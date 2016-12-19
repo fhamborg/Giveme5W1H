@@ -5,10 +5,8 @@ try:
 except NameError:
     basestring = (str, bytes)
 
-
 """Abstract class for answer extractors.
 """
-
 
 class AbsExtractor:
     __metaclass__ = ABCMeta

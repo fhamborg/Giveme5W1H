@@ -1,4 +1,4 @@
-from extractors import whoExtractor, whereExtractor, whyExtractor, actionExtractor
+from extractors import actionExtractor
 from document import Document
 
 

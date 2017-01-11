@@ -1,5 +1,4 @@
-from extractors import actionExtractor
-from document import Document
+from extractors import actionExtractor, environmentExtractor, causeExtractor
 
 
 class FiveWExtractor:
@@ -15,12 +14,12 @@ class FiveWExtractor:
         else:
             self.extractors = [
                 actionExtractor.ActionExtractor(),
+                environmentExtractor.EnvironmentExtractor(),
+                causeExtractor.CauseExtractor()
             ]
 
-    def parse(self, title, desc=None):
-        doc = Document(title, desc)
+    def parse(self, doc):
         self.preprocessor.preprocess(doc)
-
         for extractor in self.extractors:
             extractor.extract(doc)
 
@@ -30,6 +29,5 @@ class FiveWExtractor:
 if __name__ == "__main__":
     ex = FiveWExtractor('/home/soeren/Downloads/stanford-ner-2015-12-09/classifiers/english.muc.7class.distsim.crf.ser.gz',
                                '/home/soeren/Downloads/stanford-ner-2015-12-09/stanford-ner.jar')
-    data = "Harold T. Martin III kept his security clearance despite a record that included drinking problems, unpaid tax bills and an episode in which he posed as a police officer. Also another sentece for you."
-    ex.parse(data)
+
 

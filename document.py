@@ -1,13 +1,12 @@
 class Document:
 
-    def __init__(self, title, desc=None):
+    def __init__(self, title, desc=None, text=None):
         self.raw_title = title
-        if desc is not None:
-            self.raw_description = desc
-        else:
-            desc = ''
+        self.raw_description = desc
+        self.raw_text = text
 
-        self.desc_offset = 0
+        self.length = 0
+        self.section_offsets = []
         self.sentences = []
         self.tokens = []
         self.posTags = []
@@ -21,6 +20,8 @@ class Document:
             'who': '',
             'why': ''
         }
+
+        self.annotations = []
 
     def __str__(self):
         return ("""

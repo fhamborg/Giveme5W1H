@@ -12,9 +12,8 @@ class AbsExtractor:
     __metaclass__ = ABCMeta
     overwrite = True
 
-    def __init__(self, overwrite=None):
-        if overwrite is not None:
-            self.overwrite = overwrite
+    def __init__(self, overwrite=True):
+        self.overwrite = overwrite
 
     @abstractmethod
     def extract(self, document):

@@ -1,6 +1,6 @@
-from extractors.absExtractor import AbsExtractor
 import nltk
 from nltk.stem.wordnet import WordNetLemmatizer
+from .abs_extractor import AbsExtractor
 
 
 class CauseExtractor(AbsExtractor):

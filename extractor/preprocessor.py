@@ -1,16 +1,13 @@
 import nltk
-from nltk.tokenize import sent_tokenize
-from nltk.tokenize import word_tokenize
+from nltk.tokenize import sent_tokenize, word_tokenize
 from nltk.tag.stanford import StanfordNERTagger
 from nltk.tree import *
 from bllipparser import RerankingParser
-#from bllipparser import Tree
 
 
 class Preprocessor:
     nerParser = None
     rerankingParser = None
-
 
     def __init__(self, classifier, ner):
 
@@ -27,20 +24,19 @@ class Preprocessor:
         self.rerankingParser = RerankingParser.fetch_and_load('WSJ+Gigaword-v2')
 
     def preprocess(self, document):
-        document.sentences = sent_tokenize(document.raw_title)
+        length = 0
+        for section in [document.raw_title, document.raw_description, document.raw_text]:
+            document.section_offsets.append(length)
+            if section is not None:
+                sentences = sent_tokenize(section)
+                document.sentences += [s.replace('"', '') for s in sentences]
+                length += len(sentences)
 
-        if document.raw_description is not None:
-            document.desc_offset = len(document.sentences)
-            document.sentences += sent_tokenize(document.raw_description)
+        document.length = length
 
-        for i in range(len(document.sentences)):
+        for i in range(length):
             document.tokens.append(word_tokenize(document.sentences[i]))
             document.posTrees.append(ParentedTree.fromstring(self.rerankingParser.simple_parse(document.tokens[i])))
             document.posTags.append(document.posTrees[i].pos())
-
-            # NER is restricted to the title to reduce the workload
-            #if 1000 <= document.desc_offset:
-            document.nerTags.append(self.nerParser.tag(document.tokens[i]))
-
-    def labelner(self, tokens):
-        return self.nerParser.tag(tokens)
+            if i < document.section_offsets[2]:
+                document.nerTags.append(self.nerParser.tag(document.tokens[i]))

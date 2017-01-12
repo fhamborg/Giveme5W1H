@@ -1,4 +1,4 @@
-from .absExtractor import AbsExtractor
+from .abs_extractor import AbsExtractor
 
 
 class ActionExtractor(AbsExtractor):

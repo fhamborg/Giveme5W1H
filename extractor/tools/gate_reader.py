@@ -1,11 +1,11 @@
+import copy
+import html
 import logging
 import os
-import copy
 import re
-import html
 import xml.etree.cElementTree as ElementTree
 
-from document import Document
+from extractor.document import Document
 
 
 def parse_dir(path):
@@ -88,8 +88,3 @@ def extract_markup(root, start, end, encoding):
             text += html.unescape(ElementTree.tostring(node, method='text').decode(encoding))
 
     return text
-
-
-if __name__ == "__main__":
-    docs = parse_dir('./data/articles/')
-    logging.info(' %i documents parsed' % len(docs))

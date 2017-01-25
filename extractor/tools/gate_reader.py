@@ -9,6 +9,12 @@ from extractor.document import Document
 
 
 def parse_dir(path):
+    """
+    Reads all gate documents in the given directory.
+
+    :param path: Path to the directory
+    :return: A list of Document objects
+    """
 
     documents = []
 
@@ -25,6 +31,12 @@ def parse_dir(path):
 
 
 def parse_file(path):
+    """
+    Creates a Document object from a gate file.
+
+    :param path: Path to the file
+    :return: The Document object
+    """
 
     if not os.path.isfile(path):
         return None
@@ -79,6 +91,15 @@ def parse_file(path):
 
 
 def extract_markup(root, start, end, encoding):
+    """
+    Extracts marked text from text body
+
+    :param root: xml root of the text body
+    :param start: Id of the start Node
+    :param end: Id of the end Node
+    :param encoding: Document encoding.
+    :return: Marked text.
+    """
     text = ''
 
     for node in root:

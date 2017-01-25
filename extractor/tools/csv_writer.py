@@ -3,6 +3,11 @@ import csv
 
 class CSVWriter:
     def __init__(self, path):
+        """
+        A simple csv writer
+
+        :param path: Path to the file
+        """
         self.csv_file = open(path, 'w')
         self.writer = csv.writer(self.csv_file)
 
@@ -14,7 +19,13 @@ class CSVWriter:
         self.csv_file.close()
 
     def save_document(self, document, n=3):
-        # writes results and annotation to a csv file
+        """
+        Saves the first n 5Ws answers to the csv document.
+
+        :param document: The parsed Document
+        :param n: Number of candidates to save.
+        :return: None
+        """
 
         self.writer.writerow([document.raw_title])
 
@@ -49,7 +60,7 @@ class CSVWriter:
                     data = True
 
                 if len(topn_results) > i:
-                    if question in ['where', 'why']:
+                    if question in ['where', 'when']:
                         answer = ' '.join(topn_results[i][0])
                     else:
                         answer = ' '.join([token[0] for token in topn_results[i][0]])  # filter pos

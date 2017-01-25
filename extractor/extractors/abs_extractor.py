@@ -8,11 +8,15 @@ except NameError:
 """Abstract class for answer extractors.
 """
 
+
 class AbsExtractor:
     __metaclass__ = ABCMeta
     overwrite = True
 
     def __init__(self, overwrite=True):
+        """
+        :param overwrite: determines if existing answers should be overwritten.
+        """
         self.overwrite = overwrite
 
     @abstractmethod
@@ -20,6 +24,14 @@ class AbsExtractor:
         return document
 
     def answer(self, document, question, answer):
+        """
+        Saves a certain answer for a document.
+
+        :param document: The Document that is processed.
+        :param question: The question that is answered.
+        :param answer: The actual answer.
+        :return:
+        """
         if self.overwrite or len(document.questions[question]) == 0:
             document.questions[question] = answer
         else:
@@ -30,7 +42,7 @@ class AbsExtractor:
                 prev_answer.append(answer)
             document.questions[question] = prev_answer
 
-    def _extract_entities(self, tokens, filter=None, inverted=False):
+    def _extract_entities(self, tokens, filter=None, inverted=False, phrase_range=1, groups=None):
         """
         Extract named entities from ner tagged list of tokens.
 
@@ -38,30 +50,40 @@ class AbsExtractor:
         :param filter: An optional list of tags that should be ignored:
                        LOCATION, ORGANIZATION, DATE, MONEY, PERSON, PERCENTAGE, TIME
         :param inverted: Boolean determining if the filter should be inverted.
+        :param phrase_range: Allowed distance between two entities of the same type.
+        :param groups: Dictionary containing possible entity groupings.
         :return: A list of tuples containing the tokens and their label
         """
 
         entity_list = []
-        entity = None
+        entity = [0, 0, None, None]
+        words = [t[0] for t in tokens]
 
         if filter is None:
             filter = ['O']
 
-        for token in tokens:
-            if (token[1] in filter) is inverted:
-                if entity is None:
-                    entity = [token[0]], token[1]
-                elif token[1] == entity[1]:
-                    entity[0].append(token[0])
-                else:
-                    entity_list.append(entity)
-                    entity = [token[0]], token[1]
-            elif entity is not None:
-                entity_list.append(entity)
-                entity = None
+        if groups is None:
+            groups = {}
 
-        if entity is not None:
-            entity_list.append(entity)
+        for i in range(len(tokens)):
+            token = tokens[i]
+
+            if (token[1] in filter) is inverted:
+                if token[1] == entity[2] and (i - entity[1]) < phrase_range:
+                    # token of same type in allowed range discovered
+                    entity[1] = i+1
+                elif entity[3] is not None and groups.get(token[1]) == entity[3] and (i - entity[1]) < phrase_range:
+                    # hybrid group found
+                    entity[1] = i+1
+                    entity[2] = entity[3]
+                else:
+                    # token found which has a different typ or is out of range
+                    if entity[1] > 0:
+                        entity_list.append((words[entity[0]:entity[1]], entity[2]))
+                    entity = [i, i+1, token[1], groups.get(token[1])]
+
+        if entity[1] > 0:
+            entity_list.append((words[entity[0]:entity[1]], entity[2]))
 
         return entity_list
 

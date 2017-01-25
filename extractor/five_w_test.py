@@ -5,7 +5,6 @@ from extractor.tools.csv_writer import CSVWriter
 from extractor.extractors import action_extractor, environment_extractor, cause_extractor
 from extractor.preprocessor import Preprocessor
 
-
 # This is just a simple example how to use the extractor
 if __name__ == '__main__':
     log = logging.Logger('FiveWTest')
@@ -33,7 +32,7 @@ if __name__ == '__main__':
             if len(document.annotations) > 0:
                 print('Parsing %s' % document.raw_title)
                 extractor.parse(document)
-                writer.save_document(document)
+                writer.save_document(document, 10)
 
                 n -= 1
                 if n == 0:

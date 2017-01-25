@@ -1,4 +1,5 @@
 from .abs_extractor import AbsExtractor
+from copy import deepcopy
 
 
 class ActionExtractor(AbsExtractor):
@@ -6,10 +7,22 @@ class ActionExtractor(AbsExtractor):
     ner_threshold = 0
 
     def __init__(self, overwrite=True, ner_threshold=0):
+        """
+        :param overwrite: determines if existing answers should be overwritten.
+        :param ner_threshold: Overlap threshold used to determine if a phrase contains an entity.
+        """
+
         self.overwrite = overwrite
         self.ner_threshold = ner_threshold
 
     def extract(self, document):
+        """
+        Parses the document for answers to the questions who and what.
+
+        :param document: Document to be Parsed
+        :return: Parsed document
+        """
+
         candidates = self._extract_candidates(document)
         candidates = self._cluster_candidates(candidates[0], candidates[1])
         candidates = self._evaluate_candidates(document, candidates)
@@ -86,17 +99,35 @@ class ActionExtractor(AbsExtractor):
         for subtree in tree.subtrees():
             # A subject of a sentence s can be defined as the NP that is a child of s and the sibling of VP
             if subtree.label() == 'NP' and subtree.parent().label() == 'S':
+
+                # skip phrases starting with certain pos-patterns
+                pos = subtree.pos()
+
+                for label in pos:
+                    if label[1] in ['NN', 'NNS', 'NNP', 'NNPS', 'PRP', 'PRP$']:
+                        break
+
+                if label is None or label[1] not in ['NN', 'NNS', 'NNP', 'NNPS']:
+                    continue
+
                 # check siblings for VP
                 sibling = subtree.right_sibling()
                 while sibling is not None:
                     if sibling.label() == 'VP':
-                        candidates.append((subtree.pos(), sibling.pos()))
+                        candidates.append((pos, sibling.pos()))
                         break
                     sibling = sibling.right_sibling()
 
         return candidates
 
     def _cluster_candidates(self, np_list, ner_list):
+        """
+        Decides based on overlapping tokens or contained entities, if a phrase is considered similar.
+
+        :param np_list: List of noun phrases
+        :param ner_list: List of named entities
+        :return: Returns clustered noun phrases
+        """
 
         overlap_threshold = 0.5  # overlap necessary for clustering candidates w/o know entities
         clusters = {}
@@ -122,7 +153,7 @@ class ActionExtractor(AbsExtractor):
                     entity_found = name.lower() in candidate_strings[i]
                     if entity_found:
                         np_list[i][3] = True
-                        clusters[entity[1]].append(np_list[i])
+                        clusters[entity[1]].append(deepcopy(np_list[i]))
                         break
 
                 if entity_found:
@@ -130,21 +161,26 @@ class ActionExtractor(AbsExtractor):
 
         # revisit NPs without known entities
         for i in range(len(np_list)):
-            # filter Nps with known entities or PRPs
-            if not np_list[i][3] and 'PRP' not in [token[1] for token in np_list[i][0]]:
-                # TODO check only first x words for PRPs?
-
-                clusters[candidate_strings[i]] = [np_list[i]]
+            if not np_list[i][3]:
+                clusters[candidate_strings[i]] = [deepcopy(np_list[i])]
 
                 # iterate over following candidates
                 for j in range(len(np_list))[i+1:]:
                     if self.overlap(candidate_tokens[i], candidate_tokens[j]) > overlap_threshold:
-                        clusters[candidate_strings[i]].append(np_list[j])
+                        clusters[candidate_strings[i]].append(deepcopy(np_list[j]))
                         np_list[j][3] = True  # mark as clustered
 
         return clusters
 
     def _evaluate_candidates(self, document, clusters, weights=None):
+        """
+        Calculate a confidence score for extracted candidates.
+
+        :param document: The parsed document
+        :param clusters: The noun phrase clusters
+        :param weights:  Optional weights for the ranking: (cluster_size, position, entity)
+        :return: A list of evaluated and ranked candidates
+        """
 
         # TODO include VP for ranking?
 
@@ -154,12 +190,14 @@ class ActionExtractor(AbsExtractor):
             weights = [1, 1, 1]
 
         for cluster in clusters:
+            frequency = len(clusters[cluster])
             for candidate in clusters[cluster]:
-                scores = weights
+
+                scores = deepcopy(weights)
                 # frequency
-                scores[0] *= len(candidate[0])/document.length
+                scores[0] *= frequency
                 # position
-                scores[1] *= (document.length - candidate[3])/document.length
+                scores[1] *= (document.length - candidate[2])
                 # contains a named entity
                 if candidate[3]:
                     scores[2] *= 1

@@ -7,6 +7,10 @@ class FiveWExtractor:
     extractors = []
 
     def __init__(self, prep, extractorlist=None):
+        """
+        :param prep: Preprocessor object
+        :param extractorlist: List of Extractors
+        """
         self.preprocessor = prep
 
         if extractorlist is not None and len(extractorlist) > 0:
@@ -19,6 +23,12 @@ class FiveWExtractor:
             ]
 
     def parse(self, doc):
+        """
+        Extract the 5Ws for the given document
+
+        :param doc: Document object to process
+        :return: Processed document
+        """
         self.preprocessor.preprocess(doc)
 
         for extractor in self.extractors:

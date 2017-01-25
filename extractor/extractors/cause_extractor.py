@@ -1,5 +1,6 @@
 import nltk
 from nltk.stem.wordnet import WordNetLemmatizer
+from copy import deepcopy
 from .abs_extractor import AbsExtractor
 
 
@@ -12,7 +13,9 @@ class CauseExtractor(AbsExtractor):
                             'because': '', 'due': 'to', 'stemmed': 'from'}
 
     def __init__(self, overwrite=None):
-
+        """
+        :param overwrite: determines if existing answers should be overwritten.
+        """
         try:
             nltk.data.find('wordnet.zip')
         except:
@@ -23,20 +26,29 @@ class CauseExtractor(AbsExtractor):
         self.lemmatizer = WordNetLemmatizer()
 
     def extract(self, document):
-        candidates = []
+        """
+        Parses the document for answers to the question why.
+
+        :param document: Document to be Parsed
+        :return: Parsed document
+        """
+        candidate_list = []
 
         for i in range(document.length):
-            candidates.extend([c.append(i) for c in self._evaluate_tree(document.posTrees[i])])
+            for candidate in self._evaluate_tree(document.posTrees[i]):
+                candidate_list.append([candidate[0], candidate[1], i])
 
-        candidates = self._evaluate_candidates(document, candidates)
-        self.answer(document, 'why', candidates)
+        candidate_list = self._evaluate_candidates(document, candidate_list)
+        self.answer(document, 'why', candidate_list)
+
+        return document
 
     def _evaluate_tree(self, tree):
         """
-        Determines if the given sub tree contains a possible reason.
+        Determines if the given sub tree contains a cause/effect relation.
 
         :param tree: A ParentedTree to be analyzed
-        :return: A Tuple containing the cause/effect phrases and the methode used to find it.
+        :return: A Tuple containing the cause/effect phrases and the pattern used to find it.
         """
 
         candidates = []
@@ -47,7 +59,7 @@ class CauseExtractor(AbsExtractor):
         for subtree in tree.subtrees(filter=lambda t: t.label() == 'NP' and t.right_sibling() is not None):
             sibling = subtree.right_sibling()
 
-            # TODO Modal auxiliaries? (MD)
+            # TODO Modal auxiliaries? (MD)?
 
             while sibling.label() == 'ADVP' and sibling.right_sibling() is not None:
                 sibling = sibling.right_sibling()
@@ -56,29 +68,36 @@ class CauseExtractor(AbsExtractor):
                 leaves = sibling.leaves()
                 verb = leaves[0].lower()
 
-                # TODO passive sentences
+                # TODO passive sentences?
 
                 if verb in self.verb_indicators:
-                    candidates.append([subtree.pos(), sibling.pos(), 'NP-VP-NP'])
+                    candidates.append(deepcopy([subtree.pos(), sibling.pos(), 'NP-VP-NP']))
                 elif self.lemmatizer.lemmatize(verb, 'v') in self.verb_indicators:
-                    candidates.append([subtree.pos(), sibling.pos(), 'NP-VP-NP'])
+                    candidates.append(deepcopy([subtree.pos(), sibling.pos(), 'NP-VP-NP']))
 
         for i in range(len(tokens)):
             token = tokens[i].lower()
 
-            # TODO negation check
+            # TODO negation check?
 
             # search for adverbs indicating a causal relation
             if pos[i][1] == 'RB' and token in self.adverbial_indicators:
-                candidates.append([pos[i - 1:], pos[:i], 'RB'])
+                candidates.append(deepcopy([pos[i - 1:], pos[:i], 'RB']))
             # search for causal links
             elif token in self.clausal_conjunctions and \
-                            ' '.join(tokens[i:]).lower() == self.clausal_conjunctions[token]:
-                candidates.append([pos[i - 1:], pos[:i], 'biclausal'])
-
+                    ' '.join(tokens[i:]).lower().startswith(self.clausal_conjunctions[token]):
+                candidates.append(deepcopy([pos[i - 1:], pos[:i], 'biclausal']))
         return candidates
 
     def _evaluate_candidates(self, document, candidates, weights=None):
+        """
+        Calculate a confidence score for extracted candidates.
+
+        :param document: The parsed document.
+        :param candidates: The extracted candidates: [cause, effect, pattern]
+        :param weights: Optional weighting used for the evaluation: [position, pattern]
+        :return: A list of evaluated and ranked candidates
+        """
 
         if weights is None:
             weights = [1, 1]
@@ -86,11 +105,13 @@ class CauseExtractor(AbsExtractor):
         ranked_candidates = []
         for candidate in candidates:
             if candidate is not None and len(candidate[0]) > 0:
-                scores = weights
-                scores[0] *= candidate[3]/document.length
-                if candidate[2] == 'biclausal':
-                     scores[1] *= 1
-                elif candidate[2] == 'RB':
+                scores = deepcopy(weights)
+                # position
+                scores[0] *= candidate[2]/document.length
+                # pattern
+                if candidate[1] == 'biclausal':
+                    scores[1] *= 1
+                elif candidate[1] == 'RB':
                     scores[1] *= 0.6
                 else:
                     scores[1] *= 0.3

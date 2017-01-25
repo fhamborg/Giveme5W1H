@@ -1,6 +1,7 @@
 class Document:
 
     def __init__(self, title, desc=None, text=None):
+
         self.raw_title = title
         self.raw_description = desc
         self.raw_text = text

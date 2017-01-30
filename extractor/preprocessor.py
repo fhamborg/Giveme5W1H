@@ -10,23 +10,22 @@ class Preprocessor:
     nerParser = None
     rerankingParser = None
 
-    def __init__(self, classifier, ner):
+    def __init__(self, tagger, model):
         """
         Performs all necessary preprocessing
 
-        :param classifier: Path to the Stanford NER Tagger
-        :param ner: Path to the model for the NER Tagger
+        :param tagger: Path to the Stanford NER Tagger
+        :param model: Path to the model for the NER Tagger
         """
 
-
-        # init nltk tokenizers
+        # check if model for tokenizer exists
         try:
             nltk.data.find('punkt.zip')
         except:
             nltk.download('punkt')
 
         # init NER parser
-        self.nerParser = StanfordNERTagger(classifier, ner)
+        self.nerParser = StanfordNERTagger(tagger, model)
 
         # init Charniak parser
         self.rerankingParser = RerankingParser.fetch_and_load('WSJ+Gigaword-v2')
@@ -39,10 +38,10 @@ class Preprocessor:
         :return Document: The processed Document object.
         """
 
-        length = 0
         for section in [document.raw_title, document.raw_description, document.raw_text]:
             document.section_offsets.append(document.length)
             if section is not None:
+                # delete '...' and quotes from plain text, then split sentences
                 sentences = sent_tokenize(re.sub(r'[.]{2,}|"', ' ', section))
                 document.sentences += [s for s in sentences if len(s) > 1]
 

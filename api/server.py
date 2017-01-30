@@ -1,3 +1,5 @@
+from extractor.document import Document
+from extractor.five_w_extractor import FiveWExtractor
 from flask import Flask, request, jsonify
 import logging
 
@@ -8,6 +10,7 @@ host = None
 port = 5000
 debug = False
 options = None
+extractor = FiveWExtractor()
 ch = logging.StreamHandler()
 ch.setLevel(logging.DEBUG)
 log.addHandler(ch)
@@ -22,10 +25,13 @@ def run():
 
 @app.route('/extract', methods=['GET', 'POST'])
 def extract():
-    json_article = request.args.get('article')
-    log.debug("retrieved raw article for extraction: %s", json_article)
-    return jsonify("TODO")
+    json_article = request.get_json()
+    log.debug("retrieved raw article for extraction: %s", json_article['title'])
 
+    document = Document(json_article['title'], json_article['description'], json_article['text'])
+    extractor.parse(document)
+
+    return jsonify(document.questions)
 
 if __name__ == "__main__":
     run()

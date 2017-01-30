@@ -12,8 +12,6 @@ if __name__ == '__main__':
 
     # preprocessor expects the location of the sanford-ner.jar and a model to train the ner-parser
     # stanford-ner can be found here: http://nlp.stanford.edu/software/CRF-NER.shtml
-    prep = Preprocessor('./resources/stanford-ner-2015-12-09/classifiers/english.muc.7class.distsim.crf.ser.gz',
-                        './resources/stanford-ner-2015-12-09/stanford-ner.jar')
 
     # initialize desired extractors
     extractor_list = [
@@ -22,7 +20,7 @@ if __name__ == '__main__':
         cause_extractor.CauseExtractor()
     ]
 
-    extractor = FiveWExtractor(prep, extractor_list)
+    extractor = FiveWExtractor(extractor_list)
     documents = gate_reader.parse_dir('../data/articles')
 
     n = 200

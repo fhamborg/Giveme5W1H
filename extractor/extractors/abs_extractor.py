@@ -46,7 +46,7 @@ class AbsExtractor:
         """
         Extract named entities from ner tagged list of tokens.
 
-        :param tokens: A list of tokens to be parsed
+        :param tokens: A list of tokens and entity information to be parsed
         :param filter: An optional list of tags that should be ignored:
                        LOCATION, ORGANIZATION, DATE, MONEY, PERSON, PERCENTAGE, TIME
         :param inverted: Boolean determining if the filter should be inverted.

@@ -58,7 +58,7 @@ def parse_file(path):
             text = None
 
             # read the Annotation
-            annotations = []
+            annotations = {'what': [], 'who': [], 'why': [], 'where': [], 'when': []}
             for annotation in root.find('AnnotationSet'):
                 attrib = annotation.attrib
 
@@ -74,10 +74,28 @@ def parse_file(path):
                             text = marked_text
                         else:
                             logging.warning("Wrong feature in 'TextSection' found.")
-                else:
-                    features = [(f[0].text, f[1].text) for f in annotation]
+
+                elif attrib['Type'] == 'FiveW':
                     marked_text = extract_markup(text_node, attrib['StartNode'], attrib['EndNode'], encoding)
-                    annotations.append((attrib['Type'], features, marked_text))
+                    question = None
+                    features = [None, None, None]  # id , accuracy, text
+
+                    for feature in [(f[0].text, f[1].text) for f in annotation]:
+                        if feature[0] == 'accuracy':
+                            features[1] = feature[1]
+                        elif feature[0] == 'id':
+                            features[1] = feature[0]
+                        elif feature[0] == 'question':
+                            question = feature[1]
+
+                    if question is not None:
+                        features[2] = marked_text
+                        annotations[question].append(features)
+
+            for answers in annotations.items():
+                #sort them based on id and accuracy
+                answers[1].sort(key=lambda x: x[0] or 'None')
+                answers[1].sort(key=lambda x: x[1] or 'None')
 
             document = Document(title, description, text)
             document.annotations = annotations

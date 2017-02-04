@@ -14,15 +14,8 @@ class Document:
         self.posTrees = []
         self.nerTags = []
 
-        self.questions = {
-            'what': '',
-            'when': '',
-            'where': '',
-            'who': '',
-            'why': ''
-        }
-
-        self.annotations = []
+        self.questions = {'what': [], 'who': [], 'why': [], 'where': [], 'when': []}
+        self.annotations = {'what': [], 'who': [], 'why': [], 'where': [], 'when': []}
 
     def __str__(self):
         return ("""

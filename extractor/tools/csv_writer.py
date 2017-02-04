@@ -29,21 +29,9 @@ class CSVWriter:
 
         self.writer.writerow([document.raw_title])
 
-        questions = {'what': [], 'who': [], 'why': [], 'where': [], 'when': []}
-
-        # read gate annotations
-        for annotation in [a for a in document.annotations if a[0] == 'FiveW']:
-            features = {'question': '-', 'id': '1', 'accuracy': '1'}
-
-            for feature in annotation[1]:
-                features[feature[0]] = feature[1]
-
-            if features['question'] in questions.keys():
-                questions[features['question']].append((features['id'], features['accuracy'], annotation[2]))
-
         # write to csv file
-        for question in questions.keys():
-            topn_annotations = sorted(questions[question], key=lambda q: q[1])[:n]
+        for question in document.questions.keys():
+            topn_annotations = document.annotations[question][:n]
             topn_results = document.questions[question][:n]
 
             self.writer.writerow([question, 'annotation', '(id | accuracy)', 'result', 'score'])

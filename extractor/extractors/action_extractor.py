@@ -5,12 +5,16 @@ from copy import deepcopy
 class ActionExtractor(AbsExtractor):
 
     ner_threshold = 0
+    weights = (1, 1, 1)
 
-    def __init__(self, overwrite=True, ner_threshold=0):
+    def __init__(self, weights=None, overwrite=True, ner_threshold=0):
         """
+        :param weights: tuple of weights for candidate evaluation: (pos, frequency, ner)
         :param overwrite: determines if existing answers should be overwritten.
         :param ner_threshold: Overlap threshold used to determine if a phrase contains an entity.
         """
+        if weights is not None:
+            self.weights = weights
 
         self.overwrite = overwrite
         self.ner_threshold = ner_threshold
@@ -172,13 +176,12 @@ class ActionExtractor(AbsExtractor):
 
         return clusters
 
-    def _evaluate_candidates(self, document, clusters, weights=None):
+    def _evaluate_candidates(self, document, clusters):
         """
         Calculate a confidence score for extracted candidates.
 
         :param document: The parsed document
         :param clusters: The noun phrase clusters
-        :param weights:  Optional weights for the ranking: (cluster_size, position, entity)
         :return: A list of evaluated and ranked candidates
         """
 
@@ -186,18 +189,15 @@ class ActionExtractor(AbsExtractor):
 
         ranked_candidates = []
 
-        if weights is None:
-            weights = [1, 1, 1]
-
         for cluster in clusters:
             frequency = len(clusters[cluster])
             for candidate in clusters[cluster]:
 
-                scores = deepcopy(weights)
-                # frequency
-                scores[0] *= frequency
+                scores = list(self.weights)
                 # position
-                scores[1] *= (document.length - candidate[2])
+                scores[0] *= (document.length - candidate[2])
+                # frequency
+                scores[1] *= frequency
                 # contains a named entity
                 if candidate[3]:
                     scores[2] *= 1

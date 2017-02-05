@@ -3,6 +3,7 @@ from copy import deepcopy
 import dateutil.parser as dparser
 
 class EnvironmentExtractor(AbsExtractor):
+    weights = ((1, 1), (10, 1, 1, 5))  # ((loc_pos, loc_freq), (time_pos, time_date, time_time, time_dateutil))
 
     def extract(self, document):
         """
@@ -64,7 +65,7 @@ class EnvironmentExtractor(AbsExtractor):
                         ne_lists['LOCATION'].append([[candidate[0]], i])
         return ne_lists
 
-    def _evaluate_locations(self, document, clusters, weights=None):
+    def _evaluate_locations(self, document, clusters):
         """
         Calculate a confidence score for extracted location candidates.
 
@@ -74,25 +75,22 @@ class EnvironmentExtractor(AbsExtractor):
         :return: A list of evaluated and ranked candidates
         """
 
-        if weights is None:
-            weights = [1, 1]
-
         ranked_candidates = []
         for cluster in clusters:
-            scores = deepcopy(weights)
+            scores = list(self.weights[0])
             cluster[0].sort(reverse=True)
 
-            # frequency
-            scores[0] *= len(cluster[0])
             # position
-            scores[1] *= document.length - cluster[1]
+            scores[0] *= document.length - cluster[1]
+            # frequency
+            scores[1] *= len(cluster[0])
 
             ranked_candidates.append((cluster[0][0], sum(scores)))
 
         ranked_candidates.sort(key=lambda x: x[1], reverse=True)
         return ranked_candidates
 
-    def _evaluate_dates(self, document, date_list, time_list, date_time_list, weights=None):
+    def _evaluate_dates(self, document, date_list, time_list, date_time_list):
         """
         Calculate a confidence score for extracted time candidates.
 
@@ -100,24 +98,20 @@ class EnvironmentExtractor(AbsExtractor):
         :param date_list: List of date candidates.
         :param time_list: List of time candidates.
         :param date_time_list: List of time+date candidates.
-        :param weights: Optional weighting used for the evaluation: [position, date, time, dateutil]
         :return: A list of evaluated and ranked candidates
         """
 
         ranked_candidates = []
         time_candidates = deepcopy(time_list)
 
-        if weights is None:
-            weights = [10, 1, 1, 5]
-
         for candidate in date_time_list:
-            scores = deepcopy(weights[:3])
+            scores = list(self.weights[1])
             scores[0] *= (document.length - candidate[1])/document.length
 
-            ranked_candidates.append([candidate[0], sum(scores)])
+            ranked_candidates.append([candidate[0], scores])
 
         for candidate in date_list:
-            scores = deepcopy(weights[:3])
+            scores = list(self.weights[1])
             scores[0] *= (document.length - candidate[1])/document.length
 
             for i in range(len(time_candidates)):
@@ -129,22 +123,22 @@ class EnvironmentExtractor(AbsExtractor):
             else:
                 scores[2] = 0
 
-            ranked_candidates.append([candidate[0], sum(scores)])
+            ranked_candidates.append([candidate[0], scores])
 
         for candidate in time_candidates:
-            scores = deepcopy(weights[:3])
+            scores = list(self.weights[1])
             scores[0] *= (document.length - candidate[1])/document.length
             scores[1] = 0
 
-            ranked_candidates.append([candidate[0], sum(scores)])
+            ranked_candidates.append([candidate[0], scores])
 
+        # try to compute a dateutil-object
         for candidate in ranked_candidates:
-            score = deepcopy(weights[3])
             try:
                 dparser.parse(' '.join(candidate[0]), fuzzy=True)
             except ValueError as e:
-                score = 0
-            candidate[1] += score
+                candidate[1][3]=0
+            candidate[1] = sum(candidate[1])
 
         ranked_candidates.sort(key=lambda x: x[1], reverse=True)
         return ranked_candidates

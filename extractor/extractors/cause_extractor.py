@@ -5,6 +5,7 @@ from .abs_extractor import AbsExtractor
 
 
 class CauseExtractor(AbsExtractor):
+    weights = (1, 1)
     verb_indicators = ['allow', 'affect', 'alter', 'arouse', 'cause', 'change', 'create', 'criticize', 'convert',
                        'cut', 'develop', 'derive', 'encourage', 'extend', 'force', 'let', 'permit', 'make', 'wash',
                        'generate', 'result']
@@ -12,8 +13,9 @@ class CauseExtractor(AbsExtractor):
     clausal_conjunctions = {'consequence': 'of', 'effect': 'of',  'result': 'of', 'upshot': 'of', 'outcome': 'of',
                             'because': '', 'due': 'to', 'stemmed': 'from'}
 
-    def __init__(self, overwrite=None):
+    def __init__(self, weights=None, overwrite=True):
         """
+        :param weights: tuple of weights for candidate evaluation: (pos, pattern)
         :param overwrite: determines if existing answers should be overwritten.
         """
         try:
@@ -21,8 +23,10 @@ class CauseExtractor(AbsExtractor):
         except:
             nltk.download('wordnet')
 
-        if overwrite is not None:
-            self.overwrite = overwrite
+        if weights is not None:
+            self.weights = weights
+
+        self.overwrite = overwrite
         self.lemmatizer = WordNetLemmatizer()
 
     def extract(self, document):
@@ -89,7 +93,7 @@ class CauseExtractor(AbsExtractor):
                 candidates.append(deepcopy([pos[i - 1:], pos[:i], 'biclausal']))
         return candidates
 
-    def _evaluate_candidates(self, document, candidates, weights=None):
+    def _evaluate_candidates(self, document, candidates):
         """
         Calculate a confidence score for extracted candidates.
 
@@ -99,13 +103,10 @@ class CauseExtractor(AbsExtractor):
         :return: A list of evaluated and ranked candidates
         """
 
-        if weights is None:
-            weights = [1, 1]
-
         ranked_candidates = []
         for candidate in candidates:
             if candidate is not None and len(candidate[0]) > 0:
-                scores = deepcopy(weights)
+                scores = list(self.weights)
                 # position
                 scores[0] *= candidate[2]/document.length
                 # pattern

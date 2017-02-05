@@ -12,11 +12,15 @@ except NameError:
 class AbsExtractor:
     __metaclass__ = ABCMeta
     overwrite = True
+    weights = None
 
-    def __init__(self, overwrite=True):
+    def __init__(self, weights=None, overwrite=True):
         """
         :param overwrite: determines if existing answers should be overwritten.
         """
+        if weights is not None:
+            self.weights = weights
+
         self.overwrite = overwrite
 
     @abstractmethod

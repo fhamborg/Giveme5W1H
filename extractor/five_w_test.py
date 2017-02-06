@@ -1,9 +1,75 @@
 import logging
+import editdistance
 from extractor.five_w_extractor import FiveWExtractor
 from extractor.tools import gate_reader
 from extractor.tools.csv_writer import CSVWriter
 from extractor.extractors import action_extractor, environment_extractor, cause_extractor
-from extractor.preprocessor import Preprocessor
+
+
+def cmp_length(annotation, answer):
+    # compares the length of answers and corresponding answers
+    if annotation is not None and answer is not None:
+        return len(annotation) - len(answer)
+    return 0
+
+
+def cmp_levenshtein(annotation, answer):
+    # computes edit distance of answers and corresponding answers
+    if annotation is not None and answer is not None:
+        return editdistance.eval(annotation, answer)
+    return 0
+
+
+def cmp_fnull(annotation, answer):
+    if annotation is not None and answer is None:
+        return 1
+    return 0
+
+
+def cmp_fnonnull(annotation, answer):
+    if annotation is None and answer is not None:
+        return 1
+    return 0
+
+
+def cmp_answers(document, questions=None, level=1):
+    scores = {'who': [], 'what': [], 'when': [], 'where': [], 'why': []}
+
+    if questions is None:
+        questions = ['who', 'what', 'when', 'where', 'why']
+
+    for question in questions:
+        annotations = document.annotations[question][:level]
+        answers = document.questions[question][:level]
+
+        annotations.extend([None] * (level-len(annotations)))
+        answers.extend([None] * (level - len(answers)))
+
+        for i in range(level):
+            if answers[i] is None:
+                answer = None
+            elif question in ['where', 'when']:
+                answer = ' '.join(answers[i][0])
+            else:
+                answer = ' '.join([token[0] for token in answers[i][0]])  # filter pos
+
+            if annotations[i] is None:
+                annotation = None
+            else:
+                annotation = annotations[i][2]
+
+            score = (
+                cmp_fnull(annotation, annotations),
+                cmp_fnonnull(annotation, annotations),
+                cmp_length(annotation, answer),
+                cmp_levenshtein(annotation, answer)
+            )
+
+            scores[question].append(score)
+
+    return scores
+
+
 
 # This is just a simple example how to use the extractor
 if __name__ == '__main__':
@@ -22,16 +88,16 @@ if __name__ == '__main__':
 
     extractor = FiveWExtractor(extractor_list)
     documents = gate_reader.parse_dir('../data/articles')
-
-    n = 200
+    scores = {'who': [], 'what': [], 'when': [], 'where': [], 'why': []}
 
     with CSVWriter('../data/results.csv') as writer:
         for document in documents:
-            if len(document.annotations) > 0:
-                print('Parsing %s' % document.raw_title)
-                extractor.parse(document)
-                writer.save_document(document, 10)
+            print('Parsing %s' % document.raw_title)
+            extractor.parse(document)
+            evaluation = cmp_answers(document)
+            for question in evaluation:
+                scores[question] = evaluation[question]
 
-                n -= 1
-                if n == 0:
-                    break
+            writer.save_document(document, 10)
+
+    print(scores)

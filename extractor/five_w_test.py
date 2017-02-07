@@ -91,6 +91,8 @@ if __name__ == '__main__':
     extractor = FiveWExtractor(extractor_list)
     documents = gate_reader.parse_dir('../data/articles')
     scores = {'who': [], 'what': [], 'when': [], 'where': [], 'why': []}
+    count_candidates_total = 0
+    start_all = timer()
 
     with CSVWriter('../data/results.csv') as writer:
         print("Starting parsing of %i documents " % len(documents))
@@ -98,11 +100,20 @@ if __name__ == '__main__':
             print("Parsing '%s'..." % document.raw_title)
             start = timer()
             extractor.parse(document)
-            print("Parsed '%s' [%is]" % (document.raw_title, (timer() - start)))
+            print("Parsed  '%s' [%is]" % (document.raw_title, (timer() - start)))
             evaluation = cmp_answers(document)
             for question in evaluation:
                 scores[question] = evaluation[question]
+                print('%s' % question)
+                # print('%s' % scores[question].translate(None, "'"))
+                print('#candidates: %i' % len(document.questions[question]))
+                count_candidates_total += len(document.questions[question])
 
             writer.save_document(document, 10)
 
+    diff_all = timer() - start_all
+
     print(scores)
+    print(count_candidates_total)
+    print("candidates/article={}".format(count_candidates_total / len(documents)))
+    print("total time={}, time/article={}".format(diff_all, diff_all / len(documents)))

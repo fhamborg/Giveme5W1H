@@ -1,9 +1,12 @@
 import logging
+from timeit import default_timer as timer
+
 import editdistance
+
+from extractor.extractors import action_extractor, environment_extractor, cause_extractor
 from extractor.five_w_extractor import FiveWExtractor
 from extractor.tools import gate_reader
 from extractor.tools.csv_writer import CSVWriter
-from extractor.extractors import action_extractor, environment_extractor, cause_extractor
 
 
 def cmp_length(annotation, answer):
@@ -42,7 +45,7 @@ def cmp_answers(document, questions=None, level=1):
         annotations = document.annotations[question][:level]
         answers = document.questions[question][:level]
 
-        annotations.extend([None] * (level-len(annotations)))
+        annotations.extend([None] * (level - len(annotations)))
         answers.extend([None] * (level - len(answers)))
 
         for i in range(level):
@@ -70,7 +73,6 @@ def cmp_answers(document, questions=None, level=1):
     return scores
 
 
-
 # This is just a simple example how to use the extractor
 if __name__ == '__main__':
     log = logging.Logger('FiveWTest')
@@ -91,9 +93,12 @@ if __name__ == '__main__':
     scores = {'who': [], 'what': [], 'when': [], 'where': [], 'why': []}
 
     with CSVWriter('../data/results.csv') as writer:
+        print("Starting parsing of %i documents " % len(documents))
         for document in documents:
-            print('Parsing %s' % document.raw_title)
+            print("Parsing '%s'..." % document.raw_title)
+            start = timer()
             extractor.parse(document)
+            print("Parsed '%s' [%is]" % (document.raw_title, (timer() - start)))
             evaluation = cmp_answers(document)
             for question in evaluation:
                 scores[question] = evaluation[question]

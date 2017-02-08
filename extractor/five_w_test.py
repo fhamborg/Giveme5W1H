@@ -1,8 +1,11 @@
+import sys
+import os
 import logging
+import editdistance
 from timeit import default_timer as timer
 
-import editdistance
 
+sys.path.insert(0, '/'.join(os.path.realpath(__file__).split('/')[:-2]))
 from extractor.extractors import action_extractor, environment_extractor, cause_extractor
 from extractor.five_w_extractor import FiveWExtractor
 from extractor.tools import gate_reader

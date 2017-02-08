@@ -1,5 +1,6 @@
-from .abs_extractor import AbsExtractor
 from copy import deepcopy
+
+from .abs_extractor import AbsExtractor
 
 
 class ActionExtractor(AbsExtractor):
@@ -68,7 +69,7 @@ class ActionExtractor(AbsExtractor):
                 if similarity == 0:
                     entity_list.append([[candidate[0]], None, candidate[1]])
 
-        # sort names of entities by ascending length and pic longest as most accurate representation
+        # sort names of entities by ascending length and select longest as most accurate representation
         for entity in entity_list:
 
             name_strings = []

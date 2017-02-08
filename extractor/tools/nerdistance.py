@@ -1,8 +1,12 @@
+import sys
+import os
+import csv
+
+sys.path.insert(0, '/'.join(os.path.realpath(__file__).split('/')[:-3]))
 from extractor.extractors.abs_extractor import AbsExtractor
 from extractor.five_w_extractor import FiveWExtractor
 from extractor.tools import gate_reader
-import csv
-import os
+
 
 
 class NERD(AbsExtractor):
@@ -26,7 +30,7 @@ class NERD(AbsExtractor):
 
 if __name__ == '__main__':
     path = '/'.join(os.path.realpath(__file__).split('/')[:-3])
-    print(path)
+
     with open(path + '/data/nerd_loc.csv', 'w') as csv_loc:
         with open(path + '/data/nerd_time.csv', 'w') as csv_time:
             writer_loc = csv.writer(csv_loc)

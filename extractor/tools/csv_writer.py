@@ -8,7 +8,7 @@ class CSVWriter:
 
         :param path: Path to the file
         """
-        self.csv_file = open(path, 'w')
+        self.csv_file = open(path, 'w', encoding="utf-8")
         self.writer = csv.writer(self.csv_file)
 
     def __enter__(self):

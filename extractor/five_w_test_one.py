@@ -1,5 +1,4 @@
 import logging
-import sys
 
 from extractor.document import Document
 from extractor.extractors import action_extractor, environment_extractor, cause_extractor
@@ -14,9 +13,7 @@ if __name__ == '__main__':
     lead = "add lead paragraph"
     text = '''add text'''
 
-    if title == 'add title':
-        assert (False, "Change title, lead paragraph, and text first")
-        sys.exit(0)
+    assert title != 'add title', "Change title, lead paragraph, and text first"
 
     # preprocessor expects the location of the sanford-ner.jar and a model to train the ner-parser
     # stanford-ner can be found here: http://nlp.stanford.edu/software/CRF-NER.shtml

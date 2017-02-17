@@ -209,7 +209,3 @@ class ActionExtractor(AbsExtractor):
         ranked_candidates.sort(key=lambda x: x[0], reverse=True)
         return ranked_candidates
 
-
-
-
-

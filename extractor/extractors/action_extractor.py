@@ -84,6 +84,7 @@ class ActionExtractor(AbsExtractor):
             entity[1] = name_strings[len(name_strings)-1]
 
         # extract all suitable NPs
+        # TODO: add some explanation (not only here), what is the i doing? it is relatively hard to understand all the algos without comments in in them
         for i in range(document.length):
             if limit is not None and limit == i:
                 break

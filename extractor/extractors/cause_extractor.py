@@ -108,7 +108,7 @@ class CauseExtractor(AbsExtractor):
             if candidate is not None and len(candidate[0]) > 0:
                 scores = list(self.weights)
                 # position
-                scores[0] *= candidate[2]/document.length
+                scores[0] *= (1 - candidate[2]/document.length)
                 # pattern
                 if candidate[1] == 'biclausal':
                     scores[1] *= 1

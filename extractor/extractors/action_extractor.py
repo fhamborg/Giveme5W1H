@@ -1,5 +1,5 @@
 from copy import deepcopy
-
+from nltk.tree import ParentedTree
 from .abs_extractor import AbsExtractor
 
 
@@ -84,7 +84,6 @@ class ActionExtractor(AbsExtractor):
             entity[1] = name_strings[len(name_strings)-1]
 
         # extract all suitable NPs
-        # TODO: add some explanation (not only here), what is the i doing? it is relatively hard to understand all the algos without comments in in them
         for i in range(document.length):
             if limit is not None and limit == i:
                 break
@@ -120,7 +119,10 @@ class ActionExtractor(AbsExtractor):
                 sibling = subtree.right_sibling()
                 while sibling is not None:
                     if sibling.label() == 'VP':
-                        candidates.append((pos, sibling.pos()))
+                        first = sibling.leaves()[0].lower()
+                        if first.startswith('say') or first.startswith('said'):
+                            break
+                        candidates.append((pos, self.cut_what(sibling, 2).pos()))
                         break
                     sibling = sibling.right_sibling()
 
@@ -209,4 +211,21 @@ class ActionExtractor(AbsExtractor):
 
         ranked_candidates.sort(key=lambda x: x[0], reverse=True)
         return ranked_candidates
+
+    def cut_what(self, tree, min=0):
+        n = 0
+        if type(tree[0]) is not ParentedTree:
+            return ParentedTree(tree.label(), [tree[0]])
+        else:
+            children = []
+            for sub in tree:
+                child = self.cut_what(sub, n - min)
+                n += len(child.leaves())
+                children.append(child)
+                if sub.label() == 'NP' and n <= min:
+                    break
+            return ParentedTree(tree.label(), children)
+
+
+
 

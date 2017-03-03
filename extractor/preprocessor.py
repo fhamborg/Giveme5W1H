@@ -43,7 +43,7 @@ class Preprocessor:
             if section is not None:
                 # delete '...' and quotes from plain text, then split sentences
                 sentences = sent_tokenize(re.sub(r'[.]{2,}|"', ' ', section))
-                document.sentences += [s for s in sentences if len(s) > 1]
+                document.sentences += [s[:398] for s in sentences if len(s) > 1]
 
         document.length = len(document.sentences)
 

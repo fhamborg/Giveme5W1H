@@ -36,7 +36,7 @@ if __name__ == '__main__':
             writer_loc = csv.writer(csv_loc)
             writer_time = csv.writer(csv_time)
             nerd_loc = NERD(writer_loc, ['LOCATION'])
-            nerd_time = NERD(writer_time, ['LOCATION'])
+            nerd_time = NERD(writer_time, ['DATE', 'TIME'])
             extractor = FiveWExtractor([nerd_loc, nerd_time])
             documents = gate_reader.parse_dir(path + '/data/articles')
             for document in documents:

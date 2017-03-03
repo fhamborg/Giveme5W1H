@@ -93,12 +93,13 @@ if __name__ == '__main__':
     ]
 
     extractor = FiveWExtractor(extractor_list)
-    documents = gate_reader.parse_dir('../data/articles')
+    abs_path = os.path.dirname(os.path.dirname(__file__))
+    documents = gate_reader.parse_dir(abs_path + '/data/articles')
     scores = {'who': [], 'what': [], 'when': [], 'where': [], 'why': []}
     count_candidates_total = 0
     start_all = timer()
 
-    with CSVWriter('../data/results.csv') as writer:
+    with CSVWriter(abs_path + '/data/results.csv') as writer:
         print("Starting parsing of %i documents " % len(documents))
         for document in documents:
             print("Parsing '%s'..." % document.raw_title)

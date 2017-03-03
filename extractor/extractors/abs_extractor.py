@@ -1,4 +1,6 @@
 from abc import ABCMeta, abstractmethod
+from itertools import product
+from nltk.corpus import wordnet
 
 try:
     basestring = basestring
@@ -107,3 +109,39 @@ class AbsExtractor:
 
         intersection = [x for x in list_a if x in list_b]
         return len(intersection) / max([len(list_a), len(list_b)])
+
+    def sem_overlap(self, list_a, list_b, pos=None):
+        """
+        Compares two lists of strings based on semantic similarity.
+
+        :param list_a: List of tokens with pos
+        :param list_b: List of tokens with pos
+        :param pos: Optional parameter, filters tokens based on POS-label
+        :return: A float representing the similarity.
+        """
+
+        pos_filter = {'NOUN': 'NN', 'VERB': 'VB'}.get(pos)
+        if pos_filter is not None:
+            syn_a = [wordnet.synsets(t[0], pos=pos) for t in list_a if t[1].startswith(pos_filter)]
+            syn_b = [wordnet.synsets(t[0], pos=pos) for t in list_b if t[1].startswith(pos_filter)]
+        else:
+            syn_a = [wordnet.synsets(t[0]) for t in list_a]
+            syn_b = [wordnet.synsets(t[0]) for t in list_b]
+
+        # drop tokens without synsets
+        syn_a = [syn for syn in syn_a if len(syn) > 0]
+        syn_b = [syn for syn in syn_b if len(syn) > 0]
+
+        score = 0
+        max_b = [0] * len(syn_b)
+        for i in range(len(syn_a)):
+            max_a = 0
+            for j in range(len(syn_b)):
+                sim = max(list((wordnet.path_similarity(a, b) or 0) for a, b in product(syn_a[i], syn_b[j])) or [0])
+                max_a = max(sim, max_a)
+                max_b[j] = max(max_b[j], sim)
+
+            score += max_a
+
+        score += sum(max_b)
+        return score / (len(syn_a) + len(syn_b))

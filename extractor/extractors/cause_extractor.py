@@ -37,13 +37,14 @@ class CauseExtractor(AbsExtractor):
         :return: Parsed document
         """
         candidate_list = []
+        posTrees = document.get_trees()
 
-        for i in range(document.length):
-            for candidate in self._evaluate_tree(document.posTrees[i]):
+        for i in range(len(posTrees)):
+            for candidate in self._evaluate_tree(posTrees[i]):
                 candidate_list.append([candidate[0], candidate[1], i])
 
         candidate_list = self._evaluate_candidates(document, candidate_list)
-        self.answer(document, 'why', candidate_list)
+        document.set_answer('why', candidate_list)
 
         return document
 
@@ -108,7 +109,7 @@ class CauseExtractor(AbsExtractor):
             if candidate is not None and len(candidate[0]) > 0:
                 scores = list(self.weights)
                 # position
-                scores[0] *= (1 - candidate[2]/document.length)
+                scores[0] *= candidate[2]/document.get_len()
                 # pattern
                 if candidate[1] == 'biclausal':
                     scores[1] *= 1

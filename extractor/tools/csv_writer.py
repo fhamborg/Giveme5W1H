@@ -9,6 +9,7 @@ class CSVWriter:
         :param path: Path to the file
         """
         self.csv_file = open(path, 'w', encoding="utf-8")
+        self.csv_file.write(('"sep=,"\n'))
         self.writer = csv.writer(self.csv_file)
 
     def __enter__(self):
@@ -27,12 +28,15 @@ class CSVWriter:
         :return: None
         """
 
-        self.writer.writerow([document.raw_title])
+        self.writer.writerow([document.get_title()])
 
         # write to csv file
-        for question in document.questions.keys():
-            topn_annotations = document.annotations[question][:n]
-            topn_results = document.questions[question][:n]
+        answers = document.get_answers()
+        annotations = document.get_annotations()
+
+        for question in answers.keys():
+            topn_annotations = annotations[question][:n]
+            topn_results = answers[question][:n]
 
             self.writer.writerow([question, 'annotation', '(id | accuracy)', 'result', 'score'])
             if max(len(topn_annotations), len(topn_results)) == 0:

@@ -8,16 +8,14 @@ class ActionExtractor(AbsExtractor):
     ner_threshold = 0
     weights = (1, 1, 1)
 
-    def __init__(self, weights=None, overwrite=True, ner_threshold=0):
+    def __init__(self, weights=None, ner_threshold=0):
         """
         :param weights: tuple of weights for candidate evaluation: (pos, frequency, ner)
-        :param overwrite: determines if existing answers should be overwritten.
         :param ner_threshold: Overlap threshold used to determine if a phrase contains an entity.
         """
         if weights is not None:
             self.weights = weights
 
-        self.overwrite = overwrite
         self.ner_threshold = ner_threshold
 
     def extract(self, document):
@@ -35,8 +33,8 @@ class ActionExtractor(AbsExtractor):
         who = [(c[1], c[0]) for c in candidates]
         what = [(c[2], c[0]) for c in candidates]
 
-        self.answer(document, 'who', who)
-        self.answer(document, 'what', what)
+        document.set_answer('who', who)
+        document.set_answer('what', what)
 
     def _extract_candidates(self, document, limit=None):
         """
@@ -47,12 +45,15 @@ class ActionExtractor(AbsExtractor):
         :return: A List of Tuples containing all agents, actions and their position in the document.
         """
 
+        nerTags = document.get_ner()
+        posTrees = document.get_trees()
+
         entity_list = []
         np_list = []
 
         # look up all named entities
-        for i in range(len(document.nerTags)):
-            for candidate in self._extract_entities(document.nerTags[i], filter=['PERSON', 'ORGANIZATION'],
+        for i in range(len(nerTags)):
+            for candidate in self._extract_entities(nerTags[i], filter=['PERSON', 'ORGANIZATION'],
                                                     inverted=True):
 
                 # check if a similar name was already mentioned
@@ -84,10 +85,10 @@ class ActionExtractor(AbsExtractor):
             entity[1] = name_strings[len(name_strings)-1]
 
         # extract all suitable NPs
-        for i in range(document.length):
+        for i in range(len(posTrees)):
             if limit is not None and limit == i:
                 break
-            np_list.extend([c[0], c[1], i, False] for c in self._evaluate_tree(document.posTrees[i]))
+            np_list.extend([c[0], c[1], i, False] for c in self._evaluate_tree(posTrees[i]))
 
         return np_list, entity_list
 
@@ -137,7 +138,7 @@ class ActionExtractor(AbsExtractor):
         :return: Returns clustered noun phrases
         """
 
-        overlap_threshold = 0.5  # overlap necessary for clustering candidates w/o know entities
+        overlap_threshold = 0.6  # overlap necessary for clustering candidates w/o know entities
         clusters = {}
         candidate_strings = []
         candidate_tokens = []
@@ -172,9 +173,9 @@ class ActionExtractor(AbsExtractor):
             if not np_list[i][3]:
                 clusters[candidate_strings[i]] = [deepcopy(np_list[i])]
 
-                # iterate over following candidates
+                # iterate over following candidates and compare semantic overlap
                 for j in range(len(np_list))[i+1:]:
-                    if self.overlap(candidate_tokens[i], candidate_tokens[j]) > overlap_threshold:
+                    if self.sem_overlap(np_list[i][0], np_list[j][0], 'n') > overlap_threshold:
                         clusters[candidate_strings[i]].append(deepcopy(np_list[j]))
                         np_list[j][3] = True  # mark as clustered
 
@@ -199,7 +200,7 @@ class ActionExtractor(AbsExtractor):
 
                 scores = list(self.weights)
                 # position
-                scores[0] *= (document.length - candidate[2])
+                scores[0] *= (document.get_len() - candidate[2])
                 # frequency
                 scores[1] *= frequency
                 # contains a named entity

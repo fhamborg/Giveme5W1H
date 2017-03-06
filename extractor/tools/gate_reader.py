@@ -5,7 +5,7 @@ import os
 import re
 import xml.etree.cElementTree as ElementTree
 
-from extractor.document import Document
+from extractor.document import DocumentFactory
 
 
 def parse_dir(path):
@@ -16,6 +16,7 @@ def parse_dir(path):
     :return: A list of Document objects
     """
 
+    factory = DocumentFactory()
     documents = []
 
     if not os.path.exists(path):
@@ -23,18 +24,19 @@ def parse_dir(path):
     else:
         for root, directory, files in os.walk(path):
             for file in files:
-                doc = parse_file(os.path.join(root, file))
+                doc = parse_file(os.path.join(root, file), factory)
                 if doc is not None:
                     documents.append(doc)
 
     return documents
 
 
-def parse_file(path):
+def parse_file(path, factory):
     """
     Creates a Document object from a gate file.
 
     :param path: Path to the file
+    :param factory: DocumentFactory used to instantiate the document
     :return: The Document object
     """
 
@@ -97,8 +99,8 @@ def parse_file(path):
                 answers[1].sort(key=lambda x: x[0] or 'None')
                 answers[1].sort(key=lambda x: x[1] or 'None')
 
-            document = Document(title, description, text)
-            document.annotations = annotations
+            document = factory.spawn_doc(title, description, text)
+            document.set_annotations(annotations)
 
             return document
 

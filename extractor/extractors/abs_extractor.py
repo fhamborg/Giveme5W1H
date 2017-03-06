@@ -29,24 +29,24 @@ class AbsExtractor:
     def extract(self, document):
         return document
 
-    def answer(self, document, question, answer):
-        """
-        Saves a certain answer for a document.
-
-        :param document: The Document that is processed.
-        :param question: The question that is answered.
-        :param answer: The actual answer.
-        :return:
-        """
-        if self.overwrite or len(document.questions[question]) == 0:
-            document.questions[question] = answer
-        else:
-            prev_answer = document.questions[question]
-            if isinstance(prev_answer, basestring):
-                prev_answer = [prev_answer, answer]
-            else:
-                prev_answer.append(answer)
-            document.questions[question] = prev_answer
+    # def answer(self, document, question, answer):
+    #     """
+    #     Saves a certain answer for a document.
+    #
+    #     :param document: The Document that is processed.
+    #     :param question: The question that is answered.
+    #     :param answer: The actual answer.
+    #     :return:
+    #     """
+    #     if self.overwrite or len(document.questions[question]) == 0:
+    #         document.questions[question] = answer
+    #     else:
+    #         prev_answer = document.questions[question]
+    #         if isinstance(prev_answer, basestring):
+    #             prev_answer = [prev_answer, answer]
+    #         else:
+    #             prev_answer.append(answer)
+    #         document.questions[question] = prev_answer
 
     def _extract_entities(self, tokens, filter=None, inverted=False, phrase_range=1, groups=None):
         """
@@ -114,13 +114,13 @@ class AbsExtractor:
         """
         Compares two lists of strings based on semantic similarity.
 
-        :param list_a: List of tokens with pos
-        :param list_b: List of tokens with pos
+        :param list_a: List of tuples containing tokens and POS-label
+        :param list_b: List of tuples containing tokens and POS-label
         :param pos: Optional parameter, filters tokens based on POS-label
         :return: A float representing the similarity.
         """
 
-        pos_filter = {'NOUN': 'NN', 'VERB': 'VB'}.get(pos)
+        pos_filter = {'n': 'NN', 'v': 'VB'}.get(pos)
         if pos_filter is not None:
             syn_a = [wordnet.synsets(t[0], pos=pos) for t in list_a if t[1].startswith(pos_filter)]
             syn_b = [wordnet.synsets(t[0], pos=pos) for t in list_b if t[1].startswith(pos_filter)]
@@ -144,4 +144,8 @@ class AbsExtractor:
             score += max_a
 
         score += sum(max_b)
-        return score / (len(syn_a) + len(syn_b))
+        n = len(syn_a) + len(syn_b)
+
+        if n == 0:
+            return 0
+        return score / n

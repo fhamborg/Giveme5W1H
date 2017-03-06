@@ -17,7 +17,7 @@ class NERD(AbsExtractor):
         writer.writerow(tags)
 
     def extract(self, document):
-        for sentence in document.nerTags:
+        for sentence in document.get_ner():
             first = None
             for i in range(len(sentence)):
                 if sentence[i][1] in self.tags:
@@ -40,5 +40,5 @@ if __name__ == '__main__':
             extractor = FiveWExtractor([nerd_loc, nerd_time])
             documents = gate_reader.parse_dir(path + '/data/articles')
             for document in documents:
-                print('Parsing %s' % document.raw_title)
+                print('Parsing %s' % document.get_title())
                 extractor.parse(document)

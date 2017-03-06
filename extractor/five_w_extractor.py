@@ -1,4 +1,5 @@
 import os
+import multiprocessing
 from extractor.preprocessor import Preprocessor
 from extractor.extractors import action_extractor, environment_extractor, cause_extractor
 
@@ -44,9 +45,14 @@ class FiveWExtractor:
         :return: Processed document
         """
         self.preprocessor.preprocess(doc)
-
+        threads = []
         for extractor in self.extractors:
-            extractor.extract(doc)
+            t = multiprocessing.Process(target=extractor.extract, args=(doc,))
+            threads.append(t)
+            t.start()
+
+        for t in threads:
+            t.join()
 
         return doc
 

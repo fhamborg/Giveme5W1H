@@ -38,17 +38,31 @@ class Preprocessor:
         :return Document: The processed Document object.
         """
 
-        for section in [document.raw_title, document.raw_description, document.raw_text]:
-            document.section_offsets.append(document.length)
-            if section is not None:
-                # delete '...' and quotes from plain text, then split sentences
-                sentences = sent_tokenize(re.sub(r'[.]{2,}|"', ' ', section))
-                document.sentences += [s[:398] for s in sentences if len(s) > 1]
+        raw = document.get_raw()
+        sections = []
+        tokens = []
+        pos = []
+        trees = []
+        ner = []
 
-        document.length = len(document.sentences)
 
-        for i in range(document.length):
-            document.tokens.append(word_tokenize(document.sentences[i]))
-            document.posTrees.append(ParentedTree.fromstring(self.rerankingParser.simple_parse(document.tokens[i])))
-            document.posTags.append(document.posTrees[i].pos())
-            document.nerTags.append(self.nerParser.tag(document.tokens[i]))
+        for section in raw:
+            # delete '...' and quotes from plain text, then split sentences
+            sentences = sent_tokenize(re.sub(r'[.]{2,}|"', ' ', raw[section]))
+            # cut sentences with more than 398 tokens
+            sections.append([s[:398] for s in sentences if len(s) > 1])
+
+        document.set_sentences(sections[0], sections[1], sections[2])
+
+        for section in sections:
+            for sentence in section:
+                n = len(tokens)
+                tokens.append(word_tokenize(sentence))
+                ner.append(self.nerParser.tag(tokens[n]))
+                trees.append(ParentedTree.fromstring(self.rerankingParser.simple_parse(tokens[n])))
+                pos.append(trees[n].pos())
+
+        document.set_tokens(tokens)
+        document.set_pos(pos)
+        document.set_trees(trees)
+        document.set_ner(ner)

@@ -46,8 +46,8 @@ def cmp_answers(document, questions=None, level=1):
         questions = ['who', 'what', 'when', 'where', 'why']
 
     for question in questions:
-        annotations = document.annotations[question][:level]
-        answers = document.questions[question][:level]
+        annotations = document.get_annotations()[question][:level]
+        answers = document.get_answers()[question][:level]
 
         annotations.extend([None] * (level - len(annotations)))
         answers.extend([None] * (level - len(answers)))
@@ -102,17 +102,18 @@ if __name__ == '__main__':
     with CSVWriter(abs_path + '/data/results.csv') as writer:
         print("Starting parsing of %i documents " % len(documents))
         for document in documents:
-            print("Parsing '%s'..." % document.raw_title)
+            print("Parsing '%s'..." % document.get_title())
             start = timer()
             extractor.parse(document)
-            print("Parsed  '%s' [%is]" % (document.raw_title, (timer() - start)))
+            print("Parsed  '%s' [%is]" % (document.get_title(), (timer() - start)))
             evaluation = cmp_answers(document)
+            answers = document.get_answers()
             for question in evaluation:
                 scores[question] = evaluation[question]
                 print('%s' % question)
                 # print('%s' % scores[question].translate(None, "'"))
-                print('#candidates: %i' % len(document.questions[question]))
-                count_candidates_total += len(document.questions[question])
+                print('#candidates: %i' % len(answers[question]))
+                count_candidates_total += len(answers[question])
 
             writer.save_document(document, 10)
 

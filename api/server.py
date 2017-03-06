@@ -1,4 +1,4 @@
-from extractor.document import Document
+from extractor.document import DocumentFactory
 from extractor.five_w_extractor import FiveWExtractor
 from flask import Flask, request, jsonify
 import logging
@@ -11,6 +11,7 @@ port = 5000
 debug = False
 options = None
 extractor = FiveWExtractor()
+factory = DocumentFactory()
 ch = logging.StreamHandler()
 ch.setLevel(logging.DEBUG)
 log.addHandler(ch)
@@ -28,7 +29,7 @@ def extract():
     json_article = request.get_json()
     log.debug("retrieved raw article for extraction: %s", json_article['title'])
 
-    document = Document(json_article['title'], json_article['description'], json_article['text'])
+    document = factory.spawn_doc(json_article['title'], json_article['description'], json_article['text'])
     extractor.parse(document)
 
     return jsonify(document.questions)

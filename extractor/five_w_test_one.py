@@ -1,6 +1,6 @@
 import logging
 
-from extractor.document import Document
+from extractor.document import DocumentFactory
 from extractor.extractors import action_extractor, environment_extractor, cause_extractor
 from extractor.five_w_extractor import FiveWExtractor
 
@@ -26,4 +26,5 @@ if __name__ == '__main__':
     ]
 
     extractor = FiveWExtractor(extractor_list)
-    extractor.parse(Document(title, lead, text))
+    factory = DocumentFactory()
+    extractor.parse(factory.spawn_doc(title, lead, text))

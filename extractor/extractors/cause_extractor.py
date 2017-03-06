@@ -118,7 +118,7 @@ class CauseExtractor(AbsExtractor):
                 else:
                     scores[1] *= 0.3
 
-                ranked_candidates.append((candidate[0], sum(scores)))
+                ranked_candidates.append((candidate[0], round(sum(scores), 3)))
 
         ranked_candidates.sort(key=lambda x: x[1], reverse=True)
         return ranked_candidates

@@ -208,7 +208,7 @@ class ActionExtractor(AbsExtractor):
                     scores[2] *= 1
                 else:
                     scores[2] = 0
-                ranked_candidates.append((sum(scores), candidate[0], candidate[1]))
+                ranked_candidates.append((round(sum(scores), 3), candidate[0], candidate[1]))
 
         ranked_candidates.sort(key=lambda x: x[0], reverse=True)
         return ranked_candidates

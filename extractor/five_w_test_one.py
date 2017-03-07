@@ -6,7 +6,7 @@ from extractor.five_w_extractor import FiveWExtractor
 
 
 def _print_1w(_doc, question):
-    one_w = _doc.questions[question]
+    one_w = _doc.get_answers()[question]
     if len(one_w) == 0:
         print(question + ": NONE")
         return

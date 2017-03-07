@@ -103,7 +103,6 @@ def parallel_parse(function, parser, tokens):
 def ner_resolution(q_in, q_out, parser):
     while True:
         arg = q_in.get()
-        print(arg)
         if arg is None:
             break
         else:
@@ -113,7 +112,6 @@ def ner_resolution(q_in, q_out, parser):
 def tree_construction(q_in, q_out, parser):
     while True:
         arg = q_in.get()
-        print(arg)
         if arg is None:
             break
         else:

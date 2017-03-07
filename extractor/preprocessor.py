@@ -87,11 +87,11 @@ def parallel_parse(function, parser, tokens):
                 q_in.put(None)
                 pushed += 1
 
-        if retrieved < len(tokens):
+        if retrieved < len(tokens) and (pushed - retrieved > len(workers) or pushed >= len(tokens)):
             output = q_out.get()
             result[output[0]] = output[1]
             retrieved += 1
-        else:
+        elif retrieved == len(tokens):
             break
 
     for worker in workers:

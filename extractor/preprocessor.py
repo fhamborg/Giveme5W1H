@@ -104,6 +104,5 @@ def ner_resolution(q_in, q_out, parser):
 def tree_construction(q_in, q_out, parser):
     while not q_in.empty():
         arg = q_in.get()
-        print(arg)
         result = (arg[0], ParentedTree.fromstring(parser.simple_parse(arg[1])))
         q_out.put(result)

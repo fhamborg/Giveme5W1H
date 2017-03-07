@@ -4,6 +4,28 @@ from extractor.document import DocumentFactory
 from extractor.extractors import action_extractor, environment_extractor, cause_extractor
 from extractor.five_w_extractor import FiveWExtractor
 
+
+def _print_1w(_doc, question):
+    one_w = _doc.questions[question]
+    if len(one_w) == 0:
+        print(question + ": NONE")
+        return
+    print(question + ": " + str(one_w[0]))
+    if len(one_w) == 2:
+        print(question + ": "+ str(one_w[1]))
+        # _print_list(one_w[0][0])
+
+
+def _print_5w(_doc):
+    _print_1w(_doc, "who")
+    _print_1w(_doc, "what")
+    _print_1w(_doc, "when")
+    _print_1w(_doc, "where")
+    _print_1w(_doc, "why")
+    print("")
+    print("")
+
+
 # This is a simple example how to use the extractor. You need to fill in your data correspondingly
 if __name__ == '__main__':
     log = logging.Logger('FiveWTest')
@@ -27,4 +49,5 @@ if __name__ == '__main__':
 
     extractor = FiveWExtractor(extractor_list)
     factory = DocumentFactory()
-    extractor.parse(factory.spawn_doc(title, lead, text))
+    doc = extractor.parse(factory.spawn_doc(title, lead, text))
+    _print_5w(doc)

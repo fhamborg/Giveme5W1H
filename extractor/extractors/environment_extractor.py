@@ -18,10 +18,10 @@ class EnvironmentExtractor(AbsExtractor):
         self.geocoder = Nominatim(domain=geo_domain, timeout=2)
 
         ne_lists = self._extract_candidates(document)
-        #locations = self._evaluate_locations(document, ne_lists['LOCATION'])
+        locations = self._evaluate_locations(document, ne_lists['LOCATION'])
         dates = self._evaluate_dates(document, ne_lists['DATE'], ne_lists['TIME'], ne_lists['TIME+DATE'])
 
-        #document.set_answer('where', locations)
+        document.set_answer('where', locations)
         document.set_answer('when', dates)
 
     def _extract_candidates(self, document, limit=None):
@@ -40,8 +40,8 @@ class EnvironmentExtractor(AbsExtractor):
         for i in range(len(ner_tags)):
             if limit is not None and limit == i:
                 break
-            # 'LOCATION',
-            for candidate in self._extract_entities(ner_tags[i], [ 'TIME', 'DATE'], inverted=True,
+
+            for candidate in self._extract_entities(ner_tags[i], ['LOCATION', 'TIME', 'DATE'], inverted=True,
                                                     phrase_range=2, groups={'TIME': 'TIME+DATE', 'DATE': 'TIME+DATE'}):
                 if candidate[1] != 'LOCATION':
                     # just save time related data

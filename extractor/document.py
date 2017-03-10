@@ -12,6 +12,7 @@ class Document(object):
         self._length = 0
         self._section_offsets = []
         self._sentences = []
+        self._corefs = []
         self._tokens = []
         self._posTags = []
         self._posTrees = []
@@ -34,6 +35,9 @@ class Document(object):
 
     def get_sentences(self):
         return self._sentences
+
+    def get_corefs(self):
+        return self._corefs
 
     def get_tokens(self):
         return self._tokens
@@ -61,6 +65,9 @@ class Document(object):
         offsets[1] += offsets[0]
         offsets[2] += offsets[1]
         self._section_offsets = offsets
+
+    def set_corefs(self, corefs):
+        self._corefs = corefs
 
     def set_tokens(self, tokens):
         self._tokens = tokens

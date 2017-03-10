@@ -57,7 +57,7 @@ class Preprocessor:
 
         ner = parallel_parse(ner_resolution, self.nerParser, tokens)
         trees = parallel_parse(tree_construction, self.rerankingParser, tokens)
-        pos = [tree.pos for tree in trees]
+        pos = [tree.pos() for tree in trees]
 
         document.set_tokens(tokens)
         document.set_pos(pos)

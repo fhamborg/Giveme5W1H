@@ -41,7 +41,10 @@ class CauseExtractor(AbsExtractor):
 
         for i in range(len(posTrees)):
             for candidate in self._evaluate_tree(posTrees[i]):
-                candidate_list.append([candidate[0], candidate[1], i])
+                if candidate[1] == 'RB':
+                    candidate_list.append([candidate[0], candidate[2], i])
+                else:
+                    candidate_list.append([candidate[1], candidate[2], i])
 
         candidate_list = self._evaluate_candidates(document, candidate_list)
         document.set_answer('why', candidate_list)
@@ -105,20 +108,22 @@ class CauseExtractor(AbsExtractor):
         """
 
         ranked_candidates = []
+        weights_sum = sum(self.weights)
+
         for candidate in candidates:
             if candidate is not None and len(candidate[0]) > 0:
-                scores = list(self.weights)
                 # position
-                scores[0] *= candidate[2]/document.get_len()
+                score = self.weights[0] * (document.get_len()-candidate[2]) / document.get_len()
                 # pattern
                 if candidate[1] == 'biclausal':
-                    scores[1] *= 1
+                    score += self.weights[1]
                 elif candidate[1] == 'RB':
-                    scores[1] *= 0.6
-                else:
-                    scores[1] *= 0.3
+                    score += self.weights[1] * 0.5
 
-                ranked_candidates.append((candidate[0], round(sum(scores), 3)))
+                if score > 0:
+                    score /= weights_sum
+
+                ranked_candidates.append((candidate[0], score))
 
         ranked_candidates.sort(key=lambda x: x[1], reverse=True)
         return ranked_candidates

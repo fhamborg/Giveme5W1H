@@ -1,3 +1,4 @@
+import re
 from copy import deepcopy
 from nltk.tree import ParentedTree
 from .abs_extractor import AbsExtractor
@@ -6,7 +7,9 @@ from .abs_extractor import AbsExtractor
 class ActionExtractor(AbsExtractor):
 
     ner_threshold = 0
-    weights = (1, 1, 1)
+    # weights used in the candidate evaluation:
+    # position, frequency, named entity
+    weights = (4, 3, 2)
 
     def __init__(self, weights=None, ner_threshold=0):
         """
@@ -27,14 +30,13 @@ class ActionExtractor(AbsExtractor):
         """
 
         candidates = self._extract_candidates(document)
-        candidates = self._cluster_candidates(candidates[0], candidates[1])
         candidates = self._evaluate_candidates(document, candidates)
 
-        who = [(c[1], c[0]) for c in candidates]
-        what = [(c[2], c[0]) for c in candidates]
+        who = [(c[0], c[2]) for c in candidates]
+        what = [(c[1], c[2]) for c in candidates]
 
-        document.set_answer('who', who)
-        document.set_answer('what', what)
+        document.set_answer('who', self._filter_duplicates(who))
+        document.set_answer('what', self._filter_duplicates(what))
 
     def _extract_candidates(self, document, limit=None):
         """
@@ -45,52 +47,20 @@ class ActionExtractor(AbsExtractor):
         :return: A List of Tuples containing all agents, actions and their position in the document.
         """
 
-        nerTags = document.get_ner()
-        posTrees = document.get_trees()
+        corefs = document.get_corefs()
+        trees = document.get_trees()
+        candidates = []
 
-        entity_list = []
-        np_list = []
+        for cluster in corefs:
+            for mention in corefs[cluster]:
+                # check if the mention is part of a NP-VP-NP pattern
+                for pattern in self._evaluate_tree(trees[mention['sentNum']-1]):
+                    np_string = ''.join([p[0] for p in pattern[0]])
+                    if re.sub(r'\s+', '', mention['text']) in np_string:
+                        candidates.append([pattern[0], pattern[1], cluster, mention['id']])
 
-        # look up all named entities
-        for i in range(len(nerTags)):
-            for candidate in self._extract_entities(nerTags[i], filter=['PERSON', 'ORGANIZATION'],
-                                                    inverted=True):
+        return candidates
 
-                # check if a similar name was already mentioned
-                similarity = 0
-                for entity in entity_list:
-                    for name in entity[0]:
-                        similarity = max(similarity, self.overlap(candidate[0], name))
-
-                    if 1 > similarity > self.ner_threshold:
-                        entity[0].append(candidate[0])
-                        break
-
-                # no similar name could be found, this must be a new entity
-                if similarity == 0:
-                    entity_list.append([[candidate[0]], None, candidate[1]])
-
-        # sort names of entities by ascending length and select longest as most accurate representation
-        for entity in entity_list:
-
-            name_strings = []
-
-            for name in entity[0]:
-                if isinstance(name, list):
-                    name = ' '.join(name)
-                name_strings.append(name)
-
-            name_strings.sort(key=len)
-            entity[0] = name_strings
-            entity[1] = name_strings[len(name_strings)-1]
-
-        # extract all suitable NPs
-        for i in range(len(posTrees)):
-            if limit is not None and limit == i:
-                break
-            np_list.extend([c[0], c[1], i, False] for c in self._evaluate_tree(posTrees[i]))
-
-        return np_list, entity_list
 
     def _evaluate_tree(self, tree):
         """
@@ -103,27 +73,31 @@ class ActionExtractor(AbsExtractor):
         candidates = []
 
         for subtree in tree.subtrees():
-            # A subject of a sentence s can be defined as the NP that is a child of s and the sibling of VP
+                        # A subject of a sentence s can be defined as the NP that is a child of s and the sibling of VP
             if subtree.label() == 'NP' and subtree.parent().label() == 'S':
+
+                # Skip NPs containing a VP
+                if any(list(subtree.subtrees(filter=lambda t: t.label() == 'VP'))):
+                    continue
 
                 # skip phrases starting with certain pos-patterns
                 pos = subtree.pos()
 
-                for label in pos:
-                    if label[1] in ['NN', 'NNS', 'NNP', 'NNPS', 'PRP', 'PRP$']:
-                        break
+                # for label in pos:
+                #     if label[1] in ['NN', 'NNS', 'NNP', 'NNPS', 'PRP', 'PRP$']:
+                #         break
 
-                if label is None or label[1] not in ['NN', 'NNS', 'NNP', 'NNPS']:
-                    continue
+                # if label is None or label[1] not in ['NN', 'NNS', 'NNP', 'NNPS']:
+                #     continue
 
                 # check siblings for VP
                 sibling = subtree.right_sibling()
                 while sibling is not None:
                     if sibling.label() == 'VP':
                         first = sibling.leaves()[0].lower()
-                        if first.startswith('say') or first.startswith('said'):
-                            break
-                        candidates.append((pos, self.cut_what(sibling, 2).pos()))
+                        # if first.startswith('say') or first.startswith('said'):
+                        #     break
+                        candidates.append((pos, self.cut_what(sibling, 3).pos()))
                         break
                     sibling = sibling.right_sibling()
 
@@ -181,7 +155,7 @@ class ActionExtractor(AbsExtractor):
 
         return clusters
 
-    def _evaluate_candidates(self, document, clusters):
+    def _evaluate_candidates(self, document, candidates):
         """
         Calculate a confidence score for extracted candidates.
 
@@ -193,37 +167,69 @@ class ActionExtractor(AbsExtractor):
         # TODO include VP for ranking?
 
         ranked_candidates = []
+        d_len = document.get_len()
+        ners = document.get_ner()
+        pos = document.get_pos()
+        corefs = document.get_corefs()
+        max_len = len(max(corefs.values(), key=len))
 
-        for cluster in clusters:
-            frequency = len(clusters[cluster])
-            for candidate in clusters[cluster]:
+        for candidate in candidates:
+            verb = candidate[1][0][0].lower()
+            if verb.startswith('say') or verb.startswith('said'):
+                # skip actions starting with say etc
+                continue
 
-                scores = list(self.weights)
-                # position
-                scores[0] *= (document.get_len() - candidate[2])
-                # frequency
-                scores[1] *= frequency
-                # contains a named entity
-                if candidate[3]:
-                    scores[2] *= 1
-                else:
-                    scores[2] = 0
-                ranked_candidates.append((round(sum(scores), 3), candidate[0], candidate[1]))
+            cluster = corefs[candidate[2]]
+            score = (len(cluster) / max_len) * self.weights[1]
+            rep = None
+            ner = False
+            type = ''
 
-        ranked_candidates.sort(key=lambda x: x[0], reverse=True)
+            for mention in cluster:
+                if mention['id'] == candidate[3]:
+                    type = mention['type']
+                    if mention['sentNum'] < d_len:
+                        # position
+                        score += ((d_len - mention['sentNum'] + 1) / d_len) * self.weights[0]
+                if mention['isRepresentativeMention']:
+                    # representing mention for agent without a proper name
+                    rep = pos[mention['sentNum']-1][mention['headIndex']-1:mention['endIndex']-1]
+                    if rep[-1][1] == 'POS':
+                        rep = rep[:-1]
+
+                if not ner:
+                    for token in ners[mention['sentNum']-1][mention['headIndex']-1:mention['endIndex']-1]:
+                        if token[1] in ['PERSON', 'ORGANIZATION', 'LOCATION']:
+                            ner = True
+                            score += self.weights[2]
+                            break
+
+            if score > 0:
+                score /= sum(self.weights)
+
+            if type == 'PRONOMINAL':
+                # use representing mention if the agent is only a pronoun
+                ranked_candidates.append((rep, candidate[1], score))
+            else:
+                ranked_candidates.append((candidate[0], candidate[1], score))
+
+        ranked_candidates.sort(key=lambda x: x[2], reverse=True)
         return ranked_candidates
 
-    def cut_what(self, tree, min=0):
-        n = 0
+    def cut_what(self, tree, min=0, length=0):
         if type(tree[0]) is not ParentedTree:
+
             return ParentedTree(tree.label(), [tree[0]])
         else:
             children = []
             for sub in tree:
-                child = self.cut_what(sub, n - min)
-                n += len(child.leaves())
+                child = self.cut_what(sub, min, length)
+                length += len(child.leaves())
                 children.append(child)
-                if sub.label() == 'NP' and n <= min:
+                if sub.label() == 'NP':
+                    sibling = sub.right_sibling()
+                    if length < min and sibling is not None and sibling.label() == 'PP':
+                        children.append(ParentedTree.fromstring(str(sibling)))
                     break
             return ParentedTree(tree.label(), children)
 

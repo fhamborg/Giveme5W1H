@@ -53,11 +53,10 @@ class CSVWriter:
 
                 if len(topn_results) > i:
                     if question in ['where', 'when']:
-                        answer = ' '.join(topn_results[i][0])
+                        row[3] = ' '.join(topn_results[i][0])
                     else:
-                        answer = ' '.join([token[0] for token in topn_results[i][0]])  # filter pos
-                    row[3] = answer
-                    row[4] = topn_results[i][1]
+                        row[3] = ' '.join([token[0] for token in topn_results[i][0]])  # filter pos
+                    row[4] = round(topn_results[i][1], 3)
                     data = True
 
                 if data:

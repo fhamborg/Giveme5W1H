@@ -4,7 +4,6 @@ import logging
 import os
 import re
 import xml.etree.cElementTree as ElementTree
-
 from extractor.document import DocumentFactory
 
 
@@ -58,8 +57,14 @@ def parse_file(path, factory):
             title = html.unescape(ElementTree.tostring(text_node, method='text').decode(encoding))
             description = None
             text = None
+            pubdate = None
 
-            # read the Annotation
+            # search for publication date in document features
+            for feature in root.find('GateDocumentFeatures'):
+                if feature[0] == 'pubdate':
+                    pubdate = feature[1]
+
+            # read the annotation
             annotations = {'what': [], 'who': [], 'why': [], 'where': [], 'when': []}
             for annotation in root.find('AnnotationSet'):
                 attrib = annotation.attrib
@@ -101,6 +106,7 @@ def parse_file(path, factory):
 
             document = factory.spawn_doc(title, description, text)
             document.set_annotations(annotations)
+            document.set_date(pubdate)
 
             return document
 

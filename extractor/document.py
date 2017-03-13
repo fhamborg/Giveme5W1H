@@ -8,6 +8,7 @@ class DocumentManager(BaseManager):
 class Document(object):
     def __init__(self, title, desc='', text=''):
         self._raw = {'title': title, 'description': desc, 'text': text}
+        self._date = None
 
         self._length = 0
         self._section_offsets = []
@@ -29,6 +30,9 @@ class Document(object):
 
     def get_raw(self):
         return self._raw
+
+    def get_date(self):
+        return self._date
 
     def get_sections(self):
         return self._section_offsets
@@ -56,6 +60,9 @@ class Document(object):
 
     def get_annotations(self):
         return self._annotations
+
+    def set_date(self, date):
+        self._date = date
 
     def set_sentences(self, title, description, text):
         self._sentences = (title or []) + (description or []) + (text or [])

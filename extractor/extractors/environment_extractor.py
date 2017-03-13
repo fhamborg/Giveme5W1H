@@ -1,11 +1,27 @@
+import time
 from .abs_extractor import AbsExtractor
 from copy import deepcopy
 from geopy.geocoders import Nominatim
 from geopy.distance import vincenty
+from parsedatetime import parsedatetime as pdt
 import dateutil.parser as dparser
 
+
 class EnvironmentExtractor(AbsExtractor):
-    weights = ((1, 1), (10, 1, 1, 5))  # ((loc_pos, loc_freq), (time_pos, time_date, time_time, time_dateutil))
+    weights = ((1, 1), (2, 2, 1, 1))  # ((loc_pos, loc_freq), (time_pos, time_date, time_time, time_neigbours))
+
+    def __init__(self, weights=None, overwrite=True):
+        """
+        :param overwrite: determines if existing answers should be overwritten.
+        """
+        if weights is not None:
+            self.weights = weights
+
+        self.overwrite = overwrite
+        geo_domain = 'nominatim.openstreetmap.org'
+        self.geocoder = Nominatim(domain=geo_domain, timeout=2)
+        self.calendar = pdt.Calendar()
+        self.time_dela = 129600  # 32h in seconds
 
     def extract(self, document):
         """
@@ -14,15 +30,13 @@ class EnvironmentExtractor(AbsExtractor):
         :param document: The document to analyze
         :return: Processed document
         """
-        geo_domain = 'nominatim.openstreetmap.org'
-        self.geocoder = Nominatim(domain=geo_domain, timeout=2)
 
         ne_lists = self._extract_candidates(document)
-        #locations = self._evaluate_locations(document, ne_lists['LOCATION'])
-        dates = self._evaluate_dates(document, ne_lists['DATE'], ne_lists['TIME'], ne_lists['TIME+DATE'])
+        locations = self._evaluate_locations(document, ne_lists[0])
+        dates = self._evaluate_dates(document, ne_lists[1])
 
-        #document.set_answer('where', locations)
-        document.set_answer('when', dates)
+        document.set_answer('where', self._filter_duplicates(locations, False))
+        document.set_answer('when', self._filter_duplicates(dates, False))
 
     def _extract_candidates(self, document, limit=None):
         """
@@ -35,24 +49,33 @@ class EnvironmentExtractor(AbsExtractor):
 
         # first check the results of the NER
         ner_tags = document.get_ner()
-        ne_lists = {'LOCATION': [], 'DATE': [], 'TIME': [], 'TIME+DATE': []}
+        locations = []
+        dates = []
+        last_date = None
 
         for i in range(len(ner_tags)):
             if limit is not None and limit == i:
                 break
-            # 'LOCATION',
-            for candidate in self._extract_entities(ner_tags[i], [ 'TIME', 'DATE'], inverted=True,
+            for candidate in self._extract_entities(ner_tags[i], ['LOCATION', 'TIME', 'DATE'], inverted=True,
                                                     phrase_range=2, groups={'TIME': 'TIME+DATE', 'DATE': 'TIME+DATE'}):
-                if candidate[1] != 'LOCATION':
-                    # just save time related data
-                    ne_lists[candidate[1]].append([candidate[0], i])
-                else:
+
+                if candidate[1] == 'LOCATION':
                     # geocode retrieved entities
                     location = self.geocoder.geocode(' '.join(candidate[0]))
                     if location is not None:
-                        ne_lists['LOCATION'].append((candidate[0], location, i))
+                        locations.append((candidate[0], location, i))
+                elif candidate[1] == 'TIME':
+                    # try to associate a date to the given time
+                    if last_date is not None:
+                        dates.append((last_date + candidate[0],i))
+                    else:
+                        dates.append((last_date + candidate[0], i))
+                else:
+                    # save date and update last_date
+                    dates.append([candidate[0], i])
+                    last_date = candidate[0]
 
-        return ne_lists
+        return locations, dates
 
     def _evaluate_locations(self, document, candidates):
         """
@@ -65,6 +88,8 @@ class EnvironmentExtractor(AbsExtractor):
         raw_locations = []
         unique_locations = []
         ranked_locations = []
+        weights = self.weights[0]
+        weights_sum = sum(weights)
 
         for location in candidates:
             bb = location[1].raw['boundingbox']  # bb contains min lat, max lat, min long, max long
@@ -96,20 +121,24 @@ class EnvironmentExtractor(AbsExtractor):
         unique_locations.sort(key=lambda x: x[4], reverse=True)
 
         # check entailment
-        for i in range(len(unique_locations)):
-            location = unique_locations[i]
-            for alt in raw_locations[i + 1:]:
+        max_n = 0
+        for index, location in enumerate(unique_locations):
+            for alt in raw_locations[index + 1:]:
                 if alt[3][0] >= location[2][0] >= alt[3][1] and alt[3][2] >= location[2][1] >= alt[3][3]:
                     # add parent's number of mentions
                     location[6] += alt[6]
+            max_n = max(max_n, location[6])
 
-            score = self.weights[0][0] * (document.get_len() - location[5]) + self.weights[0][1] * location[6]
+        for location in unique_locations:
+            score = weights[0] * (document.get_len() - location[5])/document.get_len() + weights[1] * location[6]/max_n
+            if score > 0:
+                score /= weights_sum
             ranked_locations.append((location[0], score))
 
         ranked_locations.sort(key=lambda x: x[1], reverse=True)
         return ranked_locations
 
-    def _evaluate_dates(self, document, date_list, time_list, date_time_list):
+    def _evaluate_dates(self, document, date_list):
         """
         Calculate a confidence score for extracted time candidates.
 
@@ -121,49 +150,46 @@ class EnvironmentExtractor(AbsExtractor):
         """
 
         ranked_candidates = []
-        time_candidates = deepcopy(time_list)
         weights = self.weights[1]
-
-        for candidate in date_time_list:
-            scores = [0] * len(weights)
-            scores[0] = weights[0] * (document.get_len() - candidate[1])/document.get_len()
-            scores[1] = weights[1]
-            scores[2] = weights[2]
-
-            ranked_candidates.append([candidate[0], deepcopy(scores)])
+        weights_sum = sum(weights)
+        reference = self.calendar.parse(document.get_date() or '')
 
         for candidate in date_list:
-            scores = [0] * len(weights)
-            scores[0] = weights[0] * (document.get_len() - candidate[1]) / document.get_len()
-            scores[1] = weights[1]
+            date_str = ' '.join(candidate[0])
+            if date_str.lower().strip() == 'now':
+                continue
+            parse = self.calendar.parse(date_str, reference[0])
+            if parse[1] > 0:
+                # date could be parsed
+                ranked_candidates.append([candidate[0], candidate[1], parse[0], parse[1], 1])
 
-            for i in range(len(time_candidates)):
-                # look for time-data in adjacent sentences
-                if abs(candidate[1] - time_candidates[i][1]) < 2:
-                    scores[2] = weights[2] * 0.8
-                    candidate[0].extend(time_candidates[i][0])
-                    time_candidates.pop(i)
-                    break
+        ranked_candidates.sort(key=lambda x: x[2])
 
-            ranked_candidates.append([candidate[0], deepcopy(scores)])
+        # count 'neighbours' within time_delta range
+        max_n = 0
+        for index, candidate in enumerate(ranked_candidates):
+            for neighbour in ranked_candidates[index+1:]:
+                if (time.mktime(neighbour[2]) - time.mktime(candidate[2])) <= self.time_dela:
+                    candidate[4] += 1
+                    neighbour[4] += 1
+            max_n = max(max_n, candidate[4])
 
-        for candidate in time_candidates:
-            scores = [0] * len(weights)
-            scores[0] = weights[0] * (document.get_len() - candidate[1]) / document.get_len()
-            scores[2] = weights[2]
-
-            ranked_candidates.append([candidate[0], deepcopy(scores)])
-
-        # try to compute a dateutil-object
+        # calculate the scores
         for candidate in ranked_candidates:
-            try:
-                dparser.parse(' '.join(candidate[0]), fuzzy=True)
-                candidate[1][3] = weights[3]
-            except ValueError as e:
-                candidate[1][3] = 0
+            score = weights[0] * (document.get_len() - candidate[1])/document.get_len()     # position
+            if candidate[3] == 1:
+                score += weights[1]                 # date
+            elif candidate[3] == 2:
+                score += weights[2]                 # time
+            else:
+                score += weights[1] + weights[2]    # date + time
+            score += weights[3] * (candidate[4]/max_n)  # neighbourhood/frequency
 
-            candidate[1] = round(sum(candidate[1]), 3)
+            if score > 0:
+                score /= weights_sum
+            candidate[1] = score
 
+        ranked_candidates = [(c[0], c[1]) for c in ranked_candidates]
         ranked_candidates.sort(key=lambda x: x[1], reverse=True)
         return ranked_candidates
 

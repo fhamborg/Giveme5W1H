@@ -93,6 +93,29 @@ class AbsExtractor:
 
         return entity_list
 
+    def _filter_duplicates(self, candidates, exact=True):
+        mentioned = []
+        filtered = []
+        for candidate in candidates:
+            if type(candidate[0][0]) == str:
+                string = ' '.join(candidate[0]).lower()
+            else:
+                # tuples containing token and pos
+                string = ' '.join([c[0] for c in candidate[0]]).lower()
+
+            new = True
+            if exact:
+                new = string not in mentioned
+            else:
+                for member in mentioned:
+                    if string in member:
+                        new = False
+                        break
+            if new:
+                mentioned.append(string)
+                filtered.append(candidate)
+        return filtered
+
     def overlap(self, list_a, list_b, sensitive=False):
         """
         Compares two lists of strings and returns a percentage of overlap.

@@ -4,11 +4,11 @@ import csv
 class CSVWriter:
     def __init__(self, path):
         """
-        A simple csv writer
+        A simple csv writer for saving results.
 
-        :param path: Path to the file
+        :param path: Absolute path to the file
         """
-        self.csv_file = open(path, 'w', encoding="utf-8")
+        self.csv_file = open(path, 'w+', encoding="utf-8")
         self.csv_file.write(('"sep=,"\n'))
         self.writer = csv.writer(self.csv_file)
 
@@ -21,10 +21,13 @@ class CSVWriter:
 
     def save_document(self, document, n=3):
         """
-        Saves the first n 5Ws answers to the csv document.
+        Saves the first n 5Ws answers to a csv document.
 
         :param document: The parsed Document
-        :param n: Number of candidates to save.
+        :type document: Document
+        :param n: Number of candidates to save
+        :type n: Integer
+
         :return: None
         """
 
@@ -35,13 +38,11 @@ class CSVWriter:
         annotations = document.get_annotations()
 
         for question in answers.keys():
+            #get the first n results and annotations
             topn_annotations = annotations[question][:n]
             topn_results = answers[question][:n]
 
             self.writer.writerow([question, 'annotation', '(id | accuracy)', 'result', 'score'])
-            if max(len(topn_annotations), len(topn_results)) == 0:
-                self.writer.writerow([])
-
             for i in range(n):
                 row = ['', '', '', '', '']
                 data = False

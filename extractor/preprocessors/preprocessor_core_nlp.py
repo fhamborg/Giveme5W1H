@@ -1,28 +1,34 @@
-from pycorenlp import StanfordCoreNLP
-import os
-from extractor.tools import gate_reader
-from timeit import default_timer as timer
+import logging
 import nltk
+from pycorenlp import StanfordCoreNLP
 
 
 class Preprocessor:
 
+    log = None
+
     def __init__(self, host=None):
         """
-        Performs all necessary preprocessing
+        This preprocessor connects to an CoreNLP server to perform sentence splitting, tokenization, syntactic parsing,
+        named entity recognition and coref-resolution on passed documents.
 
         :param host: the core-nlp host
         """
 
+        self.log = logging.getLogger('GiveMe5W')
+
+        # connect to CoreNLP server
         if host is None:
             self.cnlp = StanfordCoreNLP("http://localhost:9000")
         else:
             self.cnlp = StanfordCoreNLP(host)
 
+        # define basic config and desired processing pipeline
         self.config = {
             'timeout': 500000,
             'annotators': 'tokenize,ssplit,pos,lemma,parse,ner,depparse,mention,coref',
             'tokenize.language': 'English',
+            # CoreNLps charniak-wrapper has some problems ...
             #'parse.type': 'charniak',
             #'parse.executable': '/home/ubuntu/bllip-parser/',
             #'parse.verbose': 'true',
@@ -32,14 +38,18 @@ class Preprocessor:
 
     def preprocess(self, document):
         """
-        Performs all necessary preprocessing
+        Send the document to CoreNLP server to execute the necessary preprocessing.
 
-        :param document: Document object to preprocess.
+        :param document: Document object to process.
+        :type document: Document
+
         :return Document: The processed Document object.
         """
 
         raw = document.get_raw()
         text = ''
+
+        # concatenate sections to send them to the server
         for section in raw:
             text += raw[section]
 
@@ -72,13 +82,4 @@ class Preprocessor:
             document.set_tokens(tokens)
             document.set_pos(pos)
             document.set_ner(ner)
-
-if __name__ =="__main__":
-
-    prep = Preprocessor("http://132.230.224.141:9000")
-    abs_path = os.path.dirname(os.path.dirname(__file__))
-    documents = gate_reader.parse_dir(abs_path + '/data/articles')
-    start = timer()
-    prep.preprocess(documents[1])
-    print(timer() - start)
-
+            self.log.debug("Preprocessor: Finished preprocessing: '%s...'" % document.get_title()[:50])

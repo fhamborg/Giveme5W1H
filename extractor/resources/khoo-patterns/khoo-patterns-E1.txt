@@ -1,0 +1,486 @@
+# The following set of patterns indicate causal relations across two sentences.
+# They are listed here to preclude them being used for single sentences.
+- &S so
+- &S &THIS &AUX &ADV_ &ADJ &EFFECT/RESULT of
+- &S &THIS &AUX &ADV_ due &RB_ to
+- &S &THIS &AUX &ADV_ owing to
+- &S &THIS &AUX &ADV_ &ADJ &REASON why
+- &S &THIS &AUX &ADV_ why
+- &S &THIS &AUX &ADV_ because
+- &S &THIS &AUX &ADV_ on account of
+- &S it &AUX &ADV_ for &THIS &REASON that
+- there *** &REASON &FOR/WHY
+- there *** &EFFECT/RESULT &OF/FROM
+- there *** &EFFECT/RESULT to
+- &THIS &AUX *** not *** only &REASON &FOR/WHY
+- &THIS &AUX *** not *** only &EFFECT/RESULT &OF/FROM
+- &THIS &AUX *** not *** only &EFFECT/RESULT to
+- there &AUX *** &ANOTHER &REASON &FOR/WHY
+- there &AUX *** &ANOTHER &EFFECT/RESULT &OF/FROM
+- there &AUX *** &ANOTHER &EFFECT/RESULT to
+- &S &ADJ &EFFECT/RESULT :
+- &S &ADJ &EFFECT/RESULT &AUX
+- &S &ADJ &REASON :
+- &S &ADJ &REASON &AUX
+- &S &ADJ &CAUSE :
+- &S &ADJ &CAUSE &AUX
+- &S &THIS &AUX &ADV_ &CRITICAL in
+- &S &THIS &AUX &ADV_ &NECESSARY &TO/FOR
+C how &CRITICAL [1] &AUX to the success of [2] &._
+- &NO &EFFECT/RESULT
+C &C1_ [1] &AND &THIS/IT &AUX_ &ADV_ &MAKE it possible for [2] &._
+- as possible
+C &C1_ [1] &AND &THIS/IT &AUX_ &ADV_ &MAKE [2] possible
+C &C1_ &[1](AND_THIS) &AUX_ &ADV_ &MAKE it possible for [2] &._
+C &C2_ [2] &AND [1] &AUX_ &ADV_ &MAKE &THIS/IT possible
+C &C1_ &[1](AND_THIS) &AUX_ &ADV_ &MAKE [2] possible
+# C &C1_ [1] &WHICH [1] &REPORT &EFFECT/RESULT in [2] &._
+# C &C1_ [1] &WHICH [1] &REPORT &EFFECT/RESULT &OF/FOR [2] &._
+- &PERSON &AUX_ &ADV_ fulfill* *** dream of
+C &C1_ &[1](AND_THIS) &AUX_ &ADV_ fulfill* *** dream of [2] &._
+C [1] &AND &THEREFORE [2] &._
+C [1] and in consequence [2] &._
+C &C1_ [1] so that [2] &.
+- as *** , so &BE
+- as *** , so &HAVE
+- or so
+- if so
+- &NOT so
+- more so
+- so &BE
+- so &HAVE
+- &THINK so
+C &C1_ [1] so [1] that [2] &._
+C &C1_ [1] so [1] as to [2] &._
+C &C2_ [2] so [j:1] &AUX [1] &._
+# C &C1_ [1] too [1] to [2] &._
+- so @RB
+- so *** as
+- &BE so
+- so @J
+- so @V
+- so @W
+C &C1_ [1] so [2] &._
+C [1] &AND for &THIS &REASON [2] &._
+- &NOT as &DT &EFFECT/RESULT
+C [1] &AND as &ADJ &EFFECT/RESULT of &THIS[1],[2] &._
+C [1] &AND as &ADJ &EFFECT/RESULT [2] &._
+- &NOT on account
+C [1] &AND on &THIS account [2] &._
+C [1] &AND on account of &THIS[1],[2] &._
+C [1] &AND because of &THIS[1],[2] &._
+C [1] &AND on &THIS &GROUND [2] &._
+C [2] &AND owing to &THIS[1],[2] &._
+C &C2_ [2] for &ADJ &REASON *** : [1]
+C &C2_ [2] on the &GROUND that [1] &._
+C &C2_ [2] for &ADJ &REASON that [1] &._
+C &C2_ [2] on &ADJ &GROUND *** : [1]
+C &C1_ [1] with the &EFFECT/RESULT that [2] &._
+- &NOT because
+C it &AUX &ADV_ because of [1] that [2] &._
+C it &AUX &ADV_ because [1] that [2] &._
+C it &AUX &ADV_ due &RB_ to [1] that [2] &._
+C &C2_ &[2](AND_THIS) &AUX &ADV_ because of [1] &._
+C &C2_ &[2](AND_THIS) &AUX &ADV_ because [1] &._
+C &C2_ &[2](AND_THIS) &AUX &ADV_ on account of [1] &._
+C &C because of &[N:1],[2]
+C &C2_ [2] because of [1] &._
+- &NOT owing to
+C &C owing to &[N:1],[2]
+C &C2_ [2] owing to [1] &._
+- &NOT on the &GROUND
+C &C on the &GROUND of &[N:1],[2]
+C &C2_ [2] on the &GROUND of [1] &._
+- on &MANY &GROUND
+- on &DT_ &SAME/DIFFERENT &GROUND
+C &C on [j:1] &GROUND [2] &._
+C &C2_ [2] on [j:1] &GROUND
+C &C on account of &[N:1],[2]
+C &C2_ [2] on account of [1] &._
+- &NOT for &REASON
+C &C for reasons of &[N:1],[2]
+C &C2_ [2] for reasons of [1] &._
+- for &MANY reasons
+- for &DT_ &SAME/DIFFERENT &REASON
+C &C for [j:1] reasons [2] &._
+C &C2_ [2] for [j:1] reasons
+- &NOT as &DT &EFFECT/RESULT
+C &C as &ADJ &EFFECT/RESULT of &[N:1],[2]
+C &C2_ [2] as &ADJ &EFFECT/RESULT of [1] &._
+- &NOT for the sake
+C &C for the sake of &[1], [2] &._
+C &C for the sake of [1] &[C:2].
+C &C for the sake of [G:1] [2] &._
+C &C2_ [2] for the sake of &[G:1].
+C &C2_ [2] for [1] sake
+- &NOT by reason
+C &C by reason of &[N:1],[2]
+C &C2_ [2] by reason of [1] &._
+C with the &ADVENT of &[N:1],[2]
+- &NOT due &RB_ to
+- due to expire
+C &C due &RB_ to &[N:1],[2]
+C &C2_ &[2](AND_THIS) &AUX &ADV_ due &RB_ to [1] &._
+C &C2_ [2] due &RB_ to &[N:1]
+C &C2_ [2] due &RB_ to [1] &._
+C &C on account of &[N:1],[2]
+C &C2_ [2] on account of [1] &._
+C &C because &[C:1],[2]
+C [C:2] only because &[C:1].
+C [C:2] because &[C:1].
+C &C2_ [2] only because [1] &._
+C &C2_ [2] because [1] &._
+- &NOT for
+C [C:2] for &[C:1].
+C &C2_ [2] for &[C:1].
+- ever since
+- time since
+- @DT @J since
+- since *** &TIME
+- since &[N:0] ,
+- since &[N:0] &.
+- &TIME2 since
+- &S &[N:0] since
+- , &[N:0] since
+- &S &[N:0] [P:0] since
+- , &[N:0] [P:0] since
+- &HAVE since
+- since then
+- since before
+- since after
+- since *** , *** &HAVE &ADV_ &VBD
+- &HAVE &ADV_ &VBD *** since
+C &C since &[C:1],[2]
+C &C2_ [2] since [1] &._
+- as *** as
+- such *** as
+- same *** as
+- &AS_BEFORE as
+- as &AS_AFTER
+- @J as [N:0] &BE
+- @J as [N:0] seems
+- , as &[N:0] &RB_ $that &,/.
+- " as &[N:0] &RB_ $that &,/.
+- &C as
+- &C2_ [2] as &"_ &[N:0] &"_ &.
+- &C2_ [2] as &"_ &[N:0] &"_ [P:0] &.
+- $as *** as
+C &C2_ &[C:2] as &[N:1] [1] &._
+# C &C having &[1], [2] &._
+# C &C having [1] [C:2]
+# C &C2_ [2] having [1] &._
+# C having &[1], [2] &._
+# C having [1] [C:2]
+- &NOT &HAVE &ADJ &EFFECT
+C &C1_ &[1](AND_THIS) &AUX_ &ADV_ &HAVE &ADJ &EFFECT/RESULT *** : [2]
+C &C1_ &[1](AND_THIS) &AUX_ &ADV_ &HAVE &ADJ &EFFECT on [2] &._
+- &NOT &ADJ &EFFECT/RESULT
+C &C2_ &[2](AND_THIS) &AUX &ADV_ &ADJ &EFFECT/RESULT &OF/FROM [1] &._
+C &C1_ [1] &AND &ADJ &EFFECT/RESULT *** : [2]
+- &BE &ADV_ &VBD/VBG
+- &BE &NOT &ADV_ &VBD/VBG
+- &BE &ADJ &.
+C &C1_ [1] &AND &ADJ &EFFECT/RESULT of &THIS &AUX [2] &._
+C &C1_ [1] &AND &ADJ &EFFECT/RESULT of &THIS [1] &AUX [2] &._
+C &C1_ [1] &AND &ADJ &EFFECT/RESULT &AUX [2] &._
+C &EFFECT/RESULT of [1] &AUX &ADV_ on [2] &._
+C &EFFECT of [1] on [2] : [2]
+C &EFFECT of [1] on [2] &AUX &ADV_ &VBD/VBG
+C &EFFECT of [1] on [2] &AUX [2] &._
+- &EFFECT of &[conj_N:0],
+C &EFFECT of &[conj_N:1] on [2] &._
+- &EFFECT &[P:0], *** on
+C &EFFECT of [1] on [2] &._
+C &EFFECT/RESULT of [1] : [2]
+C &EFFECT/RESULT of [1] &AUX &ADV_ that [2] &._
+C &EFFECT/RESULT of [1] &AUX &NOT *** but [2] &._
+- &BE &NOT
+C &EFFECT/RESULT of &[conj_N:1] &AUX [2] &._
+- &EFFECT/RESULT &[P:0],
+C &EFFECT/RESULT of [1] &AUX &[not_cc:2].
+C &EFFECT [1] &HAVE on [2] &._
+C &EFFECT [1] &AUX_ &ADV_ &HAVE on [2] &._
+- &NOT &ADJ &CAUSE
+C &C1_ &[1](AND_THIS) &AUX &ADV_ &ADJ &CAUSE &OF/IN [2] &._
+C &C1_ &[2](AND_THIS) &AUX_ &ADV_ &HAVE &ADJ &CAUSE *** : [1]
+C &C2_ [2] &AND &ADJ &CAUSE *** : [1]
+- &BE &ADV_ &VBD/VBG
+- &BE &NOT &ADV_ &VBD/VBG
+- &BE &J &.
+C &C2_ [2] &AND &ADJ &CAUSE of &THIS/IT &AUX [1] &._
+C &C2_ [2] &AND &ADJ &CAUSE of &THIS [2] &AUX [1] &._
+C &C2_ [2] &AND &ADJ &CAUSE &AUX [1] &._
+C &CAUSE of [2] : [1]
+C &CAUSE of [2] &AUX &ADV_ that [1] &._
+C &CAUSE of [2] &AUX &ADV_ &NOT *** but [1] &._
+- &AUX &NOT
+- &CAUSE of &[conj_N:0],
+C &CAUSE of &[conj_N:2] &AUX [1] &._
+- &CAUSE &[P:0],
+C &CAUSE of [2] &AUX &[not_cc:1].
+- &HAVE &ADJ_ &REASON for
+- &NOT &ADJ &REASON for
+- &NOT &ADJ &REASON
+- there &AUX &ADJ_ &REASON
+- &REASON to @V
+C &C1_ &[1](AND_THIS) &AUX &ADV_ &ADJ_ &REASON [2] &._
+- &NOT why
+C &C1_ &[1](AND_THIS) &AUX &ADV_ why [2] &._
+C &C2_ [2] &AND &ADJ &REASON *** : [1]
+- &BE &ADV_ &VBD/VBG
+- &BE &NOT &ADV_ &VBD/VBG
+- &BE &J &.
+C &C2_ [2] &AND &ADJ &REASON &OF/FOR &THIS/IT &AUX [1] &._
+C &C2_ [2] &AND &ADJ &REASON &OF/FOR &THIS/IT [2] &AUX [1] &._
+C &C2_ [2] &AND &ADJ &REASON why &AUX [1] &._
+C &C2_ [2] &AND &ADJ &REASON why [2] &AUX &ADV_ &BECAUSE/THAT [1] &._
+C &C2_ [2] &AND &ADJ &REASON why [2] &[VP:2] &AUX [1] &._
+C &C2_ [2] &AND &ADJ &REASON &AUX [1] &._
+C &REASON &FOR/WHY [2] : [1]
+C &REASON &FOR/WHY [2] &AUX &ADV_ &BECAUSE/THAT [1] &._
+C &REASON [2] &AUX &ADV_ &BECAUSE/THAT [1] &._
+C &REASON &FOR/WHY [2] &AUX &ADV_ &NOT *** but [1] &._
+- &BE &NOT
+- &REASON &FOR &[conj_N:0],
+C &REASON &FOR &[conj_N:2] &AUX [1] &._
+- &REASON &[P:0],
+C &REASON &FOR [2] &AUX &[not_cc:1].
+C &REASON why [2] &[VP:2] &AUX &[not_cc:1].
+C &REASON &[C:2] &AUX &[not_cc:1] [1] &._
+C why [2] &AUX &ADV_ that [1] &._
+C &C1_ &[1](AND_THIS) &AUX_ &ADV_ &PROVIDE a basis for [2] &._
+C &C1_ &[1](AND_THIS) &AUX &ADV_ a basis for [2] &._
+- &NOT &CRITICAL &TO/FOR
+- &NOT &CRITICAL
+- important &TO/FOR &DT_ &PERSON
+C &TO/FOR [v:2] , it &AUX &ADV_ &CRITICAL to &[VP:1].
+C &TO/FOR [v:2] &[2], it &AUX &ADV_ &CRITICAL to &[VP:1].
+C it &AUX &ADV_ &CRITICAL &TO/FOR &[VP:1] to &[VP:2].
+C for the &[2], it &AUX &ADV_ &CRITICAL to &[VP:1].
+C it &AUX &ADV_ &CRITICAL &TO/FOR [2] to &[VP:1].
+- it &AUX &ADV_ &CRITICAL to
+- too &CRITICAL to @V
+C &C1_ &[1](AND_THIS) &AUX &ADV_ &CRITICAL &TO/FOR [2] than [1] &._
+C &C1_ &[1](AND_THIS) &AUX &ADV_ &CRITICAL &TO/FOR [2] &._
+C &C1_ &[1](AND_THIS) &AUX &ADV_ &CRITICAL in &[G:2].
+C more &CRITICAL &TO/FOR [2] than [1] &._
+C &CRITICAL &TO/FOR [2] &AUX &[not_cc:1].
+C &CRITICAL &TO/FOR &[2], [1] &._
+- &NOT &ADJ &FACTOR
+C &C1_ &[1](AND_THIS) &AUX_ &ADV_ &EMERGE as &ADJ &FACTOR &OF/IN [2]
+&._
+C &C1_ &[1](AND_THIS) &AUX &ADV_ &ADJ &FACTOR &OF/IN [2] &._
+C &FACTOR &OF/IN [2] &AUX &ADV_ &J *** : [1]
+C &FACTOR &OF/IN [2] &AUX &ADV_ that [1] &._
+- &BE &ADV_ &VBD/VBG
+- &BE &ADV_ &NOT &VBD/VBG
+- &BE &ADV_ &J &.
+C &FACTOR &OF/IN [2] &AUX &ADV_ &NOT *** but [1] &._
+- &FACTOR &OF/IN &[conj_N:0],
+C &FACTOR &OF/IN &[conj_N:2] &AUX [1] &._
+- &FACTOR &[P:0],
+- &BE &NOT
+C &FACTOR &OF/IN [2] &AUX &[not_cc:1].
+C &C1_ &[1](AND_THIS) &AUX &ADV_ initiator* of [2] &._
+- &NOT &ADJ_ &OBSTACLE to
+C &C1_ &[1](AND_THIS) &AUX &ADV_ &ADJ_ &OBSTACLE to [2] &._
+C &C1_ &[1](AND_THIS) &AUX_ &ADV_ &HAVE the potential for [2] &._
+C &C1_ &[1](AND_THIS) &AUX &ADV_ &ADJ_ predictor* of [2] than [2] &._
+C &C1_ &[1](AND_THIS) &AUX &ADV_ &ADJ_ predictor* of [2] &._
+C &C1_ [1] &AUX &ADV_ held responsible for [2] &._
+C &HOLD [1] responsible for [2] &._
+C &C1_ [1] responsible for [2] &._
+# - &TAKE *** advantage
+# - &C &THIS/IT &AUX_ &ADV_ &HAVE &ADJ_ advantage*
+# - &C @IN advantage* ,
+# C &C1 &[1](AND_THIS) &AUX_ &ADV_ &HAVE &ADJ_ advantage of [2] &._
+# C advantage* * &OF/IN [1] &TO/FOR [2] : [2]
+# C advantage* * &OF/IN [1] over *** : [2]
+# C advantage* * &OF/IN [1] : [2]
+# - advantage* in &[N:0]
+# - advantage* * &OF/IN &[conj_N:1],
+# C advantage* * &OF/IN &[conj_N:1] &AUX &[not_cc:2].
+# - advantage* &[P:0],
+# - advantage* * &OF/IN [G:0] ,
+# - advantage* * &OF/IN [G:0] [P:0] ,
+# C advantage* * &OF/IN [1] &TO/FOR [2] &BE &ADV_ &VBD/VBG
+# C advantage* * &OF/IN [1] &TO/FOR [2] &BE [2] &._
+# - advantage* * &OF/IN *** over *** &BE &ADV_ &VBD/VBG
+# C advantage* * &OF/IN [1] over *** &AUX [2] &._
+# - advantage* * &OF/IN *** &BE &ADV_ &VBD/VBG
+# C advantage* * &OF/IN [1] &AUX &[not_cc:2].
+# - &C &THIS/IT &AUX_ &ADV_ &HAVE &ADJ_ disadvantage*
+# - &C it &AUX_ &ADV_ &HAVE &ADJ_ disadvantage*
+# C &C1 &[1](AND_THIS) &HAVE &ADJ_ advantage of [2] &._
+# C disadvantage* * &OF/IN [1] &TO/FOR [2] : [2]
+# C disadvantage* * &OF/IN [1] over *** : [2]
+# C disadvantage* * &OF/IN [1] : [2]
+# - disadvantage* in &[N:0]
+# - disadvantage* * &OF/IN &[conj_N:1],
+# C disadvantage* * &OF/IN &[conj_N:1] &AUX [2] &._
+# - disadvantage* &[P:0],
+# - disadvantage* * &OF/IN [G:0] ,
+# - disadvantage* * &OF/IN [G:0] [P:0] ,
+# C disadvantage* * &OF/IN [1] &TO/FOR [2] &BE &ADV_ &VBD/VBG
+# C disadvantage* * &OF/IN [1] &TO/FOR [2] &BE [2] &._
+# - disadvantage* * &OF/IN *** over *** &BE &ADV_ &VBD/VBG
+# C disadvantage* * &OF/IN [1] over *** &AUX [2] &._
+# - disadvantage* * &OF/IN *** &BE &ADV_ &VBD/VBG
+# C disadvantage* * &OF/IN [1] &AUX &[not_cc:2].
+- downside to *** &AUX &ADV_ &VBD/VBG
+C downside to [1] &AUX &[not_cc:2].
+- if not~
+- &KNOW if
+- even if
+- if *** , &WH
+- if any &,/.
+- if @RB &,/.
+- if *** &NOT have to
+C &IF [2] &WANT to [2] , [1] &MUST [1]
+- if *** &MUST
+C &IF [2] &WANT to [2] , it &AUX &ADV_ &CRITICAL [1]
+# C &IF [2] , [1] &MUST [1] &._
+# C &IF [2] &[N:1] &MUST [1] &._
+# C &IF [2] it &AUX &ADV_ &CRITICAL [1]
+C &C2_ &[2](AND_THIS) &AUX possible only &IF [1] &._
+C &C2_ &[2](AND_THIS) &AUX only possible &IF [1] &._
+C &C2_ &[2](AND_THIS) &AUX possible &IF [1] &._
+C &C2_ [2] only &IF [1] &._
+C only &IF [1] can [2] &._
+C &C1_ [1] &IF [2] &BE to [2] &._
+C [2] &WILL [2] , [N:0] $that , &IF [1] &._
+C [2] &WILL [2] , $that [N:0] , &IF [1] &._
+C &C/, &IF [1] then [2] &._
+C &C/, &IF &[1], [2] &WILL [2] &._
+C &C/, &IF [1] &[N:2] &WILL [2] &._
+C &C2_ [2] &WILL [2] &IF [1] &._
+C &IF [1] then [2] &._
+C &IF &[1], [2] &WILL [2] &._
+C &IF [1] &[N:2] &WILL [2] &._
+C &ATTRIBUTE [2] to [1] &._
+C &C2_ &[2](AND_THIS) &AUX &ADV_ &ATTRIBUTE to [1] &._
+C &BLAME [1] for [2] &._
+C &C1_ &[1](AND_THIS) &AUX &ADV_ blame* for [2] &._
+- &NOT &NECESSARY &TO/FOR
+C &C1_ &TO/FOR [2] it &AUX &ADV_ &NECESSARY &TO/FOR [2] &._
+C &C1_ &[1](AND_THIS) &AUX &ADV_ &NECESSARY &TO/FOR [2] &._
+# - &REQUIRE by
+# - &REQUIRE that
+# - &REQUIRE to
+# - &REQUIRE &[N:0] to
+# - &[N:0] [G:0] &REQUIRE
+# - &NOT &REQUIRE
+# C &C2_ &[2](AND_THIS) &AUX_ &ADV_ &REQUIRE [1] &._
+# C for [2] &AUX_ &ADV_ &REQUIRE [1] &._
+# C [I:2] &AUX_ &ADV_ &REQUIRE [1] &._
+# C [I:2] , it &AUX_ &ADV_ &REQUIRE [1] &._
+# C [G:2] &AUX_ &ADV_ &REQUIRE [1] &._
+- &NOT &PLAY
+C &C1_ &[1](AND_THIS) &AUX_ &ADV_ &PLAY &ADJ role in [2] &._
+- role of *** &AUX &ADV_ &VBD/VBG
+C role of [1] &AUX &NOT *** but [2] &._
+- role of [1] &AUX &NOT
+C role of [1] &AUX &[not_cc:2].
+- &NOT &DELIVER
+C &C1_ &[1](AND_THIS) &AUX_ &ADV_ &DELIVER &ADJ_ benefit* to [2] &._
+C &C1_ &[1](AND_THIS) &STAND in the way of [2] &._
+- &NOT sufficient to
+C &C1_ &[1](AND_THIS) &AUX_ &ADV_ sufficient to [2] &._
+C &C2_ [2] in the wake of [1] &._
+C &C2_ [2] in the aftermath of [1] &._
+C &C2_ [2] amid [1] &._
+C &C1_ &[1](AND_THIS) &AUX &ADV_ &CRITICAL in &[G:2].
+C it &AUX &ADV_ because of [1] that [2] &._
+- &NOT for
+C &FOR &[G:2] by &[G:1].
+- &VERB_BY *** by
+C &C by [vbg:1] , [2] &._
+C &C by [vbg:1] &[1], [2] &._
+C &C by &[G:1] &[C:2].
+C &C by [vbg:1] [2] &._
+C &C2_ [I:2] by &[G:1].
+C &C2_ [2] by &[G:1].
+- exchange for
+- @J for
+- &HAVE &[N:0] for
+- &AUX &[N:0] for
+- &,/. &[N:0] for
+- &,/. &ADJ_ @N for
+- &C &[N:0] for
+- &C &ADJ_ @N for
+- &NOUN_FOR *** for
+- &VERB_FOR *** for
+C &C for [G:1] , [2] &.
+C &C for [G:1] &[1], [2] &._
+C &C for &[G:1] &[C:2].
+C &C for [vbg:1] [2] &._
+C &[N:2] [I:2] for &[G:1].
+C [I:2] for &[G:1].
+C &C2 &[VP:2] for &[G:1].
+C &C2_ [2] &[VP:2] for &[G:1].
+- &NOT through
+# - through @IN
+# - through &DT_ &PERSON
+# - through it
+# - through &TIME
+# - $through *** &THROUGH/TO
+# C &C &ADV_ through &[1], [2] &._
+# C &C &ADV_ through [1] [I:2] &.
+# C &C &ADV_ through [1] [I:2] [2] &._
+# C &C &ADV_ through [1] &[C:2].
+# C &C &ADV_ through &[N:1] [2] &._
+# C &C2_ &[2], through &[1], [2] &._
+# C &C2_ [2] through &[G:1].
+# C [I:2] through [1] &._
+# C &C2_ [2] through [1] &._
+# C &ACHIEVE [2] through [1] &._
+C &C through [vbg:1] , [2] &._
+C &C through [vbg:1] &[1], [2] &._
+C &C through &[G:1] &[C:2].
+C &C through [vbg:1] [2] &._
+C &C2_ [I:2] through &[G:1].
+C &C2_ [2] through &[G:1].
+C &C in order &TO/FOR &[2], [1] &._
+C &C1_ [1] in order &TO/FOR [2] &._
+C &C in order that &[2], [1] &._
+C &C1_ [1] in order that [2] &._
+C &C1_ [1] in an effort to [2] &._
+# - to @VBG
+# - &NOT to
+# - &AUX to
+# - &AUX &[N:0] to
+# - &AUX for &[N:0] to @V
+# - &AUX &ADV_ &J to @V
+# - &AUX &PERSON to @V
+# - @VBG &TO
+# - @J to
+# - &HAVE &TO
+# - take *** time to
+# - @W &ADV_ to
+# - &TAKE &TIME to @V
+# - &NOUN_TO *** &TO
+# - $to *** &TO
+# C &C1_ [1] &[VP:1] to &ADV_ &[VP:2]
+# - &[N:0] to &ADV_ @V
+# Sentence initial infinitive phrases
+- to @VBG
+- &NOT to
+- to be sure
+- agree* *** to
+C &S &"_ to &ADV_ [v:2] , [1] &._
+C &S &"_ to &ADV_ [v:2] &[2], [1] &._
+C &S &"_ to &ADV_ &[VP:2] &[C:1].
+C &C2_ &[2](AND_THIS) &AUX &ADV_ &NOT dependent on *** but on [1] &._
+- &NOT dependent
+C &C2_ &[2](AND_THIS) &AUX &ADV_ dependent on [1] &._
+# - &NOT being
+# C &C being &[1], [2] &._
+# C &C being [1] &[C:2].
+# C &C2_ [2] , being [1] &._
+- . * [P:0] , &ADJ &EFFECT/RESULT of
+C &C2_ [2] , &ADJ &EFFECT/RESULT of [1] &,/.
+C &C2_ [2] -- &ADJ &EFFECT/RESULT of [1] &,/.
+- &NOT in response
+C &C in response to &[N:1],[2]
+C &C2_ [2] in response to [1] &._
+C &C1_ [1] &AUX credited with [2] &._

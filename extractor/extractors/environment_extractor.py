@@ -1,34 +1,54 @@
 import time
 from .abs_extractor import AbsExtractor
-from copy import deepcopy
 from geopy.geocoders import Nominatim
 from geopy.distance import vincenty
 from parsedatetime import parsedatetime as pdt
-import dateutil.parser as dparser
 
 
 class EnvironmentExtractor(AbsExtractor):
-    weights = ((1, 1), (2, 2, 1, 1))  # ((loc_pos, loc_freq), (time_pos, time_date, time_time, time_neigbours))
+    """
+    The EnvironmentExtractor tries to extract the location and time the event happened.
+    """
 
-    def __init__(self, weights=None, overwrite=True):
+    # weights used in the candidate evaluation:
+    # ((position, frequency), (position, date, time, frequency))
+    weights = ((1, 1), (2, 2, 1, 1))
+
+    def __init__(self, weights=None, host=None):
         """
-        :param overwrite: determines if existing answers should be overwritten.
+        Init the Nominatim connection as well as the calender object used for date interpretation.
+
+        :param weights: Weights used to evaluate answer candidates.
+        :type weights: ((Float, Float), (Float, Float, Float, Float))
+        :param host: Address to the Nominatim host
+        :type host: String
         """
         if weights is not None:
             self.weights = weights
 
-        self.overwrite = overwrite
-        geo_domain = 'nominatim.openstreetmap.org'
-        self.geocoder = Nominatim(domain=geo_domain, timeout=2)
+        # init db connection used for location resolution
+        if host is None:
+            host = 'nominatim.openstreetmap.org'
+
+        self.geocoder = Nominatim(domain=host, timeout=2)
+
+        # init calender object for date resolution
         self.calendar = pdt.Calendar()
-        self.time_dela = 129600  # 32h in seconds
+
+        # date strings like 'monday' can denote dates in the future as well as in the past
+        # in most cases an article describes an event in the past
+        self.calendar.ptc.DOWParseStyle = -1            # prefer day in the past for 'monday'
+        self.calendar.ptc.CurrentDOWParseStyle = True   # prefer reference date if its the same weekday
+        self.time_dela = 129600                         # 32h in seconds
 
     def extract(self, document):
         """
         Parses the given document for locations and time data
 
-        :param document: The document to analyze
-        :return: Processed document
+        :param document: The Document object to parse
+        :type document: Document
+
+        :return: The parsed Document object
         """
 
         ne_lists = self._extract_candidates(document)
@@ -38,42 +58,45 @@ class EnvironmentExtractor(AbsExtractor):
         document.set_answer('where', self._filter_duplicates(locations, False))
         document.set_answer('when', self._filter_duplicates(dates, False))
 
-    def _extract_candidates(self, document, limit=None):
+    def _extract_candidates(self, document):
         """
         Extracts all locations, dates and times.
 
-        :param document: The Document to be analyzed.
-        :param limit: Number of sentences that should be analyzed.
-        :return: A dictionary containing all entities sorted by locations, dates, times and time+date
+        :param document: The Document object to parse
+        :type document: Document
+
+        :return: A Tuple containing a list of locations and a list of dates.
         """
 
-        # first check the results of the NER
+        # fetch results of the NER
         ner_tags = document.get_ner()
         locations = []
         dates = []
         last_date = None
 
-        for i in range(len(ner_tags)):
-            if limit is not None and limit == i:
-                break
+        for i, entity in enumerate(ner_tags):
+            # phrase_range=2 allows entities to be separate by single tokens, this is common for locations and dates
+            # i.e. 'London, England' or 'October 13, 2015'.
             for candidate in self._extract_entities(ner_tags[i], ['LOCATION', 'TIME', 'DATE'], inverted=True,
                                                     phrase_range=2, groups={'TIME': 'TIME+DATE', 'DATE': 'TIME+DATE'}):
 
                 if candidate[1] == 'LOCATION':
-                    # geocode retrieved entities
+                    # look-up geocode in Nominatim
                     location = self.geocoder.geocode(' '.join(candidate[0]))
                     if location is not None:
                         locations.append((candidate[0], location, i))
                 elif candidate[1] == 'TIME':
-                    # try to associate a date to the given time
+                    # If a date was already mentioned combine it with the mentioned time
                     if last_date is not None:
-                        dates.append((last_date + candidate[0],i))
-                    else:
                         dates.append((last_date + candidate[0], i))
-                else:
-                    # save date and update last_date
-                    dates.append([candidate[0], i])
+                    else:
+                        dates.append((candidate[0], i))
+                elif candidate[1] == 'DATE':
+                    dates.append((candidate[0], i))
                     last_date = candidate[0]
+                else:
+                    # String includes date and time
+                    dates.append((candidate[0], i))
 
         return locations, dates
 
@@ -82,17 +105,23 @@ class EnvironmentExtractor(AbsExtractor):
         Calculate a confidence score for extracted location candidates.
 
         :param document: The parsed document.
-        :param candidates: List of tuples containing the extracted candidates: (tokens, geocode, position)
+        :type document: Document
+        :param candidates: List of tuples containing the extracted candidates
+        :type candidates: (tokens, geocode, position)
+
         :return: A list of evaluated and ranked candidates
         """
         raw_locations = []
         unique_locations = []
         ranked_locations = []
         weights = self.weights[0]
-        weights_sum = sum(weights)
+        weights_sum = sum(weights[0])
 
         for location in candidates:
-            bb = location[1].raw['boundingbox']  # bb contains min lat, max lat, min long, max long
+            # fetch the boundingbox: (min lat, max lat, min long, max long)
+            bb = location[1].raw['boundingbox']
+
+            # use the vincenty algorithm to calculate the covered area
             area = int(vincenty((bb[0], bb[2]), (bb[0], bb[3])).meters) \
                 * int(vincenty((bb[0], bb[2]), (bb[1], bb[2])).meters)
             for i in range(4):
@@ -104,8 +133,7 @@ class EnvironmentExtractor(AbsExtractor):
         raw_locations.sort(key=lambda x: x[1], reverse=True)
 
         # count multiple mentions
-        for i in range(len(raw_locations)):
-            location = raw_locations[i]
+        for i, location in enumerate(raw_locations):
             positions = [raw_locations[i][5]]
 
             for alt in raw_locations[i+1:]:
@@ -120,16 +148,19 @@ class EnvironmentExtractor(AbsExtractor):
         # sort locations based on size/area
         unique_locations.sort(key=lambda x: x[4], reverse=True)
 
-        # check entailment
+        # highest frequency is used for normalization
         max_n = 0
-        for index, location in enumerate(unique_locations):
-            for alt in raw_locations[index + 1:]:
+
+        # check entailment of locations based on the bounding box
+        for i, location in enumerate(unique_locations):
+            for alt in raw_locations[i + 1:]:
                 if alt[3][0] >= location[2][0] >= alt[3][1] and alt[3][2] >= location[2][1] >= alt[3][3]:
-                    # add parent's number of mentions
-                    location[6] += alt[6]
+                    # We prefer more specific mentions, therefor we a fraction of the parent's number of mentions
+                    location[6] += alt[6] / 0.8
             max_n = max(max_n, location[6])
 
         for location in unique_locations:
+            # calculate score based on position in text (inverted pyramid) and the number of mentions
             score = weights[0] * (document.get_len() - location[5])/document.get_len() + weights[1] * location[6]/max_n
             if score > 0:
                 score /= weights_sum
@@ -143,29 +174,34 @@ class EnvironmentExtractor(AbsExtractor):
         Calculate a confidence score for extracted time candidates.
 
         :param document: The parsed document.
+        :type document: Document
         :param date_list: List of date candidates.
-        :param time_list: List of time candidates.
-        :param date_time_list: List of time+date candidates.
-        :return: A list of evaluated and ranked candidates
+        :type date_list: (String, Integer)
+
+        :return: A list of ranked candidates
         """
 
         ranked_candidates = []
         weights = self.weights[1]
         weights_sum = sum(weights)
+
+        # fetch the date the article was published as a reference date
         reference = self.calendar.parse(document.get_date() or '')
 
+        # translate date strings into date objects
         for candidate in date_list:
             date_str = ' '.join(candidate[0])
+            # Skip 'now' because its often part of a newsletter offer or similar
             if date_str.lower().strip() == 'now':
                 continue
             parse = self.calendar.parse(date_str, reference[0])
             if parse[1] > 0:
-                # date could be parsed
                 ranked_candidates.append([candidate[0], candidate[1], parse[0], parse[1], 1])
 
         ranked_candidates.sort(key=lambda x: x[2])
 
-        # count 'neighbours' within time_delta range
+        # Similar to the frequency used for locations we count similar date mentions.
+        # Dates are considered related if they differ at most 36h (time_delta).
         max_n = 0
         for index, candidate in enumerate(ranked_candidates):
             for neighbour in ranked_candidates[index+1:]:
@@ -174,16 +210,23 @@ class EnvironmentExtractor(AbsExtractor):
                     neighbour[4] += 1
             max_n = max(max_n, candidate[4])
 
-        # calculate the scores
+        # Calculate the scores
         for candidate in ranked_candidates:
-            score = weights[0] * (document.get_len() - candidate[1])/document.get_len()     # position
+            # Position is the first parameter used scoring following the inverted pyramid
+            score = weights[0] * (document.get_len() - candidate[1])/document.get_len()
+
             if candidate[3] == 1:
-                score += weights[1]                 # date
+                # Add a constant value if string contains a date
+                score += weights[1]
             elif candidate[3] == 2:
-                score += weights[2]                 # time
+                # Add a constant value if string contains a time
+                score += weights[2]
             else:
-                score += weights[1] + weights[2]    # date + time
-            score += weights[3] * (candidate[4]/max_n)  # neighbourhood/frequency
+                # String contains date and time
+                score += weights[1] + weights[2]
+
+            # Number of similar dates is also included as it indicates relevance
+            score += weights[3] * (candidate[4]/max_n)
 
             if score > 0:
                 score /= weights_sum

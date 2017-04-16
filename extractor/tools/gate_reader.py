@@ -9,17 +9,21 @@ from extractor.document import DocumentFactory
 
 def parse_dir(path):
     """
-    Reads all gate documents in the given directory.
+    Reads all gate documents in a given directory.
 
-    :param path: Path to the directory
+    :param path: Absolute path to the directory
+    :type path: String
+
     :return: A list of Document objects
     """
+
+    log = logging.getLogger('GiveMe5W')
 
     factory = DocumentFactory()
     documents = []
 
     if not os.path.exists(path):
-        logging.warning('The given path does not exist: %s' % path)
+        log.warning('The given path does not exist: %s' % path)
     else:
         for root, directory, files in os.walk(path):
             for file in files:
@@ -34,10 +38,15 @@ def parse_file(path, factory):
     """
     Creates a Document object from a gate file.
 
-    :param path: Path to the file
+    :param path: Absolute path to the file
+    :type path: String
     :param factory: DocumentFactory used to instantiate the document
+    :type factory: DocumentFactory
+
     :return: The Document object
     """
+
+    log = logging.getLogger('GiveMe5W')
 
     if not os.path.isfile(path):
         return None
@@ -69,8 +78,8 @@ def parse_file(path, factory):
             for annotation in root.find('AnnotationSet'):
                 attrib = annotation.attrib
 
+                # read marked text sections
                 if attrib['Type'] == 'TextSection':
-                    # divide text up in sections if marked
                     marked_text = extract_markup(text_node, attrib['StartNode'], attrib['EndNode'], encoding)
                     for feature in annotation:
                         if feature[1].text == 'title':
@@ -99,8 +108,12 @@ def parse_file(path, factory):
                         features[2] = marked_text
                         annotations[question].append(features)
 
+            # backup for gate documents without marked text sections
+            if len(title) == 0 and len(description) == 0 and len(text) == 0:
+                title = html.unescape(ElementTree.tostring(text_node, method='text').decode(encoding))
+
             for answers in annotations.items():
-                #sort them based on id and accuracy
+                #sort annotations based on id and accuracy
                 answers[1].sort(key=lambda x: x[0] or 'None')
                 answers[1].sort(key=lambda x: x[1] or 'None')
 
@@ -111,7 +124,7 @@ def parse_file(path, factory):
             return document
 
         except ElementTree.ParseError as e:
-            logging.warning('The given file contains invalid xml: %s - %s', e, path)
+            log.warning('The given file contains invalid xml: %s - %s', e, path)
 
             return None
 

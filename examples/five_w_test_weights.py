@@ -1,15 +1,15 @@
-import sys
-import os
 import logging
-import editdistance
-# from nltk.metrics import edit_distance as editdistance
+import os
+import sys
+import time
 from timeit import default_timer as timer
 
+import editdistance
+from geopy.distance import vincenty
 
 sys.path.insert(0, '/'.join(os.path.realpath(__file__).split('/')[:-2]))
-from extractor.extractors import action_extractor, environment_extractor, cause_extractor
-from extractor.corenlp_preprocessor import Preprocessor
-from extractor.five_w_extractor import FiveWExtractor
+from extractor.extractors import action_extractor, environment_extractor
+from extractor.preprocessors.preprocessor_core_nlp import Preprocessor
 from extractor.tools import gate_reader
 from extractor.tools.csv_writer import CSVWriter
 
@@ -83,20 +83,73 @@ if __name__ == '__main__':
     log = logging.Logger('FiveWTest')
     log.setLevel(20)
 
-    # preprocessor expects the location of the sanford-ner.jar and a model to train the ner-parser
-    # stanford-ner can be found here: http://nlp.stanford.edu/software/CRF-NER.shtml
-
-    # initialize desired extractors
-    extractor_list = [
-        action_extractor.ActionExtractor(),
-        environment_extractor.EnvironmentExtractor(),
-        cause_extractor.CauseExtractor()
-    ]
-
-    preprocessor = Preprocessor('http://132.230.224.141:9000')
-    extractor = FiveWExtractor(extractor_list, preprocessor)
     abs_path = os.path.dirname(os.path.dirname(__file__))
     documents = gate_reader.parse_dir(abs_path + '/data/articles')
+
+    preprocessor = Preprocessor('http://132.230.224.141:9000')
+    for doc in documents:
+        preprocessor.preprocess(doc)
+
+    env = environment_extractor.EnvironmentExtractor()
+    act = action_extractor.ActionExtractor()
+    #cau = cause_extractor.CauseExtractor()
+
+    points = 10
+    distances = {
+        'where': [[0]*points]*points,
+        'when': [[[0] * points] * points] * points
+    }
+
+    for doc in documents:
+        candidates = {'action': act._extract_candidates(doc)}
+        c = env._extract_candidates(doc)
+        candidates['where'] = c[0]
+        candidates['when'] = c[1]
+
+        annotations = doc.get_annotations()
+        for q in annotations:
+            if any(annotations[q]):
+                annotations[q] = annotations[q][0][2].strip()
+            else:
+                annotations[q] = None
+
+        if annotations['where'] is not None:
+            annotations['where'] = env.geocoder.geocode(annotations['where'])
+        if annotations['when'] is not None:
+            pub_date = env.calendar.parse(doc.get_date() or '')[0]
+            annotations['when'] = time.mktime(env.calendar.parse(annotations['when'] or '', pub_date)[0])
+
+        for i in range(points):  # position
+            for j in range(points):  # frequency
+                for l in range(points):
+                    env.weights = ((i/points, j/points), (i/points, 1 + l/points, 1 - l/points, j/points))
+
+                    # measure distance in meters
+                    if annotations['where'] is not None:
+                        location = env.geocoder.geocode(' '.join(env._evaluate_locations(doc, candidates['where'])[0][0]))
+                        distances['where'] += int(vincenty(annotations['where'].point, location.point).meters)
+
+                    #  measure distance in seconds
+                    if annotations['when'] is not None:
+                        date = time.mktime(env.calendar.parse(' '.join(env._evaluate_dates(doc, candidates['when'])[0][0]))[0]),
+                        distances['when'] += abs(annotations['when'] - date)
+
+                    act.weights = (i/points, j/points, l/points)
+                    c = act._evaluate_candidates(doc, candidates['action'])[0]
+                    if annotations['who'] is not None:
+                        agent = ' '.join([x[0] for x in c[0]])
+
+                    if annotations['what'] is not None:
+                        action = ' '.join([x[0] for x in c[1]])
+
+                    if annotations['why'] is not None:
+                        continue
+
+
+
+
+
+
     scores = {'who': [], 'what': [], 'when': [], 'where': [], 'why': []}
     count_candidates_total = 0
     start_all = timer()
@@ -106,7 +159,6 @@ if __name__ == '__main__':
         for document in documents:
             print("Parsing '%s'..." % document.get_title())
             start = timer()
-            extractor.parse(document)
             print("Parsed  '%s' [%is]" % (document.get_title(), (timer() - start)))
             evaluation = cmp_answers(document)
             answers = document.get_answers()

@@ -6,6 +6,10 @@ class DocumentManager(BaseManager):
 
 
 class Document(object):
+    """
+    Document is a pickable container for the raw document and all related data
+    """
+
     def __init__(self, title, desc='', text=''):
         self._raw = {'title': title, 'description': desc, 'text': text}
         self._date = None
@@ -95,9 +99,22 @@ class Document(object):
     def set_annotations(self, annotations):
         self._annotations = annotations
 
+    def pretty_answers(self):
+        string = 'Answers to: "%s..."' % self.get_title()[:35]
+        for question in self._answers:
+            answer = 'NONE'
+            if len(self._answers[question]) > 0:
+                answer = self._answers[question][0]
+            string += "\n\t%s:\t%s" % (question, answer)
+        return string
+
 DocumentManager.register('Document', Document)
 
 class DocumentFactory:
+    """
+    DocumentFactory initializes the necessary BaseManager and allows easy instantiation of Document objects
+    """
+
     def __init__(self):
         self.manager = DocumentManager()
         self.manager.start()

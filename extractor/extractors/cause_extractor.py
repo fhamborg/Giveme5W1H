@@ -51,17 +51,31 @@ class CauseExtractor(AbsExtractor):
         :param document: Document to be Parsed
         :return: Parsed document
         """
-        candidate_list = []
-        posTrees = document.get_trees()
 
-        for i, tree in enumerate(posTrees):
-            for candidate in self._evaluate_tree(tree):
-                candidate_list.append([candidate[1], candidate[2], i])
-
+        candidate_list = self._extract_candidates(document)
         candidate_list = self._evaluate_candidates(document, candidate_list)
         document.set_answer('why', candidate_list)
 
         return document
+
+    def _extract_candidates(self, document):
+        """
+        Extracts possible agents/actions pairs from a given document.
+        Candidates are chosen if they belong to an coref-chain and is part of a NP-VP-NP pattern
+
+        :param document: The Document to be analyzed.
+        :type document: Document
+
+        :return: A List of Tuples containing all agents, actions and their position in the document.
+        """
+        candidate_list = []
+        postrees = document.get_trees()
+
+        for i, tree in enumerate(postrees):
+            for candidate in self._evaluate_tree(tree):
+                candidate_list.append([candidate[1], candidate[2], i])
+
+        return candidate_list
 
     def _evaluate_tree(self, tree):
         """

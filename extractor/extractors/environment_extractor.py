@@ -107,7 +107,7 @@ class EnvironmentExtractor(AbsExtractor):
         :param document: The parsed document.
         :type document: Document
         :param candidates: List of tuples containing the extracted candidates
-        :type candidates: (tokens, geocode, position)
+        :type candidates: [tokens, geocode, position]
 
         :return: A list of evaluated and ranked candidates
         """
@@ -176,7 +176,7 @@ class EnvironmentExtractor(AbsExtractor):
         :param document: The parsed document.
         :type document: Document
         :param date_list: List of date candidates.
-        :type date_list: (String, Integer)
+        :type date_list: [String, Integer]
 
         :return: A list of ranked candidates
         """

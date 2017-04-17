@@ -1,6 +1,8 @@
+import logging
+import nltk
+from nltk.corpus import wordnet
 from abc import ABCMeta, abstractmethod
 from itertools import product
-from nltk.corpus import wordnet
 
 try:
     basestring = basestring
@@ -15,8 +17,8 @@ class AbsExtractor:
     """
 
     __metaclass__ = ABCMeta
-    overwrite = True
     weights = None
+    wn_corpus = False
 
     def __init__(self, weights=None):
         """
@@ -161,6 +163,17 @@ class AbsExtractor:
 
         :return: A float in [0,1] representing the similarity.
         """
+
+        # check if WordNet corpus was already fetched
+        if not self.wn_corpus:
+            # fetch WordNet corpus
+            log = logging.getLogger('GiveMe5W')
+            try:
+                nltk.data.find('corpora/wordnet')
+            except LookupError:
+                log.info('Could not find corpus for WordNet, will now try to download the corpus.')
+                nltk.download('wordnet')
+            self.wn_corpus = True
 
         # get desired pos parameter for wordnet
         pos_filter = {'n': 'NN', 'v': 'VB'}.get(pos)

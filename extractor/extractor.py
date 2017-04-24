@@ -1,5 +1,6 @@
 import logging
 import multiprocessing
+
 from extractor.extractors import action_extractor, environment_extractor, cause_extractor
 from extractor.preprocessors.preprocessor_nltk import Preprocessor
 
@@ -39,7 +40,6 @@ class FiveWExtractor:
                 environment_extractor.EnvironmentExtractor(),
                 cause_extractor.CauseExtractor()
             ]
-
 
     def parse(self, doc):
         """

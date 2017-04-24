@@ -1,13 +1,15 @@
 import logging
+
 from flask import Flask, request, jsonify
+
 from extractor.document import DocumentFactory
-from extractor.preprocessors.preprocessor_core_nlp import Preprocessor
 from extractor.extractor import FiveWExtractor
+from extractor.preprocessors.preprocessor_core_nlp import Preprocessor
 
 """
 This is a simple example on how to use flask to create a rest api for our extractor.
 
-Please update the CoreNLP address to math your host and check the flask settings.
+Please update the CoreNLP address to match your host and check the flask settings.
 """
 
 # basic configuration of the rest api

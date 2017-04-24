@@ -115,7 +115,7 @@ class EnvironmentExtractor(AbsExtractor):
         unique_locations = []
         ranked_locations = []
         weights = self.weights[0]
-        weights_sum = sum(weights[0])
+        weights_sum = sum(weights)
 
         for location in candidates:
             # fetch the boundingbox: (min lat, max lat, min long, max long)

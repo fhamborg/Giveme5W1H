@@ -1,7 +1,9 @@
 import logging
-
+import os
+import sys
+# Add path to allow execution though console
+sys.path.insert(0, '/'.join(os.path.realpath(__file__).split('/')[:-2]))
 from flask import Flask, request, jsonify
-
 from extractor.document import DocumentFactory
 from extractor.extractor import FiveWExtractor
 from extractor.preprocessors.preprocessor_core_nlp import Preprocessor
@@ -21,7 +23,7 @@ debug = False
 options = None
 
 # CoreNLP host
-core_nlp_host = 'http://132.230.224.141:9000'
+core_nlp_host = 'localhost:9000'
 
 # initialize the logger
 sh = logging.StreamHandler()

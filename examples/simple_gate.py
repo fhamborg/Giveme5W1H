@@ -1,6 +1,8 @@
 import logging
 import os
 import sys
+# Add path to allow execution though console
+sys.path.insert(0, '/'.join(os.path.realpath(__file__).split('/')[:-2]))
 from timeit import default_timer as timer
 from extractor.preprocessors.preprocessor_core_nlp import Preprocessor
 from extractor.extractor import FiveWExtractor
@@ -16,11 +18,14 @@ Please update the CoreNLP address to math your host.
 
 # Host of the CoreNLP server
 # For information on how to build/run a CoreNLP instance go to: https://stanfordnlp.github.io/CoreNLP/
-core_nlp_host = 'http://132.230.224.141:9000'
+core_nlp_host = 'http://localhost:9000'
 
 if __name__ == '__main__':
     log = logging.getLogger('GiveMe5W')
-    log.setLevel(logging.INFO)
+    log.setLevel(logging.DEBUG)
+    sh = logging.StreamHandler()
+    sh.setLevel(logging.DEBUG)
+    log.addHandler(sh)
 
     # init extractor
     preprocessor = Preprocessor(core_nlp_host)

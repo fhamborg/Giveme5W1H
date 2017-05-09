@@ -1,5 +1,8 @@
 import logging
 import os
+import sys
+# Add path to allow execution though console
+sys.path.insert(0, '/'.join(os.path.realpath(__file__).split('/')[:-2]))
 from extractor.extractor import FiveWExtractor
 from extractor.document import DocumentFactory
 from extractor.preprocessors.preprocessor_nltk import Preprocessor

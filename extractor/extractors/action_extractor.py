@@ -11,7 +11,7 @@ class ActionExtractor(AbsExtractor):
 
     # weights used in the candidate evaluation:
     # (position, frequency, named entity)
-    weights = (4, 3, 2)
+    weights = (0.2, 0.9, 0.4)
 
     def extract(self, document):
         """

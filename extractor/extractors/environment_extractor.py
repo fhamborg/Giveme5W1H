@@ -12,7 +12,7 @@ class EnvironmentExtractor(AbsExtractor):
 
     # weights used in the candidate evaluation:
     # ((position, frequency), (position, date, time, frequency))
-    weights = ((1, 1), (2, 2, 1, 1))
+    weights = ((0.5, 0.8), (0.8, 0.25, 0.2, 0.7))
 
     def __init__(self, weights=None, host=None):
         """
@@ -77,15 +77,18 @@ class EnvironmentExtractor(AbsExtractor):
         for i, entity in enumerate(ner_tags):
             # phrase_range=2 allows entities to be separate by single tokens, this is common for locations and dates
             # i.e. 'London, England' or 'October 13, 2015'.
-            for candidate in self._extract_entities(ner_tags[i], ['LOCATION', 'TIME', 'DATE'], inverted=True,
-                                                    phrase_range=2, groups={'TIME': 'TIME+DATE', 'DATE': 'TIME+DATE'}):
 
-                if candidate[1] == 'LOCATION':
-                    # look-up geocode in Nominatim
-                    location = self.geocoder.geocode(' '.join(candidate[0]))
-                    if location is not None:
-                        locations.append((candidate[0], location, i))
-                elif candidate[1] == 'TIME':
+            for candidate in self._extract_entities(ner_tags[i], ['LOCATION'], inverted=True, phrase_range=3):
+
+                # look-up geocode in Nominatim
+                location = self.geocoder.geocode(' '.join(candidate[0]))
+                if location is not None:
+                    locations.append((candidate[0], location, i))
+
+            for candidate in self._extract_entities(ner_tags[i], ['TIME', 'DATE'], inverted=True,
+                                                    phrase_range=1, groups={'TIME': 'TIME+DATE', 'DATE': 'TIME+DATE'}):
+
+                if candidate[1] == 'TIME':
                     # If a date was already mentioned combine it with the mentioned time
                     if last_date is not None:
                         dates.append((last_date + candidate[0], i))

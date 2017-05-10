@@ -14,6 +14,9 @@ class Document(object):
         self._raw = {'title': title, 'description': desc, 'text': text}
         self._date = None
 
+        self._file_name = None
+        self._source = None
+
         self._length = 0
         self._section_offsets = []
         self._sentences = []
@@ -25,6 +28,12 @@ class Document(object):
 
         self._answers = {'what': [], 'who': [], 'why': [], 'where': [], 'when': []}
         self._annotations = {'what': [], 'who': [], 'why': [], 'where': [], 'when': []}
+
+    def get_file_name(self):
+        return self._file_name
+
+    def get_source(self):
+        return self._source
 
     def get_len(self):
         return self._length
@@ -64,6 +73,12 @@ class Document(object):
 
     def get_annotations(self):
         return self._annotations
+
+    def set_file_name(self, name):
+        self._file_name = name
+
+    def set_source(self, source):
+        self._source = source
 
     def set_date(self, date):
         self._date = date
@@ -119,8 +134,11 @@ class DocumentFactory:
         self.manager = DocumentManager()
         self.manager.start()
 
-    def spawn_doc(self, title, desc=None, text=None):
-        return self.manager.Document(title, desc or '', text or '')
+    def spawn_doc(self, title, desc=None, text=None, file_name=None, source=None):
+        document = self.manager.Document(title, desc or '', text or '')
+        document.set_file_name(file_name)
+        document.set_source(source)
+        return document
 
 
 

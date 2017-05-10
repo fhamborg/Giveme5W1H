@@ -12,8 +12,8 @@ class CauseExtractor(AbsExtractor):
     """
 
     # weights used in the candidate evaluation:
-    # (position, pattern types)
-    weights = (1, 1, 1, 1)
+    # (position, clausal conjunction, adverbial indicator, NP-VP-NP)
+    weights = (.35, 0.3, .7, .4)
 
     adverbial_indicators = ['therefore', 'hence', 'thus', 'consequently', 'accordingly']  # 'so' has problems with JJ
     clausal_conjunctions = {'consequence': 'of', 'effect': 'of',  'result': 'of', 'upshot': 'of', 'outcome': 'of',

@@ -61,7 +61,10 @@ class JSONWriter:
         answers = document.get_answers()
         for index, question in enumerate(answers):
             candidates = [];
-            for candidate in answers[question]:
+            for index, key in enumerate(answers[question]):
+                candidate = answers[question][index]
+                if index >= n:
+                    break
                 candidateJson = Object()
                 candidateJson.score = candidate[1]
                 # one object to hold all findings 
@@ -70,8 +73,7 @@ class JSONWriter:
                     # index as prefix to keep track of the order
                     jsonkey = str(index).zfill(3) + '_' + key[1]
                     setattr(candidateJson.found, jsonkey, key[0])
-                    if index >= n:
-                        break
+                   
                 candidateJson.found = candidateJson.found
                 candidates.append(candidateJson)
             setattr(output.answers, question, candidates)

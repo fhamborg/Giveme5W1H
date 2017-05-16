@@ -51,10 +51,12 @@ def parse_file(path, factory):
     if not os.path.isfile(path):
         return None
 
-    with open(path) as raw_data:
+    # ASCII is a subset of UTF-8 
+    with open(path, encoding='utf-8') as raw_data:
         try:
             # read encoding from xml head
-            encoding = re.search('''(?<=encoding=["'])[^'"]*''', raw_data.readline())
+            rawData = raw_data.readline()
+            encoding = re.search('''(?<=encoding=["'])[^'"]*''', rawData)
             if encoding:
                 encoding = encoding.group()
             else:

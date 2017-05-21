@@ -1,0 +1,651 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<Library name="sap.uxap" xmlns="http://www.sap.com/ui5/ide/templates/xmlview">
+<Template name="sap.uxap.AnchorBar" alias="AnchorBar,Bar">
+	<jsTemplate><![CDATA[new sap.uxap.AnchorBar({
+	id: "${id}", // sap.ui.core.ID
+	busy: false, // boolean
+	busyIndicatorDelay: 1000, // int
+	visible: true, // boolean
+	fieldGroupIds: [], // string[], since 1.31
+	width: undefined, // sap.ui.core.CSSSize
+	active: false, // boolean
+	enabled: true, // boolean
+	height: "", // sap.ui.core.CSSSize
+	design: sap.m.ToolbarDesign.Auto, // sap.m.ToolbarDesign, since 1.16.8
+	showPopover: true, // boolean
+	upperCase: false, // boolean
+	tooltip: undefined, // sap.ui.core.TooltipBase
+	customData: [], // sap.ui.core.CustomData
+	dependents: [], // sap.ui.core.Element, since 1.19
+	content: [], // sap.ui.core.Control
+	ariaLabelledBy: [], // sap.ui.core.Control
+	selectedButton: undefined, // sap.m.Button
+	validateFieldGroup: [function (oEvent) {
+		var ${control} = oEvent.getSource();
+	}, this],
+	press: [function (oEvent) {
+		var ${control} = oEvent.getSource();
+	}, this]
+})
+]]></jsTemplate>
+	<xmlTemplate><![CDATA[<AnchorBar xmlns="sap.uxap"
+	id="${id}"
+	busy="false"
+	busyIndicatorDelay="1000"
+	visible="true"
+	fieldGroupIds=""
+	width=""
+	active="false"
+	enabled="true"
+	height=""
+	design="Auto"
+	showPopover="true"
+	upperCase="false"
+	ariaLabelledBy=""
+	selectedButton=""
+	validateFieldGroup=""
+	press="">
+		<tooltip></tooltip> <!-- sap.ui.core.TooltipBase -->
+		<dependents></dependents> <!-- sap.ui.core.Element, since 1.19 -->
+		<content></content> <!-- sap.ui.core.Control -->
+</AnchorBar>
+]]></xmlTemplate>
+</Template>
+<Template name="sap.uxap.BlockBase" alias="BlockBase,Base">
+	<jsTemplate><![CDATA[new sap.uxap.BlockBase({
+	id: "${id}", // sap.ui.core.ID
+	busy: false, // boolean
+	busyIndicatorDelay: 1000, // int
+	visible: true, // boolean
+	fieldGroupIds: [], // string[], since 1.31
+	mode: undefined, // string
+	visible: true, // boolean
+	columnLayout: "auto", // sap.uxap.BlockBaseColumnLayout
+	formAdjustment: sap.uxap.BlockBaseFormAdjustment.BlockColumns, // sap.uxap.BlockBaseFormAdjustment
+	showSubSectionMore: false, // boolean
+	tooltip: undefined, // sap.ui.core.TooltipBase
+	customData: [], // sap.ui.core.CustomData
+	dependents: [], // sap.ui.core.Element, since 1.19
+	mappings: [], // sap.uxap.ModelMapping
+	selectedView: undefined, // sap.ui.core.Control
+	validateFieldGroup: [function (oEvent) {
+		var ${control} = oEvent.getSource();
+	}, this]
+})
+]]></jsTemplate>
+	<xmlTemplate><![CDATA[<BlockBase xmlns="sap.uxap"
+	id="${id}"
+	busy="false"
+	busyIndicatorDelay="1000"
+	visible="true"
+	fieldGroupIds=""
+	mode=""
+	visible="true"
+	columnLayout="auto"
+	formAdjustment="BlockColumns"
+	showSubSectionMore="false"
+	selectedView=""
+	validateFieldGroup="">
+		<tooltip></tooltip> <!-- sap.ui.core.TooltipBase -->
+		<dependents></dependents> <!-- sap.ui.core.Element, since 1.19 -->
+		<mappings></mappings> <!-- sap.uxap.ModelMapping -->
+</BlockBase>
+]]></xmlTemplate>
+</Template>
+<Template name="sap.uxap.BreadCrumbs" alias="BreadCrumbs,Crumbs">
+	<jsTemplate><![CDATA[new sap.uxap.BreadCrumbs({
+	id: "${id}", // sap.ui.core.ID
+	busy: false, // boolean
+	busyIndicatorDelay: 1000, // int
+	visible: true, // boolean
+	fieldGroupIds: [], // string[], since 1.31
+	showCurrentLocation: true, // boolean
+	tooltip: undefined, // sap.ui.core.TooltipBase
+	customData: [], // sap.ui.core.CustomData
+	dependents: [], // sap.ui.core.Element, since 1.19
+	links: [], // sap.m.Link
+	currentLocation: undefined, // sap.m.Text
+	validateFieldGroup: [function (oEvent) {
+		var ${control} = oEvent.getSource();
+	}, this]
+})
+]]></jsTemplate>
+	<xmlTemplate><![CDATA[<BreadCrumbs xmlns="sap.uxap"
+	id="${id}"
+	busy="false"
+	busyIndicatorDelay="1000"
+	visible="true"
+	fieldGroupIds=""
+	showCurrentLocation="true"
+	validateFieldGroup="">
+		<tooltip></tooltip> <!-- sap.ui.core.TooltipBase -->
+		<dependents></dependents> <!-- sap.ui.core.Element, since 1.19 -->
+		<links></links> <!-- sap.m.Link -->
+		<currentLocation></currentLocation> <!-- sap.m.Text -->
+</BreadCrumbs>
+]]></xmlTemplate>
+</Template>
+<Template name="sap.uxap.HierarchicalSelect" alias="HierarchicalSelect,Select">
+	<jsTemplate><![CDATA[new sap.uxap.HierarchicalSelect({
+	id: "${id}", // sap.ui.core.ID
+	busy: false, // boolean
+	busyIndicatorDelay: 1000, // int
+	visible: true, // boolean
+	fieldGroupIds: [], // string[], since 1.31
+	name: "", // string
+	enabled: true, // boolean
+	width: "auto", // sap.ui.core.CSSSize
+	maxWidth: "100%", // sap.ui.core.CSSSize
+	selectedKey: "", // string, since 1.11
+	selectedItemId: "", // string, since 1.12
+	icon: "", // sap.ui.core.URI, since 1.16
+	type: sap.m.SelectType.Default, // sap.m.SelectType, since 1.16
+	autoAdjustWidth: false, // boolean, since 1.16
+	textAlign: sap.ui.core.TextAlign.Initial, // sap.ui.core.TextAlign, since 1.28
+	textDirection: sap.ui.core.TextDirection.Inherit, // sap.ui.core.TextDirection, since 1.28
+	valueState: sap.ui.core.ValueState.None, // sap.ui.core.ValueState, since 1.40.2
+	valueStateText: "", // string, since 1.40.5
+	showSecondaryValues: false, // boolean, since 1.40
+	forceSelection: true, // boolean, since 1.34
+	upperCase: false, // boolean
+	tooltip: undefined, // sap.ui.core.TooltipBase
+	customData: [], // sap.ui.core.CustomData
+	dependents: [], // sap.ui.core.Element, since 1.19
+	items: [], // sap.ui.core.Item
+	selectedItem: undefined, // sap.ui.core.Item
+	ariaLabelledBy: [], // sap.ui.core.Control, since 1.27.0
+	validateFieldGroup: [function (oEvent) {
+		var ${control} = oEvent.getSource();
+	}, this],
+	change: [function (oEvent) {
+		var ${control} = oEvent.getSource();
+	}, this]
+})
+]]></jsTemplate>
+	<xmlTemplate><![CDATA[<HierarchicalSelect xmlns="sap.uxap"
+	id="${id}"
+	busy="false"
+	busyIndicatorDelay="1000"
+	visible="true"
+	fieldGroupIds=""
+	name=""
+	enabled="true"
+	width="auto"
+	maxWidth="100%"
+	selectedKey=""
+	selectedItemId=""
+	icon=""
+	type="Default"
+	autoAdjustWidth="false"
+	textAlign="Initial"
+	textDirection="Inherit"
+	valueState="None"
+	valueStateText=""
+	showSecondaryValues="false"
+	forceSelection="true"
+	upperCase="false"
+	selectedItem=""
+	ariaLabelledBy=""
+	validateFieldGroup=""
+	change="">
+		<tooltip></tooltip> <!-- sap.ui.core.TooltipBase -->
+		<dependents></dependents> <!-- sap.ui.core.Element, since 1.19 -->
+		<items></items> <!-- sap.ui.core.Item -->
+</HierarchicalSelect>
+]]></xmlTemplate>
+</Template>
+<Template name="sap.uxap.ModelMapping" alias="ModelMapping,Mapping">
+	<jsTemplate><![CDATA[new sap.uxap.ModelMapping({
+	id: "${id}", // sap.ui.core.ID
+	externalModelName: undefined, // string
+	internalModelName: "Model", // string
+	externalPath: undefined, // string
+	tooltip: undefined, // sap.ui.core.TooltipBase
+	customData: [], // sap.ui.core.CustomData
+	dependents: [] // sap.ui.core.Element, since 1.19
+})
+]]></jsTemplate>
+	<xmlTemplate><![CDATA[<ModelMapping xmlns="sap.uxap"
+	id="${id}"
+	externalModelName=""
+	internalModelName="Model"
+	externalPath="">
+		<tooltip></tooltip> <!-- sap.ui.core.TooltipBase -->
+		<dependents></dependents> <!-- sap.ui.core.Element, since 1.19 -->
+</ModelMapping>
+]]></xmlTemplate>
+</Template>
+<Template name="sap.uxap.ObjectPageHeader" alias="ObjectPageHeader,Header">
+	<jsTemplate><![CDATA[new sap.uxap.ObjectPageHeader({
+	id: "${id}", // sap.ui.core.ID
+	busy: false, // boolean
+	busyIndicatorDelay: 1000, // int
+	visible: true, // boolean
+	fieldGroupIds: [], // string[], since 1.31
+	objectImageURI: undefined, // string
+	objectImageAlt: "", // string
+	objectImageDensityAware: false, // boolean
+	objectTitle: undefined, // string
+	objectSubtitle: undefined, // string
+	objectImageShape: sap.uxap.ObjectPageHeaderPictureShape.Square, // sap.uxap.ObjectPageHeaderPictureShape
+	isObjectIconAlwaysVisible: false, // boolean
+	isObjectTitleAlwaysVisible: true, // boolean
+	isObjectSubtitleAlwaysVisible: true, // boolean
+	isActionAreaAlwaysVisible: true, // boolean
+	headerDesign: sap.uxap.ObjectPageHeaderDesign.Light, // sap.uxap.ObjectPageHeaderDesign
+	showTitleSelector: false, // boolean
+	markFavorite: false, // boolean
+	markFlagged: false, // boolean
+	showMarkers: false, // boolean
+	markLocked: false, // boolean
+	showPlaceholder: false, // boolean
+	markChanges: false, // boolean, since 1.34.0
+	tooltip: undefined, // sap.ui.core.TooltipBase
+	customData: [], // sap.ui.core.CustomData
+	dependents: [], // sap.ui.core.Element, since 1.19
+	breadCrumbsLinks: [], // sap.m.Link
+	navigationBar: undefined, // sap.m.Bar
+	actions: [], // sap.ui.core.Control
+	sideContentButton: undefined, // sap.m.Button, since 1.38.0
+	validateFieldGroup: [function (oEvent) {
+		var ${control} = oEvent.getSource();
+	}, this],
+	titleSelectorPress: [function (oEvent) {
+		var ${control} = oEvent.getSource();
+	}, this],
+	markLockedPress: [function (oEvent) {
+		var ${control} = oEvent.getSource();
+	}, this],
+	markChangesPress: [function (oEvent) {
+		var ${control} = oEvent.getSource();
+	}, this]
+})
+]]></jsTemplate>
+	<xmlTemplate><![CDATA[<ObjectPageHeader xmlns="sap.uxap"
+	id="${id}"
+	busy="false"
+	busyIndicatorDelay="1000"
+	visible="true"
+	fieldGroupIds=""
+	objectImageURI=""
+	objectImageAlt=""
+	objectImageDensityAware="false"
+	objectTitle=""
+	objectSubtitle=""
+	objectImageShape="Square"
+	isObjectIconAlwaysVisible="false"
+	isObjectTitleAlwaysVisible="true"
+	isObjectSubtitleAlwaysVisible="true"
+	isActionAreaAlwaysVisible="true"
+	headerDesign="Light"
+	showTitleSelector="false"
+	markFavorite="false"
+	markFlagged="false"
+	showMarkers="false"
+	markLocked="false"
+	showPlaceholder="false"
+	markChanges="false"
+	validateFieldGroup=""
+	titleSelectorPress=""
+	markLockedPress=""
+	markChangesPress="">
+		<tooltip></tooltip> <!-- sap.ui.core.TooltipBase -->
+		<dependents></dependents> <!-- sap.ui.core.Element, since 1.19 -->
+		<breadCrumbsLinks></breadCrumbsLinks> <!-- sap.m.Link -->
+		<navigationBar></navigationBar> <!-- sap.m.Bar -->
+		<actions></actions> <!-- sap.ui.core.Control -->
+		<sideContentButton></sideContentButton> <!-- sap.m.Button, since 1.38.0 -->
+</ObjectPageHeader>
+]]></xmlTemplate>
+</Template>
+<Template name="sap.uxap.ObjectPageHeaderActionButton" alias="ObjectPageHeaderActionButton,Button">
+	<jsTemplate><![CDATA[new sap.uxap.ObjectPageHeaderActionButton({
+	id: "${id}", // sap.ui.core.ID
+	busy: false, // boolean
+	busyIndicatorDelay: 1000, // int
+	visible: true, // boolean
+	fieldGroupIds: [], // string[], since 1.31
+	text: undefined, // string
+	type: sap.m.ButtonType.Default, // sap.m.ButtonType
+	width: undefined, // sap.ui.core.CSSSize
+	enabled: true, // boolean
+	icon: undefined, // sap.ui.core.URI
+	iconFirst: true, // boolean
+	activeIcon: undefined, // sap.ui.core.URI
+	iconDensityAware: true, // boolean
+	textDirection: sap.ui.core.TextDirection.Inherit, // sap.ui.core.TextDirection, since 1.28.0
+	hideText: true, // boolean
+	hideIcon: false, // boolean
+	importance: sap.uxap.Importance.High, // sap.uxap.Importance, since 1.34.0
+	tooltip: undefined, // sap.ui.core.TooltipBase
+	customData: [], // sap.ui.core.CustomData
+	dependents: [], // sap.ui.core.Element, since 1.19
+	ariaDescribedBy: [], // sap.ui.core.Control
+	ariaLabelledBy: [], // sap.ui.core.Control
+	validateFieldGroup: [function (oEvent) {
+		var ${control} = oEvent.getSource();
+	}, this],
+	tap: [function (oEvent) {
+		var ${control} = oEvent.getSource();
+	}, this],
+	press: [function (oEvent) {
+		var ${control} = oEvent.getSource();
+	}, this]
+})
+]]></jsTemplate>
+	<xmlTemplate><![CDATA[<ObjectPageHeaderActionButton xmlns="sap.uxap"
+	id="${id}"
+	busy="false"
+	busyIndicatorDelay="1000"
+	visible="true"
+	fieldGroupIds=""
+	text=""
+	type="Default"
+	width=""
+	enabled="true"
+	icon=""
+	iconFirst="true"
+	activeIcon=""
+	iconDensityAware="true"
+	textDirection="Inherit"
+	hideText="true"
+	hideIcon="false"
+	importance="High"
+	ariaDescribedBy=""
+	ariaLabelledBy=""
+	validateFieldGroup=""
+	tap=""
+	press="">
+		<tooltip></tooltip> <!-- sap.ui.core.TooltipBase -->
+		<dependents></dependents> <!-- sap.ui.core.Element, since 1.19 -->
+</ObjectPageHeaderActionButton>
+]]></xmlTemplate>
+</Template>
+<Template name="sap.uxap.ObjectPageHeaderContent" alias="ObjectPageHeaderContent,Content">
+	<jsTemplate><![CDATA[new sap.uxap.ObjectPageHeaderContent({
+	id: "${id}", // sap.ui.core.ID
+	busy: false, // boolean
+	busyIndicatorDelay: 1000, // int
+	visible: true, // boolean
+	fieldGroupIds: [], // string[], since 1.31
+	contentDesign: sap.uxap.ObjectPageHeaderDesign.Light, // sap.uxap.ObjectPageHeaderDesign
+	tooltip: undefined, // sap.ui.core.TooltipBase
+	customData: [], // sap.ui.core.CustomData
+	dependents: [], // sap.ui.core.Element, since 1.19
+	content: [], // sap.ui.core.Control
+	validateFieldGroup: [function (oEvent) {
+		var ${control} = oEvent.getSource();
+	}, this]
+})
+]]></jsTemplate>
+	<xmlTemplate><![CDATA[<ObjectPageHeaderContent xmlns="sap.uxap"
+	id="${id}"
+	busy="false"
+	busyIndicatorDelay="1000"
+	visible="true"
+	fieldGroupIds=""
+	contentDesign="Light"
+	validateFieldGroup="">
+		<tooltip></tooltip> <!-- sap.ui.core.TooltipBase -->
+		<dependents></dependents> <!-- sap.ui.core.Element, since 1.19 -->
+		<content></content> <!-- sap.ui.core.Control -->
+</ObjectPageHeaderContent>
+]]></xmlTemplate>
+</Template>
+<Template name="sap.uxap.ObjectPageHeaderLayoutData" alias="ObjectPageHeaderLayoutData,Data">
+	<jsTemplate><![CDATA[new sap.uxap.ObjectPageHeaderLayoutData({
+	id: "${id}", // sap.ui.core.ID
+	visibleS: true, // boolean
+	visibleM: true, // boolean
+	visibleL: true, // boolean
+	showSeparatorBefore: false, // boolean
+	showSeparatorAfter: false, // boolean
+	width: "auto", // sap.ui.core.CSSSize
+	tooltip: undefined, // sap.ui.core.TooltipBase
+	customData: [], // sap.ui.core.CustomData
+	dependents: [] // sap.ui.core.Element, since 1.19
+})
+]]></jsTemplate>
+	<xmlTemplate><![CDATA[<ObjectPageHeaderLayoutData xmlns="sap.uxap"
+	id="${id}"
+	visibleS="true"
+	visibleM="true"
+	visibleL="true"
+	showSeparatorBefore="false"
+	showSeparatorAfter="false"
+	width="auto">
+		<tooltip></tooltip> <!-- sap.ui.core.TooltipBase -->
+		<dependents></dependents> <!-- sap.ui.core.Element, since 1.19 -->
+</ObjectPageHeaderLayoutData>
+]]></xmlTemplate>
+</Template>
+<Template name="sap.uxap.ObjectPageLayout" alias="ObjectPageLayout,Layout">
+	<jsTemplate><![CDATA[new sap.uxap.ObjectPageLayout({
+	id: "${id}", // sap.ui.core.ID
+	busy: false, // boolean
+	busyIndicatorDelay: 1000, // int
+	visible: true, // boolean
+	fieldGroupIds: [], // string[], since 1.31
+	showAnchorBar: true, // boolean
+	showAnchorBarPopover: true, // boolean
+	upperCaseAnchorBar: true, // boolean
+	height: "100%", // sap.ui.core.CSSSize
+	enableLazyLoading: false, // boolean
+	subSectionLayout: sap.uxap.ObjectPageSubSectionLayout.TitleOnTop, // sap.uxap.ObjectPageSubSectionLayout
+	sectionTitleLevel: sap.ui.core.TitleLevel.Auto, // sap.ui.core.TitleLevel, since 1.44.0
+	useIconTabBar: false, // boolean
+	showHeaderContent: true, // boolean
+	useTwoColumnsForLargeScreen: false, // boolean
+	showTitleInHeaderContent: false, // boolean
+	showOnlyHighImportance: false, // boolean, since 1.32.0
+	isChildPage: false, // boolean, since 1.34.0
+	alwaysShowContentHeader: false, // boolean, since 1.34.0
+	showEditHeaderButton: false, // boolean, since 1.34.0
+	flexEnabled: false, // boolean, since 1.34.0
+	showFooter: false, // boolean
+	tooltip: undefined, // sap.ui.core.TooltipBase
+	customData: [], // sap.ui.core.CustomData
+	dependents: [], // sap.ui.core.Element, since 1.19
+	sections: [], // sap.uxap.ObjectPageSection
+	headerTitle: undefined, // sap.uxap.ObjectPageHeader
+	headerContent: [], // sap.ui.core.Control
+	footer: undefined, // sap.m.IBar
+	selectedSection: undefined, // sap.uxap.ObjectPageSection, since 1.44.0
+	validateFieldGroup: [function (oEvent) {
+		var ${control} = oEvent.getSource();
+	}, this],
+	toggleAnchorBar: [function (oEvent) {
+		var ${control} = oEvent.getSource();
+	}, this],
+	editHeaderButtonPress: [function (oEvent) {
+		var ${control} = oEvent.getSource();
+	}, this],
+	navigate: [function (oEvent) {
+		var ${control} = oEvent.getSource();
+	}, this] // since 1.38.1
+})
+]]></jsTemplate>
+	<xmlTemplate><![CDATA[<ObjectPageLayout xmlns="sap.uxap"
+	id="${id}"
+	busy="false"
+	busyIndicatorDelay="1000"
+	visible="true"
+	fieldGroupIds=""
+	showAnchorBar="true"
+	showAnchorBarPopover="true"
+	upperCaseAnchorBar="true"
+	height="100%"
+	enableLazyLoading="false"
+	subSectionLayout="TitleOnTop"
+	sectionTitleLevel="Auto"
+	useIconTabBar="false"
+	showHeaderContent="true"
+	useTwoColumnsForLargeScreen="false"
+	showTitleInHeaderContent="false"
+	showOnlyHighImportance="false"
+	isChildPage="false"
+	alwaysShowContentHeader="false"
+	showEditHeaderButton="false"
+	flexEnabled="false"
+	showFooter="false"
+	selectedSection=""
+	validateFieldGroup=""
+	toggleAnchorBar=""
+	editHeaderButtonPress=""
+	navigate="">
+		<tooltip></tooltip> <!-- sap.ui.core.TooltipBase -->
+		<dependents></dependents> <!-- sap.ui.core.Element, since 1.19 -->
+		<sections></sections> <!-- sap.uxap.ObjectPageSection -->
+		<headerTitle></headerTitle> <!-- sap.uxap.ObjectPageHeader -->
+		<headerContent></headerContent> <!-- sap.ui.core.Control -->
+		<footer></footer> <!-- sap.m.IBar -->
+</ObjectPageLayout>
+]]></xmlTemplate>
+</Template>
+<Template name="sap.uxap.ObjectPageLazyLoader" alias="ObjectPageLazyLoader,Loader">
+	<jsTemplate><![CDATA[new sap.uxap.ObjectPageLazyLoader({
+	id: "${id}", // sap.ui.core.ID
+	tooltip: undefined, // sap.ui.core.TooltipBase
+	customData: [], // sap.ui.core.CustomData
+	dependents: [], // sap.ui.core.Element, since 1.19
+	content: [] // sap.ui.core.Control
+})
+]]></jsTemplate>
+	<xmlTemplate><![CDATA[<ObjectPageLazyLoader xmlns="sap.uxap"
+	id="${id}">
+		<tooltip></tooltip> <!-- sap.ui.core.TooltipBase -->
+		<dependents></dependents> <!-- sap.ui.core.Element, since 1.19 -->
+		<content></content> <!-- sap.ui.core.Control -->
+</ObjectPageLazyLoader>
+]]></xmlTemplate>
+</Template>
+<Template name="sap.uxap.ObjectPageSection" alias="ObjectPageSection,Section">
+	<jsTemplate><![CDATA[new sap.uxap.ObjectPageSection({
+	id: "${id}", // sap.ui.core.ID
+	busy: false, // boolean
+	busyIndicatorDelay: 1000, // int
+	visible: true, // boolean
+	fieldGroupIds: [], // string[], since 1.31
+	title: undefined, // string
+	titleLevel: sap.ui.core.TitleLevel.Auto, // sap.ui.core.TitleLevel, since 1.44.0
+	visible: true, // boolean
+	importance: sap.uxap.Importance.High, // sap.uxap.Importance, since 1.32.0
+	showTitle: true, // boolean
+	titleUppercase: true, // boolean
+	tooltip: undefined, // sap.ui.core.TooltipBase
+	customData: [], // sap.ui.core.CustomData
+	dependents: [], // sap.ui.core.Element, since 1.19
+	customAnchorBarButton: undefined, // sap.m.Button
+	subSections: [], // sap.uxap.ObjectPageSubSection
+	selectedSubSection: undefined, // sap.uxap.ObjectPageSubSection
+	validateFieldGroup: [function (oEvent) {
+		var ${control} = oEvent.getSource();
+	}, this]
+})
+]]></jsTemplate>
+	<xmlTemplate><![CDATA[<ObjectPageSection xmlns="sap.uxap"
+	id="${id}"
+	busy="false"
+	busyIndicatorDelay="1000"
+	visible="true"
+	fieldGroupIds=""
+	title=""
+	titleLevel="Auto"
+	visible="true"
+	importance="High"
+	showTitle="true"
+	titleUppercase="true"
+	selectedSubSection=""
+	validateFieldGroup="">
+		<tooltip></tooltip> <!-- sap.ui.core.TooltipBase -->
+		<dependents></dependents> <!-- sap.ui.core.Element, since 1.19 -->
+		<customAnchorBarButton></customAnchorBarButton> <!-- sap.m.Button -->
+		<subSections></subSections> <!-- sap.uxap.ObjectPageSubSection -->
+</ObjectPageSection>
+]]></xmlTemplate>
+</Template>
+<Template name="sap.uxap.ObjectPageSectionBase" alias="ObjectPageSectionBase,Base">
+	<jsTemplate><![CDATA[new sap.uxap.ObjectPageSectionBase({
+	id: "${id}", // sap.ui.core.ID
+	busy: false, // boolean
+	busyIndicatorDelay: 1000, // int
+	visible: true, // boolean
+	fieldGroupIds: [], // string[], since 1.31
+	title: undefined, // string
+	titleLevel: sap.ui.core.TitleLevel.Auto, // sap.ui.core.TitleLevel, since 1.44.0
+	visible: true, // boolean
+	importance: sap.uxap.Importance.High, // sap.uxap.Importance, since 1.32.0
+	tooltip: undefined, // sap.ui.core.TooltipBase
+	customData: [], // sap.ui.core.CustomData
+	dependents: [], // sap.ui.core.Element, since 1.19
+	customAnchorBarButton: undefined, // sap.m.Button
+	validateFieldGroup: [function (oEvent) {
+		var ${control} = oEvent.getSource();
+	}, this]
+})
+]]></jsTemplate>
+	<xmlTemplate><![CDATA[<ObjectPageSectionBase xmlns="sap.uxap"
+	id="${id}"
+	busy="false"
+	busyIndicatorDelay="1000"
+	visible="true"
+	fieldGroupIds=""
+	title=""
+	titleLevel="Auto"
+	visible="true"
+	importance="High"
+	validateFieldGroup="">
+		<tooltip></tooltip> <!-- sap.ui.core.TooltipBase -->
+		<dependents></dependents> <!-- sap.ui.core.Element, since 1.19 -->
+		<customAnchorBarButton></customAnchorBarButton> <!-- sap.m.Button -->
+</ObjectPageSectionBase>
+]]></xmlTemplate>
+</Template>
+<Template name="sap.uxap.ObjectPageSubSection" alias="ObjectPageSubSection,Section">
+	<jsTemplate><![CDATA[new sap.uxap.ObjectPageSubSection({
+	id: "${id}", // sap.ui.core.ID
+	busy: false, // boolean
+	busyIndicatorDelay: 1000, // int
+	visible: true, // boolean
+	fieldGroupIds: [], // string[], since 1.31
+	title: undefined, // string
+	titleLevel: sap.ui.core.TitleLevel.Auto, // sap.ui.core.TitleLevel, since 1.44.0
+	visible: true, // boolean
+	importance: sap.uxap.Importance.High, // sap.uxap.Importance, since 1.32.0
+	mode: sap.uxap.ObjectPageSubSectionMode.Collapsed, // sap.uxap.ObjectPageSubSectionMode
+	titleUppercase: false, // boolean
+	tooltip: undefined, // sap.ui.core.TooltipBase
+	customData: [], // sap.ui.core.CustomData
+	dependents: [], // sap.ui.core.Element, since 1.19
+	customAnchorBarButton: undefined, // sap.m.Button
+	blocks: [], // sap.ui.core.Control
+	moreBlocks: [], // sap.ui.core.Control
+	actions: [], // sap.ui.core.Control
+	validateFieldGroup: [function (oEvent) {
+		var ${control} = oEvent.getSource();
+	}, this]
+})
+]]></jsTemplate>
+	<xmlTemplate><![CDATA[<ObjectPageSubSection xmlns="sap.uxap"
+	id="${id}"
+	busy="false"
+	busyIndicatorDelay="1000"
+	visible="true"
+	fieldGroupIds=""
+	title=""
+	titleLevel="Auto"
+	visible="true"
+	importance="High"
+	mode="Collapsed"
+	titleUppercase="false"
+	validateFieldGroup="">
+		<tooltip></tooltip> <!-- sap.ui.core.TooltipBase -->
+		<dependents></dependents> <!-- sap.ui.core.Element, since 1.19 -->
+		<customAnchorBarButton></customAnchorBarButton> <!-- sap.m.Button -->
+		<blocks></blocks> <!-- sap.ui.core.Control -->
+		<moreBlocks></moreBlocks> <!-- sap.ui.core.Control -->
+		<actions></actions> <!-- sap.ui.core.Control -->
+</ObjectPageSubSection>
+]]></xmlTemplate>
+</Template>
+</Library>

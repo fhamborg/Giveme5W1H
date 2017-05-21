@@ -1,0 +1,6 @@
+/*!
+ * UI development toolkit for HTML5 (OpenUI5)
+ * (c) Copyright 2009-2017 SAP SE or an SAP affiliate company.
+ * Licensed under the Apache License, Version 2.0 - see LICENSE.txt.
+ */
+sap.ui.define(['jquery.sap.global','./Action'],function($,A){"use strict";var P=A.extend("sap.ui.test.actions.Press",{metadata:{publicMethods:["executeOn"]},init:function(){A.prototype.init.apply(this,arguments);this.controlAdapters=$.extend(this.controlAdapters,P.controlAdapters);},executeOn:function(c){var a=this.$(c),o=a[0];if(a.length){$.sap.log.debug("Pressed the control "+c,this._sLogPrefix);this._tryOrSimulateFocusin(a,c);this._createAndDispatchMouseEvent("mousedown",o);this.getUtils().triggerEvent("selectstart",o);this._createAndDispatchMouseEvent("mouseup",o);this._createAndDispatchMouseEvent("click",o);}}});P.controlAdapters={};P.controlAdapters["sap.m.Input"]="vhi";P.controlAdapters["sap.m.SearchField"]="search";P.controlAdapters["sap.m.ListBase"]="trigger";P.controlAdapters["sap.m.Page"]="navButton";P.controlAdapters["sap.m.semantic.FullscreenPage"]="navButton";P.controlAdapters["sap.m.semantic.DetailPage"]="navButton";P.controlAdapters["sap.m.ComboBox"]="arrow";P.controlAdapters["sap.ui.comp.smartfilterbar.SmartFilterBar"]="btnGo";return P;},true);

@@ -1,0 +1,107 @@
+
+/* ======================================= */
+/* CSS for control sap.m/RadioButtonGroup  */
+/* Base theme                              */
+/* ======================================= */
+.sapMRbG{
+	display: inline-block;
+}
+
+.sapMRbGTab{
+	display: -webkit-box;
+	display: -webkit-flex;
+	display: flex;
+}
+
+.sapMRbGCol{
+	-webkit-box-flex: 1;
+	flex-grow: 1;
+	vertical-align: top;
+	min-width: 10px;
+	margin-right: 0;
+	padding: 1px;
+	overflow: hidden; /* needed in Safari */
+}
+
+.sapMRbGDummy {
+	-webkit-box-flex: 100;
+	flex-grow: 100;
+}
+
+.sapMRbG > .sapMRb,
+.sapMRbGCol > .sapMRb{
+	float: left;
+	clear: left;
+	text-overflow: ellipsis;
+}
+
+.sapMRbG.sapMRbG1Row > .sapMRb{
+	clear: none;
+	padding: 1px;
+}
+
+.sapMRbGCol > .sapMRb{
+	width: 100%;
+	outline-offset: -1px;
+}
+
+.sapMRbG .sapMRbB {
+	position: absolute;
+	left: 0;
+}
+
+.sapMRbG  .sapMRbHasLabel .sapMRbB {
+	width: 3rem;
+}
+
+.sapMRbG .sapMRbBLabel {
+	margin-left: 0;
+	padding-left: 3rem;
+	display: inline-block;
+}
+
+.sapMRbG .sapMRbHasLabel .sapMRbBOut {
+	margin: 0.8125rem;
+}
+
+/* Read only */
+.sapMRbGRo {
+	.sapMRb .sapMRbBOut {
+		background-color: @sapUiFieldReadOnlyBackground;
+		border-color: @sapUiFieldReadOnlyBorderColor;
+	}
+
+	.sapMRb.sapMRbSel .sapMRbBInn {
+		background-color: @sapUiContentNonInteractiveIconColor;
+	}
+}
+
+/* Right to left */
+.sapMRbG[dir=rtl] .sapMRbB {
+	right: 0;
+}
+
+.sapMRbG[dir=rtl] .sapMRbBLabel {
+	padding-left: 0;
+	padding-right: 3rem;
+}
+
+/* Compact Size */
+.sapUiSizeCompact {
+	.sapMRbG .sapMRbHasLabel .sapMRbB {
+		width: 2rem;
+	}
+
+	.sapMRbG .sapMRbHasLabel .sapMRbBOut {
+		margin: 0.5rem;
+	}
+
+	.sapMRbG .sapMRbBLabel {
+		padding-left: 2rem;
+	}
+
+	.sapMRbG[dir=rtl] .sapMRbBLabel {
+		padding-left: 0;
+		padding-right: 2rem;
+	}
+}

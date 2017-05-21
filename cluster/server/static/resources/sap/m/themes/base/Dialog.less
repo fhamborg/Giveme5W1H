@@ -1,0 +1,536 @@
+/* ============================= */
+/* CSS for control sap.m/Dialog  */
+/* Base theme                    */
+/* ============================= */
+
+@sapMDialogMarginHeight: 7%;
+@sapMDialogBarHeight: 3rem;
+@sapMDialogBarCompactHeight: 2.5rem;
+@sapMDialogPadding: 1rem;
+
+.sapMDialog,
+.sapMMessageDialog .sapMDialogScrollCont,
+.sapMDialogSection {
+	box-sizing: border-box;
+}
+
+.sapMDialog {
+	background-clip: padding-box;
+	min-height: 6rem;
+	outline: none;
+	overflow: hidden;
+	position: absolute;
+	opacity: 0;
+	-webkit-transition: opacity .15s, transform 0.2s;
+	transition: opacity .15s, transform 0.2s;
+	-webkit-transform: translate(-50%, -50%) scale(0.9);
+	transform: translate(-50%, -50%) scale(0.9);
+	border-radius: 0.25rem;
+	box-shadow: @sapUiShadowLevel3;
+
+	&:not(.sapMDialogHighPixelDensity) {
+		//prevent blurring when the device pixel ration is 1 (not high density screens)
+		//this is done with style and not with media query for wider support
+		-webkit-filter: blur(0);
+		filter: blur(0);
+	}
+
+	&:not(.sapMDialogResizeHandler) {
+		.sapMDialogScroll {
+			.sapMDialogScrollCont {
+				-ms-overflow-x: hidden;
+				overflow-x: hidden;
+			}
+		}
+	}
+}
+
+//the rtl will change the transform-translate from (-50% -50%) to (50% -50%)
+[dir="rtl"] .sapMDialog {
+	left: 50%; //this will be changed 'right: 50%' from the rtl mode
+}
+
+[dir="rtl"] .sapMDialog.sapMDialogTouched {
+	left: auto;
+}
+
+// set max height and max width ========================================================================================
+
+.sapMDialog {
+	max-width: 90%;
+}
+
+.sapMDialog > .sapMDialogSection {
+	max-width: 100%;
+}
+
+// =====================================================================================================================
+// there are 6 cases (3 vars - header, subheader, and footer)
+// =====================================================================================================================
+
+.setDialogMaxHeight(@_barHeight, @_path) {
+
+	//with header, subheader and footer (3 bars)
+	@{_path}.sapMDialogWithSubHeader:not(.sapMDialog-NoHeader):not(.sapMDialog-NoFooter) {
+		max-height: calc(~"100% - " @_barHeight * 3 ~" - " @sapMDialogMarginHeight);
+	}
+
+	//with header, no subheader and footer (2 bars)
+	@{_path}:not(.sapMDialog-NoHeader):not(.sapMDialog-NoFooter):not(.sapMDialogWithSubHeader) {
+		max-height: calc(~"100% - " @_barHeight * 2 ~" - " @sapMDialogMarginHeight);
+	}
+
+	//with no headers and footer (1 bar)
+	@{_path}.sapMDialog-NoHeader:not(.sapMDialog-NoFooter):not(.sapMDialogWithSubHeader) {
+			max-height: calc(~"100% - " @_barHeight ~" - " @sapMDialogMarginHeight);
+	}
+
+	//with 2 headers with no footer (2 bars)
+	@{_path}:not(.sapMDialog-NoHeader).sapMDialog-NoFooter.sapMDialogWithSubHeader {
+		max-height: calc(~"100% - " @_barHeight ~" - " @sapMDialogMarginHeight);
+	}
+
+	//with 1 sub-header and no footer (1 bar)
+	@{_path}.sapMDialog-NoHeader.sapMDialog-NoFooter.sapMDialogWithSubHeader {
+		max-height: calc(~"100% - " @_barHeight ~" - " @sapMDialogMarginHeight);
+	}
+
+	//with header, no sub-header and no footer (1 bar)
+	@{_path}:not(.sapMDialog-NoHeader).sapMDialog-NoFooter:not(.sapMDialogWithSubHeader) {
+		max-height: calc(~"100% - " @_barHeight ~" - " @sapMDialogMarginHeight);
+	}
+
+	//with no headers and no footer (0 bars)
+	@{_path}.sapMDialog-NoHeader.sapMDialog-NoFooter:not(.sapMDialogWithSubHeader) {
+		max-height: calc(~"100% - " @_barHeight);
+	}
+}
+
+.setDialogMaxHeight(@sapMDialogBarHeight, ~".sapMDialog");
+.setDialogMaxHeight(@sapMDialogBarCompactHeight, ~".sapUiSizeCompact .sapMDialog");
+
+
+// end max height and max width ========================================================================================
+
+.sapMDialog .sapMDialogScrollCont > * {
+	vertical-align: middle;
+}
+
+// Removing borders, shadow, and rounded corners when the dialog is on fullscreen
+.sapMDialog.sapMDialogStretched {
+	border: none;
+	border-radius: 0;
+	box-shadow: 0;
+	transform: none;
+	-webkit-transform: none;
+	right: 0 !important;
+	bottom: 0 !important;
+	top: 0 !important;
+	left: 0 !important;
+	max-height: none !important;
+	max-width: none !important;
+	height: auto !important; //this is for preventing inline size/width sizes set the width
+	width: auto !important; //this is for preventing inline size/height sizes set the height
+	min-width: 0 !important; //this is for preventing the dialog to hold it's width in small screens
+	min-height: 0 !important; //this is for preventing the dialog to hold it's width in small screens
+}
+
+html.sap-phone .sapMDialog {
+	min-width: 18rem;
+	overflow: hidden;
+
+	& > footer  {
+		display: -webkit-box; /* OLD - iOS 6-, Safari 3.1-6 */
+		display: -webkit-flex; /* NEW - Chrome */
+		display: flex;
+		padding: 0 0.25rem;
+
+		.sapMTBSpacer {
+			display: none;
+		}
+
+		.sapMBtn {
+			-webkit-box-flex: 1; /* OLD - iOS 6-, Safari 3.1-6 */
+			-webkit-flex: 1; /* Chrome */
+			flex: 1;
+			min-width: 31%;
+		}
+	}
+}
+
+html.sap-tablet .sapMDialog,
+html.sap-desktop .sapMDialog {
+	min-width: 25rem;
+}
+
+.sapMDialog > .sapMBar {
+	position: relative;
+	width: auto;
+}
+
+.sapMDialog .sapMDialogSection {
+	overflow: hidden;
+	position: relative;
+}
+
+.sapMDialogScroll {
+	display: inline-block; /*this is for horizontal scrolling enablement */
+	height: auto;
+	width: 100%;
+	vertical-align: middle;
+}
+
+/* disable scrolling automatically for sap.m.Page sap.m.NavContainer sap.m.ScrollingContainer inside Dialog */
+.sapMDialogVerScrollDisabled .sapMDialogScroll {
+	height: 100%;
+}
+
+/* disable scrolling automatically for sap.m.Page sap.m.NavContainer sap.m.ScrollingContainer inside Dialog */
+.sapMDialogHorScrollDisabled .sapMDialogScroll {
+	display: block;
+	/* This div has position set to absolute when runs in android native browser with version less than 4.1. */
+	/* Width needs to be set to 100% due to position absolute */
+	width: 100%;
+}
+
+.sapMDialogHidden {
+	/* display: none; */
+	/* visibility need to be used instead of display none, because some control inside dialog may need to do calculation */
+	visibility: hidden;
+}
+
+.sapMDialogBlockLayer {
+	opacity: 0.6;
+}
+
+.sapMDialogTransparent {
+	opacity: 0;
+}
+
+.sapUiPopupWithPadding .sapMDialogScrollCont {
+	padding: @sapMDialogPadding;
+}
+
+.sapUiPopupWithPadding .sapMDialogScrollCont.sapMDialogStretchContent {
+  	height: calc(~"100% - 2 * " @sapMDialogPadding);
+}
+
+.sapMDialogScrollCont.sapMDialogStretchContent {
+  	height: 100%;
+}
+
+/* messagedialog always has content padding */
+.sapMMessageDialog .sapMDialogScrollCont {
+	box-sizing: border-box;
+	padding: 1rem;
+}
+
+.sapMDialogWithScrollCont .sapMDialogScroll {
+	/*
+      This property together with the position: absolute in sapMDialogScrollCont fixes the browser bug stated here:
+      http://stackoverflow.com/questions/8468066/child-inside-parent-with-min-height-100-not-inheriting-height
+  */
+	position: relative;
+}
+.sapUiPopupWithPadding.sapMDialogWithScrollCont .sapMDialogScrollCont {
+  	height: 100%;
+}
+
+.sapMDialogWithScrollCont .sapMDialogScrollCont {
+	height: 100%;
+	padding: 0;
+	position: absolute;
+	width: 100%;
+}
+
+.sapMActionSheetDialog .sapMDialogScrollCont {
+	padding: 0; /* no content padding for action sheet */
+}
+
+.sapMDialogOpen {
+	opacity: 1;
+	transform: translate(-50%, -50%) scale(1);
+	-webkit-transform: translate(-50%, -50%) scale(1);
+}
+
+.sapMDialogBlockLayerAnimation {
+	position: absolute;
+	transition: opacity 0.2s linear;
+	-webkit-transition: opacity 0.2s linear;
+}
+
+/* mixin call for creating container content padding classes (arguments: rootContainer, contentSelector) */
+.sapUiContainerContentPadding(~".sapMDialog", ~"> section > .sapMDialogScroll > .sapMDialogScrollCont");
+
+/* ====================================================== */
+
+.sapMDialog.sapMMessageDialog {
+	font-size: 0.875rem;
+}
+
+.sapMDialog > header.sapMDialogTitle,
+.sapMDialog > header.sapMDialogSubHeader {
+	font-size: 1rem;
+}
+
+.sapMDialogIcon ~ .sapMDialogTitle {
+	display: inline;
+}
+
+/* remove the branding color of bar in page when page is in dialog*/
+.sapMDialog .sapMIBar.sapMPageHeader::before {
+	border-top: none;
+}
+
+.sapMMessageDialog.sapMPopup-CTX > header.sapMDialogTitle {
+	background-image: none;
+	filter: none;
+}
+
+.sapMDialog > header.sapMDialogTitle .sapMTitle {
+	color: @sapUiPageHeaderTextColor;
+	margin: 0;
+	vertical-align: middle;
+}
+
+.sapMDialog > header.sapMDialogTitle .sapMImg {
+	height: 2.25rem;
+	margin-right: 0.625rem;
+	vertical-align: middle;
+	width: 2.25rem;
+}
+
+.sapMDialog > header.sapMDialogTitle .sapMDialogIcon.sapUiIcon {
+	font-size: 1.25rem;
+	margin-right: 0.5rem;
+	vertical-align: middle;
+}
+
+.sapMTB.sapMTBNoBorders {
+	border-bottom: none;
+}
+
+.sapMDialog > footer {
+
+	#dialogWithManyButtons-footer-overflowButton-inner {
+		padding-left: 0;
+	}
+
+	#dialogWithManyButtons-footer-overflowButton-img {
+		position: static;
+	}
+}
+
+/* Compact size */
+.sapUiSizeCompact {
+
+	&.sapMDialog,
+	.sapMDialog {
+		min-height: @sapMDialogBarCompactHeight;
+		padding-bottom: @sapMDialogBarCompactHeight;
+		padding-top: @sapMDialogBarCompactHeight;
+
+		&.sapMDialogWithSubHeader {
+			padding-top: @sapMDialogBarCompactHeight + @sapMDialogBarCompactHeight;
+
+		  	&.sapMDialog-NoHeader {
+				padding-top: @sapMDialogBarCompactHeight;
+
+				& > .sapMDialogSubHeader {
+			  		top: 0;
+				}
+		  	}
+		}
+
+		& > .sapMDialogTitle {
+			height: @sapMDialogBarCompactHeight;
+
+			.sapMBarPH {
+				line-height: @sapMDialogBarCompactHeight;
+			}
+		}
+
+		& > .sapMDialogSection {
+			min-height: @sapMDialogBarCompactHeight;
+		}
+
+		& > footer {
+			height: @sapMDialogBarCompactHeight;
+		}
+
+		& header.sapMDialogSubHeader {
+			height: @sapMDialogBarCompactHeight;
+			top: @sapMDialogBarCompactHeight;
+		}
+	}
+
+	&.sapMDialog > header.sapMDialogTitle > .sapMBarMiddle > .sapMBarPH > .sapMImg {
+		&.sapMDialog > header.sapMDialogTitle > .sapMBarMiddle > .sapMBarPH > .sapMImg,
+		& .sapMDialog > header.sapMDialogTitle > .sapMBarMiddle > .sapMBarPH > .sapMImg {
+			height: 1.5rem;
+			width: 1.5rem;
+		}
+
+		&.sapMDialog > header.sapMDialogTitle > .sapMBarMiddle > .sapMBarPH > .sapUiIcon,
+		& .sapMDialog > header.sapMDialogTitle > .sapMBarMiddle > .sapMBarPH > .sapUiIcon {
+			font-size: 1rem;
+			height: 1.5rem;
+			line-height: 1.5rem;
+			width: 1rem;
+		}
+
+		&.sapMDialog > header:first-of-type.sapMHeader-CTX,
+		&.sapMDialog > footer:last-of-type.sapMFooter-CTX,
+		& .sapMDialog > header:first-of-type.sapMHeader-CTX,
+		& .sapMDialog > footer:last-of-type.sapMFooter-CTX {
+			height: 2.5rem;
+
+			.sapMBarLeft,
+			.sapMBarRight,
+			.sapMBarPH {
+				padding-bottom: 0.25rem;
+				padding-top: 0.25rem;
+			}
+		}
+	}
+}
+
+.sapMDialogResizing,
+.sapMDialogResizing * {
+	-moz-user-select: none;
+	-webkit-user-select: none;
+	-ms-user-select: none;
+	user-select: none;
+}
+
+//remove the transform translate
+.sapMDialogTouched {
+	transform: scale(1);
+	-webkit-transform: scale(1);
+}
+
+.sapDialogDisableTransition {
+	transition: none;
+	-webkit-transition: none;
+}
+
+.sapMDialogResizeHandler {
+	bottom: 0.5rem;
+	cursor: se-resize;
+	height: .5rem;
+	position: absolute;
+	right: 0;
+	width: .5rem;
+	z-index: 2;
+  	line-height: 1rem;
+
+	&:before {
+		left: 0;
+		position: relative;
+		top: 0;
+	}
+}
+
+.sapMDialog {
+	box-sizing: content-box;
+	min-height: @sapMDialogBarHeight;
+	padding-bottom: @sapMDialogBarHeight;
+	padding-top: @sapMDialogBarHeight;
+
+	&.sapMDialog-NoFooter {
+		padding-bottom: 0;
+	}
+
+	&.sapMDialog-NoHeader {
+		padding-top: 0;
+	}
+
+	&.sapMDialogWithSubHeader {
+		padding-top: @sapMDialogBarHeight + @sapMDialogBarHeight;
+
+	  	&.sapMDialog-NoHeader {
+			padding-top: @sapMDialogBarHeight;
+
+		  	& > .sapMDialogSubHeader {
+				top: 0;
+		  	}
+		}
+	}
+
+	& > .sapMDialogTitle {
+		height: @sapMDialogBarHeight;
+		left: 0;
+		position: absolute;
+		right: 0;
+		top: 0;
+	}
+
+	& > .sapMDialogSection {
+		height: 100%;
+		min-height: @sapMDialogBarHeight;
+	}
+
+	& > footer {
+		bottom: 0;
+		height: @sapMDialogBarHeight;
+		left: 0;
+		position: absolute;
+		right: 0;
+	}
+
+	&.sapMDialogDraggable > header {
+		cursor: move;
+	}
+
+	& header.sapMDialogSubHeader {
+		cursor: default;
+		height: @sapMDialogBarHeight;
+		left: 0;
+		position: absolute;
+		right: 0;
+		top: @sapMDialogBarHeight;
+		z-index: 2;
+	}
+}
+
+//remove transition when animation is off
+html[data-sap-ui-animation='off'] {
+	.sapMDialog,
+	.sapMDialogBlockLayerAnimation {
+		transition: none;
+	}
+}
+
+.sapMDialog > .sapMDialogSection {
+  	background: @sapUiGroupContentBackground;
+}
+
+.sapMDialogWarning > header {
+	&.sapMDialogTitle .sapUiIcon {
+		color: @sapUiCriticalElement;
+	}
+
+	&.sapMBar:last-of-type {
+	  	box-shadow: inset 0 -0.125rem @sapUiWarningBorder;
+	}
+}
+
+.sapMDialogError > header {
+	&.sapMDialogTitle .sapUiIcon {
+		color: @sapUiNegativeElement;
+	}
+
+	&.sapMBar:last-of-type {
+	  	box-shadow: inset 0 -0.125rem @sapUiErrorBorder;
+	}
+}
+
+.sapMDialogSuccess > header {
+	&.sapMDialogTitle .sapUiIcon {
+		color: @sapUiPositiveElement;
+	}
+
+	&.sapMBar:last-of-type {
+	  	box-shadow: inset 0 -0.125rem @sapUiSuccessBorder;
+	}
+}

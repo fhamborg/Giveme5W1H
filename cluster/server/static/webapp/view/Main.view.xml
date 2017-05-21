@@ -1,0 +1,58 @@
+<mvc:View
+		controllerName="ch.berncon.generator.ui5.controller.Main"
+  	    xmlns:layout="sap.ui.layout"
+		xmlns:form="sap.ui.layout.form"
+		xmlns:core="sap.ui.core"
+		xmlns:u="sap.ui.unified"
+		xmlns:mvc="sap.ui.core.mvc"
+		xmlns:semantic="sap.m.semantic"
+		xmlns:table="sap.ui.table"
+		xmlns="sap.m">
+				<semantic:FullscreenPage 
+				                     title="5w1hExtraction Set"
+									 showNavButton="false"
+									 navButtonPress="onNavButtonPress">
+					 <Table
+						 items="{path:'data>/'}"
+						 inset="false"
+						 itemPress="onPress"
+						 >
+						 
+        		 		<columns>
+        		 		    <Column>
+                                    <Text text="Title"/>
+                            </Column>
+        		 			<Column>
+        							<Text text="PubDate"/>
+        		 			</Column>
+        		 			<Column>
+                                    <Text text="Filename"/>
+                            </Column>
+                            <Column>
+                                    <Text text="Annotated Cluster"/>
+                            </Column>
+                             <Column>
+                                    <Text text="Cluster"/>
+                            </Column>
+        		 		</columns>
+        				<items>
+        						<ColumnListItem type="Navigation">
+        							<cells>
+        								<Text
+        									text="{data>metadata/title}" wrapping="true"/>
+        								<Text
+        									text="{data>metadata/date}" wrapping="true"/>
+        								<Text
+        									text="{data>metadata/filename}" wrapping="true"/>
+        								<Text
+                                            text="{data>annotation/cluster}" wrapping="true"/>
+                                        <Text
+                                            text="{data>cluster}" wrapping="true"/>
+        							</cells>
+        						</ColumnListItem>
+        					</items>
+        		 	</Table>
+					<semantic:customFooterContent>
+					</semantic:customFooterContent>
+			</semantic:FullscreenPage>
+</mvc:View>

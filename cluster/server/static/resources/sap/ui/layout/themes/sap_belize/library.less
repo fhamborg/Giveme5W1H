@@ -1,0 +1,357 @@
+/* NOTE: This file was generated as an optimized version of "library.source.less" for the Theme Designer. */
+
+/*!
+ * UI development toolkit for HTML5 (OpenUI5)
+ * (c) Copyright 2009-2017 SAP SE or an SAP affiliate company.
+ * Licensed under the Apache License, Version 2.0 - see LICENSE.txt.
+ */
+
+@import "../base/library.less";
+@import "../../../../../../Base/baseLib/sap_belize/base.less"; /* ORIGINAL IMPORT PATH: "../../../../../sap/ui/core/themes/sap_belize/base.less" */
+
+@import "../../../../../sap/ui/core/themes/sap_belize/global.less";
+
+/* START "Form.less" */
+/* =================================== */
+/* CSS for control sap.ui.layout/Form  */
+/* Belize theme                        */
+/* =================================== */
+/* END "Form.less" */
+
+/* START "FormLayout.less" */
+/* ========================================= */
+/* CSS for control sap.ui.layout/FormLayout  */
+/* Belize theme                              */
+/* ========================================= */
+
+.sapUiFormLayout {
+	font-family: @sapUiDesktopFontFamily;
+}
+
+.sapUiFormLayout.sapUiFormBackgrTranslucent > section {
+	background-color: fade(@sapUiGroupContentBackground, @sapUiTranslucentBGOpacity);
+}
+
+.sapUiFormLayout.sapUiFormBackgrSolid > section {
+	background-color: @sapUiGroupContentBackground;
+}
+
+.sapUiForm .sapUiFormTitle {
+	border-width: 1px;
+	border-color: @sapUiGroupTitleBorderColor;
+	font-family: @sapUiFontHeaderFamily;
+}
+
+.sapUiFormTitle > .sapUiBtn {
+	bottom: 0.25rem;
+}
+/* END "FormLayout.less" */
+
+/* START "GridLayout.less" */
+/* ========================================= */
+/* CSS for control sap.ui.layout/GridLayout  */
+/* Belize theme                              */
+/* ========================================= */
+
+.sapUiGrid {
+	font-family: @sapUiDesktopFontFamily;
+}
+
+.sapUiGrid.sapUiFormBackgrTranslucent > tbody > tr {
+	background-color: fade(@sapUiGroupContentBackground, @sapUiTranslucentBGOpacity);
+}
+
+.sapUiGrid.sapUiFormBackgrSolid > tbody > tr {
+	background-color: @sapUiGroupContentBackground;
+}
+
+.sapUiGrid > tbody > tr.sapUiGridTitle {
+	background-color: transparent;
+}
+
+/* Title */
+.sapUiGridHeader > .sapUiFormTitle > .sapUiBtnS.sapUiBtnLite {
+	bottom: 0.3125rem;
+}
+/* END "GridLayout.less" */
+
+/* START "ResponsiveFlowLayout.less" */
+/* =================================================== */
+/* CSS for control sap.ui.layout/ResponsiveFlowLayout  */
+/* Belize theme                                        */
+/* =================================================== */
+/* END "ResponsiveFlowLayout.less" */
+
+/* START "ResponsiveGridLayout.less" */
+/* =================================================== */
+/* CSS for control sap.ui.layout/ResponsiveGridLayout  */
+/* Belize theme                                        */
+/* =================================================== */
+
+/* Toolbar */
+.sapUiFormResGrid.sapUiFormToolbar > div:first-child {
+	background-color: transparent;
+}
+
+/* Grid */
+.sapUiFormResGrid.sapUiFormBackgrTranslucent > div {
+	background-color: fade(@sapUiGroupContentBackground, @sapUiTranslucentBGOpacity);
+}
+
+.sapUiFormResGrid.sapUiFormBackgrSolid > div {
+	background-color: @sapUiGroupContentBackground;
+}
+/* END "ResponsiveGridLayout.less" */
+
+/* START "ResponsiveLayout.less" */
+/* =============================================== */
+/* CSS for control sap.ui.layout/ResponsiveLayout  */
+/* Belize theme                                    */
+/* =============================================== */
+
+.sapUiFormResLayout.sapUiFormBackgrTranslucent > div {
+	background-color: fade(@sapUiGroupContentBackground, @sapUiTranslucentBGOpacity);
+}
+
+.sapUiFormResLayout.sapUiFormBackgrSolid > div {
+	background-color: @sapUiGroupContentBackground;
+}
+
+.sapUiRLContainer > .sapUiFormTitle > .sapUiBtn {
+	bottom: 0.3125rem;
+}
+
+/* Toolbar */
+.sapUiFormResLayout.sapUiFormToolbar > div:first-child {
+	background-color: transparent;
+}
+/* END "ResponsiveLayout.less" */
+
+/* START "ResponsiveSplitter.less" */
+/* ================================================= */
+/* CSS for control sap.ui.layout/ResponsiveSplitter  */
+/* Belize theme                                      */
+/* ================================================= */
+
+@_sap_ui_layout_ResponsiveSplitter_PaginatorButtonColor: darken(@sapUiContentForegroundColor, 20);
+@_sap_ui_layout_ResponsiveSplitter_BarColor: darken(@sapUiGlobalBackgroundColor, 11);
+@_sap_ui_layout_ResponsiveSplitter_BarHoverColor: darken(@sapUiGlobalBackgroundColor, 21);
+@_sap_ui_layout_ResponsiveSplitter_CircleColor: darken(@sapUiGlobalBackgroundColor, 3);
+@_sap_ui_layout_ResponsiveSplitter_CircleBorderColor: darken(@sapUiGlobalBackgroundColor, 23);
+
+.sapUiResponsiveSplitterPaginatorButton:hover {
+	&:after {
+		background-color: @_sap_ui_layout_ResponsiveSplitter_PaginatorButtonColor;
+	}
+}
+
+.sapUiResponsiveSplitterPaginatorButton {
+	&:after {
+		background-color: @_sap_ui_layout_ResponsiveSplitter_PaginatorButtonColor;
+	}
+}
+
+.sapUiResponsiveSplitter > .sapUiResponsiveSplitterPage > .sapUiLoSplitter .sapUiLoSplitterBar {
+	background-color: @_sap_ui_layout_ResponsiveSplitter_BarColor;
+
+	&:hover {
+		background-color: @_sap_ui_layout_ResponsiveSplitter_BarHoverColor;
+	}
+}
+
+html.sap-phone .sapUiResponsiveSplitter > .sapUiResponsiveSplitterPage > .sapUiLoSplitter .sapUiLoSplitterBar,
+html.sap-tablet .sapUiResponsiveSplitter > .sapUiResponsiveSplitterPage > .sapUiLoSplitter .sapUiLoSplitterBar,
+html.sap-phone .sapUiResponsiveSplitter > .sapUiResponsiveSplitterPage > .sapUiLoSplitter .sapUiLoSplitterOverlayBar,
+html.sap-tablet .sapUiResponsiveSplitter > .sapUiResponsiveSplitterPage > .sapUiLoSplitter .sapUiLoSplitterOverlayBar {
+	& .sapUiLoSplitterBarIcon:after {
+		background-color: @_sap_ui_layout_ResponsiveSplitter_CircleColor;
+		border-color: @_sap_ui_layout_ResponsiveSplitter_CircleBorderColor;
+	}
+}
+/* END "ResponsiveSplitter.less" */
+
+/* START "SimpleForm.less" */
+/* ========================================= */
+/* CSS for control sap.ui.layout/SimpleForm  */
+/* Belize theme                              */
+/* ========================================= */
+
+.sapUiFormEdit-CTX .sapMRb {
+	z-index: 0;
+}
+
+.sapUiFormEdit-CTX .sapMRbHasLabel.sapMRb:focus:before {
+	right: -0.0312rem;
+}
+/* END "SimpleForm.less" */
+
+/* START "Splitter.less" */
+/* ======================================= */
+/* CSS for control sap.ui.layout/Splitter  */
+/* Belize theme                            */
+/* ======================================= */
+
+@_sap_ui_layout_Splitter_BarColor: darken(@sapUiGlobalBackgroundColor, 11);
+@_sap_ui_layout_Splitter_BarHoverColor: darken(@sapUiGlobalBackgroundColor, 21);
+
+html.sap-desktop .sapUiLoSplitterH.sapUiLoSplitter > .sapUiLoSplitterBar,
+html.sap-desktop .sapUiLoSplitterH > .sapUiLoSplitterOverlay > .sapUiLoSplitterOverlayBar {
+	height: 100%;
+	width: 0.25rem;
+}
+
+html.sap-desktop .sapUiLoSplitterV.sapUiLoSplitter > .sapUiLoSplitterBar,
+html.sap-desktop .sapUiLoSplitterV > .sapUiLoSplitterOverlay > .sapUiLoSplitterOverlayBar {
+	width: 100%;
+	height: 0.25rem;
+}
+
+.sapUiLoSplitter > .sapUiLoSplitterBar {
+	background-color: @_sap_ui_layout_Splitter_BarColor;
+}
+
+.sapUiLoSplitter > .sapUiLoSplitterBar:hover {
+	background-color: @_sap_ui_layout_Splitter_BarHoverColor;
+}
+
+.sapUiLoSplitterOverlay > .sapUiLoSplitterOverlayBar {
+	background-color: @sapUiHighlight;
+}
+
+.sapUiLoSplitterBarIcon {
+	display: none;
+}
+
+/*********************************** IE Focus outline workaround **********************************/
+
+html[data-sap-ui-browser^=ie] .sapUiLoSplitterH > .sapUiLoSplitterBar:focus::after {
+	top: 0;
+}
+
+html[data-sap-ui-browser^=ie].sap-desktop .sapUiLoSplitterH > .sapUiLoSplitterBar:focus::after {
+	height: 100%;
+	width: 0.25rem;
+	border: 1px dotted @sapUiContentFocusColor;
+}
+
+html[data-sap-ui-browser^=ie].sap-desktop .sapUiLoSplitterV > .sapUiLoSplitterBar:focus::after {
+	top: 0;
+	height: 0.25rem;
+	width: 100%;
+	border: 1px dotted @sapUiContentFocusColor;
+}
+/* END "Splitter.less" */
+
+/* START "BlockLayout.less" */
+/* ========================================== */
+/* CSS for control sap.ui.layout/BlockLayout  */
+/* Belize theme                               */
+/* ========================================== */
+
+/* ============ Background type: Light ============== */
+.sapUiBlockLayoutBackgroundLight {
+	.sapUiBlockLayoutRow.sapUiBlockLayoutBackgroundColorSet1,
+	.sapUiBlockLayoutRow.sapUiBlockLayoutBackgroundColorSet3 {
+		.setCellsColorDoubles(@sapUiGroupContentBackground, @sapUiBaseColor);
+	}
+
+	.sapUiBlockLayoutRow.sapUiBlockLayoutBackgroundColorSet1Inverted,
+	.sapUiBlockLayoutRow.sapUiBlockLayoutBackgroundColorSet3Inverted {
+		.setCellsColorDoubles(@sapUiBaseColor, @sapUiGroupContentBackground);
+	}
+
+	.sapUiBlockLayoutRow.sapUiBlockLayoutBackgroundColorSet2,
+	.sapUiBlockLayoutRow.sapUiBlockLayoutBackgroundColorSet4 {
+		.setCellsColorDoubles(darken(@sapUiBaseColor, 7), darken(@sapUiBaseColor, 14));
+	}
+
+	.sapUiBlockLayoutRow.sapUiBlockLayoutBackgroundColorSet2Inverted,
+	.sapUiBlockLayoutRow.sapUiBlockLayoutBackgroundColorSet4Inverted {
+		.setCellsColorDoubles(darken(@sapUiBaseColor, 14), darken(@sapUiBaseColor, 7));
+	}
+}
+
+/* ============ Background type: Mixed ============== */
+.sapUiBlockLayoutBackgroundMixed {
+	.sapUiBlockLayoutBackgroundLight; // Use the same rules as in sapUiBlockLayoutBackgroundLight
+
+	&.sapUiBlockLayoutSizeL, &.sapUiBlockLayoutSizeXL {
+		.sapUiBlockLayoutRow {
+			.sapContrast, .sapContrastPlus {
+				&.sapUiBlockLayoutCell {
+					background-color: darken(@sapUiBaseColor, 12);
+				}
+
+				&.sapUiBlockLayoutCell.sapUiBlockLayoutBackgroundContrast2 {
+					background-color: darken(@sapUiBaseColor, 4);
+				}
+			}
+		}
+	}
+}
+
+/* ============ Background type: Accent ============== */
+.sapUiBlockLayoutBackgroundAccent {
+	.sapUiBlockCellContent,
+	.sapUiBlockCellTitle,
+	.sapUiBlockCellContent .sapMText {
+		color: @sapUiContentContrastTextColor;
+	}
+
+	.sapUiBlockLayoutRow.sapUiBlockLayoutBackgroundColorSet1 {
+		.setCellsColorDoubles(darken(@sapUiAccent7, 5), darken(@sapUiAccent7, 12)); // Colors A & B
+	}
+
+	.sapUiBlockLayoutRow.sapUiBlockLayoutBackgroundColorSet1Inverted {
+		.setCellsColorDoubles(darken(@sapUiAccent7, 12), darken(@sapUiAccent7, 5)); // Colors B & A
+	}
+
+	.sapUiBlockLayoutRow.sapUiBlockLayoutBackgroundColorSet2 {
+		.setCellsColorDoubles(darken(@sapUiAccent6, 6), darken(@sapUiAccent6, 12)); // Colors C & D
+	}
+
+	.sapUiBlockLayoutRow.sapUiBlockLayoutBackgroundColorSet2Inverted {
+		.setCellsColorDoubles(darken(@sapUiAccent6, 12), darken(@sapUiAccent6, 6)); // Colors D & C
+	}
+
+	.sapUiBlockLayoutRow.sapUiBlockLayoutBackgroundColorSet3 {
+		.setCellsColorDoubles(darken(@sapUiAccent5, 8), darken(@sapUiAccent5, 16)); // Colors E & F
+	}
+
+	.sapUiBlockLayoutRow.sapUiBlockLayoutBackgroundColorSet3Inverted {
+		.setCellsColorDoubles(darken(@sapUiAccent5, 16), darken(@sapUiAccent5, 8)); // Colors F & E
+	}
+
+	.sapUiBlockLayoutRow.sapUiBlockLayoutBackgroundColorSet4 {
+		.setCellsColorDoubles(darken(@sapUiGroupContentBackground, 2), darken(@sapUiGroupContentBackground, 8)); // Colors G & H
+	}
+
+	.sapUiBlockLayoutRow.sapUiBlockLayoutBackgroundColorSet4Inverted {
+		.setCellsColorDoubles(darken(@sapUiGroupContentBackground, 8), darken(@sapUiGroupContentBackground, 2)); // Colors H & G
+	}
+
+	.sapUiBlockLayoutRow.sapUiBlockLayoutBackgroundColorSet1,
+	.sapUiBlockLayoutRow.sapUiBlockLayoutBackgroundColorSet2,
+	.sapUiBlockLayoutRow.sapUiBlockLayoutBackgroundColorSet3,
+	.sapUiBlockLayoutRow.sapUiBlockLayoutBackgroundColorSet4 {
+		.sapUiBlockLayoutCell.sapUiBlockLayoutBackgroundColorSetGray1 {
+			background-color: darken(@sapUiGroupContentBackground, 8); //color: H
+		}
+
+		.sapUiBlockLayoutCell.sapUiBlockLayoutBackgroundColorSetGray2 {
+			background-color: darken(@sapUiGroupContentBackground, 2); //color: G
+		}
+	}
+
+	.sapUiBlockLayoutBackgroundColorSet4,
+	.sapUiBlockLayoutBackgroundColorSet4Inverted,
+	.sapUiBlockLayoutBackgroundColorSetGray1,
+	.sapUiBlockLayoutBackgroundColorSetGray2 {
+		.sapUiBlockCellContent,
+		.sapUiBlockCellTitle,
+		.sapUiBlockCellContent .sapMText {
+			color: @sapUiGroupTitleTextColor;
+		}
+	}
+}
+/* END "BlockLayout.less" */

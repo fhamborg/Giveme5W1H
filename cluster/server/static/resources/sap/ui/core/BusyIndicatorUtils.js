@@ -1,0 +1,6 @@
+/*!
+ * UI development toolkit for HTML5 (OpenUI5)
+ * (c) Copyright 2009-2017 SAP SE or an SAP affiliate company.
+ * Licensed under the Apache License, Version 2.0 - see LICENSE.txt.
+ */
+sap.ui.define(['jquery.sap.global'],function(q){"use strict";var B=function(){};B.getElement=function(s){var S="sapUiLocalBusyIndicatorSizeMedium";if(s==="Big"){S="sapUiLocalBusyIndicatorSizeBig";}var c=document.createElement("div");c.className="sapUiLocalBusyIndicator "+S;c.setAttribute("role","progressbar");c.setAttribute("aria-valuemin","0");c.setAttribute("aria-valuemax","100");c.setAttribute("alt","");c.setAttribute("tabIndex","0");var a=document.createElement("div");a.className="sapUiLocalBusyIndicatorAnimation sapUiLocalBusyIndicatorAnimStandard";a.appendChild(document.createElement("div"));a.appendChild(document.createElement("div"));a.appendChild(document.createElement("div"));c.appendChild(a);return c;};B.addHTML=function($,b,s){var e=B.getElement(s);e.id=b;var d=$.get(0);d.appendChild(e);d.className+=" sapUiLocalBusy";var a=e.children[0];var w=a.offsetWidth;e.className+=" sapUiLocalBusyIndicatorFade";if($[0].offsetWidth<w){a.className="sapUiLocalBusyIndicatorAnimation sapUiLocalBusyIndicatorAnimSmall";}$.attr('aria-busy',true);return q(e);};B.animateIE9={start:function(){},stop:function(){}};return B;},true);

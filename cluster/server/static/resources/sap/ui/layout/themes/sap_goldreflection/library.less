@@ -1,0 +1,2088 @@
+/* NOTE: This file was generated as an optimized version of "library.source.less" for the Theme Designer. */
+
+/*!
+ * UI development toolkit for HTML5 (OpenUI5)
+ * (c) Copyright 2009-2017 SAP SE or an SAP affiliate company.
+ * Licensed under the Apache License, Version 2.0 - see LICENSE.txt.
+ */
+
+/***********************************************************************************
+/* Due to deprecation of sap_goldreflection with SAPUI5 version 1.38
+/* the library.source.less coding of base is directly at the top section of the
+/* control less files and no longer imported within this library.source.less file.
+/* This decoupling of the base theme is introduced with SAPUI5 version 1.46.
+***********************************************************************************/
+
+@import "../../../../../../Base/baseLib/baseTheme/base.less"; /* ORIGINAL IMPORT PATH: "../../../../../sap/ui/core/themes/base/base.less" */
+
+@import "../../../../../sap/ui/core/themes/base/global.less";
+
+@import "../../../../../../Base/baseLib/sap_goldreflection/base.less"; /* ORIGINAL IMPORT PATH: "../../../../../sap/ui/core/themes/sap_goldreflection/base.less" */
+
+@import "../../../../../sap/ui/core/themes/sap_goldreflection/global.less";
+
+/* START "DynamicSideContent.less" */
+.sapUiDSC {
+	&:after {
+		clear: both;
+		content: " ";
+		display: block;
+		font-size: 0;
+		height: 0;
+		visibility: hidden;
+	}
+
+	> div[class^="sapUiDSCSpan"] {
+		float: left;
+		overflow: auto;
+	}
+
+	> aside[class^="sapUiDSCSpan"] {
+		float: left;
+		overflow: auto;
+	}
+
+	> div.sapUiDSCMCFixed {
+		width: ~"calc(100% - 340px)";
+		float: left;
+	}
+
+	> aside.sapUiDSCSCFixed,
+	> div.sapUiDSCSCFixed {
+		width: 340px;
+		float: left;
+	}
+
+	> .sapUiDSCSpan1 {
+		width: 8.333%;
+	}
+
+	> .sapUiDSCSpan2 {
+		width: 16.666%;
+	}
+
+	> .sapUiDSCSpan3 {
+		width: 25%;
+	}
+
+	> .sapUiDSCSpan4 {
+		width: 33.333%;
+	}
+
+	> .sapUiDSCSpan5 {
+		width: 41.666%;
+	}
+
+	> .sapUiDSCSpan6 {
+		width: 50%;
+	}
+
+	> .sapUiDSCSpan7 {
+		width: 58.333%;
+	}
+
+	> .sapUiDSCSpan8 {
+		width: 66.666%;
+	}
+
+	> .sapUiDSCSpan9 {
+		width: 75%;
+	}
+
+	> .sapUiDSCSpan10 {
+		width: 83.333%;
+	}
+
+	> .sapUiDSCSpan11 {
+		width: 91.666%;
+	}
+
+	> .sapUiDSCSpan12 {
+		width: 100%;
+	}
+}
+
+/* mixin call for creating container content padding classes (arguments: rootContainer, mainContent) */
+.sapUiContainerContentPadding(~".sapUiDSC", ~"> div:first-child");
+.sapUiContainerContentPadding(~".sapUiDSC", ~"> div:last-child");
+
+/* mixin call for creating container content padding classes (arguments: rootContainer, sideContent) */
+.sapUiContainerContentPadding(~".sapUiDSC", ~"> aside");
+
+/* END "DynamicSideContent.less" */
+
+/* START "FixFlex.less" */
+/* ==========================================================================
+   CSS for control sap.m/FlexBox.control
+   ========================================================================== */
+
+/* Class for vertical (default) layout
+   ========================================================================== */
+.sapUiFixFlex {
+	box-sizing: border-box;
+
+	display: -webkit-box;
+	display: -webkit-flex;
+	display: flex;
+
+	-webkit-box-direction: normal;
+	-webkit-box-orient: vertical;
+	-webkit-flex-direction: column;
+	flex-direction: column;
+
+	-webkit-box-align: start;
+	-webkit-align-items: flex-start;
+	align-items: flex-start;
+
+	height: 100%;
+}
+
+/* Flexible child */
+.sapUiFixFlexFlexible {
+	box-sizing: border-box;
+
+	/* Fixes bug in Chrome 48 where flexbox is broken
+		https://github.com/angular/material/issues/6841 */
+	min-height: 0;
+	min-width: 0;
+
+	display: -webkit-box;
+	display: -webkit-flex;
+	display: flex;
+
+	-webkit-box-flex: 1;
+	-webkit-flex: 1;
+	flex: 1;
+
+	-webkit-box-align: start;
+	-webkit-align-items: flex-start;
+	align-items: flex-start;
+
+	overflow: hidden;
+	position: relative;
+	width: 100%;
+}
+
+.sapUiFixFlexFlexibleContainer {
+	position: absolute;
+	top: 0;
+	right: 0;
+	bottom: 0;
+	left: 0;
+
+	& > .sapUiFixFlex {
+		position: absolute;
+		top: 0;
+		right: 0;
+		bottom: 0;
+		left: 0;
+	}
+}
+
+/* Fixed child */
+.sapUiFixFlexFixed {
+	box-sizing: border-box;
+
+	position: relative;
+	overflow: hidden;
+	width: 100%;
+}
+
+/* Class for horizontal layout
+   ========================================================================== */
+
+.sapUiFixFlexRow {
+	-webkit-box-direction: normal;
+	-webkit-box-orient: horizontal;
+	-webkit-flex-direction: row;
+	flex-direction: row;
+
+	& > .sapUiFixFlexFlexible,
+	& > .sapUiFixFlexFixed {
+		width: auto;
+		height: 100%;
+	}
+}
+
+/* Legacy browser support
+   ========================================================================== */
+
+.sapUiFixFlexRow {
+	&.sapUiFixFlex-Legacy {
+		position: relative;
+
+		& > .sapUiFixFlexFixed,
+		& > .sapUiFixFlexFlexible {
+			position: relative;
+			float: left;
+		}
+	}
+}
+
+/* Styles for scrolling
+   ========================================================================== */
+.sapUiFixFlexInnerScrolling {
+	& > .sapUiFixFlexFlexible {
+		-webkit-overflow-scrolling: touch;
+		overflow: auto;
+
+		.sapUiFixFlexFlexibleContainerGrowing {
+			overflow-x: hidden;
+			overflow-y: visible;
+			width: 100%;
+			position: static;
+		}
+	}
+
+	&.sapUiFixFlexRow {
+		& > .sapUiFixFlexFlexible {
+			overflow-y: hidden;
+		}
+	}
+}
+
+.sapUiFixFlexScrolling {
+	-webkit-overflow-scrolling: touch;
+	display: block;
+
+	& > .sapUiFixFlexFlexible {
+		display: block;
+
+		& > .sapUiFixFlexFlexibleContainer {
+			position: static;
+			height: 100%;
+		}
+	}
+
+	&.sapUiFixFlexRow {
+		white-space: nowrap;
+		& > .sapUiFixFlexFlexible,
+		& > .sapUiFixFlexFixed {
+			display: inline-block;
+		}
+	}
+}
+
+/* END "FixFlex.less" */
+
+/* START "Form.less" */
+/* =============================================== */
+/* CSS for control sap.ui.layout/form/Form.control */
+/* Goldreflection                                  */
+/* =============================================== */
+
+@sapUiFormContainerExpImageURL: url("img/form/Maximize.png");
+@sapUiFormContainerExpImageDownURL: url("img/form/Maximize_hover.png");
+@sapUiFormContainerColImageURL: url("img/form/Minimize.png");
+@sapUiFormContainerColImageDownURL: url("img/form/Minimize_hover.png");
+
+.sapUiForm .sapUiFormTitle > button{
+	height: 16px;
+	width: 16px;
+	padding-left: 0;
+	padding-right:0;
+	bottom: 0;
+}
+
+html[data-sap-ui-browser^="ie"] .sapUiFormTitle > .sapUiBtnS.sapUiBtnLite.sapUiBtnAct{
+	padding-left: 0;
+	padding-right:0px;
+	padding-top: 0px;
+}
+
+html[data-sap-ui-browser^="ie"] .sapUiFormTitle > .sapUiBtnS.sapUiBtnLite.sapUiBtnAct > img{
+	margin-left: -1px;
+	margin-top: -3px;
+}
+
+/* END "Form.less" */
+
+/* START "FormLayout.less" */
+/* ========================================= */
+/* CSS for control sap.ui.layout/FormLayout  */
+/* Goldreflection                            */
+/* ========================================= */
+
+@sapUiFormTitleSize: ~"H4";
+@sapUiFormSubTitleSize: ~"H5";
+
+.sapUiFormLayout {
+	border: 1px solid @sapUiGroupTitleBorderColor;
+	font-size: @sapUiDesktopFontSize;
+}
+
+.sapUiFormLayout > .sapUiFormContainer {
+	display: block;
+}
+
+.sapUiFormTitle {
+	border-bottom: 1px solid @sapUiGroupTitleBorderColor;
+	overflow: hidden;
+	white-space: nowrap;
+	text-overflow: ellipsis;
+	display: block;
+	width: 100%;
+	color: @sapUiGroupTitleTextColor;
+	margin: 0;
+}
+
+.sapUiForm .sapUiFormTitle {
+	font-weight: @sapUiFontHeaderWeight;
+	color: @sapUiGroupTitleTextColor;
+	height: 3rem;
+	line-height: 3rem;
+}
+
+.sapUiFormContainerTitle > .sapUiFormTitle {
+	position: relative;
+	border: none;
+	box-sizing: border-box;
+	margin-bottom: 0.5rem;
+	height: 2rem;
+	line-height: 2rem;
+}
+
+.sapUiFormTitle.sapUiFormTitleEmph {
+	border-color: @sapUiGroupTitleBorderColor;
+}
+
+/* Title levels - can not use TextView CSS from commons, because also used in mobile */
+.sapUiFormTitleH1 {
+	font-size: @sapMFontHeader1Size;
+	line-height: 122%;
+}
+
+.sapUiFormTitleH2 {
+	font-size: @sapMFontHeader2Size;
+	line-height: 122%;
+}
+
+.sapUiFormTitleH3 {
+	font-size: @sapMFontHeader3Size;
+	line-height: 122%;
+}
+
+.sapUiFormTitleH4 {
+	font-size: @sapMFontHeader4Size;
+}
+
+.sapUiFormTitleH5 {
+	font-size: @sapMFontHeader5Size;
+}
+
+.sapUiFormTitleH6 {
+	font-size: @sapMFontHeader6Size;
+	color: @sapUiGroupTitleTextColor;
+}
+
+.sapUiFormTitle> img {
+	vertical-align: middle;
+}
+
+/* Toolbar */
+.sapUiFormContainerToolbar > div:first-child {
+	margin-bottom: 0.5rem;
+}
+
+.sapUiFormM .sapUiFormContainerTitle > .sapUiFormTitle {
+	height: 3rem;
+	line-height: 3rem;
+}
+
+.sapUiSizeCompact .sapUiFormContainerTitle > .sapUiFormTitle {
+	height: 2rem;
+	line-height: 2rem;
+}
+/* END "FormLayout.less" */
+
+/* START "Grid.less" */
+/* UI5 RESPONSIVE GRID */
+// Variables
+@sapUiRespGridCols: 12;
+@sapUiRespGridCols-1: @sapUiRespGridCols - 1;
+@sapUiRespGridOneCol: 100% / @sapUiRespGridCols;
+@sapUiRespGridMedia_Phone: sapUiRespGridMedia-Std-Phone;
+@sapUiRespGridMedia_Tablet: sapUiRespGridMedia-Std-Tablet;
+@sapUiRespGridMedia_Desktop: sapUiRespGridMedia-Std-Desktop;
+@sapUiRespGridMedia_XL: sapUiRespGridMedia-Std-LargeDesktop;
+@sapUiRespGridMedia_PhoneSize: 320px;
+@sapUiRespGridMedia_TabletSize: 600px;
+@sapUiRespGridMedia_DesktopSize: 1024px;
+@sapUiRespGridMedia_XLSize: 1440px;
+@sapUiRespGrid_PxInRem: 16;
+@sapUiRespGridVisible: sapUiRespGridVisible;
+@sapUiRespGridHidden: sapUiRespGridHidden;
+
+div[class*="sapUiRespGrid"] > div[class*="sapUiRespGridSpan"] {
+    float: left;
+    overflow: hidden;
+}
+
+/* CLEAR FIX */
+
+div[class*="sapUiRespGrid"]:after {
+    clear: both;
+    content: " ";
+    display: block;
+    font-size: 0;
+    height: 0;
+    visibility: hidden;
+}
+
+/* GRID HORIZONTAL SPACING - 0.5rem */
+
+.sapUiRespGrid.sapUiRespGridHSpace05 {
+    padding: 0 0.25rem;
+}
+
+.sapUiRespGrid.sapUiRespGridHSpace05 > div {
+    margin: 0 0.25rem;
+}
+
+/* GRID HORIZONTAL SPACING - 1rem */
+
+.sapUiRespGrid.sapUiRespGridHSpace1 {
+    padding: 0 0.5rem;
+}
+
+.sapUiRespGrid.sapUiRespGridHSpace1 > div {
+    margin: 0 0.5rem;
+}
+
+/* GRID HORIZONTAL SPACING - 2rem */
+
+.sapUiRespGrid.sapUiRespGridHSpace2 {
+    padding: 0 1rem;
+}
+
+.sapUiRespGrid.sapUiRespGridHSpace2 > div {
+    margin: 0 1rem;
+}
+
+/* GRID VERTICAL SPACING - general */
+
+.sapUiRespGrid.sapUiRespGridVSpace0 > div {
+    margin-bottom: 0;
+}
+
+.sapUiRespGrid.sapUiRespGridVSpace05 > div {
+    margin-bottom: 0.5rem;
+}
+
+.sapUiRespGrid.sapUiRespGridVSpace1 > div {
+    margin-bottom: 1rem;
+}
+
+.sapUiRespGrid.sapUiRespGridVSpace2 > div {
+    margin-bottom: 2rem;
+}
+
+/* GENERAL BREAK */
+
+.sapUiRespGridBreak { clear: both; }
+
+.sapUiRespGridWriteSpanClass(@classFor, @hspace, @span, @screenSize) when (@classFor = Span) {
+    @a:  @sapUiRespGridOneCol * @span;
+    width: @a - 100% * @sapUiRespGrid_PxInRem * @hspace / @screenSize;
+    .sapUiRespGrid-getCalcFuncSpan(@a, @hspace);
+}
+
+.sapUiRespGridWriteIndentClass(@classFor, @hspace, @span, @screenSize) when (@classFor = Indent) {
+    @a:  @sapUiRespGridOneCol * @span;
+    margin-left: @a + (100% * @sapUiRespGrid_PxInRem * @hspace/2) / @screenSize ;
+    .sapUiRespGrid-getCalcFuncIndent(@a, @hspace);
+}
+
+// Get the values and how I cheat LESS processor with the commented calc function
+.sapUiRespGrid-getCalcFuncSpan(@a, @hspace)  when (@hspace > 0) {
+   @c: "calc(";
+   @b: " - ";
+   @d: "-webkit-calc(";
+   @e: "rem)";
+   @par1: ~"@{d}@{a}@{b}@{hspace}@{e}";
+   @par2: ~"@{c}@{a}@{b}@{hspace}@{e}";
+        width: @par1;
+        width: @par2;
+}
+
+// Get the values and how I cheat LESS processor with the commented calc function
+.sapUiRespGrid-getCalcFuncIndent(@a, @hspace)  when (@hspace > 0) {
+   @c: "calc(";
+   @b: " + ";
+   @d: "-webkit-calc(";
+   @e: "rem)";
+   @f: @hspace/2;
+   @par1: ~"@{d}@{a}@{b}@{f}@{e}";
+   @par2: ~"@{c}@{a}@{b}@{f}@{e}";
+        margin-left: @par1;
+        margin-left: @par2;
+}
+
+
+//Write Span and Indent classes
+.sapUiRespGridWriteClasses(@counter, @media, @classFor, @name, @classHSpace, @hspace, @screenSize) when (@counter > 0) {
+  .sapUiRespGridWriteClasses((@counter - 1), @media, @classFor, @name, @classHSpace, @hspace, @screenSize);
+  .@{media}.sapUiRespGridHSpace@{classHSpace} > .sapUiRespGrid@{classFor}@{name}@{counter} {
+      .sapUiRespGridWriteSpanClass(@classFor, @hspace, @counter,  @screenSize);
+      .sapUiRespGridWriteIndentClass(@classFor, @hspace, @counter,  @screenSize);
+    }
+}
+
+// MOVE LEFT
+.sapUiRespGridWriteMoveFwd(@counter, @media, @name) when (@counter > 0) {
+  .sapUiRespGridWriteMoveFwd((@counter - 1), @media, @name);
+  .@{media} > .sapUiRespGridFwd@{name}@{counter} { left: @sapUiRespGridOneCol * @counter; }
+}
+
+// MOVE RIGHT
+.sapUiRespGridWriteMoveBwd(@counter, @media, @name) when (@counter > 0) {
+  .sapUiRespGridWriteMoveBwd((@counter - 1), @media, @name);
+  .@{media} > .sapUiRespGridBwd@{name}@{counter} { right: @sapUiRespGridOneCol * @counter; }
+}
+
+.sapUiRespGridWriteBreak(@media, @name){
+  .@{media} > .sapUiRespGridBreak@{name} { clear: both }
+}
+
+
+.sapUiRespGridWriteCSS(@media, @name, @screenSize) {
+
+    /*SPANS */
+    .sapUiRespGridWriteClasses(@sapUiRespGridCols, @media, Span, @name, 0, 0, @screenSize);
+    .sapUiRespGridWriteClasses(@sapUiRespGridCols, @media, Span, @name, ~"05", 0.5, @screenSize);
+    .sapUiRespGridWriteClasses(@sapUiRespGridCols, @media, Span, @name, 1, 1, @screenSize);
+    .sapUiRespGridWriteClasses(@sapUiRespGridCols, @media, Span, @name, 2, 2, @screenSize);
+
+    /*INDENTS */
+    .sapUiRespGridWriteClasses(@sapUiRespGridCols-1, @media, Indent, @name, 0, 0, @screenSize);
+    .sapUiRespGridWriteClasses(@sapUiRespGridCols-1, @media, Indent, @name, ~"05", 0.5, @screenSize);
+    .sapUiRespGridWriteClasses(@sapUiRespGridCols-1, @media, Indent, @name, 1, 1, @screenSize);
+    .sapUiRespGridWriteClasses(@sapUiRespGridCols-1, @media, Indent, @name, 2, 2, @screenSize);
+
+	/* MOVE LEFT */
+	.sapUiRespGridWriteMoveFwd(@sapUiRespGridCols-1, @media, @name);
+
+	/* MOVE RIGHT */
+	.sapUiRespGridWriteMoveBwd(@sapUiRespGridCols-1, @media, @name);
+
+	/* BREAK */
+	.sapUiRespGridWriteBreak(@media, @name);
+}
+
+/* =============================== */
+/*   S M A L L   D E V I C E S     */
+/* =============================== */
+
+.sapUiRespGridWriteCSS(@sapUiRespGridMedia_Phone, S, @sapUiRespGridMedia_PhoneSize);
+
+/* SHOW and HIDE for SMALL contexts */
+
+.@{sapUiRespGridMedia_Phone} > .@{sapUiRespGridVisible}XL { display: none }
+.@{sapUiRespGridMedia_Phone} > .@{sapUiRespGridVisible}L { display: none }
+.@{sapUiRespGridMedia_Phone} > .@{sapUiRespGridVisible}M { display: none }
+.@{sapUiRespGridMedia_Phone} > .@{sapUiRespGridVisible}S { display: block }
+
+.@{sapUiRespGridMedia_Phone} > .@{sapUiRespGridHidden}XL { display: block }
+.@{sapUiRespGridMedia_Phone} > .@{sapUiRespGridHidden}L { display: block }
+.@{sapUiRespGridMedia_Phone} > .@{sapUiRespGridHidden}M { display: block }
+.@{sapUiRespGridMedia_Phone} > .@{sapUiRespGridHidden}S { display: none }
+
+
+
+/* =============================== */
+/*   M E D I U M   D E V I C E S   */
+/* =============================== */
+
+.sapUiRespGridWriteCSS(@sapUiRespGridMedia_Tablet, M, @sapUiRespGridMedia_TabletSize);
+
+  /* SHOW and HIDE for MEDIUM contexts */
+.@{sapUiRespGridMedia_Tablet} > .@{sapUiRespGridVisible}XL { display: none }
+.@{sapUiRespGridMedia_Tablet} > .@{sapUiRespGridVisible}L { display: none }
+.@{sapUiRespGridMedia_Tablet} > .@{sapUiRespGridVisible}M { display: block }
+.@{sapUiRespGridMedia_Tablet} > .@{sapUiRespGridVisible}S { display: none }
+
+.@{sapUiRespGridMedia_Tablet} > .@{sapUiRespGridHidden}XL { display: block }
+.@{sapUiRespGridMedia_Tablet} > .@{sapUiRespGridHidden}L { display: block }
+.@{sapUiRespGridMedia_Tablet} > .@{sapUiRespGridHidden}M { display: none }
+.@{sapUiRespGridMedia_Tablet} > .@{sapUiRespGridHidden}S { display: block }
+
+
+/* ============================= */
+/*   L A R G E   D E V I C E S   */
+/* ============================= */
+
+.sapUiRespGridWriteCSS(@sapUiRespGridMedia_Desktop, L, @sapUiRespGridMedia_DesktopSize);
+
+ /* SHOW and HIDE for LARGE contexts */
+.@{sapUiRespGridMedia_Desktop} > .@{sapUiRespGridVisible}XL { display: block }
+.@{sapUiRespGridMedia_Desktop} > .@{sapUiRespGridVisible}L { display: block }
+.@{sapUiRespGridMedia_Desktop} > .@{sapUiRespGridVisible}M { display: none }
+.@{sapUiRespGridMedia_Desktop} > .@{sapUiRespGridVisible}S { display: none }
+
+.@{sapUiRespGridMedia_Desktop} > .@{sapUiRespGridHidden}XL { display: none }
+.@{sapUiRespGridMedia_Desktop} > .@{sapUiRespGridHidden}L { display: none }
+.@{sapUiRespGridMedia_Desktop} > .@{sapUiRespGridHidden}M { display: block }
+.@{sapUiRespGridMedia_Desktop} > .@{sapUiRespGridHidden}S { display: block }
+
+
+/* ====================================== */
+/*  E X T R A   L A R G E   D E V I C E S */
+/* ====================================== */
+
+.sapUiRespGridWriteCSS(@sapUiRespGridMedia_XL, XL, @sapUiRespGridMedia_XLSize);
+
+/* SHOW and HIDE for XLARGE contexts */
+.@{sapUiRespGridMedia_XL} > .@{sapUiRespGridVisible}XL { display: block }
+.@{sapUiRespGridMedia_XL} > .@{sapUiRespGridVisible}L { display: block }
+.@{sapUiRespGridMedia_XL} > .@{sapUiRespGridVisible}M { display: none }
+.@{sapUiRespGridMedia_XL} > .@{sapUiRespGridVisible}S { display: none }
+
+.@{sapUiRespGridMedia_XL} > .@{sapUiRespGridHidden}XL { display: none }
+.@{sapUiRespGridMedia_XL} > .@{sapUiRespGridHidden}L { display: none }
+.@{sapUiRespGridMedia_XL} > .@{sapUiRespGridHidden}M { display: block }
+.@{sapUiRespGridMedia_XL} > .@{sapUiRespGridHidden}S { display: block }
+
+
+
+/* =============== */
+/*   E X T R A S   */
+/* =============== */
+
+/* HORIZONTAL POSITIONING GRID IN CONTAINER */
+
+div.sapUiRespGrid.sapUiRespGridPosCenter {
+       margin-left: auto;
+       margin-right: auto;
+}
+
+div.sapUiRespGrid.sapUiRespGridPosRight {
+       margin-left: auto;
+       margin-right: 0;
+}
+
+/* MOVE FOWARD and BACKWARD */
+
+div[class*="sapUiRespGrid"] > div[class*="sapUiRespGridFwd"] {
+       position: relative;
+}
+
+div[class*="sapUiRespGrid"] > div[class*="sapUiRespGridBwd"] {
+       float: right;
+       position: relative;
+}
+
+
+/* explanation for percentages for browsers without calc support:
+   16px = 1rem
+   -------------------------
+S  1.25%     =  4px / 320px
+   2.5%      =  8px / 320px
+   5%        = 16px / 320px
+   10%       = 32px / 320px
+M  0.16667%  =  4px / 600px
+   1.3333%   =  8px / 600px
+   2.6667%   = 16px / 600px
+   5.3333%   = 32px / 600px
+L  0.390625% =  4px / 1024px
+   0.78125%  =  8px / 1024px
+   1.5625%   = 16px / 1024px
+   3.125%    = 32px / 1024px
+   ------------------------- */
+/* END "Grid.less" */
+
+/* START "GridLayout.less" */
+/*******************************************************************************
+/* Due to deprecation of sap_goldreflection with SAPUI5 version 1.38
+/* the less file of base is directly at the top section of this file
+/* and no longer imported within the library.source.less file. This decoupling
+/* of the base theme is introduced with SAPUI5 version 1.46.
+*******************************************************************************/
+
+/*******************************************************************************
+/* Start of base section
+*******************************************************************************/
+
+/* ====================================================== */
+/* CSS for control sap.ui.layout/form/GridLayout.control  */
+/* ====================================================== */
+
+/*.sapUiGrid{
+
+}*/
+
+.sapUiGrid td{
+	vertical-align: top;
+	overflow: hidden;
+}
+
+.sapUiGrid td.sapUiGridHeader{
+	vertical-align: bottom;
+}
+
+.sapUiGrid th > .sapUiFormTitle,
+.sapUiGrid td > .sapUiFormTitle{
+	text-align: start;
+/*	border-bottom: 2px solid @sapUiHighlight;*/
+	position: relative;
+}
+
+/* Internet Explorer / Edge  does not support "text-align: start"!
+Therefore the title needs to be positioned separately for RTL and LTR mode */
+html[data-sap-ui-browser^=ie] .sapUiGrid th > .sapUiFormTitle,
+html[data-sap-ui-browser^=ie] .sapUiGrid td > .sapUiFormTitle,
+html[data-sap-ui-browser^=ed] .sapUiGrid th > .sapUiFormTitle,
+html[data-sap-ui-browser^=ed] .sapUiGrid td > .sapUiFormTitle {
+	text-align: left;
+}
+
+html[dir=rtl][data-sap-ui-browser^=ie] .sapUiGrid th > .sapUiFormTitle,
+html[dir=rtl][data-sap-ui-browser^=ie] .sapUiGrid td > .sapUiFormTitle,
+html[dir=rtl][data-sap-ui-browser^=ed] .sapUiGrid th > .sapUiFormTitle,
+html[dir=rtl][data-sap-ui-browser^=ed] .sapUiGrid td > .sapUiFormTitle {
+	text-align: right;
+}
+
+/*
+.sapUiGrid td[colspan="8"] > .sapUiFormTitle{
+	border-color: @sapUiMediumBorder;
+}
+*/
+
+.sapUiGridHeader > .sapUiFormTitle > button{
+	position: absolute;
+	right: 0;
+}
+
+/* Toolbar */
+.sapUiGrid.sapUiFormToolbar th > div{
+	text-align: start;
+}
+
+/*******************************************************************************
+/* End of base section
+/* Start of sap_goldreflection less section
+*******************************************************************************/
+
+/* ===================================================== */
+/* CSS for control sap.ui.layout/form/GridLayout.control */
+/* Goldreflection                                        */
+/* ===================================================== */
+/*
+.sapUiGrid{
+
+}
+*/
+
+.sapUiGrid td{
+	padding: 3px 0 0 3px; /*Maybe better 2 1 1 2 because of focus outline of some controls ?*/
+}
+
+.sapUiGrid td:first-child{
+	padding-left: 0;
+}
+
+.sapUiGrid > tbody > tr.sapUiGridTitle > th,
+.sapUiGrid > tbody > tr.sapUiGridConteinerFirstRow > td{
+	padding-top: 20px;
+}
+
+.sapUiGrid .sapUiGridHeader{
+	padding: 0;
+}
+
+.sapUiGrid th > .sapUiFormTitle,
+.sapUiGrid td > .sapUiFormTitle{
+	text-transform: uppercase;
+	margin-bottom: 2px;
+	padding-bottom: 5px;
+}
+
+.sapUiGridSpace{
+	width: 30px;
+}
+
+.sapUiGrid .sapUiFormTitle > img,
+.sapUiGrid .sapUiFormTitle > span{
+	margin-right: 3px;
+}
+
+.sapUiGridHeader > .sapUiFormTitle > .sapUiBtnS.sapUiBtnLite{
+	bottom: 5px;
+}
+/* END "GridLayout.less" */
+
+/* START "HorizontalLayout.less" */
+/* ====================================================== */
+/* CSS for control sap.ui.layout/HorizontalLayout.control */
+/* ====================================================== */
+
+.sapUiHLayout {
+	display: inline-block;
+}
+
+.sapUiHLayoutNoWrap {
+	white-space: nowrap;
+}
+
+.sapUiHLayoutChildWrapper {
+	white-space: normal;
+	display: inline-block;
+	vertical-align: top;
+}
+
+/* mixin call for creating container content padding classes (arguments: rootContainer, contentSelector) */
+.sapUiContainerContentPadding(~".sapUiHLayout");
+
+/* fix for BCP: 1580166858
+ * HorizontalLayout inside table cell doesn't respect the width of the cell but the width of the control that is inside it
+ */
+.sapMListTblCell .sapUiHLayout {
+	width: 100%;
+}
+/* END "HorizontalLayout.less" */
+
+/* START "ResponsiveFlowLayout.less" */
+/* =================================================== */
+/* CSS for control sap.ui.layout/ResponsiveFlowLayout  */
+/* Goldreflection                                      */
+/* =================================================== */
+
+@sapUiRFLPadding: ~"8px";
+
+.sapUiRFL {
+	position: relative;
+	display: inline-block;
+	width: 100%;
+	box-sizing: border-box;
+}
+
+.sapUiRFLRow {
+	position: relative;
+	display: block;
+	box-sizing: border-box;
+}
+
+.sapUiRFLContainer {
+	position: relative;
+	display: inline-block;
+	box-sizing: border-box;
+	vertical-align: top;
+	overflow: hidden;
+}
+
+.sapUiRFLRow > .sapUiRFLContainer:first-child > .sapUiRFLContainerContent.sapUiRFLPaddingClass:first-child {
+	padding-left: 0;
+}
+
+.sapUiRFLRow > .sapUiRFLContainer:last-child > .sapUiRFLContainerContent.sapUiRFLPaddingClass:last-child {
+	padding-right: 0;
+}
+
+.sapUiRFLMultiContainerContent {
+	white-space: nowrap;
+}
+
+.sapUiRFLMultiContent {
+	display: inline-block;
+	box-sizing: border-box;
+}
+
+.sapUiRFLMultiContainerContent > .sapUiRFLMultiContent.sapUiRFLPaddingClass:last-child {
+	padding-right: 0;
+}
+
+.sapUiRFLPaddingClass {
+	padding: 0 0 8px 8px;
+}
+
+.sapUiRFLFullLength > .sapUiRFLPaddingClass {
+	padding-left: 0;
+}
+
+.sapUiRFLMultiContent.sapUiRFLPaddingClass {
+	padding: 0 0 8px 8px;
+}
+
+.sapUiRFLMultiContainerContent > .sapUiRFLMultiContent.sapUiRFLPaddingClass:first-child {
+	padding-left: 0;
+}
+/* END "ResponsiveFlowLayout.less" */
+
+/* START "ResponsiveGridLayout.less" */
+/*******************************************************************************
+/* Due to deprecation of sap_goldreflection with SAPUI5 version 1.38
+/* the less file of base is directly at the top section of this file
+/* and no longer imported within the library.source.less file. This decoupling
+/* of the base theme is introduced with SAPUI5 version 1.46.
+*******************************************************************************/
+
+/*******************************************************************************
+/* Start of base section
+*******************************************************************************/
+
+/* =============================================================== */
+/* CSS for control sap.ui.layout.form/ResponsiveGridLayout.control */
+/* =============================================================== */
+
+/* Title */
+.sapUiFormResGrid > .sapUiFormTitle{
+	box-sizing: border-box;
+	padding: 0 1rem 0 1rem;
+}
+
+.sapUiRGLContainer > .sapUiFormTitle{
+	padding: 0 0.25rem;
+}
+
+.sapUiFormResGrid > .sapUiFormTitle > img,
+.sapUiRGLContainer > .sapUiFormTitle > img,
+.sapUiFormResGrid > .sapUiFormTitle > span,
+.sapUiRGLContainer > .sapUiFormTitle > span{
+	margin-right: 0.5rem;
+}
+
+.sapUiRGLContainer > .sapUiFormTitle > button{
+	position: absolute;
+	right: 0.25rem;
+}
+
+/* Toolbar */
+.sapUiFormResGrid.sapUiFormToolbar > div:first-child {
+	height: 3rem; /* to have in compact mode and in commons always 3rem on Form header */
+	line-height: 3rem;
+	padding: 0 0.75rem;
+}
+
+/* Grid */
+.sapUiFormResGrid > div {
+	padding: 1rem 0.75rem; /* because fields have 0.25rem padding on left and right */
+	box-sizing: border-box;
+}
+
+.sapUiRGLContainerColl > .sapUiRGLContainerCont{
+	display: none;
+}
+
+/* add paddings to content */
+.sapUiFormResGridCont{
+	padding-bottom: 2rem;
+}
+
+.sapUiFormResGridCont > div{
+	padding: 0 0.25rem 0.5rem 0.25rem;
+	box-sizing: border-box;
+}
+
+.sapUiFormResGridCont > .sapUiFormElementLbl{
+	min-height: @sapUiLineHeight;
+}
+
+/* Special styles for Mobile controls */
+.sapUiFormM .sapUiRespGrid.sapUiRespGridVSpace0 > div{
+	padding-bottom: 0;
+}
+
+.sapUiFormM > .sapUiFormResGrid > .sapUiFormResGridMain > div{
+	overflow: visible; /* to show top of title or tooolbar in cozy mode (because moved upwards) */
+}
+
+/* ================= */
+/*   SMALL DEVICES   */
+/* ================= */
+html.sap-phone .sapUiFormResGridCont{
+	/* on real phones use smaller space between containers */
+	padding-bottom: 1rem;
+}
+
+/* ================================= */
+/*   SMALL, MEDIUM and LARGE DEVICES */
+/* ================================= */
+/* add some space on top of full-size labels*/
+.sapUiRespGridMedia-Std-Phone.sapUiFormResGridCont > .sapUiFormElementLbl.sapUiRespGridSpanS12,
+.sapUiRespGridMedia-Std-Tablet.sapUiFormResGridCont > .sapUiFormElementLbl.sapUiRespGridSpanM12,
+.sapUiRespGridMedia-Std-Desktop.sapUiFormResGridCont > .sapUiFormElementLbl.sapUiRespGridSpanL12,
+.sapUiRespGridMedia-Std-LargeDesktop.sapUiFormResGridCont > .sapUiFormElementLbl.sapUiRespGridSpanXL12{
+	padding-top: 0.375rem;
+}
+
+.sapUiFormM .sapUiRespGridMedia-Std-Phone.sapUiFormResGridCont > .sapUiFormElementLbl.sapUiRespGridSpanS12,
+.sapUiFormM .sapUiRespGridMedia-Std-Tablet.sapUiFormResGridCont > .sapUiFormElementLbl.sapUiRespGridSpanM12,
+.sapUiFormM .sapUiRespGridMedia-Std-Desktop.sapUiFormResGridCont > .sapUiFormElementLbl.sapUiRespGridSpanL12,
+.sapUiFormM .sapUiRespGridMedia-Std-LargeDesktop.sapUiFormResGridCont > .sapUiFormElementLbl.sapUiRespGridSpanXL12{
+	padding-top: 0.625rem;
+}
+
+/* but not for first one */
+.sapUiRespGridMedia-Std-Phone.sapUiFormResGridCont > div:first-child.sapUiFormElementLbl.sapUiRespGridSpanS12,
+.sapUiRespGridMedia-Std-Tablet.sapUiFormResGridCont > div:first-child.sapUiFormElementLbl.sapUiRespGridSpanM12,
+.sapUiRespGridMedia-Std-Desktop.sapUiFormResGridCont > div:first-child.sapUiFormElementLbl.sapUiRespGridSpanL12,
+.sapUiRespGridMedia-Std-LargeDesktop.sapUiFormResGridCont > div:first-child.sapUiFormElementLbl.sapUiRespGridSpanXL12{
+	padding-top: 0;
+}
+
+/* but not for first full-size label under title/toolbar in compact mode */
+.sapUiSizeCompact .sapUiFormM .sapUiFormContainerTitle > .sapUiRGLContainerCont > .sapUiRespGridMedia-Std-Phone.sapUiFormResGridCont > div:first-child.sapUiFormElementLbl.sapUiRespGridSpanS12,
+.sapUiSizeCompact .sapUiFormM .sapUiFormContainerTitle > .sapUiRGLContainerCont > .sapUiRespGridMedia-Std-Tablet.sapUiFormResGridCont > div:first-child.sapUiFormElementLbl.sapUiRespGridSpanM12,
+.sapUiSizeCompact .sapUiFormM .sapUiFormContainerTitle > .sapUiRGLContainerCont > .sapUiRespGridMedia-Std-Desktop.sapUiFormResGridCont > div:first-child.sapUiFormElementLbl.sapUiRespGridSpanL12,
+.sapUiSizeCompact .sapUiFormM .sapUiFormContainerTitle > .sapUiRGLContainerCont > .sapUiRespGridMedia-Std-LargeDesktop.sapUiFormResGridCont > div:first-child.sapUiFormElementLbl.sapUiRespGridSpanXL12,
+.sapUiSizeCompact .sapUiFormM .sapUiFormContainerToolbar > .sapUiRGLContainerCont > .sapUiRespGridMedia-Std-Phone.sapUiFormResGridCont > div:first-child.sapUiFormElementLbl.sapUiRespGridSpanS12,
+.sapUiSizeCompact .sapUiFormM .sapUiFormContainerToolbar > .sapUiRGLContainerCont > .sapUiRespGridMedia-Std-Tablet.sapUiFormResGridCont > div:first-child.sapUiFormElementLbl.sapUiRespGridSpanM12,
+.sapUiSizeCompact .sapUiFormM .sapUiFormContainerToolbar > .sapUiRGLContainerCont > .sapUiRespGridMedia-Std-Desktop.sapUiFormResGridCont > div:first-child.sapUiFormElementLbl.sapUiRespGridSpanL12,
+.sapUiSizeCompact .sapUiFormM .sapUiFormContainerToolbar > .sapUiRGLContainerCont > .sapUiRespGridMedia-Std-LargeDesktop.sapUiFormResGridCont > div:first-child.sapUiFormElementLbl.sapUiRespGridSpanXL12{
+	padding-top: 0.5rem;
+}
+
+/* make labels right aligned if left from fields*/
+.sapUiRespGridMedia-Std-Phone.sapUiFormResGridCont > .sapUiFormElementLbl:not(.sapUiRespGridSpanS12),
+.sapUiRespGridMedia-Std-Tablet.sapUiFormResGridCont > .sapUiFormElementLbl:not(.sapUiRespGridSpanM12),
+.sapUiRespGridMedia-Std-Desktop.sapUiFormResGridCont > .sapUiFormElementLbl:not(.sapUiRespGridSpanL12),
+.sapUiRespGridMedia-Std-LargeDesktop.sapUiFormResGridCont > .sapUiFormElementLbl:not(.sapUiRespGridSpanXL12){
+	padding-right: 0.5rem;
+}
+
+.sapUiRespGridMedia-Std-Phone.sapUiFormResGridCont > .sapUiFormElementLbl.sapUiRespGridSpanS12,
+.sapUiRespGridMedia-Std-Tablet.sapUiFormResGridCont > .sapUiFormElementLbl.sapUiRespGridSpanM12,
+.sapUiRespGridMedia-Std-Desktop.sapUiFormResGridCont > .sapUiFormElementLbl.sapUiRespGridSpanL12,
+.sapUiRespGridMedia-Std-LargeDesktop.sapUiFormResGridCont > .sapUiFormElementLbl.sapUiRespGridSpanXL12{
+	padding-bottom: 0.125rem;
+}
+
+.sapUiFormEdit.sapUiFormM .sapUiRespGridMedia-Std-Phone.sapUiFormResGridCont > .sapUiFormElementLbl:not(.sapUiRespGridSpanS12),
+.sapUiFormEdit.sapUiFormM .sapUiRespGridMedia-Std-Tablet.sapUiFormResGridCont > .sapUiFormElementLbl:not(.sapUiRespGridSpanM12),
+.sapUiFormEdit.sapUiFormM .sapUiRespGridMedia-Std-Desktop.sapUiFormResGridCont > .sapUiFormElementLbl:not(.sapUiRespGridSpanL12),
+.sapUiFormEdit.sapUiFormM .sapUiRespGridMedia-Std-LargeDesktop.sapUiFormResGridCont > .sapUiFormElementLbl:not(.sapUiRespGridSpanXL12){
+	padding-top: 1rem;
+}
+
+html[data-sap-ui-browser^="ff"] .sapUiFormEdit.sapUiFormM .sapUiRespGridMedia-Std-Phone.sapUiFormResGridCont > .sapUiFormElementLbl:not(.sapUiRespGridSpanS12),
+html[data-sap-ui-browser^="ff"] .sapUiFormEdit.sapUiFormM .sapUiRespGridMedia-Std-Tablet.sapUiFormResGridCont > .sapUiFormElementLbl:not(.sapUiRespGridSpanM12),
+html[data-sap-ui-browser^="ff"] .sapUiFormEdit.sapUiFormM .sapUiRespGridMedia-Std-Desktop.sapUiFormResGridCont > .sapUiFormElementLbl:not(.sapUiRespGridSpanL12),
+html[data-sap-ui-browser^="ff"] .sapUiFormEdit.sapUiFormM .sapUiRespGridMedia-Std-LargeDesktop.sapUiFormResGridCont > .sapUiFormElementLbl:not(.sapUiRespGridSpanXL12){
+	padding-top: 0.9375rem;
+}
+
+.sapUiSizeCompact .sapUiFormEdit.sapUiFormM .sapUiRespGridMedia-Std-Phone.sapUiFormResGridCont > .sapUiFormElementLbl:not(.sapUiRespGridSpanS12),
+.sapUiSizeCompact .sapUiFormEdit.sapUiFormM .sapUiRespGridMedia-Std-Tablet.sapUiFormResGridCont > .sapUiFormElementLbl:not(.sapUiRespGridSpanM12),
+.sapUiSizeCompact .sapUiFormEdit.sapUiFormM .sapUiRespGridMedia-Std-Desktop.sapUiFormResGridCont > .sapUiFormElementLbl:not(.sapUiRespGridSpanL12),
+.sapUiSizeCompact .sapUiFormEdit.sapUiFormM .sapUiRespGridMedia-Std-LargeDesktop.sapUiFormResGridCont > .sapUiFormElementLbl:not(.sapUiRespGridSpanXL12){
+	padding-top: 0.5rem;
+}
+
+html[data-sap-ui-browser^="ff"] .sapUiSizeCompact .sapUiFormEdit.sapUiFormM .sapUiRespGridMedia-Std-Phone.sapUiFormResGridCont > .sapUiFormElementLbl:not(.sapUiRespGridSpanS12),
+html[data-sap-ui-browser^="ff"].sapUiSizeCompact .sapUiFormEdit.sapUiFormM .sapUiRespGridMedia-Std-Phone.sapUiFormResGridCont > .sapUiFormElementLbl:not(.sapUiRespGridSpanS12),
+html[data-sap-ui-browser^="ff"] .sapUiSizeCompact .sapUiFormEdit.sapUiFormM .sapUiRespGridMedia-Std-Tablet.sapUiFormResGridCont > .sapUiFormElementLbl:not(.sapUiRespGridSpanM12),
+html[data-sap-ui-browser^="ff"].sapUiSizeCompact .sapUiFormEdit.sapUiFormM .sapUiRespGridMedia-Std-Tablet.sapUiFormResGridCont > .sapUiFormElementLbl:not(.sapUiRespGridSpanM12),
+html[data-sap-ui-browser^="ff"] .sapUiSizeCompact .sapUiFormEdit.sapUiFormM .sapUiRespGridMedia-Std-Desktop.sapUiFormResGridCont > .sapUiFormElementLbl:not(.sapUiRespGridSpanL12),
+html[data-sap-ui-browser^="ff"].sapUiSizeCompact .sapUiFormEdit.sapUiFormM .sapUiRespGridMedia-Std-Desktop.sapUiFormResGridCont > .sapUiFormElementLbl:not(.sapUiRespGridSpanL12),
+html[data-sap-ui-browser^="ff"] .sapUiSizeCompact .sapUiFormEdit.sapUiFormM .sapUiRespGridMedia-Std-LargeDesktop.sapUiFormResGridCont > .sapUiFormElementLbl:not(.sapUiRespGridSpanXL12),
+html[data-sap-ui-browser^="ff"].sapUiSizeCompact .sapUiFormEdit.sapUiFormM .sapUiRespGridMedia-Std-LargeDesktop.sapUiFormResGridCont > .sapUiFormElementLbl:not(.sapUiRespGridSpanXL12){
+	padding-top: 0.4375rem;
+}
+
+/* on last row no padding-bottom on container content */
+.sapUiFormM > .sapUiFormResGrid > .sapUiRGLContainer > .sapUiRGLContainerCont > .sapUiFormResGridCont, /* only one container(panel) */
+.sapUiRespGridMedia-Std-Phone > .sapUiFormResGridLastRowM:last-child .sapUiFormResGridCont,
+.sapUiRespGridMedia-Std-Tablet > .sapUiFormResGridLastRowM .sapUiFormResGridCont,
+.sapUiRespGridMedia-Std-Desktop > .sapUiFormResGridLastRowL .sapUiFormResGridCont,
+.sapUiRespGridMedia-Std-LargeDesktop > .sapUiFormResGridLastRowXL .sapUiFormResGridCont{
+	padding-bottom: 0;
+}
+
+/* In Cozy mode put first FormContainers with title or toolbar 0.5rem on top */
+.sapUiFormM .sapUiRespGridMedia-Std-Phone > .sapUiFormResGridFirstRowM:first-child > .sapUiFormContainerTitle,
+.sapUiFormM .sapUiRespGridMedia-Std-Phone > .sapUiFormResGridFirstRowM:first-child > .sapUiFormContainerToolbar,
+.sapUiFormM .sapUiRespGridMedia-Std-Tablet > .sapUiFormResGridFirstRowM > .sapUiFormContainerTitle,
+.sapUiFormM .sapUiRespGridMedia-Std-Tablet > .sapUiFormResGridFirstRowM > .sapUiFormContainerToolbar,
+.sapUiFormM .sapUiRespGridMedia-Std-Desktop > .sapUiFormResGridFirstRowL > .sapUiFormContainerTitle,
+.sapUiFormM .sapUiRespGridMedia-Std-Desktop > .sapUiFormResGridFirstRowL > .sapUiFormContainerToolbar,
+.sapUiFormM .sapUiRespGridMedia-Std-LargeDesktop > .sapUiFormResGridFirstRowXL > .sapUiFormContainerTitle,
+.sapUiFormM .sapUiRespGridMedia-Std-LargeDesktop > .sapUiFormResGridFirstRowXL > .sapUiFormContainerToolbar{
+	margin-top: -0.5rem;
+}
+
+/* only one container - reduce top padding*/
+.sapUiFormM > .sapUiFormResGrid > .sapUiFormContainerTitle,
+.sapUiFormM > .sapUiFormResGrid > .sapUiFormContainerToolbar{
+	padding-top: 0.5rem;
+}
+
+.sapUiSizeCompact .sapUiRespGridMedia-Std-Phone > .sapUiFormResGridFirstRowM:first-child > .sapUiFormContainerTitle,
+.sapUiSizeCompact .sapUiRespGridMedia-Std-Phone > .sapUiFormResGridFirstRowM:first-child > .sapUiFormContainerToolbar,
+.sapUiSizeCompact .sapUiRespGridMedia-Std-Tablet > .sapUiFormResGridFirstRowM > .sapUiFormContainerTitle,
+.sapUiSizeCompact .sapUiRespGridMedia-Std-Tablet > .sapUiFormResGridFirstRowM > .sapUiFormContainerToolbar,
+.sapUiSizeCompact .sapUiRespGridMedia-Std-Desktop > .sapUiFormResGridFirstRowL > .sapUiFormContainerTitle,
+.sapUiSizeCompact .sapUiRespGridMedia-Std-Desktop > .sapUiFormResGridFirstRowL > .sapUiFormContainerToolbar,
+.sapUiSizeCompact .sapUiRespGridMedia-Std-LargeDesktop > .sapUiFormResGridFirstRowXL > .sapUiFormContainerTitle,
+.sapUiSizeCompact .sapUiRespGridMedia-Std-LargeDesktop > .sapUiFormResGridFirstRowXL > .sapUiFormContainerToolbar{
+	margin-top: 0;
+}
+
+.sapUiSizeCompact .sapUiFormM > .sapUiFormResGrid > .sapUiFormContainerTitle,
+.sapUiSizeCompact .sapUiFormM > .sapUiFormResGrid > .sapUiFormContainerToolbar{
+	padding-top: 1rem;
+}
+
+/* ============================ */
+/*   MEDIUM and LARGE DEVICES   */
+/* ============================ */
+/* add paddings between containers */
+.sapUiRespGridMedia-Std-Tablet.sapUiFormResGridMain > div:not(.sapUiRespGridSpanM12):not(.sapUiFormResGridLastContM),
+.sapUiRespGridMedia-Std-Desktop.sapUiFormResGridMain > div:not(.sapUiRespGridSpanL12):not(.sapUiFormResGridLastContL),
+.sapUiRespGridMedia-Std-LargeDesktop.sapUiFormResGridMain > div:not(.sapUiRespGridSpanXL12):not(.sapUiFormResGridLastContXL){
+	padding-right: 0.75rem; /* because fields have 0.25rem padding on left and right */
+	box-sizing: border-box;
+}
+
+.sapUiRespGridMedia-Std-Tablet.sapUiFormResGridMain > div:not(.sapUiRespGridBreakM):not(.sapUiRespGridSpanM12),
+.sapUiRespGridMedia-Std-Desktop.sapUiFormResGridMain > div:not(.sapUiRespGridBreakL):not(.sapUiRespGridSpanL12),
+.sapUiRespGridMedia-Std-LargeDesktop.sapUiFormResGridMain > div:not(.sapUiRespGridBreakXL):not(.sapUiRespGridSpanXL12){
+	padding-left: 0.75rem; /* because fields have 0.25rem padding on left and right */
+	box-sizing: border-box;
+}
+
+/*******************************************************************************
+/* End of base section
+/* Start of sap_goldreflection less section
+*******************************************************************************/
+
+/* =============================================================== */
+/* CSS for control sap.ui.layout.form/ResponsiveGridLayout.control */
+/* Goldreflection                                                  */
+/* =============================================================== */
+/* END "ResponsiveGridLayout.less" */
+
+/* START "ResponsiveLayout.less" */
+/*******************************************************************************
+/* Due to deprecation of sap_goldreflection with SAPUI5 version 1.38
+/* the less file of base is directly at the top section of this file
+/* and no longer imported within the library.source.less file. This decoupling
+/* of the base theme is introduced with SAPUI5 version 1.46.
+*******************************************************************************/
+
+/*******************************************************************************
+/* Start of base section
+*******************************************************************************/
+
+/* =========================================================== */
+/* CSS for control sap.ui.layout.form/ResponsiveLayout.control */
+/* =========================================================== */
+
+.sapUiRLContainer > .sapUiFormTitle > button{
+	position: absolute;
+	right: 0;
+}
+
+.sapUiRLContainerColl > .sapUiRLContainerCont{
+	display: none;
+}
+
+/* make labels before fields right aligned */
+.sapUiRLElementWithLabel > .sapUiRFLRow:first-child > .sapUiRFLContainer:first-child:not(.sapUiRFLFullLength) > div{
+	text-align: end;
+}
+
+html[data-sap-ui-browser^=ie] .sapUiRLElementWithLabel > .sapUiRFLRow:first-child > .sapUiRFLContainer:first-child:not(.sapUiRFLFullLength) > div,
+html[data-sap-ui-browser^=ed] .sapUiRLElementWithLabel > .sapUiRFLRow:first-child > .sapUiRFLContainer:first-child:not(.sapUiRFLFullLength) > div {
+	text-align: right;
+}
+
+html[dir=rtl][data-sap-ui-browser^=ie] .sapUiRLElementWithLabel > .sapUiRFLRow:first-child > .sapUiRFLContainer:first-child:not(.sapUiRFLFullLength) > div,
+html[dir=rtl][data-sap-ui-browser^=ed] .sapUiRLElementWithLabel > .sapUiRFLRow:first-child > .sapUiRFLContainer:first-child:not(.sapUiRFLFullLength) > div {
+	text-align: left;
+}
+
+/*******************************************************************************
+/* End of base section
+/* Start of sap_goldreflection less section
+*******************************************************************************/
+
+/* =========================================================== */
+/* CSS for control sap.ui.layout.form/ResponsiveLayout.control */
+/* Goldreflection                                              */
+/* =========================================================== */
+
+.sapUiFormResLayout > .sapUiFormTitle,
+.sapUiRLContainer > .sapUiFormTitle{
+	text-transform: uppercase;
+	padding-bottom: 5px;
+}
+
+.sapUiFormResLayout .sapUiFormTitle > img,
+.sapUiFormResLayout .sapUiFormTitle > span{
+	margin-right: 3px;
+}
+
+.sapUiRLContainer > .sapUiFormTitle > button{
+	bottom: 5px;
+}
+
+.sapUiRLContainerCont{
+	padding: 6px;
+}
+/* END "ResponsiveLayout.less" */
+
+/* START "ResponsiveSplitter.less" */
+/* ================================================= */
+/* CSS for control sap.ui.layout/ResponsiveSplitter  */
+/* Goldreflection                                    */
+/* ================================================= */
+
+.sapUiResponsiveSplitter {
+	width: 100%;
+	height: 100%;
+}
+
+.sapUiResponsiveSplitterPage {
+	width: 100%;
+	height: 100%;
+}
+
+.sapUiRSVisiblePaginator {
+	& .sapUiResponsiveSplitterPaginator {
+		width: 100%;
+		display: flex;
+		justify-content: center;
+		outline: none;
+		height: 2.5rem;
+		background-color: @sapUiPageFooterBackground;
+		border: 1px solid @sapUiPageFooterBorderColor;
+	}
+
+	& .sapUiResponsiveSplitterPage {
+		min-height: ~"calc(100% - 2.5rem)";
+		height: auto;
+	}
+
+	& .sapUiResponsiveSplitterPaginator.sapUiResponsiveSplitterWithNavButtons {
+		justify-content: space-between;
+	}
+}
+
+.sapUiResponsiveSplitterPaginatorButton:hover {
+	background-color: @sapUiButtonLiteHoverBackground;
+
+	&:after {
+		background-color: @sapUiContentIconColor;
+	}
+}
+
+.sapUiResponsiveSplitterPaginatorButton {
+	width: 2.5rem;
+	height: 2.5rem;
+	cursor: pointer;
+	background-color: transparent;
+	display: inline-block;
+
+	&:active {
+		background-color: @sapUiButtonLiteActiveBackground;
+
+		&:after {
+			background-color: @sapUiContentContrastIconColor;
+		}
+	};
+
+	&:after {
+		content: "";
+		width: 0.5rem;
+		height: 0.5rem;
+		background-color: @sapUiContentIconColor;
+		margin: auto;
+		display: block;
+		margin-top: 16px;
+		border-radius: 50%;
+	};
+
+	&:focus {
+		outline: none;
+	}
+
+	&:focus:before {
+		content: "";
+		position: absolute;
+		border: 1px dotted @sapUiContentFocusColor;
+		width: 2.125rem;
+		height: 2.125rem;
+		margin: 2px 0 0 2px;
+	}
+}
+
+.sapUiResponsiveSplitterPaginatorButton:first-child {
+	margin-left: 0;
+}
+
+.sapUiResponsiveSplitterPaginatorSelectedButton {
+	background-color: transparent;
+
+	&:hover {
+		background-color: @sapUiButtonLiteHoverBackground;
+
+		&:after {
+			background-color: @sapUiSelected;
+		}
+	}
+
+	&:after {
+		background-color: @sapUiSelected;
+	}
+}
+
+.sapUiResponsiveSplitterHiddenElement {
+	display: none;
+}
+
+.sapUiResponsiveSplitterPaginatorNavButton {
+	width: 2.5rem;
+    height: 2.5rem;
+	font-family: 'SAP-icons';
+	cursor: pointer;
+
+	&::after {
+		position: absolute;
+		margin-top: 11px;
+		margin-left: 15px;
+	}
+}
+
+.sapUiResponsiveSplitterPaginatorButtonBack {
+	&::after {
+		content: '\e067';
+	}
+}
+
+.sapUiResponsiveSplitterPaginatorButtonForward {
+	&::after {
+		content: '\e066';
+	}
+}
+
+.sapUiResponsiveSplitterHiddenBackButton,
+ .sapUiResponsiveSplitterHiddenPaginatorButton {
+	display: none !important;
+	background-color: @sapUiSelected;
+}
+
+.sapUiResponsiveSplitter > .sapUiResponsiveSplitterPage > .sapUiLoSplitter .sapUiLoSplitterBar {
+	background-color: @sapUiGlobalBackgroundColor;
+
+	&:hover {
+		background-color: @sapUiHighlight;
+	}
+
+	&:active {
+		background-color: @sapUiHighlight;
+	}
+}
+
+html.sap-phone .sapUiResponsiveSplitter > .sapUiResponsiveSplitterPage > .sapUiLoSplitter .sapUiLoSplitterBar,
+html.sap-tablet .sapUiResponsiveSplitter > .sapUiResponsiveSplitterPage > .sapUiLoSplitter .sapUiLoSplitterBar,
+html.sap-phone .sapUiResponsiveSplitter > .sapUiResponsiveSplitterPage > .sapUiLoSplitter .sapUiLoSplitterOverlayBar,
+html.sap-tablet .sapUiResponsiveSplitter > .sapUiResponsiveSplitterPage > .sapUiLoSplitter .sapUiLoSplitterOverlayBar {
+	& .sapUiLoSplitterBarIcon {
+		width: 3rem;
+		height: 3rem;
+		z-index: 1;
+		margin-left: -22px;
+		top: 50%;
+		display:block;
+		position:relative;
+		text-align:center;
+	}
+
+	& .sapUiLoSplitterBarIcon:after {
+		content: "";
+		width: 1.25rem;
+		height: 1.25rem;
+		border-color: @sapUiContentIconColor;
+		border-width: 0.125rem;
+		background-color: @sapUiGlobalBackgroundColor;
+		border-radius: 50%;
+		border-style: solid;
+		display: block;
+		position: relative;
+		left: 25%;
+		top: 25%;
+	}
+}
+
+html.sap-phone .sapUiResponsiveSplitter > .sapUiResponsiveSplitterPage > .sapUiLoSplitter .sapUiLoSplitterOverlayBar,
+html.sap-tablet .sapUiResponsiveSplitter > .sapUiResponsiveSplitterPage > .sapUiLoSplitter .sapUiLoSplitterOverlayBar {
+	& .sapUiLoSplitterBarIcon:after {
+		border-color: @sapUiContentIconColor;
+		background-color: @sapUiHighlight;
+	}
+}
+
+.sapUiResponsiveSplitter .sapUiLoSplitterV.sapUiLoSplitter > .sapUiLoSplitterBar,
+.sapUiResponsiveSplitter .sapUiLoSplitterV > .sapUiLoSplitterOverlay > .sapUiLoSplitterOverlayBar {
+	&:hover {
+		cursor: row-resize;
+	}
+}
+
+.sapUiResponsiveSplitter .sapUiLoSplitterH.sapUiLoSplitter > .sapUiLoSplitterBar,
+.sapUiResponsiveSplitter .sapUiLoSplitterH > .sapUiLoSplitterOverlay > .sapUiLoSplitterOverlayBar {
+
+	&:hover {
+		cursor: col-resize;
+	}
+}
+
+html.sap-phone .sapUiResponsiveSplitter > .sapUiResponsiveSplitterPage .sapUiLoSplitter.sapUiLoSplitterV .sapUiLoSplitterBar,
+html.sap-phone .sapUiResponsiveSplitter > .sapUiResponsiveSplitterPage .sapUiLoSplitter.sapUiLoSplitterV .sapUiLoSplitterOverlayBar,
+html.sap-tablet .sapUiResponsiveSplitter > .sapUiResponsiveSplitterPage .sapUiLoSplitter.sapUiLoSplitterV .sapUiLoSplitterBar,
+html.sap-tablet .sapUiResponsiveSplitter > .sapUiResponsiveSplitterPage .sapUiLoSplitter.sapUiLoSplitterV .sapUiLoSplitterOverlayBar {
+	& .sapUiLoSplitterBarIcon {
+		position: absolute;
+		margin-top: -22px;
+		top: auto;
+	}
+
+	& .sapUiLoSplitterBarIcon:after {
+		top: 25%;
+		left: 25%;
+	}
+}
+
+html.sap-phone .sapUiResponsiveSplitter > .sapUiResponsiveSplitterPage .sapUiLoSplitter.sapUiLoSplitterV .sapUiLoSplitterOverlayBar,
+html.sap-tablet .sapUiResponsiveSplitter > .sapUiResponsiveSplitterPage .sapUiLoSplitter.sapUiLoSplitterV .sapUiLoSplitterOverlayBar {
+	& .sapUiLoSplitterBarIcon {
+		left: 50%;
+		width: 3rem;
+		height: 3rem;
+		margin-left: -30px;
+	}
+}
+
+.sapUiResponsiveSplitter .sapUiLoSplitterV.sapUiLoSplitter > .sapUiLoSplitterBar,
+.sapUiResponsiveSplitter .sapUiLoSplitterV > .sapUiLoSplitterOverlay > .sapUiLoSplitterOverlayBar {
+	height: 0.25rem !important;
+}
+
+.sapUiResponsiveSplitter .sapUiLoSplitterH.sapUiLoSplitter > .sapUiLoSplitterBar,
+.sapUiResponsiveSplitter .sapUiLoSplitterH > .sapUiLoSplitterOverlay > .sapUiLoSplitterOverlayBar {
+	width: 0.25rem !important;
+}
+
+html[data-sap-ui-browser^=ie].sap-desktop .sapUiResponsiveSplitter {
+	.sapUiLoSplitterH > .sapUiLoSplitterBar:focus::after {
+		width: 2px;
+		z-index: 1;
+	}
+
+	.sapUiLoSplitterV > .sapUiLoSplitterBar:focus::after {
+		height: 2px;
+		top: -6px;
+		z-index: 1;
+	}
+}
+/* END "ResponsiveSplitter.less" */
+
+/* START "SimpleForm.less" */
+/* ========================================= */
+/* CSS for control sap.ui.layout/SimpleForm  */
+/* Goldreflection                            */
+/* ========================================= */
+
+.sapUiSimpleForm {
+	width:100%;
+	box-sizing: border-box;
+}
+
+html.sap-tablet .sapUiFioriObjectPage > section > .sapUiSimpleForm,
+html.sap-desktop .sapUiFioriObjectPage > section > .sapUiSimpleForm {
+	margin: 1rem 0;
+	padding: 0 1rem;
+}
+
+.sapUiFormEdit-CTX .sapMRb {
+	vertical-align: top;
+	line-height:1em;
+}
+
+.sapUiFormEdit-CTX .sapMRbBLabel {
+	line-height:3rem;
+}
+
+.sapUiSizeCompact .sapUiFormEdit-CTX .sapMRbBLabel {
+	line-height:  2rem;
+}
+
+.sapUiFormEdit-CTX .sapMSwtCont {
+	vertical-align:middle;
+}
+/* END "SimpleForm.less" */
+
+/* START "Splitter.less" */
+/* ======================================= */
+/* CSS for control sap.ui.layout/Splitter  */
+/* Goldreflection                          */
+/* ======================================= */
+
+/**
+ * The main Splitter element can have the following classes in addition to its main class
+ * "sapUiLoSplitter":
+ *   sapUiLoSplitterAnimated - Resizing should be animated (through css-transitions)
+ *   sapUiLoSplitterH        - It's a horizontal splitter
+ *   sapUiLoSplitterV        - It's a vertical splitter
+ * The splitter bars "sapUiLoSplitterBar" and "sapUiLoSplitterOverlayBar" can have the following
+ * additional classes:
+ *   sapUiLoSplitterNoResize
+ *
+**/
+
+/********************************************* General ********************************************/
+
+.sapUiLoSplitter {
+	position: relative;
+	width: 100%;
+	height: 100%;
+	overflow: hidden;
+	display: block;
+}
+
+.sapUiLoSplitterContent {
+	overflow: auto;
+}
+
+.sapUiLoSplitter > .sapUiLoSplitterBar,
+.sapUiLoSplitterOverlay > .sapUiLoSplitterOverlayBar {
+	cursor: move;
+	font-size: 16px;
+	background-color: transparent;
+	color: @sapUiContentIconColor;
+	
+	-webkit-touch-callout: none;
+	-webkit-user-select: none;
+	-moz-user-select: none;
+	-ms-user-select: none;
+	user-select: none;
+}
+
+.sapUiLoSplitter > .sapUiLoSplitterBar:focus {
+	outline: 1px dotted @sapUiContentFocusColor;
+	outline-offset: -1px;
+}
+
+.sapUiLoSplitter > .sapUiLoSplitterBar:hover,
+.sapUiLoSplitter > .sapUiLoSplitterOverlay > .sapUiLoSplitterOverlayBar {
+	background-color: @sapUiHighlight;
+	color: @sapUiContentContrastIconColor;
+	text-shadow: none;
+}
+
+.sapUiLoSplitterBarIcon {
+	text-align: center;
+	position: relative;
+	display: block;
+}
+
+.sapUiLoSplitter.sapUiLoSplitterH > .sapUiLoSplitterBar.sapUiLoSplitterNoResize,
+.sapUiLoSplitter.sapUiLoSplitterV > .sapUiLoSplitterBar.sapUiLoSplitterNoResize {
+	cursor: default;
+	visibility: hidden;
+}
+
+.sapUiLoSplitter > .sapUiLoSplitterBar.sapUiLoSplitterNoResize > *,
+.sapUiLoSplitterOverlay > .sapUiLoSplitterOverlayBar.sapUiLoSplitterNoResize > * {
+	display: none;
+}
+
+.sapUiLoSplitterOverlay {
+	display: none;
+	position: absolute;
+	top: 0;
+	left: 0;
+	bottom: 0;
+	right: 0;
+}
+
+.sapUiLoSplitterOverlay > .sapUiLoSplitterOverlayBar {
+	position: absolute;
+}
+
+
+/******************************************* Horizontal *******************************************/
+
+.sapUiLoSplitterH.sapUiLoSplitter {
+	white-space: nowrap;
+}
+
+.sapUiLoSplitterH > .sapUiLoSplitterBar,
+.sapUiLoSplitterH > .sapUiLoSplitterContent,
+.sapUiLoSplitterH > .sapUiLoSplitterOverlay > .sapUiLoSplitterOverlayBar {
+	display: inline-block;
+	vertical-align: top;
+	height: 100%;
+}
+
+.sapUiLoSplitterH > .sapUiLoSplitterBar > .sapUiLoSplitterBarIcon,
+.sapUiLoSplitterH > .sapUiLoSplitterOverlay > .sapUiLoSplitterOverlayBar > .sapUiIcon.sapUiLoSplitterBarIcon {
+	font-size: 16px;
+	line-height: 16px;
+	height: 16px;
+	top: ~"calc(50% - 12px)";
+}
+
+.sapUiLoSplitterH > .sapUiLoSplitterBar > .sapUiIcon.sapUiLoSplitterBarIcon::before,
+.sapUiLoSplitterH > .sapUiLoSplitterOverlay > .sapUiLoSplitterOverlayBar > .sapUiIcon.sapUiLoSplitterBarIcon::before {
+	content: "\e1fa";
+}
+
+.sapUiLoSplitterAnimated.sapUiLoSplitterH > .sapUiLoSplitterContent {
+	transition: width 200ms ease 0ms;
+}
+
+.sapUiLoSplitterH.sapUiLoSplitter > .sapUiLoSplitterBar,
+.sapUiLoSplitterH > .sapUiLoSplitterOverlay > .sapUiLoSplitterOverlayBar {
+	cursor: col-resize;
+	width: 4px;
+}
+
+
+/******************************************** Vertical ********************************************/
+
+.sapUiLoSplitterV > .sapUiLoSplitterBar,
+.sapUiLoSplitterV > .sapUiLoSplitterContent,
+.sapUiLoSplitterV > .sapUiLoSplitterOverlay > .sapUiLoSplitterOverlayBar {
+	display: block;
+	width: 100%;
+}
+
+.sapUiLoSplitterV > .sapUiLoSplitterBar > .sapUiLoSplitterBarIcon,
+.sapUiLoSplitterV > .sapUiLoSplitterOverlay > .sapUiLoSplitterOverlayBar > .sapUiIcon.sapUiLoSplitterBarIcon {
+	font-size: 16px;
+	line-height: 16px;
+	width: 16px;
+	left: ~"calc(50% - 8px)";
+	top: 0;
+
+}
+
+.sapUiLoSplitterV > .sapUiLoSplitterBar > .sapUiIcon.sapUiLoSplitterBarIcon::before,
+.sapUiLoSplitterV > .sapUiLoSplitterOverlay > .sapUiLoSplitterOverlayBar > .sapUiIcon.sapUiLoSplitterBarIcon::before {
+	content: "\e1fb";
+}
+
+.sapUiLoSplitterAnimated.sapUiLoSplitterV > .sapUiLoSplitterContent {
+	transition: height 200ms ease 0ms;
+}
+
+.sapUiLoSplitterV.sapUiLoSplitter > .sapUiLoSplitterBar,
+.sapUiLoSplitterV > .sapUiLoSplitterOverlay > .sapUiLoSplitterOverlayBar {
+	cursor: row-resize;
+	height: 4px;
+}
+
+/************************************** Responsive Bar sizes **************************************/
+
+
+html.sap-desktop .sapUiLoSplitterH.sapUiLoSplitter > .sapUiLoSplitterBar,
+html.sap-desktop .sapUiLoSplitterH > .sapUiLoSplitterOverlay > .sapUiLoSplitterOverlayBar,
+html.sap-desktop .sapUiLoSplitterH .sapUiLoSplitterBarIcon {
+	width: 6px;
+}
+
+
+html.sap-desktop .sapUiLoSplitterV.sapUiLoSplitter > .sapUiLoSplitterBar,
+html.sap-desktop .sapUiLoSplitterV > .sapUiLoSplitterOverlay > .sapUiLoSplitterOverlayBar,
+html.sap-desktop .sapUiLoSplitterV .sapUiLoSplitterBarIcon {
+	height: 6px;
+	line-height: 6px;
+}
+
+
+html.sap-tablet .sapUiLoSplitterH.sapUiLoSplitter > .sapUiLoSplitterBar,
+html.sap-tablet .sapUiLoSplitterH > .sapUiLoSplitterOverlay > .sapUiLoSplitterOverlayBar,
+html.sap-tablet .sapUiLoSplitterH .sapUiLoSplitterBarIcon {
+	width: 16px;
+}
+
+
+html.sap-tablet .sapUiLoSplitterV.sapUiLoSplitter > .sapUiLoSplitterBar,
+html.sap-tablet .sapUiLoSplitterV > .sapUiLoSplitterOverlay > .sapUiLoSplitterOverlayBar,
+html.sap-tablet .sapUiLoSplitterV .sapUiLoSplitterBarIcon {
+	height: 16px;
+	line-height: 16px;
+}
+
+
+html.sap-phone .sapUiLoSplitterH.sapUiLoSplitter > .sapUiLoSplitterBar,
+html.sap-phone .sapUiLoSplitterH > .sapUiLoSplitterOverlay > .sapUiLoSplitterOverlayBar,
+html.sap-phone .sapUiLoSplitterH .sapUiLoSplitterBarIcon {
+	width: 1px;
+}
+
+html.sap-phone .sapUiLoSplitterV.sapUiLoSplitter > .sapUiLoSplitterBar,
+html.sap-phone .sapUiLoSplitterV > .sapUiLoSplitterOverlay > .sapUiLoSplitterOverlayBar,
+html.sap-phone .sapUiLoSplitterV .sapUiLoSplitterBarIcon {
+	height: 1px;
+	line-height: 1px;
+}
+
+
+/*********************************** IE Focus outline workaround **********************************/
+
+html[data-sap-ui-browser^=ie] .sapUiLoSplitter > .sapUiLoSplitterBar:focus {
+	outline: 0px solid @sapUiContentFocusColor;
+	outline-offset: 0;
+}
+
+html[data-sap-ui-browser^=ie] .sapUiLoSplitter > .sapUiLoSplitterBar:focus::after {
+	content: "";
+	display: block;
+	position: relative;
+}
+
+html[data-sap-ui-browser^=ie] .sapUiLoSplitterH > .sapUiLoSplitterBar:focus::after {
+	top: -1em;
+}
+
+html[data-sap-ui-browser^=ie].sap-desktop .sapUiLoSplitterH > .sapUiLoSplitterBar:focus::after {
+	height: 100%;
+	width: 6px;
+	border: 1px dotted @sapUiContentFocusColor;
+}
+html[data-sap-ui-browser^=ie].sap-tablet .sapUiLoSplitterH > .sapUiLoSplitterBar:focus::after {
+	height: 100%;
+	width: 16px;
+	border: 1px dotted @sapUiContentFocusColor;
+}
+html[data-sap-ui-browser^=ie].sap-phone .sapUiLoSplitterH > .sapUiLoSplitterBar:focus::after {
+	height: 100%;
+	width: 1px;
+	border: 1px dotted @sapUiContentFocusColor;
+}
+
+html[data-sap-ui-browser^=ie].sap-desktop .sapUiLoSplitterV > .sapUiLoSplitterBar:focus::after {
+	top: -6px;
+	height: 6px;
+	width: 100%;
+	border: 1px dotted @sapUiContentFocusColor;
+}
+html[data-sap-ui-browser^=ie].sap-tablet .sapUiLoSplitterV > .sapUiLoSplitterBar:focus::after {
+	top: -16px;
+	height: 16px;
+	width: 100%;
+	border: 1px dotted @sapUiContentFocusColor;
+}
+html[data-sap-ui-browser^=ie].sap-phone .sapUiLoSplitterV > .sapUiLoSplitterBar:focus::after {
+	top: -1px;
+	height: 1px;
+	width: 100%;
+	border: 1px dotted @sapUiContentFocusColor;
+}
+/* END "Splitter.less" */
+
+/* START "VerticalLayout.less" */
+/* ====================================================== */
+/* CSS for control sap.ui.layout/VerticalLayout.control   */
+/* ====================================================== */
+
+.sapUiVlt {
+	display: inline-block;
+	vertical-align: top;
+}
+
+/* mixin call for creating container content padding classes (arguments: rootContainer, contentSelector) */
+.sapUiContainerContentPadding(~".sapUiVlt");
+/* END "VerticalLayout.less" */
+
+/* START "BlockLayoutRow.less" */
+.sapUiBlockScrollingRow {
+	display: -webkit-box;
+	display: -webkit-flex;
+	display: flex;
+	-webkit-flex-wrap: nowrap;
+	flex-wrap: nowrap;
+	overflow: auto;
+
+	.sapUiBlockScrollableCell {
+		-webkit-flex-shrink: 0;
+		flex-shrink: 0;
+		width: 40%;
+	}
+}
+
+.sapUiBlockLayoutSizeL,
+.sapUiBlockLayoutSizeXL,
+.sapUiBlockLayoutSizeM {
+	.sapUiBlockHorizontalCellsRow {
+		display: -webkit-box;
+		display: -webkit-flex;
+		display: flex;
+	}
+
+	.sapUiBlockSmallCell {
+		-webkit-flex-shrink: 1;
+		-webkit-flex-grow: 1;
+		-webkit-flex-basis: 0;
+		flex-grow: 1;
+		flex-shrink: 1;
+		flex-basis: 0;
+	}
+
+	.sapUiBlockMediumCell {
+		-webkit-flex-grow: 2;
+		-webkit-flex-shrink: 1;
+		-webkit-flex-basis: 0;
+		flex-grow: 2;
+		flex-shrink: 1;
+		flex-basis: 0;
+	}
+}
+
+.sapUiBlockLayoutSizeL,
+.sapUiBlockLayoutSizeXL {
+	.sapUiBlockScrollingNarrowCells {
+		.sapUiBlockScrollableCell {
+			width: 25%;
+		}
+	}
+}
+
+.sapUiBlockLayoutSizeS {
+	.sapUiBlockRowSCase {
+		display: -webkit-box;
+		display: -webkit-flex;
+		display: flex;
+		-webkit-flex-wrap: wrap;
+		flex-wrap: wrap;
+	}
+
+	.sapUiBlockSmallCell {
+		width: 100%;
+	}
+
+	.sapUiBlockMediumCell {
+		width: 100%;
+	}
+
+	.sapUiBlockScrollingRow {
+		.sapUiBlockScrollableCell:first-child .sapUiBlockCellContent {
+			padding-left: 2rem;
+		}
+
+		.sapUiBlockScrollableCell:last-child .sapUiBlockCellContent {
+			padding-right: 2rem;
+		}
+
+		.sapUiBlockScrollableCell {
+			min-width: 90%;
+		}
+	}
+}
+
+/* END "BlockLayoutRow.less" */
+
+/* START "BlockLayoutCell.less" */
+.sapUiBlockLayoutCell {
+	display: -webkit-box;
+	display: -webkit-flex;
+	display: flex;
+}
+
+.sapUiBlockCellCenteredContent {
+	align-self: center;
+	text-align: center;
+	width: 100%;
+
+	.sapUiBlockCellTitle {
+		font-size: @sapUiFontHeader1Size;
+	}
+}
+
+.sapUiBlockCellLeft,
+.sapUiBlockCellBegin {
+	text-align: left;
+}
+
+.sapUiBlockCellRight,
+.sapUiBlockCellEnd {
+	text-align: right;
+}
+
+[dir=rtl] .sapUiBlockCellEnd {
+	text-align: left;
+}
+
+[dir=rtl] .sapUiBlockCellBegin {
+	text-align: right;
+}
+
+.sapUiBlockCellContent {
+	width: 100%;
+	padding: 1rem;
+	overflow: hidden;
+	box-sizing: border-box;
+}
+
+.sapUiBlockCellTitle {
+    font-weight: normal;
+	font-size: @sapUiFontHeader2Size;
+	margin-top: 0;
+	margin-bottom: 1rem;
+}
+
+.sapUiBlockCellTitleNoContent {
+	margin-bottom: 0;
+}
+
+/* mixin call for creating container content padding classes (arguments: rootContainer, contentSelector) */
+.sapUiContainerContentPadding(~".sapUiBlockLayoutCell", ~"> .sapUiBlockCellContent");
+
+/* override for standard padding: 2rem for BlockLayoutCell */
+.sapUiBlockLayoutCell.sapUiContentPadding > .sapUiBlockCellContent {
+	padding: 2rem;
+}
+
+/* END "BlockLayoutCell.less" */
+
+/* START "BlockLayout.less" */
+/* ========================================== */
+/* CSS for control sap.ui.layout/BlockLayout  */
+/* Goldreflection                             */
+/* ========================================== */
+
+.sapUiBlockLayout {
+	.sapUiFormResLayout > div {
+		background-color: inherit;
+	}
+}
+
+.setCellsColorDoubles (@evenCell, @oddCell) {
+	// Match every even cell
+	.sapUiBlockLayoutCell:nth-child(2n) {
+		background-color: @evenCell;
+	}
+
+	// Match every odd cell
+	.sapUiBlockLayoutCell:nth-child(2n+1) {
+		background-color: @oddCell;
+	}
+}
+
+.sapUiBlockCellContent {
+	font-family: @sapUiFontFamily;
+	font-weight: normal;
+	font-size: 0.875rem;
+	color: @sapUiContentForegroundTextColor;
+	padding: 1rem;
+
+	> .sapUiIcon {
+		font-size: 2.25rem;
+	}
+}
+
+.sapUiBlockCellTitle {
+	font-size: 1.25rem;
+}
+
+// Styles & Sizes for Tablet
+.sapUiBlockLayoutSizeM {
+	.sapUiBlockCellContent {
+		padding: 2rem;
+
+		> .sapUiIcon {
+			font-size: 3rem;
+		}
+	}
+}
+
+// Styles & Sizes for Desktop
+.sapUiBlockLayoutSizeL {
+	.sapUiBlockCellContent {
+		padding: 3rem;
+		font-size: 1.125rem;
+
+		> .sapMText {
+			font-size: 1.125rem;
+		}
+
+		> .sapUiIcon {
+			font-size: 3.75rem;
+		}
+	}
+
+	.sapUiBlockCellTitle {
+		font-size: 1.75rem;
+	}
+}
+
+// Styles & Sizes for LargeDesktop
+.sapUiBlockLayoutSizeXL {
+	.sapUiBlockCellContent {
+		padding: 4rem;
+		font-size: 1.5rem;
+
+		> .sapMText {
+			font-size: 1.125rem;
+		}
+
+		> .sapUiIcon {
+			font-size: 4.5rem;
+		}
+	}
+
+	.sapUiBlockCellTitle {
+		font-size: 2.25rem;
+	}
+}
+
+/* ============ Background type: Dashboard ============== */
+.sapUiBlockLayoutBackgroundDashboard {
+	.sapUiBlockLayoutCell {
+		font-weight: normal;
+		color: @sapUiContentForegroundTextColor;
+	}
+
+	.sapUiBlockCellContent {
+		background-color: @sapUiGroupContentBackground;
+		box-shadow: @sapUiShadowLevel0;
+		margin: 0.25rem;
+	}
+
+	.sapUiBlockScrollingNarrowCells {
+		.sapUiBlockScrollableCell .sapUiBlockCellContent {
+			margin-bottom: 0;
+		}
+
+		& + .sapUiBlockHorizontalCellsRow .sapUiBlockCellContent {
+			margin-top: 0.375rem;
+		}
+	}
+
+	&:not(.sapUiBlockLayoutSizeS) {
+		.sapUiBlockLayoutCell:first-child .sapUiBlockCellContent {
+			margin-left: 0.5rem; // Adjust first cell in a row with 0.5rem on the left
+		}
+		.sapUiBlockLayoutCell:last-child .sapUiBlockCellContent {
+			margin-right: 0.5rem; // Adjust last cell in a row with 0.5rem on the right
+		}
+
+		.sapUiBlockLayoutRow:first-child .sapUiBlockCellContent {
+			margin-top: 0.5rem; // Adjust spacing at the top for all cells in the first row
+		}
+
+		.sapUiBlockLayoutRow:last-child .sapUiBlockCellContent {
+			margin-bottom: 0.5rem; // Adjust spacing at the bottom for all cells in the last row
+		}
+	}
+
+	// Block Layout with size S (Phone) puts every cell into a single row
+	// Therefore spacing should be altered in this case
+	&.sapUiBlockLayoutSizeS {
+		.sapUiBlockCellContent {
+			margin-left: 0.5rem;
+			margin-right: 0.5rem;
+		}
+
+		.sapUiBlockLayoutRow:first-child .sapUiBlockLayoutCell:first-child .sapUiBlockCellContent {
+			margin-top: 0.5rem; // Add 0.5rem spacing for the first cell in the first row
+		}
+
+		.sapUiBlockLayoutRow:last-child .sapUiBlockLayoutCell:last-child .sapUiBlockCellContent {
+			margin-bottom: 0.5rem; // Add 0.5rem spacing for the last cell in the last row
+		}
+	}
+}
+/* END "BlockLayout.less" */

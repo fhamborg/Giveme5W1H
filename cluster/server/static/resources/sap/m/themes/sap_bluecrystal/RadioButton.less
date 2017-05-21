@@ -1,0 +1,47 @@
+/* ================================== */
+/* CSS for control sap.m/RadioButton  */
+/* BlueCrystal theme                  */
+/* ================================== */
+
+.sapMRb:focus:before {
+	border: 1px dotted @sapUiContentFocusColor;
+}
+
+.sapMLIBActive .sapMRbB .sapMRbBOut{
+	border: 2px solid @sapUiListActiveTextColor;
+}
+
+.sapMLIBActive .sapMRbSel .sapMRbBOut {
+	background-color: @sapUiListActiveBackground;
+}
+
+.sapMRbDis {
+	opacity: @sapContent_DisabledOpacity;
+}
+
+/* Read only */
+.sapMRbRo .sapMRbBOut {
+	border-color: @sapUiFieldBorderColor;
+}
+
+/* Value states */
+
+.sapMRbErr.sapMRbSel .sapMRbBInn {
+	background-color: @sapUiFieldInvalidColor;
+}
+
+.sapMRbErr .sapMRbBOut,
+.sapMRbErr.sapMRbBTouched .sapMRbBOut {
+	border-color: @sapUiFieldInvalidColor;
+	background-color: @sapUiFieldInvalidBackground;
+}
+
+.sapMRbWarn.sapMRbSel .sapMRbBInn {
+	background-color: darken(@sapUiFieldWarningColor, 100);
+}
+
+.sapMRbWarn .sapMRbBOut,
+.sapMRbWarn.sapMRbBTouched .sapMRbBOut {
+	border-color: @sapUiFieldWarningColor;
+	background-color: @sapUiFieldWarningBackground;
+}

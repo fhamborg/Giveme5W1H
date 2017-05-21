@@ -1,0 +1,17 @@
+/* ============================================ */
+/* CSS for control sap.m/NotificationListGroup  */
+/* Belize theme                                 */
+/* ============================================ */
+
+@_sap_m_NotificationListGroup_CombinationBackground: @sapUiListBackground;
+
+.sapMNLG .sapMNLI {
+    background: @_sap_m_NotificationListGroup_CombinationBackground;
+}
+
+html[data-sap-ui-browser^="ie"].sap-desktop,
+html[data-sap-ui-browser^="ed"].sap-desktop {
+    .sapMNLG:focus::after {
+        border: 1px dashed @sapUiContentFocusColor;
+    }
+}

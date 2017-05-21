@@ -1,0 +1,22 @@
+<?xml version="1.0" ?>
+<library  version="2.0" name="sap.ui.codeeditor">
+  <module name="sap/ui/codeeditor/CodeEditor.js" size="9118" compressedSize="3968">
+    <description>global ace</description>
+    <requires>
+      <module name="jquery.sap.global.js"/>
+      <module name="sap/ui/core/Control.js"/>
+      <module name="sap/ui/codeeditor/js/ace/ace.js"/>
+      <module name="sap/ui/codeeditor/js/ace/mode-javascript.js"/>
+      <module name="sap/ui/codeeditor/js/ace/mode-json.js"/>
+    </requires>
+  </module>
+  <module name="sap/ui/codeeditor/library.js" size="812" compressedSize="474">
+    <description>Initialization Code and shared classes of library sap.ui.codeeditor.</description>
+    <requires>
+      <module name="sap/ui/core/Core.js"/>
+      <module name="jquery.sap.global.js"/>
+    </requires>
+  </module>
+  <module name="sap/ui/codeeditor/manifest.json" size="806">
+  </module>
+</library>

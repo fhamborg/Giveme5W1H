@@ -1,0 +1,17 @@
+/* ================================ */
+/* CSS for control sap.m/InputBase  */
+/* Belize theme                     */
+/* ================================ */
+
+html.sap-desktop .sapMInputBaseInner:not(.sapMInputBaseReadonlyInner):focus {
+	outline: 1px dotted @sapUiContentFocusColor;
+	outline-offset: -3px;
+}
+
+html.sap-desktop .sapMInputBaseStateInner:not(.sapMInputBaseReadonlyInner):focus {
+	outline-offset: -4px;
+}
+
+.sapMInputBaseInner:not(.sapMInputBaseReadonlyInner):not(.sapMInputBaseStateInner):not(.sapMInputBaseDisabledInner):active {
+  	border-color: @sapUiFieldBorderColor;
+}

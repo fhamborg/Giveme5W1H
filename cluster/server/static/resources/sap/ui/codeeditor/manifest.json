@@ -1,0 +1,41 @@
+{
+  "_version": "1.2.0",
+  "sap.app": {
+    "_version": "1.2.0",
+    "id": "sap.ui.codeeditor",
+    "type": "library",
+    "embeds": [],
+    "applicationVersion": {
+      "version": "1.46.7"
+    },
+    "title": "UI5 library: sap.ui.codeeditor",
+    "description": "UI5 library: sap.ui.codeeditor",
+    "resources": "resources.json",
+    "offline": true,
+    "openSourceComponents": [
+      {
+        "name": "ace",
+        "packagedWithMySelf": true,
+        "version": "0.0.0"
+      }
+    ]
+  },
+  "sap.ui": {
+    "_version": "1.1.0",
+    "technology": "UI5",
+    "supportedThemes": [
+      "base"
+    ]
+  },
+  "sap.ui5": {
+    "_version": "1.1.0",
+    "dependencies": {
+      "minUI5Version": "1.46",
+      "libs": {
+        "sap.ui.core": {
+          "minVersion": "1.46.7"
+        }
+      }
+    }
+  }
+}

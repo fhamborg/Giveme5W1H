@@ -1,0 +1,370 @@
+/* NOTE: This file was generated as an optimized version of "library.source.less" for the Theme Designer. */
+
+/*!
+ * UI development toolkit for HTML5 (OpenUI5)
+ * (c) Copyright 2009-2017 SAP SE or an SAP affiliate company.
+ * Licensed under the Apache License, Version 2.0 - see LICENSE.txt.
+ */
+@import "../base/library.less";
+@import "../../../../sap/ui/core/themes/sap_hcb/global.less";
+/* START "AnchorBar.less" */
+/* =================================== */
+/* CSS for control sap.uxap/AnchorBar  */
+/* High Contrast Black theme           */
+/* =================================== */
+
+.sapUxAPAnchorBar {
+	background-color: @sapUiObjectHeaderBackground;
+	border-bottom-width: 0.125rem;
+}
+
+.sapUxAPAnchorBar .sapUxAPAnchorBarButton,
+.sapUxAPAnchorBar .sapUxAPAnchorBarButton .sapMBtnInner {
+	padding-top: 0;
+	padding-bottom: 0;
+	border: none;
+}
+
+.sapUxAPAnchorBar .sapUxAPAnchorBarButton .sapMBtnInner {
+	border-radius: 0;
+}
+
+.sapUxAPAnchorBar .sapUxAPAnchorBarButton .sapMBtnIcon,
+.sapUxAPAnchorBar .sapUxAPAnchorBarButton .sapMBtnInner,
+.sapUxAPAnchorBar .sapUxAPAnchorBarButton .sapMBtnInner .sapMBtnContent {
+	height: 1.875rem;
+	line-height: 1.875rem;
+}
+
+.sapUxAPAnchorBarButton.sapUxAPAnchorBarButtonSelected::after {
+	display: block;
+	content: "";
+	position: absolute;
+	background-color: @sapUiObjectHeaderBorderColor;
+	height: 0.25rem;
+	bottom: 0;
+	left: 1rem;
+	right: 1rem;
+}
+
+// overriding to center the text of the popover buttons in compact mode
+.sapUiSizeCompact.sapUxAPAnchorBarPopover.sapMPopover .sapMBtn.sapUxAPAnchorBarButton .sapMBtnInner .sapMBtnContent {
+	line-height: 1.8rem;
+}
+
+.sapUxAPAnchorBar .sapUxAPAnchorBarButton .sapMBtnInner .sapMBtnContent,
+.sapUxAPAnchorBar .sapUxAPAnchorBarButton .sapMBtnInner .sapMBtnIcon {
+	line-height: 2rem;
+}
+/***********************/
+/* BEGIN Scroll Arrows */
+/***********************/
+
+// Gradient mask
+.sapUxAPAnchorBar.sapUxAPAnchorBarScrollLeft .anchorBarArrowLeft,
+html[dir=rtl] .sapUxAPAnchorBar.sapUxAPAnchorBarScrollRight .anchorBarArrowRight {
+	background: -moz-linear-gradient(left, @sapUiObjectHeaderBackground 0%, @sapUiObjectHeaderBackground 75%, fade(@sapUiObjectHeaderBackground, 0) 100%); /* FF3.6+ */
+	background: -ms-linear-gradient(left, @sapUiObjectHeaderBackground 0%, @sapUiObjectHeaderBackground 75%, fade(@sapUiObjectHeaderBackground, 0) 100%); /* IE10+ */
+	background: -webkit-gradient(linear, left top, right top, color-stop(0%, @sapUiObjectHeaderBackground), color-stop(75%, @sapUiObjectHeaderBackground), color-stop(100%, fade(@sapUiObjectHeaderBackground, 0))); /* Chrome,Safari4+ */
+	background: -webkit-linear-gradient(left, @sapUiObjectHeaderBackground 0%, @sapUiObjectHeaderBackground 75%, fade(@sapUiObjectHeaderBackground, 0) 100%); /* Chrome10+,Safari5.1+ */
+	background: linear-gradient(to right, @sapUiObjectHeaderBackground 0%, @sapUiObjectHeaderBackground 75%, fade(@sapUiObjectHeaderBackground, 0) 100%); /* W3C */
+	filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#000000', endColorstr='#00000000', GradientType=1); /* IE6-9 */
+}
+
+.sapUxAPAnchorBar.sapUxAPAnchorBarScrollRight .anchorBarArrowRight,
+html[dir=rtl] .sapUxAPAnchorBar.sapUxAPAnchorBarScrollLeft .anchorBarArrowLeft {
+	background: -moz-linear-gradient(left, fade(@sapUiObjectHeaderBackground, 0) 0%, @sapUiObjectHeaderBackground 25%, @sapUiObjectHeaderBackground 100%); /* FF3.6+ */
+	background: -ms-linear-gradient(left, fade(@sapUiObjectHeaderBackground, 0) 0%, @sapUiObjectHeaderBackground 25%, @sapUiObjectHeaderBackground 100%); /* IE10+ */
+	background: -webkit-gradient(linear, left top, right top, color-stop(0%, fade(@sapUiObjectHeaderBackground, 0)), color-stop(25%, @sapUiObjectHeaderBackground), color-stop(100%, @sapUiObjectHeaderBackground)); /* Chrome,Safari4+ */
+	background: -webkit-linear-gradient(left, fade(@sapUiObjectHeaderBackground, 0) 0%, @sapUiObjectHeaderBackground 25%, @sapUiObjectHeaderBackground 100%); /* Chrome10+,Safari5.1+ */
+	background: linear-gradient(to right, fade(@sapUiObjectHeaderBackground, 0) 0%, @sapUiObjectHeaderBackground 25%, @sapUiObjectHeaderBackground 100%); /* W3C */
+	filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#00000000', endColorstr='#000000', GradientType=1); /* IE6-9 */
+}
+
+/*********************/
+/* END Scroll Arrows */
+/*********************/
+
+/* OVERVIEW BUTTON */
+.sapUxAPAnchorBar.sapUxAPAnchorBarOverflow .sapUxAPHierarchicalSelect.sapMSltIconOnly {
+	top: 0;
+}
+
+/* OVERVIEW BUTTON IE focus fix */
+html[data-sap-ui-browser^="ie"] {
+	.sapUxAPAnchorBar.sapUxAPAnchorBarOverflow .sapUxAPHierarchicalSelect.sapMSltIconOnly:focus {
+		right: -28px;
+		overflow: visible;
+		&:before {
+			border: 0 none;
+		}
+	}
+}
+
+/* OVERVIEW BUTTON EDGE focus fix */
+html[data-sap-ui-browser^="ed"] {
+	.sapUxAPAnchorBar.sapUxAPAnchorBarOverflow .sapUxAPHierarchicalSelect.sapMSltIconOnly:focus {
+		overflow: visible;
+	}
+}
+
+// Scroll buttons
+.sapUiSizeCompact .sapUxAPAnchorBar.sapUxAPAnchorBarScrollLeft .anchorBarArrow .sapMBtn,
+.sapUiSizeCompact .sapUxAPAnchorBar.sapUxAPAnchorBarScrollRight .anchorBarArrow .sapMBtn {
+	top: 0;
+}
+
+.sapUiSizeCompact .sapUxAPAnchorBar .sapUxAPAnchorBarButton .sapMBtnText>.sapMBtnIcon {
+	top:0;
+}
+/* END "AnchorBar.less" */
+
+/* START "BreadCrumbs.less" */
+/* ===================================== */
+/* CSS for control sap.uxap/BreadCrumbs  */
+/* High Contrast Black theme             */
+/* ===================================== */
+
+.sapUxAPBreadCrumbs {
+	.sapMText:focus {
+		outline: 0.125rem dotted @sapUiContentFocusColor;
+		outline-offset: 0.2rem;
+	}
+
+	.sapMSlt > .sapMSltArrow:hover,
+	.sapMSlt:hover > .sapMSltArrow,
+	.sapMSltPressed > .sapMSltArrow {
+		border-left: 0 none;
+	}
+}
+/* END "BreadCrumbs.less" */
+
+/* START "HierarchicalSelect.less" */
+/* ============================================ */
+/* CSS for control sap.uxap/HierarchicalSelect  */
+/* High Contrast Black theme                    */
+/* ============================================ */
+
+.sapUxAPHierarchicalSelect {
+	border: none;
+
+	&.sapMSltHoverable {
+		border: none;
+
+		&.sapMSltIconOnly {
+
+			&:hover {
+				background: transparent;
+
+				&:focus {
+					background: transparent;
+				}
+			}
+
+			&:focus {
+				outline: none;
+
+				> .sapMSltIcon {
+					outline: 0.125rem dotted @sapUiContentFocusColor;
+					outline-offset: -0.125rem;
+					border-color: transparent;
+				}
+			}
+		}
+
+		> .sapMSltIcon:hover {
+			background: @sapUiButtonHoverBackground;
+		}
+	}
+
+	&.sapMSltPressed {
+
+		&.sapMSltIconOnly:not(.sapMSltDisabled) {
+			background: none;
+			border: none;
+		}
+
+		> .sapMSltIcon {
+			background: @sapUiButtonActiveBackground;
+		}
+	}
+}
+
+.sapUxAPHierarchicalSelect .sapMSltLabel,
+.sapUxAPHierarchicalSelect .sapMSltArrow,
+.sapUxAPHierarchicalSelectFirstLevel.sapMSelectListItem {
+	color: @sapUiListTextColor;
+}
+
+.sapUiMedia-Std-Phone .sapUxAPHierarchicalSelect .sapMSltArrow,
+.sapUiMedia-Std-Phone .sapUiSizeCompact .sapUxAPHierarchicalSelect .sapMSltArrow {
+	width: 3rem;
+}
+
+.sapUiMedia-Std-Phone .sapUxAPHierarchicalSelect > .sapMSltArrow {
+	border-left: none;
+}
+
+.sapUxAPAnchorBar .sapUxAPHierarchicalSelect.sapMSltIconOnly {
+	border-radius: 0;
+	height: 3rem;
+	width: 2rem;
+}
+
+.sapUxAPAnchorBar .sapUxAPHierarchicalSelect.sapMSltIconOnly .sapMSltIcon {
+	box-sizing: border-box;
+	border: 1px solid @sapUiButtonBorderColor;
+}
+
+.sapUxAPHierarchicalSelectSecondLevel.sapMSelectListItem,
+.sapUxAPHierarchicalSelectFirstLevel.sapMSelectListItem {
+	border-bottom: none;
+}
+
+.sapUxAPHierarchicalSelectSecondLevel.sapMSelectListItem {
+	border-top: 1px solid @sapUiListBorderColor;
+	padding-left: 2rem;
+}
+
+.sapUxAPHierarchicalSelectFirstLevel.sapMSelectListItem {
+	border-top: 0.125rem solid @sapUiGroupContentBorderColor;
+}
+
+.sapMSelectList .sapUxAPHierarchicalSelectSecondLevel.sapMSelectListItem {
+	text-indent: 1rem;
+}
+
+.sapUiSizeCompact .sapUxAPHierarchicalSelect .sapMSltIcon {
+	top: 0;
+}
+
+/* END "HierarchicalSelect.less" */
+
+/* START "IconTabBar.less" */
+.sapUxAPObjectPageNavigation {
+	.sapMITB {
+
+		box-shadow: inset 0 -0.0625rem @sapHCStandardFG;
+
+		.sapMITH {
+			.sapMITBArrowScroll {
+				top: 0;
+			}
+
+			.sapMITBHead {
+				margin-top: 0;
+			}
+		}
+	}
+}
+
+/* END "IconTabBar.less" */
+
+/* START "ObjectPageHeader.less" */
+/* ========================================== */
+/* CSS for control sap.uxap/ObjectPageHeader  */
+/* High Contrast Black theme                  */
+/* ========================================== */
+
+.sapUxAPObjectPageHeaderIdentifierSubTitleInContent {
+	font-size: @sapMFontMediumSize;
+}
+
+.sapUiMedia-Std-Phone .sapUiSizeCompact.sapUxAPObjectPageHeaderLockBtn .sapMBtn,
+.sapUiMedia-Std-Phone .sapUiSizeCompact.sapUxAPObjectPageHeaderChangesBtn .sapMBtn {
+	margin-top: -0.3rem;
+}
+
+.sapUiSizeCompact.sapUxAPObjectPageHeaderLockBtn .sapMBtn,
+.sapUiSizeCompact.sapUxAPObjectPageHeaderChangesBtn .sapMBtn {
+	margin-top: -0.125rem;
+}
+/* END "ObjectPageHeader.less" */
+
+/* START "ObjectPageLayout.less" */
+/* ========================================== */
+/* CSS for control sap.uxap/ObjectPageLayout  */
+/* High Contrast Black theme                  */
+/* ========================================== */
+
+.sapUxAPObjectPageNavigation {
+	background-color: @sapUiObjectHeaderBackground;
+}
+
+.sapUxAPObjectChildPage {
+	width: 0.25rem;
+}
+
+.sapUxAPObjectPageNavigation .sapUxAPObjectChildPage {
+	height: 3rem;
+}
+
+.sapUiSizeCompact .sapUxAPObjectPageNavigation .sapUxAPObjectChildPage {
+	height: 2rem;
+}
+
+.sapUxAPObjectPageNavigation .sapUxAPITBar.sapUxAPObjectChildPage {
+	height: 3.125rem;
+}
+
+.sapUiSizeCompact .sapUxAPObjectPageNavigation .sapUxAPITBar.sapUxAPObjectChildPage {
+	height: 2.125rem;
+}
+
+/* Overriding the width inherited from BrowserScrollbar.less */
+.sap-desktop .sapUxAPObjectPageWrapper ::-webkit-scrollbar {
+	width: auto;
+}
+/* END "ObjectPageLayout.less" */
+
+/* START "ObjectPageSection.less" */
+/* =========================================== */
+/* CSS for control sap.uxap/ObjectPageSection  */
+/* High Contrast Black theme                   */
+/* =========================================== */
+
+.sapUxAPObjectPageSectionHeader {
+	background-color: @sapUiListGroupHeaderBackground;
+	font-size: @sapMFontHeader2Size;
+	color: @sapUiGroupTitleTextColor;
+	border-top: 0.0625rem solid @sapUiListBorderColor;
+	border-bottom: 0.0625rem solid @sapUiListBorderColor;
+}
+
+.sapUxAPObjectPageSection:focus {
+	outline: 0.125rem dotted @sapUiContentFocusColor;
+	outline-offset: -0.125rem;
+	border-color: transparent;
+	border-radius: 0;
+}
+
+.sapUxAPObjectPageSectionTitle {
+	line-height: 2.9rem;
+}
+
+.sapUiSizeCompact .sapUxAPObjectPageSectionTitle {
+	line-height: 2.4rem;
+}
+/* END "ObjectPageSection.less" */
+
+/* START "ObjectPageSubSection.less" */
+/* ============================================== */
+/* CSS for control sap.uxap/ObjectPageSubSection  */
+/* High Contrast Black theme                      */
+/* ============================================== */
+
+.sapUxAPObjectPageSubSection:focus,
+.sapUxAPObjectPageSubSectionHeaderTitle:focus {
+	outline: 0.125rem dotted @sapUiContentFocusColor;
+	outline-offset: -0.125rem;
+	border-color: transparent;
+	border-radius: 0;
+}
+
+/* IE ignores outline-offset. Use an overlay: */
+html[data-sap-ui-browser^="ie"] .sapUxAPObjectPageSubSection, .sapUxAPObjectPageSubSectionHeaderTitle {
+	&:focus:before {
+		border-width: 0.125rem;
+	}
+}
+/* END "ObjectPageSubSection.less" */

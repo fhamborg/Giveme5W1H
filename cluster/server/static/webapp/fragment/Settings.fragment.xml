@@ -1,0 +1,20 @@
+<core:FragmentDefinition xmlns="sap.m" xmlns:f="sap.ui.layout.form"
+	xmlns:core="sap.ui.core"
+	xmlns:mvc="sap.ui.core.mvc"
+	xmlns:l="sap.ui.layout"
+	xmlns:u="sap.ui.unified"
+	>
+	<Dialog title="{i18n>DialogSettingsTitle}"  type="Standard" >
+		<content>
+		</content>
+		<beginButton>
+			<Button icon="sap-icon://decline" press="onPressDialogSettingsCancel"/>					
+		</beginButton>
+		<endButton>
+			 <Button icon="sap-icon://accept"  press="onPressDialogSettingsOk"/>	
+		</endButton>
+	</Dialog>
+</core:FragmentDefinition>
+
+
+

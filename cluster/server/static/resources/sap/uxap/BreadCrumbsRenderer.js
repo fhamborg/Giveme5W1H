@@ -1,0 +1,6 @@
+/*!
+ * UI development toolkit for HTML5 (OpenUI5)
+ * (c) Copyright 2009-2017 SAP SE or an SAP affiliate company.
+ * Licensed under the Apache License, Version 2.0 - see LICENSE.txt.
+ */
+sap.ui.define(function(){"use strict";var B={};B.render=function(r,c){r.write("<div");r.writeControlData(c);r.addClass("sapUxAPBreadCrumbs");r.writeClasses();r.writeAttribute("role","navigation");r.writeAttributeEscaped("aria-labelledby",c._getAriaLabelledBy().getId());r.write(">");this._renderOverflowSelect(r,c);if(!c._bOnPhone){this._renderBreadcrumbTrail(r,c);}r.write("</div>");};B._renderBreadcrumbTrail=function(r,c){var l=c.getLinks(),C=c.getCurrentLocation(),t=c._getTubeIcon(),s=c.getShowCurrentLocation();r.write("<ul id='"+c.getId()+"-breadcrumbs'");r.write(">");l.forEach(function(L){r.write("<li>");r.renderControl(L);r.renderControl(t);r.write("</li>");});if(s){r.write("<li>");r.renderControl(C);r.write("</li>");}r.write("</ul>");};B._renderOverflowSelect=function(r,c){var t=c._getTubeIcon();r.write("<div id='"+c.getId()+"-select'");r.addClass("sapUiHidden");r.writeClasses();r.write(">");r.write('<span class="sapUxAPBreadCrumbsDots">...</span>');r.renderControl(t);r.renderControl(c._getOverflowSelect());r.write("</div>");};return B;},true);

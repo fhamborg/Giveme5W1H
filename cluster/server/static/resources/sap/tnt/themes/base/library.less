@@ -1,0 +1,707 @@
+/* NOTE: This file was generated as an optimized version of "library.source.less" for the Theme Designer. */
+
+/*!
+ * UI development toolkit for HTML5 (OpenUI5)
+ * (c) Copyright 2009-2017 SAP SE or an SAP affiliate company.
+ * Licensed under the Apache License, Version 2.0 - see LICENSE.txt.
+ */
+
+@import "../../../../../Base/baseLib/baseTheme/base.less"; /* ORIGINAL IMPORT PATH: "../../../../sap/ui/core/themes/base/base.less" */
+
+@import "../../../../sap/ui/core/themes/base/global.less";
+
+/* START "NavigationList.less" */
+/* ======================================= */
+/* CSS for control sap.tnt/NavigationList  */
+/* Base theme                              */
+/* ======================================= */
+
+.sapTntNavLI {
+	margin: 0;
+	padding: 0;
+	list-style: none;
+}
+
+.sapTntNavLI ul {
+	margin: 0;
+	padding: 0;
+	list-style: none;
+}
+
+.sapTntNavLIItem {
+	width : 100%;
+	height: 2.5rem;
+
+	box-sizing: border-box;
+
+	display: -webkit-box;
+	display: -webkit-flex;
+	display: flex;
+
+	-webkit-box-align: center;
+	-webkit-align-items: center;
+	align-items: center;
+
+	cursor: pointer;
+	background-color: @sapUiListBackground;
+
+	& > span {
+		cursor: pointer;
+	}
+
+	&.sapTntNavLIItemDisabled {
+		cursor: auto;
+
+		& > span {
+			cursor: auto;
+		}
+	}
+
+	& > .sapMText {
+		color: @sapUiListTextColor;
+	}
+
+	& > .sapUiIcon {
+		color: @sapUiContentIconColor;
+	}
+}
+
+.sapTntNavLIText {
+	width: 100%;
+	display: block;
+}
+
+.sapTntNavLIGroupItem > .sapMText {
+	padding-left: 3rem;
+}
+
+.sapTntNavLIPopup .sapTntNavLIGroupItem > .sapMText {
+	padding: 0 1rem;
+}
+
+.sapTntNavLIPopup .sapTntNavLIGroup > .sapMText {
+	margin: 0 1rem 0 0;
+}
+
+.sapTntNavLI {
+  span.sapTntNavLIGroupIcon {
+	min-width: 3rem;
+	padding: 0.6875rem 0;
+
+	outline: none;
+	-webkit-user-select: none; /* Chrome all / Safari all */
+	-moz-user-select: none; /* Firefox all */
+	-ms-user-select: none; /* IE 10+ */
+	user-select: none;
+  }
+
+  img.sapTntNavLIGroupIcon {
+	height: 1.125rem;
+	width: 1.125rem;
+	padding: 0.6875rem 0.9375rem;
+  }
+}
+
+.sapTntNavLIPopup {
+  span.sapTntNavLIGroupIcon {
+	width: 1rem;
+	visibility: hidden;
+	min-width: 1rem;
+  }
+
+  img.sapTntNavLIGroupIcon {
+	width: 1rem;
+	visibility: hidden;
+	min-width: 1rem;
+	padding: 0;
+  }
+}
+
+.sapTntNavLI .sapTntNavLIExpandIcon {
+	min-width: 2rem;
+	padding: 0.75rem 0;
+	font-size: 0.875rem;
+
+	outline: none;
+	-webkit-user-select: none;  /* Chrome all / Safari all */
+	-moz-user-select: none;     /* Firefox all */
+	-ms-user-select: none;      /* IE 10+ */
+	user-select: none;
+}
+
+.sapTntNavLIHiddenGroupItems {
+	display: none;
+}
+
+.sapTntNavLICollapsed {
+	width: 3rem;
+}
+
+.sapTntNavLI li,
+.sapTntNavLIItem {
+	position: relative;
+}
+
+.sapTntNavLIGroup {
+	border-bottom: 1px solid @sapUiListBorderColor;
+}
+
+.sapTntNavLIItem:not(.sapTntNavLIItemDisabled):hover {
+	background-color: @sapUiListHoverBackground;
+}
+
+.sapTntNavLI .sapTntNavLIGroup.sapTntNavLIItem:not(.sapTntNavLIItemDisabled):active,
+.sapTntNavLI .sapTntNavLIGroupItem.sapTntNavLIItem:not(.sapTntNavLIItemDisabled):active{
+	background-color: @sapUiListActiveBackground;
+
+	& > .sapMText {
+		color: @sapUiListActiveTextColor;
+	}
+
+	& > .sapUiIcon {
+		color: @sapUiListActiveTextColor;
+	}
+}
+
+
+.sapTntNavLIItemSelected .sapTntNavLIItem,
+.sapTntNavLIItemSelected.sapTntNavLIGroupItem.sapTntNavLIGroupItem {
+	background-color: @sapUiListSelectionBackgroundColor;
+}
+
+.sapTntNavLIItemSelected .sapTntNavLIItem:hover,
+.sapTntNavLIItemSelected.sapTntNavLIGroupItem.sapTntNavLIGroupItem:hover {
+	background-color: @sapUiListSelectionHoverBackground;
+}
+
+.sapTntNavLIGroupItem.sapTntNavLIItem:last-child {
+	border-bottom: 1px solid @sapUiListBorderColor;
+}
+
+.sapTntNavLI li:focus,
+.sapTntNavLIItem:focus {
+	outline: none;
+}
+
+.sapTntNavLI li:focus > .sapTntNavLIItem::before,
+.sapTntNavLIItem:focus::before {
+	border: 1px dotted @sapUiContentFocusColor;
+	position: absolute;
+	content: " ";
+	top: 1px;
+	right: 1px;
+	bottom: 1px;
+	left: 1px;
+	z-index: 2;
+	pointer-events: none;
+}
+
+html[data-sap-ui-browser^="ie"].sap-desktop,
+html[data-sap-ui-browser^="ed"].sap-desktop {
+	.sapTntNavLI li:focus > .sapTntNavLIItem::before,
+	.sapTntNavLIItem:focus::before {
+		border: 1px dashed @sapUiContentFocusColor;
+	}
+}
+
+/* Compact size */
+.sapUiSizeCompact {
+
+	.sapTntNavLIItem {
+		height: 2rem;
+	}
+
+	.sapTntNavLIGroupItem > .sapMText {
+		padding-left: 2rem;
+	}
+
+	.sapTntNavLIPopup .sapTntNavLIGroupItem > .sapMText {
+		padding: 0 0.5rem;
+	}
+
+	.sapTntNavLIPopup .sapTntNavLIGroup > .sapMText {
+		margin: 0 0.5rem 0 0;
+	}
+
+	.sapTntNavLI span.sapTntNavLIGroupIcon {
+		min-width: 2rem;
+		padding: 0.5rem 0;
+	}
+
+	.sapTntNavLI img.sapTntNavLIGroupIcon {
+	  padding: 0.5rem 0.4375rem;
+	}
+
+	.sapTntNavLIPopup span.sapTntNavLIGroupIcon {
+		width: 0.5rem;
+	  	min-width: 0.5rem;
+	}
+
+	.sapTntNavLI .sapTntNavLIExpandIcon {
+		min-width: 2rem;
+		padding: 0.5rem 0;
+	}
+
+	.sapTntNavLICollapsed {
+		width: 2rem;
+	}
+}
+/* END "NavigationList.less" */
+
+/* START "ToolHeader.less" */
+/* =================================== */
+/* CSS for control sap.tnt/ToolHeader  */
+/* Base theme                          */
+/* =================================== */
+
+.sapTntToolHeaderPopover.sapMOTAPopover.sapMPopover .sapMPopoverCont .sapMPopoverScroll,
+.sapTntToolHeaderPopover.sapMOTAPopover.sapMPopover .sapMPopoverCont .sapMPopoverScroll .sapMBtn {
+	padding: 0;
+}
+
+.sapTntToolHeader.sapMTB {
+	height: 3rem;
+}
+/* END "ToolHeader.less" */
+
+/* START "SideNavigation.less" */
+/* ======================================= */
+/* CSS for control sap.tnt/SideNavigation  */
+/* Base theme                              */
+/* ======================================= */
+
+.sapTntSideNavigation {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: flex;
+  -webkit-box-direction: normal;
+  -webkit-box-orient: vertical;
+  -webkit-flex-direction: column;
+  flex-direction: column;
+  -webkit-box-flex: 1;
+  -webkit-flex-grow: 1;
+  flex-grow: 1;
+  box-sizing: border-box;
+  overflow: hidden;
+  background: @sapUiListBackground;
+  border-right: 1px solid @sapUiGroupContentBorderColor;
+}
+
+.sapTntSideNavigation {
+  width: 15rem;
+}
+
+.sapTntSideNavigation.sapTntSideNavigationNotExpandedWidth {
+  width: 3rem;
+}
+
+.sapTntSideNavigationNotExpanded {
+
+  .sapTntNavLIText, .sapTntNavLIExpandIcon  {
+    display: none;
+  }
+  .sapTntSideNavigationSeparator {
+    margin: 0.25rem 0.5rem;
+  }
+
+  .sapTntSideNavigationFlexible {
+    padding-right: 3rem;
+    width: 6rem;
+  }
+}
+
+.sapTntSideNavigationFlexible {
+  -webkit-box-flex: 1;
+  -webkit-flex-grow: 1;
+  flex-grow: 1;
+
+  -webkit-flex-basis: 100%;
+  flex-basis: 100%;
+
+  position: relative;
+  overflow: hidden;
+
+  box-sizing: border-box;
+}
+
+.sapTntSideNavigationSeparator {
+  margin: 0.25rem 1rem;
+  height: 1px;
+  min-height: 1px;
+   background-color: @sapUiToolbarSeparatorColor;
+}
+
+.sapTntSideNavigationFixed {
+  position: relative;
+}
+
+.sapTntSideNavigationVerticalScrolling {
+  overflow-y: auto;
+  overflow-x: hidden;
+  height: 10rem;
+}
+
+/* Styles for layout with arrows
+   ========================================================================== */
+
+.sapTntSideNavigationScrollIcon {
+  display: none;
+  padding: 0.6875rem 0;
+  outline: none;
+  -webkit-user-select: none;  /* Chrome all / Safari all */
+  -moz-user-select: none;     /* Firefox all */
+  -ms-user-select: none;      /* IE 10+ */
+  user-select: none;
+  color: @sapUiContentIconColor;
+}
+
+.sapTntSideNavigationScrollIcon.sapUiIcon:focus {
+  outline: none;
+}
+
+.sapTntSideNavigationScrollIconDisabled {
+  cursor: auto;
+}
+
+.sapTntSideNavigationScrollIconUp {
+  border-bottom: 1px solid @sapUiListBorderColor;
+}
+
+.sapTntSideNavigationScrollIconDown {
+  border-top: 1px solid @sapUiListBorderColor;
+}
+
+.sapTntSideNavigationScrollIcon:not(.sapTntSideNavigationScrollIconDisabled):hover {
+  background-color: @sapUiListHoverBackground;
+}
+
+.sapTntSideNavigationScrollIcon:not(.sapTntSideNavigationScrollIconDisabled):active {
+  background-color: @sapUiListActiveBackground;
+  color: @sapUiListActiveTextColor;
+}
+
+/*  Compact size
+   ========================================================================== */
+
+.sapUiSizeCompact {
+
+  .sapTntSideNavigationNotExpandedWidth {
+    width: 2rem;
+  }
+
+  .sapTntSideNavigationNotExpanded {
+
+    .sapTntSideNavigationSeparator {
+      margin: 0.125rem 0.25rem;
+    }
+  }
+
+  .sapTntSideNavigationSeparator {
+    margin: 0.125rem 0.5rem;
+  }
+
+  .sapTntSideNavigationScrollIcon {
+    padding: 0.5rem 0;
+  }
+}
+/* END "SideNavigation.less" */
+
+/* START "ToolPage.less" */
+/* ================================= */
+/* CSS for control sap.tnt/ToolPage  */
+/* Base theme                        */
+/* ================================= */
+
+/* ==========================================================================
+   Variables and mixins
+   ========================================================================== */
+
+@sapTntToolPageAsideWidth : 15rem;
+@sapTntToolPageAsideWidthOnTablet : 3rem;
+@sapTntToolPageHeaderHeight : 3rem;
+@sapTntToolPageFooterHeight : 3rem;
+
+@sapTntToolPageCompactAsideWidth : 15rem;
+@sapTntToolPageCompactAsideWidthOnTablet : 2rem;
+@sapTntToolPageCompactHeaderHeight : 3rem;
+@sapTntToolPageCompactFooterHeight : 2rem;
+
+@sapTntToolPageAnimationDuration : 0.3s;
+
+.display-flex() {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: flex;
+}
+
+.flex-direction-column() {
+  -webkit-box-direction: normal;
+  -webkit-box-orient: vertical;
+  -webkit-flex-direction: column;
+  flex-direction: column;
+}
+
+.flex-grow(@flex-grow) {
+  -webkit-box-flex: @flex-grow;
+  -webkit-flex-grow: @flex-grow;
+  flex-grow: @flex-grow;
+}
+
+/* ==========================================================================
+   Root element
+   ========================================================================== */
+.sapTntToolPage {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+
+  .display-flex();
+  .flex-direction-column();
+
+  box-sizing: border-box;
+  overflow: hidden;
+}
+
+/* ==========================================================================
+   Header
+   ========================================================================== */
+.sapTntToolPageHeader {
+  height: @sapTntToolPageHeaderHeight;
+}
+
+/* ==========================================================================
+   Content wrapper
+   ========================================================================== */
+.sapTntToolPageContentWrapper {
+  .display-flex();
+  .flex-grow(1);
+  max-height: calc(~'100% - @{sapTntToolPageHeaderHeight}');
+  position: relative;
+}
+
+/* Aside container
+   ========================================================================== */
+
+.sapTntToolPageAside {
+  .display-flex();
+  .flex-direction-column();
+
+  will-change: transform;
+}
+
+.sapTntToolPageAsideContent {
+  .display-flex();
+  .flex-direction-column();
+  .flex-grow(1);
+  height: 100%;
+}
+
+.sapTntToolPageAsideFooter {
+  height: @sapTntToolPageFooterHeight;
+  overflow: hidden;
+}
+
+html:not([data-sap-ui-animation='off']) .sapTntToolPageMain {
+  -webkit-transition: padding-left @sapTntToolPageAnimationDuration, -webkit-transform @sapTntToolPageAnimationDuration; /* Safari */
+  transition: padding-left @sapTntToolPageAnimationDuration, transform @sapTntToolPageAnimationDuration;
+}
+
+html:not([data-sap-ui-animation='off']) .sapTntToolPageAside {
+  -webkit-transition: -webkit-transform @sapTntToolPageAnimationDuration; /* Safari */
+  transition: transform @sapTntToolPageAnimationDuration;
+}
+
+.sap-desktop,
+.sap-tablet {
+  .sapTntToolPageAside {
+    width: @sapTntToolPageAsideWidth;
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    top: 0;
+    z-index: 1;
+  }
+
+  .sapTntToolPageMain {
+    padding-left: @sapTntToolPageAsideWidth;
+  }
+}
+
+.sap-desktop,
+.sap-tablet {
+  .sapTntToolPageAsideCollapsed {
+    .sapTntToolPageAside {
+      width: @sapTntToolPageAsideWidthOnTablet;
+    }
+
+    .sapTntToolPageMain {
+      padding-left: @sapTntToolPageAsideWidthOnTablet;
+    }
+  }
+}
+
+.sap-phone {
+  .sapTntToolPageAside {
+    width: @sapTntToolPageAsideWidth;
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    top: 0;
+    z-index: 1;
+  }
+
+  .sapTntToolPageMain {
+    -webkit-transform: translateX(@sapTntToolPageAsideWidth);
+    transform: translateX(@sapTntToolPageAsideWidth);
+  }
+
+  .sapTntToolPageAsideCollapsed {
+    .sapTntToolPageAside {
+      -webkit-transform: translateX(-@sapTntToolPageAsideWidth);
+      transform: translateX(-@sapTntToolPageAsideWidth);
+    }
+    .sapTntToolPageMain {
+      -webkit-transform: translateX(0);
+      transform: translateX(0);
+    }
+  }
+}
+
+/* Main container
+   ========================================================================== */
+
+.sapTntToolPageMain {
+  .display-flex();
+  .flex-direction-column();
+  .flex-grow(1);
+
+  will-change: transform;
+}
+
+.sapTntToolPageMainContent {
+  .flex-grow(1);
+
+  position: relative;
+}
+
+.sapTntToolPageMainContentWrapper {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+}
+
+.sapTntToolPageMainFooter {
+  height: @sapTntToolPageFooterHeight;
+  overflow: hidden;
+}
+
+/* Compact size */
+.sapUiSizeCompact {
+
+  .sapTntToolPageHeader {
+    height: @sapTntToolPageCompactHeaderHeight;
+  }
+
+  .sapTntToolPageAsideFooter {
+    height: @sapTntToolPageCompactFooterHeight;
+  }
+
+  .sapTntToolPageMainFooter {
+    height: @sapTntToolPageCompactFooterHeight;
+  }
+}
+
+.sap-desktop .sapUiSizeCompact,
+.sap-tablet .sapUiSizeCompact {
+  .sapTntToolPageAside {
+    width: @sapTntToolPageCompactAsideWidth;
+  }
+
+  .sapTntToolPageMain {
+    padding-left: @sapTntToolPageCompactAsideWidth;
+  }
+}
+
+.sap-desktop .sapUiSizeCompact,
+.sap-tablet .sapUiSizeCompact {
+  .sapTntToolPageAsideCollapsed {
+    .sapTntToolPageAside {
+      width: @sapTntToolPageCompactAsideWidthOnTablet;
+    }
+
+    .sapTntToolPageMain {
+      padding-left: @sapTntToolPageCompactAsideWidthOnTablet;
+    }
+  }
+}
+
+.sap-phone .sapUiSizeCompact {
+
+  .sapTntToolPageAside {
+    width: @sapTntToolPageCompactAsideWidth;
+  }
+
+  .sapTntToolPageMain {
+    -webkit-transform: translateX(@sapTntToolPageCompactAsideWidth);
+    transform: translateX(@sapTntToolPageCompactAsideWidth);
+  }
+
+  .sapTntToolPageAsideCollapsed {
+    .sapTntToolPageAside {
+      -webkit-transform: translateX(-@sapTntToolPageCompactAsideWidth);
+      transform: translateX(-@sapTntToolPageCompactAsideWidth);
+    }
+    .sapTntToolPageMain {
+      -webkit-transform: translateX(0);
+      transform: translateX(0);
+    }
+  }
+}
+
+/* ==========================================================================
+   RTL
+   ========================================================================== */
+
+html[dir=rtl] {
+  &.sap-phone {
+    .sapTntToolPageMain {
+      -webkit-transform: translateX(-@sapTntToolPageAsideWidth);
+      transform: translateX(-@sapTntToolPageAsideWidth);
+    }
+
+    .sapTntToolPageAsideCollapsed {
+      .sapTntToolPageAside {
+        -webkit-transform: translateX(@sapTntToolPageAsideWidth);
+        transform: translateX(@sapTntToolPageAsideWidth);
+      }
+      .sapTntToolPageMain {
+        -webkit-transform: translateX(0);
+        transform: translateX(0);
+      }
+    }
+  }
+
+  &.sap-phone .sapUiSizeCompact {
+    .sapTntToolPageMain {
+      -webkit-transform: translateX(-@sapTntToolPageCompactAsideWidth);
+      transform: translateX(-@sapTntToolPageCompactAsideWidth);
+    }
+
+    .sapTntToolPageAsideCollapsed {
+      .sapTntToolPageAside {
+        -webkit-transform: translateX(@sapTntToolPageCompactAsideWidth);
+        transform: translateX(@sapTntToolPageCompactAsideWidth);
+      }
+      .sapTntToolPageMain {
+        -webkit-transform: translateX(0);
+        transform: translateX(0);
+      }
+    }
+  }
+}
+/* END "ToolPage.less" */
+

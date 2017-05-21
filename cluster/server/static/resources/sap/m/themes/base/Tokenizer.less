@@ -1,0 +1,105 @@
+/* ================================ */
+/* CSS for control sap.m/Tokenizer  */
+/* Base theme                       */
+/* ================================ */
+
+.sapMTokenizer {
+	position: relative;
+	display: inline-block;
+	white-space: nowrap;
+	overflow: hidden;
+}
+
+.sapMTokenizer .sapMToken {
+	margin-top: 0.375rem;
+	margin-bottom: 0.125rem;
+	margin-right: 0.375rem;
+	line-height: normal;
+	max-width: calc(~"100% - 0.375rem");
+}
+
+.sapMTokenizer.sapMTokenizerReadonly {
+	.sapMToken {
+		padding: 0 0.375rem;
+	}
+
+	.sapMTokenIcon {
+		display: none;
+	}
+}
+
+.sapMTokenizerClip {
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 1px;
+	height: 1px;
+	display: block;
+	font-size: 1px;
+	z-index: -1;
+	color: transparent;
+	background: transparent;
+	overflow: hidden;
+	border: none;
+	padding: 0;
+	resize: none;
+	outline: none;
+	-webkit-user-select: text;
+	user-select: text;
+}
+
+.sapMTokenTruncate {
+	overflow: hidden;
+	text-overflow: ellipsis;
+	white-space: nowrap;
+	position: relative;
+}
+
+.sapMTokenTruncate > .sapMTokenIcon {
+	position: absolute;
+	right: 0;
+}
+
+.sapMTokenTruncate > .sapMTokenText {
+	line-height: 1.625rem;
+	display: inline-block;
+	width: calc(~"100% - 2rem");
+}
+
+.sapUiSizeCompact .sapMTokenizer .sapMToken {
+	height: 1.25rem;
+	margin-top: 0.125rem;
+	margin-bottom: 0.125rem;
+	margin-right: 0.25rem;
+	max-width: calc(~"100% - 0.25rem");
+}
+
+.sapUiSizeCompact .sapMTokenTruncate > .sapMTokenText {
+	line-height: 1.25rem;
+	width: calc(~"100% - 1.25rem");
+}
+
+.sapMTokenizerScrollContainer {
+	width: 100%;
+	display: inline-block;
+	-moz-user-select: none;
+	-webkit-user-select: none;
+	-ms-user-select: none;
+}
+
+html[data-sap-ui-browser^="ie"].sap-desktop,
+html[data-sap-ui-browser^="ed"].sap-desktop {
+	.sapMTokenizer:focus {
+		outline: none;
+
+		&:before {
+			position: absolute;
+			top: 2px;
+			left: 2px;
+			right: 2px;
+			bottom: 2px;
+			content: "";
+			pointer-events: none;
+		}
+	}
+}

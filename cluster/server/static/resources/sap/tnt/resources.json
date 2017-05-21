@@ -1,0 +1,386 @@
+{
+  "_version": "1.1.0",
+  "resources": [
+    {
+      "name": ".library"
+    },
+    {
+      "name": ".theming"
+    },
+    {
+      "name": "NavigationList-dbg.js",
+      "module": "sap/tnt/NavigationList.js",
+      "isDebug": true,
+      "required": [
+        "jquery.sap.global.js",
+        "sap/tnt/library.js",
+        "sap/ui/core/Control.js",
+        "sap/m/Popover.js",
+        "sap/ui/core/delegate/ItemNavigation.js",
+        "sap/ui/core/InvisibleText.js"
+      ]
+    },
+    {
+      "name": "NavigationList.control",
+      "designtime": true
+    },
+    {
+      "name": "NavigationList.js",
+      "module": "sap/tnt/NavigationList.js",
+      "required": [
+        "jquery.sap.global.js",
+        "sap/tnt/library.js",
+        "sap/ui/core/Control.js",
+        "sap/m/Popover.js",
+        "sap/ui/core/delegate/ItemNavigation.js",
+        "sap/ui/core/InvisibleText.js"
+      ]
+    },
+    {
+      "name": "NavigationListItem-dbg.js",
+      "module": "sap/tnt/NavigationListItem.js",
+      "isDebug": true,
+      "required": [
+        "jquery.sap.global.js",
+        "sap/tnt/library.js",
+        "sap/ui/core/Item.js",
+        "sap/ui/core/Icon.js",
+        "sap/tnt/NavigationList.js",
+        "sap/ui/core/Renderer.js",
+        "sap/ui/core/IconPool.js"
+      ]
+    },
+    {
+      "name": "NavigationListItem.control",
+      "designtime": true
+    },
+    {
+      "name": "NavigationListItem.js",
+      "module": "sap/tnt/NavigationListItem.js",
+      "required": [
+        "jquery.sap.global.js",
+        "sap/tnt/library.js",
+        "sap/ui/core/Item.js",
+        "sap/ui/core/Icon.js",
+        "sap/tnt/NavigationList.js",
+        "sap/ui/core/Renderer.js",
+        "sap/ui/core/IconPool.js"
+      ]
+    },
+    {
+      "name": "NavigationListRenderer-dbg.js",
+      "module": "sap/tnt/NavigationListRenderer.js",
+      "isDebug": true,
+      "required": [
+        "jquery.sap.global.js",
+        "sap/ui/core/Renderer.js"
+      ]
+    },
+    {
+      "name": "NavigationListRenderer.js",
+      "module": "sap/tnt/NavigationListRenderer.js",
+      "required": [
+        "jquery.sap.global.js",
+        "sap/ui/core/Renderer.js"
+      ]
+    },
+    {
+      "name": "SideNavigation-dbg.js",
+      "module": "sap/tnt/SideNavigation.js",
+      "isDebug": true,
+      "required": [
+        "jquery.sap.global.js",
+        "sap/tnt/library.js",
+        "sap/ui/core/Control.js",
+        "sap/ui/core/ResizeHandler.js",
+        "sap/ui/core/Icon.js",
+        "sap/ui/core/delegate/ScrollEnablement.js"
+      ]
+    },
+    {
+      "name": "SideNavigation.control",
+      "designtime": true
+    },
+    {
+      "name": "SideNavigation.js",
+      "module": "sap/tnt/SideNavigation.js",
+      "required": [
+        "jquery.sap.global.js",
+        "sap/tnt/library.js",
+        "sap/ui/core/Control.js",
+        "sap/ui/core/ResizeHandler.js",
+        "sap/ui/core/Icon.js",
+        "sap/ui/core/delegate/ScrollEnablement.js"
+      ]
+    },
+    {
+      "name": "SideNavigationRenderer-dbg.js",
+      "module": "sap/tnt/SideNavigationRenderer.js",
+      "isDebug": true
+    },
+    {
+      "name": "SideNavigationRenderer.js",
+      "module": "sap/tnt/SideNavigationRenderer.js"
+    },
+    {
+      "name": "ToolHeader-dbg.js",
+      "module": "sap/tnt/ToolHeader.js",
+      "isDebug": true,
+      "required": [
+        "jquery.sap.global.js",
+        "sap/tnt/library.js",
+        "sap/ui/core/Control.js",
+        "sap/m/OverflowToolbar.js",
+        "sap/m/OverflowToolbarAssociativePopover.js"
+      ]
+    },
+    {
+      "name": "ToolHeader.control",
+      "designtime": true
+    },
+    {
+      "name": "ToolHeader.js",
+      "module": "sap/tnt/ToolHeader.js",
+      "required": [
+        "jquery.sap.global.js",
+        "sap/tnt/library.js",
+        "sap/ui/core/Control.js",
+        "sap/m/OverflowToolbar.js",
+        "sap/m/OverflowToolbarAssociativePopover.js"
+      ]
+    },
+    {
+      "name": "ToolHeaderRenderer-dbg.js",
+      "module": "sap/tnt/ToolHeaderRenderer.js",
+      "isDebug": true,
+      "required": [
+        "sap/ui/core/Renderer.js",
+        "sap/m/OverflowToolbarRenderer.js",
+        "sap/m/BarInPageEnabler.js"
+      ]
+    },
+    {
+      "name": "ToolHeaderRenderer.js",
+      "module": "sap/tnt/ToolHeaderRenderer.js",
+      "required": [
+        "sap/ui/core/Renderer.js",
+        "sap/m/OverflowToolbarRenderer.js",
+        "sap/m/BarInPageEnabler.js"
+      ]
+    },
+    {
+      "name": "ToolHeaderUtilitySeparator-dbg.js",
+      "module": "sap/tnt/ToolHeaderUtilitySeparator.js",
+      "isDebug": true,
+      "required": [
+        "jquery.sap.global.js",
+        "sap/tnt/library.js",
+        "sap/ui/core/Control.js"
+      ]
+    },
+    {
+      "name": "ToolHeaderUtilitySeparator.control",
+      "designtime": true
+    },
+    {
+      "name": "ToolHeaderUtilitySeparator.js",
+      "module": "sap/tnt/ToolHeaderUtilitySeparator.js",
+      "required": [
+        "jquery.sap.global.js",
+        "sap/tnt/library.js",
+        "sap/ui/core/Control.js"
+      ]
+    },
+    {
+      "name": "ToolPage-dbg.js",
+      "module": "sap/tnt/ToolPage.js",
+      "isDebug": true,
+      "required": [
+        "sap/tnt/library.js",
+        "sap/ui/core/Control.js",
+        "sap/ui/Device.js",
+        "sap/ui/core/ResizeHandler.js"
+      ]
+    },
+    {
+      "name": "ToolPage.control",
+      "designtime": true
+    },
+    {
+      "name": "ToolPage.js",
+      "module": "sap/tnt/ToolPage.js",
+      "required": [
+        "sap/tnt/library.js",
+        "sap/ui/core/Control.js",
+        "sap/ui/Device.js",
+        "sap/ui/core/ResizeHandler.js"
+      ]
+    },
+    {
+      "name": "ToolPageRenderer-dbg.js",
+      "module": "sap/tnt/ToolPageRenderer.js",
+      "isDebug": true
+    },
+    {
+      "name": "ToolPageRenderer.js",
+      "module": "sap/tnt/ToolPageRenderer.js"
+    },
+    {
+      "name": "library-all-dbg.js",
+      "isDebug": true,
+      "merged": true
+    },
+    {
+      "name": "library-all.js",
+      "merged": true
+    },
+    {
+      "name": "library-dbg.js",
+      "module": "sap/tnt/library.js",
+      "isDebug": true,
+      "required": [
+        "jquery.sap.global.js",
+        "sap/ui/core/library.js",
+        "sap/m/library.js"
+      ]
+    },
+    {
+      "name": "library-preload.js",
+      "merged": true
+    },
+    {
+      "name": "library-preload.js.map"
+    },
+    {
+      "name": "library-preload.json",
+      "merged": true
+    },
+    {
+      "name": "library.dependencies.json"
+    },
+    {
+      "name": "library.dependencies.xml"
+    },
+    {
+      "name": "library.js",
+      "module": "sap/tnt/library.js",
+      "required": [
+        "jquery.sap.global.js",
+        "sap/ui/core/library.js",
+        "sap/m/library.js"
+      ]
+    },
+    {
+      "name": "library.templates.xml"
+    },
+    {
+      "name": "manifest.json",
+      "module": "sap/tnt/manifest.json"
+    },
+    {
+      "name": "resources.json"
+    },
+    {
+      "name": "themes/base/.theming",
+      "theme": "base"
+    },
+    {
+      "name": "themes/base/NavigationList.less",
+      "designtime": true,
+      "theme": "base"
+    },
+    {
+      "name": "themes/base/SideNavigation.less",
+      "designtime": true,
+      "theme": "base"
+    },
+    {
+      "name": "themes/base/ToolHeader.less",
+      "designtime": true,
+      "theme": "base"
+    },
+    {
+      "name": "themes/base/ToolPage.less",
+      "designtime": true,
+      "theme": "base"
+    },
+    {
+      "name": "themes/base/library-RTL-dbg.css",
+      "isDebug": true,
+      "theme": "base"
+    },
+    {
+      "name": "themes/base/library-RTL.css",
+      "theme": "base"
+    },
+    {
+      "name": "themes/base/library-dbg.css",
+      "isDebug": true,
+      "theme": "base"
+    },
+    {
+      "name": "themes/base/library-parameters.json",
+      "theme": "base"
+    },
+    {
+      "name": "themes/base/library.css",
+      "theme": "base"
+    },
+    {
+      "name": "themes/base/library.less",
+      "designtime": true,
+      "theme": "base"
+    },
+    {
+      "name": "themes/base/library.source.less",
+      "designtime": true,
+      "theme": "base"
+    },
+    {
+      "name": "themes/sap_hcb/.theming",
+      "theme": "sap_hcb"
+    },
+    {
+      "name": "themes/sap_hcb/NavigationList.less",
+      "designtime": true,
+      "theme": "sap_hcb"
+    },
+    {
+      "name": "themes/sap_hcb/SideNavigation.less",
+      "designtime": true,
+      "theme": "sap_hcb"
+    },
+    {
+      "name": "themes/sap_hcb/library-RTL-dbg.css",
+      "isDebug": true,
+      "theme": "sap_hcb"
+    },
+    {
+      "name": "themes/sap_hcb/library-RTL.css",
+      "theme": "sap_hcb"
+    },
+    {
+      "name": "themes/sap_hcb/library-dbg.css",
+      "isDebug": true,
+      "theme": "sap_hcb"
+    },
+    {
+      "name": "themes/sap_hcb/library-parameters.json",
+      "theme": "sap_hcb"
+    },
+    {
+      "name": "themes/sap_hcb/library.css",
+      "theme": "sap_hcb"
+    },
+    {
+      "name": "themes/sap_hcb/library.less",
+      "designtime": true,
+      "theme": "sap_hcb"
+    },
+    {
+      "name": "themes/sap_hcb/library.source.less",
+      "designtime": true,
+      "theme": "sap_hcb"
+    }
+  ]
+}

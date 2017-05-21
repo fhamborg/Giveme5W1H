@@ -1,0 +1,3242 @@
+/* NOTE: This file was generated as an optimized version of "library.source.less" for the Theme Designer. */
+
+/*!
+ * UI development toolkit for HTML5 (OpenUI5)
+ * (c) Copyright 2009-2017 SAP SE or an SAP affiliate company.
+ * Licensed under the Apache License, Version 2.0 - see LICENSE.txt.
+ */
+
+@import "../base/library.less";
+@import "../../../../../Base/baseLib/sap_belize/base.less"; /* ORIGINAL IMPORT PATH: "../../../../sap/ui/core/themes/sap_belize/base.less" */
+
+@import "../../../../sap/ui/core/themes/sap_belize/global.less";
+/* START "shared.less" */
+/* ======================== */
+/* Shared CSS Belize theme  */
+/* ======================== */
+/* END "shared.less" */
+
+
+/* START "ActionListItem.less" */
+/* ===================================== */
+/* CSS for control sap.m/ActionListItem  */
+/* Belize theme                          */
+/* ===================================== */
+
+html.sap-desktop .sapMList .sapMLIB.sapMALI:not(.sapMLIBActive) {
+	padding: 0;
+}
+
+.sapMList .sapMLIB.sapMALI:focus {
+	outline-offset: -0.2rem;
+}
+
+.sapMALI > .sapMLIBContent {
+	line-height: 3rem;
+}
+/* END "ActionListItem.less" */
+
+/* START "ActionSelect.less" */
+/* =================================== */
+/* CSS for control sap.m/ActionSelect  */
+/* Belize theme                        */
+/* =================================== */
+
+/* ----------------------------- */
+/* button                        */
+/* ----------------------------- */
+
+.sapMActionSelectPicker .sapMBtnInner {
+ 	border-top: 1px solid @sapUiButtonActionSelectBorderColor;
+ 	border-bottom: 0;
+ 	border-left: 0;
+ 	border-right: 0;
+}
+
+.sapMActionSelectPicker .sapMBtnDisabled {
+	opacity: 1;
+}
+
+.sapMActionSelectPicker .sapMBtnDisabled .sapMBtnContent {
+	opacity: 0.5;
+}
+
+.sapMActionSelectPicker .sapMBtn .sapMBtnInner {
+	border-radius: 0;
+}
+
+/* override standard buttons inside the action select */
+
+.sapMActionSelectPicker .sapMBtnDefault {
+	background: @sapUiButtonActionSelectBackground;
+	border-color: @sapUiButtonActionSelectBorderColor;
+
+	/* override the default text-shadow */
+	text-shadow: none;
+}
+
+.sapMActionSelectPicker .sapMBtn,
+.sapMActionSelectPicker .sapMBtn:hover > .sapMBtnHoverable {
+	border-color: @sapUiButtonActionSelectBorderColor;
+}
+
+html.sap-desktop .sapMActionSelectPicker .sapMBtnDefault:not(.sapMBtnActive):hover {
+	background: @sapUiButtonLiteActionSelectHoverBackground;
+}
+
+html.sap-desktop .sapMActionSelectPicker .sapMBtn:focus>.sapMBtnDefault {
+	outline: 1px dotted @sapUiContentFocusColor;
+}
+
+html.sap-desktop .sapMActionSelectPicker .sapMBtn:focus .sapMBtnFocusDiv {
+	border: 1px dotted @sapUiContentFocusColor;
+}
+
+/* ======================================================================= */
+/* CSS for control sap.m/ActionSelect Belize theme compact/condensed sizes */
+/* ======================================================================= */
+
+/* ----------------------------- */
+/* button                        */
+/* ----------------------------- */
+
+.sapUiSizeCompact.sapMActionSelectPicker .sapMBtn,
+.sapUiTableCell .sapUiSizeCondensed.sapMActionSelectPicker .sapMBtn {
+	height: 2rem;
+	padding: 0;
+}
+
+.sapUiSizeCompact.sapMActionSelectPicker .sapMBtnInner {
+ 	height: 2rem;
+ 	border-radius: 0;
+ 	border: 0;
+ 	border-top: 1px solid @sapUiButtonActionSelectBorderColor;
+}
+
+.sapUiSizeCompact.sapMActionSelectPicker .sapMBtnContent {
+	line-height: 2rem;
+}
+/* END "ActionSelect.less" */
+
+/* START "App.less" */
+/* ========================== */
+/* CSS for control sap.m/App  */
+/* Belize theme               */
+/* ========================== */
+/* END "App.less" */
+
+/* START "Bar.less" */
+/* ========================== */
+/* CSS for control sap.m/Bar  */
+/* Belize theme               */
+/* ========================== */
+
+/* in Master page the bar should have different color */
+html .sapMSplitContainerMaster .sapMIBar.sapMHeader-CTX,
+.sapMSplitContainerMaster .sapMIBar .sapMHeader-CTX,
+html .sapMSplitContainerMaster .sapMIBar.sapMSubHeader-CTX,
+.sapMSplitContainerMaster .sapMIBar.sapMSubHeader-CTX {
+	background-color: @sapUiGroupContentBackground;
+}
+
+/* in Master page the bar should have a different color shadow only if we don't have subHeader (e.g. another bar) */
+html .sapMSplitContainerMaster .sapMIBar.sapMHeader-CTX:only-of-type,
+.sapMSplitContainerMaster .sapMIBar .sapMHeader-CTX:only-of-type {
+	box-shadow: inset 0 -0.0625rem @sapUiGroupContentBorderColor;
+}
+
+/* in Master page the bar should have a different color shadow */
+html .sapMSplitContainerMaster .sapMIBar.sapMSubHeader-CTX,
+.sapMSplitContainerMaster .sapMIBar.sapMSubHeader-CTX {
+	box-shadow: inset 0 -0.0625rem @sapUiGroupContentBorderColor;
+}
+/* END "Bar.less" */
+
+/* START "BarBase.less" */
+/* ============================== */
+/* CSS for control sap.m/BarBase  */
+/* Belize theme                   */
+/* ============================== */
+/* END "BarBase.less" */
+
+/* START "BusyIndicator.less" */
+/* ==================================== */
+/* CSS for control sap.m/BusyIndicator  */
+/* Belize theme                         */
+/* ==================================== */
+
+/* Background animation element */
+.sapUiLocalBusyIndicatorAnimation > div::before {
+  background: saturate(lighten(@sapUiAccent6, 5), 20);
+}
+
+/* Shadow animation element */
+.sapUiLocalBusyIndicatorAnimation > div::after {
+  box-shadow: inset 0px 0px 2px 1px saturate(lighten(@sapUiAccent6, 5), 20);
+}
+/* END "BusyIndicator.less" */
+
+/* START "BusyDialog.less" */
+/* ================================= */
+/* CSS for control sap.m/BusyDialog  */
+/* Belize theme                      */
+/* ================================= */
+/* END "BusyDialog.less" */
+
+/* START "Button.less" */
+/* ============================= */
+/* CSS for control sap.m/Button  */
+/* Belize theme                  */
+/* ============================= */
+
+@_sap_m_Button_EmphasizedFocusColor: @sapUiContentFocusColor;
+
+/* ---------------------------------------------------------------------*/
+/* Custom focus outline:                                                */
+/* ---------------------------------------------------------------------*/
+
+html.sap-desktop .sapMBtn:focus > .sapMFocusable {
+	outline:          1px dotted @sapUiContentFocusColor;
+	outline-offset:   -3px;
+}
+
+html.sap-desktop .sapMBtn:focus > .sapMBtnActive.sapMFocusable {
+	outline-color:    @sapUiContentContrastFocusColor;
+}
+
+html.sap-desktop .sapMBtn:focus > .sapMBtnEmphasized.sapMFocusable {
+	outline-color:    @_sap_m_Button_EmphasizedFocusColor;
+}
+
+/* ---------------------------------------------------------------------*/
+/* Custom focus outline for IE and Edge:                                */
+/* ---------------------------------------------------------------------*/
+
+.sapMBtn:focus > .sapMBtnInner.sapMFocusable.sapMIE {
+	outline:          none;
+	position:         relative;
+}
+
+.sapMBtnFocusDiv {
+	box-sizing:       border-box;
+	position:         absolute;
+	left:             1px;
+	top:              1px;
+	right:            1px;
+	bottom:           1px;
+	border-radius:    0;
+}
+
+html.sap-desktop .sapMFooter-CTX .sapMBtn:focus .sapMBtnFocusDiv,
+.sapMBtn:focus .sapMBtnFocusDiv {
+	border:           1px dashed @sapUiContentFocusColor;
+}
+
+html.sap-desktop .sapMFooter-CTX .sapMBtn:focus > .sapMBtnActive > .sapMBtnFocusDiv,
+.sapMBtn:focus > .sapMBtnActive > .sapMBtnFocusDiv {
+	border-color:    @sapUiContentContrastFocusColor;
+}
+
+html.sap-desktop .sapMFooter-CTX .sapMBtn:focus > .sapMBtnEmphasized.sapMBtnActive > .sapMBtnFocusDiv,
+html.sap-desktop .sapMBtn:focus > .sapMBtnEmphasized > .sapMBtnFocusDiv {
+	border-color:    @_sap_m_Button_EmphasizedFocusColor;
+}
+
+/* ---------------------------------------------------------------------*/
+/* Disabled, hover and active states:                                   */
+/* ---------------------------------------------------------------------*/
+
+.sapMBtnDisabled {
+	opacity:          0.5;
+}
+
+/* ------------------------------------------------ */
+/* Buttons in a Bar                                 */
+/* (add separators, remove top/bottom border)       */
+/* ------------------------------------------------ */
+
+.sapMIBar-CTX .sapMBtn:hover > .sapMBtnHoverable:not(.sapMBtnActive) {
+	border-color:     transparent;
+}
+
+html.sap-desktop .sapMFooter-CTX .sapMBtnInner.sapMBtnAccept {
+	border-color: @sapUiButtonAcceptBorderColor;
+}
+
+html.sap-desktop .sapMFooter-CTX .sapMBtnInner.sapMBtnReject {
+	border-color: @sapUiButtonRejectBorderColor;
+}
+
+/* Background and text colors for different states */
+.sapMTB-Info-CTX > .sapUiIcon:focus {
+	outline: 1px dotted @sapUiContentContrastFocusColor;
+}
+
+.sapMBar-CTX :not(.sapMBtnDisabled) > span.sapMBtnInner.sapMBtnTransparent.sapMBtnActive > .sapMBtnContent {
+	color: @sapUiButtonActiveTextColor;
+}
+
+/* END "Button.less" */
+
+/* START "Breadcrumbs.less" */
+/* ================================== */
+/* CSS for control sap.m/Breadcrumbs  */
+/* Belize theme                       */
+/* ================================== */
+
+.sapMBreadcrumbs {
+	.sapMBreadcrumbsCurrentLocation:focus, .sapMSlt:focus {
+		outline: 1px dotted @sapUiContentFocusColor;
+		outline-offset: -1px;
+	}
+
+	.sapMSlt {
+		background-color: transparent;
+	}
+}
+/* END "Breadcrumbs.less" */
+
+/* START "Carousel.less" */
+/* =============================== */
+/* CSS for control sap.m/Carousel  */
+/* Belize theme                    */
+/* =============================== */
+
+/* Carousel controls: HUD */
+.sapMCrslHud a {
+	opacity: 0.5;
+	box-shadow: @sapUiShadowLevel1;
+}
+
+.sapMCrsl .sapMCrslHud a:hover,
+.sapMCrsl .sapMCrslHud a:focus {
+	box-shadow: @sapUiShadowLevel1;
+	border: 1px solid @sapUiButtonBorderColor;
+}
+
+.sapMCrsl .sapMCrslHud a:active {
+	box-shadow: @sapUiShadowLevel1;
+}
+
+.sapMCrsl:focus {
+	&:before {
+		border: 1px solid @sapUiContentFocusColor;
+		position: absolute;
+		content: " ";
+		top: 0;
+		right: 0;
+		bottom: 0;
+		left: 0;
+		z-index: 2;
+		pointer-events: none;
+	}
+
+	&:after {
+		border: 1px dotted @sapUiContentContrastFocusColor;
+		position: absolute;
+		content: " ";
+		top: 0;
+		right: 0;
+		bottom: 0;
+		left: 0;
+		z-index: 2;
+		pointer-events: none;
+	}
+}
+
+html[data-sap-ui-browser^='ie'].sap-desktop .sapMCrsl:focus::after,
+html[data-sap-ui-browser^='ed'].sap-desktop .sapMCrsl:focus::after {
+	border: 1px dashed @sapUiContentContrastFocusColor;
+}
+
+.sapMCrslPrev:focus,
+.sapMCrslNext:focus,
+.sapMCrslPrev .sapUiIcon:focus,
+.sapMCrslNext .sapUiIcon:focus {
+  outline: none;
+}
+
+html.sap-desktop .sapMCrslHud .sapMCrslPrev:focus,
+html.sap-desktop .sapMCrslHud .sapMCrslNext:focus {
+  	&::before {
+		content: "";
+		position: absolute;
+		top: -0.125rem;
+		right: -0.125rem;
+		bottom: -0.125rem;
+		left: -0.125rem;
+		pointer-events: none;
+		border: 1px solid @sapUiContentContrastFocusColor;
+	}
+
+  	&::after {
+		content: "";
+		position: absolute;
+		top: -0.125rem;
+		right: -0.125rem;
+		bottom: -0.125rem;
+		left: -0.125rem;
+		pointer-events: none;
+		border: 1px dotted @sapUiContentFocusColor;
+	}
+}
+
+html[data-sap-ui-browser^='ie'].sap-desktop .sapMCrslPrev:focus .sapUiIcon,
+html[data-sap-ui-browser^='ie'].sap-desktop .sapMCrslNext:focus .sapUiIcon,
+html[data-sap-ui-browser^='ie'].sap-desktop .sapMCrslPrev .sapUiIcon:focus,
+html[data-sap-ui-browser^='ie'].sap-desktop .sapMCrslNext .sapUiIcon:focus {
+  	&::before {
+		position: absolute;
+		padding-top: 0.425rem;
+		top: -0.125rem;
+		right: -0.125rem;
+		bottom: -0.125rem;
+		left: -0.125rem;
+		border: 1px solid @sapUiContentContrastFocusColor;
+	}
+
+  	&::after {
+		content: "";
+		position: absolute;
+		top: -0.125rem;
+		right: -0.125rem;
+		bottom: -0.125rem;
+		left: -0.125rem;
+		border: 1px dotted @sapUiContentFocusColor;
+	}
+}
+
+/* END "Carousel.less" */
+
+/* START "CheckBox.less" */
+/* =============================== */
+/* CSS for control sap.m/CheckBox  */
+/* Belize theme                    */
+/* =============================== */
+
+@_sap_m_CheckBox_SelectedWarningColor: darken(@sapUiFieldWarningColor, 100);
+
+.sapMCb.sapMCbWarn .sapMCbBg {
+	background-color: @sapUiFieldWarningBackground;
+	border-color: @sapUiFieldWarningColor;
+	&.sapMCbMarkChecked:before {
+		color: @_sap_m_CheckBox_SelectedWarningColor;
+	}
+}
+
+.sapMCb.sapMCbErr .sapMCbBg {
+	background-color: @sapUiFieldInvalidBackground;
+	border-color: @sapUiFieldInvalidColor;
+	&.sapMCbMarkChecked:before {
+		color: @sapUiFieldInvalidColor;
+	}
+}
+
+.sapUiForm .sapMCbBg { /* In forms, align left with '0.0625rem' ( the focus width) */
+	left: 0.0625rem;
+}
+
+.sapMCbBg.sapMCbMarkChecked:before {
+	color: @sapUiSelected;
+}
+
+/* CheckBox focus */
+.sapMCb:focus {
+	outline: none;
+}
+
+html.sap-desktop {
+	.sapMCbBg:focus,
+	.sapMCbBg:active,
+	.sap-desktop .sapMCbBg.sapMCbBgDis:focus {
+		-webkit-tap-highlight-color: rgba(255, 255, 255, 0);
+		outline: none;
+	}
+
+	.sapMCb:not(.sapMCbBgDis):not(.sapMCbHasLabel):focus > .sapMCbBg {
+		outline-width: 1px;
+		outline-style: dotted;
+		outline-color: @sapUiContentFocusColor;
+	}
+
+	.sapMCb:not(.sapMCbBgDis).sapMCbHasLabel:focus:before {
+		content: "";
+		display: block;
+		position: absolute;
+		top: 0.6875rem;
+		bottom: 0.6875rem;
+		left: 0.6875rem;
+		right: -1px; /* Cb in BC the outline should have offset 1px from the control */
+		border: 1px dotted @sapUiContentFocusColor;
+	}
+
+	.sapUiForm .sapMCb:not(.sapMCbBgDis):focus:before {
+		left: -1px; /* Cb in SimpleForm: left and right border adjustment */
+		right: 1px;
+	}
+
+	.sapUiRespGrid .sapMCb:not(.sapMCbBgDis).sapMCbHasLabel:focus:before {
+		right: 0; /* in the Grid the outline on the right is not visible */
+	}
+}
+
+html[data-sap-ui-browser^="ie"].sap-desktop,
+html[data-sap-ui-browser^="ed"].sap-desktop {
+	.sapMCb:not(.sapMCbBgDis):not(.sapMCbHasLabel):focus > .sapMCbBg {
+		outline-style: dashed;
+	}
+	.sapMCb:not(.sapMCbBgDis).sapMCbHasLabel:focus:before {
+		border: 1px dashed @sapUiContentFocusColor;
+	}
+}
+
+/* CheckBox in Footer Context */
+.sapMFooter-CTX .sapMCb:not(.sapMCbBgDis):focus > .sapMCbBg,
+.sapMFooter-CTX .sapMCb:not(.sapMCbBgDis)		> .sapMCbBg:focus {
+	outline-color: @sapUiContentContrastFocusColor;
+}
+
+.sapMLIBActive .sapMCbBg,
+.sapMLIBActive .sapMCbBg.sapMCbMarkChecked,
+.sapMLIBActive .sapMCbBg.sapMCbBgDis,
+.sapMLIBActive .sapMCbBg.sapMCbBgDis.sapMCbMarkChecked{
+	border-color: @sapUiListActiveTextColor;
+}
+
+.sapMLIBActive .sapMCbBg{
+	background-color: @sapUiListActiveBackground;
+}
+
+.sapMCbHoverable:hover{
+	border-color: @sapUiFieldHoverBorderColor;
+	background: @sapUiFieldHoverBackground;
+}
+
+.sapMCbBgDis {
+	opacity: @sapUiContentDisabledOpacity;
+}
+
+.sapMLIBActive .sapMActive .sapMCbBg.sapMCbActiveStateOff.sapMCbMarkChecked:before,
+.sapMLIBActive .sapMCbBg:active.sapMCbActiveStateOff.sapMCbMarkChecked:before,
+.sapMLIBActive .sapMCbBg.sapMCbMarkChecked:before,
+.sapMLIBActive .sapMActive .sapMCbBg.sapMCbMarkChecked:before,
+.sapMLIBActive .sapMCbBg:active.sapMCbMarkChecked:before,
+.sapMLIBActive .sapMCbBg.sapMCbBgDis.sapMCbMarkChecked:before{
+	color: @sapUiListActiveTextColor;
+}
+
+.sapMActive .sapMCbBg.sapMCbActiveStateOff.sapMCbMarkChecked:before,
+.sapMCbBg:active.sapMCbActiveStateOff.sapMCbMarkChecked:before,
+.sapMActive .sapMCbBg.sapMCbMarkChecked:before,
+.sapMCbBg:active.sapMCbMarkChecked:before {
+	color: @sapUiSelected;
+}
+
+.sapMCbBg.sapMCbBgDis.sapMCbMarkChecked:before {
+	color: fade(@sapUiSelected, 25);
+}
+
+/* Compact size */
+.sapUiSizeCompact{
+	.sapUiForm .sapMCbBg { /* In forms, align left with '0.0625rem' ( the focus width) */
+		left: 0.0625rem;
+	}
+}
+
+html.sap-desktop {
+	.sapUiSizeCompact {
+		.sapMCb:not(.sapMCbBgDis).sapMCbHasLabel:focus:before {
+			top:0.365rem;
+			bottom: 0.365rem;
+			left: 0.365rem;
+		}
+
+		.sapUiSimpleForm .sapMCb:not(.sapMCbBgDis):focus:before {
+			left: -0.0625rem;
+		}
+	}
+}
+
+/* END "CheckBox.less" */
+
+/* START "ColumnListItem.less" */
+/* ===================================== */
+/* CSS for control sap.m/ColumnListItem  */
+/* Belize theme                          */
+/* ===================================== */
+/* END "ColumnListItem.less" */
+
+/* START "CustomListItem.less" */
+/* ===================================== */
+/* CSS for control sap.m/CustomListItem  */
+/* Belize theme                          */
+/* ===================================== */
+
+/* END "CustomListItem.less" */
+
+/* START "CustomTile.less" */
+/* ========================= */
+/* CSS for sap.m/CustomTile  */
+/* Belize theme              */
+/* ========================= */
+
+.sapMCustomTile:focus {
+	outline: 1px dotted @sapUiContentFocusColor;
+}
+/* END "CustomTile.less" */
+
+/* START "Dialog.less" */
+/* ============================= */
+/* CSS for control sap.m/Dialog  */
+/* Belize theme                  */
+/* ============================= */
+
+@_sap_m_Dialog_HeaderShadowColor: darken(@sapUiGroupContentBackground, 8);
+
+.sapMDialog.sapMPopup-CTX > header.sapMHeader-CTX,
+.sapMDialog.sapMPopup-CTX > header.sapMSubHeader-CTX {
+	background-color: @sapUiGroupContentBackground;
+}
+
+.sapMDialog > header {
+	box-shadow: none;
+}
+
+.sapMDialog > header:last-of-type {
+  	box-shadow: inset 0 -1px @_sap_m_Dialog_HeaderShadowColor;
+}
+
+.sapMDialog.sapMMessageDialog > header {
+  	box-shadow: inset 0 -0.125rem @_sap_m_Dialog_HeaderShadowColor;
+}
+
+.sapMDialog > header.sapMDialogTitle .sapMDialogIcon.sapUiIcon {
+	font-size: 1rem;
+}
+
+.sapMDialogResizeHandler::before {
+	content: attr(data-sap-ui-icon-content);
+	color: @sapUiButtonEmphasizedBackground;
+}
+/* END "Dialog.less" */
+
+/* START "MessagePage.less" */
+/* ================================== */
+/* CSS for control sap.m/MessagePage  */
+/* Belize theme                       */
+/* ================================== */
+
+.sapMMessagePage > .sapMPage > section > .sapUiIcon::before {
+	color: fade(@sapUiContentNonInteractiveIconColor, 50);
+}
+/* END "MessagePage.less" */
+
+/* START "FacetFilter.less" */
+/* ================================== */
+/* CSS for control sap.m/FacetFilter  */
+/* Belize theme                       */
+/* ================================== */
+/* END "FacetFilter.less" */
+
+/* START "FacetFilterItem.less" */
+/* ====================================== */
+/* CSS for control sap.m/FacetFilterItem  */
+/* Belize theme                           */
+/* ====================================== */
+/* END "FacetFilterItem.less" */
+
+/* START "FacetFilterList.less" */
+/* ====================================== */
+/* CSS for control sap.m/FacetFilterList  */
+/* Belize theme                           */
+/* ====================================== */
+/* END "FacetFilterList.less" */
+
+/* START "FeedContent.less" */
+/* ================================== */
+/* CSS for control sap.m/FeedContent  */
+/* Belize theme                       */
+/* ================================== */
+/* END "FeedContent.less" */
+
+/* START "FeedInput.less" */
+/* ================================ */
+/* CSS for control sap.m/FeedInput  */
+/* Belize theme                     */
+/* ================================ */
+/* END "FeedInput.less" */
+
+/* START "FeedListItem.less" */
+/* =================================== */
+/* CSS for control sap.m/FeedListItem  */
+/* Belize theme                        */
+/* =================================== */
+/* END "FeedListItem.less" */
+
+/* START "FlexBox.less" */
+/* ============================== */
+/* CSS for control sap.m/FlexBox  */
+/* Belize theme                   */
+/* ============================== */
+
+/* mixin call for creating container content padding classes (arguments: rootContainer, contentSelector) */
+.sapUiContainerContentPadding(~".sapMFlexItem", ~"");
+/* END "FlexBox.less" */
+
+/* START "GenericTile.less" */
+/* ================================== */
+/* CSS for control sap.m/GenericTile  */
+/* Belize theme                       */
+/* ================================== */
+
+.sapMGT.sapMGTBackgroundImage {
+	.sapMGTContent {
+		border-bottom-left-radius: 0.125rem;
+		border-bottom-right-radius: 0.125rem;
+	}
+}
+
+.sapMGT.sapMGTScopeActions.sapMGTBackgroundImage .sapMGTMoreIcon {
+	color: @sapUiContentContrastTextColor;
+}
+
+/************************ LINE MODE COZY ********************/
+
+.sapMGT.sapMGTLineMode {
+	transition: background 0.2s;
+	background: transparent;
+}
+
+.sap-desktop .sapMGT.sapMGTLineMode:not(.sapMGTDisabled) {
+	&:not(.sapMGTLineModePress):hover {
+		background: fade(@sapUiShellHoverBackground, 10);
+	}
+}
+
+.sapMGT.sapMGTLineMode:not(.sapMGTDisabled).sapMGTLineModePress {
+	background: fade(@sapUiShellHoverBackground, 12);
+}
+
+.sapMGT.sapMGTLineMode .sapMGTFocusDiv {
+	border-radius: 0;
+}
+
+.sapMGTLineMode .sapMGTLineModeFailedIcon {
+	cursor: pointer;
+	color: @sapUiContentNonInteractiveIconColor;
+	text-shadow: @sapUiShadowText;
+}
+
+.sapMGTLineMode.sapMGTDisabled > .sapMGTTouchArea > *:not(.sapMGTActionsContainer) {
+	opacity: 0.5;
+}
+
+.sapMGTLineMode.sapMGTFailed .sapMGTLineModeFailedIcon ~ *:not(.sapMGTStyleHelper):not(.sapMGTActionsContainer):not(.sapMGTEndMarker) {
+	opacity: 0.5;
+}
+
+.sapMGTLineMode .sapMGTActionsContainer .sapMGTRemoveButton {
+	border: 1px solid @sapUiButtonBorderColor;
+	background-color: @sapUiButtonBackground;
+	color: @sapUiButtonTextColor;
+
+	&:before {
+		color: @sapUiButtonIconColor;
+	}
+}
+
+.sapMGTLineMode .sapMGTLineModeHelpContainer:not(:last-child) {
+	-webkit-mask-image: linear-gradient(to right, #FFF ~"calc(100% - 1.5rem)", transparent);
+
+	html[dir~=rtl] & {
+		-webkit-mask-image: linear-gradient(to left, #FFF ~"calc(100% - 1.5rem)", transparent);
+	}
+
+	.sapMGTHdrTxt, .sapMGTSubHdrTxt {
+		text-overflow: clip;
+	}
+}
+
+/************************ LINE MODE COMPACT *****************/
+
+.sapUiSizeCompact {
+	.sap-desktop & .sapMGT.sapMGTLineMode:not(.sapMGTDisabled) {
+		&:focus, &.sapMGTLineModePress {
+			.sapMGTLineStyleHelperInner:before {
+				content: "";
+				position: absolute;
+				top: 1px;
+				left: 1px;
+				bottom: 1px;
+				right: 1px;
+				box-sizing: border-box;
+				border: 1px dotted @sapUiContentFocusColor;
+			}
+		}
+
+		&:hover .sapMGTLineStyleHelperInner {
+			background: fade(@sapUiShellHoverBackground, 10);
+		}
+	}
+
+	.sapMGT.sapMGTLineMode {
+		font-size: @sapMFontMediumSize;
+
+		& * {
+			font-size: @sapMFontMediumSize;
+		}
+
+		&.sapMGTDisabled {
+			.sapMGTHdrTxt, .sapMGTSubHdrTxt {
+				opacity: 0.5;
+			}
+		}
+
+		.sapMGTLineStyleHelper {
+			&:first-child:not(:only-child) .sapMGTLineStyleHelperInner {
+				margin-right: 0.125rem;
+			}
+
+			&:not(:first-child) .sapMGTLineStyleHelperInner {
+				margin: 0 0.125rem;
+			}
+			&:last-child .sapMGTLineStyleHelperInner {
+				margin-right: 0;
+			}
+
+			&:first-child .sapMGTLineStyleHelperInner {
+				border-top-left-radius: 0.2rem;
+				border-bottom-left-radius: 0.2rem;
+			}
+
+			&:last-child .sapMGTLineStyleHelperInner {
+				border-top-right-radius: 0.2rem;
+				border-bottom-right-radius: 0.2rem;
+			}
+		}
+
+		.sapMGTLineStyleHelperInner {
+			transition: background 0.2s;
+		}
+
+		&.sapMGTLineModePress:not(.sapMGTDisabled) {
+			&, &:hover {
+				.sapMGTLineStyleHelperInner {
+					background: fade(@sapUiShellHoverBackground, 12);
+				}
+			}
+		}
+	}
+}
+
+/************************************************************/
+
+.sapMGTLineMode .sapMGTHdrTxt {
+	color: @sapUiShellTextColor;
+	font-size: @sapMFontMediumSize;
+	text-shadow: @sapUiShadowText;
+}
+
+.sapMGTLineMode .sapMGTSubHdrTxt {
+	color: @sapUiTileTextColor;
+	font-size: @sapMFontMediumSize;
+	text-shadow: @sapUiShadowText;
+}
+
+html.sap-desktop .sapMGTWithoutImageHoverOverlay,
+html.sap-desktop .sapMGTWithImageHoverOverlay {
+	z-index: 1;
+	position: absolute;
+	pointer-events: none;
+	top: 0;
+	right: 0;
+	left: 0;
+	bottom: 0;
+	transition: background 0.2s;
+}
+
+html.sap-phone .sapMGTWithoutImageHoverOverlay,
+html.sap-phone .sapMGTWithImageHoverOverlay,
+html.sap-tablet .sapMGTWithoutImageHoverOverlay,
+html.sap-tablet .sapMGTWithImageHoverOverlay {
+	position: absolute;
+	pointer-events: none;
+	top: 0;
+	right: 0;
+	left: 0;
+	bottom: 0;
+}
+
+html.sap-desktop .sapMGTWithoutImageHoverOverlay.sapMGTPressActive,
+html.sap-phone .sapMGTWithoutImageHoverOverlay.sapMGTPressActive,
+html.sap-tablet .sapMGTWithoutImageHoverOverlay.sapMGTPressActive {
+	background: fade(@sapUiShellActiveBackground, 8) !important;
+}
+
+html.sap-desktop .sapMGTWithImageHoverOverlay.sapMGTPressActive,
+html.sap-phone .sapMGTWithImageHoverOverlay.sapMGTPressActive,
+html.sap-tablet .sapMGTWithImageHoverOverlay.sapMGTPressActive {
+	background: fade(@sapUiShellActiveBackground, 22) !important;
+}
+
+html.sap-desktop .sapMGT:hover .sapMGTWithoutImageHoverOverlay:not(.sapMGTWithoutImagePressActive) {
+	background: fade(@sapUiShellHoverBackground, 4);
+}
+
+html.sap-desktop .sapMGT:hover .sapMGTWithImageHoverOverlay:not(.sapMGTWithImagePressActive) {
+	background: fade(@sapUiShellHoverBackground, 18);
+}
+
+html.sap-desktop .sapMGT:focus .sapMGTFocusDiv,
+html.sap-desktop .sapMGT:active .sapMGTFocusDiv,
+html.sap-desktop .sapMGTLineModePress .sapMGTFocusDiv {
+	border: 1px dotted @sapUiContentFocusColor;
+}
+
+
+html.sap-desktop .sapMGT.sapMGTBackgroundImage:focus .sapMGTFocusDiv,
+html.sap-desktop .sapMGT.sapMGTBackgroundImage:active .sapMGTFocusDiv {
+	&:after {
+		content: "";
+		.sapMGTOverlayMixin();
+		border-radius: 0.125rem;
+		margin: -1px;
+		border: 1px dotted @sapUiContentContrastFocusColor;
+		z-index: 0;
+	}
+}
+
+/* END "GenericTile.less" */
+
+/* START "GroupHeaderListItem.less" */
+/* ========================================== */
+/* CSS for control sap.m/GroupHeaderListItem  */
+/* Belize theme                               */
+/* ========================================== */
+/* END "GroupHeaderListItem.less" */
+
+/* START "GrowingList.less" */
+/* ================================== */
+/* CSS for control sap.m/GrowingList  */
+/* Belize theme                       */
+/* ================================== */
+/* END "GrowingList.less" */
+
+/* START "HeaderContainer.less" */
+/* ====================================== */
+/* CSS for control sap.m/HeaderContainer  */
+/* Belize theme                           */
+/* ====================================== */
+
+@_sap_m_HeaderContainer_Translucent_Background: fade(@sapUiObjectHeaderBackground, 100);
+
+.sapMHdrCntrBtn > .sapMBtnInner {
+	border: none;
+}
+
+.sapMHdrCntrBGTransparent {
+	background-color: transparent;
+}
+
+.sapMHdrCntrBGTranslucent {
+	background-color: @_sap_m_HeaderContainer_Translucent_Background;
+}
+/* END "HeaderContainer.less" */
+
+/* START "IconTabBar.less" */
+/* ================================= */
+/* CSS for control sap.m/IconTabBar  */
+/* Belize theme                      */
+/* ================================= */
+
+@_sap_m_IconTabBar_TextHoverColor: darken(@sapUiGroupTitleTextColor, 10);
+@_sap_m_IconTabBar_SelectedTextColor: darken(@sapUiSelected, 5);
+@_sap_m_IconTabBar_SelectedTextHoverColor: darken(@sapUiSelected, 10);
+
+/* Head Container */
+
+.sapMITH {
+	box-shadow: inset 0 -0.25rem 0 -0.125rem @sapUiObjectHeaderBorderColor;
+  	background-color: @sapUiObjectHeaderBackground;
+	border-bottom: 0.125rem solid @sapUiObjectHeaderBackground;
+}
+
+/* Arrow */
+
+.sapMITBSelected > .sapMITBContentArrow {
+	border-bottom-color: @sapUiSelected;
+}
+
+.sapMITBSelected.sapMITBFilterNeutral > .sapMITBContentArrow {
+	border-bottom-color: @sapUiNeutralElement;
+}
+
+.sapMITBSelected.sapMITBFilterPositive > .sapMITBContentArrow {
+	border-bottom-color: @sapUiPositiveElement;
+}
+
+.sapMITBSelected.sapMITBFilterNegative > .sapMITBContentArrow {
+	border-bottom-color: @sapUiNegativeElement;
+}
+
+.sapMITBSelected.sapMITBFilterCritical > .sapMITBContentArrow {
+	border-bottom-color: @sapUiCriticalElement;
+}
+
+/* Content Container */
+
+.sapMITBContent {
+	border-bottom: 0.125rem solid @sapUiObjectHeaderBorderColor;
+}
+
+.sapMITB.sapMITBNoContentPadding > .sapMITBContainerContent, /* legacy class */
+.sapMITB.sapUiNoContentPadding > .sapMITBContainerContent {
+	border-bottom: 0;
+	border-top: 0;
+}
+
+/* Tab Filter Item */
+
+.sapMITBTextOnly .sapMITBFilterDefault:hover > .sapMITBText {
+	color: @_sap_m_IconTabBar_TextHoverColor;
+}
+
+.sapMITBTextOnly .sapMITBFilterDefault.sapMITBSelected > .sapMITBText {
+	color: @_sap_m_IconTabBar_SelectedTextColor;
+	text-shadow: @sapUiShadowText;
+}
+
+.sapMITBTextOnly .sapMITBFilterDefault.sapMITBSelected:hover > .sapMITBText {
+	color: @_sap_m_IconTabBar_SelectedTextHoverColor;
+}
+
+.sapMITBTextOnly .sapMITBFilterNeutral > .sapMITBText {
+	color: @sapUiNeutralText;
+}
+
+.sapMITBTextOnly .sapMITBFilterPositive > .sapMITBText {
+	color: @sapUiPositiveText;
+}
+
+.sapMITBTextOnly .sapMITBFilterPositive:hover > .sapMITBText {
+	color: darken(@sapUiPositiveText, 10);
+}
+
+.sapMITBTextOnly .sapMITBFilterNegative > .sapMITBText {
+	color: @sapUiNegativeText;
+}
+
+.sapMITBTextOnly .sapMITBFilterNegative:hover > .sapMITBText {
+  	color: darken(@sapUiNegativeText, 10);
+}
+
+.sapMITBTextOnly .sapMITBFilterCritical > .sapMITBText {
+	color: @sapUiCriticalText;
+}
+
+.sapMITBTextOnly .sapMITBFilterCritical:hover > .sapMITBText {
+	color: darken(@sapUiCriticalText, 10);
+}
+
+.sapMITBFilterIcon {
+	border: 1px solid @sapUiHighlight;
+
+  	&::before {
+		text-shadow: @sapUiShadowText;
+	}
+}
+
+.sapMITBSelected .sapMITBFilterIcon::before {
+	text-shadow: none;
+}
+
+.sapMITBFilterDefault {
+	color: @sapUiHighlight;
+}
+
+.sapMITBFilterNeutral {
+	border-color: @sapUiNeutralElement;
+	color: @sapUiNeutralElement;
+}
+
+.sapMITBFilterPositive {
+	border-color: @sapUiPositiveElement;
+	color: @sapUiPositiveElement;
+}
+
+.sapMITBFilterNegative {
+	border-color: @sapUiNegativeElement;
+	color: @sapUiNegativeElement;
+}
+
+.sapMITBFilterCritical {
+	border-color: @sapUiCriticalElement;
+	color: @sapUiCriticalElement;
+}
+
+.sapMITBSelected .sapMITBFilterDefault {
+	background: @sapUiSelected;
+	color: @sapUiContentContrastIconColor;
+}
+
+.sapMITBSelected .sapMITBFilterNeutral {
+	background: @sapUiNeutralElement;
+	color: @sapUiGroupContentBackground;
+}
+
+.sapMITBSelected .sapMITBFilterPositive {
+	background: @sapUiPositiveElement;
+	color: @sapUiGroupContentBackground;
+}
+
+.sapMITBSelected .sapMITBFilterNegative {
+	background: @sapUiNegativeElement;
+	color: @sapUiGroupContentBackground;
+}
+
+.sapMITBSelected .sapMITBFilterCritical {
+	background: @sapUiCriticalElement;
+	color: @sapUiGroupContentBackground;
+}
+
+/* Tab Separator Item */
+
+html.sap-desktop .sapMITBArrowScroll:hover,
+html.sap-desktop .sapMITBArrowScroll:active {
+	color: @sapUiHighlight;
+}
+
+/* Custom focus outline */
+html.sap-desktop .sapMITBItem:focus .sapMITBFilterIcon,
+html.sap-desktop .sapMITBTextOnly .sapMITBItem:focus .sapMITBText,
+html.sap-desktop .sapMITBItem:focus.sapMITBAll {
+	outline: 1px dotted @sapUiContentFocusColor;
+}
+
+/* container background design */
+.sapMITBBackgroundDesignTranslucent > .sapMITBContainerContent > .sapMITBContent {
+	background-color: fade(@sapUiGroupContentBackground, 60);
+}
+
+/* header background design */
+.sapMITHBackgroundDesignTransparent {
+	background-color: transparent;
+}
+
+.sapMITHBackgroundDesignTranslucent {
+	background-color: fade(@sapUiGroupContentBackground, 60);
+}
+/* END "IconTabBar.less" */
+
+/* START "IconTabBarSelectList.less" */
+/* =========================================== */
+/* CSS for control sap.m/IconTabBarSelectList  */
+/* Belize theme                                */
+/* =========================================== */
+/* END "IconTabBarSelectList.less" */
+
+/* START "Image.less" */
+/* ============================ */
+/* CSS for control sap.m/Image  */
+/* Belize theme                 */
+/* ============================ */
+
+.sapMImgFocusable:focus {
+	outline: 1px dotted @sapUiContentFocusColor;
+}
+/* END "Image.less" */
+
+/* START "ImageContent.less" */
+/* =================================== */
+/* CSS for control sap.m/ImageContent  */
+/* Belize theme                        */
+/* =================================== */
+
+/* END "ImageContent.less" */
+
+/* START "Input.less" */
+/* ============================ */
+/* CSS for control sap.m/Input  */
+/* Belize theme                 */
+/* ============================ */
+
+/* Value Help */
+.sapMInputVH > .sapMInputBaseInner {
+	padding-right: 2.375rem;
+}
+
+.sapMInputBaseState .sapMInputValHelp{
+	top: 0.375rem;
+	right: 0.125rem;
+	height: 2.25rem;
+	width: 2.25rem;
+}
+
+.sapMInputBaseState.sapMInputDescription.sapMInputVH > span > .sapMInputValHelp{
+	left: -2.375rem;
+	top: 0.125rem;
+}
+
+.sapMInputBaseState .sapMInputValHelp > .sapMInputValHelpInner {
+	height: 2.25rem;
+	width: 2.25rem;
+	line-height: 2.25rem;
+}
+
+.sapMInputBaseState.sapMInputDescription.sapMInputVH > span > .sapMInputValHelp > .sapMInputValHelpInner{
+	vertical-align: top;
+}
+
+/* suggestion popup */
+div.sapMInputSuggestionPopup {
+	border: none;
+	box-shadow: @sapUiShadowLevel1;
+}
+
+/* Compact size */
+.sapUiSizeCompact {
+	.sapMInputBaseState .sapMInputValHelp{
+		top: 0.3125rem;
+		height: 1.375rem;
+		width: 1.375rem;
+	}
+
+	.sapMInputBaseState.sapMInputDescription.sapMInputVH > span > .sapMInputValHelp{
+		left: -1.5rem;
+	}
+
+	.sapMInputBaseState .sapMInputValHelp > .sapMInputValHelpInner {
+		height: 1.375rem;
+		width: 1.375rem;
+		line-height: 1.375rem;
+	}
+}
+/* END "Input.less" */
+
+/* START "InputBase.less" */
+/* ================================ */
+/* CSS for control sap.m/InputBase  */
+/* Belize theme                     */
+/* ================================ */
+
+html.sap-desktop .sapMInputBaseInner:not(.sapMInputBaseReadonlyInner):focus {
+	outline: 1px dotted @sapUiContentFocusColor;
+	outline-offset: -3px;
+}
+
+html.sap-desktop .sapMInputBaseStateInner:not(.sapMInputBaseReadonlyInner):focus {
+	outline-offset: -4px;
+}
+
+.sapMInputBaseInner:not(.sapMInputBaseReadonlyInner):not(.sapMInputBaseStateInner):not(.sapMInputBaseDisabledInner):active {
+  	border-color: @sapUiFieldBorderColor;
+}
+/* END "InputBase.less" */
+
+
+/* note: the following three files are not in alphabetical order and should be imported after InputBase.less */
+/* START "ComboBoxTextField.less" */
+/* ======================================== */
+/* CSS for control sap.m/ComboBoxTextField  */
+/* Belize theme                             */
+/* ======================================== */
+
+/* ------------------------------ */
+/* text field                     */
+/* ------------------------------ */
+
+/* states */
+
+.sapMComboBoxTextFieldState {
+	border-width: 2px;
+}
+
+.sapMComboBoxTextFieldWarning {
+	border-color: @sapUiFieldWarningColor;
+}
+
+.sapMComboBoxTextFieldError {
+	border-color: @sapUiFieldInvalidColor;
+}
+
+.sapMComboBoxTextFieldSuccess {
+	border-color: @sapUiFieldSuccessColor;
+}
+
+.sapMComboBoxTextFieldReadonly {
+	border-color: @sapUiFieldReadOnlyBorderColor;
+}
+
+/* focus and hover */
+
+.sapMFocus.sapMComboBoxTextField:not(.sapMComboBoxTextFieldReadonly):not(.sapMComboBoxTextFieldState):not(.sapMComboBoxTextFieldDisabled),
+.sapMComboBoxTextField:not(.sapMComboBoxTextFieldReadonly):not(.sapMComboBoxTextFieldState):not(.sapMComboBoxTextFieldDisabled):hover {
+	border-color: @sapUiFieldFocusBorderColor;
+}
+
+/* ------------------------------ */
+/* arrow                          */
+/* ------------------------------ */
+
+.sapMComboBoxTextFieldState .sapMComboBoxTextFieldArrow {
+	line-height: 2.25rem;
+}
+
+/* compact size */
+
+/* ------------------------------ */
+/* arrow                          */
+/* ------------------------------ */
+
+.sapUiSizeCompact .sapMComboBoxTextFieldState .sapMComboBoxTextFieldArrow {
+	line-height: 1.375rem;
+}
+/* END "ComboBoxTextField.less" */
+
+/* START "ComboBoxBase.less" */
+/* =================================== */
+/* CSS for control sap.m/ComboBoxBase  */
+/* Belize theme                        */
+/* =================================== */
+
+/* ------------------------------ */
+/* text field                     */
+/* ------------------------------ */
+
+/* hover */
+
+.sapMComboBoxBasePressed:not(.sapMComboBoxTextFieldReadonly):not(.sapMComboBoxTextFieldState):not(.sapMComboBoxTextFieldDisabled) {
+	border-color: @sapUiFieldActiveBorderColor;
+}
+
+/* ------------------------------ */
+/* picker                         */
+/* ------------------------------ */
+
+div.sapMComboBoxBasePicker {
+	box-shadow: @sapUiShadowLevel1;
+	border: none;
+
+	& .sapMComboBoxBasePickerValueState .sapMComboBoxBasePickerTitle.sapMTitle {
+		margin-left: 0.75rem;
+	}
+}
+
+.sapMComboBoxBaseBar {
+	box-shadow: none;
+}
+
+div.sapMComboBoxBasePicker .sapMComboBoxBasePickerValueState {
+	font-size: @sapMFontSmallSize;
+	height: 2rem;
+	line-height: 2rem;
+	padding-left: 1rem;
+
+	&.sapMComboBoxBasePickerErrorState {
+		background: @sapUiErrorBG;
+		color: @sapUiBaseText;
+	}
+
+	&.sapMComboBoxBasePickerSuccessState {
+		background: @sapUiSuccessBG;
+		color: @sapUiBaseText;
+	}
+
+	&.sapMComboBoxBasePickerWarningState {
+		background: @sapUiWarningBG;
+		color: @sapUiBaseText;
+	}
+}
+
+.sapMComboBoxBasePickerNoneState {
+	display: none;
+}
+/* END "ComboBoxBase.less" */
+
+/* START "ComboBox.less" */
+/* =================================== */
+/* CSS for control sap.m/ComboBoxBase  */
+/* Belize theme                        */
+/* =================================== */
+/* END "ComboBox.less" */
+
+
+/* START "InputListItem.less" */
+/* ==================================== */
+/* CSS for control sap.m/InputListItem  */
+/* Belize theme                         */
+/* ==================================== */
+/* END "InputListItem.less" */
+
+/* START "Label.less" */
+/* =========================== */
+/* CSS for control sap.m/Label */
+/* Belize theme                */
+/* =========================== */
+/* END "Label.less" */
+
+/* START "LightBox.less" */
+/* =============================== */
+/* CSS for control sap.m/LightBox  */
+/* Belize theme                    */
+/* =============================== */
+
+/* ==========================================================================
+   Error
+  ========================================================================== */
+
+.sapMLightBox .sapMLightBoxErrorContainer .sapUiIcon::before,
+.sapMLightBox .sapMLightBoxErrorContainerTwoHeaders .sapUiIcon::before {
+  color: fade(@sapUiContentNonInteractiveIconColor, 50);
+}
+/* END "LightBox.less" */
+
+/* START "Link.less" */
+/* =========================== */
+/* CSS for control sap.m/Link  */
+/* Belize theme                */
+/* =========================== */
+
+@_sap_m_Link_TextShadowColor: none;
+
+.sapMLnkDsbl {
+	opacity: 0.5;
+	outline: none;
+	cursor: default;
+}
+
+.sapMLIBActive .sapMLnk {
+	color: @sapUiListActiveTextColor;
+	text-decoration: underline;
+}
+
+.sapMLnkSubtle {
+	color: darken(@sapUiLink,15);
+}
+
+.sapMLnkSubtle:focus {
+	color: @sapUiContentFocusColor;
+}
+
+.sapMLnk:not(.sapMLnkDsbl) {
+	text-shadow: @_sap_m_Link_TextShadowColor;
+}
+/* END "Link.less" */
+
+/* START "ListBase.less" */
+/* =============================== */
+/* CSS for control sap.m/ListBase  */
+/* Belize theme                    */
+/* =============================== */
+
+/* Growing feature */
+.sapMGrowingList > .sapMCLI.sapMLIB:not(.sapMLIBActive) {
+	background: @sapUiButtonActionSelectBackground;
+	border-color: @sapUiButtonActionSelectBorderColor;
+}
+
+.sapMGrowingList > .sapMCLI.sapMLIBHoverable:hover {
+	background: @sapUiButtonLiteActionSelectHoverBackground;
+}
+
+.sapMGrowingListDescription,
+.sapMGrowingListTriggerText > .sapMSLITitle {
+	text-shadow: @sapUiShadowText;
+}
+/* END "ListBase.less" */
+
+/* START "ListItemBase.less" */
+/* =================================== */
+/* CSS for control sap.m/ListItemBase  */
+/* Belize theme                        */
+/* =================================== */
+
+@_sap_m_ListItemBase_ListTextShadowColor: none;
+
+.sapMLIBCounter {
+	text-shadow: @_sap_m_ListItemBase_ListTextShadowColor;
+}
+
+.sapMListBGTransparent .sapMLIB:not(.sapMLIBActive):not(.sapMLIBSelected):not(:hover) {
+	background: fade(@sapUiListBackground, 0);
+}
+
+.sapMListBGTranslucent .sapMLIB:not(.sapMLIBActive):not(.sapMLIBSelected):not(:hover) {
+	background: @sapUiListBackground;
+}
+
+.sapMListBGSolid .sapMLIB:not(.sapMLIBActive):not(.sapMLIBSelected):not(:hover) {
+	background: @sapUiListBackground;
+}
+/* END "ListItemBase.less" */
+
+/* START "MessageStrip.less" */
+/* =================================== */
+/* CSS for control sap.m/MessageStrip  */
+/* Belize theme                        */
+/* =================================== */
+
+.sapMMsgStripCloseButton {
+	// centering the content of the ::after element
+	// does not work in IE if directly set on ::after
+	// 1.75rem - 4px (1px border and 1px offset per side)
+	line-height: 1.5rem;
+	border-radius: .2rem;
+
+	&:focus::after {
+		border-color: @sapUiContentFocusColor;
+	}
+
+	&::after {
+		top: 1px;
+		left: 1px;
+		bottom: 1px;
+		right: 1px;
+		border: 1px dotted transparent;
+	}
+
+	&:hover {
+		background-color: @sapUiButtonLiteHoverBackground;
+		border: @sapUiButtonLiteHoverBorderColor;
+	}
+
+	&:active {
+		background-color: @sapUiButtonLiteActiveBackground;
+		border-color: @sapUiButtonLiteActiveBorderColor;
+		color: @sapUiButtonActiveTextColor;
+	}
+
+	&:focus:active::after {
+		// we need white color in both light and
+		// dark versions when close button is active
+		border-color: @sapUiContentContrastFocusColor;
+	}
+}
+/* END "MessageStrip.less" */
+
+/* START "MessagePopover.less" */
+/* ===================================== */
+/* CSS for control sap.m/MessagePopover  */
+/* Belize theme                          */
+/* ===================================== */
+
+.sapMMsgPopover {
+	.sapMLIBActive .sapMLIBImgNav {
+		background: none;
+	}
+}
+
+.sapMMsgPopover .sapMIBar.sapMHeader-CTX {
+	background-color: @sapUiGroupContentBackground;
+}
+/* END "MessagePopover.less" */
+
+/* START "MessageView.less" */
+/* ===================================== */
+/* CSS for control sap.m/MessagePopover  */
+/* Belize theme                          */
+/* ===================================== */
+
+.sapMMsgView {
+	.sapMLIBActive .sapMLIBImgNav {
+		background: none;
+	}
+}
+
+.sapMMsgView .sapMIBar.sapMHeader-CTX {
+	background-color: @sapUiGroupContentBackground;
+}
+/* END "MessageView.less" */
+
+/* START "MultiInput.less" */
+/* ================================= */
+/* CSS for control sap.m/MultiInput  */
+/* Belize theme                      */
+/* ================================= */
+
+.sapMInputFocused:not(.sapMInputBaseReadonly) .sapMMultiInputBorder::before {
+	border: 1px dotted @sapUiContentFocusColor;
+	content: "";
+	position: absolute;
+	top: 1px;
+	right: 1px;
+	bottom: 1px;
+	left: 1px;
+	pointer-events: none;
+}
+
+.sapMMultiInput.sapMInputBaseWarning .sapMMultiInputBorder,
+.sapMMultiInput.sapMInputBaseError .sapMMultiInputBorder,
+.sapMMultiInput.sapMInputBaseSuccess .sapMMultiInputBorder {
+	border-width: 2px;
+}
+/* END "MultiInput.less" */
+
+/* START "NotificationListBase.less" */
+/* =========================================== */
+/* CSS for control sap.m/NotificationListBase  */
+/* Belize theme                                */
+/* =========================================== */
+
+@_sap_m_NotificationListBase_Background: @sapUiListBackground;
+
+.sapMNLB {
+  background-color: @_sap_m_NotificationListBase_Background;
+}
+/* END "NotificationListBase.less" */
+
+/* START "NotificationListGroup.less" */
+/* ============================================ */
+/* CSS for control sap.m/NotificationListGroup  */
+/* Belize theme                                 */
+/* ============================================ */
+
+@_sap_m_NotificationListGroup_CombinationBackground: @sapUiListBackground;
+
+.sapMNLG .sapMNLI {
+    background: @_sap_m_NotificationListGroup_CombinationBackground;
+}
+
+html[data-sap-ui-browser^="ie"].sap-desktop,
+html[data-sap-ui-browser^="ed"].sap-desktop {
+    .sapMNLG:focus::after {
+        border: 1px dashed @sapUiContentFocusColor;
+    }
+}
+/* END "NotificationListGroup.less" */
+
+/* START "NotificationListItem.less" */
+/* =========================================== */
+/* CSS for control sap.m/NotificationListItem  */
+/* Belize theme                                */
+/* =========================================== */
+
+.sapMNLI-UnreadStatus {
+  background: @sapUiAccent5;
+}
+
+.sapMNLI-CloseButton {
+  border: none;
+}
+
+.sapUiSizeCompact .sapMNLG-CloseButton .sapMBtnInner {
+  border: none;
+}
+
+// Focus Styles ========================================================================================================
+
+
+
+.sapMNLI:focus::before {
+  border: 1px dotted @sapUiContentFocusColor;
+  position: absolute;
+  content: " ";
+  top: 1px;
+  right: 1px;
+  bottom: 1px;
+  left: 1px;
+  z-index: 2;
+  pointer-events: none;
+}
+/* END "NotificationListItem.less" */
+
+/* START "NewsContent.less" */
+/* ================================== */
+/* CSS for control sap.m/NewsContent  */
+/* Belize theme                       */
+/* ================================== */
+
+@_sap_m_NewsContent_HeaderTextColor: @sapUiContentContrastTextColor;
+@_sap_m_NewsContent_SubHeaderTextColor: lighten(@sapUiTileTextColor, 45);
+
+.sapMNwC {
+	background-color: fade(@sapUiTileBackground, 60);
+}
+
+.sapMTileCnt.News {
+	.sapMNwC {
+		text-shadow: 0 0 0.125rem @sapUiContentShadowColor;
+		.sapMNwCSbh {
+			color: @_sap_m_NewsContent_SubHeaderTextColor;
+		}
+		.sapMNwCCTxt .sapMText {
+			color: @_sap_m_NewsContent_HeaderTextColor;
+		}
+	}
+}
+
+.sapMNwC:focus {
+	outline: 1px dotted @sapUiContentFocusColor;
+}
+/* END "NewsContent.less" */
+
+/* START "ObjectAttribute.less" */
+/* ====================================== */
+/* CSS for control sap.m/ObjectAttribute  */
+/* Belize theme                           */
+/* ====================================== */
+
+@_sap_m_ObjectAttribute_ListTextShadowColor: none;
+
+html.sap-desktop .sapMObjectAttributeActive:focus > .sapMText {
+	outline: 1px dotted @sapUiContentFocusColor;
+	outline-offset: -1px;
+}
+
+html[data-sap-ui-browser ^= "ie"], html[data-sap-ui-browser^="ed"] {
+	.sapMObjectAttributeActive:focus > .sapMText {
+		outline-style: dashed;
+	}
+}
+
+/*=========================================== */
+/* Custom design for Responsive Object Header */
+/*=========================================== */
+
+.sapMOHR .sapMObjectAttributeActive .sapMObjectAttributeText:active,
+.sapMOHR .sapMObjectAttributeActive .sapMObjectAttributeText:hover,
+.sapMOHR .sapMObjectAttributeActive:focus .sapMObjectAttributeText {
+	text-decoration: underline;
+}
+
+.sapMOHR .sapMObjectAttributeActive:focus .sapMObjectAttributeText {
+	outline: 1px dotted @sapUiContentFocusColor;
+	outline-offset: -1px;
+}
+
+/*=========================================== */
+/* Custom design for Static Object Header     */
+/*=========================================== */
+
+.sapMOH .sapMObjectAttributeActive .sapMObjectAttributeText:active,
+.sapMOH .sapMObjectAttributeActive .sapMObjectAttributeText:hover {
+	text-decoration: underline;
+}
+
+.sapMOH .sapMObjectAttributeActive:focus .sapMObjectAttributeText {
+	outline: 1px dotted @sapUiContentFocusColor;
+	outline-offset: -1px;
+}
+
+.sapMOHR .sapMObjectAttributeActive .sapMObjectAttributeText,
+.sapMOH .sapMObjectAttributeActive .sapMObjectAttributeText {
+	text-shadow: @_sap_m_ObjectAttribute_ListTextShadowColor;
+}
+/* END "ObjectAttribute.less" */
+
+/* START "ObjectHeader.less" */
+/* =================================== */
+/* CSS for control sap.m/ObjectHeader  */
+/* Belize theme                        */
+/* =================================== */
+
+.sapMOH.sapMOHBgTranslucent,
+.sapMOHC.sapMOHBgTranslucent,
+.sapMOH.sapMOHBgSolid,
+.sapMOHC.sapMOHBgSolid {
+	background-color: @sapUiObjectHeaderBackground;
+}
+
+.sapMOHC.sapMOHBgTranslucent,
+.sapMOHC.sapMOHBgSolid {
+	border: none;
+	box-shadow: none;
+}
+.sapMOH.sapMOHBgTransparent,
+.sapMOHC.sapMOHBgTransparent {
+	background: transparent;
+}
+
+a.sapMOHTitle.sapMOHTitleActive:hover > h1 .sapMText {
+	text-decoration: underline;
+}
+
+.sapMOHTitleArrow > .sapUiIcon {
+	outline-offset: -1px;
+}
+
+.sapMOHTitle.sapMOHTitleActive:focus {
+	outline: none;
+}
+
+.sapMOHTitle.sapMOHTitleActive:focus > h1 span,
+.sapMOHTitleIcon > .sapMOHIcon:focus,
+.sapMOHTitleArrow .sapUiIcon:focus {
+	outline: 1px dotted @sapUiContentFocusColor;
+	outline-offset: -1px;
+}
+
+html[data-sap-ui-browser ^= "ie"] {
+	.sapMOH {
+		.sapMOHTitleActive, .sapMOHTitle {
+			border: 1px solid transparent;
+			margin-top: 0.125rem;
+			padding-top: 0.125rem;
+			padding-left: 0.125rem;
+		}
+
+		a.sapMOHTitleActive:focus ~ .sapMOHTitle > h1 > span {
+			outline: none;
+			border: 1px dotted @sapUiContentFocusColor;
+		}
+
+		.sapMOHIntro {
+			padding: 0.125rem 0.125rem 0.125rem 0.25rem;
+		}
+
+		.sapMObjectAttributeDiv {
+			padding: 0.125rem 0.125rem 0.125rem 0.125rem;
+		}
+		.sapMObjStatusMarker .sapUiIcon:focus {
+			outline: none;
+		}
+	}
+}
+
+/*** styles for responsive object header ***/
+.sapMOHR:not(.sapMOHRNoBorder) {
+	border-bottom: 0.125rem solid @sapUiObjectHeaderBorderColor;
+	box-shadow: @sapUiShadowHeader;
+}
+
+.sapMOHR.sapMOHRBgSolid,
+.sapMOHR.sapMOHRBgTranslucent {
+	background: @sapUiObjectHeaderBackground;
+}
+
+.sapMOHR.sapMOHRBgTransparent {
+	background: transparent;
+}
+
+.sapMOHRTitleArrow .sapUiIcon:focus {
+	outline: 1px dotted @sapUiContentFocusColor;
+	outline-offset: -1px;
+}
+
+.sapMOHRIcon.sapMPointer:focus {
+	outline: 1px dotted @sapUiContentFocusColor;
+	outline-offset: -1px;
+}
+
+.sapMOHRTitleActive .sapMOHRTitleText:focus {
+	outline: 1px dotted @sapUiContentFocusColor;
+	outline-offset: -1px;
+}
+
+html[data-sap-ui-browser ^= "ie"] {
+	.sapMOHR {
+		.sapMOHRTitleDiv {
+			padding-bottom: 0.125rem;
+		}
+
+		.sapMOHRTitleText {
+			border: 1px solid transparent;
+			margin-top: 0.125rem;
+			padding-top: 0.125rem;
+			padding-left: 0.125rem;
+		}
+
+		.sapMOHRTitleActive .sapMOHRTitleText:focus {
+			outline: none;
+			border: 1px dotted @sapUiContentFocusColor;
+		}
+
+		.sapMOHRIcon.sapMPointer {
+			border: 1px solid transparent;
+		}
+
+		.sapMOHRIcon.sapMPointer:focus {
+			outline: none;
+			border: 1px dotted @sapUiContentFocusColor;
+		}
+
+		.sapMOHRIntro, .sapMOHRIntroActive {
+			padding: 0.125rem;
+			span, a {
+				margin: 0.125rem;
+			}
+		}
+
+		.sapMOHRStates {
+			padding-left: 0.125rem;
+		}
+
+		.sapMObjStatusMarker .sapUiIcon:focus {
+			outline: none;
+		}
+
+		.sapMObjectAttributeDiv {
+			padding: 0.125rem 0.125rem 0 0.125rem;
+		}
+
+		.sapMOHRStatus {
+			padding: 0.125rem 0.125rem 0.5rem 0.125rem;
+		}
+	}
+}
+/* END "ObjectHeader.less" */
+
+/* START "ObjectMarker.less" */
+/* =================================== */
+/* CSS for control sap.m/ObjectMarker  */
+/* Belize theme                        */
+/* =================================== */
+
+@_sap_m_ObjectMarker_LinkShadowColor: none;
+
+.sapMObjectMarker .sapMLnk {
+	text-shadow: @_sap_m_ObjectMarker_LinkShadowColor;
+}
+/* END "ObjectMarker.less" */
+
+/* START "ObjectNumber.less" */
+/* =================================== */
+/* CSS for control sap.m/ObjectNumber  */
+/* Belize theme                        */
+/* =================================== */
+
+@_sap_m_ObjectNumber_TextShadowColor: none;
+
+.sapMObjectNumberText,
+.sapMObjectNumberUnit {
+	text-shadow: @_sap_m_ObjectNumber_TextShadowColor;
+}
+/* END "ObjectNumber.less" */
+
+/* START "ObjectStatus.less" */
+/* =================================== */
+/* CSS for control sap.m/ObjectStatus  */
+/* Belize theme                        */
+/* =================================== */
+
+@_sap_m_ObjectStatus_TextShadowColor: none;
+
+.sapMObjStatus .sapMObjStatusText,
+.sapMObjStatus .sapMObjStatusIcon {
+	text-shadow: @_sap_m_ObjectStatus_TextShadowColor;
+}
+/* END "ObjectStatus.less" */
+
+/* START "OverflowToolbarAssociativePopover.less" */
+/* ======================================================== */
+/* CSS for control sap.m/OverflowToolbarAssociativePopover  */
+/* Belize theme                                             */
+/* ======================================================== */
+
+html.sap-phone {
+  .sapMOTAPopover {
+	&.sapMOTAPopoverNoShadowTop {
+		border-radius: 0 0 0.25rem 0.25rem;
+	}
+	&.sapMOTAPopoverNoShadowBottom {
+		border-radius: 0.25rem 0.25rem 0 0;
+	}
+  }
+}
+/* END "OverflowToolbarAssociativePopover.less" */
+
+/* START "Page.less" */
+/* =================================== */
+/* CSS for control sap.m/Page.control  */
+/* Belize theme                        */
+/* =================================== */
+
+.sapMPageWithSubHeader {
+	.sapMPageHeader {
+		border-bottom: none;
+		box-shadow: none;
+	}
+}
+
+/* The following overrides for sap_belize/sap_belize_plus are only intended for apps inside FLP (Ushell) */
+.sapUshellShell {
+
+	/* In sap_belize_plus backgroundDesign=Standard maps to Solid */
+	.sapMPageBgStandard {
+		background-color: @sapUiBaseBG;
+	}
+
+	/* For the pages in the master part of sap.m.SplitApp backgroundDesign=Standard maps to Transparent */
+	.sapMSplitContainerMaster .sapMPageBgStandard {
+		background-color: transparent;
+		background-image: none;
+	}
+
+	/* Hack - temporary - this is the FLP change*/
+	#sapUshellDashboardPage {
+		background-color: transparent !important;
+		background-image: none !important;
+	}
+}
+/* END "Page.less" */
+
+/* START "Panel.less" */
+/* ================================== */
+/* Theme CSS for control sap.m/Panel  */
+/* Belize theme                       */
+/* ================================== */
+
+.sapMPanelBGSolid {
+	background-color: @sapUiGroupContentBackground;
+}
+
+.sapMPanelBGTranslucent {
+	/* In order to avoid over-styling, we need to change the default behavior to transparent for belize.
+	We cannot change it via the design property, because this change will be backward incompatible.*/
+	background-color: transparent;
+}
+
+.sapMPanelBGTransparent {
+	background-color: transparent;
+}
+
+/* if Panel is not expandable, we do wish header to come with own border */
+.sapMPanel > .sapMPanelHdr,
+/* notice: sapMPanelWrappingDiv is available if Panel is expandable */
+.sapMPanelWrappingDiv,
+/* do not want border if expanded and if only header text */
+.sapMPanelWrappingDivTb {
+	border-bottom: 1px solid @sapUiGroupTitleBorderColor;
+}
+
+.sapMPanelContent:not(.sapMPanelBGTransparent) {
+	border-bottom: 1px solid @sapUiGroupContentBorderColor;
+}
+/* END "Panel.less" */
+
+/* START "PlanningCalendar.less" */
+/* ======================================= */
+/* CSS for control sap.m/PlanningCalendar  */
+/* Belize theme                            */
+/* ======================================= */
+
+/* show every second row in an other color */
+.sapMPlanCal:not(.sapMPlanCalSuppressAlternatingRowColors) > .sapMList > table > tbody > tr.sapMLIB:nth-child(even):not(.sapMListTblSubRow),
+.sapMSize0.sapMPlanCal:not(.sapMPlanCalSuppressAlternatingRowColors) > .sapMList > table > tbody > tr.sapMLIB:nth-child(4n+3),
+.sapMSize1.sapMPlanCal:not(.sapMPlanCalSuppressAlternatingRowColors) > .sapMList > table > tbody > tr.sapMLIB:nth-child(4n+3),
+.sapMPlanCal:not(.sapMPlanCalSuppressAlternatingRowColors) > .sapMList > table > tbody > tr.sapMListTblSubRow:nth-child(4n){
+	background-color: darken(@sapUiListBackground, 2);
+}
+
+.sapMPlanCal:not(.sapMPlanCalSuppressAlternatingRowColors) > .sapMList > table > tbody > tr:nth-child(even):not(.sapMListTblSubRow).sapMLIBHoverable:hover,
+.sapMSize0.sapMPlanCal:not(.sapMPlanCalSuppressAlternatingRowColors) > .sapMList > table > tbody > tr:nth-child(4n+3).sapMLIBHoverable:hover,
+.sapMSize0.sapMPlanCal:not(.sapMPlanCalSuppressAlternatingRowColors) > .sapMList > table > tbody > tr:nth-child(4n+3).sapMLIBHoverable:hover + .sapMListTblSubRow,
+.sapMSize1.sapMPlanCal:not(.sapMPlanCalSuppressAlternatingRowColors) > .sapMList > table > tbody > tr:nth-child(4n+3).sapMLIBHoverable:hover,
+.sapMSize1.sapMPlanCal:not(.sapMPlanCalSuppressAlternatingRowColors) > .sapMList > table > tbody > tr:nth-child(4n+3).sapMLIBHoverable:hover + .sapMListTblSubRow,
+.sapMPlanCal:not(.sapMPlanCalSuppressAlternatingRowColors) > .sapMList > table > tbody > tr.sapMListTblSubRow:nth-child(4n).sapMLIBHoverable:hover{
+	background-color: @sapUiListHoverBackground;
+}
+
+.sapMPlanCal:not(.sapMPlanCalSuppressAlternatingRowColors) > .sapMList > table > tbody > tr:nth-child(even):not(.sapMListTblSubRow).sapMLIBSelected,
+.sapMSize0.sapMPlanCal:not(.sapMPlanCalSuppressAlternatingRowColors) > .sapMList > table > tbody > tr:nth-child(4n+3).sapMLIBSelected,
+.sapMSize0.sapMPlanCal:not(.sapMPlanCalSuppressAlternatingRowColors) > .sapMList > table > tbody > tr:nth-child(4n+3).sapMLIBSelected + .sapMListTblSubRow,
+.sapMSize1.sapMPlanCal:not(.sapMPlanCalSuppressAlternatingRowColors) > .sapMList > table > tbody > tr:nth-child(4n+3).sapMLIBSelected,
+.sapMSize1.sapMPlanCal:not(.sapMPlanCalSuppressAlternatingRowColors) > .sapMList > table > tbody > tr:nth-child(4n+3).sapMLIBSelected + .sapMListTblSubRow,
+.sapMPlanCal:not(.sapMPlanCalSuppressAlternatingRowColors) > .sapMList > table > tbody > tr.sapMListTblSubRow:nth-child(4n).sapMLIBSelected{
+	background-color: darken(@sapUiListSelectionBackgroundColor, 2);
+}
+
+.sapMPlanCal:not(.sapMPlanCalSuppressAlternatingRowColors) > .sapMList > table > tbody > tr:nth-child(even):not(.sapMListTblSubRow).sapMLIBSelected.sapMLIBHoverable:hover,
+.sapMSize0.sapMPlanCal:not(.sapMPlanCalSuppressAlternatingRowColors) > .sapMList > table > tbody > tr:nth-child(4n+3).sapMLIBSelected.sapMLIBHoverable:hover,
+.sapMSize0.sapMPlanCal:not(.sapMPlanCalSuppressAlternatingRowColors) > .sapMList > table > tbody > tr:nth-child(4n+3).sapMLIBSelected.sapMLIBHoverable:hover + .sapMListTblSubRow,
+.sapMSize1.sapMPlanCal:not(.sapMPlanCalSuppressAlternatingRowColors) > .sapMList > table > tbody > tr:nth-child(4n+3).sapMLIBSelected.sapMLIBHoverable:hover,
+.sapMSize1.sapMPlanCal:not(.sapMPlanCalSuppressAlternatingRowColors) > .sapMList > table > tbody > tr:nth-child(4n+3).sapMLIBSelected.sapMLIBHoverable:hover + .sapMListTblSubRow,
+.sapMPlanCal:not(.sapMPlanCalSuppressAlternatingRowColors) > .sapMList > table > tbody > tr.sapMListTblSubRow:nth-child(4n).sapMLIBSelected.sapMLIBHoverable:hover{
+	background-color: darken(@sapUiListSelectionBackgroundColor, 4);
+}
+/* END "PlanningCalendar.less" */
+
+/* START "Popover.less" */
+/* ============================== */
+/* CSS for control sap.m/Popover  */
+/* Belize theme                   */
+/* ============================== */
+
+/* END "Popover.less" */
+
+/* START "PullToRefresh.less" */
+/* ==================================== */
+/* CSS for control sap.m/PullToRefresh  */
+/* Belize theme                         */
+/* ==================================== */
+
+.sapMPullDown {
+	background-color: darken(@sapUiGroupContentBackground, 5);
+}
+/* END "PullToRefresh.less" */
+
+/* START "QuickView.less" */
+/* ================================ */
+/* CSS for control sap.m/QuickView  */
+/* Belize theme                     */
+/* ================================ */
+
+.sapMQuickViewPage .sapMQuickViewThumbnail {
+	background-color: @sapUiAccent7;
+	color: @sapUiContentContrastIconColor;
+}
+
+html.sap-desktop .sapMQuickViewPage .sapUiIcon:focus {
+	outline: 1px dotted @sapUiContentFocusColor;
+	outline-offset: -3px;
+}
+/* END "QuickView.less" */
+
+/* START "RadioButton.less" */
+/* ================================== */
+/* CSS for control sap.m/RadioButton  */
+/* Belize theme                       */
+/* ================================== */
+
+@_sap_m_RadioButton_SelectedWarningColor: darken(@sapUiFieldWarningColor, 100);
+
+.sapMRb:focus:before {
+	border: 1px dotted @sapUiContentFocusColor;
+}
+
+.sapMLIBActive .sapMRbB .sapMRbBOut {
+	border: 2px solid @sapUiListActiveTextColor;
+}
+
+.sapMLIBActive .sapMRbSel .sapMRbBOut {
+	background-color: @sapUiListActiveBackground;
+}
+
+.sapMRbDis {
+	opacity: @sapContent_DisabledOpacity;
+}
+
+/* Value states */
+
+.sapMRbErr.sapMRbSel .sapMRbBInn {
+	background-color: @sapUiFieldInvalidColor;
+}
+
+.sapMRbErr .sapMRbBOut,
+.sapMRbErr.sapMRbBTouched .sapMRbBOut {
+	border-color: @sapUiFieldInvalidColor;
+	background-color: @sapUiFieldInvalidBackground;
+}
+
+.sapMRbWarn.sapMRbSel .sapMRbBInn {
+	background-color: @_sap_m_RadioButton_SelectedWarningColor;
+}
+
+.sapMRbWarn .sapMRbBOut,
+.sapMRbWarn.sapMRbBTouched .sapMRbBOut {
+	border-color: @sapUiFieldWarningColor;
+	background-color: @sapUiFieldWarningBackground;
+}
+/* END "RadioButton.less" */
+
+/* START "RangeSlider.less" */
+/* ================================== */
+/* CSS for control sap.m/RangeSlider  */
+/* Belize theme                       */
+/* ================================== */
+
+@_sap_m_Slider_HandleHoverBackground: fade(darken(@sapUiFieldBackground, 15), 60);
+@_sap_m_Slider_HandleBorderColor: darken(@sapUiFieldBorderColor, 15);
+
+/* overlap */
+.sapMSliderHandle.sapMSliderHandleOverlap {
+  border: 0.125rem solid darken(@sapUiFieldActiveBorderColor, 5);
+}
+
+/* pressed */
+.sapMSliderInner > .sapMSliderHandle.sapMSliderHandlePressed {
+  background: fade(@sapUiFieldActiveBorderColor, 30);
+}
+
+.sapMSliderProgress:hover ~ .sapMSliderHandle {
+  background-color: @_sap_m_Slider_HandleHoverBackground;
+  border: 0.125rem solid @_sap_m_Slider_HandleBorderColor;
+}
+/* END "RangeSlider.less" */
+
+/* START "RatingIndicator.less" */
+/* ====================================== */
+/* CSS for control sap.m/RatingIndicator  */
+/* Belize theme                           */
+/* ====================================== */
+
+@_sap_m_RatingIndicator_IconUnselectedColor: darken(@sapUiContentForegroundColor, 30);
+@_sap_m_RatingIndicator_IconHoverColor: darken(@sapUiAccent1, 5);
+
+.sapMRIIconSel {
+	color: @sapUiAccent1;
+}
+
+.sapMRIIconUnsel  {
+    color: @_sap_m_RatingIndicator_IconUnselectedColor;
+}
+
+.sapMRIDisabled {
+    opacity: 0.5;
+}
+
+.sapMRIIconHov {
+	color: @_sap_m_RatingIndicator_IconHoverColor;
+}
+
+/* Custom focus outline */
+html.sap-desktop .sapMRI:focus:not(.sapMRIDisabled) {
+	outline: 1px dotted @sapUiContentFocusColor;
+	outline-offset: -1px;
+}
+
+/* IE ignores outline-offset. Use an overlay: */
+html[data-sap-ui-browser^="ie"].sap-desktop {
+	.sapMRI:focus {
+		outline: none;
+		position: relative;
+	}
+	.sapMRI:focus:not(.sapMRIDisabled)::before {
+		content: " ";
+		box-sizing: border-box;
+		width: 100%;
+		height: 100%;
+		position: absolute;
+		left: 0;
+		top: 0;
+		border: 1px dotted @sapUiContentFocusColor;
+	}
+}
+/* END "RatingIndicator.less" */
+
+/* START "ResponsivePopover.less" */
+/* ======================================== */
+/* CSS for control sap.m/ResponsivePopover  */
+/* Belize theme                             */
+/* ======================================== */
+
+.sapMResponsivePopover.sapMDialog .sapMIBar.sapMPageHeader:before{
+	border-top: none;
+}
+/* END "ResponsivePopover.less" */
+
+/* START "ScrollContainer.less" */
+/* ====================================== */
+/* CSS for control sap.m/ScrollContainer  */
+/* Belize theme                           */
+/* ====================================== */
+
+html.sap-desktop .sapMScrollContV::-webkit-scrollbar {
+    width: 0.75rem;
+    height: 100%;
+}
+
+html.sap-desktop .sapMScrollContH::-webkit-scrollbar {
+    width: 100%;
+    height: 0.75rem;
+}
+
+html.sap-desktop .sapMScrollContVH::-webkit-scrollbar {
+    width: 0.75rem;
+    height: 0.75rem;
+}
+/* END "ScrollContainer.less" */
+
+/* START "SearchField.less" */
+/* ================================== */
+/* CSS for control sap.m/SearchField  */
+/* Belize theme                       */
+/* ================================== */
+
+.sapMSFDisabled {
+	opacity: 0.5;
+}
+
+/* custom buttons */
+.sapMSFB:focus {
+	outline: none;
+}
+
+html.sap-desktop .sapMFocus > .sapMSFF {
+	outline: 1px dotted @sapUiContentFocusColor;
+	outline-offset: -3px;
+}
+
+.sapMBarChild > .sapMSFF > .sapMSFB {
+	text-shadow: none;
+}
+
+.sapMFocus>.sapMSFF>.sapMSFB {
+	color: @sapUiHighlight;
+}
+
+.sapMFocus>.sapMSFF>.sapMSFB:active {
+	color: @sapUiButtonActiveTextColor;
+}
+
+.sapMSFB:hover{
+	background-color: @sapUiButtonLiteHoverBackground;
+}
+
+.sapMSFF>.sapMSFB:not(.sapMSFBF):active,
+.sapMSFF>.sapMSFB.sapMSFBA{
+	background-color: @sapUiButtonLiteActiveBackground;
+	color: @sapUiButtonActiveTextColor;
+}
+/* END "SearchField.less" */
+
+/* START "SegmentedButton.less" */
+/* ====================================== */
+/* CSS for control sap.m/SegmentedButton  */
+/* Belize theme                           */
+/* ====================================== */
+
+.sapMSegBBtn:first-child {
+	border-top-left-radius: 0.2rem;
+	border-bottom-left-radius: 0.2rem;
+}
+
+.sapMSegBBtn:last-child {
+	border-top-right-radius: 0.2rem;
+	border-bottom-right-radius: 0.2rem;
+}
+
+.sapMSegBBtn:last-child {
+	border-right: 1px solid @sapUiSegmentedButtonBorderColor;
+}
+
+/* Custom focus outline: */
+html.sap-desktop {
+	.sapMSegBBtnFocusable:focus {
+		outline: 1px dotted;
+		outline-offset: -3px;
+		outline-color: @sapUiContentFocusColor;
+	}
+
+	.sapMSegBBtnFocusable.sapMSegBBtnSel:focus {
+		outline: 1px dotted;
+		outline-offset: -3px;
+		outline-color: @sapUiContentContrastFocusColor;
+	}
+}
+
+/* IE/Edge */
+html[data-sap-ui-browser^="ie"].sap-desktop,
+html[data-sap-ui-browser^="ed"].sap-desktop {
+	.sapMSegB {
+		.sapMSegBBtnFocusable.sapMSegBBtnSel:focus:before {
+			border: 1px dashed @sapUiContentContrastFocusColor;
+		}
+	}
+}
+
+/* Android size compact fix */
+html[data-sap-ui-os^="Android4.1"][data-sap-ui-browser^="an"] {
+	.sapUiSizeCompact .sapMSegBBtn img {
+		margin-bottom: 0.128rem;
+	}
+}
+/* END "SegmentedButton.less" */
+
+/* START "Select.less" */
+/* ============================= */
+/* CSS for control sap.m/Select  */
+/* Belize theme                  */
+/* ============================= */
+
+/* IconOnly */
+
+.sapMSlt.sapMSltIconOnly:not(.sapMSltDisabled) {
+	border-color: @sapUiButtonLiteBorderColor;
+	background: @sapUiButtonLiteBackground;
+	border-radius: 0.2rem;
+}
+
+/* IconOnly Hover */
+
+.sapMSltIconOnly.sapMSltHoverable:hover:not(.sapMSltState) {
+	border-color: @sapUiButtonLiteHoverBorderColor;
+	background: @sapUiButtonLiteHoverBackground;
+}
+
+/*IconOnly Pressed */
+.sapMSltPressed.sapMSltIconOnly:not(.sapMSltDisabled) {
+	background: @sapUiToggleButtonPressedBackground;
+	border: 0.0625rem solid @sapUiToggleButtonPressedBorderColor;
+}
+
+html.sap-desktop .sapMSlt:not(.sapMSltExpanded):not(.sapMSltDisabled):not(.sapMSltState):focus {
+	outline-offset: -3px;
+	outline: 1px dotted @sapUiContentFocusColor;
+}
+
+html.sap-desktop .sapMSlt:not(.sapMSltExpanded):not(.sapMSltDisabled).sapMSltState:focus {
+	outline-offset: -4px;
+	outline: 1px dotted @sapUiContentFocusColor;
+}
+
+html.sap-desktop .sapMSltIconOnly:not(.sapMSltExpanded):not(.sapMSltDisabled).sapMSltPressed:focus {
+	outline-color: @sapUiContentContrastFocusColor;
+}
+
+html[data-sap-ui-browser^="ie"].sap-desktop,
+html[data-sap-ui-browser^="ed"].sap-desktop {
+	.sapMSlt:not(.sapMSltExpanded):not(.sapMSltDisabled):focus {
+	  	outline: none;
+
+		&:before {
+			content: "";
+			position: absolute;
+			border: 1px dashed @sapUiContentFocusColor;
+			top: 1px;
+			right: 1px;
+			bottom: 1px;
+			left: 1px;
+			pointer-events: none;
+		}
+
+		&.sapMSltIconOnly.sapMSltPressed:before {
+			border: 1px dashed @sapUiContentContrastFocusColor;
+		}
+	}
+}
+
+.sapMSltHoverable:not(.sapMSltState):hover {
+	border-color: @sapUiFieldHoverBorderColor;
+	background: @sapUiFieldHoverBackground;
+}
+
+/* pressed and hover */
+
+.sapMSltIconOnly.sapMSltPressed.sapMSltHoverable:not(.sapMSltState):hover {
+	background: @sapUiToggleButtonPressedHoverBackground;
+	border-color: @sapUiFieldActiveBorderColor;
+}
+
+/* value state */
+
+.sapMSltState {
+	border-width: 2px;
+}
+
+/* disabled */
+
+.sapMSltDisabled {
+	opacity: 0.5;
+}
+/* END "Select.less" */
+
+/* START "SelectList.less" */
+/* ================================= */
+/* CSS for control sap.m/SelectList  */
+/* Belize theme                      */
+/* ================================= */
+
+/* selected */
+.sapMSelectListItemBaseSelected {
+	background: @sapUiListSelectionBackgroundColor;
+	outline: 1px dotted @sapUiContentFocusColor;
+	outline-offset: -2px;
+}
+
+/* pressed */
+html.sap-desktop .sapMSelectListItemBase.sapMSelectListItemBasePressed:focus {
+	outline: 1px dotted @sapUiContentContrastFocusColor;
+}
+
+/* disabled */
+.sapMSelectListItemBaseDisabled {
+	opacity: 0.5;
+}
+
+/* focus */
+html.sap-desktop .sapMSelectListItemBase:focus {
+	outline: 1px dotted @sapUiContentFocusColor;
+	outline-offset: -2px;
+}
+
+html[data-sap-ui-browser^="ie"].sap-desktop,
+html[data-sap-ui-browser^="ed"].sap-desktop {
+	li.sapMSelectListItemBase.sapMSelectListItemBaseSelected::before {
+		border: 1px dashed @sapUiContentFocusColor;
+	}
+}
+/* END "SelectList.less" */
+
+/* START "Shell.less" */
+/* ============================ */
+/* CSS for control sap.m/Shell  */
+/* Belize theme                 */
+/* ============================ */
+
+/* background color class for Shell header */
+.sapMShellBackgroundColorOnlyIfDefaultMixin() when not (@sapUiGlobalBackgroundImage = '') {
+	background-color: transparent; /* custom BG image... just hide the background */
+}
+
+.sapMShellBackgroundColorOnlyIfDefaultMixin() when (@sapUiGlobalBackgroundImage = '') {
+	background-color: mix(@sapUiHighlight, #fff, 5); /* default BG image - display the default background color */
+}
+
+.sapMShellBackgroundColorOnlyIfDefault {
+	.sapMShellBackgroundColorOnlyIfDefaultMixin;
+}
+
+html.sap-desktop .sapMShellCentralBox {
+	box-shadow: 0 0 24px fade(@sapUiContentShadowColor, 15);
+}
+/* END "Shell.less" */
+
+/* START "Slider.less" */
+/* ============================= */
+/* CSS for control sap.m/Slider  */
+/* Belize theme                  */
+/* ============================= */
+
+@_sap_m_Slider_Background: lighten(@sapUiFieldBorderColor, 11.8);
+@_sap_m_Slider_HandleBorderColor: darken(@sapUiFieldBorderColor, 15);
+@_sap_m_Slider_HandleHoverBackground: fade(darken(@sapUiFieldBackground, 15), 60);
+
+/* slider */
+.sapMSliderInner {
+	background: @_sap_m_Slider_Background;
+}
+
+/* slider handle */
+.sapMSliderHandle {
+	background: fade(@sapUiFieldBackground, 10);
+	border: 0.125rem solid @_sap_m_Slider_HandleBorderColor;
+}
+
+/* hover */
+.sapMSliderHandle:hover {
+	background-color: @_sap_m_Slider_HandleHoverBackground;
+	border: 0.125rem solid @_sap_m_Slider_HandleBorderColor;;
+}
+
+/* focus */
+html.sap-desktop .sapMSliderHandle:focus {
+	outline: 1px dotted @sapUiContentFocusColor;
+}
+
+/* pressed */
+.sapMSliderPressed:not(.sapMSliderInnerDisabled) > .sapMSliderHandle {
+	background-color: fade(@sapUiFieldActiveBorderColor, 30);
+	border: 0.125rem solid @sapUiFieldActiveBorderColor;
+}
+
+/* disabled */
+.sapMSliderDisabled {
+	opacity: 0.5;
+}
+/* END "Slider.less" */
+
+/* START "SlideTile.less" */
+/* ================================ */
+/* CSS for control sap.m/SlideTile  */
+/* Belize theme                     */
+/* ================================ */
+
+html.sap-desktop .sapMST:focus .sapMSTFocusDiv,
+html.sap-desktop .sapMST:active .sapMSTFocusDiv {
+	border: 1px solid @sapUiTileBackground;
+}
+
+.sapMST.sapMSTScopeActions.sapMSTDarkBackground .sapMSTMoreIcon {
+	color: @sapUiContentContrastTextColor;
+}
+
+/* This part is used to achieve dotted white black interlace border*/
+html.sap-desktop .sapMST:focus .sapMSTFocusDiv:after,
+html.sap-desktop .sapMST:active .sapMSTFocusDiv:after {
+	content: "";
+	position: absolute;
+	top: 0;
+	bottom: 0;
+	left: 0;
+	right: 0;
+	border-radius: 0.25rem;
+	margin: -1px;
+	border: 1px dotted @sapUiContentFocusColor;
+}
+
+/* Bulleted indicator of multiple tiles*/
+.sapMSTBulleted > span {
+	background-color: @sapUiContentNonInteractiveIconColor;
+	box-shadow: 0 0 0.25rem fade(@sapUiContentShadowColor, 25);
+}
+
+.sapMSTBulleted > span.sapMSTActive {
+	background-color: @sapUiContentContrastIconColor;
+	box-shadow: 0 0 0.25rem fade(@sapUiContentShadowColor, 25);
+}
+
+.sapMST .sapMSTIconDisplayArea {
+	background-color: darken(@sapUiBrand, 18);
+}
+
+.sapMST.sapMSTIconPressed .sapMSTIconClickTapArea:hover ~.sapMSTIconDisplayArea {
+	background-color: @sapUiBrand;
+}
+
+.sapMST .sapMSTIconNestedArea {
+	text-shadow: 0px 1px @sapUiButtonEmphasizedTextShadow;
+}
+
+html.sap-desktop .sapMST .sapMGT:active .sapMGTFocusDiv,
+html.sap-desktop .sapMST .sapMGT:active .sapMGTFocusDiv:after {
+	border: none;
+}
+
+/* END "SlideTile.less" */
+
+/* START "SplitButton.less" */
+/* ================================== */
+/* CSS for control sap.m/SplitButton  */
+/* Belize theme                       */
+/* ================================== */
+
+.sapMIBar-CTX.sapMFooter-CTX .sapMSB.sapMSBEmphasized:focus .sapMSBInner::after,
+.sapMSB.sapMSBEmphasized:focus .sapMSBInner::after {
+	border-color: @sapUiContentContrastFocusColor;
+}
+/* END "SplitButton.less" */
+
+/* START "StandardListItem.less" */
+/* ======================================= */
+/* CSS for control sap.m/StandardListItem  */
+/* Belize theme                            */
+/* ======================================= */
+
+@_sap_m_StandardListItem_TextShadowColor: none;
+@_sap_m_StandardListItem_SelectedLabelColor: @sapUiContentLabelColor;
+
+.sapMSLIInfo {
+	text-shadow: @_sap_m_StandardListItem_TextShadowColor;
+}
+
+.sapMLIBSelected.sapMLIBHoverable .sapMSLIDescription {
+	color: @_sap_m_StandardListItem_SelectedLabelColor;
+}
+/* END "StandardListItem.less" */
+
+/* START "StandardTile.less" */
+/* =================================== */
+/* CSS for control sap.m/StandardTile  */
+/* Belize theme                        */
+/* =================================== */
+
+.sapMStdTileIconDiv {
+	color: @sapUiHighlight;
+}
+
+.sapMStdIconCreate {
+	opacity: .3;
+}
+
+.sapMStdTileMonitorType {
+	background-color: darken(@sapUiTileBackground, 5);
+}
+
+.sapMTCEditable .sapMStdTileMonitorType {
+	background-color: fade(darken(@sapUiTileBackground, 5), 50);
+}
+
+.sapMStdTileMonitorType .sapMStdTileTitle {
+	color: @sapUiTileTitleTextColor;
+}
+
+.sapMTileActive-CTX .sapMStdTileMonitorType {
+	background-color: transparent;
+}
+/* END "StandardTile.less" */
+
+/* START "StepInput.less" */
+/* ================================ */
+/* CSS for control sap.m/StepInput  */
+/* Belize theme                     */
+/* ================================ */
+
+.sapMStepInput-CTX {
+  &:focus {
+    .sapMInput .sapMInputBaseInner:not(.sapMInputBaseReadonlyInner):not(.sapMInputBaseStateInner):not(.sapMStepInputReadOnly):not(.sapMStepInputDisabled) {
+      outline: 1px dotted @sapUiContentFocusColor;
+      outline-offset: -3px;
+      border: 1px solid @sapUiFieldBorderColor;
+    }
+  }
+  .sapMInput .sapMInputBaseInner:focus {
+    outline: 1px dotted @sapUiContentFocusColor;
+    outline-offset: -3px;
+    border: 1px solid @sapUiFieldBorderColor;
+  }
+}
+/* END "StepInput.less" */
+
+/* START "Switch.less" */
+/* ============================= */
+/* CSS for control sap.m/Switch  */
+/* Belize theme                  */
+/* ============================= */
+
+@_sap_m_Switch_OffBackground: lighten(@sapUiButtonBackground, 3);
+@_sap_m_Switch_OffBorderColor: @sapUiButtonBorderColor;
+
+/* ------------------------------ */
+/* Switch container               */
+/* ------------------------------ */
+
+/* focus */
+
+html.sap-desktop .sapMSwtCont:focus > .sapMSwt {
+	outline: 1px dotted @sapUiContentFocusColor;
+}
+
+/* ------------------------------ */
+/* Switch                         */
+/* ------------------------------ */
+
+/* background */
+
+.sapMSwtOff:not(.sapMSwtAcceptReject) {
+	background: @_sap_m_Switch_OffBackground;
+	border-color: @_sap_m_Switch_OffBorderColor;
+}
+
+/* disabled */
+
+.sapMSwtDisabled {
+	opacity: 0.5;
+}
+
+/* ------------------------------ */
+/* Switch handler                 */
+/* ------------------------------ */
+
+/* background */
+
+.sapMSwtOff .sapMSwtHandle {
+	border-color: @_sap_m_Switch_OffBorderColor;
+}
+
+/* ====================================================== */
+/* Switch type "AcceptReject"                             */
+/* ====================================================== */
+
+/* ------------------------------ */
+/* Switch                         */
+/* ------------------------------ */
+
+/* background */
+
+.sapMSwtAcceptReject.sapMSwt {
+	background: @_sap_m_Switch_OffBackground;
+}
+
+/* ------------------------------ */
+/* Switch handler                 */
+/* ------------------------------ */
+
+/*  Workaround for a WebKit bug that causes a rendering issue. @link https://bugs.webkit.org/show_bug.cgi?id=21819
+
+	Affected platforms:
+	BlackBerry 10 Z30 device. */
+
+.sapMSwtAcceptReject .sapMSwtWebKit537-35.sapMSwtHandle {
+	border: none;
+}
+
+.sapMSwtAcceptReject.sapMSwtOn .sapMSwtWebKit537-35.sapMSwtHandle {
+	box-shadow: inset 0 0 0 0.125rem @sapUiPositiveElement;
+}
+
+.sapMSwtAcceptReject.sapMSwtOff .sapMSwtWebKit537-35.sapMSwtHandle {
+	box-shadow: inset 0 0 0 0.125rem @sapUiNegativeElement;
+}
+/* END "Switch.less" */
+
+/* START "Table.less" */
+/* ============================ */
+/* CSS for control sap.m/Table  */
+/* Belize theme                 */
+/* ============================ */
+
+.sapMListBGTransparent .sapMListTblHeader,
+.sapMListBGTransparent .sapMListTblFooter {
+	background-color: fade(@sapUiListBackground, 0%);
+}
+
+.sapMListBGTranslucent .sapMListTblHeader,
+.sapMListBGTranslucent .sapMListTblFooter {
+	background-color: @sapUiListBackground;
+}
+
+.sapMListBGSolid .sapMListTblHeader,
+.sapMListBGSolid .sapMListTblFooter {
+	background-color: @sapUiListBackground;
+}
+
+.sapMListTblHeader th{
+	border-bottom: 1px solid @sapUiListHeaderBorderColor;
+}
+/* END "Table.less" */
+
+/* START "TabStrip.less" */
+/* =============================== */
+/* CSS for control sap.m/TabStrip  */
+/* Belize theme                    */
+/* =============================== */
+
+@_sap_m_TabStrip_ItemHoverTextColor: darken(@sapUiGroupTitleTextColor, 10);
+@_sap_m_TabStrip_ItemSelectedTextColor: darken(@sapUiGroupTitleTextColor, 20);
+
+.sapMTabStrip {
+	.sapMTSTabsContainer {
+		.sapMTSTabs {
+			.sapMTabStripItem {
+				&:hover {
+					color: @_sap_m_TabStrip_ItemHoverTextColor;
+				}
+				&.sapMTabStripItemSelected {
+					color: @_sap_m_TabStrip_ItemSelectedTextColor;
+				}
+			}
+		}
+	}
+}
+/* END "TabStrip.less" */
+
+/* START "TabStripSelect.less" */
+/* ===================================== */
+/* CSS for control sap.m/TabStripSelect  */
+/* Belize theme                          */
+/* ===================================== */
+/* END "TabStripSelect.less" */
+
+/* START "Text.less" */
+/* =========================== */
+/* CSS for control sap.m/Text  */
+/* Belize theme                */
+/* =========================== */
+/* END "Text.less" */
+
+/* START "TextArea.less" */
+/* =============================== */
+/* CSS for control sap.m/TextArea  */
+/* Belize theme                    */
+/* =============================== */
+/* END "TextArea.less" */
+
+/* START "TileContent.less" */
+/* ================================== */
+/* CSS for control sap.m/TileContent  */
+/* Belize theme                       */
+/* ================================== */
+
+@_sap_m_TileContent_NewsFooterTextColor: lighten(@sapUiTileTextColor, 45);
+
+.sapMTileCnt.News {
+	background-color: fade(darken(@sapUiBrand, 18), 85);
+}
+
+.sapMTileCnt.News .sapMTileCntFtrTxt {
+	color: @_sap_m_TileContent_NewsFooterTextColor;
+	text-shadow: 0 0 0.125rem @sapUiContentShadowColor;
+}
+/* END "TileContent.less" */
+
+/* START "TileContainer.less" */
+/* ==================================== */
+/* CSS for control sap.m/TileContainer  */
+/* Belize theme                         */
+/* ==================================== */
+
+.sapMTC .sapMTCBlind {
+	opacity: 0.4;
+}
+
+.sapMTC .sapMTCScroller:focus::before {
+	border: 1px dotted @sapUiContentFocusColor;
+	position: absolute;
+	top: -1px;
+	bottom: -1px;
+	left: -1px;
+	right: -1px;
+}
+/* END "TileContainer.less" */
+
+/* START "TimePicker.less" */
+/* ================================= */
+/* CSS for control sap.m/TimePicker  */
+/* Belize theme                      */
+/* ================================= */
+
+@_sap_m_TimePicker_ItemColor: lighten(@sapUiContentForegroundColor, 5);
+@_sap_m_TimePicker_ItemHoverColor: darken(@sapUiContentForegroundColor, 5);
+@_sap_m_TimePicker_ItemBorderColor: lighten(@sapUiListBorderColor, 10);
+
+/* ======================================== */
+/* TimePicker Dropdown                      */
+/* ======================================== */
+
+.sapMTimePickerDropDown {
+	.sapMTimePickerContainer {
+		.sapMTPColumn {
+			.sapMTimePickerSlider {
+				.sapMTimePickerItem {
+					border: 1px solid @_sap_m_TimePicker_ItemBorderColor;
+					&:hover {
+						background: darken(@sapUiSelected, 10);
+					}
+				}
+			}
+			&.sapMTPSliderExpanded {
+				.sapMTimePickerSlider {
+					.sapMTimePickerItem {
+						background: @_sap_m_TimePicker_ItemColor;
+						border: 1px solid @_sap_m_TimePicker_ItemBorderColor;
+						&:hover {
+							background: @_sap_m_TimePicker_ItemHoverColor;
+						}
+						&:active {
+							background: @sapUiHighlight;
+							color: @sapUiContentContrastTextColor;
+						}
+						
+					}
+					.sapMTPPickerSelectionFrame {
+						outline: 0.125rem solid @sapUiSelected;
+						outline-offset: -0.188rem;
+						&:hover {
+							+ ul > li.sapMTimePickerItem.sapMTimePickerItemSelected {
+								background: @_sap_m_TimePicker_ItemHoverColor;
+							}
+						}
+						&:active {
+							& + ul > li.sapMTimePickerItem.sapMTimePickerItemSelected {
+								background: @sapUiSelected;
+								color: @sapUiContentContrastTextColor;
+							}
+						}
+					}
+				}
+			}
+		}
+	}
+}
+
+/* PHONE STYLES */
+html.sap-phone {
+	/* ======================================== */
+	/* TimePicker Dropdown                      */
+	/* ======================================== */
+	
+	.sapMTimePickerDropDown {
+		.sapMTimePickerContainer {
+			.sapMTPColumn {
+				.sapMTimePickerSlider {
+					.sapMTimePickerItem {
+						border: 1px solid @_sap_m_TimePicker_ItemBorderColor;
+					}
+				}
+				&.sapMTPSliderExpanded {
+					.sapMTimePickerSlider {
+						.sapMTimePickerItem {
+							background: @_sap_m_TimePicker_ItemColor;
+							border: 1px solid @_sap_m_TimePicker_ItemBorderColor;
+						}
+						.sapMTPPickerSelectionFrame {
+							outline: 0.125rem solid @sapUiSelected;
+							outline-offset: -0.188rem;
+						}
+					}
+				}
+			}
+		}
+	}
+}
+/* END "TimePicker.less" */
+
+/* START "Token.less" */
+/* ============================ */
+/* CSS for control sap.m/Token  */
+/* Belize theme                 */
+/* ============================ */
+
+@_sap_m_Token_BorderColor: darken(@sapUiButtonBackground, 10);
+@_sap_m_Token_HoverBorderColor: darken(@sapUiButtonHoverBackground, 5);
+
+.sapMToken {
+	border: 1px solid @_sap_m_Token_BorderColor;
+}
+
+html.sap-desktop .sapMToken:hover {
+	border: 1px solid @_sap_m_Token_HoverBorderColor;
+}
+
+html.sap-desktop .sapMToken:focus {
+	outline: 1px dotted @sapUiContentFocusColor;
+	outline-offset: -3px;
+}
+
+html.sap-desktop .sapMToken.sapMTokenSelected:focus {
+	outline: 1px dotted @sapUiContentContrastFocusColor;
+}
+
+html[data-sap-ui-browser^="ie"].sap-desktop,
+html[data-sap-ui-browser^="ed"].sap-desktop {
+	.sapMToken:focus {
+		.sapMTokenText:before {
+			border: 1px dashed @sapUiContentFocusColor; //dashed only in IE due to visual issues with dotted - ticket 1670468323
+		}
+	}
+
+	.sapMToken.sapMTokenSelected:focus {
+		.sapMTokenText:before {
+			border: 1px dashed @sapUiContentContrastFocusColor; //dashed only in IE due to visual issues with dotted - ticket 1670468323
+		}
+	}
+}
+/* END "Token.less" */
+
+/* START "Tokenizer.less" */
+/* ================================ */
+/* CSS for control sap.m/Tokenizer  */
+/* Belize theme                     */
+/* ================================ */
+
+html.sap-desktop .sapMTokenizer:focus {
+	outline: 1px dotted @sapUiContentFocusColor;
+	outline-offset: -3px;
+}
+
+html[data-sap-ui-browser^="ie"].sap-desktop,
+html[data-sap-ui-browser^="ed"].sap-desktop {
+	.sapMTokenizer:focus {
+		&:before {
+			border: 1px dotted @sapUiContentFocusColor;
+		}
+	}
+}
+
+/* editable tokens in read-only tokenizer */
+.sapMTokenizer.sapMTokenizerReadonly {
+	.sapMToken {
+		color: @sapUiContentForegroundTextColor;
+
+		&.sapMTokenSelected {
+			color: @sapUiToggleButtonPressedTextColor;
+		}
+	}
+}
+/* END "Tokenizer.less" */
+
+/* START "Toolbar.less" */
+/* ============================== */
+/* CSS for control sap.m/Toolbar  */
+/* Belize theme                   */
+/* ============================== */
+
+/* Info Toolbar Context */
+.sapMTB-Info-CTX.sapMTB {
+	height: 2rem;
+	padding: 0 0.5rem;
+	border-bottom: none;
+}
+
+html.sap-desktop .sapMTB-Info-CTX.sapMTBActive:focus {
+	outline: 1px dotted @sapUiContentContrastFocusColor;
+	outline-offset: -0.125rem;
+}
+
+/* IE ignores outline-offset. Use an overlay: */
+html[data-sap-ui-browser^="ie"].sap-desktop {
+	.sapMTB-Info-CTX.sapMTBActive:focus {
+		outline: none;
+		position: relative;
+	}
+	.sapMTB-Info-CTX.sapMTBActive:focus:before {
+		content: " ";
+		box-sizing: border-box;
+		width: calc(~'100% - 0.0625rem');
+		height: calc(~'100% - 0.0625rem');
+		position: absolute;
+		left: 0;
+		top: 0;
+		border: 0.0625rem dashed @sapUiContentContrastFocusColor;
+		pointer-events: none;
+	}
+}
+/* END "Toolbar.less" */
+
+/* START "UploadCollection.less" */
+/* ======================================= */
+/* CSS for control sap.m/UploadCollection  */
+/* Belize theme                            */
+/* ======================================= */
+
+.sapMLIB.sapMUCListSingleItem,
+.sapMLIB.sapMUCListFirstItem,
+.sapMLIB.sapMUCListLastItem,
+.sapMLIB.sapMUCListItem {
+	border-bottom-color: @sapUiListBorderColor;
+}
+/* END "UploadCollection.less" */
+
+/* START "ValueStateMessage.less" */
+/* ======================================== */
+/* CSS for control sap.m/ValueStateMessage  */
+/* Belize theme                             */
+/* ======================================== */
+
+.sapMValueStateMessage {
+	border-width: 0;
+}
+/* END "ValueStateMessage.less" */
+
+/* START "ViewSettingsDialog.less" */
+/* ========================================= */
+/* CSS for control sap.m/ViewSettingsDialog  */
+/* Belize theme                              */
+/* ========================================= */
+
+@_sap_m_ViewSettingsDialog_HeaderBorderColor: darken(@sapUiGroupContentBackground, 8);
+
+.sapMVSDUpperList {
+	border-bottom: 1px solid @sapUiToolbarSeparatorColor;
+}
+
+.sapMTB.sapMVSDFilterHeaderToolbar {
+	background-color:  @sapUiGroupContentBackground;
+	border-bottom: 1px solid @_sap_m_ViewSettingsDialog_HeaderBorderColor;
+	.sapMBarChild.sapMCb {
+		.sapMCbLabel {
+			font-family: @sapUiFontFamily;
+			color: @sapUiGroupTitleTextColor;
+			font-size: @sapMFontLargeSize;
+		}
+	}
+}
+
+.sapMVSD.sapMDialog.sapMPopup-CTX .sapMIBar.sapMHeader-CTX,
+.sapMVSD.sapMDialog.sapMPopup-CTX .sapMIBar.sapMSubHeader-CTX {
+	background-color: @sapUiGroupContentBackground;
+}
+
+.sapMVSD .sapMVSDBar {
+	box-shadow: inset 0 -1px @_sap_m_ViewSettingsDialog_HeaderBorderColor;
+}
+
+.sapMVSDBarWithSearch.sapMBar ,
+.sapMVSD.sapMDialog.sapMPopup-CTX .sapMIBar.sapMHeader-CTX .sapMVSDBarWithSearch,
+.sapMVSD.sapMDialog.sapMPopup-CTX .sapMIBar.sapMSubHeader-CTX .sapMVSDBarWithSearch {
+	box-shadow: none;
+}
+
+.sapMPageWithSubHeader .sapMIBar.sapMHeader-CTX {
+	border-bottom: none;
+	box-shadow: none;
+}
+/* END "ViewSettingsDialog.less" */
+
+/* START "Wizard.less" */
+/* ============================= */
+/* CSS for control sap.m/Wizard  */
+/* Belize theme                  */
+/* ============================= */
+
+.sapMWizard .sapMWizardStepContainer {
+	margin-top: @navHeight;
+}
+/* END "Wizard.less" */
+
+/* START "WizardProgressNavigator.less" */
+/* ============================================== */
+/* CSS for control sap.m/WizardProgressNavigator  */
+/* Belize theme                                   */
+/* ============================================== */
+
+@_sap_m_WizardProgressNavigator_NavAnchorCircleHoverColor: lighten(@sapUiObjectHeaderBackground, 5);
+@_sap_m_WizardProgressNavigator_NavAnchorTitleSelectedTextColor: darken(@sapUiGroupTitleTextColor, 20);
+@_sap_m_WizardProgressNavigator_NavAnchorTitleHoverTextColor: darken(@sapUiGroupTitleTextColor, 10);
+
+.sapMWizardProgressNav {
+	box-shadow: 0 0.125rem 0 0 @sapUiObjectHeaderBackground;
+	position: absolute;
+	z-index: 1;
+}
+
+.sapMWizardProgressNavStep:hover .sapMWizardProgressNavAnchorCircle {
+	background-color: inherit;
+	color: @sapUiHighlight;
+}
+
+.sapMWizardProgressNavStep[data-sap-ui-wpn-step-current="true"]:hover .sapMWizardProgressNavAnchorCircle {
+	background-color: @sapUiHighlight;
+	color: @sapUiContentContrastIconColor;
+}
+
+.sapMWizardProgressNavStep[data-sap-ui-wpn-step-current="true"]:hover .sapMWizardProgressNavAnchorTitle,
+.sapMWizardProgressNavStep:hover .sapMWizardProgressNavAnchorTitle {
+	color: @_sap_m_WizardProgressNavigator_NavAnchorTitleHoverTextColor;
+}
+
+.sapMWizardProgressNavStep[data-sap-ui-wpn-step-current="true"] .sapMWizardProgressNavAnchor::after {
+	height: 0.125rem;
+}
+
+.sapMWizardProgressNavAnchor:focus {
+	outline: 1px dotted @sapUiContentFocusColor;
+	outline-offset: 1px;
+}
+
+.sapMWizardProgressNavAnchorCircle {
+	color: @sapUiHighlight;
+	border-color: @sapUiHighlight;
+}
+
+.sapMWizardProgressNavAnchorTitle:hover {
+	color: @_sap_m_WizardProgressNavigator_NavAnchorTitleHoverTextColor;
+}
+
+.sapMWizardProgressNavStep::after {
+	border-bottom-color: @sapUiHighlight;
+}
+
+.sapMWizard .sapMWizardStepContainer {
+  background: @sapUiGroupContentBackground;
+}
+
+.sapMWizardProgressNavStep[data-sap-ui-wpn-step-active="true"] {
+
+	.sapMWizardProgressNavAnchorTitle {
+		color: @_sap_m_WizardProgressNavigator_NavAnchorTitleSelectedTextColor;
+	}
+
+  & ~ .sapMWizardProgressNavStep {
+		color: fade(@sapUiGroupTitleTextColor, 50);
+	}
+	/* anchors in all steps after the active one have inactive style */
+	& ~ .sapMWizardProgressNavStep .sapMWizardProgressNavAnchorCircle {
+		border-color: fade(@sapUiHighlight, 50);
+		color: fade(@sapUiHighlight, 50);
+	}
+
+	& ~ .sapMWizardProgressNavStep .sapMWizardProgressNavAnchorTitle {
+		color: fade(@sapUiGroupTitleTextColor, 50);
+	}
+
+	& ~ .sapMWizardProgressNavStep:hover .sapMWizardProgressNavAnchorCircle {
+		background-color: inherit;
+	}
+
+	/* all separators after (and including) the active step have inactive style */
+	&::after,
+	& ~ .sapMWizardProgressNavStep::after {
+		border-bottom-color: fade(@sapUiHighlight, 50);
+	}
+}
+/* END "WizardProgressNavigator.less" */
+
+/* START "WizardStep.less" */
+/* ================================= */
+/* CSS for control sap.m/WizardStep  */
+/* Belize theme                      */
+/* ================================= */
+/* END "WizardStep.less" */
+

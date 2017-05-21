@@ -1,0 +1,225 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<Library name="sap.tnt" xmlns="http://www.sap.com/ui5/ide/templates/xmlview">
+<Template name="sap.tnt.NavigationList" alias="NavigationList,List">
+	<jsTemplate><![CDATA[new sap.tnt.NavigationList({
+	id: "${id}", // sap.ui.core.ID
+	busy: false, // boolean
+	busyIndicatorDelay: 1000, // int
+	visible: true, // boolean
+	fieldGroupIds: [], // string[], since 1.31
+	width: undefined, // sap.ui.core.CSSSize
+	expanded: true, // boolean
+	tooltip: undefined, // sap.ui.core.TooltipBase
+	customData: [], // sap.ui.core.CustomData
+	dependents: [], // sap.ui.core.Element, since 1.19
+	items: [], // sap.tnt.NavigationListItem
+	ariaDescribedBy: [], // sap.ui.core.Control
+	ariaLabelledBy: [], // sap.ui.core.Control
+	validateFieldGroup: [function (oEvent) {
+		var ${control} = oEvent.getSource();
+	}, this],
+	itemSelect: [function (oEvent) {
+		var ${control} = oEvent.getSource();
+	}, this]
+})
+]]></jsTemplate>
+	<xmlTemplate><![CDATA[<NavigationList xmlns="sap.tnt"
+	id="${id}"
+	busy="false"
+	busyIndicatorDelay="1000"
+	visible="true"
+	fieldGroupIds=""
+	width=""
+	expanded="true"
+	ariaDescribedBy=""
+	ariaLabelledBy=""
+	validateFieldGroup=""
+	itemSelect="">
+		<tooltip></tooltip> <!-- sap.ui.core.TooltipBase -->
+		<dependents></dependents> <!-- sap.ui.core.Element, since 1.19 -->
+		<items></items> <!-- sap.tnt.NavigationListItem -->
+</NavigationList>
+]]></xmlTemplate>
+</Template>
+<Template name="sap.tnt.NavigationListItem" alias="NavigationListItem,Item">
+	<jsTemplate><![CDATA[new sap.tnt.NavigationListItem({
+	id: "${id}", // sap.ui.core.ID
+	text: "", // string
+	enabled: true, // boolean
+	textDirection: sap.ui.core.TextDirection.Inherit, // sap.ui.core.TextDirection
+	key: undefined, // string
+	icon: "", // sap.ui.core.URI
+	expanded: true, // boolean
+	hasExpander: true, // boolean
+	tooltip: undefined, // sap.ui.core.TooltipBase
+	customData: [], // sap.ui.core.CustomData
+	dependents: [], // sap.ui.core.Element, since 1.19
+	items: [], // sap.tnt.NavigationListItem
+	select: [function (oEvent) {
+		var ${control} = oEvent.getSource();
+	}, this]
+})
+]]></jsTemplate>
+	<xmlTemplate><![CDATA[<NavigationListItem xmlns="sap.tnt"
+	id="${id}"
+	text=""
+	enabled="true"
+	textDirection="Inherit"
+	key=""
+	icon=""
+	expanded="true"
+	hasExpander="true"
+	select="">
+		<tooltip></tooltip> <!-- sap.ui.core.TooltipBase -->
+		<dependents></dependents> <!-- sap.ui.core.Element, since 1.19 -->
+		<items></items> <!-- sap.tnt.NavigationListItem -->
+</NavigationListItem>
+]]></xmlTemplate>
+</Template>
+<Template name="sap.tnt.SideNavigation" alias="SideNavigation,Navigation">
+	<jsTemplate><![CDATA[new sap.tnt.SideNavigation({
+	id: "${id}", // sap.ui.core.ID
+	busy: false, // boolean
+	busyIndicatorDelay: 1000, // int
+	visible: true, // boolean
+	fieldGroupIds: [], // string[], since 1.31
+	expanded: true, // boolean
+	tooltip: undefined, // sap.ui.core.TooltipBase
+	customData: [], // sap.ui.core.CustomData
+	dependents: [], // sap.ui.core.Element, since 1.19
+	item: undefined, // sap.tnt.NavigationList
+	fixedItem: undefined, // sap.tnt.NavigationList
+	footer: undefined, // sap.tnt.NavigationList
+	validateFieldGroup: [function (oEvent) {
+		var ${control} = oEvent.getSource();
+	}, this],
+	itemSelect: [function (oEvent) {
+		var ${control} = oEvent.getSource();
+	}, this]
+})
+]]></jsTemplate>
+	<xmlTemplate><![CDATA[<SideNavigation xmlns="sap.tnt"
+	id="${id}"
+	busy="false"
+	busyIndicatorDelay="1000"
+	visible="true"
+	fieldGroupIds=""
+	expanded="true"
+	validateFieldGroup=""
+	itemSelect="">
+		<tooltip></tooltip> <!-- sap.ui.core.TooltipBase -->
+		<dependents></dependents> <!-- sap.ui.core.Element, since 1.19 -->
+		<item></item> <!-- sap.tnt.NavigationList -->
+		<fixedItem></fixedItem> <!-- sap.tnt.NavigationList -->
+		<footer></footer> <!-- sap.tnt.NavigationList -->
+</SideNavigation>
+]]></xmlTemplate>
+</Template>
+<Template name="sap.tnt.ToolHeader" alias="ToolHeader,Header">
+	<jsTemplate><![CDATA[new sap.tnt.ToolHeader({
+	id: "${id}", // sap.ui.core.ID
+	busy: false, // boolean
+	busyIndicatorDelay: 1000, // int
+	visible: true, // boolean
+	fieldGroupIds: [], // string[], since 1.31
+	width: undefined, // sap.ui.core.CSSSize
+	active: false, // boolean
+	enabled: true, // boolean
+	height: "", // sap.ui.core.CSSSize
+	design: sap.m.ToolbarDesign.Auto, // sap.m.ToolbarDesign, since 1.16.8
+	tooltip: undefined, // sap.ui.core.TooltipBase
+	customData: [], // sap.ui.core.CustomData
+	dependents: [], // sap.ui.core.Element, since 1.19
+	content: [], // sap.ui.core.Control
+	ariaLabelledBy: [], // sap.ui.core.Control
+	validateFieldGroup: [function (oEvent) {
+		var ${control} = oEvent.getSource();
+	}, this],
+	press: [function (oEvent) {
+		var ${control} = oEvent.getSource();
+	}, this]
+})
+]]></jsTemplate>
+	<xmlTemplate><![CDATA[<ToolHeader xmlns="sap.tnt"
+	id="${id}"
+	busy="false"
+	busyIndicatorDelay="1000"
+	visible="true"
+	fieldGroupIds=""
+	width=""
+	active="false"
+	enabled="true"
+	height=""
+	design="Auto"
+	ariaLabelledBy=""
+	validateFieldGroup=""
+	press="">
+		<tooltip></tooltip> <!-- sap.ui.core.TooltipBase -->
+		<dependents></dependents> <!-- sap.ui.core.Element, since 1.19 -->
+		<content></content> <!-- sap.ui.core.Control -->
+</ToolHeader>
+]]></xmlTemplate>
+</Template>
+<Template name="sap.tnt.ToolHeaderUtilitySeparator" alias="ToolHeaderUtilitySeparator,Separator">
+	<jsTemplate><![CDATA[new sap.tnt.ToolHeaderUtilitySeparator({
+	id: "${id}", // sap.ui.core.ID
+	busy: false, // boolean
+	busyIndicatorDelay: 1000, // int
+	visible: true, // boolean
+	fieldGroupIds: [], // string[], since 1.31
+	tooltip: undefined, // sap.ui.core.TooltipBase
+	customData: [], // sap.ui.core.CustomData
+	dependents: [], // sap.ui.core.Element, since 1.19
+	validateFieldGroup: [function (oEvent) {
+		var ${control} = oEvent.getSource();
+	}, this]
+})
+]]></jsTemplate>
+	<xmlTemplate><![CDATA[<ToolHeaderUtilitySeparator xmlns="sap.tnt"
+	id="${id}"
+	busy="false"
+	busyIndicatorDelay="1000"
+	visible="true"
+	fieldGroupIds=""
+	validateFieldGroup="">
+		<tooltip></tooltip> <!-- sap.ui.core.TooltipBase -->
+		<dependents></dependents> <!-- sap.ui.core.Element, since 1.19 -->
+</ToolHeaderUtilitySeparator>
+]]></xmlTemplate>
+</Template>
+<Template name="sap.tnt.ToolPage" alias="ToolPage,Page">
+	<jsTemplate><![CDATA[new sap.tnt.ToolPage({
+	id: "${id}", // sap.ui.core.ID
+	busy: false, // boolean
+	busyIndicatorDelay: 1000, // int
+	visible: true, // boolean
+	fieldGroupIds: [], // string[], since 1.31
+	sideExpanded: true, // boolean
+	tooltip: undefined, // sap.ui.core.TooltipBase
+	customData: [], // sap.ui.core.CustomData
+	dependents: [], // sap.ui.core.Element, since 1.19
+	header: undefined, // sap.tnt.ToolHeader
+	sideContent: undefined, // sap.tnt.SideNavigation
+	mainContents: [], // sap.ui.core.Control
+	validateFieldGroup: [function (oEvent) {
+		var ${control} = oEvent.getSource();
+	}, this]
+})
+]]></jsTemplate>
+	<xmlTemplate><![CDATA[<ToolPage xmlns="sap.tnt"
+	id="${id}"
+	busy="false"
+	busyIndicatorDelay="1000"
+	visible="true"
+	fieldGroupIds=""
+	sideExpanded="true"
+	validateFieldGroup="">
+		<tooltip></tooltip> <!-- sap.ui.core.TooltipBase -->
+		<dependents></dependents> <!-- sap.ui.core.Element, since 1.19 -->
+		<header></header> <!-- sap.tnt.ToolHeader -->
+		<sideContent></sideContent> <!-- sap.tnt.SideNavigation -->
+		<mainContents></mainContents> <!-- sap.ui.core.Control -->
+</ToolPage>
+]]></xmlTemplate>
+</Template>
+</Library>

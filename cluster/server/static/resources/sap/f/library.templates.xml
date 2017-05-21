@@ -1,0 +1,845 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<Library name="sap.f" xmlns="http://www.sap.com/ui5/ide/templates/xmlview">
+<Template name="sap.f.Avatar" alias="Avatar">
+	<jsTemplate><![CDATA[new sap.f.Avatar({
+	id: "${id}", // sap.ui.core.ID
+	busy: false, // boolean
+	busyIndicatorDelay: 1000, // int
+	visible: true, // boolean
+	fieldGroupIds: [], // string[], since 1.31
+	src: undefined, // sap.ui.core.URI
+	initials: undefined, // string
+	displayShape: sap.f.AvatarShape.Circle, // sap.f.AvatarShape
+	displaySize: sap.f.AvatarSize.S, // sap.f.AvatarSize
+	customDisplaySize: "3rem", // sap.ui.core.CSSSize
+	customFontSize: "1.125rem", // sap.ui.core.CSSSize
+	imageFitType: sap.f.AvatarImageFitType.Cover, // sap.f.AvatarImageFitType
+	tooltip: undefined, // sap.ui.core.TooltipBase
+	customData: [], // sap.ui.core.CustomData
+	dependents: [], // sap.ui.core.Element, since 1.19
+	validateFieldGroup: [function (oEvent) {
+		var ${control} = oEvent.getSource();
+	}, this],
+	press: [function (oEvent) {
+		var ${control} = oEvent.getSource();
+	}, this]
+})
+]]></jsTemplate>
+	<xmlTemplate><![CDATA[<Avatar xmlns="sap.f"
+	id="${id}"
+	busy="false"
+	busyIndicatorDelay="1000"
+	visible="true"
+	fieldGroupIds=""
+	src=""
+	initials=""
+	displayShape="Circle"
+	displaySize="S"
+	customDisplaySize="3rem"
+	customFontSize="1.125rem"
+	imageFitType="Cover"
+	validateFieldGroup=""
+	press="">
+		<tooltip></tooltip> <!-- sap.ui.core.TooltipBase -->
+		<dependents></dependents> <!-- sap.ui.core.Element, since 1.19 -->
+</Avatar>
+]]></xmlTemplate>
+</Template>
+<Template name="sap.f.DynamicPage" alias="DynamicPage,Page">
+	<jsTemplate><![CDATA[new sap.f.DynamicPage({
+	id: "${id}", // sap.ui.core.ID
+	busy: false, // boolean
+	busyIndicatorDelay: 1000, // int
+	visible: true, // boolean
+	fieldGroupIds: [], // string[], since 1.31
+	preserveHeaderStateOnScroll: false, // boolean
+	headerExpanded: true, // boolean
+	toggleHeaderOnTitleClick: true, // boolean
+	showFooter: false, // boolean
+	fitContent: false, // boolean
+	tooltip: undefined, // sap.ui.core.TooltipBase
+	customData: [], // sap.ui.core.CustomData
+	dependents: [], // sap.ui.core.Element, since 1.19
+	title: undefined, // sap.f.DynamicPageTitle
+	header: undefined, // sap.f.DynamicPageHeader
+	content: undefined, // sap.ui.core.Control
+	footer: undefined, // sap.m.IBar
+	validateFieldGroup: [function (oEvent) {
+		var ${control} = oEvent.getSource();
+	}, this]
+})
+]]></jsTemplate>
+	<xmlTemplate><![CDATA[<DynamicPage xmlns="sap.f"
+	id="${id}"
+	busy="false"
+	busyIndicatorDelay="1000"
+	visible="true"
+	fieldGroupIds=""
+	preserveHeaderStateOnScroll="false"
+	headerExpanded="true"
+	toggleHeaderOnTitleClick="true"
+	showFooter="false"
+	fitContent="false"
+	validateFieldGroup="">
+		<tooltip></tooltip> <!-- sap.ui.core.TooltipBase -->
+		<dependents></dependents> <!-- sap.ui.core.Element, since 1.19 -->
+		<title></title> <!-- sap.f.DynamicPageTitle -->
+		<header></header> <!-- sap.f.DynamicPageHeader -->
+		<content></content> <!-- sap.ui.core.Control -->
+		<footer></footer> <!-- sap.m.IBar -->
+</DynamicPage>
+]]></xmlTemplate>
+</Template>
+<Template name="sap.f.DynamicPageHeader" alias="DynamicPageHeader,Header">
+	<jsTemplate><![CDATA[new sap.f.DynamicPageHeader({
+	id: "${id}", // sap.ui.core.ID
+	busy: false, // boolean
+	busyIndicatorDelay: 1000, // int
+	visible: true, // boolean
+	fieldGroupIds: [], // string[], since 1.31
+	pinnable: true, // boolean
+	tooltip: undefined, // sap.ui.core.TooltipBase
+	customData: [], // sap.ui.core.CustomData
+	dependents: [], // sap.ui.core.Element, since 1.19
+	content: [], // sap.ui.core.Control
+	validateFieldGroup: [function (oEvent) {
+		var ${control} = oEvent.getSource();
+	}, this]
+})
+]]></jsTemplate>
+	<xmlTemplate><![CDATA[<DynamicPageHeader xmlns="sap.f"
+	id="${id}"
+	busy="false"
+	busyIndicatorDelay="1000"
+	visible="true"
+	fieldGroupIds=""
+	pinnable="true"
+	validateFieldGroup="">
+		<tooltip></tooltip> <!-- sap.ui.core.TooltipBase -->
+		<dependents></dependents> <!-- sap.ui.core.Element, since 1.19 -->
+		<content></content> <!-- sap.ui.core.Control -->
+</DynamicPageHeader>
+]]></xmlTemplate>
+</Template>
+<Template name="sap.f.DynamicPageTitle" alias="DynamicPageTitle,Title">
+	<jsTemplate><![CDATA[new sap.f.DynamicPageTitle({
+	id: "${id}", // sap.ui.core.ID
+	busy: false, // boolean
+	busyIndicatorDelay: 1000, // int
+	visible: true, // boolean
+	fieldGroupIds: [], // string[], since 1.31
+	tooltip: undefined, // sap.ui.core.TooltipBase
+	customData: [], // sap.ui.core.CustomData
+	dependents: [], // sap.ui.core.Element, since 1.19
+	heading: undefined, // sap.ui.core.Control
+	actions: [], // sap.ui.core.Control
+	snappedContent: [], // sap.ui.core.Control
+	expandedContent: [], // sap.ui.core.Control
+	validateFieldGroup: [function (oEvent) {
+		var ${control} = oEvent.getSource();
+	}, this]
+})
+]]></jsTemplate>
+	<xmlTemplate><![CDATA[<DynamicPageTitle xmlns="sap.f"
+	id="${id}"
+	busy="false"
+	busyIndicatorDelay="1000"
+	visible="true"
+	fieldGroupIds=""
+	validateFieldGroup="">
+		<tooltip></tooltip> <!-- sap.ui.core.TooltipBase -->
+		<dependents></dependents> <!-- sap.ui.core.Element, since 1.19 -->
+		<heading></heading> <!-- sap.ui.core.Control -->
+		<actions></actions> <!-- sap.ui.core.Control -->
+		<snappedContent></snappedContent> <!-- sap.ui.core.Control -->
+		<expandedContent></expandedContent> <!-- sap.ui.core.Control -->
+</DynamicPageTitle>
+]]></xmlTemplate>
+</Template>
+<Template name="sap.f.FlexibleColumnLayout" alias="FlexibleColumnLayout,Layout">
+	<jsTemplate><![CDATA[new sap.f.FlexibleColumnLayout({
+	id: "${id}", // sap.ui.core.ID
+	busy: false, // boolean
+	busyIndicatorDelay: 1000, // int
+	visible: true, // boolean
+	fieldGroupIds: [], // string[], since 1.31
+	layout: sap.f.LayoutType.OneColumn, // sap.f.LayoutType
+	defaultTransitionNameBeginColumn: "slide", // string
+	defaultTransitionNameMidColumn: "slide", // string
+	defaultTransitionNameEndColumn: "slide", // string
+	tooltip: undefined, // sap.ui.core.TooltipBase
+	customData: [], // sap.ui.core.CustomData
+	dependents: [], // sap.ui.core.Element, since 1.19
+	beginColumnPages: [], // sap.ui.core.Control
+	midColumnPages: [], // sap.ui.core.Control
+	endColumnPages: [], // sap.ui.core.Control
+	initialBeginColumnPage: undefined, // sap.ui.core.Control
+	initialMidColumnPage: undefined, // sap.ui.core.Control
+	initialEndColumnPage: undefined, // sap.ui.core.Control
+	validateFieldGroup: [function (oEvent) {
+		var ${control} = oEvent.getSource();
+	}, this],
+	stateChange: [function (oEvent) {
+		var ${control} = oEvent.getSource();
+	}, this],
+	beginColumnNavigate: [function (oEvent) {
+		var ${control} = oEvent.getSource();
+	}, this],
+	afterBeginColumnNavigate: [function (oEvent) {
+		var ${control} = oEvent.getSource();
+	}, this],
+	midColumnNavigate: [function (oEvent) {
+		var ${control} = oEvent.getSource();
+	}, this],
+	afterMidColumnNavigate: [function (oEvent) {
+		var ${control} = oEvent.getSource();
+	}, this],
+	endColumnNavigate: [function (oEvent) {
+		var ${control} = oEvent.getSource();
+	}, this],
+	afterEndColumnNavigate: [function (oEvent) {
+		var ${control} = oEvent.getSource();
+	}, this]
+})
+]]></jsTemplate>
+	<xmlTemplate><![CDATA[<FlexibleColumnLayout xmlns="sap.f"
+	id="${id}"
+	busy="false"
+	busyIndicatorDelay="1000"
+	visible="true"
+	fieldGroupIds=""
+	layout="OneColumn"
+	defaultTransitionNameBeginColumn="slide"
+	defaultTransitionNameMidColumn="slide"
+	defaultTransitionNameEndColumn="slide"
+	initialBeginColumnPage=""
+	initialMidColumnPage=""
+	initialEndColumnPage=""
+	validateFieldGroup=""
+	stateChange=""
+	beginColumnNavigate=""
+	afterBeginColumnNavigate=""
+	midColumnNavigate=""
+	afterMidColumnNavigate=""
+	endColumnNavigate=""
+	afterEndColumnNavigate="">
+		<tooltip></tooltip> <!-- sap.ui.core.TooltipBase -->
+		<dependents></dependents> <!-- sap.ui.core.Element, since 1.19 -->
+		<beginColumnPages></beginColumnPages> <!-- sap.ui.core.Control -->
+		<midColumnPages></midColumnPages> <!-- sap.ui.core.Control -->
+		<endColumnPages></endColumnPages> <!-- sap.ui.core.Control -->
+</FlexibleColumnLayout>
+]]></xmlTemplate>
+</Template>
+<Template name="sap.f.semantic.AddAction" alias="AddAction,Action">
+	<jsTemplate><![CDATA[new sap.f.semantic.AddAction({
+	id: "${id}", // sap.ui.core.ID
+	visible: true, // boolean
+	enabled: true, // boolean
+	tooltip: undefined, // sap.ui.core.TooltipBase
+	customData: [], // sap.ui.core.CustomData
+	dependents: [], // sap.ui.core.Element, since 1.19
+	press: [function (oEvent) {
+		var ${control} = oEvent.getSource();
+	}, this]
+})
+]]></jsTemplate>
+	<xmlTemplate><![CDATA[<semantic/AddAction xmlns="sap.f"
+	id="${id}"
+	visible="true"
+	enabled="true"
+	press="">
+		<tooltip></tooltip> <!-- sap.ui.core.TooltipBase -->
+		<dependents></dependents> <!-- sap.ui.core.Element, since 1.19 -->
+</semantic/AddAction>
+]]></xmlTemplate>
+</Template>
+<Template name="sap.f.semantic.CloseAction" alias="CloseAction,Action">
+	<jsTemplate><![CDATA[new sap.f.semantic.CloseAction({
+	id: "${id}", // sap.ui.core.ID
+	visible: true, // boolean
+	enabled: true, // boolean
+	tooltip: undefined, // sap.ui.core.TooltipBase
+	customData: [], // sap.ui.core.CustomData
+	dependents: [], // sap.ui.core.Element, since 1.19
+	press: [function (oEvent) {
+		var ${control} = oEvent.getSource();
+	}, this]
+})
+]]></jsTemplate>
+	<xmlTemplate><![CDATA[<semantic/CloseAction xmlns="sap.f"
+	id="${id}"
+	visible="true"
+	enabled="true"
+	press="">
+		<tooltip></tooltip> <!-- sap.ui.core.TooltipBase -->
+		<dependents></dependents> <!-- sap.ui.core.Element, since 1.19 -->
+</semantic/CloseAction>
+]]></xmlTemplate>
+</Template>
+<Template name="sap.f.semantic.CopyAction" alias="CopyAction,Action">
+	<jsTemplate><![CDATA[new sap.f.semantic.CopyAction({
+	id: "${id}", // sap.ui.core.ID
+	visible: true, // boolean
+	enabled: true, // boolean
+	tooltip: undefined, // sap.ui.core.TooltipBase
+	customData: [], // sap.ui.core.CustomData
+	dependents: [], // sap.ui.core.Element, since 1.19
+	press: [function (oEvent) {
+		var ${control} = oEvent.getSource();
+	}, this]
+})
+]]></jsTemplate>
+	<xmlTemplate><![CDATA[<semantic/CopyAction xmlns="sap.f"
+	id="${id}"
+	visible="true"
+	enabled="true"
+	press="">
+		<tooltip></tooltip> <!-- sap.ui.core.TooltipBase -->
+		<dependents></dependents> <!-- sap.ui.core.Element, since 1.19 -->
+</semantic/CopyAction>
+]]></xmlTemplate>
+</Template>
+<Template name="sap.f.semantic.DeleteAction" alias="DeleteAction,Action">
+	<jsTemplate><![CDATA[new sap.f.semantic.DeleteAction({
+	id: "${id}", // sap.ui.core.ID
+	visible: true, // boolean
+	enabled: true, // boolean
+	tooltip: undefined, // sap.ui.core.TooltipBase
+	customData: [], // sap.ui.core.CustomData
+	dependents: [], // sap.ui.core.Element, since 1.19
+	press: [function (oEvent) {
+		var ${control} = oEvent.getSource();
+	}, this]
+})
+]]></jsTemplate>
+	<xmlTemplate><![CDATA[<semantic/DeleteAction xmlns="sap.f"
+	id="${id}"
+	visible="true"
+	enabled="true"
+	press="">
+		<tooltip></tooltip> <!-- sap.ui.core.TooltipBase -->
+		<dependents></dependents> <!-- sap.ui.core.Element, since 1.19 -->
+</semantic/DeleteAction>
+]]></xmlTemplate>
+</Template>
+<Template name="sap.f.semantic.DiscussInJamAction" alias="DiscussInJamAction,Action">
+	<jsTemplate><![CDATA[new sap.f.semantic.DiscussInJamAction({
+	id: "${id}", // sap.ui.core.ID
+	visible: true, // boolean
+	enabled: true, // boolean
+	tooltip: undefined, // sap.ui.core.TooltipBase
+	customData: [], // sap.ui.core.CustomData
+	dependents: [], // sap.ui.core.Element, since 1.19
+	press: [function (oEvent) {
+		var ${control} = oEvent.getSource();
+	}, this]
+})
+]]></jsTemplate>
+	<xmlTemplate><![CDATA[<semantic/DiscussInJamAction xmlns="sap.f"
+	id="${id}"
+	visible="true"
+	enabled="true"
+	press="">
+		<tooltip></tooltip> <!-- sap.ui.core.TooltipBase -->
+		<dependents></dependents> <!-- sap.ui.core.Element, since 1.19 -->
+</semantic/DiscussInJamAction>
+]]></xmlTemplate>
+</Template>
+<Template name="sap.f.semantic.ExitFullScreenAction" alias="ExitFullScreenAction,Action">
+	<jsTemplate><![CDATA[new sap.f.semantic.ExitFullScreenAction({
+	id: "${id}", // sap.ui.core.ID
+	visible: true, // boolean
+	enabled: true, // boolean
+	tooltip: undefined, // sap.ui.core.TooltipBase
+	customData: [], // sap.ui.core.CustomData
+	dependents: [], // sap.ui.core.Element, since 1.19
+	press: [function (oEvent) {
+		var ${control} = oEvent.getSource();
+	}, this]
+})
+]]></jsTemplate>
+	<xmlTemplate><![CDATA[<semantic/ExitFullScreenAction xmlns="sap.f"
+	id="${id}"
+	visible="true"
+	enabled="true"
+	press="">
+		<tooltip></tooltip> <!-- sap.ui.core.TooltipBase -->
+		<dependents></dependents> <!-- sap.ui.core.Element, since 1.19 -->
+</semantic/ExitFullScreenAction>
+]]></xmlTemplate>
+</Template>
+<Template name="sap.f.semantic.FavoriteAction" alias="FavoriteAction,Action">
+	<jsTemplate><![CDATA[new sap.f.semantic.FavoriteAction({
+	id: "${id}", // sap.ui.core.ID
+	visible: true, // boolean
+	enabled: true, // boolean
+	pressed: false, // boolean
+	tooltip: undefined, // sap.ui.core.TooltipBase
+	customData: [], // sap.ui.core.CustomData
+	dependents: [], // sap.ui.core.Element, since 1.19
+	press: [function (oEvent) {
+		var ${control} = oEvent.getSource();
+	}, this]
+})
+]]></jsTemplate>
+	<xmlTemplate><![CDATA[<semantic/FavoriteAction xmlns="sap.f"
+	id="${id}"
+	visible="true"
+	enabled="true"
+	pressed="false"
+	press="">
+		<tooltip></tooltip> <!-- sap.ui.core.TooltipBase -->
+		<dependents></dependents> <!-- sap.ui.core.Element, since 1.19 -->
+</semantic/FavoriteAction>
+]]></xmlTemplate>
+</Template>
+<Template name="sap.f.semantic.FlagAction" alias="FlagAction,Action">
+	<jsTemplate><![CDATA[new sap.f.semantic.FlagAction({
+	id: "${id}", // sap.ui.core.ID
+	visible: true, // boolean
+	enabled: true, // boolean
+	pressed: false, // boolean
+	tooltip: undefined, // sap.ui.core.TooltipBase
+	customData: [], // sap.ui.core.CustomData
+	dependents: [], // sap.ui.core.Element, since 1.19
+	press: [function (oEvent) {
+		var ${control} = oEvent.getSource();
+	}, this]
+})
+]]></jsTemplate>
+	<xmlTemplate><![CDATA[<semantic/FlagAction xmlns="sap.f"
+	id="${id}"
+	visible="true"
+	enabled="true"
+	pressed="false"
+	press="">
+		<tooltip></tooltip> <!-- sap.ui.core.TooltipBase -->
+		<dependents></dependents> <!-- sap.ui.core.Element, since 1.19 -->
+</semantic/FlagAction>
+]]></xmlTemplate>
+</Template>
+<Template name="sap.f.semantic.FooterMainAction" alias="FooterMainAction,Action">
+	<jsTemplate><![CDATA[new sap.f.semantic.FooterMainAction({
+	id: "${id}", // sap.ui.core.ID
+	visible: true, // boolean
+	enabled: true, // boolean
+	text: undefined, // string
+	tooltip: undefined, // sap.ui.core.TooltipBase
+	customData: [], // sap.ui.core.CustomData
+	dependents: [], // sap.ui.core.Element, since 1.19
+	press: [function (oEvent) {
+		var ${control} = oEvent.getSource();
+	}, this]
+})
+]]></jsTemplate>
+	<xmlTemplate><![CDATA[<semantic/FooterMainAction xmlns="sap.f"
+	id="${id}"
+	visible="true"
+	enabled="true"
+	text=""
+	press="">
+		<tooltip></tooltip> <!-- sap.ui.core.TooltipBase -->
+		<dependents></dependents> <!-- sap.ui.core.Element, since 1.19 -->
+</semantic/FooterMainAction>
+]]></xmlTemplate>
+</Template>
+<Template name="sap.f.semantic.FullScreenAction" alias="FullScreenAction,Action">
+	<jsTemplate><![CDATA[new sap.f.semantic.FullScreenAction({
+	id: "${id}", // sap.ui.core.ID
+	visible: true, // boolean
+	enabled: true, // boolean
+	tooltip: undefined, // sap.ui.core.TooltipBase
+	customData: [], // sap.ui.core.CustomData
+	dependents: [], // sap.ui.core.Element, since 1.19
+	press: [function (oEvent) {
+		var ${control} = oEvent.getSource();
+	}, this]
+})
+]]></jsTemplate>
+	<xmlTemplate><![CDATA[<semantic/FullScreenAction xmlns="sap.f"
+	id="${id}"
+	visible="true"
+	enabled="true"
+	press="">
+		<tooltip></tooltip> <!-- sap.ui.core.TooltipBase -->
+		<dependents></dependents> <!-- sap.ui.core.Element, since 1.19 -->
+</semantic/FullScreenAction>
+]]></xmlTemplate>
+</Template>
+<Template name="sap.f.semantic.MainAction" alias="MainAction,Action">
+	<jsTemplate><![CDATA[new sap.f.semantic.MainAction({
+	id: "${id}", // sap.ui.core.ID
+	visible: true, // boolean
+	enabled: true, // boolean
+	text: undefined, // string
+	tooltip: undefined, // sap.ui.core.TooltipBase
+	customData: [], // sap.ui.core.CustomData
+	dependents: [], // sap.ui.core.Element, since 1.19
+	press: [function (oEvent) {
+		var ${control} = oEvent.getSource();
+	}, this]
+})
+]]></jsTemplate>
+	<xmlTemplate><![CDATA[<semantic/MainAction xmlns="sap.f"
+	id="${id}"
+	visible="true"
+	enabled="true"
+	text=""
+	press="">
+		<tooltip></tooltip> <!-- sap.ui.core.TooltipBase -->
+		<dependents></dependents> <!-- sap.ui.core.Element, since 1.19 -->
+</semantic/MainAction>
+]]></xmlTemplate>
+</Template>
+<Template name="sap.f.semantic.MessagesIndicator" alias="MessagesIndicator,Indicator">
+	<jsTemplate><![CDATA[new sap.f.semantic.MessagesIndicator({
+	id: "${id}", // sap.ui.core.ID
+	visible: true, // boolean
+	enabled: true, // boolean
+	tooltip: undefined, // sap.ui.core.TooltipBase
+	customData: [], // sap.ui.core.CustomData
+	dependents: [], // sap.ui.core.Element, since 1.19
+	press: [function (oEvent) {
+		var ${control} = oEvent.getSource();
+	}, this]
+})
+]]></jsTemplate>
+	<xmlTemplate><![CDATA[<semantic/MessagesIndicator xmlns="sap.f"
+	id="${id}"
+	visible="true"
+	enabled="true"
+	press="">
+		<tooltip></tooltip> <!-- sap.ui.core.TooltipBase -->
+		<dependents></dependents> <!-- sap.ui.core.Element, since 1.19 -->
+</semantic/MessagesIndicator>
+]]></xmlTemplate>
+</Template>
+<Template name="sap.f.semantic.NegativeAction" alias="NegativeAction,Action">
+	<jsTemplate><![CDATA[new sap.f.semantic.NegativeAction({
+	id: "${id}", // sap.ui.core.ID
+	visible: true, // boolean
+	enabled: true, // boolean
+	text: undefined, // string
+	tooltip: undefined, // sap.ui.core.TooltipBase
+	customData: [], // sap.ui.core.CustomData
+	dependents: [], // sap.ui.core.Element, since 1.19
+	press: [function (oEvent) {
+		var ${control} = oEvent.getSource();
+	}, this]
+})
+]]></jsTemplate>
+	<xmlTemplate><![CDATA[<semantic/NegativeAction xmlns="sap.f"
+	id="${id}"
+	visible="true"
+	enabled="true"
+	text=""
+	press="">
+		<tooltip></tooltip> <!-- sap.ui.core.TooltipBase -->
+		<dependents></dependents> <!-- sap.ui.core.Element, since 1.19 -->
+</semantic/NegativeAction>
+]]></xmlTemplate>
+</Template>
+<Template name="sap.f.semantic.PositiveAction" alias="PositiveAction,Action">
+	<jsTemplate><![CDATA[new sap.f.semantic.PositiveAction({
+	id: "${id}", // sap.ui.core.ID
+	visible: true, // boolean
+	enabled: true, // boolean
+	text: undefined, // string
+	tooltip: undefined, // sap.ui.core.TooltipBase
+	customData: [], // sap.ui.core.CustomData
+	dependents: [], // sap.ui.core.Element, since 1.19
+	press: [function (oEvent) {
+		var ${control} = oEvent.getSource();
+	}, this]
+})
+]]></jsTemplate>
+	<xmlTemplate><![CDATA[<semantic/PositiveAction xmlns="sap.f"
+	id="${id}"
+	visible="true"
+	enabled="true"
+	text=""
+	press="">
+		<tooltip></tooltip> <!-- sap.ui.core.TooltipBase -->
+		<dependents></dependents> <!-- sap.ui.core.Element, since 1.19 -->
+</semantic/PositiveAction>
+]]></xmlTemplate>
+</Template>
+<Template name="sap.f.semantic.PrintAction" alias="PrintAction,Action">
+	<jsTemplate><![CDATA[new sap.f.semantic.PrintAction({
+	id: "${id}", // sap.ui.core.ID
+	visible: true, // boolean
+	enabled: true, // boolean
+	tooltip: undefined, // sap.ui.core.TooltipBase
+	customData: [], // sap.ui.core.CustomData
+	dependents: [], // sap.ui.core.Element, since 1.19
+	press: [function (oEvent) {
+		var ${control} = oEvent.getSource();
+	}, this]
+})
+]]></jsTemplate>
+	<xmlTemplate><![CDATA[<semantic/PrintAction xmlns="sap.f"
+	id="${id}"
+	visible="true"
+	enabled="true"
+	press="">
+		<tooltip></tooltip> <!-- sap.ui.core.TooltipBase -->
+		<dependents></dependents> <!-- sap.ui.core.Element, since 1.19 -->
+</semantic/PrintAction>
+]]></xmlTemplate>
+</Template>
+<Template name="sap.f.semantic.SemanticButton" alias="SemanticButton,Button">
+	<jsTemplate><![CDATA[new sap.f.semantic.SemanticButton({
+	id: "${id}", // sap.ui.core.ID
+	visible: true, // boolean
+	enabled: true, // boolean
+	tooltip: undefined, // sap.ui.core.TooltipBase
+	customData: [], // sap.ui.core.CustomData
+	dependents: [], // sap.ui.core.Element, since 1.19
+	press: [function (oEvent) {
+		var ${control} = oEvent.getSource();
+	}, this]
+})
+]]></jsTemplate>
+	<xmlTemplate><![CDATA[<semantic/SemanticButton xmlns="sap.f"
+	id="${id}"
+	visible="true"
+	enabled="true"
+	press="">
+		<tooltip></tooltip> <!-- sap.ui.core.TooltipBase -->
+		<dependents></dependents> <!-- sap.ui.core.Element, since 1.19 -->
+</semantic/SemanticButton>
+]]></xmlTemplate>
+</Template>
+<Template name="sap.f.semantic.SemanticControl" alias="SemanticControl,Control">
+	<jsTemplate><![CDATA[new sap.f.semantic.SemanticControl({
+	id: "${id}", // sap.ui.core.ID
+	visible: true, // boolean
+	tooltip: undefined, // sap.ui.core.TooltipBase
+	customData: [], // sap.ui.core.CustomData
+	dependents: [] // sap.ui.core.Element, since 1.19
+})
+]]></jsTemplate>
+	<xmlTemplate><![CDATA[<semantic/SemanticControl xmlns="sap.f"
+	id="${id}"
+	visible="true">
+		<tooltip></tooltip> <!-- sap.ui.core.TooltipBase -->
+		<dependents></dependents> <!-- sap.ui.core.Element, since 1.19 -->
+</semantic/SemanticControl>
+]]></xmlTemplate>
+</Template>
+<Template name="sap.f.semantic.SemanticPage" alias="SemanticPage,Page">
+	<jsTemplate><![CDATA[new sap.f.semantic.SemanticPage({
+	id: "${id}", // sap.ui.core.ID
+	busy: false, // boolean
+	busyIndicatorDelay: 1000, // int
+	visible: true, // boolean
+	fieldGroupIds: [], // string[], since 1.31
+	headerExpanded: true, // boolean
+	headerPinnable: true, // boolean
+	preserveHeaderStateOnScroll: false, // boolean
+	toggleHeaderOnTitleClick: true, // boolean
+	showFooter: false, // boolean
+	tooltip: undefined, // sap.ui.core.TooltipBase
+	customData: [], // sap.ui.core.CustomData
+	dependents: [], // sap.ui.core.Element, since 1.19
+	titleHeading: undefined, // sap.ui.core.Control
+	titleSnappedContent: [], // sap.ui.core.Control
+	titleExpandedContent: [], // sap.ui.core.Control
+	titleMainAction: undefined, // sap.f.semantic.TitleMainAction
+	addAction: undefined, // sap.f.semantic.AddAction
+	deleteAction: undefined, // sap.f.semantic.DeleteAction
+	copyAction: undefined, // sap.f.semantic.CopyAction
+	flagAction: undefined, // sap.f.semantic.FlagAction
+	favoriteAction: undefined, // sap.f.semantic.FavoriteAction
+	fullScreenAction: undefined, // sap.f.semantic.FullScreenAction
+	exitFullScreenAction: undefined, // sap.f.semantic.ExitFullScreenAction
+	closeAction: undefined, // sap.f.semantic.CloseAction
+	titleCustomTextActions: [], // sap.m.Button
+	titleCustomIconActions: [], // sap.m.OverflowToolbarButton
+	headerContent: [], // sap.ui.core.Control
+	content: undefined, // sap.ui.core.Control
+	footerMainAction: undefined, // sap.f.semantic.FooterMainAction
+	messagesIndicator: undefined, // sap.f.semantic.MessagesIndicator
+	draftIndicator: undefined, // sap.m.DraftIndicator
+	positiveAction: undefined, // sap.f.semantic.PositiveAction
+	negativeAction: undefined, // sap.f.semantic.NegativeAction
+	footerCustomActions: [], // sap.m.Button
+	discussInJamAction: undefined, // sap.f.semantic.DiscussInJamAction
+	saveAsTileAction: undefined, // sap.m.Button
+	shareInJamAction: undefined, // sap.f.semantic.ShareInJamAction
+	sendMessageAction: undefined, // sap.f.semantic.SendMessageAction
+	sendEmailAction: undefined, // sap.f.semantic.SendEmailAction
+	printAction: undefined, // sap.f.semantic.PrintAction
+	customShareActions: [], // sap.m.Button
+	validateFieldGroup: [function (oEvent) {
+		var ${control} = oEvent.getSource();
+	}, this]
+})
+]]></jsTemplate>
+	<xmlTemplate><![CDATA[<semantic/SemanticPage xmlns="sap.f"
+	id="${id}"
+	busy="false"
+	busyIndicatorDelay="1000"
+	visible="true"
+	fieldGroupIds=""
+	headerExpanded="true"
+	headerPinnable="true"
+	preserveHeaderStateOnScroll="false"
+	toggleHeaderOnTitleClick="true"
+	showFooter="false"
+	validateFieldGroup="">
+		<tooltip></tooltip> <!-- sap.ui.core.TooltipBase -->
+		<dependents></dependents> <!-- sap.ui.core.Element, since 1.19 -->
+		<titleHeading></titleHeading> <!-- sap.ui.core.Control -->
+		<titleSnappedContent></titleSnappedContent> <!-- sap.ui.core.Control -->
+		<titleExpandedContent></titleExpandedContent> <!-- sap.ui.core.Control -->
+		<titleMainAction></titleMainAction> <!-- sap.f.semantic.TitleMainAction -->
+		<addAction></addAction> <!-- sap.f.semantic.AddAction -->
+		<deleteAction></deleteAction> <!-- sap.f.semantic.DeleteAction -->
+		<copyAction></copyAction> <!-- sap.f.semantic.CopyAction -->
+		<flagAction></flagAction> <!-- sap.f.semantic.FlagAction -->
+		<favoriteAction></favoriteAction> <!-- sap.f.semantic.FavoriteAction -->
+		<fullScreenAction></fullScreenAction> <!-- sap.f.semantic.FullScreenAction -->
+		<exitFullScreenAction></exitFullScreenAction> <!-- sap.f.semantic.ExitFullScreenAction -->
+		<closeAction></closeAction> <!-- sap.f.semantic.CloseAction -->
+		<titleCustomTextActions></titleCustomTextActions> <!-- sap.m.Button -->
+		<titleCustomIconActions></titleCustomIconActions> <!-- sap.m.OverflowToolbarButton -->
+		<headerContent></headerContent> <!-- sap.ui.core.Control -->
+		<content></content> <!-- sap.ui.core.Control -->
+		<footerMainAction></footerMainAction> <!-- sap.f.semantic.FooterMainAction -->
+		<messagesIndicator></messagesIndicator> <!-- sap.f.semantic.MessagesIndicator -->
+		<draftIndicator></draftIndicator> <!-- sap.m.DraftIndicator -->
+		<positiveAction></positiveAction> <!-- sap.f.semantic.PositiveAction -->
+		<negativeAction></negativeAction> <!-- sap.f.semantic.NegativeAction -->
+		<footerCustomActions></footerCustomActions> <!-- sap.m.Button -->
+		<discussInJamAction></discussInJamAction> <!-- sap.f.semantic.DiscussInJamAction -->
+		<saveAsTileAction></saveAsTileAction> <!-- sap.m.Button -->
+		<shareInJamAction></shareInJamAction> <!-- sap.f.semantic.ShareInJamAction -->
+		<sendMessageAction></sendMessageAction> <!-- sap.f.semantic.SendMessageAction -->
+		<sendEmailAction></sendEmailAction> <!-- sap.f.semantic.SendEmailAction -->
+		<printAction></printAction> <!-- sap.f.semantic.PrintAction -->
+		<customShareActions></customShareActions> <!-- sap.m.Button -->
+</semantic/SemanticPage>
+]]></xmlTemplate>
+</Template>
+<Template name="sap.f.semantic.SemanticToggleButton" alias="SemanticToggleButton,Button">
+	<jsTemplate><![CDATA[new sap.f.semantic.SemanticToggleButton({
+	id: "${id}", // sap.ui.core.ID
+	visible: true, // boolean
+	enabled: true, // boolean
+	pressed: false, // boolean
+	tooltip: undefined, // sap.ui.core.TooltipBase
+	customData: [], // sap.ui.core.CustomData
+	dependents: [], // sap.ui.core.Element, since 1.19
+	press: [function (oEvent) {
+		var ${control} = oEvent.getSource();
+	}, this]
+})
+]]></jsTemplate>
+	<xmlTemplate><![CDATA[<semantic/SemanticToggleButton xmlns="sap.f"
+	id="${id}"
+	visible="true"
+	enabled="true"
+	pressed="false"
+	press="">
+		<tooltip></tooltip> <!-- sap.ui.core.TooltipBase -->
+		<dependents></dependents> <!-- sap.ui.core.Element, since 1.19 -->
+</semantic/SemanticToggleButton>
+]]></xmlTemplate>
+</Template>
+<Template name="sap.f.semantic.SendEmailAction" alias="SendEmailAction,Action">
+	<jsTemplate><![CDATA[new sap.f.semantic.SendEmailAction({
+	id: "${id}", // sap.ui.core.ID
+	visible: true, // boolean
+	enabled: true, // boolean
+	tooltip: undefined, // sap.ui.core.TooltipBase
+	customData: [], // sap.ui.core.CustomData
+	dependents: [], // sap.ui.core.Element, since 1.19
+	press: [function (oEvent) {
+		var ${control} = oEvent.getSource();
+	}, this]
+})
+]]></jsTemplate>
+	<xmlTemplate><![CDATA[<semantic/SendEmailAction xmlns="sap.f"
+	id="${id}"
+	visible="true"
+	enabled="true"
+	press="">
+		<tooltip></tooltip> <!-- sap.ui.core.TooltipBase -->
+		<dependents></dependents> <!-- sap.ui.core.Element, since 1.19 -->
+</semantic/SendEmailAction>
+]]></xmlTemplate>
+</Template>
+<Template name="sap.f.semantic.SendMessageAction" alias="SendMessageAction,Action">
+	<jsTemplate><![CDATA[new sap.f.semantic.SendMessageAction({
+	id: "${id}", // sap.ui.core.ID
+	visible: true, // boolean
+	enabled: true, // boolean
+	tooltip: undefined, // sap.ui.core.TooltipBase
+	customData: [], // sap.ui.core.CustomData
+	dependents: [], // sap.ui.core.Element, since 1.19
+	press: [function (oEvent) {
+		var ${control} = oEvent.getSource();
+	}, this]
+})
+]]></jsTemplate>
+	<xmlTemplate><![CDATA[<semantic/SendMessageAction xmlns="sap.f"
+	id="${id}"
+	visible="true"
+	enabled="true"
+	press="">
+		<tooltip></tooltip> <!-- sap.ui.core.TooltipBase -->
+		<dependents></dependents> <!-- sap.ui.core.Element, since 1.19 -->
+</semantic/SendMessageAction>
+]]></xmlTemplate>
+</Template>
+<Template name="sap.f.semantic.ShareInJamAction" alias="ShareInJamAction,Action">
+	<jsTemplate><![CDATA[new sap.f.semantic.ShareInJamAction({
+	id: "${id}", // sap.ui.core.ID
+	visible: true, // boolean
+	enabled: true, // boolean
+	tooltip: undefined, // sap.ui.core.TooltipBase
+	customData: [], // sap.ui.core.CustomData
+	dependents: [], // sap.ui.core.Element, since 1.19
+	press: [function (oEvent) {
+		var ${control} = oEvent.getSource();
+	}, this]
+})
+]]></jsTemplate>
+	<xmlTemplate><![CDATA[<semantic/ShareInJamAction xmlns="sap.f"
+	id="${id}"
+	visible="true"
+	enabled="true"
+	press="">
+		<tooltip></tooltip> <!-- sap.ui.core.TooltipBase -->
+		<dependents></dependents> <!-- sap.ui.core.Element, since 1.19 -->
+</semantic/ShareInJamAction>
+]]></xmlTemplate>
+</Template>
+<Template name="sap.f.semantic.TitleMainAction" alias="TitleMainAction,Action">
+	<jsTemplate><![CDATA[new sap.f.semantic.TitleMainAction({
+	id: "${id}", // sap.ui.core.ID
+	visible: true, // boolean
+	enabled: true, // boolean
+	text: undefined, // string
+	tooltip: undefined, // sap.ui.core.TooltipBase
+	customData: [], // sap.ui.core.CustomData
+	dependents: [], // sap.ui.core.Element, since 1.19
+	press: [function (oEvent) {
+		var ${control} = oEvent.getSource();
+	}, this]
+})
+]]></jsTemplate>
+	<xmlTemplate><![CDATA[<semantic/TitleMainAction xmlns="sap.f"
+	id="${id}"
+	visible="true"
+	enabled="true"
+	text=""
+	press="">
+		<tooltip></tooltip> <!-- sap.ui.core.TooltipBase -->
+		<dependents></dependents> <!-- sap.ui.core.Element, since 1.19 -->
+</semantic/TitleMainAction>
+]]></xmlTemplate>
+</Template>
+</Library>

@@ -1,0 +1,108 @@
+/* NOTE: This file was generated as an optimized version of "library.source.less" for the Theme Designer. */
+
+/*!
+ * UI development toolkit for HTML5 (OpenUI5)
+ * (c) Copyright 2009-2017 SAP SE or an SAP affiliate company.
+ * Licensed under the Apache License, Version 2.0 - see LICENSE.txt.
+ */
+
+@import "../base/library.less";
+@import "../../../../../sap/ui/core/themes/sap_hcb/global.less";
+
+/* START "Table.less" */
+/* =================================== */
+/* CSS for control sap.ui.table/Table  */
+/* High Contrast Black theme           */
+/* =================================== */
+
+@_sapUiTableFocusOutlineWidth: 2px;
+@_sapUiTableFocusOutlineOffset: -3px;
+
+.sapUiTableHdr {
+	border-bottom: 3px solid @sapUiListHeaderBorderColor;
+}
+
+.sapUiTableTbr,
+.sapUiTableExt {
+	border-bottom: 1px solid @sapUiListHeaderBorderColor;
+	padding: 0.125rem;
+	box-sizing: content-box;
+}
+
+.sapUiTableCnt {
+	border: 1px solid @sapUiListBorderColor;
+}
+
+.sapUiTableColHdrCnt {
+	border-bottom-width: 3px;
+}
+
+.sapUiTableCol:hover,
+.sapUiTableColRowHdr:hover {
+	background-color: @sapUiListHoverBackground;
+}
+
+.sapUiTableRowHdr::after,
+.sapUiTableColRowHdrIco::after {
+	color: @sapUiContentIconColor;
+}
+
+.sapUiTableCtrl tr.sapUiTableRowHvr,
+.sapUiTableRowHdr.sapUiTableRowHvr {
+	color: @sapUiContentContrastTextColor;
+}
+
+.sapUiTableRowHdr.sapUiTableRowHvr::after {
+	background-color: @sapUiSelected;
+}
+/* END "Table.less" */
+
+/* START "Scrolling.less" */
+/* ======================================= */
+/* CSS for control sap.ui.table/Scrolling  */
+/* High Contrast Black theme               */
+/* ======================================= */
+
+.sapUiTableVSb,
+.sapUiTableHSb,
+html.sap-desktop .sapUiTableVSb,
+html.sap-desktop .sapUiTableHSb  {
+	&::-webkit-scrollbar {
+		border: none;
+	}
+	
+	&::-webkit-scrollbar-thumb {
+		box-shadow: none;
+	}
+}
+/* END "Scrolling.less" */
+
+/* START "DragDrop.less" */
+/* ====================================== */
+/* CSS for control sap.ui.table/DragDrop  */
+/* High Contrast Black theme              */
+/* ====================================== */
+
+@_sapUiTableColumnDnDHighlightColor: @sapUiContentHelpColor;
+
+.sapUiTableColReorderFade:after {
+	background-color: @sapUiBaseColor;
+	opacity: 0.5;
+}
+/* END "DragDrop.less" */
+
+/* START "Grouping.less" */
+/* ====================================== */
+/* CSS for control sap.ui.table/Grouping  */
+/* High Contrast Black theme              */
+/* ====================================== */
+
+@_sapUiTableGroupIconBorderWidth: 3px;
+/* END "Grouping.less" */
+
+/* START "AnalyticalTable.less" */
+/* ============================================= */
+/* CSS for control sap.ui.table/AnalyticalTable  */
+/* High Contrast Black theme                     */
+/* ============================================= */
+/* END "AnalyticalTable.less" */

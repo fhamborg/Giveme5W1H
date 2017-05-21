@@ -1,0 +1,69 @@
+/* ================================== */
+/* CSS for control sap.m/MessagePage  */
+/* Base theme                         */
+/* ================================== */
+
+/* MessagePage general styles */
+.sapMMessagePage {
+	width: 100%;
+	height: 100%;
+	background: @sapUiGlobalBackgroundColor;
+}
+.sapMMessagePage > .sapMPage > section {
+	padding: 1rem;
+}
+
+/* MessagePage inner controls styles*/
+.sapMMessagePage > .sapMPage > section > .sapMText,
+.sapMMessagePage > .sapMPage > section > .sapMLnk {
+	font-family: @sapUiFontFamily;
+	margin-top: 1rem;
+}
+.sapMMessagePage .sapMMessagePageMainText {
+	font-size: 1.5rem;
+	line-height: 2rem;
+	display: block;
+	margin-left: auto;
+	margin-right: auto;
+}
+
+.sapMMessagePage .sapMMessagePageDescription {
+	font-size: 1rem;
+	display: inline-block;
+}
+
+/* the inner controls should have limited width */
+.sapMMessagePage .sapMMessagePageMainText,
+.sapMMessagePage .sapMMessagePageDescription {
+	max-width: 30rem;
+}
+
+.sapMMessagePage > .sapMPage {
+	section {
+		width: 100%;
+		box-sizing: border-box;
+		text-align: center;
+		margin: 0 auto;
+	}
+}
+
+.sapMMessagePage > .sapMPage section::before {
+	display: block;
+	content: "";
+	height: 25%;
+}
+
+.sapMMessagePage > .sapMPage > section > .sapUiIcon::before {
+	font-size: 6rem;
+	color: @sapUiContentNonInteractiveIconColor;
+}
+
+.sapMMessagePage .sapMText.sapMMessagePageMainText {
+	color: @sapUiGroupTitleTextColor;
+	font-size: @sapMFontHeader2Size;
+}
+
+.sapMMessagePage .sapMText.sapMMessagePageDescription {
+	color: @sapUiContentLabelColor;
+	font-size: @sapMFontHeader5Size;
+}

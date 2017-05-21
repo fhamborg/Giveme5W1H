@@ -1,0 +1,175 @@
+<core:View 
+           controllerName="ch.berncon.generator.ui5.controller.NewsDetail"
+           xmlns:core="sap.ui.core"
+           xmlns="sap.uxap"
+           xmlns:layout="sap.ui.layout"
+           xmlns:semantic="sap.m.semantic"
+           xmlns:m="sap.m"
+         >
+         <semantic:FullscreenPage 
+                     title="NewsDetail"
+                     showNavButton="true"
+                     navButtonPress="onNavBack">
+            <ObjectPageLayout 
+                          enableLazyLoading="false"
+                          showTitleInHeaderContent="false"
+                          >
+            <headerTitle>
+                <ObjectPageHeader 
+                                  objectTitle="{data>metadata/title}"                               
+                                  objectSubtitle="{data>metadata/filename}"
+                                  > 
+                </ObjectPageHeader>
+            </headerTitle>
+        <sections>
+            <ObjectPageSection title="Cluster">
+                <subSections>
+                    <ObjectPageSubSection  title="Annotated">
+                        <blocks>
+                            <m:Text text="test"/>
+                        </blocks>
+                    </ObjectPageSubSection>
+ 
+                    <ObjectPageSubSection  title="Found" >
+                        <blocks>
+                            <m:Text text="test"/>
+                        </blocks>
+                    </ObjectPageSubSection>
+                </subSections>
+            </ObjectPageSection>
+            <ObjectPageSection title="What">
+                <subSections>
+                    <ObjectPageSubSection  title="Annotations">
+                        <blocks>
+                            <m:Text text="{data>annotations/what/}"/>
+                        </blocks>
+                    </ObjectPageSubSection>
+ 
+                    <ObjectPageSubSection  title="Found" >
+                        <blocks>
+                                <m:List items="{data>answers/what/}" >
+                                    <m:items>
+                                        <m:StandardListItem
+                                            title="Score: {data>score}"
+                                            description= "{ path: 'data>found/', formatter: '.findingsToString' }" 
+                                             />
+                                    </m:items>
+                                </m:List>
+                        </blocks>
+                    </ObjectPageSubSection>
+                </subSections>
+            </ObjectPageSection>
+            <ObjectPageSection title="When">
+                <subSections>
+                    <ObjectPageSubSection  title="Annotations">
+                        <blocks>
+                            <m:Text text="{data>annotations/when/}"/>
+                        </blocks>
+                    </ObjectPageSubSection>
+ 
+                    <ObjectPageSubSection  title="Found" >
+                        <blocks>
+                                <m:List items="{data>answers/when/}" >
+                                    <m:items>
+                                        <m:StandardListItem
+                                            title="Score: {data>score}"
+                                            description= "{ path: 'data>found/', formatter: '.findingsToString' }" 
+                                             />
+                                    </m:items>
+                                </m:List>
+                        </blocks>
+                    </ObjectPageSubSection>
+                </subSections>
+            </ObjectPageSection>
+            <ObjectPageSection title="Where">
+                <subSections>
+                    <ObjectPageSubSection  title="Annotations">
+                        <blocks>
+                            <m:Text text="{data>annotations/where/}"/>
+                        </blocks>
+                    </ObjectPageSubSection>
+ 
+                    <ObjectPageSubSection  title="Found" >
+                        <blocks>
+                                <m:List items="{data>answers/where/}" >
+                                    <m:items>
+                                        <m:StandardListItem
+                                            title="Score: {data>score}"
+                                            description= "{ path: 'data>found/', formatter: '.findingsToString' }" 
+                                             />
+                                    </m:items>
+                                </m:List>
+                        </blocks>
+                    </ObjectPageSubSection>
+                </subSections>
+            </ObjectPageSection>
+            <ObjectPageSection title="Who">
+                <subSections>
+                    <ObjectPageSubSection  title="Annotations">
+                        <blocks>
+                            <m:Text text="{data>annotations/who/}"/>
+                        </blocks>
+                    </ObjectPageSubSection>
+ 
+                    <ObjectPageSubSection  title="Found" >
+                        <blocks>
+                                <m:List items="{data>answers/who/}" >
+                                    <m:items>
+                                        <m:StandardListItem
+                                            title="Score: {data>score}"
+                                            description= "{ path: 'data>found/', formatter: '.findingsToString' }" 
+                                             />
+                                    </m:items>
+                                </m:List>
+                        </blocks>
+                    </ObjectPageSubSection>
+                </subSections>
+            </ObjectPageSection>
+            <ObjectPageSection title="Why">
+                <subSections>
+                    <ObjectPageSubSection  title="Annotations">
+                        <blocks>
+                            <m:Text text="{data>annotations/why/}"/>
+                        </blocks>
+                    </ObjectPageSubSection>
+ 
+                    <ObjectPageSubSection  title="Found" >
+                        <blocks>
+                                <m:List items="{data>answers/why/}" >
+                                    <m:items>
+                                        <m:StandardListItem
+                                            title="Score: {data>score}"
+                                            description= "{ path: 'data>found/', formatter: '.findingsToString' }" 
+                                             />
+                                    </m:items>
+                                </m:List>
+                        </blocks>
+                    </ObjectPageSubSection>
+                </subSections>
+            </ObjectPageSection>
+            <ObjectPageSection title="How">
+                <subSections>
+                    <ObjectPageSubSection  title="Annotations">
+                        <blocks>
+                            <m:Text text="{data>annotations/how/}"/>
+                        </blocks>
+                    </ObjectPageSubSection>
+ 
+                    <ObjectPageSubSection  title="Found" >
+                        <blocks>
+                                <m:List items="{data>answers/how/}" >
+                                    <m:items>
+                                        <m:StandardListItem
+                                            title="Score: {data>score}"
+                                            description= "{ path: 'data>found/', formatter: '.findingsToString' }" 
+                                             />
+                                    </m:items>
+                                </m:List>
+                        </blocks>
+                    </ObjectPageSubSection>
+                </subSections>
+            </ObjectPageSection>     
+        </sections>
+    </ObjectPageLayout>
+    </semantic:FullscreenPage>
+</core:View>

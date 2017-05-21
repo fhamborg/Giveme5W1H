@@ -1,0 +1,42 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+<title>App</title>
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta http-equiv="Content-Type" content="text/html;charset=UTF-8" />
+
+
+<script src="resources/sap-ui-core.js"
+	id="sap-ui-bootstrap"
+	data-sap-ui-libs="sap.ui.commons"
+	data-sap-ui-compatVersion="edge"
+	data-sap-ui-theme="sap_bluecrystal"
+	data-sap-ui-resourceroots='{
+				"ch.berncon.generator.ui5": "./"
+	}'
+	type="text/javascript">
+</script>
+
+<script type="text/javascript">
+
+	sap.ui.getCore().attachInit(function() {
+		sap.ui.require([ "sap/m/Shell", "sap/ui/core/ComponentContainer" ], function(Shell, ComponentContainer) {
+			var shell = new Shell({
+				app : new ComponentContainer({
+					height : "100%",
+					name : "ch.berncon.generator.ui5"
+				})
+			});
+
+			//shell.setAppWidthLimited(false);
+			shell.placeAt("content");
+		});
+
+	});
+</script>
+
+</head>
+<body class="sapUiBody" role="application">
+	<div id="content"></div>
+</body>
+</html>

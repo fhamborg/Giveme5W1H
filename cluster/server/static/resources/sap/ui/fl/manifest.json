@@ -1,0 +1,38 @@
+{
+  "_version": "1.2.0",
+  "sap.app": {
+    "_version": "1.2.0",
+    "id": "sap.ui.fl",
+    "type": "library",
+    "embeds": [
+      "support/apps/contentbrowser"
+    ],
+    "applicationVersion": {
+      "version": "1.46.7"
+    },
+    "title": "SAPUI5 library with sap.ui.fl controls.",
+    "description": "SAPUI5 library with sap.ui.fl controls.",
+    "ach": "CA-UI5-FL",
+    "resources": "resources.json",
+    "offline": true
+  },
+  "sap.ui": {
+    "_version": "1.1.0",
+    "technology": "UI5",
+    "supportedThemes": []
+  },
+  "sap.ui5": {
+    "_version": "1.1.0",
+    "dependencies": {
+      "minUI5Version": "1.46",
+      "libs": {
+        "sap.ui.core": {
+          "minVersion": "1.46.7"
+        },
+        "sap.m": {
+          "minVersion": "1.46.7"
+        }
+      }
+    }
+  }
+}

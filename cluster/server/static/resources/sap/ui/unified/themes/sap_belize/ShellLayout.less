@@ -1,0 +1,37 @@
+/* =========================================== */
+/* CSS for control sap.ui.unified/ShellLayout  */
+/* Belize theme                                */
+/* =========================================== */
+
+@sapUiUfdShellCurtainBGStartColor: fade(@sapUiGroupContentBackground,97);
+@sapUiUfdShellCurtainBGEndColor: fade(lighten(desaturate(@sapUiHighlight,37),56),97);
+@sapUiUfdShellCurtainBGStartColor_IE: fade(@sapUiGroupContentBackground, 100);
+@sapUiUfdShellCurtainBGEndColor_IE: fade(lighten(desaturate(@sapUiHighlight,37),56),100); /*#e5f2f9*/
+
+._sapUiUfdShellSubHdr { /* Testpage only */
+	background-color: @sapUiShellBackground;
+	color: @sapUiShellTextColor;
+}
+
+.sapUiUfdShell .sapUiUfdShellHead {
+	background-color: @sapUiBlockLayerBackground;
+}
+
+.sapUiUfdShell .sapUiUfdShellBrand {
+	background: transparent;
+}
+
+.sapUiUfdShell.sapUiUfdShellCurtainVisible .sapUiUfdShellHead,
+.sapUiUfdShell.sapUiUfdShellCurtainVisible .sapUiUfdShellHead > div {
+	background: none;
+	background-color: @sapUiShellBackground;
+	filter: none;
+}
+
+.sapUiUfdShellCurtain {
+	border-bottom: 1px solid @sapUiShellBorderColor;
+	background-image: linear-gradient(to bottom, @sapUiUfdShellCurtainBGStartColor 0%, @sapUiUfdShellCurtainBGEndColor 100%);
+	background-image: -webkit-linear-gradient(top, @sapUiUfdShellCurtainBGStartColor 0%, @sapUiUfdShellCurtainBGEndColor 100%);
+	background-attachment: fixed;
+	background-repeat: repeat, no-repeat;
+}

@@ -1,0 +1,6 @@
+/*!
+ * UI development toolkit for HTML5 (OpenUI5)
+ * (c) Copyright 2009-2017 SAP SE or an SAP affiliate company.
+ * Licensed under the Apache License, Version 2.0 - see LICENSE.txt.
+ */
+sap.ui.define(["jquery.sap.global","sap/ui/fl/LrepConnector","sap/ui/fl/Cache"],function(q,L,C){"use strict";var S=function(s){if(!s){throw new Error("no descriptor settings provided");}this._oSettings=s;};S._cachedSettingsPromise=null;S.getInstance=function(){if(!S._cachedSettingsPromise){S._cachedSettingsPromise=C.getChangesFillingCache(L.createConnector(),"dummy").then(function(f){var s;if(f.changes&&f.changes.settings){s=new S(f.changes.settings);}else{s=new S({});}return s;});}return S._cachedSettingsPromise;};S.prototype.isKeyUser=function(){var i=false;if(this._oSettings.isKeyUser){i=this._oSettings.isKeyUser;}return i;};S.prototype.isModelS=function(){var i=false;if(this._oSettings.isAtoAvailable){i=this._oSettings.isAtoAvailable;}return i;};S.prototype.isAtoEnabled=function(){var i=false;if(this._oSettings.isAtoEnabled){i=this._oSettings.isAtoEnabled;}return i;};S.prototype.isProductiveSystem=function(){var i=false;if(this._oSettings.isProductiveSystem){i=this._oSettings.isProductiveSystem;}return i;};return S;},true);

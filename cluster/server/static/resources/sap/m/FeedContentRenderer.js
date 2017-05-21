@@ -1,0 +1,6 @@
+/*!
+ * UI development toolkit for HTML5 (OpenUI5)
+ * (c) Copyright 2009-2017 SAP SE or an SAP affiliate company.
+ * Licensed under the Apache License, Version 2.0 - see LICENSE.txt.
+ */
+sap.ui.define([],function(){"use strict";var F={};F.render=function(r,c){var s=c.getSubheader();var v=c.getValue();var t=c.getTooltip_AsString();if(typeof t!=="string"){t="";}r.write("<div");r.writeControlData(c);r.writeAttribute("id",c.getId()+"-feed-content");r.writeAttribute("role","presentation");r.writeAttributeEscaped("aria-label",t);r.addClass("sapMFC");if(c.hasListeners("press")){r.writeAttribute("tabindex","0");r.addClass("sapMPointer");}r.writeClasses();r.write(">");if(v){r.write("<div");r.writeAttribute("id",c.getId()+"-value");r.addClass("sapMFCValue");r.addClass(c.getValueColor());r.writeClasses();r.write(">");var C=c.getTruncateValueTo();if(v.length>=C&&(v[C-1]==="."||v[C-1]===",")){r.writeEscaped(v.substring(0,C-1));}else if(v){r.writeEscaped(v.substring(0,C));}else{r.writeEscaped("");}r.write("</div>");}r.write("<div");r.addClass("sapMFCCTxt");r.writeClasses();r.write(">");r.renderControl(c._oContentText);r.write("</div>");r.write("<div");r.writeAttribute("id",c.getId()+"-subheader");r.addClass("sapMFCSbh");r.writeClasses();r.write(">");r.writeEscaped(s);r.write("</div>");r.write("</div>");};return F;},true);

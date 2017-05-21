@@ -1,0 +1,6 @@
+/*!
+ * UI development toolkit for HTML5 (OpenUI5)
+ * (c) Copyright 2009-2017 SAP SE or an SAP affiliate company.
+ * Licensed under the Apache License, Version 2.0 - see LICENSE.txt.
+ */
+sap.ui.define(["jquery.sap.global","sap/ui/test/_LogCollector"],function($,_){"use strict";var M=3;var a=1000;var l=$.sap.log.getLogger("sap.ui.test._timeoutCounter",_.DEFAULT_LEVEL_FOR_OPA_LOGGERS);var t={};var c=0;function b(n){var s="set"+n;var C="clear"+n;var o=window[s];if(!o){return;}var O=window[C];window[s]=function(f,d){var W=function(){c=t[i]+1;delete t[i];try{f();}finally{c=0;}};if(d>=a){return o.apply(this,arguments);}var i=o.call(this,W,d);t[i]=c;return i;};window[C]=function(i){delete t[i];return O.apply(this,arguments);};}b("Timeout");b("Immediate");var p=0;function w(o){var O=Promise[o];Promise[o]=function(){var T=false;var i=setTimeout(function(){T=true;p--;},a);var C=function(){if(T){return;}p--;clearTimeout(i);};p++;var P=O.apply(this,arguments);P.then(C,C);return P;};}w("resolve");w("all");w("race");w("reject");return{hasPendingTimeouts:function(){var T=Object.keys(t);var n=T.filter(function(i){return t[i]<M;}).length;var h=n>0;if(p>0){l.debug("There are "+p+" pending microtasks");return true;}if(h){l.debug("There are '"+n+"' open blocking Timeouts. And "+(T.length-n)+" non blocking timeouts");}return h;}};},true);

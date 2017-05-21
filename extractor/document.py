@@ -1,4 +1,5 @@
 from multiprocessing.managers import BaseManager
+from fileinput import filename
 
 
 class DocumentManager(BaseManager):
@@ -10,8 +11,8 @@ class Document(object):
     Document is a pickable container for the raw document and all related data
     """
 
-    def __init__(self, title, desc='', text=''):
-        self._raw = {'title': title, 'description': desc, 'text': text}
+    def __init__(self, title, desc='', text='', filename=''):
+        self._raw = {'title': title, 'description': desc, 'text': text, 'filename': filename }
         self._date = None
 
         self._length = 0
@@ -31,6 +32,9 @@ class Document(object):
 
     def get_title(self):
         return self._raw['title']
+    
+    def get_filename(self):
+        return self._raw['filename']
 
     def get_raw(self):
         return self._raw

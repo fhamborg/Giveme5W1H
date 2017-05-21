@@ -46,6 +46,7 @@ class JSONWriter:
         output.metadata = Object();
         output.metadata.title = document.get_title()   
         output.metadata.pubdate = document.get_date()
+        output.metadata.filename = document.get_filename()
         
         # Annotations
         output.annotations = Object();

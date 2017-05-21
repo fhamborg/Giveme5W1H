@@ -38,7 +38,7 @@ if __name__ == '__main__':
     documents = gate_reader.parse_dir(os.path.dirname(__file__) + '/sample_articles')
     start_all = timer()
 
-    with JSONWriter(os.path.dirname(__file__) + '/result/giveme5w.json') as writer:
+    with JSONWriter(os.path.dirname(__file__) + '/result/5w1hExtraction.json') as writer:
         log.info("Starting parsing of %i documents " % len(documents))
         for document in documents:
             extractor.parse(document)

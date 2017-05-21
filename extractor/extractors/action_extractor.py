@@ -32,6 +32,7 @@ class ActionExtractor(AbsExtractor):
 
         document.set_answer('who', self._filter_duplicates(who))
         document.set_answer('what', self._filter_duplicates(what))
+        document.set_answer('how', [])
 
     def _extract_candidates(self, document):
         """

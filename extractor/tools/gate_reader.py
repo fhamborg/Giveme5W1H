@@ -69,11 +69,15 @@ def parse_file(path, factory):
             description = None
             text = None
             pubdate = None
+            source = None
 
             # search for publication date in document features
             for feature in root.find('GateDocumentFeatures'):
                 if feature[0] == 'pubdate':
                     pubdate = feature[1]
+                if feature[0] == 'source':
+                    source = feature[1]
+                
 
             # read the annotation
             annotations = {'what': [], 'who': [], 'why': [], 'where': [], 'when': []}
@@ -119,7 +123,7 @@ def parse_file(path, factory):
                 answers[1].sort(key=lambda x: x[0] or 'None')
                 answers[1].sort(key=lambda x: x[1] or 'None')
 
-            document = factory.spawn_doc(title, description, text)
+            document = factory.spawn_doc(title, description, text, path, source)
             document.set_annotations(annotations)
             document.set_date(pubdate)
 

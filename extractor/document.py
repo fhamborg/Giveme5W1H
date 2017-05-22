@@ -11,8 +11,8 @@ class Document(object):
     Document is a pickable container for the raw document and all related data
     """
 
-    def __init__(self, title, desc='', text='', filename=''):
-        self._raw = {'title': title, 'description': desc, 'text': text, 'filename': filename }
+    def __init__(self, title, desc='', text='', path='', source=''):
+        self._raw = {'title': title, 'description': desc, 'text': text, 'path': path, "source": source }
         self._date = None
 
         self._length = 0
@@ -24,8 +24,8 @@ class Document(object):
         self._posTrees = []
         self._nerTags = []
 
-        self._answers = {'what': [], 'who': [], 'why': [], 'where': [], 'when': []}
-        self._annotations = {'what': [], 'who': [], 'why': [], 'where': [], 'when': []}
+        self._answers = {'what': [], 'who': [], 'why': [], 'where': [], 'when': [], 'how': []}
+        self._annotations = {'what': [], 'who': [], 'why': [], 'where': [], 'when': [], 'how': []}
 
     def get_len(self):
         return self._length
@@ -33,8 +33,11 @@ class Document(object):
     def get_title(self):
         return self._raw['title']
     
-    def get_filename(self):
-        return self._raw['filename']
+    def get_path(self):
+        return self._raw['path']
+    
+    def get_source(self):
+        return self._raw['source']
 
     def get_raw(self):
         return self._raw
@@ -123,8 +126,8 @@ class DocumentFactory:
         self.manager = DocumentManager()
         self.manager.start()
 
-    def spawn_doc(self, title, desc=None, text=None):
-        return self.manager.Document(title, desc or '', text or '')
+    def spawn_doc(self, title, desc=None, text=None, filename=None, source=None):
+        return self.manager.Document(title, desc or '', text or '',filename or '',source or '')
 
 
 

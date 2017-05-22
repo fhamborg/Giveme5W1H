@@ -1,11 +1,22 @@
 import  json
+import ntpath
 
+
+def path_leaf(path):
+        """
+        helper to get the filename from a path
+        """
+        head, tail = ntpath.split(path)
+        return tail or ntpath.basename(head)
+    
 class Object:
     def toJSON(self):
-        return json.dumps(self, default=lambda o: o.__dict__, sort_keys=True, indent=4)
-       
+        return json.dumps(self, default=lambda o: o.__dict__, sort_keys=True, indent=2)
         
 class JSONWriter:
+    
+   
+
     def __init__(self, path):
         """
         A simple json writer for saving results.  
@@ -42,40 +53,40 @@ class JSONWriter:
             self.isEmpty = False
         else: 
             self.outfile.write(',');
+            
         output = Object();
+        output.title = document.get_title()
+        output.filename = path_leaf(document.get_path())
         output.metadata = Object();
-        output.metadata.title = document.get_title()   
         output.metadata.pubdate = document.get_date()
-        output.metadata.filename = document.get_filename()
+        output.metadata.source = document.get_source()
         
-        # Annotations
-        output.annotations = Object();
+        
         doc_annotation = document.get_annotations()
         
-        for question in doc_annotation:
-            annotations = []
-            for an in doc_annotation[question]:
-                annotations.append(an[2])
-            setattr(output.annotations, question, annotations)
-        # Answer 
-        output.answers = Object()
-        answers = document.get_answers()
+        #Answer 
+        answers = document.get_answers()   
+        output.fiveWoneH = Object()
         for index, question in enumerate(answers):
-            candidates = [];
+            questionAttribut = Object()
+            setattr(output.fiveWoneH, question, questionAttribut)
+            
+            # Add annotation for this question 
+            questionAttribut.annotations = []
+            questionAnnotation = doc_annotation.get(question,None)
+            if questionAnnotation is not None:
+                for an in doc_annotation.get(question,None):
+                    questionAttribut.annotations.append(an[2])
+                
+            # Add answers for this question
+            questionAttribut.extracted = []
             for index, key in enumerate(answers[question]):
                 candidate = answers[question][index]
                 if index >= n:
                     break
                 candidateJson = Object()
                 candidateJson.score = candidate[1]
-                # one object to hold all findings 
-                candidateJson.found = Object()
-                for index, key in enumerate(candidate[0]):
-                    # index as prefix to keep track of the order
-                    jsonkey = str(index).zfill(3) + '_' + key[1]
-                    setattr(candidateJson.found, jsonkey, key[0])
-                   
-                candidateJson.found = candidateJson.found
-                candidates.append(candidateJson)
-            setattr(output.answers, question, candidates)
+                candidateJson.words = candidate[0]
+                questionAttribut.extracted.append(candidateJson)
+                 
         self.outfile.write(output.toJSON());

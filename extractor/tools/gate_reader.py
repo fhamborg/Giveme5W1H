@@ -73,10 +73,10 @@ def parse_file(path, factory):
 
             # search for publication date in document features
             for feature in root.find('GateDocumentFeatures'):
-                if feature[0] == 'pubdate':
-                    pubdate = feature[1]
-                if feature[0] == 'source':
-                    source = feature[1]
+                if feature[0].text == 'pubdate':
+                    pubdate = feature[1].text
+                if feature[0].text == 'source':
+                    source = feature[1].text
                 
 
             # read the annotation

@@ -42,7 +42,7 @@ if __name__ == '__main__':
         log.info("Starting parsing of %i documents " % len(documents))
         for document in documents:
             extractor.parse(document)
-            writer.save_document(document, 3)
+            writer.save_document(document, 0.8)
             
     diff_all = timer() - start_all
     log.info("total time={}, time/article={}".format(round(diff_all, 2), round(diff_all / len(documents), 2)))

@@ -38,13 +38,14 @@ class JSONWriter:
         self.outfile.close()
         
 
-    def save_document(self, document, n=3):
+    def save_document(self, document, n=0.8, f=False):
         """
         Saves the first n 5Ws answers to a json file.
 
         :param document: The parsed Document
         :type document: Document
-        :param n: Number of candidates to save
+        :param n: Min. scoring of a candidates to be save
+        :param f: Boolean, if candidates components should be further filtered(removing ,.(){}, removing if length under 2 ) 
         :type n: Integer
 
         :return: None
@@ -82,11 +83,16 @@ class JSONWriter:
             questionAttribut.extracted = []
             for index, key in enumerate(answers[question]):
                 candidate = answers[question][index]
-                if index >= n:
-                    break
                 candidateJson = Object()
                 candidateJson.score = candidate[1]
-                candidateJson.words = candidate[0]
+                
+                if candidateJson.score <= n:
+                    break
+                if f:
+                    candidateJson.words = candidate[0]
+                else:    
+                    candidateJson.words = candidate[0]
                 questionAttribut.extracted.append(candidateJson)
                  
         self.outfile.write(output.toJSON());
+        

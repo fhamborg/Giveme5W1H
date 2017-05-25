@@ -28,7 +28,7 @@ class Preprocessor:
             'timeout': 500000,
             'annotators': 'tokenize,ssplit,pos,lemma,parse,ner,depparse,mention,coref',
             'tokenize.language': 'English',
-            # CoreNLps charniak-wrapper has some problems ...
+            # CoreNLPs charniak-wrapper has some problems ...
             #'parse.type': 'charniak',
             #'parse.executable': '/home/ubuntu/bllip-parser/',
             #'parse.verbose': 'true',
@@ -51,7 +51,7 @@ class Preprocessor:
 
         # concatenate sections to send them to the server
         for section in raw:
-            text += raw[section]
+            text += raw[section] + '\n'
 
         annotation = self.cnlp.annotate(text, self.config)
 

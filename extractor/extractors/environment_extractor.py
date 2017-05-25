@@ -30,7 +30,7 @@ class EnvironmentExtractor(AbsExtractor):
         if host is None:
             host = 'nominatim.openstreetmap.org'
 
-        self.geocoder = Nominatim(domain=host, timeout=2)
+        self.geocoder = Nominatim(domain=host, timeout=8)
 
         # init calender object for date resolution
         self.calendar = pdt.Calendar()
@@ -39,7 +39,7 @@ class EnvironmentExtractor(AbsExtractor):
         # in most cases an article describes an event in the past
         self.calendar.ptc.DOWParseStyle = -1            # prefer day in the past for 'monday'
         self.calendar.ptc.CurrentDOWParseStyle = True   # prefer reference date if its the same weekday
-        self.time_dela = 129600                         # 32h in seconds
+        self.time_dela = 86400                          # 24h in seconds
 
     def extract(self, document):
         """
@@ -70,6 +70,7 @@ class EnvironmentExtractor(AbsExtractor):
 
         # fetch results of the NER
         ner_tags = document.get_ner()
+        pos_tags = document.get_pos()
         locations = []
         dates = []
         last_date = None
@@ -83,7 +84,8 @@ class EnvironmentExtractor(AbsExtractor):
                 # look-up geocode in Nominatim
                 location = self.geocoder.geocode(' '.join(candidate[0]))
                 if location is not None:
-                    locations.append((candidate[0], location, i))
+                    # fetch pos and append to candidates
+                    locations.append((self._fetch_pos(pos_tags[i], candidate[0]), location, i))
 
             for candidate in self._extract_entities(ner_tags[i], ['TIME', 'DATE'], inverted=True,
                                                     phrase_range=1, groups={'TIME': 'TIME+DATE', 'DATE': 'TIME+DATE'}):
@@ -91,15 +93,15 @@ class EnvironmentExtractor(AbsExtractor):
                 if candidate[1] == 'TIME':
                     # If a date was already mentioned combine it with the mentioned time
                     if last_date is not None:
-                        dates.append((last_date + candidate[0], i))
+                        dates.append((last_date + self._fetch_pos(pos_tags[i], candidate[0]), i))
                     else:
-                        dates.append((candidate[0], i))
+                        dates.append((self._fetch_pos(pos_tags[i], candidate[0]), i))
                 elif candidate[1] == 'DATE':
-                    dates.append((candidate[0], i))
-                    last_date = candidate[0]
+                    dates.append((self._fetch_pos(pos_tags[i], candidate[0]), i))
+                    last_date = self._fetch_pos(pos_tags[i], candidate[0])
                 else:
                     # String includes date and time
-                    dates.append((candidate[0], i))
+                    dates.append((self._fetch_pos(pos_tags[i], candidate[0]), i))
 
         return locations, dates
 
@@ -193,7 +195,7 @@ class EnvironmentExtractor(AbsExtractor):
 
         # translate date strings into date objects
         for candidate in date_list:
-            date_str = ' '.join(candidate[0])
+            date_str = ' '.join([t[0] for t in candidate[0]])
             # Skip 'now' because its often part of a newsletter offer or similar
             if date_str.lower().strip() == 'now':
                 continue
@@ -204,7 +206,7 @@ class EnvironmentExtractor(AbsExtractor):
         ranked_candidates.sort(key=lambda x: x[2])
 
         # Similar to the frequency used for locations we count similar date mentions.
-        # Dates are considered related if they differ at most 36h (time_delta).
+        # Dates are considered related if they differ at most 24h (time_delta).
         max_n = 0
         for index, candidate in enumerate(ranked_candidates):
             for neighbour in ranked_candidates[index+1:]:
@@ -239,5 +241,20 @@ class EnvironmentExtractor(AbsExtractor):
         ranked_candidates.sort(key=lambda x: x[1], reverse=True)
         return ranked_candidates
 
+    def _fetch_pos(self, pos, pattern):
+        """
+        This function scans a tokenized sentence with POS-labels for a token sequence
 
+        :param pos: sentence with POS-labels
+        :type pos: [(String, String)]
+        :param pattern: The tokens without POS-labels
+        :type pattern: [String]
+
+        :return: The tokens of the pattern with POS-labels
+        """
+
+        for i, token in enumerate(pos):
+            if token[0] == pattern[0] and [t[0] for t in pos[i:i+len(pattern)]] == pattern:
+                return pos[i:i+len(pattern)]
+        return []
 

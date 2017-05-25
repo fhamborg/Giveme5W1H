@@ -9,7 +9,6 @@ class CSVWriter:
         :param path: Absolute path to the file
         """
         self.csv_file = open(path, 'w+', encoding="utf-8")
-        self.csv_file.write(('"sep=,"\n'))
         self.writer = csv.writer(self.csv_file)
 
     def __enter__(self):
@@ -38,7 +37,7 @@ class CSVWriter:
         annotations = document.get_annotations()
 
         for question in answers.keys():
-            #get the first n results and annotations
+            # get the first n results and annotations
             topn_annotations = annotations[question][:n]
             topn_results = answers[question][:n]
 
@@ -53,10 +52,7 @@ class CSVWriter:
                     data = True
 
                 if len(topn_results) > i:
-                    if question in ['where', 'when']:
-                        row[3] = ' '.join(topn_results[i][0])
-                    else:
-                        row[3] = ' '.join([token[0] for token in topn_results[i][0]])  # filter pos
+                    row[3] = ' '.join([token[0] for token in topn_results[i][0]])  # filter pos
                     row[4] = round(topn_results[i][1], 3)
                     data = True
 

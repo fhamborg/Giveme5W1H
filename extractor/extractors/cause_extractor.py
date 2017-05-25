@@ -113,7 +113,10 @@ class CauseExtractor(AbsExtractor):
         """
         Determines if the given sub tree contains a cause/effect relation.
 
-        The indicators used in this function are inspired by TODO
+        The indicators used in this function are inspired by:
+        "Automatic Extraction of Cause-Effect Information from Newspaper Text Without Knowledge-based Inferencing"
+        by Khoo et. al. (adverbs + conjunctions)
+        "Automatic Detection of Causal Relations for Question Answering" by Roxana Girj (verbs)
 
         :param tree: A tree to analyze
         :type tree: ParentedTree
@@ -220,7 +223,23 @@ class CauseExtractor(AbsExtractor):
                     ' '.join(tokens[i:]).lower().startswith(self.clausal_conjunctions[token]):
                 # Check if token is au clausal conjunction indicating causation
                 candidates.append(deepcopy([pos[i - 1:], pos[:i], 'biclausal']))
-        return candidates
+
+        # drop candidates containing other candidates
+        unique_candidates = []
+        candidate_strings = []
+        for candidate in candidates:
+            candidate_strings.append(' '.join([x[0] for x in candidate[0]]))
+
+        for i, candidate in enumerate(candidates):
+            unique = True
+            for j, substring in enumerate(candidate_strings):
+                if i != j and candidate[2] == candidates[j][2] and substring in candidate_strings[i]:
+                    unique = False
+                    break
+            if unique:
+                unique_candidates.append(candidate)
+
+        return unique_candidates
 
     def _evaluate_candidates(self, document, candidates):
         """

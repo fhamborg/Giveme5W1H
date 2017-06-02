@@ -30,8 +30,8 @@ class Writer:
 
         print(output)
         if self.rewriteFilename:
-            output['filename'] = hashlib.sha256(output['url'].encode('utf-8')).hexdigest()
-            
+            output['filename'] = hashlib.sha224(output['url'].encode('utf-8')).hexdigest() + '.json'
+         
         # check if there isn`t already a fiveWoneH literal
         fiveWoneHLiteral =  output.setdefault('fiveWoneH',{})
         
@@ -40,8 +40,8 @@ class Writer:
         for index, question in enumerate(answers):
             # check if question literal is there
             questionLiteral =  fiveWoneHLiteral.setdefault(question,{ 'annotated': None, 'extracted': []})
-            # check if extracted literal is there
-            extractedLiteral = questionLiteral.setdefault(question,[])
+            # check if extracted literal is there 
+            extractedLiteral = questionLiteral.setdefault('extracted',[])
             for index, key in enumerate(answers[question]):
                 candidate = answers[question][index]
                 candidateJson = {'score': candidate[1], 'words': []}

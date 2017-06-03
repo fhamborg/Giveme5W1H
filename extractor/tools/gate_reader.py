@@ -123,7 +123,7 @@ def parse_file(path, factory):
                 answers[1].sort(key=lambda x: x[0] or 'None')
                 answers[1].sort(key=lambda x: x[1] or 'None')
 
-            document = factory.spawn_doc(title, description, text, path, source)
+            document = factory.spawn_doc(title, description, text)
             document.set_annotations(annotations)
             document.set_date(pubdate)
 

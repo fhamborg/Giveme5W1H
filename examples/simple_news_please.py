@@ -25,7 +25,7 @@ if __name__ == '__main__':
     sh.setLevel(logging.DEBUG)
     log.addHandler(sh)
     
-    #extractor = FiveWExtractor(Preprocessor(core_nlp_host))
+    extractor = FiveWExtractor(Preprocessor(core_nlp_host))
     inputPath = os.path.dirname(__file__) + '/input'
     outputPath = os.path.dirname(__file__) + '/output'
-    Handler(inputPath).setOutputPath(outputPath).addProcessor( SimpleLogger() ).process()
+    Handler(inputPath).setOutputPath(outputPath).setLimit(2).setExtractor(extractor).addProcessor( SimpleLogger() ).process()

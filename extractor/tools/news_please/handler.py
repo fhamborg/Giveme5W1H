@@ -4,6 +4,7 @@ from timeit import default_timer as timer
 
 from extractor.tools.news_please.writer import Writer
 from extractor.tools.news_please.reader import Reader
+from token import GREATER
 
 
 class Handler(object):
@@ -11,7 +12,8 @@ class Handler(object):
     def __init__(self, inputPath):
        
         self._inputPath = inputPath
-       
+        
+        self._limit = None
         self._extractor = None 
         self._outputPath = None
         self._processors = []
@@ -29,6 +31,10 @@ class Handler(object):
         self._extractor = extractor 
         return self
     
+    def setLimit(self, limit):
+        self._limit = limit 
+        return self
+    
     def setOutputPath(self, outputPath):
         self._outputPath = outputPath
         return self
@@ -38,10 +44,15 @@ class Handler(object):
         docCounter = 0
         #timeExtraction = 0
         for filepath in glob.glob(self._inputPath + '/*.json'):
+            
+            if self._limit and docCounter >= self._limit:
+                print('limit reached') 
+                break 
+            
             docCounter += 1
             
             document = self._reader.read(filepath)
-            if self._extractor:
+            if self._extractor: 
                 self._extractor.parse(document)
             if self._outputPath:
                 self._writer.write(self._outputPath, document)

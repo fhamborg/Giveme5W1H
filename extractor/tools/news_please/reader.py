@@ -9,9 +9,11 @@ class Reader(object):
         self.log = logging.getLogger('GiveMe5W')
         
     def read(self,path):
-        with open(path) as data_file:    
+        with open(path, encoding='utf-8') as data_file:    
+            #print(data_file.read()[:11])
             data = json.load(data_file)
-            document = self.factory.spawn_doc(data['title'], data['description'], data['text'], data)
+            
+            document = self.factory.spawn_doc(data['title'],  data.setdefault('description',None) , data['text'], data)
             # load annotations if any
             if 'fiveWoneH' in data:
                 annotationsForGivMe5W = {} 

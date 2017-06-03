@@ -45,6 +45,8 @@ class Writer:
                 candidateJson = {'score': candidate[1], 'words': []}
                 #if candidateJson.score <= n:
                 #    break
-                candidateJson['words'] = { 'text':candidate[0], 'tag':candidate[1]}
+                candidateJson['words'] = []
+                for candidateWord in candidate[0]:
+                    candidateJson['words'].append({ 'text':candidateWord[0], 'tag':candidateWord[1]})
                 extractedLiteral.append(candidateJson)
         self._writeJson(outputPath, output)

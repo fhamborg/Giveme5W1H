@@ -11,7 +11,7 @@ from extractor.extractor import FiveWExtractor
 from extractor.tools.news_please.processor.simple_logger import SimpleLogger
 from extractor.tools.news_please.handler import Handler
 from extractor.tools.news_please.processor.learn_weights import LearnWeights
-
+from extractor.extractors import action_extractor, environment_extractor, cause_extractor, method_extractor
 """
 This is a simple example on how to use the extractor in combination with NewsPlease files
 """
@@ -25,7 +25,14 @@ if __name__ == '__main__':
     sh.setLevel(logging.DEBUG)
     log.addHandler(sh)
     
-    extractor = FiveWExtractor(Preprocessor(core_nlp_host))
+    
+    extractors = [
+                #action_extractor.ActionExtractor(),
+                #environment_extractor.EnvironmentExtractor(),
+                #cause_extractor.CauseExtractor(),
+                method_extractor.MethodExtractor()
+            ]
+    extractor = FiveWExtractor(Preprocessor(core_nlp_host), extractors)
     inputPath = os.path.dirname(__file__) + '/input'
     outputPath = os.path.dirname(__file__) + '/output'
-    Handler(inputPath).setOutputPath(outputPath).setLimit(2).setExtractor(extractor).addProcessor( SimpleLogger() ).process()
+    Handler(inputPath).setOutputPath(outputPath).setLimit(1).setExtractor(extractor).addProcessor( SimpleLogger() ).process()

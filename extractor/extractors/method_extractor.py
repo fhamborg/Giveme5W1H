@@ -107,7 +107,7 @@ class MethodExtractor(AbsExtractor):
                 lemaCount = groupePerLemma.get(candidate["lemma"], 0 )
                 
                 #  normalized position
-                candidate['positionNorm'] =  candidate['position'] / self._maxIndex
+                candidate['positionNorm'] = (self._maxIndex -  candidate['position']) / self._maxIndex
 
     
         # scoring

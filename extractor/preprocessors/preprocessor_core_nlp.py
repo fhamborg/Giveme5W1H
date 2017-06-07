@@ -46,14 +46,20 @@ class Preprocessor:
         :return Document: The processed Document object.
         """
 
-        raw = document.get_raw()
-        text = ''
+        #raw = 
+        #text = ''
 
         # concatenate sections to send them to the server
-        for section in raw:
-            text += raw[section]
-
+        #for section in raw:
+        #    text += raw[section]
+        # text =  " ".join(x for x in raw)
+        #print(text)
+        
+        text = '. '.join(val for key, val in document.get_raw().items())
+        print(text)
+            
         annotation = self.cnlp.annotate(text, self.config)
+        
 
         if type(annotation) == str:
             print(annotation)

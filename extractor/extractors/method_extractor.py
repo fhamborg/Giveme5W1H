@@ -22,13 +22,19 @@ class MethodExtractor(AbsExtractor):
         :return: The parsed Document object
         """
         self.weights = [1,1,1]
-        self._candidates = []
+        
         candidates = self._extract_candidates(document)
-        #print(candidates)
         candidates = self._evaluate_candidates(document, candidates)
-        document.set_answer('how', [])
-
-
+        
+        
+        #convert candidates into correct format
+        #print(candidates)
+        result = []
+        for candidate in candidates:
+            keyVal = ([( candidate['originalText'], candidate['pos'])], candidate['score'] )
+            result.append( keyVal )
+        document.set_answer('how', result )
+        print(result)
 
     def _extract_candidates(self, document):
         """
@@ -56,14 +62,14 @@ class MethodExtractor(AbsExtractor):
                     self._maxIndex = token['index']
                 if self._isRelevantPos(token['pos']):
                     # TODO some further checks based on relations
-                    print(token['pos'])
+                    # print(token['pos'])
                     
                     # TODO exclude if ner tags is time, location...
                     
+                    # TODO extend candidates to phrases
                     
-                    # save all relevant information for _evaluate_candidates
-                    # position, lema, word itslef,  
-                    candidates.append({ 'position': token['index'], 'lemma': token['lemma'], 'originalText':token['originalText']  })
+                    # save all relevant information for _evaluate_candidates  
+                    candidates.append({ 'position': token['index'], 'lemma': token['lemma'], 'originalText':token['originalText'], 'pos' : token['pos']   })
                 
         return candidates
 
@@ -80,15 +86,11 @@ class MethodExtractor(AbsExtractor):
         """
         #ranked_candidates = []
         
-        
-        # 1. position in text
-        # score = self.weights[0] * (document_lenght-candidate['position']) / document_lenght
-        
-
-        
+          
         groupePerLemma = {}
         maxCount = 0
-        # group per lemma
+        
+        # frequency per lemma
         for candidate in candidates:
             if candidate is not None and len(candidate['originalText']) > 0:
                 lemaCount = groupePerLemma.get(candidate["lemma"], 0 )
@@ -98,29 +100,42 @@ class MethodExtractor(AbsExtractor):
                     maxCount = lemaCount
                 groupePerLemma[candidate["lemma"]] = lemaCount
                 
-        # transfer count per lemma group to candidates
+        # transfer count per lemmaGroup to candidates 
         for candidate in candidates:
             if candidate is not None and len(candidate['originalText']) > 0:
                 
                 # save normalized frequency
-                candidate['frequencyNorm'] = ( groupePerLemma[candidate['lemma']] - 1 ) / (maxCount-1)
+                candidate['frequency'] = groupePerLemma[candidate['lemma']]
+                candidate['frequencyNorm'] = ( candidate['frequency'] - 1 ) / (maxCount-1)
                 lemaCount = groupePerLemma.get(candidate["lemma"], 0 )
                 
-                #  normalized position
+                # normalized position
                 candidate['positionNorm'] = (self._maxIndex -  candidate['position']) / self._maxIndex
 
     
         # scoring
+        scoreMax = 0 
         for candidate in candidates:
-            candidate['score'] =  candidate['frequencyNorm'] * self.weights[1] +  candidate['positionNorm'] * self.weights[0] 
+            candidate['score'] =  candidate['positionNorm'] * self.weights[0] + candidate['frequencyNorm'] * self.weights[1]
+            if candidate['score'] > scoreMax:
+                    scoreMax = candidate['score']
+                    
+        # normalizing scores
+        for candidate in candidates:
+            candidate['score'] = candidate['score']/scoreMax
+        # Sort candidates
+        candidates.sort(key = lambda x: x['score'], reverse=True)
         
-       
-        # sort candidates accoring to the scoring
-        #candidate.sort(key=lambda x: x.score, reverse=True)
-        #sorted(candidate.keys(), key=lambda candidate: candidate.score)
-        candidates.sort(key = lambda x: x['score'])
-        print(candidates)
-        return candidate
+        # delete duplicates
+        # - frequency already used used for scoring, so only best scored candidate must be returned
+        alreadySaveLemma = {}
+        new_list = []
+        for candidate in candidates:
+            if candidate['lemma'] not in alreadySaveLemma:
+                alreadySaveLemma[candidate['lemma']] = True
+                new_list.append(candidate)
+        
+        return new_list
 
     def _isRelevantPos(self, pos):
        

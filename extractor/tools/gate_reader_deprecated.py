@@ -1,3 +1,5 @@
+
+
 import copy
 import html
 import logging
@@ -133,7 +135,6 @@ def parse_file(path, factory):
             log.warning('The given file contains invalid xml: %s - %s', e, path)
 
             return None
-
 
 def extract_markup(root, start, end, encoding):
     """

@@ -41,6 +41,12 @@ class AbsExtractor:
         """
 
         return document
+    
+    def _evaluate_candidates(self, document):
+        return None
+    
+    def _distCandidateToAnnotation(self, document):
+        return 99999
 
     def _extract_entities(self, tokens, filter=None, inverted=False, phrase_range=1, groups=None):
         """

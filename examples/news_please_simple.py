@@ -44,7 +44,7 @@ if __name__ == '__main__':
                     # add an optional output directory
                    .setOutputPath(outputPath)
                     # limit the the to process documents (nice for development) 
-                   .setLimit(1)
+                   .setLimit(2)
                     # add an optional extractor (it would do basically just copying without...)
                    .setExtractor(extractor)
                     # add an optional processor, each processor is called for each document after parsing 

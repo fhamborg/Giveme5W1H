@@ -87,7 +87,7 @@ class CauseExtractor(AbsExtractor):
         candidate_list = self._extract_candidates(document)
         candidate_list = self._evaluate_candidates(document, candidate_list)
         document.set_answer('why', candidate_list)
-
+        print(candidate_list)
         return document
 
     def _extract_candidates(self, document):

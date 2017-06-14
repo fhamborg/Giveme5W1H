@@ -56,7 +56,7 @@ class Preprocessor:
         #print(text)
         
         text = '. '.join(val for key, val in document.get_raw().items())
-        print(text)
+        #print(text)
             
         annotation = self.cnlp.annotate(text, self.config)
         

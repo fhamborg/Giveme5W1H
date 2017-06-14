@@ -1,14 +1,10 @@
 import glob
 import logging
-from timeit import default_timer as timer
 
-from extractor.tools.news_please.writer import Writer
-from extractor.tools.news_please.reader import Reader
-from token import GREATER
-
+from .writer import Writer
+from .reader import Reader
 
 class Handler(object):
-    
     def __init__(self, inputPath):
        
         self._inputPath = inputPath
@@ -16,23 +12,20 @@ class Handler(object):
         self._limit = None
         self._extractor = None 
         self._outputPath = None
-        self._processors = []
+        self._adocuments = None
         
         self._reader = Reader()
         self._writer = Writer()
         self.log = logging.getLogger('GiveMe5W')
     
-    # helper to inject any other further processing after GiveMe5W processing
-    def addProcessor(self, processor):
-        self._processors.append(processor)
-        return self
-    
+ 
     def setExtractor(self, extractor):
         self._extractor = extractor 
         return self
     
     def setLimit(self, limit):
         self._limit = limit 
+        print('document input limit:\t', limit) 
         return self
     
     def setOutputPath(self, outputPath):
@@ -44,9 +37,13 @@ class Handler(object):
         docCounter = 0
         for filepath in glob.glob(self._inputPath + '/*.json'):
             if self._limit and docCounter >= self._limit:
-                print('limit reached') 
+                
                 break
+            docCounter += 1
             self._documents.append(self._reader.read(filepath))
+        
+        print('documents prelaoded:\t', docCounter ) 
+        return self
             
     def getDocuments(self):
         if self._documents:
@@ -55,13 +52,11 @@ class Handler(object):
             print('you must call preLoadAndCacheDocuments before processing to collect the docs')
     
     def _processDocument(self, document):
+        
         if self._extractor: 
             self._extractor.parse(document)
         if self._outputPath:
             self._writer.write(self._outputPath, document)
-        # pass document to all registered processors
-        for processor in self._processors:
-                processor.process(document)
                 
     def process(self):
         #timerGlobal = timer()
@@ -69,19 +64,19 @@ class Handler(object):
         
         #process in memory objects (call preLoadDocuments)
         if self._documents:
+            print('processing documents from memory')
             for document in self._documents:
                 self._processDocument(document)  
         else:
-        #read/instantiate them again
+            print('processing documents from file system ')
             for filepath in glob.glob(self._inputPath + '/*.json'):
                 if self._limit and docCounter >= self._limit:
                     print('limit reached') 
                     break 
                 docCounter += 1
                 self._processDocument(self._reader.read(filepath))
-        
+            print('Processed Documents:\t ', docCounter)  
         print('')   
         print('------- Handler finished processing-------\t')        
-        print('Processed Documents:\t ', docCounter)        
-        
+        return self
                 

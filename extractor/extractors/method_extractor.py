@@ -34,7 +34,7 @@ class MethodExtractor(AbsExtractor):
             keyVal = ([( candidate['originalText'], candidate['pos'])], candidate['score'] )
             result.append( keyVal )
         document.set_answer('how', result )
-        print(result)
+        #print(result)
 
     def _extract_candidates(self, document):
         """

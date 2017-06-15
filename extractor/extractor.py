@@ -1,9 +1,10 @@
 import logging
 import multiprocessing
 
-from extractor.extractors import action_extractor, environment_extractor, cause_extractor, method_extractor
-from extractor.preprocessors.preprocessor_nltk import Preprocessor
+from extractors import action_extractor, environment_extractor, cause_extractor, method_extractor
+from preprocessors.preprocessor_core_nlp import Preprocessor
 
+from combined_scoring.distance_of_candidate import DistanceOfCandidate
 
 class FiveWExtractor:
     """
@@ -13,8 +14,9 @@ class FiveWExtractor:
     log = None
     preprocessor = None
     extractors = []
+    
 
-    def __init__(self, preprocessor, extractors=None):
+    def __init__(self, preprocessor=None, extractors=None, combinedScorers=None):
         """
         Initializes the given preprocessor and extractors.
 
@@ -27,7 +29,10 @@ class FiveWExtractor:
         # first initialize logger
         self.log = logging.getLogger('GiveMe5W')
 
-        self.preprocessor = preprocessor
+        if preprocessor:
+            self.preprocessor = preprocessor
+        else:
+            self.preprocessor = Preprocessor('http://localhost:9000')
 
         # initialize extractors
         if extractors is not None and len(extractors) > 0:
@@ -41,7 +46,15 @@ class FiveWExtractor:
                 cause_extractor.CauseExtractor(),
                 method_extractor.MethodExtractor()
             ]
-
+            
+        if combinedScorers and len(combinedScorers) > 0:
+            self.combinedScorers = combinedScorers
+        else:
+            self.log.info('No combinedScorers passed, initializing default configuration.')
+            self.combinedScorers = [
+                DistanceOfCandidate( ('What', 'Who'),('How'), 1)
+            ]
+            
     def parse(self, doc):
         """
         Pass a document to the preprocessor and the extractors
@@ -66,4 +79,9 @@ class FiveWExtractor:
         for t in threads:
             t.join()
 
+        # apply combined_scoring
+        if self.combinedScorers:
+            for combinedScorer in self.combinedScorers:
+                combinedScorer.score(doc)
+        
         return doc

@@ -1,6 +1,6 @@
 import json
 import logging
-from extractor.document import DocumentFactory
+from document import DocumentFactory
 
 class Reader(object):
     

@@ -9,7 +9,7 @@ from extractor.extractor import FiveWExtractor
 
 
 from extractor.tools.news_please.handler import Handler
-from extractor.tools.news_please.processor.learn_weights import LearnWeights
+#from extractor.tools.news_please.processor.learn_weights import LearnWeights
 
 """
 
@@ -39,26 +39,26 @@ if __name__ == '__main__':
     # Setup
     extractor = FiveWExtractor(Preprocessor(core_nlp_host))
     inputPath = os.path.dirname(__file__) + '/input/'
-    learnWeightsProcessor = LearnWeights( os.path.dirname(__file__) + '/output')
-    
-    # Put all together, run it, get the cached objects
-    documents = Handler(inputPath).setExtractor( extractor ).preLoadAndCacheDocuments().process().getDocuments()
     
     increment_range = [0.0, 0.05, 0.10, 0.15, 0.20, 0.25, 0.30, 0.35, 0.40, 0.45, 0.50, 0.55, 0.60, 0.65, 0.70, 0.75, 0.80,
                    0.85, 0.90, 0.95, 1]
     
+    # Put all together, run it, get the cached document objects
+    documents = Handler(inputPath).setExtractor( extractor ).preLoadAndCacheDocuments().process().getDocuments()
     
-    results = []
-
-    for i in increment_range:
-        for j in increment_range:
-            for k in increment_range:
-                for l in increment_range:
-                   
-                    adjustWeights(extractor.extractors)
+    for document in documents:
+        # manually generate candidate lists
+        candidates = [e._extract_candidates(document) for e in extractor.extractors]
+        
+        # try all weight combinations
+        for i in increment_range:
+            for j in increment_range:
+                for k in increment_range:
+                    for l in increment_range:
+                        
+                        adjustWeights(extractor.extractors)
                     
-                    for document in documents:
-                        # 2_Reevaluate 
+                        # 2_Reevaluate
                         extractor.extractors[0]._evaluate_candidates(document)
                         extractor.extractors[1]._evaluate_candidates(document)
                         extractor.extractors[2]._evaluate_candidates(document)
@@ -69,7 +69,7 @@ if __name__ == '__main__':
                         extractor.extractors[2]._distCandidateToAnnotation(document)
                         
                         # save it, somehow
-   
-    
+       
+        
 
     

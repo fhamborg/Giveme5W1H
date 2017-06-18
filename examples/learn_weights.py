@@ -43,12 +43,12 @@ if __name__ == '__main__':
     increment_range = [0.0, 0.05, 0.10, 0.15, 0.20, 0.25, 0.30, 0.35, 0.40, 0.45, 0.50, 0.55, 0.60, 0.65, 0.70, 0.75, 0.80,
                    0.85, 0.90, 0.95, 1]
     
-    # Put all together, run it, get the cached document objects
+    # Put all together, run it once, get the cached document objects
     documents = Handler(inputPath).setExtractor( extractor ).preLoadAndCacheDocuments().process().getDocuments()
     
     for document in documents:
         # manually generate candidate lists
-        candidates = [e._extract_candidates(document) for e in extractor.extractors]
+        # candidates = [e._extract_candidates(document) for e in extractor.extractors]
         
         # try all weight combinations
         for i in increment_range:
@@ -58,18 +58,20 @@ if __name__ == '__main__':
                         
                         adjustWeights(extractor.extractors)
                     
-                        # 2_Reevaluate
-                        extractor.extractors[0]._evaluate_candidates(document)
-                        extractor.extractors[1]._evaluate_candidates(document)
-                        extractor.extractors[2]._evaluate_candidates(document)
+                        # 2__Reevaluate per extractor
+                        for extractor in extractor.extractors:
+                            extractor._evaluate_candidates(document)
+                                        
+                        # 2_1 Reevaluate combined scoring
+                        for combinedScorer in extractor.combinedScorers:
+                            combinedScorer.score(document)
                     
-                        # 3_calculate the distance to annotation 
-                        extractor.extractors[0]._distCandidateToAnnotation(document)
+                        # 3__ calculate the distance to annotation 
+                        # 3_1 Time
                         extractor.extractors[1]._distCandidateToAnnotation(document)
+                        # 3_2 Cause extractor - (position, conjunction, adverb, verb)
                         extractor.extractors[2]._distCandidateToAnnotation(document)
                         
-                        # save it, somehow
-       
-        
-
-    
+                    # 3_3 action extractor - (position, frequency, named entity)
+                    extractor.extractors[0]._evaluate_candidates(document, candidates[0])
+                    extractor.extractors[0]._distCandidateToAnnotation(document)

@@ -25,9 +25,17 @@ class Document(object):
         self._nerTags = []
         self._rawData = rawData
         
+        self._candidates = {};
+        
         self._answers = {'what': [], 'who': [], 'why': [], 'where': [], 'when': [], 'how': []}
         self._annotations = {'what': [], 'who': [], 'why': [], 'where': [], 'when': [], 'how': []}
 
+    def set_candidates(self, extractor, candidates):
+        self._candidates[extractor] = candidates
+    
+    def get_candidates(self, extractor):
+        return self._candidates[extractor]
+    
     def get_len(self):
         return self._length
 

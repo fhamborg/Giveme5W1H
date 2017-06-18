@@ -25,7 +25,7 @@ if __name__ == '__main__':
                         #action_extractor.ActionExtractor(),
                         #environment_extractor.EnvironmentExtractor(),
                         cause_extractor.CauseExtractor(),
-                        method_extractor.MethodExtractor()
+                        #method_extractor.MethodExtractor()
                     ])
     inputPath = os.path.dirname(__file__) + '/input'
     outputPath = os.path.dirname(__file__) + '/output'

@@ -4,7 +4,7 @@ from nltk.corpus import wordnet
 from nltk.stem.wordnet import WordNetLemmatizer
 from copy import deepcopy
 from .abs_extractor import AbsExtractor
-
+from .candidate import Candidate
 
 class CauseExtractor(AbsExtractor):
     """
@@ -84,10 +84,9 @@ class CauseExtractor(AbsExtractor):
         :return: Parsed document
         """
 
-        candidate_list = self._extract_candidates(document)
-        candidate_list = self._evaluate_candidates(document, candidate_list)
-        document.set_answer('why', candidate_list)
-        #print(candidate_list)
+        self._extract_candidates(document)
+        self._evaluate_candidates(document)
+    
         return document
 
     def _extract_candidates(self, document):
@@ -107,7 +106,8 @@ class CauseExtractor(AbsExtractor):
             for candidate in self._evaluate_tree(tree):
                 candidate_list.append([candidate[1], candidate[2], i])
 
-        return candidate_list
+        document.set_candidates('CauseExtractor', candidate_list)
+        #return candidate_list
 
     def _evaluate_tree(self, tree):
         """
@@ -222,7 +222,7 @@ class CauseExtractor(AbsExtractor):
                 candidates.append(deepcopy([pos[i - 1:], pos[:i], 'biclausal']))
         return candidates
 
-    def _evaluate_candidates(self, document, candidates):
+    def _evaluate_candidates(self, document):
         """
         Calculate a confidence score for extracted candidates.
 
@@ -232,11 +232,10 @@ class CauseExtractor(AbsExtractor):
 
         :return: A list of evaluated and ranked candidates
         """
-
         ranked_candidates = []
         weights_sum = sum(self.weights)
 
-        for candidate in candidates:
+        for candidate in document.get_candidates('CauseExtractor'):
             if candidate is not None and len(candidate[0]) > 0:
                 # following the concept of the inverted pyramid use the position for scoring
                 score = self.weights[0] * (document.get_len()-candidate[2]) / document.get_len()
@@ -258,7 +257,7 @@ class CauseExtractor(AbsExtractor):
                 ranked_candidates.append((candidate[0], score))
 
         ranked_candidates.sort(key=lambda x: x[1], reverse=True)
-        return ranked_candidates
+        document.set_answer('why', ranked_candidates)
 
     def get_hyponyms(self, synsets):
         """

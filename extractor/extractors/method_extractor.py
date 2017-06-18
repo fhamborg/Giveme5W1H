@@ -11,7 +11,8 @@ class MethodExtractor(AbsExtractor):
     # weights used in the candidate evaluation:
     # (position, frequency, named entity)
     # weights = (4, 3, 2)
-
+    weights = [1,1,1]
+    
     def extract(self, document):
         """
         Parses the document for answers to the questions how.
@@ -21,25 +22,19 @@ class MethodExtractor(AbsExtractor):
 
         :return: The parsed Document object
         """
-        self.weights = [1,1,1]
-        
-        candidates = self._extract_candidates(document)
-        candidates = self._evaluate_candidates(document, candidates)
         
         
+        self._extract_candidates(document)
+        self._evaluate_candidates(document)
+        
+        return document
         #convert candidates into correct format
         #print(candidates)
-        result = []
-        for candidate in candidates:
-            keyVal = ([( candidate['originalText'], candidate['pos'])], candidate['score'] )
-            result.append( keyVal )
-        document.set_answer('how', result )
+        
         #print(result)
 
     def _extract_candidates(self, document):
         """
-    
-
         :param document: The Document to be analyzed.
         :type document: Document
 
@@ -71,12 +66,11 @@ class MethodExtractor(AbsExtractor):
                     # save all relevant information for _evaluate_candidates  
                     candidates.append({ 'position': token['index'], 'lemma': token['lemma'], 'originalText':token['originalText'], 'pos' : token['pos']   })
                 
-        return candidates
+        document.set_candidates('MethodExtractor', candidates)
+        #return candidates
 
 
-    
-
-    def _evaluate_candidates(self, document, candidates):
+    def _evaluate_candidates(self, document):
         """
         :param document: The parsed document
         :type document: Document
@@ -90,6 +84,7 @@ class MethodExtractor(AbsExtractor):
         groupePerLemma = {}
         maxCount = 0
         
+        candidates = document.get_candidates('MethodExtractor')
         # frequency per lemma
         for candidate in candidates:
             if candidate is not None and len(candidate['originalText']) > 0:
@@ -135,7 +130,17 @@ class MethodExtractor(AbsExtractor):
                 alreadySaveLemma[candidate['lemma']] = True
                 new_list.append(candidate)
         
-        return new_list
+        
+        
+        
+        result = []
+        for candidate in new_list:
+            keyVal = ([( candidate['originalText'], candidate['pos'])], candidate['score'] )
+            result.append( keyVal )
+        document.set_answer('how', result )
+        
+        
+        #return new_list
 
     def _isRelevantPos(self, pos):
        

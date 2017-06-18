@@ -57,6 +57,8 @@ class Handler(object):
             self._extractor.parse(document)
         if self._outputPath:
             self._writer.write(self._outputPath, document)
+    
+    
                 
     def process(self):
         #timerGlobal = timer()

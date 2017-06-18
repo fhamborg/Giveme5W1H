@@ -22,17 +22,10 @@ class ActionExtractor(AbsExtractor):
 
         :return: The parsed Document object
         """
-
-        candidates = self._extract_candidates(document)
-        candidates = self._evaluate_candidates(document, candidates)
-
-        # split results
-        who = [(c[0], c[2]) for c in candidates]
-        what = [(c[1], c[2]) for c in candidates]
-
-        document.set_answer('who', self._filter_duplicates(who))
-        document.set_answer('what', self._filter_duplicates(what))
-       
+        self._extract_candidates(document)
+        self._evaluate_candidates(document)
+        return document
+        
 
     def _extract_candidates(self, document):
         """
@@ -62,7 +55,8 @@ class ActionExtractor(AbsExtractor):
                     if re.sub(r'\s+', '', mention['text']) in np_string:
                         candidates.append([pattern[0], pattern[1], cluster, mention['id']])
 
-        return candidates
+        document.set_candidates('ActionExtractor', candidates)
+        #return candidates
 
 
     def _evaluate_tree(self, tree):
@@ -94,7 +88,7 @@ class ActionExtractor(AbsExtractor):
 
         return candidates
 
-    def _evaluate_candidates(self, document, candidates):
+    def _evaluate_candidates(self, document):
         """
         Calculate a confidence score based on number of mentions, position in text and entailment of named entities
         for extracted candidates.
@@ -120,7 +114,7 @@ class ActionExtractor(AbsExtractor):
         else:
             max_len = 1
 
-        for candidate in candidates:
+        for candidate in document.get_candidates('ActionExtractor'):
             verb = candidate[1][0][0].lower()
 
             # VP beginning with say/said often contain no relevant action and are therefor skipped.
@@ -170,7 +164,18 @@ class ActionExtractor(AbsExtractor):
                 ranked_candidates.append((candidate[0], candidate[1], score))
 
         ranked_candidates.sort(key=lambda x: x[2], reverse=True)
-        return ranked_candidates
+        
+        
+        
+        # split results
+        who = [(c[0], c[2]) for c in ranked_candidates]
+        what = [(c[1], c[2]) for c in ranked_candidates]
+
+        document.set_answer('who', self._filter_duplicates(who))
+        document.set_answer('what', self._filter_duplicates(what))
+        
+        
+        #return ranked_candidates
 
     def cut_what(self, tree, min_length=0, length=0):
         """

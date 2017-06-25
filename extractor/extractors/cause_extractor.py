@@ -104,19 +104,31 @@ class CauseExtractor(AbsExtractor):
 
         for i, tree in enumerate(postrees):
             for candidate in self._evaluate_tree(tree):
-                print(candidate)
-                CandidateObject = Candidate([candidate[1], candidate[2], i])
+               
+                
+                CandidateObject = Candidate([candidate[0], candidate[1], i])
                 CandidateObject.setType(candidate[2])
-                #print('_')
-                #print(candidate)
-                #break
+                
+                # bugfix for the missing index information
+                self._searchIndex(document,CandidateObject)
                 candidates.append(CandidateObject)
-                #candidates.append([candidate[1], candidate[2], i])
 
        
         document.set_candidates('CauseExtractor', candidates)
         #return candidate_list
-
+        
+    
+    def _searchIndex(self, document, candidateObject):
+        raw = candidateObject.getRaw();
+        text = "";
+        for candidate in raw[0]:
+            text += candidate[0]
+        for candidate in raw[1]:
+            text += candidate[0]
+            
+        candidateObject.setIndex( text in document.getText() )
+        print(candidateObject.getIndex())
+ 
     def _evaluate_tree(self, tree):
         """
         Determines if the given sub tree contains a cause/effect relation.
@@ -128,7 +140,7 @@ class CauseExtractor(AbsExtractor):
 
         :return: A Tuple containing the cause/effect phrases and the pattern used to find it.
         """
-        candidatesObjects = []
+        self._candidatesObjects = []
         candidates = []
         pos = tree.pos()
         tokens = [t[0] for t in pos]
@@ -204,18 +216,6 @@ class CauseExtractor(AbsExtractor):
                             break
 
                     # apply subpatterns
-                    #if post_con['phenomenon']:
-                    #print('b')
-                    #    candidates.append(deepcopy([subtree.pos(), sibling.pos(), 'NP-VP-NP']))
-                    #elif not pre_con['entity'] and (verb_con['associate'] or verb_con['relate']) and (post_con['abstraction'] and post_con['group'] and post_con['possession']): 
-                    #    candidates.append(deepcopy([subtree.pos(), sibling.pos(), 'NP-VP-NP']))
-                    #elif not pre_con['entity'] and post_con['event']:
-                    #    candidates.append(deepcopy([subtree.pos(), sibling.pos(), 'NP-VP-NP']))
-                    #elif not pre_con['abstraction'] and (post_con['event'] or post_con['act']):
-                    #    candidates.append(deepcopy([subtree.pos(), sibling.pos(), 'NP-VP-NP']))
-                    #elif verb_con['lead'] and (not post_con['entity'] and not post_con['group']):
-                    #   candidates.append(deepcopy([subtree.pos(), sibling.pos(), 'NP-VP-NP']))
-                        
                     if  (
                             post_con['phenomenon'] 
                         ) or (
@@ -227,6 +227,8 @@ class CauseExtractor(AbsExtractor):
                         ) or (
                             verb_con['lead'] and (not post_con['entity'] and not post_con['group'])
                         ): 
+                    
+                        
                         candidates.append(deepcopy([subtree.pos(), sibling.pos(), 'NP-VP-NP']))
 
         # search for adverbs or clausal conjunctions

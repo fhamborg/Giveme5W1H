@@ -3,7 +3,7 @@
 class CandidatePart:
     def __init__(self):
         self._posTag = None
-        self._index = None
+       
         self._text = None
         
     def setPosTag(self,posTag):
@@ -11,10 +11,7 @@ class CandidatePart:
     def getPosTag(self):
         return self._posTag
     
-    def setIndex(self, index):
-        self._index = index
-    def getIndex(self):
-        return self._index
+    
     
     def setText(self, text):
         self._text = text
@@ -26,7 +23,7 @@ class Candidate:
     def __init__(self, raw=None):
         self._raw = raw    
         self._score = None
-        
+        self._index = None
     
     def getRaw(self):
         return self._raw
@@ -40,6 +37,11 @@ class Candidate:
         self._score = score
     def getScore(self):
         return self._score
+    
+    def setIndex(self, index):
+        self._index = index
+    def getIndex(self):
+        return self._index
 
 
    

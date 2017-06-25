@@ -44,6 +44,9 @@ class Document(object):
     
     def get_raw(self):
         return self._raw
+    concanate
+    def get_raw_concanated(self):
+        return self._raw
 
     def get_date(self):
         return self._date

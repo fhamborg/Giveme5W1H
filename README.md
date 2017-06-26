@@ -1,6 +1,6 @@
 # GiveMe5W
 
-GiveMe5W is an state of the art open-source 5W Question Answering system for news articles. It can either be used through a simple RESTapi or directly included in existing Python projects. Depending on the configuration  GiveMe5W parses each document for thepasse answeres of the following  questions:
+GiveMe5W is a state of the art open-source 5W Question Answering system for news articles. It can either be used through a simple RESTapi or directly included in existing Python projects. Depending on the configuration GiveMe5W parses each document for the answers to the following  questions:
 
 * **Who** is involved?
 * **What** happened?
@@ -9,8 +9,8 @@ GiveMe5W is an state of the art open-source 5W Question Answering system for new
 * **Why** did it happen?
 
 ## Getting started
-Before you can use GiveMe5W you need to make sure you have an CoreNLP-server up and running.
-In case you have to first install CoreNLP please refere to the CoreNLPs extensive [documentation](https://stanfordnlp.github.io/CoreNLP/corenlp-server.html) and follow the instructions on how to install CoreNLP and start a server.
+Before you can use GiveMe5W, you need to make sure you have a CoreNLP-server up and running.
+In the case you first to have to install CoreNLP please refer to the CoreNLPs extensive [documentation](https://stanfordnlp.github.io/CoreNLP/corenlp-server.html) and follow the instructions on how to install CoreNLP and start a server.
 
 Starting the CoreNLP server: 
 ```
@@ -39,7 +39,7 @@ options = None
 
 You can also adjust the extractors which are used to examine the documents:
 ```python
-# If desired, the selection of extractors can changed and passed to the FiveWExtractor at initialization
+# If desired, the selection of extractors can be changed and passed to the FiveWExtractor at initialization
     extractor_list = [
         action_extractor.ActionExtractor(),             # who & what
         environment_extractor.EnvironmentExtractor(),   # when & where
@@ -53,8 +53,8 @@ You can also adjust the extractors which are used to examine the documents:
 $ python extractor/examples/simple_api.py
 ```
 
-Now you are able to send articles throug the RESTapi to GiveMe5W. 
-The api supports the following JSON fields:
+Now you can send articles through the RESTapi to GiveMe5W. 
+The API supports the following JSON fields:
 
 * title (always required!)
 * description

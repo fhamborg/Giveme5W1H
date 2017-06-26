@@ -2,7 +2,7 @@ import logging
 import os
 import sys
 # Add path to allow execution though console
-sys.path.insert(0, '/'.join(os.path.realpath(__file__).split('/')[:-2]))
+sys.path.insert(0, '/'.join(os.path.realpath(__file__).split('/')[:-3]))
 from flask import Flask, request, jsonify
 from extractor.document import DocumentFactory
 from extractor.extractor import FiveWExtractor

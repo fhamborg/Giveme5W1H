@@ -13,19 +13,52 @@ Before you can use GiveMe5W you need to make sure you have an CoreNLP-server up 
 In case you have to first install CoreNLP please refere to the CoreNLPs extensive [documentation](https://stanfordnlp.github.io/CoreNLP/corenlp-server.html) and follow the instructions on how to install CoreNLP and start a server.
 
 Starting the CoreNLP server: 
-'''
+```
 $ nohup java -mx4g edu.stanford.nlp.pipeline.StanfordCoreNLPServer 9000 &
-'''
+```
 
 ### (Optional) Configuration
 If you are running CoreNLP on a different port or machine you have to first adjust the network settings for the prerpocessor:
 
-(Bsp: examples/simple_api.py)
-'''python
+(Bsp: extractor/examples/simple_api.py)
+```python
 # CoreNLP host
 core_nlp_host = 'localhost:9000'
-'''
+```
 
+For the RESTapi it is also possible to network config:
+```python
+# basic configuration of the rest api
+app = Flask(__name__)
+log = logging.getLogger(__name__)
+host = None
+port = 5000
+debug = False
+options = None
+```
+
+You can also adjust the extractors which are used to examine the documents:
+```python
+# If desired, the selection of extractors can changed and passed to the FiveWExtractor at initialization
+    extractor_list = [
+        action_extractor.ActionExtractor(),             # who & what
+        environment_extractor.EnvironmentExtractor(),   # when & where
+        cause_extractor.CauseExtractor()                # why
+    ]
+    extractor = FiveWExtractor(preprocessor, extractor_list)
+```
+
+### Start the python script
+```
+$ python extractor/examples/simple_api.py
+```
+
+Now you are able to send articles throug the RESTapi to GiveMe5W. 
+The api supports the following JSON fields:
+
+* title (always required!)
+* description
+* text
 ## License
 
 The project is licensed under the Apache License 2.0. Make sure that you use news-GiveMe5W in compliance with applicable law. Copyright 2016 The GiveMe5W team

@@ -4,7 +4,7 @@ from nltk.corpus import wordnet
 from nltk.stem.wordnet import WordNetLemmatizer
 from copy import deepcopy
 from .abs_extractor import AbsExtractor
-
+from .candidate import Candidate
 
 class CauseExtractor(AbsExtractor):
     """
@@ -84,10 +84,9 @@ class CauseExtractor(AbsExtractor):
         :return: Parsed document
         """
 
-        candidate_list = self._extract_candidates(document)
-        candidate_list = self._evaluate_candidates(document, candidate_list)
-        document.set_answer('why', candidate_list)
-
+        self._extract_candidates(document)
+        self._evaluate_candidates(document)
+    
         return document
 
     def _extract_candidates(self, document):
@@ -100,15 +99,36 @@ class CauseExtractor(AbsExtractor):
 
         :return: A List of Tuples containing all agents, actions and their position in the document.
         """
-        candidate_list = []
+        candidates = []
         postrees = document.get_trees()
 
         for i, tree in enumerate(postrees):
             for candidate in self._evaluate_tree(tree):
-                candidate_list.append([candidate[1], candidate[2], i])
+               
+                
+                CandidateObject = Candidate([candidate[0], candidate[1], i])
+                CandidateObject.setType(candidate[2])
+                
+                # bugfix for the missing index information
+                self._searchIndex(document,CandidateObject)
+                candidates.append(CandidateObject)
 
-        return candidate_list
-
+       
+        document.set_candidates('CauseExtractor', candidates)
+        #return candidate_list
+        
+    
+    def _searchIndex(self, document, candidateObject):
+        raw = candidateObject.getRaw();
+        text = "";
+        for candidate in raw[0]:
+            text += candidate[0]
+        for candidate in raw[1]:
+            text += candidate[0]
+            
+        candidateObject.setIndex( text in document.getText() )
+        print(candidateObject.getIndex())
+ 
     def _evaluate_tree(self, tree):
         """
         Determines if the given sub tree contains a cause/effect relation.
@@ -123,7 +143,7 @@ class CauseExtractor(AbsExtractor):
 
         :return: A Tuple containing the cause/effect phrases and the pattern used to find it.
         """
-
+        self._candidatesObjects = []
         candidates = []
         pos = tree.pos()
         tokens = [t[0] for t in pos]
@@ -163,6 +183,7 @@ class CauseExtractor(AbsExtractor):
                         if rest != self.causal_verb_phrases[lemma]:
                             continue
 
+                
                 # pattern contains a valid verb, so check the 8 subpatterns
                 if not verb_synset.isdisjoint(self.constraints_verbs['cause']):
                     candidates.append(deepcopy([subtree.pos(), sibling.pos(), 'NP-VP-NP']))
@@ -198,16 +219,19 @@ class CauseExtractor(AbsExtractor):
                             break
 
                     # apply subpatterns
-                    if post_con['phenomenon']:
-                        candidates.append(deepcopy([subtree.pos(), sibling.pos(), 'NP-VP-NP']))
-                    elif not pre_con['entity'] and (verb_con['associate'] or verb_con['relate']) and (
-                                    post_con['abstraction'] and post_con['group'] and post_con['possession']):
-                        candidates.append(deepcopy([subtree.pos(), sibling.pos(), 'NP-VP-NP']))
-                    elif not pre_con['entity'] and post_con['event']:
-                        candidates.append(deepcopy([subtree.pos(), sibling.pos(), 'NP-VP-NP']))
-                    elif not pre_con['abstraction'] and (post_con['event'] or post_con['act']):
-                        candidates.append(deepcopy([subtree.pos(), sibling.pos(), 'NP-VP-NP']))
-                    elif verb_con['lead'] and (not post_con['entity'] and not post_con['group']):
+                    if  (
+                            post_con['phenomenon'] 
+                        ) or (
+                            not pre_con['entity'] and (verb_con['associate'] or verb_con['relate']) and (post_con['abstraction'] and post_con['group'] and post_con['possession'])
+                        ) or (
+                            not pre_con['entity'] and post_con['event'] 
+                        ) or (
+                            not pre_con['abstraction'] and (post_con['event'] or post_con['act']) 
+                        ) or (
+                            verb_con['lead'] and (not post_con['entity'] and not post_con['group'])
+                        ): 
+                    
+                        
                         candidates.append(deepcopy([subtree.pos(), sibling.pos(), 'NP-VP-NP']))
 
         # search for adverbs or clausal conjunctions
@@ -223,6 +247,7 @@ class CauseExtractor(AbsExtractor):
                     ' '.join(tokens[i:]).lower().startswith(self.clausal_conjunctions[token]):
                 # Check if token is au clausal conjunction indicating causation
                 candidates.append(deepcopy([pos[i - 1:], pos[:i], 'biclausal']))
+
 
         # drop candidates containing other candidates
         unique_candidates = []
@@ -241,7 +266,8 @@ class CauseExtractor(AbsExtractor):
 
         return unique_candidates
 
-    def _evaluate_candidates(self, document, candidates):
+
+    def _evaluate_candidates(self, document):
         """
         Calculate a confidence score for extracted candidates.
 
@@ -251,11 +277,12 @@ class CauseExtractor(AbsExtractor):
 
         :return: A list of evaluated and ranked candidates
         """
-
         ranked_candidates = []
         weights_sum = sum(self.weights)
 
-        for candidate in candidates:
+        for candidateObject in document.get_candidates('CauseExtractor'):
+            
+            candidate = candidateObject.getRaw();
             if candidate is not None and len(candidate[0]) > 0:
                 # following the concept of the inverted pyramid use the position for scoring
                 score = self.weights[0] * (document.get_len()-candidate[2]) / document.get_len()
@@ -273,11 +300,14 @@ class CauseExtractor(AbsExtractor):
 
                 if score > 0:
                     score /= weights_sum
-
+                
+                candidateObject.setScore(score)
+               
+                # OLD
                 ranked_candidates.append((candidate[0], score))
-
+        #OLD
         ranked_candidates.sort(key=lambda x: x[1], reverse=True)
-        return ranked_candidates
+        document.set_answer('why', ranked_candidates)
 
     def get_hyponyms(self, synsets):
         """

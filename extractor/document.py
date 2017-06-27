@@ -1,4 +1,5 @@
 from multiprocessing.managers import BaseManager
+from fileinput import filename
 
 
 class DocumentManager(BaseManager):
@@ -10,8 +11,8 @@ class Document(object):
     Document is a pickable container for the raw document and all related data
     """
 
-    def __init__(self, title, desc='', text=''):
-        self._raw = {'title': title, 'description': desc, 'text': text}
+    def __init__(self, title, desc='', text='', rawData = None):
+        self._raw = {'title': title, 'description': desc, 'text': text }
         self._date = None
 
         self._file_name = None
@@ -25,6 +26,7 @@ class Document(object):
         self._posTags = []
         self._posTrees = []
         self._nerTags = []
+<<<<<<< HEAD
 
         self._answers = {'what': [], 'who': [], 'why': [], 'where': [], 'when': []}
         self._annotations = {'what': [], 'who': [], 'why': [], 'where': [], 'when': []}
@@ -35,13 +37,31 @@ class Document(object):
     def get_source(self):
         return self._source
 
+=======
+        self._rawData = rawData
+        
+        self._candidates = {};
+        
+        self._answers = {'what': [], 'who': [], 'why': [], 'where': [], 'when': [], 'how': []}
+        self._annotations = {'what': [], 'who': [], 'why': [], 'where': [], 'when': [], 'how': []}
+
+    def set_candidates(self, extractor, candidates):
+        self._candidates[extractor] = candidates
+    
+    def get_candidates(self, extractor):
+        return self._candidates[extractor]
+    
+>>>>>>> 522fbbeef3f653d409482d26dfbb1ce654d3d4cb
     def get_len(self):
         return self._length
 
     def get_title(self):
         return self._raw['title']
-
+    
     def get_raw(self):
+        return self._raw
+    concanate
+    def get_raw_concanated(self):
         return self._raw
 
     def get_date(self):
@@ -73,6 +93,9 @@ class Document(object):
 
     def get_annotations(self):
         return self._annotations
+    
+    def get_rawData(self):
+        return self._rawData
 
     def set_file_name(self, name):
         self._file_name = name
@@ -134,11 +157,16 @@ class DocumentFactory:
         self.manager = DocumentManager()
         self.manager.start()
 
+<<<<<<< HEAD
     def spawn_doc(self, title, desc=None, text=None, file_name=None, source=None):
         document = self.manager.Document(title, desc or '', text or '')
         document.set_file_name(file_name)
         document.set_source(source)
         return document
+=======
+    def spawn_doc(self, title, desc=None, text=None, rawData=None):
+        return self.manager.Document(title, desc or '', text or '', rawData or None)
+>>>>>>> 522fbbeef3f653d409482d26dfbb1ce654d3d4cb
 
 
 

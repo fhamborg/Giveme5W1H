@@ -37,10 +37,16 @@ class AbsExtractor:
         :param document: The Document object to parse
         :type document: Document
 
-        :return: The parsed Document object
+        :return: None, verything it store within the document object (set_candiadates)
         """
 
-        return document
+        return None
+    
+    def _evaluate_candidates(self, document):
+        return None
+    
+    def _distCandidateToAnnotation(self, document):
+        return 99999
 
     def _extract_entities(self, tokens, filter=None, inverted=False, phrase_range=1, groups=None):
         """

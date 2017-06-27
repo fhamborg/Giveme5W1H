@@ -50,11 +50,16 @@ class EnvironmentExtractor(AbsExtractor):
 
         :return: The parsed Document object
         """
-
-        ne_lists = self._extract_candidates(document)
-        locations = self._evaluate_locations(document, ne_lists[0])
-        dates = self._evaluate_dates(document, ne_lists[1])
-
+        self._extract_candidates(document)
+        self._evaluate_candidates(document)
+        
+        return document
+        
+    def _evaluate_candidates(self, document):
+        
+        locations = self._evaluate_locations(document)
+        dates = self._evaluate_dates(document)
+        
         document.set_answer('where', self._filter_duplicates(locations, False))
         document.set_answer('when', self._filter_duplicates(dates, False))
 
@@ -103,9 +108,11 @@ class EnvironmentExtractor(AbsExtractor):
                     # String includes date and time
                     dates.append((self._fetch_pos(pos_tags[i], candidate[0]), i))
 
-        return locations, dates
+        document.set_candidates('EnvironmentExtractorNeDates', dates)
+        document.set_candidates('EnvironmentExtractorNeLocatios', locations)
+        #return locations, dates
 
-    def _evaluate_locations(self, document, candidates):
+    def _evaluate_locations(self, document):
         """
         Calculate a confidence score for extracted location candidates.
 
@@ -122,7 +129,7 @@ class EnvironmentExtractor(AbsExtractor):
         weights = self.weights[0]
         weights_sum = sum(weights)
 
-        for location in candidates:
+        for location in document.get_candidates('EnvironmentExtractorNeLocatios'):
             # fetch the boundingbox: (min lat, max lat, min long, max long)
             bb = location[1].raw['boundingbox']
 
@@ -174,7 +181,7 @@ class EnvironmentExtractor(AbsExtractor):
         ranked_locations.sort(key=lambda x: x[1], reverse=True)
         return ranked_locations
 
-    def _evaluate_dates(self, document, date_list):
+    def _evaluate_dates(self, document):
         """
         Calculate a confidence score for extracted time candidates.
 
@@ -193,9 +200,11 @@ class EnvironmentExtractor(AbsExtractor):
         # fetch the date the article was published as a reference date
         reference = self.calendar.parse(document.get_date() or '')
 
-        # translate date strings into date objects
-        for candidate in date_list:
+       
+        for candidate in  document.get_candidates('EnvironmentExtractorNeDates'):
+            # translate date strings into date objects
             date_str = ' '.join([t[0] for t in candidate[0]])
+
             # Skip 'now' because its often part of a newsletter offer or similar
             if date_str.lower().strip() == 'now':
                 continue

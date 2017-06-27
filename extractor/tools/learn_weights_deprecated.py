@@ -14,6 +14,8 @@ from geopy.distance import vincenty
 from nltk.tokenize import word_tokenize
 from nltk.corpus import wordnet
 from itertools import product
+import json
+import codecs
 
 """
 This tool extracts all candidates from the given sample articles, iterates over a range of parameter increments and
@@ -24,9 +26,9 @@ compares the results with given annotations. The results are saved to .csv file.
 
 abs_path = '/'.join(os.path.realpath(__file__).split('/')[:-3])
 # path to dir with documents
-d_path = abs_path + '/examples/sample_articles/article'
+d_path = abs_path + '/examples/sample_articles/'
 # path to .json file with annotations
-a_path = abs_path + '/examples/sample_articles/golden.json'
+a_path = abs_path + '/examples/sample_articles/golden.pjson'
 
 # Host of the CoreNLP server
 # For information on how to build/run a CoreNLP instance go to: https://stanfordnlp.github.io/CoreNLP/
@@ -67,14 +69,23 @@ def load_documents(d_path, a_path):
         log.warning('The given file does not exist: %s' % a_path)
     else:
         # load annotations
-        with open(a_path) as file:
+        with codecs.open(a_path, 'r', 'utf-8-sig') as file:
+            #annotations = json.load(file)
+            # just open the file...
+            
+            # need to use codecs for output to avoid error in json.dump
+            #output_file = codecs.open("output_file.json", "w", encoding="utf-8")
+            
+            # read the file and decode possible UTF-8 signature at the beginning
+            # which can be the case in some files.
             annotations = json.load(file)
 
         for root, directory, files in os.walk(d_path):
             for file in files:
                 doc = gate_reader.parse_file(os.path.join(root, file), factory)
-
+                
                 if doc is not None:
+                    print(doc.get_annotations())
                     # fetch annotation
                     annotation = {}
                     for question in annotations[file]:
@@ -82,7 +93,7 @@ def load_documents(d_path, a_path):
                         doc.set_annotations(annotation)
                         # store filename in 'what'-field
                         doc.set_answer('what', file)
-
+                    print(annotation)
                     documents.append(doc)
 
     log.info('%i document and annotations loaded' % len(documents))

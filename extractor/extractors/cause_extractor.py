@@ -126,7 +126,7 @@ class CauseExtractor(AbsExtractor):
         for candidate in raw[1]:
             text += candidate[0]
             
-        candidateObject.setIndex( text in document.getText() )
+        candidateObject.setIndex( text in document.get_FullText() )
         print(candidateObject.getIndex())
  
     def _evaluate_tree(self, tree):

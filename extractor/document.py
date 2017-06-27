@@ -26,32 +26,31 @@ class Document(object):
         self._posTags = []
         self._posTrees = []
         self._nerTags = []
-<<<<<<< HEAD
-
-        self._answers = {'what': [], 'who': [], 'why': [], 'where': [], 'when': []}
-        self._annotations = {'what': [], 'who': [], 'why': [], 'where': [], 'when': []}
-
-    def get_file_name(self):
-        return self._file_name
-
-    def get_source(self):
-        return self._source
-
-=======
         self._rawData = rawData
         
         self._candidates = {};
         
-        self._answers = {'what': [], 'who': [], 'why': [], 'where': [], 'when': [], 'how': []}
-        self._annotations = {'what': [], 'who': [], 'why': [], 'where': [], 'when': [], 'how': []}
+        # append all document text into one string
+        self._fullText = '. '.join(val for key, val in self._raw.items())
+
+        self._answers = {'what': [], 'who': [], 'why': [], 'where': [], 'when': []}
+        self._annotations = {'what': [], 'who': [], 'why': [], 'where': [], 'when': []}
+
+    def get_FullText(self):
+        return self._fullText
 
     def set_candidates(self, extractor, candidates):
         self._candidates[extractor] = candidates
     
     def get_candidates(self, extractor):
         return self._candidates[extractor]
+
+    def get_file_name(self):
+        return self._file_name
+
+    def get_source(self):
+        return self._source
     
->>>>>>> 522fbbeef3f653d409482d26dfbb1ce654d3d4cb
     def get_len(self):
         return self._length
 
@@ -60,7 +59,7 @@ class Document(object):
     
     def get_raw(self):
         return self._raw
-    concanate
+   
     def get_raw_concanated(self):
         return self._raw
 
@@ -157,16 +156,10 @@ class DocumentFactory:
         self.manager = DocumentManager()
         self.manager.start()
 
-<<<<<<< HEAD
     def spawn_doc(self, title, desc=None, text=None, file_name=None, source=None):
         document = self.manager.Document(title, desc or '', text or '')
         document.set_file_name(file_name)
         document.set_source(source)
         return document
-=======
-    def spawn_doc(self, title, desc=None, text=None, rawData=None):
-        return self.manager.Document(title, desc or '', text or '', rawData or None)
->>>>>>> 522fbbeef3f653d409482d26dfbb1ce654d3d4cb
-
 
 

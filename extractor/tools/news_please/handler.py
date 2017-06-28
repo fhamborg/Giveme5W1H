@@ -57,10 +57,12 @@ class Handler(object):
             print('you must call preLoadAndCacheDocuments before processing to collect the docs')
     
     def _processDocument(self, document):
-        
+
+        wasPreprocessed = document.is_preprocessed()
+
         if self._extractor: 
             self._extractor.parse(document)
-            if self._reader.getPreprocessedPath():
+            if self._reader.getPreprocessedPath() and not wasPreprocessed:
                 rawData = document.get_rawData()
                 self._writer.writePickle(document, self._reader.get_preprocessedFilePath(rawData['dId']))
                 
@@ -70,6 +72,7 @@ class Handler(object):
     
                 
     def process(self):
+        # TODO add here threading
         #timerGlobal = timer()
         docCounter = 0
         

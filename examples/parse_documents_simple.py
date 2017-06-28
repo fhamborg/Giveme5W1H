@@ -12,7 +12,7 @@ sys.path.insert(0, '/'.join(os.path.realpath(__file__).split('/')[:-3]))
 
 
 """
-This is a simple example on how to use the extractor in combination with NewsPlease files.
+This is a simple example how to use the extractor in combination with NewsPlease files.
 File will be process one by one, nothing is cached
 """
 

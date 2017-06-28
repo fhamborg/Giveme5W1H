@@ -12,8 +12,11 @@ sys.path.insert(0, '/'.join(os.path.realpath(__file__).split('/')[:-3]))
 
 """
 Advanced example to use the extractor in combination with NewsPlease files
-The output of the core_nlp_host is save in the cache directory to speed up multiple runs. 
-Documents are preloaded into the memory and stay persistent for further calculations after processing
+The output of the core_nlp_host is saved in the cache directory to speed up multiple runs. 
+Documents are preloaded into memory and stay persistent for further calculations.
+
+Documents are preprocessed just once, you have to set is_preprocessed to false, 
+if you want to process them again by core_nlp
 """
 
 # don`t forget to start up core_nlp_host
@@ -27,10 +30,10 @@ if __name__ == '__main__':
     log.addHandler(sh)
     
     extractor = FiveWExtractor(extractors = [
-                        #action_extractor.ActionExtractor(),
-                        #environment_extractor.EnvironmentExtractor(),
+                        action_extractor.ActionExtractor(),
+                        environment_extractor.EnvironmentExtractor(),
                         cause_extractor.CauseExtractor(),
-                        #method_extractor.MethodExtractor()
+                        method_extractor.MethodExtractor()
                     ])
     inputPath = os.path.dirname(__file__) + '/input'
     outputPath = os.path.dirname(__file__) + '/output'
@@ -39,15 +42,16 @@ if __name__ == '__main__':
     documents = (
                 # initiate the newsplease file handler with the input directory
                 Handler(inputPath)
+                    .setOutputPath(outputPath)
                     # set a path to save an load preprocessed documents
-                   .setPreprocessedPath(preprocessedPath)
+                    .setPreprocessedPath(preprocessedPath)
                     # limit the the to process documents (nice for development) 
-                   #.setLimit(1)
+                    #.setLimit(1)
                     # add an optional extractor (it would do basically just copying without...)
-                   .setExtractor(extractor)
+                    .setExtractor(extractor)
                     # saves all document objects for further programming
-                   #.preLoadAndCacheDocuments()
+                    .preLoadAndCacheDocuments()
                     # executing it
-                   .process().getDocuments()
+                    .process().getDocuments()
             )
     

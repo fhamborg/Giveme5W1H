@@ -107,18 +107,23 @@ class CauseExtractor(AbsExtractor):
 
         for i, tree in enumerate(postrees):
             for candidate in self._evaluate_tree(tree):
-               
-                
-                CandidateObject = Candidate([candidate[0], candidate[1], i])
-                CandidateObject.setType(candidate[2])
-                
-                # bugfix for the missing index information
-                self._searchIndex(document,CandidateObject)
-                candidates.append(CandidateObject)
+                candidateObject = Candidate()
+                # used by the extractor
+                candidateObject.setLegacyCandidates([candidate[0], candidate[1], i])
+                candidateObject.setType(candidate[2])
+                candidates.append(candidateObject)
 
-       
+                # first attempt to refactor to an object based data model
+                # not really used by the extractor, refactoring is an open todo
+                partObject = candidateObject.spawnPart()
+                partObject.setPosTag(candidate[0][0][0])
+                partObject.setText(candidate[0][0][1])
+                for part in candidate[1]:
+                        partObject = candidateObject.spawnPart()
+                        partObject.setPosTag(part[0])
+                        partObject.setText(part[1])
         document.set_candidates('CauseExtractor', candidates)
-        #return candidate_list
+
         
     # this dosen`t work well, it seams to be impossible to reconstruct the original text out of the parts 
     def _searchIndex(self, document, candidateObject):
@@ -132,8 +137,7 @@ class CauseExtractor(AbsExtractor):
         index = document.get_fullText().find(text)
         if index is not -1:
             candidateObject.setIndex( index )
-        #print(text)
-        #print(candidateObject.getIndex())
+
  
     def _evaluate_tree(self, tree):
         """
@@ -283,12 +287,13 @@ class CauseExtractor(AbsExtractor):
 
         :return: A list of evaluated and ranked candidates
         """
-        ranked_candidates = []
+        #ranked_candidates = []
+        candidates = document.get_candidates('CauseExtractor')
         weights_sum = sum(self.weights)
 
-        for candidateObject in document.get_candidates('CauseExtractor'):
+        for candidateObject in candidates:
             
-            candidate = candidateObject.getRaw();
+            candidate = candidateObject.getLegacyCandidates();
             if candidate is not None and len(candidate[0]) > 0:
                 # following the concept of the inverted pyramid use the position for scoring
                 score = self.weights[0] * (document.get_len()-candidate[2]) / document.get_len()
@@ -306,14 +311,13 @@ class CauseExtractor(AbsExtractor):
 
                 if score > 0:
                     score /= weights_sum
-                
+                # NEW
                 candidateObject.setScore(score)
-               
-                # OLD
-                ranked_candidates.append((candidate[0], score))
-        #OLD
-        ranked_candidates.sort(key=lambda x: x[1], reverse=True)
-        document.set_answer('why', ranked_candidates)
+
+
+        candidates.sort(key=lambda x: x.getScore(), reverse=True)
+        document.set_answer('why', candidates)
+
 
     def get_hyponyms(self, synsets):
         """

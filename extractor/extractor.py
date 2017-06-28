@@ -1,5 +1,4 @@
 import logging
-import multiprocessing
 
 from combined_scoring.distance_of_candidate import DistanceOfCandidate
 from extractors import action_extractor, environment_extractor, cause_extractor, method_extractor
@@ -69,19 +68,10 @@ class FiveWExtractor:
             self.preprocessor.preprocess(doc)
             self.log.debug("Preprocessor: Finished preprocessing: '%s...'" % doc.get_title()[:50])
         else:
-            self.log.debug("Preprocessor: Skipped it is already preprocessored: '%s...'" % doc.get_title()[:50])
+            self.log.debug("Preprocessor: Skipped already preprocessed: '%s...'" % doc.get_title()[:50])
 
-        # pass the document to the extractors
-        threads = []
         for extractor in self.extractors:
-            # every document is processed in a new thread
-            t = multiprocessing.Process(target=extractor.extract, args=(doc,))
-            threads.append(t)
-            t.start()
-
-        # wait for the extractors to terminate
-        for t in threads:
-            t.join()
+            extractor.extract(doc)
 
         # apply combined_scoring
         if self.combinedScorers:

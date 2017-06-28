@@ -1,10 +1,13 @@
+from copy import deepcopy
 import logging
+
 import nltk
 from nltk.corpus import wordnet
 from nltk.stem.wordnet import WordNetLemmatizer
-from copy import deepcopy
+
 from .abs_extractor import AbsExtractor
 from .candidate import Candidate
+
 
 class CauseExtractor(AbsExtractor):
     """
@@ -129,8 +132,8 @@ class CauseExtractor(AbsExtractor):
         index = document.get_fullText().find(text)
         if index is not -1:
             candidateObject.setIndex( index )
-        print(text)
-        print(candidateObject.getIndex())
+        #print(text)
+        #print(candidateObject.getIndex())
  
     def _evaluate_tree(self, tree):
         """

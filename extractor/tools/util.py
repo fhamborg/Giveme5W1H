@@ -1,14 +1,14 @@
-import time
-
-from geopy.distance import vincenty
-from nltk.tokenize import word_tokenize
-from nltk.corpus import wordnet
-from itertools import product
-
-
 """
     Collection of utility methods    
 """
+
+from itertools import product
+import time
+
+from geopy.distance import vincenty
+from nltk.corpus import wordnet
+from nltk.tokenize import word_tokenize
+
 
 def cmp_text(annotation, candidate):
     """

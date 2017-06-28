@@ -1,9 +1,11 @@
+import hashlib
 import json
 import logging
-from document import DocumentFactory
-import hashlib
 import os.path
 import pickle
+
+from document import DocumentFactory
+
 
 class Reader(object):
     

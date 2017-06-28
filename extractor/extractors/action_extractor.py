@@ -1,5 +1,7 @@
 import re
+
 from nltk.tree import ParentedTree
+
 from .abs_extractor import AbsExtractor
 
 

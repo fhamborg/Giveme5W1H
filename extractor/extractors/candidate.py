@@ -3,11 +3,12 @@
 class CandidatePart:
     def __init__(self):
         self._posTag = None
+        self._posTag = None
        
         self._text = None
         
     def setPosTag(self,posTag):
-        self._postTag = posTag
+        pass
     def getPosTag(self):
         return self._posTag
     
@@ -21,7 +22,8 @@ class CandidatePart:
    
 class Candidate:
     def __init__(self, raw=None):
-        self._raw = raw    
+        self._type = type
+        self._raw = raw
         self._score = None
         self._index = None
     
@@ -29,7 +31,7 @@ class Candidate:
         return self._raw
     
     def setType(self, type):
-        self._type = type
+        pass
     def getType(self):
         return self._type
     

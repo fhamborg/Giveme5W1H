@@ -1,6 +1,7 @@
 import json
 import pickle
 
+
 class Writer:
     def __init__(self):
         """
@@ -46,11 +47,10 @@ class Writer:
             extractedLiteral = questionLiteral.setdefault('extracted',[])
             for index, key in enumerate(answers[question]):
                 candidate = answers[question][index]
-                candidateJson = {'score': candidate[1], 'words': []}
+                candidate_json = {'score': candidate[1], 'words': []}
                 #if candidateJson.score <= n:
                 #    break
-                candidateJson['words'] = []
                 for candidateWord in candidate[0]:
-                    candidateJson['words'].append({ 'text':candidateWord[0], 'tag':candidateWord[1]})
-                extractedLiteral.append(candidateJson)
+                    candidate_json['words'].append({ 'text':candidateWord[0], 'tag':candidateWord[1]})
+                extractedLiteral.append(candidate_json)
         self._writeJson(outputPath, output)

@@ -1,10 +1,10 @@
 import logging
 import multiprocessing
 
+from combined_scoring.distance_of_candidate import DistanceOfCandidate
 from extractors import action_extractor, environment_extractor, cause_extractor, method_extractor
 from preprocessors.preprocessor_core_nlp import Preprocessor
 
-from combined_scoring.distance_of_candidate import DistanceOfCandidate
 
 class FiveWExtractor:
     """

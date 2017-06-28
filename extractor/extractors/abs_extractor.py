@@ -1,8 +1,10 @@
-import logging
-import nltk
-from nltk.corpus import wordnet
 from abc import ABCMeta, abstractmethod
 from itertools import product
+import logging
+
+import nltk
+from nltk.corpus import wordnet
+
 
 try:
     basestring = basestring

@@ -1,8 +1,10 @@
 import time
-from .abs_extractor import AbsExtractor
-from geopy.geocoders import Nominatim
+
 from geopy.distance import vincenty
+from geopy.geocoders import Nominatim
 from parsedatetime import parsedatetime as pdt
+
+from .abs_extractor import AbsExtractor
 
 
 class EnvironmentExtractor(AbsExtractor):

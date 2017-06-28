@@ -1,5 +1,7 @@
 import re
+
 from nltk.tree import ParentedTree
+
 from .abs_extractor import AbsExtractor
 
 
@@ -81,28 +83,28 @@ class MethodExtractor(AbsExtractor):
         #ranked_candidates = []
         
           
-        groupePerLemma = {}
+        groupe_per_lemma = {}
         maxCount = 0
         
         candidates = document.get_candidates('MethodExtractor')
         # frequency per lemma
         for candidate in candidates:
             if candidate is not None and len(candidate['originalText']) > 0:
-                lemaCount = groupePerLemma.get(candidate["lemma"], 0 )
-                lemaCount += 1
+                lema_count = groupe_per_lemma.get(candidate["lemma"], 0 )
+                lema_count += 1
                 
-                if lemaCount > maxCount:
-                    maxCount = lemaCount
-                groupePerLemma[candidate["lemma"]] = lemaCount
+                if lema_count > maxCount:
+                    maxCount = lema_count
+                groupe_per_lemma[candidate["lemma"]] = lema_count
                 
         # transfer count per lemmaGroup to candidates 
         for candidate in candidates:
             if candidate is not None and len(candidate['originalText']) > 0:
                 
                 # save normalized frequency
-                candidate['frequency'] = groupePerLemma[candidate['lemma']]
+                candidate['frequency'] = groupe_per_lemma[candidate['lemma']]
                 candidate['frequencyNorm'] = ( candidate['frequency'] - 1 ) / (maxCount-1)
-                lemaCount = groupePerLemma.get(candidate["lemma"], 0 )
+                lema_count = groupe_per_lemma.get(candidate["lemma"], 0 )
                 
                 # normalized position
                 candidate['positionNorm'] = (self._maxIndex -  candidate['position']) / self._maxIndex
@@ -118,6 +120,7 @@ class MethodExtractor(AbsExtractor):
         # normalizing scores
         for candidate in candidates:
             candidate['score'] = candidate['score']/scoreMax
+            
         # Sort candidates
         candidates.sort(key = lambda x: x['score'], reverse=True)
         
@@ -137,10 +140,10 @@ class MethodExtractor(AbsExtractor):
         for candidate in new_list:
             keyVal = ([( candidate['originalText'], candidate['pos'])], candidate['score'] )
             result.append( keyVal )
+            
+            
         document.set_answer('how', result )
         
-        
-        #return new_list
 
     def _isRelevantPos(self, pos):
        

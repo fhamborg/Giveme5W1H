@@ -1,9 +1,9 @@
 import glob
 import logging
 
-
-from .writer import Writer
 from .reader import Reader
+from .writer import Writer
+
 
 class Handler(object):
     def __init__(self, inputPath):
@@ -14,6 +14,7 @@ class Handler(object):
         self._extractor = None
         self._outputPath = None
         self._adocuments = None
+        self._documents = None
         
         self._reader = Reader()
         self._writer = Writer()

@@ -1,13 +1,16 @@
 import logging
 import os
 import sys
+
+from extractor.extractor import FiveWExtractor
+from extractor.preprocessors.preprocessor_core_nlp import Preprocessor
+from extractor.tools.news_please.handler import Handler
+
+
 # Add path to allow execution though console
 sys.path.insert(0, '/'.join(os.path.realpath(__file__).split('/')[:-2]))
 #from timeit import default_timer as timer
-from extractor.preprocessors.preprocessor_core_nlp import Preprocessor
-from extractor.extractor import FiveWExtractor
 
-from extractor.tools.news_please.handler import Handler
 
 
 core_nlp_host = 'http://localhost:9000'

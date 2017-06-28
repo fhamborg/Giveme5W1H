@@ -1,7 +1,5 @@
 #from multiprocessing.managers import BaseManager
 #from fileinput import filename
-
-
 #class DocumentManager(BaseManager):
 #    pass
 

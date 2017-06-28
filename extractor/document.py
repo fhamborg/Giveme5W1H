@@ -1,9 +1,9 @@
-from multiprocessing.managers import BaseManager
-from fileinput import filename
+#from multiprocessing.managers import BaseManager
+#from fileinput import filename
 
 
-class DocumentManager(BaseManager):
-    pass
+#class DocumentManager(BaseManager):
+#    pass
 
 
 class Document(object):
@@ -11,7 +11,7 @@ class Document(object):
     Document is a pickable container for the raw document and all related data
     """
 
-    def __init__(self, title, desc='', text='', rawData = None):
+    def __init__(self, title, desc='', text='', rawData=None):
         self._raw = {'title': title, 'description': desc, 'text': text }
         self._date = None
 
@@ -27,6 +27,7 @@ class Document(object):
         self._posTrees = []
         self._nerTags = []
         self._rawData = rawData
+        self._preprocessed = False
         
         self._candidates = {};
         
@@ -36,7 +37,13 @@ class Document(object):
         self._answers = {'what': [], 'who': [], 'why': [], 'where': [], 'when': []}
         self._annotations = {'what': [], 'who': [], 'why': [], 'where': [], 'when': []}
 
-    def get_FullText(self):
+
+    def is_preprocessed(self, preprocessed=None):
+        if preprocessed is True:
+            self._preprocessed = True
+        return self._preprocessed
+    
+    def get_fullText(self):
         return self._fullText
 
     def set_candidates(self, extractor, candidates):
@@ -145,21 +152,19 @@ class Document(object):
             string += "\n\t%s:\t%s" % (question, answer)
         return string
 
-DocumentManager.register('Document', Document)
+#DocumentManager.register('Document', Document)
 
 class DocumentFactory:
     """
     DocumentFactory initializes the necessary BaseManager and allows easy instantiation of Document objects
     """
 
-    def __init__(self):
-        self.manager = DocumentManager()
-        self.manager.start()
+    #def __init__(self):
+        #self.manager = DocumentManager()
+        #self.manager.start()
 
-    def spawn_doc(self, title, desc=None, text=None, file_name=None, source=None):
-        document = self.manager.Document(title, desc or '', text or '')
-        document.set_file_name(file_name)
-        document.set_source(source)
-        return document
+    def spawn_doc(self, title, desc=None, text=None, raw=None):
+        #document = self.manager.Document(title, desc or '', text or '', raw)
+        return Document(title, desc or '', text or '', raw)
 
 

@@ -1,20 +1,26 @@
 import json
-import hashlib
+import pickle
 
 class Writer:
-    def __init__(self, rewriteFilename=True):
+    def __init__(self):
         """
         :param path: Absolute path to the output directory
         """
-        self.rewriteFilename = rewriteFilename
+        
         
     def __enter__(self):
         return self
         
     def _writeJson(self, outputPath, outputObject):
-        outfile = open(outputPath +'/'+ outputObject['filename'], 'w')
+        outfile = open(outputPath +'/'+ outputObject['dId']+'.json', 'w')
         outfile.write( json.dumps(outputObject, sort_keys=False, indent=2))
         outfile.close()
+        
+        
+    def writePickle(self, document, path):
+        with open(path, 'wb') as f:
+            # Pickle the 'data' document using the highest protocol available.
+            pickle.dump(document, f, pickle.HIGHEST_PROTOCOL)
         
     def write(self, outputPath , document):
         """
@@ -26,9 +32,7 @@ class Writer:
         # reuse the input json as template for the output json
         output = document.get_rawData()
 
-        #print(output)
-        if self.rewriteFilename:
-            output['filename'] = hashlib.sha224(output['url'].encode('utf-8')).hexdigest() + '.json'
+       
          
         # check if there isn`t already a fiveWoneH literal
         fiveWoneHLiteral =  output.setdefault('fiveWoneH',{})

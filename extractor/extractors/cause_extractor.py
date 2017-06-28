@@ -117,16 +117,19 @@ class CauseExtractor(AbsExtractor):
         document.set_candidates('CauseExtractor', candidates)
         #return candidate_list
         
-    
+    # this dosen`t work well, it seams to be impossible to reconstruct the original text out of the parts 
     def _searchIndex(self, document, candidateObject):
         raw = candidateObject.getRaw();
-        text = "";
+        textParts = []
         for candidate in raw[0]:
-            text += candidate[0]
+            textParts.append(candidate[0])
         for candidate in raw[1]:
-            text += candidate[0]
-            
-        candidateObject.setIndex( text in document.get_FullText() )
+            textParts.append(candidate[0])
+        text = " ".join(textParts) 
+        index = document.get_fullText().find(text)
+        if index is not -1:
+            candidateObject.setIndex( index )
+        print(text)
         print(candidateObject.getIndex())
  
     def _evaluate_tree(self, tree):

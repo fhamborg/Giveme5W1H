@@ -1,6 +1,7 @@
 import logging
 import os
 import sys
+from pip.req.req_file import preprocess
 # Add path to allow execution though console
 sys.path.insert(0, '/'.join(os.path.realpath(__file__).split('/')[:-2]))
 
@@ -29,12 +30,15 @@ if __name__ == '__main__':
                     ])
     inputPath = os.path.dirname(__file__) + '/input'
     outputPath = os.path.dirname(__file__) + '/output'
+    preprocessedPath = os.path.dirname(__file__) + '/cache'
     
     documents = (
                 # initiate the newsplease file handler with the input directory
                 Handler(inputPath)
                     # add an optional output directory
                    .setOutputPath(outputPath)
+                    # set a path to save an load preprocessed documents
+                   .setPreprocessedPath(preprocessedPath)
                     # limit the the to process documents (nice for development) 
                    .setLimit(1)
                     # add an optional extractor (it would do basically just copying without...)

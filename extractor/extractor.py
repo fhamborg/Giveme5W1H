@@ -65,7 +65,11 @@ class FiveWExtractor:
         :return: the processed document
         """
         # preprocess the document
-        self.preprocessor.preprocess(doc)
+        if not doc.is_preprocessed():
+            self.preprocessor.preprocess(doc)
+            self.log.debug("Preprocessor: Finished preprocessing: '%s...'" % doc.get_title()[:50])
+        else:
+            self.log.debug("Preprocessor: Skipped it is already preprocessored: '%s...'" % doc.get_title()[:50])
 
         # pass the document to the extractors
         threads = []

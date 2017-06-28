@@ -11,7 +11,7 @@ class Handler(object):
         self._inputPath = inputPath
         
         self._limit = None
-        self._extractor = None 
+        self._extractor = None
         self._outputPath = None
         self._adocuments = None
         
@@ -33,12 +33,15 @@ class Handler(object):
         self._outputPath = outputPath
         return self
     
+    def setPreprocessedPath(self, preprocessedPath):
+        self._reader.setPreprocessedPath(preprocessedPath)
+        return self
+    
     def preLoadAndCacheDocuments(self):
         self._documents = []
         docCounter = 0
         for filepath in glob.glob(self._inputPath + '/*.json'):
             if self._limit and docCounter >= self._limit:
-                
                 break
             docCounter += 1
             self._documents.append(self._reader.read(filepath))
@@ -56,6 +59,10 @@ class Handler(object):
         
         if self._extractor: 
             self._extractor.parse(document)
+            if self._reader.getPreprocessedPath():
+                rawData = document.get_rawData()
+                self._writer.writePickle(document, self._reader.get_preprocessedFilePath(rawData['dId']))
+                
         if self._outputPath:
             self._writer.write(self._outputPath, document)
     

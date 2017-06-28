@@ -7,13 +7,8 @@ sys.path.insert(0, '/'.join(os.path.realpath(__file__).split('/')[:-2]))
 from extractor.preprocessors.preprocessor_core_nlp import Preprocessor
 from extractor.extractor import FiveWExtractor
 
-
 from extractor.tools.news_please.handler import Handler
-#from extractor.tools.news_please.processor.learn_weights import LearnWeights
 
-"""
-
-"""
 
 core_nlp_host = 'http://localhost:9000'
 

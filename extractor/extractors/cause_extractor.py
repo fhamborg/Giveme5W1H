@@ -8,8 +8,11 @@ from nltk.stem.wordnet import WordNetLemmatizer
 from .abs_extractor import AbsExtractor
 from .candidate import Candidate
 
+def factory():
+    return CauseExtractor()
 
-class CauseExtractor(AbsExtractor):
+
+class  CauseExtractor(AbsExtractor):
     """
     The CauseExtractor tries to detect a causative that could explain an event.
     """
@@ -115,13 +118,13 @@ class CauseExtractor(AbsExtractor):
 
                 # first attempt to refactor to an object based data model
                 # not really used by the extractor, refactoring is an open todo
-                partObject = candidateObject.spawnPart()
-                partObject.setPosTag(candidate[0][0][0])
-                partObject.setText(candidate[0][0][1])
-                for part in candidate[1]:
-                        partObject = candidateObject.spawnPart()
-                        partObject.setPosTag(part[0])
-                        partObject.setText(part[1])
+                #partObject = candidateObject.spawnPart()
+                #partObject.setPosTag(candidate[0][0][0])
+                #partObject.setText(candidate[0][0][1])
+                #for part in candidate[1]:
+                #        partObject = candidateObject.spawnPart()
+                #        partObject.setPosTag(part[0])
+                #        partObject.setText(part[1])
         document.set_candidates('CauseExtractor', candidates)
 
         

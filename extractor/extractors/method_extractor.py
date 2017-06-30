@@ -5,6 +5,9 @@ from nltk.tree import ParentedTree
 from .abs_extractor import AbsExtractor
 
 
+def factory():
+    return MethodExtractor()
+
 class MethodExtractor(AbsExtractor):
     """
     The MethodExtractor tries to extract the methods.

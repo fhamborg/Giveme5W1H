@@ -4,6 +4,9 @@ from nltk.tree import ParentedTree
 
 from .abs_extractor import AbsExtractor
 
+def factory():
+    return ActionExtractor()
+
 
 class ActionExtractor(AbsExtractor):
     """

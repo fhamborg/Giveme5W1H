@@ -1,10 +1,13 @@
 import time
 
-from geopy.distance import vincenty
+from geopy.distance import vincenty, great_circle
 from geopy.geocoders import Nominatim
 from parsedatetime import parsedatetime as pdt
 
 from .abs_extractor import AbsExtractor
+
+def factory():
+    return EnvironmentExtractor()
 
 
 class EnvironmentExtractor(AbsExtractor):
@@ -136,8 +139,8 @@ class EnvironmentExtractor(AbsExtractor):
             bb = location[1].raw['boundingbox']
 
             # use the vincenty algorithm to calculate the covered area
-            area = int(vincenty((bb[0], bb[2]), (bb[0], bb[3])).meters) \
-                * int(vincenty((bb[0], bb[2]), (bb[1], bb[2])).meters)
+            area = int(great_circle((bb[0], bb[2]), (bb[0], bb[3])).meters) \
+                * int(great_circle((bb[0], bb[2]), (bb[1], bb[2])).meters)
             for i in range(4):
                 bb[i] = float(bb[i])
             raw_locations.append([location[0], location[1].raw['place_id'],

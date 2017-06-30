@@ -30,10 +30,10 @@ if __name__ == '__main__':
     log.addHandler(sh)
     
     extractor = FiveWExtractor(extractors = [
-                        action_extractor.ActionExtractor(),
-                        environment_extractor.EnvironmentExtractor(),
-                        cause_extractor.CauseExtractor(),
-                        method_extractor.MethodExtractor()
+                        action_extractor.factory,
+                        environment_extractor.factory,
+                        cause_extractor.factory,
+                        method_extractor.factory
                     ])
     inputPath = os.path.dirname(__file__) + '/input'
     outputPath = os.path.dirname(__file__) + '/output'

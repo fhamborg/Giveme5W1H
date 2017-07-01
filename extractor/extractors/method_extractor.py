@@ -5,9 +5,6 @@ from nltk.tree import ParentedTree
 from .abs_extractor import AbsExtractor
 
 
-def factory():
-    return MethodExtractor()
-
 class MethodExtractor(AbsExtractor):
     """
     The MethodExtractor tries to extract the methods.
@@ -90,63 +87,69 @@ class MethodExtractor(AbsExtractor):
         maxCount = 0
         
         candidates = document.get_candidates('MethodExtractor')
-        # frequency per lemma
-        for candidate in candidates:
-            if candidate is not None and len(candidate['originalText']) > 0:
-                lema_count = groupe_per_lemma.get(candidate["lemma"], 0 )
-                lema_count += 1
-                
-                if lema_count > maxCount:
-                    maxCount = lema_count
-                groupe_per_lemma[candidate["lemma"]] = lema_count
-                
-        # transfer count per lemmaGroup to candidates 
-        for candidate in candidates:
-            if candidate is not None and len(candidate['originalText']) > 0:
-                
-                # save normalized frequency
-                candidate['frequency'] = groupe_per_lemma[candidate['lemma']]
-                candidate['frequencyNorm'] = ( candidate['frequency'] - 1 ) / (maxCount-1)
-                lema_count = groupe_per_lemma.get(candidate["lemma"], 0 )
-                
-                # normalized position
-                candidate['positionNorm'] = (self._maxIndex -  candidate['position']) / self._maxIndex
 
-    
-        # scoring
-        scoreMax = 0 
-        for candidate in candidates:
-            candidate['score'] =  candidate['positionNorm'] * self.weights[0] + candidate['frequencyNorm'] * self.weights[1]
-            if candidate['score'] > scoreMax:
-                    scoreMax = candidate['score']
-                    
-        # normalizing scores
-        for candidate in candidates:
-            candidate['score'] = candidate['score']/scoreMax
-            
-        # Sort candidates
-        candidates.sort(key = lambda x: x['score'], reverse=True)
-        
-        # delete duplicates
-        # - frequency already used used for scoring, so only best scored candidate must be returned
-        alreadySaveLemma = {}
-        new_list = []
-        for candidate in candidates:
-            if candidate['lemma'] not in alreadySaveLemma:
-                alreadySaveLemma[candidate['lemma']] = True
-                new_list.append(candidate)
-        
-        
-        
-        
-        result = []
-        for candidate in new_list:
-            keyVal = ([( candidate['originalText'], candidate['pos'])], candidate['score'] )
-            result.append( keyVal )
-            
-            
-        document.set_answer('how', result )
-        
+        if len(candidates) > 0:
+            # frequency per lemma
+            for candidate in candidates:
+                if candidate is not None and len(candidate['originalText']) > 0:
+                    lema_count = groupe_per_lemma.get(candidate["lemma"], 0 )
+                    lema_count += 1
+
+                    if lema_count > maxCount:
+                        maxCount = lema_count
+                    groupe_per_lemma[candidate["lemma"]] = lema_count
+
+            # transfer count per lemmaGroup to candidates
+            for candidate in candidates:
+                if candidate is not None and len(candidate['originalText']) > 0:
+
+                    # save normalized frequency
+                    candidate['frequency'] = groupe_per_lemma[candidate['lemma']]
+                    if maxCount-1 > 0:
+                        candidate['frequencyNorm'] = ( candidate['frequency'] - 1 ) / (maxCount-1)
+                    else:
+                        # there is just one candidate
+                        candidate['frequencyNorm'] = 1
+                    lema_count = groupe_per_lemma.get(candidate["lemma"], 0 )
+
+                    # normalized position
+                    candidate['positionNorm'] = (self._maxIndex -  candidate['position']) / self._maxIndex
+
+
+            # scoring
+            scoreMax = 0
+            for candidate in candidates:
+                candidate['score'] =  candidate['positionNorm'] * self.weights[0] + candidate['frequencyNorm'] * self.weights[1]
+                if candidate['score'] > scoreMax:
+                        scoreMax = candidate['score']
+
+            # normalizing scores
+            for candidate in candidates:
+                candidate['score'] = candidate['score']/scoreMax
+
+            # Sort candidates
+            candidates.sort(key = lambda x: x['score'], reverse=True)
+
+            # delete duplicates
+            # - frequency already used used for scoring, so only best scored candidate must be returned
+            alreadySaveLemma = {}
+            new_list = []
+            for candidate in candidates:
+                if candidate['lemma'] not in alreadySaveLemma:
+                    alreadySaveLemma[candidate['lemma']] = True
+                    new_list.append(candidate)
+
+
+
+
+            result = []
+            for candidate in new_list:
+                keyVal = ([( candidate['originalText'], candidate['pos'])], candidate['score'] )
+                result.append( keyVal )
+
+
+            document.set_answer('how', result )
+
 
     def _isRelevantPos(self, pos):
        

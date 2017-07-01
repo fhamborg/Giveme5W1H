@@ -9,8 +9,10 @@ class Document(object):
     Document is a pickable container for the raw document and all related data
     """
 
-    def __init__(self, title, desc='', text='', rawData=None):
-        self._raw = {'title': title, 'description': desc, 'text': text }
+    def __init__(self, title='', desc='', text='', rawData=None):
+
+        self._raw = {'title': title, 'description': desc, 'text': text}
+
         self._date = None
 
         self._file_name = None
@@ -101,6 +103,12 @@ class Document(object):
     def get_rawData(self):
         return self._rawData
 
+    def set_clp_result(self, clp_result):
+        self._clp_result = clp_result
+
+    def get_clp_result(self):
+        return self._clp_result
+
     def set_file_name(self, name):
         self._file_name = name
 
@@ -150,20 +158,5 @@ class Document(object):
                 answer = self._answers[question][0]
             string += "\n\t%s:\t%s" % (question, answer)
         return string
-
-#DocumentManager.register('Document', Document)
-
-class DocumentFactory:
-    """
-    DocumentFactory initializes the necessary BaseManager and allows easy instantiation of Document objects
-    """
-
-    #def __init__(self):
-        #self.manager = DocumentManager()
-        #self.manager.start()
-
-    def spawn_doc(self, title, desc=None, text=None, raw=None):
-        #document = self.manager.Document(title, desc or '', text or '', raw)
-        return Document(title, desc or '', text or '', raw)
 
 

@@ -4,13 +4,13 @@ import logging
 import os.path
 import pickle
 
-from document import DocumentFactory
+from document import Document
 
 
 class Reader(object):
     
     def __init__(self):
-        self.factory = DocumentFactory()
+        #self.factory = DocumentFactory()
         self.log = logging.getLogger('GiveMe5W')
         self._preprocessedPath = None
         
@@ -43,7 +43,7 @@ class Reader(object):
                     with open(preprocessedFilePath, 'rb') as ff:
                         document = pickle.load(ff)
             else:
-                document = self.factory.spawn_doc(data['title'],  data.setdefault('description',None) , data['text'], data)
+                document = Document(data.setdefault('title', ''),  data.setdefault('description', ''), data.setdefault('text', ''), data)
                 
                 url = data.setdefault('url',None)
                 if not url:

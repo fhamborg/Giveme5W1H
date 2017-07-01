@@ -4,8 +4,6 @@ from nltk.tree import ParentedTree
 
 from .abs_extractor import AbsExtractor
 
-def factory():
-    return ActionExtractor()
 
 
 class ActionExtractor(AbsExtractor):
@@ -61,8 +59,6 @@ class ActionExtractor(AbsExtractor):
                         candidates.append([pattern[0], pattern[1], cluster, mention['id']])
 
         document.set_candidates('ActionExtractor', candidates)
-        #return candidates
-
 
     def _evaluate_tree(self, tree):
         """

@@ -1,14 +1,13 @@
 import json
+import pickle
 from extractor.extractors.candidate import Candidate
 
 
 class Writer:
-    def __init__(self, outputPath, preprocessedPath):
+    def __init__(self):
         """
         :param path: Absolute path to the output directory
         """
-        self._outputPath = outputPath
-        self._preprocessedPath = preprocessedPath
         
     def _writeJson(self,  outputObject):
         outfile = open(self._outputPath +'/'+ outputObject['dId']+'.json', 'w')
@@ -16,7 +15,7 @@ class Writer:
         outfile.close()
 
     def writePickle(self, document):
-        with open(self._preprocessedPath, 'wb') as f:
+        with open(self.get_preprocessedFilePath(document.get_rawData()['dId']), 'wb') as f:
             # Pickle the 'data' document using the highest protocol available.
             pickle.dump(document, f, pickle.HIGHEST_PROTOCOL)
 
@@ -25,7 +24,13 @@ class Writer:
 
     def getPreprocessedPath(self):
         return self._preprocessedPath
-        
+
+    def setPreprocessedPath(self, preprocessedPath):
+        self._preprocessedPath = preprocessedPath
+
+    def setOutputPath(self,outputPath):
+        self._outputPath = outputPath
+
     def write(self, document):
         """
         :param document: The parsed Document
@@ -54,15 +59,12 @@ class Writer:
                 for answer in answers[question]:
                     if type(answer) is Candidate:
                         # answer was already refactored
-                        words = []
-                        for part in answer.getParts():
-                            words.append({'text': part.getText(), 'tag': part.getPosTag()})
-                        extractedLiteral.append({'score': answer.getScore(), 'words': words})
+                        extractedLiteral.append(answer.get_json())
                     else:
                         # fallback for none refactored extractors
                         candidate_json = {'score': answer[1], 'words': []}
                         for candidateWord in answer[0]:
-                            candidate_json['words'].append({ 'text':candidateWord[0], 'tag':candidateWord[1]})
+                            candidate_json['words'].append({'text': candidateWord[0], 'tag':candidateWord[1]})
                         extractedLiteral.append(candidate_json)
 
             self._writeJson( output)

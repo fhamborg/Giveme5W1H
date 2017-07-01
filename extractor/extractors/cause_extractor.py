@@ -8,9 +8,6 @@ from nltk.stem.wordnet import WordNetLemmatizer
 from .abs_extractor import AbsExtractor
 from .candidate import Candidate
 
-def factory():
-    return CauseExtractor()
-
 
 class  CauseExtractor(AbsExtractor):
     """
@@ -112,8 +109,9 @@ class  CauseExtractor(AbsExtractor):
             for candidate in self._evaluate_tree(tree):
                 candidateObject = Candidate()
                 # used by the extractor
-                candidateObject.setLegacyCandidates([candidate[0], candidate[1], i])
+                candidateObject.setParts(candidate[0] + candidate[1])
                 candidateObject.setType(candidate[2])
+                candidateObject.setIndex(i)
                 candidates.append(candidateObject)
 
                 # first attempt to refactor to an object based data model
@@ -296,16 +294,17 @@ class  CauseExtractor(AbsExtractor):
 
         for candidateObject in candidates:
             
-            candidate = candidateObject.getLegacyCandidates();
-            if candidate is not None and len(candidate[0]) > 0:
+            parts = candidateObject.getParts();
+            if parts is not None and len(parts) > 0:
                 # following the concept of the inverted pyramid use the position for scoring
-                score = self.weights[0] * (document.get_len()-candidate[2]) / document.get_len()
+                score = self.weights[0] * (document.get_len() - candidateObject.getIndex()) / document.get_len()
+
 
                 # we also consider the pattern typ used to detect the candidate
-                if candidate[1] == 'biclausal':
+                if candidateObject.getType() == 'biclausal':
                     # the most obvious candidates have biclausal indicators and get the most boost
                     score += self.weights[1]
-                elif candidate[1] == 'RB':
+                elif candidateObject.getType() == 'RB':
                     # while not as significant as biclausal indicators, adverbials are mor significant as the verbs
                     score += self.weights[2]
                 else:

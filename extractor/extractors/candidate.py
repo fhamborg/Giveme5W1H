@@ -1,45 +1,16 @@
-
-
-class CandidatePart:
-    def __init__(self):
-        self._posTag = None
-        self._text = None
-        
-    def setPosTag(self, posTag):
-        self._posTag = posTag
-
-    def getPosTag(self):
-        return self._posTag
-
-    def setText(self, text):
-        self._text = text
-
-    def getText(self):
-        return self._text
-
-
-   
 class Candidate:
     def __init__(self):
         self._type = None
         self._raw = None
         self._score = None
         self._index = None
-        self._parts = []
-
-    def spawnPart(self):
-        part = CandidatePart()
-        self._parts.append(part)
-        return part
+        self._parts = None
 
     def getParts(self):
         return self._parts
 
-    def getLegacyCandidates(self):
-        return self._raw
-
-    def setLegacyCandidates(self, raw):
-        self._raw = raw
+    def setParts(self, parts):
+        self._parts = parts
 
     def setType(self, type):
         self._tyoe = type
@@ -62,7 +33,7 @@ class Candidate:
     def get_json(self):
         words = []
         for part in self._parts:
-            words.append({ 'text': part.getText(), 'tag': part.getPosTag()})
+            words.append({ 'text': part[0], 'tag': part[1]})
         return {'score': self._score , 'words': words}
 
    

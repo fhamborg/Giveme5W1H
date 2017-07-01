@@ -6,8 +6,6 @@ from parsedatetime import parsedatetime as pdt
 
 from .abs_extractor import AbsExtractor
 
-def factory():
-    return EnvironmentExtractor()
 
 
 class EnvironmentExtractor(AbsExtractor):

@@ -2,7 +2,7 @@ import logging
 import os
 import sys
 
-from extractor.extractor import FiveWExtractor
+from extractor.extractor import FiveWExtractor, factoryBuilder
 from extractor.extractors import action_extractor, environment_extractor, cause_extractor, method_extractor
 from extractor.tools.news_please.handler import Handler
 
@@ -25,9 +25,8 @@ if __name__ == '__main__':
     sh = logging.StreamHandler()
     sh.setLevel(logging.DEBUG)
     log.addHandler(sh)
-    
 
-    extractor = FiveWExtractor()
+    extractor = factoryBuilder()
     inputPath = os.path.dirname(__file__) + '/input'
     outputPath = os.path.dirname(__file__) + '/output'
     
@@ -41,6 +40,6 @@ if __name__ == '__main__':
         # add an optional extractor (it would do basically just copying without...)
        .setExtractor(extractor)
         # executing it
-       .process().getDocuments() )
+       .process().getDocuments())
             
     

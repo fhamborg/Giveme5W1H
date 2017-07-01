@@ -3,7 +3,23 @@ import logging
 from combined_scoring.distance_of_candidate import DistanceOfCandidate
 from extractors import action_extractor, environment_extractor, cause_extractor, method_extractor
 from preprocessors.preprocessor_core_nlp import Preprocessor
+from threading import Thread
+import queue
 
+
+
+class Worker(Thread):
+    def __init__(self, document, queue):
+        ''' Constructor. '''
+        Thread.__init__(self)
+        self._document = document
+        self._queue = queue
+
+    def run(self):
+        while True:
+            extractor = self._queue.get()
+            extractor.extract(self._document)
+            self._queue.task_done()
 
 class FiveWExtractor:
     """
@@ -13,7 +29,8 @@ class FiveWExtractor:
     log = None
     preprocessor = None
     extractors = []
-    
+
+
 
     def __init__(self, preprocessor=None, extractors=None, combinedScorers=None):
         """
@@ -44,10 +61,10 @@ class FiveWExtractor:
             # the default extractor selection
             self.log.info('No extractors passed, initializing default configuration.')
             self.extractors = [
-                action_extractor.factory(),
-                environment_extractor.factory(),
-                cause_extractor.factory(),
-                method_extractor.factory()
+                action_extractor,
+                environment_extractor,
+                cause_extractor.factory,
+                method_extractor.factory
             ]
             
         if combinedScorers and len(combinedScorers) > 0:
@@ -70,12 +87,17 @@ class FiveWExtractor:
         # preprocess the document
         if not doc.is_preprocessed():
             self.preprocessor.preprocess(doc)
-            self.log.debug("Preprocessor: Finished preprocessing: '%s...'" % doc.get_title()[:50])
-        else:
-            self.log.debug("Preprocessor: Skipped already preprocessed: '%s...'" % doc.get_title()[:50])
+
+        q = queue.Queue()
+        for i in range(len(self.extractors)):
+            t = Worker(doc, q)
+            t.daemon = True
+            t.start()
 
         for extractor in self.extractors:
-            extractor.extract(doc)
+            q.put(extractor)
+
+        q.join()
 
         # apply combined_scoring
         if self.combinedScorers:

@@ -63,8 +63,8 @@ class FiveWExtractor:
             self.extractors = [
                 action_extractor,
                 environment_extractor,
-                cause_extractor.factory,
-                method_extractor.factory
+                cause_extractor,
+                method_extractor
             ]
             
         if combinedScorers and len(combinedScorers) > 0:

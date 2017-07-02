@@ -6,7 +6,7 @@ from nltk.corpus import wordnet
 from nltk.stem.wordnet import WordNetLemmatizer
 
 from .abs_extractor import AbsExtractor
-from .candidate import Candidate
+from extractor.extractors.candidate import Candidate
 
 
 class  CauseExtractor(AbsExtractor):
@@ -113,33 +113,8 @@ class  CauseExtractor(AbsExtractor):
                 candidateObject.setType(candidate[2])
                 candidateObject.setIndex(i)
                 candidates.append(candidateObject)
-
-                # first attempt to refactor to an object based data model
-                # not really used by the extractor, refactoring is an open todo
-                #partObject = candidateObject.spawnPart()
-                #partObject.setPosTag(candidate[0][0][0])
-                #partObject.setText(candidate[0][0][1])
-                #for part in candidate[1]:
-                #        partObject = candidateObject.spawnPart()
-                #        partObject.setPosTag(part[0])
-                #        partObject.setText(part[1])
         document.set_candidates('CauseExtractor', candidates)
 
-        
-    # this dosen`t work well, it seams to be impossible to reconstruct the original text out of the parts 
-    def _searchIndex(self, document, candidateObject):
-        raw = candidateObject.getRaw();
-        textParts = []
-        for candidate in raw[0]:
-            textParts.append(candidate[0])
-        for candidate in raw[1]:
-            textParts.append(candidate[0])
-        text = " ".join(textParts) 
-        index = document.get_fullText().find(text)
-        if index is not -1:
-            candidateObject.setIndex( index )
-
- 
     def _evaluate_tree(self, tree):
         """
         Determines if the given sub tree contains a cause/effect relation.
@@ -240,9 +215,7 @@ class  CauseExtractor(AbsExtractor):
                             not pre_con['abstraction'] and (post_con['event'] or post_con['act']) 
                         ) or (
                             verb_con['lead'] and (not post_con['entity'] and not post_con['group'])
-                        ): 
-                    
-                        
+                        ):
                         candidates.append(deepcopy([subtree.pos(), sibling.pos(), 'NP-VP-NP']))
 
         # search for adverbs or clausal conjunctions

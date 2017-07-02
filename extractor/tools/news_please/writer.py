@@ -44,7 +44,6 @@ class Writer:
             # reuse the input json as template for the output json
             output = document.get_rawData()
 
-
             # check if there isn`t already a fiveWoneH literal
             fiveWoneHLiteral =  output.setdefault('fiveWoneH',{})
 
@@ -57,9 +56,12 @@ class Writer:
                 # check if extracted literal is there
                 extractedLiteral = questionLiteral.setdefault('extracted', [])
                 for answer in answers[question]:
-                    if type(answer) is Candidate:
+                    if isinstance(answer, Candidate):
                         # answer was already refactored
-                        extractedLiteral.append(answer.get_json())
+                        awJson = answer.get_json()
+                        # clean up json by skipping NULL entries
+                        if awJson:
+                            extractedLiteral.append(awJson)
                     else:
                         # fallback for none refactored extractors
                         candidate_json = {'score': answer[1], 'words': []}

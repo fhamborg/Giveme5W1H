@@ -54,7 +54,16 @@ class Preprocessor:
             print(annotation)
         else:
             document.set_sentences(annotation['sentences'], [], [])
-            document.set_trees([nltk.ParentedTree.fromstring(sentence['parse']) for sentence in annotation['sentences']])
+
+            tree = []
+            for sentence in annotation['sentences']:
+                parentedTree = nltk.ParentedTree.fromstring(sentence['parse'])
+                # add a reference to the original data from parsing
+                parentedTree.stanfordCoreNLPResult = sentence
+                tree.append(parentedTree)
+            #testTree = [nltk.ParentedTree.fromstring(sentence['parse']) for sentence in annotation['sentences']]
+
+            document.set_trees(tree)
             document.set_corefs(annotation['corefs'])
 
             tokens = []

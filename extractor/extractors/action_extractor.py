@@ -2,6 +2,7 @@ import re
 
 from nltk.tree import ParentedTree
 
+from extractor.extractors.candidate import Candidate
 from .abs_extractor import AbsExtractor
 
 
@@ -56,7 +57,10 @@ class ActionExtractor(AbsExtractor):
                 for pattern in self._evaluate_tree(trees[mention['sentNum']-1]):
                     np_string = ''.join([p[0] for p in pattern[0]])
                     if re.sub(r'\s+', '', mention['text']) in np_string:
-                        candidates.append([pattern[0], pattern[1], cluster, mention['id']])
+                        candidateObject = Candidate()
+                        candidateObject.setIndex(pattern[2])
+                        candidateObject.setRaw([pattern[0], pattern[1], cluster, mention['id']])
+                        candidates.append(candidateObject)
 
         document.set_candidates('ActionExtractor', candidates)
 
@@ -83,7 +87,7 @@ class ActionExtractor(AbsExtractor):
                 sibling = subtree.right_sibling()
                 while sibling is not None:
                     if sibling.label() == 'VP':
-                        candidates.append((subtree.pos(), self.cut_what(sibling, 3).pos()))
+                        candidates.append((subtree.pos(), self.cut_what(sibling, 3).pos(), tree.stanfordCoreNLPResult['index']))
                         break
                     sibling = sibling.right_sibling()
 
@@ -116,13 +120,14 @@ class ActionExtractor(AbsExtractor):
             max_len = 1
 
         for candidate in document.get_candidates('ActionExtractor'):
-            verb = candidate[1][0][0].lower()
+            candidateParts = candidate.getRaw()
+            verb = candidateParts[1][0][0].lower()
 
             # VP beginning with say/said often contain no relevant action and are therefor skipped.
             if verb.startswith('say') or verb.startswith('said'):
                 continue
 
-            coref_chain = doc_coref[candidate[2]]
+            coref_chain = doc_coref[candidateParts[2]]
 
             # first parameter used for ranking is the number of mentions, we use the length of the coref chain
             score = (len(coref_chain) / max_len) * self.weights[1]
@@ -132,7 +137,7 @@ class ActionExtractor(AbsExtractor):
             mention_type = ''
 
             for mention in coref_chain:
-                if mention['id'] == candidate[3]:
+                if mention['id'] == candidateParts[3]:
                     mention_type = mention['type']
                     if mention['sentNum'] < doc_len:
                         # The position (sentence number) is another important parameter for scoring.
@@ -160,23 +165,33 @@ class ActionExtractor(AbsExtractor):
 
             if mention_type == 'PRONOMINAL':
                 # use representing mention if the agent is only a pronoun
-                ranked_candidates.append((representative, candidate[1], score))
+                ranked_candidates.append((representative, candidateParts[1], score, candidate.getIndex()))
             else:
-                ranked_candidates.append((candidate[0], candidate[1], score))
+                ranked_candidates.append((candidateParts[0], candidateParts[1], score, candidate.getIndex()))
 
         ranked_candidates.sort(key=lambda x: x[2], reverse=True)
         
-        
-        
-        # split results
-        who = [(c[0], c[2]) for c in ranked_candidates]
-        what = [(c[1], c[2]) for c in ranked_candidates]
 
-        document.set_answer('who', self._filter_duplicates(who))
-        document.set_answer('what', self._filter_duplicates(what))
-        
-        
-        #return ranked_candidates
+        # split results
+        who = [(c[0], c[2],c[3]) for c in ranked_candidates]
+        what = [(c[1], c[2], c[3]) for c in ranked_candidates]
+
+
+        # Filte dublicates and transform who to object oriented list
+        oWho = self._filterAndConvertToObjectOrientedList(who)
+        oWhat = self._filterAndConvertToObjectOrientedList(what)
+        document.set_answer('who', oWho)
+        document.set_answer('what', oWhat)
+
+    def _filterAndConvertToObjectOrientedList(self, list):
+        whoList = []
+        for answer in self._filter_duplicates(list):
+            ca = Candidate()
+            ca.setParts(answer[0])
+            ca.setIndex(answer[2])
+            ca.setScore(answer[1])
+            whoList.append(ca)
+        return whoList
 
     def cut_what(self, tree, min_length=0, length=0):
         """

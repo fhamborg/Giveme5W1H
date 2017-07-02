@@ -12,6 +12,12 @@ class Candidate:
     def setParts(self, parts):
         self._parts = parts
 
+    def setRaw(self, raw):
+        self._raw = raw
+
+    def getRaw(self):
+        return self._raw
+
     def setType(self, type):
         self._tyoe = type
 
@@ -31,11 +37,14 @@ class Candidate:
         return self._index
 
     def get_json(self):
-        words = []
-        for part in self._parts:
-            words.append({ 'text': part[0], 'tag': part[1]})
-        return {'score': self._score , 'words': words}
 
-   
-    
-   
+        if self._parts:
+            words = []
+            for part in self._parts:
+                words.append({ 'text': part[0], 'tag': part[1]})
+
+            json = {'score': self._score , 'words': words}
+            if self._index:
+                json['index'] = self._index
+            return json
+        return None

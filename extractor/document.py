@@ -13,6 +13,9 @@ class Document(object):
 
         self._raw = {'title': title, 'description': desc, 'text': text}
 
+        # append all document text into one string
+        self._fullText = '. '.join(val for key, val in self._raw.items())
+
         self._date = None
 
         self._file_name = None
@@ -31,8 +34,7 @@ class Document(object):
         
         self._candidates = {};
         
-        # append all document text into one string
-        self._fullText = '. '.join(val for key, val in self._raw.items())
+
 
         self._answers = {'what': [], 'who': [], 'why': [], 'where': [], 'when': []}
         self._annotations = {'what': [], 'who': [], 'why': [], 'where': [], 'when': []}

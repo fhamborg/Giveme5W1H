@@ -30,9 +30,9 @@ if __name__ == '__main__':
     log.addHandler(sh)
     
     extractor = FiveWExtractor(extractors = [
-                        action_extractor.ActionExtractor,
-                        environment_extractor.EnvironmentExtractor,
-                        cause_extractor.CauseExtractor,
+                        #action_extractor.ActionExtractor,
+                        #environment_extractor.EnvironmentExtractor,
+                        #cause_extractor.CauseExtractor,
                         method_extractor.MethodExtractor
                     ])
     inputPath = os.path.dirname(__file__) + '/input'
@@ -46,7 +46,7 @@ if __name__ == '__main__':
                     # set a path to save an load preprocessed documents
                     .setPreprocessedPath(preprocessedPath)
                     # limit the the to process documents (nice for development) 
-                    #.setLimit(1)
+                    .setLimit(1)
                     # add an optional extractor (it would do basically just copying without...)
                     .setExtractor(extractor)
                     # saves all document objects for further programming

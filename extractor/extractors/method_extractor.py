@@ -14,7 +14,14 @@ class MethodExtractor(AbsExtractor):
     # (position, frequency, named entity)
     # weights = (4, 3, 2)
     weights = [1,1,1]
-    
+
+    # relevant indicators
+    preposition = ['with', 'in', 'by', 'after']
+    conjunction = ['as', 'because', 'so', 'until', 'while']
+    pattern= ['NN-VBD', 'NN-VBZ', 'VBN-VBN']
+
+    # prepositional phrase PP, preposition
+
     def extract(self, document):
         """
         Parses the document for answers to the questions how.
@@ -24,52 +31,69 @@ class MethodExtractor(AbsExtractor):
 
         :return: The parsed Document object
         """
-        
-        
+
         self._extract_candidates(document)
         self._evaluate_candidates(document)
         
         return document
-        #convert candidates into correct format
-        #print(candidates)
-        
-        #print(result)
 
     def _extract_candidates(self, document):
-        """
-        :param document: The Document to be analyzed.
-        :type document: Document
 
-        :return: A List of Tuples containing all agents, actions and their position in the document.
-        """
-
-        # retrieve results from preprocessing
-        corefs = document.get_corefs()
-        trees = document.get_trees()
         candidates = []
-        
-        tmp_candidates = []
-        sentences = document.get_sentences()
-        
-        # is used for normalisation
-        self._maxIndex = 0
-        for sentence in sentences:
-            for token in sentence['tokens']:
-                if token['index'] > self._maxIndex:
-                    self._maxIndex = token['index']
-                if self._isRelevantPos(token['pos']):
-                    # TODO some further checks based on relations
-                    # print(token['pos'])
-                    
-                    # TODO exclude if ner tags is time, location...
-                    
-                    # TODO extend candidates to phrases
-                    
-                    # save all relevant information for _evaluate_candidates  
-                    candidates.append({ 'position': token['index'], 'lemma': token['lemma'], 'originalText':token['originalText'], 'pos' : token['pos']   })
-                
-        document.set_candidates('MethodExtractor', candidates)
-        #return candidates
+        postrees = document.get_trees()
+
+        for i, tree in enumerate(postrees):
+            for candidate in self._evaluate_tree(tree):
+                candidateObject = Candidate()
+                # used by the extractor
+                candidateObject.setParts(candidate[0] + candidate[1])
+                candidateObject.setType(candidate[2])
+                candidateObject.setIndex(i)
+                candidates.append(candidateObject)
+        document.set_candidates('CauseExtractor', candidates)
+
+
+    def _evaluate_tree(self, tree):
+
+        doc_coref = document.get_corefs()
+        for subtree in tree.subtrees():
+            print(subtree)
+
+    # def _extract_candidates(self, document):
+    #     """
+    #     :param document: The Document to be analyzed.
+    #     :type document: Document
+    #
+    #     :return: A List of Tuples containing all agents, actions and their position in the document.
+    #     """
+    #
+    #     # retrieve results from preprocessing
+    #     corefs = document.get_corefs()
+    #     trees = document.get_trees()
+    #     candidates = []
+    #
+    #     tmp_candidates = []
+    #     sentences = document.get_sentences()
+    #
+    #     # is used for normalisation
+    #     self._maxIndex = 0
+    #     for sentence in sentences:
+    #         for token in sentence['tokens']:
+    #             if token['index'] > self._maxIndex:
+    #                 self._maxIndex = token['index']
+    #             if self._isRelevantPos(token['pos']):
+    #                 # TODO some further checks based on relations
+    #                 # print(token['pos'])
+    #
+    #                 # TODO exclude if ner tags is time, location...
+    #
+    #                 # TODO extend candidates to phrases
+    #
+    #                 # save all relevant information for _evaluate_candidates
+    #                 candidates.append({ 'position': token['index'], 'lemma': token['lemma'], 'originalText':token['originalText'], 'pos' : token['pos']   })
+    #
+    #     document.set_candidates('MethodExtractor', candidates)
+    #     #return candidates
 
 
     def _evaluate_candidates(self, document):

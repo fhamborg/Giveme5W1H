@@ -31,7 +31,7 @@ class Handler(object):
 
     def setLimit(self, limit):
         self._limit = limit
-        print('document input limit:\t', limit)
+        self.log.info('document input limit:\t' + str(limit))
         return self
 
     def setOutputPath(self, outputPath):
@@ -57,7 +57,8 @@ class Handler(object):
             self._documents.append(doc)
             self.log.info('Handler: preloaded ' + doc.get_title())
 
-        print('documents prelaoded:\t', docCounter)
+
+        self.log.error('documents prelaoded:\t' + str(docCounter))
         return self
 
 
@@ -65,7 +66,7 @@ class Handler(object):
         if self._documents:
             return self._documents
         else:
-            print('you must call preLoadAndCacheDocuments before processing to collect the docs')
+            self.log.error('you must call preLoadAndCacheDocuments before processing to collect the docs')
 
     def _processDocument(self, document):
         wasPreprocessed = document.is_preprocessed()
@@ -91,12 +92,12 @@ class Handler(object):
 
         # process in memory objects (call preLoadDocuments)
         if self._documents:
-            print('processing documents from memory')
+            self.log.info('processing documents from memory')
             sys.stdout.flush()
             for document in self._documents:
                 self._processDocument(document)
         else:
-            print('processing documents from file system ')
+            self.log.info('processing documents from file system ')
             sys.stdout.flush()
             for filepath in glob.glob(self._inputPath + '/*.json'):
                 if self._limit and docCounter >= self._limit:
@@ -105,7 +106,7 @@ class Handler(object):
                 docCounter += 1
                 document = self._reader.read(filepath)
                 self._processDocument(document)
-            print('Processed Documents:\t ', docCounter)
+            self.log.info('Processed Documents:\t ' + str(docCounter))
 
         self.log.info('')
         self.log.info('------- Handler finished processing-------\t')

@@ -9,16 +9,15 @@ import queue
 
 
 class Worker(Thread):
-    def __init__(self, document, queue):
+    def __init__(self,  queue):
         ''' Constructor. '''
         Thread.__init__(self)
-        self._document = document
         self._queue = queue
 
     def run(self):
         while True:
-            extractor = self._queue.get()
-            extractor.extract(self._document)
+            extractor, document = self._queue.get()
+            extractor.extract(document)
             self._queue.task_done()
 
 class FiveWExtractor:
@@ -71,6 +70,13 @@ class FiveWExtractor:
             self.combinedScorers = [
                 DistanceOfCandidate( ('What', 'Who'),('How'), 1)
             ]
+
+        self.q = queue.Queue()
+        # creating worker threads
+        for i in range(len(self.extractors)):
+            t = Worker(self.q)
+            t.daemon = True
+            t.start()
             
     def parse(self, doc):
         """
@@ -85,16 +91,10 @@ class FiveWExtractor:
         if not doc.is_preprocessed():
             self.preprocessor.preprocess(doc)
 
-        q = queue.Queue()
-        for i in range(len(self.extractors)):
-            t = Worker(doc, q)
-            t.daemon = True
-            t.start()
-
         for extractor in self.extractors:
-            q.put(extractor)
+            self.q.put((extractor, doc))
 
-        q.join()
+        self.q.join()
 
         # apply combined_scoring
         if self.combinedScorers:

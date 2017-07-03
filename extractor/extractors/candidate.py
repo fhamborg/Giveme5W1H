@@ -19,7 +19,7 @@ class Candidate:
         return self._raw
 
     def setType(self, type):
-        self._tyoe = type
+        self._type = type
 
     def getType(self):
         return self._type

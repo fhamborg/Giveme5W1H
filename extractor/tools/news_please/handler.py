@@ -70,21 +70,21 @@ class Handler(object):
 
     def _processDocument(self, document):
         self.log.info('Handler: \tTitle:\t' + str(document.get_title()))
-        self.log.info('Handler: \tId:   \t' + str(document.get_document_id()))
+        self.log.info('         \tId:   \t' + str(document.get_document_id()))
 
         if self._extractor:
             if not document.is_preprocessed():
                 self._extractor.preprocessor.preprocess(document)
                 if self._writer.getPreprocessedPath():
                     self._writer.writePickle(document)
-                    self.log.info('Handler: \tsaved to cache')
+                    self.log.info('         \tsaved to cache')
             else:
-                self.log.info('Handler: \talready preprocessed')
+                self.log.info('          \talready preprocessed')
             self._extractor.parse(document)
-            self.log.info('Handler:\tprocessed')
+            self.log.info('         \tprocessed')
 
         if self._outputPath:
-            self.log.info('Handler:\tsaved to output')
+            self.log.info('         \tsaved to output')
             self._writer.write( document)
         self.log.info('')
 

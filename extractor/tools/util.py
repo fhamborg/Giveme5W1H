@@ -22,7 +22,7 @@ def cmp_text(annotation, candidate):
     :return: Float
     """
 
-    if annotation is None:
+    if annotation is None or annotation is 'NULL':
         # annotation is NULL
         return -1
     elif candidate is None:

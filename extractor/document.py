@@ -31,13 +31,11 @@ class Document(object):
         self._nerTags = []
         self._rawData = rawData
         self._preprocessed = False
-        
-        self._candidates = {};
-        
 
+        self._annotations = {'what': [], 'who': [], 'why': [], 'where': [], 'when': [], 'how': []}
 
-        self._answers = {'what': [], 'who': [], 'why': [], 'where': [], 'when': []}
-        self._annotations = {'what': [], 'who': [], 'why': [], 'where': [], 'when': []}
+        self._answers = {'what': [], 'who': [], 'why': [], 'where': [], 'when': [], 'how': []}
+        self._candidates = {}
 
 
     def is_preprocessed(self, preprocessed=None):
@@ -80,6 +78,9 @@ class Document(object):
 
     def get_sentences(self):
         return self._sentences
+
+    def get_document_id(self):
+        return self._rawData['dId']
 
     def get_corefs(self):
         return self._corefs

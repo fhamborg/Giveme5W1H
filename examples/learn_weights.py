@@ -33,20 +33,37 @@ if __name__ == '__main__':
     log.addHandler(sh)
     
     # Setup
-    extractor = FiveWExtractor()
+    extractorObject = FiveWExtractor()
     inputPath = os.path.dirname(__file__) + '/input/'
-    
+    preprocessedPath = os.path.dirname(__file__) + '/cache'
+
     increment_range = [0.0, 0.05, 0.10, 0.15, 0.20, 0.25, 0.30, 0.35, 0.40, 0.45, 0.50, 0.55, 0.60, 0.65, 0.70, 0.75, 0.80,
                    0.85, 0.90, 0.95, 1]
     
     # Put all together, run it once, get the cached document objects
-    documents = Handler(inputPath).setExtractor(extractor).preLoadAndCacheDocuments().process().getDocuments()
+    documents = (
+        # initiate the newsplease file handler with the input directory
+        Handler(inputPath)
+            # set a path to save an load preprocessed documents
+            .setPreprocessedPath(preprocessedPath)
+            # limit the the to process documents (nice for development)
+            .setLimit(1)
+            # add an optional extractor (it would do basically just copying without...)
+            .setExtractor(extractorObject)
+            # saves all document objects for further programming
+            .preLoadAndCacheDocuments()
+            # executing it
+            .process().getDocuments()
+    )
 
     resultPath = os.path.dirname(__file__)+'/result/learnWeights.json'
 
     with open(resultPath, encoding='utf-8', mode='r') as data_file:
         data = json.load(data_file)
 
+        # grab utilities to parse dates and locations from the EnvironmentExtractor
+        geocoder = extractorObject.extractors[1].geocoder
+        calendar = extractorObject.extractors[1].calendar
 
         # Questions
 
@@ -60,21 +77,21 @@ if __name__ == '__main__':
                     for k in increment_range:
                         for l in increment_range:
 
-                            adjustWeights(extractor.extractors, i, j, k, l)
+                            adjustWeights(extractorObject.extractors, i, j, k, l)
 
                             # 2__Reevaluate per extractor
-                            for extractor in extractor.extractors:
+                            for extractor in extractorObject.extractors:
                                 extractor._evaluate_candidates(document)
 
                             # 2_1 Reevaluate combined scoring
-                            for combinedScorer in extractor.combinedScorers:
+                            for combinedScorer in extractorObject.combinedScorers:
                                 combinedScorer.score(document)
 
                             annotation = document.get_annotations()
                             answers = document.get_answers()
 
                             # take the best annotation and compare it with the best answer
-                            when = cmp_date(annotation['when'][0], answers['when'][0])
+                            #when = cmp_date(annotation['when'][0][2], answers['when'][0][0][0], calendar)
                             why  = cmp_text(annotation['why'][0], answers['why'][0])
                             who  = cmp_text(annotation['who'][0], answers['who'][0])
                             what = cmp_text(annotation['what'][0], answers['what'][0])

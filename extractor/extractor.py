@@ -52,19 +52,16 @@ class FiveWExtractor:
 
         # initialize extractors
         if extractors is not None and len(extractors) > 0:
-
-            self.extractors = []
-            for factory in extractors:
-                self.extractors.append(factory())
+            self.extractors = extractors
 
         else:
             # the default extractor selection
             self.log.info('No extractors passed, initializing default configuration.')
             self.extractors = [
-                action_extractor,
-                environment_extractor,
-                cause_extractor,
-                method_extractor
+                action_extractor.ActionExtractor(),
+                environment_extractor.EnvironmentExtractor(),
+                cause_extractor.CauseExtractor(),
+                method_extractor.MethodExtractor()
             ]
             
         if combinedScorers and len(combinedScorers) > 0:

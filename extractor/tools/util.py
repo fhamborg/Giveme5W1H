@@ -69,9 +69,10 @@ def cmp_date(annotation, candidate, calendar):
     :return: Float
     """
 
-    if annotation is None:
-        # annotation is NULL
+    t = calendar.parse(annotation)
+    if t[1] == 0:
         return -1
+
     elif candidate is None:
         # no answer was extracted
         return -2
@@ -82,7 +83,7 @@ def cmp_date(annotation, candidate, calendar):
         # one of the answers couldn't be parsed
         return -3
 
-    return abs(time.mktime(annotation[0]) - time.mktime(c_time[0]))
+    return abs(time.mktime(t) - time.mktime(c_time[0]))
 
 
 def cmp_location(annotation, candidate, geocoder):

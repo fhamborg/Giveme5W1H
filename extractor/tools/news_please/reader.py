@@ -36,9 +36,11 @@ class Reader(object):
             data['dId'] = hashlib.sha224(data['url'].encode('utf-8')).hexdigest()
             
             # path where the preprocessed file should be
-            preprocessedFilePath = self.get_preprocessedFilePath(data['dId'])
+
             
-            if self._preprocessedPath is not None and os.path.isfile(preprocessedFilePath):
+            if self._preprocessedPath is not None:
+                preprocessedFilePath = self.get_preprocessedFilePath(data['dId'])
+                if os.path.isfile(preprocessedFilePath):
                     # _preprocessedPath path is given, and there is already a preprocessed document
                     with open(preprocessedFilePath, 'rb') as ff:
                         document = pickle.load(ff)

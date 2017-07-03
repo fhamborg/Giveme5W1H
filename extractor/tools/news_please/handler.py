@@ -69,20 +69,22 @@ class Handler(object):
             self.log.error('you must call preLoadAndCacheDocuments before processing to collect the docs')
 
     def _processDocument(self, document):
-        wasPreprocessed = document.is_preprocessed()
-        self.log.info('Handler: ' + str(document.get_title()))
+        self.log.info('Handler: \tTitle:\t' + str(document.get_title()))
+        self.log.info('Handler: \tId:   \t' + str(document.get_document_id()))
+
         if self._extractor:
-            self._extractor.parse(document)
-            if self._writer.getPreprocessedPath() and not wasPreprocessed:
-                rawData = document.get_rawData()
-                self._writer.writePickle(document)
-                self.log.info('Handler: saved to cache')
+            if not document.is_preprocessed():
+                self._extractor.preprocessor.preprocess(document)
+                if self._writer.getPreprocessedPath():
+                    self._writer.writePickle(document)
+                    self.log.info('Handler: \tsaved to cache')
             else:
-                self.log.info('Handler: was already preprocessed')
-            self.log.info('Handler: processed')
+                self.log.info('Handler: \talready preprocessed')
+            self._extractor.parse(document)
+            self.log.info('Handler:\tprocessed')
 
         if self._outputPath:
-            self.log.info('Handler: saved to output')
+            self.log.info('Handler:\tsaved to output')
             self._writer.write( document)
         self.log.info('')
 

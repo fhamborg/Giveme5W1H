@@ -3,7 +3,7 @@ import re
 from nltk.tree import ParentedTree
 
 from .abs_extractor import AbsExtractor
-
+from extractor.extractors.candidate import Candidate
 
 class MethodExtractor(AbsExtractor):
     """
@@ -42,58 +42,105 @@ class MethodExtractor(AbsExtractor):
         candidates = []
         postrees = document.get_trees()
 
+        # Preposition or subordinating conjunction -> detecting verbs
         for i, tree in enumerate(postrees):
             for candidate in self._evaluate_tree(tree):
-                candidateObject = Candidate()
-                # used by the extractor
-                candidateObject.setParts(candidate[0] + candidate[1])
-                candidateObject.setType(candidate[2])
-                candidateObject.setIndex(i)
-                candidates.append(candidateObject)
-        document.set_candidates('CauseExtractor', candidates)
+                    candidates.append(candidate)
+        candidates = self._filterAndConvertToObjectOrientedList(candidates)
 
+        # All kind of adjectives
+        candidates = candidates + self._filterAndConvertToObjectOrientedList(self._extract_ad_candidates(document))
+
+        document.set_candidates('MethodExtractor', candidates)
 
     def _evaluate_tree(self, tree):
 
-        doc_coref = document.get_corefs()
-        for subtree in tree.subtrees():
-            print(subtree)
 
-    # def _extract_candidates(self, document):
-    #     """
-    #     :param document: The Document to be analyzed.
-    #     :type document: Document
-    #
-    #     :return: A List of Tuples containing all agents, actions and their position in the document.
-    #     """
-    #
-    #     # retrieve results from preprocessing
-    #     corefs = document.get_corefs()
-    #     trees = document.get_trees()
-    #     candidates = []
-    #
-    #     tmp_candidates = []
-    #     sentences = document.get_sentences()
-    #
-    #     # is used for normalisation
-    #     self._maxIndex = 0
-    #     for sentence in sentences:
-    #         for token in sentence['tokens']:
-    #             if token['index'] > self._maxIndex:
-    #                 self._maxIndex = token['index']
-    #             if self._isRelevantPos(token['pos']):
-    #                 # TODO some further checks based on relations
-    #                 # print(token['pos'])
-    #
-    #                 # TODO exclude if ner tags is time, location...
-    #
-    #                 # TODO extend candidates to phrases
-    #
-    #                 # save all relevant information for _evaluate_candidates
-    #                 candidates.append({ 'position': token['index'], 'lemma': token['lemma'], 'originalText':token['originalText'], 'pos' : token['pos']   })
-    #
-    #     document.set_candidates('MethodExtractor', candidates)
-    #     #return candidates
+        # in: before
+        # after: after
+        candidates = []
+        for subtree in tree.subtrees():
+            label = subtree.label()
+
+            # Preposition or subordinating conjunction -> detecting verbs
+            # ...after it "came off the tracks"...
+            if label == 'IN':
+
+                # after can be followed by a candidate
+                # TODO list all prepositions depending on where candidates can be found (before or after)
+                if subtree[0] in ['after']:
+                    # candidate is after the preposition
+
+                    right_sibling_pos = subtree.right_sibling()
+                    # be  sure there is more text on the right side of the tree
+                    if right_sibling_pos:
+                        right_sibling_pos = right_sibling_pos.pos()
+                        candidate_parts = self._findString(right_sibling_pos)
+                        if candidate_parts:
+                            candidates.append([candidate_parts, tree.stanfordCoreNLPResult['index']])
+
+                else:
+                    # candidate is before the preposition
+                    # ....derailed and overturned IN...
+
+                    # match VBD CC VBD and VBD
+                    relevantParts = subtree.parent().parent().parent().pos()
+                    candidate_parts = self._findString(relevantParts)
+                    if candidate_parts:
+                        candidates.append([candidate_parts, tree.stanfordCoreNLPResult['index']])
+
+        return candidates
+
+    def _filterAndConvertToObjectOrientedList(self, list):
+        whoList = []
+        for answer in self._filter_duplicates(list):
+            ca = Candidate()
+            ca.setParts(answer[0])
+            ca.setIndex(answer[1])
+            whoList.append(ca)
+        return whoList
+
+
+    def _findString(self, relevantParts):
+        recording = False
+        candidateParts = []
+        for relevantPart in relevantParts:
+            if relevantPart[1].startswith('VB') or relevantPart[1] == 'CC':
+                candidateParts.append(relevantPart)
+                recording = True
+            elif recording is True:
+                break
+        candidatePartsLen = len(candidateParts)
+
+        # filter out short candidates
+        if ((candidatePartsLen == 1 and candidateParts[0][0] not in ['and', 'is', 'has', 'have', 'went', 'was', 'been', 'were', 'am', 'get', 'said','are']) or candidatePartsLen > 1):
+            return candidateParts
+        return None
+
+
+    def _extract_ad_candidates(self, document):
+        """
+        :param document: The Document to be analyzed.
+        :type document: Document
+
+        :return: A List of Tuples containing all agents, actions and their position in the document.
+        """
+
+        # retrieve results from preprocessing
+        candidates = []
+
+        tmp_candidates = []
+        sentences = document.get_sentences()
+
+        self._maxIndex = 0
+        for sentence in sentences:
+            for token in sentence['tokens']:
+                if token['index'] > self._maxIndex:
+                    self._maxIndex = token['index']
+                if self._isRelevantPos(token['pos']) and token['ner'] not in ['TIME', 'DATE', 'ORGANIZATION', 'DURATION', 'ORDINAL']:
+                    candidates.append( [[(token['pos'], token['originalText'], token['lemma'])], sentence['index']] )
+
+        return candidates
 
 
     def _evaluate_candidates(self, document):
@@ -105,14 +152,14 @@ class MethodExtractor(AbsExtractor):
         :return: A list of evaluated and ranked candidates
         """
         #ranked_candidates = []
-        
+        document.set_answer('how', document.get_candidates('MethodExtractor'))
           
         groupe_per_lemma = {}
         maxCount = 0
         
         candidates = document.get_candidates('MethodExtractor')
 
-        if len(candidates) > 0:
+        if candidates and len(candidates) == -1:
             # frequency per lemma
             for candidate in candidates:
                 if candidate is not None and len(candidate['originalText']) > 0:
@@ -172,7 +219,7 @@ class MethodExtractor(AbsExtractor):
                 result.append( keyVal )
 
 
-            document.set_answer('how', result )
+
 
 
     def _isRelevantPos(self, pos):

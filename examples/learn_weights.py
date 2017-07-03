@@ -3,16 +3,33 @@ import os
 import sys
 import json
 import math
+from threading import Thread
 from extractor.extractor import FiveWExtractor
-from extractor.tools.news_please.handler import Handler
+from extractor.tools.file.handler import Handler
 from extractor.tools.util import cmp_date, cmp_text
-
+import queue
 # Add path to allow execution though console
 sys.path.insert(0, '/'.join(os.path.realpath(__file__).split('/')[:-2]))
 #from timeit import default_timer as timer
 
 
 core_nlp_host = 'http://localhost:9000'
+
+
+class Worker(Thread):
+    def __init__(self,  queue):
+        ''' Constructor. '''
+        Thread.__init__(self)
+        self._queue = queue
+
+    def run(self):
+        while True:
+            extractor, document = self._queue.get()
+            if extractor and document:
+                extractor._evaluate_candidates(document)
+                self._queue.task_done()
+
+
 
 def adjustWeights(extractors, i,j,k,l):
     # (action_0, cause_1, environment_2)
@@ -50,9 +67,14 @@ if __name__ == '__main__':
     increment_range_length = len(increment_range)
     increment_range_steps = math.pow(increment_range_length, 4) / 100
 
-
+    q = queue.Queue()
     resultFiles = {}
     resultObjects ={}
+
+    for i in range(8):
+        t = Worker(q)
+        t.daemon = True
+        t.start()
 
     # Put all together, run it once, get the cached document objects
     documents = (
@@ -102,7 +124,12 @@ if __name__ == '__main__':
 
                         # 2__Reevaluate per extractor
                         for extractor in extractorObject.extractors:
-                            extractor._evaluate_candidates(document)
+                            q.put((extractor, document))
+
+                        q.join()
+
+                        #for extractor in extractorObject.extractors:
+                        #   extractor._evaluate_candidates(document)
 
                         # 2_1 Reevaluate combined scoring
                         for combinedScorer in extractorObject.combinedScorers:
@@ -119,11 +146,14 @@ if __name__ == '__main__':
                         #
                         #cmp_text_helper('when', answers, annotation, [i, j, k, l], document, resultObjects)
                         counter = counter+1
-                print("Progress: " + str(counter/increment_range_steps) + "%")
+                print("Progress: " + str(counter/increment_range_steps) + " %")
 
     # save everything
     for question in questions:
+        # order: the result
         resultObjects[question].sort(key=lambda x: x['score'], reverse=True)
+
+        # write to the disk
         resultFiles[question].write(json.dumps(resultObjects[question], sort_keys=False, indent=2, check_circular=False))
         resultFiles[question].close()
 

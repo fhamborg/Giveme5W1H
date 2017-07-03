@@ -4,7 +4,7 @@ import sys
 
 from extractor.extractor import FiveWExtractor
 from extractor.extractors import action_extractor, environment_extractor, cause_extractor, method_extractor
-from extractor.tools.news_please.handler import Handler
+from extractor.tools.file.handler import Handler
 
 
 # Add path to allow execution though console
@@ -40,18 +40,21 @@ if __name__ == '__main__':
     preprocessedPath = os.path.dirname(__file__) + '/cache'
     
     documents = (
-                # initiate the newsplease file handler with the input directory
+                # initiate the file handler with the input directory
                 Handler(inputPath)
+                    # set a output directory
                     .setOutputPath(outputPath)
-                    # set a path to save an load preprocessed documents
+                    # set a path to save an load preprocessed documents - CoreNLP results
                     .setPreprocessedPath(preprocessedPath)
                     # limit the the to process documents (nice for development) 
                     .setLimit(1)
-                    # add an optional extractor (it would do basically just copying without...)
+                    # add an optional extractor (it would do only copying without...)
                     .setExtractor(extractor)
-                    # saves all document objects for further programming
+                    # load and saves all document objects for further programming
                     .preLoadAndCacheDocuments()
                     # executing it
-                    .process().getDocuments()
+                    .process()
+                    # get the processed documents
+                    .getDocuments()
             )
     

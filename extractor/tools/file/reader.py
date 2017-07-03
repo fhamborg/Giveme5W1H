@@ -37,13 +37,13 @@ class Reader(object):
             
             # path where the preprocessed file should be
 
-            
             if self._preprocessedPath is not None:
                 preprocessedFilePath = self.get_preprocessedFilePath(data['dId'])
-                if os.path.isfile(preprocessedFilePath):
-                    # _preprocessedPath path is given, and there is already a preprocessed document
-                    with open(preprocessedFilePath, 'rb') as ff:
-                        document = pickle.load(ff)
+
+            if preprocessedFilePath and os.path.isfile(preprocessedFilePath):
+                # _preprocessedPath path is given, and there is already a preprocessed document
+                with open(preprocessedFilePath, 'rb') as ff:
+                    document = pickle.load(ff)
             else:
                 document = Document(data.setdefault('title', ''),  data.setdefault('description', ''), data.setdefault('text', ''), data)
                 

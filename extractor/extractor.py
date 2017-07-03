@@ -17,8 +17,9 @@ class Worker(Thread):
     def run(self):
         while True:
             extractor, document = self._queue.get()
-            extractor.extract(document)
-            self._queue.task_done()
+            if extractor and document:
+                extractor.extract(document)
+                self._queue.task_done()
 
 class FiveWExtractor:
     """

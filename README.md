@@ -1,12 +1,13 @@
 # GiveMe5W
 
-GiveMe5W is a state of the art open-source 5W Question Answering system for news articles. It can either be used through a simple RESTapi or directly included in existing Python projects. Depending on the configuration GiveMe5W parses each document for the answers to the following  questions:
+GiveMe5W(1H) is a state of the art open-source 5W Question Answering system for news articles. It can either be used through a simple RESTapi or directly included in existing Python projects. Depending on the configuration GiveMe5W parses each document for the answers to the following  questions:
 
 * **Who** is involved?
 * **What** happened?
 * **Where** did it take place?
 * **When** did it happen?
 * **Why** did it happen?
+* **How** did it happen?
 
 ## Getting started
 Before you can use GiveMe5W, you need to make sure you have a CoreNLP-server up and running.
@@ -26,7 +27,16 @@ If you are running CoreNLP on a different port or machine you have to first adju
 core_nlp_host = 'localhost:9000'
 ```
 
-For the RESTapi it is also possible to network config:
+## ScriptUsage
+GiveMe5W can read and write news in a json format (https://github.com/fhamborg/news-please/blob/master/newsplease/examples/sample.json)[example]
+
+Files can be processed like a stream (parse_documents_simple.py) or can be loaded in advance and kept in the (parse_documents.py). Because of the long execution time of CoreNLP,
+it is possible to cache the result on the filesystem to speed up multiple run. The raw results are attached to each document under clp_result.
+
+
+
+## RESTapi
+For the RESTapi it is possible to config the network:
 ```python
 # basic configuration of the rest api
 app = Flask(__name__)
@@ -59,6 +69,7 @@ The API supports the following JSON fields:
 * title (always required!)
 * description
 * text
-## License
 
+
+## License
 The project is licensed under the Apache License 2.0. Make sure that you use news-GiveMe5W in compliance with applicable law. Copyright 2016 The GiveMe5W team

@@ -2,9 +2,9 @@ import logging
 import os
 import sys
 
-from extractor.extractor import FiveWExtractor, factoryBuilder
+from extractor.extractor import FiveWExtractor
 from extractor.extractors import action_extractor, environment_extractor, cause_extractor, method_extractor
-from extractor.tools.news_please.handler import Handler
+from extractor.tools.file.handler import Handler
 
 
 # Add path to allow execution though console
@@ -26,7 +26,7 @@ if __name__ == '__main__':
     sh.setLevel(logging.DEBUG)
     log.addHandler(sh)
 
-    extractor = factoryBuilder()
+    extractor = FiveWExtractor()
     inputPath = os.path.dirname(__file__) + '/input'
     outputPath = os.path.dirname(__file__) + '/output'
     
@@ -37,9 +37,9 @@ if __name__ == '__main__':
        .setOutputPath(outputPath)
         # limit the the to process documents (nice for development) 
        .setLimit(1)
-        # add an optional extractor (it would do basically just copying without...)
+        # add an optional extractor
        .setExtractor(extractor)
         # executing it
-       .process().getDocuments())
+       .process())
             
     

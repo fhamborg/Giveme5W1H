@@ -1,13 +1,9 @@
-import logging
-import os
-import sys
-import json
-import glob
-import xml.etree.ElementTree as ET
 import copy
-import html
-import re
+import glob
 import hashlib
+import html
+import json
+import xml.etree.ElementTree as ET
 
 
 def extract_markup(root, start, end, encoding):
@@ -30,6 +26,7 @@ def extract_markup(root, start, end, encoding):
 
     return text
 
+
 class Object:
     def toJSON(self):
         return json.dumps(self, default=lambda o: o.__dict__, sort_keys=False, indent=2, ensure_ascii=False)
@@ -43,7 +40,7 @@ fileTopics = open('input/index.txt', 'r')
 
 for topic in fileTopics.read().split('#'):
     parts = topic.split('\n')
-    topicCandidate  = parts.pop(0);
+    topicCandidate = parts.pop(0);
     parts = [part for part in parts if '' is not part]
     if topicCandidate is not '':
         if topicCandidate is not '' and topicCandidate in topics:
@@ -61,7 +58,6 @@ for topic in tmp_topics:
 with open('input/annotation.json', 'r', encoding='utf-8-sig') as dataAnnotation:
     annotation = json.load(dataAnnotation)
 
-
 for filepath in glob.glob('input/*.xml'):
     filename = filepath[6:-4]
     news = ET.parse(filepath)
@@ -69,26 +65,27 @@ for filepath in glob.glob('input/*.xml'):
 
     text_node = copy.deepcopy(root.find('TextWithNodes'))
 
-    #Output Object
+    # Output Object
     news = Object()
 
     news.fiveWoneH = Object()
     for features in root.iter('Feature'):
-        if(features[0].text == 'MimeType'):
+        if (features[0].text == 'MimeType'):
             news.mimeType = features[1].text
-        if(features[0].text == 'source'):
+        if (features[0].text == 'source'):
             news.url = features[1].text
-        if(features[0].text == 'pubdate'):
+        if (features[0].text == 'pubdate'):
             news.publish_date = features[1].text
-        if(features[0].text == 'parsingError'):
+        if (features[0].text == 'parsingError'):
             news.parsingError = features[1].text
 
     for features in root.iter('Annotation'):
-        if(features[0][1].text == 'title'):
+        if (features[0][1].text == 'title'):
             news.title = extract_markup(text_node, features.get('StartNode', 0), features.get('EndNode', 0), 'utf-8')
-        if(features[0][1].text == 'description'):
-            news.description = extract_markup(text_node, features.get('StartNode', 0), features.get('EndNode', 0), 'utf-8')
-        if(features[0][1].text == 'text'):
+        if (features[0][1].text == 'description'):
+            news.description = extract_markup(text_node, features.get('StartNode', 0), features.get('EndNode', 0),
+                                              'utf-8')
+        if (features[0][1].text == 'text'):
             news.text = extract_markup(text_node, features.get('StartNode', 0), features.get('EndNode', 0), 'utf-8')
             news.text = news.text.replace("\n", " ")
 
@@ -101,19 +98,19 @@ for filepath in glob.glob('input/*.xml'):
     if filenameWithExtention in annotation:
         news.fiveWoneH = Object()
         for question in annotation[filenameWithExtention]:
-            #print(question)
+            # print(question)
             questionAttribut = Object()
             setattr(news.fiveWoneH, question, questionAttribut)
             questionAttribut.annotated = []
             for tmpAnnotannoWithScore in annotation[filenameWithExtention][question]:
                 tmp = Object()
                 tmp.text = tmpAnnotannoWithScore[0]
-                questionAttribut.annotated.append( tmp)
+                questionAttribut.annotated.append(tmp)
 
     news.origin = 'gate'
     news.filename = hashlib.sha224(news.url.encode('utf-8')).hexdigest() + '.json'
 
-    outfile = open('output/'+ news.filename, 'w', encoding='utf8')
+    outfile = open('output/' + news.filename, 'w', encoding='utf8')
     outfile.write(news.toJSON())
     outfile.close()
 

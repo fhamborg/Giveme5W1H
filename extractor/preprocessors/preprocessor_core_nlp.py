@@ -5,7 +5,6 @@ from pycorenlp import StanfordCoreNLP
 
 
 class Preprocessor:
-
     log = None
 
     def __init__(self, host=None):
@@ -30,10 +29,10 @@ class Preprocessor:
             'annotators': 'tokenize,ssplit,pos,lemma,parse,ner,depparse,mention,coref',
             'tokenize.language': 'English',
             # CoreNLPs charniak-wrapper has some problems ...
-            #'parse.type': 'charniak',
-            #'parse.executable': '/home/ubuntu/bllip-parser/',
-            #'parse.verbose': 'true',
-            #'parse.model': './parse-50best.sh',#'~/.local/share/bllipparser/WSJ+Gigaword-v2',
+            # 'parse.type': 'charniak',
+            # 'parse.executable': '/home/ubuntu/bllip-parser/',
+            # 'parse.verbose': 'true',
+            # 'parse.model': './parse-50best.sh',#'~/.local/share/bllipparser/WSJ+Gigaword-v2',
             'outputFormat': 'json'
         }
 
@@ -48,7 +47,6 @@ class Preprocessor:
         """
 
         annotation = self.cnlp.annotate(document.get_fullText(), self.config)
-        
 
         if type(annotation) == str:
             print(annotation)
@@ -61,7 +59,7 @@ class Preprocessor:
                 # add a reference to the original data from parsing
                 parentedTree.stanfordCoreNLPResult = sentence
                 tree.append(parentedTree)
-            #testTree = [nltk.ParentedTree.fromstring(sentence['parse']) for sentence in annotation['sentences']]
+            # testTree = [nltk.ParentedTree.fromstring(sentence['parse']) for sentence in annotation['sentences']]
 
             document.set_trees(tree)
             document.set_corefs(annotation['corefs'])
@@ -88,4 +86,3 @@ class Preprocessor:
             document.set_ner(ner)
             document.set_clp_result(annotation)
             document.is_preprocessed(True)
-            

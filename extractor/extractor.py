@@ -1,15 +1,14 @@
 import logging
+import queue
+from threading import Thread
 
 from combined_scoring.distance_of_candidate import DistanceOfCandidate
 from extractors import action_extractor, environment_extractor, cause_extractor, method_extractor
 from preprocessors.preprocessor_core_nlp import Preprocessor
-from threading import Thread
-import queue
-
 
 
 class Worker(Thread):
-    def __init__(self,  queue):
+    def __init__(self, queue):
         ''' Constructor. '''
         Thread.__init__(self)
         self._queue = queue
@@ -21,6 +20,7 @@ class Worker(Thread):
                 extractor.extract(document)
                 self._queue.task_done()
 
+
 class FiveWExtractor:
     """
     The FiveWExtractor bundles all parsing modules.
@@ -29,8 +29,6 @@ class FiveWExtractor:
     log = None
     preprocessor = None
     extractors = []
-
-
 
     def __init__(self, preprocessor=None, extractors=None, combinedScorers=None):
         """
@@ -63,13 +61,13 @@ class FiveWExtractor:
                 cause_extractor.CauseExtractor(),
                 method_extractor.MethodExtractor()
             ]
-            
+
         if combinedScorers and len(combinedScorers) > 0:
             self.combinedScorers = combinedScorers
         else:
             self.log.info('No combinedScorers passed, initializing default configuration.')
             self.combinedScorers = [
-                DistanceOfCandidate( ('What', 'Who'),('How'), 1)
+                DistanceOfCandidate(('What', 'Who'), ('How'), 1)
             ]
 
         self.q = queue.Queue()
@@ -78,7 +76,7 @@ class FiveWExtractor:
             t = Worker(self.q)
             t.daemon = True
             t.start()
-            
+
     def parse(self, doc):
         """
         Pass a document to the preprocessor and the extractors
@@ -101,5 +99,5 @@ class FiveWExtractor:
         if self.combinedScorers:
             for combinedScorer in self.combinedScorers:
                 combinedScorer.score(doc)
-        
+
         return doc

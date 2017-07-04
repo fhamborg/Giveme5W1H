@@ -6,7 +6,6 @@ from extractor.extractors.candidate import Candidate
 from .abs_extractor import AbsExtractor
 
 
-
 class ActionExtractor(AbsExtractor):
     """
     The ActionExtractor tries to extract the main actor and his action.
@@ -29,7 +28,6 @@ class ActionExtractor(AbsExtractor):
         self._extract_candidates(document)
         self._evaluate_candidates(document)
         return document
-        
 
     def _extract_candidates(self, document):
         """
@@ -54,7 +52,7 @@ class ActionExtractor(AbsExtractor):
                 # "One common way of defining the subject of a sentence S in English is as the noun phrase that is the
                 # child of S and the sibling of VP" (http://www.nltk.org/book/ch08.html)
 
-                for pattern in self._evaluate_tree(trees[mention['sentNum']-1]):
+                for pattern in self._evaluate_tree(trees[mention['sentNum'] - 1]):
                     np_string = ''.join([p[0] for p in pattern[0]])
                     if re.sub(r'\s+', '', mention['text']) in np_string:
                         candidateObject = Candidate()
@@ -87,7 +85,8 @@ class ActionExtractor(AbsExtractor):
                 sibling = subtree.right_sibling()
                 while sibling is not None:
                     if sibling.label() == 'VP':
-                        candidates.append((subtree.pos(), self.cut_what(sibling, 3).pos(), tree.stanfordCoreNLPResult['index']))
+                        candidates.append(
+                            (subtree.pos(), self.cut_what(sibling, 3).pos(), tree.stanfordCoreNLPResult['index']))
                         break
                     sibling = sibling.right_sibling()
 
@@ -145,13 +144,13 @@ class ActionExtractor(AbsExtractor):
                         score += ((doc_len - mention['sentNum'] + 1) / doc_len) * self.weights[0]
                 if mention['isRepresentativeMention']:
                     # The representative name for this chain has been found.
-                    representative = doc_pos[mention['sentNum']-1][mention['headIndex']-1:mention['endIndex']-1]
+                    representative = doc_pos[mention['sentNum'] - 1][mention['headIndex'] - 1:mention['endIndex'] - 1]
                     if representative[-1][1] == 'POS':
                         representative = representative[:-1]
 
                 if not contains_ne:
                     # If the current mention doesn't contain a named entity, check the other members of the chain
-                    for token in doc_ner[mention['sentNum']-1][mention['headIndex']-1:mention['endIndex']-1]:
+                    for token in doc_ner[mention['sentNum'] - 1][mention['headIndex'] - 1:mention['endIndex'] - 1]:
                         if token[1] in ['PERSON', 'ORGANIZATION', 'LOCATION']:
                             contains_ne = True
                             break
@@ -170,12 +169,10 @@ class ActionExtractor(AbsExtractor):
                 ranked_candidates.append((candidateParts[0], candidateParts[1], score, candidate.getIndex()))
 
         ranked_candidates.sort(key=lambda x: x[2], reverse=True)
-        
 
         # split results
-        who = [(c[0], c[2],c[3]) for c in ranked_candidates]
+        who = [(c[0], c[2], c[3]) for c in ranked_candidates]
         what = [(c[1], c[2], c[3]) for c in ranked_candidates]
-
 
         # Filte dublicates and transform who to object oriented list
         oWho = self._filterAndConvertToObjectOrientedList(who)
@@ -221,7 +218,3 @@ class ActionExtractor(AbsExtractor):
                         children.append(ParentedTree.fromstring(str(sibling)))
                     break
             return ParentedTree(tree.label(), children)
-
-
-
-

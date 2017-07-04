@@ -1,6 +1,7 @@
 import logging
 import os
 import sys
+
 # Add path to allow execution though console
 sys.path.insert(0, '/'.join(os.path.realpath(__file__).split('/')[:-3]))
 from flask import Flask, request, jsonify
@@ -47,6 +48,7 @@ def extract():
     extractor.parse(document)
 
     return jsonify(document.get_answers())
+
 
 if __name__ == "__main__":
     log.info("starting server on port %i", port)

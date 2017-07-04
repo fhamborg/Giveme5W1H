@@ -1,9 +1,6 @@
-import re
-
-from nltk.tree import ParentedTree
-
-from .abs_extractor import AbsExtractor
 from extractor.extractors.candidate import Candidate
+from .abs_extractor import AbsExtractor
+
 
 class MethodExtractor(AbsExtractor):
     """
@@ -13,12 +10,12 @@ class MethodExtractor(AbsExtractor):
     # weights used in the candidate evaluation:
     # (position, frequency, named entity)
     # weights = (4, 3, 2)
-    weights = [1,1,1]
+    weights = [1, 1, 1]
 
     # relevant indicators
     preposition = ['with', 'in', 'by', 'after']
     conjunction = ['as', 'because', 'so', 'until', 'while']
-    pattern= ['NN-VBD', 'NN-VBZ', 'VBN-VBN']
+    pattern = ['NN-VBD', 'NN-VBZ', 'VBN-VBN']
 
     # prepositional phrase PP, preposition
 
@@ -34,7 +31,7 @@ class MethodExtractor(AbsExtractor):
 
         self._extract_candidates(document)
         self._evaluate_candidates(document)
-        
+
         return document
 
     def _extract_candidates(self, document):
@@ -45,7 +42,7 @@ class MethodExtractor(AbsExtractor):
         # Preposition or subordinating conjunction -> detecting verbs
         for i, tree in enumerate(postrees):
             for candidate in self._evaluate_tree(tree):
-                    candidates.append(candidate)
+                candidates.append(candidate)
         candidates = self._filterAndConvertToObjectOrientedList(candidates)
 
         # All kind of adjectives
@@ -54,7 +51,6 @@ class MethodExtractor(AbsExtractor):
         document.set_candidates('MethodExtractor', candidates)
 
     def _evaluate_tree(self, tree):
-
 
         # in: before
         # after: after
@@ -83,7 +79,7 @@ class MethodExtractor(AbsExtractor):
                     # candidate is before the preposition
                     # ....derailed and overturned IN...
 
-                    # match VBD CC VBD and VBD
+                    # matches VBD CC VBD and VBD
                     relevantParts = subtree.parent().parent().parent().pos()
                     candidate_parts = self._findString(relevantParts)
                     if candidate_parts:
@@ -100,7 +96,6 @@ class MethodExtractor(AbsExtractor):
             whoList.append(ca)
         return whoList
 
-
     def _findString(self, relevantParts):
         recording = False
         candidateParts = []
@@ -113,10 +108,11 @@ class MethodExtractor(AbsExtractor):
         candidatePartsLen = len(candidateParts)
 
         # filter out short candidates
-        if ((candidatePartsLen == 1 and candidateParts[0][0] not in ['and', 'is', 'has', 'have', 'went', 'was', 'been', 'were', 'am', 'get', 'said','are']) or candidatePartsLen > 1):
+        if ((candidatePartsLen == 1 and candidateParts[0][0] not in ['and', 'is', 'has', 'have', 'went', 'was', 'been',
+                                                                     'were', 'am', 'get', 'said',
+                                                                     'are']) or candidatePartsLen > 1):
             return candidateParts
         return None
-
 
     def _extract_ad_candidates(self, document):
         """
@@ -137,11 +133,11 @@ class MethodExtractor(AbsExtractor):
             for token in sentence['tokens']:
                 if token['index'] > self._maxIndex:
                     self._maxIndex = token['index']
-                if self._isRelevantPos(token['pos']) and token['ner'] not in ['TIME', 'DATE', 'ORGANIZATION', 'DURATION', 'ORDINAL']:
-                    candidates.append( [[(token['pos'], token['originalText'], token['lemma'])], sentence['index']] )
+                if self._isRelevantPos(token['pos']) and token['ner'] not in ['TIME', 'DATE', 'ORGANIZATION',
+                                                                              'DURATION', 'ORDINAL']:
+                    candidates.append([[(token['pos'], token['originalText'], token['lemma'])], sentence['index']])
 
         return candidates
-
 
     def _evaluate_candidates(self, document):
         """
@@ -151,19 +147,19 @@ class MethodExtractor(AbsExtractor):
         :type candidates:[([(String,String)], ([(String,String)])]
         :return: A list of evaluated and ranked candidates
         """
-        #ranked_candidates = []
+        # ranked_candidates = []
         document.set_answer('how', document.get_candidates('MethodExtractor'))
-          
+
         groupe_per_lemma = {}
         maxCount = 0
-        
+
         candidates = document.get_candidates('MethodExtractor')
 
         if candidates and len(candidates) == -1:
             # frequency per lemma
             for candidate in candidates:
                 if candidate is not None and len(candidate['originalText']) > 0:
-                    lema_count = groupe_per_lemma.get(candidate["lemma"], 0 )
+                    lema_count = groupe_per_lemma.get(candidate["lemma"], 0)
                     lema_count += 1
 
                     if lema_count > maxCount:
@@ -176,30 +172,30 @@ class MethodExtractor(AbsExtractor):
 
                     # save normalized frequency
                     candidate['frequency'] = groupe_per_lemma[candidate['lemma']]
-                    if maxCount-1 > 0:
-                        candidate['frequencyNorm'] = ( candidate['frequency'] - 1 ) / (maxCount-1)
+                    if maxCount - 1 > 0:
+                        candidate['frequencyNorm'] = (candidate['frequency'] - 1) / (maxCount - 1)
                     else:
                         # there is just one candidate
                         candidate['frequencyNorm'] = 1
-                    lema_count = groupe_per_lemma.get(candidate["lemma"], 0 )
+                    lema_count = groupe_per_lemma.get(candidate["lemma"], 0)
 
                     # normalized position
-                    candidate['positionNorm'] = (self._maxIndex -  candidate['position']) / self._maxIndex
-
+                    candidate['positionNorm'] = (self._maxIndex - candidate['position']) / self._maxIndex
 
             # scoring
             scoreMax = 0
             for candidate in candidates:
-                candidate['score'] =  candidate['positionNorm'] * self.weights[0] + candidate['frequencyNorm'] * self.weights[1]
+                candidate['score'] = candidate['positionNorm'] * self.weights[0] + candidate['frequencyNorm'] * \
+                                                                                   self.weights[1]
                 if candidate['score'] > scoreMax:
-                        scoreMax = candidate['score']
+                    scoreMax = candidate['score']
 
             # normalizing scores
             for candidate in candidates:
-                candidate['score'] = candidate['score']/scoreMax
+                candidate['score'] = candidate['score'] / scoreMax
 
             # Sort candidates
-            candidates.sort(key = lambda x: x['score'], reverse=True)
+            candidates.sort(key=lambda x: x['score'], reverse=True)
 
             # delete duplicates
             # - frequency already used used for scoring, so only best scored candidate must be returned
@@ -210,26 +206,15 @@ class MethodExtractor(AbsExtractor):
                     alreadySaveLemma[candidate['lemma']] = True
                     new_list.append(candidate)
 
-
-
-
             result = []
             for candidate in new_list:
-                keyVal = ([( candidate['originalText'], candidate['pos'])], candidate['score'] )
-                result.append( keyVal )
-
-
-
-
+                keyVal = ([(candidate['originalText'], candidate['pos'])], candidate['score'])
+                result.append(keyVal)
 
     def _isRelevantPos(self, pos):
-       
+
         # Is adjectivs or adverb
         if pos.startswith('JJ') or pos.startswith('RB'):
             return True
         else:
             return False
-
-
-
-

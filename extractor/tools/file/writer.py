@@ -1,5 +1,6 @@
 import json
 import pickle
+
 from extractor.extractors.candidate import Candidate
 
 
@@ -8,9 +9,9 @@ class Writer:
         """
         :param path: Absolute path to the output directory
         """
-        
-    def _writeJson(self,  outputObject):
-        outfile = open(self._outputPath +'/'+ outputObject['dId']+'.json', 'w')
+
+    def _writeJson(self, outputObject):
+        outfile = open(self._outputPath + '/' + outputObject['dId'] + '.json', 'w')
         outfile.write(json.dumps(outputObject, sort_keys=False, indent=2))
         outfile.close()
 
@@ -28,7 +29,7 @@ class Writer:
     def setPreprocessedPath(self, preprocessedPath):
         self._preprocessedPath = preprocessedPath
 
-    def setOutputPath(self,outputPath):
+    def setOutputPath(self, outputPath):
         self._outputPath = outputPath
 
     def write(self, document):
@@ -45,9 +46,9 @@ class Writer:
             output = document.get_rawData()
 
             # check if there isn`t already a fiveWoneH literal
-            fiveWoneHLiteral =  output.setdefault('fiveWoneH',{})
+            fiveWoneHLiteral = output.setdefault('fiveWoneH', {})
 
-            #Extract answers
+            # Extract answers
             answers = document.get_answers()
 
             for question in answers:
@@ -66,7 +67,7 @@ class Writer:
                         # fallback for none refactored extractors
                         candidate_json = {'score': answer[1], 'words': []}
                         for candidateWord in answer[0]:
-                            candidate_json['words'].append({'text': candidateWord[0], 'tag':candidateWord[1]})
+                            candidate_json['words'].append({'text': candidateWord[0], 'tag': candidateWord[1]})
                         extractedLiteral.append(candidate_json)
 
-            self._writeJson( output)
+            self._writeJson(output)

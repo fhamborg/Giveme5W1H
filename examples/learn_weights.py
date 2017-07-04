@@ -1,23 +1,25 @@
-import logging
-import os
-import sys
 import json
+import logging
 import math
+import os
+import queue
+import sys
 from threading import Thread
+
 from extractor.extractor import FiveWExtractor
 from extractor.tools.file.handler import Handler
-from extractor.tools.util import cmp_date, cmp_text
-import queue
+from extractor.tools.util import cmp_text
+
 # Add path to allow execution though console
 sys.path.insert(0, '/'.join(os.path.realpath(__file__).split('/')[:-2]))
-#from timeit import default_timer as timer
+# from timeit import default_timer as timer
 
 
 core_nlp_host = 'http://localhost:9000'
 
 
 class Worker(Thread):
-    def __init__(self,  queue):
+    def __init__(self, queue):
         ''' Constructor. '''
         Thread.__init__(self)
         self._queue = queue
@@ -30,14 +32,14 @@ class Worker(Thread):
                 self._queue.task_done()
 
 
-
-def adjustWeights(extractors, i,j,k,l):
+def adjustWeights(extractors, i, j, k, l):
     # (action_0, cause_1, environment_2)
     extractors[0].weights = (i, j, k)
     ## time
     extractors[1].weights = ((i, j), (i, j, k, l))
     ## cause - (position, conjunction, adverb, verb)
     extractors[2].weights = (i, j, k, l)
+
 
 def cmp_text_helper(question, answers, annotations, weights, document, resultObjects):
     score = -1
@@ -54,14 +56,15 @@ if __name__ == '__main__':
     sh = logging.StreamHandler()
     sh.setLevel(logging.DEBUG)
     log.addHandler(sh)
-    
+
     # Setup
     extractorObject = FiveWExtractor()
     inputPath = os.path.dirname(__file__) + '/input/'
     preprocessedPath = os.path.dirname(__file__) + '/cache'
 
-    increment_range = [0.05, 0.10, 0.15, 0.20, 0.25, 0.30, 0.35, 0.40, 0.45, 0.50, 0.55, 0.60, 0.65, 0.70, 0.75, 0.80, 0.85, 0.90, 0.95, 1]
-    #increment_range = [0.10, 0.15, 0.45, 0.50, 0.55, 1]
+    increment_range = [0.05, 0.10, 0.15, 0.20, 0.25, 0.30, 0.35, 0.40, 0.45, 0.50, 0.55, 0.60, 0.65, 0.70, 0.75, 0.80,
+                       0.85, 0.90, 0.95, 1]
+    # increment_range = [0.10, 0.15, 0.45, 0.50, 0.55, 1]
     questions = {'when', 'why', 'who', 'how', 'what'}
 
     increment_range_length = len(increment_range)
@@ -69,7 +72,7 @@ if __name__ == '__main__':
 
     q = queue.Queue()
     resultFiles = {}
-    resultObjects ={}
+    resultObjects = {}
 
     for i in range(8):
         t = Worker(q)
@@ -92,15 +95,15 @@ if __name__ == '__main__':
             .process().getDocuments()
     )
 
-    resultPath = os.path.dirname(__file__)+'/result/learnWeights'
+    resultPath = os.path.dirname(__file__) + '/result/learnWeights'
 
     for question in questions:
         resultFiles[question] = open(resultPath + '_' + str(question) + '.json', encoding='utf-8', mode='w')
     for question in questions:
         resultObjects[question] = []
 
-    #with open(resultPath, encoding='utf-8', mode='r') as data_file:
-        #data = json.load(data_file)
+        # with open(resultPath, encoding='utf-8', mode='r') as data_file:
+        # data = json.load(data_file)
 
     # grab utilities to parse dates and locations from the EnvironmentExtractor
     geocoder = extractorObject.extractors[1].geocoder
@@ -128,7 +131,7 @@ if __name__ == '__main__':
 
                         q.join()
 
-                        #for extractor in extractorObject.extractors:
+                        # for extractor in extractorObject.extractors:
                         #   extractor._evaluate_candidates(document)
 
                         # 2_1 Reevaluate combined scoring
@@ -144,9 +147,9 @@ if __name__ == '__main__':
                         cmp_text_helper('how', answers, annotation, [i, j], document, resultObjects)
 
                         #
-                        #cmp_text_helper('when', answers, annotation, [i, j, k, l], document, resultObjects)
-                        counter = counter+1
-                print("Progress: " + str(counter/increment_range_steps) + " %")
+                        # cmp_text_helper('when', answers, annotation, [i, j, k, l], document, resultObjects)
+                        counter = counter + 1
+                print("Progress: " + str(counter / increment_range_steps) + " %")
 
     # save everything
     for question in questions:
@@ -154,7 +157,8 @@ if __name__ == '__main__':
         resultObjects[question].sort(key=lambda x: x['score'], reverse=True)
 
         # write to the disk
-        resultFiles[question].write(json.dumps(resultObjects[question], sort_keys=False, indent=2, check_circular=False))
+        resultFiles[question].write(
+            json.dumps(resultObjects[question], sort_keys=False, indent=2, check_circular=False))
         resultFiles[question].close()
 
 

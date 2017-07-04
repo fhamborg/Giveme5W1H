@@ -1,11 +1,10 @@
 import time
 
-from geopy.distance import vincenty, great_circle
+from geopy.distance import great_circle
 from geopy.geocoders import Nominatim
 from parsedatetime import parsedatetime as pdt
 
 from .abs_extractor import AbsExtractor
-
 
 
 class EnvironmentExtractor(AbsExtractor):
@@ -40,9 +39,9 @@ class EnvironmentExtractor(AbsExtractor):
 
         # date strings like 'monday' can denote dates in the future as well as in the past
         # in most cases an article describes an event in the past
-        self.calendar.ptc.DOWParseStyle = -1            # prefer day in the past for 'monday'
-        self.calendar.ptc.CurrentDOWParseStyle = True   # prefer reference date if its the same weekday
-        self.time_dela = 86400                          # 24h in seconds
+        self.calendar.ptc.DOWParseStyle = -1  # prefer day in the past for 'monday'
+        self.calendar.ptc.CurrentDOWParseStyle = True  # prefer reference date if its the same weekday
+        self.time_dela = 86400  # 24h in seconds
 
     def extract(self, document):
         """
@@ -55,14 +54,14 @@ class EnvironmentExtractor(AbsExtractor):
         """
         self._extract_candidates(document)
         self._evaluate_candidates(document)
-        
+
         return document
-        
+
     def _evaluate_candidates(self, document):
-        
+
         locations = self._evaluate_locations(document)
         dates = self._evaluate_dates(document)
-        
+
         document.set_answer('where', self._filter_duplicates(locations, False))
         document.set_answer('when', self._filter_duplicates(dates, False))
 
@@ -113,7 +112,7 @@ class EnvironmentExtractor(AbsExtractor):
 
         document.set_candidates('EnvironmentExtractorNeDates', dates)
         document.set_candidates('EnvironmentExtractorNeLocatios', locations)
-        #return locations, dates
+        # return locations, dates
 
     def _evaluate_locations(self, document):
         """
@@ -138,7 +137,7 @@ class EnvironmentExtractor(AbsExtractor):
 
             # use the vincenty algorithm to calculate the covered area
             area = int(great_circle((bb[0], bb[2]), (bb[0], bb[3])).meters) \
-                * int(great_circle((bb[0], bb[2]), (bb[1], bb[2])).meters)
+                   * int(great_circle((bb[0], bb[2]), (bb[1], bb[2])).meters)
             for i in range(4):
                 bb[i] = float(bb[i])
             raw_locations.append([location[0], location[1].raw['place_id'],
@@ -151,14 +150,14 @@ class EnvironmentExtractor(AbsExtractor):
         for i, location in enumerate(raw_locations):
             positions = [raw_locations[i][5]]
 
-            for alt in raw_locations[i+1:]:
+            for alt in raw_locations[i + 1:]:
                 if location[1] == alt[1]:
                     positions.append(alt[5])
 
             location[5] = min(positions)
             location[6] = len(positions)
             unique_locations.append(location)
-            i += len(positions)-1
+            i += len(positions) - 1
 
         # sort locations based on size/area
         unique_locations.sort(key=lambda x: x[4], reverse=True)
@@ -176,7 +175,8 @@ class EnvironmentExtractor(AbsExtractor):
 
         for location in unique_locations:
             # calculate score based on position in text (inverted pyramid) and the number of mentions
-            score = weights[0] * (document.get_len() - location[5])/document.get_len() + weights[1] * location[6]/max_n
+            score = weights[0] * (document.get_len() - location[5]) / document.get_len() + weights[1] * location[
+                6] / max_n
             if score > 0:
                 score /= weights_sum
             ranked_locations.append((location[0], score))
@@ -203,8 +203,7 @@ class EnvironmentExtractor(AbsExtractor):
         # fetch the date the article was published as a reference date
         reference = self.calendar.parse(document.get_date() or '')
 
-       
-        for candidate in  document.get_candidates('EnvironmentExtractorNeDates'):
+        for candidate in document.get_candidates('EnvironmentExtractorNeDates'):
             # translate date strings into date objects
             date_str = ' '.join([t[0] for t in candidate[0]])
 
@@ -221,7 +220,7 @@ class EnvironmentExtractor(AbsExtractor):
         # Dates are considered related if they differ at most 24h (time_delta).
         max_n = 0
         for index, candidate in enumerate(ranked_candidates):
-            for neighbour in ranked_candidates[index+1:]:
+            for neighbour in ranked_candidates[index + 1:]:
                 if (time.mktime(neighbour[2]) - time.mktime(candidate[2])) <= self.time_dela:
                     candidate[4] += 1
                     neighbour[4] += 1
@@ -230,7 +229,7 @@ class EnvironmentExtractor(AbsExtractor):
         # Calculate the scores
         for candidate in ranked_candidates:
             # Position is the first parameter used scoring following the inverted pyramid
-            score = weights[0] * (document.get_len() - candidate[1])/document.get_len()
+            score = weights[0] * (document.get_len() - candidate[1]) / document.get_len()
 
             if candidate[3] == 1:
                 # Add a constant value if string contains a date
@@ -243,7 +242,7 @@ class EnvironmentExtractor(AbsExtractor):
                 score += weights[1] + weights[2]
 
             # Number of similar dates is also included as it indicates relevance
-            score += weights[3] * (candidate[4]/max_n)
+            score += weights[3] * (candidate[4] / max_n)
 
             if score > 0:
                 score /= weights_sum
@@ -266,7 +265,6 @@ class EnvironmentExtractor(AbsExtractor):
         """
 
         for i, token in enumerate(pos):
-            if token[0] == pattern[0] and [t[0] for t in pos[i:i+len(pattern)]] == pattern:
-                return pos[i:i+len(pattern)]
+            if token[0] == pattern[0] and [t[0] for t in pos[i:i + len(pattern)]] == pattern:
+                return pos[i:i + len(pattern)]
         return []
-

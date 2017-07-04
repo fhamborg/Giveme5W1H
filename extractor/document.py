@@ -1,6 +1,6 @@
-#from multiprocessing.managers import BaseManager
-#from fileinput import filename
-#class DocumentManager(BaseManager):
+# from multiprocessing.managers import BaseManager
+# from fileinput import filename
+# class DocumentManager(BaseManager):
 #    pass
 
 
@@ -37,18 +37,17 @@ class Document(object):
         self._answers = {'what': [], 'who': [], 'why': [], 'where': [], 'when': [], 'how': []}
         self._candidates = {}
 
-
     def is_preprocessed(self, preprocessed=None):
         if preprocessed is True:
             self._preprocessed = True
         return self._preprocessed
-    
+
     def get_fullText(self):
         return self._fullText
 
     def set_candidates(self, extractor, candidates):
         self._candidates[extractor] = candidates
-    
+
     def get_candidates(self, extractor):
         return self._candidates[extractor]
 
@@ -57,17 +56,17 @@ class Document(object):
 
     def get_source(self):
         return self._source
-    
+
     def get_len(self):
         return self._length
 
     def get_title(self):
         return self._raw['title']
-    
+
     def get_raw(self):
         return self._raw
-   
-    #def get_raw_concanated(self):
+
+    # def get_raw_concanated(self):
     #    return self._raw
 
     def get_date(self):
@@ -102,7 +101,7 @@ class Document(object):
 
     def get_annotations(self):
         return self._annotations
-    
+
     def get_rawData(self):
         return self._rawData
 
@@ -161,5 +160,3 @@ class Document(object):
                 answer = self._answers[question][0]
             string += "\n\t%s:\t%s" % (question, answer)
         return string
-
-

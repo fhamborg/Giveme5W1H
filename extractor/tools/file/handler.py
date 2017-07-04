@@ -1,13 +1,9 @@
 import glob
 import logging
-import queue
-
+import sys
 
 from .reader import Reader
 from .writer import Writer
-import sys
-
-
 
 
 class Handler(object):
@@ -57,10 +53,8 @@ class Handler(object):
             self._documents.append(doc)
             self.log.info('Handler: preloaded ' + doc.get_title())
 
-
         self.log.error('documents prelaoded:\t' + str(docCounter))
         return self
-
 
     def getDocuments(self):
         if self._documents:
@@ -85,7 +79,7 @@ class Handler(object):
 
         if self._outputPath:
             self.log.info('         \tsaved to output')
-            self._writer.write( document)
+            self._writer.write(document)
         self.log.info('')
 
     def process(self):

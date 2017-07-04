@@ -1,10 +1,9 @@
+import logging
 from abc import ABCMeta, abstractmethod
 from itertools import product
-import logging
 
 import nltk
 from nltk.corpus import wordnet
-
 
 try:
     basestring = basestring
@@ -43,10 +42,9 @@ class AbsExtractor:
         """
 
         return None
-    
+
     def _evaluate_candidates(self, document):
         return None
-
 
     def _extract_entities(self, tokens, filter=None, inverted=False, phrase_range=1, groups=None):
         """
@@ -68,7 +66,7 @@ class AbsExtractor:
         """
 
         entity_list = []
-        entity = [0, 0, None, None]     #[start, end, type, group]
+        entity = [0, 0, None, None]  # [start, end, type, group]
         words = [t[0] for t in tokens]
 
         if filter is None:
@@ -83,16 +81,16 @@ class AbsExtractor:
             if (token[1] in filter) is inverted:
                 if token[1] == entity[2] and (i - entity[1]) < phrase_range:
                     # token of same type in allowed range discovered
-                    entity[1] = i+1
+                    entity[1] = i + 1
                 elif entity[3] is not None and groups.get(token[1]) == entity[3] and (i - entity[1]) < phrase_range:
                     # hybrid group found
-                    entity[1] = i+1
+                    entity[1] = i + 1
                     entity[2] = entity[3]
                 else:
                     # token found which has a different typ or is out of range
                     if entity[1] > 0:
                         entity_list.append((words[entity[0]:entity[1]], entity[2]))
-                    entity = [i, i+1, token[1], groups.get(token[1])]
+                    entity = [i, i + 1, token[1], groups.get(token[1])]
 
         if entity[1] > 0:
             entity_list.append((words[entity[0]:entity[1]], entity[2]))

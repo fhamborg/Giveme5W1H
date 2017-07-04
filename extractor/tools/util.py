@@ -2,8 +2,8 @@
     Collection of utility methods    
 """
 
-from itertools import product
 import time
+from itertools import product
 
 from geopy.distance import vincenty
 from nltk.corpus import wordnet

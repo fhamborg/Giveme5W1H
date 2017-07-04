@@ -3,9 +3,8 @@ import os
 import sys
 
 from extractor.extractor import FiveWExtractor
-from extractor.extractors import action_extractor, environment_extractor, cause_extractor, method_extractor
+from extractor.extractors import method_extractor
 from extractor.tools.file.handler import Handler
-
 
 # Add path to allow execution though console
 sys.path.insert(0, '/'.join(os.path.realpath(__file__).split('/')[:-3]))
@@ -28,33 +27,32 @@ if __name__ == '__main__':
     sh = logging.StreamHandler()
     sh.setLevel(logging.DEBUG)
     log.addHandler(sh)
-    
-    extractor = FiveWExtractor(extractors = [
-                        #action_extractor.ActionExtractor,
-                        #environment_extractor.EnvironmentExtractor,
-                        #cause_extractor.CauseExtractor,
-                        method_extractor.MethodExtractor()
-                    ])
+
+    extractor = FiveWExtractor(extractors=[
+        # action_extractor.ActionExtractor,
+        # environment_extractor.EnvironmentExtractor,
+        # cause_extractor.CauseExtractor,
+        method_extractor.MethodExtractor()
+    ])
     inputPath = os.path.dirname(__file__) + '/input'
     outputPath = os.path.dirname(__file__) + '/output'
     preprocessedPath = os.path.dirname(__file__) + '/cache'
-    
+
     documents = (
-                # initiate the file handler with the input directory
-                Handler(inputPath)
-                    # set a output directory
-                    .setOutputPath(outputPath)
-                    # set a path to save an load preprocessed documents - CoreNLP results
-                    .setPreprocessedPath(preprocessedPath)
-                    # limit the the to process documents (nice for development) 
-                    .setLimit(1)
-                    # add an optional extractor (it would do only copying without...)
-                    .setExtractor(extractor)
-                    # load and saves all document objects for further programming
-                    .preLoadAndCacheDocuments()
-                    # executing it
-                    .process()
-                    # get the processed documents
-                    .getDocuments()
-            )
-    
+        # initiate the file handler with the input directory
+        Handler(inputPath)
+            # set a output directory
+            .setOutputPath(outputPath)
+            # set a path to save an load preprocessed documents - CoreNLP results
+            .setPreprocessedPath(preprocessedPath)
+            # limit the the to process documents (nice for development)
+            .setLimit(1)
+            # add an optional extractor (it would do only copying without...)
+            .setExtractor(extractor)
+            # load and saves all document objects for further programming
+            .preLoadAndCacheDocuments()
+            # executing it
+            .process()
+            # get the processed documents
+            .getDocuments()
+    )

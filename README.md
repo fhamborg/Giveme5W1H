@@ -27,12 +27,16 @@ If you are running CoreNLP on a different port or machine you have to first adju
 core_nlp_host = 'localhost:9000'
 ```
 
-## ScriptUsage
-GiveMe5W can read and write news in a json format (https://github.com/fhamborg/news-please/blob/master/newsplease/examples/sample.json)[example]
+## File based usage
+GiveMe5W can read and write news in a json format [example](https://github.com/fhamborg/news-please/blob/master/newsplease/examples/sample.json).
+There is also a converter script to convert gate.xml files to json.
 
-Files can be processed like a stream (parse_documents_simple.py) or can be loaded in advance and kept in the (parse_documents.py). Because of the long execution time of CoreNLP,
-it is possible to cache the result on the filesystem to speed up multiple run. The raw results are attached to each document under clp_result.
+Files can be processed like a stream (parse_documents_simple.py) or can be loaded in advance and kept in memory (parse_documents.py).
+Because of the long execution time of the CoreNLP server, it is possible to cache the result on the filesystem to speed up multiple executions.
+The raw results are attached to each document under clp_result.
 
+The included example files already preprocessed.
+Delete all files in "/cache" if you want to preprocess them again by CoreNLP server.
 
 
 ## RESTapi

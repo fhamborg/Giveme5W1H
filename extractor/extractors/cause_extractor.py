@@ -1,15 +1,15 @@
-from copy import deepcopy
 import logging
+from copy import deepcopy
 
 import nltk
 from nltk.corpus import wordnet
 from nltk.stem.wordnet import WordNetLemmatizer
 
-from .abs_extractor import AbsExtractor
 from extractor.extractors.candidate import Candidate
+from .abs_extractor import AbsExtractor
 
 
-class  CauseExtractor(AbsExtractor):
+class CauseExtractor(AbsExtractor):
     """
     The CauseExtractor tries to detect a causative that could explain an event.
     """
@@ -19,7 +19,7 @@ class  CauseExtractor(AbsExtractor):
     weights = (.35, 0.3, .7, .4)
 
     adverbial_indicators = ['therefore', 'hence', 'thus', 'consequently', 'accordingly']  # 'so' has problems with JJ
-    clausal_conjunctions = {'consequence': 'of', 'effect': 'of',  'result': 'of', 'upshot': 'of', 'outcome': 'of',
+    clausal_conjunctions = {'consequence': 'of', 'effect': 'of', 'result': 'of', 'upshot': 'of', 'outcome': 'of',
                             'because': '', 'due': 'to', 'stemmed': 'from'}
 
     # list of verbs for the detection of cause-effect relations within NP-VP-NP patterns
@@ -76,7 +76,6 @@ class  CauseExtractor(AbsExtractor):
                 hyponyms |= self.get_hyponyms(synset)
             self.constraints_hyponyms[noun] = hyponyms
 
-
         self.lemmatizer = WordNetLemmatizer()
 
     def extract(self, document):
@@ -89,7 +88,7 @@ class  CauseExtractor(AbsExtractor):
 
         self._extract_candidates(document)
         self._evaluate_candidates(document)
-    
+
         return document
 
     def _extract_candidates(self, document):
@@ -164,12 +163,11 @@ class  CauseExtractor(AbsExtractor):
                         rest = ''
                         for i, token in enumerate(verbs):
                             if verb == token[0]:
-                                rest = ' '.join([t[0] for t in verbs[i+1:i+3]]).lower()
+                                rest = ' '.join([t[0] for t in verbs[i + 1:i + 3]]).lower()
                                 break
                         if rest != self.causal_verb_phrases[lemma]:
                             continue
 
-                
                 # pattern contains a valid verb, so check the 8 subpatterns
                 if not verb_synset.isdisjoint(self.constraints_verbs['cause']):
                     candidates.append(deepcopy([subtree.pos(), sibling.pos(), 'NP-VP-NP']))
@@ -205,17 +203,18 @@ class  CauseExtractor(AbsExtractor):
                             break
 
                     # apply subpatterns
-                    if  (
-                            post_con['phenomenon'] 
-                        ) or (
-                            not pre_con['entity'] and (verb_con['associate'] or verb_con['relate']) and (post_con['abstraction'] and post_con['group'] and post_con['possession'])
-                        ) or (
-                            not pre_con['entity'] and post_con['event'] 
-                        ) or (
-                            not pre_con['abstraction'] and (post_con['event'] or post_con['act']) 
-                        ) or (
-                            verb_con['lead'] and (not post_con['entity'] and not post_con['group'])
-                        ):
+                    if (
+                            post_con['phenomenon']
+                    ) or (
+                                    not pre_con['entity'] and (verb_con['associate'] or verb_con['relate']) and (
+                                    post_con['abstraction'] and post_con['group'] and post_con['possession'])
+                    ) or (
+                                not pre_con['entity'] and post_con['event']
+                    ) or (
+                                not pre_con['abstraction'] and (post_con['event'] or post_con['act'])
+                    ) or (
+                                verb_con['lead'] and (not post_con['entity'] and not post_con['group'])
+                    ):
                         candidates.append(deepcopy([subtree.pos(), sibling.pos(), 'NP-VP-NP']))
 
         # search for adverbs or clausal conjunctions
@@ -231,7 +230,6 @@ class  CauseExtractor(AbsExtractor):
                     ' '.join(tokens[i:]).lower().startswith(self.clausal_conjunctions[token]):
                 # Check if token is au clausal conjunction indicating causation
                 candidates.append(deepcopy([pos[i - 1:], pos[:i], 'biclausal']))
-
 
         # drop candidates containing other candidates
         unique_candidates = []
@@ -250,7 +248,6 @@ class  CauseExtractor(AbsExtractor):
 
         return unique_candidates
 
-
     def _evaluate_candidates(self, document):
         """
         Calculate a confidence score for extracted candidates.
@@ -261,17 +258,16 @@ class  CauseExtractor(AbsExtractor):
 
         :return: A list of evaluated and ranked candidates
         """
-        #ranked_candidates = []
+        # ranked_candidates = []
         candidates = document.get_candidates('CauseExtractor')
         weights_sum = sum(self.weights)
 
         for candidateObject in candidates:
-            
+
             parts = candidateObject.getParts();
             if parts is not None and len(parts) > 0:
                 # following the concept of the inverted pyramid use the position for scoring
                 score = self.weights[0] * (document.get_len() - candidateObject.getIndex()) / document.get_len()
-
 
                 # we also consider the pattern typ used to detect the candidate
                 if candidateObject.getType() == 'biclausal':
@@ -289,10 +285,8 @@ class  CauseExtractor(AbsExtractor):
                 # NEW
                 candidateObject.setScore(score)
 
-
         candidates.sort(key=lambda x: x.getScore(), reverse=True)
         document.set_answer('why', candidates)
-
 
     def get_hyponyms(self, synsets):
         """

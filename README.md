@@ -1,6 +1,6 @@
-# GiveMe5W
+# Giveme5W
 
-GiveMe5W(1H) is a state of the art open-source 5W Question Answering system for news articles. It can either be used through a simple RESTapi or directly included in existing Python projects. Depending on the configuration GiveMe5W parses each document for the answers to the following  questions:
+Giveme5W(1H) is a state of the art open-source 5W Question Answering system for news articles. It can either be used through a simple RESTapi or directly included in existing Python projects. Depending on the configuration Giveme5W parses each document for the answers to the following  questions:
 
 * **Who** is involved?
 * **What** happened?
@@ -10,7 +10,7 @@ GiveMe5W(1H) is a state of the art open-source 5W Question Answering system for 
 * **How** did it happen?
 
 ## Getting started
-Before you can use GiveMe5W, you need to make sure you have a CoreNLP-server up and running.
+Before you can use Giveme5W, you need to make sure you have a CoreNLP-server up and running.
 In the case you first to have to install CoreNLP please refer to the CoreNLPs extensive [documentation](https://stanfordnlp.github.io/CoreNLP/corenlp-server.html) and follow the instructions on how to install CoreNLP and start a server.
 
 Starting the CoreNLP server: 
@@ -28,7 +28,7 @@ core_nlp_host = 'localhost:9000'
 ```
 
 ## File based usage
-GiveMe5W can read and write news in a json format [example](https://github.com/fhamborg/news-please/blob/master/newsplease/examples/sample.json).
+Giveme5W can read and write news in a json format [example](https://github.com/fhamborg/news-please/blob/master/newsplease/examples/sample.json).
 There is also a converter script to convert gate.xml files to json.
 
 Files can be processed like a stream (parse_documents_simple.py) or can be loaded in advance and kept in memory (parse_documents.py).
@@ -77,4 +77,4 @@ The API supports the following JSON fields:
 
 
 ## License
-The project is licensed under the Apache License 2.0. Make sure that you use news-GiveMe5W in compliance with applicable law. Copyright 2016 The GiveMe5W team
+The project is licensed under the Apache License 2.0. Make sure that you use Giveme5W in compliance with applicable law. Copyright 2016 The Giveme5W team

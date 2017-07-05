@@ -32,7 +32,7 @@ GiveMe5W can read and write news in a json format [example](https://github.com/f
 There is also a converter script to convert gate.xml files to json.
 
 Files can be processed like a stream (parse_documents_simple.py) or can be loaded in advance and kept in memory (parse_documents.py).
-Because of the long execution time of the CoreNLP server, it is possible to cache the result on the filesystem to speed up multiple executions.
+Because CoreNLP server has a long execution time, it is possible to cache the result on the filesystem to speed up multiple executions.
 The raw results are attached to each document under clp_result.
 
 The included example files already preprocessed. So you can process them without a running CoreNLP server instance.
@@ -58,6 +58,7 @@ You can also adjust the extractors which are used to examine the documents:
         action_extractor.ActionExtractor(),             # who & what
         environment_extractor.EnvironmentExtractor(),   # when & where
         cause_extractor.CauseExtractor()                # why
+        method_extractor.MethodExtractor()              # how
     ]
     extractor = FiveWExtractor(preprocessor, extractor_list)
 ```

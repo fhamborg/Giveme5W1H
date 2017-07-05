@@ -43,18 +43,23 @@ if __name__ == '__main__':
     documents = (
         # initiate the file handler with the input directory
         Handler(inputPath)
-            # set a output directory
-            .setOutputPath(outputPath)
-            # set a path to save an load preprocessed documents - CoreNLP results
-            .setPreprocessedPath(preprocessedPath)
-            # limit the the to process documents (nice for development)
-            .setLimit(1)
-            # add an optional extractor (it would do only copying without...)
-            .setExtractor(extractor)
-            # load and saves all document objects for further programming
-            .preLoadAndCacheDocuments()
-            # executing it
-            .process()
-            # get the processed documents
-            .getDocuments()
+            ## everything else is optional:
+
+                # set a output directory
+                .setOutputPath(outputPath)
+                # set a path to save an load preprocessed documents (CoreNLP result)
+                .setPreprocessedPath(preprocessedPath)
+                # limit the documents read from the input directory (handy for development)
+                .setLimit(1)
+                # add an optional extractor (it would do only copying without...)
+                .setExtractor(extractor)
+                # load and saves all document objects for further programming
+                .preLoadAndCacheDocuments()
+
+            ## setup is done:
+        
+                # executing it
+                .process()
+                # get the processed documents
+                .getDocuments()
     )

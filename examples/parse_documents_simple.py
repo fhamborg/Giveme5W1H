@@ -27,13 +27,17 @@ if __name__ == '__main__':
     inputPath = os.path.dirname(__file__) + '/input'
     outputPath = os.path.dirname(__file__) + '/output'
 
-    # initiate the newsplease file handler with the input directory
+    # initiate the news-please file handler with the input directory
     (Handler(inputPath)
-     # add an optional output directory
-     .setOutputPath(outputPath)
-     # limit the the to process documents (nice for development)
-     .setLimit(1)
-     # add an optional extractor
-     .setExtractor(extractor)
-     # executing it
-     .process())
+    # everything else is optional:
+
+        ## add an optional output directory
+             .setOutputPath(outputPath)
+             # limit the documents read from the input directory (handy for development)
+             .setLimit(1)
+             # add an extractor
+             .setExtractor(extractor)
+
+         ## setup is done:
+             # executing it
+             .process())

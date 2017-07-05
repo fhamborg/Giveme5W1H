@@ -35,8 +35,8 @@ Files can be processed like a stream (parse_documents_simple.py) or can be loade
 Because of the long execution time of the CoreNLP server, it is possible to cache the result on the filesystem to speed up multiple executions.
 The raw results are attached to each document under clp_result.
 
-The included example files already preprocessed.
-Delete all files in "/cache" if you want to preprocess them again by CoreNLP server.
+The included example files already preprocessed. So you can process them without a running CoreNLP server instance.
+Delete all files in "/cache", if you want to preprocess them again.
 
 
 ## RESTapi

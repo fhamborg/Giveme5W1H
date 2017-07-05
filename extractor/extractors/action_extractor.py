@@ -2,7 +2,7 @@ import re
 
 from nltk.tree import ParentedTree
 
-from extractor.extractors.candidate import Candidate
+from candidate import Candidate
 from .abs_extractor import AbsExtractor
 
 
@@ -56,7 +56,7 @@ class ActionExtractor(AbsExtractor):
                     np_string = ''.join([p[0] for p in pattern[0]])
                     if re.sub(r'\s+', '', mention['text']) in np_string:
                         candidateObject = Candidate()
-                        candidateObject.setIndex(pattern[2])
+                        candidateObject.set_sentence_Index(pattern[2])
                         candidateObject.setRaw([pattern[0], pattern[1], cluster, mention['id']])
                         candidates.append(candidateObject)
 
@@ -164,15 +164,17 @@ class ActionExtractor(AbsExtractor):
 
             if mention_type == 'PRONOMINAL':
                 # use representing mention if the agent is only a pronoun
-                ranked_candidates.append((representative, candidateParts[1], score, candidate.getIndex()))
+                ranked_candidates.append((representative, candidateParts[1], score, candidate.get_sentence_Index()))
             else:
-                ranked_candidates.append((candidateParts[0], candidateParts[1], score, candidate.getIndex()))
+                ranked_candidates.append((candidateParts[0], candidateParts[1], score, candidate.get_sentence_Index()))
 
-        ranked_candidates.sort(key=lambda x: x[2], reverse=True)
+        #ranked_candidates.sort(key=lambda x: x[2], reverse=True)
 
         # split results
         who = [(c[0], c[2], c[3]) for c in ranked_candidates]
         what = [(c[1], c[2], c[3]) for c in ranked_candidates]
+        
+        
 
         # Filte dublicates and transform who to object oriented list
         oWho = self._filterAndConvertToObjectOrientedList(who)
@@ -181,14 +183,26 @@ class ActionExtractor(AbsExtractor):
         document.set_answer('what', oWhat)
 
     def _filterAndConvertToObjectOrientedList(self, list):
-        whoList = []
+        max = 0
+        candidates = []
         for answer in self._filter_duplicates(list):
             ca = Candidate()
             ca.setParts(answer[0])
-            ca.setIndex(answer[2])
+            ca.set_sentence_Index(answer[2])
+            if answer[1] > max:
+                max = answer[1]
             ca.setScore(answer[1])
-            whoList.append(ca)
-        return whoList
+            candidates.append(ca)
+        
+        # normalize
+        for candidate in candidates:
+            score = candidate.getScore()
+            candidate.setScore(score/max)
+
+        # sort
+        candidates.sort(key=lambda x: x.getScore(), reverse=True)
+        
+        return candidates
 
     def cut_what(self, tree, min_length=0, length=0):
         """

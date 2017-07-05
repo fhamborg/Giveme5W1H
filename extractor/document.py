@@ -105,6 +105,23 @@ class Document(object):
     def get_rawData(self):
         return self._rawData
 
+    # Creates a map of frequency for every words per lemma
+    #
+    #  "..he blocked me, by blocking my blocker.."
+    #  { block: 3, me: 1  .... }
+    def get_lemma_map(self):
+        if not hasattr(self, '_lemma_map'):
+            self._lemma_map = {}
+            for sentence in self._sentences:
+                for token in sentence['tokens']:
+                    lemma = token["lemma"]
+                    lema_count = self._lemma_map.get(lemma, 0)
+                    lema_count += 1
+                    self._lemma_map[lemma] = lema_count
+
+        return self._lemma_map
+
+
     def set_clp_result(self, clp_result):
         self._clp_result = clp_result
 
@@ -151,6 +168,8 @@ class Document(object):
 
     def set_annotations(self, annotations):
         self._annotations = annotations
+
+
 
     def pretty_answers(self):
         string = 'Answers to: "%s..."' % self.get_title()[:35]

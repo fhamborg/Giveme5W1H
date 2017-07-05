@@ -5,6 +5,7 @@ class Candidate:
         self._score = None
         self._index = None
         self._parts = None
+        self._calculations = {}
 
     def getParts(self):
         return self._parts
@@ -24,16 +25,25 @@ class Candidate:
     def getType(self):
         return self._type
 
+    def set_lemma_count(self, lemma_count):
+        self._lemma_count = lemma_count
+
+    def get_lemma_count(self):
+        return self._lemma_count
+
+
     def setScore(self, score):
         self._score = score
+
 
     def getScore(self):
         return self._score
 
-    def setIndex(self, index):
+    # indicated the core_nlp sentence index
+    def set_sentence_Index(self, index):
         self._index = index
 
-    def getIndex(self):
+    def get_sentence_Index(self):
         return self._index
 
     def get_json(self):
@@ -48,3 +58,14 @@ class Candidate:
                 json['index'] = self._index
             return json
         return None
+
+    # helper to decouple evaluation calculations from candidate extraction
+    # use this for all evaluation related information
+    def get_calculations(self, key):
+        return self._calculations[key]
+
+    def set_calculations(self, key, value):
+        self._calculations[key] = value
+
+    def reset_calculations(self):
+        self._calculations = {}

@@ -7,6 +7,8 @@ from extractor.extractors import method_extractor
 from extractor.tools.file.handler import Handler
 
 # Add path to allow execution though console
+from extractors import action_extractor, cause_extractor, environment_extractor
+
 sys.path.insert(0, '/'.join(os.path.realpath(__file__).split('/')[:-3]))
 
 """
@@ -29,9 +31,9 @@ if __name__ == '__main__':
     log.addHandler(sh)
 
     extractor = FiveWExtractor(extractors=[
-        # action_extractor.ActionExtractor,
-        # environment_extractor.EnvironmentExtractor,
-        # cause_extractor.CauseExtractor,
+        action_extractor.ActionExtractor(),
+        environment_extractor.EnvironmentExtractor(),
+        cause_extractor.CauseExtractor(),
         method_extractor.MethodExtractor()
     ])
     inputPath = os.path.dirname(__file__) + '/input'

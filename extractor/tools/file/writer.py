@@ -1,7 +1,7 @@
 import json
 import pickle
 
-from extractor.extractors.candidate import Candidate
+from candidate import Candidate
 
 
 class Writer:

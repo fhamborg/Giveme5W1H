@@ -5,7 +5,7 @@ import nltk
 from nltk.corpus import wordnet
 from nltk.stem.wordnet import WordNetLemmatizer
 
-from extractor.extractors.candidate import Candidate
+from candidate import Candidate
 from .abs_extractor import AbsExtractor
 
 
@@ -110,7 +110,7 @@ class CauseExtractor(AbsExtractor):
                 # used by the extractor
                 candidateObject.setParts(candidate[0] + candidate[1])
                 candidateObject.setType(candidate[2])
-                candidateObject.setIndex(i)
+                candidateObject.set_sentence_Index(i)
                 candidates.append(candidateObject)
         document.set_candidates('CauseExtractor', candidates)
 
@@ -267,7 +267,7 @@ class CauseExtractor(AbsExtractor):
             parts = candidateObject.getParts();
             if parts is not None and len(parts) > 0:
                 # following the concept of the inverted pyramid use the position for scoring
-                score = self.weights[0] * (document.get_len() - candidateObject.getIndex()) / document.get_len()
+                score = self.weights[0] * (document.get_len() - candidateObject.get_sentence_Index()) / document.get_len()
 
                 # we also consider the pattern typ used to detect the candidate
                 if candidateObject.getType() == 'biclausal':

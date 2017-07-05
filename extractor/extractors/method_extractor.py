@@ -93,26 +93,35 @@ class MethodExtractor(AbsExtractor):
 
                     # matches VBD CC VBD and VBD
                     atree = subtree.parent().parent().parent()
-
-                    relevantParts = self._pos_linked_to_corenlp_tokens(atree)
-                    candidate_parts = self._find_VB_CC_VB_Parts(relevantParts)
-                    if candidate_parts:
-                        candidates.append([candidate_parts, tree.stanfordCoreNLPResult['index'], 'prepos'])
+                    if atree:
+                        relevantParts = self._pos_linked_to_corenlp_tokens(atree)
+                        candidate_parts = self._find_VB_CC_VB_Parts(relevantParts)
+                        if candidate_parts:
+                            candidates.append([candidate_parts, tree.stanfordCoreNLPResult['index'], 'prepos'])
 
         return candidates
 
     def _pos_linked_to_corenlp_tokens(self, tree):
+
         root = tree.root()
         pos = tree.pos()
         candidate_parts_as_list = []
         startIndex = self._findIndexFromRoot(tree.root(), list(tree.treeposition())) -1
-        for x in range(0, len(pos)):
+
+        posLen = len(pos)
+        # bugfix, at some very rare occasion the tree isn`t exactly reflecting the CoreNLP structure
+        if posLen + startIndex >= len(root.stanfordCoreNLPResult['tokens']):
+            posLen = len(root.stanfordCoreNLPResult['tokens']) - startIndex -1
+
+        for x in range(0, posLen):
             # convert part tuple to list, get token
+
             token = root.stanfordCoreNLPResult['tokens'][x + startIndex]
             partsAsList = list(pos[x])
             partsAsList.append(token)
             # save list
             candidate_parts_as_list.append(partsAsList)
+
         return [tuple(x) for x in candidate_parts_as_list]
 
 
@@ -207,7 +216,6 @@ class MethodExtractor(AbsExtractor):
         for candidate in candidates:
             score = candidate.getScore()
             candidate.setScore(score/score_max)
-            #print(candidate.getScore())
 
         candidates.sort(key=lambda x: x.getScore(), reverse=True)
         document.set_answer('how', candidates)

@@ -1,7 +1,7 @@
 import glob
 import logging
 import sys
-
+import os
 from .reader import Reader
 from .writer import Writer
 
@@ -16,7 +16,7 @@ class Handler(object):
         self._outputPath = None
         self._adocuments = None
         self._documents = None
-
+        self._skipDocumentsWithOutput = False
         self._reader = Reader()
         self._writer = Writer()
         self.log = logging.getLogger('GiveMe5W')
@@ -56,6 +56,15 @@ class Handler(object):
         self.log.error('documents prelaoded:\t' + str(docCounter))
         return self
 
+    # process only files without an entry in the output directory
+    # Warning dosent work well in combination with preLoadAndCacheDocuments,
+    # output is not loaded into context, if existence
+    def skipDocumentsWithOutput(self, skip=True):
+        self._skipDocumentsWithOutput = skip
+        if not self._outputPath:
+            self.log.error('Call setOutputPath with a valid path, before you enable this option')
+        return  self
+
     def getDocuments(self):
         if self._documents:
             return self._documents
@@ -65,6 +74,13 @@ class Handler(object):
     def _processDocument(self, document):
         self.log.info('Handler: \tTitle:\t' + str(document.get_title()))
         self.log.info('         \tId:   \t' + str(document.get_document_id()))
+
+        if self._skipDocumentsWithOutput:
+            path = self._writer._outputPath + '/' + document.get_document_id() + '.json'
+            if os.path.isfile(path):
+                self.log.info('         \tskipped, found result in output directory')
+                self.log.info('')
+                return
 
         if self._extractor:
             if not document.is_preprocessed():

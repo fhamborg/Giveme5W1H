@@ -13,14 +13,14 @@ class Reader(object):
         self.log = logging.getLogger('GiveMe5W')
         self._preprocessedPath = None
 
-    def setPreprocessedPath(self, preprocessedPath):
-        self._preprocessedPath = preprocessedPath
+    def set_preprocessed_path(self, preprocessed_path):
+        self._preprocessedPath = preprocessed_path
         return self
 
-    def getPreprocessedPath(self):
+    def get_preprocessed_path(self):
         return self._preprocessedPath
 
-    def get_preprocessedFilePath(self, id):
+    def get_preprocessed_filepath(self, id):
         return self._preprocessedPath + '/' + id + '.pickle'
 
     def read(self, path):
@@ -36,7 +36,7 @@ class Reader(object):
             # path where the preprocessed file should be
 
             if self._preprocessedPath is not None:
-                preprocessedFilePath = self.get_preprocessedFilePath(data['dId'])
+                preprocessedFilePath = self.get_preprocessed_filepath(data['dId'])
 
             if preprocessedFilePath and os.path.isfile(preprocessedFilePath):
                 # _preprocessedPath path is given, and there is already a preprocessed document

@@ -77,7 +77,7 @@ class MethodExtractor(AbsExtractor):
 
                         right_sibling_pos = self._pos_linked_to_corenlp_tokens(right_sibling)
 
-                        candidate_parts = self._find_VB_CC_VB_Parts(right_sibling_pos)
+                        candidate_parts = self._find_vb_cc_vb_parts(right_sibling_pos)
 
                         if candidate_parts:
 
@@ -95,7 +95,7 @@ class MethodExtractor(AbsExtractor):
                     atree = subtree.parent().parent().parent()
                     if atree:
                         relevantParts = self._pos_linked_to_corenlp_tokens(atree)
-                        candidate_parts = self._find_VB_CC_VB_Parts(relevantParts)
+                        candidate_parts = self._find_vb_cc_vb_parts(relevantParts)
                         if candidate_parts:
                             candidates.append([candidate_parts, tree.stanfordCoreNLPResult['index'], 'prepos'])
 
@@ -106,7 +106,7 @@ class MethodExtractor(AbsExtractor):
         root = tree.root()
         pos = tree.pos()
         candidate_parts_as_list = []
-        startIndex = self._findIndexFromRoot(tree.root(), list(tree.treeposition())) -1
+        startIndex = self._find_index_from_root(tree.root(), list(tree.treeposition())) - 1
 
         posLen = len(pos)
         # bugfix, at some very rare occasion the tree isn`t exactly reflecting the CoreNLP structure
@@ -144,7 +144,7 @@ class MethodExtractor(AbsExtractor):
             for token in sentence['tokens']:
                 if token['index'] > self._maxIndex:
                     self._maxIndex = token['index']
-                if self._isRelevantPos(token['pos']) and token['ner'] not in ['TIME', 'DATE', 'ORGANIZATION',
+                if self._is_relevant_pos(token['pos']) and token['ner'] not in ['TIME', 'DATE', 'ORGANIZATION',
                                                                               'DURATION', 'ORDINAL']:
 
 
@@ -173,7 +173,7 @@ class MethodExtractor(AbsExtractor):
             candidate.reset_calculations()
 
             maxLemma = 0
-            for part in candidate.getParts():
+            for part in candidate.get_parts():
                 lemma = part[2]['lemma']
                 lemma_count = 0
                 if lemma not in ['be', 'i', 'is', 'and', 'have', 'the', 'a', ',', '.', '']:
@@ -195,10 +195,10 @@ class MethodExtractor(AbsExtractor):
         # normalize position - reserved order
         sentences_count = len(document.get_sentences())
         for candidate in candidates:
-            freq = (sentences_count - candidate.get_sentence_Index()) / sentences_count
+            freq = (sentences_count - candidate.get_sentence_index()) / sentences_count
             candidate.set_calculations('position_frequency_norm', freq )
             #print(candidate.get_calculations('position_frequency_norm'))
-            #print(candidate.get_sentence_Index())
+            #print(candidate.get_sentence_index())
             #print('')
 
         # callculate score
@@ -208,32 +208,30 @@ class MethodExtractor(AbsExtractor):
             score = ((candidate.get_calculations('lemma_count_norm') * self.weights[1] +
                       candidate.get_calculations('position_frequency_norm') * self.weights[0]
                         )/ weights_sum)
-            candidate.setScore(score)
+            candidate.set_score(score)
             if score > score_max:
                 score_max = score
 
         #normalize score
         for candidate in candidates:
-            score = candidate.getScore()
-            candidate.setScore(score/score_max)
+            score = candidate.get_score()
+            candidate.set_score(score / score_max)
 
-        candidates.sort(key=lambda x: x.getScore(), reverse=True)
+        candidates.sort(key=lambda x: x.get_score(), reverse=True)
         document.set_answer('how', candidates)
 
-
-    # removed filter because of frequency
     def _convert_to_object_oriented_list(self, list):
         whoList = []
         #for answer in list:
         for answer in self._filter_duplicates(list):
             ca = Candidate()
-            ca.setParts(answer[0])
-            ca.set_sentence_Index(answer[1])
-            ca.setType(answer[2])
+            ca.set_parts(answer[0])
+            ca.set_sentence_index(answer[1])
+            ca.set_type(answer[2])
             whoList.append(ca)
         return whoList
 
-    def _find_VB_CC_VB_Parts(self, relevantParts):
+    def _find_vb_cc_vb_parts(self, relevantParts):
         recording = False
         candidateParts = []
         for relevantPart in relevantParts:
@@ -251,36 +249,32 @@ class MethodExtractor(AbsExtractor):
             return candidateParts
         return None
 
-
-
-
-    def _findIndexFromRoot(self, root, path):
+    def _find_index_from_root(self, root, path):
 
        if(len(path) > 1):
             position = path.pop(0)
             leftChildCount = 0
             for x in range(0, position):
-                 leftChildCount = leftChildCount + self._countElements(root[x])
-            return leftChildCount + self._findIndexFromRoot(root[position], path)
+                 leftChildCount = leftChildCount + self._count_elements(root[x])
+            return leftChildCount + self._find_index_from_root(root[position], path)
        elif (len(path) is 1):
             return path.pop(0)+1
        else:
             return 0
 
-    def _countElements(self, root):
+    def _count_elements(self, root):
         count = 0
         if isinstance(root, list):
             for element in root:
                 if isinstance(element, list):
-                    count += self._countElements(element)
+                    count += self._count_elements(element)
                 else:
                     count += 1
         else:
             count += 1
         return count
 
-
-    def _isRelevantPos(self, pos):
+    def _is_relevant_pos(self, pos):
 
         # Is adjectivs or adverb
         if pos.startswith('JJ') or pos.startswith('RB'):

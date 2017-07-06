@@ -32,11 +32,11 @@ if __name__ == '__main__':
     # everything else is optional:
 
         ## add an optional output directory
-             .setOutputPath(outputPath)
+             .set_output_path(outputPath)
              # limit the documents read from the input directory (handy for development)
-             .setLimit(1)
+             .set_limit(1)
              # add an extractor
-             .setExtractor(extractor)
+             .set_extractor(extractor)
 
          ## setup is done:
              # executing it

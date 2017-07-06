@@ -108,9 +108,9 @@ class CauseExtractor(AbsExtractor):
             for candidate in self._evaluate_tree(tree):
                 candidateObject = Candidate()
                 # used by the extractor
-                candidateObject.setParts(candidate[0] + candidate[1])
-                candidateObject.setType(candidate[2])
-                candidateObject.set_sentence_Index(i)
+                candidateObject.set_parts(candidate[0] + candidate[1])
+                candidateObject.set_type(candidate[2])
+                candidateObject.set_sentence_index(i)
                 candidates.append(candidateObject)
         document.set_candidates('CauseExtractor', candidates)
 
@@ -264,16 +264,16 @@ class CauseExtractor(AbsExtractor):
 
         for candidateObject in candidates:
 
-            parts = candidateObject.getParts();
+            parts = candidateObject.get_parts();
             if parts is not None and len(parts) > 0:
                 # following the concept of the inverted pyramid use the position for scoring
-                score = self.weights[0] * (document.get_len() - candidateObject.get_sentence_Index()) / document.get_len()
+                score = self.weights[0] * (document.get_len() - candidateObject.get_sentence_index()) / document.get_len()
 
                 # we also consider the pattern typ used to detect the candidate
-                if candidateObject.getType() == 'biclausal':
+                if candidateObject.get_type() == 'biclausal':
                     # the most obvious candidates have biclausal indicators and get the most boost
                     score += self.weights[1]
-                elif candidateObject.getType() == 'RB':
+                elif candidateObject.get_type() == 'RB':
                     # while not as significant as biclausal indicators, adverbials are mor significant as the verbs
                     score += self.weights[2]
                 else:
@@ -283,9 +283,9 @@ class CauseExtractor(AbsExtractor):
                 if score > 0:
                     score /= weights_sum
                 # NEW
-                candidateObject.setScore(score)
+                candidateObject.set_score(score)
 
-        candidates.sort(key=lambda x: x.getScore(), reverse=True)
+        candidates.sort(key=lambda x: x.get_score(), reverse=True)
         document.set_answer('why', candidates)
 
     def get_hyponyms(self, synsets):

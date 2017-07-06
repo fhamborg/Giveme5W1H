@@ -5,24 +5,25 @@ class Candidate:
         self._score = None
         self._index = None
         self._parts = None
+        self._lemma_count = None
         self._calculations = {}
 
-    def getParts(self):
+    def get_parts(self):
         return self._parts
 
-    def setParts(self, parts):
+    def set_parts(self, parts):
         self._parts = parts
 
-    def setRaw(self, raw):
+    def set_raw(self, raw):
         self._raw = raw
 
-    def getRaw(self):
+    def get_raw(self):
         return self._raw
 
-    def setType(self, type):
+    def set_type(self, type):
         self._type = type
 
-    def getType(self):
+    def get_type(self):
         return self._type
 
     def set_lemma_count(self, lemma_count):
@@ -31,19 +32,17 @@ class Candidate:
     def get_lemma_count(self):
         return self._lemma_count
 
-
-    def setScore(self, score):
+    def set_score(self, score):
         self._score = score
 
-
-    def getScore(self):
+    def get_score(self):
         return self._score
 
     # indicated the core_nlp sentence index
-    def set_sentence_Index(self, index):
+    def set_sentence_index(self, index):
         self._index = index
 
-    def get_sentence_Index(self):
+    def get_sentence_index(self):
         return self._index
 
     def get_json(self):

@@ -46,21 +46,21 @@ if __name__ == '__main__':
             ## everything else is optional:
 
                 # set a output directory
-                .setOutputPath(outputPath)
+                .set_output_path(outputPath)
                 # set a path to save an load preprocessed documents (CoreNLP result)
-                .setPreprocessedPath(preprocessedPath)
+                .set_preprocessed_path(preprocessedPath)
                 # limit the documents read from the input directory (handy for development)
-                #.setLimit(1)
-                .skipDocumentsWithOutput()
+                #.set_limit(1)
+                .skip_documents_with_output()
                 # add an optional extractor (it would do only copying without...)
-                .setExtractor(extractor)
+                .set_extractor(extractor)
                 # load and saves all document objects for further programming
-                .preLoadAndCacheDocuments()
+                .preload_and_cache_documents()
 
             ## setup is done:
 
                 # executing it
                 .process()
                 # get the processed documents
-                .getDocuments()
+                .get_documents()
     )

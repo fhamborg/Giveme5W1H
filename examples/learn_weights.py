@@ -44,7 +44,7 @@ def adjustWeights(extractors, i, j, k, l):
 def cmp_text_helper(question, answers, annotations, weights, document, resultObjects):
     score = -1
     if question in annotation and question in answers:
-        topAnswer = answers[question][0].getParts()
+        topAnswer = answers[question][0].get_parts()
         topAnnotation = annotation[question][0][2]
         score = cmp_text(topAnnotation, topAnswer)
     resultObjects[question].append({'weights': weights, 'score': score, 'document_id': document.get_document_id()})
@@ -84,15 +84,15 @@ if __name__ == '__main__':
         # initiate the newsplease file handler with the input directory
         Handler(inputPath)
             # set a path to save an load preprocessed documents
-            .setPreprocessedPath(preprocessedPath)
+            .set_preprocessed_path(preprocessedPath)
             # limit the the to process documents (nice for development)
-            .setLimit(1)
+            .set_limit(1)
             # add an optional extractor (it would do basically just copying without...)
-            .setExtractor(extractorObject)
+            .set_extractor(extractorObject)
             # saves all document objects for further programming
-            .preLoadAndCacheDocuments()
+            .preload_and_cache_documents()
             # executing it
-            .process().getDocuments()
+            .process().get_documents()
     )
 
     resultPath = os.path.dirname(__file__) + '/result/learnWeights'

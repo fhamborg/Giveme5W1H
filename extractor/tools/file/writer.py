@@ -10,27 +10,27 @@ class Writer:
         :param path: Absolute path to the output directory
         """
 
-    def _writeJson(self, outputObject):
-        outfile = open(self._outputPath + '/' + outputObject['dId'] + '.json', 'w')
-        outfile.write(json.dumps(outputObject, sort_keys=False, indent=2))
+    def _write_json(self, output_object):
+        outfile = open(self._outputPath + '/' + output_object['dId'] + '.json', 'w')
+        outfile.write(json.dumps(output_object, sort_keys=False, indent=2))
         outfile.close()
 
-    def writePickle(self, document):
-        with open(self.get_preprocessedFilePath(document.get_rawData()['dId']), 'wb') as f:
+    def write_pickle(self, document):
+        with open(self.get_preprocessed_filepath(document.get_rawData()['dId']), 'wb') as f:
             # Pickle the 'data' document using the highest protocol available.
             pickle.dump(document, f, pickle.HIGHEST_PROTOCOL)
 
-    def get_preprocessedFilePath(self, id):
+    def get_preprocessed_filepath(self, id):
         return self._preprocessedPath + '/' + id + '.pickle'
 
-    def getPreprocessedPath(self):
+    def get_preprocessed_path(self):
         return self._preprocessedPath
 
-    def setPreprocessedPath(self, preprocessedPath):
-        self._preprocessedPath = preprocessedPath
+    def set_preprocessed_path(self, preprocessed_path):
+        self._preprocessedPath = preprocessed_path
 
-    def setOutputPath(self, outputPath):
-        self._outputPath = outputPath
+    def setOutputPath(self, output_path):
+        self._outputPath = output_path
 
     def write(self, document):
         """
@@ -70,4 +70,4 @@ class Writer:
                             candidate_json['words'].append({'text': candidateWord[0], 'tag': candidateWord[1]})
                         extractedLiteral.append(candidate_json)
 
-            self._writeJson(output)
+            self._write_json(output)

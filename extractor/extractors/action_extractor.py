@@ -56,8 +56,8 @@ class ActionExtractor(AbsExtractor):
                     np_string = ''.join([p[0] for p in pattern[0]])
                     if re.sub(r'\s+', '', mention['text']) in np_string:
                         candidateObject = Candidate()
-                        candidateObject.set_sentence_Index(pattern[2])
-                        candidateObject.setRaw([pattern[0], pattern[1], cluster, mention['id']])
+                        candidateObject.set_sentence_index(pattern[2])
+                        candidateObject.set_raw([pattern[0], pattern[1], cluster, mention['id']])
                         candidates.append(candidateObject)
 
         document.set_candidates('ActionExtractor', candidates)
@@ -119,7 +119,7 @@ class ActionExtractor(AbsExtractor):
             max_len = 1
 
         for candidate in document.get_candidates('ActionExtractor'):
-            candidateParts = candidate.getRaw()
+            candidateParts = candidate.get_raw()
             verb = candidateParts[1][0][0].lower()
 
             # VP beginning with say/said often contain no relevant action and are therefor skipped.
@@ -164,9 +164,9 @@ class ActionExtractor(AbsExtractor):
 
             if mention_type == 'PRONOMINAL':
                 # use representing mention if the agent is only a pronoun
-                ranked_candidates.append((representative, candidateParts[1], score, candidate.get_sentence_Index()))
+                ranked_candidates.append((representative, candidateParts[1], score, candidate.get_sentence_index()))
             else:
-                ranked_candidates.append((candidateParts[0], candidateParts[1], score, candidate.get_sentence_Index()))
+                ranked_candidates.append((candidateParts[0], candidateParts[1], score, candidate.get_sentence_index()))
 
         #ranked_candidates.sort(key=lambda x: x[2], reverse=True)
 
@@ -187,20 +187,20 @@ class ActionExtractor(AbsExtractor):
         candidates = []
         for answer in self._filter_duplicates(list):
             ca = Candidate()
-            ca.setParts(answer[0])
-            ca.set_sentence_Index(answer[2])
+            ca.set_parts(answer[0])
+            ca.set_sentence_index(answer[2])
             if answer[1] > max:
                 max = answer[1]
-            ca.setScore(answer[1])
+            ca.set_score(answer[1])
             candidates.append(ca)
         
         # normalize
         for candidate in candidates:
-            score = candidate.getScore()
-            candidate.setScore(score/max)
+            score = candidate.get_score()
+            candidate.set_score(score / max)
 
         # sort
-        candidates.sort(key=lambda x: x.getScore(), reverse=True)
+        candidates.sort(key=lambda x: x.get_score(), reverse=True)
         
         return candidates
 

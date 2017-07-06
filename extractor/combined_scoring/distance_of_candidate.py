@@ -20,14 +20,14 @@ class DistanceOfCandidate:
             min = 99
             for i, d_candidate in enumerate(d_candidates):
                # callculate the avg distance to the firs n candidates
-                d_index = d_candidate.get_sentence_Index()
+                d_index = d_candidate.get_sentence_index()
                 counter = 0
                 sum = 0
                 for m_candidate in m_candidates:
                     if counter >= self._weight[0]:
                         break
                     #
-                    sum += abs(m_candidate.get_sentence_Index() - d_index)
+                    sum += abs(m_candidate.get_sentence_index() - d_index)
                     counter += 1
                 avgDist = sum/counter
                 if min > avgDist:
@@ -55,10 +55,10 @@ class DistanceOfCandidate:
                 distFactor += distanceMatrix[question][i] * self._weight[iq]
             distFactor = distFactor/ len(distanceMatrix)
 
-            score = d_candidate.getScore() + distFactor
-            d_candidate.setScore(score)
+            score = d_candidate.get_score() + distFactor
+            d_candidate.set_score(score)
 
         #resort the candidates
-        d_candidates.sort(key=lambda x: x.getScore(), reverse=True)
+        d_candidates.sort(key=lambda x: x.get_score(), reverse=True)
 
         return None

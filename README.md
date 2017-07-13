@@ -33,10 +33,10 @@ There is also a converter script to convert gate.xml files to json.
 
 Files can be processed like a stream (parse_documents_simple.py) or can be loaded in advance and kept in memory (parse_documents.py).
 Because CoreNLP server has a long execution time, it is possible to cache the result on the filesystem to speed up multiple executions.
-The raw results are attached to each document under clp_result.
+The raw result is attached to each document under clp_result.
 
 The included example files already preprocessed. So you can process them without a running CoreNLP server instance.
-Delete all files in "/cache", if you want to preprocess them again.
+Delete all files in "/cache", if you want to precess them again.
 
 
 ## RESTapi
@@ -74,6 +74,18 @@ The API supports the following JSON fields:
 * title (always required!)
 * description
 * text
+
+## Learn_Weights
+Learn_Weights is running the extractor with different weights.
+The best candidate is compared with the best annotation to get a score.
+The calculated score, document id and the used weights are saved per question under ./results.
+
+Because of the combined_scorer, each document is evaluated in each step. 
+This can lead to entries with the same weights, but with different scores.
+
+
+
+
 
 
 ## License

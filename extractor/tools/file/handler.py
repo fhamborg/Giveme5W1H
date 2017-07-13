@@ -106,12 +106,13 @@ class Handler(object):
         # process in memory objects (call preLoadDocuments)
         if self._documents:
             self.log.info('processing documents from memory')
+            self.log.info('')
             sys.stdout.flush()
             for document in self._documents:
                 self._process_document(document)
         else:
-            self.log.info('processing documents from file system ')
-            sys.stdout.flush()
+            self.log.info('processing documents from file system')
+            self.log.info('')
             for filepath in glob.glob(self._inputPath + '/*.json'):
                 if self._limit and docCounter >= self._limit:
                     print('limit reached')
@@ -122,5 +123,6 @@ class Handler(object):
             self.log.info('Processed Documents:\t ' + str(docCounter))
 
         self.log.info('')
-        self.log.info('------- Handler finished processing-------\t')
+        self.log.info('Handler: process: finished\t')
+        self.log.info('')
         return self

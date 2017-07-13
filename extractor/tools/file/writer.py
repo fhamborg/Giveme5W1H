@@ -53,7 +53,11 @@ class Writer:
 
             for question in answers:
                 # check if question literal is there
-                questionLiteral = fiveWoneHLiteral.setdefault(question, {'annotated': None, 'extracted': []})
+                questionLiteral = fiveWoneHLiteral.setdefault(question, { 'annotated': None, 'extracted': []})
+
+                # add a label, thats only there for the ui
+                questionLiteral['label'] = question
+
                 # check if extracted literal is there
                 extractedLiteral = questionLiteral.setdefault('extracted', [])
                 for answer in answers[question]:

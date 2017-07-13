@@ -5,6 +5,7 @@ import os
 import queue
 import sys
 from threading import Thread
+import pickle
 
 from extractor.extractor import FiveWExtractor
 from extractor.tools.file.handler import Handler
@@ -32,55 +33,130 @@ class Worker(Thread):
                 self._queue.task_done()
 
 
-def adjustWeights(extractors, i, j, k, l):
+class WeightQueue:
+    _documentIndex = 0
+    _weight_queue_index = 0
+
+    _weight_queue = []
+    _tmp_counter = 0
+    _counter = 0
+    def __init__(self, increment_range, save_interval = 30, ):
+        self._increment_range_length = len(increment_range)
+        self._increment_range_steps = math.pow(self._increment_range_length, 4) / 100
+        self._save_interval = save_interval
+        for i in increment_range:
+            for j in increment_range:
+                for k in increment_range:
+                    for l in increment_range:
+                        self._weight_queue.append((i , j, k, l))
+
+        self._documents, self._geocoder, self._calendar = loadDocumentsAndCoder()
+
+    def next(self,):
+        #return document
+        return self._weight_queue.pop()
+
+    def has_next(self, file_handler):
+        # helper to get every n-th item a progress indicator
+        # saves also the current state, before poping the next item
+        if self._tmp_counter > self._save_interval:
+            print("Progress: " + str(self._counter / self._increment_range_steps) + " %")
+            file_handler.save()
+            print("saved")
+            self._tmp_counter = 0
+        else:
+            self._tmp_counter += 1
+
+        self._counter += 1
+
+        if len(self._weight_queue) > 0:
+            return True
+        else:
+            return False
+
+
+class FileHandler:
+    _resultFiles = {}
+    _resultObjects = {}
+    _questions = None
+    _weight_queue = None
+
+    def __init__(self, questions, resultPath, weightQueuePath):
+        self._questions = questions
+        self._weightQueuePath = weightQueuePath
+
+        for question in self._questions:
+            self._resultFiles[question] = open(resultPath + '_' + str(question) + '.json', encoding='utf-8', mode='w')
+            try:
+                self._resultObjects[question] = json.load(self._resultFiles[question])
+                break
+            except OSError as err:
+                # initial call create an array
+                self._resultObjects[question] = []
+
+    def add_result(self, question, weights, score, document_id):
+        self._resultObjects[question].append({'weights': weights, 'score': score, 'document_id': document_id})
+
+
+    def get_weight_queue(self):
+
+        if not self._weight_queue:
+            if os.path.isfile(self._weightQueuePath):
+                # _preprocessedPath path is given, and there is already a preprocessed document
+                with open(self._weightQueuePath, 'rb') as ff:
+                    print("weightQueue instance found! continue processing :)")
+                    self._weight_queue = pickle.load(ff)
+            else:
+                self._weight_queue = WeightQueue(increment_range)
+        return self._weight_queue;
+
+    def save(self):
+        for question in self._questions:
+            # order: the result
+            self._resultObjects[question].sort(key=lambda x: x['score'], reverse=True)
+
+            # write to disk
+            self._resultFiles[question].write(json.dumps(self._resultObjects[question], sort_keys=False, indent=2, check_circular=False))
+
+        # save the questate for this data state
+        with open(self._weightQueuePath, 'wb') as f:
+            # Pickle the 'data' document using the highest protocol available.
+            pickle.dump(self._weight_queue, f, pickle.HIGHEST_PROTOCOL)
+
+    def closeAndRemoveWeightQueue(self):
+        os.remove(self._weightQueuePath, dir_fd=None)
+        for question in self._questions:
+            self._resultFiles[question].close()
+
+
+def adjust_weights(extractors, i, j, k, l):
     # (action_0, cause_1, environment_2)
     extractors[0].weights = (i, j, k)
-    ## time
+    # time
     extractors[1].weights = ((i, j), (i, j, k, l))
-    ## cause - (position, conjunction, adverb, verb)
+    # cause - (position, conjunction, adverb, verb)
     extractors[2].weights = (i, j, k, l)
+    # method - (position, frequency)
+    extractors[3].weights = (i, j)
 
 
-def cmp_text_helper(question, answers, annotations, weights, document, resultObjects):
+def cmp_text_helper(question, answers, annotations, weights, document,fileHandler):
     score = -1
-    if question in annotation and question in answers:
+    if question in annotations and question in answers:
         topAnswer = answers[question][0].get_parts()
-        topAnnotation = annotation[question][0][2]
+        topAnnotation = annotations[question][0][2]
         score = cmp_text(topAnnotation, topAnswer)
-    resultObjects[question].append({'weights': weights, 'score': score, 'document_id': document.get_document_id()})
+
+    fileHandler.add_result(question, weights, score, document.get_document_id())
 
 
-if __name__ == '__main__':
-    log = logging.getLogger('GiveMe5W')
-    log.setLevel(logging.DEBUG)
-    sh = logging.StreamHandler()
-    sh.setLevel(logging.DEBUG)
-    log.addHandler(sh)
-
+def loadDocumentsAndCoder():
     # Setup
     extractorObject = FiveWExtractor()
     inputPath = os.path.dirname(__file__) + '/input/'
     preprocessedPath = os.path.dirname(__file__) + '/cache'
-
-    increment_range = [0.05, 0.10, 0.15, 0.20, 0.25, 0.30, 0.35, 0.40, 0.45, 0.50, 0.55, 0.60, 0.65, 0.70, 0.75, 0.80,
-                       0.85, 0.90, 0.95, 1]
-    # increment_range = [0.10, 0.15, 0.45, 0.50, 0.55, 1]
-    questions = {'when', 'why', 'who', 'how', 'what'}
-
-    increment_range_length = len(increment_range)
-    increment_range_steps = math.pow(increment_range_length, 4) / 100
-
-    q = queue.Queue()
-    resultFiles = {}
-    resultObjects = {}
-
-    for i in range(8):
-        t = Worker(q)
-        t.daemon = True
-        t.start()
-
     # Put all together, run it once, get the cached document objects
-    documents = (
+    docments = (
         # initiate the newsplease file handler with the input directory
         Handler(inputPath)
             # set a path to save an load preprocessed documents
@@ -95,109 +171,71 @@ if __name__ == '__main__':
             .process().get_documents()
     )
 
-    resultPath = os.path.dirname(__file__) + '/result/learnWeights'
-
-    for question in questions:
-        resultFiles[question] = open(resultPath + '_' + str(question) + '.json', encoding='utf-8', mode='w')
-    for question in questions:
-        resultObjects[question] = []
-
-        # with open(resultPath, encoding='utf-8', mode='r') as data_file:
-        # data = json.load(data_file)
-
     # grab utilities to parse dates and locations from the EnvironmentExtractor
     geocoder = extractorObject.extractors[1].geocoder
     calendar = extractorObject.extractors[1].calendar
 
+    return docments, geocoder,  calendar
+
+
+if __name__ == '__main__':
+    log = logging.getLogger('GiveMe5W')
+    log.setLevel(logging.DEBUG)
+    sh = logging.StreamHandler()
+    sh.setLevel(logging.DEBUG)
+    log.addHandler(sh)
+
+
+    increment_range = [0.05, 0.10, 0.15, 0.20, 0.25, 0.30, 0.35, 0.40, 0.45, 0.50, 0.55, 0.60, 0.65, 0.70, 0.75, 0.80,0.85, 0.90, 0.95, 1]
+    #increment_range = [0.10, 0.15, 1]
+    questions = {'when', 'why', 'who', 'how', 'what'}
+
+    resultPath = os.path.dirname(__file__) + '/result/learnWeights'
+    weightQueuePath = os.path.dirname(__file__) + '/result/weightQueue.prickle'
+
+    fileHandler = FileHandler(questions, resultPath, weightQueuePath)
+    weightQueue = fileHandler.get_weight_queue()
+
+    q = queue.Queue()
+
+    for i in range(5):
+        t = Worker(q)
+        t.daemon = True
+        t.start()
+
     # Questions
-
     for document in documents:
-        # manually generate candidate lists
-        # candidates = [e._extract_candidates(document) for e in extractor.extractors]
+        while weightQueue.has_next(fileHandler):
+            document, weights = weightQueue.next()
 
-        counter = 0
-        print("Progress: " + str(counter / increment_range_steps) + "%", end="\r")
-        # try all weight combinations
-        for i in increment_range:
-            for j in increment_range:
-                for k in increment_range:
-                    for l in increment_range:
+            i = weights[0]
+            j = weights[1]
+            k = weights[2]
+            l = weights[3]
+            adjust_weights(extractorObject.extractors, i, j, k, l)
 
-                        adjustWeights(extractorObject.extractors, i, j, k, l)
+            # 2__Reevaluate per extractor
+            for extractor in extractorObject.extractors:
+                q.put((extractor, document))
+            q.join()
 
-                        # 2__Reevaluate per extractor
-                        for extractor in extractorObject.extractors:
-                            q.put((extractor, document))
+            # 2_1 Reevaluate, combined scoring
+            for combinedScorer in extractorObject.combinedScorers:
+                combinedScorer.score(document)
 
-                        q.join()
+            annotation = document.get_annotations()
+            answers = document.get_answers()
 
-                        # for extractor in extractorObject.extractors:
-                        #   extractor._evaluate_candidates(document)
+            cmp_text_helper('why', answers, annotation, [i, j, k, l], document,  fileHandler)
+            cmp_text_helper('what', answers, annotation, [i, j, k], document, fileHandler)
+            cmp_text_helper('who', answers, annotation, [i, j, k], document, fileHandler)
+            cmp_text_helper('how', answers, annotation, [i, j], document, fileHandler)
 
-                        # 2_1 Reevaluate combined scoring
-                        for combinedScorer in extractorObject.combinedScorers:
-                            combinedScorer.score(document)
+            # These two are tricky because of the used online services
+            #cmp_text_helper('when', answers, annotation, [i, j, k, l], document, resultObjects)
+            #cmp_text_helper('where', answers, annotation, [i, j], document, resultObjects)
+            #counter = counter + 1
 
-                        annotation = document.get_annotations()
-                        answers = document.get_answers()
-
-                        cmp_text_helper('why', answers, annotation, [i, j, k, l], document, resultObjects)
-                        cmp_text_helper('what', answers, annotation, [i, j, k], document, resultObjects)
-                        cmp_text_helper('who', answers, annotation, [i, j, k], document, resultObjects)
-                        cmp_text_helper('how', answers, annotation, [i, j], document, resultObjects)
-
-                        #
-                        # cmp_text_helper('when', answers, annotation, [i, j, k, l], document, resultObjects)
-                        counter = counter + 1
-                print("Progress: " + str(counter / increment_range_steps) + " %")
-
-    # save everything
-    for question in questions:
-        # order: the result
-        resultObjects[question].sort(key=lambda x: x['score'], reverse=True)
-
-        # write to the disk
-        resultFiles[question].write(
-            json.dumps(resultObjects[question], sort_keys=False, indent=2, check_circular=False))
-        resultFiles[question].close()
-
-
-#
-# result = {
-#     'when': {
-#         'weights':[i, j, k, l],
-#         'score': when
-#     },
-#     'why': {
-#         'weights':{
-#              'position': i,
-#              'conjunction': j,
-#              'adverb': k,
-#              'verb': l
-#         },
-#         'score': why
-#     },
-#     'who': {
-#         'weights':{
-#              'position': i,
-#              'frequency': j,
-#              'namedEntity': k
-#         },
-#         'score': who
-#     },
-#     'what': {
-#         'weights':{
-#              'position': i,
-#              'frequency': j,
-#              'namedEntity': k
-#         },
-#         'score': what
-#     },
-#     'how': {
-#         'weights':{
-#              'position': i,
-#              'frequency': j
-#         },
-#         'score': how
-#     }
-# }
+    print("Done")
+    fileHandler.save()
+    fileHandler.closeAndRemoveWeightQueue()

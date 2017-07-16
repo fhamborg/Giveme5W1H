@@ -77,13 +77,19 @@ def cmp_date(annotation, candidate, calendar):
         # no answer was extracted
         return -2
 
-    c_time = calendar.parse(' '.join(candidate))
+    strings = []
+    for candidatepart in candidate:
+        strings.append(candidatepart[0])
+
+    c_time = calendar.parse(' '.join(strings))
 
     if c_time[1] == 0:
         # one of the answers couldn't be parsed
         return -3
 
-    return abs(time.mktime(t) - time.mktime(c_time[0]))
+    a = time.mktime(t[0])
+    b = time.mktime(c_time[0])
+    return abs(a - b)
 
 
 def cmp_location(annotation, candidate, geocoder):

@@ -9,7 +9,7 @@ import pickle
 
 from extractor.extractor import FiveWExtractor
 from extractor.tools.file.handler import Handler
-from extractor.tools.util import cmp_text
+from extractor.tools.util import cmp_text, cmp_date, cmp_location
 
 # Add path to allow execution though console
 sys.path.insert(0, '/'.join(os.path.realpath(__file__).split('/')[:-2]))
@@ -37,24 +37,40 @@ class WeightQueue:
     _documentIndex = 0
     _weight_queue_index = 0
 
-    _weight_queue = []
+
     _tmp_counter = 0
     _counter = 0
+    _document_counter = 0
+
     def __init__(self, increment_range, save_interval = 30, ):
+
+        self._documents, self._geocoder, self._calendar, self._extractor = loadDocumentsAndCoder()
+
+        self._document_counter = len(self._documents)
+
         self._increment_range_length = len(increment_range)
+        # interval has 4 dimensions
         self._increment_range_steps = math.pow(self._increment_range_length, 4) / 100
+        # each document is going throug the interval once
+        self._increment_range_steps = self._increment_range_steps * self._document_counter
+
+        # save each n-th step
         self._save_interval = save_interval
+        self.create_new_interval_queue()
+
+
+    def create_new_interval_queue(self):
+        self._weight_queue = []
         for i in increment_range:
             for j in increment_range:
                 for k in increment_range:
                     for l in increment_range:
-                        self._weight_queue.append((i , j, k, l))
+                        self._weight_queue.append((i, j, k, l))
 
-        self._documents, self._geocoder, self._calendar = loadDocumentsAndCoder()
 
     def next(self,):
         #return document
-        return self._weight_queue.pop()
+        return self._weight_queue.pop(), self._documents[self._document_counter-1]
 
     def has_next(self, file_handler):
         # helper to get every n-th item a progress indicator
@@ -72,7 +88,13 @@ class WeightQueue:
         if len(self._weight_queue) > 0:
             return True
         else:
-            return False
+            if self._document_counter > 0:
+                # process the next document
+                self.create_new_interval_queue()
+                self._document_counter -= 1
+            else:
+                # done
+                return False
 
 
 class FileHandler:
@@ -119,9 +141,9 @@ class FileHandler:
             self._resultFiles[question].write(json.dumps(self._resultObjects[question], sort_keys=False, indent=2, check_circular=False))
 
         # save the questate for this data state
-        with open(self._weightQueuePath, 'wb') as f:
+        #with open(self._weightQueuePath, 'wb') as f:
             # Pickle the 'data' document using the highest protocol available.
-            pickle.dump(self._weight_queue, f, pickle.HIGHEST_PROTOCOL)
+         #   pickle.dump(self._weight_queue, f, pickle.HIGHEST_PROTOCOL)
 
     def closeAndRemoveWeightQueue(self):
         os.remove(self._weightQueuePath, dir_fd=None)
@@ -142,12 +164,37 @@ def adjust_weights(extractors, i, j, k, l):
 
 def cmp_text_helper(question, answers, annotations, weights, document,fileHandler):
     score = -1
+    # check if there is an annotaton and an answer
     if question in annotations and question in answers:
         topAnswer = answers[question][0].get_parts()
         topAnnotation = annotations[question][0][2]
         score = cmp_text(topAnnotation, topAnswer)
 
     fileHandler.add_result(question, weights, score, document.get_document_id())
+
+def cmp_date_helper(question, answers, annotations, weights, document,fileHandler):
+    score = -1
+    # check if there is an annotaton and an answer
+    if question in annotations and question in answers:
+        topAnswer = answers[question][0][0]
+        topAnnotation = annotations[question][0][2]
+        score = cmp_date(topAnnotation, topAnswer, fileHandler.get_weight_queue()._calendar)
+
+    fileHandler.add_result(question, weights, score, document.get_document_id())
+
+
+
+def cmp_location_helper(question, answers, annotations, weights, document,fileHandler):
+    score = -1
+    # check if there is an annotaton and an answer
+    if question in annotations and question in answers:
+        topAnswer = answers[question][0][0]
+        topAnnotation = annotations[question][0][2]
+        score = cmp_location(topAnnotation, topAnswer, fileHandler.get_weight_queue()._geocoder)
+
+    fileHandler.add_result(question, weights, score, document.get_document_id())
+
+
 
 
 def loadDocumentsAndCoder():
@@ -175,7 +222,7 @@ def loadDocumentsAndCoder():
     geocoder = extractorObject.extractors[1].geocoder
     calendar = extractorObject.extractors[1].calendar
 
-    return docments, geocoder,  calendar
+    return docments, geocoder,  calendar, extractorObject
 
 
 if __name__ == '__main__':
@@ -188,14 +235,14 @@ if __name__ == '__main__':
 
     increment_range = [0.05, 0.10, 0.15, 0.20, 0.25, 0.30, 0.35, 0.40, 0.45, 0.50, 0.55, 0.60, 0.65, 0.70, 0.75, 0.80,0.85, 0.90, 0.95, 1]
     #increment_range = [0.10, 0.15, 1]
-    questions = {'when', 'why', 'who', 'how', 'what'}
+    questions = {'when', 'why', 'who', 'how', 'what', 'where'}
 
     resultPath = os.path.dirname(__file__) + '/result/learnWeights'
     weightQueuePath = os.path.dirname(__file__) + '/result/weightQueue.prickle'
 
     fileHandler = FileHandler(questions, resultPath, weightQueuePath)
     weightQueue = fileHandler.get_weight_queue()
-
+    extractorObject = weightQueue._extractor
     q = queue.Queue()
 
     for i in range(5):
@@ -204,9 +251,9 @@ if __name__ == '__main__':
         t.start()
 
     # Questions
-    for document in documents:
+    # for document in documents:
         while weightQueue.has_next(fileHandler):
-            document, weights = weightQueue.next()
+            weights, document = weightQueue.next()
 
             i = weights[0]
             j = weights[1]
@@ -232,8 +279,8 @@ if __name__ == '__main__':
             cmp_text_helper('how', answers, annotation, [i, j], document, fileHandler)
 
             # These two are tricky because of the used online services
-            #cmp_text_helper('when', answers, annotation, [i, j, k, l], document, resultObjects)
-            #cmp_text_helper('where', answers, annotation, [i, j], document, resultObjects)
+            cmp_date_helper('when', answers, annotation, [i, j, k, l], document, fileHandler)
+            cmp_location_helper('where', answers, annotation, [i, j], document, fileHandler)
             #counter = counter + 1
 
     print("Done")

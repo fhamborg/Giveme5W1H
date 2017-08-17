@@ -13,6 +13,13 @@ Giveme5W(1H) is a state of the art open-source 5W Question Answering system for 
 Before you can use Giveme5W, you need to make sure you have a CoreNLP-server up and running.
 In the case you first to have to install CoreNLP please refer to the CoreNLPs extensive [documentation](https://stanfordnlp.github.io/CoreNLP/corenlp-server.html) and follow the instructions on how to install CoreNLP and start a server.
 
+ * download the server itself from [here](https://stanfordnlp.github.io/CoreNLP/index.html#download)
+    * at the time of writing [this](http://nlp.stanford.edu/software/stanford-corenlp-full-2017-06-09.zip) was the newest version
+ * download also the english language package on the same page
+    * at the time of writing [this](http://nlp.stanford.edu/software/stanford-english-corenlp-2017-06-09-models.jar) was the newest version
+ * extract the server zip,
+ * extract the language zip, copy it inside the server directory
+
 Starting the CoreNLP server: 
 ```
 $ nohup java -mx4g edu.stanford.nlp.pipeline.StanfordCoreNLPServer 9000 &

@@ -82,9 +82,7 @@ class MethodExtractor(AbsExtractor):
                         if candidate_parts:
 
                             # get the CoreNLP tokens for each part e.g lemmas etc.
-
                             # convert list objects back to tuples for backward compatibility
-
                             candidates.append([candidate_parts, tree.stanfordCoreNLPResult['index'], 'prepos'])
 
                 else:

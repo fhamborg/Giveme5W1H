@@ -30,11 +30,14 @@ class Reader(object):
             if not url:
                 print(path + ' has not URL. A URL is mandatory to generate a unique document id')
 
-            # generate an (document)id, That the best way to get a unique name.    
+            # generate an (document)id, That the best way to get a unique name.
+
             data['dId'] = hashlib.sha224(data['url'].encode('utf-8')).hexdigest()
+
 
             # path where the preprocessed file should be
 
+            preprocessedFilePath = None
             if self._preprocessedPath is not None:
                 preprocessedFilePath = self.get_preprocessed_filepath(data['dId'])
 

@@ -30,7 +30,7 @@ class FiveWExtractor:
     preprocessor = None
     extractors = []
 
-    def __init__(self, preprocessor=None, extractors=None, combinedScorers=None):
+    def __init__(self, preprocessor=None, extractors=None, combinedScorers=None, config=None):
         """
         Initializes the given preprocessor and extractors.
 
@@ -71,6 +71,14 @@ class FiveWExtractor:
             ]
 
         self.q = queue.Queue()
+
+        if config:
+            if config.enhancement:
+                print('test')
+            self._config = config;
+
+
+
         # creating worker threads
         for i in range(len(self.extractors)):
             t = Worker(self.q)

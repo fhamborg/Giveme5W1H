@@ -11,6 +11,8 @@ class Document(object):
 
     def __init__(self, title='', desc='', text='', rawData=None):
 
+
+
         self._raw = {'title': title, 'description': desc, 'text': text}
 
         # append all document text into one string

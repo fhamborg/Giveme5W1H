@@ -87,12 +87,14 @@ FiveWExtractor(preprocessor=preprocessor)
         }
        ]
 ```
->This is the output of one question inclusive the golden standard annotation; 2 extracted candidates with some additional information
+>This is the output of one question;
+    - inclusive the golden standard annotation
+    - 2 extracted candidates with some additional information
 
 
 Additional information can be added to the output by setting them as true in the config object.
-- information can be per candidate: like nlpIndexSentence or score
-- information can be per token like: lemma, tag
+- information per candidate: like nlpIndexSentence or score
+- information per token like: lemma, tag
 
 ```python
 {
@@ -164,10 +166,10 @@ This can lead to entries with the same weights, but with different scores.
 This extension can perform further feature extraction and selection.
 
 Install Giveme5_enhancer to use this features.
-'''shell
-pip install Giveme5W_enhancer
 
-'''
+```shell
+pip install Giveme5W_enhancer
+```
 
 ## AIDA
 ```python

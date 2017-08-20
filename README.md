@@ -25,14 +25,100 @@ Starting the CoreNLP server:
 $ nohup java -mx4g edu.stanford.nlp.pipeline.StanfordCoreNLPServer 9000 &
 ```
 
-### (Optional) Configuration
-If you are running CoreNLP on a different port or machine you have to first adjust the network settings for the prerpocessor:
+## Configuration
+All configurations are optional giveme5W has default settings for every option
+
+### CoreNLP Host
+If you are running CoreNLP on a different port or machine you have to first adjust the network settings for the preprocessor:
 
 (Bsp: extractor/examples/simple_api.py)
 ```python
-# CoreNLP host
-core_nlp_host = 'localhost:9000'
+from extractor.preprocessors.preprocessor_core_nlp import Preprocessor
+preprocessor = Preprocessor('localhost:9000')
+FiveWExtractor(preprocessor=preprocessor)
 ```
+
+### Output Configuration
+
+- For file based data - every input is transferred to the output
+    -  For instance, annotated is already a part of the provided example files
+- REST service and file based input have the same output and configuration
+- Fields or their parents indicate with a prefix their origin, if no from giveme5W itself
+  - nlp, from CoreNLP
+
+
+
+```json
+"who": {
+      "annotated": [
+        {
+          "text": "UK"
+        }
+      ],
+      "label": "who",
+      "extracted": [
+        {
+          "score": 1.0,
+          "words": [
+            {
+              "text": "The",
+              "nlpTag": "DT"
+            },
+            {
+              "text": "UK",
+              "nlpTag": "NNP"
+            }
+          ],
+          "nlpIndexSentence": 5
+        },
+        {
+          "score": 0.2,
+          "words": [
+            {
+              "text": "The",
+              "nlpTag": "DT"
+            },
+            {
+              "text": "UK",
+              "nlpTag": "NNP"
+            }
+          ],
+          "nlpIndexSentence": 6
+        }
+       ]
+```
+>This is the output of one question inclusive the golden standard annotation; 2 extracted candidates with some additional information
+
+
+Additional information can be added to the output by setting them as true in the config object.
+- information can be per candidate: like nlpIndexSentence or score
+- information can be per token like: lemma, tag
+
+```python
+{
+  'information': {
+        'nlpIndexSentence': true
+        'candidate':{
+            'nlpTag': true
+        }
+   },
+   'onlyTopCandidate': False
+   'enhancer': {
+    'see': 'giveme5W Enhancer'
+   }
+}
+```
+> see configuration.py for all available settings
+
+
+Use the configuration Singleton to make adjustments
+```python
+from extractor.configuration import Configuration as Config
+Config.get()['information']['nlpIndexSentence'] = False
+```
+
+
+> Not all extractors support config so far
 
 ## File based usage
 Giveme5W can read and write news in a json format [example](https://github.com/fhamborg/news-please/blob/master/newsplease/examples/sample.json).
@@ -46,41 +132,24 @@ The included example files already preprocessed. So you can process them without
 Delete all files in "/cache", if you want to precess them again.
 
 
-## RESTapi
-For the RESTapi it is possible to config the network:
-```python
-# basic configuration of the rest api
-app = Flask(__name__)
-log = logging.getLogger(__name__)
-host = None
-port = 5000
-debug = False
-options = None
-```
+## REST-Service
+Its also possible to use giveme5W as rest service.
 
-You can also adjust the extractors which are used to examine the documents:
-```python
-# If desired, the selection of extractors can be changed and passed to the FiveWExtractor at initialization
-    extractor_list = [
-        action_extractor.ActionExtractor(),             # who & what
-        environment_extractor.EnvironmentExtractor(),   # when & where
-        cause_extractor.CauseExtractor()                # why
-        method_extractor.MethodExtractor()              # how
-    ]
-    extractor = FiveWExtractor(preprocessor, extractor_list)
-```
-
-### Start the python script
 ```
 $ python extractor/examples/simple_api.py
 ```
+> Check the code for more details, it is well documented
 
-Now you can send articles through the RESTapi to GiveMe5W. 
-The API supports the following JSON fields:
 
-* title (always required!)
-* description
-* text
+* GET AND POST requests are supported
+    * Keep in mind that GET has a limited request length and special character encoding can be tricky
+* Input Field
+    * title (mandatory)
+    * description
+    * text
+* Output
+    * [news-please format](https://github.com/fhamborg/news-please/blob/master/newsplease/examples/sample.json)
+
 
 ## Learn_Weights
 Learn_Weights is running the extractor with different weights.
@@ -91,6 +160,27 @@ Because of the combined_scorer, each document is evaluated in each step.
 This can lead to entries with the same weights, but with different scores.
 
 
+# Giveme5W Enhancer
+This extension can perform further feature extraction and selection.
+
+Install Giveme5_enhancer to use this features.
+'''shell
+pip install Giveme5W_enhancer
+
+'''
+
+## AIDA
+```python
+from extractor.configuration import Configuration as Config
+Config.get()['enhancer']['AIDA'] = ['what']
+```
+
+
+## Heideltime
+```python
+from extractor.configuration import Configuration as Config
+Config.get()['enhancer']['Heideltime'] = ['When']
+```
 
 
 

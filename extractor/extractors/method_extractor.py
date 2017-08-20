@@ -47,7 +47,6 @@ class MethodExtractor(AbsExtractor):
         # All kind of adjectives
         candidatesAd = self._convert_to_object_oriented_list(self._extract_ad_candidates(document))
 
-
         # join the candidates
         candidates = candidates + candidatesAd
 
@@ -142,10 +141,7 @@ class MethodExtractor(AbsExtractor):
             for token in sentence['tokens']:
                 if token['index'] > self._maxIndex:
                     self._maxIndex = token['index']
-                if self._is_relevant_pos(token['pos']) and token['ner'] not in ['TIME', 'DATE', 'ORGANIZATION',
-                                                                              'DURATION', 'ORDINAL']:
-
-
+                if self._is_relevant_pos(token['pos']) and token['ner'] not in ['TIME', 'DATE', 'ORGANIZATION', 'DURATION', 'ORDINAL']:
                     candidates.append([[(token['pos'], token['originalText'], token)], sentence['index'], 'adjectiv'])
 
         return candidates

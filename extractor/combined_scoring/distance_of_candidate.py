@@ -15,6 +15,11 @@ class DistanceOfCandidate:
         d_candidates = document.get_answers()[self._dependantQuestions]
         for question in self._majorQuestions:
             m_candidates = document.get_answers()[question]
+
+            if len(m_candidates) == 0:
+                # no candidates to compare with, nothing to to here
+                return
+
             distanceMatrix[question] = []
             max = -99
             min = 99
@@ -29,7 +34,10 @@ class DistanceOfCandidate:
                     #
                     sum += abs(m_candidate.get_sentence_index() - d_index)
                     counter += 1
-                avgDist = sum/counter
+
+                    avgDist = sum/counter
+
+
                 if min > avgDist:
                     min = avgDist
                 if max < avgDist:

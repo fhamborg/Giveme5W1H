@@ -54,7 +54,7 @@ class Candidate:
 
             json = {'score': self._score, 'words': words}
             if self._index:
-                json['index'] = self._index
+                json['nlpIndexSentence'] = self._index
             return json
         return None
 

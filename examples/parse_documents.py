@@ -5,6 +5,7 @@ import sys
 from extractor.extractor import FiveWExtractor
 from extractor.extractors import method_extractor
 from extractor.tools.file.handler import Handler
+from extractor.configuration import Configuration as Config
 
 # Add path to allow execution though console
 from extractors import action_extractor, cause_extractor, environment_extractor
@@ -24,6 +25,12 @@ if you want to process them again by core_nlp
 # java -mx4g -cp "*" edu.stanford.nlp.pipeline.StanfordCoreNLPServer -port 9000 -timeout 15000
 
 if __name__ == '__main__':
+
+
+    Config.get()['information']['nlpIndexSentence'] = False
+    Config.get()['enhancer']['nlpIndexSentence'] = False
+
+
     log = logging.getLogger('GiveMe5W')
     log.setLevel(logging.DEBUG)
     sh = logging.StreamHandler()
@@ -31,9 +38,9 @@ if __name__ == '__main__':
     log.addHandler(sh)
 
     extractor = FiveWExtractor(extractors=[
-        action_extractor.ActionExtractor(),
-        environment_extractor.EnvironmentExtractor(),
-        cause_extractor.CauseExtractor(),
+        #action_extractor.ActionExtractor(),
+        #environment_extractor.EnvironmentExtractor(),
+        #cause_extractor.CauseExtractor(),
         method_extractor.MethodExtractor()
     ])
     inputPath = os.path.dirname(__file__) + '/input'
@@ -50,8 +57,8 @@ if __name__ == '__main__':
                 # set a path to save an load preprocessed documents (CoreNLP result)
                 .set_preprocessed_path(preprocessedPath)
                 # limit the documents read from the input directory (handy for development)
-                #.set_limit(1)
-                .skip_documents_with_output()
+                .set_limit(1)
+                #.skip_documents_with_output()
                 # add an optional extractor (it would do only copying without...)
                 .set_extractor(extractor)
                 # load and saves all document objects for further programming

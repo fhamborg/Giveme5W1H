@@ -5,7 +5,7 @@ from threading import Thread
 from combined_scoring.distance_of_candidate import DistanceOfCandidate
 from extractors import action_extractor, environment_extractor, cause_extractor, method_extractor
 from preprocessors.preprocessor_core_nlp import Preprocessor
-
+from extractor.configuration import Configuration as Config
 
 class Worker(Thread):
     def __init__(self, queue):
@@ -30,7 +30,7 @@ class FiveWExtractor:
     preprocessor = None
     extractors = []
 
-    def __init__(self, preprocessor=None, extractors=None, combinedScorers=None, config=None):
+    def __init__(self, preprocessor=None, extractors=None, combinedScorers=None):
         """
         Initializes the given preprocessor and extractors.
 
@@ -65,18 +65,12 @@ class FiveWExtractor:
         if combinedScorers and len(combinedScorers) > 0:
             self.combinedScorers = combinedScorers
         else:
-            self.log.info('No combinedScorers passed, initializing default configuration.')
+            self.log.info('No combinedScorers: initializing default configuration.')
             self.combinedScorers = [
                 DistanceOfCandidate(('what', 'who'), ('how'))
             ]
 
         self.q = queue.Queue()
-
-        if config:
-            if config.enhancement:
-                print('test')
-            self._config = config;
-
 
 
         # creating worker threads
@@ -84,6 +78,19 @@ class FiveWExtractor:
             t = Worker(self.q)
             t.daemon = True
             t.start()
+
+
+        # check if enhancement config is set and if module is installed
+        if len(Config.get()['enhancer']) > 0:
+            try:
+                import Giveme5W_enhancer.enhancer as optional_import
+                self.enhancer = optional_import.Enhancer()
+            except ImportError:
+                optional_import = None
+                self.enhancer = optional_import
+                self.log.info('Install giveme5W_enhancer to use enhancer functionality')
+        else:
+            self.log.info('No enhancer')
 
     def parse(self, doc):
         """
@@ -107,5 +114,9 @@ class FiveWExtractor:
         if self.combinedScorers:
             for combinedScorer in self.combinedScorers:
                 combinedScorer.score(doc)
+
+        # enhancer
+        if self.enhancer:
+            self.enhancer.process(doc)
 
         return doc

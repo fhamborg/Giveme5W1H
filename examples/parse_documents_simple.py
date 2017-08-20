@@ -10,7 +10,12 @@ sys.path.insert(0, '/'.join(os.path.realpath(__file__).split('/')[:-3]))
 
 """
 This is a simple example how to use the extractor in combination with NewsPlease files.
-File will be process one by one, nothing is cached
+File will be process one by one.
+
+- Nothing is cached
+- Existing files (in output) will be overwritten
+- 
+
 """
 
 # don`t forget to start up core_nlp_host
@@ -26,6 +31,8 @@ if __name__ == '__main__':
     extractor = FiveWExtractor()
     inputPath = os.path.dirname(__file__) + '/input'
     outputPath = os.path.dirname(__file__) + '/output'
+
+
 
     # initiate the news-please file handler with the input directory
     (Handler(inputPath)

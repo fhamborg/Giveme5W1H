@@ -1,3 +1,4 @@
+import importlib
 import logging
 import queue
 from threading import Thread
@@ -79,18 +80,41 @@ class FiveWExtractor:
             t.daemon = True
             t.start()
 
-
-        # check if enhancement config is set and if module is installed
-        if len(Config.get()['enhancer']) > 0:
-            try:
-                import Giveme5W_enhancer.enhancer as optional_import
-                self.enhancer = optional_import.Enhancer()
-            except ImportError:
-                optional_import = None
-                self.enhancer = optional_import
-                self.log.info('Install giveme5W_enhancer to use enhancer functionality')
+        
+        # check if there are enhancements
+        enhancements = Config.get().get('enhancements')
+        if enhancements:
+            self.enhancer = []
+            for enhancement_name in enhancements:
+                enhancement = enhancements.get(enhancement_name)
+                # check if a enhancement is enabled
+                if enhancement.get('enabled'):
+                    main_module = enhancement.get('mainModule')
+                    if main_module and len(main_module) > 0:
+                        try:
+                            optional_import = importlib.import_module(enhancement_name+'.'+main_module)
+                            self.enhancer.append(optional_import.Enhancement(enhancement.get('config')))
+                        except ImportError:
+                            self.log.error(main_module + ' import raised an exception. Is it installed?')
+                    else:
+                        self.log.error(main_module + ' is enabled, but no mainModule string is set')
         else:
-            self.log.info('No enhancer')
+            self.enhancer = None
+
+        if len(self.enhancer) == 0:
+            self.log.info('No enhancement enabled')
+
+
+       # if len(Config.get()['enhancer']) > 0:
+       #     try:
+       #         import Giveme5W_enhancer.enhancer as optional_import
+       #         self.enhancer = optional_import.Enhancer()
+       #     except ImportError:
+       #         optional_import = None
+       #         self.enhancer = optional_import
+       #        self.log.info('Install giveme5W_enhancer to use enhancer functionality')
+       # else:
+       #     self.log.info('No enhancer')
 
     def parse(self, doc):
         """
@@ -117,6 +141,7 @@ class FiveWExtractor:
 
         # enhancer
         if self.enhancer:
-            self.enhancer.process(doc)
+            for enhancement in self.enhancer:
+                enhancement.process(doc)
 
         return doc

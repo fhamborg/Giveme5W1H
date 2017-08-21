@@ -106,7 +106,7 @@ Additional information can be added to the output by setting them as true in the
    },
    'onlyTopCandidate': False
    'enhancer': {
-    'see': 'giveme5W Enhancer'
+    'see': 'Enhancements'
    }
 }
 ```
@@ -162,7 +162,27 @@ Because of the combined_scorer, each document is evaluated in each step.
 This can lead to entries with the same weights, but with different scores.
 
 
-# Giveme5W Enhancer
+
+#Enhancements
+
+The enhancement was designed tp
+You can hockup any self developer enhancer by adding them to the configuration
+
+```shell
+"Giveme5W_enhancer":  { # Thats the module name
+                            "enabled": False,
+                            "mainModule": "enhancement", # thats the .py file, must contain a class name Enhancement
+                            "config": {} # This will passed to the constructor
+                        }
+```
+or by passing them during initialisation
+
+```shell
+pip install Giveme5W_enhancer
+```
+
+
+## Giveme5W Enhancer
 This extension can perform further feature extraction and selection.
 
 Install Giveme5_enhancer to use this features.
@@ -171,14 +191,14 @@ Install Giveme5_enhancer to use this features.
 pip install Giveme5W_enhancer
 ```
 
-## AIDA
+### AIDA
 ```python
 from extractor.configuration import Configuration as Config
 Config.get()['enhancer']['AIDA'] = ['what']
 ```
 
 
-## Heideltime
+### Heideltime
 ```python
 from extractor.configuration import Configuration as Config
 Config.get()['enhancer']['Heideltime'] = ['When']

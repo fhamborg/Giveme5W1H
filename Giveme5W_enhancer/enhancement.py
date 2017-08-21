@@ -2,9 +2,9 @@ import logging
 
 #
 # Random metric, it will always return a distance between 0 and 1
-class Enhancer():
+class Enhancement():
 
-    def __init__(self):
+    def __init__(self, config):
         self.log = logging.getLogger('GiveMe5W')
         self.log.info('Enhancer initialised')
 

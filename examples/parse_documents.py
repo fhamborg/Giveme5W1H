@@ -28,7 +28,7 @@ if __name__ == '__main__':
 
 
     Config.get()['information']['nlpIndexSentence'] = False
-    Config.get()['enhancer']['nlpIndexSentence'] = False
+    Config.get()['enhancements']['Giveme5W_enhancer']['enabled'] = True
 
 
     log = logging.getLogger('GiveMe5W')

@@ -31,7 +31,7 @@ class FiveWExtractor:
     preprocessor = None
     extractors = []
 
-    def __init__(self, preprocessor=None, extractors=None, combinedScorers=None):
+    def __init__(self, preprocessor=None, extractors=None, combined_scorers=None, enhancement=None):
         """
         Initializes the given preprocessor and extractors.
 
@@ -63,8 +63,8 @@ class FiveWExtractor:
                 method_extractor.MethodExtractor()
             ]
 
-        if combinedScorers and len(combinedScorers) > 0:
-            self.combinedScorers = combinedScorers
+        if combined_scorers and len(combined_scorers) > 0:
+            self.combinedScorers = combined_scorers
         else:
             self.log.info('No combinedScorers: initializing default configuration.')
             self.combinedScorers = [
@@ -80,29 +80,29 @@ class FiveWExtractor:
             t.daemon = True
             t.start()
 
-        
+        self.enhancement = enhancement
         # check if there are enhancements
-        enhancements = Config.get().get('enhancements')
-        if enhancements:
-            self.enhancer = []
-            for enhancement_name in enhancements:
-                enhancement = enhancements.get(enhancement_name)
-                # check if a enhancement is enabled
-                if enhancement.get('enabled'):
-                    main_module = enhancement.get('mainModule')
-                    if main_module and len(main_module) > 0:
-                        try:
-                            optional_import = importlib.import_module(enhancement_name+'.'+main_module)
-                            self.enhancer.append(optional_import.Enhancement(enhancement.get('config')))
-                        except ImportError:
-                            self.log.error(main_module + ' import raised an exception. Is it installed?')
-                    else:
-                        self.log.error(main_module + ' is enabled, but no mainModule string is set')
-        else:
-            self.enhancer = None
+        # enhancements = Config.get().get('enhancements')
+        # if enhancements:
+        #     self.enhancer = []
+        #     for enhancement_name in enhancements:
+        #         enhancement = enhancements.get(enhancement_name)
+        #         # check if a enhancement is enabled
+        #         if enhancement.get('enabled'):
+        #             main_module = enhancement.get('mainModule')
+        #             if main_module and len(main_module) > 0:
+        #                 try:
+        #                     optional_import = importlib.import_module(enhancement_name+'.'+main_module)
+        #                     self.enhancer.append(optional_import.Enhancement(enhancement.get('config')))
+        #                 except ImportError:
+        #                     self.log.error(main_module + ' import raised an exception. Is it installed?')
+        #             else:
+        #                 self.log.error(main_module + ' is enabled, but no mainModule string is set')
+        # else:
+        #     self.enhancer = None
 
-        if len(self.enhancer) == 0:
-            self.log.info('No enhancement enabled')
+        #if len(self.enhancer) == 0:
+        #    self.log.info('No enhancement enabled')
 
 
        # if len(Config.get()['enhancer']) > 0:
@@ -140,8 +140,8 @@ class FiveWExtractor:
                 combinedScorer.score(doc)
 
         # enhancer
-        if self.enhancer:
-            for enhancement in self.enhancer:
+        if self.enhancement:
+            for enhancement in self.enhancement:
                 enhancement.process(doc)
 
         return doc

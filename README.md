@@ -192,11 +192,21 @@ pip install Giveme5W_enhancer
 ```
 
 ### AIDA
+
 ```python
 from extractor.configuration import Configuration as Config
 Config.get()['enhancer']['AIDA'] = ['what']
 ```
 
+- OSX
+    - brew install postgres
+    - brew services start postgresql
+- createuser postgres -s
+- psql CREATE DATABASE AIDA;
+- bzcat AIDA_entity_repository_2014-01-02v7.sql.bz2 | psql aida
+
+> - Warning database dump has 26GB
+  - Import takes up to 24h and around 100 GB disc space
 
 ### Heideltime
 ```python

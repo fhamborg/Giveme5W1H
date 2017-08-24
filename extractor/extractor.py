@@ -52,7 +52,6 @@ class FiveWExtractor:
         # initialize extractors
         if extractors is not None and len(extractors) > 0:
             self.extractors = extractors
-
         else:
             # the default extractor selection
             self.log.info('No extractors passed, initializing default configuration.')

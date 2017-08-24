@@ -7,8 +7,8 @@ class Configuration:
                 "nlpTag": False
                 }
            },
-        "onlyTopCandidate": False
-
+        "onlyTopCandidate": False,
+        "Giveme5W-runtime-resources": './../../Giveme5w-runtime-resources/'
         }
 
     @classmethod

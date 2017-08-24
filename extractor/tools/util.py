@@ -10,6 +10,8 @@ from nltk.corpus import wordnet
 from nltk.tokenize import word_tokenize
 
 
+
+
 def cmp_text(annotation, candidate):
     """
     Compare the retrieved answer with the annotation using WordNet path distance.

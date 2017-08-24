@@ -19,24 +19,40 @@ In the case you first to have to install CoreNLP please refer to the CoreNLPs ex
     * at the time of writing [this](http://nlp.stanford.edu/software/stanford-english-corenlp-2017-06-09-models.jar) was the newest version
  * extract the server zip,
  * extract the language zip, copy it inside the server directory
+ * copy it into Giveme5W-runtime-resources
 
-Starting the CoreNLP server: 
+
+
+## Giveme5w_runtime_resources
+All external resource are expected to be place in a folder called next to Giveme5W.
+You can change this location over the config:
+
+
+```python
+Config.get()['CoreNLP'] = 'path'
 ```
-$ nohup java -mx4g edu.stanford.nlp.pipeline.StanfordCoreNLPServer 9000 &
-```
+
 
 ## Configuration
 All configurations are optional giveme5W has default settings for every option
 
 ### CoreNLP Host
-If you are running CoreNLP on a different port or machine you have to first adjust the network settings for the preprocessor:
+By default, Giveme5W tries to start the server with default port.
 
+You can prevent this by setting up a preprocessor with another url in case you run it on another masch:
 (Bsp: extractor/examples/simple_api.py)
 ```python
 from extractor.preprocessors.preprocessor_core_nlp import Preprocessor
 preprocessor = Preprocessor('localhost:9000')
 FiveWExtractor(preprocessor=preprocessor)
 ```
+
+Then start up CoreNLP by:
+```
+$ nohup java -mx4g edu.stanford.nlp.pipeline.StanfordCoreNLPServer 9000 &
+```
+
+
 
 ### Output Configuration
 
@@ -195,7 +211,7 @@ pip install Giveme5W_enhancer
 
 ```python
 from extractor.configuration import Configuration as Config
-Config.get()['enhancer']['AIDA'] = ['what']
+Config.get()
 ```
 
 - OSX
@@ -203,10 +219,11 @@ Config.get()['enhancer']['AIDA'] = ['what']
     - brew services start postgresql
 - createuser postgres -s
 - psql CREATE DATABASE AIDA;
-- bzcat AIDA_entity_repository_2014-01-02v7.sql.bz2 | psql aida
+- bzcat [AIDA_entity_repository_2014-01-02v7.sql.bz2](http://resources.mpi-inf.mpg.de/yago-naga/aida/download/entity-repository/) | psql aida
 
 > - Warning database dump has 26GB
   - Import takes up to 24h and around 100 GB disc space
+  - Drop the database, if you have to restart import
 
 ### Heideltime
 ```python

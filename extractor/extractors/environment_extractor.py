@@ -4,6 +4,7 @@ from geopy.distance import great_circle
 from geopy.geocoders import Nominatim
 from parsedatetime import parsedatetime as pdt
 
+from candidate import Candidate
 from .abs_extractor import AbsExtractor
 
 
@@ -92,7 +93,10 @@ class EnvironmentExtractor(AbsExtractor):
                 location = self.geocoder.geocode(' '.join(candidate[0]))
                 if location is not None:
                     # fetch pos and append to candidates
-                    locations.append((self._fetch_pos(pos_tags[i], candidate[0]), location, i))
+                    ca = Candidate()
+                    ca.set_parts((self._fetch_pos(pos_tags[i], candidate[0]), location, i))
+                    locations.append(ca)
+                    #locations.append((self._fetch_pos(pos_tags[i], candidate[0]), location, i))
 
             for candidate in self._extract_entities(ner_tags[i], ['TIME', 'DATE'], inverted=True,
                                                     phrase_range=1, groups={'TIME': 'TIME+DATE', 'DATE': 'TIME+DATE'}):
@@ -100,15 +104,27 @@ class EnvironmentExtractor(AbsExtractor):
                 if candidate[1] == 'TIME':
                     # If a date was already mentioned combine it with the mentioned time
                     if last_date is not None:
-                        dates.append((last_date + self._fetch_pos(pos_tags[i], candidate[0]), i))
+                        ca = Candidate()
+                        ca.set_parts((last_date + self._fetch_pos(pos_tags[i], candidate[0]), i))
+                        dates.append(ca)
+                        # dates.append((last_date + self._fetch_pos(pos_tags[i], candidate[0]), i))
                     else:
-                        dates.append((self._fetch_pos(pos_tags[i], candidate[0]), i))
+                        ca = Candidate()
+                        ca.set_parts((self._fetch_pos(pos_tags[i], candidate[0]), i))
+                        dates.append(ca)
+                        # dates.append((self._fetch_pos(pos_tags[i], candidate[0]), i))
                 elif candidate[1] == 'DATE':
-                    dates.append((self._fetch_pos(pos_tags[i], candidate[0]), i))
+                    #dates.append((self._fetch_pos(pos_tags[i], candidate[0]), i))
+                    ca = Candidate()
+                    ca.set_parts((self._fetch_pos(pos_tags[i], candidate[0]), i))
+                    dates.append(ca)
                     last_date = self._fetch_pos(pos_tags[i], candidate[0])
                 else:
                     # String includes date and time
-                    dates.append((self._fetch_pos(pos_tags[i], candidate[0]), i))
+                    ca = Candidate()
+                    ca.set_parts((self._fetch_pos(pos_tags[i], candidate[0]), i))
+                    dates.append(ca)
+                    #dates.append((self._fetch_pos(pos_tags[i], candidate[0]), i))
 
         document.set_candidates('EnvironmentExtractorNeDates', dates)
         document.set_candidates('EnvironmentExtractorNeLocatios', locations)
@@ -131,8 +147,10 @@ class EnvironmentExtractor(AbsExtractor):
         weights = self.weights[0]
         weights_sum = sum(weights)
 
-        for location in document.get_candidates('EnvironmentExtractorNeLocatios'):
+        for candidate in document.get_candidates('EnvironmentExtractorNeLocatios'):
             # fetch the boundingbox: (min lat, max lat, min long, max long)
+
+            location = candidate.get_parts()
             bb = location[1].raw['boundingbox']
 
             # use the vincenty algorithm to calculate the covered area
@@ -203,7 +221,9 @@ class EnvironmentExtractor(AbsExtractor):
         # fetch the date the article was published as a reference date
         reference = self.calendar.parse(document.get_date() or '')
 
-        for candidate in document.get_candidates('EnvironmentExtractorNeDates'):
+        for candidateO in document.get_candidates('EnvironmentExtractorNeDates'):
+
+            candidate = candidateO.get_parts()
             # translate date strings into date objects
             date_str = ' '.join([t[0] for t in candidate[0]])
 
@@ -248,7 +268,7 @@ class EnvironmentExtractor(AbsExtractor):
                 score /= weights_sum
             candidate[1] = score
 
-        ranked_candidates = [(c[0], c[1]) for c in ranked_candidates]
+        ranked_candidates = [[c[0], c[1] ] for c in ranked_candidates]
         ranked_candidates.sort(key=lambda x: x[1], reverse=True)
         return ranked_candidates
 

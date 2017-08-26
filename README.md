@@ -10,7 +10,8 @@ Giveme5W(1H) is a state of the art open-source 5W Question Answering system for 
 * **How** did it happen?
 
 ## Getting started
-Before you can use Giveme5W, you need to make sure you have a CoreNLP-server up and running.
+Before you can use Giveme5W, you need to make sure you have a CoreNLP-server runtimes.
+
 In the case you first to have to install CoreNLP please refer to the CoreNLPs extensive [documentation](https://stanfordnlp.github.io/CoreNLP/corenlp-server.html) and follow the instructions on how to install CoreNLP and start a server.
 
  * download the server itself from [here](https://stanfordnlp.github.io/CoreNLP/index.html#download)
@@ -19,22 +20,12 @@ In the case you first to have to install CoreNLP please refer to the CoreNLPs ex
     * at the time of writing [this](http://nlp.stanford.edu/software/stanford-english-corenlp-2017-06-09-models.jar) was the newest version
  * extract the server zip,
  * extract the language zip, copy it inside the server directory
- * copy it into Giveme5W-runtime-resources
+ * copy it into [Giveme5W-runtime-resources](#Giveme5W-runtime-resources) next to your repository folder
 
-
-
-## Giveme5w_runtime_resources
-All external resource are expected to be place in a folder called next to Giveme5W.
-You can change this location over the config:
-
-
-```python
-Config.get()['CoreNLP'] = 'path'
-```
-
+Run environment_enhancer.py to start up coreNLP.
 
 ## Configuration
-All configurations are optional giveme5W has default settings for every option
+All configurations are optional.
 
 ### CoreNLP Host
 By default, Giveme5W tries to start the server with default port.
@@ -51,7 +42,6 @@ Then start up CoreNLP by:
 ```
 $ nohup java -mx4g edu.stanford.nlp.pipeline.StanfordCoreNLPServer 9000 &
 ```
-
 
 
 ### Output Configuration
@@ -178,42 +168,11 @@ Because of the combined_scorer, each document is evaluated in each step.
 This can lead to entries with the same weights, but with different scores.
 
 
-
-#Enhancements
-
-The enhancement was designed tp
-You can hockup any self developer enhancer by adding them to the configuration
-
-```shell
-"Giveme5W_enhancer":  { # Thats the module name
-                            "enabled": False,
-                            "mainModule": "enhancement", # thats the .py file, must contain a class name Enhancement
-                            "config": {} # This will passed to the constructor
-                        }
-```
-or by passing them during initialisation
-
-```shell
-pip install Giveme5W_enhancer
-```
+# Giveme5W Enhancer
+This extension can perform further feature extraction and selection. Install Giveme5_enhancer to use this features.
 
 
-## Giveme5W Enhancer
-This extension can perform further feature extraction and selection.
-
-Install Giveme5_enhancer to use this features.
-
-```shell
-pip install Giveme5W_enhancer
-```
-
-### AIDA
-
-```python
-from extractor.configuration import Configuration as Config
-Config.get()
-```
-
+## AIDA
 - OSX
     - brew install postgres
     - brew services start postgresql
@@ -225,14 +184,20 @@ Config.get()
   - Import takes up to 24h and around 100 GB disc space
   - Drop the database, if you have to restart import
 
-### Heideltime
-```python
-from extractor.configuration import Configuration as Config
-Config.get()['enhancer']['Heideltime'] = ['When']
+Use environment_enhancer.py to startup CoreNLP and AIDA together.
+
+## Heideltime
+[Heideltime](https://github.com/HeidelTime/heideltime) works out of the box with the 'Giveme5W-runtime-resources'.
+This enhancement parse further the "when" answers to get precise time definitions.
+
+
+# Giveme5W-runtime-resources
+Giveme5W expects all libraries to be located in the same directory and next to the Giveme5W folder.
+
+
+You can change this with:
+```shell
+Config.get()['Giveme5W-runtime-resources'] = './../Giveme5W-runtime-resources'
 ```
-
-
-
-
-## License
+# License
 The project is licensed under the Apache License 2.0. Make sure that you use Giveme5W in compliance with applicable law. Copyright 2016 The Giveme5W team

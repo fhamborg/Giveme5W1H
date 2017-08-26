@@ -169,7 +169,10 @@ This can lead to entries with the same weights, but with different scores.
 
 
 # Giveme5W Enhancer
-This extension can perform further feature extraction and selection. Install Giveme5_enhancer to use this features.
+This extension can perform further feature extraction and selection.
+Install Giveme5_enhancer to use this features.
+
+
 
 
 ## AIDA
@@ -179,6 +182,7 @@ This extension can perform further feature extraction and selection. Install Giv
 - createuser postgres -s
 - psql CREATE DATABASE AIDA;
 - bzcat [AIDA_entity_repository_2014-01-02v7.sql.bz2](http://resources.mpi-inf.mpg.de/yago-naga/aida/download/entity-repository/) | psql aida
+-  Download [3.0.4](https://github.com/yago-naga/aida/archive/3.0.4.zip)
 
 > - Warning database dump has 26GB
   - Import takes up to 24h and around 100 GB disc space
@@ -186,14 +190,48 @@ This extension can perform further feature extraction and selection. Install Giv
 
 Use environment_enhancer.py to startup CoreNLP and AIDA together.
 
+usage:
+```python
+from Giveme5W_enhancer.aida import Aida
+extractor = FiveWExtractor(extractors=[
+        environment_extractor.EnvironmentExtractor(),
+    ], enhancement=[
+        Aida()
+    ])
+```
+
 ## Heideltime
 [Heideltime](https://github.com/HeidelTime/heideltime) works out of the box with the 'Giveme5W-runtime-resources'.
 This enhancement parse further the "when" answers to get precise time definitions.
 
+- Download [2.2.1](https://github.com/HeidelTime/heideltime/releases/download/VERSION2.2.1/heideltime-standalone-2.2.1.zip)
+- Copy it to Giveme5W-runtime-resources
+- Follow the installation instruction Manual.pdf
+> You must use treeTagger, Heideltime is not compatible with CoreNLP 3.X
+
+
+
+usage:
+```python
+from Giveme5W_enhancer.heideltime import Heideltime
+extractor = FiveWExtractor(extractors=[
+        environment_extractor.EnvironmentExtractor(),
+    ], enhancement=[
+        Heideltime()
+    ])
+```
 
 # Giveme5W-runtime-resources
-Giveme5W expects all libraries to be located in the same directory and next to the Giveme5W folder.
+Giveme5W expects all libraries to be located in the same directory 'Giveme5W-runtime-resources' and next to the Giveme5W folder.
 
+- Folder Structure
+    - Giveme5W (Master)
+    - Giveme5W-enhancer (Master)
+    - Giveme5W-runtime-resources (Master)
+        - aida-3.0.4
+        - heideltime-standalone
+        - stanford-corenlp-full-2016-10-31
+        - treeTagger
 
 You can change this with:
 ```shell

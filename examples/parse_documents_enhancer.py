@@ -2,16 +2,13 @@ import logging
 import os
 import sys
 
-from extractor.extractor import FiveWExtractor
-from extractor.extractors import method_extractor
-from extractor.tools.file.handler import Handler
+from Giveme5W_enhancer.heideltime import Heideltime
 from extractor.configuration import Configuration as Config
-
-from Giveme5W_enhancer.enhancement import Enhancement
+from extractor.extractor import FiveWExtractor
+from extractor.tools.file.handler import Handler
+from extractors import environment_extractor
 
 # Add path to allow execution though console
-from extractors import action_extractor, cause_extractor, environment_extractor
-
 sys.path.insert(0, '/'.join(os.path.realpath(__file__).split('/')[:-3]))
 
 """
@@ -41,7 +38,7 @@ if __name__ == '__main__':
         # cause_extractor.CauseExtractor(),
         # method_extractor.MethodExtractor()
     ], enhancement=[
-        Enhancement()
+        Heideltime()
     ])
     inputPath = os.path.dirname(__file__) + '/input'
     outputPath = os.path.dirname(__file__) + '/output'

@@ -141,6 +141,6 @@ class FiveWExtractor:
         # enhancer
         if self.enhancement:
             for enhancement in self.enhancement:
-                enhancement.process(doc)
+                enhancement.enhance(doc)
 
         return doc

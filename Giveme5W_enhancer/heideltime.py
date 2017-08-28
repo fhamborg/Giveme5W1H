@@ -61,9 +61,11 @@ class Heideltime():
                         answer.append(json.dumps(o))
 
             else:
-                self.log.error(document.get_document_id + ': ' + document.get_title())
+                self.log.error('')
+                self.log.error(document.get_document_id() + ': ' + document.get_title())
                 self.log.error(
-                    "Heideltime need a publish date to parse news. Input:" + document.get_rawData().get('publish_date'))
+                    "         Heideltime need a publish date to parse news. Input:" + document.get_rawData().get('publish_date'))
         else:
-            self.log.error(document.get_document_id + ': ' + document.get_title())
-            self.log.error("Heideltime need EnvironmentExtractor results. skipped")
+            self.log.error('')
+            self.log.error(document.get_document_id() + ': ' + document.get_title())
+            self.log.error("       Heideltime need EnvironmentExtractor results. skipped")

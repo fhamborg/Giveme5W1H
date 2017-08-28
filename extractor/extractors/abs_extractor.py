@@ -1,4 +1,5 @@
 import logging
+from candidate import Candidate
 from abc import ABCMeta, abstractmethod
 from itertools import product
 
@@ -128,8 +129,14 @@ class AbsExtractor:
                         new = False
                         break
             if new:
+
+
                 mentioned.append(string)
                 filtered.append(candidate)
+                #
+                cd = Candidate()
+
+
         return filtered
 
     def overlap(self, list_a, list_b, sensitive=False):

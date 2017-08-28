@@ -6,6 +6,7 @@ class Candidate:
         self._index = None
         self._parts = None
         self._lemma_count = None
+        self._enhancement = {}
         self._calculations = {}
 
     def get_parts(self):
@@ -13,6 +14,12 @@ class Candidate:
 
     def set_parts(self, parts):
         self._parts = parts
+
+    def get_parts_as_text(self):
+        answer_text = ''
+        for part in self._parts:
+            answer_text = answer_text + ' ' + part[0]
+        return answer_text
 
     def set_raw(self, raw):
         self._raw = raw
@@ -45,21 +52,40 @@ class Candidate:
     def get_sentence_index(self):
         return self._index
 
+    # json representation for this candidate
     def get_json(self):
-
         if self._parts:
             words = []
             for part in self._parts:
                 words.append({'text': part[0], 'tag': part[1]})
 
             json = {'score': self._score, 'words': words}
+
+            if len(self._enhancement) > 0:
+                json['enhancement'] = self._enhancement
+
             if self._index:
                 json['nlpIndexSentence'] = self._index
             return json
         return None
 
+
+    # additional information create by enhancments
+    def get_enhancement(self, key):
+        return self._enhancement.get(key)
+
+    # additional information create by enhancments
+    # must be writeable as json
+    def set_enhancement(self, key, value):
+        self._enhancement[key] = value
+
+    def reset_enhancements(self):
+        self._enhancement = {}
+
+
     # helper to decouple evaluation calculations from candidate extraction
     # use this for all evaluation related information
+    # in other words store temporal information per candidate over this interface
     def get_calculations(self, key):
         return self._calculations[key]
 

@@ -15,7 +15,7 @@ from extractor.configuration import Configuration as Config
 
 async def _do_subprocess(filename, date, path, results):
     path_to_libs = Config.get()['Giveme5W-runtime-resources']
-    command = 'java -jar de.unihd.dbs.heideltime.standalone.jar -t NEWS ' + filename + ' -dct ' + date
+    command = 'java -jar de.unihd.dbs.heideltime.standalone.jar -it -t NEWS ' + filename + ' -dct ' + date
     proc = await asyncio.create_subprocess_shell(command,
                                                  shell=True, cwd=path_to_libs + '/' + path,
                                                  stdout=asyncio.subprocess.PIPE)
@@ -31,20 +31,18 @@ class Heideltime():
         # raw document date
         date = document.get_rawData().get('publish_date')
 
-        answers = document.get_answers().get('when')
+        candidates = document.get_answers().get('when')
 
-        if answers:
+        if candidates:
             # parsed document date
             date = parse(date)
             date = date.strftime('%Y-%m-%d')
             if date:
 
-                for answer in answers:
-                    answer_text = ''
-                    for part in answer[0]:
-                        answer_text = answer_text + ' ' + part[0]
-
-                    if answer_text and len(answer_text) > 1:
+                for candidate in candidates:
+                    answer_text = candidate.get_parts_as_text()
+                    # assumption, there is no way to define a time with 2 characters -> 1am
+                    if answer_text and len(answer_text) > 2:
                         # write the question as file to disc
                         outfile = open(filename, 'w')
                         outfile.write(answer_text)
@@ -58,7 +56,8 @@ class Heideltime():
 
                         # WARNING direct conversion to JSON, some information can`t be transferred
                         o = xmltodict.parse(results[0])
-                        answer.append(json.dumps(o))
+                        candidate.set_enhancement('heideltime', o)
+                        #answer.append(json.dumps(o))
 
             else:
                 self.log.error('')

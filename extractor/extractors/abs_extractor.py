@@ -132,10 +132,12 @@ class AbsExtractor:
 
 
                 mentioned.append(string)
-                filtered.append(candidate)
+                #filtered.append(candidate)
                 #
                 cd = Candidate()
-
+                cd.set_parts(candidate[0])
+                cd.set_score(candidate[1])
+                filtered.append(cd)
 
         return filtered
 

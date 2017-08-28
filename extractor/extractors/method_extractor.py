@@ -79,7 +79,6 @@ class MethodExtractor(AbsExtractor):
                         candidate_parts = self._find_vb_cc_vb_parts(right_sibling_pos)
 
                         if candidate_parts:
-
                             # get the CoreNLP tokens for each part e.g lemmas etc.
                             # convert list objects back to tuples for backward compatibility
                             candidates.append([candidate_parts, tree.stanfordCoreNLPResult['index'], 'prepos'])
@@ -108,7 +107,7 @@ class MethodExtractor(AbsExtractor):
         posLen = len(pos)
         # bugfix, at some very rare occasion the tree isn`t exactly reflecting the CoreNLP structure
         if posLen + startIndex >= len(root.stanfordCoreNLPResult['tokens']):
-            posLen = len(root.stanfordCoreNLPResult['tokens']) - startIndex -1
+            posLen = len(root.stanfordCoreNLPResult['tokens']) - startIndex - 1
 
         for x in range(0, posLen):
             # convert part tuple to list, get token
@@ -120,7 +119,6 @@ class MethodExtractor(AbsExtractor):
             candidate_parts_as_list.append(partsAsList)
 
         return [tuple(x) for x in candidate_parts_as_list]
-
 
     def _extract_ad_candidates(self, document):
         """
@@ -141,7 +139,8 @@ class MethodExtractor(AbsExtractor):
             for token in sentence['tokens']:
                 if token['index'] > self._maxIndex:
                     self._maxIndex = token['index']
-                if self._is_relevant_pos(token['pos']) and token['ner'] not in ['TIME', 'DATE', 'ORGANIZATION', 'DURATION', 'ORDINAL']:
+                if self._is_relevant_pos(token['pos']) and token['ner'] not in ['TIME', 'DATE', 'ORGANIZATION',
+                                                                                'DURATION', 'ORDINAL']:
                     candidates.append([[(token['pos'], token['originalText'], token)], sentence['index'], 'adjectiv'])
 
         return candidates
@@ -178,22 +177,22 @@ class MethodExtractor(AbsExtractor):
                     global_max_lemma = lemma_count
             # assigme the greatest lemma to the candidate
             candidate.set_calculations('lemma_count', maxLemma)
-            #candidate.set_lemma_count(maxLemma)
+            # candidate.set_lemma_count(maxLemma)
 
         # normalize frequency (per lemma)
         for candidate in candidates:
             count = candidate.get_calculations('lemma_count')
-            candidate.set_calculations('lemma_count_norm', count /global_max_lemma)
-            #print(candidate.get_calculations('lemma_count_norm'))
+            candidate.set_calculations('lemma_count_norm', count / global_max_lemma)
+            # print(candidate.get_calculations('lemma_count_norm'))
 
         # normalize position - reserved order
         sentences_count = len(document.get_sentences())
         for candidate in candidates:
             freq = (sentences_count - candidate.get_sentence_index()) / sentences_count
-            candidate.set_calculations('position_frequency_norm', freq )
-            #print(candidate.get_calculations('position_frequency_norm'))
-            #print(candidate.get_sentence_index())
-            #print('')
+            candidate.set_calculations('position_frequency_norm', freq)
+            # print(candidate.get_calculations('position_frequency_norm'))
+            # print(candidate.get_sentence_index())
+            # print('')
 
         # callculate score
         score_max = 0
@@ -201,12 +200,12 @@ class MethodExtractor(AbsExtractor):
         for candidate in candidates:
             score = ((candidate.get_calculations('lemma_count_norm') * self.weights[1] +
                       candidate.get_calculations('position_frequency_norm') * self.weights[0]
-                        )/ weights_sum)
+                      ) / weights_sum)
             candidate.set_score(score)
             if score > score_max:
                 score_max = score
 
-        #normalize score
+        # normalize score
         for candidate in candidates:
             score = candidate.get_score()
             candidate.set_score(score / score_max)
@@ -216,7 +215,7 @@ class MethodExtractor(AbsExtractor):
 
     def _convert_to_object_oriented_list(self, list):
         whoList = []
-        #for answer in list:
+        # for answer in list:
         for answer in self._filter_duplicates(list):
             ca = Candidate()
             ca.set_parts(answer[0])
@@ -245,15 +244,15 @@ class MethodExtractor(AbsExtractor):
 
     def _find_index_from_root(self, root, path):
 
-       if(len(path) > 1):
+        if (len(path) > 1):
             position = path.pop(0)
             leftChildCount = 0
             for x in range(0, position):
-                 leftChildCount = leftChildCount + self._count_elements(root[x])
+                leftChildCount = leftChildCount + self._count_elements(root[x])
             return leftChildCount + self._find_index_from_root(root[position], path)
-       elif (len(path) is 1):
-            return path.pop(0)+1
-       else:
+        elif (len(path) is 1):
+            return path.pop(0) + 1
+        else:
             return 0
 
     def _count_elements(self, root):

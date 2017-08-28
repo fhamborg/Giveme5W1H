@@ -2,10 +2,10 @@ import json
 import logging
 import math
 import os
+import pickle
 import queue
 import sys
 from threading import Thread
-import pickle
 
 from extractor.extractor import FiveWExtractor
 from extractor.tools.file.handler import Handler
@@ -37,12 +37,11 @@ class WeightQueue:
     _documentIndex = 0
     _weight_queue_index = 0
 
-
     _tmp_counter = 0
     _counter = 0
     _document_counter = 0
 
-    def __init__(self, increment_range, save_interval = 30, ):
+    def __init__(self, increment_range, save_interval=30, ):
 
         self._documents, self._geocoder, self._calendar, self._extractor = loadDocumentsAndCoder()
 
@@ -58,7 +57,6 @@ class WeightQueue:
         self._save_interval = save_interval
         self.create_new_interval_queue()
 
-
     def create_new_interval_queue(self):
         self._weight_queue = []
         for i in increment_range:
@@ -67,10 +65,9 @@ class WeightQueue:
                     for l in increment_range:
                         self._weight_queue.append((i, j, k, l))
 
-
-    def next(self,):
-        #return document
-        return self._weight_queue.pop(), self._documents[self._document_counter-1]
+    def next(self, ):
+        # return document
+        return self._weight_queue.pop(), self._documents[self._document_counter - 1]
 
     def has_next(self, file_handler):
         # helper to get every n-th item a progress indicator
@@ -119,7 +116,6 @@ class FileHandler:
     def add_result(self, question, weights, score, document_id):
         self._resultObjects[question].append({'weights': weights, 'score': score, 'document_id': document_id})
 
-
     def get_weight_queue(self):
 
         if not self._weight_queue:
@@ -138,12 +134,13 @@ class FileHandler:
             self._resultObjects[question].sort(key=lambda x: x['score'], reverse=True)
 
             # write to disk
-            self._resultFiles[question].write(json.dumps(self._resultObjects[question], sort_keys=False, indent=2, check_circular=False))
+            self._resultFiles[question].write(
+                json.dumps(self._resultObjects[question], sort_keys=False, indent=2, check_circular=False))
 
-        # save the questate for this data state
-        #with open(self._weightQueuePath, 'wb') as f:
+            # save the questate for this data state
+            # with open(self._weightQueuePath, 'wb') as f:
             # Pickle the 'data' document using the highest protocol available.
-         #   pickle.dump(self._weight_queue, f, pickle.HIGHEST_PROTOCOL)
+            #   pickle.dump(self._weight_queue, f, pickle.HIGHEST_PROTOCOL)
 
     def closeAndRemoveWeightQueue(self):
         os.remove(self._weightQueuePath, dir_fd=None)
@@ -162,7 +159,7 @@ def adjust_weights(extractors, i, j, k, l):
     extractors[3].weights = (i, j)
 
 
-def cmp_text_helper(question, answers, annotations, weights, document,fileHandler):
+def cmp_text_helper(question, answers, annotations, weights, document, fileHandler):
     score = -1
     # check if there is an annotaton and an answer
     if question in annotations and question in answers:
@@ -172,7 +169,8 @@ def cmp_text_helper(question, answers, annotations, weights, document,fileHandle
 
     fileHandler.add_result(question, weights, score, document.get_document_id())
 
-def cmp_date_helper(question, answers, annotations, weights, document,fileHandler):
+
+def cmp_date_helper(question, answers, annotations, weights, document, fileHandler):
     score = -1
     # check if there is an annotaton and an answer
     if question in annotations and question in answers:
@@ -183,8 +181,7 @@ def cmp_date_helper(question, answers, annotations, weights, document,fileHandle
     fileHandler.add_result(question, weights, score, document.get_document_id())
 
 
-
-def cmp_location_helper(question, answers, annotations, weights, document,fileHandler):
+def cmp_location_helper(question, answers, annotations, weights, document, fileHandler):
     score = -1
     # check if there is an annotaton and an answer
     if question in annotations and question in answers:
@@ -193,8 +190,6 @@ def cmp_location_helper(question, answers, annotations, weights, document,fileHa
         score = cmp_location(topAnnotation, topAnswer, fileHandler.get_weight_queue()._geocoder)
 
     fileHandler.add_result(question, weights, score, document.get_document_id())
-
-
 
 
 def loadDocumentsAndCoder():
@@ -222,7 +217,7 @@ def loadDocumentsAndCoder():
     geocoder = extractorObject.extractors[1].geocoder
     calendar = extractorObject.extractors[1].calendar
 
-    return docments, geocoder,  calendar, extractorObject
+    return docments, geocoder, calendar, extractorObject
 
 
 if __name__ == '__main__':
@@ -232,9 +227,9 @@ if __name__ == '__main__':
     sh.setLevel(logging.DEBUG)
     log.addHandler(sh)
 
-
-    increment_range = [0.05, 0.10, 0.15, 0.20, 0.25, 0.30, 0.35, 0.40, 0.45, 0.50, 0.55, 0.60, 0.65, 0.70, 0.75, 0.80,0.85, 0.90, 0.95, 1]
-    #increment_range = [0.10, 0.15, 1]
+    increment_range = [0.05, 0.10, 0.15, 0.20, 0.25, 0.30, 0.35, 0.40, 0.45, 0.50, 0.55, 0.60, 0.65, 0.70, 0.75, 0.80,
+                       0.85, 0.90, 0.95, 1]
+    # increment_range = [0.10, 0.15, 1]
     questions = {'when', 'why', 'who', 'how', 'what', 'where'}
 
     resultPath = os.path.dirname(__file__) + '/result/learnWeights'
@@ -250,8 +245,8 @@ if __name__ == '__main__':
         t.daemon = True
         t.start()
 
-    # Questions
-    # for document in documents:
+        # Questions
+        # for document in documents:
         while weightQueue.has_next(fileHandler):
             weights, document = weightQueue.next()
 
@@ -273,7 +268,7 @@ if __name__ == '__main__':
             annotation = document.get_annotations()
             answers = document.get_answers()
 
-            cmp_text_helper('why', answers, annotation, [i, j, k, l], document,  fileHandler)
+            cmp_text_helper('why', answers, annotation, [i, j, k, l], document, fileHandler)
             cmp_text_helper('what', answers, annotation, [i, j, k], document, fileHandler)
             cmp_text_helper('who', answers, annotation, [i, j, k], document, fileHandler)
             cmp_text_helper('how', answers, annotation, [i, j], document, fileHandler)
@@ -281,7 +276,7 @@ if __name__ == '__main__':
             # These two are tricky because of the used online services
             cmp_date_helper('when', answers, annotation, [i, j, k, l], document, fileHandler)
             cmp_location_helper('where', answers, annotation, [i, j], document, fileHandler)
-            #counter = counter + 1
+            # counter = counter + 1
 
     print("Done")
     fileHandler.save()

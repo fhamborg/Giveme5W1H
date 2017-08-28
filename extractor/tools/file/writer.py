@@ -33,7 +33,6 @@ class Writer:
     def setOutputPath(self, output_path):
         self._outputPath = output_path
 
-
     def generate_json(self, document):
 
         """

@@ -21,7 +21,6 @@ Documents are preprocessed just once, you have to set is_preprocessed to false,
 if you want to process them again by core_nlp (or just delete cache and output)
 """
 
-
 if __name__ == '__main__':
     Config.get()['information']['nlpIndexSentence'] = False
     # Config.get()['enhancements']['Giveme5W_enhancer']['enabled'] = True

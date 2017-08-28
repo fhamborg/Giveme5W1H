@@ -1,9 +1,8 @@
-import logging
 import asyncio
+import json
+import logging
 
-import xml.etree.ElementTree as ET
-import xmltodict, json
-
+import xmltodict
 from dateutil.parser import parse
 
 from extractor.configuration import Configuration as Config
@@ -53,7 +52,8 @@ class Heideltime():
 
                         results = []
                         event_loop = asyncio.get_event_loop()
-                        tasks = [asyncio.ensure_future(_do_subprocess(filename, date, 'heideltime-standalone', results))]
+                        tasks = [
+                            asyncio.ensure_future(_do_subprocess(filename, date, 'heideltime-standalone', results))]
                         event_loop.run_until_complete(asyncio.wait(tasks))
 
                         # WARNING direct conversion to JSON, some information can`t be transferred

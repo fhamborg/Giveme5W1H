@@ -176,17 +176,28 @@ Install Giveme5_enhancer to use this features.
 
 
 ## AIDA
-- OSX
-    - brew install postgres
-    - brew services start postgresql
-- createuser postgres -s
-- psql CREATE DATABASE AIDA;
-- bzcat [AIDA_entity_repository_2014-01-02v7.sql.bz2](http://resources.mpi-inf.mpg.de/yago-naga/aida/download/entity-repository/) | psql aida
--  Download [3.0.4](https://github.com/yago-naga/aida/archive/3.0.4.zip)
 
-> - Warning database dump has 26GB
-  - Import takes up to 24h and around 100 GB disc space
-  - Drop the database, if you have to restart import
+- Download [3.0.4](https://github.com/yago-naga/aida/archive/3.0.4.zip)
+- copy sample_settings into settings
+- open settings/aida.properties set
+  - dataAccess = dmap
+- create in settings a file 'dmap_aida.properties', set
+  - mapsToLoad = all
+  - default.preloadKeys = true
+  - default.preloadValues = true
+
+- Download [DMaps](http://resources.mpi-inf.mpg.de/yago-naga/aida/download/entity-repository/AIDA_entity_repository_2014-01-02v10_dmap.tar.bz2)
+ - Check also [here](http://www.mpi-inf.mpg.de/departments/databases-and-information-systems/research/yago-naga/aida/downloads/) for update
+- Decompress the bz2 file
+ - use pbzip2 on osx/linux for fast decompression
+- create a folder 'dMaps' in the AIDA root directory
+ - Unpack the tar file into the dMaps folder
+- run
+ - mvn package -Dmaven.test.skip=true
+
+
+> - Warning database dump has 20GB
+  - Your computer should have at least 18GB ram
 
 Use environment_enhancer.py to startup CoreNLP and AIDA together.
 
@@ -208,7 +219,6 @@ This enhancement parse further the "when" answers to get precise time definition
 - Copy it to Giveme5W-runtime-resources
 - Follow the installation instruction Manual.pdf
 > You must use treeTagger, Heideltime is not compatible with CoreNLP 3.X
-
 
 
 usage:

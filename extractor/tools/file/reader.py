@@ -34,7 +34,6 @@ class Reader(object):
 
             data['dId'] = hashlib.sha224(data['url'].encode('utf-8')).hexdigest()
 
-
             # path where the preprocessed file should be
 
             preprocessedFilePath = None

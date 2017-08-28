@@ -1,4 +1,3 @@
-import importlib
 import logging
 import queue
 from threading import Thread
@@ -6,7 +5,7 @@ from threading import Thread
 from combined_scoring.distance_of_candidate import DistanceOfCandidate
 from extractors import action_extractor, environment_extractor, cause_extractor, method_extractor
 from preprocessors.preprocessor_core_nlp import Preprocessor
-from extractor.configuration import Configuration as Config
+
 
 class Worker(Thread):
     def __init__(self, queue):
@@ -72,7 +71,6 @@ class FiveWExtractor:
 
         self.q = queue.Queue()
 
-
         # creating worker threads
         for i in range(len(self.extractors)):
             t = Worker(self.q)
@@ -100,20 +98,20 @@ class FiveWExtractor:
         # else:
         #     self.enhancer = None
 
-        #if len(self.enhancer) == 0:
+        # if len(self.enhancer) == 0:
         #    self.log.info('No enhancement enabled')
 
 
-       # if len(Config.get()['enhancer']) > 0:
-       #     try:
-       #         import Giveme5W_enhancer.enhancer as optional_import
-       #         self.enhancer = optional_import.Enhancer()
-       #     except ImportError:
-       #         optional_import = None
-       #         self.enhancer = optional_import
-       #        self.log.info('Install giveme5W_enhancer to use enhancer functionality')
-       # else:
-       #     self.log.info('No enhancer')
+        # if len(Config.get()['enhancer']) > 0:
+        #     try:
+        #         import Giveme5W_enhancer.enhancer as optional_import
+        #         self.enhancer = optional_import.Enhancer()
+        #     except ImportError:
+        #         optional_import = None
+        #         self.enhancer = optional_import
+        #        self.log.info('Install giveme5W_enhancer to use enhancer functionality')
+        # else:
+        #     self.log.info('No enhancer')
 
     def parse(self, doc):
         """

@@ -11,8 +11,6 @@ class Document(object):
 
     def __init__(self, title='', desc='', text='', rawData=None):
 
-
-
         self._raw = {'title': title, 'description': desc, 'text': text}
 
         # append all document text into one string
@@ -68,9 +66,6 @@ class Document(object):
     def get_raw(self):
         return self._raw
 
-    # def get_raw_concanated(self):
-    #    return self._raw
-
     def get_date(self):
         return self._date
 
@@ -123,7 +118,6 @@ class Document(object):
 
         return self._lemma_map
 
-
     def set_clp_result(self, clp_result):
         self._clp_result = clp_result
 
@@ -170,8 +164,6 @@ class Document(object):
 
     def set_annotations(self, annotations):
         self._annotations = annotations
-
-
 
     def pretty_answers(self):
         string = 'Answers to: "%s..."' % self.get_title()[:35]

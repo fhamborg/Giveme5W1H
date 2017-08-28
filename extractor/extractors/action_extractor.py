@@ -168,13 +168,11 @@ class ActionExtractor(AbsExtractor):
             else:
                 ranked_candidates.append((candidateParts[0], candidateParts[1], score, candidate.get_sentence_index()))
 
-        #ranked_candidates.sort(key=lambda x: x[2], reverse=True)
+        # ranked_candidates.sort(key=lambda x: x[2], reverse=True)
 
         # split results
         who = [(c[0], c[2], c[3]) for c in ranked_candidates]
         what = [(c[1], c[2], c[3]) for c in ranked_candidates]
-        
-        
 
         # Filte dublicates and transform who to object oriented list
         oWho = self._filterAndConvertToObjectOrientedList(who)
@@ -193,7 +191,7 @@ class ActionExtractor(AbsExtractor):
                 max = answer[1]
             ca.set_score(answer[1])
             candidates.append(ca)
-        
+
         # normalize
         for candidate in candidates:
             score = candidate.get_score()
@@ -201,7 +199,7 @@ class ActionExtractor(AbsExtractor):
 
         # sort
         candidates.sort(key=lambda x: x.get_score(), reverse=True)
-        
+
         return candidates
 
     def cut_what(self, tree, min_length=0, length=0):

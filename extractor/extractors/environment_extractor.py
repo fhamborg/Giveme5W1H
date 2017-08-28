@@ -96,7 +96,7 @@ class EnvironmentExtractor(AbsExtractor):
                     ca = Candidate()
                     ca.set_parts((self._fetch_pos(pos_tags[i], candidate[0]), location, i))
                     locations.append(ca)
-                    #locations.append((self._fetch_pos(pos_tags[i], candidate[0]), location, i))
+                    # locations.append((self._fetch_pos(pos_tags[i], candidate[0]), location, i))
 
             for candidate in self._extract_entities(ner_tags[i], ['TIME', 'DATE'], inverted=True,
                                                     phrase_range=1, groups={'TIME': 'TIME+DATE', 'DATE': 'TIME+DATE'}):
@@ -114,7 +114,7 @@ class EnvironmentExtractor(AbsExtractor):
                         dates.append(ca)
                         # dates.append((self._fetch_pos(pos_tags[i], candidate[0]), i))
                 elif candidate[1] == 'DATE':
-                    #dates.append((self._fetch_pos(pos_tags[i], candidate[0]), i))
+                    # dates.append((self._fetch_pos(pos_tags[i], candidate[0]), i))
                     ca = Candidate()
                     ca.set_parts((self._fetch_pos(pos_tags[i], candidate[0]), i))
                     dates.append(ca)
@@ -124,7 +124,7 @@ class EnvironmentExtractor(AbsExtractor):
                     ca = Candidate()
                     ca.set_parts((self._fetch_pos(pos_tags[i], candidate[0]), i))
                     dates.append(ca)
-                    #dates.append((self._fetch_pos(pos_tags[i], candidate[0]), i))
+                    # dates.append((self._fetch_pos(pos_tags[i], candidate[0]), i))
 
         document.set_candidates('EnvironmentExtractorNeDates', dates)
         document.set_candidates('EnvironmentExtractorNeLocatios', locations)
@@ -268,7 +268,7 @@ class EnvironmentExtractor(AbsExtractor):
                 score /= weights_sum
             candidate[1] = score
 
-        ranked_candidates = [[c[0], c[1] ] for c in ranked_candidates]
+        ranked_candidates = [[c[0], c[1]] for c in ranked_candidates]
         ranked_candidates.sort(key=lambda x: x[1], reverse=True)
         return ranked_candidates
 

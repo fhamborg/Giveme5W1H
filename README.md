@@ -231,6 +231,33 @@ extractor = FiveWExtractor(extractors=[
     ])
 ```
 
+
+The enhancement is stored per candidate, a published date is mandatory for news to resolve relative times.
+Example output:
+```json
+{
+          "score": 0.5220949263502455,
+          "words": [
+            {
+              "text": "Today",
+              "tag": "NN"
+            }
+          ],
+          "enhancement": {
+            "heideltime": {
+              "TimeML": {
+                "TIMEX3": {
+                  "@tid": "t1",
+                  "@type": "DATE",
+                  "@value": "2016-11-09",
+                  "#text": "Today"
+                }
+              }
+            }
+          }
+        },
+```
+
 # Giveme5W-runtime-resources
 Giveme5W expects all libraries to be located in the same directory 'Giveme5W-runtime-resources' and next to the Giveme5W folder.
 

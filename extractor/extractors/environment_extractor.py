@@ -1,6 +1,9 @@
 import time
+import logging
+from warnings import catch_warnings
 
 from geopy.distance import great_circle
+from geopy.exc import GeocoderServiceError
 from geopy.geocoders import Nominatim
 from parsedatetime import parsedatetime as pdt
 
@@ -63,7 +66,14 @@ class EnvironmentExtractor(AbsExtractor):
         locations = self._evaluate_locations(document)
         dates = self._evaluate_dates(document)
 
-        document.set_answer('where', self._filter_duplicates(locations, False))
+
+
+
+
+
+        document.set_answer('where', self._filter_duplicates(locations, False) )
+
+
         document.set_answer('when', self._filter_duplicates(dates, False))
 
     def _extract_candidates(self, document):
@@ -90,12 +100,15 @@ class EnvironmentExtractor(AbsExtractor):
             for candidate in self._extract_entities(ner_tags[i], ['LOCATION'], inverted=True, phrase_range=3):
 
                 # look-up geocode in Nominatim
-                location = self.geocoder.geocode(' '.join(candidate[0]))
-                if location is not None:
-                    # fetch pos and append to candidates
-                    ca = Candidate()
-                    ca.set_parts((self._fetch_pos(pos_tags[i], candidate[0]), location, i))
-                    locations.append(ca)
+                try:
+                    location = self.geocoder.geocode(' '.join(candidate[0]))
+                    if location is not None:
+                        # fetch pos and append to candidates
+                        ca = Candidate()
+                        ca.set_parts((self._fetch_pos(pos_tags[i], candidate[0]), location, i))
+                        locations.append(ca)
+                except GeocoderServiceError:
+                    logging.getLogger('GiveMe5W').error('GeocoderServiceError: When is not extracted ')
                     # locations.append((self._fetch_pos(pos_tags[i], candidate[0]), location, i))
 
             for candidate in self._extract_entities(ner_tags[i], ['TIME', 'DATE'], inverted=True,

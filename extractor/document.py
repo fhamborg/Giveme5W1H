@@ -49,7 +49,7 @@ class Document(object):
         self._candidates[extractor] = candidates
 
     def get_candidates(self, extractor):
-        return self._candidates[extractor]
+        return self._candidates.get(extractor, [])
 
     def get_file_name(self):
         return self._file_name

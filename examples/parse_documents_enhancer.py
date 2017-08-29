@@ -2,6 +2,7 @@ import logging
 import os
 import sys
 
+from Giveme5W_enhancer.aida import Aida
 from Giveme5W_enhancer.heideltime import Heideltime
 from extractor.configuration import Configuration as Config
 from extractor.extractor import FiveWExtractor
@@ -37,7 +38,8 @@ if __name__ == '__main__':
         # cause_extractor.CauseExtractor(),
         # method_extractor.MethodExtractor()
     ], enhancement=[
-        Heideltime()
+        #Heideltime('when'),
+        Aida('when')
     ])
     inputPath = os.path.dirname(__file__) + '/input'
     outputPath = os.path.dirname(__file__) + '/output'

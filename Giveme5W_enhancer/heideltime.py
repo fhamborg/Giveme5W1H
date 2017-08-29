@@ -23,15 +23,16 @@ async def _do_subprocess(filename, date, path, results):
 
 
 class Heideltime():
-    def __init__(self):
+    def __init__(self, question):
         self.log = logging.getLogger('GiveMe5W-Enhancer')
+        self._question = question
 
     def enhance(self, document):
         filename = Config.get()['Giveme5W-runtime-resources'] + '/' + 'tmp.txt'
         # raw document date
         date = document.get_rawData().get('publish_date')
 
-        candidates = document.get_answers().get('when')
+        candidates = document.get_answers().get(self._question)
 
         if candidates:
             # parsed document date

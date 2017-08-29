@@ -169,14 +169,15 @@ This can lead to entries with the same weights, but with different scores.
 
 
 # Giveme5W Enhancer
-This extension can perform further feature extraction and selection.
+This extensions can perform further feature extraction and/or selection.
 Install Giveme5_enhancer to use this features.
 
-
-
-
 ## AIDA
+Aida is available as webservice and can be installed local.
+Because of the complex installation this is the default option.
+The service is limited, you can find details [here](https://www.ambiverse.com/pricing/)
 
+### Aida Local Installation
 - Download [3.0.4](https://github.com/yago-naga/aida/archive/3.0.4.zip)
 - copy sample_settings into settings
 - open settings/aida.properties set
@@ -185,6 +186,7 @@ Install Giveme5_enhancer to use this features.
   - mapsToLoad = all
   - default.preloadKeys = true
   - default.preloadValues = true
+
 
 - Download [DMaps](http://resources.mpi-inf.mpg.de/yago-naga/aida/download/entity-repository/AIDA_entity_repository_2014-01-02v10_dmap.tar.bz2)
  - Check also [here](http://www.mpi-inf.mpg.de/departments/databases-and-information-systems/research/yago-naga/aida/downloads/) for update
@@ -197,7 +199,7 @@ Install Giveme5_enhancer to use this features.
 
 
 > - Warning database dump has 20GB
-  - Your computer should have at least 18GB ram
+  - Your computer should have at least 15GB ram
 
 Use environment_enhancer.py to startup CoreNLP and AIDA together.
 
@@ -207,7 +209,7 @@ from Giveme5W_enhancer.aida import Aida
 extractor = FiveWExtractor(extractors=[
         environment_extractor.EnvironmentExtractor(),
     ], enhancement=[
-        Aida()
+        Aida('when', 'http://myOptionalAidaServer:8080')
     ])
 ```
 
@@ -220,17 +222,15 @@ This enhancement parse further the "when" answers to get precise time definition
 - Follow the installation instruction Manual.pdf
 > You must use treeTagger, Heideltime is not compatible with CoreNLP 3.X
 
-
 usage:
 ```python
 from Giveme5W_enhancer.heideltime import Heideltime
 extractor = FiveWExtractor(extractors=[
         environment_extractor.EnvironmentExtractor(),
     ], enhancement=[
-        Heideltime()
+        Heideltime('when')
     ])
 ```
-
 
 The enhancement is stored per candidate, a published date is mandatory for news to resolve relative times.
 Example output:

@@ -2,6 +2,7 @@ import json
 import pickle
 
 from candidate import Candidate
+from extractor.configuration import Configuration as Config
 
 
 class Writer:
@@ -59,7 +60,8 @@ class Writer:
             questionLiteral = fiveWoneHLiteral.setdefault(question, {'extracted': []})
 
             # add a label, thats only there for the ui
-            questionLiteral['label'] = question
+            if Config.get()['label']:
+                questionLiteral['label'] = question
 
             # check if extracted literal is there
             extractedLiteral = questionLiteral.setdefault('extracted', [])
@@ -70,12 +72,17 @@ class Writer:
                     # clean up json by skipping NULL entries
                     if awJson:
                         extractedLiteral.append(awJson)
+
                 else:
                     # fallback for none refactored extractors
                     candidate_json = {'score': answer[1], 'words': []}
                     for candidateWord in answer[0]:
-                        candidate_json['words'].append({'text': candidateWord[0], 'tag': candidateWord[1]})
+                        candidate_json['parts'].append({'text': candidateWord[0], 'nlpTag': candidateWord[1]})
                     extractedLiteral.append(candidate_json)
+
+                if Config.get()['onlyTopCandidate']:
+                    # stop after the first not answer
+                    break
         return output
 
     def write(self, document):

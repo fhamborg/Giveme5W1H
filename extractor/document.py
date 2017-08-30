@@ -34,7 +34,8 @@ class Document(object):
 
         self._annotations = {'what': [], 'who': [], 'why': [], 'where': [], 'when': [], 'how': []}
 
-        self._answers = {'what': [], 'who': [], 'why': [], 'where': [], 'when': [], 'how': []}
+        #self._answers = {'what': [], 'who': [], 'why': [], 'where': [], 'when': [], 'how': []}
+        self._answers = {}
         self._candidates = {}
 
     def is_preprocessed(self, preprocessed=None):
@@ -158,9 +159,11 @@ class Document(object):
         self._nerTags = ner
 
     # use this setter for object based answers aka list of candidate objects with proper loaded parts
-    def set_answer(self, question, Candidates):
-        if question in self._answers:
-            self._answers[question] = Candidates
+    def set_answer(self, question, candidates):
+        self._answers[question] = candidates
+
+    def get_answer(self, question):
+        return self._answers.get(question,[])
 
     def set_annotations(self, annotations):
         self._annotations = annotations

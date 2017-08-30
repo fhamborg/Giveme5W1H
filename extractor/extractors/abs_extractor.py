@@ -103,11 +103,12 @@ class AbsExtractor:
         Simple candidate filter that drops duplicates
 
         :param candidates: List of candidates to parse
-        :type candidates: [([String]|[(String, String)], Float)]
+        :type candidates: [([String]|  [(String, String)], Float)]
         :param exact: If true only exact matches are filtered, false filters based on entailment
         :type exact: Boolean
 
         :return: The filtered candidate list
+
         """
 
         mentioned = []
@@ -137,6 +138,10 @@ class AbsExtractor:
                 cd = Candidate()
                 cd.set_parts(candidate[0])
                 cd.set_score(candidate[1])
+                cd.set_sentence_index(candidate[2] if 2 < len(candidate) else None)
+
+
+
                 filtered.append(cd)
 
         return filtered

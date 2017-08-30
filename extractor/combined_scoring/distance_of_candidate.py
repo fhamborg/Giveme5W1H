@@ -11,9 +11,9 @@ class DistanceOfCandidate:
 
         distanceMatrix = {}
 
-        d_candidates = document.get_answers()[self._dependantQuestions]
+        d_candidates = document.get_answer(self._dependantQuestions)
         for question in self._majorQuestions:
-            m_candidates = document.get_answers()[question]
+            m_candidates = document.get_answer(question)
 
             if len(m_candidates) == 0:
                 # no candidates to compare with, nothing to to here

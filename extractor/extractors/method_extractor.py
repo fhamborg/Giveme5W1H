@@ -46,6 +46,7 @@ class MethodExtractor(AbsExtractor):
 
         # All kind of adjectives
         candidatesAd = self._convert_to_object_oriented_list(self._extract_ad_candidates(document))
+        #candidatesAd = self._extract_ad_candidates(document)
 
         # join the candidates
         candidates = candidates + candidatesAd
@@ -81,7 +82,10 @@ class MethodExtractor(AbsExtractor):
                         if candidate_parts:
                             # get the CoreNLP tokens for each part e.g lemmas etc.
                             # convert list objects back to tuples for backward compatibility
-                            candidates.append([candidate_parts, tree.stanfordCoreNLPResult['index'], 'prepos'])
+                            candidates.append([candidate_parts, None, tree.stanfordCoreNLPResult['index'], 'prepos'])
+
+
+
 
                 else:
                     # candidate is before the preposition
@@ -93,7 +97,7 @@ class MethodExtractor(AbsExtractor):
                         relevantParts = self._pos_linked_to_corenlp_tokens(atree)
                         candidate_parts = self._find_vb_cc_vb_parts(relevantParts)
                         if candidate_parts:
-                            candidates.append([candidate_parts, tree.stanfordCoreNLPResult['index'], 'prepos'])
+                            candidates.append([candidate_parts,None ,tree.stanfordCoreNLPResult['index'], 'prepos'])
 
         return candidates
 
@@ -141,7 +145,7 @@ class MethodExtractor(AbsExtractor):
                     self._maxIndex = token['index']
                 if self._is_relevant_pos(token['pos']) and token['ner'] not in ['TIME', 'DATE', 'ORGANIZATION',
                                                                                 'DURATION', 'ORDINAL']:
-                    candidates.append([[(token['pos'], token['originalText'], token)], sentence['index'], 'adjectiv'])
+                    candidates.append([[(token['pos'], token['originalText'], token)], None ,sentence['index'], 'adjectiv'])
 
         return candidates
 
@@ -214,6 +218,8 @@ class MethodExtractor(AbsExtractor):
         document.set_answer('how', candidates)
 
     def _convert_to_object_oriented_list(self, list):
+
+        return self._filter_duplicates(list)
         whoList = []
         # for answer in list:
         for answer in self._filter_duplicates(list):
@@ -222,6 +228,14 @@ class MethodExtractor(AbsExtractor):
             ca.set_sentence_index(answer[1])
             ca.set_type(answer[2])
             whoList.append(ca)
+
+            # ca.set_parts(answer[0])  # correct
+            # ca.set_sentence_index(answer[1])  # wrong  -> score
+            # ca.set_type(answer[2])  # not used -> set_sentence_index
+            # not used -> type
+
+
+
         return whoList
 
     def _find_vb_cc_vb_parts(self, relevantParts):

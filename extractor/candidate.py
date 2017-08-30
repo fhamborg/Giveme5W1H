@@ -1,3 +1,5 @@
+from extractor.configuration import Configuration as Config
+
 class Candidate:
     def __init__(self):
         self._type = None
@@ -8,6 +10,11 @@ class Candidate:
         self._lemma_count = None
         self._enhancement = {}
         self._calculations = {}
+        self._config = Config.get()['candidate']
+
+
+    def part_constructor(self, answer, score, type, ):
+        re
 
     def get_parts(self):
         return self._parts
@@ -54,17 +61,25 @@ class Candidate:
 
     # json representation for this candidate
     def get_json(self):
+
         if self._parts:
             words = []
             for part in self._parts:
-                words.append({'text': part[0], 'tag': part[1]})
+                parts_json = {'text': part[0]}
+                if self._config['part'].get('nlpTag'):
+                    parts_json['nlpTag'] = part[1]
+                words.append(parts_json)
 
-            json = {'score': self._score, 'words': words}
+            # nlpTag
+            json = {'parts': words}
+            if self._config.get('score'):
+                json['score'] = self._score
+
 
             if len(self._enhancement) > 0:
                 json['enhancement'] = self._enhancement
 
-            if self._index:
+            if self._index and self._config.get('nlpIndexSentence'):
                 json['nlpIndexSentence'] = self._index
             return json
         return None

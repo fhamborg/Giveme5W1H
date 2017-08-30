@@ -10,9 +10,9 @@ Giveme5W(1H) is a state of the art open-source 5W Question Answering system for 
 * **How** did it happen?
 
 ## Getting started
-Before you can use Giveme5W, you need to make sure you have a CoreNLP-server runtimes.
+Before you can use Giveme5W, you need to make sure you have  CoreNLP-Server runtimes.
 
-In the case you first to have to install CoreNLP please refer to the CoreNLPs extensive [documentation](https://stanfordnlp.github.io/CoreNLP/corenlp-server.html) and follow the instructions on how to install CoreNLP and start a server.
+If you have to install CoreNLP, please refer to the CoreNLPs extensive [documentation](https://stanfordnlp.github.io/CoreNLP/corenlp-server.html) and follow the instructions on how to install CoreNLP and start a server.
 
  * download the server itself from [here](https://stanfordnlp.github.io/CoreNLP/index.html#download)
     * at the time of writing [this](http://nlp.stanford.edu/software/stanford-corenlp-full-2017-06-09.zip) was the newest version
@@ -102,27 +102,13 @@ Additional information can be added to the output by setting them as true in the
 - information per candidate: like nlpIndexSentence or score
 - information per token like: lemma, tag
 
-```python
-{
-  'information': {
-        'nlpIndexSentence': true
-        'candidate':{
-            'nlpTag': true
-        }
-   },
-   'onlyTopCandidate': False
-   'enhancer': {
-    'see': 'Enhancements'
-   }
-}
-```
-> see configuration.py for all available settings
+> see configuration.py for all settings and description
 
 
 Use the configuration Singleton to make adjustments
 ```python
 from extractor.configuration import Configuration as Config
-Config.get()['information']['nlpIndexSentence'] = False
+Config.get()['candidate']['nlpIndexSentence'] = False
 ```
 
 

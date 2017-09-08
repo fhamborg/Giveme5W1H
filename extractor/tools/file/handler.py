@@ -89,13 +89,16 @@ class Handler(object):
         if self._extractor:
             if not document.is_preprocessed():
                 self._extractor.preprocessor.preprocess(document)
-                if self._writer.get_preprocessed_path():
-                    self._writer.write_pickle(document)
-                    self.log.info('         \tsaved to cache')
             else:
                 self.log.info('          \talready preprocessed')
             self._extractor.parse(document)
+
             self.log.info('         \tprocessed')
+
+            # cache, after processing.
+            if self._writer.get_preprocessed_path():
+                self._writer.write_pickle(document)
+                self.log.info('         \tsaved to cache')
 
         if self._outputPath:
             self.log.info('         \tsaved to output')

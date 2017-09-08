@@ -66,14 +66,7 @@ class EnvironmentExtractor(AbsExtractor):
         locations = self._evaluate_locations(document)
         dates = self._evaluate_dates(document)
 
-
-
-
-
-
         document.set_answer('where', self._filter_duplicates(locations, False) )
-
-
         document.set_answer('when', self._filter_duplicates(dates, False))
 
     def _extract_candidates(self, document):

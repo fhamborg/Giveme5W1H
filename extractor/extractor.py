@@ -126,15 +126,18 @@ class FiveWExtractor:
         if not doc.is_preprocessed():
             self.preprocessor.preprocess(doc)
 
+        # run extractors in different threads
         for extractor in self.extractors:
             self.q.put((extractor, doc))
 
+        # wait till oll extractors are done
         self.q.join()
 
         # apply combined_scoring
         if self.combinedScorers:
             for combinedScorer in self.combinedScorers:
                 combinedScorer.score(doc)
+        doc.is_processed(True)
 
         # enhancer
         if self.enhancement:

@@ -85,8 +85,6 @@ class MethodExtractor(AbsExtractor):
                             candidates.append([candidate_parts, None, tree.stanfordCoreNLPResult['index'], 'prepos'])
 
 
-
-
                 else:
                     # candidate is before the preposition
                     # ....derailed and overturned IN...
@@ -228,14 +226,6 @@ class MethodExtractor(AbsExtractor):
             ca.set_sentence_index(answer[1])
             ca.set_type(answer[2])
             whoList.append(ca)
-
-            # ca.set_parts(answer[0])  # correct
-            # ca.set_sentence_index(answer[1])  # wrong  -> score
-            # ca.set_type(answer[2])  # not used -> set_sentence_index
-            # not used -> type
-
-
-
         return whoList
 
     def _find_vb_cc_vb_parts(self, relevantParts):

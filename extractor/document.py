@@ -37,11 +37,17 @@ class Document(object):
         #self._answers = {'what': [], 'who': [], 'why': [], 'where': [], 'when': [], 'how': []}
         self._answers = {}
         self._candidates = {}
+        self._processed = None
 
     def is_preprocessed(self, preprocessed=None):
-        if preprocessed is True:
-            self._preprocessed = True
+        if preprocessed is True or preprocessed is False:
+            self._preprocessed = preprocessed
         return self._preprocessed
+
+    def is_processed(self, processed=None):
+        if processed is True or processed is False:
+            self._processed = processed
+        return self._processed
 
     def get_fullText(self):
         return self._fullText
@@ -167,12 +173,3 @@ class Document(object):
 
     def set_annotations(self, annotations):
         self._annotations = annotations
-
-    def pretty_answers(self):
-        string = 'Answers to: "%s..."' % self.get_title()[:35]
-        for question in self._answers:
-            answer = 'NONE'
-            if len(self._answers[question]) > 0:
-                answer = self._answers[question][0]
-            string += "\n\t%s:\t%s" % (question, answer)
-        return string

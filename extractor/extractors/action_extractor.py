@@ -186,13 +186,6 @@ class ActionExtractor(AbsExtractor):
         for candidate in self._filter_duplicates(list):
             if candidate.get_score() > max:
                 max = candidate.get_score()
-            #ca = Candidate()
-            #ca.set_parts(answer[0])
-            #ca.set_sentence_index(answer[2])
-            #if answer[1] > max:
-            #    max = answer[1]
-            #ca.set_score(answer[1])
-            #candidates.append(ca)
 
         # normalize
         for candidate in candidates:

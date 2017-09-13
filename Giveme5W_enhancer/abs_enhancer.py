@@ -11,7 +11,7 @@ target = {"part": "part"
            "candidate" "candidate"}
 
 
-class AbsExtractor:
+class AbsEnhancer:
 
     def __init__(self, questions, tar= target.part):
         self._questions = questions

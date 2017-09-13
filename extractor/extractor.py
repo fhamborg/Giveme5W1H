@@ -113,6 +113,18 @@ class FiveWExtractor:
         # else:
         #     self.log.info('No enhancer')
 
+
+    def preprocess(self, doc):
+        if not doc.is_preprocessed():
+            self.preprocessor.preprocess(doc)
+
+            # enhancer parsing
+            if self.enhancement:
+                for enhancement in self.enhancement:
+                    enhancement.process(doc)
+        else:
+            self.log.info('          \talready preprocessed')
+
     def parse(self, doc):
         """
         Pass a document to the preprocessor and the extractors
@@ -122,14 +134,8 @@ class FiveWExtractor:
 
         :return: the processed document
         """
-        # preprocess -> coreNLP
-        if not doc.is_preprocessed():
-            self.preprocessor.preprocess(doc)
-
-        # enhancer
-        if self.enhancement:
-            for enhancement in self.enhancement:
-                enhancement.enhance(doc)
+        # preprocess -> coreNLP -> enhancer if any
+        self.preprocess(doc)
 
         # run extractors in different threads
         for extractor in self.extractors:
@@ -144,5 +150,9 @@ class FiveWExtractor:
                 combinedScorer.score(doc)
         doc.is_processed(True)
 
+        # enhancer linking questions to data
+        if self.enhancement:
+            for enhancement in self.enhancement:
+                enhancement.enhance(doc)
 
         return doc

@@ -87,15 +87,14 @@ class Handler(object):
                 return
 
         if self._extractor:
-            if not document.is_preprocessed():
-                self._extractor.preprocessor.preprocess(document)
-            else:
-                self.log.info('          \talready preprocessed')
+            # if not document.is_preprocessed():
+            #     self._extractor.preprocess(document)
+            # else:
+            #    self.log.info('          \talready preprocessed')
             self._extractor.parse(document)
-
             self.log.info('         \tprocessed')
 
-            # cache, after processing.
+            # cache, after pre/processing.
             if self._writer.get_preprocessed_path():
                 self._writer.write_pickle(document)
                 self.log.info('         \tsaved to cache')
@@ -106,9 +105,7 @@ class Handler(object):
         self.log.info('')
 
     def process(self):
-
-        docCounter = 0
-
+        doc_counter = 0
         # process in memory objects (call preLoadDocuments)
         if self._documents:
             self.log.info('processing documents from memory')
@@ -120,13 +117,13 @@ class Handler(object):
             self.log.info('processing documents from file system')
             self.log.info('')
             for filepath in glob.glob(self._inputPath + '/*.json'):
-                if self._limit and docCounter >= self._limit:
+                if self._limit and doc_counter >= self._limit:
                     print('limit reached')
                     break
-                docCounter += 1
+                doc_counter += 1
                 document = self._reader.read(filepath)
                 self._process_document(document)
-            self.log.info('Processed Documents:\t ' + str(docCounter))
+            self.log.info('Processed Documents:\t ' + str(doc_counter))
 
         self.log.info('')
         self.log.info('Handler: process: finished\t')

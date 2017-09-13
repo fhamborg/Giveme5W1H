@@ -5,16 +5,12 @@ import sys
 from extractor.extractor import FiveWExtractor
 from extractor.tools.file.handler import Handler
 
-# Add path to allow execution though console
-sys.path.insert(0, '/'.join(os.path.realpath(__file__).split('/')[:-3]))
-
 """
 This is a simple example how to use the extractor in combination with NewsPlease files.
 File will be process one by one.
 
 - Nothing is cached
 - Existing files (in output) will be overwritten
-- 
 
 """
 
@@ -39,7 +35,7 @@ if __name__ == '__main__':
      ## add an optional output directory
      .set_output_path(outputPath)
      # limit the documents read from the input directory (handy for development)
-     .set_limit(1)
+     .set_limit(5)
      # add an extractor
      .set_extractor(extractor)
 

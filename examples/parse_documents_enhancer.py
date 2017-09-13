@@ -8,6 +8,7 @@ from extractor.configuration import Configuration as Config
 from extractor.extractor import FiveWExtractor
 from extractor.tools.file.handler import Handler
 from extractors import environment_extractor
+from extractors import method_extractor
 
 # Add path to allow execution though console
 sys.path.insert(0, '/'.join(os.path.realpath(__file__).split('/')[:-3]))
@@ -34,12 +35,12 @@ if __name__ == '__main__':
 
     extractor = FiveWExtractor(extractors=[
         # action_extractor.ActionExtractor(),
-        environment_extractor.EnvironmentExtractor(),
+        #environment_extractor.EnvironmentExtractor(),
         # cause_extractor.CauseExtractor(),
-        # method_extractor.MethodExtractor()
+         method_extractor.MethodExtractor()
     ], enhancement=[
         #Heideltime('when'),
-        Aida('when')
+        #Aida('when')
     ])
     inputPath = os.path.dirname(__file__) + '/input'
     outputPath = os.path.dirname(__file__) + '/output'
@@ -55,7 +56,7 @@ if __name__ == '__main__':
             # set a path to save and load preprocessed documents (CoreNLP result)
             .set_preprocessed_path(preprocessedPath)
             # limit the documents read from the input directory (handy for development)
-            .set_limit(1)
+            .set_limit(5)
             # .skip_documents_with_output()
             # add an optional extractor (it would do only copying without...)
             .set_extractor(extractor)

@@ -12,10 +12,6 @@ class Candidate:
         self._calculations = {}
         self._config = Config.get()['candidate']
 
-
-    def part_constructor(self, answer, score, type, ):
-        re
-
     def get_parts(self):
         return self._parts
 
@@ -83,7 +79,6 @@ class Candidate:
                 json['nlpIndexSentence'] = self._index
             return json
         return None
-
 
     # additional information create by enhancments
     def get_enhancement(self, key):

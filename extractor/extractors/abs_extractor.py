@@ -130,8 +130,6 @@ class AbsExtractor:
                         new = False
                         break
             if new:
-
-
                 mentioned.append(string)
                 #filtered.append(candidate)
                 #
@@ -226,3 +224,35 @@ class AbsExtractor:
         if n == 0:
             return 0
         return score / n
+
+
+    '''
+    Most of the extractor work with a tree structure and don`t save any backlinkt to the original text or 
+    the core NLP results. 
+    
+    This method can take a (sub)-tree/leave and walk back the tree and count all left hand-nodes.
+    By doing so it is possbile to extracts all core NLP-Information for the candidate tokens.
+    '''
+    def _pos_linked_to_corenlp_tokens(self, tree):
+
+        root = tree.root()
+        pos = tree.pos()
+        candidate_parts_as_list = []
+        startIndex = self._find_index_from_root(tree.root(), list(tree.treeposition())) - 1
+
+        posLen = len(pos)
+
+        # TODO
+        # bugfix, at some very rare occasion the tree isn`t exactly reflecting the CoreNLP structure
+        if posLen + startIndex >= len(root.stanfordCoreNLPResult['tokens']):
+            posLen = len(root.stanfordCoreNLPResult['tokens']) - startIndex - 1
+
+        for x in range(0, posLen):
+            # convert part tuple to list, get token
+            token = root.stanfordCoreNLPResult['tokens'][x + startIndex]
+            parts_as_list = list(pos[x])
+            parts_as_list.append(token)
+            # save list core_nlp result in the list
+            candidate_parts_as_list.append(parts_as_list)
+
+        return [tuple(x) for x in candidate_parts_as_list]

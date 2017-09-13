@@ -3,7 +3,6 @@ import datetime
 import time
 
 
-
 # default service is calling  https://www.ambiverse.com/pricing/
 # at the time of writing there is a request limit 60 API calls per minute/1K API calls per month
 # setup your own server for request
@@ -38,7 +37,7 @@ class Aida():
                     r = requests.post(self._url, data={'text': answer_text})
                     if self._limit_request_rate:
                         self._last_request = datetime.datetime.now()
-                    #print(r.text())
+
                     o = r.json()
                     candidate.set_enhancement('aida', o)
 

@@ -95,32 +95,11 @@ class MethodExtractor(AbsExtractor):
                         relevantParts = self._pos_linked_to_corenlp_tokens(atree)
                         candidate_parts = self._find_vb_cc_vb_parts(relevantParts)
                         if candidate_parts:
-                            candidates.append([candidate_parts,None ,tree.stanfordCoreNLPResult['index'], 'prepos'])
+                            candidates.append([candidate_parts,None,tree.stanfordCoreNLPResult['index'], 'prepos'])
 
         return candidates
 
-    def _pos_linked_to_corenlp_tokens(self, tree):
 
-        root = tree.root()
-        pos = tree.pos()
-        candidate_parts_as_list = []
-        startIndex = self._find_index_from_root(tree.root(), list(tree.treeposition())) - 1
-
-        posLen = len(pos)
-        # bugfix, at some very rare occasion the tree isn`t exactly reflecting the CoreNLP structure
-        if posLen + startIndex >= len(root.stanfordCoreNLPResult['tokens']):
-            posLen = len(root.stanfordCoreNLPResult['tokens']) - startIndex - 1
-
-        for x in range(0, posLen):
-            # convert part tuple to list, get token
-
-            token = root.stanfordCoreNLPResult['tokens'][x + startIndex]
-            partsAsList = list(pos[x])
-            partsAsList.append(token)
-            # save list
-            candidate_parts_as_list.append(partsAsList)
-
-        return [tuple(x) for x in candidate_parts_as_list]
 
     def _extract_ad_candidates(self, document):
         """
@@ -192,9 +171,7 @@ class MethodExtractor(AbsExtractor):
         for candidate in candidates:
             freq = (sentences_count - candidate.get_sentence_index()) / sentences_count
             candidate.set_calculations('position_frequency_norm', freq)
-            # print(candidate.get_calculations('position_frequency_norm'))
-            # print(candidate.get_sentence_index())
-            # print('')
+
 
         # callculate score
         score_max = 0

@@ -6,7 +6,7 @@ class DistanceOfCandidate:
         self._dependantQuestions = dependantQuestions
         self._weight = weight
 
-    # documentObject, ['Who','What'], ['How'], weight=1
+    # documentObject, ['2','What'], ['How'], weight=1
     def score(self, document):
 
         distanceMatrix = {}

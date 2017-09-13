@@ -38,6 +38,7 @@ class Document(object):
         self._answers = {}
         self._candidates = {}
         self._processed = None
+        self._enhancement = {}
 
     def is_preprocessed(self, preprocessed=None):
         if preprocessed is True or preprocessed is False:
@@ -173,3 +174,13 @@ class Document(object):
 
     def set_annotations(self, annotations):
         self._annotations = annotations
+
+    # additional information create by enhancments
+    def get_enhancement(self, key):
+        return self._enhancement.get(key)
+
+    def set_enhancement(self, key, value):
+        self._enhancement[key] = value
+
+    def reset_enhancements(self):
+        self._enhancement = {}

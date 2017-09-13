@@ -122,9 +122,14 @@ class FiveWExtractor:
 
         :return: the processed document
         """
-        # preprocess the document
+        # preprocess -> coreNLP
         if not doc.is_preprocessed():
             self.preprocessor.preprocess(doc)
+
+        # enhancer
+        if self.enhancement:
+            for enhancement in self.enhancement:
+                enhancement.enhance(doc)
 
         # run extractors in different threads
         for extractor in self.extractors:
@@ -139,9 +144,5 @@ class FiveWExtractor:
                 combinedScorer.score(doc)
         doc.is_processed(True)
 
-        # enhancer
-        if self.enhancement:
-            for enhancement in self.enhancement:
-                enhancement.enhance(doc)
 
         return doc

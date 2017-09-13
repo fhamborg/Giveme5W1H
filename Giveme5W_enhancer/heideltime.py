@@ -4,7 +4,7 @@ import logging
 import xmltodict
 from dateutil.parser import parse
 
-from .abs_enhancer import AbsEnhancer
+from .abs_enhancer import AbsEnhancer, target
 from extractor.configuration import Configuration as Config
 
 
@@ -21,9 +21,9 @@ async def _do_subprocess(filename, date, path, results):
 
 
 class Heideltime(AbsEnhancer):
-    def __init__(self, question):
+    def __init__(self, questions):
         self.log = logging.getLogger('GiveMe5W-Enhancer')
-        self._question = question
+        self._questions = questions
 
     def process(self, document):
         filename = Config.get()['Giveme5W-runtime-resources'] + '/' + 'tmp.txt'
@@ -53,4 +53,8 @@ class Heideltime(AbsEnhancer):
             self.log.error('')
             self.log.error(document.get_document_id() + ': ' + document.get_title())
             self.log.error(
-                "         Heideltime need a publish date to parse news. Input:" + document.get_rawData().get('publish_date'))
+                "         Heideltime needs a publish date to parse news. Input:" + document.get_rawData().get('publish_date'))
+
+    def enhance(self, document):
+        # TODO
+        return None

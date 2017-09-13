@@ -7,15 +7,10 @@ import nltk
 from nltk.corpus import wordnet
 
 
-target = {"part": "part"
-           "candidate" "candidate"}
-
-
 class AbsEnhancer:
 
-    def __init__(self, questions, tar= target.part):
+    def __init__(self, questions):
         self._questions = questions
-        self._target = tar
 
     @abstractmethod
     def process(self, document):

@@ -3,16 +3,13 @@ import datetime
 import time
 from .abs_enhancer import AbsEnhancer, target
 
-
 # default service is calling  https://www.ambiverse.com/pricing/
 # at the time of writing there is a request limit 60 API calls per minute/1K API calls per month
 # setup your own server for request
 
-
 class Aida(AbsEnhancer):
-    def __init__(self, questions, tar=target.part, url=None):
+    def __init__(self, questions, url=None):
         self._questions = questions
-        self._target = tar
 
         self._url = url
         self._last_request = None
@@ -36,4 +33,7 @@ class Aida(AbsEnhancer):
         o = r.json()
         document.set_enhancement('aida', o)
 
-    # candidates = document.get_answers().get(self._question)
+    def enhance(self, document):
+        return None
+        # TODO mapper
+        # candidates = document.get_answers().get(self._question)

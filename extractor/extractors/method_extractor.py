@@ -1,7 +1,6 @@
 from candidate import Candidate
 from .abs_extractor import AbsExtractor
 
-
 class MethodExtractor(AbsExtractor):
     """
     The MethodExtractor tries to extract the methods.
@@ -12,10 +11,9 @@ class MethodExtractor(AbsExtractor):
     # weights = (4, 3)
     weights = [1.0, 1]
 
-    # relevant indicators
-    preposition = ['with', 'in', 'by', 'after']
-    conjunction = ['as', 'because', 'so', 'until', 'while']
-    pattern = ['NN-VBD', 'NN-VBZ', 'VBN-VBN']
+    _copulative_conjunction = ['and', 'as', 'both', 'because', 'even', 'for', 'if ', 'that', 'then', 'since', 'seeing', 'so']
+    _prepositions_before = ['in', 'with', 'until', 'as']
+    _stop_words = ['and', 'is', 'has', 'have', 'went', 'was', 'been','were', 'am', 'get', 'said','are']
 
     # prepositional phrase PP, preposition
     def extract(self, document):
@@ -46,7 +44,6 @@ class MethodExtractor(AbsExtractor):
 
         # All kind of adjectives
         candidatesAd = self._convert_to_object_oriented_list(self._extract_ad_candidates(document))
-        #candidatesAd = self._extract_ad_candidates(document)
 
         # join the candidates
         candidates = candidates + candidatesAd
@@ -66,9 +63,7 @@ class MethodExtractor(AbsExtractor):
             # ...after it "came off the tracks"...
             if label == 'IN':
 
-                # after can be followed by a candidate
-                # TODO list all prepositions depending on where candidates can be found (before or after)
-                if subtree[0] in ['after']:
+                if subtree[0] in  self._copulative_conjunction or  subtree[0] not in self._prepositions_before:
                     # candidate is after the preposition
 
                     right_sibling = subtree.right_sibling()
@@ -76,14 +71,12 @@ class MethodExtractor(AbsExtractor):
                     if right_sibling:
 
                         right_sibling_pos = self._pos_linked_to_corenlp_tokens(right_sibling)
-
                         candidate_parts = self._find_vb_cc_vb_parts(right_sibling_pos)
 
                         if candidate_parts:
                             # get the CoreNLP tokens for each part e.g lemmas etc.
                             # convert list objects back to tuples for backward compatibility
                             candidates.append([candidate_parts, None, tree.stanfordCoreNLPResult['index'], 'prepos'])
-
 
                 else:
                     # candidate is before the preposition
@@ -120,10 +113,8 @@ class MethodExtractor(AbsExtractor):
             for token in sentence['tokens']:
                 if token['index'] > self._maxIndex:
                     self._maxIndex = token['index']
-                if self._is_relevant_pos(token['pos']) and token['ner'] not in ['TIME', 'DATE', 'ORGANIZATION',
-                                                                                'DURATION', 'ORDINAL']:
+                if self._is_relevant_pos(token['pos']) and token['ner'] not in ['TIME', 'DATE', 'ORGANIZATION', 'DURATION', 'ORDINAL']:
                     candidates.append([[(token['pos'], token['originalText'], token)], None ,sentence['index'], 'adjectiv'])
-
         return candidates
 
     def _evaluate_candidates(self, document):
@@ -158,20 +149,17 @@ class MethodExtractor(AbsExtractor):
                     global_max_lemma = lemma_count
             # assigme the greatest lemma to the candidate
             candidate.set_calculations('lemma_count', maxLemma)
-            # candidate.set_lemma_count(maxLemma)
 
         # normalize frequency (per lemma)
         for candidate in candidates:
             count = candidate.get_calculations('lemma_count')
             candidate.set_calculations('lemma_count_norm', count / global_max_lemma)
-            # print(candidate.get_calculations('lemma_count_norm'))
 
         # normalize position - reserved order
         sentences_count = len(document.get_sentences())
         for candidate in candidates:
             freq = (sentences_count - candidate.get_sentence_index()) / sentences_count
             candidate.set_calculations('position_frequency_norm', freq)
-
 
         # callculate score
         score_max = 0
@@ -194,16 +182,20 @@ class MethodExtractor(AbsExtractor):
 
     def _convert_to_object_oriented_list(self, list):
 
-        return self._filter_duplicates(list)
-        whoList = []
+        list = self._filter_duplicates(list)
+
+        #BUGFIX TODO
+
+        return list
+        #whoList = []
         # for answer in list:
-        for answer in self._filter_duplicates(list):
-            ca = Candidate()
-            ca.set_parts(answer[0])
-            ca.set_sentence_index(answer[1])
-            ca.set_type(answer[2])
-            whoList.append(ca)
-        return whoList
+        #for answer in self._filter_duplicates(list):
+        #    ca = Candidate()
+        #    ca.set_parts(answer[0])
+        #    ca.set_sentence_index(answer[1])
+        #    ca.set_type(answer[2])
+        #    whoList.append(ca)
+        #return whoList
 
     def _find_vb_cc_vb_parts(self, relevantParts):
         recording = False
@@ -217,24 +209,11 @@ class MethodExtractor(AbsExtractor):
         candidatePartsLen = len(candidateParts)
 
         # filter out short candidates
-        if ((candidatePartsLen == 1 and candidateParts[0][0] not in ['and', 'is', 'has', 'have', 'went', 'was', 'been',
-                                                                     'were', 'am', 'get', 'said',
-                                                                     'are']) or candidatePartsLen > 1):
+        if ((candidatePartsLen == 1 and candidateParts[0][0] not in self._stop_words) or candidatePartsLen > 1):
             return candidateParts
         return None
 
-    def _find_index_from_root(self, root, path):
 
-        if (len(path) > 1):
-            position = path.pop(0)
-            leftChildCount = 0
-            for x in range(0, position):
-                leftChildCount = leftChildCount + self._count_elements(root[x])
-            return leftChildCount + self._find_index_from_root(root[position], path)
-        elif (len(path) is 1):
-            return path.pop(0) + 1
-        else:
-            return 0
 
     def _count_elements(self, root):
         count = 0

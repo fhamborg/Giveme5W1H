@@ -57,7 +57,6 @@ class Candidate:
 
     # json representation for this candidate
     def get_json(self):
-
         if self._parts:
             words = []
             for part in self._parts:
@@ -91,7 +90,6 @@ class Candidate:
 
     def reset_enhancements(self):
         self._enhancement = {}
-
 
     # helper to decouple evaluation calculations from candidate extraction
     # use this for all evaluation related information

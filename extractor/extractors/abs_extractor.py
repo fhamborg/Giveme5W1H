@@ -231,28 +231,41 @@ class AbsExtractor:
     the core NLP results. 
     
     This method can take a (sub)-tree/leave and walk back the tree and count all left hand-nodes.
-    By doing so it is possbile to extracts all core NLP-Information for the candidate tokens.
+    By doing so it is possible to extracts all Core-NLP-Information for the candidates and their tokens.
     '''
     def _pos_linked_to_corenlp_tokens(self, tree):
 
         root = tree.root()
         pos = tree.pos()
         candidate_parts_as_list = []
-        startIndex = self._find_index_from_root(tree.root(), list(tree.treeposition())) - 1
+        start_index = self.__find_index_from_root(tree.root(), list(tree.treeposition())) - 1
 
         posLen = len(pos)
 
         # TODO
         # bugfix, at some very rare occasion the tree isn`t exactly reflecting the CoreNLP structure
-        if posLen + startIndex >= len(root.stanfordCoreNLPResult['tokens']):
-            posLen = len(root.stanfordCoreNLPResult['tokens']) - startIndex - 1
+        if posLen + start_index >= len(root.stanfordCoreNLPResult['tokens']):
+            posLen = len(root.stanfordCoreNLPResult['tokens']) - start_index - 1
 
         for x in range(0, posLen):
             # convert part tuple to list, get token
-            token = root.stanfordCoreNLPResult['tokens'][x + startIndex]
+            token = root.stanfordCoreNLPResult['tokens'][x + start_index]
             parts_as_list = list(pos[x])
             parts_as_list.append(token)
             # save list core_nlp result in the list
             candidate_parts_as_list.append(parts_as_list)
 
         return [tuple(x) for x in candidate_parts_as_list]
+
+    def __find_index_from_root(self, root, path):
+
+        if (len(path) > 1):
+            position = path.pop(0)
+            leftChildCount = 0
+            for x in range(0, position):
+                leftChildCount = leftChildCount + self._count_elements(root[x])
+            return leftChildCount + self._find_index_from_root(root[position], path)
+        elif (len(path) is 1):
+            return path.pop(0) + 1
+        else:
+            return 0

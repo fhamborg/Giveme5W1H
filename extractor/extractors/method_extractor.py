@@ -12,7 +12,7 @@ class MethodExtractor(AbsExtractor):
     weights = [1.0, 1]
 
     _copulative_conjunction = ['and', 'as', 'both', 'because', 'even', 'for', 'if ', 'that', 'then', 'since', 'seeing', 'so']
-    _prepositions_before = ['in', 'with', 'until', 'as']
+    _prepositions_before = ['in', 'with', 'until', 'as', 'during']
     _stop_words = ['and', 'is', 'has', 'have', 'went', 'was', 'been','were', 'am', 'get', 'said', 'are']
 
     #_tmp_statistic = {}
@@ -64,13 +64,8 @@ class MethodExtractor(AbsExtractor):
             # Preposition or subordinating conjunction -> detecting verbs
             # ...after it "came off the tracks"...
             if label == 'IN':
-               # stat =  str.lower(subtree[0] )
-               # if self._tmp_statistic.get(stat) is None:
-               #     self._tmp_statistic.setdefault(stat, 1)
-               # else:
-               #     self._tmp_statistic[stat] =  self._tmp_statistic[stat] + 1;
 
-                if subtree[0] in  self._copulative_conjunction or  subtree[0] not in self._prepositions_before:
+                if subtree[0] in  self._copulative_conjunction or subtree[0] not in self._prepositions_before:
                     # candidate is after the preposition
 
                     right_sibling = subtree.right_sibling()
@@ -121,7 +116,7 @@ class MethodExtractor(AbsExtractor):
                 if token['index'] > self._maxIndex:
                     self._maxIndex = token['index']
                 if self._is_relevant_pos(token['pos']) and token['ner'] not in ['TIME', 'DATE', 'ORGANIZATION', 'DURATION', 'ORDINAL']:
-                    candidates.append([[(token['pos'], token['originalText'], token)], None ,sentence['index'], 'adjectiv'])
+                    candidates.append([[(token['originalText'],token['pos'], token)], None ,sentence['index'], 'adjectiv'])
         return candidates
 
     def _evaluate_candidates(self, document):
@@ -148,7 +143,7 @@ class MethodExtractor(AbsExtractor):
             for part in candidate.get_parts():
                 lemma = part[2]['lemma']
                 lemma_count = 0
-                if lemma not in ['be', 'i', 'is', 'and', 'have', 'the', 'a', ',', '.', '']:
+                if lemma not in ['so','due', 'well', 'very', 'on', 'too', 'be', 'i', 'is', 'and', 'have', 'the', 'a', ',', '.', '', 'not', "n't", 'am', 'as', 'even', 'however', 'other', 'just', 'over', 'more']:
                     lemma_count = lemma_map[lemma]
                 if lemma_count > maxLemma:
                     maxLemma = lemma_count
@@ -219,8 +214,6 @@ class MethodExtractor(AbsExtractor):
         if ((candidatePartsLen == 1 and candidateParts[0][0] not in self._stop_words) or candidatePartsLen > 1):
             return candidateParts
         return None
-
-
 
     def _count_elements(self, root):
         count = 0

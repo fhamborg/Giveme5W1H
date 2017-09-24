@@ -4,7 +4,7 @@ import logging
 import xmltodict
 from dateutil.parser import parse
 
-from .abs_enhancer import AbsEnhancer, target
+from .abs_enhancer import AbsEnhancer
 from extractor.configuration import Configuration as Config
 
 

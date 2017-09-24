@@ -1,7 +1,7 @@
 import requests
 import datetime
 import time
-from .abs_enhancer import AbsEnhancer, target
+from .abs_enhancer import AbsEnhancer
 
 # default service is calling  https://www.ambiverse.com/pricing/
 # at the time of writing there is a request limit 60 API calls per minute/1K API calls per month

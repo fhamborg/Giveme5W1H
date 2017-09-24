@@ -13,7 +13,9 @@ class MethodExtractor(AbsExtractor):
 
     _copulative_conjunction = ['and', 'as', 'both', 'because', 'even', 'for', 'if ', 'that', 'then', 'since', 'seeing', 'so']
     _prepositions_before = ['in', 'with', 'until', 'as']
-    _stop_words = ['and', 'is', 'has', 'have', 'went', 'was', 'been','were', 'am', 'get', 'said','are']
+    _stop_words = ['and', 'is', 'has', 'have', 'went', 'was', 'been','were', 'am', 'get', 'said', 'are']
+
+    #_tmp_statistic = {}
 
     # prepositional phrase PP, preposition
     def extract(self, document):
@@ -62,6 +64,11 @@ class MethodExtractor(AbsExtractor):
             # Preposition or subordinating conjunction -> detecting verbs
             # ...after it "came off the tracks"...
             if label == 'IN':
+               # stat =  str.lower(subtree[0] )
+               # if self._tmp_statistic.get(stat) is None:
+               #     self._tmp_statistic.setdefault(stat, 1)
+               # else:
+               #     self._tmp_statistic[stat] =  self._tmp_statistic[stat] + 1;
 
                 if subtree[0] in  self._copulative_conjunction or  subtree[0] not in self._prepositions_before:
                     # candidate is after the preposition
@@ -234,3 +241,81 @@ class MethodExtractor(AbsExtractor):
             return True
         else:
             return False
+
+""""
+1	  of	1761
+2	  in	1667
+3	  on	890
+4	  for	716
+5	  with	622
+6	  at	538
+7	  as	497
+8	  that	414
+9	  after	374
+10	  from	330
+11	  by	316
+12	  into	181
+13	  about	137
+14	  before	123
+15	  than	114
+16	  during	111
+17	  over	110
+18	  while	99
+19	  like	96
+20	  since	84
+21	  if	82
+22	  around	80
+23	  between	79
+24	  because	61
+25	  against	61
+26	  near	56
+27	  out	55
+28	  outside	42
+29	  through	35
+30	  whether	34
+31	  across	34
+32	  behind	31
+33	  among	31
+34	  until	24
+35	  without	23
+36	  under	22
+37	  despite	22
+38	  onto	21
+39	  inside	19
+40	  off	18
+41	  down	17
+42	  though	16
+43	  alongside	15
+44	  so	14
+45	  within	13
+46	  up	11
+47	  although	11
+48	  throughout	10
+49	  along	10
+50	  towards	8
+51	  above	8
+52	  ago	7
+53	  per	6
+54	  via	5
+55	  beyond	5
+56	  toward	4
+57	  upon	4
+58	  whilst	3
+59	  next	3
+60	  underneath	3
+61	  beside	3
+62	  unlike	3
+63	  !!	2
+64	  amid	2
+65	  save	2
+66	  past	2
+67	  amongst	1
+68	  except	1
+69	  below	1
+70	  unless	1
+71	  en	1
+72	  aboard	1
+73	  once	1
+74	  atop	1
+
+"""

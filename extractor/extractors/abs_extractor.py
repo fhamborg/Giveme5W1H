@@ -264,7 +264,7 @@ class AbsExtractor:
             leftChildCount = 0
             for x in range(0, position):
                 leftChildCount = leftChildCount + self._count_elements(root[x])
-            return leftChildCount + self._find_index_from_root(root[position], path)
+            return leftChildCount + self.__find_index_from_root(root[position], path)
         elif (len(path) is 1):
             return path.pop(0) + 1
         else:

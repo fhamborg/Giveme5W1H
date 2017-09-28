@@ -55,10 +55,14 @@ class ActionExtractor(AbsExtractor):
                 for pattern in self._evaluate_tree(trees[mention['sentNum'] - 1]):
                     np_string = ''.join([p[0] for p in pattern[0]])
                     if re.sub(r'\s+', '', mention['text']) in np_string:
-                        candidateObject = Candidate()
-                        candidateObject.set_sentence_index(pattern[2])
-                        candidateObject.set_raw([pattern[0], pattern[1], cluster, mention['id']])
-                        candidates.append(candidateObject)
+                        candidate_object = Candidate()
+                        candidate_object.set_sentence_index(pattern[2])
+                        candidate_object.set_raw([pattern[0], pattern[1], cluster, mention['id']])
+
+                        # TODO FINDE SOMEHOW THE TEXTINDEX
+                        # candidate_object.set_text_index(None)
+
+                        candidates.append(candidate_object)
 
         document.set_candidates('ActionExtractor', candidates)
 
@@ -85,11 +89,10 @@ class ActionExtractor(AbsExtractor):
                 sibling = subtree.right_sibling()
                 while sibling is not None:
                     if sibling.label() == 'VP':
-                        candidates.append(
-                            (subtree.pos(), self.cut_what(sibling, 3).pos(), tree.stanfordCoreNLPResult['index']))
+                        entry = [subtree.pos(), self.cut_what(sibling, 3).pos(), tree.stanfordCoreNLPResult['index']]
+                        candidates.append(entry)
                         break
                     sibling = sibling.right_sibling()
-
         return candidates
 
     def _evaluate_candidates(self, document):
@@ -103,9 +106,6 @@ class ActionExtractor(AbsExtractor):
         :type candidates:[([(String,String)], ([(String,String)])]
         :return: A list of evaluated and ranked candidates
         """
-
-        # TODO consider VP in ranking?
-
         ranked_candidates = []
         doc_len = document.get_len()
         doc_ner = document.get_ner()

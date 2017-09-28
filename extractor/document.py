@@ -14,7 +14,7 @@ class Document(object):
         self._raw = {'title': title, 'description': desc, 'text': text}
 
         # append all document text into one string
-        self._fullText = '. '.join(val for key, val in self._raw.items())
+        self._full_text = '. '.join(val for key, val in self._raw.items())
 
         self._date = None
 
@@ -50,8 +50,8 @@ class Document(object):
             self._processed = processed
         return self._processed
 
-    def get_fullText(self):
-        return self._fullText
+    def get_full_text(self):
+        return self._full_text
 
     def set_candidates(self, extractor, candidates):
         self._candidates[extractor] = candidates

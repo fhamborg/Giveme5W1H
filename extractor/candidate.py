@@ -55,27 +55,36 @@ class Candidate:
     def get_sentence_index(self):
         return self._index
 
+    # indicated index of the first character, related to document.get_fullText()
+    def set_text_index(self, index):
+        self._index_text = index
+    def get_text_index(self):
+        return self._index_text
+
     # json representation for this candidate
     def get_json(self):
         if self._parts:
             words = []
             for part in self._parts:
                 parts_json = {'text': part[0]}
+                # nlpTag
                 if self._config['part'].get('nlpTag'):
                     parts_json['nlpTag'] = part[1]
                 words.append(parts_json)
 
-            # nlpTag
             json = {'parts': words}
             if self._config.get('score'):
                 json['score'] = self._score
 
-
             if len(self._enhancement) > 0:
                 json['enhancement'] = self._enhancement
 
+            # nlpIndexSentence
             if self._index and self._config.get('nlpIndexSentence'):
                 json['nlpIndexSentence'] = self._index
+
+            if self._index_text and self._config.get('IndexText'):
+                json['IndexText'] = self._index_text
             return json
         return None
 

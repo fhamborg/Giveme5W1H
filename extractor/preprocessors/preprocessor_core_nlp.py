@@ -46,7 +46,7 @@ class Preprocessor:
         :return Document: The processed Document object.
         """
 
-        annotation = self.cnlp.annotate(document.get_fullText(), self.config)
+        annotation = self.cnlp.annotate(document.get_full_text(), self.config)
 
         if type(annotation) == str:
             print(annotation)

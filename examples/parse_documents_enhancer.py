@@ -9,6 +9,7 @@ from extractor.extractor import FiveWExtractor
 from extractor.tools.file.handler import Handler
 from extractors import environment_extractor
 from extractors import method_extractor
+from extractors import action_extractor
 
 # Add path to allow execution though console
 sys.path.insert(0, '/'.join(os.path.realpath(__file__).split('/')[:-3]))
@@ -33,11 +34,13 @@ if __name__ == '__main__':
     sh.setLevel(logging.DEBUG)
     log.addHandler(sh)
 
+
+    me = method_extractor.MethodExtractor()
     extractor = FiveWExtractor(extractors=[
-        # action_extractor.ActionExtractor(),
-        #environment_extractor.EnvironmentExtractor(),
+         action_extractor.ActionExtractor(),
+        # environment_extractor.EnvironmentExtractor(),
         # cause_extractor.CauseExtractor(),
-         method_extractor.MethodExtractor()
+        # me
     ], enhancement=[
         #Heideltime('when'),
         #Aida('when')
@@ -56,7 +59,7 @@ if __name__ == '__main__':
             # set a path to save and load preprocessed documents (CoreNLP result)
             .set_preprocessed_path(preprocessedPath)
             # limit the documents read from the input directory (handy for development)
-            .set_limit(5)
+            .set_limit(1)
             # .skip_documents_with_output()
             # add an optional extractor (it would do only copying without...)
             .set_extractor(extractor)
@@ -70,3 +73,10 @@ if __name__ == '__main__':
             # get the processed documents
             .get_documents()
     )
+
+    # convert to array
+#    arr = []
+ #   for item in me._tmp_statistic:
+ #       arr.append(  (item, me._tmp_statistic[item] )   )
+  #  arr.sort(key=lambda x: x[1], reverse=True)
+  #  print(arr)

@@ -66,7 +66,7 @@ class EnvironmentExtractor(AbsExtractor):
         locations = self._evaluate_locations(document)
         dates = self._evaluate_dates(document)
 
-        document.set_answer('where', self._filter_duplicates(locations, False) )
+        document.set_answer('where', self._filter_duplicates(locations, False))
         document.set_answer('when', self._filter_duplicates(dates, False))
 
     def _extract_candidates(self, document):
@@ -89,7 +89,6 @@ class EnvironmentExtractor(AbsExtractor):
         for i, entity in enumerate(ner_tags):
             # phrase_range=2 allows entities to be separate by single tokens, this is common for locations and dates
             # i.e. 'London, England' or 'October 13, 2015'.
-
             for candidate in self._extract_entities(ner_tags[i], ['LOCATION'], inverted=True, phrase_range=3):
 
                 # look-up geocode in Nominatim
@@ -98,6 +97,8 @@ class EnvironmentExtractor(AbsExtractor):
                     if location is not None:
                         # fetch pos and append to candidates
                         ca = Candidate()
+                        # TODO FINDE SOMEHOW THE TEXTINDEX
+                        # candidate_object.set_text_index(None)
                         ca.set_parts((self._fetch_pos(pos_tags[i], candidate[0]), location, i))
                         locations.append(ca)
                 except GeocoderServiceError:
@@ -111,26 +112,33 @@ class EnvironmentExtractor(AbsExtractor):
                     # If a date was already mentioned combine it with the mentioned time
                     if last_date is not None:
                         ca = Candidate()
+                        # TODO FINDE SOMEHOW THE TEXTINDEX
+                        # candidate_object.set_text_index(None)
                         ca.set_parts((last_date + self._fetch_pos(pos_tags[i], candidate[0]), i))
                         dates.append(ca)
                         # dates.append((last_date + self._fetch_pos(pos_tags[i], candidate[0]), i))
                     else:
                         ca = Candidate()
+                        # TODO FINDE SOMEHOW THE TEXTINDEX
+                        # candidate_object.set_text_index(None)
                         ca.set_parts((self._fetch_pos(pos_tags[i], candidate[0]), i))
                         dates.append(ca)
                         # dates.append((self._fetch_pos(pos_tags[i], candidate[0]), i))
                 elif candidate[1] == 'DATE':
                     # dates.append((self._fetch_pos(pos_tags[i], candidate[0]), i))
                     ca = Candidate()
+                    # TODO FINDE SOMEHOW THE TEXTINDEX
+                    # candidate_object.set_text_index(None)
                     ca.set_parts((self._fetch_pos(pos_tags[i], candidate[0]), i))
                     dates.append(ca)
                     last_date = self._fetch_pos(pos_tags[i], candidate[0])
                 else:
                     # String includes date and time
                     ca = Candidate()
+                    # TODO FINDE SOMEHOW THE TEXTINDEX
+                    # candidate_object.set_text_index(None)
                     ca.set_parts((self._fetch_pos(pos_tags[i], candidate[0]), i))
                     dates.append(ca)
-                    # dates.append((self._fetch_pos(pos_tags[i], candidate[0]), i))
 
         document.set_candidates('EnvironmentExtractorNeDates', dates)
         document.set_candidates('EnvironmentExtractorNeLocatios', locations)

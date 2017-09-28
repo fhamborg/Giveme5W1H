@@ -134,7 +134,7 @@ class FiveWExtractor:
 
         :return: the processed document
         """
-        # preprocess -> coreNLP -> enhancer if any
+        # preprocess -> coreNLP and enahncer
         self.preprocess(doc)
 
         # run extractors in different threads

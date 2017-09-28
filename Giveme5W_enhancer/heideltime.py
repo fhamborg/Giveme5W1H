@@ -37,7 +37,7 @@ class Heideltime(AbsEnhancer):
         if date:
             # write the question as file to disc
             outfile = open(filename, 'w')
-            outfile.write(document.get_fullText())
+            outfile.write(document.get_full_text())
             outfile.close()
 
             results = []

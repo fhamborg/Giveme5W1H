@@ -111,7 +111,13 @@ class CauseExtractor(AbsExtractor):
                 candidateObject.set_parts(candidate[0] + candidate[1])
                 candidateObject.set_type(candidate[2])
                 candidateObject.set_sentence_index(i)
+
+                # TODO FINDE SOMEHOW THE TEXTINDEX
+                # candidate_object.set_text_index(None)
+
                 candidates.append(candidateObject)
+
+
         document.set_candidates('CauseExtractor', candidates)
 
     def _evaluate_tree(self, tree):
@@ -138,7 +144,6 @@ class CauseExtractor(AbsExtractor):
             sibling = subtree.right_sibling()
 
             # skip to the first verb
-            # TODO skip Modal auxiliaries? (MD)?
             while sibling.label() == 'ADVP' and sibling.right_sibling() is not None:
                 sibling = sibling.right_sibling()
 
@@ -206,7 +211,7 @@ class CauseExtractor(AbsExtractor):
                     if (
                             post_con['phenomenon']
                     ) or (
-                                    not pre_con['entity'] and (verb_con['associate'] or verb_con['relate']) and (
+                            not pre_con['entity'] and (verb_con['associate'] or verb_con['relate']) and (
                                             post_con['abstraction'] and post_con['group'] and post_con['possession'])
                     ) or (
                                 not pre_con['entity'] and post_con['event']
@@ -267,8 +272,7 @@ class CauseExtractor(AbsExtractor):
             parts = candidateObject.get_parts();
             if parts is not None and len(parts) > 0:
                 # following the concept of the inverted pyramid use the position for scoring
-                score = self.weights[0] * (
-                document.get_len() - candidateObject.get_sentence_index()) / document.get_len()
+                score = self.weights[0] * ( document.get_len() - candidateObject.get_sentence_index()) / document.get_len()
 
                 # we also consider the pattern typ used to detect the candidate
                 if candidateObject.get_type() == 'biclausal':

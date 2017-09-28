@@ -185,9 +185,6 @@ class MethodExtractor(AbsExtractor):
     def _convert_to_object_oriented_list(self, list):
 
         list = self._filter_duplicates(list)
-
-        #BUGFIX TODO
-
         return list
         #whoList = []
         # for answer in list:

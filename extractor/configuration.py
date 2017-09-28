@@ -1,6 +1,7 @@
 class Configuration:
     __config = {
         "candidate": {
+            "indexText": True,        # determinde by giveme5w, index refers to
             "nlpIndexSentence": True,  # determined by CoreNlp: include index of sentence
             "part": {
                 "nlpTag": True  # determined by CoreNlp: Tag

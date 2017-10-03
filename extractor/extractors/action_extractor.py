@@ -66,19 +66,19 @@ class ActionExtractor(AbsExtractor):
 
         document.set_candidates('ActionExtractor', candidates)
 
-    def _evaluate_tree(self, tree):
+    def _evaluate_tree(self, sentence_root):
         """
         Examines the passed syntactic tree to determine if it matches a NP-VP-NP pattern
+        This is executed per sentence
 
-        :param tree: A tree to be analyzed
-        :type tree: ParentedTree
+        :param sentence_root: A tree to be analyzed
+        :type sentence_root: ParentedTree
 
         :return: A list of Tuples containing the agent and the action described in the sentence.
         """
 
         candidates = []
-
-        for subtree in tree.subtrees():
+        for subtree in sentence_root.subtrees():
             if subtree.label() == 'NP' and subtree.parent().label() == 'S':
 
                 # Skip NPs containing a VP
@@ -89,11 +89,17 @@ class ActionExtractor(AbsExtractor):
                 sibling = subtree.right_sibling()
                 while sibling is not None:
                     if sibling.label() == 'VP':
-                        entry = [subtree.pos(), self.cut_what(sibling, 3).pos(), tree.stanfordCoreNLPResult['index']]
+
+                        # this gives a tuple to find the way from sentence to leaf
+                        tree_position = subtree.leaf_treeposition(0)
+
+                        entry = [subtree.pos(), self.cut_what(sibling, 3).pos(), sentence_root.stanfordCoreNLPResult['index']]
                         candidates.append(entry)
                         break
                     sibling = sibling.right_sibling()
         return candidates
+
+
 
     def _evaluate_candidates(self, document):
         """

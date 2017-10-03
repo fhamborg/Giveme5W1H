@@ -5,7 +5,10 @@ class Candidate:
         self._type = None
         self._raw = None
         self._score = None
+
         self._index = None
+        self._index_text = None
+
         self._parts = None
         self._lemma_count = None
         self._enhancement = {}

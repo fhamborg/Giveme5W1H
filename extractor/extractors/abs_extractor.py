@@ -122,7 +122,7 @@ class AbsExtractor:
                 # tuples containing token and pos
                 string = ' '.join([c[0] for c in candidate[0]]).lower()
 
-            new = True
+
             if exact:
                 new = string not in mentioned
             else:
@@ -130,17 +130,17 @@ class AbsExtractor:
                     if string in member:
                         new = False
                         break
-            if new:
-                mentioned.append(string)
 
-                cd = Candidate()
-                cd.set_parts(candidate[0])
-                cd.set_score(candidate[1])
-                cd.set_sentence_index(candidate[2] if 2 < len(candidate) else None)
+            mentioned.append(string)
 
-                cd.set_text_index(text_index)
+            cd = Candidate()
+            cd.set_parts(candidate[0])
+            cd.set_score(candidate[1])
+            cd.set_sentence_index(candidate[2] if 2 < len(candidate) else None)
 
-                filtered.append(cd)
+            #cd.set_text_index(text_index)
+
+            filtered.append(cd)
 
         return filtered
 

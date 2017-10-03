@@ -25,7 +25,7 @@ if __name__ == '__main__':
     log.addHandler(sh)
 
     extractor = FiveWExtractor()
-    inputPath = os.path.dirname(__file__) + '/input'
+    inputPath = os.path.dirname(__file__) + '/../datasets/gold_standard/data/'
     outputPath = os.path.dirname(__file__) + '/output'
 
     # initiate the news-please file handler with the input directory

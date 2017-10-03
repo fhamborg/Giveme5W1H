@@ -45,7 +45,7 @@ if __name__ == '__main__':
         #Heideltime('when'),
         #Aida('when')
     ])
-    inputPath = os.path.dirname(__file__) + '/input'
+    inputPath = os.path.dirname(__file__) + '/../datasets/gold_standard/data/'
     outputPath = os.path.dirname(__file__) + '/output'
     preprocessedPath = os.path.dirname(__file__) + '/cache'
 

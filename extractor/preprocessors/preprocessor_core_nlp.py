@@ -36,6 +36,15 @@ class Preprocessor:
             'outputFormat': 'json'
         }
 
+        self._token_index = None
+
+    def _link_leaf_to_core_nlp(self, s):
+
+        # (original leaf content, token information, ... add here more)
+        result = (s, self._tokens[self._token_index])
+        self._token_index = self._token_index + 1
+        return result
+
     def preprocess(self, document):
         """
         Send the document to CoreNLP server to execute the necessary preprocessing.
@@ -55,11 +64,16 @@ class Preprocessor:
 
             tree = []
             for sentence in annotation['sentences']:
-                parentedTree = nltk.ParentedTree.fromstring(sentence['parse'])
-                # add a reference to the original data from parsing
-                parentedTree.stanfordCoreNLPResult = sentence
-                tree.append(parentedTree)
-            # testTree = [nltk.ParentedTree.fromstring(sentence['parse']) for sentence in annotation['sentences']]
+
+                # that's a hack to add to every tree leave a the tokens result
+                self._token_index = 0
+                self._tokens = sentence['tokens']
+                sentence_tree = nltk.ParentedTree.fromstring(sentence['parse'], read_leaf=self._link_leaf_to_core_nlp)
+
+                # add a reference to the original data from parsing for this sentence
+                sentence_tree.stanfordCoreNLPResult = sentence
+
+                tree.append(sentence_tree)
 
             document.set_trees(tree)
             document.set_corefs(annotation['corefs'])

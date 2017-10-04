@@ -5,28 +5,25 @@ import hashlib
 
 
 def read_random(directory, count):
-
-
     glob_pattern = os.path.join(directory, '*.txt')
     files = sorted(glob(glob_pattern), key=os.path.getctime)
     return numpy.random.choice(a=files,size=count).tolist()
 
-
+#
 # Variables
 
-# Change these if you wan` another sample size
+# Change these if you wan`t another sample size
 categories = ['business', 'entertainment', 'politics', 'sport','tech']
 category_size = 12
 
-##
-## tool itself
+
+
+#
+# tool itself
 inputPath = os.path.dirname(__file__) + '/data_raw'
 outputPath = os.path.dirname(__file__) + '/data'
 
-
-
-
-#delete the old files
+# delete the old files
 for the_file in os.listdir(outputPath):
     file_path = os.path.join(outputPath, the_file)
     try:
@@ -35,15 +32,12 @@ for the_file in os.listdir(outputPath):
     except Exception as e:
         print(e)
 
-
 # reading files
 sample_set = []
 for category in categories:
     full_path = inputPath + '/' + category + '/'
     sample_set = sample_set + read_random(full_path, category_size)
 
-
-print(len(sample_set))
 # write data
 for path in sample_set:
     with open(path, encoding='utf-8') as data_file:
@@ -61,5 +55,3 @@ for path in sample_set:
             json_dump = json.dumps(output_object, sort_keys=False, indent=2)
             outfile.write(json_dump)
             outfile.close()
-
-

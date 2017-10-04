@@ -8,7 +8,7 @@ question = 'how'
 # number of included candidates
 candidates = 3
 # input files, usually the output directory of giveme5w
-inputPath = os.path.dirname(__file__) + '/output'
+inputPath = os.path.dirname(__file__) + 'extracting/output'
 
 
 # extracting

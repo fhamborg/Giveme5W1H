@@ -53,7 +53,7 @@ class ActionExtractor(AbsExtractor):
                 # child of S and the sibling of VP" (http://www.nltk.org/book/ch08.html)
 
                 for pattern in self._evaluate_tree(trees[mention['sentNum'] - 1]):
-                    np_string = ''.join([p[0] for p in pattern[0]])
+                    np_string = ''.join([p[0] for p in pattern[0][0]])
                     if re.sub(r'\s+', '', mention['text']) in np_string:
                         candidate_object = Candidate()
                         candidate_object.set_sentence_index(pattern[2])
@@ -91,7 +91,7 @@ class ActionExtractor(AbsExtractor):
                     if sibling.label() == 'VP':
 
                         # this gives a tuple to find the way from sentence to leaf
-                        tree_position = subtree.leaf_treeposition(0)
+                        # tree_position = subtree.leaf_treeposition(0)
 
                         entry = [subtree.pos(), self.cut_what(sibling, 3).pos(), sentence_root.stanfordCoreNLPResult['index']]
                         candidates.append(entry)
@@ -126,7 +126,7 @@ class ActionExtractor(AbsExtractor):
 
         for candidate in document.get_candidates('ActionExtractor'):
             candidateParts = candidate.get_raw()
-            verb = candidateParts[1][0][0].lower()
+            verb = candidateParts[1][0][0][0].lower()
 
             # VP beginning with say/said often contain no relevant action and are therefor skipped.
             if verb.startswith('say') or verb.startswith('said'):
@@ -150,7 +150,10 @@ class ActionExtractor(AbsExtractor):
                         score += ((doc_len - mention['sentNum'] + 1) / doc_len) * self.weights[0]
                 if mention['isRepresentativeMention']:
                     # The representative name for this chain has been found.
-                    representative = doc_pos[mention['sentNum'] - 1][mention['headIndex'] - 1:mention['endIndex'] - 1]
+                    tmp = document._sentences[mention['sentNum'] - 1]['tokens'][mention['headIndex'] - 1]
+                    representative = ((tmp['originalText'],tmp),tmp['pos'])
+                    # document._sentences[mention['sentNum'] - 1]['tokens'][mention['headIndex'] - 1]
+                    #representative = doc_pos[mention['sentNum'] - 1][mention['headIndex'] - 1:mention['endIndex'] - 1]
                     if representative[-1][1] == 'POS':
                         representative = representative[:-1]
 
@@ -170,11 +173,11 @@ class ActionExtractor(AbsExtractor):
 
             if mention_type == 'PRONOMINAL':
                 # use representing mention if the agent is only a pronoun
-                ranked_candidates.append((representative, candidateParts[1], score, candidate.get_sentence_index()))
+                ranked_candidates.append(([representative], candidateParts[1], score, candidate.get_sentence_index()))
             else:
                 ranked_candidates.append((candidateParts[0], candidateParts[1], score, candidate.get_sentence_index()))
 
-        # ranked_candidates.sort(key=lambda x: x[2], reverse=True)
+
 
         # split results
         who = [(c[0], c[2], c[3]) for c in ranked_candidates]
@@ -188,8 +191,8 @@ class ActionExtractor(AbsExtractor):
 
     def _filterAndConvertToObjectOrientedList(self, list):
         max = 0
-        candidates = []
-        for candidate in self._filter_duplicates(list):
+        candidates = self._filter_duplicates(list)
+        for candidate in candidates:
             if candidate.get_score() > max:
                 max = candidate.get_score()
 

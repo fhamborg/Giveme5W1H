@@ -119,8 +119,11 @@ class AbsExtractor:
             if type(candidate[0][0]) == str:
                 string = ' '.join(candidate[0]).lower()
             else:
-                # tuples containing token and pos
-                string = ' '.join([c[0] for c in candidate[0]]).lower()
+
+                string_a = []
+                for part in candidate[0]:
+                    string_a.append(part[0][1]['lemma'])
+                string = ' '.join(string_a)
 
 
             if exact:

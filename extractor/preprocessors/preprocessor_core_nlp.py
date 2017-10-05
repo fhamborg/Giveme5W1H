@@ -87,7 +87,8 @@ class Preprocessor:
                 s_pos = []
                 s_ner = []
                 for token in sentence['tokens']:
-                    s_tokens.append(token['originalText'])
+                    s_tokens.append(token)
+                    #s_tokens.append(token['originalText'])
                     s_pos.append((token['originalText'], token['pos']))
                     s_ner.append((token['originalText'], token['ner']))
 

@@ -6,11 +6,6 @@ from itertools import product
 import nltk
 from nltk.corpus import wordnet
 
-try:
-    basestring = basestring
-except NameError:
-    basestring = (str, bytes)
-
 
 class AbsExtractor:
     """
@@ -47,7 +42,7 @@ class AbsExtractor:
     def _evaluate_candidates(self, document):
         return None
 
-    def _extract_entities(self, tokens, filter=None, inverted=False, phrase_range=1, groups=None):
+    def _extract_entities(self, tokens, filter=None, inverted=False, phrase_range=1, groups=None, accessor='ner'):
         """
         Extract named entities from a list of ner tagged tokens.
 
@@ -67,8 +62,9 @@ class AbsExtractor:
         """
 
         entity_list = []
+        #entity_list_tmp = []
         entity = [0, 0, None, None]  # [start, end, type, group]
-        words = [t[0] for t in tokens]
+        #words = [t['originalText'] for t in tokens]
 
         if filter is None:
             # default: extract all entities
@@ -78,23 +74,26 @@ class AbsExtractor:
             groups = {}
 
         for i, token in enumerate(tokens):
+            tag = token[accessor]
             # check if filter allows mentioned entity type
-            if (token[1] in filter) is inverted:
-                if token[1] == entity[2] and (i - entity[1]) < phrase_range:
+            if (tag in filter) is inverted:
+                if tag == entity[2] and (i - entity[1]) < phrase_range:
                     # token of same type in allowed range discovered
                     entity[1] = i + 1
-                elif entity[3] is not None and groups.get(token[1]) == entity[3] and (i - entity[1]) < phrase_range:
+                elif entity[3] is not None and groups.get(tag) == entity[3] and (i - entity[1]) < phrase_range:
                     # hybrid group found
                     entity[1] = i + 1
                     entity[2] = entity[3]
                 else:
                     # token found which has a different typ or is out of range
                     if entity[1] > 0:
-                        entity_list.append((words[entity[0]:entity[1]], entity[2]))
-                    entity = [i, i + 1, token[1], groups.get(token[1])]
+                        entity_list.append((tokens[entity[0]:entity[1]], entity[2]))
+                        #entity_list_tmp.append((words[entity[0]:entity[1]], entity[2]))
+                    entity = [i, i + 1, tag, groups.get(tag)]
 
         if entity[1] > 0:
-            entity_list.append((words[entity[0]:entity[1]], entity[2]))
+            entity_list.append((tokens[entity[0]:entity[1]], entity[2]))
+            #entity_list_tmp.append((words[entity[0]:entity[1]], entity[2]))
 
         return entity_list
 

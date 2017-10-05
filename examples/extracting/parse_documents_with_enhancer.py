@@ -37,8 +37,8 @@ if __name__ == '__main__':
 
     me = method_extractor.MethodExtractor()
     extractor = FiveWExtractor(extractors=[
-         action_extractor.ActionExtractor(),
-        # environment_extractor.EnvironmentExtractor(),
+        #action_extractor.ActionExtractor(),
+        environment_extractor.EnvironmentExtractor(),
         # cause_extractor.CauseExtractor(),
         # me
     ], enhancement=[

@@ -4,7 +4,7 @@ class Candidate:
     def __init__(self):
         self._type = None
         self._raw = None
-        self._score = None
+        self._score = -1
 
         self._index = None
         self._index_text = None
@@ -67,15 +67,15 @@ class Candidate:
     # json representation for this candidate
     def get_json(self):
         if self._parts:
-            words = []
-            for part in self._parts:
-                parts_json = {'text': part[0]}
+            #words = self._parts
+            #for part in self._parts:
+            #    parts_json = {'text': part[0]}
                 # nlpTag
-                if self._config['part'].get('nlpTag'):
-                    parts_json['nlpTag'] = part[1]
-                words.append(parts_json)
+            #    if self._config['part'].get('nlpTag'):
+            #        parts_json['nlpTag'] = part[1]
+            #    words.append(parts_json)
 
-            json = {'parts': words}
+            json = {'parts': self._parts}
             if self._config.get('score'):
                 json['score'] = self._score
 
@@ -93,10 +93,10 @@ class Candidate:
 
     # additional information create by enhancments
     def get_enhancement(self, key):
-        return self._enhancement.get(key)
+        return self._enhancement.get(key)(0)
 
     # additional information create by enhancments
-    # must be writeable as json
+    # it must be serialisable
     def set_enhancement(self, key, value):
         self._enhancement[key] = value
 

@@ -89,8 +89,6 @@ class Handler(object):
         if self._extractor:
             if not document.is_preprocessed():
                 self._extractor.preprocess(document)
-            else:
-                self.log.info('          \talready preprocessed')
 
             # cache, after pre/processing.
             if self._writer.get_preprocessed_path():

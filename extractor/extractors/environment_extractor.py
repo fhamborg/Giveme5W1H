@@ -66,8 +66,13 @@ class EnvironmentExtractor(AbsExtractor):
         locations = self._evaluate_locations(document)
         dates = self._evaluate_dates(document)
 
-        document.set_answer('where', self._filter_duplicates(locations, False))
-        document.set_answer('when', self._filter_duplicates(dates, False))
+        #document.set_answer('where', self._filter_duplicates(locations, False))
+        # document.set_answer('when', self._filter_duplicates(dates, False))
+
+        # TODO: flag duplicates
+        # TODO: skip flagged candidates on writing output
+        document.set_answer('where', locations) # there are now duplicates
+        document.set_answer('when', dates)
 
     def _extract_candidates(self, document):
         """
@@ -86,63 +91,92 @@ class EnvironmentExtractor(AbsExtractor):
         dates = []
         last_date = None
 
-        for i, entity in enumerate(ner_tags):
+        #sentences = document.get_sentences()
+        #for sentence in sentences:
+        #    for token in sentence['tokens']:
+        #        ner = token['ner']
+        #        pos = token['pos']
+
+        tokens = document.get_tokens()
+
+        for i, entity in enumerate(tokens):
             # phrase_range=2 allows entities to be separate by single tokens, this is common for locations and dates
             # i.e. 'London, England' or 'October 13, 2015'.
-            for candidate in self._extract_entities(ner_tags[i], ['LOCATION'], inverted=True, phrase_range=3):
+            for candidate in self._extract_entities(entity, ['LOCATION'], inverted=True, phrase_range=3, accessor='ner'):
 
                 # look-up geocode in Nominatim
                 try:
-                    location = self.geocoder.geocode(' '.join(candidate[0]))
+                    location_string = [t['originalText'] for t in candidate[0]]
+                    location = self.geocoder.geocode(' '.join(location_string))
                     if location is not None:
                         # fetch pos and append to candidates
                         ca = Candidate()
-                        # TODO FINDE SOMEHOW THE TEXTINDEX
+
                         # candidate_object.set_text_index(None)
-                        ca.set_parts((self._fetch_pos(pos_tags[i], candidate[0]), location, i))
+                        #ca.set_parts((self._fetch_pos(pos_tags[i], candidate[0]), location, i))
+                        ca.set_parts(candidate[0])
+                        ca.set_sentence_index(i)
+                        # thats for the internal evaluation
+                        ca.set_calculations('openstreetmap_nominatim', location)
+                        # thats for the output
+                        ca.set_enhancement('openstreetmap_nominatim', location.raw)
+
+
                         locations.append(ca)
                 except GeocoderServiceError:
                     logging.getLogger('GiveMe5W').error('GeocoderServiceError: When is not extracted ')
                     # locations.append((self._fetch_pos(pos_tags[i], candidate[0]), location, i))
 
-            for candidate in self._extract_entities(ner_tags[i], ['TIME', 'DATE'], inverted=True,
-                                                    phrase_range=1, groups={'TIME': 'TIME+DATE', 'DATE': 'TIME+DATE'}):
+            for candidate in self._extract_entities(entity, ['TIME', 'DATE'], inverted=True,
+                                                    phrase_range=1, groups={'TIME': 'TIME+DATE', 'DATE': 'TIME+DATE'}, accessor='ner'):
 
                 if candidate[1] == 'TIME':
                     # If a date was already mentioned combine it with the mentioned time
                     if last_date is not None:
                         ca = Candidate()
-                        # TODO FINDE SOMEHOW THE TEXTINDEX
+
                         # candidate_object.set_text_index(None)
-                        ca.set_parts((last_date + self._fetch_pos(pos_tags[i], candidate[0]), i))
+                        #ca.set_parts((last_date + self._fetch_pos(pos_tags[i], candidate[0]), i))
+                        ca.set_parts(candidate[0])
+                        ca.set_sentence_index(i)
                         dates.append(ca)
                         # dates.append((last_date + self._fetch_pos(pos_tags[i], candidate[0]), i))
                     else:
                         ca = Candidate()
-                        # TODO FINDE SOMEHOW THE TEXTINDEX
+
                         # candidate_object.set_text_index(None)
-                        ca.set_parts((self._fetch_pos(pos_tags[i], candidate[0]), i))
+                        #ca.set_parts((self._fetch_pos(pos_tags[i], candidate[0]), i))
+                        ca.set_parts(candidate[0])
+                        ca.set_sentence_index(i)
                         dates.append(ca)
                         # dates.append((self._fetch_pos(pos_tags[i], candidate[0]), i))
                 elif candidate[1] == 'DATE':
                     # dates.append((self._fetch_pos(pos_tags[i], candidate[0]), i))
                     ca = Candidate()
-                    # TODO FINDE SOMEHOW THE TEXTINDEX
+
                     # candidate_object.set_text_index(None)
-                    ca.set_parts((self._fetch_pos(pos_tags[i], candidate[0]), i))
+                    #ca.set_parts((self._fetch_pos(pos_tags[i], candidate[0]), i))
+                    #dates.append(ca)
+                    #ca = self._create_candidate(i, 'pos', tokens, candidate[0])
+                    ca.set_parts(candidate[0])
+                    ca.set_sentence_index(i)
                     dates.append(ca)
                     last_date = self._fetch_pos(pos_tags[i], candidate[0])
                 else:
                     # String includes date and time
                     ca = Candidate()
-                    # TODO FINDE SOMEHOW THE TEXTINDEX
+
                     # candidate_object.set_text_index(None)
-                    ca.set_parts((self._fetch_pos(pos_tags[i], candidate[0]), i))
+                    #ca.set_parts((self._fetch_pos(pos_tags[i], candidate[0]), i))
+                    #ca = self._create_candidate(i,'pos', tokens,  candidate[0])
+                    ca.set_parts(candidate[0])
+                    ca.set_sentence_index(i)
                     dates.append(ca)
 
         document.set_candidates('EnvironmentExtractorNeDates', dates)
         document.set_candidates('EnvironmentExtractorNeLocatios', locations)
         # return locations, dates
+
 
     def _evaluate_locations(self, document):
         """
@@ -164,16 +198,18 @@ class EnvironmentExtractor(AbsExtractor):
         for candidate in document.get_candidates('EnvironmentExtractorNeLocatios'):
             # fetch the boundingbox: (min lat, max lat, min long, max long)
 
-            location = candidate.get_parts()
-            bb = location[1].raw['boundingbox']
+            #location = candidate.get_parts()
+            #bb = location[1].raw['boundingbox']
+            parts = candidate.get_parts()
+            location = candidate.get_calculations('openstreetmap_nominatim')
+            bb = location.raw['boundingbox']
+
 
             # use the vincenty algorithm to calculate the covered area
-            area = int(great_circle((bb[0], bb[2]), (bb[0], bb[3])).meters) \
-                   * int(great_circle((bb[0], bb[2]), (bb[1], bb[2])).meters)
+            area = int(great_circle((bb[0], bb[2]), (bb[0], bb[3])).meters) * int(great_circle((bb[0], bb[2]), (bb[1], bb[2])).meters)
             for i in range(4):
                 bb[i] = float(bb[i])
-            raw_locations.append([location[0], location[1].raw['place_id'],
-                                  location[1].point, bb, area, location[2], 0])
+            raw_locations.append([parts, location.raw['place_id'], location.point, bb, area, 0, 0, candidate])
 
         # sort locations based id
         raw_locations.sort(key=lambda x: x[1], reverse=True)
@@ -211,9 +247,15 @@ class EnvironmentExtractor(AbsExtractor):
                 6] / max_n
             if score > 0:
                 score /= weights_sum
-            ranked_locations.append((location[0], score))
+            # new the last index holds the candidate wrapper object
+            ca = location[7]
+            ca.set_score(score)
+            ranked_locations.append(ca)
+            #ranked_locations.append((location[0], score))
 
-        ranked_locations.sort(key=lambda x: x[1], reverse=True)
+
+        # NEW
+        ranked_locations.sort(key=lambda x: x.get_score(), reverse=True)
         return ranked_locations
 
     def _evaluate_dates(self, document):
@@ -235,18 +277,19 @@ class EnvironmentExtractor(AbsExtractor):
         # fetch the date the article was published as a reference date
         reference = self.calendar.parse(document.get_date() or '')
 
-        for candidateO in document.get_candidates('EnvironmentExtractorNeDates'):
+        oCandidates = document.get_candidates('EnvironmentExtractorNeDates')
+        for candidateO in oCandidates:
 
             candidate = candidateO.get_parts()
             # translate date strings into date objects
-            date_str = ' '.join([t[0] for t in candidate[0]])
-
+            # date_str = ' '.join([t[0] for t in candidate[0]])
+            date_str = ' '.join([t['originalText'] for t in candidate])
             # Skip 'now' because its often part of a newsletter offer or similar
             if date_str.lower().strip() == 'now':
                 continue
             parse = self.calendar.parse(date_str, reference[0])
             if parse[1] > 0:
-                ranked_candidates.append([candidate[0], candidate[1], parse[0], parse[1], 1])
+                ranked_candidates.append([candidate[0], candidateO.get_sentence_index(), parse[0], parse[1], 1, candidateO])
 
         ranked_candidates.sort(key=lambda x: x[2])
 
@@ -280,12 +323,19 @@ class EnvironmentExtractor(AbsExtractor):
 
             if score > 0:
                 score /= weights_sum
-            candidate[1] = score
+            #candidate[1] = score
+            # 5 is the wrapper objeck
+            candidate[5].set_score(score)
 
-        ranked_candidates = [[c[0], c[1]] for c in ranked_candidates]
-        ranked_candidates.sort(key=lambda x: x[1], reverse=True)
-        return ranked_candidates
+        #ranked_candidates = [[c[0], c[1]] for c in ranked_candidates]
+        #ranked_candidates.sort(key=lambda x: x[1], reverse=True)
 
+
+        oCandidates.sort(key=lambda x: x.get_score(), reverse=True)
+        return oCandidates
+
+
+    # This function is not "scaning" by a pattern: it fetches the pos tag for a word, by walking over all tokens
     def _fetch_pos(self, pos, pattern):
         """
         This function scans a tokenized sentence with POS-labels for a token sequence
@@ -300,5 +350,6 @@ class EnvironmentExtractor(AbsExtractor):
 
         for i, token in enumerate(pos):
             if token[0] == pattern[0] and [t[0] for t in pos[i:i + len(pattern)]] == pattern:
-                return pos[i:i + len(pattern)]
+                rt = pos[i:i + len(pattern)]
+                return rt
         return []

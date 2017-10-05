@@ -147,14 +147,15 @@ class CauseExtractor(AbsExtractor):
             while sibling.label() == 'ADVP' and sibling.right_sibling() is not None:
                 sibling = sibling.right_sibling()
 
-            # NP-VP-NP pattern found
-            if sibling.label() == 'VP' and '(NP' in sibling.pformat():
+            # NP-VP-NP pattern found .unicode_repr()
+            #if sibling.label() == 'VP' and '(NP' in sibling.pformat():
+            if sibling.label() == 'VP' and "('NN'" in sibling.unicode_repr():
                 verbs = [t[0] for t in sibling.pos() if t[1][0] == 'V'][:3]
                 verb_synset = set()
 
                 # depending on the used tense, we may have to look at the second/third verb e.g. 'have been ...'
                 for verb in verbs:
-                    normalized = verb.lower()
+                    normalized = verb[0].lower()
 
                     # check if word meaning is relevant
                     verb_synset = set(wordnet.synsets(normalized, 'v'))
@@ -177,8 +178,8 @@ class CauseExtractor(AbsExtractor):
                 if not verb_synset.isdisjoint(self.constraints_verbs['cause']):
                     candidates.append(deepcopy([subtree.pos(), sibling.pos(), 'NP-VP-NP']))
                 else:
-                    pre = [t[0].lower() for t in subtree.pos() if t[1][0] == 'N' and t[0].isalpha()]
-                    post = [t[0].lower() for t in sibling.pos() if t[1][0] == 'N' and t[0].isalpha()]
+                    pre = [t[0][0].lower() for t in subtree.pos() if t[1][0] == 'N' and t[0][0].isalpha()]
+                    post = [t[0][0].lower() for t in sibling.pos() if t[1][0] == 'N' and t[0][0].isalpha()]
                     pre_con = {'entity': False, 'abstraction': False}
                     post_con = {'entity': False, 'phenomenon': False, 'abstraction': False, 'group': False,
                                 'possession': False, 'event': False, 'act': False, 'state': False}
@@ -224,15 +225,14 @@ class CauseExtractor(AbsExtractor):
 
         # search for adverbs or clausal conjunctions
         for i in range(len(tokens)):
-            token = tokens[i].lower()
+            token = tokens[i][0].lower()
 
             # TODO negation check?
             if pos[i][1] == 'RB' and token in self.adverbial_indicators:
                 # If we come along an adverb (RB) check the adverbials that indicate causation
                 candidates.append(deepcopy([pos[:i], pos[i - 1:], 'RB']))
 
-            elif token in self.clausal_conjunctions and \
-                    ' '.join(tokens[i:]).lower().startswith(self.clausal_conjunctions[token]):
+            elif token in self.clausal_conjunctions and ' '.join( [x[0] for x in tokens[i:]]).lower().startswith(self.clausal_conjunctions[token]):
                 # Check if token is au clausal conjunction indicating causation
                 candidates.append(deepcopy([pos[i - 1:], pos[:i], 'biclausal']))
 
@@ -240,7 +240,7 @@ class CauseExtractor(AbsExtractor):
         unique_candidates = []
         candidate_strings = []
         for candidate in candidates:
-            candidate_strings.append(' '.join([x[0] for x in candidate[0]]))
+            candidate_strings.append(candidate[0][0][0][0] + ' ' + ' '.join([x[0][0] for x in candidate[1]]))
 
         for i, candidate in enumerate(candidates):
             unique = True

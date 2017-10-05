@@ -10,6 +10,7 @@ from extractor.tools.file.handler import Handler
 from extractors import environment_extractor
 from extractors import method_extractor
 from extractors import action_extractor
+from extractors import cause_extractor
 
 # Add path to allow execution though console
 sys.path.insert(0, '/'.join(os.path.realpath(__file__).split('/')[:-3]))
@@ -38,8 +39,8 @@ if __name__ == '__main__':
     me = method_extractor.MethodExtractor()
     extractor = FiveWExtractor(extractors=[
         #action_extractor.ActionExtractor(),
-        environment_extractor.EnvironmentExtractor(),
-        # cause_extractor.CauseExtractor(),
+        #environment_extractor.EnvironmentExtractor(),
+        cause_extractor.CauseExtractor(),
         # me
     ], enhancement=[
         #Heideltime('when'),

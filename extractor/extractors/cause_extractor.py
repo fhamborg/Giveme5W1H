@@ -108,7 +108,7 @@ class CauseExtractor(AbsExtractor):
             for candidate in self._evaluate_tree(tree):
                 candidateObject = Candidate()
                 # used by the extractor
-                candidateObject.set_parts(candidate[0] + candidate[1])
+                candidateObject.set_raw(candidate[0] + candidate[1])
                 candidateObject.set_type(candidate[2])
                 candidateObject.set_sentence_index(i)
 
@@ -155,7 +155,7 @@ class CauseExtractor(AbsExtractor):
 
                 # depending on the used tense, we may have to look at the second/third verb e.g. 'have been ...'
                 for verb in verbs:
-                    normalized = verb[0].lower()
+                    normalized = verb['nlpToken']['originalText'].lower()
 
                     # check if word meaning is relevant
                     verb_synset = set(wordnet.synsets(normalized, 'v'))
@@ -178,8 +178,8 @@ class CauseExtractor(AbsExtractor):
                 if not verb_synset.isdisjoint(self.constraints_verbs['cause']):
                     candidates.append(deepcopy([subtree.pos(), sibling.pos(), 'NP-VP-NP']))
                 else:
-                    pre = [t[0][0].lower() for t in subtree.pos() if t[1][0] == 'N' and t[0][0].isalpha()]
-                    post = [t[0][0].lower() for t in sibling.pos() if t[1][0] == 'N' and t[0][0].isalpha()]
+                    pre = [t[0]['nlpToken']['originalText'].lower() for t in subtree.pos() if t[1][0] == 'N' and t[0]['nlpToken']['originalText'].isalpha()]
+                    post = [t[0]['nlpToken']['originalText'].lower() for t in sibling.pos() if t[1][0] == 'N' and t[0]['nlpToken']['originalText'].isalpha()]
                     pre_con = {'entity': False, 'abstraction': False}
                     post_con = {'entity': False, 'phenomenon': False, 'abstraction': False, 'group': False,
                                 'possession': False, 'event': False, 'act': False, 'state': False}
@@ -225,14 +225,14 @@ class CauseExtractor(AbsExtractor):
 
         # search for adverbs or clausal conjunctions
         for i in range(len(tokens)):
-            token = tokens[i][0].lower()
+            token = tokens[i]['nlpToken']['originalText'].lower()
 
             # TODO negation check?
             if pos[i][1] == 'RB' and token in self.adverbial_indicators:
                 # If we come along an adverb (RB) check the adverbials that indicate causation
                 candidates.append(deepcopy([pos[:i], pos[i - 1:], 'RB']))
 
-            elif token in self.clausal_conjunctions and ' '.join( [x[0] for x in tokens[i:]]).lower().startswith(self.clausal_conjunctions[token]):
+            elif token in self.clausal_conjunctions and ' '.join( [x['nlpToken']['originalText'] for x in tokens[i:]]).lower().startswith(self.clausal_conjunctions[token]):
                 # Check if token is au clausal conjunction indicating causation
                 candidates.append(deepcopy([pos[i - 1:], pos[:i], 'biclausal']))
 
@@ -240,7 +240,7 @@ class CauseExtractor(AbsExtractor):
         unique_candidates = []
         candidate_strings = []
         for candidate in candidates:
-            candidate_strings.append(candidate[0][0][0][0] + ' ' + ' '.join([x[0][0] for x in candidate[1]]))
+            candidate_strings.append(candidate[0][0][0]['nlpToken']['originalText'] + ' ' + ' '.join([x[0]['nlpToken']['originalText'] for x in candidate[1]]))
 
         for i, candidate in enumerate(candidates):
             unique = True
@@ -269,7 +269,7 @@ class CauseExtractor(AbsExtractor):
 
         for candidateObject in candidates:
 
-            parts = candidateObject.get_parts();
+            parts = candidateObject.get_raw();
             if parts is not None and len(parts) > 0:
                 # following the concept of the inverted pyramid use the position for scoring
                 score = self.weights[0] * ( document.get_len() - candidateObject.get_sentence_index()) / document.get_len()
@@ -289,6 +289,10 @@ class CauseExtractor(AbsExtractor):
                     score /= weights_sum
                 # NEW
                 candidateObject.set_score(score)
+
+        # TODO: remove leftover from refactoring
+        for candidate in candidates:
+            candidate.set_parts(candidate.get_raw())
 
         candidates.sort(key=lambda x: x.get_score(), reverse=True)
         document.set_answer('why', candidates)

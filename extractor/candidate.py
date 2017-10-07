@@ -22,14 +22,16 @@ class Candidate:
         self._parts = parts
 
     def get_parts_as_text(self):
-        answer_text = ''
+        answer_text = []
         for part in self._parts:
-            answer_text = answer_text + ' ' + part[0]
-        return answer_text
+            answer_text.append(part[0]['nlpToken']['originalText'])
+        return ' '.join(answer_text)
 
+    # helper to avoid refactoring by carrying data in a legacy format
     def set_raw(self, raw):
         self._raw = raw
 
+    # helper to avoid refactoring by carrying data in a legacy format
     def get_raw(self):
         return self._raw
 
@@ -67,17 +69,12 @@ class Candidate:
     # json representation for this candidate
     def get_json(self):
         if self._parts:
-            #words = self._parts
-            #for part in self._parts:
-            #    parts_json = {'text': part[0]}
-                # nlpTag
-            #    if self._config['part'].get('nlpTag'):
-            #        parts_json['nlpTag'] = part[1]
-            #    words.append(parts_json)
-
             json = {'parts': self._parts}
             if self._config.get('score'):
                 json['score'] = self._score
+
+            if self._config.get('text'):
+                json['text'] = self.get_parts_as_text()
 
             if len(self._enhancement) > 0:
                 json['enhancement'] = self._enhancement

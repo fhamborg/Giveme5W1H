@@ -42,10 +42,10 @@ class MethodExtractor(AbsExtractor):
         for i, tree in enumerate(postrees):
             for candidate in self._extract_tree_for_prepos_conjunctions(tree):
                 candidates.append(candidate)
-        candidates = self._convert_to_object_oriented_list(candidates)
+        candidates = self._filter_duplicates(candidates)
 
         # All kind of adjectives
-        candidatesAd = self._convert_to_object_oriented_list(self._extract_ad_candidates(document))
+        candidatesAd = self._filter_duplicates(self._extract_ad_candidates(document))
 
         # join the candidates
         candidates = candidates + candidatesAd
@@ -116,7 +116,7 @@ class MethodExtractor(AbsExtractor):
                 if token['index'] > self._maxIndex:
                     self._maxIndex = token['index']
                 if self._is_relevant_pos(token['pos']) and token['ner'] not in ['TIME', 'DATE', 'ORGANIZATION', 'DURATION', 'ORDINAL']:
-                    candidates.append([[(token['originalText'],token['pos'], token)], None ,sentence['index'], 'adjectiv'])
+                    candidates.append([[( {'nlpToken': token},token['pos'], token)], None ,sentence['index'], 'adjectiv'])
         return candidates
 
     def _evaluate_candidates(self, document):
@@ -182,10 +182,10 @@ class MethodExtractor(AbsExtractor):
         candidates.sort(key=lambda x: x.get_score(), reverse=True)
         document.set_answer('how', candidates)
 
-    def _convert_to_object_oriented_list(self, list):
+   # def _convert_to_object_oriented_list(self, list):
 
-        list = self._filter_duplicates(list)
-        return list
+    #    list = self._filter_duplicates(list)
+     #   return list
         #whoList = []
         # for answer in list:
         #for answer in self._filter_duplicates(list):

@@ -1,15 +1,15 @@
 class Configuration:
     __config = {
         "candidate": {
-            "indexText": True,        # determinde by giveme5w, index refers to
+            "text": True,  # Concatenated 'originalText' from nlpToken
             "nlpIndexSentence": True,  # determined by CoreNlp: include index of sentence
-            "part": {
-                "nlpTag": True  # determined by CoreNlp: Tag
+            "parts": {
+                "nlpToken": True  # determined by CoreNlp: Tag
             },
             "score": True  # determined by Giveme5W: calculated score for this candidate
         },
         "label": True,  # This repeating information is useful for template engines
-        "onlyTopCandidate": False, # Return only the determined Candidate with the best score per question
+        "onlyTopCandidate": True, # Return only the  Candidate with the best score per question
         "Giveme5W-runtime-resources": './../../Giveme5w-runtime-resources/' # Runtime directory
     }
 

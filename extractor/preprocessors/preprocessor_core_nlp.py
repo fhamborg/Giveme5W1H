@@ -40,8 +40,17 @@ class Preprocessor:
 
     def _link_leaf_to_core_nlp(self, s):
 
-        # (original leaf content, token information, ... add here more)
-        result = (s, self._tokens[self._token_index])
+        # this is where the magic happens add there additional information per candidate-part/token/leave
+        # char index information is in each nlpToken
+
+        #result = (s, {
+        #    'nlpToken': self._tokens[self._token_index]
+        #})
+
+        result = {
+            'nlpToken': self._tokens[self._token_index]
+        }
+
         self._token_index = self._token_index + 1
         return result
 

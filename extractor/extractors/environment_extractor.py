@@ -1,3 +1,4 @@
+import copy
 import time
 import logging
 from warnings import catch_warnings
@@ -67,12 +68,14 @@ class EnvironmentExtractor(AbsExtractor):
         dates = self._evaluate_dates(document)
 
         #document.set_answer('where', self._filter_duplicates(locations, False))
-        # document.set_answer('when', self._filter_duplicates(dates, False))
+        #document.set_answer('when', self._filter_duplicates(dates, False))
 
         # TODO: flag duplicates
         # TODO: skip flagged candidates on writing output
+
         document.set_answer('where', locations) # there are now duplicates
         document.set_answer('when', dates)
+
 
     def _extract_candidates(self, document):
         """
@@ -113,8 +116,8 @@ class EnvironmentExtractor(AbsExtractor):
                         ca = Candidate()
 
                         # candidate_object.set_text_index(None)
-                        #ca.set_parts((self._fetch_pos(pos_tags[i], candidate[0]), location, i))
-                        ca.set_parts(candidate[0])
+                        #ca.set_raw((self._fetch_pos(pos_tags[i], candidate[0]), location, i))
+                        ca.set_raw(candidate[0])
                         ca.set_sentence_index(i)
                         # thats for the internal evaluation
                         ca.set_calculations('openstreetmap_nominatim', location)
@@ -136,8 +139,8 @@ class EnvironmentExtractor(AbsExtractor):
                         ca = Candidate()
 
                         # candidate_object.set_text_index(None)
-                        #ca.set_parts((last_date + self._fetch_pos(pos_tags[i], candidate[0]), i))
-                        ca.set_parts(candidate[0])
+                        #ca.set_raw((last_date + self._fetch_pos(pos_tags[i], candidate[0]), i))
+                        ca.set_raw(candidate[0])
                         ca.set_sentence_index(i)
                         dates.append(ca)
                         # dates.append((last_date + self._fetch_pos(pos_tags[i], candidate[0]), i))
@@ -145,8 +148,8 @@ class EnvironmentExtractor(AbsExtractor):
                         ca = Candidate()
 
                         # candidate_object.set_text_index(None)
-                        #ca.set_parts((self._fetch_pos(pos_tags[i], candidate[0]), i))
-                        ca.set_parts(candidate[0])
+                        #ca.set_raw((self._fetch_pos(pos_tags[i], candidate[0]), i))
+                        ca.set_raw(candidate[0])
                         ca.set_sentence_index(i)
                         dates.append(ca)
                         # dates.append((self._fetch_pos(pos_tags[i], candidate[0]), i))
@@ -155,10 +158,10 @@ class EnvironmentExtractor(AbsExtractor):
                     ca = Candidate()
 
                     # candidate_object.set_text_index(None)
-                    #ca.set_parts((self._fetch_pos(pos_tags[i], candidate[0]), i))
+                    #ca.set_raw((self._fetch_pos(pos_tags[i], candidate[0]), i))
                     #dates.append(ca)
                     #ca = self._create_candidate(i, 'pos', tokens, candidate[0])
-                    ca.set_parts(candidate[0])
+                    ca.set_raw(candidate[0])
                     ca.set_sentence_index(i)
                     dates.append(ca)
                     last_date = self._fetch_pos(pos_tags[i], candidate[0])
@@ -167,9 +170,9 @@ class EnvironmentExtractor(AbsExtractor):
                     ca = Candidate()
 
                     # candidate_object.set_text_index(None)
-                    #ca.set_parts((self._fetch_pos(pos_tags[i], candidate[0]), i))
+                    #ca.set_raw((self._fetch_pos(pos_tags[i], candidate[0]), i))
                     #ca = self._create_candidate(i,'pos', tokens,  candidate[0])
-                    ca.set_parts(candidate[0])
+                    ca.set_raw(candidate[0])
                     ca.set_sentence_index(i)
                     dates.append(ca)
 
@@ -198,9 +201,9 @@ class EnvironmentExtractor(AbsExtractor):
         for candidate in document.get_candidates('EnvironmentExtractorNeLocatios'):
             # fetch the boundingbox: (min lat, max lat, min long, max long)
 
-            #location = candidate.get_parts()
+            #location = candidate.get_raw()
             #bb = location[1].raw['boundingbox']
-            parts = candidate.get_parts()
+            parts = candidate.get_raw()
             location = candidate.get_calculations('openstreetmap_nominatim')
             bb = location.raw['boundingbox']
 
@@ -280,7 +283,7 @@ class EnvironmentExtractor(AbsExtractor):
         oCandidates = document.get_candidates('EnvironmentExtractorNeDates')
         for candidateO in oCandidates:
 
-            candidate = candidateO.get_parts()
+            candidate = candidateO.get_raw()
             # translate date strings into date objects
             # date_str = ' '.join([t[0] for t in candidate[0]])
             date_str = ' '.join([t['originalText'] for t in candidate])
@@ -324,11 +327,19 @@ class EnvironmentExtractor(AbsExtractor):
             if score > 0:
                 score /= weights_sum
             #candidate[1] = score
-            # 5 is the wrapper objeck
+            # 5 is the wrapper object
             candidate[5].set_score(score)
 
-        #ranked_candidates = [[c[0], c[1]] for c in ranked_candidates]
-        #ranked_candidates.sort(key=lambda x: x[1], reverse=True)
+        # format bugfix - take the raw information and form a standardized parts format
+        # this is the same format as the nlp tree leafs
+        # TODO: add the leaf itself instead of rebuilding the same structure
+        # TODO: do this already in _extract_candidates to speed it up
+        for candidate in oCandidates:
+            raw = candidate.get_raw()
+            parts = []
+            for old_part in raw:
+                parts.append(({'nlpToken': old_part}, old_part['pos']))
+            candidate.set_parts(parts)
 
 
         oCandidates.sort(key=lambda x: x.get_score(), reverse=True)

@@ -40,8 +40,8 @@ if __name__ == '__main__':
     extractor = FiveWExtractor(extractors=[
         #action_extractor.ActionExtractor(),
         #environment_extractor.EnvironmentExtractor(),
-        cause_extractor.CauseExtractor(),
-        # me
+        #cause_extractor.CauseExtractor(),
+         me
     ], enhancement=[
         #Heideltime('when'),
         #Aida('when')

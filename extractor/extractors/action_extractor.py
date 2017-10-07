@@ -53,7 +53,7 @@ class ActionExtractor(AbsExtractor):
                 # child of S and the sibling of VP" (http://www.nltk.org/book/ch08.html)
 
                 for pattern in self._evaluate_tree(trees[mention['sentNum'] - 1]):
-                    np_string = ''.join([p[0] for p in pattern[0][0]])
+                    np_string = ''.join([p[0]['nlpToken']['originalText'] for p in pattern[0]])
                     if re.sub(r'\s+', '', mention['text']) in np_string:
                         candidate_object = Candidate()
                         candidate_object.set_sentence_index(pattern[2])
@@ -126,7 +126,7 @@ class ActionExtractor(AbsExtractor):
 
         for candidate in document.get_candidates('ActionExtractor'):
             candidateParts = candidate.get_raw()
-            verb = candidateParts[1][0][0][0].lower()
+            verb = candidateParts[1][0][0]['nlpToken']['originalText'].lower()
 
             # VP beginning with say/said often contain no relevant action and are therefor skipped.
             if verb.startswith('say') or verb.startswith('said'):
@@ -173,8 +173,12 @@ class ActionExtractor(AbsExtractor):
 
             if mention_type == 'PRONOMINAL':
                 # use representing mention if the agent is only a pronoun
-                ranked_candidates.append(([representative], candidateParts[1], score, candidate.get_sentence_index()))
+
+                rp_format_fix = [(representative[0][0], { 'nlpToken': representative[0][1]})]
+               # ranked_candidates.append((rp_format_fix, candidateParts[1], score, candidate.get_sentence_index()))
+               # ranked_candidates.append(([representative], candidateParts[1], score, candidate.get_sentence_index()))
             else:
+               # print("a")
                 ranked_candidates.append((candidateParts[0], candidateParts[1], score, candidate.get_sentence_index()))
 
 

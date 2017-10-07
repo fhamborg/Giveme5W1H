@@ -97,7 +97,6 @@ class AbsExtractor:
 
         return entity_list
 
-    # TODO FINDE SOMEHOW THE TEXTINDEX for each caller
     def _filter_duplicates(self, candidates, exact=True):
         """
         Simple candidate filter that drops duplicates
@@ -115,14 +114,14 @@ class AbsExtractor:
         filtered = []
 
         for candidate in candidates:
-            if type(candidate[0][0]) == str:
-                string = ' '.join(candidate[0]).lower()
-            else:
+            #if type(candidate[0][0]) == str:
+            #    string = ' '.join(candidate[0]).lower()
+            #else:
 
-                string_a = []
-                for part in candidate[0]:
-                    string_a.append(part[0][1]['lemma'])
-                string = ' '.join(string_a)
+            string_a = []
+            for part in candidate[0]:
+                string_a.append(part[0]['nlpToken']['lemma'])
+            string = ' '.join(string_a)
 
 
             if exact:

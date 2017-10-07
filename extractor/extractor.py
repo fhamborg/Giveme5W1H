@@ -122,8 +122,7 @@ class FiveWExtractor:
             if self.enhancement:
                 for enhancement in self.enhancement:
                     enhancement.process(doc)
-        else:
-            self.log.info('          \talready preprocessed')
+
 
     def parse(self, doc):
         """

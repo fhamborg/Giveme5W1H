@@ -12,10 +12,43 @@ class AbsEnhancer:
     def __init__(self, questions):
         self._questions = questions
 
+    # this is called autom. by the extractor
+    def enhance(self, document):
+
+        id = self.get_enhancer_id()
+
+        for question in self._questions:
+            candidates = document.get_answer(question)
+            for candidate in candidates:
+                # offset aka text position of this candidate
+                # character_offset = candidate.get_parts_character_offset()
+
+                process_data = document.get_enhancement(id)
+                for part in candidate.get_parts():
+                    begin = part[0]['nlpToken']['characterOffsetBegin']
+                    end = part[0]['nlpToken']['characterOffsetBegin']
+                    character_offset = (begin, end)
+
+                    # call enhancer implementation
+                    data = self.process_data(process_data, character_offset)
+
+                    if data:
+                        #candidate.set_enhancement(id, data)
+                        part[0][id] =  data
+
+
+    def is_overlapping(self, a, b):
+        return max(a[0], b[0]) <= min(a[1], b[1])
+
+
+    @abstractmethod
+    def get_enhancer_id(self):
+        print('TODO: return a unique string to identify this enhancer')
+
     @abstractmethod
     def process(self, document):
         return None
 
     @abstractmethod
-    def enhance(self, document):
-        return None
+    def process_data(self, process_data, character_offset):
+        print('TODO: implement')

@@ -27,7 +27,7 @@ if you want to process them again by core_nlp (or just delete cache and output)
 
 if __name__ == '__main__':
     #Config.get()['candidate']['part'] = False
-    # Config.get()['enhancements']['Giveme5W_enhancer']['enabled'] = True
+    #Config.get()['enhancements']['Giveme5W_enhancer']['enabled'] = True
 
     log = logging.getLogger('GiveMe5W')
     log.setLevel(logging.DEBUG)
@@ -38,13 +38,13 @@ if __name__ == '__main__':
 
     me = method_extractor.MethodExtractor()
     extractor = FiveWExtractor(extractors=[
-        #action_extractor.ActionExtractor(),
+        action_extractor.ActionExtractor(),
         #environment_extractor.EnvironmentExtractor(),
         #cause_extractor.CauseExtractor(),
-         me
+        me
     ], enhancement=[
-        #Heideltime('when'),
-        #Aida('when')
+        #Heideltime(['when']),
+        Aida(['how','when','why','where','what','who'])
     ])
     inputPath = os.path.dirname(__file__) + '/../datasets/gold_standard/data/'
     outputPath = os.path.dirname(__file__) + '/output'
@@ -53,31 +53,28 @@ if __name__ == '__main__':
     documents = (
         # initiate the file handler with the input directory
         Handler(inputPath)
-            ## everything else is optional:
+            ## everything else is optional !!
 
             # set a output directory
             .set_output_path(outputPath)
+
             # set a path to save and load preprocessed documents (CoreNLP result)
             .set_preprocessed_path(preprocessedPath)
+
             # limit the documents read from the input directory (handy for development)
             .set_limit(1)
+
+            # this option provides resume ability
             # .skip_documents_with_output()
-            # add an optional extractor (it would do only copying without...)
+
+            # add an optional extractor (it would only copying without...)
             .set_extractor(extractor)
+
             # load and saves all document objects for further programming
             .preload_and_cache_documents()
 
-            ## setup is done:
-
-            # executing it
+            ## setup is done: executing it
             .process()
             # get the processed documents
             .get_documents()
     )
-
-    # convert to array
-#    arr = []
- #   for item in me._tmp_statistic:
- #       arr.append(  (item, me._tmp_statistic[item] )   )
-  #  arr.sort(key=lambda x: x[1], reverse=True)
-  #  print(arr)

@@ -111,3 +111,22 @@ class Candidate:
 
     def reset_calculations(self):
         self._calculations = {}
+
+    # returns the character offset of the first and last part.
+    # this span marks the candidate in the original document
+    def get_parts_character_offset(self):
+        parts = self.get_parts()
+        if parts:
+            number_of_parts = len(parts)
+            start_index = parts[0][0]['nlpToken']['characterOffsetBegin']
+            end_index  = None
+            if len(parts) > 1:
+                # more than one
+                end_index = parts[number_of_parts-1][0]['nlpToken']['characterOffsetEnd']
+            else:
+                # just one parts
+                end_index = parts[0][0]['nlpToken']['characterOffsetEnd']
+
+            return (start_index, end_index)
+        return (-1, -1)
+

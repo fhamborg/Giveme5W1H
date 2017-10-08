@@ -149,7 +149,7 @@ class FiveWExtractor:
                 combinedScorer.score(doc)
         doc.is_processed(True)
 
-        # enhancer linking questions to data
+        # enhancer linking candidate questions to data
         if self.enhancement:
             for enhancement in self.enhancement:
                 enhancement.enhance(doc)

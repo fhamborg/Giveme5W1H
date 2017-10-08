@@ -10,12 +10,15 @@ from .abs_enhancer import AbsEnhancer
 class Aida(AbsEnhancer):
     def __init__(self, questions, url=None):
         self._questions = questions
-
-        self._url = url
         self._last_request = None
         if not url:
             self._url = 'https://gate.d5.mpi-inf.mpg.de/aida/service/disambiguate'
             self._limit_request_rate = True
+        else:
+            self._url = url
+
+    def get_enhancer_id(self):
+        return 'aida'
 
     def process(self, document):
         # make sure there is just one call per second, if rate is limited
@@ -31,9 +34,27 @@ class Aida(AbsEnhancer):
             self._last_request = datetime.datetime.now()
 
         o = r.json()
-        document.set_enhancement('aida', o)
+        document.set_enhancement(self.get_enhancer_id() , o)
 
-    def enhance(self, document):
-        return None
-        # TODO mapper
-        # candidates = document.get_answers().get(self._question)
+    def process_data(self, process_data, character_offset):
+
+        # there could be more than one mention per character_offset
+        result = []
+        for mention in process_data['mentions']:
+            offset = mention['offset']
+            length = mention['length']
+
+            process_data_offset = (offset, offset+length)
+
+            if self.is_overlapping(character_offset, process_data_offset):
+                bestEntity = mention.get('bestEntity')
+                bestEntityMetadata = None
+
+                # some have no Entity in the dataset
+                if bestEntity:
+                    bestEntityMetadata = process_data['entityMetadata'][bestEntity['kbIdentifier']]
+
+                # TODO: besides bestEntityMetadata there are more under all (sometimes)
+                result.append({'mention': mention, 'bestEntityMetadata': bestEntityMetadata})
+        return result
+

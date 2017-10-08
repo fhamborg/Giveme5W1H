@@ -148,8 +148,7 @@ class CauseExtractor(AbsExtractor):
                 sibling = sibling.right_sibling()
 
             # NP-VP-NP pattern found .unicode_repr()
-            #if sibling.label() == 'VP' and '(NP' in sibling.pformat():
-            if sibling.label() == 'VP' and "('NN'" in sibling.unicode_repr():
+            if sibling.label() == 'VP' and "('NP'" in sibling.unicode_repr():
                 verbs = [t[0] for t in sibling.pos() if t[1][0] == 'V'][:3]
                 verb_synset = set()
 

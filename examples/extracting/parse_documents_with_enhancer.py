@@ -18,7 +18,7 @@ sys.path.insert(0, '/'.join(os.path.realpath(__file__).split('/')[:-3]))
 """
 Advanced example to use the extractor in combination with NewsPlease files
  - The output of the core_nlp_host is saved in the cache directory to speed up multiple runs. 
- - Documents are preloaded into memory and stay persistent for further calculations.
+ - Documents are preload into memory and stay persistent for further calculations.
  - Enhancer is used to process the result further
 
 Documents are preprocessed just once, you have to set is_preprocessed to false, 
@@ -36,17 +36,16 @@ if __name__ == '__main__':
     log.addHandler(sh)
 
 
-    me = method_extractor.MethodExtractor()
     extractor = FiveWExtractor(extractors=[
-        action_extractor.ActionExtractor(),
+        #action_extractor.ActionExtractor(),
         #environment_extractor.EnvironmentExtractor(),
         #cause_extractor.CauseExtractor(),
-        me
+        method_extractor.MethodExtractor()
     ], enhancement=[
         #Heideltime(['when']),
-        Aida(['how','when','why','where','what','who'])
+        #Aida(['how','when','why','where','what','who'])
     ])
-    inputPath = os.path.dirname(__file__) + '/../datasets/gold_standard/data/'
+    inputPath = os.path.dirname(__file__) + '/../datasets/bbc/data/'
     outputPath = os.path.dirname(__file__) + '/output'
     preprocessedPath = os.path.dirname(__file__) + '/cache'
 
@@ -62,7 +61,7 @@ if __name__ == '__main__':
             .set_preprocessed_path(preprocessedPath)
 
             # limit the documents read from the input directory (handy for development)
-            .set_limit(1)
+            # .set_limit(1)
 
             # this option provides resume ability
             # .skip_documents_with_output()

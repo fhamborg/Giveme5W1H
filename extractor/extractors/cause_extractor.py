@@ -112,8 +112,6 @@ class CauseExtractor(AbsExtractor):
                 candidateObject.set_type(candidate[2])
                 candidateObject.set_sentence_index(i)
 
-                # TODO FINDE SOMEHOW THE TEXTINDEX
-                # candidate_object.set_text_index(None)
 
                 candidates.append(candidateObject)
 

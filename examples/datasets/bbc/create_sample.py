@@ -12,7 +12,7 @@ def read_random(directory, count):
 #
 # Variables
 
-# Change these if you wan`t another sample size
+# Change these if you want another sample size
 categories = ['business', 'entertainment', 'politics', 'sport','tech']
 category_size = 12
 

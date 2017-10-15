@@ -13,7 +13,7 @@ class MethodExtractor(AbsExtractor):
 
     _copulative_conjunction = ['and', 'as', 'both', 'because', 'even', 'for', 'if ', 'that', 'then', 'since', 'seeing', 'so']
     _prepositions_before = ['in', 'with', 'until', 'as', 'during']
-    _stop_words = ['and', 'is', 'has', 'have', 'went', 'was', 'been','were', 'am', 'get', 'said', 'are']
+    _stop_words = ['and', 'but', 'lead','is', 'has', 'have', 'went', 'was', 'been', 'were', 'get', 'are','do','so','due', 'well', 'very', 'on', 'too', 'be', 'i', 'and', 'have', 'the', 'a', ',', '.', '', 'not', "n't", 'am', 'as', 'even', 'however', 'other', 'just', 'over', 'more', 'say', 'also']
 
     #_tmp_statistic = {}
 
@@ -44,11 +44,13 @@ class MethodExtractor(AbsExtractor):
                 candidates.append(candidate)
         candidates = self._filter_duplicates(candidates)
 
+
+        # candidate detection
         # All kind of adjectives
-        candidatesAd = self._filter_duplicates(self._extract_ad_candidates(document))
+        # candidatesAd = self._filter_duplicates(self._extract_ad_candidates(document))
 
         # join the candidates
-        candidates = candidates + candidatesAd
+        candidates = candidates #+ candidatesAd
 
         # save them to the document
         document.set_candidates('MethodExtractor', candidates)
@@ -141,15 +143,16 @@ class MethodExtractor(AbsExtractor):
 
             maxLemma = 0
             for part in candidate.get_parts():
-                lemma = part[2]['lemma']
+                lemma = part[0]['nlpToken']['lemma']
                 lemma_count = 0
-                if lemma not in ['so','due', 'well', 'very', 'on', 'too', 'be', 'i', 'is', 'and', 'have', 'the', 'a', ',', '.', '', 'not', "n't", 'am', 'as', 'even', 'however', 'other', 'just', 'over', 'more']:
+                # ignore lemma count for stopwords, because they are very frequent
+                if lemma not in self._stop_words:
                     lemma_count = lemma_map[lemma]
                 if lemma_count > maxLemma:
                     maxLemma = lemma_count
                 if lemma_count > global_max_lemma:
                     global_max_lemma = lemma_count
-            # assigme the greatest lemma to the candidate
+            # assign the greatest lemma to the candidate
             candidate.set_calculations('lemma_count', maxLemma)
 
         # normalize frequency (per lemma)
@@ -180,27 +183,28 @@ class MethodExtractor(AbsExtractor):
             candidate.set_score(score / score_max)
 
         candidates.sort(key=lambda x: x.get_score(), reverse=True)
-        document.set_answer('how', candidates)
+        document.set_answer('how', self._fix_format(candidates))
 
-   # def _convert_to_object_oriented_list(self, list):
-
-    #    list = self._filter_duplicates(list)
-     #   return list
-        #whoList = []
-        # for answer in list:
-        #for answer in self._filter_duplicates(list):
-        #    ca = Candidate()
-        #    ca.set_parts(answer[0])
-        #    ca.set_sentence_index(answer[1])
-        #    ca.set_type(answer[2])
-        #    whoList.append(ca)
-        #return whoList
+    # helper to convert parts to the new format
+    def _fix_format(self, candidates):
+        result = []
+        for candidate in candidates:
+            ca = Candidate()
+            parts = candidate.get_parts()
+            parts_new = []
+            for part in parts:
+                parts_new.append((part[0], part[1]))
+            ca.set_parts(parts_new)
+            ca.set_sentence_index(candidate.get_sentence_index())
+            ca.set_score(candidate.get_score())
+            result.append(ca)
+        return result
 
     def _find_vb_cc_vb_parts(self, relevantParts):
         recording = False
         candidateParts = []
         for relevantPart in relevantParts:
-            if relevantPart[1].startswith('VB') or relevantPart[1] == 'CC':
+            if relevantPart[1].startswith('VB') or relevantPart[1].startswith('JJ') or relevantPart[1].startswith('LS') or relevantPart[1] == 'CC':
                 candidateParts.append(relevantPart)
                 recording = True
             elif recording is True:
@@ -208,7 +212,7 @@ class MethodExtractor(AbsExtractor):
         candidatePartsLen = len(candidateParts)
 
         # filter out short candidates
-        if ((candidatePartsLen == 1 and candidateParts[0][0] not in self._stop_words) or candidatePartsLen > 1):
+        if ((candidatePartsLen == 1 and candidateParts[0][0]['nlpToken']['lemma'] not in self._stop_words) or candidatePartsLen > 1):
             return candidateParts
         return None
 

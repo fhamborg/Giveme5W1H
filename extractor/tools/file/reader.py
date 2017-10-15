@@ -27,15 +27,16 @@ class Reader(object):
         with open(path, encoding='utf-8') as data_file:
             data = json.load(data_file)
             url = data.setdefault('url', None)
-            if not url:
-                print(path + ' has not URL. A URL is mandatory to generate a unique document id')
 
-            # generate an (document)id, That the best way to get a unique name.
 
-            data['dId'] = hashlib.sha224(data['url'].encode('utf-8')).hexdigest()
+
+            if not data['dId']:
+                if not url:
+                    print(path + ' has not URL or dID. At leat a URL is mandatory to generate a unique dId')
+                else:
+                    data['dId'] = hashlib.sha224(url.encode('utf-8')).hexdigest()
 
             # path where the preprocessed file should be
-
             preprocessedFilePath = None
             if self._preprocessedPath is not None:
                 preprocessedFilePath = self.get_preprocessed_filepath(data['dId'])
@@ -48,12 +49,6 @@ class Reader(object):
             else:
                 document = Document(data.setdefault('title', ''), data.setdefault('description', ''),
                                     data.setdefault('text', ''), data)
-
-                url = data.setdefault('url', None)
-                if not url:
-                    print(path + ' has not URL. A URL is mandatory to generate a unique document id')
-                else:
-                    document.set_source(data['url'])
 
                 # load annotations if any
                 if 'fiveWoneH' in data:

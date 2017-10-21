@@ -93,9 +93,7 @@ $ nohup java -mx4g edu.stanford.nlp.pipeline.StanfordCoreNLPServer 9000 &
         }
        ]
 ```
->This is the output of one question;
-    - inclusive the golden standard annotation
-    - 2 extracted candidates with some additional information
+>
 
 
 Additional information can be added to the output by setting them as true in the config object.
@@ -116,15 +114,49 @@ Config.get()['candidate']['nlpIndexSentence'] = False
 
 ## File based usage
 Giveme5W can read and write news in a json format [example](https://github.com/fhamborg/news-please/blob/master/newsplease/examples/sample.json).
-There is also a converter script to convert gate.xml files to json.
+[You find ready to used examples here](/examples/extracting)
 
-Files can be processed like a stream (parse_documents_simple.py) or can be loaded in advance and kept in memory (parse_documents.py).
-Because CoreNLP server has a long execution time, it is possible to cache the result on the filesystem to speed up multiple executions.
-The raw result is attached to each document under clp_result.
+There is a easy to use handler to work with files:
+``` python
+ documents = (
+        # initiate the file handler with the input directory
+        Handler(inputPath)
+            # add giveme5w extractor  (it would only copying files without...)
+            .set_extractor(extractor)
+
+            # Optional: set a output directory
+            .set_output_path(outputPath)
+
+            # Optional: set a path to cache and load preprocessed documents (CoreNLP & Enhancer result)
+            .set_preprocessed_path(preprocessedPath)
+
+            # Optional: limit the documents read from the input directory (handy for development)
+            .set_limit(1)
+
+            # Optional: resume ability, skip input file if its already in output
+            .skip_documents_with_output()
+
+            # load and saves all document runtime objects for further programming
+            .preload_and_cache_documents()
+
+            ## setup is done: executing it
+            .process()
+
+            # get the processed documents, this can only be done because preload_and_cache_documents was called
+            .get_documents()
+    )
+```
+Check the examples under parse_documents_simple.py and parse_documents.py
+
+
+### CACHE
+CoreNLP and Enhancer have a  long execution time, therefore it is possible to cache the result on the filesystem to speed up multiple executions.
+
 
 The included example files already preprocessed. So you can process them without a running CoreNLP server instance.
 Delete all files in "/cache", if you want to precess them again.
 
+> if you add or remove enhancer, you must delete all files in the cache directory (if cache is enabled (set_preprocessed_path))
 
 ## REST-Service
 Its also possible to use giveme5W as rest service.
@@ -150,7 +182,7 @@ Learn_Weights is running the extractor with different weights.
 The best candidate is compared with the best annotation to get a score.
 The calculated score, document id and the used weights are saved per question under ./results.
 
-Because of the combined_scorer, each document is evaluated in each step. 
+Because of the combined_scorer, each document is evaluated in each step.
 This can lead to entries with the same weights, but with different scores.
 
 

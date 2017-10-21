@@ -45,10 +45,14 @@ class AbsEnhancer:
     def get_enhancer_id(self):
         print('TODO: return a unique string to identify this enhancer')
 
+    # this i called once per document
     @abstractmethod
     def process(self, document):
         return None
 
+    # this is called once per relevant token but simplified to character_offset(begin, end)
+    # simply look up process_data, find matching data via offset and return them if any
+    # this is information is attached to the token under get_enhancer_id()
     @abstractmethod
     def process_data(self, process_data, character_offset):
         print('TODO: implement')

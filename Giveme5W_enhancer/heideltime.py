@@ -34,11 +34,11 @@ class Heideltime(AbsEnhancer):
         # raw document date
         date = document.get_rawData().get('publish_date')
 
-        # parsed document date
-        date = parse(date)
-        date = date.strftime('%Y-%m-%d')
-
         if date:
+            # parsed document date
+            date = parse(date)
+            date = date.strftime('%Y-%m-%d')
+
             # write the question as file to disc
             outfile = open(filename, 'w')
             outfile.write(document.get_full_text())

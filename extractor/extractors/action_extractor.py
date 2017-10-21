@@ -1,3 +1,4 @@
+import copy
 import re
 
 from nltk.tree import ParentedTree
@@ -45,6 +46,7 @@ class ActionExtractor(AbsExtractor):
         trees = document.get_trees()
         candidates = []
 
+      
         for cluster in corefs:
             for mention in corefs[cluster]:
                 # Check if mention is the subject of the sentence by matching the NP-VP-NP pattern.
@@ -59,10 +61,9 @@ class ActionExtractor(AbsExtractor):
                         candidate_object.set_sentence_index(pattern[2])
                         candidate_object.set_raw([pattern[0], pattern[1], cluster, mention['id']])
 
-                        # TODO FINDE SOMEHOW THE TEXTINDEX
-                        # candidate_object.set_text_index(None)
-
                         candidates.append(candidate_object)
+
+
 
         document.set_candidates('ActionExtractor', candidates)
 
@@ -92,7 +93,8 @@ class ActionExtractor(AbsExtractor):
 
                         # this gives a tuple to find the way from sentence to leaf
                         # tree_position = subtree.leaf_treeposition(0)
-
+                        if sentence_root.stanfordCoreNLPResult['index'] == 17 and len(subtree.pos()) == 5:
+                            print('bingo')
                         entry = [subtree.pos(), self.cut_what(sibling, 3).pos(), sentence_root.stanfordCoreNLPResult['index']]
                         candidates.append(entry)
                         break
@@ -115,7 +117,7 @@ class ActionExtractor(AbsExtractor):
         ranked_candidates = []
         doc_len = document.get_len()
         doc_ner = document.get_ner()
-        doc_pos = document.get_pos()
+        # doc_pos = document.get_pos()
         doc_coref = document.get_corefs()
 
         if any(doc_coref.values()):
@@ -153,7 +155,7 @@ class ActionExtractor(AbsExtractor):
                     tmp = document._sentences[mention['sentNum'] - 1]['tokens'][mention['headIndex'] - 1]
                     representative = ((tmp['originalText'],tmp),tmp['pos'])
                     # document._sentences[mention['sentNum'] - 1]['tokens'][mention['headIndex'] - 1]
-                    #representative = doc_pos[mention['sentNum'] - 1][mention['headIndex'] - 1:mention['endIndex'] - 1]
+                    # representative = doc_pos[mention['sentNum'] - 1][mention['headIndex'] - 1:mention['endIndex'] - 1]
                     if representative[-1][1] == 'POS':
                         representative = representative[:-1]
 
@@ -173,13 +175,13 @@ class ActionExtractor(AbsExtractor):
 
             if mention_type == 'PRONOMINAL':
                 # use representing mention if the agent is only a pronoun
-
+                # TODO: Fix format fix
                 rp_format_fix = [(representative[0][0], { 'nlpToken': representative[0][1]})]
-               # ranked_candidates.append((rp_format_fix, candidateParts[1], score, candidate.get_sentence_index()))
-               # ranked_candidates.append(([representative], candidateParts[1], score, candidate.get_sentence_index()))
+                #ranked_candidates.append((rp_format_fix, candidateParts[1], score, candidate.get_sentence_index()))
+                #ranked_candidates.append(([representative], candidateParts[1], score, candidate.get_sentence_index()))
             else:
                # print("a")
-                ranked_candidates.append((candidateParts[0], candidateParts[1], score, candidate.get_sentence_index()))
+               ranked_candidates.append((candidateParts[0], candidateParts[1], score, candidate.get_sentence_index()))
 
 
 
@@ -235,6 +237,8 @@ class ActionExtractor(AbsExtractor):
                 if sub.label() == 'NP':
                     sibling = sub.right_sibling()
                     if length < min_length and sibling is not None and sibling.label() == 'PP':
-                        children.append(ParentedTree.fromstring(str(sibling)))
+                        #tmp = ParentedTree.fromstring(str(sibling))
+                        #children.append(ParentedTree.fromstring(str(sibling)))
+                        children.append(sibling.copy(deep=True))
                     break
             return ParentedTree(tree.label(), children)

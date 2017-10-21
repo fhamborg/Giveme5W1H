@@ -114,9 +114,6 @@ class AbsExtractor:
         filtered = []
 
         for candidate in candidates:
-            #if type(candidate[0][0]) == str:
-            #    string = ' '.join(candidate[0]).lower()
-            #else:
 
             string_a = []
             for part in candidate[0]:

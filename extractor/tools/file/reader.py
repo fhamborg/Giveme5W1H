@@ -26,13 +26,12 @@ class Reader(object):
     def read(self, path):
         with open(path, encoding='utf-8') as data_file:
             data = json.load(data_file)
-            url = data.setdefault('url', None)
 
 
-
-            if not data['dId']:
+            if not data.get('dId'):
+                url = data.get('url')
                 if not url:
-                    print(path + ' has not URL or dID. At leat a URL is mandatory to generate a unique dId')
+                    print(path + ' has not URL or dID. At least a URL is mandatory to generate a unique dId')
                 else:
                     data['dId'] = hashlib.sha224(url.encode('utf-8')).hexdigest()
 

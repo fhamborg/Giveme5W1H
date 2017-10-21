@@ -73,7 +73,7 @@ class Handler(object):
         if self._documents:
             return self._documents
         else:
-            self.log.error('you must call preload_and_cache_documents before processing to collect the docs')
+            self.log.error('No documents-objects have been cached. Did you call preload_and_cache_documents?')
 
     def _process_document(self, document):
         self.log.info('Handler: \tTitle:\t' + str(document.get_title()))

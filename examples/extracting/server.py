@@ -55,8 +55,6 @@ def get_mainPage():
 
     return response
 
-
-
 # define route for parsing requests
 @app.route('/', methods=['GET'])
 def root():
@@ -84,7 +82,8 @@ def extract():
         extractor.parse(document)
 
         answer = writer.generate_json(document)
-        # writer was initial written for files. Files wrap results under fiveWoneH
+        # writer was initial written for files.
+        # Files-Object is wrapping the results under fiveWoneH
         return jsonify(answer.get('fiveWoneH'))
 
     else:

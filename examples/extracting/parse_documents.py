@@ -18,29 +18,33 @@ File will be process one by one.
 # java -mx4g -cp "*" edu.stanford.nlp.pipeline.StanfordCoreNLPServer -port 9000 -timeout 15000
 
 if __name__ == '__main__':
+    # helper to make dataset selction simple
+    golden_standard = os.path.dirname(__file__) + '/../datasets/gold_standard/data/'
+    bbc = os.path.dirname(__file__) + '/../datasets/bbc/data/'
+
+    # logger setup
     log = logging.getLogger('GiveMe5W')
     log.setLevel(logging.DEBUG)
     sh = logging.StreamHandler()
     sh.setLevel(logging.DEBUG)
     log.addHandler(sh)
 
+    # giveme5w setup - with defaults
     extractor = FiveWExtractor()
-    inputPath = os.path.dirname(__file__) + '/../datasets/gold_standard/data/'
+
+    inputPath = golden_standard
     outputPath = os.path.dirname(__file__) + '/output'
 
     # initiate the news-please file handler with the input directory
     (Handler(inputPath)
-     # everything else is optional:
+     # add an extractor
+     .set_extractor(extractor)
 
-     ## add an optional output directory
+     # add an output directory
      .set_output_path(outputPath)
 
      # limit the documents read from the input directory (handy for development)
      .set_limit(10)
 
-     # add an extractor
-     .set_extractor(extractor)
-
-     ## setup is done:
      # execute it
      .process())

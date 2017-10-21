@@ -48,57 +48,110 @@ $ nohup java -mx4g edu.stanford.nlp.pipeline.StanfordCoreNLPServer 9000 &
 
 - For file based data - every input is transferred to the output
     -  For instance, annotated is already a part of the provided example files
-- REST service and file based input have the same output and configuration
-- Fields or their parents indicate with a prefix their origin, if no from giveme5W itself
-  - nlp, from CoreNLP
+- Each Question has their extracted candidates under extracted,
+- Each Candidate, has parts, score and text property and their sentence index.
+- Each parts is structured as (payload, Postoken)
+- Each payload has at least nlpToken which is the "basic" information.
+- Each enhancer is saving his information under their own name in the payload
 
-
-
+See the example below for details:
 ```json
-"who": {
+ "who": {
       "annotated": [
         {
-          "text": "UK"
+          "text": "Several people"
+        },
+        {
+          "text": "dozens injured"
         }
       ],
       "label": "who",
       "extracted": [
         {
+          "parts": [
+            [
+              {
+                "nlpToken": {
+                  "index": 8,
+                  "word": "Croydon",
+                  "originalText": "Croydon",
+                  "lemma": "Croydon",
+                  "characterOffsetBegin": 3148,
+                  "characterOffsetEnd": 3155,
+                  "pos": "NNP",
+                  "ner": "LOCATION",
+                  "speaker": "PER0",
+                  "before": " ",
+                  "after": " "
+                },
+                "aida": [
+                  {
+                    "mention": {
+                      "allEntities": [
+                        {
+                          "kbIdentifier": "YAGO:Croydon",
+                          "disambiguationScore": "0.23577"
+                        }
+                      ],
+                      "offset": 3148,
+                      "name": "Croydon",
+                      "length": 7,
+                      "bestEntity": {
+                        "kbIdentifier": "YAGO:Croydon",
+                        "disambiguationScore": "0.23577"
+                      }
+                    },
+                    "bestEntityMetadata": {
+                      "knowledgebase": "YAGO",
+                      "depictionurl": "http://upload.wikimedia.org/wikipedia/commons/0/08/Croydon_Town_Hall_-_geograph.org.uk_-_432983.jpg",
+                      "depictionthumbnailurl": "http://upload.wikimedia.org/wikipedia/commons/thumbCroydon_Town_Hall_-_geograph.org.uk_-_432983.jpg/200px-Croydon_Town_Hall_-_geograph.org.uk_-_432983.jpg",
+                      "importance": 0.0007512499244432548,
+                      "entityId": "Croydon",
+                      "type": [
+                        "YAGO_wordnet_district_108552138",
+                        "YAGO_yagoPermanentlyLocatedEntity",
+                        "YAGO_yagoLegalActorGeo",
+                        "YAGO_wordnet_medium_106254669",
+                        "YAGO_wordnet_urban_area_108675967",
+                        "YAGO_wikicategory_Market_towns_in_Surrey",
+                        "YAGO_wordnet_municipality_108626283",
+                        "YAGO_wordnet_instrumentality_103575240",
+                        "YAGO_wordnet_market_town_108672073",
+                        "YAGO_wikicategory_locations",
+                        "YAGO_wikicategory_Districts_of_London_listed_in_the_Domesday_Book",
+                        "YAGO_wordnet_region_108630985",
+                        "YAGO_yagoGeoEntity",
+                        "YAGO_wordnet_physical_entity_100001930",
+                        "YAGO_wikicategory_Districts_of_Croydon",
+                        "YAGO_wikicategory_Post_towns_in_the_CR_postcode_area",
+                        "YAGO_wordnet_entity_100001740",
+                        "YAGO_wordnet_object_100002684",
+                        "YAGO_wordnet_area_108497294",
+                        "YAGO_wordnet_geographical_area_108574314",
+                        "YAGO_wikicategory_Areas_of_London",
+                        "YAGO_wikicategory_Market_towns_in_London",
+                        "YAGO_wordnet_location_100027167",
+                        "YAGO_wordnet_whole_100003553",
+                        "YAGO_wikicategory_Media_and_communications_in_Croydon",
+                        "YAGO_wordnet_artifact_100021939",
+                        "YAGO_wordnet_administrative_district_108491826",
+                        "YAGO_wordnet_town_108665504"
+                      ],
+                      "readableRepr": "Croydon",
+                      "url": "http://en.wikipedia.org/wiki/Croydon"
+                    }
+                  }
+                ]
+              },
+              "NNP"
+            ]..
           "score": 1.0,
-          "words": [
-            {
-              "text": "The",
-              "nlpTag": "DT"
-            },
-            {
-              "text": "UK",
-              "nlpTag": "NNP"
-            }
-          ],
-          "nlpIndexSentence": 5
-        },
-        {
-          "score": 0.2,
-          "words": [
-            {
-              "text": "The",
-              "nlpTag": "DT"
-            },
-            {
-              "text": "UK",
-              "nlpTag": "NNP"
-            }
-          ],
-          "nlpIndexSentence": 6
-        }
-       ]
+          "text": "Croydon MPS ( @MPSCroydon ) November 9 , 201 \" There",
+          "nlpIndexSentence": 21:
+
 ```
 >
 
-
-Additional information can be added to the output by setting them as true in the config object.
-- information per candidate: like nlpIndexSentence or score
-- information per token like: lemma, tag
 
 > see configuration.py for all settings and description
 
@@ -110,13 +163,13 @@ Config.get()['candidate']['nlpIndexSentence'] = False
 ```
 
 
-> Not all extractors support config so far
-
-## File based usage
-Giveme5W can read and write news in a json format [example](https://github.com/fhamborg/news-please/blob/master/newsplease/examples/sample.json).
+## Processing-Files
+Giveme5W can read and write only in a json format [example](https://github.com/fhamborg/news-please/blob/master/newsplease/examples/sample.json).
 [You find ready to used examples here](/examples/extracting)
 
-There is a easy to use handler to work with files:
+> dID is used for matching input and output, not the filename!
+
+There is a easy to use handler to work with files, these are all options::
 ``` python
  documents = (
         # initiate the file handler with the input directory
@@ -127,7 +180,7 @@ There is a easy to use handler to work with files:
             # Optional: set a output directory
             .set_output_path(outputPath)
 
-            # Optional: set a path to cache and load preprocessed documents (CoreNLP & Enhancer result)
+            # Optional: set a path to cache and load preprocessed documents (CoreNLP & Enhancer results)
             .set_preprocessed_path(preprocessedPath)
 
             # Optional: limit the documents read from the input directory (handy for development)
@@ -146,26 +199,25 @@ There is a easy to use handler to work with files:
             .get_documents()
     )
 ```
-Check the examples under parse_documents_simple.py and parse_documents.py
+Check the examples under parse_documents_simple.py and parse_documents.py for more details
 
 
 ### CACHE
-CoreNLP and Enhancer have a  long execution time, therefore it is possible to cache the result on the filesystem to speed up multiple executions.
-
+CoreNLP and Enhancer have a long execution time, therefore it is possible to cache the result on the filesystem to speed up multiple executions.
 
 The included example files already preprocessed. So you can process them without a running CoreNLP server instance.
 Delete all files in "/cache", if you want to precess them again.
 
 > if you add or remove enhancer, you must delete all files in the cache directory (if cache is enabled (set_preprocessed_path))
 
+
 ## REST-Service
 Its also possible to use giveme5W as rest service.
 
 ```
-$ python extractor/examples/simple_api.py
+$ python extractor/examples/extracting/simple_api.py
 ```
 > Check the code for more details, it is well documented
-
 
 * GET AND POST requests are supported
     * Keep in mind that GET has a limited request length and special character encoding can be tricky
@@ -178,25 +230,28 @@ $ python extractor/examples/simple_api.py
 
 
 ## Learn_Weights
-Learn_Weights is running the extractor with different weights.
+/examples/misc/Learn_Weights.py is running the extractor with different weights from 0-10.
 The best candidate is compared with the best annotation to get a score.
 The calculated score, document id and the used weights are saved per question under ./results.
 
-Because of the combined_scorer, each document is evaluated in each step.
-This can lead to entries with the same weights, but with different scores.
+> Because of the combined_scorer, each document is evaluated in each step. This can lead to entries with the same weights, but with different scores.
 
-
-# Giveme5W Enhancer
-This extensions can perform further feature extraction and/or selection.
-Install Giveme5_enhancer to use this features.
+# Giveme5W-Enhancer
+Enhancer can perform further feature extraction and/or selection.
+Sourcecode of all enhancer is saved under /codebase/ to ensure results are reproachable at any time.
 
 ## AIDA
-Aida is available as webservice and can be installed local.
-Because of the complex installation this is the default option.
-The service is limited, you can find details [here](https://www.ambiverse.com/pricing/)
+Aida is available as webservice or can be installed local.
+Because of the complex installation and size; online service is set up as default.
 
-### Aida Local Installation
-- Download [3.0.4](https://github.com/yago-naga/aida/archive/3.0.4.zip)
+### Online Service
+Service is limited to 1000 request per day.
+You can find details [here](https://www.ambiverse.com/pricing/)
+
+### Local Installation
+> AIDA repo went offline, check /codebase/ for the last version
+
+- Source-Download [3.0.4](https://github.com/yago-naga/aida/archive/3.0.4.zip)
 - copy sample_settings into settings
 - open settings/aida.properties set
   - dataAccess = dmap
@@ -206,7 +261,7 @@ The service is limited, you can find details [here](https://www.ambiverse.com/pr
   - default.preloadValues = true
 
 
-- Download [DMaps](http://resources.mpi-inf.mpg.de/yago-naga/aida/download/entity-repository/AIDA_entity_repository_2014-01-02v10_dmap.tar.bz2)
+- Data-Download [DMaps](http://resources.mpi-inf.mpg.de/yago-naga/aida/download/entity-repository/AIDA_entity_repository_2014-01-02v10_dmap.tar.bz2)
  - Check also [here](http://www.mpi-inf.mpg.de/departments/databases-and-information-systems/research/yago-naga/aida/downloads/) for update
 - Decompress the bz2 file
  - use pbzip2 on osx/linux for fast decompression
@@ -214,7 +269,6 @@ The service is limited, you can find details [here](https://www.ambiverse.com/pr
  - Unpack the tar file into the dMaps folder
 - run
  - mvn package -Dmaven.test.skip=true
-
 
 > - Warning database dump has 20GB
   - Your computer should have at least 15GB ram
@@ -276,8 +330,9 @@ Example output:
         },
 ```
 
-# Giveme5W-runtime-resources
-Giveme5W expects all libraries to be located in the same directory 'Giveme5W-runtime-resources' and next to the Giveme5W folder.
+# Startup - Scripts -> Giveme5W-runtime-resources
+Giveme5W can start up everything. Check examples/startup scripts.
+To do so all libraries must be located in the same directory 'Giveme5W-runtime-resources' and next to the Giveme5W folder.
 
 - Folder Structure
     - Giveme5W (Master)
@@ -288,9 +343,10 @@ Giveme5W expects all libraries to be located in the same directory 'Giveme5W-run
         - stanford-corenlp-full-2016-10-31
         - treeTagger
 
-You can change this with:
+You can change this directory with:
 ```shell
 Config.get()['Giveme5W-runtime-resources'] = './../Giveme5W-runtime-resources'
 ```
+
 # License
 The project is licensed under the Apache License 2.0. Make sure that you use Giveme5W in compliance with applicable law. Copyright 2016 The Giveme5W team

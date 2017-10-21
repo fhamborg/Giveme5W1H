@@ -9,7 +9,7 @@ class Candidate:
         self._index = None
         self._index_text = None
 
-        self._parts = None
+        self._parts = []
         self._lemma_count = None
         self._enhancement = {}
         self._calculations = {}

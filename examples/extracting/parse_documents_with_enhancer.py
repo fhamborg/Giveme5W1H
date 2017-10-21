@@ -24,26 +24,34 @@ Advanced example to use the extractor in combination with NewsPlease files
 Documents are preprocessed just once, you have to set is_preprocessed to false, 
 if you want to process them again by core_nlp (or just delete cache and output)
 """
-
 if __name__ == '__main__':
+
+    # helper to make dataset selction simple
+    dataset_golden_standard = os.path.dirname(__file__) + '/../datasets/gold_standard/data/'
+    # Do not work with heideltime!, there is no pub date...
+    dataset_bbc = os.path.dirname(__file__) + '/../datasets/bbc/data/'
+
+    # logger setup
     log = logging.getLogger('GiveMe5W')
     log.setLevel(logging.DEBUG)
     sh = logging.StreamHandler()
     sh.setLevel(logging.DEBUG)
     log.addHandler(sh)
 
-
+    # giveme5w setup
     extractor = FiveWExtractor(extractors=[
         action_extractor.ActionExtractor(),
-        environment_extractor.EnvironmentExtractor(),
-        cause_extractor.CauseExtractor(),
-        method_extractor.MethodExtractor()
+        #environment_extractor.EnvironmentExtractor(),
+        #cause_extractor.CauseExtractor(),
+        #method_extractor.MethodExtractor()
     ], enhancement=[
         Heideltime(['when']),
         Aida(['how','when','why','where','what','who'])
     ])
-    inputPath = os.path.dirname(__file__) + '/../datasets/bbc/data/'
+
+    inputPath = dataset_golden_standard
     outputPath = os.path.dirname(__file__) + '/output'
+
     preprocessedPath = os.path.dirname(__file__) + '/cache'
 
     documents = (

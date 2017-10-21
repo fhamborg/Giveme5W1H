@@ -67,11 +67,6 @@ class EnvironmentExtractor(AbsExtractor):
         locations = self._evaluate_locations(document)
         dates = self._evaluate_dates(document)
 
-        #document.set_answer('where', self._filter_duplicates(locations, False))
-        #document.set_answer('when', self._filter_duplicates(dates, False))
-
-        # TODO: flag duplicates
-        # TODO: skip flagged candidates on writing output
 
         document.set_answer('where', locations) # there are now duplicates
         document.set_answer('when', dates)
@@ -93,12 +88,6 @@ class EnvironmentExtractor(AbsExtractor):
         locations = []
         dates = []
         last_date = None
-
-        #sentences = document.get_sentences()
-        #for sentence in sentences:
-        #    for token in sentence['tokens']:
-        #        ner = token['ner']
-        #        pos = token['pos']
 
         tokens = document.get_tokens()
 

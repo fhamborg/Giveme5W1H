@@ -10,7 +10,7 @@ This is a simple example how to use the extractor in combination with NewsPlease
 File will be process one by one.
 
 - Nothing is cached
-- Existing files (in output) will be overwritten
+- Existing files (in output) will be overwritten!!!
 
 """
 
@@ -34,11 +34,13 @@ if __name__ == '__main__':
 
      ## add an optional output directory
      .set_output_path(outputPath)
+
      # limit the documents read from the input directory (handy for development)
-     .set_limit(5)
+     .set_limit(10)
+
      # add an extractor
      .set_extractor(extractor)
 
      ## setup is done:
-     # executing it
+     # execute it
      .process())

@@ -13,7 +13,7 @@ from extractors import action_extractor
 from extractors import cause_extractor
 
 # Add path to allow execution though console
-sys.path.insert(0, '/'.join(os.path.realpath(__file__).split('/')[:-3]))
+#sys.path.insert(0, '/'.join(os.path.realpath(__file__).split('/')[:-3]))
 
 """
 Advanced example to use the extractor in combination with NewsPlease files
@@ -26,9 +26,6 @@ if you want to process them again by core_nlp (or just delete cache and output)
 """
 
 if __name__ == '__main__':
-    #Config.get()['candidate']['part'] = False
-    #Config.get()['enhancements']['Giveme5W_enhancer']['enabled'] = True
-
     log = logging.getLogger('GiveMe5W')
     log.setLevel(logging.DEBUG)
     sh = logging.StreamHandler()
@@ -37,13 +34,13 @@ if __name__ == '__main__':
 
 
     extractor = FiveWExtractor(extractors=[
-        #action_extractor.ActionExtractor(),
-        #environment_extractor.EnvironmentExtractor(),
-        #cause_extractor.CauseExtractor(),
+        action_extractor.ActionExtractor(),
+        environment_extractor.EnvironmentExtractor(),
+        cause_extractor.CauseExtractor(),
         method_extractor.MethodExtractor()
     ], enhancement=[
-        #Heideltime(['when']),
-        #Aida(['how','when','why','where','what','who'])
+        Heideltime(['when']),
+        Aida(['how','when','why','where','what','who'])
     ])
     inputPath = os.path.dirname(__file__) + '/../datasets/bbc/data/'
     outputPath = os.path.dirname(__file__) + '/output'
@@ -52,28 +49,27 @@ if __name__ == '__main__':
     documents = (
         # initiate the file handler with the input directory
         Handler(inputPath)
-            ## everything else is optional !!
-
-            # set a output directory
-            .set_output_path(outputPath)
-
-            # set a path to save and load preprocessed documents (CoreNLP result)
-            .set_preprocessed_path(preprocessedPath)
-
-            # limit the documents read from the input directory (handy for development)
-            # .set_limit(1)
-
-            # this option provides resume ability
-            # .skip_documents_with_output()
-
-            # add an optional extractor (it would only copying without...)
+            # add giveme5w extractor  (it would only copying files without...)
             .set_extractor(extractor)
 
-            # load and saves all document objects for further programming
+            # Optional: set a output directory
+            .set_output_path(outputPath)
+
+            # Optional: set a path to cache and load preprocessed documents (CoreNLP & Enhancer result)
+            .set_preprocessed_path(preprocessedPath)
+
+            # Optional: limit the documents read from the input directory (handy for development)
+            .set_limit(10)
+
+            # Optional: resume ability, skip input file if its already in output
+            .skip_documents_with_output()
+
+            # load and saves all document runtime objects for further programming
             .preload_and_cache_documents()
 
             ## setup is done: executing it
             .process()
-            # get the processed documents
+
+            # get the processed documents, this can only be done because preload_and_cache_documents was called
             .get_documents()
     )

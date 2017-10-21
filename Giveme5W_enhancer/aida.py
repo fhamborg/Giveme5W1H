@@ -26,8 +26,10 @@ class Aida(AbsEnhancer):
             now = datetime.datetime.now()
             if self._last_request:
                 time_since_last = (now - self._last_request).total_seconds()
-                if time_since_last > 2:
-                    time.sleep(2-time_since_last)
+                if 1 > time_since_last:
+                    time.sleep(1)
+                    # there can`t be a shorter sleep than one second.
+                    # This makes tops 2 seconds per request
 
         r = requests.post(self._url, data={'text': document.get_full_text()})
         if self._limit_request_rate:

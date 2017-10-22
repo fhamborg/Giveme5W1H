@@ -17,19 +17,35 @@ This is a simple example on how to use flask to create a rest api for our extrac
 Please update the CoreNLP address to match your host and check the flask settings.
 """
 
+
+
+
+import socket
+def get_ip():
+    s = socket.socket(socket.AF_INET, socket.SOCK_DGRAM)
+    try:
+        # doesn't even have to be reachable
+        s.connect(('10.255.255.255', 1))
+        IP = s.getsockname()[0]
+    except:
+        IP = '127.0.0.1'
+    finally:
+        s.close()
+    return IP
+
+
 # basic configuration of the rest api
 app = Flask(__name__)
 log = logging.getLogger(__name__)
-host = None
-port = 5000
+host = get_ip()
+port = 9099
 debug = False
 
-
 # setup config
-Config.get()["candidate"]["nlpIndexSentence"] = False
-Config.get()["candidate"]["part"]['nlpTag'] = False
-Config.get()["candidate"]["score"] = False
-Config.get()["label"] = False
+#Config.get()["candidate"]["nlpIndexSentence"] = False
+#Config.get()["candidate"]["part"]['nlpTag'] = False
+#Config.get()["candidate"]["score"] = False
+#Config.get()["label"] = False
 
 Config.get()["onlyTopCandidate"] = True
 

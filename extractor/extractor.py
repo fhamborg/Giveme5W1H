@@ -2,7 +2,7 @@ import logging
 import queue
 from threading import Thread
 
-from combined_scoring.distance_of_candidate import DistanceOfCandidate
+import combined_scoring.distance_of_candidate
 from extractors import action_extractor, environment_extractor, cause_extractor, method_extractor
 from preprocessors.preprocessor_core_nlp import Preprocessor
 
@@ -66,7 +66,7 @@ class FiveWExtractor:
         else:
             self.log.info('No combinedScorers: initializing default configuration.')
             self.combinedScorers = [
-                DistanceOfCandidate(('what', 'who'), ('how'))
+                combined_scoring.distance_of_candidate.DistanceOfCandidate(('what', 'who'), ('how'))
             ]
 
         self.q = queue.Queue()

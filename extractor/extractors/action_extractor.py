@@ -3,7 +3,7 @@ import re
 
 from nltk.tree import ParentedTree
 
-from candidate import Candidate
+from extractor.candidate import Candidate
 from .abs_extractor import AbsExtractor
 
 

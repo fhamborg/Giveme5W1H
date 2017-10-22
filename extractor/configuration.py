@@ -10,7 +10,7 @@ class Configuration:
         },
         "label": True,  # This repeating information is useful for template engines
         "onlyTopCandidate": True, # Return only the  Candidate with the best score per question
-        "Giveme5W-runtime-resources": './../../Giveme5w-runtime-resources/' # Runtime directory
+        "Giveme5W-runtime-resources": './../../Giveme5W-runtime-resources/' # Runtime directory
     }
 
     @classmethod

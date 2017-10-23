@@ -40,8 +40,8 @@ if __name__ == '__main__':
 
     # giveme5w setup
     extractor = FiveWExtractor(extractors=[
-        action_extractor.ActionExtractor(),
-        #environment_extractor.EnvironmentExtractor(),
+        #action_extractor.ActionExtractor(),
+        environment_extractor.EnvironmentExtractor(),
         #cause_extractor.CauseExtractor(),
         #method_extractor.MethodExtractor()
     ], enhancement=[
@@ -67,10 +67,10 @@ if __name__ == '__main__':
             .set_preprocessed_path(preprocessedPath)
 
             # Optional: limit the documents read from the input directory (handy for development)
-            .set_limit(10)
+            .set_limit(1)
 
             # Optional: resume ability, skip input file if its already in output
-            .skip_documents_with_output()
+            #.skip_documents_with_output()
 
             # load and saves all document runtime objects for further programming
             .preload_and_cache_documents()

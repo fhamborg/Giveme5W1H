@@ -34,45 +34,34 @@ def get_ip():
         s.close()
     return ip
 
-if __name__ == "__main__":
-    # setup config
-    # Config.get()["candidate"]["nlpIndexSentence"] = False
-    # Config.get()["candidate"]["part"]['nlpTag'] = False
-    # Config.get()["candidate"]["score"] = False
-    # Config.get()["label"] = False
-    # Config.get()["onlyTopCandidate"] = True
-
-    # Flask setup
-    app = Flask(__name__)
-    log = logging.getLogger(__name__)
-    host = get_ip()
-    port = 9099
-    debug = False
-
-    # Template engine
-    env = Environment(
-        loader=PackageLoader('examples', 'extracting'),
-        autoescape=select_autoescape(['html', 'xml'])
-    )
-
-    # Render landing page
-    template_index = env.get_template('index.html')
-
-    # Giveme5W setup
-    extractor = FiveWExtractor()
-    extractor_enhancer = FiveWExtractor( enhancement=[
-        Heideltime(['when']),
-        Aida(['how','when','why','where','what','who'])
-    ])
-    reader = Reader()
-    writer = Writer()
-
-    # startup
-    log.info("starting server on port %i", port)
-    app.run(host, port, debug)
 
 
-    log.info("server has stopped")
+# Flask setup
+app = Flask(__name__)
+log = logging.getLogger(__name__)
+host = get_ip()
+port = 9099
+debug = False
+
+# Template engine
+env = Environment(
+    loader=PackageLoader('examples', 'extracting'),
+    autoescape=select_autoescape(['html', 'xml'])
+)
+
+# Render landing page
+template_index = env.get_template('index.html')
+
+# Giveme5W setup
+extractor = FiveWExtractor()
+extractor_enhancer = FiveWExtractor( enhancement=[
+    Heideltime(['when']),
+    Aida(['how','when','why','where','what','who'])
+])
+reader = Reader()
+writer = Writer()
+
+
 
 
 # im sure there is a smarter way... this is a very simple landing page
@@ -111,11 +100,29 @@ def extract():
 
 # define route for parsing requests
 @app.route('/extractEnhancer', methods=['GET', 'POST'])
-def extract():
+def extractEnhancer():
     document = request_to_document()
     if document:
-        extractor.parse(document)
+        extractor_enhancer.parse(document)
         answer = writer.generate_json(document)
         return jsonify(answer)
 
+
+
+if __name__ == "__main__":
+    # setup config
+    # Config.get()["candidate"]["nlpIndexSentence"] = False
+    # Config.get()["candidate"]["part"]['nlpTag'] = False
+    # Config.get()["candidate"]["score"] = False
+    # Config.get()["label"] = False
+    # Config.get()["onlyTopCandidate"] = True
+
+
+
+    # startup
+    log.info("starting server on port %i", port)
+    app.run(host, port, debug)
+
+
+    log.info("server has stopped")
 

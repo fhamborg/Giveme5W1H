@@ -1,9 +1,9 @@
 import logging
 import os
-import sys
 
-from Giveme5W_enhancer.aida import Aida
+
 from Giveme5W_enhancer.heideltime import Heideltime
+
 from extractor.configuration import Configuration as Config
 from extractor.extractor import FiveWExtractor
 from extractor.tools.file.handler import Handler
@@ -41,12 +41,12 @@ if __name__ == '__main__':
     # giveme5w setup
     extractor = FiveWExtractor(extractors=[
         #action_extractor.ActionExtractor(),
-        environment_extractor.EnvironmentExtractor(),
+        #environment_extractor.EnvironmentExtractor(),
         #cause_extractor.CauseExtractor(),
-        #method_extractor.MethodExtractor()
+        method_extractor.MethodExtractor()
     ], enhancement=[
         Heideltime(['when']),
-        Aida(['how','when','why','where','what','who'])
+        #Aida(['how','when','why','where','what','who'])
     ])
 
     inputPath = dataset_golden_standard

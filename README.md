@@ -43,6 +43,7 @@ Then start up CoreNLP by:
 $ nohup java -mx4g edu.stanford.nlp.pipeline.StanfordCoreNLPServer 9000 &
 ```
 
+> see also Startup - Scripts -> Giveme5W-runtime-resources
 
 ### Output Configuration
 
@@ -236,107 +237,14 @@ The calculated score, document id and the used weights are saved per question un
 
 > Because of the combined_scorer, each document is evaluated in each step. This can lead to entries with the same weights, but with different scores.
 
-# Giveme5W-Enhancer
-Enhancer can perform further feature extraction and/or selection.
-Sourcecode of all enhancer is saved under /codebase/ to ensure results are reproachable at any time.
-
-## AIDA
-Aida is available as webservice or can be installed local.
-Because of the complex installation and size; online service is set up as default.
-
-### Online Service
-Service is limited to 1000 request per day.
-You can find details [here](https://www.ambiverse.com/pricing/)
-
-### Local Installation
-> AIDA repo went offline, check /codebase/ for the last version
-
-- Source-Download [3.0.4](https://github.com/yago-naga/aida/archive/3.0.4.zip)
-- copy sample_settings into settings
-- open settings/aida.properties set
-  - dataAccess = dmap
-- create in settings a file 'dmap_aida.properties', set
-  - mapsToLoad = all
-  - default.preloadKeys = true
-  - default.preloadValues = true
-
-
-- Data-Download [DMaps](http://resources.mpi-inf.mpg.de/yago-naga/aida/download/entity-repository/AIDA_entity_repository_2014-01-02v10_dmap.tar.bz2)
- - Check also [here](http://www.mpi-inf.mpg.de/departments/databases-and-information-systems/research/yago-naga/aida/downloads/) for update
-- Decompress the bz2 file
- - use pbzip2 on osx/linux for fast decompression
-- create a folder 'dMaps' in the AIDA root directory
- - Unpack the tar file into the dMaps folder
-- run
- - mvn package -Dmaven.test.skip=true
-
-> - Warning database dump has 20GB
-  - Your computer should have at least 15GB ram
-
-Use environment_enhancer.py to startup CoreNLP and AIDA together.
-
-usage:
-```python
-from Giveme5W_enhancer.aida import Aida
-extractor = FiveWExtractor(extractors=[
-        environment_extractor.EnvironmentExtractor(),
-    ], enhancement=[
-        Aida('when', 'http://myOptionalAidaServer:8080')
-    ])
-```
-
-## Heideltime
-[Heideltime](https://github.com/HeidelTime/heideltime) works out of the box with the 'Giveme5W-runtime-resources'.
-This enhancement parse further the "when" answers to get precise time definitions.
-
-- Download [2.2.1](https://github.com/HeidelTime/heideltime/releases/download/VERSION2.2.1/heideltime-standalone-2.2.1.zip)
-- Copy it to Giveme5W-runtime-resources
-- Follow the installation instruction Manual.pdf
-> You must use treeTagger, Heideltime is not compatible with CoreNLP 3.X
-
-usage:
-```python
-from Giveme5W_enhancer.heideltime import Heideltime
-extractor = FiveWExtractor(extractors=[
-        environment_extractor.EnvironmentExtractor(),
-    ], enhancement=[
-        Heideltime('when')
-    ])
-```
-
-The enhancement is stored per candidate, a published date is mandatory for news to resolve relative times.
-Example output:
-```json
-{
-          "score": 0.5220949263502455,
-          "words": [
-            {
-              "text": "Today",
-              "tag": "NN"
-            }
-          ],
-          "enhancement": {
-            "heideltime": {
-              "TimeML": {
-                "TIMEX3": {
-                  "@tid": "t1",
-                  "@type": "DATE",
-                  "@value": "2016-11-09",
-                  "#text": "Today"
-                }
-              }
-            }
-          }
-        },
-```
 
 # Startup - Scripts -> Giveme5W-runtime-resources
-Giveme5W can start up everything. Check examples/startup scripts.
-To do so all libraries must be located in the same directory 'Giveme5W-runtime-resources' and next to the Giveme5W folder.
+Giveme5W can start up everything for you. Check examples/startup scripts.
+To do so, all libraries must be located in the same directory 'Giveme5W-runtime-resources' and next to the Giveme5W folder.
 
 - Folder Structure
     - Giveme5W (Master)
-    - Giveme5W-enhancer (Master)
+    - Giveme5W_NewsCluster_enhancer (Master)
     - Giveme5W-runtime-resources (Master)
         - aida-3.0.4
         - heideltime-standalone

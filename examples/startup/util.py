@@ -7,7 +7,7 @@ path_to_libs = Config.get()['Giveme5W-runtime-resources']
 
 async def do_subprocess(task, command, path):
     print(task)
-    proc = await asyncio.create_subprocess_shell(command, shell=True, cwd=path_to_libs + '/' + path)
+    proc = await asyncio.create_subprocess_shell(command, shell=True, cwd='./.' + path_to_libs + path)
     return_code = await proc.wait()
     print(task + 'closed.  Return code = %d' % return_code)
 

@@ -5,6 +5,33 @@
         {
           "text": ""
         }
+      ],
+      "label": "how",
+      "extracted": [
+        {
+          "parts": [
+            [
+              {
+                "nlpToken": {
+                  "index": 12,
+                  "word": "overturns",
+                  "originalText": "overturns",
+                  "lemma": "overturn",
+                  "characterOffsetBegin": 68,
+                  "characterOffsetEnd": 77,
+                  "pos": "VBZ",
+                  "ner": "O",
+                  "speaker": "PER0",
+                  "before": " ",
+                  "after": " "
+                }
+              },
+              "VBZ"
+            ]
+          ],
+          "score": 1.0,
+          "text": "overturns"
+        }
       ]
     },
     "what": {
@@ -22,66 +49,6 @@
         {
           "text": "at around 6am"
         }
-      ],
-      "label": "when",
-      "extracted": [
-        {
-          "parts": [
-            [
-              {
-                "nlpToken": {
-                  "index": 24,
-                  "word": "6am",
-                  "originalText": "6am",
-                  "lemma": "6am",
-                  "characterOffsetBegin": 316,
-                  "characterOffsetEnd": 319,
-                  "pos": "JJ",
-                  "ner": "TIME",
-                  "normalizedNER": "T06:00",
-                  "speaker": "PER0",
-                  "before": " ",
-                  "after": "",
-                  "timex": {
-                    "tid": "t1",
-                    "type": "TIME",
-                    "value": "T06:00"
-                  }
-                },
-                "heideltime": "test"
-              },
-              "JJ"
-            ],
-            [
-              {
-                "nlpToken": {
-                  "index": 25,
-                  "word": ".",
-                  "originalText": ".",
-                  "lemma": ".",
-                  "characterOffsetBegin": 319,
-                  "characterOffsetEnd": 320,
-                  "pos": ".",
-                  "ner": "TIME",
-                  "normalizedNER": "T06:00",
-                  "speaker": "PER0",
-                  "before": "",
-                  "after": " ",
-                  "timex": {
-                    "tid": "t1",
-                    "type": "TIME",
-                    "value": "T06:00"
-                  }
-                },
-                "heideltime": "test"
-              },
-              "."
-            ]
-          ],
-          "score": 0.8543371522094926,
-          "text": "6am .",
-          "nlpIndexSentence": 2
-        }
       ]
     },
     "where": {
@@ -92,9 +59,7 @@
         {
           "text": "in a tunnel near Sandlilands tram station"
         }
-      ],
-      "label": "where",
-      "extracted": []
+      ]
     },
     "who": {
       "annotated": [

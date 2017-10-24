@@ -11,11 +11,10 @@ class MethodExtractor(AbsExtractor):
     # weights = (4, 3)
     weights = [1.0, 1]
 
-    _copulative_conjunction = ['and', 'as', 'both', 'because', 'even', 'for', 'if ', 'that', 'then', 'since', 'seeing', 'so']
-    _prepositions_before = ['in', 'with', 'until', 'as', 'during']
+    _copulative_conjunction = ['and', 'as', 'both', 'because', 'even', 'for', 'if ', 'that', 'then', 'since', 'seeing', 'so', 'after']
+    #_prepositions_before = ['in', 'with', 'until', 'as', 'during']
     _stop_words = ['and', 'but', 'lead','is', 'has', 'have', 'went', 'was', 'been', 'were', 'get', 'are','do','so','due', 'well', 'very', 'on', 'too', 'be', 'i', 'and', 'have', 'the', 'a', ',', '.', '', 'not', "n't", 'am', 'as', 'even', 'however', 'other', 'just', 'over', 'more', 'say', 'also']
-
-    #_tmp_statistic = {}
+    _stop_ner = ['TIME', 'DATE', 'ORGANIZATION', 'DURATION', 'ORDINAL']
 
     # prepositional phrase PP, preposition
     def extract(self, document):
@@ -44,13 +43,12 @@ class MethodExtractor(AbsExtractor):
                 candidates.append(candidate)
         candidates = self._filter_duplicates(candidates)
 
-
         # candidate detection
         # All kind of adjectives
-        # candidatesAd = self._filter_duplicates(self._extract_ad_candidates(document))
+        candidatesAd = self._filter_duplicates(self._extract_ad_candidates(document))
 
         # join the candidates
-        candidates = candidates #+ candidatesAd
+        candidates = candidates + candidatesAd
 
         # save them to the document
         document.set_candidates('MethodExtractor', candidates)
@@ -66,33 +64,36 @@ class MethodExtractor(AbsExtractor):
             # Preposition or subordinating conjunction -> detecting verbs
             # ...after it "came off the tracks"...
             if label == 'IN':
+                right_sibling = subtree.right_sibling()
 
-                if subtree[0] in  self._copulative_conjunction or subtree[0] not in self._prepositions_before:
-                    # candidate is after the preposition
+                # be sure there is more text on the right side of the tree
+                if right_sibling:
+                    # check if IN candidate is copulative(also known as addition)
 
-                    right_sibling = subtree.right_sibling()
-                    # be  sure there is more text on the right side of the tree
-                    if right_sibling:
+                    # if subtree[0] in self._copulative_conjunction or subtree[0] not in self._prepositions_before:
+                    if subtree[0]['nlpToken']['lemma'] in self._copulative_conjunction:
+                        # candidate is after the preposition and
 
-                        right_sibling_pos = self._pos_linked_to_corenlp_tokens(right_sibling)
-                        candidate_parts = self._find_vb_cc_vb_parts(right_sibling_pos)
+                        # if the right sibling (potential candidate) is an location or time
+                        # the left sibling is taken as candidate
+                        if right_sibling.leaves()[0]['nlpToken']['ner'] not in self._stop_ner:
 
-                        if candidate_parts:
-                            # get the CoreNLP tokens for each part e.g lemmas etc.
-                            # convert list objects back to tuples for backward compatibility
-                            candidates.append([candidate_parts, None, tree.stanfordCoreNLPResult['index'], 'prepos'])
+                            right_sibling_pos = self._pos_linked_to_corenlp_tokens(right_sibling)
+                            candidate_parts = self._find_vb_cc_vb_parts(right_sibling_pos)
 
-                else:
-                    # candidate is before the preposition
-                    # ....derailed and overturned IN...
-
-                    # matches VBD CC VBD and VBD
-                    atree = subtree.parent().parent().parent()
-                    if atree:
-                        relevantParts = self._pos_linked_to_corenlp_tokens(atree)
-                        candidate_parts = self._find_vb_cc_vb_parts(relevantParts)
-                        if candidate_parts:
-                            candidates.append([candidate_parts,None,tree.stanfordCoreNLPResult['index'], 'prepos'])
+                            if candidate_parts:
+                                # get the CoreNLP tokens for each part e.g lemmas etc.
+                                # convert list objects back to tuples for backward compatibility
+                                candidates.append([candidate_parts, None, tree.stanfordCoreNLPResult['index'], 'prepos'])
+                        else:
+                            # look at the sentence to the left side
+                            # beause of the tree structure simples way is to go multible times up and then walk back
+                            atree = subtree.parent().parent().parent()
+                            if atree:
+                                relevantParts = self._pos_linked_to_corenlp_tokens(atree)
+                                candidate_parts = self._find_vb_cc_vb_parts(relevantParts)
+                                if candidate_parts:
+                                    candidates.append([candidate_parts,None,tree.stanfordCoreNLPResult['index'], 'prepos'])
 
         return candidates
 
@@ -117,7 +118,7 @@ class MethodExtractor(AbsExtractor):
             for token in sentence['tokens']:
                 if token['index'] > self._maxIndex:
                     self._maxIndex = token['index']
-                if self._is_relevant_pos(token['pos']) and token['ner'] not in ['TIME', 'DATE', 'ORGANIZATION', 'DURATION', 'ORDINAL']:
+                if self._is_relevant_pos(token['pos']) and token['ner'] not in self._stop_ner:
                     candidates.append([[( {'nlpToken': token},token['pos'], token)], None ,sentence['index'], 'adjectiv'])
         return candidates
 

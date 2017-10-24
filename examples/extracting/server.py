@@ -1,15 +1,12 @@
 import datetime
 import logging
-import os
-import sys
 import time
+import socket
 from jinja2 import Environment, PackageLoader, select_autoescape
-env = Environment(
-    loader=PackageLoader('examples', 'extracting'),
-    autoescape=select_autoescape(['html', 'xml'])
-)
 
-sys.path.insert(0, '/'.join(os.path.realpath(__file__).split('/')[:-3]))
+from Giveme5W_enhancer.heideltime import Heideltime
+from Giveme5W_enhancer.aida import Aida
+
 from flask import Flask, request, jsonify
 from extractor.document import Document
 from extractor.extractor import FiveWExtractor
@@ -24,78 +21,71 @@ Please update the CoreNLP address to match your host and check the flask setting
 """
 
 
-
-
-import socket
+# helper to find own ip address
 def get_ip():
     s = socket.socket(socket.AF_INET, socket.SOCK_DGRAM)
     try:
         # doesn't even have to be reachable
         s.connect(('10.255.255.255', 1))
-        IP = s.getsockname()[0]
+        ip = s.getsockname()[0]
     except:
-        IP = '127.0.0.1'
+        ip = '127.0.0.1'
     finally:
         s.close()
-    return IP
+    return ip
+
+if __name__ == "__main__":
+    # setup config
+    # Config.get()["candidate"]["nlpIndexSentence"] = False
+    # Config.get()["candidate"]["part"]['nlpTag'] = False
+    # Config.get()["candidate"]["score"] = False
+    # Config.get()["label"] = False
+    # Config.get()["onlyTopCandidate"] = True
+
+    # Flask setup
+    app = Flask(__name__)
+    log = logging.getLogger(__name__)
+    host = get_ip()
+    port = 9099
+    debug = False
+
+    # Template engine
+    env = Environment(
+        loader=PackageLoader('examples', 'extracting'),
+        autoescape=select_autoescape(['html', 'xml'])
+    )
+
+    # Render landing page
+    template_index = env.get_template('index.html')
+
+    # Giveme5W setup
+    extractor = FiveWExtractor()
+    extractor_enhancer = FiveWExtractor( enhancement=[
+        Heideltime(['when']),
+        Aida(['how','when','why','where','what','who'])
+    ])
+    reader = Reader()
+    writer = Writer()
+
+    # startup
+    log.info("starting server on port %i", port)
+    app.run(host, port, debug)
 
 
-# basic configuration of the rest api
-app = Flask(__name__)
-log = logging.getLogger(__name__)
-host = get_ip()
-port = 9099
-debug = False
+    log.info("server has stopped")
 
-# setup config
-#Config.get()["candidate"]["nlpIndexSentence"] = False
-#Config.get()["candidate"]["part"]['nlpTag'] = False
-#Config.get()["candidate"]["score"] = False
-#Config.get()["label"] = False
-
-Config.get()["onlyTopCandidate"] = True
-
-
-extractor = FiveWExtractor()
-
-reader = Reader()
-writer = Writer()
-
-template_index = env.get_template('index.html')
 
 # im sure there is a smarter way... this is a very simple landing page
 def get_mainPage():
-
     return template_index.render()
-    timestamp = datetime.datetime.fromtimestamp(time.time()).strftime('%Y-%m-%d %H:%M:%S')
-    example_link = "/extract?title=While%20the%20U.S.%20talks%20about%20election,%20UK%20outraged%20over%20Toblerone%20chocolate&text=Skip%20Ad%20Ad%20Loading...%20x%20Embed%20x%20Share%20Toblerone%20is%20facing%20a%20mountain%20of%20criticism%20for%20changing%20the%20shape%20of%20its%20famous%20triangular%20candy%20bars%20in%20British%20stores,%20a%20move%20it%20blames%20on%20rising%20costs.%20USA%20TODAY%20Toblerone%20chocolate%20bars%20come%20in%20a%20variety%20of%20sizes,%20but%20recently%20changed%20the%20shape%20of%20two%20of%20its%20smaller%20bars%20sold%20in%20the%20UK.%20(Photo:%20Martin%20Ruetschi,%20AP)%20The%20UK%20has%20a%20chocolate%20bar%20crisis%20on%20its%20hands:%20the%20beloved%20Swiss%20chocolate%20bar%20is%20unrecognizable."
-
-    response = '<!DOCTYPE html><html lang="en"><head><meta charset="utf-8">'
-    response += '<title>giveme5W REST API</title>'
-    response += ''
-
-    response += "<p>Provide title and (text or description) for GET. Keep in mind to encode special characters</p>"
-    response += "<p>For POST, use the newsplease format, use the form below for example</p>"
-    response += "<form action='/extract' method='post'>"
-    response += "<p><a href='" + example_link + "'>GET example</a></p>"
-    response += timestamp
-    response += '</head><body>'
-    response += '</body ></html >'
-
-    return response
 
 # define route for parsing requests
 @app.route('/', methods=['GET'])
 def root():
     return get_mainPage()
 
-# define route for parsing requests
-@app.route('/extract', methods=['GET', 'POST'])
-def extract():
-    title = None
-    description = None
-    text = None
 
+def request_to_document():
     if request.method == 'POST':
         data = request.get_json(force=True)
         document = reader.parse_newsplease(data,'Server')
@@ -107,21 +97,25 @@ def extract():
         if title and (description or text):
             log.debug("retrieved raw article for extraction: %s", title)
             document = Document(title, description if description else '', text if text else '')
+    return document
 
+
+# define route for parsing requests
+@app.route('/extract', methods=['GET', 'POST'])
+def extract():
+    document = request_to_document()
     if document:
         extractor.parse(document)
-
         answer = writer.generate_json(document)
-        # writer was initial written for files.
-        # Files-Object is wrapping the results under fiveWoneH
-        #return answer # jsonify(answer.get('fiveWoneH'))
         return jsonify(answer)
 
-    else:
-        return get_mainPage()
+# define route for parsing requests
+@app.route('/extractEnhancer', methods=['GET', 'POST'])
+def extract():
+    document = request_to_document()
+    if document:
+        extractor.parse(document)
+        answer = writer.generate_json(document)
+        return jsonify(answer)
 
 
-if __name__ == "__main__":
-    log.info("starting server on port %i", port)
-    app.run(host, port, debug)
-    log.info("server has stopped")

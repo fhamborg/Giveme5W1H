@@ -116,7 +116,7 @@ class EnvironmentExtractor(AbsExtractor):
 
                         locations.append(ca)
                 except GeocoderServiceError:
-                    logging.getLogger('GiveMe5W').error('GeocoderServiceError: When is not extracted ')
+                    logging.getLogger('GiveMe5W').error('openstreetmap_nominatim: Where is not extracted ')
                     # locations.append((self._fetch_pos(pos_tags[i], candidate[0]), location, i))
 
             for candidate in self._extract_entities(entity, ['TIME', 'DATE'], inverted=True,

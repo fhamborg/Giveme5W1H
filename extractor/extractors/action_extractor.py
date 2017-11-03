@@ -4,8 +4,7 @@ import re
 from nltk.tree import ParentedTree
 
 from extractor.candidate import Candidate
-from .abs_extractor import AbsExtractor
-
+from extractor.extractors.abs_extractor import AbsExtractor
 
 class ActionExtractor(AbsExtractor):
     """

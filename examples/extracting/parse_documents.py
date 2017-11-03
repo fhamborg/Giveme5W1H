@@ -1,6 +1,5 @@
 import logging
 import os
-import sys
 
 from extractor.extractor import FiveWExtractor
 from extractor.tools.file.handler import Handler

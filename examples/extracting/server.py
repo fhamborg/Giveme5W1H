@@ -4,8 +4,8 @@ import time
 import socket
 from jinja2 import Environment, PackageLoader, select_autoescape
 
-from Giveme5W_enhancer.heideltime import Heideltime
-from Giveme5W_enhancer.aida import Aida
+#from Giveme5W_enhancer.heideltime import Heideltime
+#from Giveme5W_enhancer.aida import Aida
 
 from flask import Flask, request, jsonify
 from extractor.document import Document
@@ -54,14 +54,13 @@ template_index = env.get_template('index.html')
 
 # Giveme5W setup
 extractor = FiveWExtractor()
-extractor_enhancer = FiveWExtractor( enhancement=[
-    Heideltime(['when']),
-    Aida(['how','when','why','where','what','who'])
-])
+
+#extractor_enhancer = FiveWExtractor( enhancement=[
+#    Heideltime(['when']),
+#    Aida(['how','when','why','where','what','who'])
+#])
 reader = Reader()
 writer = Writer()
-
-
 
 
 # im sure there is a smarter way... this is a very simple landing page
@@ -99,13 +98,13 @@ def extract():
         return jsonify(answer)
 
 # define route for parsing requests
-@app.route('/extractEnhancer', methods=['GET', 'POST'])
-def extractEnhancer():
-    document = request_to_document()
-    if document:
-        extractor_enhancer.parse(document)
-        answer = writer.generate_json(document)
-        return jsonify(answer)
+#@app.route('/extractEnhancer', methods=['GET', 'POST'])
+#def extractEnhancer():
+#    document = request_to_document()
+#    if document:
+#        #extractor_enhancer.parse(document)
+#        answer = writer.generate_json(document)
+#        return jsonify(answer)
 
 
 
@@ -116,7 +115,6 @@ if __name__ == "__main__":
     # Config.get()["candidate"]["score"] = False
     # Config.get()["label"] = False
     # Config.get()["onlyTopCandidate"] = True
-
 
 
     # startup

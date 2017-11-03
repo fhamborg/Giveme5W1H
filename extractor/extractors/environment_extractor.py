@@ -1,15 +1,13 @@
-import copy
 import time
 import logging
-from warnings import catch_warnings
 
 from geopy.distance import great_circle
 from geopy.exc import GeocoderServiceError
 from geopy.geocoders import Nominatim
 from parsedatetime import parsedatetime as pdt
 
-from candidate import Candidate
-from .abs_extractor import AbsExtractor
+from extractor.candidate import Candidate
+from extractor.extractors.abs_extractor import AbsExtractor
 
 
 class EnvironmentExtractor(AbsExtractor):

@@ -36,9 +36,8 @@ class Object:
         return json.dumps(self, default=lambda o: o.__dict__, sort_keys=True, indent=2, ensure_ascii=False)
     
     
-# get topic files
+# get topic file
 println("Starting converting")
-
 
 
 topics = {}
@@ -53,22 +52,18 @@ for topic in fileTopics.read().split('#'):
             topics[topicCandidate] += parts
         else:
             topics[topicCandidate] = parts
+
 # create a structure filename->topic            
 tmp_topics = topics  
 topics = {}
 for topic in tmp_topics:
     for filename in tmp_topics[topic]:
         topics[filename] = topic
-#print(topic)
-         
-            
-            
-#print(topics)     
+
 
 # get the annotation file
 with open('input/annotation.json', 'r', encoding='utf-8-sig') as dataAnnotation:
     annotation = json.load(dataAnnotation)
-#print(annotation)
 
 
 for filepath in glob.glob('input/*.xml'):

@@ -6,6 +6,8 @@ import time
 
 # Convert the extracted answers to csv file for further evaluation
 # format is: dId,title, category, score, text, Coder-ICR-placeholder-1, Coder-ICR-placeholder-2, Coder-ICR-placeholder-3
+# see "Setup:" to run it for the golden_standart annotations
+
 
 # Coder-ICR-placeholder-x must be set by hand with a scale from 0 to 2
 # (0) non-relevant (if an answer contains no relevant information,
@@ -17,12 +19,22 @@ import time
 # https://www.pcc.edu/resources/academic/learning-assessment/documents/2014_11_21_LACMtg2InterRaterReliability.pdf
 
 # set the question here
-question = 'how'
+questions = [['how','when','why','where','what','who']]
 # number of included candidates (obviously, they should be part in the input files)
 # set it to one for evaluation per document
 candidates = 1
-# input files, usually the output directory of giveme5w
+
+
+# Setup: evaluation of giveme5W output
+## input files: usually the output directory of giveme5w
 inputPath = os.path.dirname(__file__) + '/../extracting/output'
+accessor = 'extracted'
+
+
+# Setup: evaluation of ggolden_standard
+# input files
+inputPath = os.path.dirname(__file__) + '/../extracting/output'
+accessor = 'annotated'
 
 
 # extracting
@@ -36,26 +48,33 @@ def get_parts_as_text(parts):
     return answer_text
 
 # init with initial header line
-output = [('dId', 'title', 'category', 'score', 'text', 'Coder-ICR-1', 'Coder-ICR-2', 'Coder-ICR-3')]
+outputs = {}
+for question in questions:
+    outputs[question] = [('dId', 'title', 'category', 'score', 'text', 'Coder-ICR-1', 'Coder-ICR-2', 'Coder-ICR-3')]
 
 # Usage of the handler to get the documents
 documents = Handler(inputPath).preload_and_cache_documents().get_documents()
 
 for document in documents:
     raw = document.get_rawData()
-    answers = raw['fiveWoneH'][question]['extracted']
-    if answers:
-        counter = 0
-        for candidate in answers:
-            output.append([str(document.get_document_id()), raw.get('title','noTitle'), raw.get('category','noCategory'), str(candidate['score']), get_parts_as_text(candidate.get('parts')),-1,-1,-1],)
-            counter = counter + 1
-            if counter == candidates:
-                break
 
-with open(os.path.dirname(__file__) + '/evaluation_data_' + question + '_' + str(time.time()) + '.csv', 'w') as csvfile:
-    writer = csv.writer(csvfile)
-    for line in output:
-        print(line)
-        writer.writerow(line)
+    for question in questions:
+        answers = raw['fiveWoneH'][question]['extracted']
+        if answers:
+            counter = 0
+            for candidate in answers:
+                outputs[question].append([str(document.get_document_id()), raw.get('title','noTitle'), raw.get('category','noCategory'), str(candidate['score']), get_parts_as_text(candidate.get('parts')),-1,-1,-1])
+                counter = counter + 1
+                if counter == candidates:
+                    break
+
+# write it back
+timestamp =  str(time.time()) # this is preventing the override of files, which may have been annotated by coder already
+for question in questions:
+
+    with open(os.path.dirname(__file__) + '/evaluation_data_' + question + '_' + timestamp+ '.csv', 'w') as csv_file:
+        writer = csv.writer(csv_file)
+        for line in outputs:
+            writer.writerow(line)
 
 

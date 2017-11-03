@@ -5,8 +5,8 @@ import nltk
 from nltk.corpus import wordnet
 from nltk.stem.wordnet import WordNetLemmatizer
 
-from candidate import Candidate
-from .abs_extractor import AbsExtractor
+from extractor.candidate import Candidate
+from extractor.extractors.abs_extractor import AbsExtractor
 
 
 class CauseExtractor(AbsExtractor):

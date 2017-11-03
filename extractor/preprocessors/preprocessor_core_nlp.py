@@ -108,5 +108,5 @@ class Preprocessor:
             document.set_tokens(tokens)
             document.set_pos(pos)
             document.set_ner(ner)
-            document.set_clp_result(annotation)
+            document.set_enhancement('coreNLP', annotation)
             document.is_preprocessed(True)

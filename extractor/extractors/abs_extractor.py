@@ -1,10 +1,11 @@
 import logging
-from candidate import Candidate
+import nltk
+
 from abc import ABCMeta, abstractmethod
 from itertools import product
-
-import nltk
 from nltk.corpus import wordnet
+
+from extractor.candidate import Candidate
 
 
 class AbsExtractor:

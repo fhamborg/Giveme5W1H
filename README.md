@@ -10,7 +10,7 @@ Giveme5W(1H) is a state of the art open-source 5W Question Answering system for 
 * **How** did it happen?
 
 ## Getting started
-Before you can use Giveme5W, you need to make sure you have  CoreNLP-Server runtimes.
+Before you can use Giveme5W, you need to make sure you have CoreNLP-Server runtimes.
 
 If you have to install CoreNLP, please refer to the CoreNLPs extensive [documentation](https://stanfordnlp.github.io/CoreNLP/corenlp-server.html) and follow the instructions on how to install CoreNLP and start a server.
 
@@ -22,30 +22,50 @@ If you have to install CoreNLP, please refer to the CoreNLPs extensive [document
  * extract the language zip, copy it inside the server directory
  * copy it into [Giveme5W-runtime-resources](#Giveme5W-runtime-resources) next to your repository folder
 
-Run environment_enhancer.py to start up coreNLP.
-
-## Configuration
-All configurations are optional.
-
-### CoreNLP Host
-By default, Giveme5W tries to start the server with default port.
-
-You can prevent this by setting up a preprocessor with another url in case you run it on another masch:
-(Bsp: extractor/examples/simple_api.py)
+Start coreNLP by yourself
+``` bash
+ java -mx4g -cp "*" edu.stanford.nlp.pipeline.StanfordCoreNLPServer -port 9000 -timeout 15000
+```
+or
 ```python
-from extractor.preprocessors.preprocessor_core_nlp import Preprocessor
-preprocessor = Preprocessor('localhost:9000')
-FiveWExtractor(preprocessor=preprocessor)
+python3 -m examples.startup.environment.py
 ```
 
-Then start up CoreNLP by:
-```
-$ nohup java -mx4g edu.stanford.nlp.pipeline.StanfordCoreNLPServer 9000 &
-```
 
 > see also Startup - Scripts -> Giveme5W-runtime-resources
 
-### Output Configuration
+
+Environment is now running. Start parsing news_please files
+```python
+python3 -m examples.parsing.parse_documents.py
+```
+
+```python
+python3 -m examples.extracting.parse_documents.py
+```
+or start the rest api.
+```python
+python3 -m examples.extracting.server.py
+```
+
+> Its recommended to use a proper IDE(e.g. PyCharm) if you want to use Enhancer,
+  otherwise you have to add the projects to your environment
+## Configuration
+Configurations are optional.
+
+### CoreNLP Host
+
+You can use not local installed  CoreNLP-Server. Simply parse the the preprocessor another url in case you run it on another machine:
+
+```python
+from extractor.preprocessors.preprocessor_core_nlp import Preprocessor
+preprocessor = Preprocessor('192.168.178.10:9000')
+FiveWExtractor(preprocessor=preprocessor)
+```
+
+
+
+### Output
 
 - For file based data - every input is transferred to the output
     -  For instance, annotated is already a part of the provided example files
@@ -204,13 +224,10 @@ Check the examples under parse_documents_simple.py and parse_documents.py for mo
 
 
 ### CACHE
-CoreNLP and Enhancer have a long execution time, therefore it is possible to cache the result on the filesystem to speed up multiple executions.
-
-The included example files already preprocessed. So you can process them without a running CoreNLP server instance.
-Delete all files in "/cache", if you want to precess them again.
+CoreNLP and Enhancer have a long execution time, therefore it is possible to cache the result at the filesystem to speed up multiple executions.
+Delete all files in "/cache", if you want to precess them again, see examples in 'examples/extracting' for more details.
 
 > if you add or remove enhancer, you must delete all files in the cache directory (if cache is enabled (set_preprocessed_path))
-
 
 ## REST-Service
 Its also possible to use giveme5W as rest service.

@@ -1,5 +1,5 @@
-from candidate import Candidate
-from .abs_extractor import AbsExtractor
+from extractor.candidate import Candidate
+from extractor.extractors.abs_extractor import AbsExtractor
 
 class MethodExtractor(AbsExtractor):
     """

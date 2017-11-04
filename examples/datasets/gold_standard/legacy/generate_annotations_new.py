@@ -20,7 +20,7 @@ with open(os.path.dirname(__file__) + '/IRC-annotations.csv', 'r') as excel_dunp
     reader = csv.reader(excel_dunp_file)
 
     line_counter = 0
-    file_name = None # this is the filename
+    file_name = None  # this is the filename
     question = None
     for line in reader:
         # File-Header line

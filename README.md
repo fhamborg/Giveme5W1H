@@ -28,7 +28,7 @@ Start coreNLP by yourself
 ```
 or
 ```python
-python3 -m examples.startup.environment.py
+python3 -m examples.startup.environment
 ```
 
 
@@ -37,15 +37,15 @@ python3 -m examples.startup.environment.py
 
 Environment is now running. Start parsing news_please files
 ```python
-python3 -m examples.parsing.parse_documents.py
+python3 -m examples.parsing.parse_documents
 ```
 
 ```python
-python3 -m examples.extracting.parse_documents.py
+python3 -m examples.extracting.parse_documents
 ```
 or start the rest api.
 ```python
-python3 -m examples.extracting.server.py
+python3 -m examples.extracting.server
 ```
 
 > Its recommended to use a proper IDE(e.g. PyCharm) if you want to use Enhancer,

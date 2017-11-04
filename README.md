@@ -37,10 +37,6 @@ python3 -m examples.startup.environment
 
 Environment is now running. Start parsing news_please files
 ```python
-python3 -m examples.parsing.parse_documents
-```
-
-```python
 python3 -m examples.extracting.parse_documents
 ```
 or start the rest api.

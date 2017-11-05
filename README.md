@@ -22,16 +22,14 @@ If you have to install CoreNLP, please refer to the CoreNLPs extensive [document
  * extract the language zip, copy it inside the server directory
  * copy it into [Giveme5W-runtime-resources](#Giveme5W-runtime-resources) next to your repository folder
 
-Start coreNLP by yourself
+Start coreNLP by yourself (Windows)
 ``` bash
  java -mx4g -cp "*" edu.stanford.nlp.pipeline.StanfordCoreNLPServer -port 9000 -timeout 15000
 ```
-or
+or (only Linux, OSX)
 ```python
 python3 -m examples.startup.environment
 ```
-
-
 > see also Startup - Scripts -> Giveme5W-runtime-resources
 
 

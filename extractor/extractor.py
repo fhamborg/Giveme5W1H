@@ -29,6 +29,7 @@ class FiveWExtractor:
     log = None
     preprocessor = None
     extractors = []
+    combinedScorers = None
 
     def __init__(self, preprocessor=None, extractors=None, combined_scorers=None, enhancement=None):
         """
@@ -65,9 +66,10 @@ class FiveWExtractor:
             self.combinedScorers = combined_scorers
         else:
             self.log.info('No combinedScorers: initializing default configuration.')
-            self.combinedScorers = [
-                distance_of_candidate.DistanceOfCandidate(('what', 'who'), ('how'))
-            ]
+
+           # self.combinedScorers = [
+           #     distance_of_candidate.DistanceOfCandidate(('what', 'who'), ('how'))
+           # ]
 
         self.q = queue.Queue()
 

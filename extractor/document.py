@@ -53,11 +53,11 @@ class Document(object):
     def get_full_text(self):
         return self._full_text
 
-    #def set_candidates(self, extractor, candidates):
-     #   self._candidates[extractor] = candidates
+    def set_candidates(self, extractor, candidates):
+        self._candidates[extractor] = candidates
 
-   # def get_candidates(self, extractor):
-    #    return self._candidates.get(extractor, [])
+    def get_candidates(self, extractor):
+        return self._candidates.get(extractor, [])
 
     def get_file_name(self):
         return self._file_name
@@ -126,11 +126,7 @@ class Document(object):
 
         return self._lemma_map
 
-    def set_clp_result(self, clp_result):
-        self._clp_result = clp_result
 
-    def get_clp_result(self):
-        return self._clp_result
 
     def set_file_name(self, name):
         self._file_name = name

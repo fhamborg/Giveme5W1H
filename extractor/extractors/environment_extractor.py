@@ -247,6 +247,14 @@ class EnvironmentExtractor(AbsExtractor):
 
         # NEW
         ranked_locations.sort(key=lambda x: x.get_score(), reverse=True)
+
+        #Format Fix - mime tree structure
+        for ranked in ranked_locations:
+            raw_list = ranked.get_raw()
+            parts = []
+            for raw in raw_list:
+                parts.append(( { 'nlpToken': raw}, raw['pos']))
+            ranked.set_parts(parts)
         return ranked_locations
 
     def _evaluate_dates(self, document):

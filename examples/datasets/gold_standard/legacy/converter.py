@@ -7,7 +7,7 @@ import xml.etree.ElementTree as ET
 import copy
 import html
 import re
-
+import hashlib
 
 from twisted.python.util import println
 
@@ -41,7 +41,7 @@ println("Starting converting")
 
 
 topics = {}
-fileTopics = open('input/index.txt', 'r')
+fileTopics = open('data_raw/index.txt', 'r')
 
 for topic in fileTopics.read().split('#'):
     parts = topic.split('\n')
@@ -62,12 +62,12 @@ for topic in tmp_topics:
 
 
 # get the annotation file
-with open('input/annotation.json', 'r', encoding='utf-8-sig') as dataAnnotation:
+with open('./annotation_new.json', 'r', encoding='utf-8-sig') as dataAnnotation:
     annotation = json.load(dataAnnotation)
 
 
-for filepath in glob.glob('input/*.xml'):
-    filename = filepath[6:-4]
+for filepath in glob.glob('data_raw/*.xml'):
+    filename = filepath[9:-4]
     news = ET.parse(filepath)
     root = news.getroot()
     
@@ -75,18 +75,18 @@ for filepath in glob.glob('input/*.xml'):
     
     #Output Object
     news = Object()
-    news.metadata = Object()
+
    
     news.fiveWoneH = Object()
     for features in root.iter('Feature'):
         if(features[0].text == 'MimeType'):
-            news.metadata.mimeType = features[1].text
+            news.mimeType = features[1].text
         if(features[0].text == 'source'):
-            news.metadata.source = features[1].text  
+            news.url = features[1].text
         if(features[0].text == 'pubdate'):
-            news.metadata.pubdate = features[1].text
+            news.pubdate = features[1].text
         if(features[0].text == 'parsingError'):
-            news.metadata.parsingError = features[1].text  
+            news.parsingError = features[1].text
         
     for features in root.iter('Annotation'):
         if(features[0][1].text == 'title'):
@@ -98,22 +98,20 @@ for filepath in glob.glob('input/*.xml'):
             news.text = news.text.replace("\n", " ")
             
     # get a nice to readable publisher from the url         
-    if('www' in news.metadata.source):
-        firstDot = news.metadata.source.index('.')+1
+    if('www' in news.url):
+        firstDot = news.url.index('.')+1
     else:
-        firstDot = news.metadata.source.index('//')+2
-    news.metadata.publisher = news.metadata.source[firstDot:]
+        firstDot = news.url.index('//')+2
+    news.publisher = news.url[firstDot:]
     #print(news.metadata.publisher) 
-    news.metadata.publisher = news.metadata.publisher[:news.metadata.publisher.index('.')]
+    news.publisher = news.publisher[:news.publisher.index('.')]
     
-    # get text
-   
-    #news.text = html.unescape(ET.tostring(text_node, method='text').decode('UTF-8')).replace("\n", " ")
+
     
-    # add topics if any
+    # add topics as category
     filenameWithExtention = filename + '.xml'
     if filenameWithExtention in topics:
-        news.metadata.topics = topics[filename + '.xml']
+        news.category = topics[filename + '.xml']
     
     # add annotations
     if filenameWithExtention in annotation:
@@ -124,14 +122,14 @@ for filepath in glob.glob('input/*.xml'):
             setattr(news.fiveWoneH, question, questionAttribut)
             questionAttribut.annotated = []
             for tmpAnnotannoWithScore in annotation[filenameWithExtention][question]:
-                questionAttribut.annotated.append(tmpAnnotannoWithScore[0])
-                
-            #news.fiveWoneH = annotation[filenameWithExtention]
-        
-    news.metadata.filename  = news.metadata.pubdate.replace(' ','T').replace(':','') +'_'+ news.metadata.publisher + '_' + re.sub('[^a-zA-Z0-9]', '', news.title.replace(' ',''))[0:15] 
-    print(news.toJSON())
+               # questionAttribut.annotated.append(tmpAnnotannoWithScore[0])
+               questionAttribut.annotated.append({ 'text': tmpAnnotannoWithScore[0],  'coderPhraseCount':tmpAnnotannoWithScore[1] })
+
+    news.filename = hashlib.sha224(news.url.encode('utf-8')).hexdigest()
+    #news.filename  = news.pubdate.replace(' ','T').replace(':','') +'_'+ news.publisher + '_' + re.sub('[^a-zA-Z0-9]', '', news.title.replace(' ',''))[0:15]
+
     #write it out
-    outfile = open('output/'+ news.metadata.filename   + '.json', 'w', encoding='utf8')
+    outfile = open('output/'+ news.filename   + '.json', 'w', encoding='utf8')
     outfile.write(news.toJSON())
     outfile.close()
     #print(filename)

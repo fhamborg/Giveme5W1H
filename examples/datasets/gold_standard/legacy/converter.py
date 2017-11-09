@@ -121,6 +121,7 @@ for filepath in glob.glob('data_raw/*.xml'):
             questionAttribut = Object()
             setattr(news.fiveWoneH, question, questionAttribut)
             questionAttribut.annotated = []
+            questionAttribut.label = question
             for tmpAnnotannoWithScore in annotation[filenameWithExtention][question]:
                # questionAttribut.annotated.append(tmpAnnotannoWithScore[0])
                questionAttribut.annotated.append({ 'text': tmpAnnotannoWithScore[0],  'coderPhraseCount':tmpAnnotannoWithScore[1] })

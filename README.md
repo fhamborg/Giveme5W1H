@@ -22,11 +22,14 @@ If you have to install CoreNLP, please refer to the CoreNLPs extensive [document
  * extract the language zip, copy it inside the server directory
  * copy it into [Giveme5W-runtime-resources](#Giveme5W-runtime-resources) next to your repository folder
 
-Start coreNLP by yourself (Windows)
+Start coreNLP by yourself (Windows, Linux, OSX)
 ``` bash
  java -mx4g -cp "*" edu.stanford.nlp.pipeline.StanfordCoreNLPServer -port 9000 -timeout 15000
 ```
-or (only Linux, OSX)
+or
+(this is optional, there is no need to use the startup scripts;
+ this is only for a simple startup while developing etc.; Linux, OSX)
+
 ```python
 python3 -m examples.startup.environment
 ```
@@ -44,6 +47,7 @@ python3 -m examples.extracting.server
 
 > Its recommended to use a proper IDE(e.g. PyCharm) if you want to use Enhancer,
   otherwise you have to add the projects to your environment
+
 ## Configuration
 Configurations are optional.
 
@@ -251,7 +255,8 @@ The calculated score, document id and the used weights are saved per question un
 
 # Startup - Scripts -> Giveme5W-runtime-resources
 Giveme5W can start up everything for you. Check examples/startup scripts.
-To do so, all libraries must be located in the same directory 'Giveme5W-runtime-resources' and next to the Giveme5W folder.
+This is optional, especially without enhancer
+All libraries must be located in the same directory 'Giveme5W-runtime-resources' and next to the Giveme5W folder.
 
 - Folder Structure
     - Giveme5W (Master)

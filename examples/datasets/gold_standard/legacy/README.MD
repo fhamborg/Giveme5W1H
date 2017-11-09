@@ -6,5 +6,5 @@ This is the original dataset, before conversation and without how annotation
 - annotation_new.json is a new extract from ICR-annotations.csv, this is removing copy paste errors within annotation.json and includes the "how" annotations
 
 - Reproduce results:
-- run generate_annotations
-- run converter.py
+- run generate_annotations => annotation_new.json
+- run converter.py => writes in output

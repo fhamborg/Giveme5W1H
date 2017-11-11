@@ -9,6 +9,22 @@ Annotations and categorise have been stored in a different format.
 
 Legacy contains everything to reproduce the new fileset out o the original files.
 
+# Annotations
+
+If the coderPhraseCount is set but there is not Text;
+This means they agreed on there is no candidate
+
+```
+{
+text: "was annotated"
+coderPhraseCount: coderAggrement
+}
+```
+
+
+
+
+
 # Source
 NewsGate?
 

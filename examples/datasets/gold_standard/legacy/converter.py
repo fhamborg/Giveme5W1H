@@ -8,6 +8,8 @@ import copy
 import html
 import re
 import hashlib
+import unidecode
+
 
 from twisted.python.util import println
 
@@ -91,10 +93,14 @@ for filepath in glob.glob('data_raw/*.xml'):
     for features in root.iter('Annotation'):
         if(features[0][1].text == 'title'):
             news.title = extract_markup(text_node, features.get('StartNode', 0), features.get('EndNode', 0), 'utf-8')
+            news.title = unidecode.unidecode(u''+news.title)
         if(features[0][1].text == 'description'):
-            news.description = extract_markup(text_node, features.get('StartNode', 0), features.get('EndNode', 0), 'utf-8')    
+            news.description = extract_markup(text_node, features.get('StartNode', 0), features.get('EndNode', 0), 'utf-8')
+            news.description = unidecode.unidecode(u'' + news.description)
         if(features[0][1].text == 'text'):
             news.text = extract_markup(text_node, features.get('StartNode', 0), features.get('EndNode', 0), 'utf-8')    
+
+            news.text = unidecode.unidecode(u'' + news.text)
             news.text = news.text.replace("\n", " ")
             
     # get a nice to readable publisher from the url         
@@ -123,11 +129,17 @@ for filepath in glob.glob('data_raw/*.xml'):
             questionAttribut.annotated = []
             questionAttribut.label = question
             for tmpAnnotannoWithScore in annotation[filenameWithExtention][question]:
-               # questionAttribut.annotated.append(tmpAnnotannoWithScore[0])
-               questionAttribut.annotated.append({ 'text': tmpAnnotannoWithScore[0],  'coderPhraseCount':tmpAnnotannoWithScore[1] })
+                # questionAttribut.annotated.append(tmpAnnotannoWithScore[0])
+                ascii_text =  unidecode.unidecode(u'' + tmpAnnotannoWithScore[0])
+
+                # skipp text wih NULL
+                if ascii_text != 'NULL':
+                    questionAttribut.annotated.append({ 'text': ascii_text,  'coderPhraseCount':tmpAnnotannoWithScore[1] })
+                else:
+                    questionAttribut.annotated.append({ 'coderPhraseCount': tmpAnnotannoWithScore[1]})
 
     news.filename = hashlib.sha224(news.url.encode('utf-8')).hexdigest()
-    #news.filename  = news.pubdate.replace(' ','T').replace(':','') +'_'+ news.publisher + '_' + re.sub('[^a-zA-Z0-9]', '', news.title.replace(' ',''))[0:15]
+    news.originalFilename = filename
 
     #write it out
     outfile = open('output/'+ news.filename   + '.json', 'w', encoding='utf8')

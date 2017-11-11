@@ -34,7 +34,6 @@ class Document(object):
 
         self._annotations = {'what': [], 'who': [], 'why': [], 'where': [], 'when': [], 'how': []}
 
-        #self._answers = {'what': [], 'who': [], 'why': [], 'where': [], 'when': [], 'how': []}
         self._answers = {}
         self._candidates = {}
         self._processed = None
@@ -171,7 +170,7 @@ class Document(object):
     def set_annotations(self, annotations):
         self._annotations = annotations
 
-    # additional information create by enhancments
+    # additional information create by enhancements
     def get_enhancement(self, key):
         return self._enhancement.get(key)
 

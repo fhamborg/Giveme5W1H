@@ -261,10 +261,10 @@ All libraries must be located in the same directory 'runtime-resources' located 
 - Folder Structure
     - Giveme5W                      (Master)
         - runtime-resources
-        - aida-3.0.4
-        - heideltime-standalone
-        - stanford-corenlp-full-2016-10-31
-        - treeTagger
+            - aida-3.0.4
+            - heideltime-standalone
+            - stanford-corenlp-full-2016-10-31
+            - treeTagger
     - Giveme5W_NewsCluster_enhancer (Master)
 
 

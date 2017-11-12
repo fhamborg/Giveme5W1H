@@ -1,13 +1,17 @@
 import asyncio
 
 from extractor.configuration import Configuration as Config
-
+import os
 path_to_libs = Config.get()['Giveme5W-runtime-resources']
 
 
 async def do_subprocess(task, command, path):
-    print(task)
-    proc = await asyncio.create_subprocess_shell(command, shell=True, cwd='./.' + path_to_libs + path)
+    dir = os.path.dirname(__file__)
+    abs_path = os.path.join(dir, './../.' + path_to_libs + path)
+
+    print(task+':'+ abs_path)
+
+    proc = await asyncio.create_subprocess_shell(command, shell=True, cwd=abs_path)
     return_code = await proc.wait()
     print(task + 'closed.  Return code = %d' % return_code)
 

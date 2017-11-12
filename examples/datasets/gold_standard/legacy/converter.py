@@ -1,12 +1,8 @@
-import logging
-import os
-import sys
 import json
 import glob
 import xml.etree.ElementTree as ET
 import copy
 import html
-import re
 import hashlib
 import unidecode
 

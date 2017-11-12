@@ -256,20 +256,21 @@ The calculated score, document id and the used weights are saved per question un
 # Startup - Scripts -> Giveme5W-runtime-resources
 Giveme5W can start up everything for you. Check examples/startup scripts.
 This is optional, especially without enhancer
-All libraries must be located in the same directory 'Giveme5W-runtime-resources' and next to the Giveme5W folder.
+All libraries must be located in the same directory 'runtime-resources' located inside Giveme5W .
 
 - Folder Structure
-    - Giveme5W (Master)
-    - Giveme5W_NewsCluster_enhancer (Master)
-    - Giveme5W-runtime-resources (Master)
+    - Giveme5W                      (Master)
+        - runtime-resources
         - aida-3.0.4
         - heideltime-standalone
         - stanford-corenlp-full-2016-10-31
         - treeTagger
+    - Giveme5W_NewsCluster_enhancer (Master)
+
 
 You can change this directory with:
 ```shell
-Config.get()['Giveme5W-runtime-resources'] = './../Giveme5W-runtime-resources'
+Config.get()['Giveme5W-runtime-resources'] = './runtime-resources'
 ```
 
 > Unfortunately there is a bug in PyCharm at the time of writing: if you are viewing multiple project at once, you have to add an additional /../ to the path

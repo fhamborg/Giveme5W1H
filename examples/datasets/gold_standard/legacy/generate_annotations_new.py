@@ -1,15 +1,6 @@
-import logging
-import os
-import sys
-import json
-import glob
-import xml.etree.ElementTree as ET
-import copy
-import html
-import re
 import csv
-
-from twisted.python.util import println
+import json
+import os
 
 
 # converter to the get a more reliable annotation.json, see also readme

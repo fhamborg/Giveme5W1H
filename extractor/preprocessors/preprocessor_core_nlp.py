@@ -42,11 +42,6 @@ class Preprocessor:
 
         # this is where the magic happens add there additional information per candidate-part/token/leave
         # char index information is in each nlpToken
-
-        #result = (s, {
-        #    'nlpToken': self._tokens[self._token_index]
-        #})
-
         result = {
             'nlpToken': self._tokens[self._token_index]
         }
@@ -73,7 +68,6 @@ class Preprocessor:
 
             tree = []
             for sentence in annotation['sentences']:
-
                 # that's a hack to add to every tree leave a the tokens result
                 self._token_index = 0
                 self._tokens = sentence['tokens']
@@ -97,7 +91,6 @@ class Preprocessor:
                 s_ner = []
                 for token in sentence['tokens']:
                     s_tokens.append(token)
-                    #s_tokens.append(token['originalText'])
                     s_pos.append((token['originalText'], token['pos']))
                     s_ner.append((token['originalText'], token['ner']))
 

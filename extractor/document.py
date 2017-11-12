@@ -1,9 +1,3 @@
-# from multiprocessing.managers import BaseManager
-# from fileinput import filename
-# class DocumentManager(BaseManager):
-#    pass
-
-
 class Document(object):
     """
     Document is a pickable container for the raw document and all related data
@@ -125,8 +119,6 @@ class Document(object):
 
         return self._lemma_map
 
-
-
     def set_file_name(self, name):
         self._file_name = name
 
@@ -165,7 +157,7 @@ class Document(object):
         self._answers[question] = candidates
 
     def get_answer(self, question):
-        return self._answers.get(question,[])
+        return self._answers.get(question, [])
 
     def set_annotations(self, annotations):
         self._annotations = annotations

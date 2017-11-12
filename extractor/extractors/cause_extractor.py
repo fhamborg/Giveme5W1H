@@ -112,9 +112,7 @@ class CauseExtractor(AbsExtractor):
                 candidateObject.set_type(candidate[2])
                 candidateObject.set_sentence_index(i)
 
-
                 candidates.append(candidateObject)
-
 
         document.set_candidates('CauseExtractor', candidates)
 
@@ -175,8 +173,10 @@ class CauseExtractor(AbsExtractor):
                 if not verb_synset.isdisjoint(self.constraints_verbs['cause']):
                     candidates.append(deepcopy([subtree.pos(), sibling.pos(), 'NP-VP-NP']))
                 else:
-                    pre = [t[0]['nlpToken']['originalText'].lower() for t in subtree.pos() if t[1][0] == 'N' and t[0]['nlpToken']['originalText'].isalpha()]
-                    post = [t[0]['nlpToken']['originalText'].lower() for t in sibling.pos() if t[1][0] == 'N' and t[0]['nlpToken']['originalText'].isalpha()]
+                    pre = [t[0]['nlpToken']['originalText'].lower() for t in subtree.pos() if
+                           t[1][0] == 'N' and t[0]['nlpToken']['originalText'].isalpha()]
+                    post = [t[0]['nlpToken']['originalText'].lower() for t in sibling.pos() if
+                            t[1][0] == 'N' and t[0]['nlpToken']['originalText'].isalpha()]
                     pre_con = {'entity': False, 'abstraction': False}
                     post_con = {'entity': False, 'phenomenon': False, 'abstraction': False, 'group': False,
                                 'possession': False, 'event': False, 'act': False, 'state': False}
@@ -209,7 +209,7 @@ class CauseExtractor(AbsExtractor):
                     if (
                             post_con['phenomenon']
                     ) or (
-                            not pre_con['entity'] and (verb_con['associate'] or verb_con['relate']) and (
+                                    not pre_con['entity'] and (verb_con['associate'] or verb_con['relate']) and (
                                             post_con['abstraction'] and post_con['group'] and post_con['possession'])
                     ) or (
                                 not pre_con['entity'] and post_con['event']
@@ -229,7 +229,9 @@ class CauseExtractor(AbsExtractor):
                 # If we come along an adverb (RB) check the adverbials that indicate causation
                 candidates.append(deepcopy([pos[:i], pos[i - 1:], 'RB']))
 
-            elif token in self.clausal_conjunctions and ' '.join( [x['nlpToken']['originalText'] for x in tokens[i:]]).lower().startswith(self.clausal_conjunctions[token]):
+            elif token in self.clausal_conjunctions and ' '.join(
+                    [x['nlpToken']['originalText'] for x in tokens[i:]]).lower().startswith(
+                    self.clausal_conjunctions[token]):
                 # Check if token is au clausal conjunction indicating causation
                 candidates.append(deepcopy([pos[i - 1:], pos[:i], 'biclausal']))
 
@@ -237,7 +239,8 @@ class CauseExtractor(AbsExtractor):
         unique_candidates = []
         candidate_strings = []
         for candidate in candidates:
-            candidate_strings.append(candidate[0][0][0]['nlpToken']['originalText'] + ' ' + ' '.join([x[0]['nlpToken']['originalText'] for x in candidate[1]]))
+            candidate_strings.append(candidate[0][0][0]['nlpToken']['originalText'] + ' ' + ' '.join(
+                [x[0]['nlpToken']['originalText'] for x in candidate[1]]))
 
         for i, candidate in enumerate(candidates):
             unique = True
@@ -269,7 +272,8 @@ class CauseExtractor(AbsExtractor):
             parts = candidateObject.get_raw();
             if parts is not None and len(parts) > 0:
                 # following the concept of the inverted pyramid use the position for scoring
-                score = self.weights[0] * ( document.get_len() - candidateObject.get_sentence_index()) / document.get_len()
+                score = self.weights[0] * (
+                document.get_len() - candidateObject.get_sentence_index()) / document.get_len()
 
                 # we also consider the pattern typ used to detect the candidate
                 if candidateObject.get_type() == 'biclausal':

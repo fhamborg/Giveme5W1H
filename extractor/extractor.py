@@ -90,7 +90,6 @@ class FiveWExtractor:
                 for enhancement in self.enhancement:
                     enhancement.process(doc)
 
-
     def parse(self, doc):
         """
         Pass a document to the preprocessor and the extractors

@@ -1,20 +1,17 @@
 import logging
 import os
 
-
-from Giveme5W_enhancer.heideltime import Heideltime
 from Giveme5W_enhancer.aida import Aida
-
-from extractor.configuration import Configuration as Config
+from Giveme5W_enhancer.heideltime import Heideltime
 from extractor.extractor import FiveWExtractor
 from extractor.tools.file.handler import Handler
-from extractors import environment_extractor
-from extractors import method_extractor
 from extractors import action_extractor
 from extractors import cause_extractor
+from extractors import environment_extractor
+from extractors import method_extractor
 
 # Add path to allow execution though console
-#sys.path.insert(0, '/'.join(os.path.realpath(__file__).split('/')[:-3]))
+# sys.path.insert(0, '/'.join(os.path.realpath(__file__).split('/')[:-3]))
 
 """
 Advanced example to use the extractor in combination with NewsPlease files
@@ -26,7 +23,6 @@ Documents are preprocessed just once, you have to set is_preprocessed to false,
 if you want to process them again by core_nlp (or just delete cache and output)
 """
 if __name__ == '__main__':
-
     # helper to make dataset selction simple
     dataset_golden_standard = os.path.dirname(__file__) + '/../datasets/gold_standard/data/'
     # Do not work with heideltime!, there is no pub date...
@@ -47,7 +43,7 @@ if __name__ == '__main__':
         method_extractor.MethodExtractor()
     ], enhancement=[
         Heideltime(['when']),
-        Aida(['how','when','why','where','what','who'])
+        Aida(['how', 'when', 'why', 'where', 'what', 'who'])
     ])
 
     inputPath = dataset_golden_standard
@@ -71,7 +67,7 @@ if __name__ == '__main__':
             .set_limit(1)
 
             # Optional: resume ability, skip input file if its already in output
-            #.skip_documents_with_output()
+            # .skip_documents_with_output()
 
             # load and saves all document runtime objects for further programming
             .preload_and_cache_documents()

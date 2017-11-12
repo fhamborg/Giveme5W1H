@@ -1,18 +1,16 @@
-import datetime
 import logging
-import time
 import socket
-from jinja2 import Environment, PackageLoader, select_autoescape
-
-#from Giveme5W_enhancer.heideltime import Heideltime
-#from Giveme5W_enhancer.aida import Aida
 
 from flask import Flask, request, jsonify
+from jinja2 import Environment, PackageLoader, select_autoescape
+
 from extractor.document import Document
 from extractor.extractor import FiveWExtractor
-from extractor.tools.file.writer import Writer
 from extractor.tools.file.reader import Reader
-from extractor.configuration import Configuration as Config
+from extractor.tools.file.writer import Writer
+
+# from Giveme5W_enhancer.heideltime import Heideltime
+# from Giveme5W_enhancer.aida import Aida
 
 """
 This is a simple example on how to use flask to create a rest api for our extractor.
@@ -35,7 +33,6 @@ def get_ip():
     return ip
 
 
-
 # Flask setup
 app = Flask(__name__)
 log = logging.getLogger(__name__)
@@ -55,10 +52,10 @@ template_index = env.get_template('index.html')
 # Giveme5W setup
 extractor = FiveWExtractor()
 
-#extractor_enhancer = FiveWExtractor( enhancement=[
+# extractor_enhancer = FiveWExtractor( enhancement=[
 #    Heideltime(['when']),
 #    Aida(['how','when','why','where','what','who'])
-#])
+# ])
 reader = Reader()
 writer = Writer()
 
@@ -66,6 +63,7 @@ writer = Writer()
 # im sure there is a smarter way... this is a very simple landing page
 def get_mainPage():
     return template_index.render()
+
 
 # define route for parsing requests
 @app.route('/', methods=['GET'])
@@ -76,7 +74,7 @@ def root():
 def request_to_document():
     if request.method == 'POST':
         data = request.get_json(force=True)
-        document = reader.parse_newsplease(data,'Server')
+        document = reader.parse_newsplease(data, 'Server')
     elif request.method == 'GET':
         title = request.args.get('title', None)
         description = request.args.get('description', None)
@@ -97,9 +95,10 @@ def extract():
         answer = writer.generate_json(document)
         return jsonify(answer)
 
+
 # define route for parsing requests
-#@app.route('/extractEnhancer', methods=['GET', 'POST'])
-#def extractEnhancer():
+# @app.route('/extractEnhancer', methods=['GET', 'POST'])
+# def extractEnhancer():
 #    document = request_to_document()
 #    if document:
 #        #extractor_enhancer.parse(document)
@@ -121,6 +120,4 @@ if __name__ == "__main__":
     log.info("starting server on port %i", port)
     app.run(host, port, debug)
 
-
     log.info("server has stopped")
-

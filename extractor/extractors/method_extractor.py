@@ -1,6 +1,7 @@
 from extractor.candidate import Candidate
 from extractor.extractors.abs_extractor import AbsExtractor
 
+
 class MethodExtractor(AbsExtractor):
     """
     The MethodExtractor tries to extract the methods.
@@ -11,9 +12,12 @@ class MethodExtractor(AbsExtractor):
     # weights = (4, 3)
     weights = [1.0, 1]
 
-    _copulative_conjunction = ['and', 'as', 'both', 'because', 'even', 'for', 'if ', 'that', 'then', 'since', 'seeing', 'so', 'after']
-    #_prepositions_before = ['in', 'with', 'until', 'as', 'during']
-    _stop_words = ['and', 'but', 'lead','is', 'has', 'have', 'went', 'was', 'been', 'were', 'get', 'are','do','so','due', 'well', 'very', 'on', 'too', 'be', 'i', 'and', 'have', 'the', 'a', ',', '.', '', 'not', "n't", 'am', 'as', 'even', 'however', 'other', 'just', 'over', 'more', 'say', 'also']
+    _copulative_conjunction = ['and', 'as', 'both', 'because', 'even', 'for', 'if ', 'that', 'then', 'since', 'seeing',
+                               'so', 'after']
+
+    _stop_words = ['and', 'but', 'lead', 'is', 'has', 'have', 'went', 'was', 'been', 'were', 'get', 'are', 'do', 'so',
+                   'due', 'well', 'very', 'on', 'too', 'be', 'i', 'and', 'have', 'the', 'a', ',', '.', '', 'not', "n't",
+                   'am', 'as', 'even', 'however', 'other', 'just', 'over', 'more', 'say', 'also']
     _stop_ner = ['TIME', 'DATE', 'ORGANIZATION', 'DURATION', 'ORDINAL']
 
     # prepositional phrase PP, preposition
@@ -84,7 +88,8 @@ class MethodExtractor(AbsExtractor):
                             if candidate_parts:
                                 # get the CoreNLP tokens for each part e.g lemmas etc.
                                 # convert list objects back to tuples for backward compatibility
-                                candidates.append([candidate_parts, None, tree.stanfordCoreNLPResult['index'], 'prepos'])
+                                candidates.append(
+                                    [candidate_parts, None, tree.stanfordCoreNLPResult['index'], 'prepos'])
                         else:
                             # look at the sentence to the left side
                             # beause of the tree structure simples way is to go multible times up and then walk back
@@ -93,11 +98,10 @@ class MethodExtractor(AbsExtractor):
                                 relevantParts = self._pos_linked_to_corenlp_tokens(atree)
                                 candidate_parts = self._find_vb_cc_vb_parts(relevantParts)
                                 if candidate_parts:
-                                    candidates.append([candidate_parts,None,tree.stanfordCoreNLPResult['index'], 'prepos'])
+                                    candidates.append(
+                                        [candidate_parts, None, tree.stanfordCoreNLPResult['index'], 'prepos'])
 
         return candidates
-
-
 
     def _extract_ad_candidates(self, document):
         """
@@ -119,7 +123,8 @@ class MethodExtractor(AbsExtractor):
                 if token['index'] > self._maxIndex:
                     self._maxIndex = token['index']
                 if self._is_relevant_pos(token['pos']) and token['ner'] not in self._stop_ner:
-                    candidates.append([[( {'nlpToken': token},token['pos'], token)], None ,sentence['index'], 'adjectiv'])
+                    candidates.append(
+                        [[({'nlpToken': token}, token['pos'], token)], None, sentence['index'], 'adjectiv'])
         return candidates
 
     def _evaluate_candidates(self, document):
@@ -205,7 +210,8 @@ class MethodExtractor(AbsExtractor):
         recording = False
         candidateParts = []
         for relevantPart in relevantParts:
-            if relevantPart[1].startswith('VB') or relevantPart[1].startswith('JJ') or relevantPart[1].startswith('LS') or relevantPart[1] == 'CC':
+            if relevantPart[1].startswith('VB') or relevantPart[1].startswith('JJ') or relevantPart[1].startswith(
+                    'LS') or relevantPart[1] == 'CC':
                 candidateParts.append(relevantPart)
                 recording = True
             elif recording is True:
@@ -213,7 +219,8 @@ class MethodExtractor(AbsExtractor):
         candidatePartsLen = len(candidateParts)
 
         # filter out short candidates
-        if ((candidatePartsLen == 1 and candidateParts[0][0]['nlpToken']['lemma'] not in self._stop_words) or candidatePartsLen > 1):
+        if ((candidatePartsLen == 1 and candidateParts[0][0]['nlpToken'][
+            'lemma'] not in self._stop_words) or candidatePartsLen > 1):
             return candidateParts
         return None
 
@@ -230,87 +237,8 @@ class MethodExtractor(AbsExtractor):
         return count
 
     def _is_relevant_pos(self, pos):
-
         # Is adjectivs or adverb
         if pos.startswith('JJ') or pos.startswith('RB'):
             return True
         else:
             return False
-
-""""
-1	  of	1761
-2	  in	1667
-3	  on	890
-4	  for	716
-5	  with	622
-6	  at	538
-7	  as	497
-8	  that	414
-9	  after	374
-10	  from	330
-11	  by	316
-12	  into	181
-13	  about	137
-14	  before	123
-15	  than	114
-16	  during	111
-17	  over	110
-18	  while	99
-19	  like	96
-20	  since	84
-21	  if	82
-22	  around	80
-23	  between	79
-24	  because	61
-25	  against	61
-26	  near	56
-27	  out	55
-28	  outside	42
-29	  through	35
-30	  whether	34
-31	  across	34
-32	  behind	31
-33	  among	31
-34	  until	24
-35	  without	23
-36	  under	22
-37	  despite	22
-38	  onto	21
-39	  inside	19
-40	  off	18
-41	  down	17
-42	  though	16
-43	  alongside	15
-44	  so	14
-45	  within	13
-46	  up	11
-47	  although	11
-48	  throughout	10
-49	  along	10
-50	  towards	8
-51	  above	8
-52	  ago	7
-53	  per	6
-54	  via	5
-55	  beyond	5
-56	  toward	4
-57	  upon	4
-58	  whilst	3
-59	  next	3
-60	  underneath	3
-61	  beside	3
-62	  unlike	3
-63	  !!	2
-64	  amid	2
-65	  save	2
-66	  past	2
-67	  amongst	1
-68	  except	1
-69	  below	1
-70	  unless	1
-71	  en	1
-72	  aboard	1
-73	  once	1
-74	  atop	1
-
-"""

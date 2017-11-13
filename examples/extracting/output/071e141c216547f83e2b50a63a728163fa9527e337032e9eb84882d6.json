@@ -1,11 +1,12 @@
 {
+  "category": "tram",
+  "dId": "071e141c216547f83e2b50a63a728163fa9527e337032e9eb84882d6",
+  "date_publish": "2016-11-09 00:00:00",
+  "description": "Several people died and dozens were injured after a tram derailed and overturned in Croydon. Five people were left trapped inside the vehicle after it came off the tracks in a tunnel near Sandlilands tram station at around 6am. Three of those trapped have been removed from the tram, which is on its side, but two still remain inside as of 11.30am.",
+  "filename": "071e141c216547f83e2b50a63a728163fa9527e337032e9eb84882d6",
   "fiveWoneH": {
     "how": {
-      "annotated": [
-        {
-          "text": ""
-        }
-      ],
+      "annotated": [],
       "label": "how",
       "extracted": [
         {
@@ -13,33 +14,72 @@
             [
               {
                 "nlpToken": {
-                  "index": 12,
-                  "word": "overturns",
-                  "originalText": "overturns",
-                  "lemma": "overturn",
-                  "characterOffsetBegin": 68,
-                  "characterOffsetEnd": 77,
-                  "pos": "VBZ",
+                  "index": 11,
+                  "word": "derailed",
+                  "originalText": "derailed",
+                  "lemma": "derail",
+                  "characterOffsetBegin": 150,
+                  "characterOffsetEnd": 158,
+                  "pos": "VBD",
                   "ner": "O",
                   "speaker": "PER0",
                   "before": " ",
                   "after": " "
                 }
               },
-              "VBZ"
+              "VBD"
+            ],
+            [
+              {
+                "nlpToken": {
+                  "index": 12,
+                  "word": "and",
+                  "originalText": "and",
+                  "lemma": "and",
+                  "characterOffsetBegin": 159,
+                  "characterOffsetEnd": 162,
+                  "pos": "CC",
+                  "ner": "O",
+                  "speaker": "PER0",
+                  "before": " ",
+                  "after": " "
+                }
+              },
+              "CC"
+            ],
+            [
+              {
+                "nlpToken": {
+                  "index": 13,
+                  "word": "overturned",
+                  "originalText": "overturned",
+                  "lemma": "overturn",
+                  "characterOffsetBegin": 163,
+                  "characterOffsetEnd": 173,
+                  "pos": "VBD",
+                  "ner": "O",
+                  "speaker": "PER0",
+                  "before": " ",
+                  "after": " "
+                }
+              },
+              "VBD"
             ]
           ],
-          "score": 1.0,
-          "text": "overturns"
+          "score": 1.626724339490297,
+          "text": "derailed and overturned",
+          "nlpIndexSentence": 1
         }
       ]
     },
     "what": {
       "annotated": [
         {
+          "coderPhraseCount": 3,
           "text": "tram derailment: Several dead and dozens injured"
         },
         {
+          "coderPhraseCount": 2,
           "text": "Five people were left trapped inside"
         }
       ],
@@ -54,8 +94,8 @@
                   "word": "are",
                   "originalText": "are",
                   "lemma": "be",
-                  "characterOffsetBegin": 3197,
-                  "characterOffsetEnd": 3200,
+                  "characterOffsetBegin": 3212,
+                  "characterOffsetEnd": 3215,
                   "pos": "VBP",
                   "ner": "O",
                   "speaker": "180",
@@ -72,8 +112,8 @@
                   "word": "eight",
                   "originalText": "eight",
                   "lemma": "eight",
-                  "characterOffsetBegin": 3201,
-                  "characterOffsetEnd": 3206,
+                  "characterOffsetBegin": 3216,
+                  "characterOffsetEnd": 3221,
                   "pos": "CD",
                   "ner": "NUMBER",
                   "normalizedNER": "8.0",
@@ -91,8 +131,8 @@
                   "word": "fire",
                   "originalText": "fire",
                   "lemma": "fire",
-                  "characterOffsetBegin": 3207,
-                  "characterOffsetEnd": 3211,
+                  "characterOffsetBegin": 3222,
+                  "characterOffsetEnd": 3226,
                   "pos": "NN",
                   "ner": "O",
                   "speaker": "180",
@@ -109,8 +149,8 @@
                   "word": "engines",
                   "originalText": "engines",
                   "lemma": "engine",
-                  "characterOffsetBegin": 3212,
-                  "characterOffsetEnd": 3219,
+                  "characterOffsetBegin": 3227,
+                  "characterOffsetEnd": 3234,
                   "pos": "NNS",
                   "ner": "O",
                   "speaker": "180",
@@ -130,6 +170,7 @@
     "when": {
       "annotated": [
         {
+          "coderPhraseCount": 3,
           "text": "at around 6am"
         }
       ],
@@ -263,9 +304,11 @@
     "where": {
       "annotated": [
         {
+          "coderPhraseCount": 3,
           "text": "Croydon"
         },
         {
+          "coderPhraseCount": 2,
           "text": "in a tunnel near Sandlilands tram station"
         }
       ],
@@ -294,7 +337,7 @@
                       "allEntities": [
                         {
                           "kbIdentifier": "YAGO:Croydon",
-                          "disambiguationScore": "0.23565"
+                          "disambiguationScore": "0.23558"
                         }
                       ],
                       "offset": 0,
@@ -302,7 +345,7 @@
                       "length": 7,
                       "bestEntity": {
                         "kbIdentifier": "YAGO:Croydon",
-                        "disambiguationScore": "0.23565"
+                        "disambiguationScore": "0.23558"
                       }
                     },
                     "bestEntityMetadata": {
@@ -379,9 +422,11 @@
     "who": {
       "annotated": [
         {
+          "coderPhraseCount": 2,
           "text": "Several people"
         },
         {
+          "coderPhraseCount": 2,
           "text": "dozens injured"
         }
       ],
@@ -396,8 +441,8 @@
                   "word": "Croydon",
                   "originalText": "Croydon",
                   "lemma": "Croydon",
-                  "characterOffsetBegin": 3148,
-                  "characterOffsetEnd": 3155,
+                  "characterOffsetBegin": 3163,
+                  "characterOffsetEnd": 3170,
                   "pos": "NNP",
                   "ner": "LOCATION",
                   "speaker": "PER0",
@@ -410,15 +455,15 @@
                       "allEntities": [
                         {
                           "kbIdentifier": "YAGO:Croydon",
-                          "disambiguationScore": "0.23577"
+                          "disambiguationScore": "0.23568"
                         }
                       ],
-                      "offset": 3148,
+                      "offset": 3163,
                       "name": "Croydon",
                       "length": 7,
                       "bestEntity": {
                         "kbIdentifier": "YAGO:Croydon",
-                        "disambiguationScore": "0.23577"
+                        "disambiguationScore": "0.23568"
                       }
                     },
                     "bestEntityMetadata": {
@@ -472,8 +517,8 @@
                   "word": "MPS",
                   "originalText": "MPS",
                   "lemma": "MPS",
-                  "characterOffsetBegin": 3156,
-                  "characterOffsetEnd": 3159,
+                  "characterOffsetBegin": 3171,
+                  "characterOffsetEnd": 3174,
                   "pos": "NNP",
                   "ner": "O",
                   "speaker": "PER0",
@@ -490,8 +535,8 @@
                   "word": "-LRB-",
                   "originalText": "(",
                   "lemma": "-lrb-",
-                  "characterOffsetBegin": 3160,
-                  "characterOffsetEnd": 3161,
+                  "characterOffsetBegin": 3175,
+                  "characterOffsetEnd": 3176,
                   "pos": "-LRB-",
                   "ner": "O",
                   "speaker": "PER0",
@@ -508,8 +553,8 @@
                   "word": "@MPSCroydon",
                   "originalText": "@MPSCroydon",
                   "lemma": "@MPSCroydon",
-                  "characterOffsetBegin": 3161,
-                  "characterOffsetEnd": 3172,
+                  "characterOffsetBegin": 3176,
+                  "characterOffsetEnd": 3187,
                   "pos": "NNP",
                   "ner": "O",
                   "speaker": "PER0",
@@ -526,8 +571,8 @@
                   "word": "-RRB-",
                   "originalText": ")",
                   "lemma": "-rrb-",
-                  "characterOffsetBegin": 3172,
-                  "characterOffsetEnd": 3173,
+                  "characterOffsetBegin": 3187,
+                  "characterOffsetEnd": 3188,
                   "pos": "-RRB-",
                   "ner": "O",
                   "speaker": "PER0",
@@ -544,8 +589,8 @@
                   "word": "November",
                   "originalText": "November",
                   "lemma": "November",
-                  "characterOffsetBegin": 3174,
-                  "characterOffsetEnd": 3182,
+                  "characterOffsetBegin": 3189,
+                  "characterOffsetEnd": 3197,
                   "pos": "NNP",
                   "ner": "DATE",
                   "normalizedNER": "XXXX-11-09",
@@ -568,8 +613,8 @@
                   "word": "9",
                   "originalText": "9",
                   "lemma": "9",
-                  "characterOffsetBegin": 3183,
-                  "characterOffsetEnd": 3184,
+                  "characterOffsetBegin": 3198,
+                  "characterOffsetEnd": 3199,
                   "pos": "CD",
                   "ner": "DATE",
                   "normalizedNER": "XXXX-11-09",
@@ -592,8 +637,8 @@
                   "word": ",",
                   "originalText": ",",
                   "lemma": ",",
-                  "characterOffsetBegin": 3184,
-                  "characterOffsetEnd": 3185,
+                  "characterOffsetBegin": 3199,
+                  "characterOffsetEnd": 3200,
                   "pos": ",",
                   "ner": "O",
                   "speaker": "PER0",
@@ -610,8 +655,8 @@
                   "word": "201",
                   "originalText": "201",
                   "lemma": "201",
-                  "characterOffsetBegin": 3186,
-                  "characterOffsetEnd": 3189,
+                  "characterOffsetBegin": 3201,
+                  "characterOffsetEnd": 3204,
                   "pos": "CD",
                   "ner": "NUMBER",
                   "normalizedNER": "201.0",
@@ -629,8 +674,8 @@
                   "word": "``",
                   "originalText": "\"",
                   "lemma": "``",
-                  "characterOffsetBegin": 3190,
-                  "characterOffsetEnd": 3191,
+                  "characterOffsetBegin": 3205,
+                  "characterOffsetEnd": 3206,
                   "pos": "``",
                   "ner": "O",
                   "speaker": "PER0",
@@ -647,8 +692,8 @@
                   "word": "There",
                   "originalText": "There",
                   "lemma": "there",
-                  "characterOffsetBegin": 3191,
-                  "characterOffsetEnd": 3196,
+                  "characterOffsetBegin": 3206,
+                  "characterOffsetEnd": 3211,
                   "pos": "EX",
                   "ner": "O",
                   "speaker": "180",
@@ -668,7 +713,7 @@
     "why": {
       "annotated": [
         {
-          "text": "NULL"
+          "coderPhraseCount": 2
         }
       ],
       "label": "why",
@@ -970,15 +1015,11 @@
       ]
     }
   },
-  "parsingError": "true",
   "mimeType": "text/xml",
-  "url": "http://www.standard.co.uk/news/transport/croydon-tram-derailment-people-trapped-after-tram-overturns-in-at-sandilands-a3390796.html",
-  "publish_date": "2016-11-09 00:00:00",
+  "originalFilename": "standard-6",
+  "parsingError": "true",
+  "publisher": "standard",
+  "text": "Several people died and dozens were injured after a tram derailed and overturned in Croydon. Five people were left trapped inside the vehicle after it came off the tracks in a tunnel near Sandlilands tram station at around 6am. Three of those trapped have been removed from the tram, which is on its side, but two still remain inside as of 11.30am. British Transport Police confirmed there had been \"some loss of life\". A spokesman added: \"It is too early for us to confirm numbers but we are working hard to assess the ongoing incident and we are continuing to focus on recovery efforts.\" They later confirmed that the driver of the tram was arrested in connection with the incident. Croydon Tram derailment 8 show all Croydon Tram derailment 1/8 The scene after a tram overturned in Croydon, south London, trapping five people and injuring another 40 Steve Parsons/PA 2/8 Police officers walk the site where the tram overturned Carl Court/Getty Images 3/8 Emergency services were called to the scene just after 6am Twitter/@procrastinateur 4/8 Emergency services close to the location where a tram overturned in Croydon, south London PA 5/8 Emergency services at Sandilands tram station in Croydon Ben Morgan 6/8 A police cordon is in place on Addiscombe Road Ben Morgan 7/8 40 people were injured and five trapped inside the tram Ben Morgan 8/8 Witnesses reported seeing victims stretchered from the tram James Long The London Fire Brigade, which has 70 officers in attendance, said at least 40 people were injured after the tram overturned on a sharp bend. Emergency services were called at 6.10am as torrential rain continued to batter London. Over 50 people were taken to hospital. A Met spokesman said: \"Police were called to an overturned tram at 6.10 and officers are in attendance.\" Scene: this aerial picture shows the tram on its side by the track (BBC/ITN) Hannah Collier, who lives nearby the tram station, said: \"Heard a massive crash outside my window, now emergency services everywhere for the overturned tram, hope everyone is ok.\" The 23-year-old added that she had seen people being carried away on stretchers from the scene of the incident. James Long, who lives metres away from the scene of the incident, told the Standard: \"It happened on a sharp bend on the approach to Sandilands tram stop. Carnage: Emergency services inspect the overturned tram (Steve Parsons/PA ) \"I've never seen so many emergency services attend a scene.\" A London Fire Brigade spokesman said they had been called at 6.04am to an overturned tram in a tunnel.    SANDILANDS    Emergency Services are dealing with a serious incident at #Sandilands tram stop. Please avoid the area #Croydoncops pic.twitter.com/xp4RPNxXI5 -- Croydon MPS (@MPSCroydon) November 9, 201 \"There are eight fire engines and four fire and rescue crews in attendance,\" they added. People are being warned to avoid the tram line and the area surrounding Sandilands station in east Croydon, where there is a large police cordon and many emergency vehicles. Heard a massive crash outside my window, now emergency services everywhere for the overturned tram, hope everyone is ok #croydon pic.twitter.com/gxQgnPygEJ -- Hannah Collier (@HannahCollier1) November 9, 2016 Police tell me that people who are worried about loved ones should go to St Mildred's Centre on Bingham Road. Don't have phone number yet -- Gavin Barwell MP (@GavinBarwellMP) November 9, 2016 Miguel John, who was on a bus to Bromley when it stopped by Sandilands tram stop, told the Standard: \"The road hadn't been shut off yet but emergency services were already at the scene, this would have been around 6.30am. \"By this point more emergency services were flooding to the scene and a police car shut off the road with vehicles being ushered down Elgin Road towards Addiscombe. \"But it was obvious it was very, very serious due to the amount of emergency services at the scene. @RachelMirrorVid @DailyMirror here you go, I can't actually see the tram though pic.twitter.com/mwz56sxacI -- Hannah Collier (@HannahCollier1) November 9, 2016 \"At first there would have been roughly between six or 10 [vehicles], as time passed a lot more arrived and continued to arrive. \"Visibly from where I was about two fire engines, two to three ambulances, several police cars and then more arrived as time went on. \"I think that's how everyone knew it was very serious, especially how quickly they acted to shut off the road.\" Emergency: witnesses reported seeing victims stretchered from the tram (James Long) A London Ambulance Service spokesman said: \"We were called at 6.13 to an incident at Addiscombe Road in Croydon. \"We have sent a number of resources to the scene including ambulance crews, advanced paramedics and single responders in cars. \"We are treating a number of patients.\" Scene: Police, ambulances and fire engines were in attendance (James Long) Rail safety investigators are reportedly on their way to the scene to begin gathering evidence. A British Transport Police spokesman said: \"We are currently on scene at a major incident at Sandilands tram stop in Croydon. \"Officers are working to deal with a tram derailment, alongside colleagues from other emergency services. \"A number of people are believed to have been injured. People are asked to avoid the area.\" Rain: there were torrential downpours throughout the night (James Long) Mayor of London Sadiq Khan said: \"I am in contact with emergency services and TfL, who are working extremely hard to get the situation under control and treat those who have been injured. My thoughts are with all those involved in this incident. \"We are asking people to please visit the TfL website, tfl.gov.uk, for the latest travel information.\" A Transport for London spokesman said: \"We are currently working with the emergency services following a derailment involving a tram in Croydon. \"There is currently no service on the tram between Reeves Corner and Addington Village / Harrington Road.\" Today's is believed to be the first tram crash involving fatalities on board since 1959, when two women passengers and the driver died after a tram caught fire in Glasgow, following a collision with a lorry. London's only tram network operates in the south of the capital, from Wimbledon to Beckenham Junction, Elmers End and New Addington, via Croydon. More than 27 million passengers used the service in 2015/16. The system uses a combination of on-street and segregated running for the 17 miles (27km) of track.",
   "title": "Croydon tram derailment: Several dead and dozens injured after tram overturns at Sandilands",
-  "description": "Several people died\u00a0and dozens were injured after a tram derailed and overturned in Croydon. Five people were left trapped inside the vehicle after it came off the tracks in a tunnel near Sandlilands tram station at around 6am. Three of those trapped have been removed from the tram, which is on its side, but two still remain inside as of 11.30am.",
-  "text": "Several people died and dozens were injured after a tram derailed and overturned in Croydon. Five people were left trapped inside the vehicle after it came off the tracks in a tunnel near Sandlilands tram station at around 6am. Three of those trapped have been removed from the tram, which is on its side, but two still remain inside as of 11.30am. British Transport Police confirmed there had been \"some loss of life\". A spokesman added: \"It is too early for us to confirm numbers but we are working hard to assess the ongoing incident and we are continuing to focus on recovery efforts. They later confirmed that the driver of the tram was arrested in connection with the incident. Croydon Tram derailment 8 show all Croydon Tram derailment 1/8 The scene after a tram overturned in Croydon, south London, trapping five people and injuring another 40 Steve Parsons/PA 2/8 Police officers walk the site where the tram overturned Carl Court/Getty Images 3/8 Emergency services were called to the scene just after 6am Twitterprocrastinateur 4/8 Emergency services close to the location where a tram overturned in Croydon, south London PA 5/8 Emergency services at Sandilands tram station in Croydon Ben Morgan 6/8 A police cordon is in place on Addiscombe Road Ben Morgan 7/8 40 people were injured and five trapped inside the tram Ben Morgan 8/8 Witnesses reported seeing victims stretchered from the tram James Long The London Fire Brigade, which has 70 officers in attendance, said at least 40 people were injured after the tram overturned on a sharp bend. Emergency services were called at 6.10am as torrential rain continued to batter London. Over 50 people were taken to hospital. A Met spokesman said: \"Police were called to an overturned tram at 6.10 and officers are in attendance.\" Scene: this aerial picture shows the tram on its side by the track (BBC/ITN) Hannah Collier, who lives nearby the tram station, said: \"Heard a massive crash outside my window, now emergency services everywhere for the overturned tram, hope everyone is ok.\" The 23-year-old added that she had seen people being carried away on stretchers from the scene of the incident. James Long, who lives metres away from the scene of the incident, told the Standard: \"It happened on a sharp bend on the approach to Sandilands tram stop. Carnage: Emergency services inspect the overturned tram (Steve Parsons/PA ) \"I've never seen so many emergency services attend a scene.\" A London Fire Brigade spokesman said they had been called at 6.04am to an overturned tram in a tunnel.    SANDILANDS    Emergency Services are dealing with a serious incident at #Sandilands tram stop. Please avoid the area #Croydoncops pic.twitter.com \u2014 Croydon MPS (@MPSCroydon) November 9, 201 \"There are eight fire engines and four fire and rescue crews in attendance,\" they added. People are being warned to avoid the tram line and the area surrounding Sandilands station in east Croydon, where there is a large police cordon and many emergency vehicles. Heard a massive crash outside my window, now emergency services everywhere for the overturned tram, hope everyone is ok #croydon pic.twitter.com/gxQgnPygEJ \u2014 Hannah Collier (@HannahCollier1) November 9, 2016 Police tell me that people who are worried about loved ones should go to St Mildred's Centre on Bingham Road. Don't have phone number yet \u2014 Gavin Barwell MP (@GavinBarwellMP) November 9, 2016 Miguel John, who was on a bus to Bromley when it stopped by Sandilands tram stop, told the Standard: \"The road hadn't been shut off yet but emergency services were already at the scene, this would have been around 6.30am. \u201cBy this point more emergency services were flooding to the scene and a police car shut off the road with vehicles being ushered down Elgin Road towards Addiscombe. \u201cBut it was obvious it was very, very serious due to the amount of emergency services at the scene. @RachelMirrorVid @DailyMirror here you go, I can't actually see the tram though pic.twitter.com/mwz56sxacI \u2014 Hannah Collier (@HannahCollier1) November 9, 2016 \u201cAt first there would have been roughly between six or 10 [vehicles], as time passed a lot more arrived and continued to arrive. \u201cVisibly from where I was about two fire engines, two to three ambulances, several police cars and then more arrived as time went on. \u201cI think that\u2019s how everyone knew it was very serious, especially how quickly they acted to shut off the road.\u201d Emergency: witnesses reported seeing victims stretchered from the tram (James Long) A London Ambulance Service spokesman said: \"We were called at 6.13 to an incident at Addiscombe Road in Croydon. \"We have sent a number of resources to the scene including ambulance crews, advanced paramedics and single responders in cars. \"We are treating a number of patients.\" Scene: Police, ambulances and fire engines were in attendance (James Long) Rail safety investigators are reportedly on their way to the scene to begin gathering evidence. A British Transport Police spokesman said: \"We are currently on scene at a major incident at Sandilands tram stop in Croydon. \"Officers are working to deal with a tram derailment, alongside colleagues from other emergency services. \"A number of people are believed to have been injured. People are asked to avoid the area.\" Rain: there were torrential downpours throughout the night (James Long) Mayor of London Sadiq Khan said: \u201cI am in contact with emergency services and TfL, who are working extremely hard to get the situation under control and treat those who have been injured. My thoughts are with all those involved in this incident. \u201cWe are asking people to please visit the TfL website, tfl.gov.uk, for the latest travel information.\u201d A Transport for London spokesman said: \u201cWe are currently working with the emergency services following a derailment involving a tram in Croydon. \u201cThere is currently no service on the tram between Reeves Corner and Addington Village / Harrington Road.\u201d Today's is believed to be the first tram crash involving fatalities on board since 1959, when two women passengers and the driver died after a tram caught fire in Glasgow, following a collision with a lorry. London's only tram network operates in the south of the capital, from Wimbledon to Beckenham Junction, Elmers End and New Addington, via Croydon. More than 27 million passengers used the service in 2015/16. The system uses a combination of on-street and segregated running for the 17 miles (27km) of track.",
-  "topics": "tram",
-  "origin": "gate",
-  "filename": "071e141c216547f83e2b50a63a728163fa9527e337032e9eb84882d6.json",
-  "dId": "071e141c216547f83e2b50a63a728163fa9527e337032e9eb84882d6"
+  "url": "http://www.standard.co.uk/news/transport/croydon-tram-derailment-people-trapped-after-tram-overturns-in-at-sandilands-a3390796.html"
 }

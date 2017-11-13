@@ -25,7 +25,7 @@ if you want to process them again by core_nlp (or just delete cache and output)
 if __name__ == '__main__':
     # helper to make dataset selction simple
     dataset_golden_standard = os.path.dirname(__file__) + '/../datasets/gold_standard/data/'
-    # Do not work with heideltime!, there is no pub date...
+    # Does not work with heideltime!, there is no pub date...
     dataset_bbc = os.path.dirname(__file__) + '/../datasets/bbc/data/'
 
     # logger setup
@@ -64,17 +64,17 @@ if __name__ == '__main__':
             .set_preprocessed_path(preprocessedPath)
 
             # Optional: limit the documents read from the input directory (handy for development)
-            .set_limit(1)
+            #.set_limit(1)
 
             # Optional: resume ability, skip input file if its already in output
             # .skip_documents_with_output()
 
             # load and saves all document runtime objects for further programming
-            .preload_and_cache_documents()
+            #.preload_and_cache_documents()
 
             ## setup is done: executing it
             .process()
 
             # get the processed documents, this can only be done because preload_and_cache_documents was called
-            .get_documents()
+            #.get_documents()
     )

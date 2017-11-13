@@ -79,7 +79,7 @@ for filepath in glob.glob('data_raw/*.xml'):
         if (features[0].text == 'source'):
             news.url = features[1].text
         if (features[0].text == 'pubdate'):
-            news.pubdate = features[1].text
+            news.date_publish = features[1].text
         if (features[0].text == 'parsingError'):
             news.parsingError = features[1].text
 
@@ -131,6 +131,7 @@ for filepath in glob.glob('data_raw/*.xml'):
                 else:
                     questionAttribut.annotated.append({'coderPhraseCount': tmpAnnotannoWithScore[1]})
 
+    news.dId = hashlib.sha224(news.url.encode('utf-8')).hexdigest()
     news.filename = hashlib.sha224(news.url.encode('utf-8')).hexdigest()
     news.originalFilename = filename
 

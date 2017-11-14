@@ -112,10 +112,10 @@ class Handler(object):
             self.log.info('')
             sys.stdout.flush()
             for document in self._documents:
-                try:
-                    self._process_document(document)
-                except:
-                    self.log.error('skipped one dok')
+                #try:
+                self._process_document(document)
+                #except:
+                self.log.error('skipped one dok')
 
         else:
             self.log.info('processing documents from file system')
@@ -125,12 +125,12 @@ class Handler(object):
                     print('limit reached')
                     break
                 doc_counter += 1
-                try:
-                    document = self._reader.read(filepath)
-                    self._process_document(document)
-                except:
-                    self.log.error('skipped one dok')
-            self.log.info('Processed Documents:\t ' + str(doc_counter))
+                #try:
+                document = self._reader.read(filepath)
+                self._process_document(document)
+                #except:
+                #               self.log.error('skipped one dok')
+                self.log.info('Processed Documents:\t ' + str(doc_counter))
 
         self.log.info('')
         self.log.info('Handler: process: finished\t')

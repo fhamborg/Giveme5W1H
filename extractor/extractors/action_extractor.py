@@ -89,8 +89,6 @@ class ActionExtractor(AbsExtractor):
 
                         # this gives a tuple to find the way from sentence to leaf
                         # tree_position = subtree.leaf_treeposition(0)
-                        if sentence_root.stanfordCoreNLPResult['index'] == 17 and len(subtree.pos()) == 5:
-                            print('bingo')
                         entry = [subtree.pos(), self.cut_what(sibling, 3).pos(),
                                  sentence_root.stanfordCoreNLPResult['index']]
                         candidates.append(entry)
@@ -170,7 +168,8 @@ class ActionExtractor(AbsExtractor):
             if mention_type == 'PRONOMINAL':
                 # use representing mention if the agent is only a pronoun
                 # TODO: Fix format fix
-                rp_format_fix = [(representative[0][0], {'nlpToken': representative[0][1]})]
+                rp_format_fix = [(( {'nlpToken': representative[0][1]}, representative[0][1]['pos'] ))]
+                ranked_candidates.append((rp_format_fix, candidateParts[1], score, candidate.get_sentence_index()))
                 # ranked_candidates.append((rp_format_fix, candidateParts[1], score, candidate.get_sentence_index()))
                 # ranked_candidates.append(([representative], candidateParts[1], score, candidate.get_sentence_index()))
             else:

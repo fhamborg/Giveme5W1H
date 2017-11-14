@@ -163,8 +163,8 @@ class CauseExtractor(AbsExtractor):
                         # fetch following two tokens
                         rest = ''
                         for i, token in enumerate(verbs):
-                            if verb == token[0]:
-                                rest = ' '.join([t[0] for t in verbs[i + 1:i + 3]]).lower()
+                            if verb['nlpToken']['word'] == token['nlpToken']['word']:
+                                rest = ' '.join([t['nlpToken']['word'] for t in verbs[i + 1:i + 3]]).lower()
                                 break
                         if rest != self.causal_verb_phrases[lemma]:
                             continue

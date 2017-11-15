@@ -1,7 +1,7 @@
 import json
 import pickle
 
-from candidate import Candidate
+from extractor.candidate import Candidate
 from extractor.configuration import Configuration as Config
 
 

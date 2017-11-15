@@ -1,10 +1,11 @@
 import logging
-from candidate import Candidate
 from abc import ABCMeta, abstractmethod
 from itertools import product
 
 import nltk
 from nltk.corpus import wordnet
+
+from extractor.candidate import Candidate
 
 
 class AbsExtractor:
@@ -62,9 +63,9 @@ class AbsExtractor:
         """
 
         entity_list = []
-        #entity_list_tmp = []
+        # entity_list_tmp = []
         entity = [0, 0, None, None]  # [start, end, type, group]
-        #words = [t['originalText'] for t in tokens]
+        # words = [t['originalText'] for t in tokens]
 
         if filter is None:
             # default: extract all entities
@@ -88,12 +89,12 @@ class AbsExtractor:
                     # token found which has a different typ or is out of range
                     if entity[1] > 0:
                         entity_list.append((tokens[entity[0]:entity[1]], entity[2]))
-                        #entity_list_tmp.append((words[entity[0]:entity[1]], entity[2]))
+                        # entity_list_tmp.append((words[entity[0]:entity[1]], entity[2]))
                     entity = [i, i + 1, tag, groups.get(tag)]
 
         if entity[1] > 0:
             entity_list.append((tokens[entity[0]:entity[1]], entity[2]))
-            #entity_list_tmp.append((words[entity[0]:entity[1]], entity[2]))
+            # entity_list_tmp.append((words[entity[0]:entity[1]], entity[2]))
 
         return entity_list
 
@@ -120,7 +121,6 @@ class AbsExtractor:
                 string_a.append(part[0]['nlpToken']['lemma'])
             string = ' '.join(string_a)
 
-
             if exact:
                 new = string not in mentioned
             else:
@@ -136,7 +136,7 @@ class AbsExtractor:
             cd.set_score(candidate[1])
             cd.set_sentence_index(candidate[2] if 2 < len(candidate) else None)
 
-            #cd.set_text_index(text_index)
+            # cd.set_text_index(text_index)
 
             filtered.append(cd)
 
@@ -223,7 +223,6 @@ class AbsExtractor:
             return 0
         return score / n
 
-
     '''
     Most of the extractor work with a tree structure and don`t save any backlinkt to the original text or 
     the core NLP results. 
@@ -231,6 +230,7 @@ class AbsExtractor:
     This method can take a (sub)-tree/leave and walk back the tree and count all left hand-nodes.
     By doing so it is possible to extracts all Core-NLP-Information for the candidates and their tokens.
     '''
+
     def _pos_linked_to_corenlp_tokens(self, tree):
 
         root = tree.root()

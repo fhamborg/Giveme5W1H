@@ -39,19 +39,40 @@ class Preprocessor:
         self._token_index = None
 
     def _link_leaf_to_core_nlp(self, s):
-
         # this is where the magic happens add there additional information per candidate-part/token/leave
         # char index information is in each nlpToken
 
-        #result = (s, {
-        #    'nlpToken': self._tokens[self._token_index]
-        #})
+        if len(self._tokens)-1 < self._token_index:
+            # there seams a bug around numbers,
+            # spitted numbers in the same token are called as they have been split to different tokens
+            # this leads to a wrong index, everything in this sentence is lost till the end of that sentence
+            self.log.error('fix the doc around(reformat number,remove special characters):'+ s)
 
-        result = {
-            'nlpToken': self._tokens[self._token_index]
-        }
+            # further normal dicts are not hashable and we can`t return None because this would break further extractors
+            # therefore we use the first element of each sentence
+            result = {
+                'nlpToken': {
+                    'index': 7,
+                     'word': 'BUGFIX',
+                     'originalText': '',
+                     'lemma': '',
+                     'characterOffsetBegin': 0,
+                     'characterOffsetEnd': 1,
+                     'pos': 'CD',
+                     'ner': 'NUMBER',
+                     'speaker': 'PER0',
+                     'before': ' ',
+                     'after': ''
+                }
+            }
+
+        else:
+            result = {
+                'nlpToken': self._tokens[self._token_index]
+            }
 
         self._token_index = self._token_index + 1
+
         return result
 
     def preprocess(self, document):
@@ -73,7 +94,6 @@ class Preprocessor:
 
             tree = []
             for sentence in annotation['sentences']:
-
                 # that's a hack to add to every tree leave a the tokens result
                 self._token_index = 0
                 self._tokens = sentence['tokens']
@@ -97,7 +117,6 @@ class Preprocessor:
                 s_ner = []
                 for token in sentence['tokens']:
                     s_tokens.append(token)
-                    #s_tokens.append(token['originalText'])
                     s_pos.append((token['originalText'], token['pos']))
                     s_ner.append((token['originalText'], token['ner']))
 
@@ -108,5 +127,5 @@ class Preprocessor:
             document.set_tokens(tokens)
             document.set_pos(pos)
             document.set_ner(ner)
-            document.set_clp_result(annotation)
+            document.set_enhancement('coreNLP', annotation)
             document.is_preprocessed(True)

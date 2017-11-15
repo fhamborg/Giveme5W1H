@@ -1,5 +1,6 @@
 from extractor.configuration import Configuration as Config
 
+
 class Candidate:
     def __init__(self):
         self._type = None
@@ -63,6 +64,7 @@ class Candidate:
     # indicated index of the first character, related to document.get_fullText()
     def set_text_index(self, index):
         self._index_text = index
+
     def get_text_index(self):
         return self._index_text
 
@@ -119,14 +121,13 @@ class Candidate:
         if parts:
             number_of_parts = len(parts)
             start_index = parts[0][0]['nlpToken']['characterOffsetBegin']
-            end_index  = None
+            end_index = None
             if len(parts) > 1:
                 # more than one
-                end_index = parts[number_of_parts-1][0]['nlpToken']['characterOffsetEnd']
+                end_index = parts[number_of_parts - 1][0]['nlpToken']['characterOffsetEnd']
             else:
                 # just one parts
                 end_index = parts[0][0]['nlpToken']['characterOffsetEnd']
 
             return (start_index, end_index)
         return (-1, -1)
-

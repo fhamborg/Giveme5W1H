@@ -10,7 +10,7 @@ Giveme5W(1H) is a state of the art open-source 5W Question Answering system for 
 * **How** did it happen?
 
 ## Getting started
-Before you can use Giveme5W, you need to make sure you have  CoreNLP-Server runtimes.
+Before you can use Giveme5W, you need to make sure you have CoreNLP-Server runtimes.
 
 If you have to install CoreNLP, please refer to the CoreNLPs extensive [documentation](https://stanfordnlp.github.io/CoreNLP/corenlp-server.html) and follow the instructions on how to install CoreNLP and start a server.
 
@@ -22,30 +22,48 @@ If you have to install CoreNLP, please refer to the CoreNLPs extensive [document
  * extract the language zip, copy it inside the server directory
  * copy it into [Giveme5W-runtime-resources](#Giveme5W-runtime-resources) next to your repository folder
 
-Run environment_enhancer.py to start up coreNLP.
+Start coreNLP by yourself (Windows, Linux, OSX)
+``` bash
+ java -mx4g -cp "*" edu.stanford.nlp.pipeline.StanfordCoreNLPServer -port 9000 -timeout 15000
+```
+or
+(this is optional, there is no need to use the startup scripts;
+ this is only for a simple startup while developing etc.; Linux, OSX)
+
+```python
+python3 -m examples.startup.environment
+```
+> see also Startup - Scripts -> Giveme5W-runtime-resources
+
+
+Environment is now running. Start parsing news_please files
+```python
+python3 -m examples.extracting.parse_documents
+```
+or start the rest api.
+```python
+python3 -m examples.extracting.server
+```
+
+> Its recommended to use a proper IDE(e.g. PyCharm) if you want to use Enhancer,
+  otherwise you have to add the projects to your environment
 
 ## Configuration
-All configurations are optional.
+Configurations are optional.
 
 ### CoreNLP Host
-By default, Giveme5W tries to start the server with default port.
 
-You can prevent this by setting up a preprocessor with another url in case you run it on another masch:
-(Bsp: extractor/examples/simple_api.py)
+You can use not local installed  CoreNLP-Server. Simply parse the the preprocessor another url in case you run it on another machine:
+
 ```python
 from extractor.preprocessors.preprocessor_core_nlp import Preprocessor
-preprocessor = Preprocessor('localhost:9000')
+preprocessor = Preprocessor('192.168.178.10:9000')
 FiveWExtractor(preprocessor=preprocessor)
 ```
 
-Then start up CoreNLP by:
-```
-$ nohup java -mx4g edu.stanford.nlp.pipeline.StanfordCoreNLPServer 9000 &
-```
 
-> see also Startup - Scripts -> Giveme5W-runtime-resources
 
-### Output Configuration
+### Output
 
 - For file based data - every input is transferred to the output
     -  For instance, annotated is already a part of the provided example files
@@ -204,13 +222,10 @@ Check the examples under parse_documents_simple.py and parse_documents.py for mo
 
 
 ### CACHE
-CoreNLP and Enhancer have a long execution time, therefore it is possible to cache the result on the filesystem to speed up multiple executions.
-
-The included example files already preprocessed. So you can process them without a running CoreNLP server instance.
-Delete all files in "/cache", if you want to precess them again.
+CoreNLP and Enhancer have a long execution time, therefore it is possible to cache the result at the filesystem to speed up multiple executions.
+Delete all files in "/cache", if you want to precess them again, see examples in 'examples/extracting' for more details.
 
 > if you add or remove enhancer, you must delete all files in the cache directory (if cache is enabled (set_preprocessed_path))
-
 
 ## REST-Service
 Its also possible to use giveme5W as rest service.
@@ -240,21 +255,25 @@ The calculated score, document id and the used weights are saved per question un
 
 # Startup - Scripts -> Giveme5W-runtime-resources
 Giveme5W can start up everything for you. Check examples/startup scripts.
-To do so, all libraries must be located in the same directory 'Giveme5W-runtime-resources' and next to the Giveme5W folder.
+This is optional, especially without enhancer
+All libraries must be located in the same directory 'runtime-resources' located inside Giveme5W .
 
 - Folder Structure
-    - Giveme5W (Master)
+    - Giveme5W                      (Master)
+        - runtime-resources
+            - aida-3.0.4
+            - heideltime-standalone
+            - stanford-corenlp-full-2016-10-31
+            - treeTagger
     - Giveme5W_NewsCluster_enhancer (Master)
-    - Giveme5W-runtime-resources (Master)
-        - aida-3.0.4
-        - heideltime-standalone
-        - stanford-corenlp-full-2016-10-31
-        - treeTagger
+
 
 You can change this directory with:
 ```shell
-Config.get()['Giveme5W-runtime-resources'] = './../Giveme5W-runtime-resources'
+Config.get()['Giveme5W-runtime-resources'] = './runtime-resources'
 ```
+
+> Unfortunately there is a bug in PyCharm at the time of writing: if you are viewing multiple project at once, you have to add an additional /../ to the path
 
 # License
 The project is licensed under the Apache License 2.0. Make sure that you use Giveme5W in compliance with applicable law. Copyright 2016 The Giveme5W team

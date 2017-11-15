@@ -1,6 +1,5 @@
 import logging
 import os
-import sys
 
 from extractor.extractor import FiveWExtractor
 from extractor.tools.file.handler import Handler
@@ -34,6 +33,7 @@ if __name__ == '__main__':
 
     inputPath = golden_standard
     outputPath = os.path.dirname(__file__) + '/output'
+    preprocessedPath = os.path.dirname(__file__) + '/cache'
 
     # initiate the news-please file handler with the input directory
     (Handler(inputPath)
@@ -43,8 +43,11 @@ if __name__ == '__main__':
      # add an output directory
      .set_output_path(outputPath)
 
+     # Optional: set a path to cache and load preprocessed documents (CoreNLP & Enhancer result)
+     # .set_preprocessed_path(preprocessedPath)
+
      # limit the documents read from the input directory (handy for development)
-     .set_limit(10)
+     # .set_limit(10)
 
      # execute it
      .process())

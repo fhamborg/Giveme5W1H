@@ -1,9 +1,3 @@
-# from multiprocessing.managers import BaseManager
-# from fileinput import filename
-# class DocumentManager(BaseManager):
-#    pass
-
-
 class Document(object):
     """
     Document is a pickable container for the raw document and all related data
@@ -34,7 +28,6 @@ class Document(object):
 
         self._annotations = {'what': [], 'who': [], 'why': [], 'where': [], 'when': [], 'how': []}
 
-        #self._answers = {'what': [], 'who': [], 'why': [], 'where': [], 'when': [], 'how': []}
         self._answers = {}
         self._candidates = {}
         self._processed = None
@@ -126,12 +119,6 @@ class Document(object):
 
         return self._lemma_map
 
-    def set_clp_result(self, clp_result):
-        self._clp_result = clp_result
-
-    def get_clp_result(self):
-        return self._clp_result
-
     def set_file_name(self, name):
         self._file_name = name
 
@@ -170,12 +157,12 @@ class Document(object):
         self._answers[question] = candidates
 
     def get_answer(self, question):
-        return self._answers.get(question,[])
+        return self._answers.get(question, [])
 
     def set_annotations(self, annotations):
         self._annotations = annotations
 
-    # additional information create by enhancments
+    # additional information create by enhancements
     def get_enhancement(self, key):
         return self._enhancement.get(key)
 

@@ -1,37 +1,14 @@
 {
+  "category": "tram",
+  "dId": "071e141c216547f83e2b50a63a728163fa9527e337032e9eb84882d6",
+  "date_publish": "2016-11-09 00:00:00",
+  "description": "Several people died and dozens were injured after a tram derailed and overturned in Croydon. Five people were left trapped inside the vehicle after it came off the tracks in a tunnel near Sandlilands tram station at around 6am. Three of those trapped have been removed from the tram, which is on its side, but two still remain inside as of 11.30am.",
+  "filename": "071e141c216547f83e2b50a63a728163fa9527e337032e9eb84882d6",
   "fiveWoneH": {
     "how": {
-      "annotated": [
-        {
-          "text": ""
-        }
-      ],
+      "annotated": [],
       "label": "how",
       "extracted": [
-        {
-          "parts": [
-            [
-              {
-                "nlpToken": {
-                  "index": 12,
-                  "word": "overturns",
-                  "originalText": "overturns",
-                  "lemma": "overturn",
-                  "characterOffsetBegin": 68,
-                  "characterOffsetEnd": 77,
-                  "pos": "VBZ",
-                  "ner": "O",
-                  "speaker": "PER0",
-                  "before": " ",
-                  "after": " "
-                }
-              },
-              "VBZ"
-            ]
-          ],
-          "score": 1.0,
-          "text": "overturns"
-        },
         {
           "parts": [
             [
@@ -89,340 +66,678 @@
               "VBD"
             ]
           ],
-          "score": 0.9893617021276595,
+          "score": 1.626724339490297,
           "text": "derailed and overturned",
           "nlpIndexSentence": 1
+        }
+      ]
+    },
+    "what": {
+      "annotated": [
+        {
+          "coderPhraseCount": 3,
+          "text": "tram derailment: Several dead and dozens injured"
         },
+        {
+          "coderPhraseCount": 2,
+          "text": "Five people were left trapped inside"
+        }
+      ],
+      "label": "what",
+      "extracted": [
         {
           "parts": [
             [
               {
                 "nlpToken": {
-                  "index": 11,
-                  "word": "derailed",
-                  "originalText": "derailed",
-                  "lemma": "derail",
-                  "characterOffsetBegin": 500,
-                  "characterOffsetEnd": 508,
-                  "pos": "VBD",
+                  "index": 19,
+                  "word": "are",
+                  "originalText": "are",
+                  "lemma": "be",
+                  "characterOffsetBegin": 3212,
+                  "characterOffsetEnd": 3215,
+                  "pos": "VBP",
+                  "ner": "O",
+                  "speaker": "180",
+                  "before": " ",
+                  "after": " "
+                }
+              },
+              "VBP"
+            ],
+            [
+              {
+                "nlpToken": {
+                  "index": 20,
+                  "word": "eight",
+                  "originalText": "eight",
+                  "lemma": "eight",
+                  "characterOffsetBegin": 3216,
+                  "characterOffsetEnd": 3221,
+                  "pos": "CD",
+                  "ner": "NUMBER",
+                  "normalizedNER": "8.0",
+                  "speaker": "180",
+                  "before": " ",
+                  "after": " "
+                }
+              },
+              "CD"
+            ],
+            [
+              {
+                "nlpToken": {
+                  "index": 21,
+                  "word": "fire",
+                  "originalText": "fire",
+                  "lemma": "fire",
+                  "characterOffsetBegin": 3222,
+                  "characterOffsetEnd": 3226,
+                  "pos": "NN",
+                  "ner": "O",
+                  "speaker": "180",
+                  "before": " ",
+                  "after": " "
+                }
+              },
+              "NN"
+            ],
+            [
+              {
+                "nlpToken": {
+                  "index": 22,
+                  "word": "engines",
+                  "originalText": "engines",
+                  "lemma": "engine",
+                  "characterOffsetBegin": 3227,
+                  "characterOffsetEnd": 3234,
+                  "pos": "NNS",
+                  "ner": "O",
+                  "speaker": "180",
+                  "before": " ",
+                  "after": " "
+                }
+              },
+              "NNS"
+            ]
+          ],
+          "score": 1.0,
+          "text": "are eight fire engines",
+          "nlpIndexSentence": 21
+        }
+      ]
+    },
+    "when": {
+      "annotated": [
+        {
+          "coderPhraseCount": 3,
+          "text": "at around 6am"
+        }
+      ],
+      "label": "when",
+      "extracted": [
+        {
+          "parts": [
+            [
+              {
+                "nlpToken": {
+                  "index": 24,
+                  "word": "6am",
+                  "originalText": "6am",
+                  "lemma": "6am",
+                  "characterOffsetBegin": 316,
+                  "characterOffsetEnd": 319,
+                  "pos": "JJ",
+                  "ner": "TIME",
+                  "normalizedNER": "T06:00",
+                  "speaker": "PER0",
+                  "before": " ",
+                  "after": "",
+                  "timex": {
+                    "tid": "t1",
+                    "type": "TIME",
+                    "value": "T06:00"
+                  }
+                },
+                "heideltime": [
+                  {
+                    "@tid": "t1",
+                    "@type": "TIME",
+                    "@value": "XXXX-XX-XXT06:00",
+                    "@mod": "APPROX",
+                    "#text": "around 6am.",
+                    "characterOffset": [
+                      309,
+                      320
+                    ]
+                  },
+                  {
+                    "@tid": "t2",
+                    "@type": "TIME",
+                    "@value": "XXXX-XX-XXT06:00",
+                    "@mod": "APPROX",
+                    "#text": "around 6am.",
+                    "characterOffset": [
+                      309,
+                      320
+                    ]
+                  },
+                  {
+                    "@tid": "t3",
+                    "@type": "TIME",
+                    "@value": "XXXX-XX-XXT06:00",
+                    "#text": "6am",
+                    "characterOffset": [
+                      316,
+                      319
+                    ]
+                  }
+                ]
+              },
+              "JJ"
+            ],
+            [
+              {
+                "nlpToken": {
+                  "index": 25,
+                  "word": ".",
+                  "originalText": ".",
+                  "lemma": ".",
+                  "characterOffsetBegin": 319,
+                  "characterOffsetEnd": 320,
+                  "pos": ".",
+                  "ner": "TIME",
+                  "normalizedNER": "T06:00",
+                  "speaker": "PER0",
+                  "before": "",
+                  "after": " ",
+                  "timex": {
+                    "tid": "t1",
+                    "type": "TIME",
+                    "value": "T06:00"
+                  }
+                },
+                "heideltime": [
+                  {
+                    "@tid": "t1",
+                    "@type": "TIME",
+                    "@value": "XXXX-XX-XXT06:00",
+                    "@mod": "APPROX",
+                    "#text": "around 6am.",
+                    "characterOffset": [
+                      309,
+                      320
+                    ]
+                  },
+                  {
+                    "@tid": "t2",
+                    "@type": "TIME",
+                    "@value": "XXXX-XX-XXT06:00",
+                    "@mod": "APPROX",
+                    "#text": "around 6am.",
+                    "characterOffset": [
+                      309,
+                      320
+                    ]
+                  },
+                  {
+                    "@tid": "t3",
+                    "@type": "TIME",
+                    "@value": "XXXX-XX-XXT06:00",
+                    "#text": "6am",
+                    "characterOffset": [
+                      316,
+                      319
+                    ]
+                  }
+                ]
+              },
+              "."
+            ]
+          ],
+          "score": 0.8543371522094926,
+          "text": "6am .",
+          "nlpIndexSentence": 2
+        }
+      ]
+    },
+    "where": {
+      "annotated": [
+        {
+          "coderPhraseCount": 3,
+          "text": "Croydon"
+        },
+        {
+          "coderPhraseCount": 2,
+          "text": "in a tunnel near Sandlilands tram station"
+        }
+      ],
+      "label": "where",
+      "extracted": [
+        {
+          "parts": [
+            [
+              {
+                "nlpToken": {
+                  "index": 1,
+                  "word": "Croydon",
+                  "originalText": "Croydon",
+                  "lemma": "Croydon",
+                  "characterOffsetBegin": 0,
+                  "characterOffsetEnd": 7,
+                  "pos": "NNP",
+                  "ner": "LOCATION",
+                  "speaker": "PER0",
+                  "before": "",
+                  "after": " "
+                },
+                "aida": [
+                  {
+                    "mention": {
+                      "allEntities": [
+                        {
+                          "kbIdentifier": "YAGO:Croydon",
+                          "disambiguationScore": "0.23558"
+                        }
+                      ],
+                      "offset": 0,
+                      "name": "Croydon",
+                      "length": 7,
+                      "bestEntity": {
+                        "kbIdentifier": "YAGO:Croydon",
+                        "disambiguationScore": "0.23558"
+                      }
+                    },
+                    "bestEntityMetadata": {
+                      "knowledgebase": "YAGO",
+                      "depictionurl": "http://upload.wikimedia.org/wikipedia/commons/0/08/Croydon_Town_Hall_-_geograph.org.uk_-_432983.jpg",
+                      "depictionthumbnailurl": "http://upload.wikimedia.org/wikipedia/commons/thumbCroydon_Town_Hall_-_geograph.org.uk_-_432983.jpg/200px-Croydon_Town_Hall_-_geograph.org.uk_-_432983.jpg",
+                      "importance": 0.0007512499244432548,
+                      "entityId": "Croydon",
+                      "type": [
+                        "YAGO_wordnet_district_108552138",
+                        "YAGO_yagoPermanentlyLocatedEntity",
+                        "YAGO_yagoLegalActorGeo",
+                        "YAGO_wordnet_medium_106254669",
+                        "YAGO_wordnet_urban_area_108675967",
+                        "YAGO_wikicategory_Market_towns_in_Surrey",
+                        "YAGO_wordnet_municipality_108626283",
+                        "YAGO_wordnet_instrumentality_103575240",
+                        "YAGO_wordnet_market_town_108672073",
+                        "YAGO_wikicategory_locations",
+                        "YAGO_wikicategory_Districts_of_London_listed_in_the_Domesday_Book",
+                        "YAGO_wordnet_region_108630985",
+                        "YAGO_yagoGeoEntity",
+                        "YAGO_wordnet_physical_entity_100001930",
+                        "YAGO_wikicategory_Districts_of_Croydon",
+                        "YAGO_wikicategory_Post_towns_in_the_CR_postcode_area",
+                        "YAGO_wordnet_entity_100001740",
+                        "YAGO_wordnet_object_100002684",
+                        "YAGO_wordnet_area_108497294",
+                        "YAGO_wordnet_geographical_area_108574314",
+                        "YAGO_wikicategory_Areas_of_London",
+                        "YAGO_wikicategory_Market_towns_in_London",
+                        "YAGO_wordnet_location_100027167",
+                        "YAGO_wordnet_whole_100003553",
+                        "YAGO_wikicategory_Media_and_communications_in_Croydon",
+                        "YAGO_wordnet_artifact_100021939",
+                        "YAGO_wordnet_administrative_district_108491826",
+                        "YAGO_wordnet_town_108665504"
+                      ],
+                      "readableRepr": "Croydon",
+                      "url": "http://en.wikipedia.org/wiki/Croydon"
+                    }
+                  }
+                ]
+              },
+              "NNP"
+            ]
+          ],
+          "score": 1.0,
+          "text": "Croydon",
+          "enhancement": {
+            "openstreetmap_nominatim": {
+              "place_id": "117537",
+              "licence": "Data \u00a9 OpenStreetMap contributors, ODbL 1.0. http://www.openstreetmap.org/copyright",
+              "osm_type": "node",
+              "osm_id": "21262496",
+              "boundingbox": [
+                51.3313049,
+                51.4113049,
+                -0.141957,
+                -0.061957
+              ],
+              "lat": "51.3713049",
+              "lon": "-0.101957",
+              "display_name": "Croydon, London, Greater London, England, CR0 1SZ, UK",
+              "class": "place",
+              "type": "town",
+              "importance": 0.23943987893565,
+              "icon": "https://nominatim.openstreetmap.org/images/mapicons/poi_place_town.p.20.png"
+            }
+          }
+        }
+      ]
+    },
+    "who": {
+      "annotated": [
+        {
+          "coderPhraseCount": 2,
+          "text": "Several people"
+        },
+        {
+          "coderPhraseCount": 2,
+          "text": "dozens injured"
+        }
+      ],
+      "label": "who",
+      "extracted": [
+        {
+          "parts": [
+            [
+              {
+                "nlpToken": {
+                  "index": 8,
+                  "word": "Croydon",
+                  "originalText": "Croydon",
+                  "lemma": "Croydon",
+                  "characterOffsetBegin": 3163,
+                  "characterOffsetEnd": 3170,
+                  "pos": "NNP",
+                  "ner": "LOCATION",
+                  "speaker": "PER0",
+                  "before": " ",
+                  "after": " "
+                },
+                "aida": [
+                  {
+                    "mention": {
+                      "allEntities": [
+                        {
+                          "kbIdentifier": "YAGO:Croydon",
+                          "disambiguationScore": "0.23568"
+                        }
+                      ],
+                      "offset": 3163,
+                      "name": "Croydon",
+                      "length": 7,
+                      "bestEntity": {
+                        "kbIdentifier": "YAGO:Croydon",
+                        "disambiguationScore": "0.23568"
+                      }
+                    },
+                    "bestEntityMetadata": {
+                      "knowledgebase": "YAGO",
+                      "depictionurl": "http://upload.wikimedia.org/wikipedia/commons/0/08/Croydon_Town_Hall_-_geograph.org.uk_-_432983.jpg",
+                      "depictionthumbnailurl": "http://upload.wikimedia.org/wikipedia/commons/thumbCroydon_Town_Hall_-_geograph.org.uk_-_432983.jpg/200px-Croydon_Town_Hall_-_geograph.org.uk_-_432983.jpg",
+                      "importance": 0.0007512499244432548,
+                      "entityId": "Croydon",
+                      "type": [
+                        "YAGO_wordnet_district_108552138",
+                        "YAGO_yagoPermanentlyLocatedEntity",
+                        "YAGO_yagoLegalActorGeo",
+                        "YAGO_wordnet_medium_106254669",
+                        "YAGO_wordnet_urban_area_108675967",
+                        "YAGO_wikicategory_Market_towns_in_Surrey",
+                        "YAGO_wordnet_municipality_108626283",
+                        "YAGO_wordnet_instrumentality_103575240",
+                        "YAGO_wordnet_market_town_108672073",
+                        "YAGO_wikicategory_locations",
+                        "YAGO_wikicategory_Districts_of_London_listed_in_the_Domesday_Book",
+                        "YAGO_wordnet_region_108630985",
+                        "YAGO_yagoGeoEntity",
+                        "YAGO_wordnet_physical_entity_100001930",
+                        "YAGO_wikicategory_Districts_of_Croydon",
+                        "YAGO_wikicategory_Post_towns_in_the_CR_postcode_area",
+                        "YAGO_wordnet_entity_100001740",
+                        "YAGO_wordnet_object_100002684",
+                        "YAGO_wordnet_area_108497294",
+                        "YAGO_wordnet_geographical_area_108574314",
+                        "YAGO_wikicategory_Areas_of_London",
+                        "YAGO_wikicategory_Market_towns_in_London",
+                        "YAGO_wordnet_location_100027167",
+                        "YAGO_wordnet_whole_100003553",
+                        "YAGO_wikicategory_Media_and_communications_in_Croydon",
+                        "YAGO_wordnet_artifact_100021939",
+                        "YAGO_wordnet_administrative_district_108491826",
+                        "YAGO_wordnet_town_108665504"
+                      ],
+                      "readableRepr": "Croydon",
+                      "url": "http://en.wikipedia.org/wiki/Croydon"
+                    }
+                  }
+                ]
+              },
+              "NNP"
+            ],
+            [
+              {
+                "nlpToken": {
+                  "index": 9,
+                  "word": "MPS",
+                  "originalText": "MPS",
+                  "lemma": "MPS",
+                  "characterOffsetBegin": 3171,
+                  "characterOffsetEnd": 3174,
+                  "pos": "NNP",
                   "ner": "O",
                   "speaker": "PER0",
                   "before": " ",
                   "after": " "
                 }
               },
-              "VBD"
+              "NNP"
+            ],
+            [
+              {
+                "nlpToken": {
+                  "index": 10,
+                  "word": "-LRB-",
+                  "originalText": "(",
+                  "lemma": "-lrb-",
+                  "characterOffsetBegin": 3175,
+                  "characterOffsetEnd": 3176,
+                  "pos": "-LRB-",
+                  "ner": "O",
+                  "speaker": "PER0",
+                  "before": " ",
+                  "after": ""
+                }
+              },
+              "-LRB-"
+            ],
+            [
+              {
+                "nlpToken": {
+                  "index": 11,
+                  "word": "@MPSCroydon",
+                  "originalText": "@MPSCroydon",
+                  "lemma": "@MPSCroydon",
+                  "characterOffsetBegin": 3176,
+                  "characterOffsetEnd": 3187,
+                  "pos": "NNP",
+                  "ner": "O",
+                  "speaker": "PER0",
+                  "before": "",
+                  "after": ""
+                }
+              },
+              "NNP"
             ],
             [
               {
                 "nlpToken": {
                   "index": 12,
-                  "word": "and",
-                  "originalText": "and",
-                  "lemma": "and",
-                  "characterOffsetBegin": 509,
-                  "characterOffsetEnd": 512,
-                  "pos": "CC",
+                  "word": "-RRB-",
+                  "originalText": ")",
+                  "lemma": "-rrb-",
+                  "characterOffsetBegin": 3187,
+                  "characterOffsetEnd": 3188,
+                  "pos": "-RRB-",
                   "ner": "O",
                   "speaker": "PER0",
-                  "before": " ",
+                  "before": "",
                   "after": " "
                 }
               },
-              "CC"
+              "-RRB-"
             ],
             [
               {
                 "nlpToken": {
                   "index": 13,
-                  "word": "overturned",
-                  "originalText": "overturned",
-                  "lemma": "overturn",
-                  "characterOffsetBegin": 513,
-                  "characterOffsetEnd": 523,
-                  "pos": "VBD",
-                  "ner": "O",
+                  "word": "November",
+                  "originalText": "November",
+                  "lemma": "November",
+                  "characterOffsetBegin": 3189,
+                  "characterOffsetEnd": 3197,
+                  "pos": "NNP",
+                  "ner": "DATE",
+                  "normalizedNER": "XXXX-11-09",
                   "speaker": "PER0",
                   "before": " ",
-                  "after": " "
+                  "after": " ",
+                  "timex": {
+                    "tid": "t8",
+                    "type": "DATE",
+                    "value": "XXXX-11-09"
+                  }
                 }
               },
-              "VBD"
-            ]
-          ],
-          "score": 0.9468085106382979,
-          "text": "derailed and overturned",
-          "nlpIndexSentence": 5
-        },
-        {
-          "parts": [
-            [
-              {
-                "nlpToken": {
-                  "index": 16,
-                  "word": "overturned",
-                  "originalText": "overturned",
-                  "lemma": "overturn",
-                  "characterOffsetBegin": 1213,
-                  "characterOffsetEnd": 1223,
-                  "pos": "VBN",
-                  "ner": "O",
-                  "speaker": "48",
-                  "before": " ",
-                  "after": " "
-                }
-              },
-              "VBN"
-            ]
-          ],
-          "score": 0.8829787234042553,
-          "text": "overturned",
-          "nlpIndexSentence": 11
-        },
-        {
-          "parts": [
-            [
-              {
-                "nlpToken": {
-                  "index": 143,
-                  "word": "overturned",
-                  "originalText": "overturned",
-                  "lemma": "overturn",
-                  "characterOffsetBegin": 1973,
-                  "characterOffsetEnd": 1983,
-                  "pos": "VBN",
-                  "ner": "O",
-                  "speaker": "48",
-                  "before": " ",
-                  "after": " "
-                }
-              },
-              "VBN"
-            ]
-          ],
-          "score": 0.8829787234042553,
-          "text": "overturned",
-          "nlpIndexSentence": 11
-        },
-        {
-          "parts": [
-            [
-              {
-                "nlpToken": {
-                  "index": 45,
-                  "word": "overturned",
-                  "originalText": "overturned",
-                  "lemma": "overturn",
-                  "characterOffsetBegin": 2451,
-                  "characterOffsetEnd": 2461,
-                  "pos": "VBN",
-                  "ner": "O",
-                  "speaker": "130",
-                  "before": " ",
-                  "after": " "
-                }
-              },
-              "VBN"
-            ]
-          ],
-          "score": 0.8404255319148937,
-          "text": "overturned",
-          "nlpIndexSentence": 15
-        },
-        {
-          "parts": [
-            [
-              {
-                "nlpToken": {
-                  "index": 15,
-                  "word": "overturned",
-                  "originalText": "overturned",
-                  "lemma": "overturn",
-                  "characterOffsetBegin": 3536,
-                  "characterOffsetEnd": 3546,
-                  "pos": "VBN",
-                  "ner": "O",
-                  "speaker": "PER0",
-                  "before": " ",
-                  "after": " "
-                }
-              },
-              "VBN"
-            ]
-          ],
-          "score": 0.7553191489361701,
-          "text": "overturned",
-          "nlpIndexSentence": 23
-        },
-        {
-          "parts": [
-            [
-              {
-                "nlpToken": {
-                  "index": 22,
-                  "word": "inside",
-                  "originalText": "inside",
-                  "lemma": "inside",
-                  "characterOffsetBegin": 420,
-                  "characterOffsetEnd": 426,
-                  "pos": "JJ",
-                  "ner": "O",
-                  "speaker": "PER0",
-                  "before": " ",
-                  "after": " "
-                }
-              },
-              "JJ"
-            ]
-          ],
-          "score": 0.6764184397163121,
-          "text": "inside",
-          "nlpIndexSentence": 3
-        },
-        {
-          "parts": [
-            [
-              {
-                "nlpToken": {
-                  "index": 5,
-                  "word": "Several",
-                  "originalText": "Several",
-                  "lemma": "several",
-                  "characterOffsetBegin": 25,
-                  "characterOffsetEnd": 32,
-                  "pos": "JJ",
-                  "ner": "O",
-                  "speaker": "PER0",
-                  "before": " ",
-                  "after": " "
-                }
-              },
-              "JJ"
-            ]
-          ],
-          "score": 0.6666666666666666,
-          "text": "Several"
-        },
-        {
-          "parts": [
-            [
-              {
-                "nlpToken": {
-                  "index": 1,
-                  "word": "Several",
-                  "originalText": "Several",
-                  "lemma": "several",
-                  "characterOffsetBegin": 93,
-                  "characterOffsetEnd": 100,
-                  "pos": "JJ",
-                  "ner": "O",
-                  "speaker": "PER0",
-                  "before": " ",
-                  "after": " "
-                }
-              },
-              "JJ"
-            ]
-          ],
-          "score": 0.6560283687943262,
-          "text": "Several",
-          "nlpIndexSentence": 1
-        },
-        {
-          "parts": [
-            [
-              {
-                "nlpToken": {
-                  "index": 22,
-                  "word": "inside",
-                  "originalText": "inside",
-                  "lemma": "inside",
-                  "characterOffsetBegin": 770,
-                  "characterOffsetEnd": 776,
-                  "pos": "JJ",
-                  "ner": "O",
-                  "speaker": "PER0",
-                  "before": " ",
-                  "after": " "
-                }
-              },
-              "JJ"
-            ]
-          ],
-          "score": 0.6338652482269503,
-          "text": "inside",
-          "nlpIndexSentence": 7
-        },
-        {
-          "parts": [
-            [
-              {
-                "nlpToken": {
-                  "index": 1,
-                  "word": "Several",
-                  "originalText": "Several",
-                  "lemma": "several",
-                  "characterOffsetBegin": 443,
-                  "characterOffsetEnd": 450,
-                  "pos": "JJ",
-                  "ner": "O",
-                  "speaker": "PER0",
-                  "before": " ",
-                  "after": " "
-                }
-              },
-              "JJ"
-            ]
-          ],
-          "score": 0.6134751773049645,
-          "text": "Several",
-          "nlpIndexSentence": 5
-        },
-        {
-          "parts": [
-            [
-              {
-                "nlpToken": {
-                  "index": 48,
-                  "word": "were",
-                  "originalText": "were",
-                  "lemma": "be",
-                  "characterOffsetBegin": 1419,
-                  "characterOffsetEnd": 1423,
-                  "pos": "VBD",
-                  "ner": "O",
-                  "speaker": "48",
-                  "before": " ",
-                  "after": " "
-                }
-              },
-              "VBD"
+              "NNP"
             ],
             [
               {
                 "nlpToken": {
-                  "index": 49,
-                  "word": "called",
-                  "originalText": "called",
-                  "lemma": "call",
-                  "characterOffsetBegin": 1424,
-                  "characterOffsetEnd": 1430,
-                  "pos": "VBN",
+                  "index": 14,
+                  "word": "9",
+                  "originalText": "9",
+                  "lemma": "9",
+                  "characterOffsetBegin": 3198,
+                  "characterOffsetEnd": 3199,
+                  "pos": "CD",
+                  "ner": "DATE",
+                  "normalizedNER": "XXXX-11-09",
+                  "speaker": "PER0",
+                  "before": " ",
+                  "after": "",
+                  "timex": {
+                    "tid": "t8",
+                    "type": "DATE",
+                    "value": "XXXX-11-09"
+                  }
+                }
+              },
+              "CD"
+            ],
+            [
+              {
+                "nlpToken": {
+                  "index": 15,
+                  "word": ",",
+                  "originalText": ",",
+                  "lemma": ",",
+                  "characterOffsetBegin": 3199,
+                  "characterOffsetEnd": 3200,
+                  "pos": ",",
                   "ner": "O",
-                  "speaker": "48",
+                  "speaker": "PER0",
+                  "before": "",
+                  "after": " "
+                }
+              },
+              ","
+            ],
+            [
+              {
+                "nlpToken": {
+                  "index": 16,
+                  "word": "201",
+                  "originalText": "201",
+                  "lemma": "201",
+                  "characterOffsetBegin": 3201,
+                  "characterOffsetEnd": 3204,
+                  "pos": "CD",
+                  "ner": "NUMBER",
+                  "normalizedNER": "201.0",
+                  "speaker": "PER0",
                   "before": " ",
                   "after": " "
                 }
               },
-              "VBN"
+              "CD"
+            ],
+            [
+              {
+                "nlpToken": {
+                  "index": 17,
+                  "word": "``",
+                  "originalText": "\"",
+                  "lemma": "``",
+                  "characterOffsetBegin": 3205,
+                  "characterOffsetEnd": 3206,
+                  "pos": "``",
+                  "ner": "O",
+                  "speaker": "PER0",
+                  "before": " ",
+                  "after": ""
+                }
+              },
+              "``"
+            ],
+            [
+              {
+                "nlpToken": {
+                  "index": 18,
+                  "word": "There",
+                  "originalText": "There",
+                  "lemma": "there",
+                  "characterOffsetBegin": 3206,
+                  "characterOffsetEnd": 3211,
+                  "pos": "EX",
+                  "ner": "O",
+                  "speaker": "180",
+                  "before": "",
+                  "after": " "
+                }
+              },
+              "EX"
             ]
           ],
-          "score": 0.5913120567375887,
-          "text": "were called",
-          "nlpIndexSentence": 11
-        },
+          "score": 1.0,
+          "text": "Croydon MPS ( @MPSCroydon ) November 9 , 201 \" There",
+          "nlpIndexSentence": 21
+        }
+      ]
+    },
+    "why": {
+      "annotated": [
+        {
+          "coderPhraseCount": 2
+        }
+      ],
+      "label": "why",
+      "extracted": [
         {
           "parts": [
+            [
+              {
+                "nlpToken": {
+                  "index": 10,
+                  "word": "it",
+                  "originalText": "it",
+                  "lemma": "it",
+                  "characterOffsetBegin": 241,
+                  "characterOffsetEnd": 243,
+                  "pos": "PRP",
+                  "ner": "O",
+                  "speaker": "PER0",
+                  "before": " ",
+                  "after": " "
+                }
+              },
+              "PRP"
+            ],
             [
               {
                 "nlpToken": {
@@ -440,2172 +755,271 @@
                 }
               },
               "VBD"
-            ]
-          ],
-          "score": 0.5620567375886525,
-          "text": "came",
-          "nlpIndexSentence": 2
-        },
-        {
-          "parts": [
-            [
-              {
-                "nlpToken": {
-                  "index": 20,
-                  "word": "still",
-                  "originalText": "still",
-                  "lemma": "still",
-                  "characterOffsetBegin": 407,
-                  "characterOffsetEnd": 412,
-                  "pos": "RB",
-                  "ner": "O",
-                  "speaker": "PER0",
-                  "before": " ",
-                  "after": " "
-                }
-              },
-              "RB"
-            ]
-          ],
-          "score": 0.5514184397163121,
-          "text": "still",
-          "nlpIndexSentence": 3
-        },
-        {
-          "parts": [
-            [
-              {
-                "nlpToken": {
-                  "index": 6,
-                  "word": "dead",
-                  "originalText": "dead",
-                  "lemma": "dead",
-                  "characterOffsetBegin": 33,
-                  "characterOffsetEnd": 37,
-                  "pos": "JJ",
-                  "ner": "O",
-                  "speaker": "PER0",
-                  "before": " ",
-                  "after": " "
-                }
-              },
-              "JJ"
-            ]
-          ],
-          "score": 0.5416666666666666,
-          "text": "dead"
-        },
-        {
-          "parts": [
-            [
-              {
-                "nlpToken": {
-                  "index": 6,
-                  "word": "had",
-                  "originalText": "had",
-                  "lemma": "have",
-                  "characterOffsetBegin": 2521,
-                  "characterOffsetEnd": 2524,
-                  "pos": "VBD",
-                  "ner": "O",
-                  "speaker": "PER0",
-                  "before": " ",
-                  "after": " "
-                }
-              },
-              "VBD"
             ],
             [
               {
                 "nlpToken": {
-                  "index": 7,
-                  "word": "seen",
-                  "originalText": "seen",
-                  "lemma": "see",
-                  "characterOffsetBegin": 2525,
-                  "characterOffsetEnd": 2529,
-                  "pos": "VBN",
+                  "index": 12,
+                  "word": "off",
+                  "originalText": "off",
+                  "lemma": "off",
+                  "characterOffsetBegin": 249,
+                  "characterOffsetEnd": 252,
+                  "pos": "RP",
                   "ner": "O",
                   "speaker": "PER0",
                   "before": " ",
                   "after": " "
                 }
               },
-              "VBN"
-            ]
-          ],
-          "score": 0.5381205673758865,
-          "text": "had seen",
-          "nlpIndexSentence": 16
-        },
-        {
-          "parts": [
+              "RP"
+            ],
             [
               {
                 "nlpToken": {
                   "index": 13,
-                  "word": "confirm",
-                  "originalText": "confirm",
-                  "lemma": "confirm",
-                  "characterOffsetBegin": 909,
-                  "characterOffsetEnd": 916,
-                  "pos": "VB",
-                  "ner": "O",
-                  "speaker": "48",
-                  "before": " ",
-                  "after": " "
-                }
-              },
-              "VB"
-            ]
-          ],
-          "score": 0.5292553191489362,
-          "text": "confirm",
-          "nlpIndexSentence": 9
-        },
-        {
-          "parts": [
-            [
-              {
-                "nlpToken": {
-                  "index": 11,
-                  "word": "came",
-                  "originalText": "came",
-                  "lemma": "come",
-                  "characterOffsetBegin": 594,
-                  "characterOffsetEnd": 598,
-                  "pos": "VBD",
+                  "word": "the",
+                  "originalText": "the",
+                  "lemma": "the",
+                  "characterOffsetBegin": 253,
+                  "characterOffsetEnd": 256,
+                  "pos": "DT",
                   "ner": "O",
                   "speaker": "PER0",
                   "before": " ",
                   "after": " "
                 }
               },
-              "VBD"
-            ]
-          ],
-          "score": 0.5195035460992908,
-          "text": "came",
-          "nlpIndexSentence": 6
-        },
-        {
-          "parts": [
-            [
-              {
-                "nlpToken": {
-                  "index": 20,
-                  "word": "still",
-                  "originalText": "still",
-                  "lemma": "still",
-                  "characterOffsetBegin": 757,
-                  "characterOffsetEnd": 762,
-                  "pos": "RB",
-                  "ner": "O",
-                  "speaker": "PER0",
-                  "before": " ",
-                  "after": " "
-                }
-              },
-              "RB"
-            ]
-          ],
-          "score": 0.5088652482269503,
-          "text": "still",
-          "nlpIndexSentence": 7
-        },
-        {
-          "parts": [
-            [
-              {
-                "nlpToken": {
-                  "index": 20,
-                  "word": "south",
-                  "originalText": "south",
-                  "lemma": "south",
-                  "characterOffsetBegin": 1236,
-                  "characterOffsetEnd": 1241,
-                  "pos": "RB",
-                  "ner": "O",
-                  "speaker": "48",
-                  "before": " ",
-                  "after": " "
-                }
-              },
-              "RB"
-            ]
-          ],
-          "score": 0.5079787234042553,
-          "text": "south",
-          "nlpIndexSentence": 11
-        },
-        {
-          "parts": [
-            [
-              {
-                "nlpToken": {
-                  "index": 71,
-                  "word": "south",
-                  "originalText": "south",
-                  "lemma": "south",
-                  "characterOffsetBegin": 1563,
-                  "characterOffsetEnd": 1568,
-                  "pos": "RB",
-                  "ner": "O",
-                  "speaker": "48",
-                  "before": " ",
-                  "after": " "
-                }
-              },
-              "RB"
-            ]
-          ],
-          "score": 0.5079787234042553,
-          "text": "south",
-          "nlpIndexSentence": 11
-        },
-        {
-          "parts": [
-            [
-              {
-                "nlpToken": {
-                  "index": 19,
-                  "word": "hard",
-                  "originalText": "hard",
-                  "lemma": "hard",
-                  "characterOffsetBegin": 944,
-                  "characterOffsetEnd": 948,
-                  "pos": "RB",
-                  "ner": "O",
-                  "speaker": "48",
-                  "before": " ",
-                  "after": " "
-                }
-              },
-              "RB"
-            ]
-          ],
-          "score": 0.48758865248226946,
-          "text": "hard",
-          "nlpIndexSentence": 9
-        },
-        {
-          "parts": [
-            [
-              {
-                "nlpToken": {
-                  "index": 26,
-                  "word": "am",
-                  "originalText": "am",
-                  "lemma": "am",
-                  "characterOffsetBegin": 438,
-                  "characterOffsetEnd": 440,
-                  "pos": "RB",
-                  "ner": "O",
-                  "speaker": "PER0",
-                  "before": "",
-                  "after": ""
-                }
-              },
-              "RB"
-            ]
-          ],
-          "score": 0.46808510638297873,
-          "text": "am",
-          "nlpIndexSentence": 3
-        },
-        {
-          "parts": [
-            [
-              {
-                "nlpToken": {
-                  "index": 146,
-                  "word": "sharp",
-                  "originalText": "sharp",
-                  "lemma": "sharp",
-                  "characterOffsetBegin": 1989,
-                  "characterOffsetEnd": 1994,
-                  "pos": "JJ",
-                  "ner": "O",
-                  "speaker": "48",
-                  "before": " ",
-                  "after": " "
-                }
-              },
-              "JJ"
-            ]
-          ],
-          "score": 0.46631205673758863,
-          "text": "sharp",
-          "nlpIndexSentence": 11
-        },
-        {
-          "parts": [
-            [
-              {
-                "nlpToken": {
-                  "index": 9,
-                  "word": "torrential",
-                  "originalText": "torrential",
-                  "lemma": "torrential",
-                  "characterOffsetBegin": 2045,
-                  "characterOffsetEnd": 2055,
-                  "pos": "JJ",
-                  "ner": "O",
-                  "speaker": "48",
-                  "before": " ",
-                  "after": " "
-                }
-              },
-              "JJ"
-            ]
-          ],
-          "score": 0.4556737588652482,
-          "text": "torrential",
-          "nlpIndexSentence": 12
-        },
-        {
-          "parts": [
-            [
-              {
-                "nlpToken": {
-                  "index": 9,
-                  "word": "torrential",
-                  "originalText": "torrential",
-                  "lemma": "torrential",
-                  "characterOffsetBegin": 2045,
-                  "characterOffsetEnd": 2055,
-                  "pos": "JJ",
-                  "ner": "O",
-                  "speaker": "48",
-                  "before": " ",
-                  "after": " "
-                }
-              },
-              "JJ"
-            ]
-          ],
-          "score": 0.4556737588652482,
-          "text": "torrential",
-          "nlpIndexSentence": 12
-        },
-        {
-          "parts": [
-            [
-              {
-                "nlpToken": {
-                  "index": 9,
-                  "word": "early",
-                  "originalText": "early",
-                  "lemma": "early",
-                  "characterOffsetBegin": 893,
-                  "characterOffsetEnd": 898,
-                  "pos": "JJ",
-                  "ner": "O",
-                  "speaker": "48",
-                  "before": " ",
-                  "after": " "
-                }
-              },
-              "JJ"
-            ]
-          ],
-          "score": 0.44592198581560283,
-          "text": "early",
-          "nlpIndexSentence": 9
-        },
-        {
-          "parts": [
-            [
-              {
-                "nlpToken": {
-                  "index": 23,
-                  "word": "ongoing",
-                  "originalText": "ongoing",
-                  "lemma": "ongoing",
-                  "characterOffsetBegin": 963,
-                  "characterOffsetEnd": 970,
-                  "pos": "JJ",
-                  "ner": "O",
-                  "speaker": "48",
-                  "before": " ",
-                  "after": " "
-                }
-              },
-              "JJ"
-            ]
-          ],
-          "score": 0.44592198581560283,
-          "text": "ongoing",
-          "nlpIndexSentence": 9
-        },
-        {
-          "parts": [
-            [
-              {
-                "nlpToken": {
-                  "index": 10,
-                  "word": "was",
-                  "originalText": "was",
-                  "lemma": "be",
-                  "characterOffsetBegin": 1081,
-                  "characterOffsetEnd": 1084,
-                  "pos": "VBD",
-                  "ner": "O",
-                  "speaker": "48",
-                  "before": " ",
-                  "after": " "
-                }
-              },
-              "VBD"
+              "DT"
             ],
-            [
-              {
-                "nlpToken": {
-                  "index": 11,
-                  "word": "arrested",
-                  "originalText": "arrested",
-                  "lemma": "arrest",
-                  "characterOffsetBegin": 1085,
-                  "characterOffsetEnd": 1093,
-                  "pos": "VBN",
-                  "ner": "O",
-                  "speaker": "48",
-                  "before": " ",
-                  "after": " "
-                }
-              },
-              "VBN"
-            ]
-          ],
-          "score": 0.43528368794326244,
-          "text": "was arrested",
-          "nlpIndexSentence": 10
-        },
-        {
-          "parts": [
-            [
-              {
-                "nlpToken": {
-                  "index": 2,
-                  "word": "later",
-                  "originalText": "later",
-                  "lemma": "later",
-                  "characterOffsetBegin": 1037,
-                  "characterOffsetEnd": 1042,
-                  "pos": "RB",
-                  "ner": "O",
-                  "speaker": "48",
-                  "before": " ",
-                  "after": " "
-                }
-              },
-              "RB"
-            ]
-          ],
-          "score": 0.43528368794326244,
-          "text": "later",
-          "nlpIndexSentence": 10
-        },
-        {
-          "parts": [
-            [
-              {
-                "nlpToken": {
-                  "index": 26,
-                  "word": "am",
-                  "originalText": "am",
-                  "lemma": "am",
-                  "characterOffsetBegin": 788,
-                  "characterOffsetEnd": 790,
-                  "pos": "RB",
-                  "ner": "O",
-                  "speaker": "PER0",
-                  "before": "",
-                  "after": ""
-                }
-              },
-              "RB"
-            ]
-          ],
-          "score": 0.425531914893617,
-          "text": "am",
-          "nlpIndexSentence": 7
-        },
-        {
-          "parts": [
-            [
-              {
-                "nlpToken": {
-                  "index": 56,
-                  "word": "Twitterprocrastinateur",
-                  "originalText": "Twitterprocrastinateur",
-                  "lemma": "twitterprocrastinateur",
-                  "characterOffsetBegin": 1459,
-                  "characterOffsetEnd": 1481,
-                  "pos": "JJ",
-                  "ner": "O",
-                  "speaker": "48",
-                  "before": " ",
-                  "after": " "
-                }
-              },
-              "JJ"
-            ]
-          ],
-          "score": 0.424645390070922,
-          "text": "Twitterprocrastinateur",
-          "nlpIndexSentence": 11
-        },
-        {
-          "parts": [
-            [
-              {
-                "nlpToken": {
-                  "index": 60,
-                  "word": "close",
-                  "originalText": "close",
-                  "lemma": "close",
-                  "characterOffsetBegin": 1505,
-                  "characterOffsetEnd": 1510,
-                  "pos": "RB",
-                  "ner": "O",
-                  "speaker": "48",
-                  "before": " ",
-                  "after": " "
-                }
-              },
-              "RB"
-            ]
-          ],
-          "score": 0.424645390070922,
-          "text": "close",
-          "nlpIndexSentence": 11
-        },
-        {
-          "parts": [
-            [
-              {
-                "nlpToken": {
-                  "index": 135,
-                  "word": "least",
-                  "originalText": "least",
-                  "lemma": "least",
-                  "characterOffsetBegin": 1929,
-                  "characterOffsetEnd": 1934,
-                  "pos": "JJS",
-                  "ner": "O",
-                  "speaker": "48",
-                  "before": " ",
-                  "after": " "
-                }
-              },
-              "JJS"
-            ]
-          ],
-          "score": 0.424645390070922,
-          "text": "least",
-          "nlpIndexSentence": 11
-        },
-        {
-          "parts": [
-            [
-              {
-                "nlpToken": {
-                  "index": 33,
-                  "word": "massive",
-                  "originalText": "massive",
-                  "lemma": "massive",
-                  "characterOffsetBegin": 2376,
-                  "characterOffsetEnd": 2383,
-                  "pos": "JJ",
-                  "ner": "O",
-                  "speaker": "130",
-                  "before": " ",
-                  "after": " "
-                }
-              },
-              "JJ"
-            ]
-          ],
-          "score": 0.4237588652482269,
-          "text": "massive",
-          "nlpIndexSentence": 15
-        },
-        {
-          "parts": [
-            [
-              {
-                "nlpToken": {
-                  "index": 42,
-                  "word": "everywhere",
-                  "originalText": "everywhere",
-                  "lemma": "everywhere",
-                  "characterOffsetBegin": 2432,
-                  "characterOffsetEnd": 2442,
-                  "pos": "RB",
-                  "ner": "O",
-                  "speaker": "130",
-                  "before": " ",
-                  "after": " "
-                }
-              },
-              "RB"
-            ]
-          ],
-          "score": 0.4237588652482269,
-          "text": "everywhere",
-          "nlpIndexSentence": 15
-        },
-        {
-          "parts": [
-            [
-              {
-                "nlpToken": {
-                  "index": 11,
-                  "word": "away",
-                  "originalText": "away",
-                  "lemma": "away",
-                  "characterOffsetBegin": 2551,
-                  "characterOffsetEnd": 2555,
-                  "pos": "RB",
-                  "ner": "O",
-                  "speaker": "PER0",
-                  "before": " ",
-                  "after": " "
-                }
-              },
-              "RB"
-            ]
-          ],
-          "score": 0.4131205673758865,
-          "text": "away",
-          "nlpIndexSentence": 16
-        },
-        {
-          "parts": [
-            [
-              {
-                "nlpToken": {
-                  "index": 8,
-                  "word": "serious",
-                  "originalText": "serious",
-                  "lemma": "serious",
-                  "characterOffsetBegin": 3052,
-                  "characterOffsetEnd": 3059,
-                  "pos": "JJ",
-                  "ner": "O",
-                  "speaker": "PER0",
-                  "before": " ",
-                  "after": " "
-                }
-              },
-              "JJ"
-            ]
-          ],
-          "score": 0.4122340425531915,
-          "text": "serious",
-          "nlpIndexSentence": 20
-        },
-        {
-          "parts": [
-            [
-              {
-                "nlpToken": {
-                  "index": 8,
-                  "word": "too",
-                  "originalText": "too",
-                  "lemma": "too",
-                  "characterOffsetBegin": 889,
-                  "characterOffsetEnd": 892,
-                  "pos": "RB",
-                  "ner": "O",
-                  "speaker": "48",
-                  "before": " ",
-                  "after": " "
-                }
-              },
-              "RB"
-            ]
-          ],
-          "score": 0.40425531914893614,
-          "text": "too",
-          "nlpIndexSentence": 9
-        },
-        {
-          "parts": [
-            [
-              {
-                "nlpToken": {
-                  "index": 7,
-                  "word": "away",
-                  "originalText": "away",
-                  "lemma": "away",
-                  "characterOffsetBegin": 2631,
-                  "characterOffsetEnd": 2635,
-                  "pos": "RB",
-                  "ner": "O",
-                  "speaker": "PER0",
-                  "before": " ",
-                  "after": " "
-                }
-              },
-              "RB"
-            ]
-          ],
-          "score": 0.4024822695035461,
-          "text": "away",
-          "nlpIndexSentence": 17
-        },
-        {
-          "parts": [
-            [
-              {
-                "nlpToken": {
-                  "index": 24,
-                  "word": "sharp",
-                  "originalText": "sharp",
-                  "lemma": "sharp",
-                  "characterOffsetBegin": 2705,
-                  "characterOffsetEnd": 2710,
-                  "pos": "JJ",
-                  "ner": "O",
-                  "speaker": "155",
-                  "before": " ",
-                  "after": " "
-                }
-              },
-              "JJ"
-            ]
-          ],
-          "score": 0.4024822695035461,
-          "text": "sharp",
-          "nlpIndexSentence": 17
-        },
-        {
-          "parts": [
-            [
-              {
-                "nlpToken": {
-                  "index": 19,
-                  "word": "many",
-                  "originalText": "many",
-                  "lemma": "many",
-                  "characterOffsetBegin": 2853,
-                  "characterOffsetEnd": 2857,
-                  "pos": "JJ",
-                  "ner": "O",
-                  "speaker": "169",
-                  "before": " ",
-                  "after": " "
-                }
-              },
-              "JJ"
-            ]
-          ],
-          "score": 0.39184397163120566,
-          "text": "many",
-          "nlpIndexSentence": 18
-        },
-        {
-          "parts": [
-            [
-              {
-                "nlpToken": {
-                  "index": 53,
-                  "word": "just",
-                  "originalText": "just",
-                  "lemma": "just",
-                  "characterOffsetBegin": 1444,
-                  "characterOffsetEnd": 1448,
-                  "pos": "RB",
-                  "ner": "O",
-                  "speaker": "48",
-                  "before": " ",
-                  "after": " "
-                }
-              },
-              "RB"
-            ]
-          ],
-          "score": 0.3829787234042553,
-          "text": "just",
-          "nlpIndexSentence": 11
-        },
-        {
-          "parts": [
-            [
-              {
-                "nlpToken": {
-                  "index": 4,
-                  "word": "aerial",
-                  "originalText": "aerial",
-                  "lemma": "aerial",
-                  "characterOffsetBegin": 2245,
-                  "characterOffsetEnd": 2251,
-                  "pos": "JJ",
-                  "ner": "O",
-                  "speaker": "PER0",
-                  "before": " ",
-                  "after": " "
-                }
-              },
-              "JJ"
-            ]
-          ],
-          "score": 0.3820921985815603,
-          "text": "aerial",
-          "nlpIndexSentence": 15
-        },
-        {
-          "parts": [
-            [
-              {
-                "nlpToken": {
-                  "index": 23,
-                  "word": "nearby",
-                  "originalText": "nearby",
-                  "lemma": "nearby",
-                  "characterOffsetBegin": 2336,
-                  "characterOffsetEnd": 2342,
-                  "pos": "RB",
-                  "ner": "O",
-                  "speaker": "PER0",
-                  "before": " ",
-                  "after": " "
-                }
-              },
-              "RB"
-            ]
-          ],
-          "score": 0.3820921985815603,
-          "text": "nearby",
-          "nlpIndexSentence": 15
-        },
-        {
-          "parts": [
-            [
-              {
-                "nlpToken": {
-                  "index": 17,
-                  "word": "several",
-                  "originalText": "several",
-                  "lemma": "several",
-                  "characterOffsetBegin": 4703,
-                  "characterOffsetEnd": 4710,
-                  "pos": "JJ",
-                  "ner": "O",
-                  "speaker": "PER12",
-                  "before": " ",
-                  "after": " "
-                }
-              },
-              "JJ"
-            ]
-          ],
-          "score": 0.36879432624113473,
-          "text": "several",
-          "nlpIndexSentence": 28
-        },
-        {
-          "parts": [
-            [
-              {
-                "nlpToken": {
-                  "index": 16,
-                  "word": "never",
-                  "originalText": "never",
-                  "lemma": "never",
-                  "characterOffsetBegin": 2839,
-                  "characterOffsetEnd": 2844,
-                  "pos": "RB",
-                  "ner": "O",
-                  "speaker": "169",
-                  "before": " ",
-                  "after": " "
-                }
-              },
-              "RB"
-            ]
-          ],
-          "score": 0.350177304964539,
-          "text": "never",
-          "nlpIndexSentence": 18
-        },
-        {
-          "parts": [
-            [
-              {
-                "nlpToken": {
-                  "index": 28,
-                  "word": "many",
-                  "originalText": "many",
-                  "lemma": "many",
-                  "characterOffsetBegin": 3428,
-                  "characterOffsetEnd": 3432,
-                  "pos": "JJ",
-                  "ner": "O",
-                  "speaker": "PER0",
-                  "before": " ",
-                  "after": " "
-                }
-              },
-              "JJ"
-            ]
-          ],
-          "score": 0.34929078014184395,
-          "text": "many",
-          "nlpIndexSentence": 22
-        },
-        {
-          "parts": [
-            [
-              {
-                "nlpToken": {
-                  "index": 11,
-                  "word": "serious",
-                  "originalText": "serious",
-                  "lemma": "serious",
-                  "characterOffsetBegin": 4278,
-                  "characterOffsetEnd": 4285,
-                  "pos": "JJ",
-                  "ner": "O",
-                  "speaker": "PER10",
-                  "before": " ",
-                  "after": " "
-                }
-              },
-              "JJ"
-            ]
-          ],
-          "score": 0.3484042553191489,
-          "text": "serious",
-          "nlpIndexSentence": 26
-        },
-        {
-          "parts": [
-            [
-              {
-                "nlpToken": {
-                  "index": 3,
-                  "word": "massive",
-                  "originalText": "massive",
-                  "lemma": "massive",
-                  "characterOffsetBegin": 3461,
-                  "characterOffsetEnd": 3468,
-                  "pos": "JJ",
-                  "ner": "O",
-                  "speaker": "PER0",
-                  "before": " ",
-                  "after": " "
-                }
-              },
-              "JJ"
-            ]
-          ],
-          "score": 0.3386524822695035,
-          "text": "massive",
-          "nlpIndexSentence": 23
-        },
-        {
-          "parts": [
-            [
-              {
-                "nlpToken": {
-                  "index": 12,
-                  "word": "everywhere",
-                  "originalText": "everywhere",
-                  "lemma": "everywhere",
-                  "characterOffsetBegin": 3517,
-                  "characterOffsetEnd": 3527,
-                  "pos": "RB",
-                  "ner": "O",
-                  "speaker": "PER0",
-                  "before": " ",
-                  "after": " "
-                }
-              },
-              "RB"
-            ]
-          ],
-          "score": 0.3386524822695035,
-          "text": "everywhere",
-          "nlpIndexSentence": 23
-        },
-        {
-          "parts": [
-            [
-              {
-                "nlpToken": {
-                  "index": 21,
-                  "word": "ok",
-                  "originalText": "ok",
-                  "lemma": "ok",
-                  "characterOffsetBegin": 3570,
-                  "characterOffsetEnd": 3572,
-                  "pos": "JJ",
-                  "ner": "O",
-                  "speaker": "PER0",
-                  "before": " ",
-                  "after": " "
-                }
-              },
-              "JJ"
-            ]
-          ],
-          "score": 0.3386524822695035,
-          "text": "ok",
-          "nlpIndexSentence": 23
-        },
-        {
-          "parts": [
-            [
-              {
-                "nlpToken": {
-                  "index": 6,
-                  "word": "yet",
-                  "originalText": "yet",
-                  "lemma": "yet",
-                  "characterOffsetBegin": 3795,
-                  "characterOffsetEnd": 3798,
-                  "pos": "RB",
-                  "ner": "O",
-                  "speaker": "PER0",
-                  "before": " ",
-                  "after": " "
-                }
-              },
-              "RB"
-            ]
-          ],
-          "score": 0.3280141843971631,
-          "text": "yet",
-          "nlpIndexSentence": 24
-        },
-        {
-          "parts": [
-            [
-              {
-                "nlpToken": {
-                  "index": 48,
-                  "word": "yet",
-                  "originalText": "yet",
-                  "lemma": "yet",
-                  "characterOffsetBegin": 3985,
-                  "characterOffsetEnd": 3988,
-                  "pos": "RB",
-                  "ner": "O",
-                  "speaker": "221",
-                  "before": " ",
-                  "after": " "
-                }
-              },
-              "RB"
-            ]
-          ],
-          "score": 0.3280141843971631,
-          "text": "yet",
-          "nlpIndexSentence": 24
-        },
-        {
-          "parts": [
-            [
-              {
-                "nlpToken": {
-                  "index": 26,
-                  "word": "went",
-                  "originalText": "went",
-                  "lemma": "go",
-                  "characterOffsetBegin": 4753,
-                  "characterOffsetEnd": 4757,
-                  "pos": "VBD",
-                  "ner": "O",
-                  "speaker": "PER12",
-                  "before": " ",
-                  "after": " "
-                }
-              },
-              "VBD"
-            ]
-          ],
-          "score": 0.3271276595744681,
-          "text": "went",
-          "nlpIndexSentence": 28
-        },
-        {
-          "parts": [
-            [
-              {
-                "nlpToken": {
-                  "index": 12,
-                  "word": "serious",
-                  "originalText": "serious",
-                  "lemma": "serious",
-                  "characterOffsetBegin": 4808,
-                  "characterOffsetEnd": 4815,
-                  "pos": "JJ",
-                  "ner": "O",
-                  "speaker": "278",
-                  "before": " ",
-                  "after": ""
-                }
-              },
-              "JJ"
-            ]
-          ],
-          "score": 0.31648936170212766,
-          "text": "serious",
-          "nlpIndexSentence": 29
-        },
-        {
-          "parts": [
-            [
-              {
-                "nlpToken": {
-                  "index": 18,
-                  "word": "so",
-                  "originalText": "so",
-                  "lemma": "so",
-                  "characterOffsetBegin": 2850,
-                  "characterOffsetEnd": 2852,
-                  "pos": "RB",
-                  "ner": "O",
-                  "speaker": "169",
-                  "before": " ",
-                  "after": " "
-                }
-              },
-              "RB"
-            ]
-          ],
-          "score": 0.30851063829787234,
-          "text": "so",
-          "nlpIndexSentence": 18
-        },
-        {
-          "parts": [
-            [
-              {
-                "nlpToken": {
-                  "index": 17,
-                  "word": "east",
-                  "originalText": "east",
-                  "lemma": "east",
-                  "characterOffsetBegin": 3373,
-                  "characterOffsetEnd": 3377,
-                  "pos": "JJ",
-                  "ner": "O",
-                  "speaker": "PER0",
-                  "before": " ",
-                  "after": " "
-                }
-              },
-              "JJ"
-            ]
-          ],
-          "score": 0.3076241134751773,
-          "text": "east",
-          "nlpIndexSentence": 22
-        },
-        {
-          "parts": [
-            [
-              {
-                "nlpToken": {
-                  "index": 24,
-                  "word": "large",
-                  "originalText": "large",
-                  "lemma": "large",
-                  "characterOffsetBegin": 3404,
-                  "characterOffsetEnd": 3409,
-                  "pos": "JJ",
-                  "ner": "O",
-                  "speaker": "PER0",
-                  "before": " ",
-                  "after": " "
-                }
-              },
-              "JJ"
-            ]
-          ],
-          "score": 0.3076241134751773,
-          "text": "large",
-          "nlpIndexSentence": 22
-        },
-        {
-          "parts": [
-            [
-              {
-                "nlpToken": {
-                  "index": 40,
-                  "word": "are",
-                  "originalText": "are",
-                  "lemma": "be",
-                  "characterOffsetBegin": 3692,
-                  "characterOffsetEnd": 3695,
-                  "pos": "VBP",
-                  "ner": "O",
-                  "speaker": "PER0",
-                  "before": " ",
-                  "after": " "
-                }
-              },
-              "VBP"
-            ],
-            [
-              {
-                "nlpToken": {
-                  "index": 41,
-                  "word": "worried",
-                  "originalText": "worried",
-                  "lemma": "worry",
-                  "characterOffsetBegin": 3696,
-                  "characterOffsetEnd": 3703,
-                  "pos": "VBN",
-                  "ner": "O",
-                  "speaker": "PER0",
-                  "before": " ",
-                  "after": " "
-                }
-              },
-              "VBN"
-            ]
-          ],
-          "score": 0.2969858156028369,
-          "text": "are worried",
-          "nlpIndexSentence": 23
-        },
-        {
-          "parts": [
-            [
-              {
-                "nlpToken": {
-                  "index": 53,
-                  "word": "already",
-                  "originalText": "already",
-                  "lemma": "already",
-                  "characterOffsetBegin": 4017,
-                  "characterOffsetEnd": 4024,
-                  "pos": "RB",
-                  "ner": "O",
-                  "speaker": "221",
-                  "before": " ",
-                  "after": " "
-                }
-              },
-              "RB"
-            ]
-          ],
-          "score": 0.28634751773049644,
-          "text": "already",
-          "nlpIndexSentence": 24
-        },
-        {
-          "parts": [
-            [
-              {
-                "nlpToken": {
-                  "index": 5,
-                  "word": "obvious",
-                  "originalText": "obvious",
-                  "lemma": "obvious",
-                  "characterOffsetBegin": 4252,
-                  "characterOffsetEnd": 4259,
-                  "pos": "JJ",
-                  "ner": "O",
-                  "speaker": "PER10",
-                  "before": " ",
-                  "after": " "
-                }
-              },
-              "JJ"
-            ]
-          ],
-          "score": 0.2650709219858156,
-          "text": "obvious",
-          "nlpIndexSentence": 26
-        },
-        {
-          "parts": [
-            [
-              {
-                "nlpToken": {
-                  "index": 44,
-                  "word": "passed",
-                  "originalText": "passed",
-                  "lemma": "pass",
-                  "characterOffsetBegin": 4577,
-                  "characterOffsetEnd": 4583,
-                  "pos": "VBD",
-                  "ner": "O",
-                  "speaker": "PER11",
-                  "before": " ",
-                  "after": " "
-                }
-              },
-              "VBD"
-            ]
-          ],
-          "score": 0.25443262411347517,
-          "text": "passed",
-          "nlpIndexSentence": 27
-        },
-        {
-          "parts": [
-            [
-              {
-                "nlpToken": {
-                  "index": 3,
-                  "word": "here",
-                  "originalText": "here",
-                  "lemma": "here",
-                  "characterOffsetBegin": 4370,
-                  "characterOffsetEnd": 4374,
-                  "pos": "RB",
-                  "ner": "O",
-                  "speaker": "PER10",
-                  "before": " ",
-                  "after": " "
-                }
-              },
-              "RB"
-            ]
-          ],
-          "score": 0.25443262411347517,
-          "text": "here",
-          "nlpIndexSentence": 27
-        },
-        {
-          "parts": [
-            [
-              {
-                "nlpToken": {
-                  "index": 10,
-                  "word": "actually",
-                  "originalText": "actually",
-                  "lemma": "actually",
-                  "characterOffsetBegin": 4391,
-                  "characterOffsetEnd": 4399,
-                  "pos": "RB",
-                  "ner": "O",
-                  "speaker": "PER10",
-                  "before": " ",
-                  "after": " "
-                }
-              },
-              "RB"
-            ]
-          ],
-          "score": 0.25443262411347517,
-          "text": "actually",
-          "nlpIndexSentence": 27
-        },
-        {
-          "parts": [
-            [
-              {
-                "nlpToken": {
-                  "index": 33,
-                  "word": "roughly",
-                  "originalText": "roughly",
-                  "lemma": "roughly",
-                  "characterOffsetBegin": 4531,
-                  "characterOffsetEnd": 4538,
-                  "pos": "RB",
-                  "ner": "O",
-                  "speaker": "PER11",
-                  "before": " ",
-                  "after": " "
-                }
-              },
-              "RB"
-            ]
-          ],
-          "score": 0.25443262411347517,
-          "text": "roughly",
-          "nlpIndexSentence": 27
-        },
-        {
-          "parts": [
-            [
-              {
-                "nlpToken": {
-                  "index": 2,
-                  "word": "n't",
-                  "originalText": "n't",
-                  "lemma": "not",
-                  "characterOffsetBegin": 3773,
-                  "characterOffsetEnd": 3776,
-                  "pos": "RB",
-                  "ner": "O",
-                  "speaker": "PER0",
-                  "before": "",
-                  "after": " "
-                }
-              },
-              "RB"
-            ]
-          ],
-          "score": 0.24468085106382978,
-          "text": "n't",
-          "nlpIndexSentence": 24
-        },
-        {
-          "parts": [
-            [
-              {
-                "nlpToken": {
-                  "index": 44,
-                  "word": "n't",
-                  "originalText": "n't",
-                  "lemma": "not",
-                  "characterOffsetBegin": 3967,
-                  "characterOffsetEnd": 3970,
-                  "pos": "RB",
-                  "ner": "O",
-                  "speaker": "221",
-                  "before": "",
-                  "after": " "
-                }
-              },
-              "RB"
-            ]
-          ],
-          "score": 0.24468085106382978,
-          "text": "n't",
-          "nlpIndexSentence": 24
-        },
-        {
-          "parts": [
-            [
-              {
-                "nlpToken": {
-                  "index": 64,
-                  "word": "am",
-                  "originalText": "am",
-                  "lemma": "am",
-                  "characterOffsetBegin": 4071,
-                  "characterOffsetEnd": 4073,
-                  "pos": "RB",
-                  "ner": "O",
-                  "speaker": "221",
-                  "before": "",
-                  "after": ""
-                }
-              },
-              "RB"
-            ]
-          ],
-          "score": 0.24468085106382978,
-          "text": "am",
-          "nlpIndexSentence": 24
-        },
-        {
-          "parts": [
-            [
-              {
-                "nlpToken": {
-                  "index": 2,
-                  "word": "Visibly",
-                  "originalText": "Visibly",
-                  "lemma": "visibly",
-                  "characterOffsetBegin": 4629,
-                  "characterOffsetEnd": 4636,
-                  "pos": "RB",
-                  "ner": "O",
-                  "speaker": "PER12",
-                  "before": "",
-                  "after": " "
-                }
-              },
-              "RB"
-            ]
-          ],
-          "score": 0.24379432624113473,
-          "text": "Visibly",
-          "nlpIndexSentence": 28
-        },
-        {
-          "parts": [
-            [
-              {
-                "nlpToken": {
-                  "index": 21,
-                  "word": "then",
-                  "originalText": "then",
-                  "lemma": "then",
-                  "characterOffsetBegin": 4727,
-                  "characterOffsetEnd": 4731,
-                  "pos": "RB",
-                  "ner": "O",
-                  "speaker": "PER12",
-                  "before": " ",
-                  "after": " "
-                }
-              },
-              "RB"
-            ]
-          ],
-          "score": 0.24379432624113473,
-          "text": "then",
-          "nlpIndexSentence": 28
-        },
-        {
-          "parts": [
-            [
-              {
-                "nlpToken": {
-                  "index": 5,
-                  "word": "more",
-                  "originalText": "more",
-                  "lemma": "more",
-                  "characterOffsetBegin": 4090,
-                  "characterOffsetEnd": 4094,
-                  "pos": "RBR",
-                  "ner": "O",
-                  "speaker": "221",
-                  "before": " ",
-                  "after": " "
-                }
-              },
-              "RBR"
-            ]
-          ],
-          "score": 0.23404255319148937,
-          "text": "more",
-          "nlpIndexSentence": 25
-        },
-        {
-          "parts": [
             [
               {
                 "nlpToken": {
                   "index": 14,
-                  "word": "especially",
-                  "originalText": "especially",
-                  "lemma": "especially",
-                  "characterOffsetBegin": 4817,
-                  "characterOffsetEnd": 4827,
-                  "pos": "RB",
-                  "ner": "O",
-                  "speaker": "278",
-                  "before": " ",
-                  "after": " "
-                }
-              },
-              "RB"
-            ]
-          ],
-          "score": 0.23315602836879432,
-          "text": "especially",
-          "nlpIndexSentence": 29
-        },
-        {
-          "parts": [
-            [
-              {
-                "nlpToken": {
-                  "index": 16,
-                  "word": "quickly",
-                  "originalText": "quickly",
-                  "lemma": "quickly",
-                  "characterOffsetBegin": 4832,
-                  "characterOffsetEnd": 4839,
-                  "pos": "RB",
-                  "ner": "O",
-                  "speaker": "278",
-                  "before": " ",
-                  "after": " "
-                }
-              },
-              "RB"
-            ]
-          ],
-          "score": 0.23315602836879432,
-          "text": "quickly",
-          "nlpIndexSentence": 29
-        },
-        {
-          "parts": [
-            [
-              {
-                "nlpToken": {
-                  "index": 8,
-                  "word": "very",
-                  "originalText": "very",
-                  "lemma": "very",
-                  "characterOffsetBegin": 4267,
-                  "characterOffsetEnd": 4271,
-                  "pos": "RB",
-                  "ner": "O",
-                  "speaker": "PER10",
-                  "before": " ",
-                  "after": ""
-                }
-              },
-              "RB"
-            ]
-          ],
-          "score": 0.22340425531914893,
-          "text": "very",
-          "nlpIndexSentence": 26
-        },
-        {
-          "parts": [
-            [
-              {
-                "nlpToken": {
-                  "index": 10,
-                  "word": "very",
-                  "originalText": "very",
-                  "lemma": "very",
-                  "characterOffsetBegin": 4273,
-                  "characterOffsetEnd": 4277,
-                  "pos": "RB",
-                  "ner": "O",
-                  "speaker": "PER10",
-                  "before": " ",
-                  "after": " "
-                }
-              },
-              "RB"
-            ]
-          ],
-          "score": 0.22340425531914893,
-          "text": "very",
-          "nlpIndexSentence": 26
-        },
-        {
-          "parts": [
-            [
-              {
-                "nlpToken": {
-                  "index": 12,
-                  "word": "due",
-                  "originalText": "due",
-                  "lemma": "due",
-                  "characterOffsetBegin": 4286,
-                  "characterOffsetEnd": 4289,
-                  "pos": "JJ",
-                  "ner": "O",
-                  "speaker": "PER10",
-                  "before": " ",
-                  "after": " "
-                }
-              },
-              "JJ"
-            ]
-          ],
-          "score": 0.22340425531914893,
-          "text": "due",
-          "nlpIndexSentence": 26
-        },
-        {
-          "parts": [
-            [
-              {
-                "nlpToken": {
-                  "index": 9,
-                  "word": "n't",
-                  "originalText": "n't",
-                  "lemma": "not",
-                  "characterOffsetBegin": 4387,
-                  "characterOffsetEnd": 4390,
-                  "pos": "RB",
-                  "ner": "O",
-                  "speaker": "PER10",
-                  "before": "",
-                  "after": " "
-                }
-              },
-              "RB"
-            ]
-          ],
-          "score": 0.2127659574468085,
-          "text": "n't",
-          "nlpIndexSentence": 27
-        },
-        {
-          "parts": [
-            [
-              {
-                "nlpToken": {
-                  "index": 47,
-                  "word": "more",
-                  "originalText": "more",
-                  "lemma": "more",
-                  "characterOffsetBegin": 4590,
-                  "characterOffsetEnd": 4594,
-                  "pos": "RBR",
-                  "ner": "O",
-                  "speaker": "PER11",
-                  "before": " ",
-                  "after": " "
-                }
-              },
-              "RBR"
-            ]
-          ],
-          "score": 0.2127659574468085,
-          "text": "more",
-          "nlpIndexSentence": 27
-        },
-        {
-          "parts": [
-            [
-              {
-                "nlpToken": {
-                  "index": 19,
-                  "word": "single",
-                  "originalText": "single",
-                  "lemma": "single",
-                  "characterOffsetBegin": 5171,
-                  "characterOffsetEnd": 5177,
-                  "pos": "JJ",
-                  "ner": "O",
-                  "speaker": "278",
-                  "before": " ",
-                  "after": " "
-                }
-              },
-              "JJ"
-            ]
-          ],
-          "score": 0.21187943262411346,
-          "text": "single",
-          "nlpIndexSentence": 31
-        },
-        {
-          "parts": [
-            [
-              {
-                "nlpToken": {
-                  "index": 22,
-                  "word": "more",
-                  "originalText": "more",
-                  "lemma": "more",
-                  "characterOffsetBegin": 4732,
-                  "characterOffsetEnd": 4736,
-                  "pos": "RBR",
-                  "ner": "O",
-                  "speaker": "PER12",
-                  "before": " ",
-                  "after": " "
-                }
-              },
-              "RBR"
-            ]
-          ],
-          "score": 0.20212765957446807,
-          "text": "more",
-          "nlpIndexSentence": 28
-        },
-        {
-          "parts": [
-            [
-              {
-                "nlpToken": {
-                  "index": 11,
-                  "word": "very",
-                  "originalText": "very",
-                  "lemma": "very",
-                  "characterOffsetBegin": 4803,
-                  "characterOffsetEnd": 4807,
-                  "pos": "RB",
-                  "ner": "O",
-                  "speaker": "278",
-                  "before": " ",
-                  "after": " "
-                }
-              },
-              "RB"
-            ]
-          ],
-          "score": 0.19148936170212766,
-          "text": "very",
-          "nlpIndexSentence": 29
-        },
-        {
-          "parts": [
-            [
-              {
-                "nlpToken": {
-                  "index": 20,
-                  "word": "reportedly",
-                  "originalText": "reportedly",
-                  "lemma": "reportedly",
-                  "characterOffsetBegin": 5343,
-                  "characterOffsetEnd": 5353,
-                  "pos": "RB",
+                  "word": "tracks",
+                  "originalText": "tracks",
+                  "lemma": "track",
+                  "characterOffsetBegin": 257,
+                  "characterOffsetEnd": 263,
+                  "pos": "NNS",
                   "ner": "O",
                   "speaker": "PER0",
                   "before": " ",
                   "after": " "
                 }
               },
-              "RB"
-            ]
-          ],
-          "score": 0.1906028368794326,
-          "text": "reportedly",
-          "nlpIndexSentence": 33
-        },
-        {
-          "parts": [
-            [
-              {
-                "nlpToken": {
-                  "index": 16,
-                  "word": "major",
-                  "originalText": "major",
-                  "lemma": "major",
-                  "characterOffsetBegin": 5484,
-                  "characterOffsetEnd": 5489,
-                  "pos": "JJ",
-                  "ner": "O",
-                  "speaker": "313",
-                  "before": " ",
-                  "after": " "
-                }
-              },
-              "JJ"
-            ]
-          ],
-          "score": 0.1799645390070922,
-          "text": "major",
-          "nlpIndexSentence": 34
-        },
-        {
-          "parts": [
-            [
-              {
-                "nlpToken": {
-                  "index": 5,
-                  "word": "torrential",
-                  "originalText": "torrential",
-                  "lemma": "torrential",
-                  "characterOffsetBegin": 5750,
-                  "characterOffsetEnd": 5760,
-                  "pos": "JJ",
-                  "ner": "O",
-                  "speaker": "PER0",
-                  "before": " ",
-                  "after": " "
-                }
-              },
-              "JJ"
-            ]
-          ],
-          "score": 0.17907801418439717,
-          "text": "torrential",
-          "nlpIndexSentence": 38
-        },
-        {
-          "parts": [
-            [
-              {
-                "nlpToken": {
-                  "index": 36,
-                  "word": "hard",
-                  "originalText": "hard",
-                  "lemma": "hard",
-                  "characterOffsetBegin": 5914,
-                  "characterOffsetEnd": 5918,
-                  "pos": "JJ",
-                  "ner": "O",
-                  "speaker": "326",
-                  "before": " ",
-                  "after": " "
-                }
-              },
-              "JJ"
-            ]
-          ],
-          "score": 0.17907801418439717,
-          "text": "hard",
-          "nlpIndexSentence": 38
-        },
-        {
-          "parts": [
-            [
-              {
-                "nlpToken": {
-                  "index": 35,
-                  "word": "extremely",
-                  "originalText": "extremely",
-                  "lemma": "extremely",
-                  "characterOffsetBegin": 5904,
-                  "characterOffsetEnd": 5913,
-                  "pos": "RB",
-                  "ner": "O",
-                  "speaker": "326",
-                  "before": " ",
-                  "after": " "
-                }
-              },
-              "RB"
-            ]
-          ],
-          "score": 0.1374113475177305,
-          "text": "extremely",
-          "nlpIndexSentence": 38
-        },
-        {
-          "parts": [
+              "NNS"
+            ],
             [
               {
                 "nlpToken": {
                   "index": 15,
-                  "word": "other",
-                  "originalText": "other",
-                  "lemma": "other",
-                  "characterOffsetBegin": 5615,
-                  "characterOffsetEnd": 5620,
-                  "pos": "JJ",
+                  "word": "in",
+                  "originalText": "in",
+                  "lemma": "in",
+                  "characterOffsetBegin": 264,
+                  "characterOffsetEnd": 266,
+                  "pos": "IN",
                   "ner": "O",
-                  "speaker": "313",
-                  "before": " ",
-                  "after": " "
-                }
-              },
-              "JJ"
-            ]
-          ],
-          "score": 0.1276595744680851,
-          "text": "other",
-          "nlpIndexSentence": 35
-        },
-        {
-          "parts": [
-            [
-              {
-                "nlpToken": {
-                  "index": 8,
-                  "word": "first",
-                  "originalText": "first",
-                  "lemma": "first",
-                  "characterOffsetBegin": 6436,
-                  "characterOffsetEnd": 6441,
-                  "pos": "JJ",
-                  "ner": "ORDINAL",
-                  "normalizedNER": "1.0",
                   "speaker": "PER0",
                   "before": " ",
                   "after": " "
                 }
               },
-              "JJ"
-            ]
-          ],
-          "score": 0.12588652482269502,
-          "text": "first",
-          "nlpIndexSentence": 43
-        },
-        {
-          "parts": [
+              "IN"
+            ],
+            [
+              {
+                "nlpToken": {
+                  "index": 16,
+                  "word": "a",
+                  "originalText": "a",
+                  "lemma": "a",
+                  "characterOffsetBegin": 267,
+                  "characterOffsetEnd": 268,
+                  "pos": "DT",
+                  "ner": "O",
+                  "speaker": "PER0",
+                  "before": " ",
+                  "after": " "
+                }
+              },
+              "DT"
+            ],
             [
               {
                 "nlpToken": {
                   "index": 17,
-                  "word": "latest",
-                  "originalText": "latest",
-                  "lemma": "latest",
-                  "characterOffsetBegin": 6126,
-                  "characterOffsetEnd": 6132,
-                  "pos": "JJS",
-                  "ner": "O",
-                  "speaker": "345",
-                  "before": " ",
-                  "after": " "
-                }
-              },
-              "JJS"
-            ]
-          ],
-          "score": 0.11613475177304963,
-          "text": "latest",
-          "nlpIndexSentence": 40
-        },
-        {
-          "parts": [
-            [
-              {
-                "nlpToken": {
-                  "index": 17,
-                  "word": "latest",
-                  "originalText": "latest",
-                  "lemma": "latest",
-                  "characterOffsetBegin": 6126,
-                  "characterOffsetEnd": 6132,
-                  "pos": "JJS",
-                  "ner": "O",
-                  "speaker": "345",
-                  "before": " ",
-                  "after": " "
-                }
-              },
-              "JJS"
-            ]
-          ],
-          "score": 0.11613475177304963,
-          "text": "latest",
-          "nlpIndexSentence": 40
-        },
-        {
-          "parts": [
-            [
-              {
-                "nlpToken": {
-                  "index": 29,
-                  "word": "caught",
-                  "originalText": "caught",
-                  "lemma": "catch",
-                  "characterOffsetBegin": 6554,
-                  "characterOffsetEnd": 6560,
-                  "pos": "VBD",
+                  "word": "tunnel",
+                  "originalText": "tunnel",
+                  "lemma": "tunnel",
+                  "characterOffsetBegin": 269,
+                  "characterOffsetEnd": 275,
+                  "pos": "NN",
                   "ner": "O",
                   "speaker": "PER0",
                   "before": " ",
                   "after": " "
                 }
               },
-              "VBD"
-            ]
-          ],
-          "score": 0.08421985815602837,
-          "text": "caught",
-          "nlpIndexSentence": 43
-        },
-        {
-          "parts": [
+              "NN"
+            ],
             [
               {
                 "nlpToken": {
-                  "index": 3,
-                  "word": "only",
-                  "originalText": "only",
-                  "lemma": "only",
-                  "characterOffsetBegin": 6623,
-                  "characterOffsetEnd": 6627,
+                  "index": 18,
+                  "word": "near",
+                  "originalText": "near",
+                  "lemma": "near",
+                  "characterOffsetBegin": 276,
+                  "characterOffsetEnd": 280,
+                  "pos": "IN",
+                  "ner": "O",
+                  "speaker": "PER0",
+                  "before": " ",
+                  "after": " "
+                }
+              },
+              "IN"
+            ],
+            [
+              {
+                "nlpToken": {
+                  "index": 19,
+                  "word": "Sandlilands",
+                  "originalText": "Sandlilands",
+                  "lemma": "Sandlilands",
+                  "characterOffsetBegin": 281,
+                  "characterOffsetEnd": 292,
+                  "pos": "NNPS",
+                  "ner": "LOCATION",
+                  "speaker": "PER0",
+                  "before": " ",
+                  "after": " "
+                },
+                "aida": [
+                  {
+                    "mention": {
+                      "allEntities": [],
+                      "offset": 281,
+                      "name": "Sandlilands",
+                      "length": 11
+                    },
+                    "bestEntityMetadata": null
+                  }
+                ]
+              },
+              "NNPS"
+            ],
+            [
+              {
+                "nlpToken": {
+                  "index": 20,
+                  "word": "tram",
+                  "originalText": "tram",
+                  "lemma": "tram",
+                  "characterOffsetBegin": 293,
+                  "characterOffsetEnd": 297,
+                  "pos": "NN",
+                  "ner": "O",
+                  "speaker": "PER0",
+                  "before": " ",
+                  "after": " "
+                }
+              },
+              "NN"
+            ],
+            [
+              {
+                "nlpToken": {
+                  "index": 21,
+                  "word": "station",
+                  "originalText": "station",
+                  "lemma": "station",
+                  "characterOffsetBegin": 298,
+                  "characterOffsetEnd": 305,
+                  "pos": "NN",
+                  "ner": "O",
+                  "speaker": "PER0",
+                  "before": " ",
+                  "after": " "
+                }
+              },
+              "NN"
+            ],
+            [
+              {
+                "nlpToken": {
+                  "index": 22,
+                  "word": "at",
+                  "originalText": "at",
+                  "lemma": "at",
+                  "characterOffsetBegin": 306,
+                  "characterOffsetEnd": 308,
+                  "pos": "IN",
+                  "ner": "O",
+                  "speaker": "PER0",
+                  "before": " ",
+                  "after": " "
+                }
+              },
+              "IN"
+            ],
+            [
+              {
+                "nlpToken": {
+                  "index": 23,
+                  "word": "around",
+                  "originalText": "around",
+                  "lemma": "around",
+                  "characterOffsetBegin": 309,
+                  "characterOffsetEnd": 315,
+                  "pos": "IN",
+                  "ner": "O",
+                  "speaker": "PER0",
+                  "before": " ",
+                  "after": " "
+                }
+              },
+              "IN"
+            ],
+            [
+              {
+                "nlpToken": {
+                  "index": 24,
+                  "word": "6am",
+                  "originalText": "6am",
+                  "lemma": "6am",
+                  "characterOffsetBegin": 316,
+                  "characterOffsetEnd": 319,
                   "pos": "JJ",
-                  "ner": "O",
+                  "ner": "TIME",
+                  "normalizedNER": "T06:00",
                   "speaker": "PER0",
                   "before": " ",
-                  "after": " "
+                  "after": "",
+                  "timex": {
+                    "tid": "t1",
+                    "type": "TIME",
+                    "value": "T06:00"
+                  }
                 }
               },
               "JJ"
             ]
           ],
-          "score": 0.07358156028368794,
-          "text": "only",
-          "nlpIndexSentence": 44
-        },
-        {
-          "parts": [
-            [
-              {
-                "nlpToken": {
-                  "index": 7,
-                  "word": "on-street",
-                  "originalText": "on-street",
-                  "lemma": "on-street",
-                  "characterOffsetBegin": 6854,
-                  "characterOffsetEnd": 6863,
-                  "pos": "JJ",
-                  "ner": "O",
-                  "speaker": "PER0",
-                  "before": " ",
-                  "after": " "
-                }
-              },
-              "JJ"
-            ]
-          ],
-          "score": 0.05230496453900709,
-          "text": "on-street",
-          "nlpIndexSentence": 46
-        },
-        {
-          "parts": [
-            [
-              {
-                "nlpToken": {
-                  "index": 1,
-                  "word": "More",
-                  "originalText": "More",
-                  "lemma": "more",
-                  "characterOffsetBegin": 6760,
-                  "characterOffsetEnd": 6764,
-                  "pos": "JJR",
-                  "ner": "O",
-                  "speaker": "PER0",
-                  "before": " ",
-                  "after": " "
-                }
-              },
-              "JJR"
-            ]
-          ],
-          "score": 0.02127659574468085,
-          "text": "More",
-          "nlpIndexSentence": 45
-        }
-      ]
-    },
-    "what": {
-      "annotated": [
-        {
-          "text": "tram derailment: Several dead and dozens injured"
-        },
-        {
-          "text": "Five people were left trapped inside"
-        }
-      ]
-    },
-    "when": {
-      "annotated": [
-        {
-          "text": "at around 6am"
-        }
-      ]
-    },
-    "where": {
-      "annotated": [
-        {
-          "text": "Croydon"
-        },
-        {
-          "text": "in a tunnel near Sandlilands tram station"
-        }
-      ]
-    },
-    "who": {
-      "annotated": [
-        {
-          "text": "Several people"
-        },
-        {
-          "text": "dozens injured"
-        }
-      ]
-    },
-    "why": {
-      "annotated": [
-        {
-          "text": "NULL"
+          "score": 0.42006079027355625,
+          "text": "it came off the tracks in a tunnel near Sandlilands tram station at around 6am",
+          "nlpIndexSentence": 2
         }
       ]
     }
   },
-  "parsingError": "true",
   "mimeType": "text/xml",
-  "url": "http://www.standard.co.uk/news/transport/croydon-tram-derailment-people-trapped-after-tram-overturns-in-at-sandilands-a3390796.html",
-  "publish_date": "2016-11-09 00:00:00",
+  "originalFilename": "standard-6",
+  "parsingError": "true",
+  "publisher": "standard",
+  "text": "Several people died and dozens were injured after a tram derailed and overturned in Croydon. Five people were left trapped inside the vehicle after it came off the tracks in a tunnel near Sandlilands tram station at around 6am. Three of those trapped have been removed from the tram, which is on its side, but two still remain inside as of 11.30am. British Transport Police confirmed there had been \"some loss of life\". A spokesman added: \"It is too early for us to confirm numbers but we are working hard to assess the ongoing incident and we are continuing to focus on recovery efforts.\" They later confirmed that the driver of the tram was arrested in connection with the incident. Croydon Tram derailment 8 show all Croydon Tram derailment 1/8 The scene after a tram overturned in Croydon, south London, trapping five people and injuring another 40 Steve Parsons/PA 2/8 Police officers walk the site where the tram overturned Carl Court/Getty Images 3/8 Emergency services were called to the scene just after 6am Twitter/@procrastinateur 4/8 Emergency services close to the location where a tram overturned in Croydon, south London PA 5/8 Emergency services at Sandilands tram station in Croydon Ben Morgan 6/8 A police cordon is in place on Addiscombe Road Ben Morgan 7/8 40 people were injured and five trapped inside the tram Ben Morgan 8/8 Witnesses reported seeing victims stretchered from the tram James Long The London Fire Brigade, which has 70 officers in attendance, said at least 40 people were injured after the tram overturned on a sharp bend. Emergency services were called at 6.10am as torrential rain continued to batter London. Over 50 people were taken to hospital. A Met spokesman said: \"Police were called to an overturned tram at 6.10 and officers are in attendance.\" Scene: this aerial picture shows the tram on its side by the track (BBC/ITN) Hannah Collier, who lives nearby the tram station, said: \"Heard a massive crash outside my window, now emergency services everywhere for the overturned tram, hope everyone is ok.\" The 23-year-old added that she had seen people being carried away on stretchers from the scene of the incident. James Long, who lives metres away from the scene of the incident, told the Standard: \"It happened on a sharp bend on the approach to Sandilands tram stop. Carnage: Emergency services inspect the overturned tram (Steve Parsons/PA ) \"I've never seen so many emergency services attend a scene.\" A London Fire Brigade spokesman said they had been called at 6.04am to an overturned tram in a tunnel.    SANDILANDS    Emergency Services are dealing with a serious incident at #Sandilands tram stop. Please avoid the area #Croydoncops pic.twitter.com/xp4RPNxXI5 -- Croydon MPS (@MPSCroydon) November 9, 201 \"There are eight fire engines and four fire and rescue crews in attendance,\" they added. People are being warned to avoid the tram line and the area surrounding Sandilands station in east Croydon, where there is a large police cordon and many emergency vehicles. Heard a massive crash outside my window, now emergency services everywhere for the overturned tram, hope everyone is ok #croydon pic.twitter.com/gxQgnPygEJ -- Hannah Collier (@HannahCollier1) November 9, 2016 Police tell me that people who are worried about loved ones should go to St Mildred's Centre on Bingham Road. Don't have phone number yet -- Gavin Barwell MP (@GavinBarwellMP) November 9, 2016 Miguel John, who was on a bus to Bromley when it stopped by Sandilands tram stop, told the Standard: \"The road hadn't been shut off yet but emergency services were already at the scene, this would have been around 6.30am. \"By this point more emergency services were flooding to the scene and a police car shut off the road with vehicles being ushered down Elgin Road towards Addiscombe. \"But it was obvious it was very, very serious due to the amount of emergency services at the scene. @RachelMirrorVid @DailyMirror here you go, I can't actually see the tram though pic.twitter.com/mwz56sxacI -- Hannah Collier (@HannahCollier1) November 9, 2016 \"At first there would have been roughly between six or 10 [vehicles], as time passed a lot more arrived and continued to arrive. \"Visibly from where I was about two fire engines, two to three ambulances, several police cars and then more arrived as time went on. \"I think that's how everyone knew it was very serious, especially how quickly they acted to shut off the road.\" Emergency: witnesses reported seeing victims stretchered from the tram (James Long) A London Ambulance Service spokesman said: \"We were called at 6.13 to an incident at Addiscombe Road in Croydon. \"We have sent a number of resources to the scene including ambulance crews, advanced paramedics and single responders in cars. \"We are treating a number of patients.\" Scene: Police, ambulances and fire engines were in attendance (James Long) Rail safety investigators are reportedly on their way to the scene to begin gathering evidence. A British Transport Police spokesman said: \"We are currently on scene at a major incident at Sandilands tram stop in Croydon. \"Officers are working to deal with a tram derailment, alongside colleagues from other emergency services. \"A number of people are believed to have been injured. People are asked to avoid the area.\" Rain: there were torrential downpours throughout the night (James Long) Mayor of London Sadiq Khan said: \"I am in contact with emergency services and TfL, who are working extremely hard to get the situation under control and treat those who have been injured. My thoughts are with all those involved in this incident. \"We are asking people to please visit the TfL website, tfl.gov.uk, for the latest travel information.\" A Transport for London spokesman said: \"We are currently working with the emergency services following a derailment involving a tram in Croydon. \"There is currently no service on the tram between Reeves Corner and Addington Village / Harrington Road.\" Today's is believed to be the first tram crash involving fatalities on board since 1959, when two women passengers and the driver died after a tram caught fire in Glasgow, following a collision with a lorry. London's only tram network operates in the south of the capital, from Wimbledon to Beckenham Junction, Elmers End and New Addington, via Croydon. More than 27 million passengers used the service in 2015/16. The system uses a combination of on-street and segregated running for the 17 miles (27km) of track.",
   "title": "Croydon tram derailment: Several dead and dozens injured after tram overturns at Sandilands",
-  "description": "Several people died\u00a0and dozens were injured after a tram derailed and overturned in Croydon. Five people were left trapped inside the vehicle after it came off the tracks in a tunnel near Sandlilands tram station at around 6am. Three of those trapped have been removed from the tram, which is on its side, but two still remain inside as of 11.30am.",
-  "text": "Several people died and dozens were injured after a tram derailed and overturned in Croydon. Five people were left trapped inside the vehicle after it came off the tracks in a tunnel near Sandlilands tram station at around 6am. Three of those trapped have been removed from the tram, which is on its side, but two still remain inside as of 11.30am. British Transport Police confirmed there had been \"some loss of life\". A spokesman added: \"It is too early for us to confirm numbers but we are working hard to assess the ongoing incident and we are continuing to focus on recovery efforts. They later confirmed that the driver of the tram was arrested in connection with the incident. Croydon Tram derailment 8 show all Croydon Tram derailment 1/8 The scene after a tram overturned in Croydon, south London, trapping five people and injuring another 40 Steve Parsons/PA 2/8 Police officers walk the site where the tram overturned Carl Court/Getty Images 3/8 Emergency services were called to the scene just after 6am Twitterprocrastinateur 4/8 Emergency services close to the location where a tram overturned in Croydon, south London PA 5/8 Emergency services at Sandilands tram station in Croydon Ben Morgan 6/8 A police cordon is in place on Addiscombe Road Ben Morgan 7/8 40 people were injured and five trapped inside the tram Ben Morgan 8/8 Witnesses reported seeing victims stretchered from the tram James Long The London Fire Brigade, which has 70 officers in attendance, said at least 40 people were injured after the tram overturned on a sharp bend. Emergency services were called at 6.10am as torrential rain continued to batter London. Over 50 people were taken to hospital. A Met spokesman said: \"Police were called to an overturned tram at 6.10 and officers are in attendance.\" Scene: this aerial picture shows the tram on its side by the track (BBC/ITN) Hannah Collier, who lives nearby the tram station, said: \"Heard a massive crash outside my window, now emergency services everywhere for the overturned tram, hope everyone is ok.\" The 23-year-old added that she had seen people being carried away on stretchers from the scene of the incident. James Long, who lives metres away from the scene of the incident, told the Standard: \"It happened on a sharp bend on the approach to Sandilands tram stop. Carnage: Emergency services inspect the overturned tram (Steve Parsons/PA ) \"I've never seen so many emergency services attend a scene.\" A London Fire Brigade spokesman said they had been called at 6.04am to an overturned tram in a tunnel.    SANDILANDS    Emergency Services are dealing with a serious incident at #Sandilands tram stop. Please avoid the area #Croydoncops pic.twitter.com \u2014 Croydon MPS (@MPSCroydon) November 9, 201 \"There are eight fire engines and four fire and rescue crews in attendance,\" they added. People are being warned to avoid the tram line and the area surrounding Sandilands station in east Croydon, where there is a large police cordon and many emergency vehicles. Heard a massive crash outside my window, now emergency services everywhere for the overturned tram, hope everyone is ok #croydon pic.twitter.com/gxQgnPygEJ \u2014 Hannah Collier (@HannahCollier1) November 9, 2016 Police tell me that people who are worried about loved ones should go to St Mildred's Centre on Bingham Road. Don't have phone number yet \u2014 Gavin Barwell MP (@GavinBarwellMP) November 9, 2016 Miguel John, who was on a bus to Bromley when it stopped by Sandilands tram stop, told the Standard: \"The road hadn't been shut off yet but emergency services were already at the scene, this would have been around 6.30am. \u201cBy this point more emergency services were flooding to the scene and a police car shut off the road with vehicles being ushered down Elgin Road towards Addiscombe. \u201cBut it was obvious it was very, very serious due to the amount of emergency services at the scene. @RachelMirrorVid @DailyMirror here you go, I can't actually see the tram though pic.twitter.com/mwz56sxacI \u2014 Hannah Collier (@HannahCollier1) November 9, 2016 \u201cAt first there would have been roughly between six or 10 [vehicles], as time passed a lot more arrived and continued to arrive. \u201cVisibly from where I was about two fire engines, two to three ambulances, several police cars and then more arrived as time went on. \u201cI think that\u2019s how everyone knew it was very serious, especially how quickly they acted to shut off the road.\u201d Emergency: witnesses reported seeing victims stretchered from the tram (James Long) A London Ambulance Service spokesman said: \"We were called at 6.13 to an incident at Addiscombe Road in Croydon. \"We have sent a number of resources to the scene including ambulance crews, advanced paramedics and single responders in cars. \"We are treating a number of patients.\" Scene: Police, ambulances and fire engines were in attendance (James Long) Rail safety investigators are reportedly on their way to the scene to begin gathering evidence. A British Transport Police spokesman said: \"We are currently on scene at a major incident at Sandilands tram stop in Croydon. \"Officers are working to deal with a tram derailment, alongside colleagues from other emergency services. \"A number of people are believed to have been injured. People are asked to avoid the area.\" Rain: there were torrential downpours throughout the night (James Long) Mayor of London Sadiq Khan said: \u201cI am in contact with emergency services and TfL, who are working extremely hard to get the situation under control and treat those who have been injured. My thoughts are with all those involved in this incident. \u201cWe are asking people to please visit the TfL website, tfl.gov.uk, for the latest travel information.\u201d A Transport for London spokesman said: \u201cWe are currently working with the emergency services following a derailment involving a tram in Croydon. \u201cThere is currently no service on the tram between Reeves Corner and Addington Village / Harrington Road.\u201d Today's is believed to be the first tram crash involving fatalities on board since 1959, when two women passengers and the driver died after a tram caught fire in Glasgow, following a collision with a lorry. London's only tram network operates in the south of the capital, from Wimbledon to Beckenham Junction, Elmers End and New Addington, via Croydon. More than 27 million passengers used the service in 2015/16. The system uses a combination of on-street and segregated running for the 17 miles (27km) of track.",
-  "topics": "tram",
-  "origin": "gate",
-  "filename": "071e141c216547f83e2b50a63a728163fa9527e337032e9eb84882d6.json",
-  "dId": "071e141c216547f83e2b50a63a728163fa9527e337032e9eb84882d6"
+  "url": "http://www.standard.co.uk/news/transport/croydon-tram-derailment-people-trapped-after-tram-overturns-in-at-sandilands-a3390796.html"
 }

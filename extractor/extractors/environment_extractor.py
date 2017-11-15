@@ -174,9 +174,6 @@ class EnvironmentExtractor(AbsExtractor):
 
         for candidate in document.get_candidates('EnvironmentExtractorNeLocatios'):
             # fetch the boundingbox: (min lat, max lat, min long, max long)
-
-            # location = candidate.get_raw()
-            # bb = location[1].raw['boundingbox']
             parts = candidate.get_raw()
             location = candidate.get_calculations('openstreetmap_nominatim')
             bb = location.raw['boundingbox']

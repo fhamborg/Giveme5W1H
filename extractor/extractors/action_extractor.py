@@ -110,7 +110,6 @@ class ActionExtractor(AbsExtractor):
         ranked_candidates = []
         doc_len = document.get_len()
         doc_ner = document.get_ner()
-        # doc_pos = document.get_pos()
         doc_coref = document.get_corefs()
 
         if any(doc_coref.values()):
@@ -167,13 +166,9 @@ class ActionExtractor(AbsExtractor):
 
             if mention_type == 'PRONOMINAL':
                 # use representing mention if the agent is only a pronoun
-                # TODO: Fix format fix
                 rp_format_fix = [(( {'nlpToken': representative[0][1]}, representative[0][1]['pos'] ))]
                 ranked_candidates.append((rp_format_fix, candidateParts[1], score, candidate.get_sentence_index()))
-                # ranked_candidates.append((rp_format_fix, candidateParts[1], score, candidate.get_sentence_index()))
-                # ranked_candidates.append(([representative], candidateParts[1], score, candidate.get_sentence_index()))
             else:
-                # print("a")
                 ranked_candidates.append((candidateParts[0], candidateParts[1], score, candidate.get_sentence_index()))
 
         # split results

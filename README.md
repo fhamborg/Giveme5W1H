@@ -20,7 +20,7 @@ If you have to install CoreNLP, please refer to the CoreNLPs extensive [document
     * at the time of writing [this](http://nlp.stanford.edu/software/stanford-english-corenlp-2017-06-09-models.jar) was the newest version
  * extract the server zip,
  * extract the language zip, copy it inside the server directory
- * copy it into [Giveme5W-runtime-resources](#Giveme5W-runtime-resources) next to your repository folder
+ * copy it into [Giveme5W-runtime-resources](#startup---scripts---giveme5w-runtime-resources) next to your repository folder
 
 Start coreNLP by yourself (Windows, Linux, OSX)
 ``` bash

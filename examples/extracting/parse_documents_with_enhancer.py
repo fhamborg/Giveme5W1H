@@ -1,8 +1,9 @@
 import logging
 import os
 
-from Giveme5W_enhancer.aida import Aida
-from Giveme5W_enhancer.heideltime import Heideltime
+from Giveme5W_enhancer.enhancer.heideltime import Heideltime
+from Giveme5W_enhancer.enhancer.aida import Aida
+
 from extractor.extractor import FiveWExtractor
 from extractor.tools.file.handler import Handler
 from extractors import action_extractor
@@ -23,10 +24,23 @@ Documents are preprocessed just once, you have to set is_preprocessed to false,
 if you want to process them again by core_nlp (or just delete cache and output)
 """
 if __name__ == '__main__':
-    # helper to make dataset selction simple
-    dataset_golden_standard = os.path.dirname(__file__) + '/../datasets/gold_standard/data/'
-    # Does not work with heideltime!, there is no pub date...
-    dataset_bbc = os.path.dirname(__file__) + '/../datasets/bbc/data/'
+
+    # helper to setup a correct path
+    rel_datasets_path = '/../datasets/'
+    dataset_helper= {
+        'gold_standard': os.path.dirname(__file__) + rel_datasets_path + 'gold_standard',
+        'bbv': os.path.dirname(__file__) + rel_datasets_path + 'bbc',
+        'google_news': os.path.dirname(__file__) + rel_datasets_path + 'google_news'
+    }
+
+    #
+    # Switch here between the predefined datasets
+    #
+    basePath = dataset_helper['google_news']
+    #
+    #
+    #
+
 
     # logger setup
     log = logging.getLogger('GiveMe5W')
@@ -46,10 +60,9 @@ if __name__ == '__main__':
         Aida(['how', 'when', 'why', 'where', 'what', 'who'])
     ])
 
-    inputPath = dataset_golden_standard
-    outputPath = os.path.dirname(__file__) + '/output'
-
-    preprocessedPath = os.path.dirname(__file__) + '/cache'
+    inputPath = basePath + '/data'
+    outputPath = basePath + '/output'
+    preprocessedPath = basePath + '/cache'
 
     documents = (
         # initiate the file handler with the input directory

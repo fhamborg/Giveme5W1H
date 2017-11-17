@@ -30,11 +30,12 @@ if __name__ == '__main__':
     dataset_helper= {
         'gold_standard': os.path.dirname(__file__) + rel_datasets_path + 'gold_standard',
         'bbv': os.path.dirname(__file__) + rel_datasets_path + 'bbc',
-        'google_news': os.path.dirname(__file__) + rel_datasets_path + 'google_news'
+        'google_news': os.path.dirname(__file__) + rel_datasets_path + 'google_news',
+        'local': os.path.dirname(__file__)
     }
 
     #
-    # Switch here between the predefined datasets
+    # Switch here between the predefined datasets or local for the local folder
     #
     basePath = dataset_helper['google_news']
     #

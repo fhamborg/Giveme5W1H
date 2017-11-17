@@ -6,6 +6,13 @@ class Document(object):
 
     def __init__(self, title='', desc='', text='', rawData=None):
 
+        if title is None:
+            title = ''
+        if desc is None:
+            desc = ''
+        if text is None:
+            text = ''
+
         self._raw = {'title': title, 'description': desc, 'text': text}
 
         # append all document text into one string

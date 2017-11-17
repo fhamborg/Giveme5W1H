@@ -1,6 +1,6 @@
-# GiveMe5W
+# Giveme5W
 
-GiveMe5W is a state of the art open-source 5W Question Answering system for news articles. It can either be used through a simple RESTapi or directly included in existing Python projects. Depending on the configuration GiveMe5W parses each document for the answers to the following  questions:
+Giveme5W is a state of the art open-source 5W Question Answering system for news articles. It can either be used through a simple RESTapi or directly included in existing Python projects. Depending on the configuration Giveme5W parses each document for the answers to the following  questions:
 
 * **Who** is involved?
 * **What** happened?
@@ -9,7 +9,7 @@ GiveMe5W is a state of the art open-source 5W Question Answering system for news
 * **Why** did it happen?
 
 ## Getting started
-Before you can use GiveMe5W, you need to make sure you have a CoreNLP-server up and running.
+Before you can use Giveme5W, you need to make sure you have a CoreNLP-server up and running.
 In the case you first to have to install CoreNLP please refer to the CoreNLPs extensive [documentation](https://stanfordnlp.github.io/CoreNLP/corenlp-server.html) and follow the instructions on how to install CoreNLP and start a server.
 
 Starting the CoreNLP server: 
@@ -53,12 +53,12 @@ You can also adjust the extractors which are used to examine the documents:
 $ python extractor/examples/simple_api.py
 ```
 
-Now you can send articles through the RESTapi to GiveMe5W. 
+Now you can send articles through the RESTapi to Giveme5W. 
 The API supports the following JSON fields:
 
 * title (always required!)
 * description
 * text
-## License
 
-The project is licensed under the Apache License 2.0. Make sure that you use news-GiveMe5W in compliance with applicable law. Copyright 2016 The GiveMe5W team
+## License
+The project is licensed under the Apache License 2.0. Make sure that you use Giveme5W in compliance with applicable law. Copyright 2016 The Giveme5W team

@@ -57,13 +57,13 @@ class Handler(object):
         self.log.error('documents prelaoded:\t' + str(docCounter))
         return self
 
-    """
-    process only files without an entry in the output directory
-    Warning dosent work in combination with preload_and_cache_documents,
-    output is not loaded into context, if existence
-    """
 
     def skip_documents_with_output(self, skip=True):
+        """
+           process only files without an entry in the output directory
+           Warning dosent work in combination with preload_and_cache_documents,
+           output is not loaded into context, if existence
+           """
         self._skipDocumentsWithOutput = skip
         if not self._outputPath:
             self.log.error('Call set_output_path with a valid path, before you enable this option')

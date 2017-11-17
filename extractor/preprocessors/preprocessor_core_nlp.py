@@ -39,9 +39,10 @@ class Preprocessor:
         self._token_index = None
 
     def _link_leaf_to_core_nlp(self, s):
-        # this is where the magic happens add there additional information per candidate-part/token/leave
-        # char index information is in each nlpToken
-
+        """
+        this is where the magic happens add there additional information per candidate-part/token/leave
+        char index information is in each nlpToken
+        """
         if len(self._tokens)-1 < self._token_index:
             # there seams a bug around numbers,
             # spitted numbers in the same token are called as they have been split to different tokens

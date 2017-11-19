@@ -43,27 +43,27 @@ class Preprocessor:
         this is where the magic happens add there additional information per candidate-part/token/leave
         char index information is in each nlpToken
         """
-        if len(self._tokens)-1 < self._token_index:
+        if len(self._tokens) - 1 < self._token_index:
             # there seams a bug around numbers,
             # spitted numbers in the same token are called as they have been split to different tokens
             # this leads to a wrong index, everything in this sentence is lost till the end of that sentence
-            self.log.error('fix the doc around(reformat number,remove special characters):'+ s)
+            self.log.error('fix the doc around(reformat number,remove special characters):' + s)
 
             # further normal dicts are not hashable and we can`t return None because this would break further extractors
             # therefore we use the first element of each sentence
             result = {
                 'nlpToken': {
                     'index': 7,
-                     'word': 'BUGFIX',
-                     'originalText': '',
-                     'lemma': '',
-                     'characterOffsetBegin': 0,
-                     'characterOffsetEnd': 1,
-                     'pos': 'CD',
-                     'ner': 'NUMBER',
-                     'speaker': 'PER0',
-                     'before': ' ',
-                     'after': ''
+                    'word': 'BUGFIX',
+                    'originalText': '',
+                    'lemma': '',
+                    'characterOffsetBegin': 0,
+                    'characterOffsetEnd': 1,
+                    'pos': 'CD',
+                    'ner': 'NUMBER',
+                    'speaker': 'PER0',
+                    'before': ' ',
+                    'after': ''
                 }
             }
 

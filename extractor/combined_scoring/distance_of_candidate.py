@@ -1,10 +1,7 @@
-
 class DistanceOfCandidate:
     """
-     re-score the how candidates bases on the proximity to the Who and What candidates
-     documentObject, ['who','what'], 'How', weight=[1] (number of major candidates for dist calculation, weightMajorA, weightMajorB... )
+     re-score the how dependantQuestions-candidates bases on the proximity to the majorQuestions-candidates
     """
-
 
     def __init__(self, majorQuestions, dependantQuestions, weight=[3, 1, 1]):
         self._majorQuestions = majorQuestions

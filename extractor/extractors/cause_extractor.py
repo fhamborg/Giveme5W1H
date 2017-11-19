@@ -231,7 +231,7 @@ class CauseExtractor(AbsExtractor):
 
             elif token in self.clausal_conjunctions and ' '.join(
                     [x['nlpToken']['originalText'] for x in tokens[i:]]).lower().startswith(
-                    self.clausal_conjunctions[token]):
+                self.clausal_conjunctions[token]):
                 # Check if token is au clausal conjunction indicating causation
                 candidates.append(deepcopy([pos[i - 1:], pos[:i], 'biclausal']))
 
@@ -273,7 +273,7 @@ class CauseExtractor(AbsExtractor):
             if parts is not None and len(parts) > 0:
                 # following the concept of the inverted pyramid use the position for scoring
                 score = self.weights[0] * (
-                document.get_len() - candidateObject.get_sentence_index()) / document.get_len()
+                    document.get_len() - candidateObject.get_sentence_index()) / document.get_len()
 
                 # we also consider the pattern typ used to detect the candidate
                 if candidateObject.get_type() == 'biclausal':

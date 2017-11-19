@@ -1,4 +1,7 @@
 class Configuration:
+    """
+    These flags can be used to change the giveme5w configuration
+    """
     __config = {
         "candidate": {
             "text": True,  # Concatenated 'originalText' from nlpToken

@@ -11,6 +11,7 @@ class Reader(object):
     """
     helper to read news_please files and prickles
     """
+
     def __init__(self):
         # self.factory = DocumentFactory()
         self.log = logging.getLogger('GiveMe5W')

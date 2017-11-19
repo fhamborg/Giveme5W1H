@@ -86,7 +86,6 @@ class ActionExtractor(AbsExtractor):
                 sibling = subtree.right_sibling()
                 while sibling is not None:
                     if sibling.label() == 'VP':
-
                         # this gives a tuple to find the way from sentence to leaf
                         # tree_position = subtree.leaf_treeposition(0)
                         entry = [subtree.pos(), self.cut_what(sibling, 3).pos(),
@@ -166,7 +165,7 @@ class ActionExtractor(AbsExtractor):
 
             if mention_type == 'PRONOMINAL':
                 # use representing mention if the agent is only a pronoun
-                rp_format_fix = [(( {'nlpToken': representative[0][1]}, representative[0][1]['pos'] ))]
+                rp_format_fix = [(({'nlpToken': representative[0][1]}, representative[0][1]['pos']))]
                 ranked_candidates.append((rp_format_fix, candidateParts[1], score, candidate.get_sentence_index()))
             else:
                 ranked_candidates.append((candidateParts[0], candidateParts[1], score, candidate.get_sentence_index()))

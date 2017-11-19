@@ -1,8 +1,15 @@
 import csv
 import os
 
-# evaluates results with ICR and GP
+"""
+evaluates results by calculating: 
+- ICR(pairwise intercoder reliability AB, BC, AC) 
+- GP(precision_generalized)
 
+
+Results are global and per category
+
+"""
 
 filename = 'evaluation_data_how.csv'
 

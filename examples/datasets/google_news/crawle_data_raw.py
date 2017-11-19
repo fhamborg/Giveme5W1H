@@ -1,12 +1,13 @@
 import hashlib
 import json
-from newsplease import NewsPlease
 import os.path
 
+from newsplease import NewsPlease
 
 """
 This is a dataset aiming to represent clsuterred news around topics.
 """
+
 
 def write_json(path, filename, object):
     """
@@ -15,12 +16,13 @@ def write_json(path, filename, object):
     :param object:
     :return:
     """
-    with open(path+'/'+filename+'.'+'json', 'w') as data_file:
+    with open(path + '/' + filename + '.' + 'json', 'w') as data_file:
         data_file.write(json.dumps(object, sort_keys=False, indent=2))
         data_file.close()
 
+
 def json_exist(path, filename):
-     return os.path.exists(path+'/'+filename+'.'+'json')
+    return os.path.exists(path + '/' + filename + '.' + 'json')
 
 
 # There are the articels by news, sorted by their cluster/topic
@@ -35,7 +37,7 @@ urls = {
         'https://www.reuters.com/article/us-trump-asia-japan/trump-says-japan-would-shoot-north-korean-missiles-out-of-sky-if-it-bought-u-s-weaponry-idUSKBN1D602F',
         'https://www.japantimes.co.jp/news/2017/11/14/asia-pacific/north-koreas-winter-training-means-fewer-missile-launches/'
     ],
-    'Star Wars: Battlefront II - Loot Box':{
+    'Star Wars: Battlefront II - Loot Box': {
         'https://www.cnet.com/news/star-wars-battlefront-ii-reddit-micro-transactions/',
         'https://techcrunch.com/2017/11/16/hours-before-launch-ea-strips-micro-transactions-from-star-wars-battlefront-ii/',
         'http://comicbook.com/gaming/2017/11/17/star-wars-battlefront-ii-no-more-microtransactions-turned-off-electronic-arts/',
@@ -43,7 +45,7 @@ urls = {
         'https://www.forbes.com/sites/insertcoin/2017/11/16/heres-the-emergency-heart-transplant-that-would-save-star-wars-battlefront-2',
         'https://arstechnica.com/gaming/2017/11/star-wars-battlefront-ii-review-nope-nope-nope-nope-nope-nope-nope/'
     },
-    'IPhone-X Green-Line':[
+    'IPhone-X Green-Line': [
         'http://www.thejakartapost.com/life/2017/11/13/is-samsung-display-to-blame-for-iphone-xs-screen-defect.html',
         'https://betanews.com/2017/11/12/iphone-x-green-line-cold-problems/',
         'http://www.techradar.com/news/the-latest-iphone-x-problem-is-a-bright-green-line-on-the-side-of-the-display',
@@ -74,11 +76,10 @@ urls = {
 
 }
 
-
 for index, topic in enumerate(urls):
     for url in urls[topic]:
 
-        dId =  hashlib.sha224(url.encode('utf-8')).hexdigest()
+        dId = hashlib.sha224(url.encode('utf-8')).hexdigest()
 
         if not json_exist('data_raw', dId):
             # this is an object
@@ -102,5 +103,5 @@ for index, topic in enumerate(urls):
             except:
                 print(url)
                 print('something went wrong')
-        #else:
-        #    print('already crawled')
+                # else:
+                #    print('already crawled')

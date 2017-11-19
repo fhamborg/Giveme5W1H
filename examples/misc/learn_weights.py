@@ -20,6 +20,10 @@ core_nlp_host = 'http://localhost:9000'
 
 
 class Worker(Thread):
+    """
+    Thread helper
+    """
+
     def __init__(self, queue):
         ''' Constructor. '''
         Thread.__init__(self)

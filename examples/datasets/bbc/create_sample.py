@@ -1,8 +1,9 @@
 import hashlib
 import json
-import numpy
 import os
 from glob import glob
+
+import numpy
 
 
 def read_random(directory, count):

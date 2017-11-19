@@ -1,9 +1,8 @@
 import logging
 import os
 
-from Giveme5W_enhancer.enhancer.heideltime import Heideltime
 from Giveme5W_enhancer.enhancer.aida import Aida
-
+from Giveme5W_enhancer.enhancer.heideltime import Heideltime
 from extractor.extractor import FiveWExtractor
 from extractor.tools.file.handler import Handler
 from extractors import action_extractor
@@ -24,10 +23,9 @@ Documents are preprocessed just once, you have to set is_preprocessed to false,
 if you want to process them again by core_nlp (or just delete cache and output)
 """
 if __name__ == '__main__':
-
     # helper to setup a correct path
     rel_datasets_path = '/../datasets/'
-    dataset_helper= {
+    dataset_helper = {
         'gold_standard': os.path.dirname(__file__) + rel_datasets_path + 'gold_standard',
         'bbv': os.path.dirname(__file__) + rel_datasets_path + 'bbc',
         'google_news': os.path.dirname(__file__) + rel_datasets_path + 'google_news',
@@ -78,17 +76,17 @@ if __name__ == '__main__':
             .set_preprocessed_path(preprocessedPath)
 
             # Optional: limit the documents read from the input directory (handy for development)
-            #.set_limit(1)
+            # .set_limit(1)
 
             # Optional: resume ability, skip input file if its already in output
             .skip_documents_with_output()
 
             # load and saves all document runtime objects for further programming
-            #.preload_and_cache_documents()
+            # .preload_and_cache_documents()
 
             ## setup is done: executing it
             .process()
 
-            # get the processed documents, this can only be done because preload_and_cache_documents was called
-            #.get_documents()
+        # get the processed documents, this can only be done because preload_and_cache_documents was called
+        # .get_documents()
     )

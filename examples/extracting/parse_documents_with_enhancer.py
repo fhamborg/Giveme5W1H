@@ -27,7 +27,7 @@ if __name__ == '__main__':
     rel_datasets_path = '/../datasets/'
     dataset_helper = {
         'gold_standard': os.path.dirname(__file__) + rel_datasets_path + 'gold_standard',
-        'bbv': os.path.dirname(__file__) + rel_datasets_path + 'bbc',
+        'bbc': os.path.dirname(__file__) + rel_datasets_path + 'bbc',
         'google_news': os.path.dirname(__file__) + rel_datasets_path + 'google_news',
         'local': os.path.dirname(__file__)
     }

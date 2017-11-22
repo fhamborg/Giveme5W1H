@@ -23,8 +23,8 @@ class Preprocessor:
         else:
             self.cnlp = StanfordCoreNLP(host)
 
-        # define basic config and desired processing pipeline
-        self.config = {
+        # define basic base_config and desired processing pipeline
+        self.base_config = {
             'timeout': 500000,
             'annotators': 'tokenize,ssplit,pos,lemma,parse,ner,depparse,mention,coref',
             'tokenize.language': 'English',
@@ -76,6 +76,18 @@ class Preprocessor:
 
         return result
 
+
+    def _build_actual_config(self, dynamic_params):
+        """
+        Creates the actual config, consisting of the base_config and dynamic_params. if the same key exists in both
+        base_config and dynamic_params, the value will be used from dynamic_params, i.e., base_config will be overwritten.
+        :param dynamic_params:
+        :return:
+        """
+        actual_config = {**self.base_config, **dynamic_params}
+        return actual_config
+
+
     def preprocess(self, document):
         """
         Send the document to CoreNLP server to execute the necessary preprocessing.
@@ -86,9 +98,13 @@ class Preprocessor:
         :return Document: The processed Document object.
         """
 
-        annotation = self.cnlp.annotate(document.get_full_text(), self.config)
+        dynamic_config = {
+            'date': document.get_rawData()['date_publish']
+        }
+        actual_config = self._build_actual_config(dynamic_config)
+        annotation = self.cnlp.annotate(document.get_full_text(), actual_config)
 
-        if type(annotation) == str:
+        if type(annotation) is str:
             print(annotation)
         else:
             document.set_sentences(annotation['sentences'], [], [])

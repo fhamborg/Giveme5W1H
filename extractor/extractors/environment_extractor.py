@@ -26,6 +26,7 @@ class EnvironmentExtractor(AbsExtractor):
         :type host: String
         """
 
+        # set weights
         self.weights = weights
 
         # init db connection used for location resolution

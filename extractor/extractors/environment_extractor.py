@@ -15,26 +15,20 @@ class EnvironmentExtractor(AbsExtractor):
     The EnvironmentExtractor tries to extract the location and time the event happened.
     """
 
-    # weights used in the candidate evaluation:
-    # ((position, frequency), (position, date, time, frequency))
-    weights = ((0.5, 0.8), (0.8, 0.25, 0.2, 0.7))
-
-    def __init__(self, weights=None, host=None):
+    def __init__(self, weights=((0.5, 0.8), (0.8, 0.25, 0.2, 0.7)), host='nominatim.openstreetmap.org'):
         """
         Init the Nominatim connection as well as the calender object used for date interpretation.
 
         :param weights: Weights used to evaluate answer candidates.
-        :type weights: ((Float, Float), (Float, Float, Float, Float))
-        :param host: Address to the Nominatim host
+        :type weights: ((Float, Float), (Float, Float, Float, Float)), weights used in the candidate evaluation:
+        ((position, frequency), (position, date, time, frequency))
+        :param host: Address of the Nominatim host
         :type host: String
         """
-        if weights is not None:
-            self.weights = weights
+
+        self.weights = weights
 
         # init db connection used for location resolution
-        if host is None:
-            host = 'nominatim.openstreetmap.org'
-
         self.geocoder = Nominatim(domain=host, timeout=8)
 
         # init calender object for date resolution

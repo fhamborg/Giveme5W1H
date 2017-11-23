@@ -77,14 +77,17 @@ class Preprocessor:
         return result
 
 
-    def _build_actual_config(self, dynamic_params):
+    def _build_actual_config(self, document):
         """
         Creates the actual config, consisting of the base_config and dynamic_params. if the same key exists in both
         base_config and dynamic_params, the value will be used from dynamic_params, i.e., base_config will be overwritten.
-        :param dynamic_params:
+        :param document:
         :return:
         """
-        actual_config = {**self.base_config, **dynamic_params}
+        dynamic_config = {
+            'date': document.get_rawData()['date_publish']
+        }
+        actual_config = {**self.base_config, **dynamic_config}
         return actual_config
 
 
@@ -97,11 +100,7 @@ class Preprocessor:
 
         :return Document: The processed Document object.
         """
-
-        dynamic_config = {
-            'date': document.get_rawData()['date_publish']
-        }
-        actual_config = self._build_actual_config(dynamic_config)
+        actual_config = self._build_actual_config(document)
         annotation = self.cnlp.annotate(document.get_full_text(), actual_config)
 
         if type(annotation) is str:

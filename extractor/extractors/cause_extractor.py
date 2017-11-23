@@ -54,7 +54,7 @@ class CauseExtractor(AbsExtractor):
         try:
             nltk.data.find('corpora/wordnet')
         except LookupError:
-            self.log.info('Could not find corpus for WordNet, will now try to download the corpus.')
+            self.log.warning('Could not find corpus for WordNet, will now try to download the corpus.')
             nltk.download('wordnet')
 
         if weights is not None:

@@ -49,8 +49,10 @@ class Preprocessor:
             # this leads to a wrong index, everything in this sentence is lost till the end of that sentence
             self.log.error('fix the doc around(reformat number,remove special characters):' + s)
 
-            # further normal dicts are not hashable and we can`t return None because this would break further extractors
-            # therefore we use the first element of each sentence
+            # further we can`t return None because this would break further extractors
+            # therefore we use this bugfix object
+            # TODO: reason if it make sense to reject these documents at all, because result isn`t reliable at all
+            # TODO: flag document at least with some error flags
             result = {
                 'nlpToken': {
                     'index': 7,
@@ -85,7 +87,7 @@ class Preprocessor:
         :return:
         """
         dynamic_config = {
-            'date': document.get_rawData()['date_publish']
+            'date': document.get_date()
         }
         actual_config = {**self.base_config, **dynamic_config}
         return actual_config

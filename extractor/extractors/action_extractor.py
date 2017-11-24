@@ -12,9 +12,12 @@ class ActionExtractor(AbsExtractor):
 
     """
 
-    # weights used in the candidate evaluation:
-    # (position, frequency, named entity)
-    weights = (0.2, 0.9, 0.4)
+    def __init__(self, weights: (float, float, float) = (0.2, 0.9, 0.4), minimal_length_of_tokens: int=3):
+        self._minimal_length_of_tokens = minimal_length_of_tokens
+
+        # weights used in the candidate evaluation:
+        # (position, frequency, named entity)
+        self.weights = weights
 
     def extract(self, document):
         """
@@ -88,7 +91,7 @@ class ActionExtractor(AbsExtractor):
                     if sibling.label() == 'VP':
                         # this gives a tuple to find the way from sentence to leaf
                         # tree_position = subtree.leaf_treeposition(0)
-                        entry = [subtree.pos(), self.cut_what(sibling, 3).pos(),
+                        entry = [subtree.pos(), self.cut_what(sibling, self._minimal_length_of_tokens).pos(),
                                  sentence_root.stanfordCoreNLPResult['index']]
                         candidates.append(entry)
                         break
@@ -175,10 +178,10 @@ class ActionExtractor(AbsExtractor):
         what = [(c[1], c[2], c[3]) for c in ranked_candidates]
 
         # Filter duplicates and transform who to object oriented list
-        oWho = self._filterAndConvertToObjectOrientedList(who)
-        oWhat = self._filterAndConvertToObjectOrientedList(what)
-        document.set_answer('who', oWho)
-        document.set_answer('what', oWhat)
+        o_who = self._filterAndConvertToObjectOrientedList(who)
+        o_what = self._filterAndConvertToObjectOrientedList(what)
+        document.set_answer('who', o_who)
+        document.set_answer('what', o_what)
 
     def _filterAndConvertToObjectOrientedList(self, list):
         max = 0

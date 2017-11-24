@@ -126,7 +126,7 @@ class Handler(object):
                 # try:
                 self._process_document(document)
                 # except:
-                self.log.error('skipped one dok')
+                # self.log.error('skipped one dok')
 
         else:
             self.log.info('processing documents from file system')
@@ -141,7 +141,9 @@ class Handler(object):
                 self._process_document(document)
                 # except:
                 #               self.log.error('skipped one dok')
-                self.log.info('Processed Documents:\t ' + str(doc_counter))
+
+                self.log.info('==> Processed Documents:\t ' + str(doc_counter))
+                self.log.info('')
 
         self.log.info('')
         self.log.info('Handler: process: finished\t')

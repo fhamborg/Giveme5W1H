@@ -9,7 +9,6 @@ class MethodExtractor(AbsExtractor):
 
     # weights used in the candidate evaluation:
     # (position, frequency)
-    # weights = (4, 3)
     weights = [1.0, 1]
 
     _copulative_conjunction = ['and', 'as', 'both', 'because', 'even', 'for', 'if ', 'that', 'then', 'since', 'seeing',
@@ -114,7 +113,6 @@ class MethodExtractor(AbsExtractor):
         # retrieve results from preprocessing
         candidates = []
 
-        tmp_candidates = []
         sentences = document.get_sentences()
 
         self._maxIndex = 0
@@ -237,7 +235,7 @@ class MethodExtractor(AbsExtractor):
         return count
 
     def _is_relevant_pos(self, pos):
-        # Is adjectivs or adverb
+        # Is adjective or adverb
         if pos.startswith('JJ') or pos.startswith('RB'):
             return True
         else:

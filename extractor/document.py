@@ -1,7 +1,7 @@
 class Document(object):
     """
     Document is a pickable container for the raw document and all related data
-    rawData holds the native newsPlease files
+    rawData holds the native newsPlease file
     """
 
     def __init__(self, title='', desc='', text='', date=None, raw_data=None):

@@ -12,7 +12,7 @@ from extractor.tools.file.handler import Handler
 from extractor.tools.util import cmp_text, cmp_date, cmp_location
 
 # Add path to allow execution though console
-sys.path.insert(0, '/'.join(os.path.realpath(__file__).split('/')[:-2]))
+#sys.path.insert(0, '/'.join(os.path.realpath(__file__).split('/')[:-2]))
 # from timeit import default_timer as timer
 
 
@@ -54,7 +54,7 @@ class WeightQueue:
         self._increment_range_length = len(increment_range)
         # interval has 4 dimensions
         self._increment_range_steps = math.pow(self._increment_range_length, 4) / 100
-        # each document is going throug the interval once
+        # each document is going through the interval once
         self._increment_range_steps = self._increment_range_steps * self._document_counter
 
         # save each n-th step

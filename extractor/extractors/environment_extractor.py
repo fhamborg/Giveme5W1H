@@ -15,7 +15,7 @@ class EnvironmentExtractor(AbsExtractor):
     The EnvironmentExtractor tries to extract the location and time the event happened.
     """
 
-    def __init__(self, weights=((0.5, 0.8), (0.8, 0.25, 0.2, 0.7)), host='nominatim.openstreetmap.org'):
+    def __init__(self, weights=((0.5, 0.8), (0.8, 0.25, 0.2, 0.7)), phrase_range_location: int = 3, phrase_range_time_date: int=1, time_range: int=86400, host='nominatim.openstreetmap.org'):
         """
         Init the Nominatim connection as well as the calender object used for date interpretation.
 
@@ -39,7 +39,10 @@ class EnvironmentExtractor(AbsExtractor):
         # in most cases an article describes an event in the past
         self.calendar.ptc.DOWParseStyle = -1  # prefer day in the past for 'monday'
         self.calendar.ptc.CurrentDOWParseStyle = True  # prefer reference date if its the same weekday
-        self.time_dela = 86400  # 24h in seconds
+        self.time_dela = time_range  # 24h in seconds
+
+        self._phrase_range_location = phrase_range_location
+        self._phrase_range_time_date = phrase_range_time_date
 
     def extract(self, document):
         """
@@ -84,7 +87,7 @@ class EnvironmentExtractor(AbsExtractor):
         for i, entity in enumerate(tokens):
             # phrase_range=2 allows entities to be separate by single tokens, this is common for locations and dates
             # i.e. 'London, England' or 'October 13, 2015'.
-            for candidate in self._extract_entities(entity, ['LOCATION'], inverted=True, phrase_range=3,
+            for candidate in self._extract_entities(entity, ['LOCATION'], inverted=True, phrase_range=self._phrase_range_location,
                                                     accessor='ner'):
 
                 # look-up geocode in Nominatim
@@ -108,7 +111,7 @@ class EnvironmentExtractor(AbsExtractor):
                     logging.getLogger('GiveMe5W').error(str(e))
 
             for candidate in self._extract_entities(entity, ['TIME', 'DATE'], inverted=True,
-                                                    phrase_range=1, groups={'TIME': 'TIME+DATE', 'DATE': 'TIME+DATE'},
+                                                    phrase_range=self._phrase_range_time_date, groups={'TIME': 'TIME+DATE', 'DATE': 'TIME+DATE'},
                                                     accessor='ner'):
 
                 if candidate[1] == 'TIME':
@@ -255,10 +258,8 @@ class EnvironmentExtractor(AbsExtractor):
 
         oCandidates = document.get_candidates('EnvironmentExtractorNeDates')
         for candidateO in oCandidates:
-
             candidate = candidateO.get_raw()
             # translate date strings into date objects
-            # date_str = ' '.join([t[0] for t in candidate[0]])
             date_str = ' '.join([t['originalText'] for t in candidate])
             # Skip 'now' because its often part of a newsletter offer or similar
             if date_str.lower().strip() == 'now':

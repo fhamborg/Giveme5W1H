@@ -14,10 +14,6 @@ class CauseExtractor(AbsExtractor):
     The CauseExtractor tries to detect a causative that could explain an event.
     """
 
-    # weights used in the candidate evaluation:
-    # (position, clausal conjunction, adverbial indicator, NP-VP-NP)
-    weights = (.35, 0.3, .7, .4)
-
     adverbial_indicators = ['therefore', 'hence', 'thus', 'consequently', 'accordingly']  # 'so' has problems with JJ
     clausal_conjunctions = {'consequence': 'of', 'effect': 'of', 'result': 'of', 'upshot': 'of', 'outcome': 'of',
                             'because': '', 'due': 'to', 'stemmed': 'from'}
@@ -41,11 +37,11 @@ class CauseExtractor(AbsExtractor):
     constraints_hyponyms = {'entity': None, 'phenomenon': None, 'abstraction': None, 'group': None, 'possession': None,
                             'event': None, 'act': None, 'state': None}
 
-    def __init__(self, weights=None):
+    def __init__(self, weights: (float, float, float, float) = (.35, 0.3, .7, .4)):
         """
         Load WordNet corpus
 
-        :param weights: tuple of weights for candidate evaluation
+        :param weights: (position, clausal conjunction, adverbial indicator, NP-VP-NP)
         :type weights: (Float, Float)
         """
         self.log = logging.getLogger('GiveMe5W')
@@ -56,6 +52,7 @@ class CauseExtractor(AbsExtractor):
         except LookupError:
             self.log.warning('Could not find corpus for WordNet, will now try to download the corpus.')
             nltk.download('wordnet')
+
 
         if weights is not None:
             self.weights = weights

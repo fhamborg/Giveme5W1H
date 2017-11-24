@@ -246,6 +246,7 @@ $ python extractor/examples/extracting/simple_api.py
     * title (mandatory)
     * description
     * text
+    * date (must be readable by [parsedatetime](https://pypi.python.org/pypi/parsedatetime/))
 * Output
     * [news-please format](https://github.com/fhamborg/news-please/blob/master/newsplease/examples/sample.json)
 

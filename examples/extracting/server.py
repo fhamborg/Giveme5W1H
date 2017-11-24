@@ -60,7 +60,6 @@ reader = Reader()
 writer = Writer()
 
 
-# im sure there is a smarter way... this is a very simple landing page
 def get_mainPage():
     return template_index.render()
 
@@ -79,10 +78,11 @@ def request_to_document():
         title = request.args.get('title', None)
         description = request.args.get('description', None)
         text = request.args.get('text', None)
+        date = request.args.get('date', None)
 
         if title and (description or text):
             log.debug("retrieved raw article for extraction: %s", title)
-            document = Document(title, description if description else '', text if text else '')
+            document = Document(title, description if description else '', text if text else '', date=date)
     return document
 
 

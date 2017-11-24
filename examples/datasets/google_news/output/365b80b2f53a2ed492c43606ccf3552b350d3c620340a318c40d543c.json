@@ -36,39 +36,17 @@
                   "characterOffsetBegin": 133,
                   "characterOffsetEnd": 141,
                   "pos": "NN",
-                  "ner": "DATE",
-                  "normalizedNER": "OFFSET P1D",
+                  "ner": "TIME",
+                  "normalizedNER": "2017-11-18T01:39:18",
                   "speaker": "PER0",
                   "before": " ",
                   "after": "",
                   "timex": {
                     "tid": "t1",
-                    "type": "DATE",
-                    "altValue": "OFFSET P1D"
+                    "type": "TIME",
+                    "value": "2017-11-18T01:39:18"
                   }
-                },
-                "heideltime": [
-                  {
-                    "@tid": "t1",
-                    "@type": "DATE",
-                    "@value": "2017-11-18",
-                    "#text": "tomorrow",
-                    "characterOffset": [
-                      133,
-                      141
-                    ]
-                  },
-                  {
-                    "@tid": "t2",
-                    "@type": "DATE",
-                    "@value": "2017-11-18",
-                    "#text": "tomorrow",
-                    "characterOffset": [
-                      133,
-                      141
-                    ]
-                  }
-                ]
+                }
               },
               "NN"
             ]
@@ -87,12 +65,12 @@
             [
               {
                 "nlpToken": {
-                  "index": 16,
-                  "word": "official",
-                  "originalText": "official",
-                  "lemma": "official",
-                  "characterOffsetBegin": 177,
-                  "characterOffsetEnd": 185,
+                  "index": 15,
+                  "word": "in-game",
+                  "originalText": "in-game",
+                  "lemma": "in-game",
+                  "characterOffsetBegin": 981,
+                  "characterOffsetEnd": 988,
                   "pos": "JJ",
                   "ner": "O",
                   "speaker": "PER0",
@@ -103,9 +81,9 @@
               "JJ"
             ]
           ],
-          "score": 1.5384615384615383,
-          "text": "official",
-          "nlpIndexSentence": 1
+          "score": 1.2575757575757576,
+          "text": "in-game",
+          "nlpIndexSentence": 6
         }
       ],
       "label": "how"
@@ -128,18 +106,7 @@
                   "speaker": "PER0",
                   "before": " ",
                   "after": " "
-                },
-                "aida": [
-                  {
-                    "mention": {
-                      "allEntities": [],
-                      "offset": 340,
-                      "name": "EA",
-                      "length": 2
-                    },
-                    "bestEntityMetadata": null
-                  }
-                ]
+                }
               },
               "NN"
             ]

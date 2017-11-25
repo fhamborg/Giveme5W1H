@@ -21,98 +21,6 @@
   "category": "Equifax breach",
   "dId": "fc06f28047b37cf15d3d59468c3433d66644102d50e45b2a0d0da474",
   "fiveWoneH": {
-    "where": {
-      "extracted": [],
-      "label": "where"
-    },
-    "when": {
-      "extracted": [
-        {
-          "parts": [
-            [
-              {
-                "nlpToken": {
-                  "index": 15,
-                  "word": "September",
-                  "originalText": "September",
-                  "lemma": "September",
-                  "characterOffsetBegin": 151,
-                  "characterOffsetEnd": 160,
-                  "pos": "NNP",
-                  "ner": "DATE",
-                  "normalizedNER": "XXXX-09",
-                  "speaker": "PER0",
-                  "before": " ",
-                  "after": " ",
-                  "timex": {
-                    "tid": "t1",
-                    "type": "DATE",
-                    "value": "XXXX-09"
-                  }
-                },
-                "heideltime": [
-                  {
-                    "@tid": "t1",
-                    "@type": "DATE",
-                    "@value": "2017-09",
-                    "#text": "September",
-                    "characterOffset": [
-                      151,
-                      160
-                    ]
-                  },
-                  {
-                    "@tid": "t2",
-                    "@type": "DATE",
-                    "@value": "2017-09",
-                    "#text": "September",
-                    "characterOffset": [
-                      151,
-                      160
-                    ]
-                  }
-                ]
-              },
-              "NNP"
-            ]
-          ],
-          "score": 0.8290598290598291,
-          "text": "September",
-          "nlpIndexSentence": 1
-        }
-      ],
-      "label": "when"
-    },
-    "how": {
-      "extracted": [
-        {
-          "parts": [
-            [
-              {
-                "nlpToken": {
-                  "index": 10,
-                  "word": "disclosed",
-                  "originalText": "disclosed",
-                  "lemma": "disclose",
-                  "characterOffsetBegin": 121,
-                  "characterOffsetEnd": 130,
-                  "pos": "VBD",
-                  "ner": "O",
-                  "speaker": "PER0",
-                  "before": " ",
-                  "after": " "
-                }
-              },
-              "VBD"
-            ]
-          ],
-          "score": 1.6666666666666665,
-          "text": "disclosed",
-          "nlpIndexSentence": 1
-        }
-      ],
-      "label": "how"
-    },
     "who": {
       "extracted": [
         {
@@ -131,18 +39,7 @@
                   "speaker": "PER0",
                   "before": " ",
                   "after": " "
-                },
-                "aida": [
-                  {
-                    "mention": {
-                      "allEntities": [],
-                      "offset": 0,
-                      "name": "Equifax Apologizes for Security Breach",
-                      "length": 38
-                    },
-                    "bestEntityMetadata": null
-                  }
-                ]
+                }
               },
               "NNPS"
             ]
@@ -237,6 +134,76 @@
         }
       ],
       "label": "what"
+    },
+    "where": {
+      "extracted": [],
+      "label": "where"
+    },
+    "when": {
+      "extracted": [
+        {
+          "parts": [
+            [
+              {
+                "nlpToken": {
+                  "index": 15,
+                  "word": "September",
+                  "originalText": "September",
+                  "lemma": "September",
+                  "characterOffsetBegin": 151,
+                  "characterOffsetEnd": 160,
+                  "pos": "NNP",
+                  "ner": "DATE",
+                  "normalizedNER": "XXXX-09",
+                  "speaker": "PER0",
+                  "before": " ",
+                  "after": " ",
+                  "timex": {
+                    "tid": "t1",
+                    "type": "DATE",
+                    "value": "XXXX-09"
+                  }
+                }
+              },
+              "NNP"
+            ]
+          ],
+          "score": 0.8290598290598291,
+          "text": "September",
+          "nlpIndexSentence": 1
+        }
+      ],
+      "label": "when"
+    },
+    "how": {
+      "extracted": [
+        {
+          "parts": [
+            [
+              {
+                "nlpToken": {
+                  "index": 10,
+                  "word": "disclosed",
+                  "originalText": "disclosed",
+                  "lemma": "disclose",
+                  "characterOffsetBegin": 121,
+                  "characterOffsetEnd": 130,
+                  "pos": "VBD",
+                  "ner": "O",
+                  "speaker": "PER0",
+                  "before": " ",
+                  "after": " "
+                }
+              },
+              "VBD"
+            ]
+          ],
+          "score": 1.3333333333333333,
+          "text": "disclosed",
+          "nlpIndexSentence": 1
+        }
+      ],
+      "label": "how"
     },
     "why": {
       "extracted": [

@@ -49,19 +49,7 @@
                     "type": "DATE",
                     "altValue": "THIS P1W OFFSET P-1W"
                   }
-                },
-                "heideltime": [
-                  {
-                    "@tid": "t1",
-                    "@type": "DATE",
-                    "@value": "2017-W45",
-                    "#text": "last week",
-                    "characterOffset": [
-                      336,
-                      345
-                    ]
-                  }
-                ]
+                }
               },
               "JJ"
             ],
@@ -85,19 +73,7 @@
                     "type": "DATE",
                     "altValue": "THIS P1W OFFSET P-1W"
                   }
-                },
-                "heideltime": [
-                  {
-                    "@tid": "t1",
-                    "@type": "DATE",
-                    "@value": "2017-W45",
-                    "#text": "last week",
-                    "characterOffset": [
-                      336,
-                      345
-                    ]
-                  }
-                ]
+                }
               },
               "NN"
             ]
@@ -108,6 +84,36 @@
         }
       ],
       "label": "when"
+    },
+    "how": {
+      "extracted": [
+        {
+          "parts": [
+            [
+              {
+                "nlpToken": {
+                  "index": 9,
+                  "word": "green",
+                  "originalText": "green",
+                  "lemma": "green",
+                  "characterOffsetBegin": 655,
+                  "characterOffsetEnd": 660,
+                  "pos": "JJ",
+                  "ner": "O",
+                  "speaker": "PER0",
+                  "before": " ",
+                  "after": " "
+                }
+              },
+              "JJ"
+            ]
+          ],
+          "score": 1.2450980392156863,
+          "text": "green",
+          "nlpIndexSentence": 7
+        }
+      ],
+      "label": "how"
     },
     "who": {
       "extracted": [
@@ -402,36 +408,6 @@
         }
       ],
       "label": "what"
-    },
-    "how": {
-      "extracted": [
-        {
-          "parts": [
-            [
-              {
-                "nlpToken": {
-                  "index": 9,
-                  "word": "green",
-                  "originalText": "green",
-                  "lemma": "green",
-                  "characterOffsetBegin": 655,
-                  "characterOffsetEnd": 660,
-                  "pos": "JJ",
-                  "ner": "O",
-                  "speaker": "PER0",
-                  "before": " ",
-                  "after": " "
-                }
-              },
-              "JJ"
-            ]
-          ],
-          "score": 1.5506535947712419,
-          "text": "green",
-          "nlpIndexSentence": 7
-        }
-      ],
-      "label": "how"
     },
     "why": {
       "extracted": [

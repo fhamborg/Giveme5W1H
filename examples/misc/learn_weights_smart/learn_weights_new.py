@@ -20,6 +20,17 @@ from extractors import environment_extractor, action_extractor, cause_extractor,
 from misc.learn_weights_smart.work_queue import WorkQueue
 
 
+
+def adjust_weights(extractors, i, j, k, l):
+    # (action_0, cause_1, environment_2)
+    extractors[0].weights = (i, j, k)
+    # time
+    extractors[1].weights = ((i, j), (i, j, k, l))
+    # cause - (position, conjunction, adverb, verb)
+    extractors[2].weights = (i, j, k, l)
+    # method - (position, frequency)
+    extractors[3].weights = (i, j)
+
 def loadDocumentsAndCoder():
 
 
@@ -54,6 +65,40 @@ def loadDocumentsAndCoder():
 
     return docments, geocoder, calendar, extractorObject
 
+
+def cmp_text_helper(question, answers, annotations, weights, document, fileHandler):
+    score = -1
+    # check if there is an annotaton and an answer
+    if question in annotations and question in answers:
+        topAnswer = answers[question][0].get_parts()
+        topAnnotation = annotations[question][0][2]
+        score = cmp_text(topAnnotation, topAnswer)
+
+    fileHandler.add_result(question, weights, score, document.get_document_id())
+
+
+def cmp_date_helper(question, answers, annotations, weights, document, fileHandler):
+    score = -1
+    # check if there is an annotaton and an answer
+    if question in annotations and question in answers:
+        topAnswer = answers[question][0][0]
+        topAnnotation = annotations[question][0][2]
+        score = cmp_date(topAnnotation, topAnswer, fileHandler.get_weight_queue()._calendar)
+
+    fileHandler.add_result(question, weights, score, document.get_document_id())
+
+
+def cmp_location_helper(question, answers, annotations, weights, document, fileHandler):
+    score = -1
+    # check if there is an annotaton and an answer
+    if question in annotations and question in answers:
+        topAnswer = answers[question][0][0]
+        topAnnotation = annotations[question][0][2]
+        score = cmp_location(topAnnotation, topAnswer, fileHandler.get_weight_queue()._geocoder)
+
+    fileHandler.add_result(question, weights, score, document.get_document_id())
+
+
 if __name__ == '__main__':
     log = logging.getLogger('GiveMe5W')
     log.setLevel(logging.DEBUG)
@@ -79,9 +124,31 @@ if __name__ == '__main__':
                         document.reset_candidates
                     print("reset candidates - extracting values changed")
 
-
             _pre_extracting_parameters_id = next_item['extracting_parameters_id']
 
+            # adjust weights
+            weights = next_item['scoring_parameters']['weights']
+            i = weights[0]
+            j = weights[1]
+            k = weights[2]
+            l = weights[3]
+            adjust_weights(extractor.extractors, i, j, k, l)
+
+            # run for all documents
+            for document in documents:
+                extractor.parse(document)
+
+                annotation = document.get_annotations()
+                answers = document.get_answers()
+
+                cmp_text_helper('why', answers, annotation, [i, j, k, l], document, fileHandler)
+                cmp_text_helper('what', answers, annotation, [i, j, k], document, fileHandler)
+                cmp_text_helper('who', answers, annotation, [i, j, k], document, fileHandler)
+                cmp_text_helper('how', answers, annotation, [i, j], document, fileHandler)
+
+                # These two are tricky because of the used online services
+                cmp_date_helper('when', answers, annotation, [i, j, k, l], document, fileHandler)
+                cmp_location_helper('where', answers, annotation, [i, j], document, fileHandler)
 
 
 

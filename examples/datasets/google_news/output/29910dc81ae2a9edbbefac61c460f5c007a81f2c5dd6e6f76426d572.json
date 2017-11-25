@@ -237,6 +237,46 @@
       ],
       "label": "what"
     },
+    "where": {
+      "extracted": [],
+      "label": "where"
+    },
+    "when": {
+      "extracted": [
+        {
+          "parts": [
+            [
+              {
+                "nlpToken": {
+                  "index": 7,
+                  "word": "Monday",
+                  "originalText": "Monday",
+                  "lemma": "Monday",
+                  "characterOffsetBegin": 128,
+                  "characterOffsetEnd": 134,
+                  "pos": "NNP",
+                  "ner": "DATE",
+                  "normalizedNER": "XXXX-WXX-1",
+                  "speaker": "PER0",
+                  "before": " ",
+                  "after": " ",
+                  "timex": {
+                    "tid": "t1",
+                    "type": "DATE",
+                    "value": "XXXX-WXX-1"
+                  }
+                }
+              },
+              "NNP"
+            ]
+          ],
+          "score": 0.888707037643208,
+          "text": "Monday",
+          "nlpIndexSentence": 1
+        }
+      ],
+      "label": "when"
+    },
     "why": {
       "extracted": [
         {
@@ -614,92 +654,6 @@
         }
       ],
       "label": "why"
-    },
-    "where": {
-      "extracted": [
-        {
-          "parts": [
-            [
-              {
-                "nlpToken": {
-                  "index": 3,
-                  "word": "Japan",
-                  "originalText": "Japan",
-                  "lemma": "Japan",
-                  "characterOffsetBegin": 11,
-                  "characterOffsetEnd": 16,
-                  "pos": "NNP",
-                  "ner": "LOCATION",
-                  "speaker": "PER0",
-                  "before": " ",
-                  "after": " "
-                }
-              },
-              "NNP"
-            ]
-          ],
-          "score": 1.0,
-          "text": "Japan",
-          "enhancement": {
-            "openstreetmap_nominatim": {
-              "place_id": "177812347",
-              "licence": "Data \u00a9 OpenStreetMap contributors, ODbL 1.0. http://www.openstreetmap.org/copyright",
-              "osm_type": "relation",
-              "osm_id": "382313",
-              "boundingbox": [
-                20.2145811,
-                45.7112046,
-                122.7141754,
-                154.205541
-              ],
-              "lat": "36.5748441",
-              "lon": "139.2394179",
-              "display_name": "\u65e5\u672c",
-              "class": "boundary",
-              "type": "administrative",
-              "importance": 0.22667730599968,
-              "icon": "https://nominatim.openstreetmap.org/images/mapicons/poi_boundary_administrative.p.20.png"
-            }
-          }
-        }
-      ],
-      "label": "where"
-    },
-    "when": {
-      "extracted": [
-        {
-          "parts": [
-            [
-              {
-                "nlpToken": {
-                  "index": 7,
-                  "word": "Monday",
-                  "originalText": "Monday",
-                  "lemma": "Monday",
-                  "characterOffsetBegin": 128,
-                  "characterOffsetEnd": 134,
-                  "pos": "NNP",
-                  "ner": "DATE",
-                  "normalizedNER": "2017-11-13",
-                  "speaker": "PER0",
-                  "before": " ",
-                  "after": " ",
-                  "timex": {
-                    "tid": "t1",
-                    "type": "DATE",
-                    "value": "2017-11-13"
-                  }
-                }
-              },
-              "NNP"
-            ]
-          ],
-          "score": 0.888707037643208,
-          "text": "Monday",
-          "nlpIndexSentence": 1
-        }
-      ],
-      "label": "when"
     }
   }
 }

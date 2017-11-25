@@ -65,17 +65,16 @@ class WorkQueue(object):
                             for k in self._weights_range:
                                 for l in self._weights_range:
                                     self._queue.append({
-                                        'extracting_parameters_id': extracting_parameters_id,
-                                       'scoring_parameters':{
+                                       'extracting_parameters_id': extracting_parameters_id,
+                                       'scoring_parameters': {
                                            'weights': (i, j, k, l)
                                        },
-                                       'extracting_parameters':{
+                                       'extracting_parameters': {
                                            'phrase_range_location': phrase_range_location,
                                            'phrase_range_time_date': phrase_range_time_date,
                                            'time_range': time_range
                                        }})
                     extracting_parameters_id = extracting_parameters_id + 1
-
 
         print('queue length: ' + str(len(self._queue)))
 

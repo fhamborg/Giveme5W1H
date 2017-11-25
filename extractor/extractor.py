@@ -17,7 +17,7 @@ class Worker(Thread):
         while True:
             extractor, document = self._queue.get()
             if extractor and document:
-                extractor.extract(document)
+                extractor.process(document)
                 self._queue.task_done()
 
 

@@ -19,22 +19,6 @@ class MethodExtractor(AbsExtractor):
                    'am', 'as', 'even', 'however', 'other', 'just', 'over', 'more', 'say', 'also']
     _stop_ner = ['TIME', 'DATE', 'ORGANIZATION', 'DURATION', 'ORDINAL']
 
-    # prepositional phrase PP, preposition
-    def extract(self, document):
-        """
-        Parses the document for answers to the questions how.
-
-        :param document: The Document object to parse
-        :type document: Document
-
-        :return: The parsed Document object
-        """
-
-        self._extract_candidates(document)
-        self._evaluate_candidates(document)
-
-        return document
-
     def _extract_candidates(self, document):
 
         candidates = []

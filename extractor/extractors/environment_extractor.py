@@ -44,19 +44,7 @@ class EnvironmentExtractor(AbsExtractor):
         self._phrase_range_location = phrase_range_location
         self._phrase_range_time_date = phrase_range_time_date
 
-    def extract(self, document):
-        """
-        Parses the given document for locations and time data
 
-        :param document: The Document object to parse
-        :type document: Document
-
-        :return: The parsed Document object
-        """
-        self._extract_candidates(document)
-        self._evaluate_candidates(document)
-
-        return document
 
     def _evaluate_candidates(self, document):
 

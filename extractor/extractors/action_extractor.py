@@ -19,19 +19,6 @@ class ActionExtractor(AbsExtractor):
         # (position, frequency, named entity)
         self.weights = weights
 
-    def extract(self, document):
-        """
-        Parses the document for answers to the questions who and what.
-
-        :param document: The Document object to parse
-        :type document: Document
-
-        :return: The parsed Document object
-        """
-        self._extract_candidates(document)
-        self._evaluate_candidates(document)
-        return document
-
     def _extract_candidates(self, document):
         """
         Extracts possible agents/actions pairs from a given document.

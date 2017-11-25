@@ -75,18 +75,7 @@ class CauseExtractor(AbsExtractor):
 
         self.lemmatizer = WordNetLemmatizer()
 
-    def extract(self, document):
-        """
-        Parses the document for answers to the question why.
 
-        :param document: Document to be Parsed
-        :return: Parsed document
-        """
-
-        self._extract_candidates(document)
-        self._evaluate_candidates(document)
-
-        return document
 
     def _extract_candidates(self, document):
         """

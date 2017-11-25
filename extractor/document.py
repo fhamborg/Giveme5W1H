@@ -62,8 +62,26 @@ class Document(object):
     def set_candidates(self, extractor, candidates):
         self._candidates[extractor] = candidates
 
-    def get_candidates(self, extractor):
+    def get_candidates(self, extractor: str):
         return self._candidates.get(extractor, [])
+
+    def has_candidates(self, extractor: str):
+        """
+        extractor candidates prefix their candidates with  their own id
+        e.g. EnvironmentExtractorNeLocatios
+
+        this methods returns true if there is at least one candidate with the given prefix
+        """
+        for candidate in self._candidates:
+            if candidate.startswith(extractor):
+                return True
+        return False
+    def reset_candidates(self):
+        """
+        resetting candidates will force each extractor to extract them again before evaluation
+        :return:
+        """
+        self._candidates = {}
 
     def get_file_name(self):
         return self._file_name

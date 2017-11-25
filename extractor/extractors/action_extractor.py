@@ -51,7 +51,7 @@ class ActionExtractor(AbsExtractor):
 
                         candidates.append(candidate_object)
 
-        document.set_candidates('ActionExtractor', candidates)
+        document.set_candidates(self.get_id(), candidates)
 
     def _evaluate_tree(self, sentence_root):
         """
@@ -107,7 +107,7 @@ class ActionExtractor(AbsExtractor):
         else:
             max_len = 1
 
-        for candidate in document.get_candidates('ActionExtractor'):
+        for candidate in document.get_candidates(self.get_id()):
             candidateParts = candidate.get_raw()
             verb = candidateParts[1][0][0]['nlpToken']['originalText'].lower()
 

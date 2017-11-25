@@ -100,7 +100,7 @@ class CauseExtractor(AbsExtractor):
 
                 candidates.append(candidateObject)
 
-        document.set_candidates('CauseExtractor', candidates)
+        document.set_candidates(self.get_id(), candidates)
 
     def _evaluate_tree(self, tree):
         """
@@ -250,7 +250,7 @@ class CauseExtractor(AbsExtractor):
         :return: A list of evaluated and ranked candidates
         """
         # ranked_candidates = []
-        candidates = document.get_candidates('CauseExtractor')
+        candidates = document.get_candidates(self.get_id())
         weights_sum = sum(self.weights)
 
         for candidateObject in candidates:

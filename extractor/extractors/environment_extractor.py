@@ -44,14 +44,12 @@ class EnvironmentExtractor(AbsExtractor):
         self._phrase_range_location = phrase_range_location
         self._phrase_range_time_date = phrase_range_time_date
 
-
-
     def _evaluate_candidates(self, document):
-
         locations = self._evaluate_locations(document)
         dates = self._evaluate_dates(document)
 
-        document.set_answer('where', locations)  # there are now duplicates
+        # there are now duplicates
+        document.set_answer('where', locations)
         document.set_answer('when', dates)
 
     def _extract_candidates(self, document):
@@ -104,23 +102,21 @@ class EnvironmentExtractor(AbsExtractor):
 
                 if candidate[1] == 'TIME':
                     # If a date was already mentioned combine it with the mentioned time
+                    # TODO: crosscheck with old implementation, this seams to be wrong
                     if last_date is not None:
                         ca = Candidate()
 
-                        # candidate_object.set_text_index(None)
                         ca.set_raw(candidate[0])
                         ca.set_sentence_index(i)
                         dates.append(ca)
                     else:
                         ca = Candidate()
 
-                        # candidate_object.set_text_index(None)
                         ca.set_raw(candidate[0])
                         ca.set_sentence_index(i)
                         dates.append(ca)
 
                 elif candidate[1] == 'DATE':
-                    # dates.append((self._fetch_pos(pos_tags[i], candidate[0]), i))
                     ca = Candidate()
 
                     ca.set_raw(candidate[0])
@@ -131,15 +127,13 @@ class EnvironmentExtractor(AbsExtractor):
                     # String includes date and time
                     ca = Candidate()
 
-                    # candidate_object.set_text_index(None)
-
                     ca.set_raw(candidate[0])
                     ca.set_sentence_index(i)
                     dates.append(ca)
 
-        document.set_candidates('EnvironmentExtractorNeDates', dates)
-        document.set_candidates('EnvironmentExtractorNeLocatios', locations)
-        # return locations, dates
+        document.set_candidates(self.get_id() + 'NeDates', dates)
+        document.set_candidates(self.get_id() + 'Locatios', locations)
+
 
     def _evaluate_locations(self, document):
         """
@@ -158,7 +152,7 @@ class EnvironmentExtractor(AbsExtractor):
         weights = self.weights[0]
         weights_sum = sum(weights)
 
-        for candidate in document.get_candidates('EnvironmentExtractorNeLocatios'):
+        for candidate in document.get_candidates(self.get_id() + 'NeLocatios'):
             # fetch the boundingbox: (min lat, max lat, min long, max long)
             parts = candidate.get_raw()
             location = candidate.get_calculations('openstreetmap_nominatim')
@@ -211,7 +205,6 @@ class EnvironmentExtractor(AbsExtractor):
             ca = location[7]
             ca.set_score(score)
             ranked_locations.append(ca)
-            # ranked_locations.append((location[0], score))
 
         # NEW
         ranked_locations.sort(key=lambda x: x.get_score(), reverse=True)
@@ -244,7 +237,7 @@ class EnvironmentExtractor(AbsExtractor):
         # fetch the date the article was published as a reference date
         reference = self.calendar.parse(document.get_date() or '')
 
-        oCandidates = document.get_candidates('EnvironmentExtractorNeDates')
+        oCandidates = document.get_candidates(self.get_id() + 'NeDates')
         for candidateO in oCandidates:
             candidate = candidateO.get_raw()
             # translate date strings into date objects
@@ -289,8 +282,7 @@ class EnvironmentExtractor(AbsExtractor):
 
             if score > 0:
                 score /= weights_sum
-            # candidate[1] = score
-            # 5 is the wrapper object
+
             candidate[5].set_score(score)
 
         # format bugfix - take the raw information and form a standardized parts format

@@ -12,17 +12,19 @@ class Document(object):
             desc = ''
         if text is None:
             text = ''
-        if date is None:
+        if date:
+            self._date = date
+        else:
             # use raw date as fallback if any,
             if raw_data is not None:
                 self._date = raw_data.get('date_publish', None)
+            else:
+                self._date = None
 
         self._raw = {'title': title, 'description': desc, 'text': text}
 
         # append all document text into one string
         self._full_text = '. '.join(val for key, val in self._raw.items())
-
-        self._date = None
 
         self._file_name = None
         self._source = None

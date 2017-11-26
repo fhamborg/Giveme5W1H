@@ -6,6 +6,10 @@ from extractor.configuration import Configuration as Config
 
 
 class Writer:
+    """
+    Helper to write prickles and json representations of documents
+    There is no way to convert a json back to a full document object. Use prickles instead
+    """
     def __init__(self):
         """
         :param path: Absolute path to the output directory

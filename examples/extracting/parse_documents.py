@@ -17,9 +17,22 @@ File will be process one by one.
 # java -mx4g -cp "*" edu.stanford.nlp.pipeline.StanfordCoreNLPServer -port 9000 -timeout 15000
 
 if __name__ == '__main__':
-    # helper to make dataset selction simple
-    golden_standard = os.path.dirname(__file__) + '/../datasets/gold_standard/data/'
-    bbc = os.path.dirname(__file__) + '/../datasets/bbc/data/'
+    # helper to setup a correct path
+    rel_datasets_path = '/../datasets/'
+    dataset_helper = {
+        'gold_standard': os.path.dirname(__file__) + rel_datasets_path + 'gold_standard',
+        'bbc': os.path.dirname(__file__) + rel_datasets_path + 'bbc',
+        'google_news': os.path.dirname(__file__) + rel_datasets_path + 'google_news',
+        'local': os.path.dirname(__file__)
+    }
+
+    #
+    # Switch here between the predefined datasets or local for the local folder
+    #
+    basePath = dataset_helper['google_news']
+    #
+    #
+    #
 
     # logger setup
     log = logging.getLogger('GiveMe5W')
@@ -31,9 +44,9 @@ if __name__ == '__main__':
     # giveme5w setup - with defaults
     extractor = FiveWExtractor()
 
-    inputPath = golden_standard
-    outputPath = os.path.dirname(__file__) + '/output'
-    preprocessedPath = os.path.dirname(__file__) + '/cache'
+    inputPath = basePath + '/data'
+    outputPath = basePath + '/output'
+    preprocessedPath = basePath + '/cache'
 
     # initiate the news-please file handler with the input directory
     (Handler(inputPath)

@@ -8,6 +8,18 @@ from .writer import Writer
 
 
 class Handler(object):
+    """
+    Helper to process files, this calls supports:
+     - caching,
+     - basic resuming abilities
+     - decent logging of the process
+
+
+    Handler is implementing his own workflow and wrappes only the extractor.
+    Therefore handler is calling preprocess(for cache ability) by himself.
+    This leads to two preprocess calls. This is fine, because every document know their state.
+    """
+
     def __init__(self, input_path):
 
         self._inputPath = input_path
@@ -57,13 +69,12 @@ class Handler(object):
         self.log.error('documents prelaoded:\t' + str(docCounter))
         return self
 
-    """
-    process only files without an entry in the output directory
-    Warning dosent work in combination with preload_and_cache_documents,
-    output is not loaded into context, if existence
-    """
-
     def skip_documents_with_output(self, skip=True):
+        """
+           process only files without an entry in the output directory
+           Warning doesnt work in combination with preload_and_cache_documents,
+           output is not loaded into context, if existence
+           """
         self._skipDocumentsWithOutput = skip
         if not self._outputPath:
             self.log.error('Call set_output_path with a valid path, before you enable this option')
@@ -112,10 +123,10 @@ class Handler(object):
             self.log.info('')
             sys.stdout.flush()
             for document in self._documents:
-                #try:
+                # try:
                 self._process_document(document)
-                #except:
-                self.log.error('skipped one dok')
+                # except:
+                # self.log.error('skipped one dok')
 
         else:
             self.log.info('processing documents from file system')
@@ -125,12 +136,14 @@ class Handler(object):
                     print('limit reached')
                     break
                 doc_counter += 1
-                #try:
+                # try:
                 document = self._reader.read(filepath)
                 self._process_document(document)
-                #except:
+                # except:
                 #               self.log.error('skipped one dok')
-                self.log.info('Processed Documents:\t ' + str(doc_counter))
+
+                self.log.info('==> Processed Documents:\t ' + str(doc_counter))
+                self.log.info('')
 
         self.log.info('')
         self.log.info('Handler: process: finished\t')

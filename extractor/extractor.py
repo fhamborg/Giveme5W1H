@@ -17,7 +17,7 @@ class Worker(Thread):
         while True:
             extractor, document = self._queue.get()
             if extractor and document:
-                extractor.extract(document)
+                extractor.process(document)
                 self._queue.task_done()
 
 
@@ -54,7 +54,7 @@ class FiveWExtractor:
             self.extractors = extractors
         else:
             # the default extractor selection
-            self.log.info('No extractors passed, initializing default configuration.')
+            self.log.info('No extractors passed: initializing default configuration.')
             self.extractors = [
                 action_extractor.ActionExtractor(),
                 environment_extractor.EnvironmentExtractor(),
@@ -65,7 +65,7 @@ class FiveWExtractor:
         if combined_scorers and len(combined_scorers) > 0:
             self.combinedScorers = combined_scorers
         else:
-            self.log.info('No combinedScorers: initializing default configuration.')
+            self.log.info('No combinedScorers passed: initializing default configuration.')
 
             self.combinedScorers = [
                 distance_of_candidate.DistanceOfCandidate(('what', 'who'), ('how'))

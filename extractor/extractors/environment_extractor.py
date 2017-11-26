@@ -15,26 +15,21 @@ class EnvironmentExtractor(AbsExtractor):
     The EnvironmentExtractor tries to extract the location and time the event happened.
     """
 
-    # weights used in the candidate evaluation:
-    # ((position, frequency), (position, date, time, frequency))
-    weights = ((0.5, 0.8), (0.8, 0.25, 0.2, 0.7))
-
-    def __init__(self, weights=None, host=None):
+    def __init__(self, weights=((0.5, 0.8), (0.8, 0.25, 0.2, 0.7)), phrase_range_location: int = 3, phrase_range_time_date: int=1, time_range: int=86400, host='nominatim.openstreetmap.org'):
         """
         Init the Nominatim connection as well as the calender object used for date interpretation.
 
         :param weights: Weights used to evaluate answer candidates.
-        :type weights: ((Float, Float), (Float, Float, Float, Float))
-        :param host: Address to the Nominatim host
+        :type weights: ((Float, Float), (Float, Float, Float, Float)), weights used in the candidate evaluation:
+        ((position, frequency), (position, date, time, frequency))
+        :param host: Address of the Nominatim host
         :type host: String
         """
-        if weights is not None:
-            self.weights = weights
+
+        # set weights
+        self.weights = weights
 
         # init db connection used for location resolution
-        if host is None:
-            host = 'nominatim.openstreetmap.org'
-
         self.geocoder = Nominatim(domain=host, timeout=8)
 
         # init calender object for date resolution
@@ -44,28 +39,17 @@ class EnvironmentExtractor(AbsExtractor):
         # in most cases an article describes an event in the past
         self.calendar.ptc.DOWParseStyle = -1  # prefer day in the past for 'monday'
         self.calendar.ptc.CurrentDOWParseStyle = True  # prefer reference date if its the same weekday
-        self.time_dela = 86400  # 24h in seconds
+        self.time_dela = time_range  # 24h in seconds
 
-    def extract(self, document):
-        """
-        Parses the given document for locations and time data
-
-        :param document: The Document object to parse
-        :type document: Document
-
-        :return: The parsed Document object
-        """
-        self._extract_candidates(document)
-        self._evaluate_candidates(document)
-
-        return document
+        self._phrase_range_location = phrase_range_location
+        self._phrase_range_time_date = phrase_range_time_date
 
     def _evaluate_candidates(self, document):
-
         locations = self._evaluate_locations(document)
         dates = self._evaluate_dates(document)
 
-        document.set_answer('where', locations)  # there are now duplicates
+        # there are now duplicates
+        document.set_answer('where', locations)
         document.set_answer('when', dates)
 
     def _extract_candidates(self, document):
@@ -89,7 +73,7 @@ class EnvironmentExtractor(AbsExtractor):
         for i, entity in enumerate(tokens):
             # phrase_range=2 allows entities to be separate by single tokens, this is common for locations and dates
             # i.e. 'London, England' or 'October 13, 2015'.
-            for candidate in self._extract_entities(entity, ['LOCATION'], inverted=True, phrase_range=3,
+            for candidate in self._extract_entities(entity, ['LOCATION'], inverted=True, phrase_range=self._phrase_range_location,
                                                     accessor='ner'):
 
                 # look-up geocode in Nominatim
@@ -113,28 +97,26 @@ class EnvironmentExtractor(AbsExtractor):
                     logging.getLogger('GiveMe5W').error(str(e))
 
             for candidate in self._extract_entities(entity, ['TIME', 'DATE'], inverted=True,
-                                                    phrase_range=1, groups={'TIME': 'TIME+DATE', 'DATE': 'TIME+DATE'},
+                                                    phrase_range=self._phrase_range_time_date, groups={'TIME': 'TIME+DATE', 'DATE': 'TIME+DATE'},
                                                     accessor='ner'):
 
                 if candidate[1] == 'TIME':
                     # If a date was already mentioned combine it with the mentioned time
+                    # TODO: crosscheck with old implementation, this seams to be wrong
                     if last_date is not None:
                         ca = Candidate()
 
-                        # candidate_object.set_text_index(None)
                         ca.set_raw(candidate[0])
                         ca.set_sentence_index(i)
                         dates.append(ca)
                     else:
                         ca = Candidate()
 
-                        # candidate_object.set_text_index(None)
                         ca.set_raw(candidate[0])
                         ca.set_sentence_index(i)
                         dates.append(ca)
 
                 elif candidate[1] == 'DATE':
-                    # dates.append((self._fetch_pos(pos_tags[i], candidate[0]), i))
                     ca = Candidate()
 
                     ca.set_raw(candidate[0])
@@ -145,15 +127,13 @@ class EnvironmentExtractor(AbsExtractor):
                     # String includes date and time
                     ca = Candidate()
 
-                    # candidate_object.set_text_index(None)
-
                     ca.set_raw(candidate[0])
                     ca.set_sentence_index(i)
                     dates.append(ca)
 
-        document.set_candidates('EnvironmentExtractorNeDates', dates)
-        document.set_candidates('EnvironmentExtractorNeLocatios', locations)
-        # return locations, dates
+        document.set_candidates(self.get_id() + 'NeDates', dates)
+        document.set_candidates(self.get_id() + 'Locatios', locations)
+
 
     def _evaluate_locations(self, document):
         """
@@ -172,11 +152,8 @@ class EnvironmentExtractor(AbsExtractor):
         weights = self.weights[0]
         weights_sum = sum(weights)
 
-        for candidate in document.get_candidates('EnvironmentExtractorNeLocatios'):
+        for candidate in document.get_candidates(self.get_id() + 'NeLocatios'):
             # fetch the boundingbox: (min lat, max lat, min long, max long)
-
-            # location = candidate.get_raw()
-            # bb = location[1].raw['boundingbox']
             parts = candidate.get_raw()
             location = candidate.get_calculations('openstreetmap_nominatim')
             bb = location.raw['boundingbox']
@@ -228,7 +205,6 @@ class EnvironmentExtractor(AbsExtractor):
             ca = location[7]
             ca.set_score(score)
             ranked_locations.append(ca)
-            # ranked_locations.append((location[0], score))
 
         # NEW
         ranked_locations.sort(key=lambda x: x.get_score(), reverse=True)
@@ -261,12 +237,10 @@ class EnvironmentExtractor(AbsExtractor):
         # fetch the date the article was published as a reference date
         reference = self.calendar.parse(document.get_date() or '')
 
-        oCandidates = document.get_candidates('EnvironmentExtractorNeDates')
+        oCandidates = document.get_candidates(self.get_id() + 'NeDates')
         for candidateO in oCandidates:
-
             candidate = candidateO.get_raw()
             # translate date strings into date objects
-            # date_str = ' '.join([t[0] for t in candidate[0]])
             date_str = ' '.join([t['originalText'] for t in candidate])
             # Skip 'now' because its often part of a newsletter offer or similar
             if date_str.lower().strip() == 'now':
@@ -308,8 +282,7 @@ class EnvironmentExtractor(AbsExtractor):
 
             if score > 0:
                 score /= weights_sum
-            # candidate[1] = score
-            # 5 is the wrapper object
+
             candidate[5].set_score(score)
 
         # format bugfix - take the raw information and form a standardized parts format

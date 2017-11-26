@@ -1,16 +1,30 @@
 class Document(object):
     """
     Document is a pickable container for the raw document and all related data
+    rawData holds the native newsPlease file
     """
 
-    def __init__(self, title='', desc='', text='', rawData=None):
+    def __init__(self, title='', desc='', text='', date=None, raw_data=None):
+
+        if title is None:
+            title = ''
+        if desc is None:
+            desc = ''
+        if text is None:
+            text = ''
+        if date:
+            self._date = date
+        else:
+            # use raw date as fallback if any,
+            if raw_data is not None:
+                self._date = raw_data.get('date_publish', None)
+            else:
+                self._date = None
 
         self._raw = {'title': title, 'description': desc, 'text': text}
 
         # append all document text into one string
         self._full_text = '. '.join(val for key, val in self._raw.items())
-
-        self._date = None
 
         self._file_name = None
         self._source = None
@@ -23,7 +37,7 @@ class Document(object):
         self._posTags = []
         self._posTrees = []
         self._nerTags = []
-        self._rawData = rawData
+        self._rawData = raw_data
         self._preprocessed = False
 
         self._annotations = {'what': [], 'who': [], 'why': [], 'where': [], 'when': [], 'how': []}
@@ -32,6 +46,7 @@ class Document(object):
         self._candidates = {}
         self._processed = None
         self._enhancement = {}
+
 
     def is_preprocessed(self, preprocessed=None):
         if preprocessed is True or preprocessed is False:
@@ -49,8 +64,26 @@ class Document(object):
     def set_candidates(self, extractor, candidates):
         self._candidates[extractor] = candidates
 
-    def get_candidates(self, extractor):
+    def get_candidates(self, extractor: str):
         return self._candidates.get(extractor, [])
+
+    def has_candidates(self, extractor: str):
+        """
+        extractor candidates prefix their candidates with  their own id
+        e.g. EnvironmentExtractorNeLocatios
+
+        this methods returns true if there is at least one candidate with the given prefix
+        """
+        for candidate in self._candidates:
+            if candidate.startswith(extractor):
+                return True
+        return False
+    def reset_candidates(self):
+        """
+        resetting candidates will force each extractor to extract them again before evaluation
+        :return:
+        """
+        self._candidates = {}
 
     def get_file_name(self):
         return self._file_name
@@ -103,11 +136,15 @@ class Document(object):
     def get_rawData(self):
         return self._rawData
 
-    # Creates a map of frequency for every words per lemma
-    #
-    #  "..he blocked me, by blocking my blocker.."
-    #  { block: 3, me: 1  .... }
+
     def get_lemma_map(self):
+        """
+        Creates a map of frequency for every words per lemma
+
+        "..he blocked me, by blocking my blocker.."
+        { block: 3, me: 1  .... }
+        :return:
+        """
         if not hasattr(self, '_lemma_map'):
             self._lemma_map = {}
             for sentence in self._sentences:
@@ -152,8 +189,13 @@ class Document(object):
     def set_ner(self, ner):
         self._nerTags = ner
 
-    # use this setter for object based answers aka list of candidate objects with proper loaded parts
     def set_answer(self, question, candidates):
+        """
+        use this setter for object based answers aka list of candidate objects with proper loaded parts
+        :param question:
+        :param candidates:
+        :return:
+        """
         self._answers[question] = candidates
 
     def get_answer(self, question):
@@ -162,8 +204,12 @@ class Document(object):
     def set_annotations(self, annotations):
         self._annotations = annotations
 
-    # additional information create by enhancements
     def get_enhancement(self, key):
+        """
+        additional information create by enhancements
+        :param key:
+        :return:
+        """
         return self._enhancement.get(key)
 
     def set_enhancement(self, key, value):

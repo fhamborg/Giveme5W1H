@@ -102,10 +102,14 @@ class Candidate:
     def reset_enhancements(self):
         self._enhancement = {}
 
-    # helper to decouple evaluation calculations from candidate extraction
-    # use this for all evaluation related information
-    # in other words store temporal information per candidate over this interface
     def get_calculations(self, key):
+        """
+         helper to decouple evaluation calculations from candidate extraction
+         use this for all evaluation related information
+         in other words store temporal information per candidate over this interface
+        :param key:
+        :return:
+        """
         return self._calculations[key]
 
     def set_calculations(self, key, value):
@@ -114,9 +118,12 @@ class Candidate:
     def reset_calculations(self):
         self._calculations = {}
 
-    # returns the character offset of the first and last part.
-    # this span marks the candidate in the original document
     def get_parts_character_offset(self):
+        """
+        returns the character offset of the first and last part.
+        this span marks the candidate in the original document
+        :return:
+        """
         parts = self.get_parts()
         if parts:
             number_of_parts = len(parts)

@@ -10,9 +10,12 @@ Giveme5W(1H) is a state of the art open-source 5W Question Answering system for 
 * **How** did it happen?
 
 ## Getting started
-Before you can use Giveme5W, you need to make sure you have CoreNLP-Server runtimes.
+Giveme5W requires Python 3.6 or later. 
 
-If you have to install CoreNLP, please refer to the CoreNLPs extensive [documentation](https://stanfordnlp.github.io/CoreNLP/corenlp-server.html) and follow the instructions on how to install CoreNLP and start a server.
+### Stanford CoreNLP Server
+Before you can use Giveme5W, you need to make sure that you have the Stanford CoreNLP Server runtimes.
+
+If not, you will need to install CoreNLP. Below are the steps you need to perform.
 
  * download the server itself from [here](https://stanfordnlp.github.io/CoreNLP/index.html#download)
     * at the time of writing [this](http://nlp.stanford.edu/software/stanford-corenlp-full-2017-06-09.zip) was the newest version
@@ -20,7 +23,7 @@ If you have to install CoreNLP, please refer to the CoreNLPs extensive [document
     * at the time of writing [this](http://nlp.stanford.edu/software/stanford-english-corenlp-2017-06-09-models.jar) was the newest version
  * extract the server zip,
  * extract the language zip, copy it inside the server directory
- * copy it into [Giveme5W-runtime-resources](#Giveme5W-runtime-resources) next to your repository folder
+ * copy it into [Giveme5W-runtime-resources](#startup---scripts---giveme5w-runtime-resources) next to your repository folder
 
 Start coreNLP by yourself (Windows, Linux, OSX)
 ``` bash
@@ -35,7 +38,9 @@ python3 -m examples.startup.environment
 ```
 > see also Startup - Scripts -> Giveme5W-runtime-resources
 
+For more information on the Stanford CoreNLP Server, please refer to their extensive [documentation](https://stanfordnlp.github.io/CoreNLP/corenlp-server.html).
 
+### Giveme5W
 Environment is now running. Start parsing news_please files
 ```python
 python3 -m examples.extracting.parse_documents
@@ -241,6 +246,7 @@ $ python extractor/examples/extracting/simple_api.py
     * title (mandatory)
     * description
     * text
+    * date (must be readable by [parsedatetime](https://pypi.python.org/pypi/parsedatetime/))
 * Output
     * [news-please format](https://github.com/fhamborg/news-please/blob/master/newsplease/examples/sample.json)
 

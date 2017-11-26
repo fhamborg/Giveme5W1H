@@ -8,6 +8,10 @@ from extractor.document import Document
 
 
 class Reader(object):
+    """
+    helper to read news_please files and prickles
+    """
+
     def __init__(self):
         # self.factory = DocumentFactory()
         self.log = logging.getLogger('GiveMe5W')
@@ -27,7 +31,7 @@ class Reader(object):
         if not data.get('dId'):
             url = data.get('url')
             if not url:
-                print(path + ' has not URL or dID. At least a URL is mandatory to generate a unique dId')
+                print(path + ' has no URL or dID. At least a URL is mandatory to generate a unique dId')
             else:
                 data['dId'] = hashlib.sha224(url.encode('utf-8')).hexdigest()
 
@@ -43,7 +47,7 @@ class Reader(object):
                 document = pickle.load(ff)
         else:
             document = Document(data.setdefault('title', ''), data.setdefault('description', ''),
-                                data.setdefault('text', ''), data)
+                                data.setdefault('text', ''), raw_data=data)
 
             # load annotations if any
             if 'fiveWoneH' in data:

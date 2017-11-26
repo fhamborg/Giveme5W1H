@@ -14,10 +14,6 @@ class CauseExtractor(AbsExtractor):
     The CauseExtractor tries to detect a causative that could explain an event.
     """
 
-    # weights used in the candidate evaluation:
-    # (position, clausal conjunction, adverbial indicator, NP-VP-NP)
-    weights = (.35, 0.3, .7, .4)
-
     adverbial_indicators = ['therefore', 'hence', 'thus', 'consequently', 'accordingly']  # 'so' has problems with JJ
     clausal_conjunctions = {'consequence': 'of', 'effect': 'of', 'result': 'of', 'upshot': 'of', 'outcome': 'of',
                             'because': '', 'due': 'to', 'stemmed': 'from'}
@@ -41,11 +37,11 @@ class CauseExtractor(AbsExtractor):
     constraints_hyponyms = {'entity': None, 'phenomenon': None, 'abstraction': None, 'group': None, 'possession': None,
                             'event': None, 'act': None, 'state': None}
 
-    def __init__(self, weights=None):
+    def __init__(self, weights: (float, float, float, float) = (.35, 0.3, .7, .4)):
         """
         Load WordNet corpus
 
-        :param weights: tuple of weights for candidate evaluation
+        :param weights: (position, clausal conjunction, adverbial indicator, NP-VP-NP)
         :type weights: (Float, Float)
         """
         self.log = logging.getLogger('GiveMe5W')
@@ -54,8 +50,9 @@ class CauseExtractor(AbsExtractor):
         try:
             nltk.data.find('corpora/wordnet')
         except LookupError:
-            self.log.info('Could not find corpus for WordNet, will now try to download the corpus.')
+            self.log.warning('Could not find corpus for WordNet, will now try to download the corpus.')
             nltk.download('wordnet')
+
 
         if weights is not None:
             self.weights = weights
@@ -78,18 +75,7 @@ class CauseExtractor(AbsExtractor):
 
         self.lemmatizer = WordNetLemmatizer()
 
-    def extract(self, document):
-        """
-        Parses the document for answers to the question why.
 
-        :param document: Document to be Parsed
-        :return: Parsed document
-        """
-
-        self._extract_candidates(document)
-        self._evaluate_candidates(document)
-
-        return document
 
     def _extract_candidates(self, document):
         """
@@ -114,7 +100,7 @@ class CauseExtractor(AbsExtractor):
 
                 candidates.append(candidateObject)
 
-        document.set_candidates('CauseExtractor', candidates)
+        document.set_candidates(self.get_id(), candidates)
 
     def _evaluate_tree(self, tree):
         """
@@ -231,7 +217,7 @@ class CauseExtractor(AbsExtractor):
 
             elif token in self.clausal_conjunctions and ' '.join(
                     [x['nlpToken']['originalText'] for x in tokens[i:]]).lower().startswith(
-                    self.clausal_conjunctions[token]):
+                self.clausal_conjunctions[token]):
                 # Check if token is au clausal conjunction indicating causation
                 candidates.append(deepcopy([pos[i - 1:], pos[:i], 'biclausal']))
 
@@ -264,7 +250,7 @@ class CauseExtractor(AbsExtractor):
         :return: A list of evaluated and ranked candidates
         """
         # ranked_candidates = []
-        candidates = document.get_candidates('CauseExtractor')
+        candidates = document.get_candidates(self.get_id())
         weights_sum = sum(self.weights)
 
         for candidateObject in candidates:
@@ -273,7 +259,7 @@ class CauseExtractor(AbsExtractor):
             if parts is not None and len(parts) > 0:
                 # following the concept of the inverted pyramid use the position for scoring
                 score = self.weights[0] * (
-                document.get_len() - candidateObject.get_sentence_index()) / document.get_len()
+                    document.get_len() - candidateObject.get_sentence_index()) / document.get_len()
 
                 # we also consider the pattern typ used to detect the candidate
                 if candidateObject.get_type() == 'biclausal':

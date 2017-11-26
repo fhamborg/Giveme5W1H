@@ -23,8 +23,8 @@ class Preprocessor:
         else:
             self.cnlp = StanfordCoreNLP(host)
 
-        # define basic config and desired processing pipeline
-        self.config = {
+        # define basic base_config and desired processing pipeline
+        self.base_config = {
             'timeout': 500000,
             'annotators': 'tokenize,ssplit,pos,lemma,parse,ner,depparse,mention,coref',
             'tokenize.language': 'English',
@@ -39,30 +39,33 @@ class Preprocessor:
         self._token_index = None
 
     def _link_leaf_to_core_nlp(self, s):
-        # this is where the magic happens add there additional information per candidate-part/token/leave
-        # char index information is in each nlpToken
-
-        if len(self._tokens)-1 < self._token_index:
+        """
+        this is where the magic happens add there additional information per candidate-part/token/leave
+        char index information is in each nlpToken
+        """
+        if len(self._tokens) - 1 < self._token_index:
             # there seams a bug around numbers,
             # spitted numbers in the same token are called as they have been split to different tokens
             # this leads to a wrong index, everything in this sentence is lost till the end of that sentence
-            self.log.error('fix the doc around(reformat number,remove special characters):'+ s)
+            self.log.error('fix the doc around(reformat number,remove special characters):' + s)
 
-            # further normal dicts are not hashable and we can`t return None because this would break further extractors
-            # therefore we use the first element of each sentence
+            # further we can`t return None because this would break further extractors
+            # therefore we use this bugfix object
+            # TODO: reason if it make sense to reject these documents at all, because result isn`t reliable at all
+            # TODO: flag document at least with some error flags
             result = {
                 'nlpToken': {
                     'index': 7,
-                     'word': 'BUGFIX',
-                     'originalText': '',
-                     'lemma': '',
-                     'characterOffsetBegin': 0,
-                     'characterOffsetEnd': 1,
-                     'pos': 'CD',
-                     'ner': 'NUMBER',
-                     'speaker': 'PER0',
-                     'before': ' ',
-                     'after': ''
+                    'word': 'BUGFIX',
+                    'originalText': '',
+                    'lemma': '',
+                    'characterOffsetBegin': 0,
+                    'characterOffsetEnd': 1,
+                    'pos': 'CD',
+                    'ner': 'NUMBER',
+                    'speaker': 'PER0',
+                    'before': ' ',
+                    'after': ''
                 }
             }
 
@@ -75,6 +78,21 @@ class Preprocessor:
 
         return result
 
+
+    def _build_actual_config(self, document):
+        """
+        Creates the actual config, consisting of the base_config and dynamic_params. if the same key exists in both
+        base_config and dynamic_params, the value will be used from dynamic_params, i.e., base_config will be overwritten.
+        :param document:
+        :return:
+        """
+        dynamic_config = {
+            'date': document.get_date()
+        }
+        actual_config = {**self.base_config, **dynamic_config}
+        return actual_config
+
+
     def preprocess(self, document):
         """
         Send the document to CoreNLP server to execute the necessary preprocessing.
@@ -84,10 +102,10 @@ class Preprocessor:
 
         :return Document: The processed Document object.
         """
+        actual_config = self._build_actual_config(document)
+        annotation = self.cnlp.annotate(document.get_full_text(), actual_config)
 
-        annotation = self.cnlp.annotate(document.get_full_text(), self.config)
-
-        if type(annotation) == str:
+        if type(annotation) is str:
             print(annotation)
         else:
             document.set_sentences(annotation['sentences'], [], [])

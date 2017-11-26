@@ -1,8 +1,8 @@
 import logging
 import os
 
-from Giveme5W_enhancer.aida import Aida
-from Giveme5W_enhancer.heideltime import Heideltime
+from Giveme5W_enhancer.enhancer.aida import Aida
+from Giveme5W_enhancer.enhancer.heideltime import Heideltime
 from extractor.extractor import FiveWExtractor
 from extractor.tools.file.handler import Handler
 from extractors import action_extractor
@@ -23,10 +23,23 @@ Documents are preprocessed just once, you have to set is_preprocessed to false,
 if you want to process them again by core_nlp (or just delete cache and output)
 """
 if __name__ == '__main__':
-    # helper to make dataset selction simple
-    dataset_golden_standard = os.path.dirname(__file__) + '/../datasets/gold_standard/data/'
-    # Does not work with heideltime!, there is no pub date...
-    dataset_bbc = os.path.dirname(__file__) + '/../datasets/bbc/data/'
+    # helper to setup a correct path
+    rel_datasets_path = '/../datasets/'
+    dataset_helper = {
+        'gold_standard': os.path.dirname(__file__) + rel_datasets_path + 'gold_standard',
+        'bbc': os.path.dirname(__file__) + rel_datasets_path + 'bbc',
+        'google_news': os.path.dirname(__file__) + rel_datasets_path + 'google_news',
+        'local': os.path.dirname(__file__)
+    }
+
+    #
+    # Switch here between the predefined datasets or local for the local folder
+    #
+    basePath = dataset_helper['google_news']
+    #
+    #
+    #
+
 
     # logger setup
     log = logging.getLogger('GiveMe5W')
@@ -46,10 +59,9 @@ if __name__ == '__main__':
         Aida(['how', 'when', 'why', 'where', 'what', 'who'])
     ])
 
-    inputPath = dataset_golden_standard
-    outputPath = os.path.dirname(__file__) + '/output'
-
-    preprocessedPath = os.path.dirname(__file__) + '/cache'
+    inputPath = basePath + '/data'
+    outputPath = basePath + '/output'
+    preprocessedPath = basePath + '/cache'
 
     documents = (
         # initiate the file handler with the input directory
@@ -64,17 +76,17 @@ if __name__ == '__main__':
             .set_preprocessed_path(preprocessedPath)
 
             # Optional: limit the documents read from the input directory (handy for development)
-            #.set_limit(1)
+            # .set_limit(1)
 
             # Optional: resume ability, skip input file if its already in output
             .skip_documents_with_output()
 
             # load and saves all document runtime objects for further programming
-            #.preload_and_cache_documents()
+            # .preload_and_cache_documents()
 
             ## setup is done: executing it
             .process()
 
-            # get the processed documents, this can only be done because preload_and_cache_documents was called
-            #.get_documents()
+        # get the processed documents, this can only be done because preload_and_cache_documents was called
+        # .get_documents()
     )

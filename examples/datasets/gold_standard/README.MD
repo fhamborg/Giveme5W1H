@@ -9,6 +9,10 @@ Annotations and categorise have been stored in a different format.
 
 Legacy contains everything to reproduce the new fileset out o the original files.
 
+# data_damaged
+It turned out that some documents are not correct parsed.
+Or at least the tree representation of CoreNLP doesnt match the tokens.
+
 # Annotations
 
 If the coderPhraseCount is set but there is not Text;

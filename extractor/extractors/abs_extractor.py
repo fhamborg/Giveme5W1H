@@ -5,6 +5,7 @@ from itertools import product
 import nltk
 from nltk.corpus import wordnet
 
+from document import Document
 from extractor.candidate import Candidate
 
 
@@ -28,7 +29,14 @@ class AbsExtractor:
             self.weights = weights
 
     @abstractmethod
-    def extract(self, document):
+    def _extract_candidates(self, document):
+        pass
+
+    @abstractmethod
+    def _evaluate_candidates(self, document):
+        pass
+
+    def process(self, document: Document):
         """
         Must be implemented by each Extractor, this method will be executed on every document passed to the FiveWExtractor.
 
@@ -37,11 +45,18 @@ class AbsExtractor:
 
         :return: None, verything it store within the document object (set_candiadates)
         """
+        if not document.has_candidates(self.get_id()):
+            self._extract_candidates(document)
+        self._evaluate_candidates(document)
+        return
 
-        return None
+    def get_id(self):
+        """
+        returns name of the class as string
+        :return:
+        """
+        return str(self.__class__.__name__)
 
-    def _evaluate_candidates(self, document):
-        return None
 
     def _extract_entities(self, tokens, filter=None, inverted=False, phrase_range=1, groups=None, accessor='ner'):
         """

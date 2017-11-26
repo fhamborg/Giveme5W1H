@@ -9,7 +9,6 @@ class MethodExtractor(AbsExtractor):
 
     # weights used in the candidate evaluation:
     # (position, frequency)
-    # weights = (4, 3)
     weights = [1.0, 1]
 
     _copulative_conjunction = ['and', 'as', 'both', 'because', 'even', 'for', 'if ', 'that', 'then', 'since', 'seeing',
@@ -19,22 +18,6 @@ class MethodExtractor(AbsExtractor):
                    'due', 'well', 'very', 'on', 'too', 'be', 'i', 'and', 'have', 'the', 'a', ',', '.', '', 'not', "n't",
                    'am', 'as', 'even', 'however', 'other', 'just', 'over', 'more', 'say', 'also']
     _stop_ner = ['TIME', 'DATE', 'ORGANIZATION', 'DURATION', 'ORDINAL']
-
-    # prepositional phrase PP, preposition
-    def extract(self, document):
-        """
-        Parses the document for answers to the questions how.
-
-        :param document: The Document object to parse
-        :type document: Document
-
-        :return: The parsed Document object
-        """
-
-        self._extract_candidates(document)
-        self._evaluate_candidates(document)
-
-        return document
 
     def _extract_candidates(self, document):
 
@@ -114,7 +97,6 @@ class MethodExtractor(AbsExtractor):
         # retrieve results from preprocessing
         candidates = []
 
-        tmp_candidates = []
         sentences = document.get_sentences()
 
         self._maxIndex = 0
@@ -237,7 +219,7 @@ class MethodExtractor(AbsExtractor):
         return count
 
     def _is_relevant_pos(self, pos):
-        # Is adjectivs or adverb
+        # Is adjective or adverb
         if pos.startswith('JJ') or pos.startswith('RB'):
             return True
         else:

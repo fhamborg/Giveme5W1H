@@ -12,22 +12,12 @@ class ActionExtractor(AbsExtractor):
 
     """
 
-    # weights used in the candidate evaluation:
-    # (position, frequency, named entity)
-    weights = (0.2, 0.9, 0.4)
+    def __init__(self, weights: (float, float, float) = (0.2, 0.9, 0.4), minimal_length_of_tokens: int=3):
+        self._minimal_length_of_tokens = minimal_length_of_tokens
 
-    def extract(self, document):
-        """
-        Parses the document for answers to the questions who and what.
-
-        :param document: The Document object to parse
-        :type document: Document
-
-        :return: The parsed Document object
-        """
-        self._extract_candidates(document)
-        self._evaluate_candidates(document)
-        return document
+        # weights used in the candidate evaluation:
+        # (position, frequency, named entity)
+        self.weights = weights
 
     def _extract_candidates(self, document):
         """
@@ -61,7 +51,7 @@ class ActionExtractor(AbsExtractor):
 
                         candidates.append(candidate_object)
 
-        document.set_candidates('ActionExtractor', candidates)
+        document.set_candidates(self.get_id(), candidates)
 
     def _evaluate_tree(self, sentence_root):
         """
@@ -86,10 +76,9 @@ class ActionExtractor(AbsExtractor):
                 sibling = subtree.right_sibling()
                 while sibling is not None:
                     if sibling.label() == 'VP':
-
                         # this gives a tuple to find the way from sentence to leaf
                         # tree_position = subtree.leaf_treeposition(0)
-                        entry = [subtree.pos(), self.cut_what(sibling, 3).pos(),
+                        entry = [subtree.pos(), self.cut_what(sibling, self._minimal_length_of_tokens).pos(),
                                  sentence_root.stanfordCoreNLPResult['index']]
                         candidates.append(entry)
                         break
@@ -110,7 +99,6 @@ class ActionExtractor(AbsExtractor):
         ranked_candidates = []
         doc_len = document.get_len()
         doc_ner = document.get_ner()
-        # doc_pos = document.get_pos()
         doc_coref = document.get_corefs()
 
         if any(doc_coref.values()):
@@ -119,7 +107,7 @@ class ActionExtractor(AbsExtractor):
         else:
             max_len = 1
 
-        for candidate in document.get_candidates('ActionExtractor'):
+        for candidate in document.get_candidates(self.get_id()):
             candidateParts = candidate.get_raw()
             verb = candidateParts[1][0][0]['nlpToken']['originalText'].lower()
 
@@ -167,13 +155,9 @@ class ActionExtractor(AbsExtractor):
 
             if mention_type == 'PRONOMINAL':
                 # use representing mention if the agent is only a pronoun
-                # TODO: Fix format fix
-                rp_format_fix = [(( {'nlpToken': representative[0][1]}, representative[0][1]['pos'] ))]
+                rp_format_fix = [(({'nlpToken': representative[0][1]}, representative[0][1]['pos']))]
                 ranked_candidates.append((rp_format_fix, candidateParts[1], score, candidate.get_sentence_index()))
-                # ranked_candidates.append((rp_format_fix, candidateParts[1], score, candidate.get_sentence_index()))
-                # ranked_candidates.append(([representative], candidateParts[1], score, candidate.get_sentence_index()))
             else:
-                # print("a")
                 ranked_candidates.append((candidateParts[0], candidateParts[1], score, candidate.get_sentence_index()))
 
         # split results
@@ -181,10 +165,10 @@ class ActionExtractor(AbsExtractor):
         what = [(c[1], c[2], c[3]) for c in ranked_candidates]
 
         # Filter duplicates and transform who to object oriented list
-        oWho = self._filterAndConvertToObjectOrientedList(who)
-        oWhat = self._filterAndConvertToObjectOrientedList(what)
-        document.set_answer('who', oWho)
-        document.set_answer('what', oWhat)
+        o_who = self._filterAndConvertToObjectOrientedList(who)
+        o_what = self._filterAndConvertToObjectOrientedList(what)
+        document.set_answer('who', o_who)
+        document.set_answer('what', o_what)
 
     def _filterAndConvertToObjectOrientedList(self, list):
         max = 0

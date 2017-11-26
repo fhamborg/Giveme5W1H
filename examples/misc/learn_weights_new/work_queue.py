@@ -1,6 +1,7 @@
 import os
 import pickle
 import numpy as np
+import time
 
 
 class WorkQueue(object):
@@ -12,8 +13,12 @@ class WorkQueue(object):
         self.phrase_range_time_date = None
         self.time_range = None
         self._queue = None
-        self._weightQueuePath = os.path.dirname(__file__) + '/result/weightQueue.prickle'
+        self._queue_processed = None
+        self._queue_path = os.path.dirname(__file__) + '/cache/queue.prickle'
+        self._queue_processed_path = os.path.dirname(__file__) + '/cache/queue_processed.prickle'
 
+    def get_queue_count(self):
+        return len(self._queue)
 
     def setup_scoring_parameters(self,  weight_start: float = 0.05 , weight_stop: float = 1, weight_step_size: float = 0.05):
         self._weights_range = np.arange(weight_start, weight_stop, weight_step_size)
@@ -24,17 +29,57 @@ class WorkQueue(object):
         self.time_range = time_range
 
     def load(self):
-        if os.path.isfile(self._weightQueuePath):
+        if os.path.isfile(self._queue_path) and os.path.isfile(self._queue_processed_path):
             # _preprocessedPath path is given, and there is already a preprocessed document
-            with open(self._weightQueuePath, 'rb') as ff:
-                print("weightQueue instance found! continue processing :)")
-                self._weight_queue = pickle.load(ff)
+            with open(self._queue_path, 'rb') as ff:
+                self._queue = pickle.load(ff)
+
+            with open(self._queue_processed_path, 'rb') as ff:
+                self._queue_processed = pickle.load(ff)
+
+            print("weightinstance found! continue processing :)")
+
+
         else:
-            print('generating a new queue object')
+            print('generating a new queues')
             self._generate()
 
-    def pop(self):
-        return self._queue.pop()
+
+
+    def resolve_document(self, last_item,  dId, result):
+        """
+        adds the quee item adds the result and attached if per document to
+        queue_processed
+
+        :param result:
+        :return:
+        """
+        last_item['dId'] = dId
+        last_item['result'] = result
+        self._queue_processed.append(result)
+
+        return last_item
+
+    def pop(self, persist: bool = True):
+        """
+        takes an item from the process queue. and attached it with the result to the
+        queue_processed queue
+
+        :param result:
+        :return:
+        """
+        self._queue.pop()
+        if persist:
+            with open(self._queue_path, 'wb') as f:
+                # Pickle the 'data' document using the highest protocol available.
+                pickle.dump(self._queue, f, pickle.HIGHEST_PROTOCOL)
+
+            with open(self._queue_processed_path, 'wb') as f:
+                # Pickle the 'data' document using the highest protocol available.
+                pickle.dump(self._queue_processed, f, pickle.HIGHEST_PROTOCOL)
+
+
+
 
     def next(self):
         if len(self._queue) > 0:
@@ -48,6 +93,7 @@ class WorkQueue(object):
 
         :return:
         """
+        self._queue_processed = []
         self._queue = []
         extracting_parameters_id = 0
 
@@ -76,6 +122,5 @@ class WorkQueue(object):
                                        }})
                     extracting_parameters_id = extracting_parameters_id + 1
 
-        print('queue length: ' + str(len(self._queue)))
 
 

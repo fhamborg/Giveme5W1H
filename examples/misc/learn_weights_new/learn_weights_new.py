@@ -4,8 +4,11 @@ import math
 import os
 import pickle
 import queue
+import socket
 import sys
 from threading import Thread
+
+import time
 
 from extractor.extractor import FiveWExtractor
 from extractor.root import path
@@ -17,7 +20,7 @@ from extractor.tools.util import cmp_text, cmp_date, cmp_location
 # from timeit import default_timer as timer
 # core_nlp_host = 'http://localhost:9000'
 from extractors import environment_extractor, action_extractor, cause_extractor, method_extractor
-from misc.learn_weights_smart.work_queue import WorkQueue
+from misc.learn_weights_new.work_queue import WorkQueue
 
 
 
@@ -66,44 +69,50 @@ def loadDocumentsAndCoder():
     return docments, geocoder, calendar, extractorObject
 
 
-def cmp_text_helper(question, answers, annotations, weights, document, fileHandler):
+def cmp_text_helper(question, answers, annotations, weights, result):
     score = -1
     # check if there is an annotaton and an answer
-    if question in annotations and question in answers:
-        topAnswer = answers[question][0].get_parts()
+    if question in annotations and question in answers and len(annotations[question]) > 0  and len(answers[question]) > 0:
+        topAnswer = answers[question][0].get_parts_as_text()
         topAnnotation = annotations[question][0][2]
         score = cmp_text(topAnnotation, topAnswer)
 
-    fileHandler.add_result(question, weights, score, document.get_document_id())
+    result[question] = (question, weights, score)
 
 
-def cmp_date_helper(question, answers, annotations, weights, document, fileHandler):
+
+def cmp_date_helper(question, answers, annotations, weights, calendar, result):
     score = -1
     # check if there is an annotaton and an answer
-    if question in annotations and question in answers:
-        topAnswer = answers[question][0][0]
+    if question in annotations and question in answers and len(annotations[question]) > 0  and len(answers[question]) > 0:
+        topAnswer = answers[question][0].get_parts_as_text()
         topAnnotation = annotations[question][0][2]
-        score = cmp_date(topAnnotation, topAnswer, fileHandler.get_weight_queue()._calendar)
+        score = cmp_date(topAnnotation, topAnswer, calendar)
 
-    fileHandler.add_result(question, weights, score, document.get_document_id())
+    result[question] = (question, weights, score)
 
 
-def cmp_location_helper(question, answers, annotations, weights, document, fileHandler):
+def cmp_location_helper(question, answers, annotations, weights, geocoder, result):
     score = -1
-    # check if there is an annotaton and an answer
-    if question in annotations and question in answers:
-        topAnswer = answers[question][0][0]
+    # check if there is an annotaton and answer
+    if question in annotations and question in answers and len(annotations[question]) > 0 and len(answers[question]) > 0:
+        topAnswer = answers[question][0].get_parts_as_text()
         topAnnotation = annotations[question][0][2]
-        score = cmp_location(topAnnotation, topAnswer, fileHandler.get_weight_queue()._geocoder)
+        score = cmp_location(topAnnotation, topAnswer, geocoder)
 
-    fileHandler.add_result(question, weights, score, document.get_document_id())
+    result[question] = (question, weights, score)
+
+
+def log_progress(queue,documents):
+    count = queue.get_queue_count()
+    print('There are ' + str(count * len(documents)) + ' steps to go')
 
 
 if __name__ == '__main__':
     log = logging.getLogger('GiveMe5W')
-    log.setLevel(logging.DEBUG)
+    log.setLevel(logging.INFO)
     sh = logging.StreamHandler()
-    sh.setLevel(logging.DEBUG)
+    sh.setLevel(logging.INFO)
     log.addHandler(sh)
 
     queue = WorkQueue()
@@ -113,6 +122,14 @@ if __name__ == '__main__':
 
     documents, geocoder, calendar, extractor = loadDocumentsAndCoder()
 
+    log_progress(queue,documents)
+    # make sure caller can read that...
+    time.sleep(5)
+
+
+
+
+
     _pre_extracting_parameters_id = None
     while True:
         next_item = queue.next()
@@ -120,9 +137,9 @@ if __name__ == '__main__':
             if _pre_extracting_parameters_id:
 
                 if _pre_extracting_parameters_id != next_item['extracting_parameters_id']:
+                    print("reset candidates - extracting values changed")
                     for document in documents:
                         document.reset_candidates
-                    print("reset candidates - extracting values changed")
 
             _pre_extracting_parameters_id = next_item['extracting_parameters_id']
 
@@ -136,26 +153,35 @@ if __name__ == '__main__':
 
             # run for all documents
             for document in documents:
-                extractor.parse(document)
+
+                try:
+                    extractor.parse(document)
+                except socket.timeout:
+                    print('online service (prob nominatim) did`t work, we ignore this')
 
                 annotation = document.get_annotations()
                 answers = document.get_answers()
 
-                cmp_text_helper('why', answers, annotation, [i, j, k, l], document, fileHandler)
-                cmp_text_helper('what', answers, annotation, [i, j, k], document, fileHandler)
-                cmp_text_helper('who', answers, annotation, [i, j, k], document, fileHandler)
-                cmp_text_helper('how', answers, annotation, [i, j], document, fileHandler)
+                result = {}
+
+                cmp_text_helper('why', answers, annotation, [i, j, k, l], result)
+                cmp_text_helper('what', answers, annotation, [i, j, k], result)
+                cmp_text_helper('who', answers, annotation, [i, j, k], result)
+                cmp_text_helper('how', answers, annotation, [i, j], result)
 
                 # These two are tricky because of the used online services
-                cmp_date_helper('when', answers, annotation, [i, j, k, l], document, fileHandler)
-                cmp_location_helper('where', answers, annotation, [i, j], document, fileHandler)
+                try:
+                    cmp_date_helper('when', answers, annotation, [i, j, k, l], calendar, result)
+                except socket.timeout:
+                    print('online service (prob nominatim) did`t work, we ignore this')
+                cmp_location_helper('where', answers, annotation, [i, j], geocoder, result)
+
+                # done save it to the result
+                queue.resolve_document(next_item,  document.get_document_id(), result)
 
 
-
-
-
-            # done without any exceptions...remove item
-            queue.pop()
+            queue.pop(persist=True)
+            log_progress(queue, documents)
         else:
             print('done')
             break

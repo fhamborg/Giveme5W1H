@@ -23,7 +23,7 @@ class WorkQueue(object):
     def setup_scoring_parameters(self,  weight_start: float = 0.05 , weight_stop: float = 1, weight_step_size: float = 0.05):
         self._weights_range = np.arange(weight_start, weight_stop, weight_step_size)
 
-    def setup_extracting_parameters(self, phrase_range_location: np.arange = np.arange(3, 4), phrase_range_time_date: np.arange=np.arange(1, 3), time_range: np.arange=np.arange(86400, 86401)):
+    def setup_extracting_parameters(self, phrase_range_location: np.arange = np.arange(3, 4), phrase_range_time_date: np.arange=np.arange(1, 2), time_range: np.arange=np.arange(86400, 86401)):
         self.phrase_range_location = phrase_range_location
         self.phrase_range_time_date = phrase_range_time_date
         self.time_range = time_range

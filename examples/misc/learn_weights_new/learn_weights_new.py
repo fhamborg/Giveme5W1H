@@ -75,7 +75,8 @@ def cmp_text_helper(question, answers, annotations, weights, result):
     if question in annotations and question in answers and len(annotations[question]) > 0  and len(answers[question]) > 0:
         topAnswer = answers[question][0].get_parts_as_text()
         topAnnotation = annotations[question][0][2]
-        score = cmp_text(topAnnotation, topAnswer)
+        if topAnnotation and topAnswer:
+            score = cmp_text(topAnnotation, topAnswer)
 
     result[question] = (question, weights, score)
 
@@ -87,7 +88,8 @@ def cmp_date_helper(question, answers, annotations, weights, calendar, result):
     if question in annotations and question in answers and len(annotations[question]) > 0  and len(answers[question]) > 0:
         topAnswer = answers[question][0].get_parts_as_text()
         topAnnotation = annotations[question][0][2]
-        score = cmp_date(topAnnotation, topAnswer, calendar)
+        if topAnnotation and topAnswer:
+            score = cmp_date(topAnnotation, topAnswer, calendar)
 
     result[question] = (question, weights, score)
 
@@ -98,7 +100,8 @@ def cmp_location_helper(question, answers, annotations, weights, geocoder, resul
     if question in annotations and question in answers and len(annotations[question]) > 0 and len(answers[question]) > 0:
         topAnswer = answers[question][0].get_parts_as_text()
         topAnnotation = annotations[question][0][2]
-        score = cmp_location(topAnnotation, topAnswer, geocoder)
+        if topAnnotation and topAnswer:
+            score = cmp_location(topAnnotation, topAnswer, geocoder)
 
     result[question] = (question, weights, score)
 

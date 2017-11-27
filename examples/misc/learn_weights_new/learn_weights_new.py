@@ -5,8 +5,11 @@ import os
 import pickle
 import queue
 import socket
+import datetime
 import sys
 from threading import Thread
+from dateutil.relativedelta import relativedelta as rd
+
 
 import time
 
@@ -22,7 +25,7 @@ from extractor.tools.util import cmp_text, cmp_date, cmp_location
 from extractors import environment_extractor, action_extractor, cause_extractor, method_extractor
 from misc.learn_weights_new.work_queue import WorkQueue
 
-
+fmt = '{0.days} days {0.hours} hours {0.minutes} minutes {0.seconds} seconds'
 
 def adjust_weights(extractors, i, j, k, l):
     # (action_0, cause_1, environment_2)
@@ -106,9 +109,17 @@ def cmp_location_helper(question, answers, annotations, weights, geocoder, resul
     result[question] = (question, weights, score)
 
 
-def log_progress(queue,documents):
+def log_progress(queue,documents, start, end):
     count = queue.get_queue_count()
-    print('There are ' + str(count * len(documents)) + ' steps to go')
+    doc_count = len(documents)
+    print('There are ' + str(count * doc_count) + ' steps to go')
+    if (start and end):
+        time_range = (end - start).total_seconds()
+        time_range = time_range * count
+        # No proper average this is very rough
+
+
+        print('Rough estimated time left:' + str( fmt.format(rd(seconds=time_range))))
 
 
 if __name__ == '__main__':
@@ -125,10 +136,9 @@ if __name__ == '__main__':
 
     documents, geocoder, calendar, extractor = loadDocumentsAndCoder()
 
-    log_progress(queue,documents)
+    log_progress(queue,documents, None, None)
     # make sure caller can read that...
     time.sleep(5)
-
 
 
 
@@ -154,6 +164,7 @@ if __name__ == '__main__':
             l = weights[3]
             adjust_weights(extractor.extractors, i, j, k, l)
 
+            combination_start_stamp =  datetime.datetime.now()
             # run for all documents
             for document in documents:
 
@@ -182,9 +193,9 @@ if __name__ == '__main__':
                 # done save it to the result
                 queue.resolve_document(next_item,  document.get_document_id(), result)
 
-
+            combination_end_stamp = datetime.datetime.now()
             queue.pop(persist=True)
-            log_progress(queue, documents)
+            log_progress(queue, documents, combination_start_stamp, combination_end_stamp)
         else:
             print('done')
             break

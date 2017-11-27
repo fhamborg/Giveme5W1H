@@ -6,6 +6,7 @@ from geopy.exc import GeocoderServiceError
 from geopy.geocoders import Nominatim
 from parsedatetime import parsedatetime as pdt
 
+from extractor.tools.timex import Timex
 from extractor.candidate import Candidate
 from extractor.extractors.abs_extractor import AbsExtractor
 
@@ -15,13 +16,13 @@ class EnvironmentExtractor(AbsExtractor):
     The EnvironmentExtractor tries to extract the location and time the event happened.
     """
 
-    def __init__(self, weights=((0.5, 0.8), (0.8, 0.25, 0.2, 0.7)), phrase_range_location: int = 3, phrase_range_time_date: int=1, time_range: int=86400, host='nominatim.openstreetmap.org'):
+    def __init__(self, weights=((0.5, 0.8), (0.8, 0.7, 0.5)), phrase_range_location: int = 3, phrase_range_time_date: int=1, time_range: int=86400, host='nominatim.openstreetmap.org'):
         """
         Init the Nominatim connection as well as the calender object used for date interpretation.
 
         :param weights: Weights used to evaluate answer candidates.
-        :type weights: ((Float, Float), (Float, Float, Float, Float)), weights used in the candidate evaluation:
-        ((position, frequency), (position, date, time, frequency))
+        :type weights: ((Float, Float), (Float, Float, Float)), weights used in the candidate evaluation:
+        ((position, frequency), (position, frequency, entailment))
         :param host: Address of the Nominatim host
         :type host: String
         """
@@ -39,18 +40,44 @@ class EnvironmentExtractor(AbsExtractor):
         # in most cases an article describes an event in the past
         self.calendar.ptc.DOWParseStyle = -1  # prefer day in the past for 'monday'
         self.calendar.ptc.CurrentDOWParseStyle = True  # prefer reference date if its the same weekday
-        self.time_dela = time_range  # 24h in seconds
+        self.time_delta = time_range  # 24h in seconds
 
         self._phrase_range_location = phrase_range_location
         self._phrase_range_time_date = phrase_range_time_date
 
     def _evaluate_candidates(self, document):
         locations = self._evaluate_locations(document)
-        dates = self._evaluate_dates(document)
+        # dates = self._evaluate_dates(document)
+        dates = self._evaluate_timex_dates(document)
 
         # there are now duplicates
         document.set_answer('where', locations)
         document.set_answer('when', dates)
+
+    def _extract_timex_candidates(self, tokens):
+        timex_dates = {}
+
+        for cur_token in tokens:
+            if 'timex' in cur_token:
+                timex_obj = cur_token['timex']
+                timex_id = timex_obj['tid']
+                # timex_date = timex_obj['value']
+
+                # check whether the timed_id was already found previously
+                if timex_id in timex_dates:
+                    # update the tokens list
+                    found_candidate_token_list = timex_dates[timex_id]
+                    found_candidate_token_list.append(cur_token)
+                else:
+                    found_candidate_token_list = [cur_token]
+                    timex_dates[timex_id] = found_candidate_token_list
+
+        candidate_list = []
+        for timex_id in timex_dates:
+            timex_token_list = timex_dates[timex_id]
+            candidate_list.append((timex_token_list, 'TIMEX'))
+
+        return candidate_list
 
     def _extract_candidates(self, document):
         """
@@ -66,14 +93,15 @@ class EnvironmentExtractor(AbsExtractor):
         pos_tags = document.get_pos()
         locations = []
         dates = []
+        timex_candidates = []
         last_date = None
 
         tokens = document.get_tokens()
 
-        for i, entity in enumerate(tokens):
+        for i, sentence in enumerate(tokens):
             # phrase_range=2 allows entities to be separate by single tokens, this is common for locations and dates
             # i.e. 'London, England' or 'October 13, 2015'.
-            for candidate in self._extract_entities(entity, ['LOCATION'], inverted=True, phrase_range=self._phrase_range_location,
+            for candidate in self._extract_entities(sentence, ['LOCATION'], inverted=True, phrase_range=self._phrase_range_location,
                                                     accessor='ner'):
 
                 # look-up geocode in Nominatim
@@ -96,7 +124,20 @@ class EnvironmentExtractor(AbsExtractor):
                     logging.getLogger('GiveMe5W').error('openstreetmap_nominatim: Where was not extracted ')
                     logging.getLogger('GiveMe5W').error(str(e))
 
-            for candidate in self._extract_entities(entity, ['TIME', 'DATE'], inverted=True,
+            # date candidate extraction using SUTime
+            current_timex_candidates = self._extract_timex_candidates(sentence)
+            for timex_candidate in current_timex_candidates:
+                timex_date_value = timex_candidate[0][0]['timex']['value']
+                timex_obj = Timex.from_timex_text(timex_date_value)
+                if timex_obj:
+                    ca = Candidate()
+                    ca.set_raw(timex_candidate[0])
+                    ca.set_sentence_index(i)
+                    ca.set_calculations('timex', timex_obj)
+                    timex_candidates.append(ca)
+
+            # old code for time extraction
+            for candidate in self._extract_entities(sentence, ['TIME', 'DATE'], inverted=True,
                                                     phrase_range=self._phrase_range_time_date, groups={'TIME': 'TIME+DATE', 'DATE': 'TIME+DATE'},
                                                     accessor='ner'):
 
@@ -133,6 +174,7 @@ class EnvironmentExtractor(AbsExtractor):
 
         document.set_candidates(self.get_id() + 'NeDates', dates)
         document.set_candidates(self.get_id() + 'Locatios', locations)
+        document.set_candidates(self.get_id() + 'TimexDates', timex_candidates);
 
 
     def _evaluate_locations(self, document):
@@ -152,7 +194,7 @@ class EnvironmentExtractor(AbsExtractor):
         weights = self.weights[0]
         weights_sum = sum(weights)
 
-        for candidate in document.get_candidates(self.get_id() + 'NeLocatios'):
+        for candidate in document.get_candidates(self.get_id() + 'Locatios'):
             # fetch the boundingbox: (min lat, max lat, min long, max long)
             parts = candidate.get_raw()
             location = candidate.get_calculations('openstreetmap_nominatim')
@@ -218,6 +260,98 @@ class EnvironmentExtractor(AbsExtractor):
             ranked.set_parts(parts)
         return ranked_locations
 
+    def _evaluate_timex_dates(self, document):
+        """
+        Calculate a confidence score for extracted timex candidates.
+
+        :param document: The parsed document.
+        :type document: Document
+        :param date_list: List of date candidates.
+        :type date_list: [String, Integer]
+
+        :return: A list of ranked candidates
+        """
+        scoring_candidates = []
+        weights = self.weights[1]
+        weights_sum = sum(weights)
+
+        # fetch the date the article was published as a reference date
+        #reference = self.calendar.parse(document.get_date() or '')
+
+        oCandidates = document.get_candidates(self.get_id() + 'TimexDates')
+        for candidateO in oCandidates:
+            candidate = candidateO.get_raw()
+            candidate_timex = candidateO.get_calculations('timex')
+            print(candidate_timex)
+
+            # first token, sentence index, time, number of similar dates, number of candidates that entail this one, candidateO
+            scoring_candidate = [candidate[0], candidateO.get_sentence_index(), candidate_timex, 1, 1, candidateO]
+
+            # add to list of candidates
+            scoring_candidates.append(scoring_candidate)
+
+
+        max_n_similar = 0
+        max_n_entailment = 0
+        two_days_in_s = 60*60*24*2
+
+        for index, candidate in enumerate(scoring_candidates):
+            candidate_timex = candidate[2]
+            candidate_duration = candidate_timex.get_duration()
+
+            neighbor_candidates_list = scoring_candidates[:index] + scoring_candidates[:index+1]
+            for neighbor_candidate in neighbor_candidates_list:
+                neighbor_candidate_timex = neighbor_candidate[2]
+                neighbor_candidate_duration = neighbor_candidate_timex.get_duration()
+
+                # similar date check. Dates are considered related if they differ at most 24h (time_delta). we do this only for
+                # date ranges that are at most 2 days long. that is because we are mostly interested in the day range, and
+                # it also seems not useful to compare if two years are within a range of 24h.
+
+
+                if candidate_duration.total_seconds() <= two_days_in_s and neighbor_candidate_duration.total_seconds() <= two_days_in_s:
+                    if (candidate_timex.get_start_date() - neighbor_candidate_timex.get_start_date()).total_seconds() <= self.time_delta or \
+                                    (candidate_timex.get_end_date() - neighbor_candidate_timex.get_end_date()).total_seconds() <= self.time_delta:
+                        candidate[3] += 1
+
+                # full entailment check: if a date X is entailed in another date Y, increase the frequency of X
+                if candidate_timex.is_entailed_in(neighbor_candidate_timex):
+                    candidate[4] += 1
+
+            max_n_similar = max(max_n_similar, candidate[3])
+            max_n_entailment = max(max_n_entailment, candidate[4])
+
+
+        # Calculate the scores
+        for candidate in scoring_candidates:
+            # Position is the first parameter used scoring following the inverted pyramid
+            score = weights[0] * (document.get_len() - candidate[1]) / document.get_len()
+
+            # Number of similar dates is also included as it indicates relevance
+            score += weights[1] * (candidate[3] / max_n_similar)
+
+            # number of entailments
+            score += weights[2] * (candidate[4] / max_n_entailment)
+
+            if score > 0:
+                score /= weights_sum
+
+            candidate[5].set_score(score)
+
+        # format bugfix - take the raw information and form a standardized parts format
+        # this is the same format as the nlp tree leafs
+        # TODO: add the leaf itself instead of rebuilding the same structure
+        # TODO: do this already in _extract_candidates to speed it up
+        for candidate in oCandidates:
+            raw = candidate.get_raw()
+            parts = []
+            for old_part in raw:
+                parts.append(({'nlpToken': old_part}, old_part['pos']))
+            candidate.set_parts(parts)
+
+        oCandidates.sort(key=lambda x: x.get_score(), reverse=True)
+        return oCandidates
+
     def _evaluate_dates(self, document):
         """
         Calculate a confidence score for extracted time candidates.
@@ -240,6 +374,7 @@ class EnvironmentExtractor(AbsExtractor):
         oCandidates = document.get_candidates(self.get_id() + 'NeDates')
         for candidateO in oCandidates:
             candidate = candidateO.get_raw()
+
             # translate date strings into date objects
             date_str = ' '.join([t['originalText'] for t in candidate])
             # Skip 'now' because its often part of a newsletter offer or similar
@@ -257,7 +392,7 @@ class EnvironmentExtractor(AbsExtractor):
         max_n = 0
         for index, candidate in enumerate(ranked_candidates):
             for neighbour in ranked_candidates[index + 1:]:
-                if (time.mktime(neighbour[2]) - time.mktime(candidate[2])) <= self.time_dela:
+                if (time.mktime(neighbour[2]) - time.mktime(candidate[2])) <= self.time_delta:
                     candidate[4] += 1
                     neighbour[4] += 1
             max_n = max(max_n, candidate[4])

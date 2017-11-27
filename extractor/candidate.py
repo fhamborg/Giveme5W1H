@@ -92,7 +92,7 @@ class Candidate:
 
     # additional information create by enhancments
     def get_enhancement(self, key):
-        return self._enhancement.get(key)(0)
+        return self._enhancement.get(key)
 
     # additional information create by enhancments
     # it must be serialisable

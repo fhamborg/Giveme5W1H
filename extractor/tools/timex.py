@@ -66,4 +66,6 @@ class Timex:
 
         #Timex._log.error('could not parse "' + text + '" to Timex')
         #print('could not parse "' + text + '" to Timex')
+        # we cannot parse the following things
+        #could not parse "2017-SU" to Timex: This summer
         return None

@@ -134,45 +134,46 @@ class EnvironmentExtractor(AbsExtractor):
                     ca.set_raw(timex_candidate[0])
                     ca.set_sentence_index(i)
                     ca.set_calculations('timex', timex_obj)
+                    ca.set_enhancement('timex', timex_obj.to_json())
                     timex_candidates.append(ca)
 
             # old code for time extraction
-            for candidate in self._extract_entities(sentence, ['TIME', 'DATE'], inverted=True,
-                                                    phrase_range=self._phrase_range_time_date, groups={'TIME': 'TIME+DATE', 'DATE': 'TIME+DATE'},
-                                                    accessor='ner'):
+            # for candidate in self._extract_entities(sentence, ['TIME', 'DATE'], inverted=True,
+            #                                         phrase_range=self._phrase_range_time_date, groups={'TIME': 'TIME+DATE', 'DATE': 'TIME+DATE'},
+            #                                         accessor='ner'):
+            #
+            #     if candidate[1] == 'TIME':
+            #         # If a date was already mentioned combine it with the mentioned time
+            #         # TODO: crosscheck with old implementation, this seams to be wrong
+            #         if last_date is not None:
+            #             ca = Candidate()
+            #
+            #             ca.set_raw(candidate[0])
+            #             ca.set_sentence_index(i)
+            #             dates.append(ca)
+            #         else:
+            #             ca = Candidate()
+            #
+            #             ca.set_raw(candidate[0])
+            #             ca.set_sentence_index(i)
+            #             dates.append(ca)
+            #
+            #     elif candidate[1] == 'DATE':
+            #         ca = Candidate()
+            #
+            #         ca.set_raw(candidate[0])
+            #         ca.set_sentence_index(i)
+            #         dates.append(ca)
+            #         last_date = self._fetch_pos(pos_tags[i], candidate[0])
+            #     else:
+            #         # String includes date and time
+            #         ca = Candidate()
+            #
+            #         ca.set_raw(candidate[0])
+            #         ca.set_sentence_index(i)
+            #         dates.append(ca)
 
-                if candidate[1] == 'TIME':
-                    # If a date was already mentioned combine it with the mentioned time
-                    # TODO: crosscheck with old implementation, this seams to be wrong
-                    if last_date is not None:
-                        ca = Candidate()
-
-                        ca.set_raw(candidate[0])
-                        ca.set_sentence_index(i)
-                        dates.append(ca)
-                    else:
-                        ca = Candidate()
-
-                        ca.set_raw(candidate[0])
-                        ca.set_sentence_index(i)
-                        dates.append(ca)
-
-                elif candidate[1] == 'DATE':
-                    ca = Candidate()
-
-                    ca.set_raw(candidate[0])
-                    ca.set_sentence_index(i)
-                    dates.append(ca)
-                    last_date = self._fetch_pos(pos_tags[i], candidate[0])
-                else:
-                    # String includes date and time
-                    ca = Candidate()
-
-                    ca.set_raw(candidate[0])
-                    ca.set_sentence_index(i)
-                    dates.append(ca)
-
-        document.set_candidates(self.get_id() + 'NeDates', dates)
+        #document.set_candidates(self.get_id() + 'NeDates', dates)
         document.set_candidates(self.get_id() + 'Locatios', locations)
         document.set_candidates(self.get_id() + 'TimexDates', timex_candidates);
 
@@ -352,102 +353,102 @@ class EnvironmentExtractor(AbsExtractor):
         oCandidates.sort(key=lambda x: x.get_score(), reverse=True)
         return oCandidates
 
-    def _evaluate_dates(self, document):
-        """
-        Calculate a confidence score for extracted time candidates.
+    # def _evaluate_dates(self, document):
+    #     """
+    #     Calculate a confidence score for extracted time candidates.
+    #
+    #     :param document: The parsed document.
+    #     :type document: Document
+    #     :param date_list: List of date candidates.
+    #     :type date_list: [String, Integer]
+    #
+    #     :return: A list of ranked candidates
+    #     """
+    #
+    #     ranked_candidates = []
+    #     weights = self.weights[1]
+    #     weights_sum = sum(weights)
+    #
+    #     # fetch the date the article was published as a reference date
+    #     reference = self.calendar.parse(document.get_date() or '')
+    #
+    #     oCandidates = document.get_candidates(self.get_id() + 'NeDates')
+    #     for candidateO in oCandidates:
+    #         candidate = candidateO.get_raw()
+    #
+    #         # translate date strings into date objects
+    #         date_str = ' '.join([t['originalText'] for t in candidate])
+    #         # Skip 'now' because its often part of a newsletter offer or similar
+    #         if date_str.lower().strip() == 'now':
+    #             continue
+    #         parse = self.calendar.parse(date_str, reference[0])
+    #         if parse[1] > 0:
+    #             ranked_candidates.append(
+    #                 [candidate[0], candidateO.get_sentence_index(), parse[0], parse[1], 1, candidateO])
+    #
+    #     ranked_candidates.sort(key=lambda x: x[2])
+    #
+    #     # Similar to the frequency used for locations we count similar date mentions.
+    #     # Dates are considered related if they differ at most 24h (time_delta).
+    #     max_n = 0
+    #     for index, candidate in enumerate(ranked_candidates):
+    #         for neighbour in ranked_candidates[index + 1:]:
+    #             if (time.mktime(neighbour[2]) - time.mktime(candidate[2])) <= self.time_delta:
+    #                 candidate[4] += 1
+    #                 neighbour[4] += 1
+    #         max_n = max(max_n, candidate[4])
+    #
+    #     # Calculate the scores
+    #     for candidate in ranked_candidates:
+    #         # Position is the first parameter used scoring following the inverted pyramid
+    #         score = weights[0] * (document.get_len() - candidate[1]) / document.get_len()
+    #
+    #         if candidate[3] == 1:
+    #             # Add a constant value if string contains a date
+    #             score += weights[1]
+    #         elif candidate[3] == 2:
+    #             # Add a constant value if string contains a time
+    #             score += weights[2]
+    #         else:
+    #             # String contains date and time
+    #             score += weights[1] + weights[2]
+    #
+    #         # Number of similar dates is also included as it indicates relevance
+    #         score += weights[3] * (candidate[4] / max_n)
+    #
+    #         if score > 0:
+    #             score /= weights_sum
+    #
+    #         candidate[5].set_score(score)
+    #
+    #     # format bugfix - take the raw information and form a standardized parts format
+    #     # this is the same format as the nlp tree leafs
+    #     # TODO: add the leaf itself instead of rebuilding the same structure
+    #     # TODO: do this already in _extract_candidates to speed it up
+    #     for candidate in oCandidates:
+    #         raw = candidate.get_raw()
+    #         parts = []
+    #         for old_part in raw:
+    #             parts.append(({'nlpToken': old_part}, old_part['pos']))
+    #         candidate.set_parts(parts)
+    #
+    #     oCandidates.sort(key=lambda x: x.get_score(), reverse=True)
+    #     return oCandidates
 
-        :param document: The parsed document.
-        :type document: Document
-        :param date_list: List of date candidates.
-        :type date_list: [String, Integer]
-
-        :return: A list of ranked candidates
-        """
-
-        ranked_candidates = []
-        weights = self.weights[1]
-        weights_sum = sum(weights)
-
-        # fetch the date the article was published as a reference date
-        reference = self.calendar.parse(document.get_date() or '')
-
-        oCandidates = document.get_candidates(self.get_id() + 'NeDates')
-        for candidateO in oCandidates:
-            candidate = candidateO.get_raw()
-
-            # translate date strings into date objects
-            date_str = ' '.join([t['originalText'] for t in candidate])
-            # Skip 'now' because its often part of a newsletter offer or similar
-            if date_str.lower().strip() == 'now':
-                continue
-            parse = self.calendar.parse(date_str, reference[0])
-            if parse[1] > 0:
-                ranked_candidates.append(
-                    [candidate[0], candidateO.get_sentence_index(), parse[0], parse[1], 1, candidateO])
-
-        ranked_candidates.sort(key=lambda x: x[2])
-
-        # Similar to the frequency used for locations we count similar date mentions.
-        # Dates are considered related if they differ at most 24h (time_delta).
-        max_n = 0
-        for index, candidate in enumerate(ranked_candidates):
-            for neighbour in ranked_candidates[index + 1:]:
-                if (time.mktime(neighbour[2]) - time.mktime(candidate[2])) <= self.time_delta:
-                    candidate[4] += 1
-                    neighbour[4] += 1
-            max_n = max(max_n, candidate[4])
-
-        # Calculate the scores
-        for candidate in ranked_candidates:
-            # Position is the first parameter used scoring following the inverted pyramid
-            score = weights[0] * (document.get_len() - candidate[1]) / document.get_len()
-
-            if candidate[3] == 1:
-                # Add a constant value if string contains a date
-                score += weights[1]
-            elif candidate[3] == 2:
-                # Add a constant value if string contains a time
-                score += weights[2]
-            else:
-                # String contains date and time
-                score += weights[1] + weights[2]
-
-            # Number of similar dates is also included as it indicates relevance
-            score += weights[3] * (candidate[4] / max_n)
-
-            if score > 0:
-                score /= weights_sum
-
-            candidate[5].set_score(score)
-
-        # format bugfix - take the raw information and form a standardized parts format
-        # this is the same format as the nlp tree leafs
-        # TODO: add the leaf itself instead of rebuilding the same structure
-        # TODO: do this already in _extract_candidates to speed it up
-        for candidate in oCandidates:
-            raw = candidate.get_raw()
-            parts = []
-            for old_part in raw:
-                parts.append(({'nlpToken': old_part}, old_part['pos']))
-            candidate.set_parts(parts)
-
-        oCandidates.sort(key=lambda x: x.get_score(), reverse=True)
-        return oCandidates
-
-    def _fetch_pos(self, pos, pattern):
-        """
-        Fetches the pos tag for a word, by walking over all tokens
-
-        :param pos: sentence with POS-labels
-        :type pos: [(String, String)]
-        :param pattern: The tokens without POS-labels
-        :type pattern: [String]
-
-        :return: The tokens of the pattern with POS-labels
-        """
-
-        for i, token in enumerate(pos):
-            if token[0] == pattern[0] and [t[0] for t in pos[i:i + len(pattern)]] == pattern:
-                rt = pos[i:i + len(pattern)]
-                return rt
-        return []
+    # def _fetch_pos(self, pos, pattern):
+    #     """
+    #     Fetches the pos tag for a word, by walking over all tokens
+    #
+    #     :param pos: sentence with POS-labels
+    #     :type pos: [(String, String)]
+    #     :param pattern: The tokens without POS-labels
+    #     :type pattern: [String]
+    #
+    #     :return: The tokens of the pattern with POS-labels
+    #     """
+    #
+    #     for i, token in enumerate(pos):
+    #         if token[0] == pattern[0] and [t[0] for t in pos[i:i + len(pattern)]] == pattern:
+    #             rt = pos[i:i + len(pattern)]
+    #             return rt
+    #     return []

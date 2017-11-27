@@ -29,6 +29,38 @@ class Timex:
     def is_entailed_in(self, other_timex):
         return other_timex.get_start_date() <= self._start_date and self.get_end_date() <= other_timex._end_date
 
+    def to_json(self):
+        """
+        return a serializable representation of this object.
+        Representation miming the timex3(xml) standard,
+        but limited to ranges based on two dates without any quant or freq information
+
+        http://www.timeml.org/publications/timeMLdocs/timeml_1.2.1.html#timex3
+        <TIMEX3 tid="t1" type="DATE" value="1992">
+        <TIMEX3 tid="t2" type="DATE" value="2000" mod="START">the dawn of 2000</TIMEX3>
+        <TIMEX3 tid="t3" type="DURATION" beginPoint="t1" endPoint="t2"></TIMEX3>
+        :return:
+        """
+        return [
+            {
+                'tid': 't1',
+                'type': 'DATE',
+                'value': self._start_date.isoformat()
+            },
+            {
+                'tid': 't2',
+                'type': 'DATE',
+                'value': self._end_date.isoformat()
+            },
+            {
+                'tid': 't3',
+                'type': 'DURATION',
+                'beginPoint': 't1',
+                'endPoint': 't2'
+            }
+        ]
+
+
     @staticmethod
     def from_timex_text(text):
         # month (2017-11)

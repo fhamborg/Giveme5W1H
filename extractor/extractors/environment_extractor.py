@@ -134,7 +134,7 @@ class EnvironmentExtractor(AbsExtractor):
                     ca.set_raw(timex_candidate[0])
                     ca.set_sentence_index(i)
                     ca.set_calculations('timex', timex_obj)
-                    ca.set_enhancement('timex', timex_obj.to_json())
+                    ca.set_enhancement('timex', timex_obj.get_json())
                     timex_candidates.append(ca)
 
             # old code for time extraction

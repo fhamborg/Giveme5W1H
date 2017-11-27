@@ -29,7 +29,7 @@ class Timex:
     def is_entailed_in(self, other_timex):
         return other_timex.get_start_date() <= self._start_date and self.get_end_date() <= other_timex._end_date
 
-    def to_json(self):
+    def get_json(self):
         """
         return a serializable representation of this object.
         Representation miming the timex3(xml) standard,

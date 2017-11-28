@@ -48,7 +48,7 @@ class Timex:
         """
         return [{
             'start_date': self._start_date.isoformat(),
-            'end_date': self._end_date.isoformat
+            'end_date': self._end_date.isoformat()
         }]
 
     @staticmethod

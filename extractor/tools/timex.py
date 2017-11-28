@@ -38,18 +38,18 @@ class Timex:
         return other_timex.get_start_date() <= self._start_date and self.get_end_date() <= other_timex._end_date
 
     def get_min_distance_in_seconds_to_datetime(self, other_datetime):
-        return min(Timex._get_date_distance_in_seconds(self._start_date - other_datetime),
-                   Timex._get_date_distance_in_seconds(self._end_date - other_datetime))
+        return min(Timex._get_date_distance_in_seconds(self._start_date, other_datetime),
+                   Timex._get_date_distance_in_seconds(self._end_date, other_datetime))
 
     def get_json(self):
         """
         return a serializable representation of this object.
         :return:
         """
-        return {
+        return [{
             'start_date': self._start_date.isoformat(),
             'end_date': self._end_date.isoformat
-        }
+        }]
 
     @staticmethod
     def from_timex_text(text):

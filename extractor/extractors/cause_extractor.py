@@ -54,7 +54,7 @@ class CauseExtractor(AbsExtractor):
             nltk.download('wordnet')
 
 
-        if weights is not None:
+        if weights:
             self.weights = weights
 
         # translate causal verbs into synsets
@@ -218,7 +218,7 @@ class CauseExtractor(AbsExtractor):
             elif token in self.clausal_conjunctions and ' '.join(
                     [x['nlpToken']['originalText'] for x in tokens[i:]]).lower().startswith(
                 self.clausal_conjunctions[token]):
-                # Check if token is au clausal conjunction indicating causation
+                # Check if token is a clausal conjunction indicating causation
                 candidates.append(deepcopy([pos[i - 1:], pos[:i], 'biclausal']))
 
         # drop candidates containing other candidates

@@ -4,6 +4,10 @@ from dateutil.relativedelta import relativedelta
 
 
 class Timex:
+    """
+    Simply represents a Timex object. Main reason for this class is that the datetime class (and other Python
+    equivalents) do not allow to reflect a month or a day but only a single point in time.
+    """
     _date_format_month = '%Y-%m'
     _date_format_week = '%Y-W%W' + '-%w'
     _date_format_day = '%Y-%m-%d'

@@ -251,7 +251,7 @@ class EnvironmentExtractor(AbsExtractor):
         for candidateO in oCandidates:
             candidate = candidateO.get_raw()
             candidate_timex = candidateO.get_calculations('timex')
-            logging.debug(candidate_timex)
+            logging.getLogger('GiveMe5W').debug(candidate_timex)
 
             # first token, sentence index, time, number of similar dates, number of candidates that entail this one, candidateO
             scoring_candidate = [candidate[0], candidateO.get_sentence_index(), candidate_timex, 1, 1, candidateO]

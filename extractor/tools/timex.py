@@ -17,6 +17,10 @@ class Timex:
     def __str__(self):
         return 'Timex(' + str(self._start_date) + ', ' + str(self._end_date) + ')'
 
+    @staticmethod
+    def _get_date_distance_in_seconds(date1, date2):
+        return abs((date2 - date1).total_seconds())
+
     def get_start_date(self):
         return self._start_date
 
@@ -28,6 +32,10 @@ class Timex:
 
     def is_entailed_in(self, other_timex):
         return other_timex.get_start_date() <= self._start_date and self.get_end_date() <= other_timex._end_date
+
+    def get_min_distance_in_seconds_to_datetime(self, other_datetime):
+        return min(Timex._get_date_distance_in_seconds(self._start_date - other_datetime),
+                   Timex._get_date_distance_in_seconds(self._end_date - other_datetime))
 
     def get_json(self):
         """
@@ -74,8 +82,8 @@ class Timex:
         except ValueError as verr:
             pass
 
-        #Timex._log.error('could not parse "' + text + '" to Timex')
-        #print('could not parse "' + text + '" to Timex')
+        # Timex._log.error('could not parse "' + text + '" to Timex')
+        # print('could not parse "' + text + '" to Timex')
         # we cannot parse the following things
-        #could not parse "2017-SU" to Timex: This summer
+        # could not parse "2017-SU" to Timex: This summer
         return None

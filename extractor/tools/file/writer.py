@@ -54,43 +54,44 @@ class Writer:
             output = {}
 
         # check if there isn`t already a fiveWoneH literal
-        fiveWoneHLiteral = output.setdefault('fiveWoneH', {})
+        five_w_one_h_literal = output.setdefault('fiveWoneH', {})
 
         # Extract answers
         answers = document.get_answers()
 
         for question in answers:
             # check if question literal is there
-            questionLiteral = fiveWoneHLiteral.setdefault(question, {'extracted': []})
+            question_literal = five_w_one_h_literal.setdefault(question, {'extracted': []})
 
             # add a label, thats only there for the ui
             if Config.get()['label']:
-                questionLiteral['label'] = question
+                question_literal['label'] = question
 
             # check if extracted literal is there
-            extractedLiteral = questionLiteral.setdefault('extracted', [])
+            extracted_literal = question_literal.setdefault('extracted', [])
             for answer in answers[question]:
                 if isinstance(answer, Candidate):
                     # answer was already refactored
                     awJson = answer.get_json()
                     # clean up json by skipping NULL entries
                     if awJson:
-                        extractedLiteral.append(awJson)
+                        extracted_literal.append(awJson)
 
                 else:
                     # fallback for none refactored extractors
                     candidate_json = {'score': answer[1], 'words': []}
                     for candidateWord in answer[0]:
                         candidate_json['parts'].append({'text': candidateWord[0], 'nlpTag': candidateWord[1]})
-                    extractedLiteral.append(candidate_json)
+                    extracted_literal.append(candidate_json)
 
                 if Config.get()['onlyTopCandidate']:
-                    # stop after the first not answer
+                    # stop after the first answer
                     break
         return output
 
     def write(self, document):
         if self._outputPath:
-            self._write_json(self.generate_json(document))
+            a_json = self.generate_json(document)
+            self._write_json(a_json)
         else:
-            print("set a outputPath before printing")
+            print("set a outputPath before writing")

@@ -238,16 +238,14 @@ class AbsExtractor:
             return 0
         return score / n
 
-    '''
-    Most of the extractor work with a tree structure and don`t save any backlinkt to the original text or 
-    the core NLP results. 
-    
-    This method can take a (sub)-tree/leave and walk back the tree and count all left hand-nodes.
-    By doing so it is possible to extracts all Core-NLP-Information for the candidates and their tokens.
-    '''
-
     def _pos_linked_to_corenlp_tokens(self, tree):
+        """
+        Most of the extractor work with a tree structure and don`t save any backlink to the original text or
+        the core NLP results.
 
+        This method can take a (sub)-tree/leave and walk back the tree and count all left hand-nodes.
+        By doing so it is possible to extract all Core-NLP-Information for the candidates and their tokens.
+        """
         root = tree.root()
         pos = tree.pos()
         candidate_parts_as_list = []

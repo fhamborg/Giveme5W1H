@@ -154,7 +154,7 @@ class MethodExtractor(AbsExtractor):
             freq = (sentences_count - candidate.get_sentence_index()) / sentences_count
             candidate.set_calculations('position_frequency_norm', freq)
 
-        # callculate score
+        # calculate score
         score_max = 0
         weights_sum = sum(self.weights)
         for candidate in candidates:

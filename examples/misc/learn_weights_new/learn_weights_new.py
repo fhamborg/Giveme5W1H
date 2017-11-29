@@ -13,6 +13,7 @@ from dateutil.relativedelta import relativedelta as rd
 
 import time
 
+from combined_scoring import distance_of_candidate
 from extractor.extractor import FiveWExtractor
 from extractor.root import path
 from extractor.tools.file.handler import Handler
@@ -27,27 +28,13 @@ from misc.learn_weights_new.work_queue import WorkQueue
 
 fmt = '{0.days} days {0.hours} hours {0.minutes} minutes {0.seconds} seconds'
 
-def adjust_weights(extractors, i, j, k, l):
-    # (action_0, cause_1, environment_2)
-    extractors[0].weights = (i, j, k)
-    # time
-    extractors[1].weights = ((i, j), (i, j, k, l))
-    # cause - (position, conjunction, adverb, verb)
-    extractors[2].weights = (i, j, k, l)
-    # method - (position, frequency)
-    extractors[3].weights = (i, j)
 
-def loadDocumentsAndCoder():
-
-
-    #inputPath = os.path.dirname(__file__) + '../../input/'
+def loadDocumentsAndCoder(extractors, combined_scorer):
     inputPath = path('../examples/datasets/gold_standard/data')
     preprocessedPath = path('../examples/datasets/gold_standard/cache')
-    #preprocessedPath = os.path.dirname(__file__) + '/cache'
 
     # Setup
-    extractorObject = FiveWExtractor()
-
+    extractor_object = FiveWExtractor( extractors=list(extractors.values()), combined_scorers=[combined_scorer])
 
     # Put all together, run it once, get the cached document objects
     docments = (
@@ -56,20 +43,17 @@ def loadDocumentsAndCoder():
             # set a path to save an load preprocessed documents
             .set_preprocessed_path(preprocessedPath)
             # limit the the to process documents (nice for development)
-            # .set_limit(1)
+            .set_limit(50)
             # add an optional extractor (it would do basically just copying without...)
-            .set_extractor(extractorObject)
+            .set_extractor(extractor_object)
             # saves all document objects for further programming
             .preload_and_cache_documents()
             # executing it
             .process().get_documents()
     )
 
-    # grab utilities to parse dates and locations from the EnvironmentExtractor
-    geocoder = extractorObject.extractors[1].geocoder
-    calendar = extractorObject.extractors[1].calendar
+    return docments, extractor_object
 
-    return docments, geocoder, calendar, extractorObject
 
 
 def cmp_text_helper(question, answers, annotations, weights, result):
@@ -77,12 +61,14 @@ def cmp_text_helper(question, answers, annotations, weights, result):
     # check if there is an annotaton and an answer
     if question in annotations and question in answers and len(annotations[question]) > 0  and len(answers[question]) > 0:
         topAnswer = answers[question][0].get_parts_as_text()
-        topAnnotation = annotations[question][0][2]
-        if topAnnotation and topAnswer:
-            score = cmp_text(topAnnotation, topAnswer)
+        best = -1
+        for annotation in annotations[question]:
+            topAnnotation = annotation[0][2]
+            if topAnnotation and topAnswer:
+                score = cmp_text(topAnnotation, topAnswer)
+                best = max(best, score)
 
-    result[question] = (question, weights, score)
-
+    result[question] = (question, weights, best)
 
 
 def cmp_date_helper(question, answers, annotations, weights, calendar, result):
@@ -90,22 +76,26 @@ def cmp_date_helper(question, answers, annotations, weights, calendar, result):
     # check if there is an annotaton and an answer
     if question in annotations and question in answers and len(annotations[question]) > 0  and len(answers[question]) > 0:
         topAnswer = answers[question][0].get_parts_as_text()
-        topAnnotation = annotations[question][0][2]
-        if topAnnotation and topAnswer:
-            score = cmp_date(topAnnotation, topAnswer, calendar)
+        best = -1
+        for annotation in annotations[question]:
+            topAnnotation = annotation[0][2]
+            if topAnnotation and topAnswer:
+                score = cmp_date(topAnnotation, topAnswer, calendar)
+                best = max(best, score)
 
     result[question] = (question, weights, score)
-
 
 def cmp_location_helper(question, answers, annotations, weights, geocoder, result):
     score = -1
     # check if there is an annotaton and answer
     if question in annotations and question in answers and len(annotations[question]) > 0 and len(answers[question]) > 0:
         topAnswer = answers[question][0].get_parts_as_text()
-        topAnnotation = annotations[question][0][2]
-        if topAnnotation and topAnswer:
-            score = cmp_location(topAnnotation, topAnswer, geocoder)
-
+        best = -1
+        for annotation in annotations[question]:
+            topAnnotation = annotation[0][2]
+            if topAnnotation and topAnswer:
+                score = cmp_location(topAnnotation, topAnswer, geocoder)
+                best = max(best, score)
     result[question] = (question, weights, score)
 
 
@@ -134,14 +124,24 @@ if __name__ == '__main__':
     queue.setup_extracting_parameters()
     queue.load()
 
-    documents, geocoder, calendar, extractor = loadDocumentsAndCoder()
+    extractors = {
+        'action': action_extractor.ActionExtractor(),
+        'environment': environment_extractor.EnvironmentExtractor(),
+        'cause': cause_extractor.CauseExtractor(),
+        'method': method_extractor.MethodExtractor()
+    }
+    combined_scorer = distance_of_candidate.DistanceOfCandidate(('what', 'who'), ('how'))
+
+    documents, extractor_object = loadDocumentsAndCoder(extractors, combined_scorer)
+
+    # grab utilities to parse dates and locations from the EnvironmentExtractor
+    if extractors.get('environment'):
+        geocoder = environment_extractor.geocoder
+        calendar = environment_extractor.calendar
 
     log_progress(queue,documents, None, None)
     # make sure caller can read that...
     time.sleep(5)
-
-
-
 
     _pre_extracting_parameters_id = None
     while True:
@@ -162,14 +162,30 @@ if __name__ == '__main__':
             j = weights[1]
             k = weights[2]
             l = weights[3]
-            adjust_weights(extractor.extractors, i, j, k, l)
+
+            if extractors.get('action'):
+                #
+                extractors['action'].weights = (i, j, k)
+
+            if extractors.get('environment'):
+                # time
+                extractors['environment'].weights = ((i, j), (i, j, k, l))
+
+            if extractors.get('cause'):
+                # cause - (position, conjunction, adverb, verb)
+                extractors['cause'].weights = (i, j, k, l)
+
+            if extractors.get('method'):
+                # method - (position, frequency)
+                extractors['method'].weights = (i, j)
+
 
             combination_start_stamp =  datetime.datetime.now()
             # run for all documents
             for document in documents:
 
                 try:
-                    extractor.parse(document)
+                    extractor_object.parse(document)
                 except socket.timeout:
                     print('online service (prob nominatim) did`t work, we ignore this')
 
@@ -199,6 +215,3 @@ if __name__ == '__main__':
         else:
             print('done')
             break
-
-
-    # TODO generate some settings

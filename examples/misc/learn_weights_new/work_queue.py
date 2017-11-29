@@ -20,7 +20,7 @@ class WorkQueue(object):
     def get_queue_count(self):
         return len(self._queue)
 
-    def setup_scoring_parameters(self,  weight_start: float = 0.05 , weight_stop: float = 1, weight_step_size: float = 0.05):
+    def setup_scoring_parameters(self,  weight_start: float = 0.1 , weight_stop: float = 1, weight_step_size: float = 0.1):
         self._weights_range = np.arange(weight_start, weight_stop, weight_step_size)
 
     def setup_extracting_parameters(self, phrase_range_location: np.arange = np.arange(3, 4), phrase_range_time_date: np.arange=np.arange(1, 2), time_range: np.arange=np.arange(86400, 86401)):
@@ -77,9 +77,6 @@ class WorkQueue(object):
             with open(self._queue_processed_path, 'wb') as f:
                 # Pickle the 'data' document using the highest protocol available.
                 pickle.dump(self._queue_processed, f, pickle.HIGHEST_PROTOCOL)
-
-
-
 
     def next(self):
         if len(self._queue) > 0:

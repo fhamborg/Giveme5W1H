@@ -27,8 +27,6 @@ coderPhraseCount: coderAggrement
 
 
 
-
-
 # Source
 NewsGate?
 

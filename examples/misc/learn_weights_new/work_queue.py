@@ -88,7 +88,6 @@ class WorkQueue(object):
 
     def _generate(self):
         """
-
         https://www.hackmath.net/en/calculator/combinations-and-permutations?n=19&k=4&order=1&repeat=1
         130321 per
         :return:

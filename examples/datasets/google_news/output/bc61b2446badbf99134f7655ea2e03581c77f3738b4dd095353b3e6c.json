@@ -614,54 +614,7 @@
       "label": "why"
     },
     "where": {
-      "extracted": [
-        {
-          "parts": [
-            [
-              {
-                "nlpToken": {
-                  "index": 22,
-                  "word": "America",
-                  "originalText": "America",
-                  "lemma": "America",
-                  "characterOffsetBegin": 4449,
-                  "characterOffsetEnd": 4456,
-                  "pos": "NNP",
-                  "ner": "LOCATION",
-                  "speaker": "PER0",
-                  "before": " ",
-                  "after": " "
-                }
-              },
-              "NNP"
-            ]
-          ],
-          "score": 1.0,
-          "text": "America",
-          "enhancement": {
-            "openstreetmap_nominatim": {
-              "place_id": "161730680",
-              "licence": "Data \u00a9 OpenStreetMap contributors, ODbL 1.0. http://www.openstreetmap.org/copyright",
-              "osm_type": "way",
-              "osm_id": "426681574",
-              "boundingbox": [
-                4.8165397,
-                4.8195875,
-                -75.6911087,
-                -75.6871246
-              ],
-              "lat": "4.81803125",
-              "lon": "-75.6888390028759",
-              "display_name": "America, Pereira, Risaralda, Colombia",
-              "class": "boundary",
-              "type": "administrative",
-              "importance": 0.185,
-              "icon": "https://nominatim.openstreetmap.org/images/mapicons/poi_boundary_administrative.p.20.png"
-            }
-          },
-          "nlpIndexSentence": 31
-        }
-      ],
+      "extracted": [],
       "label": "where"
     },
     "when": {
@@ -671,31 +624,31 @@
             [
               {
                 "nlpToken": {
-                  "index": 16,
-                  "word": "Friday",
-                  "originalText": "Friday",
-                  "lemma": "Friday",
-                  "characterOffsetBegin": 315,
-                  "characterOffsetEnd": 321,
-                  "pos": "NNP",
+                  "index": 6,
+                  "word": "today",
+                  "originalText": "today",
+                  "lemma": "today",
+                  "characterOffsetBegin": 1751,
+                  "characterOffsetEnd": 1756,
+                  "pos": "NN",
                   "ner": "DATE",
-                  "normalizedNER": "XXXX-WXX-5",
-                  "speaker": "PER0",
+                  "normalizedNER": "2017-11-13",
+                  "speaker": "PER1",
                   "before": " ",
                   "after": "",
                   "timex": {
-                    "tid": "t1",
+                    "tid": "t5",
                     "type": "DATE",
-                    "value": "XXXX-WXX-5"
+                    "value": "2017-11-13"
                   }
                 }
               },
-              "NNP"
+              "NN"
             ]
           ],
-          "score": 0.8681318681318682,
-          "text": "Friday",
-          "nlpIndexSentence": 3
+          "score": 0.7802197802197802,
+          "text": "today",
+          "nlpIndexSentence": 12
         }
       ],
       "label": "when"

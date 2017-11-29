@@ -41,6 +41,7 @@ class Category(Enum):
     # todo: add
     # disaster and accidents
     # World
+
 @enum.unique
 class Topic(Enum):
     unspecific = auto()
@@ -253,7 +254,7 @@ if __name__ == '__main__':
             data = json.load(data_file)
             target = None
 
-            # giveme5w(and enhancer) needs at least these 3 filed to work proper
+            # giveme5w(and enhancer) needs at least these 3 fields to work proper
             if data.get('date_publish') is not None and data.get('title') is not None and data.get('text') is not None:
                 target = 'data'
             else:

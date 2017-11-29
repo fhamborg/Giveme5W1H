@@ -50,6 +50,46 @@
       ],
       "label": "how"
     },
+    "where": {
+      "extracted": [],
+      "label": "where"
+    },
+    "when": {
+      "extracted": [
+        {
+          "parts": [
+            [
+              {
+                "nlpToken": {
+                  "index": 4,
+                  "word": "2015",
+                  "originalText": "2015",
+                  "lemma": "2015",
+                  "characterOffsetBegin": 708,
+                  "characterOffsetEnd": 712,
+                  "pos": "CD",
+                  "ner": "DATE",
+                  "normalizedNER": "2015",
+                  "speaker": "PER0",
+                  "before": " ",
+                  "after": "",
+                  "timex": {
+                    "tid": "t2",
+                    "type": "DATE",
+                    "value": "2015"
+                  }
+                }
+              },
+              "CD"
+            ]
+          ],
+          "score": 0.8402366863905325,
+          "text": "2015",
+          "nlpIndexSentence": 6
+        }
+      ],
+      "label": "when"
+    },
     "who": {
       "extracted": [
         {
@@ -1183,92 +1223,6 @@
         }
       ],
       "label": "why"
-    },
-    "where": {
-      "extracted": [
-        {
-          "parts": [
-            [
-              {
-                "nlpToken": {
-                  "index": 29,
-                  "word": "Chewbacca",
-                  "originalText": "Chewbacca",
-                  "lemma": "Chewbacca",
-                  "characterOffsetBegin": 5328,
-                  "characterOffsetEnd": 5337,
-                  "pos": "NNP",
-                  "ner": "LOCATION",
-                  "speaker": "PER0",
-                  "before": " ",
-                  "after": ""
-                }
-              },
-              "NNP"
-            ]
-          ],
-          "score": 1.0,
-          "text": "Chewbacca",
-          "enhancement": {
-            "openstreetmap_nominatim": {
-              "place_id": "88848851",
-              "licence": "Data \u00a9 OpenStreetMap contributors, ODbL 1.0. http://www.openstreetmap.org/copyright",
-              "osm_type": "way",
-              "osm_id": "86978421",
-              "boundingbox": [
-                41.269746,
-                41.2717436,
-                -73.9131546,
-                -73.9123565
-              ],
-              "lat": "41.2707653",
-              "lon": "-73.912436",
-              "display_name": "Chewbacca, Pleasantside, Cortland, Westchester County, New York, 10566, United States of America",
-              "class": "highway",
-              "type": "path",
-              "importance": 0.12875
-            }
-          },
-          "nlpIndexSentence": 38
-        }
-      ],
-      "label": "where"
-    },
-    "when": {
-      "extracted": [
-        {
-          "parts": [
-            [
-              {
-                "nlpToken": {
-                  "index": 4,
-                  "word": "2015",
-                  "originalText": "2015",
-                  "lemma": "2015",
-                  "characterOffsetBegin": 708,
-                  "characterOffsetEnd": 712,
-                  "pos": "CD",
-                  "ner": "DATE",
-                  "normalizedNER": "2015",
-                  "speaker": "PER0",
-                  "before": " ",
-                  "after": "",
-                  "timex": {
-                    "tid": "t2",
-                    "type": "DATE",
-                    "value": "2015"
-                  }
-                }
-              },
-              "CD"
-            ]
-          ],
-          "score": 0.8402366863905325,
-          "text": "2015",
-          "nlpIndexSentence": 6
-        }
-      ],
-      "label": "when"
     }
   }
 }

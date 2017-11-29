@@ -441,22 +441,30 @@
                   "characterOffsetEnd": 3814,
                   "pos": "NNP",
                   "ner": "DATE",
-                  "normalizedNER": "XXXX-12",
+                  "normalizedNER": "2017-12",
                   "speaker": "PER0",
                   "before": " ",
                   "after": " ",
                   "timex": {
                     "tid": "t7",
                     "type": "DATE",
-                    "value": "XXXX-12"
+                    "value": "2017-12"
                   }
                 }
               },
               "NNP"
             ]
           ],
-          "score": 0.6421652421652422,
+          "score": 0.786523148148148,
           "text": "December",
+          "enhancement": {
+            "timex": [
+              {
+                "start_date": "2017-12-01T00:00:00",
+                "end_date": "2017-12-31T23:59:59"
+              }
+            ]
+          },
           "nlpIndexSentence": 28
         }
       ],

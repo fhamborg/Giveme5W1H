@@ -6,10 +6,14 @@ class MethodExtractor(AbsExtractor):
     """
     The MethodExtractor tries to extract the methods.
     """
-
-    # weights used in the candidate evaluation:
-    # (position, frequency)
-    weights = [1.0, 1]
+    def __init__(self, weights: (float,float) = [1.0, 1.0]):
+        """
+         weights used in the candidate evaluation:
+        (position, frequency)
+        :param weights: 
+        """
+   
+        self.weights = weights
 
     _copulative_conjunction = ['and', 'as', 'both', 'because', 'even', 'for', 'if ', 'that', 'then', 'since', 'seeing',
                                'so', 'after']
@@ -75,7 +79,7 @@ class MethodExtractor(AbsExtractor):
                                     [candidate_parts, None, tree.stanfordCoreNLPResult['index'], 'prepos'])
                         else:
                             # look at the sentence to the left side
-                            # beause of the tree structure simples way is to go multible times up and then walk back
+                            # because of the tree structure simplest way is to go multiple times up and then walk back
                             atree = subtree.parent().parent().parent()
                             if atree:
                                 relevantParts = self._pos_linked_to_corenlp_tokens(atree)
@@ -94,7 +98,7 @@ class MethodExtractor(AbsExtractor):
         :return: A List of Tuples containing all agents, actions and their position in the document.
         """
 
-        # retrieve results from preprocessing
+        # retrieve results from pre-processing
         candidates = []
 
         sentences = document.get_sentences()
@@ -188,22 +192,22 @@ class MethodExtractor(AbsExtractor):
             result.append(ca)
         return result
 
-    def _find_vb_cc_vb_parts(self, relevantParts):
+    def _find_vb_cc_vb_parts(self, relevant_parts):
         recording = False
-        candidateParts = []
-        for relevantPart in relevantParts:
-            if relevantPart[1].startswith('VB') or relevantPart[1].startswith('JJ') or relevantPart[1].startswith(
-                    'LS') or relevantPart[1] == 'CC':
-                candidateParts.append(relevantPart)
+        candidate_parts = []
+        for relevant_part in relevant_parts:
+            if relevant_part[1].startswith('VB') or relevant_part[1].startswith('JJ') or relevant_part[1].startswith(
+                    'LS') or relevant_part[1] == 'CC':
+                candidate_parts.append(relevant_part)
                 recording = True
             elif recording is True:
                 break
-        candidatePartsLen = len(candidateParts)
+        candidatePartsLen = len(candidate_parts)
 
         # filter out short candidates
-        if ((candidatePartsLen == 1 and candidateParts[0][0]['nlpToken'][
+        if ((candidatePartsLen == 1 and candidate_parts[0][0]['nlpToken'][
             'lemma'] not in self._stop_words) or candidatePartsLen > 1):
-            return candidateParts
+            return candidate_parts
         return None
 
     def _count_elements(self, root):

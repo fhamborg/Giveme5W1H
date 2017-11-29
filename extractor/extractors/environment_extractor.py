@@ -92,11 +92,8 @@ class EnvironmentExtractor(AbsExtractor):
         """
 
         # fetch results of the NER
-        pos_tags = document.get_pos()
         locations = []
-        dates = []
         timex_candidates = []
-        last_date = None
 
         tokens = document.get_tokens()
 
@@ -130,15 +127,20 @@ class EnvironmentExtractor(AbsExtractor):
             # date candidate extraction using SUTime
             current_timex_candidates = self._extract_timex_candidates(sentence)
             for timex_candidate in current_timex_candidates:
-                timex_date_value = timex_candidate[0][0]['timex']['value']
-                timex_obj = Timex.from_timex_text(timex_date_value)
-                if timex_obj:
-                    ca = Candidate()
-                    ca.set_raw(timex_candidate[0])
-                    ca.set_sentence_index(i)
-                    ca.set_calculations('timex', timex_obj)
-                    ca.set_enhancement('timex', timex_obj.get_json())
-                    timex_candidates.append(ca)
+                # some timex  have only a altValue field, this bugfix is ignoring them
+                # gold_standard
+                # 51bd183bdd5c2ea99cdc5f0dfe49feb816b0185371c8f30842549c33
+                #'altValue' (5223107824) -> '2016-11-11-WXX-5 INTERSECT PTXH'
+                timex_date_value = timex_candidate[0][0]['timex'].get('value')
+                if timex_date_value:
+                    timex_obj = Timex.from_timex_text(timex_date_value)
+                    if timex_obj:
+                        ca = Candidate()
+                        ca.set_raw(timex_candidate[0])
+                        ca.set_sentence_index(i)
+                        ca.set_calculations('timex', timex_obj)
+                        ca.set_enhancement('timex', timex_obj.get_json())
+                        timex_candidates.append(ca)
 
         document.set_candidates(self.get_id() + 'Locatios', locations)
         document.set_candidates(self.get_id() + 'TimexDates', timex_candidates);
@@ -150,8 +152,6 @@ class EnvironmentExtractor(AbsExtractor):
 
         :param document: The parsed document.
         :type document: Document
-        :param candidates: List of tuples containing the extracted candidates
-        :type candidates: [tokens, geocode, position]
 
         :return: A list of evaluated and ranked candidates
         """

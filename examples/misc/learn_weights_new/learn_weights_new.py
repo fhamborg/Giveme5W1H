@@ -61,14 +61,13 @@ def cmp_text_helper(question, answers, annotations, weights, result):
     # check if there is an annotaton and an answer
     if question in annotations and question in answers and len(annotations[question]) > 0  and len(answers[question]) > 0:
         topAnswer = answers[question][0].get_parts_as_text()
-        best = -1
         for annotation in annotations[question]:
-            topAnnotation = annotation[0][2]
-            if topAnnotation and topAnswer:
-                score = cmp_text(topAnnotation, topAnswer)
-                best = max(best, score)
-
-    result[question] = (question, weights, best)
+            if len(annotation) > 2:
+                topAnnotation = annotation[2]
+                if topAnnotation and topAnswer:
+                    tmp_score = cmp_text(topAnnotation, topAnswer)
+                    score = max(tmp_score, score)
+    result[question] = (question, weights, score)
 
 
 def cmp_date_helper(question, answers, annotations, weights, calendar, result):
@@ -76,12 +75,12 @@ def cmp_date_helper(question, answers, annotations, weights, calendar, result):
     # check if there is an annotaton and an answer
     if question in annotations and question in answers and len(annotations[question]) > 0  and len(answers[question]) > 0:
         topAnswer = answers[question][0].get_parts_as_text()
-        best = -1
         for annotation in annotations[question]:
-            topAnnotation = annotation[0][2]
-            if topAnnotation and topAnswer:
-                score = cmp_date(topAnnotation, topAnswer, calendar)
-                best = max(best, score)
+            if len(annotation) > 2:
+                topAnnotation = annotation[2]
+                if topAnnotation and topAnswer:
+                    tmp_score = cmp_date(topAnnotation, topAnswer, calendar)
+                    score = max(tmp_score, score)
 
     result[question] = (question, weights, score)
 
@@ -90,12 +89,12 @@ def cmp_location_helper(question, answers, annotations, weights, geocoder, resul
     # check if there is an annotaton and answer
     if question in annotations and question in answers and len(annotations[question]) > 0 and len(answers[question]) > 0:
         topAnswer = answers[question][0].get_parts_as_text()
-        best = -1
         for annotation in annotations[question]:
-            topAnnotation = annotation[0][2]
-            if topAnnotation and topAnswer:
-                score = cmp_location(topAnnotation, topAnswer, geocoder)
-                best = max(best, score)
+            if len(annotation) > 2:
+                topAnnotation = annotation[2]
+                if topAnnotation and topAnswer:
+                    tmp_score = cmp_location(topAnnotation, topAnswer, geocoder)
+                    score = max(tmp_score, score)
     result[question] = (question, weights, score)
 
 
@@ -136,8 +135,8 @@ if __name__ == '__main__':
 
     # grab utilities to parse dates and locations from the EnvironmentExtractor
     if extractors.get('environment'):
-        geocoder = environment_extractor.geocoder
-        calendar = environment_extractor.calendar
+        geocoder = extractors.get('environment').geocoder
+        calendar = extractors.get('environment').calendar
 
     log_progress(queue,documents, None, None)
     # make sure caller can read that...
@@ -200,11 +199,14 @@ if __name__ == '__main__':
                 cmp_text_helper('how', answers, annotation, [i, j], result)
 
                 # These two are tricky because of the used online services
-                try:
-                    cmp_date_helper('when', answers, annotation, [i, j, k, l], calendar, result)
-                except socket.timeout:
-                    print('online service (prob nominatim) did`t work, we ignore this')
-                cmp_location_helper('where', answers, annotation, [i, j], geocoder, result)
+
+                cmp_date_helper('when', answers, annotation, [i, j, k, l], calendar, result)
+
+                #try:
+                    # cmp_location_helper('where', answers, annotation, [i, j], geocoder, result)
+                #except socket.timeout:
+                    #print('online service (prob nominatim) did`t work, we ignore this')
+
 
                 # done save it to the result
                 queue.resolve_document(next_item,  document.get_document_id(), result)

@@ -1,8 +1,11 @@
 import logging
+import warnings
+import nltk
+
 from abc import ABCMeta, abstractmethod
 from itertools import product
 
-import nltk
+
 from nltk.corpus import wordnet
 
 from document import Document
@@ -238,6 +241,7 @@ class AbsExtractor:
             return 0
         return score / n
 
+
     def _pos_linked_to_corenlp_tokens(self, tree):
         """
         Most of the extractor work with a tree structure and don`t save any backlink to the original text or
@@ -246,6 +250,11 @@ class AbsExtractor:
         This method can take a (sub)-tree/leave and walk back the tree and count all left hand-nodes.
         By doing so it is possible to extract all Core-NLP-Information for the candidates and their tokens.
         """
+        warnings.warn(
+            "There should be no need for this function anymore, use instead the information within the leave",
+            DeprecationWarning
+        )
+
         root = tree.root()
         pos = tree.pos()
         candidate_parts_as_list = []
@@ -268,8 +277,31 @@ class AbsExtractor:
 
         return [tuple(x) for x in candidate_parts_as_list]
 
-    def __find_index_from_root(self, root, path):
 
+    def _count_elements(self, root):
+        """
+        returns the leave count of tree
+        :param root:
+        :return:
+        """
+        count = 0
+        if isinstance(root, list):
+            for element in root:
+                if isinstance(element, list):
+                    count += self._count_elements(element)
+                else:
+                    count += 1
+        else:
+            count += 1
+        return count
+
+    def __find_index_from_root(self, root, path):
+        """
+        finds the index position
+        :param root:
+        :param path:
+        :return:
+        """
         if (len(path) > 1):
             position = path.pop(0)
             leftChildCount = 0

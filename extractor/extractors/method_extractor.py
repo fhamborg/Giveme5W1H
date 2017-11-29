@@ -1,3 +1,4 @@
+from document import Document
 from extractor.candidate import Candidate
 from extractor.extractors.abs_extractor import AbsExtractor
 
@@ -6,14 +7,6 @@ class MethodExtractor(AbsExtractor):
     """
     The MethodExtractor tries to extract the methods.
     """
-    def __init__(self, weights: (float,float) = [1.0, 1.0]):
-        """
-         weights used in the candidate evaluation:
-        (position, frequency)
-        :param weights: 
-        """
-   
-        self.weights = weights
 
     _copulative_conjunction = ['and', 'as', 'both', 'because', 'even', 'for', 'if ', 'that', 'then', 'since', 'seeing',
                                'so', 'after']
@@ -23,7 +16,15 @@ class MethodExtractor(AbsExtractor):
                    'am', 'as', 'even', 'however', 'other', 'just', 'over', 'more', 'say', 'also']
     _stop_ner = ['TIME', 'DATE', 'ORGANIZATION', 'DURATION', 'ORDINAL']
 
-    def _extract_candidates(self, document):
+    def __init__(self, weights: (float,float) = [1.0, 1.0]):
+        """
+         weights used in the candidate evaluation:
+        (position, frequency)
+        :param weights: 
+        """
+        self.weights = weights
+
+    def _extract_candidates(self, document: Document):
 
         candidates = []
         postrees = document.get_trees()
@@ -36,10 +37,10 @@ class MethodExtractor(AbsExtractor):
 
         # candidate detection
         # All kind of adjectives
-        candidatesAd = self._filter_duplicates(self._extract_ad_candidates(document))
+        candidates_ad = self._filter_duplicates(self._extract_ad_candidates(document))
 
         # join the candidates
-        candidates = candidates + candidatesAd
+        candidates = candidates + candidates_ad
 
         # save them to the document
         document.set_candidates('MethodExtractor', candidates)
@@ -90,7 +91,7 @@ class MethodExtractor(AbsExtractor):
 
         return candidates
 
-    def _extract_ad_candidates(self, document):
+    def _extract_ad_candidates(self, document: Document):
         """
         :param document: The Document to be analyzed.
         :type document: Document
@@ -113,12 +114,10 @@ class MethodExtractor(AbsExtractor):
                         [[({'nlpToken': token}, token['pos'], token)], None, sentence['index'], 'adjectiv'])
         return candidates
 
-    def _evaluate_candidates(self, document):
+    def _evaluate_candidates(self,  document: Document):
         """
         :param document: The parsed document
         :type document: Document
-        :param candidates: Extracted candidates to evaluate.
-        :type candidates:[([(String,String)], ([(String,String)])]
         :return: A list of evaluated and ranked candidates
         """
         # ranked_candidates = []
@@ -177,8 +176,13 @@ class MethodExtractor(AbsExtractor):
         candidates.sort(key=lambda x: x.get_score(), reverse=True)
         document.set_answer('how', self._fix_format(candidates))
 
-    # helper to convert parts to the new format
+
     def _fix_format(self, candidates):
+        '''
+        helper to convert parts to the new format
+        :param candidates:
+        :return:
+        '''
         result = []
         for candidate in candidates:
             ca = Candidate()
@@ -193,6 +197,13 @@ class MethodExtractor(AbsExtractor):
         return result
 
     def _find_vb_cc_vb_parts(self, relevant_parts):
+        """
+         walks though the given subtree and returns all parts which are a part of
+         JJ VB [CC] JJ VB  chain, starting from the first word
+
+        :param relevant_parts:
+        :return:
+        """
         recording = False
         candidate_parts = []
         for relevant_part in relevant_parts:
@@ -202,25 +213,15 @@ class MethodExtractor(AbsExtractor):
                 recording = True
             elif recording is True:
                 break
-        candidatePartsLen = len(candidate_parts)
+        candidate_parts_len = len(candidate_parts)
 
         # filter out short candidates
-        if ((candidatePartsLen == 1 and candidate_parts[0][0]['nlpToken'][
-            'lemma'] not in self._stop_words) or candidatePartsLen > 1):
+        if ((candidate_parts_len == 1 and candidate_parts[0][0]['nlpToken'][
+            'lemma'] not in self._stop_words) or candidate_parts_len > 1):
             return candidate_parts
         return None
 
-    def _count_elements(self, root):
-        count = 0
-        if isinstance(root, list):
-            for element in root:
-                if isinstance(element, list):
-                    count += self._count_elements(element)
-                else:
-                    count += 1
-        else:
-            count += 1
-        return count
+
 
     def _is_relevant_pos(self, pos):
         # Is adjective or adverb

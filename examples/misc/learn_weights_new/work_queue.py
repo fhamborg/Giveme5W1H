@@ -52,7 +52,7 @@ class WorkQueue(object):
 
 
         else:
-            print('generating a new queues')
+            print('generating a new queue')
             self._generator()
 
 

@@ -33,13 +33,13 @@ class FiveWExtractor:
 
     def __init__(self, preprocessor=None, extractors=None, combined_scorers=None, enhancement=None):
         """
-        Initializes the given preprocessor and extractors.
-
-        :param extractors: List of Extractors
-        :type extractors: [AbsExtractor]
-        :param preprocessor: Preprocessor used to prepare the passed documents
-        :type preprocessor: Preprocessor
+         Initializes the given preprocessor and extractors.
+        :param preprocessor:
+        :param extractors:
+        :param combined_scorers: None will load defaults, [] will run without
+        :param enhancement:
         """
+
 
         # first initialize logger
         self.log = logging.getLogger('GiveMe5W')
@@ -62,7 +62,7 @@ class FiveWExtractor:
                 method_extractor.MethodExtractor()
             ]
 
-        if combined_scorers and len(combined_scorers) > 0:
+        if combined_scorers is not None:
             self.combinedScorers = combined_scorers
         else:
             self.log.info('No combinedScorers passed: initializing default configuration.')
@@ -110,7 +110,7 @@ class FiveWExtractor:
         self.q.join()
 
         # apply combined_scoring
-        if self.combinedScorers:
+        if self.combinedScorers and isinstance(self.combinedScorers,list) and len(self.combinedScorers) > 0:
             for combinedScorer in self.combinedScorers:
                 combinedScorer.score(doc)
         doc.is_processed(True)

@@ -1,3 +1,4 @@
+from document import Document
 from extractor.candidate import Candidate
 from extractor.extractors.abs_extractor import AbsExtractor
 
@@ -7,10 +8,6 @@ class MethodExtractor(AbsExtractor):
     The MethodExtractor tries to extract the methods.
     """
 
-    # weights used in the candidate evaluation:
-    # (position, frequency)
-    weights = [1.0, 1]
-
     _copulative_conjunction = ['and', 'as', 'both', 'because', 'even', 'for', 'if ', 'that', 'then', 'since', 'seeing',
                                'so', 'after']
 
@@ -19,7 +16,15 @@ class MethodExtractor(AbsExtractor):
                    'am', 'as', 'even', 'however', 'other', 'just', 'over', 'more', 'say', 'also']
     _stop_ner = ['TIME', 'DATE', 'ORGANIZATION', 'DURATION', 'ORDINAL']
 
-    def _extract_candidates(self, document):
+    def __init__(self, weights: (float,float) = [1.0, 1.0]):
+        """
+         weights used in the candidate evaluation:
+        (position, frequency)
+        :param weights: 
+        """
+        self.weights = weights
+
+    def _extract_candidates(self, document: Document):
 
         candidates = []
         postrees = document.get_trees()
@@ -32,10 +37,10 @@ class MethodExtractor(AbsExtractor):
 
         # candidate detection
         # All kind of adjectives
-        candidatesAd = self._filter_duplicates(self._extract_ad_candidates(document))
+        candidates_ad = self._filter_duplicates(self._extract_ad_candidates(document))
 
         # join the candidates
-        candidates = candidates + candidatesAd
+        candidates = candidates + candidates_ad
 
         # save them to the document
         document.set_candidates('MethodExtractor', candidates)
@@ -75,7 +80,7 @@ class MethodExtractor(AbsExtractor):
                                     [candidate_parts, None, tree.stanfordCoreNLPResult['index'], 'prepos'])
                         else:
                             # look at the sentence to the left side
-                            # beause of the tree structure simples way is to go multible times up and then walk back
+                            # because of the tree structure simplest way is to go multiple times up and then walk back
                             atree = subtree.parent().parent().parent()
                             if atree:
                                 relevantParts = self._pos_linked_to_corenlp_tokens(atree)
@@ -86,7 +91,7 @@ class MethodExtractor(AbsExtractor):
 
         return candidates
 
-    def _extract_ad_candidates(self, document):
+    def _extract_ad_candidates(self, document: Document):
         """
         :param document: The Document to be analyzed.
         :type document: Document
@@ -94,7 +99,7 @@ class MethodExtractor(AbsExtractor):
         :return: A List of Tuples containing all agents, actions and their position in the document.
         """
 
-        # retrieve results from preprocessing
+        # retrieve results from pre-processing
         candidates = []
 
         sentences = document.get_sentences()
@@ -109,12 +114,10 @@ class MethodExtractor(AbsExtractor):
                         [[({'nlpToken': token}, token['pos'], token)], None, sentence['index'], 'adjectiv'])
         return candidates
 
-    def _evaluate_candidates(self, document):
+    def _evaluate_candidates(self,  document: Document):
         """
         :param document: The parsed document
         :type document: Document
-        :param candidates: Extracted candidates to evaluate.
-        :type candidates:[([(String,String)], ([(String,String)])]
         :return: A list of evaluated and ranked candidates
         """
         # ranked_candidates = []
@@ -154,7 +157,7 @@ class MethodExtractor(AbsExtractor):
             freq = (sentences_count - candidate.get_sentence_index()) / sentences_count
             candidate.set_calculations('position_frequency_norm', freq)
 
-        # callculate score
+        # calculate score
         score_max = 0
         weights_sum = sum(self.weights)
         for candidate in candidates:
@@ -173,8 +176,13 @@ class MethodExtractor(AbsExtractor):
         candidates.sort(key=lambda x: x.get_score(), reverse=True)
         document.set_answer('how', self._fix_format(candidates))
 
-    # helper to convert parts to the new format
+
     def _fix_format(self, candidates):
+        '''
+        helper to convert parts to the new format
+        :param candidates:
+        :return:
+        '''
         result = []
         for candidate in candidates:
             ca = Candidate()
@@ -188,35 +196,32 @@ class MethodExtractor(AbsExtractor):
             result.append(ca)
         return result
 
-    def _find_vb_cc_vb_parts(self, relevantParts):
+    def _find_vb_cc_vb_parts(self, relevant_parts):
+        """
+         walks though the given subtree and returns all parts which are a part of
+         JJ VB [CC] JJ VB  chain, starting from the first word
+
+        :param relevant_parts:
+        :return:
+        """
         recording = False
-        candidateParts = []
-        for relevantPart in relevantParts:
-            if relevantPart[1].startswith('VB') or relevantPart[1].startswith('JJ') or relevantPart[1].startswith(
-                    'LS') or relevantPart[1] == 'CC':
-                candidateParts.append(relevantPart)
+        candidate_parts = []
+        for relevant_part in relevant_parts:
+            if relevant_part[1].startswith('VB') or relevant_part[1].startswith('JJ') or relevant_part[1].startswith(
+                    'LS') or relevant_part[1] == 'CC':
+                candidate_parts.append(relevant_part)
                 recording = True
             elif recording is True:
                 break
-        candidatePartsLen = len(candidateParts)
+        candidate_parts_len = len(candidate_parts)
 
         # filter out short candidates
-        if ((candidatePartsLen == 1 and candidateParts[0][0]['nlpToken'][
-            'lemma'] not in self._stop_words) or candidatePartsLen > 1):
-            return candidateParts
+        if ((candidate_parts_len == 1 and candidate_parts[0][0]['nlpToken'][
+            'lemma'] not in self._stop_words) or candidate_parts_len > 1):
+            return candidate_parts
         return None
 
-    def _count_elements(self, root):
-        count = 0
-        if isinstance(root, list):
-            for element in root:
-                if isinstance(element, list):
-                    count += self._count_elements(element)
-                else:
-                    count += 1
-        else:
-            count += 1
-        return count
+
 
     def _is_relevant_pos(self, pos):
         # Is adjective or adverb

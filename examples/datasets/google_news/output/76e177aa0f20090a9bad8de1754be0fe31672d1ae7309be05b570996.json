@@ -20,6 +20,36 @@
   "category": "Star Wars: Battlefront II - Loot Box",
   "dId": "76e177aa0f20090a9bad8de1754be0fe31672d1ae7309be05b570996",
   "fiveWoneH": {
+    "how": {
+      "extracted": [
+        {
+          "parts": [
+            [
+              {
+                "nlpToken": {
+                  "index": 8,
+                  "word": "new",
+                  "originalText": "new",
+                  "lemma": "new",
+                  "characterOffsetBegin": 117,
+                  "characterOffsetEnd": 120,
+                  "pos": "JJ",
+                  "ner": "O",
+                  "speaker": "PER0",
+                  "before": " ",
+                  "after": " "
+                }
+              },
+              "JJ"
+            ]
+          ],
+          "score": 1.0,
+          "text": "new",
+          "nlpIndexSentence": 1
+        }
+      ],
+      "label": "how"
+    },
     "who": {
       "extracted": [
         {
@@ -151,36 +181,6 @@
         }
       ],
       "label": "what"
-    },
-    "how": {
-      "extracted": [
-        {
-          "parts": [
-            [
-              {
-                "nlpToken": {
-                  "index": 8,
-                  "word": "new",
-                  "originalText": "new",
-                  "lemma": "new",
-                  "characterOffsetBegin": 117,
-                  "characterOffsetEnd": 120,
-                  "pos": "JJ",
-                  "ner": "O",
-                  "speaker": "PER0",
-                  "before": " ",
-                  "after": " "
-                }
-              },
-              "JJ"
-            ]
-          ],
-          "score": 1.0,
-          "text": "new",
-          "nlpIndexSentence": 1
-        }
-      ],
-      "label": "how"
     },
     "why": {
       "extracted": [
@@ -435,54 +435,7 @@
       "label": "why"
     },
     "where": {
-      "extracted": [
-        {
-          "parts": [
-            [
-              {
-                "nlpToken": {
-                  "index": 6,
-                  "word": "Belgium",
-                  "originalText": "Belgium",
-                  "lemma": "Belgium",
-                  "characterOffsetBegin": 1163,
-                  "characterOffsetEnd": 1170,
-                  "pos": "NNP",
-                  "ner": "LOCATION",
-                  "speaker": "PER0",
-                  "before": " ",
-                  "after": ""
-                }
-              },
-              "NNP"
-            ]
-          ],
-          "score": 1.0,
-          "text": "Belgium",
-          "enhancement": {
-            "openstreetmap_nominatim": {
-              "place_id": "179136572",
-              "licence": "Data \u00a9 OpenStreetMap contributors, ODbL 1.0. http://www.openstreetmap.org/copyright",
-              "osm_type": "relation",
-              "osm_id": "52411",
-              "boundingbox": [
-                49.4969821,
-                51.5516667,
-                2.3889137,
-                6.408097
-              ],
-              "lat": "50.6407351",
-              "lon": "4.66696",
-              "display_name": "Belgi\u00eb - Belgique - Belgien",
-              "class": "boundary",
-              "type": "administrative",
-              "importance": 0.21171179835222,
-              "icon": "https://nominatim.openstreetmap.org/images/mapicons/poi_boundary_administrative.p.20.png"
-            }
-          },
-          "nlpIndexSentence": 14
-        }
-      ],
+      "extracted": [],
       "label": "where"
     },
     "when": {
@@ -500,14 +453,14 @@
                   "characterOffsetEnd": 336,
                   "pos": "NN",
                   "ner": "DATE",
-                  "normalizedNER": "THIS P1D",
+                  "normalizedNER": "2017-11-16",
                   "speaker": "PER0",
                   "before": " ",
                   "after": "",
                   "timex": {
                     "tid": "t3",
                     "type": "DATE",
-                    "altValue": "THIS P1D"
+                    "value": "2017-11-16"
                   }
                 }
               },

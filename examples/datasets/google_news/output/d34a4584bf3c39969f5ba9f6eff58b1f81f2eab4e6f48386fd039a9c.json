@@ -49,6 +49,14 @@
       ],
       "label": "how"
     },
+    "where": {
+      "extracted": [],
+      "label": "where"
+    },
+    "when": {
+      "extracted": [],
+      "label": "when"
+    },
     "who": {
       "extracted": [
         {
@@ -585,79 +593,6 @@
         }
       ],
       "label": "why"
-    },
-    "where": {
-      "extracted": [
-        {
-          "parts": [
-            [
-              {
-                "nlpToken": {
-                  "index": 6,
-                  "word": "The",
-                  "originalText": "The",
-                  "lemma": "the",
-                  "characterOffsetBegin": 1255,
-                  "characterOffsetEnd": 1258,
-                  "pos": "DT",
-                  "ner": "LOCATION",
-                  "speaker": "PER0",
-                  "before": " ",
-                  "after": " "
-                }
-              },
-              "DT"
-            ],
-            [
-              {
-                "nlpToken": {
-                  "index": 7,
-                  "word": "Loop",
-                  "originalText": "Loop",
-                  "lemma": "Loop",
-                  "characterOffsetBegin": 1259,
-                  "characterOffsetEnd": 1263,
-                  "pos": "NNP",
-                  "ner": "LOCATION",
-                  "speaker": "PER0",
-                  "before": " ",
-                  "after": ""
-                }
-              },
-              "NNP"
-            ]
-          ],
-          "score": 1.0,
-          "text": "The Loop",
-          "enhancement": {
-            "openstreetmap_nominatim": {
-              "place_id": "2769684",
-              "licence": "Data \u00a9 OpenStreetMap contributors, ODbL 1.0. http://www.openstreetmap.org/copyright",
-              "osm_type": "node",
-              "osm_id": "356582633",
-              "boundingbox": [
-                36.9075616,
-                36.9076616,
-                -81.9248964,
-                -81.9247964
-              ],
-              "lat": "36.9076116",
-              "lon": "-81.9248464",
-              "display_name": "The Loop, Russell County, Virginia, United States of America",
-              "class": "natural",
-              "type": "peak",
-              "importance": 0.275,
-              "icon": "https://nominatim.openstreetmap.org/images/mapicons/poi_peak.p.20.png"
-            }
-          },
-          "nlpIndexSentence": 10
-        }
-      ],
-      "label": "where"
-    },
-    "when": {
-      "extracted": [],
-      "label": "when"
     }
   }
 }

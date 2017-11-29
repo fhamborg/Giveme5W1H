@@ -6,21 +6,32 @@ import time
 
 class WorkQueue(object):
 
-    def __init__(self):
+    def __init__(self, id: str, generator=None):
+        """
 
+        :param id:
+        :param generator: method to generate a _queue
+        """
+        self._id = id
         self._weights_range = None
         self.phrase_range_location = None
         self.phrase_range_time_date = None
         self.time_range = None
         self._queue = None
         self._queue_processed = None
-        self._queue_path = os.path.dirname(__file__) + '/cache/queue.prickle'
-        self._queue_processed_path = os.path.dirname(__file__) + '/cache/queue_processed.prickle'
+        self._queue_path = os.path.dirname(__file__) + '/cache/'+id+'_queue.prickle'
+        self._queue_processed_path = os.path.dirname(__file__) + '/cache/'+id+'_queue_processed.prickle'
+
+        if generator is None:
+            self._queue_processed = []
+            self._queue = []
+            self._generator = self._generate_full_combination
+
 
     def get_queue_count(self):
         return len(self._queue)
 
-    def setup_scoring_parameters(self,  weight_start: float = 0.05 , weight_stop: float = 1, weight_step_size: float = 0.05):
+    def setup_scoring_parameters(self,  weight_start: float = 0.1 , weight_stop: float = 1, weight_step_size: float = 0.1):
         self._weights_range = np.arange(weight_start, weight_stop, weight_step_size)
 
     def setup_extracting_parameters(self, phrase_range_location: np.arange = np.arange(3, 4), phrase_range_time_date: np.arange=np.arange(1, 2), time_range: np.arange=np.arange(86400, 86401)):
@@ -42,7 +53,7 @@ class WorkQueue(object):
 
         else:
             print('generating a new queues')
-            self._generate()
+            self._generator()
 
 
 
@@ -78,23 +89,17 @@ class WorkQueue(object):
                 # Pickle the 'data' document using the highest protocol available.
                 pickle.dump(self._queue_processed, f, pickle.HIGHEST_PROTOCOL)
 
-
-
-
     def next(self):
         if len(self._queue) > 0:
             return self._queue[-1]
         return None
 
-    def _generate(self):
+    def _generate_full_combination(self):
         """
-
         https://www.hackmath.net/en/calculator/combinations-and-permutations?n=19&k=4&order=1&repeat=1
         130321 per
         :return:
         """
-        self._queue_processed = []
-        self._queue = []
         extracting_parameters_id = 0
 
         # because of the combined scoring each range must be respected separate

@@ -303,14 +303,14 @@
                   "characterOffsetEnd": 156,
                   "pos": "NN",
                   "ner": "DATE",
-                  "normalizedNER": "XXXX-WI",
+                  "normalizedNER": "2017-WI",
                   "speaker": "PER0",
                   "before": " ",
                   "after": " ",
                   "timex": {
                     "tid": "t3",
                     "type": "DATE",
-                    "value": "XXXX-WI"
+                    "value": "2017-WI"
                   }
                 }
               },
@@ -487,71 +487,7 @@
       "label": "why"
     },
     "where": {
-      "extracted": [
-        {
-          "parts": [
-            [
-              {
-                "nlpToken": {
-                  "index": 1,
-                  "word": "North",
-                  "originalText": "North",
-                  "lemma": "North",
-                  "characterOffsetBegin": 0,
-                  "characterOffsetEnd": 5,
-                  "pos": "NNP",
-                  "ner": "LOCATION",
-                  "speaker": "PER0",
-                  "before": "",
-                  "after": " "
-                }
-              },
-              "NNP"
-            ],
-            [
-              {
-                "nlpToken": {
-                  "index": 2,
-                  "word": "Korea",
-                  "originalText": "Korea",
-                  "lemma": "Korea",
-                  "characterOffsetBegin": 6,
-                  "characterOffsetEnd": 11,
-                  "pos": "NNP",
-                  "ner": "LOCATION",
-                  "speaker": "PER0",
-                  "before": " ",
-                  "after": ""
-                }
-              },
-              "NNP"
-            ]
-          ],
-          "score": 1.0000000000000002,
-          "text": "North Korea",
-          "enhancement": {
-            "openstreetmap_nominatim": {
-              "place_id": "177647595",
-              "licence": "Data \u00a9 OpenStreetMap contributors, ODbL 1.0. http://www.openstreetmap.org/copyright",
-              "osm_type": "relation",
-              "osm_id": "192734",
-              "boundingbox": [
-                37.6279512,
-                43.0089642,
-                124.0913902,
-                130.924647
-              ],
-              "lat": "40.3736611",
-              "lon": "127.0870417",
-              "display_name": "\uc870\uc120\ubbfc\uc8fc\uc8fc\uc758\uc778\ubbfc\uacf5\ud654\uad6d",
-              "class": "boundary",
-              "type": "administrative",
-              "importance": 0.17189971919422,
-              "icon": "https://nominatim.openstreetmap.org/images/mapicons/poi_boundary_administrative.p.20.png"
-            }
-          }
-        }
-      ],
+      "extracted": [],
       "label": "where"
     },
     "when": {
@@ -561,22 +497,46 @@
             [
               {
                 "nlpToken": {
-                  "index": 8,
-                  "word": "late",
-                  "originalText": "late",
-                  "lemma": "late",
-                  "characterOffsetBegin": 409,
-                  "characterOffsetEnd": 413,
-                  "pos": "JJ",
+                  "index": 20,
+                  "word": "the",
+                  "originalText": "the",
+                  "lemma": "the",
+                  "characterOffsetBegin": 1199,
+                  "characterOffsetEnd": 1202,
+                  "pos": "DT",
                   "ner": "DATE",
-                  "normalizedNER": "2011",
-                  "speaker": "PER0",
+                  "normalizedNER": "2018 INTERSECT PXM",
+                  "speaker": "57",
                   "before": " ",
                   "after": " ",
                   "timex": {
-                    "tid": "t6",
+                    "tid": "t9",
                     "type": "DATE",
-                    "value": "2011"
+                    "altValue": "2018 INTERSECT PXM"
+                  }
+                }
+              },
+              "DT"
+            ],
+            [
+              {
+                "nlpToken": {
+                  "index": 21,
+                  "word": "early",
+                  "originalText": "early",
+                  "lemma": "early",
+                  "characterOffsetBegin": 1203,
+                  "characterOffsetEnd": 1208,
+                  "pos": "JJ",
+                  "ner": "DATE",
+                  "normalizedNER": "2018 INTERSECT PXM",
+                  "speaker": "57",
+                  "before": " ",
+                  "after": " ",
+                  "timex": {
+                    "tid": "t9",
+                    "type": "DATE",
+                    "altValue": "2018 INTERSECT PXM"
                   }
                 }
               },
@@ -585,31 +545,79 @@
             [
               {
                 "nlpToken": {
-                  "index": 9,
-                  "word": "2011",
-                  "originalText": "2011",
-                  "lemma": "2011",
-                  "characterOffsetBegin": 414,
-                  "characterOffsetEnd": 418,
-                  "pos": "CD",
+                  "index": 22,
+                  "word": "months",
+                  "originalText": "months",
+                  "lemma": "month",
+                  "characterOffsetBegin": 1209,
+                  "characterOffsetEnd": 1215,
+                  "pos": "NNS",
                   "ner": "DATE",
-                  "normalizedNER": "2011",
-                  "speaker": "PER0",
+                  "normalizedNER": "2018 INTERSECT PXM",
+                  "speaker": "57",
                   "before": " ",
-                  "after": "",
+                  "after": " ",
                   "timex": {
-                    "tid": "t6",
+                    "tid": "t9",
                     "type": "DATE",
-                    "value": "2011"
+                    "altValue": "2018 INTERSECT PXM"
                   }
                 }
               },
-              "CD"
+              "NNS"
+            ],
+            [
+              {
+                "nlpToken": {
+                  "index": 23,
+                  "word": "next",
+                  "originalText": "next",
+                  "lemma": "next",
+                  "characterOffsetBegin": 1216,
+                  "characterOffsetEnd": 1220,
+                  "pos": "IN",
+                  "ner": "DATE",
+                  "normalizedNER": "2018 INTERSECT PXM",
+                  "speaker": "57",
+                  "before": " ",
+                  "after": " ",
+                  "timex": {
+                    "tid": "t9",
+                    "type": "DATE",
+                    "altValue": "2018 INTERSECT PXM"
+                  }
+                }
+              },
+              "IN"
+            ],
+            [
+              {
+                "nlpToken": {
+                  "index": 24,
+                  "word": "year",
+                  "originalText": "year",
+                  "lemma": "year",
+                  "characterOffsetBegin": 1221,
+                  "characterOffsetEnd": 1225,
+                  "pos": "NN",
+                  "ner": "DATE",
+                  "normalizedNER": "2018 INTERSECT PXM",
+                  "speaker": "57",
+                  "before": " ",
+                  "after": "",
+                  "timex": {
+                    "tid": "t9",
+                    "type": "DATE",
+                    "altValue": "2018 INTERSECT PXM"
+                  }
+                }
+              },
+              "NN"
             ]
           ],
-          "score": 0.8262108262108263,
-          "text": "late 2011",
-          "nlpIndexSentence": 3
+          "score": 0.8062678062678063,
+          "text": "the early months next year",
+          "nlpIndexSentence": 6
         }
       ],
       "label": "when"

@@ -18,6 +18,54 @@
   "category": "Dieselgate",
   "dId": "bbbc3473055fec8ee8f9b8d92be71d5bf87b793a092e338488d2abc0",
   "fiveWoneH": {
+    "how": {
+      "extracted": [
+        {
+          "parts": [
+            [
+              {
+                "nlpToken": {
+                  "index": 20,
+                  "word": "is",
+                  "originalText": "is",
+                  "lemma": "be",
+                  "characterOffsetBegin": 518,
+                  "characterOffsetEnd": 520,
+                  "pos": "VBZ",
+                  "ner": "O",
+                  "speaker": "PER0",
+                  "before": " ",
+                  "after": " "
+                }
+              },
+              "VBZ"
+            ],
+            [
+              {
+                "nlpToken": {
+                  "index": 21,
+                  "word": "probing",
+                  "originalText": "probing",
+                  "lemma": "probe",
+                  "characterOffsetBegin": 521,
+                  "characterOffsetEnd": 528,
+                  "pos": "VBG",
+                  "ner": "O",
+                  "speaker": "PER0",
+                  "before": " ",
+                  "after": " "
+                }
+              },
+              "VBG"
+            ]
+          ],
+          "score": 1.3333333333333333,
+          "text": "is probing",
+          "nlpIndexSentence": 4
+        }
+      ],
+      "label": "how"
+    },
     "who": {
       "extracted": [
         {
@@ -185,54 +233,6 @@
         }
       ],
       "label": "what"
-    },
-    "how": {
-      "extracted": [
-        {
-          "parts": [
-            [
-              {
-                "nlpToken": {
-                  "index": 20,
-                  "word": "is",
-                  "originalText": "is",
-                  "lemma": "be",
-                  "characterOffsetBegin": 518,
-                  "characterOffsetEnd": 520,
-                  "pos": "VBZ",
-                  "ner": "O",
-                  "speaker": "PER0",
-                  "before": " ",
-                  "after": " "
-                }
-              },
-              "VBZ"
-            ],
-            [
-              {
-                "nlpToken": {
-                  "index": 21,
-                  "word": "probing",
-                  "originalText": "probing",
-                  "lemma": "probe",
-                  "characterOffsetBegin": 521,
-                  "characterOffsetEnd": 528,
-                  "pos": "VBG",
-                  "ner": "O",
-                  "speaker": "PER0",
-                  "before": " ",
-                  "after": " "
-                }
-              },
-              "VBG"
-            ]
-          ],
-          "score": 1.3333333333333333,
-          "text": "is probing",
-          "nlpIndexSentence": 4
-        }
-      ],
-      "label": "how"
     },
     "why": {
       "extracted": [
@@ -426,54 +426,7 @@
       "label": "why"
     },
     "where": {
-      "extracted": [
-        {
-          "parts": [
-            [
-              {
-                "nlpToken": {
-                  "index": 8,
-                  "word": "Germany",
-                  "originalText": "Germany",
-                  "lemma": "Germany",
-                  "characterOffsetBegin": 446,
-                  "characterOffsetEnd": 453,
-                  "pos": "NNP",
-                  "ner": "LOCATION",
-                  "speaker": "PER0",
-                  "before": " ",
-                  "after": ""
-                }
-              },
-              "NNP"
-            ]
-          ],
-          "score": 1.0,
-          "text": "Germany",
-          "enhancement": {
-            "openstreetmap_nominatim": {
-              "place_id": "178386877",
-              "licence": "Data \u00a9 OpenStreetMap contributors, ODbL 1.0. http://www.openstreetmap.org/copyright",
-              "osm_type": "relation",
-              "osm_id": "51477",
-              "boundingbox": [
-                47.2701114,
-                55.099161,
-                5.8663153,
-                15.0419319
-              ],
-              "lat": "51.0834196",
-              "lon": "10.4234469",
-              "display_name": "Deutschland, Europe",
-              "class": "boundary",
-              "type": "administrative",
-              "importance": 0.23266028173366,
-              "icon": "https://nominatim.openstreetmap.org/images/mapicons/poi_boundary_administrative.p.20.png"
-            }
-          },
-          "nlpIndexSentence": 4
-        }
-      ],
+      "extracted": [],
       "label": "where"
     },
     "when": {
@@ -483,31 +436,79 @@
             [
               {
                 "nlpToken": {
-                  "index": 16,
-                  "word": "Friday",
-                  "originalText": "Friday",
-                  "lemma": "Friday",
-                  "characterOffsetBegin": 493,
-                  "characterOffsetEnd": 499,
-                  "pos": "NNP",
+                  "index": 11,
+                  "word": "the",
+                  "originalText": "the",
+                  "lemma": "the",
+                  "characterOffsetBegin": 1785,
+                  "characterOffsetEnd": 1788,
+                  "pos": "DT",
                   "ner": "DATE",
-                  "normalizedNER": "XXXX-WXX-5",
+                  "normalizedNER": "2017-11-12",
                   "speaker": "PER0",
                   "before": " ",
                   "after": " ",
                   "timex": {
-                    "tid": "t3",
+                    "tid": "t7",
                     "type": "DATE",
-                    "value": "XXXX-WXX-5"
+                    "value": "2017-11-12"
                   }
                 }
               },
-              "NNP"
+              "DT"
+            ],
+            [
+              {
+                "nlpToken": {
+                  "index": 12,
+                  "word": "next",
+                  "originalText": "next",
+                  "lemma": "next",
+                  "characterOffsetBegin": 1789,
+                  "characterOffsetEnd": 1793,
+                  "pos": "JJ",
+                  "ner": "DATE",
+                  "normalizedNER": "2017-11-12",
+                  "speaker": "PER0",
+                  "before": " ",
+                  "after": " ",
+                  "timex": {
+                    "tid": "t7",
+                    "type": "DATE",
+                    "value": "2017-11-12"
+                  }
+                }
+              },
+              "JJ"
+            ],
+            [
+              {
+                "nlpToken": {
+                  "index": 13,
+                  "word": "day",
+                  "originalText": "day",
+                  "lemma": "day",
+                  "characterOffsetBegin": 1794,
+                  "characterOffsetEnd": 1797,
+                  "pos": "NN",
+                  "ner": "DATE",
+                  "normalizedNER": "2017-11-12",
+                  "speaker": "PER0",
+                  "before": " ",
+                  "after": " ",
+                  "timex": {
+                    "tid": "t7",
+                    "type": "DATE",
+                    "value": "2017-11-12"
+                  }
+                }
+              },
+              "NN"
             ]
           ],
-          "score": 0.8110661268556005,
-          "text": "Friday",
-          "nlpIndexSentence": 4
+          "score": 0.6383265856950068,
+          "text": "the next day",
+          "nlpIndexSentence": 12
         }
       ],
       "label": "when"

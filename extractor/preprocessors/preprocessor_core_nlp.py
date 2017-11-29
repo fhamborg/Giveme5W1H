@@ -28,6 +28,7 @@ class Preprocessor:
             'timeout': 500000,
             'annotators': 'tokenize,ssplit,pos,lemma,parse,ner,depparse,mention,coref',
             'tokenize.language': 'English',
+            # 'coref.algorithm' :'neural', see https://github.com/smilli/py-corenlp/issues/18
             # CoreNLPs charniak-wrapper has some problems ...
             # 'parse.type': 'charniak',
             # 'parse.executable': '/home/ubuntu/bllip-parser/',
@@ -57,13 +58,13 @@ class Preprocessor:
                 'nlpToken': {
                     'index': 7,
                     'word': 'BUGFIX',
-                    'originalText': '',
-                    'lemma': '',
+                    'originalText': 'BUGFIX',
+                    'lemma': 'BUGFIX',
                     'characterOffsetBegin': 0,
                     'characterOffsetEnd': 1,
-                    'pos': 'CD',
-                    'ner': 'NUMBER',
-                    'speaker': 'PER0',
+                    'pos': 'BUGFIX',
+                    'ner': 'BUGFIX',
+                    'speaker': 'BUGFIX',
                     'before': ' ',
                     'after': ''
                 }

@@ -414,7 +414,52 @@
       "label": "why"
     },
     "where": {
-      "extracted": [],
+      "extracted": [
+        {
+          "parts": [
+            [
+              {
+                "nlpToken": {
+                  "index": 12,
+                  "word": "Britain",
+                  "originalText": "Britain",
+                  "lemma": "Britain",
+                  "characterOffsetBegin": 63,
+                  "characterOffsetEnd": 70,
+                  "pos": "NNP",
+                  "ner": "LOCATION",
+                  "speaker": "PER0",
+                  "before": " ",
+                  "after": ""
+                }
+              },
+              "NNP"
+            ]
+          ],
+          "score": 1.0,
+          "text": "Britain",
+          "enhancement": {
+            "openstreetmap_nominatim": {
+              "place_id": "217424811",
+              "licence": "Data \u00a9 OpenStreetMap contributors, ODbL 1.0. http://www.openstreetmap.org/copyright",
+              "osm_type": "relation",
+              "osm_id": "6038068",
+              "boundingbox": [
+                49.9586975,
+                58.672078,
+                -6.2280845,
+                1.7632199
+              ],
+              "lat": "54.31536155",
+              "lon": "-1.91802349480124",
+              "display_name": "Great Britain, Richmondshire, North Yorkshire, Yorkshire and the Humber, England, UK",
+              "class": "place",
+              "type": "island",
+              "importance": 0.27719267735245
+            }
+          }
+        }
+      ],
       "label": "where"
     },
     "when": {
@@ -424,30 +469,110 @@
             [
               {
                 "nlpToken": {
-                  "index": 16,
-                  "word": "morning",
-                  "originalText": "morning",
-                  "lemma": "morning",
-                  "characterOffsetBegin": 614,
-                  "characterOffsetEnd": 621,
-                  "pos": "NN",
-                  "ner": "TIME",
-                  "normalizedNER": "2017-11-08TMO",
+                  "index": 22,
+                  "word": "May",
+                  "originalText": "May",
+                  "lemma": "May",
+                  "characterOffsetBegin": 650,
+                  "characterOffsetEnd": 653,
+                  "pos": "NNP",
+                  "ner": "DATE",
+                  "normalizedNER": "2016-05-05",
                   "speaker": "PER0",
                   "before": " ",
                   "after": " ",
                   "timex": {
-                    "tid": "t3",
-                    "type": "TIME",
-                    "value": "2017-11-08TMO"
+                    "tid": "t4",
+                    "type": "DATE",
+                    "value": "2016-05-05"
                   }
                 }
               },
-              "NN"
+              "NNP"
+            ],
+            [
+              {
+                "nlpToken": {
+                  "index": 23,
+                  "word": "5",
+                  "originalText": "5",
+                  "lemma": "5",
+                  "characterOffsetBegin": 654,
+                  "characterOffsetEnd": 655,
+                  "pos": "CD",
+                  "ner": "DATE",
+                  "normalizedNER": "2016-05-05",
+                  "speaker": "PER0",
+                  "before": " ",
+                  "after": "",
+                  "timex": {
+                    "tid": "t4",
+                    "type": "DATE",
+                    "value": "2016-05-05"
+                  }
+                }
+              },
+              "CD"
+            ],
+            [
+              {
+                "nlpToken": {
+                  "index": 24,
+                  "word": ",",
+                  "originalText": ",",
+                  "lemma": ",",
+                  "characterOffsetBegin": 655,
+                  "characterOffsetEnd": 656,
+                  "pos": ",",
+                  "ner": "DATE",
+                  "normalizedNER": "2016-05-05",
+                  "speaker": "PER0",
+                  "before": "",
+                  "after": " ",
+                  "timex": {
+                    "tid": "t4",
+                    "type": "DATE",
+                    "value": "2016-05-05"
+                  }
+                }
+              },
+              ","
+            ],
+            [
+              {
+                "nlpToken": {
+                  "index": 25,
+                  "word": "2016",
+                  "originalText": "2016",
+                  "lemma": "2016",
+                  "characterOffsetBegin": 657,
+                  "characterOffsetEnd": 661,
+                  "pos": "CD",
+                  "ner": "DATE",
+                  "normalizedNER": "2016-05-05",
+                  "speaker": "PER0",
+                  "before": " ",
+                  "after": "",
+                  "timex": {
+                    "tid": "t4",
+                    "type": "DATE",
+                    "value": "2016-05-05"
+                  }
+                }
+              },
+              "CD"
             ]
           ],
-          "score": 0.695970695970696,
-          "text": "morning",
+          "score": 0.6628571428571428,
+          "text": "May 5 , 2016",
+          "enhancement": {
+            "timex": [
+              {
+                "start_date": "2016-05-05T00:00:00",
+                "end_date": "2016-05-05T23:59:59"
+              }
+            ]
+          },
           "nlpIndexSentence": 6
         }
       ],

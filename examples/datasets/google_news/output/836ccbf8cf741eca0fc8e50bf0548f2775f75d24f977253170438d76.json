@@ -962,7 +962,71 @@
       "label": "why"
     },
     "where": {
-      "extracted": [],
+      "extracted": [
+        {
+          "parts": [
+            [
+              {
+                "nlpToken": {
+                  "index": 1,
+                  "word": "Las",
+                  "originalText": "Las",
+                  "lemma": "Las",
+                  "characterOffsetBegin": 0,
+                  "characterOffsetEnd": 3,
+                  "pos": "NNP",
+                  "ner": "LOCATION",
+                  "speaker": "PER0",
+                  "before": "",
+                  "after": " "
+                }
+              },
+              "NNP"
+            ],
+            [
+              {
+                "nlpToken": {
+                  "index": 2,
+                  "word": "Vegas",
+                  "originalText": "Vegas",
+                  "lemma": "Vegas",
+                  "characterOffsetBegin": 4,
+                  "characterOffsetEnd": 9,
+                  "pos": "NNP",
+                  "ner": "LOCATION",
+                  "speaker": "PER0",
+                  "before": " ",
+                  "after": " "
+                }
+              },
+              "NNP"
+            ]
+          ],
+          "score": 1.0000000000000002,
+          "text": "Las Vegas",
+          "enhancement": {
+            "openstreetmap_nominatim": {
+              "place_id": "172842",
+              "licence": "Data \u00a9 OpenStreetMap contributors, ODbL 1.0. http://www.openstreetmap.org/copyright",
+              "osm_type": "node",
+              "osm_id": "31551114",
+              "boundingbox": [
+                36.0062859,
+                36.3262859,
+                -115.309225,
+                -114.989225
+              ],
+              "lat": "36.1662859",
+              "lon": "-115.149225",
+              "display_name": "Las Vegas, Clark County, Nevada, 89101, United States of America",
+              "class": "place",
+              "type": "city",
+              "importance": 0.35716180413836,
+              "icon": "https://nominatim.openstreetmap.org/images/mapicons/poi_place_city.p.20.png"
+            }
+          }
+        }
+      ],
       "label": "where"
     },
     "when": {
@@ -972,22 +1036,22 @@
             [
               {
                 "nlpToken": {
-                  "index": 17,
-                  "word": "Saturday",
-                  "originalText": "Saturday",
-                  "lemma": "Saturday",
-                  "characterOffsetBegin": 143,
-                  "characterOffsetEnd": 151,
+                  "index": 38,
+                  "word": "Tuesday",
+                  "originalText": "Tuesday",
+                  "lemma": "Tuesday",
+                  "characterOffsetBegin": 1132,
+                  "characterOffsetEnd": 1139,
                   "pos": "NNP",
                   "ner": "DATE",
-                  "normalizedNER": "2017-11-18TEV",
+                  "normalizedNER": "2017-11-13",
                   "speaker": "PER0",
                   "before": " ",
-                  "after": " ",
+                  "after": "",
                   "timex": {
-                    "tid": "t1",
-                    "type": "TIME",
-                    "value": "2017-11-18TEV"
+                    "tid": "t6",
+                    "type": "DATE",
+                    "value": "2017-11-13"
                   }
                 }
               },
@@ -996,31 +1060,135 @@
             [
               {
                 "nlpToken": {
-                  "index": 18,
-                  "word": "evening",
-                  "originalText": "evening",
-                  "lemma": "evening",
-                  "characterOffsetBegin": 152,
-                  "characterOffsetEnd": 159,
-                  "pos": "NN",
-                  "ner": "TIME",
-                  "normalizedNER": "2017-11-18TEV",
+                  "index": 39,
+                  "word": ",",
+                  "originalText": ",",
+                  "lemma": ",",
+                  "characterOffsetBegin": 1139,
+                  "characterOffsetEnd": 1140,
+                  "pos": ",",
+                  "ner": "DATE",
+                  "normalizedNER": "2017-11-13",
+                  "speaker": "PER0",
+                  "before": "",
+                  "after": " ",
+                  "timex": {
+                    "tid": "t6",
+                    "type": "DATE",
+                    "value": "2017-11-13"
+                  }
+                }
+              },
+              ","
+            ],
+            [
+              {
+                "nlpToken": {
+                  "index": 40,
+                  "word": "Nov.",
+                  "originalText": "Nov.",
+                  "lemma": "Nov.",
+                  "characterOffsetBegin": 1141,
+                  "characterOffsetEnd": 1145,
+                  "pos": "NNP",
+                  "ner": "DATE",
+                  "normalizedNER": "2017-11-13",
+                  "speaker": "PER0",
+                  "before": " ",
+                  "after": " ",
+                  "timex": {
+                    "tid": "t6",
+                    "type": "DATE",
+                    "value": "2017-11-13"
+                  }
+                }
+              },
+              "NNP"
+            ],
+            [
+              {
+                "nlpToken": {
+                  "index": 41,
+                  "word": "13",
+                  "originalText": "13",
+                  "lemma": "13",
+                  "characterOffsetBegin": 1146,
+                  "characterOffsetEnd": 1148,
+                  "pos": "CD",
+                  "ner": "DATE",
+                  "normalizedNER": "2017-11-13",
                   "speaker": "PER0",
                   "before": " ",
                   "after": "",
                   "timex": {
-                    "tid": "t1",
-                    "type": "TIME",
-                    "value": "2017-11-18TEV"
+                    "tid": "t6",
+                    "type": "DATE",
+                    "value": "2017-11-13"
                   }
                 }
               },
-              "NN"
+              "CD"
+            ],
+            [
+              {
+                "nlpToken": {
+                  "index": 42,
+                  "word": ",",
+                  "originalText": ",",
+                  "lemma": ",",
+                  "characterOffsetBegin": 1148,
+                  "characterOffsetEnd": 1149,
+                  "pos": ",",
+                  "ner": "DATE",
+                  "normalizedNER": "2017-11-13",
+                  "speaker": "PER0",
+                  "before": "",
+                  "after": " ",
+                  "timex": {
+                    "tid": "t6",
+                    "type": "DATE",
+                    "value": "2017-11-13"
+                  }
+                }
+              },
+              ","
+            ],
+            [
+              {
+                "nlpToken": {
+                  "index": 43,
+                  "word": "2017",
+                  "originalText": "2017",
+                  "lemma": "2017",
+                  "characterOffsetBegin": 1150,
+                  "characterOffsetEnd": 1154,
+                  "pos": "CD",
+                  "ner": "DATE",
+                  "normalizedNER": "2017-11-13",
+                  "speaker": "PER0",
+                  "before": " ",
+                  "after": "",
+                  "timex": {
+                    "tid": "t6",
+                    "type": "DATE",
+                    "value": "2017-11-13"
+                  }
+                }
+              },
+              "CD"
             ]
           ],
-          "score": 0.9835897435897437,
-          "text": "Saturday evening",
-          "nlpIndexSentence": 1
+          "score": 0.8047656635802468,
+          "text": "Tuesday , Nov. 13 , 2017",
+          "enhancement": {
+            "timex": [
+              {
+                "start_date": "2017-11-13T00:00:00",
+                "end_date": "2017-11-13T23:59:59"
+              }
+            ]
+          },
+          "nlpIndexSentence": 7
         }
       ],
       "label": "when"

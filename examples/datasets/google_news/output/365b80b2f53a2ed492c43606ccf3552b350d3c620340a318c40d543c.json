@@ -29,31 +29,111 @@
             [
               {
                 "nlpToken": {
-                  "index": 7,
-                  "word": "tomorrow",
-                  "originalText": "tomorrow",
-                  "lemma": "tomorrow",
-                  "characterOffsetBegin": 133,
-                  "characterOffsetEnd": 141,
-                  "pos": "NN",
-                  "ner": "TIME",
-                  "normalizedNER": "2017-11-18T01:39:18",
+                  "index": 13,
+                  "word": "November",
+                  "originalText": "November",
+                  "lemma": "November",
+                  "characterOffsetBegin": 2432,
+                  "characterOffsetEnd": 2440,
+                  "pos": "NNP",
+                  "ner": "DATE",
+                  "normalizedNER": "2017-11-17",
+                  "speaker": "PER0",
+                  "before": " ",
+                  "after": " ",
+                  "timex": {
+                    "tid": "t5",
+                    "type": "DATE",
+                    "value": "2017-11-17"
+                  }
+                }
+              },
+              "NNP"
+            ],
+            [
+              {
+                "nlpToken": {
+                  "index": 14,
+                  "word": "17",
+                  "originalText": "17",
+                  "lemma": "17",
+                  "characterOffsetBegin": 2441,
+                  "characterOffsetEnd": 2443,
+                  "pos": "CD",
+                  "ner": "DATE",
+                  "normalizedNER": "2017-11-17",
                   "speaker": "PER0",
                   "before": " ",
                   "after": "",
                   "timex": {
-                    "tid": "t1",
-                    "type": "TIME",
-                    "value": "2017-11-18T01:39:18"
+                    "tid": "t5",
+                    "type": "DATE",
+                    "value": "2017-11-17"
                   }
                 }
               },
-              "NN"
+              "CD"
+            ],
+            [
+              {
+                "nlpToken": {
+                  "index": 15,
+                  "word": ",",
+                  "originalText": ",",
+                  "lemma": ",",
+                  "characterOffsetBegin": 2443,
+                  "characterOffsetEnd": 2444,
+                  "pos": ",",
+                  "ner": "DATE",
+                  "normalizedNER": "2017-11-17",
+                  "speaker": "PER0",
+                  "before": "",
+                  "after": " ",
+                  "timex": {
+                    "tid": "t5",
+                    "type": "DATE",
+                    "value": "2017-11-17"
+                  }
+                }
+              },
+              ","
+            ],
+            [
+              {
+                "nlpToken": {
+                  "index": 16,
+                  "word": "2017",
+                  "originalText": "2017",
+                  "lemma": "2017",
+                  "characterOffsetBegin": 2445,
+                  "characterOffsetEnd": 2449,
+                  "pos": "CD",
+                  "ner": "DATE",
+                  "normalizedNER": "2017-11-17",
+                  "speaker": "PER0",
+                  "before": " ",
+                  "after": "\n",
+                  "timex": {
+                    "tid": "t5",
+                    "type": "DATE",
+                    "value": "2017-11-17"
+                  }
+                }
+              },
+              "CD"
             ]
           ],
-          "score": 0.8810256410256412,
-          "text": "tomorrow",
-          "nlpIndexSentence": 1
+          "score": 0.6522323302469135,
+          "text": "November 17 , 2017",
+          "enhancement": {
+            "timex": [
+              {
+                "start_date": "2017-11-17T00:00:00",
+                "end_date": "2017-11-17T23:59:59"
+              }
+            ]
+          },
+          "nlpIndexSentence": 21
         }
       ],
       "label": "when"

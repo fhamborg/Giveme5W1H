@@ -663,104 +663,60 @@
       "label": "why"
     },
     "where": {
-      "extracted": [],
-      "label": "where"
-    },
-    "when": {
       "extracted": [
         {
           "parts": [
             [
               {
                 "nlpToken": {
-                  "index": 16,
-                  "word": "the",
-                  "originalText": "the",
-                  "lemma": "the",
-                  "characterOffsetBegin": 468,
-                  "characterOffsetEnd": 471,
-                  "pos": "DT",
-                  "ner": "DATE",
-                  "normalizedNER": "P3M",
-                  "speaker": "PER0",
-                  "before": " ",
-                  "after": " ",
-                  "timex": {
-                    "tid": "t3",
-                    "type": "DURATION",
-                    "value": "P3M"
-                  }
-                }
-              },
-              "DT"
-            ],
-            [
-              {
-                "nlpToken": {
-                  "index": 17,
-                  "word": "three",
-                  "originalText": "three",
-                  "lemma": "three",
-                  "characterOffsetBegin": 472,
-                  "characterOffsetEnd": 477,
-                  "pos": "CD",
-                  "ner": "DATE",
-                  "normalizedNER": "P3M",
-                  "speaker": "PER0",
-                  "before": " ",
-                  "after": " ",
-                  "timex": {
-                    "tid": "t3",
-                    "type": "DURATION",
-                    "value": "P3M"
-                  }
-                }
-              },
-              "CD"
-            ],
-            [
-              {
-                "nlpToken": {
-                  "index": 18,
-                  "word": "months",
-                  "originalText": "months",
-                  "lemma": "month",
-                  "characterOffsetBegin": 478,
-                  "characterOffsetEnd": 484,
-                  "pos": "NNS",
-                  "ner": "DATE",
-                  "normalizedNER": "P3M",
-                  "speaker": "PER0",
-                  "before": " ",
-                  "after": " ",
-                  "timex": {
-                    "tid": "t3",
-                    "type": "DURATION",
-                    "value": "P3M"
-                  }
-                }
-              },
-              "NNS"
-            ],
-            [
-              {
-                "nlpToken": {
-                  "index": 19,
-                  "word": "to",
-                  "originalText": "to",
-                  "lemma": "to",
-                  "characterOffsetBegin": 485,
-                  "characterOffsetEnd": 487,
-                  "pos": "TO",
-                  "ner": "DATE",
-                  "normalizedNER": "to ",
+                  "index": 20,
+                  "word": "US",
+                  "originalText": "US",
+                  "lemma": "US",
+                  "characterOffsetBegin": 1223,
+                  "characterOffsetEnd": 1225,
+                  "pos": "NNP",
+                  "ner": "LOCATION",
                   "speaker": "PER0",
                   "before": " ",
                   "after": " "
                 }
               },
-              "TO"
-            ],
+              "NNP"
+            ]
+          ],
+          "score": 1.0,
+          "text": "US",
+          "enhancement": {
+            "openstreetmap_nominatim": {
+              "place_id": "177579678",
+              "licence": "Data \u00a9 OpenStreetMap contributors, ODbL 1.0. http://www.openstreetmap.org/copyright",
+              "osm_type": "relation",
+              "osm_id": "148838",
+              "boundingbox": [
+                -14.7608358,
+                71.6048217,
+                -180.0,
+                180.0
+              ],
+              "lat": "39.7837304",
+              "lon": "-100.4458825",
+              "display_name": "United States of America",
+              "class": "boundary",
+              "type": "administrative",
+              "importance": 0.2361730870995,
+              "icon": "https://nominatim.openstreetmap.org/images/mapicons/poi_boundary_administrative.p.20.png"
+            }
+          },
+          "nlpIndexSentence": 10
+        }
+      ],
+      "label": "where"
+    },
+    "when": {
+      "extracted": [
+        {
+          "parts": [
             [
               {
                 "nlpToken": {
@@ -858,8 +814,16 @@
               "NNP"
             ]
           ],
-          "score": 0.7712031558185405,
-          "text": "the three months to the end of September",
+          "score": 0.7015384615384616,
+          "text": "the end of September",
+          "enhancement": {
+            "timex": [
+              {
+                "start_date": "2017-09-01T00:00:00",
+                "end_date": "2017-09-30T23:59:59"
+              }
+            ]
+          },
           "nlpIndexSentence": 4
         }
       ],

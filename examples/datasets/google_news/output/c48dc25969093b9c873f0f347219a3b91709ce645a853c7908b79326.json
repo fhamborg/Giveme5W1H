@@ -50,70 +50,6 @@
       ],
       "label": "how"
     },
-    "where": {
-      "extracted": [],
-      "label": "where"
-    },
-    "when": {
-      "extracted": [
-        {
-          "parts": [
-            [
-              {
-                "nlpToken": {
-                  "index": 6,
-                  "word": "last",
-                  "originalText": "last",
-                  "lemma": "last",
-                  "characterOffsetBegin": 1549,
-                  "characterOffsetEnd": 1553,
-                  "pos": "JJ",
-                  "ner": "DATE",
-                  "normalizedNER": "2016",
-                  "speaker": "PER0",
-                  "before": " ",
-                  "after": " ",
-                  "timex": {
-                    "tid": "t1",
-                    "type": "DATE",
-                    "value": "2016"
-                  }
-                }
-              },
-              "JJ"
-            ],
-            [
-              {
-                "nlpToken": {
-                  "index": 7,
-                  "word": "year",
-                  "originalText": "year",
-                  "lemma": "year",
-                  "characterOffsetBegin": 1554,
-                  "characterOffsetEnd": 1558,
-                  "pos": "NN",
-                  "ner": "DATE",
-                  "normalizedNER": "2016",
-                  "speaker": "PER0",
-                  "before": " ",
-                  "after": " ",
-                  "timex": {
-                    "tid": "t1",
-                    "type": "DATE",
-                    "value": "2016"
-                  }
-                }
-              },
-              "NN"
-            ]
-          ],
-          "score": 0.5811965811965812,
-          "text": "last year",
-          "nlpIndexSentence": 9
-        }
-      ],
-      "label": "when"
-    },
     "who": {
       "extracted": [
         {
@@ -491,6 +427,61 @@
         }
       ],
       "label": "why"
+    },
+    "where": {
+      "extracted": [
+        {
+          "parts": [
+            [
+              {
+                "nlpToken": {
+                  "index": 13,
+                  "word": "US",
+                  "originalText": "US",
+                  "lemma": "US",
+                  "characterOffsetBegin": 1405,
+                  "characterOffsetEnd": 1407,
+                  "pos": "NNP",
+                  "ner": "LOCATION",
+                  "speaker": "PER0",
+                  "before": " ",
+                  "after": " "
+                }
+              },
+              "NNP"
+            ]
+          ],
+          "score": 1.0,
+          "text": "US",
+          "enhancement": {
+            "openstreetmap_nominatim": {
+              "place_id": "177579678",
+              "licence": "Data \u00a9 OpenStreetMap contributors, ODbL 1.0. http://www.openstreetmap.org/copyright",
+              "osm_type": "relation",
+              "osm_id": "148838",
+              "boundingbox": [
+                -14.7608358,
+                71.6048217,
+                -180.0,
+                180.0
+              ],
+              "lat": "39.7837304",
+              "lon": "-100.4458825",
+              "display_name": "United States of America",
+              "class": "boundary",
+              "type": "administrative",
+              "importance": 0.2361730870995,
+              "icon": "https://nominatim.openstreetmap.org/images/mapicons/poi_boundary_administrative.p.20.png"
+            }
+          },
+          "nlpIndexSentence": 8
+        }
+      ],
+      "label": "where"
+    },
+    "when": {
+      "extracted": [],
+      "label": "when"
     }
   }
 }

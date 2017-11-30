@@ -58,8 +58,8 @@ class Event(Enum):
 
     # misc
     las_vegas_shooting = auto()
-    panama_papers = auto()  # global_politics
-    boko_haram_21_schoolgirls = auto()
+    panama_papers = auto()  # global_politics, 3. April 2016, # Journalist Daphne Galizia
+    boko_haram_21_schoolgirls_freed = auto()
     harambe = auto()
     truck_attack_in_nice = auto()
     NewYearsEveSexualAssaultsGermany = auto()
@@ -78,9 +78,6 @@ class Event(Enum):
 
     zimbabwe_President_Mugabe_resigns = auto()
     zimbabwe_Military_coup = auto()
-
-
-
 
     #
     # Tech
@@ -130,8 +127,12 @@ def write_json(path, filename, object):
         data_file.close()
 
 
-def json_exist(path, filename):
-    return os.path.exists(path + '/' + filename + '.' + 'json')
+def json_exist_has_content(path, filename):
+    _path = path + '/' + filename + '.' + 'json'
+    if os.path.exists(_path):
+        if os.stat(_path).st_size != 0:
+            return True
+    return False
 
 
 articles = []
@@ -148,6 +149,38 @@ def add_article(a_category: Category, a_topic: Topic, a_Event: Event, urls: List
                 'Url': ulr
             }
         )
+
+
+
+add_article(Category.global_politics, Topic.unspecific, Event.boko_haram_21_schoolgirls_freed, [
+  'http://edition.cnn.com/2016/10/13/africa/nigeria-chibok-girls-released/index.html',
+    'https://www.nytimes.com/2016/10/14/world/africa/boko-haram-nigeria.html',
+    'https://www.npr.org/sections/thetwo-way/2016/10/13/497803083/nigeria-says-21-schoolgirls-abducted-by-boko-haram-have-been-released',
+    'https://www.thesun.co.uk/news/1971191/isis-splinter-group-boko-haram-release-21-kidnapped-nigerian-schoolgirls-in-exchange-for-four-jailed-militants/',
+    'http://www.dailymail.co.uk/wires/afp/article-3836078/Boko-Haram-releases-21-Chibok-girls-Nigerian-official.html',
+    'http://www.thehindu.com/news/international/21-abducted-Chibok-schoolgirls-freed/article15513701.ece',
+    'http://www.thehindu.com/news/international/21-abducted-Chibok-schoolgirls-freed-in-Nigeria/article16070198.ece',
+    'http://africa.chinadaily.com.cn/world/2017-05/09/content_29261603.htm'
+    'https://www.washingtonpost.com/world/boko-haram-militants-free-21-captive-chibok-schoolgirls-amid-talks-with-nigeria/2016/10/13/9e94610a-0ed3-4a26-96f1-6c5d7cccfdcd_story.html'
+])
+
+
+add_article(Category.global_politics, Topic.hack, Event.panama_papers, [
+    'http://edition.cnn.com/2016/04/04/opinions/panama-papers-ghitis/index.html',
+    'http://edition.cnn.com/2016/04/04/world/panama-papers-explainer/index.html',
+    'https://www.nytimes.com/2017/11/06/world/bank-of-utah-leonid-mikhelson.html',
+    'https://www.npr.org/sections/thetwo-way/2016/04/04/472985787/heres-what-you-need-to-know-so-far-about-panama-papers',
+    'https://www.npr.org/sections/parallels/2016/05/04/476745041/panama-rises-despite-dents-to-its-reputation-from-papers-leaks',
+    'http://www.dailymail.co.uk/wires/afp/article-3523948/Big-China-presence-Panama-Papers-law-firm.html',
+    'http://www.dailymail.co.uk/wires/afp/article-3522970/African-leaders-relatives-named-Panama-Papers.html',
+    'http://www.dailymail.co.uk/wires/afp/article-3523775/Panama-Papers-revelations-trigger-global-probes.html',
+    'https://www.rt.com/news/338270-panama-papers-corruption-report/',
+    'https://www.rt.com/op-edge/338388-putin-western-media-leaks/',
+    'http://www.chinadaily.com.cn/cndy/2016-04/05/content_24280080.htm',
+    'https://www.washingtonpost.com/opinions/where-have-russias-billions-gone/2016/04/04/44ebd46a-fa9a-11e5-80e4-c381214de1a3_story.html',
+    'https://www.washingtonpost.com/world/the_americas/where-the-papers-got-their-name/2016/04/09/f088582e-fcf8-11e5-813a-90ab563f0dde_story.html',
+    'https://www.washingtonpost.com/world/as-panama-leaks-spread-chinas-red-nobility-would-rather-not-talk-about-it/2016/04/07/ab5ab28e-fc4d-11e5-813a-90ab563f0dde_story.html'
+])
 
 
 #
@@ -211,7 +244,6 @@ add_article(Category.global_politics, Topic.north_korea, Event.north_Korea_hokka
     'http://europe.chinadaily.com.cn/world/2017-09/15/content_32047139.htm',
     'http://africa.chinadaily.com.cn/world/2017-09/15/content_32041310.htm',
     'http://www.chinadaily.com.cn/world/2017-09/15/content_32021877.htm'
-
 ])
 
 
@@ -221,7 +253,7 @@ if __name__ == '__main__':
         url = info_article['Url']
         dId = hashlib.sha224(url.encode('utf-8')).hexdigest()
 
-        if not json_exist('data_raw', dId):
+        if not json_exist_has_content('data_raw', dId):
             # this is an object
             try:
                 article = NewsPlease.from_url(url)
@@ -237,6 +269,8 @@ if __name__ == '__main__':
                 # datetime-datetime-not-json-serializable bugfix"
                 if article_dict.get('date_publish'):
                     article_dict['date_publish'] = article_dict['date_publish'].isoformat()
+                if article_dict.get('date_download'):
+                    article_dict['date_download'] = article_dict['date_download'].isoformat()
 
                 write_json('data_raw', article_dict['dId'], article_dict)
                 print(url)
@@ -251,15 +285,18 @@ if __name__ == '__main__':
     # preprocess into data
     for filepath in glob.glob('data_raw/*.json'):
         with open(filepath, encoding='utf-8') as data_file:
-            data = json.load(data_file)
-            target = None
+            try:
+                data = json.load(data_file)
+                target = None
 
-            # giveme5w(and enhancer) needs at least these 3 fields to work proper
-            if data.get('date_publish') is not None and data.get('title') is not None and data.get('text') is not None:
-                target = 'data'
-            else:
-                target = 'data_damaged'
+                # giveme5w(and enhancer) needs at least these 3 fields to work proper
+                if data.get('date_publish') is not None and data.get('title') is not None and data.get('text') is not None:
+                    target = 'data'
+                else:
+                    target = 'data_damaged'
 
-            outfile = open(target + '/' + data['dId'] + '.json', 'w')
-            outfile.write(json.dumps(data, sort_keys=False, indent=2))
-            outfile.close()
+                outfile = open(target + '/' + data['dId'] + '.json', 'w')
+                outfile.write(json.dumps(data, sort_keys=False, indent=2))
+                outfile.close()
+            except json.decoder.JSONDecodeError:
+                print('skipped:' + filepath)

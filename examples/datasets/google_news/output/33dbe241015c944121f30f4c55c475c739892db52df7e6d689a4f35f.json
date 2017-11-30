@@ -353,7 +353,53 @@
       "label": "why"
     },
     "where": {
-      "extracted": [],
+      "extracted": [
+        {
+          "parts": [
+            [
+              {
+                "nlpToken": {
+                  "index": 1,
+                  "word": "Zimbabwe",
+                  "originalText": "Zimbabwe",
+                  "lemma": "Zimbabwe",
+                  "characterOffsetBegin": 0,
+                  "characterOffsetEnd": 8,
+                  "pos": "NNP",
+                  "ner": "LOCATION",
+                  "speaker": "PER0",
+                  "before": "",
+                  "after": " "
+                }
+              },
+              "NNP"
+            ]
+          ],
+          "score": 1.0,
+          "text": "Zimbabwe",
+          "enhancement": {
+            "openstreetmap_nominatim": {
+              "place_id": "179411092",
+              "licence": "Data \u00a9 OpenStreetMap contributors, ODbL 1.0. http://www.openstreetmap.org/copyright",
+              "osm_type": "relation",
+              "osm_id": "195272",
+              "boundingbox": [
+                -22.4241096,
+                -15.6097033,
+                25.2373,
+                33.0683413
+              ],
+              "lat": "-18.4554963",
+              "lon": "29.7468414",
+              "display_name": "Zimbabwe",
+              "class": "boundary",
+              "type": "administrative",
+              "importance": 0.28862053623532,
+              "icon": "https://nominatim.openstreetmap.org/images/mapicons/poi_boundary_administrative.p.20.png"
+            }
+          }
+        }
+      ],
       "label": "where"
     },
     "when": {
@@ -363,31 +409,39 @@
             [
               {
                 "nlpToken": {
-                  "index": 17,
-                  "word": "today",
-                  "originalText": "today",
-                  "lemma": "today",
-                  "characterOffsetBegin": 149,
-                  "characterOffsetEnd": 154,
-                  "pos": "NN",
+                  "index": 12,
+                  "word": "Thursday",
+                  "originalText": "Thursday",
+                  "lemma": "Thursday",
+                  "characterOffsetBegin": 3748,
+                  "characterOffsetEnd": 3756,
+                  "pos": "NNP",
                   "ner": "DATE",
                   "normalizedNER": "2017-11-16",
                   "speaker": "PER0",
                   "before": " ",
-                  "after": " ",
+                  "after": "",
                   "timex": {
-                    "tid": "t1",
+                    "tid": "t14",
                     "type": "DATE",
                     "value": "2017-11-16"
                   }
                 }
               },
-              "NN"
+              "NNP"
             ]
           ],
-          "score": 0.8871794871794871,
-          "text": "today",
-          "nlpIndexSentence": 1
+          "score": 0.6903656635802469,
+          "text": "Thursday",
+          "enhancement": {
+            "timex": [
+              {
+                "start_date": "2017-11-16T00:00:00",
+                "end_date": "2017-11-16T23:59:59"
+              }
+            ]
+          },
+          "nlpIndexSentence": 28
         }
       ],
       "label": "when"

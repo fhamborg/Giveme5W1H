@@ -66,7 +66,7 @@ class Handler(object):
             self._documents.append(doc)
             self.log.info('Handler: preloaded ' + doc.get_title())
 
-        self.log.error('documents prelaoded:\t' + str(docCounter))
+        self.log.error('documents preloaded:\t' + str(docCounter))
         return self
 
     def skip_documents_with_output(self, skip=True):

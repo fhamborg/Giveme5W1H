@@ -6,16 +6,27 @@ import time
 
 class WorkQueue(object):
 
-    def __init__(self):
+    def __init__(self, id: str, generator=None):
+        """
 
+        :param id:
+        :param generator: method to generate a _queue
+        """
+        self._id = id
         self._weights_range = None
         self.phrase_range_location = None
         self.phrase_range_time_date = None
         self.time_range = None
         self._queue = None
         self._queue_processed = None
-        self._queue_path = os.path.dirname(__file__) + '/cache/queue.prickle'
-        self._queue_processed_path = os.path.dirname(__file__) + '/cache/queue_processed.prickle'
+        self._queue_path = os.path.dirname(__file__) + '/cache/'+id+'_queue.prickle'
+        self._queue_processed_path = os.path.dirname(__file__) + '/cache/'+id+'_queue_processed.prickle'
+
+        if generator is None:
+            self._queue_processed = []
+            self._queue = []
+            self._generator = self._generate_full_combination
+
 
     def get_queue_count(self):
         return len(self._queue)
@@ -41,8 +52,8 @@ class WorkQueue(object):
 
 
         else:
-            print('generating a new queues')
-            self._generate()
+            print('generating a new queue')
+            self._generator()
 
 
 
@@ -83,14 +94,12 @@ class WorkQueue(object):
             return self._queue[-1]
         return None
 
-    def _generate(self):
+    def _generate_full_combination(self):
         """
         https://www.hackmath.net/en/calculator/combinations-and-permutations?n=19&k=4&order=1&repeat=1
         130321 per
         :return:
         """
-        self._queue_processed = []
-        self._queue = []
         extracting_parameters_id = 0
 
         # because of the combined scoring each range must be respected separate

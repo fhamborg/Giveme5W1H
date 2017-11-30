@@ -397,8 +397,12 @@ if __name__ == '__main__':
                 print(e)
                 print(url)
         else:
-            #print(url)
-            print('skipped, already crawled')
+            print('skipped, newsCluster updated')
+            with open('data_raw' + '/' + dId + '.' + 'json', encoding='utf-8') as data_file:
+                data = json.load(data_file)
+                data['newsCluster'] = info_article
+            with open('data_raw' + '/' + dId + '.' + 'json', encoding='utf-8', mode='w') as data_file:
+                data_file.write(json.dumps(data, sort_keys=False, indent=2))
             # TODO rewrite  article_dict['newsCluster'] anyways
 
 

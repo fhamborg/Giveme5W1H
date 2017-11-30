@@ -15,13 +15,19 @@ class EnvironmentExtractor(AbsExtractor):
     The EnvironmentExtractor tries to extract the location and time the event happened.
     """
 
-    def __init__(self, weights=((0.5, 0.8), (0.8, 0.7, 0.5, 0.5)), phrase_range_location: int = 3, phrase_range_time_date: int = 1, time_range: int = 86400, host = 'nominatim.openstreetmap.org'):
+    one_minute_in_s = 60
+    one_hour_in_s = one_minute_in_s * 60
+    one_day_in_s = one_hour_in_s * 24
+    two_days_in_s = one_day_in_s * 2
+    one_month_in_s = one_day_in_s * 30
+
+    def __init__(self, weights=((0.5, 0.8), (0.8, 0.7, 0.5, 0.5, 0.5)), phrase_range_location: int = 3, phrase_range_time_date: int = 1, time_range: int = 86400, host = 'nominatim.openstreetmap.org'):
         """
         Init the Nominatim connection as well as the calender object used for date interpretation.
 
         :param weights: Weights used to evaluate answer candidates.
         :type weights: ((Float, Float), (Float, Float, Float)), weights used in the candidate evaluation:
-        ((position, frequency), (position, frequency, entailment, distance_from_publisher_date))
+        ((position, frequency), (position, frequency, entailment, distance_from_publisher_date, accurate))
         :param host: Address of the Nominatim host
         :type host: String
         """
@@ -261,8 +267,6 @@ class EnvironmentExtractor(AbsExtractor):
 
         max_n_similar = 0
         max_n_entailment = 0
-        two_days_in_s = 60 * 60 * 24 * 2
-        one_month_in_s = 60 * 60 * 24 * 30
 
         for index, candidate in enumerate(scoring_candidates):
             candidate_timex = candidate[2]
@@ -276,8 +280,8 @@ class EnvironmentExtractor(AbsExtractor):
                 # similar date check. Dates are considered related if they differ at most 24h (time_delta). we do this only for
                 # date ranges that are at most 2 days long. that is because we are mostly interested in the day range, and
                 # it also seems not useful to compare if two years are within a range of 24h.
-                if abs(candidate_duration.total_seconds()) <= two_days_in_s and abs(
-                        neighbor_candidate_duration.total_seconds()) <= two_days_in_s:
+                if abs(candidate_duration.total_seconds()) <= EnvironmentExtractor.two_days_in_s and abs(
+                        neighbor_candidate_duration.total_seconds()) <= EnvironmentExtractor.two_days_in_s:
                     if abs((
                                candidate_timex.get_start_date() - neighbor_candidate_timex.get_start_date()).total_seconds()) <= self.time_delta or \
                                     abs((
@@ -304,8 +308,14 @@ class EnvironmentExtractor(AbsExtractor):
 
             # distance from publisher date
             distance_in_secs = candidate[2].get_min_distance_in_seconds_to_datetime(reference_date)
-            normalized_distance_score = 1 - min(distance_in_secs / one_month_in_s, 1)  # we cut off after one month
+            normalized_distance_score = 1 - min(distance_in_secs / EnvironmentExtractor.one_month_in_s, 1)  # we cut off after one month
             score += weights[3] * normalized_distance_score
+
+            # accuracy (ideally one minute only, max is one year) logarithmic
+            normalized_duration = ((candidate[2].get_duration().total_seconds()-EnvironmentExtractor.one_minute_in_s)
+                                   / (EnvironmentExtractor.one_month_in_s-EnvironmentExtractor.one_minute_in_s))
+            # TODO should be logarithmic
+            score += weights[4] * (1 - normalized_duration)
 
             if score > 0:
                 score /= weights_sum

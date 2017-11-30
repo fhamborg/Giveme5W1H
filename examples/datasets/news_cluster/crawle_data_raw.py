@@ -68,17 +68,26 @@ class Event(Enum):
     north_Korea_hokkaido_missile = auto()
     north_Korea_Launches_satellite = auto()
 
+    hack_equifax_breach = auto()
+
+    # Gold_standart events
+    Benghazi_US_consulate_attack = auto() # 11. September 2012,
+    croydon_tram_trash = auto()
+    f1_crash = auto()
+    cubs_win_championship = auto()
+    china_boy_well = auto()
     # trump
 
     # erdogan
-    erdogan_attempted_Coup = auto()
-    erdogan_elected = auto()
-    erdogan_bohmermann = auto()
+    #erdogan_attempted_Coup = auto()
+    #erdogan_elected = auto()
+    ##erdogan_bohmermann = auto()
 
-    zimbabwe_President_Mugabe_resigns = auto()
-    zimbabwe_Military_coup = auto()
+    #zimbabwe_President_Mugabe_resigns = auto()
+    #zimbabwe_Military_coup = auto()
 
     #
+
     # Tech
     #
     # explosive_samsung_galaxy_note = auto() not happening at a specie time
@@ -88,7 +97,6 @@ class Event(Enum):
     # Equifax_breach = auto() not happening at a specie time
     # Linkedin hack
     # Dropbox hack
-    hack_equifax_breach = auto()
 
 
     #
@@ -151,6 +159,71 @@ def add_article(a_category: Category, a_topic: Topic, a_Event: Event, urls: List
 
 # http://www.dailymail.co.uk/wires/ap/article-4050308/Truck-rams-German-Christmas-market-killing-12-people.html
 
+add_article(Category.sports, Topic.unspecific, Event.china_boy_well, [
+    "http://www.bbc.com/news/world-asia-china-37906226",
+    "http://www.bbc.com/news/world-asia-china-37946716",
+    "http://www.dailymail.co.uk/news/article-3916560/Dramatic-footage-shows-rescuers-using-eighty-diggers-save-boy-fell-130ft-deep-picking-cabbages-Chinese-farm.html",
+    "http://www.dailymail.co.uk/news/article-3923808/Mystery-Chinese-boy-fell-deep-massive-rescue-operation-involving-80-diggers-chute-empty.html"
+])
+
+add_article(Category.sports, Topic.unspecific, Event.cubs_win_championship, [
+        "https://www.theguardian.com/sport/2016/nov/03/world-series-game-7-chicago-cubs-cleveland-indians-mlb",
+        "https://www.washingtonpost.com/sports/believe-it-chicago-cubs-win-classic-game-7-to-win-first-world-series-since-1908/2016/11/03/99cfc9c2-a0b3-11e6-a44d-cc2898cfab06_story.html",
+        "https://www.thesun.co.uk/sport/othersports/2106710/chicago-cubs-win-world-series-hillary-clinton-bill-murray-and-barack-obama-lead-celebrations-as-cubs-end-108-year-curse/",
+        "http://nypost.com/2016/11/03/cubs-end-drought-in-chaotic-epic-world-series-finale/",
+        "http://www.bbc.com/sport/baseball/37857919",
+        "https://www.washingtonpost.com/sports/nationals/you-knew-it-couldnt-come-easy-but-the-cubs-are-world-series-champions/2016/11/03/a4487ade-a0b3-11e6-a44d-cc2898cfab06_story.html",
+        "http://www.telegraph.co.uk/baseball/2016/11/03/chicago-cubs-break-108-year-curse-of-the-billy-goat-winning-worl/",
+        "http://www.mirror.co.uk/sport/other-sports/american-sports/chicago-cubs-win-world-series-9185077",
+        "http://www.standard.co.uk/sport/other-sports/chicago-cubs-win-world-series-to-end-108year-curse-and-earn-invite-from-barack-obama-a3386411.html",
+        "http://www.independent.co.uk/sport/us-sport/major-league-baseball/world-series-chicago-cubs-cleveland-indians-108-year-title-drought-a7394706.html",
+        "http://www.independent.co.uk/sport/us-sport/major-league-baseball/chicago-cubs-fans-celebrate-world-series-title-a7394736.html",
+        "http://www.dailymail.co.uk/news/article-3899956/Chicago-Cubs-win-World-Series-epic-Game-7-showdown-Cleveland.html",
+        "http://www.usatoday.com/story/sports/ftw/2016/11/03/sports-world-reacts-to-the-chicago-cubs-winning-their-first-world-series-since-1908/93225730/"
+])
+
+add_article(Category.sports, Topic.unspecific, Event.f1_crash, [
+ "http://www.dailymail.co.uk/sport/formulaone/article-3932890/Max-Verstappen-amazes-Red-Bull-principal-Christian-Horner-performance-Brazil-witnessed-special.html",
+        "https://www.thesun.co.uk/sport/2177804/felipe-massa-retires-f1-legend-makes-a-very-emotional-farewell-after-crashing-in-his-last-home-race-in-brazil/",
+        "http://www.dailymail.co.uk/sport/sportsnews/article-3934424/Formula-One-star-Max-Verstappen-shows-nerves-steel-avoid-accident.html",
+        "http://www.mirror.co.uk/sport/formula-1/red-bull-boss-christian-horner-9254708",
+        "http://www.dailymail.co.uk/sport/formulaone/article-3932386/F1-legend-Felipe-Massa-makes-emotional-farewell-crashing-Brazil-Grand-Prix-Interlagos.html",
+        "https://www.thesun.co.uk/sport/2177105/lewis-hamilton-wins-the-brazilian-grand-prix-after-two-red-flags/",
+        "http://www.standard.co.uk/sport/brazilian-grand-prix-redflagged-after-dramatic-kimi-raikkonen-crash-a3394411.html",
+        "http://www.telegraph.co.uk/formula-1/2016/11/13/max-verstappen-even-stuns-his-dad-by-storming-home-into-third-pl/",
+        "http://www.usatoday.com/story/sports/motor/formula1/2016/11/13/brazils-massa-crashes-but-gets-warm-farewell-at-home-gp/93771246/",
+        "http://www.dailymail.co.uk/sport/formulaone/article-3932252/Brazilian-Grand-Prix-thrown-chaos-Kimi-Raikkonen-accident-brings-red-flag-Sebastian-Vettel-fumes-stupid-conditions-mad.html",
+        "http://www.express.co.uk/sport/f1-autosport/731858/Max-Verstappen-avoids-crash-Kimi-Raikkonen-Brazilian-Grand-Prix-wet",
+        "http://www.mirror.co.uk/sport/formula-1/brazilian-f1-grand-prix-riddled-9253267"
+])
+
+
+add_article(Category.global_politics, Topic.unspecific, Event.croydon_tram_trash, [
+        "http://www.standard.co.uk/news/transport/croydon-tram-derailment-people-trapped-after-tram-overturns-in-at-sandilands-a3390796.html",
+        "http://www.nytimes.com/2016/11/10/world/europe/tram-derails-croydon-london.html",
+        "http://www.dailymail.co.uk/wires/pa/article-3919284/Five-trapped-40-injured-tram-overturns-tunnel.html",
+        "https://www.theguardian.com/uk-news/2016/nov/09/croydon-tram-crash-kills-at-least-seven-and-injures-more-than-50",
+        "http://www.mirror.co.uk/news/uk-news/huge-rescue-operation-sandilands-station-9226276",
+        "http://www.telegraph.co.uk/news/2016/11/10/croydon-tram-crash-police-check-drivers-mobile-phone-records/",
+        "http://www.express.co.uk/news/uk/730639/Croydon-tram-crash-carnage-survivor-derailment-seven-dead",
+        "http://www.usatoday.com/story/news/2016/11/09/least-7-killed-tram-accident-south-london/93549248/",
+        "http://www.bbc.com/news/uk-england-london-37919658",
+        "http://nypost.com/2016/11/09/several-dead-and-dozens-injured-after-tram-overturns-in-london/",
+        "http://www.independent.co.uk/news/uk/home-news/five-trapped-40-injured-after-tram-overturns-south-london-croydon-a7406496.html"
+])
+
+add_article(Category.global_politics, Topic.unspecific, Event.Benghazi_US_consulate_attack,[
+    "http://www.telegraph.co.uk/news/2016/11/10/taliban-attack-german-consulate-in-northern-afghan-city-of-mazar/",
+    "http://www.express.co.uk/news/world/731052/German-consulate-explosion-gunfire-Afghanistan",
+    "https://www.theguardian.com/world/2016/nov/10/taliban-attack-german-consulate-mazar-i-sharif-afghanistan-nato-airstrikes-kunduz",
+    "http://www.bbc.com/news/world-asia-37944115",
+    "http://www.nytimes.com/2016/11/11/world/asia/taliban-strike-german-consulate-in-afghan-city-of-mazar-i-sharif.html?_r=0",
+    "http://www.independent.co.uk/news/world/middle-east/german-consulate-afghanistan-attacked-bomb-suicide-taliban-revenge-mazar-i-sharif-kunduz-attack-two-a7410746.html",
+    "https://www.thesun.co.uk/news/2162467/taliban-suicide-bomber-truck-german-consulate-afghanistan-killing-two/amp/",
+    "http://www.nytimes.com/2016/11/11/world/asia/taliban-strike-german-consulate-in-afghan-city-of-mazar-i-sharif.html?_r=0",
+    "http://www.bbc.com/news/world-asia-37944115"
+])
+
 
 add_article(Category.global_politics, Topic.north_korea, Event.north_Korea_Launches_satellite, [
   'http://edition.cnn.com/2016/02/07/asia/gallery/north-korea-missile-launch/index.html',
@@ -206,7 +279,7 @@ add_article(Category.global_politics, Topic.unspecific, Event.boko_haram_21_scho
     'http://www.dailymail.co.uk/wires/afp/article-3836078/Boko-Haram-releases-21-Chibok-girls-Nigerian-official.html',
     'http://www.thehindu.com/news/international/21-abducted-Chibok-schoolgirls-freed/article15513701.ece',
     'http://www.thehindu.com/news/international/21-abducted-Chibok-schoolgirls-freed-in-Nigeria/article16070198.ece',
-    'http://africa.chinadaily.com.cn/world/2017-05/09/content_29261603.htm'
+    'http://africa.chinadaily.com.cn/world/2017-05/09/content_29261603.htm',
     'https://www.washingtonpost.com/world/boko-haram-militants-free-21-captive-chibok-schoolgirls-amid-talks-with-nigeria/2016/10/13/9e94610a-0ed3-4a26-96f1-6c5d7cccfdcd_story.html'
 ])
 
@@ -324,8 +397,9 @@ if __name__ == '__main__':
                 print(e)
                 print(url)
         else:
-            print(url)
+            #print(url)
             print('skipped, already crawled')
+            # TODO rewrite  article_dict['newsCluster'] anyways
 
 
     # preprocess into data

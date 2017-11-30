@@ -8,12 +8,12 @@ import urllib.parse
 '''
 
 # Set your search term here.
-search_term = 'erdogan elected'
+search_term = 'Benghazi US consulate attack'
 search_term_plus = search_term.replace(' ', '+')
 search_term_encoded = urllib.parse.quote(search_term)
 urls = [
     #'https://www.huffingtonpost.com/search?sortBy=recency&sortOrder=desc&keywords=' + search_term_plus,
-    'http://edition.cnn.com/search/?sort=relevance&q=' + search_term_plus,
+    'http://edition.cnn.com/search/?sort=relevance&size=100&type=article&q=' + search_term_plus,
     'https://query.nytimes.com/search/sitesearch/#/'+ search_term_plus +'/',
     'https://www.npr.org/templates/search/index.php?searchinput=' + search_term_plus,
     'https://www.thesun.co.uk/?s=' + search_term_plus, # no serach for relevante or date

@@ -60,14 +60,13 @@ class Event(Enum):
     las_vegas_shooting = auto()
     panama_papers = auto()  # global_politics, 3. April 2016, # Journalist Daphne Galizia
     boko_haram_21_schoolgirls_freed = auto()
-    harambe = auto()
-    truck_attack_in_nice = auto()
+    harambe = auto() # 28. Mai 2016
+    truck_attack_in_nice = auto() # 14 July 2016
     NewYearsEveSexualAssaultsGermany = auto()
 
     # north_korea
     north_Korea_hokkaido_missile = auto()
     north_Korea_Launches_satellite = auto()
-    north_Korea_Reacts_Sanctions = auto()
 
     # trump
 
@@ -85,7 +84,6 @@ class Event(Enum):
     # explosive_samsung_galaxy_note = auto() not happening at a specie time
     # dieselgate = auto()  # tech ? not happening at a specie time
     # star_wars_battlefront_lootbox = auto()  not happening at a specie time
-
     # Hacks:
     # Equifax_breach = auto() not happening at a specie time
     # Linkedin hack
@@ -151,6 +149,54 @@ def add_article(a_category: Category, a_topic: Topic, a_Event: Event, urls: List
         )
 
 
+# http://www.dailymail.co.uk/wires/ap/article-4050308/Truck-rams-German-Christmas-market-killing-12-people.html
+
+
+add_article(Category.global_politics, Topic.north_korea, Event.north_Korea_Launches_satellite, [
+  'http://edition.cnn.com/2016/02/07/asia/gallery/north-korea-missile-launch/index.html',
+    'http://www.nytimes.com/2013/01/31/world/asia/on-3d-try-south-korea-launches-satellite-into-orbit.html',
+    'https://www.npr.org/2015/09/15/440443821/north-korea-says-its-ready-to-launch-satellites-aboard-rockets',
+    'http://www.dailymail.co.uk/wires/afp/article-4322652/Japan-launches-latest-North-Korea-spy-satellite.html',
+    'http://www.thehindu.com/news/international/north-korea-to-launch-satellites-to-mark-party-anniversary/article7654457.ece',
+    'http://www.chinadaily.com.cn/world/2016-02/07/content_23426008.htm',
+    'https://www.washingtonpost.com/world/north-korea-launches-satellite-sparks-fears-about-long-range-missile-program/2016/02/06/0b6084e5-afd1-42ec-8170-280883f23240_story.html'
+])
+
+
+add_article(Category.global_politics, Topic.unspecific, Event.NewYearsEveSexualAssaultsGermany, [
+   'http://www.chinadaily.com.cn/opinion/2016-01/11/content_23017934.htm',
+    'http://www.dailymail.co.uk/news/article-3411720/A-staggering-359-sexual-assaults-migrants-reported-Cologne-police-New-Year-s-Eve-mob-went-rampage-causing-821-complaints.html',
+    'https://www.npr.org/2016/01/06/462114345/migrants-in-germany-accused-of-coordinated-sexual-assaults',
+    'https://www.npr.org/sections/parallels/2016/01/05/462059765/mass-sexual-assaults-in-cologne-germany-renew-tensions-over-migrants'
+])
+
+add_article(Category.global_politics, Topic.unspecific, Event.truck_attack_in_nice, [
+    'http://edition.cnn.com/2016/07/14/europe/nice-france-truck/index.html',
+    'http://edition.cnn.com/2016/07/14/world/nice-attack-witness-accounts/index.html',
+    'https://www.nytimes.com/2016/07/16/world/europe/truck-attack-nice-france.html',
+    'https://www.nytimes.com/2016/07/15/world/europe/nice-france-truck-bastille-day.html',
+    'https://www.npr.org/2016/07/14/486097589/more-than-70-people-killed-in-truck-attack-in-nice-france',
+    'https://www.npr.org/2016/07/14/486095754/president-obama-briefed-on-truck-attack-in-nice-france',
+    'https://www.thesun.co.uk/news/1447619/at-least-77-dead-and-100-injured-as-lorry-crashes-into-crowd-of-revellers-celebrating-in-france-terror-attack/',
+    'http://www.dailymail.co.uk/wires/afp/article-3692450/Tunisians-Algerians-dead-Nice-attack.html',
+    'http://www.thehindu.com/news/84-killed-in-France-as-terror-truck-ploughs-through-crowd/article14491015.ece',
+    'http://www.thehindu.com/news/international/Truck-attacker-in-Nice-kills-84-celebrating-Bastille-Day/article14490871.ece',
+    'http://www.chinadaily.com.cn/world/2016-08/05/content_26355611.htm',
+    'http://europe.chinadaily.com.cn/world/2016-07/15/content_26095924.htm',
+    'http://usa.chinadaily.com.cn/epaper/2016-07/15/content_26104748.htm'
+])
+
+
+add_article(Category.global_politics, Topic.unspecific, Event.harambe, [
+    'http://edition.cnn.com/2016/03/18/health/seaworld-blackfish-effect-circuses-zoos/index.html',
+    'https://www.npr.org/sections/thetwo-way/2016/05/29/479919582/gorilla-killed-to-save-boy-at-cincinnati-zoo',
+    'https://www.thesun.co.uk/news/1230550/hear-the-dramatic-moment-little-isiahs-mum-calls-for-help-after-her-son-falls-into-gorilla-enclosure-at-zoo/',
+    'http://www.dailymail.co.uk/news/article-3614480/Small-child-falls-gorilla-enclosure-zoo.html',
+    'http://www.thehindu.com/news/international/Ohio-zoo-kills-gorilla-to-protect-small-child-in-enclosure/article14347705.ece',
+    'http://usa.chinadaily.com.cn/world/2016-05/30/content_25527063.htm',
+    'https://www.washingtonpost.com/news/post-nation/wp/2016/05/29/it-could-have-been-very-bad-gorilla-killed-after-boy-falls-into-cincinnati-zoo-exhibit/?tid=a_inl',
+    'https://www.rt.com/news/344746-cincinnati-zoo-gorilla-killed/'
+])
 
 add_article(Category.global_politics, Topic.unspecific, Event.boko_haram_21_schoolgirls_freed, [
   'http://edition.cnn.com/2016/10/13/africa/nigeria-chibok-girls-released/index.html',

@@ -8,8 +8,7 @@ import urllib.parse
 '''
 
 # Set your search term here.
-search_term = 'boko haram 21 schoolgirls'
-
+search_term = 'erdogan elected'
 search_term_plus = search_term.replace(' ', '+')
 search_term_encoded = urllib.parse.quote(search_term)
 urls = [

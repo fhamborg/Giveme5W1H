@@ -21,7 +21,7 @@ class EnvironmentExtractor(AbsExtractor):
     two_days_in_s = one_day_in_s * 2
     one_month_in_s = one_day_in_s * 30
 
-    def __init__(self, weights=((0.5, 0.8), (0.8, 0.7, 0.5, 0.5, 0.5)), phrase_range_location: int = 3, phrase_range_time_date: int = 1, time_range: int = 86400, host = 'nominatim.openstreetmap.org'):
+    def __init__(self, weights=((0.5, 0.8), (0.8, 0.7, 0.5, 0.5, 0.5)), phrase_range_location: int = 3, time_range: int = 86400, host = 'nominatim.openstreetmap.org'):
         """
         Init the Nominatim connection as well as the calender object used for date interpretation.
 
@@ -48,7 +48,6 @@ class EnvironmentExtractor(AbsExtractor):
         self.time_delta = time_range  # 24h in seconds
 
         self._phrase_range_location = phrase_range_location
-        self._phrase_range_time_date = phrase_range_time_date
 
 
     def _evaluate_candidates(self, document):

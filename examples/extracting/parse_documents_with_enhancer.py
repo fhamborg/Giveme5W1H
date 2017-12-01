@@ -29,13 +29,14 @@ if __name__ == '__main__':
         'gold_standard': os.path.dirname(__file__) + rel_datasets_path + 'gold_standard',
         'bbc': os.path.dirname(__file__) + rel_datasets_path + 'bbc',
         'google_news': os.path.dirname(__file__) + rel_datasets_path + 'google_news',
+        'news_cluster': os.path.dirname(__file__) + rel_datasets_path + 'news_cluster',
         'local': os.path.dirname(__file__)
     }
 
     #
     # Switch here between the predefined datasets or local for the local folder
     #
-    basePath = dataset_helper['google_news']
+    basePath = dataset_helper['news_cluster']
     #
     #
     #
@@ -55,7 +56,7 @@ if __name__ == '__main__':
         cause_extractor.CauseExtractor(),
         method_extractor.MethodExtractor()
     ], enhancement=[
-        Heideltime(['when']),
+       # Heideltime(['when']),
         Aida(['how', 'when', 'why', 'where', 'what', 'who'])
     ])
 

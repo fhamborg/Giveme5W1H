@@ -225,8 +225,11 @@ class CauseExtractor(AbsExtractor):
         unique_candidates = []
         candidate_strings = []
         for candidate in candidates:
-            candidate_strings.append(candidate[0][0][0]['nlpToken']['originalText'] + ' ' + ' '.join(
-                [x[0]['nlpToken']['originalText'] for x in candidate[1]]))
+            # Bugfix, at some very rare occasions, the candidate holds an empty list
+            if len(candidate[0]) > 0:
+                another_string = [x[0]['nlpToken']['originalText'] for x in candidate[1]]
+                a_string = candidate[0][0][0]['nlpToken']['originalText'] + ' ' + ' '.join(another_string)
+                candidate_strings.append(a_string)
 
         for i, candidate in enumerate(candidates):
             unique = True

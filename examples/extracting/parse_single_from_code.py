@@ -5,6 +5,7 @@ from extractor.extractor import FiveWExtractor
 from extractor.document import Document
 
 from extractor.tools.file.handler import Handler
+import json
 
 """
 This is a simple example how to use the extractor in combination with a dict in news-please format.
@@ -80,7 +81,4 @@ if __name__ == '__main__':
     extractor = FiveWExtractor()
 
     doc = Document(title, lead, text, date_publish)
-
-    # parse
-    extractor.parse(doc)
-    print(doc)
+    doc = extractor.parse(doc)

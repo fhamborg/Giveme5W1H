@@ -56,6 +56,7 @@ class Learn(object):
         return docments, extractor_object
 
     def _cmp_text_helper(self, question, answers, annotations, weights, result):
+
         score = -1
         # check if there is an annotaton and an answer
         if question in annotations and question in answers and len(annotations[question]) > 0 and len(

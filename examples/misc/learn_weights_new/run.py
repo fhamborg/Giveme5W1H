@@ -91,19 +91,21 @@ def action():
 if __name__ == '__main__':
     log = logging.getLogger('GiveMe5W')
 
-    # sh = logging.StreamHandler()
-    # sh.setLevel(logging.INFO)
-    # log.addHandler(sh)
-
     # thread safe queue
     q = queue.Queue()
+
+    ######################################################
+    # WARNING SOMETHING IN NLTK-WORDNET IS NOT RUNNABLE WITH MULTI THREADS (NOT FURTHER INSPECTED)
+    # THEREFORE RUN ONE AFTER ANOTHER OR AS NEW INSTANCE
+    ######################################################
+
 
     # basic leaner
     log.setLevel(logging.WARNING)
     q.put(action())
-    q.put(environment())
-    q.put(cause())
-    q.put(method())
+    #q.put(environment())
+    #q.put(cause())
+    #q.put(method())
     log.setLevel(logging.INFO)
     # creating worker threads
     for i in range(4):

@@ -37,7 +37,7 @@ class WorkQueue(object):
     def get_queue_count(self):
         return len(self._queue)
 
-    def setup_scoring_parameters(self, weight_start: float = 0.1, weight_stop: float = 1,
+    def setup_scoring_parameters(self, weight_start: float = 0, weight_stop: float = 1,
                                  weight_step_size: float = 0.1):
         self._weights_range = np.arange(weight_start, weight_stop, weight_step_size)
 

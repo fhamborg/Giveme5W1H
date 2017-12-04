@@ -2,7 +2,6 @@ import logging
 import os
 
 from Giveme5W_enhancer.enhancer.aida import Aida
-from Giveme5W_enhancer.enhancer.heideltime import Heideltime
 from extractor.extractor import FiveWExtractor
 from extractor.tools.file.handler import Handler
 from extractors import action_extractor
@@ -56,7 +55,7 @@ if __name__ == '__main__':
         cause_extractor.CauseExtractor(),
         method_extractor.MethodExtractor()
     ], enhancement=[
-       # Heideltime(['when']),
+        # Heideltime(['when']),
         Aida(['how', 'when', 'why', 'where', 'what', 'who'])
     ])
 

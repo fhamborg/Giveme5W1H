@@ -16,7 +16,7 @@ class MethodExtractor(AbsExtractor):
                    'am', 'as', 'even', 'however', 'other', 'just', 'over', 'more', 'say', 'also']
     _stop_ner = ['TIME', 'DATE', 'ORGANIZATION', 'DURATION', 'ORDINAL']
 
-    def __init__(self, weights: (float,float) = [1.0, 1.0]):
+    def __init__(self, weights: (float, float) = [1.0, 1.0]):
         """
          weights used in the candidate evaluation:
         (position, frequency)
@@ -113,7 +113,7 @@ class MethodExtractor(AbsExtractor):
                         [[({'nlpToken': token}, token['pos'], token)], None, sentence['index'], 'adjectiv'])
         return candidates
 
-    def _evaluate_candidates(self,  document: Document):
+    def _evaluate_candidates(self, document: Document):
         """
         :param document: The parsed document
         :type document: Document
@@ -175,7 +175,6 @@ class MethodExtractor(AbsExtractor):
         candidates.sort(key=lambda x: x.get_score(), reverse=True)
         document.set_answer('how', self._fix_format(candidates))
 
-
     def _fix_format(self, candidates):
         '''
         helper to convert parts to the new format
@@ -219,8 +218,6 @@ class MethodExtractor(AbsExtractor):
             'lemma'] not in self._stop_words) or candidate_parts_len > 1):
             return candidate_parts
         return None
-
-
 
     def _is_relevant_pos(self, pos):
         # Is adjective or adverb

@@ -53,7 +53,6 @@ class CauseExtractor(AbsExtractor):
             self.log.warning('Could not find corpus for WordNet, will now try to download the corpus.')
             nltk.download('wordnet')
 
-
         if weights:
             self.weights = weights
 
@@ -74,8 +73,6 @@ class CauseExtractor(AbsExtractor):
             self.constraints_hyponyms[noun] = hyponyms
 
         self.lemmatizer = WordNetLemmatizer()
-
-
 
     def _extract_candidates(self, document):
         """
@@ -215,7 +212,9 @@ class CauseExtractor(AbsExtractor):
                 # If we come along an adverb (RB) check the adverbials that indicate causation
                 candidates.append(deepcopy([pos[:i], pos[i - 1:], 'RB']))
 
-            elif token in self.clausal_conjunctions and ' '.join([x['nlpToken']['originalText'] for x in tokens[i:]]).lower().startswith( self.clausal_conjunctions[token]):
+            elif token in self.clausal_conjunctions and ' '.join(
+                    [x['nlpToken']['originalText'] for x in tokens[i:]]).lower().startswith(
+                    self.clausal_conjunctions[token]):
                 # Check if token is a clausal conjunction indicating causation
                 candidates.append(deepcopy([pos[i - 1:], pos[:i], 'biclausal']))
 

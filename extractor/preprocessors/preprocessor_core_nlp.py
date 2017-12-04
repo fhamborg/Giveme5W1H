@@ -79,7 +79,6 @@ class Preprocessor:
 
         return result
 
-
     def _build_actual_config(self, document):
         """
         Creates the actual config, consisting of the base_config and dynamic_params. if the same key exists in both
@@ -92,7 +91,6 @@ class Preprocessor:
         }
         actual_config = {**self.base_config, **dynamic_config}
         return actual_config
-
 
     def preprocess(self, document):
         """

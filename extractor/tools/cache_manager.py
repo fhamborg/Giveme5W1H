@@ -38,7 +38,6 @@ class CacheManager:
             self._instances[instance].persist()
         self._lock.release()
 
-
     @classmethod
     def instance(cls):
         """

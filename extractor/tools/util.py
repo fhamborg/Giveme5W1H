@@ -45,6 +45,7 @@ def bytes_2_human_readable(number_of_bytes):
 
     return str(number_of_bytes) + ' ' + unit
 
+
 def cmp_text(annotation, candidate):
     """
     Compare the retrieved answer with the annotation using WordNet path distance.

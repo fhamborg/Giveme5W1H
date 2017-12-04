@@ -1,11 +1,7 @@
 import logging
-import os
 
-from extractor.extractor import FiveWExtractor
 from extractor.document import Document
-
-from extractor.tools.file.handler import Handler
-import json
+from extractor.extractor import FiveWExtractor
 
 """
 This is a simple example how to use the extractor in combination with a dict in news-please format.
@@ -67,7 +63,6 @@ Afghanistan got scarcely a passing mention in the election campaign - even thoug
 President-elect Donald Trump is set to inherit America's longest war with no end in sight.
 """
 date_publish = '2016-11-10 07:44:00'
-
 
 if __name__ == '__main__':
     # logger setup

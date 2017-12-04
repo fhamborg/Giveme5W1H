@@ -1,26 +1,29 @@
 import os
 import pickle
+
 import numpy as np
-import time
 
 
 class WorkQueue(object):
-
-    def __init__(self, id: str, generator=None):
+    def __init__(self, id: str = None, generator: str = 'default'):
         """
 
         :param id:
         :param generator: method to generate a _queue
         """
-        self._id = id
+        if id:
+            self._id = id
+        else:
+            self._id = generator
         self._weights_range = None
         self.phrase_range_location = None
         self.phrase_range_time_date = None
         self.time_range = None
         self._queue = None
         self._queue_processed = None
-        self._queue_path = os.path.dirname(__file__) + '/cache/'+id+'_queue.prickle'
-        self._queue_processed_path = os.path.dirname(__file__) + '/cache/'+id+'_queue_processed.prickle'
+        self._queue_path = os.path.dirname(__file__) + '/cache/' + self._id + '_queue.prickle'
+        self._queue_processed_path = os.path.dirname(__file__) + '/cache/' + self._id + '_queue_processed.prickle'
+        self._unique_weights = {}
 
         if generator is None:
             self._queue_processed = []
@@ -31,14 +34,16 @@ class WorkQueue(object):
             self._queue = []
             self._generator = generator
 
-
     def get_queue_count(self):
         return len(self._queue)
 
-    def setup_scoring_parameters(self,  weight_start: float = 0.1 , weight_stop: float = 1, weight_step_size: float = 0.1):
+    def setup_scoring_parameters(self, weight_start: float = 0.1, weight_stop: float = 1,
+                                 weight_step_size: float = 0.1):
         self._weights_range = np.arange(weight_start, weight_stop, weight_step_size)
 
-    def setup_extracting_parameters(self, phrase_range_location: np.arange = np.arange(3, 4), phrase_range_time_date: np.arange=np.arange(1, 2), time_range: np.arange=np.arange(86400, 86401)):
+    def setup_extracting_parameters(self, phrase_range_location: np.arange = np.arange(3, 4),
+                                    phrase_range_time_date: np.arange = np.arange(1, 2),
+                                    time_range: np.arange = np.arange(86400, 86401)):
         self.phrase_range_location = phrase_range_location
         self.phrase_range_time_date = phrase_range_time_date
         self.time_range = time_range
@@ -57,16 +62,23 @@ class WorkQueue(object):
 
         else:
             print('generating a new queue')
-            self._queue_processed =[]
+            self._queue_processed = []
             self._queue = []
-            self._generator(self)
 
+            if self._generator == 'default':
+                self._generate_default()
+            elif self._generator == 'method':
+                self._generate_method()
+            elif self._generator == 'cause':
+                self._generate_cause()
+            elif self._generator == 'environment':
+                self._generate_environment()
+            elif self._generator == 'action':
+                self._generate_action()
 
-
-    def resolve_document(self, last_item,  dId, result):
+    def resolve_document(self, last_item, dId, result):
         """
-        adds the quee item adds the result and attached if per document to
-        queue_processed
+        takes a queue item, attached result per document, and appends it to queue_processed
 
         :param result:
         :return:
@@ -100,19 +112,92 @@ class WorkQueue(object):
             return self._queue[-1]
         return None
 
-    def generate_action(self):
+    def vector_is_unique(self, weights):
+        if sum(weights) == 0:
+            False
 
+        # set se first not null weight to * 1000 (int) (overcome floating error)
+        for weight in weights:
+            if weight != 0:
+                scaleFactor = 10000 / weight
+                break
+        # scale vector
+        scaled_weights = []
+        for weight in weights:
+            if weight != 0:
+                scaled_weights.append(int(scaleFactor * weight))
+
+        # build a string representation
+        scaled_weights_string = [str(x) for x in scaled_weights]
+        scaled_weights_string = ''.join(scaled_weights_string)
+
+        if self._unique_weights.get(scaled_weights_string, False):
+            return False
+        else:
+            self._unique_weights[scaled_weights_string] = True
+            return True
+
+    def _generate_method(self):
+        # (float, float)
         for i in self._weights_range:
             for j in self._weights_range:
-                for k in self._weights_range:
+                weights = (i, j)
+                if self.vector_is_unique(weights):
                     self._queue.append({
                         'extracting_parameters_id': 1,
                         'scoring_parameters': {
-                            'weights': (i, j, k)
+                            'weights': (i, j)
                         },
                         'extracting_parameters': {}})
 
-    def _generate_full_combination(self):
+    def _generate_cause(self):
+        # (float, float, float, float)
+        for i in self._weights_range:
+            for j in self._weights_range:
+                for k in self._weights_range:
+                    for l in self._weights_range:
+
+                        weights = (i, j, k, l)
+                        if self.vector_is_unique(weights):
+                            self._queue.append({
+                                'extracting_parameters_id': 1,
+                                'scoring_parameters': {
+                                    'weights': weights
+                                },
+                                'extracting_parameters': {}})
+
+    def _generate_environment(self):
+        # (0.5, 0.8), (0.8, 0.7, 0.5, 0.5, 0.5)
+        for i in self._weights_range:
+            for j in self._weights_range:
+                for k in self._weights_range:
+                    for l in self._weights_range:
+                        for m in self._weights_range:
+                            for n in self._weights_range:
+                                for o in self._weights_range:
+                                    weights = (i, j, k, l, m, n, o)
+                                    if self.vector_is_unique(weights):
+                                        self._queue.append({
+                                            'extracting_parameters_id': 1,
+                                            'scoring_parameters': {
+                                                'weights': weights
+                                            },
+                                            'extracting_parameters': {}})
+
+    def _generate_action(self):
+        for i in self._weights_range:
+            for j in self._weights_range:
+                for k in self._weights_range:
+                    weights = (i, j, k)
+                    if self.vector_is_unique(weights):
+                        self._queue.append({
+                            'extracting_parameters_id': 1,
+                            'scoring_parameters': {
+                                'weights': weights
+                            },
+                            'extracting_parameters': {}})
+
+    def _generate_default(self):
         """
         https://www.hackmath.net/en/calculator/combinations-and-permutations?n=19&k=4&order=1&repeat=1
         130321 per
@@ -134,16 +219,13 @@ class WorkQueue(object):
                             for k in self._weights_range:
                                 for l in self._weights_range:
                                     self._queue.append({
-                                       'extracting_parameters_id': extracting_parameters_id,
-                                       'scoring_parameters': {
-                                           'weights': (i, j, k, l)
-                                       },
-                                       'extracting_parameters': {
-                                           'phrase_range_location': phrase_range_location,
-                                           'phrase_range_time_date': phrase_range_time_date,
-                                           'time_range': time_range
-                                       }})
+                                        'extracting_parameters_id': extracting_parameters_id,
+                                        'scoring_parameters': {
+                                            'weights': (i, j, k, l)
+                                        },
+                                        'extracting_parameters': {
+                                            'phrase_range_location': phrase_range_location,
+                                            'phrase_range_time_date': phrase_range_time_date,
+                                            'time_range': time_range
+                                        }})
                     extracting_parameters_id = extracting_parameters_id + 1
-
-
-

@@ -1,7 +1,6 @@
 import glob
-import json
-
 import io
+import json
 
 links = {}
 for filepath in glob.glob('output/*.json'):

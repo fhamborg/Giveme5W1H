@@ -1,11 +1,9 @@
 import logging
 import warnings
-import nltk
-
 from abc import ABCMeta, abstractmethod
 from itertools import product
 
-
+import nltk
 from nltk.corpus import wordnet
 
 from document import Document
@@ -59,7 +57,6 @@ class AbsExtractor:
         :return:
         """
         return str(self.__class__.__name__)
-
 
     def _extract_entities(self, tokens, filter=None, inverted=False, phrase_range=1, groups=None, accessor='ner'):
         """
@@ -241,7 +238,6 @@ class AbsExtractor:
             return 0
         return score / n
 
-
     def _pos_linked_to_corenlp_tokens(self, tree):
         """
         Most of the extractor work with a tree structure and don`t save any backlink to the original text or
@@ -276,7 +272,6 @@ class AbsExtractor:
             candidate_parts_as_list.append(parts_as_list)
 
         return [tuple(x) for x in candidate_parts_as_list]
-
 
     def _count_elements(self, root):
         """

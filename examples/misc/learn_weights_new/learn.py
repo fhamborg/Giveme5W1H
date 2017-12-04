@@ -1,18 +1,9 @@
-import json
-import logging
-import math
-import os
-import pickle
-import socket
 import datetime
-import sys
-from threading import Thread
-from dateutil.relativedelta import relativedelta as rd
-
-
+import socket
 import time
 
-from combined_scoring import distance_of_candidate
+from dateutil.relativedelta import relativedelta as rd
+
 from extractor.extractor import FiveWExtractor
 from extractor.root import path
 from extractor.tools.file.handler import Handler
@@ -22,20 +13,18 @@ from extractor.tools.util import cmp_text, cmp_date, cmp_location
 # sys.path.insert(0, '/'.join(os.path.realpath(__file__).split('/')[:-2]))
 # from timeit import default_timer as timer
 # core_nlp_host = 'http://localhost:9000'
-from extractors import environment_extractor, action_extractor, cause_extractor, method_extractor
-from misc.learn_weights_new.work_queue import WorkQueue
 
 fmt = '{0.days} days {0.hours} hours {0.minutes} minutes {0.seconds} seconds'
 
 
 class Learn(object):
-    def __init__(self,input_path, preprocessed_path, extractors,  queue, combined_scorer=None):
-         self._input_path = input_path
-         self._pre_processed_path = preprocessed_path
-         self._extractors = extractors
-         self._combined_scorer = combined_scorer
-         self._queue = queue
-         self._documents, self._extractor_object = self.load_documents(extractors, combined_scorer)
+    def __init__(self, input_path, preprocessed_path, extractors, queue, combined_scorer=None):
+        self._input_path = input_path
+        self._pre_processed_path = preprocessed_path
+        self._extractors = extractors
+        self._combined_scorer = combined_scorer
+        self._queue = queue
+        self._documents, self._extractor_object = self.load_documents(extractors, combined_scorer)
 
     def load_documents(self, extractors, combined_scorer):
         inputPath = path(self._input_path)
@@ -45,7 +34,7 @@ class Learn(object):
         if combined_scorer is not None:
             _combined_scorers = [combined_scorer]
         else:
-            _combined_scorers = None
+            _combined_scorers = []
         extractor_object = FiveWExtractor(extractors=list(extractors.values()), combined_scorers=_combined_scorers)
 
         # Put all together, run it once, get the cached document objects
@@ -66,7 +55,7 @@ class Learn(object):
 
         return docments, extractor_object
 
-    def _cmp_text_helper(self,question, answers, annotations, weights, result):
+    def _cmp_text_helper(self, question, answers, annotations, weights, result):
         score = -1
         # check if there is an annotaton and an answer
         if question in annotations and question in answers and len(annotations[question]) > 0 and len(
@@ -80,7 +69,7 @@ class Learn(object):
                         score = max(tmp_score, score)
         result[question] = (question, weights, score)
 
-    def _cmp_date_helper(self,question, answers, annotations, weights, calendar, result):
+    def _cmp_date_helper(self, question, answers, annotations, weights, calendar, result):
         score = -1
         # check if there is an annotaton and an answer
         if question in annotations and question in answers and len(annotations[question]) > 0 and len(
@@ -95,7 +84,7 @@ class Learn(object):
 
         result[question] = (question, weights, score)
 
-    def _cmp_location_helper(self,question, answers, annotations, weights, geocoder, result):
+    def _cmp_location_helper(self, question, answers, annotations, weights, geocoder, result):
         score = -1
         # check if there is an annotaton and answer
         if question in annotations and question in answers and len(annotations[question]) > 0 and len(
@@ -109,7 +98,7 @@ class Learn(object):
                         score = max(tmp_score, score)
         result[question] = (question, weights, score)
 
-    def _log_progress(self,queue, documents, start, end):
+    def _log_progress(self, queue, documents, start, end):
         count = queue.get_queue_count()
         doc_count = len(documents)
         print('There are ' + str(count * doc_count) + ' steps to go')
@@ -147,14 +136,14 @@ class Learn(object):
                 # adjust weights
                 weights = next_item['scoring_parameters']['weights']
 
-
                 if self._extractors.get('action'):
                     #
                     self._extractors['action'].weights = (weights[0], weights[1], weights[2])
 
                 if self._extractors.get('environment'):
                     # time
-                    self._extractors['environment'].weights = ((weights[0], weights[1]), (weights[0], weights[1], weights[2], weights[3]))
+                    self._extractors['environment'].weights = (
+                    (weights[0], weights[1]), (weights[0], weights[1], weights[2], weights[3], weights[4]))
 
                 if self._extractors.get('cause'):
                     # cause - (position, conjunction, adverb, verb)
@@ -179,7 +168,8 @@ class Learn(object):
                     result = {}
 
                     if self._extractors.get('cause'):
-                        self._cmp_text_helper('why', answers, annotation, [weights[0], weights[1], weights[2], weights[3]], result)
+                        self._cmp_text_helper('why', answers, annotation,
+                                              [weights[0], weights[1], weights[2], weights[3]], result)
                     if self._extractors.get('action'):
                         self._cmp_text_helper('what', answers, annotation, [weights[0], weights[1], weights[2]], result)
                         self._cmp_text_helper('who', answers, annotation, [weights[0], weights[1], weights[2]], result)
@@ -189,7 +179,8 @@ class Learn(object):
 
                     # These two are tricky because of the used online services
                     if self._extractors.get('environment'):
-                        self._cmp_date_helper('when', answers, annotation, [weights[0], weights[1], weights[2], weights[3]], calendar, result)
+                        self._cmp_date_helper('when', answers, annotation,
+                                              [weights[0], weights[1], weights[2], weights[3]], calendar, result)
 
                     # try:
                     # cmp_location_helper('where', answers, annotation, [i, weights[1]], geocoder, result)

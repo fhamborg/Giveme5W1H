@@ -6,8 +6,9 @@ import threading
 import time
 from typing import List
 
-from tools.util import bytes_2_human_readable
 from root import path
+from tools.util import bytes_2_human_readable
+
 
 class KeyValueCache(object):
     def __init__(self, cache_path):
@@ -72,7 +73,6 @@ class KeyValueCache(object):
 
         self._lock.release()
         return result
-
 
     def get_complex(self, list_of_keys: List[str]):
         """

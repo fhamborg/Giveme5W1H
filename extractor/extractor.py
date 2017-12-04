@@ -40,7 +40,6 @@ class FiveWExtractor:
         :param enhancement:
         """
 
-
         # first initialize logger
         self.log = logging.getLogger('GiveMe5W')
 
@@ -68,7 +67,7 @@ class FiveWExtractor:
             self.log.info('No combinedScorers passed: initializing default configuration.')
 
             self.combinedScorers = [
-                distance_of_candidate.DistanceOfCandidate(('what', 'who'), ('how'))
+                distance_of_candidate.DistanceOfCandidate(['what', 'who'], 'how')
             ]
 
         self.q = queue.Queue()
@@ -110,7 +109,7 @@ class FiveWExtractor:
         self.q.join()
 
         # apply combined_scoring
-        if self.combinedScorers and isinstance(self.combinedScorers,list) and len(self.combinedScorers) > 0:
+        if self.combinedScorers and isinstance(self.combinedScorers, list) and len(self.combinedScorers) > 0:
             for combinedScorer in self.combinedScorers:
                 combinedScorer.score(doc)
         doc.is_processed(True)

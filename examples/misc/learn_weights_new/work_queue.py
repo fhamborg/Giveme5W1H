@@ -64,6 +64,7 @@ class WorkQueue(object):
             print('generating a new queue')
             self._queue_processed = []
             self._queue = []
+            self._unique_weights = {}
 
             if self._generator == 'default':
                 self._generate_default()
@@ -113,6 +114,20 @@ class WorkQueue(object):
         return None
 
     def vector_is_unique(self, weights):
+        """
+        this is refusing vectors with the same weight ratio, if one was already used
+        e.g
+        [0.1, 0,1] and [0.2, 0,2]
+        [0.2, 0,4] and [0.4, 0,8]
+
+
+        - sets the first not null weight to * 1000 (int) (overcome floating error)
+        - scales all other weights with the same factor
+        - stores string rep. to be combarable with other vectors
+
+        :param weights:
+        :return:
+        """
         if sum(weights) == 0:
             False
 

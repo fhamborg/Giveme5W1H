@@ -100,9 +100,9 @@ if __name__ == '__main__':
 
     # basic leaner
     log.setLevel(logging.WARNING)
-    # q.put(action())
-    # q.put(environment())
-    # q.put(cause())
+    q.put(action())
+    q.put(environment())
+    q.put(cause())
     q.put(method())
     log.setLevel(logging.INFO)
     # creating worker threads
@@ -111,5 +111,5 @@ if __name__ == '__main__':
         t.daemon = True
         t.start()
 
-    # wait till oll extractors are done
+    # wait till all extractors are done
     q.join()

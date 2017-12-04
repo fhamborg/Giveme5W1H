@@ -146,26 +146,23 @@ class Learn(object):
 
                 # adjust weights
                 weights = next_item['scoring_parameters']['weights']
-                i = weights[0]
-                j = weights[1]
-                k = weights[2]
-                l = weights[3]
+
 
                 if self._extractors.get('action'):
                     #
-                    self._extractors['action'].weights = (i, j, k)
+                    self._extractors['action'].weights = (weights[0], weights[1], weights[2])
 
                 if self._extractors.get('environment'):
                     # time
-                    self._extractors['environment'].weights = ((i, j), (i, j, k, l))
+                    self._extractors['environment'].weights = ((weights[0], weights[1]), (weights[0], weights[1], weights[2], weights[3]))
 
                 if self._extractors.get('cause'):
                     # cause - (position, conjunction, adverb, verb)
-                    self._extractors['cause'].weights = (i, j, k, l)
+                    self._extractors['cause'].weights = (weights[0], weights[1], weights[2], weights[3])
 
                 if self._extractors.get('method'):
                     # method - (position, frequency)
-                    self._extractors['method'].weights = (i, j)
+                    self._extractors['method'].weights = (weights[0], weights[1])
 
                 combination_start_stamp = datetime.datetime.now()
                 # run for all documents
@@ -181,19 +178,21 @@ class Learn(object):
 
                     result = {}
 
-                    self._cmp_text_helper('why', answers, annotation, [i, j, k, l], result)
-                    self._cmp_text_helper('what', answers, annotation, [i, j, k], result)
-                    self._cmp_text_helper('who', answers, annotation, [i, j, k], result)
+                    if self._extractors.get('cause'):
+                        self._cmp_text_helper('why', answers, annotation, [weights[0], weights[1], weights[2], weights[3]], result)
+                    if self._extractors.get('action'):
+                        self._cmp_text_helper('what', answers, annotation, [weights[0], weights[1], weights[2]], result)
+                        self._cmp_text_helper('who', answers, annotation, [weights[0], weights[1], weights[2]], result)
 
                     if self._extractors.get('method'):
-                        self._cmp_text_helper('how', answers, annotation, [i, j], result)
+                        self._cmp_text_helper('how', answers, annotation, [weights[0], weights[1]], result)
 
                     # These two are tricky because of the used online services
                     if self._extractors.get('environment'):
-                        self._cmp_date_helper('when', answers, annotation, [i, j, k, l], calendar, result)
+                        self._cmp_date_helper('when', answers, annotation, [weights[0], weights[1], weights[2], weights[3]], calendar, result)
 
                     # try:
-                    # cmp_location_helper('where', answers, annotation, [i, j], geocoder, result)
+                    # cmp_location_helper('where', answers, annotation, [i, weights[1]], geocoder, result)
                     # except socket.timeout:
                     # print('online service (prob nominatim) did`t work, we ignore this')
 

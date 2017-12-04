@@ -215,9 +215,7 @@ class CauseExtractor(AbsExtractor):
                 # If we come along an adverb (RB) check the adverbials that indicate causation
                 candidates.append(deepcopy([pos[:i], pos[i - 1:], 'RB']))
 
-            elif token in self.clausal_conjunctions and ' '.join(
-                    [x['nlpToken']['originalText'] for x in tokens[i:]]).lower().startswith(
-                self.clausal_conjunctions[token]):
+            elif token in self.clausal_conjunctions and ' '.join([x['nlpToken']['originalText'] for x in tokens[i:]]).lower().startswith( self.clausal_conjunctions[token]):
                 # Check if token is a clausal conjunction indicating causation
                 candidates.append(deepcopy([pos[i - 1:], pos[:i], 'biclausal']))
 

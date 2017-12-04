@@ -252,6 +252,54 @@
       ],
       "label": "how"
     },
+    "where": {
+      "extracted": [],
+      "label": "where"
+    },
+    "when": {
+      "extracted": [
+        {
+          "parts": [
+            [
+              {
+                "nlpToken": {
+                  "index": 25,
+                  "word": "Monday",
+                  "originalText": "Monday",
+                  "lemma": "Monday",
+                  "characterOffsetBegin": 1481,
+                  "characterOffsetEnd": 1487,
+                  "pos": "NNP",
+                  "ner": "DATE",
+                  "normalizedNER": "2017-10-02",
+                  "speaker": "PER0",
+                  "before": " ",
+                  "after": "",
+                  "timex": {
+                    "tid": "t7",
+                    "type": "DATE",
+                    "value": "2017-10-02"
+                  }
+                }
+              },
+              "NNP"
+            ]
+          ],
+          "score": 0.6055593493676551,
+          "text": "Monday",
+          "enhancement": {
+            "timex": [
+              {
+                "start_date": "2017-10-02T00:00:00",
+                "end_date": "2017-10-02T23:59:59"
+              }
+            ]
+          },
+          "nlpIndexSentence": 10
+        }
+      ],
+      "label": "when"
+    },
     "why": {
       "extracted": [
         {
@@ -589,54 +637,6 @@
         }
       ],
       "label": "why"
-    },
-    "where": {
-      "extracted": [],
-      "label": "where"
-    },
-    "when": {
-      "extracted": [
-        {
-          "parts": [
-            [
-              {
-                "nlpToken": {
-                  "index": 25,
-                  "word": "Monday",
-                  "originalText": "Monday",
-                  "lemma": "Monday",
-                  "characterOffsetBegin": 1481,
-                  "characterOffsetEnd": 1487,
-                  "pos": "NNP",
-                  "ner": "DATE",
-                  "normalizedNER": "2017-10-02",
-                  "speaker": "PER0",
-                  "before": " ",
-                  "after": "",
-                  "timex": {
-                    "tid": "t7",
-                    "type": "DATE",
-                    "value": "2017-10-02"
-                  }
-                }
-              },
-              "NNP"
-            ]
-          ],
-          "score": 0.6055593493676551,
-          "text": "Monday",
-          "enhancement": {
-            "timex": [
-              {
-                "start_date": "2017-10-02T00:00:00",
-                "end_date": "2017-10-02T23:59:59"
-              }
-            ]
-          },
-          "nlpIndexSentence": 10
-        }
-      ],
-      "label": "when"
     }
   }
 }

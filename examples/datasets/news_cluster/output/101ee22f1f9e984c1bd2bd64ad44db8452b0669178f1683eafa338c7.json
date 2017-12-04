@@ -57,6 +57,156 @@
       ],
       "label": "how"
     },
+    "where": {
+      "extracted": [
+        {
+          "parts": [
+            [
+              {
+                "nlpToken": {
+                  "index": 12,
+                  "word": "Brazil",
+                  "originalText": "Brazil",
+                  "lemma": "Brazil",
+                  "characterOffsetBegin": 78,
+                  "characterOffsetEnd": 84,
+                  "pos": "NNP",
+                  "ner": "LOCATION",
+                  "speaker": "PER0",
+                  "before": " ",
+                  "after": ""
+                },
+                "aida": [
+                  {
+                    "mention": {
+                      "allEntities": [
+                        {
+                          "kbIdentifier": "YAGO:Brazil",
+                          "disambiguationScore": "0.57786"
+                        }
+                      ],
+                      "offset": 78,
+                      "name": "Brazil",
+                      "length": 6,
+                      "bestEntity": {
+                        "kbIdentifier": "YAGO:Brazil",
+                        "disambiguationScore": "0.57786"
+                      }
+                    },
+                    "bestEntityMetadata": {
+                      "knowledgebase": "YAGO",
+                      "depictionurl": "http://upload.wikimedia.org/wikipedia/en/0/05/Flag_of_Brazil.svg",
+                      "depictionthumbnailurl": "http://upload.wikimedia.org/wikipedia/en/thumbFlag_of_Brazil.svg/200px-Flag_of_Brazil.svg",
+                      "importance": 7.79940596381577e-06,
+                      "entityId": "Brazil",
+                      "type": [
+                        "YAGO_wordnet_system_108435388",
+                        "YAGO_wordnet_district_108552138",
+                        "YAGO_wikicategory_Countries_in_South_America",
+                        "YAGO_yagoPermanentlyLocatedEntity",
+                        "YAGO_yagoLegalActorGeo",
+                        "YAGO_wikicategory_Portuguese\\u002dspeaking_countries_and_territories",
+                        "YAGO_wordnet_state_108654360",
+                        "YAGO_wikicategory_Member_states_of_the_Union_of_South_American_Nations",
+                        "YAGO_wordnet_country_108544813",
+                        "YAGO_wikicategory_Member_states_of_the_United_Nations",
+                        "YAGO_wordnet_economy_108366753",
+                        "YAGO_wordnet_abstraction_100002137",
+                        "YAGO_wordnet_region_108630985",
+                        "YAGO_yagoGeoEntity",
+                        "YAGO_wikicategory_Romance_countries_and_territories",
+                        "YAGO_wikicategory_World_Trade_Organization_member_economies",
+                        "YAGO_wikicategory_Member_states_of_the_Community_of_Portuguese_Language_Countries",
+                        "YAGO_wordnet_physical_entity_100001930",
+                        "YAGO_wordnet_entity_100001740",
+                        "YAGO_wikicategory_Member_states_of_Mercosur",
+                        "YAGO_wordnet_object_100002684",
+                        "YAGO_wordnet_group_100031264",
+                        "YAGO_wikicategory_Latin_American_countries",
+                        "YAGO_wikicategory_States_and_territories_established_in_1822",
+                        "YAGO_wordnet_location_100027167",
+                        "YAGO_wordnet_administrative_district_108491826"
+                      ],
+                      "readableRepr": "Brazil",
+                      "url": "http://en.wikipedia.org/wiki/Brazil"
+                    }
+                  }
+                ]
+              },
+              "NNP"
+            ]
+          ],
+          "score": 1.0,
+          "text": "Brazil",
+          "enhancement": {
+            "openstreetmap_nominatim": {
+              "place_id": "179383758",
+              "licence": "Data \u00a9 OpenStreetMap contributors, ODbL 1.0. http://www.openstreetmap.org/copyright",
+              "osm_type": "relation",
+              "osm_id": "59470",
+              "boundingbox": [
+                -33.8689056,
+                5.2842873,
+                -73.9830625,
+                -28.6341164
+              ],
+              "lat": "-10.3333333",
+              "lon": "-53.2",
+              "display_name": "Brasil",
+              "class": "boundary",
+              "type": "administrative",
+              "importance": 0.21948000558855,
+              "icon": "https://nominatim.openstreetmap.org/images/mapicons/poi_boundary_administrative.p.20.png"
+            }
+          }
+        }
+      ],
+      "label": "where"
+    },
+    "when": {
+      "extracted": [
+        {
+          "parts": [
+            [
+              {
+                "nlpToken": {
+                  "index": 38,
+                  "word": "today",
+                  "originalText": "today",
+                  "lemma": "today",
+                  "characterOffsetBegin": 1909,
+                  "characterOffsetEnd": 1914,
+                  "pos": "NN",
+                  "ner": "DATE",
+                  "normalizedNER": "2016-11-13",
+                  "speaker": "PER0",
+                  "before": " ",
+                  "after": "",
+                  "timex": {
+                    "tid": "t5",
+                    "type": "DATE",
+                    "value": "2016-11-13"
+                  }
+                }
+              },
+              "NN"
+            ]
+          ],
+          "score": 0.701465782116193,
+          "text": "today",
+          "enhancement": {
+            "timex": [
+              {
+                "start_date": "2016-11-13T00:00:00",
+                "end_date": "2016-11-13T23:59:59"
+              }
+            ]
+          },
+          "nlpIndexSentence": 9
+        }
+      ],
+      "label": "when"
+    },
     "who": {
       "extracted": [
         {
@@ -1201,156 +1351,6 @@
         }
       ],
       "label": "why"
-    },
-    "where": {
-      "extracted": [
-        {
-          "parts": [
-            [
-              {
-                "nlpToken": {
-                  "index": 12,
-                  "word": "Brazil",
-                  "originalText": "Brazil",
-                  "lemma": "Brazil",
-                  "characterOffsetBegin": 78,
-                  "characterOffsetEnd": 84,
-                  "pos": "NNP",
-                  "ner": "LOCATION",
-                  "speaker": "PER0",
-                  "before": " ",
-                  "after": ""
-                },
-                "aida": [
-                  {
-                    "mention": {
-                      "allEntities": [
-                        {
-                          "kbIdentifier": "YAGO:Brazil",
-                          "disambiguationScore": "0.57786"
-                        }
-                      ],
-                      "offset": 78,
-                      "name": "Brazil",
-                      "length": 6,
-                      "bestEntity": {
-                        "kbIdentifier": "YAGO:Brazil",
-                        "disambiguationScore": "0.57786"
-                      }
-                    },
-                    "bestEntityMetadata": {
-                      "knowledgebase": "YAGO",
-                      "depictionurl": "http://upload.wikimedia.org/wikipedia/en/0/05/Flag_of_Brazil.svg",
-                      "depictionthumbnailurl": "http://upload.wikimedia.org/wikipedia/en/thumbFlag_of_Brazil.svg/200px-Flag_of_Brazil.svg",
-                      "importance": 7.79940596381577e-06,
-                      "entityId": "Brazil",
-                      "type": [
-                        "YAGO_wordnet_system_108435388",
-                        "YAGO_wordnet_district_108552138",
-                        "YAGO_wikicategory_Countries_in_South_America",
-                        "YAGO_yagoPermanentlyLocatedEntity",
-                        "YAGO_yagoLegalActorGeo",
-                        "YAGO_wikicategory_Portuguese\\u002dspeaking_countries_and_territories",
-                        "YAGO_wordnet_state_108654360",
-                        "YAGO_wikicategory_Member_states_of_the_Union_of_South_American_Nations",
-                        "YAGO_wordnet_country_108544813",
-                        "YAGO_wikicategory_Member_states_of_the_United_Nations",
-                        "YAGO_wordnet_economy_108366753",
-                        "YAGO_wordnet_abstraction_100002137",
-                        "YAGO_wordnet_region_108630985",
-                        "YAGO_yagoGeoEntity",
-                        "YAGO_wikicategory_Romance_countries_and_territories",
-                        "YAGO_wikicategory_World_Trade_Organization_member_economies",
-                        "YAGO_wikicategory_Member_states_of_the_Community_of_Portuguese_Language_Countries",
-                        "YAGO_wordnet_physical_entity_100001930",
-                        "YAGO_wordnet_entity_100001740",
-                        "YAGO_wikicategory_Member_states_of_Mercosur",
-                        "YAGO_wordnet_object_100002684",
-                        "YAGO_wordnet_group_100031264",
-                        "YAGO_wikicategory_Latin_American_countries",
-                        "YAGO_wikicategory_States_and_territories_established_in_1822",
-                        "YAGO_wordnet_location_100027167",
-                        "YAGO_wordnet_administrative_district_108491826"
-                      ],
-                      "readableRepr": "Brazil",
-                      "url": "http://en.wikipedia.org/wiki/Brazil"
-                    }
-                  }
-                ]
-              },
-              "NNP"
-            ]
-          ],
-          "score": 1.0,
-          "text": "Brazil",
-          "enhancement": {
-            "openstreetmap_nominatim": {
-              "place_id": "179383758",
-              "licence": "Data \u00a9 OpenStreetMap contributors, ODbL 1.0. http://www.openstreetmap.org/copyright",
-              "osm_type": "relation",
-              "osm_id": "59470",
-              "boundingbox": [
-                -33.8689056,
-                5.2842873,
-                -73.9830625,
-                -28.6341164
-              ],
-              "lat": "-10.3333333",
-              "lon": "-53.2",
-              "display_name": "Brasil",
-              "class": "boundary",
-              "type": "administrative",
-              "importance": 0.21948000558855,
-              "icon": "https://nominatim.openstreetmap.org/images/mapicons/poi_boundary_administrative.p.20.png"
-            }
-          }
-        }
-      ],
-      "label": "where"
-    },
-    "when": {
-      "extracted": [
-        {
-          "parts": [
-            [
-              {
-                "nlpToken": {
-                  "index": 38,
-                  "word": "today",
-                  "originalText": "today",
-                  "lemma": "today",
-                  "characterOffsetBegin": 1909,
-                  "characterOffsetEnd": 1914,
-                  "pos": "NN",
-                  "ner": "DATE",
-                  "normalizedNER": "2016-11-13",
-                  "speaker": "PER0",
-                  "before": " ",
-                  "after": "",
-                  "timex": {
-                    "tid": "t5",
-                    "type": "DATE",
-                    "value": "2016-11-13"
-                  }
-                }
-              },
-              "NN"
-            ]
-          ],
-          "score": 0.701465782116193,
-          "text": "today",
-          "enhancement": {
-            "timex": [
-              {
-                "start_date": "2016-11-13T00:00:00",
-                "end_date": "2016-11-13T23:59:59"
-              }
-            ]
-          },
-          "nlpIndexSentence": 9
-        }
-      ],
-      "label": "when"
     }
   }
 }

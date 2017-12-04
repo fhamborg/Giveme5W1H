@@ -57,6 +57,156 @@
       ],
       "label": "how"
     },
+    "where": {
+      "extracted": [
+        {
+          "parts": [
+            [
+              {
+                "nlpToken": {
+                  "index": 14,
+                  "word": "Spain",
+                  "originalText": "Spain",
+                  "lemma": "Spain",
+                  "characterOffsetBegin": 2352,
+                  "characterOffsetEnd": 2357,
+                  "pos": "NNP",
+                  "ner": "LOCATION",
+                  "speaker": "PER0",
+                  "before": " ",
+                  "after": ""
+                },
+                "aida": [
+                  {
+                    "mention": {
+                      "allEntities": [
+                        {
+                          "kbIdentifier": "YAGO:Spain",
+                          "disambiguationScore": "0.22957"
+                        }
+                      ],
+                      "offset": 2352,
+                      "name": "Spain",
+                      "length": 5,
+                      "bestEntity": {
+                        "kbIdentifier": "YAGO:Spain",
+                        "disambiguationScore": "0.22957"
+                      }
+                    },
+                    "bestEntityMetadata": {
+                      "knowledgebase": "YAGO",
+                      "depictionurl": "http://upload.wikimedia.org/wikipedia/en/9/9a/Flag_of_Spain.svg",
+                      "depictionthumbnailurl": "http://upload.wikimedia.org/wikipedia/en/thumbFlag_of_Spain.svg/200px-Flag_of_Spain.svg",
+                      "importance": 4.456803407894726e-06,
+                      "entityId": "Spain",
+                      "type": [
+                        "YAGO_wordnet_system_108435388",
+                        "YAGO_wordnet_district_108552138",
+                        "YAGO_yagoPermanentlyLocatedEntity",
+                        "YAGO_yagoLegalActorGeo",
+                        "YAGO_wordnet_state_108654360",
+                        "YAGO_wikicategory_Spanish\\u002dspeaking_countries_and_territories",
+                        "YAGO_wordnet_country_108544813",
+                        "YAGO_wikicategory_Member_states_of_the_United_Nations",
+                        "YAGO_wordnet_economy_108366753",
+                        "YAGO_wordnet_abstraction_100002137",
+                        "YAGO_wordnet_region_108630985",
+                        "YAGO_yagoGeoEntity",
+                        "YAGO_wikicategory_Romance_countries_and_territories",
+                        "YAGO_wikicategory_World_Trade_Organization_member_economies",
+                        "YAGO_wordnet_physical_entity_100001930",
+                        "YAGO_wordnet_entity_100001740",
+                        "YAGO_wikicategory_Member_states_of_NATO",
+                        "YAGO_wordnet_object_100002684",
+                        "YAGO_wordnet_group_100031264",
+                        "YAGO_wordnet_location_100027167",
+                        "YAGO_wordnet_administrative_district_108491826",
+                        "YAGO_wikicategory_Countries_in_Europe",
+                        "YAGO_wikicategory_Member_states_of_the_European_Union",
+                        "YAGO_wikicategory_European_Union_member_economies",
+                        "YAGO_wikicategory_Member_states_of_the_Union_for_the_Mediterranean"
+                      ],
+                      "readableRepr": "Spain",
+                      "url": "http://en.wikipedia.org/wiki/Spain"
+                    }
+                  }
+                ]
+              },
+              "NNP"
+            ]
+          ],
+          "score": 1.0,
+          "text": "Spain",
+          "enhancement": {
+            "openstreetmap_nominatim": {
+              "place_id": "179962651",
+              "licence": "Data \u00a9 OpenStreetMap contributors, ODbL 1.0. http://www.openstreetmap.org/copyright",
+              "osm_type": "relation",
+              "osm_id": "1311341",
+              "boundingbox": [
+                27.4335426,
+                43.9933088,
+                -18.3936845,
+                4.5918885
+              ],
+              "lat": "40.0028028",
+              "lon": "-4.003104",
+              "display_name": "Espa\u00f1a",
+              "class": "boundary",
+              "type": "administrative",
+              "importance": 0.22447060272487,
+              "icon": "https://nominatim.openstreetmap.org/images/mapicons/poi_boundary_administrative.p.20.png"
+            }
+          },
+          "nlpIndexSentence": 23
+        }
+      ],
+      "label": "where"
+    },
+    "when": {
+      "extracted": [
+        {
+          "parts": [
+            [
+              {
+                "nlpToken": {
+                  "index": 1,
+                  "word": "02:13",
+                  "originalText": "02:13",
+                  "lemma": "02:13",
+                  "characterOffsetBegin": 2282,
+                  "characterOffsetEnd": 2287,
+                  "pos": "CD",
+                  "ner": "TIME",
+                  "normalizedNER": "2016-03-18T02:13",
+                  "speaker": "PER0",
+                  "before": " ",
+                  "after": "\n",
+                  "timex": {
+                    "tid": "t6",
+                    "type": "TIME",
+                    "value": "2016-03-18T02:13"
+                  }
+                }
+              },
+              "CD"
+            ]
+          ],
+          "score": 0.6302817544427451,
+          "text": "02:13",
+          "enhancement": {
+            "timex": [
+              {
+                "start_date": "2016-03-18T02:13:00",
+                "end_date": "2016-03-18T02:13:59"
+              }
+            ]
+          },
+          "nlpIndexSentence": 23
+        }
+      ],
+      "label": "when"
+    },
     "who": {
       "extracted": [
         {
@@ -539,156 +689,6 @@
         }
       ],
       "label": "why"
-    },
-    "where": {
-      "extracted": [
-        {
-          "parts": [
-            [
-              {
-                "nlpToken": {
-                  "index": 14,
-                  "word": "Spain",
-                  "originalText": "Spain",
-                  "lemma": "Spain",
-                  "characterOffsetBegin": 2352,
-                  "characterOffsetEnd": 2357,
-                  "pos": "NNP",
-                  "ner": "LOCATION",
-                  "speaker": "PER0",
-                  "before": " ",
-                  "after": ""
-                },
-                "aida": [
-                  {
-                    "mention": {
-                      "allEntities": [
-                        {
-                          "kbIdentifier": "YAGO:Spain",
-                          "disambiguationScore": "0.22957"
-                        }
-                      ],
-                      "offset": 2352,
-                      "name": "Spain",
-                      "length": 5,
-                      "bestEntity": {
-                        "kbIdentifier": "YAGO:Spain",
-                        "disambiguationScore": "0.22957"
-                      }
-                    },
-                    "bestEntityMetadata": {
-                      "knowledgebase": "YAGO",
-                      "depictionurl": "http://upload.wikimedia.org/wikipedia/en/9/9a/Flag_of_Spain.svg",
-                      "depictionthumbnailurl": "http://upload.wikimedia.org/wikipedia/en/thumbFlag_of_Spain.svg/200px-Flag_of_Spain.svg",
-                      "importance": 4.456803407894726e-06,
-                      "entityId": "Spain",
-                      "type": [
-                        "YAGO_wordnet_system_108435388",
-                        "YAGO_wordnet_district_108552138",
-                        "YAGO_yagoPermanentlyLocatedEntity",
-                        "YAGO_yagoLegalActorGeo",
-                        "YAGO_wordnet_state_108654360",
-                        "YAGO_wikicategory_Spanish\\u002dspeaking_countries_and_territories",
-                        "YAGO_wordnet_country_108544813",
-                        "YAGO_wikicategory_Member_states_of_the_United_Nations",
-                        "YAGO_wordnet_economy_108366753",
-                        "YAGO_wordnet_abstraction_100002137",
-                        "YAGO_wordnet_region_108630985",
-                        "YAGO_yagoGeoEntity",
-                        "YAGO_wikicategory_Romance_countries_and_territories",
-                        "YAGO_wikicategory_World_Trade_Organization_member_economies",
-                        "YAGO_wordnet_physical_entity_100001930",
-                        "YAGO_wordnet_entity_100001740",
-                        "YAGO_wikicategory_Member_states_of_NATO",
-                        "YAGO_wordnet_object_100002684",
-                        "YAGO_wordnet_group_100031264",
-                        "YAGO_wordnet_location_100027167",
-                        "YAGO_wordnet_administrative_district_108491826",
-                        "YAGO_wikicategory_Countries_in_Europe",
-                        "YAGO_wikicategory_Member_states_of_the_European_Union",
-                        "YAGO_wikicategory_European_Union_member_economies",
-                        "YAGO_wikicategory_Member_states_of_the_Union_for_the_Mediterranean"
-                      ],
-                      "readableRepr": "Spain",
-                      "url": "http://en.wikipedia.org/wiki/Spain"
-                    }
-                  }
-                ]
-              },
-              "NNP"
-            ]
-          ],
-          "score": 1.0,
-          "text": "Spain",
-          "enhancement": {
-            "openstreetmap_nominatim": {
-              "place_id": "179962651",
-              "licence": "Data \u00a9 OpenStreetMap contributors, ODbL 1.0. http://www.openstreetmap.org/copyright",
-              "osm_type": "relation",
-              "osm_id": "1311341",
-              "boundingbox": [
-                27.4335426,
-                43.9933088,
-                -18.3936845,
-                4.5918885
-              ],
-              "lat": "40.0028028",
-              "lon": "-4.003104",
-              "display_name": "Espa\u00f1a",
-              "class": "boundary",
-              "type": "administrative",
-              "importance": 0.22447060272487,
-              "icon": "https://nominatim.openstreetmap.org/images/mapicons/poi_boundary_administrative.p.20.png"
-            }
-          },
-          "nlpIndexSentence": 23
-        }
-      ],
-      "label": "where"
-    },
-    "when": {
-      "extracted": [
-        {
-          "parts": [
-            [
-              {
-                "nlpToken": {
-                  "index": 1,
-                  "word": "02:13",
-                  "originalText": "02:13",
-                  "lemma": "02:13",
-                  "characterOffsetBegin": 2282,
-                  "characterOffsetEnd": 2287,
-                  "pos": "CD",
-                  "ner": "TIME",
-                  "normalizedNER": "2016-03-18T02:13",
-                  "speaker": "PER0",
-                  "before": " ",
-                  "after": "\n",
-                  "timex": {
-                    "tid": "t6",
-                    "type": "TIME",
-                    "value": "2016-03-18T02:13"
-                  }
-                }
-              },
-              "CD"
-            ]
-          ],
-          "score": 0.6302817544427451,
-          "text": "02:13",
-          "enhancement": {
-            "timex": [
-              {
-                "start_date": "2016-03-18T02:13:00",
-                "end_date": "2016-03-18T02:13:59"
-              }
-            ]
-          },
-          "nlpIndexSentence": 23
-        }
-      ],
-      "label": "when"
     }
   }
 }

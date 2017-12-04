@@ -51,16 +51,16 @@ if __name__ == '__main__':
     inputPath = path('../examples/datasets/gold_standard/data')
     preprocessedPath = path('../examples/datasets/gold_standard/cache')
 
-    queue = WorkQueue('default')
+    queue = WorkQueue('action', generator=WorkQueue.generate_action)
     queue.setup_scoring_parameters()
     queue.setup_extracting_parameters()
     queue.load()
 
     extractors = {
-        'action': action_extractor.ActionExtractor(),
-        'environment': environment_extractor.EnvironmentExtractor(),
-        'cause': cause_extractor.CauseExtractor(),
-        'method': method_extractor.MethodExtractor()
+         'action': action_extractor.ActionExtractor(),
+         #'environment': environment_extractor.EnvironmentExtractor(),
+         #'cause': cause_extractor.CauseExtractor(),
+         #'method': method_extractor.MethodExtractor()
     }
     #combined_scorer = distance_of_candidate.DistanceOfCandidate(('what', 'who'), ('how'))
     combined_scorer = None
@@ -69,7 +69,7 @@ if __name__ == '__main__':
     q.put(learn)
 
     # creating worker threads
-    for i in range(8):
+    for i in range(1):
         t = Worker(q)
         t.daemon = True
         t.start()

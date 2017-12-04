@@ -377,6 +377,112 @@
       ],
       "label": "what"
     },
+    "where": {
+      "extracted": [
+        {
+          "parts": [
+            [
+              {
+                "nlpToken": {
+                  "index": 7,
+                  "word": "Cincinnati",
+                  "originalText": "Cincinnati",
+                  "lemma": "Cincinnati",
+                  "characterOffsetBegin": 267,
+                  "characterOffsetEnd": 277,
+                  "pos": "NNP",
+                  "ner": "LOCATION",
+                  "speaker": "PER0",
+                  "before": " ",
+                  "after": " "
+                },
+                "aida": [
+                  {
+                    "mention": {
+                      "allEntities": [],
+                      "offset": 267,
+                      "name": "Cincinnati Zoo",
+                      "length": 14
+                    },
+                    "bestEntityMetadata": null
+                  }
+                ]
+              },
+              "NNP"
+            ]
+          ],
+          "score": 1.0,
+          "text": "Cincinnati",
+          "enhancement": {
+            "openstreetmap_nominatim": {
+              "place_id": "217656751",
+              "licence": "Data \u00a9 OpenStreetMap contributors, ODbL 1.0. http://www.openstreetmap.org/copyright",
+              "osm_type": "relation",
+              "osm_id": "183453",
+              "boundingbox": [
+                39.0520565,
+                39.2210368,
+                -84.71239,
+                -84.3687784
+              ],
+              "lat": "39.1014537",
+              "lon": "-84.5124602",
+              "display_name": "Cincinnati, Hamilton County, Ohio, United States of America",
+              "class": "place",
+              "type": "city",
+              "importance": 0.26888931171914,
+              "icon": "https://nominatim.openstreetmap.org/images/mapicons/poi_place_city.p.20.png"
+            }
+          },
+          "nlpIndexSentence": 4
+        }
+      ],
+      "label": "where"
+    },
+    "when": {
+      "extracted": [
+        {
+          "parts": [
+            [
+              {
+                "nlpToken": {
+                  "index": 30,
+                  "word": "today",
+                  "originalText": "today",
+                  "lemma": "today",
+                  "characterOffsetBegin": 2511,
+                  "characterOffsetEnd": 2516,
+                  "pos": "NN",
+                  "ner": "DATE",
+                  "normalizedNER": "2016-05-29",
+                  "speaker": "115",
+                  "before": " ",
+                  "after": " ",
+                  "timex": {
+                    "tid": "t10",
+                    "type": "DATE",
+                    "value": "2016-05-29"
+                  }
+                }
+              },
+              "NN"
+            ]
+          ],
+          "score": 0.6070919164174636,
+          "text": "today",
+          "enhancement": {
+            "timex": [
+              {
+                "start_date": "2016-05-29T00:00:00",
+                "end_date": "2016-05-29T23:59:59"
+              }
+            ]
+          },
+          "nlpIndexSentence": 24
+        }
+      ],
+      "label": "when"
+    },
     "why": {
       "extracted": [
         {
@@ -692,112 +798,6 @@
         }
       ],
       "label": "why"
-    },
-    "where": {
-      "extracted": [
-        {
-          "parts": [
-            [
-              {
-                "nlpToken": {
-                  "index": 7,
-                  "word": "Cincinnati",
-                  "originalText": "Cincinnati",
-                  "lemma": "Cincinnati",
-                  "characterOffsetBegin": 267,
-                  "characterOffsetEnd": 277,
-                  "pos": "NNP",
-                  "ner": "LOCATION",
-                  "speaker": "PER0",
-                  "before": " ",
-                  "after": " "
-                },
-                "aida": [
-                  {
-                    "mention": {
-                      "allEntities": [],
-                      "offset": 267,
-                      "name": "Cincinnati Zoo",
-                      "length": 14
-                    },
-                    "bestEntityMetadata": null
-                  }
-                ]
-              },
-              "NNP"
-            ]
-          ],
-          "score": 1.0,
-          "text": "Cincinnati",
-          "enhancement": {
-            "openstreetmap_nominatim": {
-              "place_id": "217656751",
-              "licence": "Data \u00a9 OpenStreetMap contributors, ODbL 1.0. http://www.openstreetmap.org/copyright",
-              "osm_type": "relation",
-              "osm_id": "183453",
-              "boundingbox": [
-                39.0520565,
-                39.2210368,
-                -84.71239,
-                -84.3687784
-              ],
-              "lat": "39.1014537",
-              "lon": "-84.5124602",
-              "display_name": "Cincinnati, Hamilton County, Ohio, United States of America",
-              "class": "place",
-              "type": "city",
-              "importance": 0.26888931171914,
-              "icon": "https://nominatim.openstreetmap.org/images/mapicons/poi_place_city.p.20.png"
-            }
-          },
-          "nlpIndexSentence": 4
-        }
-      ],
-      "label": "where"
-    },
-    "when": {
-      "extracted": [
-        {
-          "parts": [
-            [
-              {
-                "nlpToken": {
-                  "index": 30,
-                  "word": "today",
-                  "originalText": "today",
-                  "lemma": "today",
-                  "characterOffsetBegin": 2511,
-                  "characterOffsetEnd": 2516,
-                  "pos": "NN",
-                  "ner": "DATE",
-                  "normalizedNER": "2016-05-29",
-                  "speaker": "115",
-                  "before": " ",
-                  "after": " ",
-                  "timex": {
-                    "tid": "t10",
-                    "type": "DATE",
-                    "value": "2016-05-29"
-                  }
-                }
-              },
-              "NN"
-            ]
-          ],
-          "score": 0.6070919164174636,
-          "text": "today",
-          "enhancement": {
-            "timex": [
-              {
-                "start_date": "2016-05-29T00:00:00",
-                "end_date": "2016-05-29T23:59:59"
-              }
-            ]
-          },
-          "nlpIndexSentence": 24
-        }
-      ],
-      "label": "when"
     }
   }
 }

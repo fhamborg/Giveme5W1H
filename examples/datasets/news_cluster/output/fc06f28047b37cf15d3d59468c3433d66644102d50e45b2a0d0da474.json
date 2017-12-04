@@ -17,8 +17,15 @@
   "title_page": null,
   "title_rss": null,
   "url": "https://www.wsj.com/articles/equifax-earnings-drop-27-in-quarter-marred-by-cyberattack-1510268187",
-  "category_id": 6,
-  "category": "Equifax breach",
+  "newsCluster": {
+    "CategoryId": 3,
+    "Category": "science_tech",
+    "TopicId": 3,
+    "Topic": "hack",
+    "EventId": 9,
+    "Event": "hack_equifax_breach",
+    "Url": "https://www.wsj.com/articles/equifax-earnings-drop-27-in-quarter-marred-by-cyberattack-1510268187"
+  },
   "dId": "fc06f28047b37cf15d3d59468c3433d66644102d50e45b2a0d0da474",
   "fiveWoneH": {
     "who": {
@@ -39,7 +46,18 @@
                   "speaker": "PER0",
                   "before": " ",
                   "after": " "
-                }
+                },
+                "aida": [
+                  {
+                    "mention": {
+                      "allEntities": [],
+                      "offset": 0,
+                      "name": "Equifax Apologizes for Security Breach",
+                      "length": 38
+                    },
+                    "bestEntityMetadata": null
+                  }
+                ]
               },
               "NNPS"
             ]
@@ -135,46 +153,6 @@
       ],
       "label": "what"
     },
-    "where": {
-      "extracted": [],
-      "label": "where"
-    },
-    "when": {
-      "extracted": [
-        {
-          "parts": [
-            [
-              {
-                "nlpToken": {
-                  "index": 15,
-                  "word": "September",
-                  "originalText": "September",
-                  "lemma": "September",
-                  "characterOffsetBegin": 151,
-                  "characterOffsetEnd": 160,
-                  "pos": "NNP",
-                  "ner": "DATE",
-                  "normalizedNER": "XXXX-09",
-                  "speaker": "PER0",
-                  "before": " ",
-                  "after": " ",
-                  "timex": {
-                    "tid": "t1",
-                    "type": "DATE",
-                    "value": "XXXX-09"
-                  }
-                }
-              },
-              "NNP"
-            ]
-          ],
-          "score": 0.8290598290598291,
-          "text": "September",
-          "nlpIndexSentence": 1
-        }
-      ],
-      "label": "when"
-    },
     "how": {
       "extracted": [
         {
@@ -204,6 +182,54 @@
         }
       ],
       "label": "how"
+    },
+    "where": {
+      "extracted": [],
+      "label": "where"
+    },
+    "when": {
+      "extracted": [
+        {
+          "parts": [
+            [
+              {
+                "nlpToken": {
+                  "index": 15,
+                  "word": "September",
+                  "originalText": "September",
+                  "lemma": "September",
+                  "characterOffsetBegin": 151,
+                  "characterOffsetEnd": 160,
+                  "pos": "NNP",
+                  "ner": "DATE",
+                  "normalizedNER": "2017-09",
+                  "speaker": "PER0",
+                  "before": " ",
+                  "after": " ",
+                  "timex": {
+                    "tid": "t1",
+                    "type": "DATE",
+                    "value": "2017-09"
+                  }
+                }
+              },
+              "NNP"
+            ]
+          ],
+          "score": 0.5388889531907889,
+          "text": "September",
+          "enhancement": {
+            "timex": [
+              {
+                "start_date": "2017-09-01T00:00:00",
+                "end_date": "2017-09-30T23:59:59"
+              }
+            ]
+          },
+          "nlpIndexSentence": 1
+        }
+      ],
+      "label": "when"
     },
     "why": {
       "extracted": [
@@ -328,14 +354,14 @@
                   "characterOffsetEnd": 160,
                   "pos": "NNP",
                   "ner": "DATE",
-                  "normalizedNER": "XXXX-09",
+                  "normalizedNER": "2017-09",
                   "speaker": "PER0",
                   "before": " ",
                   "after": " ",
                   "timex": {
                     "tid": "t1",
                     "type": "DATE",
-                    "value": "XXXX-09"
+                    "value": "2017-09"
                   }
                 }
               },

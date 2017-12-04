@@ -26,6 +26,10 @@ class WorkQueue(object):
             self._queue_processed = []
             self._queue = []
             self._generator = self._generate_full_combination
+        else:
+            self._queue_processed = []
+            self._queue = []
+            self._generator = generator
 
 
     def get_queue_count(self):
@@ -53,7 +57,9 @@ class WorkQueue(object):
 
         else:
             print('generating a new queue')
-            self._generator()
+            self._queue_processed =[]
+            self._queue = []
+            self._generator(self)
 
 
 
@@ -93,6 +99,18 @@ class WorkQueue(object):
         if len(self._queue) > 0:
             return self._queue[-1]
         return None
+
+    def generate_action(self):
+
+        for i in self._weights_range:
+            for j in self._weights_range:
+                for k in self._weights_range:
+                    self._queue.append({
+                        'extracting_parameters_id': 1,
+                        'scoring_parameters': {
+                            'weights': (i, j, k)
+                        },
+                        'extracting_parameters': {}})
 
     def _generate_full_combination(self):
         """

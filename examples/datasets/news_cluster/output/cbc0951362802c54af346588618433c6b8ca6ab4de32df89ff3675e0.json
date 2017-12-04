@@ -296,6 +296,112 @@
       ],
       "label": "what"
     },
+    "where": {
+      "extracted": [
+        {
+          "parts": [
+            [
+              {
+                "nlpToken": {
+                  "index": 12,
+                  "word": "Chicago",
+                  "originalText": "Chicago",
+                  "lemma": "Chicago",
+                  "characterOffsetBegin": 1155,
+                  "characterOffsetEnd": 1162,
+                  "pos": "NNP",
+                  "ner": "LOCATION",
+                  "speaker": "PER0",
+                  "before": " ",
+                  "after": ""
+                },
+                "aida": [
+                  {
+                    "mention": {
+                      "allEntities": [
+                        {
+                          "kbIdentifier": "YAGO:Chicago_Cubs",
+                          "disambiguationScore": "0.29557"
+                        }
+                      ],
+                      "offset": 1155,
+                      "name": "Chicago",
+                      "length": 7,
+                      "bestEntity": {
+                        "kbIdentifier": "YAGO:Chicago_Cubs",
+                        "disambiguationScore": "0.29557"
+                      }
+                    },
+                    "bestEntityMetadata": {
+                      "knowledgebase": "YAGO",
+                      "depictionurl": "http://upload.wikimedia.org/wikipedia/commons/e/ed/Chicago_Cubs_Logo.svg",
+                      "depictionthumbnailurl": "http://upload.wikimedia.org/wikipedia/commons/thumbChicago_Cubs_Logo.svg/200px-Chicago_Cubs_Logo.svg",
+                      "importance": 0.00015264551672039436,
+                      "entityId": "Chicago_Cubs",
+                      "type": [
+                        "YAGO_wikicategory_Professional_baseball_teams_in_Illinois",
+                        "YAGO_yagoPermanentlyLocatedEntity",
+                        "YAGO_yagoLegalActorGeo",
+                        "YAGO_wordnet_organization_108008335",
+                        "YAGO_wikicategory_Major_League_Baseball_teams",
+                        "YAGO_wordnet_subsidiary_company_108003935",
+                        "YAGO_wordnet_unit_108189659",
+                        "YAGO_wordnet_team_108208560",
+                        "YAGO_wikicategory_Sports_clubs_established_in_1870",
+                        "YAGO_yagoLegalActor",
+                        "YAGO_wordnet_club_108227214",
+                        "YAGO_wordnet_abstraction_100002137",
+                        "YAGO_wordnet_company_108058098",
+                        "YAGO_wikicategory_Tribune_Company_subsidiaries",
+                        "YAGO_wordnet_social_group_107950920",
+                        "YAGO_wordnet_institution_108053576",
+                        "YAGO_wordnet_entity_100001740",
+                        "YAGO_wikicategory_Baseball_teams_in_Chicago\\u002c_Illinois",
+                        "YAGO_wordnet_group_100031264",
+                        "YAGO_wordnet_association_108049401",
+                        "YAGO_wordnet_baseball_team_108079319"
+                      ],
+                      "readableRepr": "Chicago Cubs",
+                      "url": "http://en.wikipedia.org/wiki/Chicago%20Cubs"
+                    }
+                  }
+                ]
+              },
+              "NNP"
+            ]
+          ],
+          "score": 1.0000000000000002,
+          "text": "Chicago",
+          "enhancement": {
+            "openstreetmap_nominatim": {
+              "place_id": "178038280",
+              "licence": "Data \u00a9 OpenStreetMap contributors, ODbL 1.0. http://www.openstreetmap.org/copyright",
+              "osm_type": "relation",
+              "osm_id": "122604",
+              "boundingbox": [
+                41.643919,
+                42.0230219,
+                -87.940101,
+                -87.5239841
+              ],
+              "lat": "41.8755546",
+              "lon": "-87.6244212",
+              "display_name": "Chicago, Cook County, Illinois, United States of America",
+              "class": "place",
+              "type": "city",
+              "importance": 0.30566190262222,
+              "icon": "https://nominatim.openstreetmap.org/images/mapicons/poi_place_city.p.20.png"
+            }
+          },
+          "nlpIndexSentence": 7
+        }
+      ],
+      "label": "where"
+    },
+    "when": {
+      "extracted": [],
+      "label": "when"
+    },
     "why": {
       "extracted": [
         {
@@ -668,112 +774,6 @@
         }
       ],
       "label": "why"
-    },
-    "where": {
-      "extracted": [
-        {
-          "parts": [
-            [
-              {
-                "nlpToken": {
-                  "index": 12,
-                  "word": "Chicago",
-                  "originalText": "Chicago",
-                  "lemma": "Chicago",
-                  "characterOffsetBegin": 1155,
-                  "characterOffsetEnd": 1162,
-                  "pos": "NNP",
-                  "ner": "LOCATION",
-                  "speaker": "PER0",
-                  "before": " ",
-                  "after": ""
-                },
-                "aida": [
-                  {
-                    "mention": {
-                      "allEntities": [
-                        {
-                          "kbIdentifier": "YAGO:Chicago_Cubs",
-                          "disambiguationScore": "0.29557"
-                        }
-                      ],
-                      "offset": 1155,
-                      "name": "Chicago",
-                      "length": 7,
-                      "bestEntity": {
-                        "kbIdentifier": "YAGO:Chicago_Cubs",
-                        "disambiguationScore": "0.29557"
-                      }
-                    },
-                    "bestEntityMetadata": {
-                      "knowledgebase": "YAGO",
-                      "depictionurl": "http://upload.wikimedia.org/wikipedia/commons/e/ed/Chicago_Cubs_Logo.svg",
-                      "depictionthumbnailurl": "http://upload.wikimedia.org/wikipedia/commons/thumbChicago_Cubs_Logo.svg/200px-Chicago_Cubs_Logo.svg",
-                      "importance": 0.00015264551672039436,
-                      "entityId": "Chicago_Cubs",
-                      "type": [
-                        "YAGO_wikicategory_Professional_baseball_teams_in_Illinois",
-                        "YAGO_yagoPermanentlyLocatedEntity",
-                        "YAGO_yagoLegalActorGeo",
-                        "YAGO_wordnet_organization_108008335",
-                        "YAGO_wikicategory_Major_League_Baseball_teams",
-                        "YAGO_wordnet_subsidiary_company_108003935",
-                        "YAGO_wordnet_unit_108189659",
-                        "YAGO_wordnet_team_108208560",
-                        "YAGO_wikicategory_Sports_clubs_established_in_1870",
-                        "YAGO_yagoLegalActor",
-                        "YAGO_wordnet_club_108227214",
-                        "YAGO_wordnet_abstraction_100002137",
-                        "YAGO_wordnet_company_108058098",
-                        "YAGO_wikicategory_Tribune_Company_subsidiaries",
-                        "YAGO_wordnet_social_group_107950920",
-                        "YAGO_wordnet_institution_108053576",
-                        "YAGO_wordnet_entity_100001740",
-                        "YAGO_wikicategory_Baseball_teams_in_Chicago\\u002c_Illinois",
-                        "YAGO_wordnet_group_100031264",
-                        "YAGO_wordnet_association_108049401",
-                        "YAGO_wordnet_baseball_team_108079319"
-                      ],
-                      "readableRepr": "Chicago Cubs",
-                      "url": "http://en.wikipedia.org/wiki/Chicago%20Cubs"
-                    }
-                  }
-                ]
-              },
-              "NNP"
-            ]
-          ],
-          "score": 1.0000000000000002,
-          "text": "Chicago",
-          "enhancement": {
-            "openstreetmap_nominatim": {
-              "place_id": "178038280",
-              "licence": "Data \u00a9 OpenStreetMap contributors, ODbL 1.0. http://www.openstreetmap.org/copyright",
-              "osm_type": "relation",
-              "osm_id": "122604",
-              "boundingbox": [
-                41.643919,
-                42.0230219,
-                -87.940101,
-                -87.5239841
-              ],
-              "lat": "41.8755546",
-              "lon": "-87.6244212",
-              "display_name": "Chicago, Cook County, Illinois, United States of America",
-              "class": "place",
-              "type": "city",
-              "importance": 0.30566190262222,
-              "icon": "https://nominatim.openstreetmap.org/images/mapicons/poi_place_city.p.20.png"
-            }
-          },
-          "nlpIndexSentence": 7
-        }
-      ],
-      "label": "where"
-    },
-    "when": {
-      "extracted": [],
-      "label": "when"
     }
   }
 }

@@ -25,7 +25,6 @@ class MethodExtractor(AbsExtractor):
         self.weights = weights
 
     def _extract_candidates(self, document: Document):
-
         candidates = []
         postrees = document.get_trees()
 

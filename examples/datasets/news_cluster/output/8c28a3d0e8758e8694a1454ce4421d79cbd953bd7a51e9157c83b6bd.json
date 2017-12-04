@@ -57,6 +57,156 @@
       ],
       "label": "how"
     },
+    "where": {
+      "extracted": [
+        {
+          "parts": [
+            [
+              {
+                "nlpToken": {
+                  "index": 74,
+                  "word": "England",
+                  "originalText": "England",
+                  "lemma": "England",
+                  "characterOffsetBegin": 887,
+                  "characterOffsetEnd": 894,
+                  "pos": "NNP",
+                  "ner": "LOCATION",
+                  "speaker": "PER0",
+                  "before": " ",
+                  "after": " "
+                },
+                "aida": [
+                  {
+                    "mention": {
+                      "allEntities": [
+                        {
+                          "kbIdentifier": "YAGO:England",
+                          "disambiguationScore": "0.16256"
+                        }
+                      ],
+                      "offset": 887,
+                      "name": "England",
+                      "length": 7,
+                      "bestEntity": {
+                        "kbIdentifier": "YAGO:England",
+                        "disambiguationScore": "0.16256"
+                      }
+                    },
+                    "bestEntityMetadata": {
+                      "knowledgebase": "YAGO",
+                      "depictionurl": "http://upload.wikimedia.org/wikipedia/en/b/be/Flag_of_England.svg",
+                      "depictionthumbnailurl": "http://upload.wikimedia.org/wikipedia/en/thumbFlag_of_England.svg/200px-Flag_of_England.svg",
+                      "importance": 5.571004259868407e-07,
+                      "entityId": "England",
+                      "type": [
+                        "YAGO_yagoGeoEntity",
+                        "YAGO_wordnet_district_108552138",
+                        "YAGO_yagoPermanentlyLocatedEntity",
+                        "YAGO_wordnet_physical_entity_100001930",
+                        "YAGO_yagoLegalActorGeo",
+                        "YAGO_wordnet_entity_100001740",
+                        "YAGO_wordnet_object_100002684",
+                        "YAGO_wikicategory_Island_countries",
+                        "YAGO_wikicategory_Germanic_countries_and_territories",
+                        "YAGO_wordnet_country_108544813",
+                        "YAGO_wordnet_location_100027167",
+                        "YAGO_wikicategory_locations",
+                        "YAGO_wordnet_administrative_district_108491826",
+                        "YAGO_wordnet_region_108630985",
+                        "YAGO_wikicategory_English\\u002dspeaking_countries_and_territories"
+                      ],
+                      "readableRepr": "England",
+                      "url": "http://en.wikipedia.org/wiki/England"
+                    }
+                  }
+                ]
+              },
+              "NNP"
+            ]
+          ],
+          "score": 1.0,
+          "text": "England",
+          "enhancement": {
+            "openstreetmap_nominatim": {
+              "place_id": "179157803",
+              "licence": "Data \u00a9 OpenStreetMap contributors, ODbL 1.0. http://www.openstreetmap.org/copyright",
+              "osm_type": "relation",
+              "osm_id": "58447",
+              "boundingbox": [
+                49.674,
+                55.917,
+                -6.7047494,
+                2.0919117
+              ],
+              "lat": "52.7954791",
+              "lon": "-0.540240286617432",
+              "display_name": "England, UK",
+              "class": "boundary",
+              "type": "administrative",
+              "importance": 0.33076201865326,
+              "icon": "https://nominatim.openstreetmap.org/images/mapicons/poi_boundary_administrative.p.20.png"
+            }
+          },
+          "nlpIndexSentence": 5
+        }
+      ],
+      "label": "where"
+    },
+    "when": {
+      "extracted": [
+        {
+          "parts": [
+            [
+              {
+                "nlpToken": {
+                  "index": 2,
+                  "word": "Today",
+                  "originalText": "Today",
+                  "lemma": "Today",
+                  "characterOffsetBegin": 2305,
+                  "characterOffsetEnd": 2310,
+                  "pos": "NNP",
+                  "ner": "ORGANIZATION",
+                  "speaker": "PER0",
+                  "before": " ",
+                  "after": " ",
+                  "timex": {
+                    "tid": "t13",
+                    "type": "DATE",
+                    "value": "2016-11-03"
+                  }
+                },
+                "aida": [
+                  {
+                    "mention": {
+                      "allEntities": [],
+                      "offset": 2301,
+                      "name": "Usa Today Sports Cleveland Cavaliers",
+                      "length": 36
+                    },
+                    "bestEntityMetadata": null
+                  }
+                ]
+              },
+              "NNP"
+            ]
+          ],
+          "score": 0.6203741641824699,
+          "text": "Today",
+          "enhancement": {
+            "timex": [
+              {
+                "start_date": "2016-11-03T00:00:00",
+                "end_date": "2016-11-03T23:59:59"
+              }
+            ]
+          },
+          "nlpIndexSentence": 14
+        }
+      ],
+      "label": "when"
+    },
     "who": {
       "extracted": [
         {
@@ -1054,156 +1204,6 @@
         }
       ],
       "label": "why"
-    },
-    "where": {
-      "extracted": [
-        {
-          "parts": [
-            [
-              {
-                "nlpToken": {
-                  "index": 74,
-                  "word": "England",
-                  "originalText": "England",
-                  "lemma": "England",
-                  "characterOffsetBegin": 887,
-                  "characterOffsetEnd": 894,
-                  "pos": "NNP",
-                  "ner": "LOCATION",
-                  "speaker": "PER0",
-                  "before": " ",
-                  "after": " "
-                },
-                "aida": [
-                  {
-                    "mention": {
-                      "allEntities": [
-                        {
-                          "kbIdentifier": "YAGO:England",
-                          "disambiguationScore": "0.16256"
-                        }
-                      ],
-                      "offset": 887,
-                      "name": "England",
-                      "length": 7,
-                      "bestEntity": {
-                        "kbIdentifier": "YAGO:England",
-                        "disambiguationScore": "0.16256"
-                      }
-                    },
-                    "bestEntityMetadata": {
-                      "knowledgebase": "YAGO",
-                      "depictionurl": "http://upload.wikimedia.org/wikipedia/en/b/be/Flag_of_England.svg",
-                      "depictionthumbnailurl": "http://upload.wikimedia.org/wikipedia/en/thumbFlag_of_England.svg/200px-Flag_of_England.svg",
-                      "importance": 5.571004259868407e-07,
-                      "entityId": "England",
-                      "type": [
-                        "YAGO_yagoGeoEntity",
-                        "YAGO_wordnet_district_108552138",
-                        "YAGO_yagoPermanentlyLocatedEntity",
-                        "YAGO_wordnet_physical_entity_100001930",
-                        "YAGO_yagoLegalActorGeo",
-                        "YAGO_wordnet_entity_100001740",
-                        "YAGO_wordnet_object_100002684",
-                        "YAGO_wikicategory_Island_countries",
-                        "YAGO_wikicategory_Germanic_countries_and_territories",
-                        "YAGO_wordnet_country_108544813",
-                        "YAGO_wordnet_location_100027167",
-                        "YAGO_wikicategory_locations",
-                        "YAGO_wordnet_administrative_district_108491826",
-                        "YAGO_wordnet_region_108630985",
-                        "YAGO_wikicategory_English\\u002dspeaking_countries_and_territories"
-                      ],
-                      "readableRepr": "England",
-                      "url": "http://en.wikipedia.org/wiki/England"
-                    }
-                  }
-                ]
-              },
-              "NNP"
-            ]
-          ],
-          "score": 1.0,
-          "text": "England",
-          "enhancement": {
-            "openstreetmap_nominatim": {
-              "place_id": "179157803",
-              "licence": "Data \u00a9 OpenStreetMap contributors, ODbL 1.0. http://www.openstreetmap.org/copyright",
-              "osm_type": "relation",
-              "osm_id": "58447",
-              "boundingbox": [
-                49.674,
-                55.917,
-                -6.7047494,
-                2.0919117
-              ],
-              "lat": "52.7954791",
-              "lon": "-0.540240286617432",
-              "display_name": "England, UK",
-              "class": "boundary",
-              "type": "administrative",
-              "importance": 0.33076201865326,
-              "icon": "https://nominatim.openstreetmap.org/images/mapicons/poi_boundary_administrative.p.20.png"
-            }
-          },
-          "nlpIndexSentence": 5
-        }
-      ],
-      "label": "where"
-    },
-    "when": {
-      "extracted": [
-        {
-          "parts": [
-            [
-              {
-                "nlpToken": {
-                  "index": 2,
-                  "word": "Today",
-                  "originalText": "Today",
-                  "lemma": "Today",
-                  "characterOffsetBegin": 2305,
-                  "characterOffsetEnd": 2310,
-                  "pos": "NNP",
-                  "ner": "ORGANIZATION",
-                  "speaker": "PER0",
-                  "before": " ",
-                  "after": " ",
-                  "timex": {
-                    "tid": "t13",
-                    "type": "DATE",
-                    "value": "2016-11-03"
-                  }
-                },
-                "aida": [
-                  {
-                    "mention": {
-                      "allEntities": [],
-                      "offset": 2301,
-                      "name": "Usa Today Sports Cleveland Cavaliers",
-                      "length": 36
-                    },
-                    "bestEntityMetadata": null
-                  }
-                ]
-              },
-              "NNP"
-            ]
-          ],
-          "score": 0.6203741641824699,
-          "text": "Today",
-          "enhancement": {
-            "timex": [
-              {
-                "start_date": "2016-11-03T00:00:00",
-                "end_date": "2016-11-03T23:59:59"
-              }
-            ]
-          },
-          "nlpIndexSentence": 14
-        }
-      ],
-      "label": "when"
     }
   }
 }

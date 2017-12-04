@@ -403,10 +403,11 @@ if __name__ == '__main__':
                 data['newsCluster'] = info_article
             with open('data_raw' + '/' + dId + '.' + 'json', encoding='utf-8', mode='w') as data_file:
                 data_file.write(json.dumps(data, sort_keys=False, indent=2))
-            # TODO rewrite  article_dict['newsCluster'] anyways
+
 
 
     # preprocess into data
+    # TODO cleanup directories before writing
     for filepath in glob.glob('data_raw/*.json'):
         with open(filepath, encoding='utf-8') as data_file:
             try:

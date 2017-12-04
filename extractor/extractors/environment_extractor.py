@@ -8,7 +8,7 @@ from parsedatetime import parsedatetime as pdt
 from extractor.candidate import Candidate
 from extractor.extractors.abs_extractor import AbsExtractor
 from extractor.tools.timex import Timex
-
+from tools.cache_manager import CacheManager
 
 class EnvironmentExtractor(AbsExtractor):
     """
@@ -50,6 +50,8 @@ class EnvironmentExtractor(AbsExtractor):
         self._phrase_range_location = phrase_range_location
         self._phrase_range_time_date = phrase_range_time_date
 
+        self._cache_nominatim = CacheManager.instance().get_cache('../examples/caches/Nominatim')
+
 
     def _evaluate_candidates(self, document):
         locations = self._evaluate_locations(document)
@@ -86,7 +88,6 @@ class EnvironmentExtractor(AbsExtractor):
 
         return candidate_list
 
-
     def _extract_candidates(self, document):
         """
         Extracts all locations, dates and times.
@@ -112,8 +113,14 @@ class EnvironmentExtractor(AbsExtractor):
 
                 # look-up geocode in Nominatim
                 try:
-                    location_string = [t['originalText'] for t in candidate[0]]
-                    location = self.geocoder.geocode(' '.join(location_string))
+                    location_array = [t['originalText'] for t in candidate[0]]
+                    location_string = ' '.join(location_array)
+
+                    location = self._cache_nominatim.get(location_string)
+                    if location is None:
+                        location = self.geocoder.geocode(location_string)
+                        self._cache_nominatim.cache(location_string, location)
+
                     if location is not None:
                         # fetch pos and append to candidates
                         ca = Candidate()

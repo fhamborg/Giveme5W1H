@@ -80,7 +80,7 @@ if __name__ == '__main__':
             # .set_limit(1)
 
             # Optional: resume ability, skip input file if its already in output
-            .skip_documents_with_output()
+            # .skip_documents_with_output()
 
             # load and saves all document runtime objects for further programming
             # .preload_and_cache_documents()

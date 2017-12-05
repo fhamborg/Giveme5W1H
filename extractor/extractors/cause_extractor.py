@@ -91,7 +91,8 @@ class CauseExtractor(AbsExtractor):
             for candidate in self._evaluate_tree(tree):
                 candidateObject = Candidate()
                 # used by the extractor
-                candidateObject.set_raw(candidate[0] + candidate[1])
+                #candidateObject.set_raw(candidate[0] + candidate[1])
+                candidateObject.set_raw(candidate[1])
                 candidateObject.set_type(candidate[2])
                 candidateObject.set_sentence_index(i)
 

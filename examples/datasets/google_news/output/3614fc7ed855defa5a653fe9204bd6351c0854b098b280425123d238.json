@@ -561,91 +561,57 @@
       "label": "why"
     },
     "where": {
-      "extracted": [],
-      "label": "where"
-    },
-    "when": {
       "extracted": [
         {
           "parts": [
             [
               {
                 "nlpToken": {
-                  "index": 25,
-                  "word": "last",
-                  "originalText": "last",
-                  "lemma": "last",
-                  "characterOffsetBegin": 204,
-                  "characterOffsetEnd": 208,
-                  "pos": "JJ",
-                  "ner": "DATE",
-                  "normalizedNER": "P37Y",
+                  "index": 1,
+                  "word": "Zimbabwe",
+                  "originalText": "Zimbabwe",
+                  "lemma": "Zimbabwe",
+                  "characterOffsetBegin": 0,
+                  "characterOffsetEnd": 8,
+                  "pos": "NNP",
+                  "ner": "LOCATION",
                   "speaker": "PER0",
-                  "before": " ",
-                  "after": " ",
-                  "timex": {
-                    "tid": "t2",
-                    "type": "DURATION",
-                    "value": "P37Y"
-                  }
+                  "before": "",
+                  "after": " "
                 }
               },
-              "JJ"
-            ],
-            [
-              {
-                "nlpToken": {
-                  "index": 26,
-                  "word": "37",
-                  "originalText": "37",
-                  "lemma": "37",
-                  "characterOffsetBegin": 209,
-                  "characterOffsetEnd": 211,
-                  "pos": "CD",
-                  "ner": "DATE",
-                  "normalizedNER": "P37Y",
-                  "speaker": "PER0",
-                  "before": " ",
-                  "after": " ",
-                  "timex": {
-                    "tid": "t2",
-                    "type": "DURATION",
-                    "value": "P37Y"
-                  }
-                }
-              },
-              "CD"
-            ],
-            [
-              {
-                "nlpToken": {
-                  "index": 27,
-                  "word": "years",
-                  "originalText": "years",
-                  "lemma": "year",
-                  "characterOffsetBegin": 212,
-                  "characterOffsetEnd": 217,
-                  "pos": "NNS",
-                  "ner": "DATE",
-                  "normalizedNER": "P37Y",
-                  "speaker": "PER0",
-                  "before": " ",
-                  "after": "",
-                  "timex": {
-                    "tid": "t2",
-                    "type": "DURATION",
-                    "value": "P37Y"
-                  }
-                }
-              },
-              "NNS"
+              "NNP"
             ]
           ],
-          "score": 0.8717948717948718,
-          "text": "last 37 years",
-          "nlpIndexSentence": 1
+          "score": 1.0,
+          "text": "Zimbabwe",
+          "enhancement": {
+            "openstreetmap_nominatim": {
+              "place_id": "179411092",
+              "licence": "Data \u00a9 OpenStreetMap contributors, ODbL 1.0. http://www.openstreetmap.org/copyright",
+              "osm_type": "relation",
+              "osm_id": "195272",
+              "boundingbox": [
+                -22.4241096,
+                -15.6097033,
+                25.2373,
+                33.0683413
+              ],
+              "lat": "-18.4554963",
+              "lon": "29.7468414",
+              "display_name": "Zimbabwe",
+              "class": "boundary",
+              "type": "administrative",
+              "importance": 0.28862053623532,
+              "icon": "https://nominatim.openstreetmap.org/images/mapicons/poi_boundary_administrative.p.20.png"
+            }
+          }
         }
       ],
+      "label": "where"
+    },
+    "when": {
+      "extracted": [],
       "label": "when"
     }
   }

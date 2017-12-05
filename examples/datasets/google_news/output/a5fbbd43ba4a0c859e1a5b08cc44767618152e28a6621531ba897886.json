@@ -51,6 +51,102 @@
       ],
       "label": "how"
     },
+    "who": {
+      "extracted": [
+        {
+          "parts": [
+            [
+              {
+                "nlpToken": {
+                  "index": 8,
+                  "word": "Trump",
+                  "originalText": "Trump",
+                  "lemma": "Trump",
+                  "characterOffsetBegin": 128,
+                  "characterOffsetEnd": 133,
+                  "pos": "NNP",
+                  "ner": "PERSON",
+                  "speaker": "PER0",
+                  "before": " ",
+                  "after": " "
+                }
+              },
+              "NNP"
+            ]
+          ],
+          "score": 1.0,
+          "text": "Trump",
+          "nlpIndexSentence": 3
+        }
+      ],
+      "label": "who"
+    },
+    "what": {
+      "extracted": [
+        {
+          "parts": [
+            [
+              {
+                "nlpToken": {
+                  "index": 9,
+                  "word": "travels",
+                  "originalText": "travels",
+                  "lemma": "travel",
+                  "characterOffsetBegin": 134,
+                  "characterOffsetEnd": 141,
+                  "pos": "VBZ",
+                  "ner": "O",
+                  "speaker": "PER0",
+                  "before": " ",
+                  "after": " "
+                }
+              },
+              "VBZ"
+            ],
+            [
+              {
+                "nlpToken": {
+                  "index": 10,
+                  "word": "through",
+                  "originalText": "through",
+                  "lemma": "through",
+                  "characterOffsetBegin": 142,
+                  "characterOffsetEnd": 149,
+                  "pos": "IN",
+                  "ner": "O",
+                  "speaker": "PER0",
+                  "before": " ",
+                  "after": " "
+                }
+              },
+              "IN"
+            ],
+            [
+              {
+                "nlpToken": {
+                  "index": 11,
+                  "word": "Asia",
+                  "originalText": "Asia",
+                  "lemma": "Asia",
+                  "characterOffsetBegin": 150,
+                  "characterOffsetEnd": 154,
+                  "pos": "NNP",
+                  "ner": "LOCATION",
+                  "speaker": "PER0",
+                  "before": " ",
+                  "after": ""
+                }
+              },
+              "NNP"
+            ]
+          ],
+          "score": 1.0,
+          "text": "travels through Asia",
+          "nlpIndexSentence": 3
+        }
+      ],
+      "label": "what"
+    },
     "why": {
       "extracted": [
         {
@@ -561,104 +657,72 @@
       ],
       "label": "why"
     },
-    "who": {
+    "where": {
       "extracted": [
         {
           "parts": [
             [
               {
                 "nlpToken": {
-                  "index": 8,
-                  "word": "Trump",
-                  "originalText": "Trump",
-                  "lemma": "Trump",
-                  "characterOffsetBegin": 128,
-                  "characterOffsetEnd": 133,
-                  "pos": "NNP",
-                  "ner": "PERSON",
-                  "speaker": "PER0",
-                  "before": " ",
-                  "after": " "
-                }
-              },
-              "NNP"
-            ]
-          ],
-          "score": 1.0,
-          "text": "Trump",
-          "nlpIndexSentence": 3
-        }
-      ],
-      "label": "who"
-    },
-    "what": {
-      "extracted": [
-        {
-          "parts": [
-            [
-              {
-                "nlpToken": {
-                  "index": 9,
-                  "word": "travels",
-                  "originalText": "travels",
-                  "lemma": "travel",
-                  "characterOffsetBegin": 134,
-                  "characterOffsetEnd": 141,
-                  "pos": "VBZ",
-                  "ner": "O",
-                  "speaker": "PER0",
-                  "before": " ",
-                  "after": " "
-                }
-              },
-              "VBZ"
-            ],
-            [
-              {
-                "nlpToken": {
-                  "index": 10,
-                  "word": "through",
-                  "originalText": "through",
-                  "lemma": "through",
-                  "characterOffsetBegin": 142,
-                  "characterOffsetEnd": 149,
-                  "pos": "IN",
-                  "ner": "O",
-                  "speaker": "PER0",
-                  "before": " ",
-                  "after": " "
-                }
-              },
-              "IN"
-            ],
-            [
-              {
-                "nlpToken": {
-                  "index": 11,
-                  "word": "Asia",
-                  "originalText": "Asia",
-                  "lemma": "Asia",
-                  "characterOffsetBegin": 150,
-                  "characterOffsetEnd": 154,
+                  "index": 5,
+                  "word": "North",
+                  "originalText": "North",
+                  "lemma": "North",
+                  "characterOffsetBegin": 22,
+                  "characterOffsetEnd": 27,
                   "pos": "NNP",
                   "ner": "LOCATION",
                   "speaker": "PER0",
                   "before": " ",
-                  "after": ""
+                  "after": " "
+                }
+              },
+              "NNP"
+            ],
+            [
+              {
+                "nlpToken": {
+                  "index": 6,
+                  "word": "Korea",
+                  "originalText": "Korea",
+                  "lemma": "Korea",
+                  "characterOffsetBegin": 28,
+                  "characterOffsetEnd": 33,
+                  "pos": "NNP",
+                  "ner": "LOCATION",
+                  "speaker": "PER0",
+                  "before": " ",
+                  "after": " "
                 }
               },
               "NNP"
             ]
           ],
           "score": 1.0,
-          "text": "travels through Asia",
-          "nlpIndexSentence": 3
+          "text": "North Korea",
+          "enhancement": {
+            "openstreetmap_nominatim": {
+              "place_id": "177647595",
+              "licence": "Data \u00a9 OpenStreetMap contributors, ODbL 1.0. http://www.openstreetmap.org/copyright",
+              "osm_type": "relation",
+              "osm_id": "192734",
+              "boundingbox": [
+                37.6279512,
+                43.0089642,
+                124.0913902,
+                130.924647
+              ],
+              "lat": "40.3736611",
+              "lon": "127.0870417",
+              "display_name": "\uc870\uc120\ubbfc\uc8fc\uc8fc\uc758\uc778\ubbfc\uacf5\ud654\uad6d",
+              "class": "boundary",
+              "type": "administrative",
+              "importance": 0.17189971919422,
+              "icon": "https://nominatim.openstreetmap.org/images/mapicons/poi_boundary_administrative.p.20.png"
+            }
+          }
         }
       ],
-      "label": "what"
-    },
-    "where": {
-      "extracted": [],
       "label": "where"
     },
     "when": {
@@ -668,12 +732,12 @@
             [
               {
                 "nlpToken": {
-                  "index": 12,
+                  "index": 10,
                   "word": "this",
                   "originalText": "this",
                   "lemma": "this",
-                  "characterOffsetBegin": 222,
-                  "characterOffsetEnd": 226,
+                  "characterOffsetBegin": 1125,
+                  "characterOffsetEnd": 1129,
                   "pos": "DT",
                   "ner": "DATE",
                   "normalizedNER": "2017-W45",
@@ -681,7 +745,7 @@
                   "before": " ",
                   "after": " ",
                   "timex": {
-                    "tid": "t2",
+                    "tid": "t10",
                     "type": "DATE",
                     "value": "2017-W45"
                   }
@@ -692,12 +756,12 @@
             [
               {
                 "nlpToken": {
-                  "index": 13,
+                  "index": 11,
                   "word": "week",
                   "originalText": "week",
                   "lemma": "week",
-                  "characterOffsetBegin": 227,
-                  "characterOffsetEnd": 231,
+                  "characterOffsetBegin": 1130,
+                  "characterOffsetEnd": 1134,
                   "pos": "NN",
                   "ner": "DATE",
                   "normalizedNER": "2017-W45",
@@ -705,7 +769,7 @@
                   "before": " ",
                   "after": "",
                   "timex": {
-                    "tid": "t2",
+                    "tid": "t10",
                     "type": "DATE",
                     "value": "2017-W45"
                   }
@@ -714,9 +778,17 @@
               "NN"
             ]
           ],
-          "score": 0.8404558404558404,
+          "score": 0.6399212191358024,
           "text": "this week",
-          "nlpIndexSentence": 5
+          "enhancement": {
+            "timex": [
+              {
+                "start_date": "2017-11-12T00:00:00",
+                "end_date": "2017-11-18T23:59:59"
+              }
+            ]
+          },
+          "nlpIndexSentence": 11
         }
       ],
       "label": "when"

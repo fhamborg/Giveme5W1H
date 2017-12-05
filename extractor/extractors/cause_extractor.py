@@ -15,7 +15,7 @@ class CauseExtractor(AbsExtractor):
     """
 
     adverbial_indicators = ['therefore', 'hence', 'thus', 'consequently', 'accordingly']  # 'so' has problems with JJ
-    clausal_conjunctions = {'consequence': 'of', 'effect': 'of', 'result': 'of', 'upshot': 'of', 'outcome': 'of',
+    causal_conjunctions = {'consequence': 'of', 'effect': 'of', 'result': 'of', 'upshot': 'of', 'outcome': 'of',
                             'because': '', 'due': 'to', 'stemmed': 'from'}
 
     # list of verbs for the detection of cause-effect relations within NP-VP-NP patterns
@@ -53,7 +53,6 @@ class CauseExtractor(AbsExtractor):
             self.log.warning('Could not find corpus for WordNet, will now try to download the corpus.')
             nltk.download('wordnet')
 
-
         if weights:
             self.weights = weights
 
@@ -75,8 +74,6 @@ class CauseExtractor(AbsExtractor):
 
         self.lemmatizer = WordNetLemmatizer()
 
-
-
     def _extract_candidates(self, document):
         """
         Extracts possible agents/actions pairs from a given document.
@@ -94,7 +91,7 @@ class CauseExtractor(AbsExtractor):
             for candidate in self._evaluate_tree(tree):
                 candidateObject = Candidate()
                 # used by the extractor
-                candidateObject.set_raw(candidate[0] + candidate[1])
+                candidateObject.set_raw(candidate[0]) # candidate[0] contains the cause, candidate[1] the effect
                 candidateObject.set_type(candidate[2])
                 candidateObject.set_sentence_index(i)
 
@@ -155,10 +152,12 @@ class CauseExtractor(AbsExtractor):
                         if rest != self.causal_verb_phrases[lemma]:
                             continue
 
-                # pattern contains a valid verb, so check the 8 subpatterns
+                # According to Girju, if the found verb is 'cause' or a synonym, the following NP is 100% the cause
+                # so we can directly put it in the list of candidates
                 if not verb_synset.isdisjoint(self.constraints_verbs['cause']):
                     candidates.append(deepcopy([subtree.pos(), sibling.pos(), 'NP-VP-NP']))
                 else:
+                    # pattern contains a valid verb (that is not 'cause'), so check the 7 subpatterns
                     pre = [t[0]['nlpToken']['originalText'].lower() for t in subtree.pos() if
                            t[1][0] == 'N' and t[0]['nlpToken']['originalText'].isalpha()]
                     post = [t[0]['nlpToken']['originalText'].lower() for t in sibling.pos() if
@@ -210,14 +209,13 @@ class CauseExtractor(AbsExtractor):
         for i in range(len(tokens)):
             token = tokens[i]['nlpToken']['originalText'].lower()
 
-            # TODO negation check?
             if pos[i][1] == 'RB' and token in self.adverbial_indicators:
                 # If we come along an adverb (RB) check the adverbials that indicate causation
                 candidates.append(deepcopy([pos[:i], pos[i - 1:], 'RB']))
 
-            elif token in self.clausal_conjunctions and ' '.join(
+            elif token in self.causal_conjunctions and ' '.join(
                     [x['nlpToken']['originalText'] for x in tokens[i:]]).lower().startswith(
-                self.clausal_conjunctions[token]):
+                    self.causal_conjunctions[token]):
                 # Check if token is a clausal conjunction indicating causation
                 candidates.append(deepcopy([pos[i - 1:], pos[:i], 'biclausal']))
 
@@ -225,8 +223,11 @@ class CauseExtractor(AbsExtractor):
         unique_candidates = []
         candidate_strings = []
         for candidate in candidates:
-            candidate_strings.append(candidate[0][0][0]['nlpToken']['originalText'] + ' ' + ' '.join(
-                [x[0]['nlpToken']['originalText'] for x in candidate[1]]))
+            # Bugfix, at some very rare occasions, the candidate holds an empty list
+            if len(candidate[0]) > 0:
+                another_string = [x[0]['nlpToken']['originalText'] for x in candidate[1]]
+                a_string = candidate[0][0][0]['nlpToken']['originalText'] + ' ' + ' '.join(another_string)
+                candidate_strings.append(a_string)
 
         for i, candidate in enumerate(candidates):
             unique = True

@@ -18,8 +18,15 @@
   "title_page": null,
   "title_rss": null,
   "url": "https://gizmodo.com/equifax-seized-138-scammy-lookalike-domains-instead-of-1820450580",
-  "category_id": 6,
-  "category": "Equifax breach",
+  "newsCluster": {
+    "CategoryId": 3,
+    "Category": "science_tech",
+    "TopicId": 3,
+    "Topic": "hack",
+    "EventId": 9,
+    "Event": "hack_equifax_breach",
+    "Url": "https://gizmodo.com/equifax-seized-138-scammy-lookalike-domains-instead-of-1820450580"
+  },
   "dId": "8c9b29cd27637c7db20792acbcb554139e9f91c9ae7f8c0ae0671c5c",
   "fiveWoneH": {
     "how": {
@@ -70,7 +77,52 @@
                   "speaker": "PER0",
                   "before": "",
                   "after": " "
-                }
+                },
+                "aida": [
+                  {
+                    "mention": {
+                      "allEntities": [
+                        {
+                          "kbIdentifier": "YAGO:Equifax",
+                          "disambiguationScore": "1"
+                        }
+                      ],
+                      "offset": 0,
+                      "name": "Equifax",
+                      "length": 7,
+                      "bestEntity": {
+                        "kbIdentifier": "YAGO:Equifax",
+                        "disambiguationScore": "1"
+                      }
+                    },
+                    "bestEntityMetadata": {
+                      "knowledgebase": "YAGO",
+                      "depictionurl": "http://upload.wikimedia.org/wikipedia/commons/2/24/Equifax.svg",
+                      "depictionthumbnailurl": "http://upload.wikimedia.org/wikipedia/commons/thumbEquifax.svg/200px-Equifax.svg",
+                      "importance": 0.03901680688420139,
+                      "entityId": "Equifax",
+                      "type": [
+                        "YAGO_wikicategory_Companies_listed_on_the_New_York_Stock_Exchange",
+                        "YAGO_yagoPermanentlyLocatedEntity",
+                        "YAGO_yagoLegalActorGeo",
+                        "YAGO_wordnet_organization_108008335",
+                        "YAGO_wikicategory_Financial_services_companies_of_the_United_States",
+                        "YAGO_wordnet_social_group_107950920",
+                        "YAGO_wordnet_institution_108053576",
+                        "YAGO_wordnet_entity_100001740",
+                        "YAGO_wordnet_group_100031264",
+                        "YAGO_wikicategory_Companies_established_in_1899",
+                        "YAGO_wikicategory_Companies_based_in_Atlanta\\u002c_Georgia",
+                        "YAGO_wikicategory_Business_services_companies_of_the_United_States",
+                        "YAGO_yagoLegalActor",
+                        "YAGO_wordnet_abstraction_100002137",
+                        "YAGO_wordnet_company_108058098"
+                      ],
+                      "readableRepr": "Equifax",
+                      "url": "http://en.wikipedia.org/wiki/Equifax"
+                    }
+                  }
+                ]
               },
               "NNP"
             ]
@@ -183,6 +235,184 @@
       ],
       "label": "what"
     },
+    "where": {
+      "extracted": [
+        {
+          "parts": [
+            [
+              {
+                "nlpToken": {
+                  "index": 20,
+                  "word": "China",
+                  "originalText": "China",
+                  "lemma": "China",
+                  "characterOffsetBegin": 2022,
+                  "characterOffsetEnd": 2027,
+                  "pos": "NNP",
+                  "ner": "LOCATION",
+                  "speaker": "PER0",
+                  "before": " ",
+                  "after": " "
+                },
+                "aida": [
+                  {
+                    "mention": {
+                      "allEntities": [],
+                      "offset": 2022,
+                      "name": "China Capital Investment",
+                      "length": 24
+                    },
+                    "bestEntityMetadata": null
+                  }
+                ]
+              },
+              "NNP"
+            ]
+          ],
+          "score": 1.0,
+          "text": "China",
+          "enhancement": {
+            "openstreetmap_nominatim": {
+              "place_id": "179360170",
+              "licence": "Data \u00a9 OpenStreetMap contributors, ODbL 1.0. http://www.openstreetmap.org/copyright",
+              "osm_type": "relation",
+              "osm_id": "5605656",
+              "boundingbox": [
+                25.0671341,
+                25.9161824,
+                -99.4612273,
+                -98.421576
+              ],
+              "lat": "25.4915799",
+              "lon": "-98.9811115045569",
+              "display_name": "China, Nuevo Le\u00f3n, M\u00e9xico",
+              "class": "boundary",
+              "type": "administrative",
+              "importance": 0.2225,
+              "icon": "https://nominatim.openstreetmap.org/images/mapicons/poi_boundary_administrative.p.20.png"
+            }
+          },
+          "nlpIndexSentence": 12
+        }
+      ],
+      "label": "where"
+    },
+    "when": {
+      "extracted": [
+        {
+          "parts": [
+            [
+              {
+                "nlpToken": {
+                  "index": 19,
+                  "word": "November",
+                  "originalText": "November",
+                  "lemma": "November",
+                  "characterOffsetBegin": 377,
+                  "characterOffsetEnd": 385,
+                  "pos": "NNP",
+                  "ner": "DATE",
+                  "normalizedNER": "2017-11-08",
+                  "speaker": "PER0",
+                  "before": " ",
+                  "after": " ",
+                  "timex": {
+                    "tid": "t3",
+                    "type": "DATE",
+                    "value": "2017-11-08"
+                  }
+                }
+              },
+              "NNP"
+            ],
+            [
+              {
+                "nlpToken": {
+                  "index": 20,
+                  "word": "8",
+                  "originalText": "8",
+                  "lemma": "8",
+                  "characterOffsetBegin": 386,
+                  "characterOffsetEnd": 387,
+                  "pos": "CD",
+                  "ner": "DATE",
+                  "normalizedNER": "2017-11-08",
+                  "speaker": "PER0",
+                  "before": " ",
+                  "after": "",
+                  "timex": {
+                    "tid": "t3",
+                    "type": "DATE",
+                    "value": "2017-11-08"
+                  }
+                }
+              },
+              "CD"
+            ],
+            [
+              {
+                "nlpToken": {
+                  "index": 21,
+                  "word": ",",
+                  "originalText": ",",
+                  "lemma": ",",
+                  "characterOffsetBegin": 387,
+                  "characterOffsetEnd": 388,
+                  "pos": ",",
+                  "ner": "DATE",
+                  "normalizedNER": "2017-11-08",
+                  "speaker": "PER0",
+                  "before": "",
+                  "after": " ",
+                  "timex": {
+                    "tid": "t3",
+                    "type": "DATE",
+                    "value": "2017-11-08"
+                  }
+                }
+              },
+              ","
+            ],
+            [
+              {
+                "nlpToken": {
+                  "index": 22,
+                  "word": "2017",
+                  "originalText": "2017",
+                  "lemma": "2017",
+                  "characterOffsetBegin": 389,
+                  "characterOffsetEnd": 393,
+                  "pos": "CD",
+                  "ner": "DATE",
+                  "normalizedNER": "2017-11-08",
+                  "speaker": "PER0",
+                  "before": " ",
+                  "after": " ",
+                  "timex": {
+                    "tid": "t3",
+                    "type": "DATE",
+                    "value": "2017-11-08"
+                  }
+                }
+              },
+              "CD"
+            ]
+          ],
+          "score": 0.6972926404464322,
+          "text": "November 8 , 2017",
+          "enhancement": {
+            "timex": [
+              {
+                "start_date": "2017-11-08T00:00:00",
+                "end_date": "2017-11-08T23:59:59"
+              }
+            ]
+          },
+          "nlpIndexSentence": 3
+        }
+      ],
+      "label": "when"
+    },
     "why": {
       "extracted": [
         {
@@ -201,7 +431,52 @@
                   "speaker": "PER0",
                   "before": "",
                   "after": " "
-                }
+                },
+                "aida": [
+                  {
+                    "mention": {
+                      "allEntities": [
+                        {
+                          "kbIdentifier": "YAGO:Equifax",
+                          "disambiguationScore": "1"
+                        }
+                      ],
+                      "offset": 0,
+                      "name": "Equifax",
+                      "length": 7,
+                      "bestEntity": {
+                        "kbIdentifier": "YAGO:Equifax",
+                        "disambiguationScore": "1"
+                      }
+                    },
+                    "bestEntityMetadata": {
+                      "knowledgebase": "YAGO",
+                      "depictionurl": "http://upload.wikimedia.org/wikipedia/commons/2/24/Equifax.svg",
+                      "depictionthumbnailurl": "http://upload.wikimedia.org/wikipedia/commons/thumbEquifax.svg/200px-Equifax.svg",
+                      "importance": 0.03901680688420139,
+                      "entityId": "Equifax",
+                      "type": [
+                        "YAGO_wikicategory_Companies_listed_on_the_New_York_Stock_Exchange",
+                        "YAGO_yagoPermanentlyLocatedEntity",
+                        "YAGO_yagoLegalActorGeo",
+                        "YAGO_wordnet_organization_108008335",
+                        "YAGO_wikicategory_Financial_services_companies_of_the_United_States",
+                        "YAGO_wordnet_social_group_107950920",
+                        "YAGO_wordnet_institution_108053576",
+                        "YAGO_wordnet_entity_100001740",
+                        "YAGO_wordnet_group_100031264",
+                        "YAGO_wikicategory_Companies_established_in_1899",
+                        "YAGO_wikicategory_Companies_based_in_Atlanta\\u002c_Georgia",
+                        "YAGO_wikicategory_Business_services_companies_of_the_United_States",
+                        "YAGO_yagoLegalActor",
+                        "YAGO_wordnet_abstraction_100002137",
+                        "YAGO_wordnet_company_108058098"
+                      ],
+                      "readableRepr": "Equifax",
+                      "url": "http://en.wikipedia.org/wiki/Equifax"
+                    }
+                  }
+                ]
               },
               "NNP"
             ],
@@ -482,93 +757,6 @@
         }
       ],
       "label": "why"
-    },
-    "where": {
-      "extracted": [
-        {
-          "parts": [
-            [
-              {
-                "nlpToken": {
-                  "index": 20,
-                  "word": "China",
-                  "originalText": "China",
-                  "lemma": "China",
-                  "characterOffsetBegin": 2022,
-                  "characterOffsetEnd": 2027,
-                  "pos": "NNP",
-                  "ner": "LOCATION",
-                  "speaker": "PER0",
-                  "before": " ",
-                  "after": " "
-                }
-              },
-              "NNP"
-            ]
-          ],
-          "score": 1.0,
-          "text": "China",
-          "enhancement": {
-            "openstreetmap_nominatim": {
-              "place_id": "179360170",
-              "licence": "Data \u00a9 OpenStreetMap contributors, ODbL 1.0. http://www.openstreetmap.org/copyright",
-              "osm_type": "relation",
-              "osm_id": "5605656",
-              "boundingbox": [
-                25.0671341,
-                25.9161824,
-                -99.4612273,
-                -98.421576
-              ],
-              "lat": "25.4915799",
-              "lon": "-98.9811115045569",
-              "display_name": "China, Nuevo Le\u00f3n, M\u00e9xico",
-              "class": "boundary",
-              "type": "administrative",
-              "importance": 0.2225,
-              "icon": "https://nominatim.openstreetmap.org/images/mapicons/poi_boundary_administrative.p.20.png"
-            }
-          },
-          "nlpIndexSentence": 12
-        }
-      ],
-      "label": "where"
-    },
-    "when": {
-      "extracted": [
-        {
-          "parts": [
-            [
-              {
-                "nlpToken": {
-                  "index": 19,
-                  "word": "September",
-                  "originalText": "September",
-                  "lemma": "September",
-                  "characterOffsetBegin": 202,
-                  "characterOffsetEnd": 211,
-                  "pos": "NNP",
-                  "ner": "DATE",
-                  "normalizedNER": "XXXX-09",
-                  "speaker": "PER0",
-                  "before": " ",
-                  "after": " ",
-                  "timex": {
-                    "tid": "t3",
-                    "type": "DATE",
-                    "value": "XXXX-09"
-                  }
-                }
-              },
-              "NNP"
-            ]
-          ],
-          "score": 0.8827838827838828,
-          "text": "September",
-          "nlpIndexSentence": 1
-        }
-      ],
-      "label": "when"
     }
   }
 }

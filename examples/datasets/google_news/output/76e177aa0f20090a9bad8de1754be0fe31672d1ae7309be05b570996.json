@@ -435,7 +435,54 @@
       "label": "why"
     },
     "where": {
-      "extracted": [],
+      "extracted": [
+        {
+          "parts": [
+            [
+              {
+                "nlpToken": {
+                  "index": 6,
+                  "word": "Belgium",
+                  "originalText": "Belgium",
+                  "lemma": "Belgium",
+                  "characterOffsetBegin": 1163,
+                  "characterOffsetEnd": 1170,
+                  "pos": "NNP",
+                  "ner": "LOCATION",
+                  "speaker": "PER0",
+                  "before": " ",
+                  "after": ""
+                }
+              },
+              "NNP"
+            ]
+          ],
+          "score": 1.0,
+          "text": "Belgium",
+          "enhancement": {
+            "openstreetmap_nominatim": {
+              "place_id": "179136572",
+              "licence": "Data \u00a9 OpenStreetMap contributors, ODbL 1.0. http://www.openstreetmap.org/copyright",
+              "osm_type": "relation",
+              "osm_id": "52411",
+              "boundingbox": [
+                49.4969821,
+                51.5516667,
+                2.3889137,
+                6.408097
+              ],
+              "lat": "50.6407351",
+              "lon": "4.66696",
+              "display_name": "Belgi\u00eb - Belgique - Belgien",
+              "class": "boundary",
+              "type": "administrative",
+              "importance": 0.21171179835222,
+              "icon": "https://nominatim.openstreetmap.org/images/mapicons/poi_boundary_administrative.p.20.png"
+            }
+          },
+          "nlpIndexSentence": 14
+        }
+      ],
       "label": "where"
     },
     "when": {
@@ -445,12 +492,12 @@
             [
               {
                 "nlpToken": {
-                  "index": 12,
+                  "index": 4,
                   "word": "today",
                   "originalText": "today",
                   "lemma": "today",
-                  "characterOffsetBegin": 331,
-                  "characterOffsetEnd": 336,
+                  "characterOffsetBegin": 1628,
+                  "characterOffsetEnd": 1633,
                   "pos": "NN",
                   "ner": "DATE",
                   "normalizedNER": "2017-11-16",
@@ -458,7 +505,7 @@
                   "before": " ",
                   "after": "",
                   "timex": {
-                    "tid": "t3",
+                    "tid": "t13",
                     "type": "DATE",
                     "value": "2017-11-16"
                   }
@@ -467,9 +514,17 @@
               "NN"
             ]
           ],
-          "score": 0.8153846153846154,
+          "score": 0.6103656635802469,
           "text": "today",
-          "nlpIndexSentence": 4
+          "enhancement": {
+            "timex": [
+              {
+                "start_date": "2017-11-16T00:00:00",
+                "end_date": "2017-11-16T23:59:59"
+              }
+            ]
+          },
+          "nlpIndexSentence": 19
         }
       ],
       "label": "when"

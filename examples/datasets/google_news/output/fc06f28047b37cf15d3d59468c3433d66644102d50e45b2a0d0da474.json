@@ -135,46 +135,6 @@
       ],
       "label": "what"
     },
-    "where": {
-      "extracted": [],
-      "label": "where"
-    },
-    "when": {
-      "extracted": [
-        {
-          "parts": [
-            [
-              {
-                "nlpToken": {
-                  "index": 15,
-                  "word": "September",
-                  "originalText": "September",
-                  "lemma": "September",
-                  "characterOffsetBegin": 151,
-                  "characterOffsetEnd": 160,
-                  "pos": "NNP",
-                  "ner": "DATE",
-                  "normalizedNER": "XXXX-09",
-                  "speaker": "PER0",
-                  "before": " ",
-                  "after": " ",
-                  "timex": {
-                    "tid": "t1",
-                    "type": "DATE",
-                    "value": "XXXX-09"
-                  }
-                }
-              },
-              "NNP"
-            ]
-          ],
-          "score": 0.8290598290598291,
-          "text": "September",
-          "nlpIndexSentence": 1
-        }
-      ],
-      "label": "when"
-    },
     "how": {
       "extracted": [
         {
@@ -204,6 +164,54 @@
         }
       ],
       "label": "how"
+    },
+    "where": {
+      "extracted": [],
+      "label": "where"
+    },
+    "when": {
+      "extracted": [
+        {
+          "parts": [
+            [
+              {
+                "nlpToken": {
+                  "index": 15,
+                  "word": "September",
+                  "originalText": "September",
+                  "lemma": "September",
+                  "characterOffsetBegin": 151,
+                  "characterOffsetEnd": 160,
+                  "pos": "NNP",
+                  "ner": "DATE",
+                  "normalizedNER": "2017-09",
+                  "speaker": "PER0",
+                  "before": " ",
+                  "after": " ",
+                  "timex": {
+                    "tid": "t1",
+                    "type": "DATE",
+                    "value": "2017-09"
+                  }
+                }
+              },
+              "NNP"
+            ]
+          ],
+          "score": 0.6466666666666667,
+          "text": "September",
+          "enhancement": {
+            "timex": [
+              {
+                "start_date": "2017-09-01T00:00:00",
+                "end_date": "2017-09-30T23:59:59"
+              }
+            ]
+          },
+          "nlpIndexSentence": 1
+        }
+      ],
+      "label": "when"
     },
     "why": {
       "extracted": [
@@ -328,14 +336,14 @@
                   "characterOffsetEnd": 160,
                   "pos": "NNP",
                   "ner": "DATE",
-                  "normalizedNER": "XXXX-09",
+                  "normalizedNER": "2017-09",
                   "speaker": "PER0",
                   "before": " ",
                   "after": " ",
                   "timex": {
                     "tid": "t1",
                     "type": "DATE",
-                    "value": "XXXX-09"
+                    "value": "2017-09"
                   }
                 }
               },

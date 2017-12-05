@@ -532,7 +532,53 @@
       "label": "why"
     },
     "where": {
-      "extracted": [],
+      "extracted": [
+        {
+          "parts": [
+            [
+              {
+                "nlpToken": {
+                  "index": 16,
+                  "word": "Japan",
+                  "originalText": "Japan",
+                  "lemma": "Japan",
+                  "characterOffsetBegin": 82,
+                  "characterOffsetEnd": 87,
+                  "pos": "NNP",
+                  "ner": "LOCATION",
+                  "speaker": "PER0",
+                  "before": " ",
+                  "after": ""
+                }
+              },
+              "NNP"
+            ]
+          ],
+          "score": 1.0000000000000002,
+          "text": "Japan",
+          "enhancement": {
+            "openstreetmap_nominatim": {
+              "place_id": "177812347",
+              "licence": "Data \u00a9 OpenStreetMap contributors, ODbL 1.0. http://www.openstreetmap.org/copyright",
+              "osm_type": "relation",
+              "osm_id": "382313",
+              "boundingbox": [
+                20.2145811,
+                45.7112046,
+                122.7141754,
+                154.205541
+              ],
+              "lat": "36.5748441",
+              "lon": "139.2394179",
+              "display_name": "\u65e5\u672c",
+              "class": "boundary",
+              "type": "administrative",
+              "importance": 0.22667730599968,
+              "icon": "https://nominatim.openstreetmap.org/images/mapicons/poi_boundary_administrative.p.20.png"
+            }
+          }
+        }
+      ],
       "label": "where"
     },
     "when": {
@@ -542,31 +588,39 @@
             [
               {
                 "nlpToken": {
-                  "index": 20,
-                  "word": "September",
-                  "originalText": "September",
-                  "lemma": "September",
-                  "characterOffsetBegin": 695,
-                  "characterOffsetEnd": 704,
+                  "index": 7,
+                  "word": "Tuesday",
+                  "originalText": "Tuesday",
+                  "lemma": "Tuesday",
+                  "characterOffsetBegin": 245,
+                  "characterOffsetEnd": 252,
                   "pos": "NNP",
                   "ner": "DATE",
-                  "normalizedNER": "2017-09",
+                  "normalizedNER": "2017-11-14",
                   "speaker": "PER0",
                   "before": " ",
                   "after": " ",
                   "timex": {
-                    "tid": "t2",
+                    "tid": "t1",
                     "type": "DATE",
-                    "value": "2017-09"
+                    "value": "2017-11-14"
                   }
                 }
               },
               "NNP"
             ]
           ],
-          "score": 0.7743589743589744,
-          "text": "September",
-          "nlpIndexSentence": 6
+          "score": 0.7196989969135802,
+          "text": "Tuesday",
+          "enhancement": {
+            "timex": [
+              {
+                "start_date": "2017-11-14T00:00:00",
+                "end_date": "2017-11-14T23:59:59"
+              }
+            ]
+          },
+          "nlpIndexSentence": 3
         }
       ],
       "label": "when"

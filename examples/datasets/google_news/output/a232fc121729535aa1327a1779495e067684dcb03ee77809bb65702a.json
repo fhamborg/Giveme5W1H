@@ -574,7 +574,72 @@
       "label": "why"
     },
     "where": {
-      "extracted": [],
+      "extracted": [
+        {
+          "parts": [
+            [
+              {
+                "nlpToken": {
+                  "index": 1,
+                  "word": "North",
+                  "originalText": "North",
+                  "lemma": "North",
+                  "characterOffsetBegin": 58,
+                  "characterOffsetEnd": 63,
+                  "pos": "NNP",
+                  "ner": "LOCATION",
+                  "speaker": "PER0",
+                  "before": " ",
+                  "after": " "
+                }
+              },
+              "NNP"
+            ],
+            [
+              {
+                "nlpToken": {
+                  "index": 2,
+                  "word": "Korea",
+                  "originalText": "Korea",
+                  "lemma": "Korea",
+                  "characterOffsetBegin": 64,
+                  "characterOffsetEnd": 69,
+                  "pos": "NNP",
+                  "ner": "LOCATION",
+                  "speaker": "PER0",
+                  "before": " ",
+                  "after": " "
+                }
+              },
+              "NNP"
+            ]
+          ],
+          "score": 1.0000000000000002,
+          "text": "North Korea",
+          "enhancement": {
+            "openstreetmap_nominatim": {
+              "place_id": "177647595",
+              "licence": "Data \u00a9 OpenStreetMap contributors, ODbL 1.0. http://www.openstreetmap.org/copyright",
+              "osm_type": "relation",
+              "osm_id": "192734",
+              "boundingbox": [
+                37.6279512,
+                43.0089642,
+                124.0913902,
+                130.924647
+              ],
+              "lat": "40.3736611",
+              "lon": "127.0870417",
+              "display_name": "\uc870\uc120\ubbfc\uc8fc\uc8fc\uc758\uc778\ubbfc\uacf5\ud654\uad6d",
+              "class": "boundary",
+              "type": "administrative",
+              "importance": 0.17189971919422,
+              "icon": "https://nominatim.openstreetmap.org/images/mapicons/poi_boundary_administrative.p.20.png"
+            }
+          },
+          "nlpIndexSentence": 1
+        }
+      ],
       "label": "where"
     },
     "when": {
@@ -584,55 +649,159 @@
             [
               {
                 "nlpToken": {
-                  "index": 18,
-                  "word": "this",
-                  "originalText": "this",
-                  "lemma": "this",
-                  "characterOffsetBegin": 148,
-                  "characterOffsetEnd": 152,
-                  "pos": "DT",
+                  "index": 8,
+                  "word": "Wednesday",
+                  "originalText": "Wednesday",
+                  "lemma": "Wednesday",
+                  "characterOffsetBegin": 447,
+                  "characterOffsetEnd": 456,
+                  "pos": "NNP",
                   "ner": "DATE",
-                  "normalizedNER": "2017",
-                  "speaker": "PER0",
-                  "before": " ",
-                  "after": " ",
-                  "timex": {
-                    "tid": "t4",
-                    "type": "DATE",
-                    "value": "2017"
-                  }
-                }
-              },
-              "DT"
-            ],
-            [
-              {
-                "nlpToken": {
-                  "index": 19,
-                  "word": "year",
-                  "originalText": "year",
-                  "lemma": "year",
-                  "characterOffsetBegin": 153,
-                  "characterOffsetEnd": 157,
-                  "pos": "NN",
-                  "ner": "DATE",
-                  "normalizedNER": "2017",
+                  "normalizedNER": "2017-11-15",
                   "speaker": "PER0",
                   "before": " ",
                   "after": "",
                   "timex": {
-                    "tid": "t4",
+                    "tid": "t6",
                     "type": "DATE",
-                    "value": "2017"
+                    "value": "2017-11-15"
                   }
                 }
               },
-              "NN"
+              "NNP"
+            ],
+            [
+              {
+                "nlpToken": {
+                  "index": 9,
+                  "word": ",",
+                  "originalText": ",",
+                  "lemma": ",",
+                  "characterOffsetBegin": 456,
+                  "characterOffsetEnd": 457,
+                  "pos": ",",
+                  "ner": "DATE",
+                  "normalizedNER": "2017-11-15",
+                  "speaker": "PER0",
+                  "before": "",
+                  "after": " ",
+                  "timex": {
+                    "tid": "t6",
+                    "type": "DATE",
+                    "value": "2017-11-15"
+                  }
+                }
+              },
+              ","
+            ],
+            [
+              {
+                "nlpToken": {
+                  "index": 10,
+                  "word": "Nov.",
+                  "originalText": "Nov.",
+                  "lemma": "Nov.",
+                  "characterOffsetBegin": 458,
+                  "characterOffsetEnd": 462,
+                  "pos": "NNP",
+                  "ner": "DATE",
+                  "normalizedNER": "2017-11-15",
+                  "speaker": "PER0",
+                  "before": " ",
+                  "after": " ",
+                  "timex": {
+                    "tid": "t6",
+                    "type": "DATE",
+                    "value": "2017-11-15"
+                  }
+                }
+              },
+              "NNP"
+            ],
+            [
+              {
+                "nlpToken": {
+                  "index": 11,
+                  "word": "15",
+                  "originalText": "15",
+                  "lemma": "15",
+                  "characterOffsetBegin": 463,
+                  "characterOffsetEnd": 465,
+                  "pos": "CD",
+                  "ner": "DATE",
+                  "normalizedNER": "2017-11-15",
+                  "speaker": "PER0",
+                  "before": " ",
+                  "after": "",
+                  "timex": {
+                    "tid": "t6",
+                    "type": "DATE",
+                    "value": "2017-11-15"
+                  }
+                }
+              },
+              "CD"
+            ],
+            [
+              {
+                "nlpToken": {
+                  "index": 12,
+                  "word": ",",
+                  "originalText": ",",
+                  "lemma": ",",
+                  "characterOffsetBegin": 465,
+                  "characterOffsetEnd": 466,
+                  "pos": ",",
+                  "ner": "DATE",
+                  "normalizedNER": "2017-11-15",
+                  "speaker": "PER0",
+                  "before": "",
+                  "after": " ",
+                  "timex": {
+                    "tid": "t6",
+                    "type": "DATE",
+                    "value": "2017-11-15"
+                  }
+                }
+              },
+              ","
+            ],
+            [
+              {
+                "nlpToken": {
+                  "index": 13,
+                  "word": "2017",
+                  "originalText": "2017",
+                  "lemma": "2017",
+                  "characterOffsetBegin": 467,
+                  "characterOffsetEnd": 471,
+                  "pos": "CD",
+                  "ner": "DATE",
+                  "normalizedNER": "2017-11-15",
+                  "speaker": "PER0",
+                  "before": " ",
+                  "after": "",
+                  "timex": {
+                    "tid": "t6",
+                    "type": "DATE",
+                    "value": "2017-11-15"
+                  }
+                }
+              },
+              "CD"
             ]
           ],
-          "score": 0.886039886039886,
-          "text": "this year",
-          "nlpIndexSentence": 1
+          "score": 0.8543656635802469,
+          "text": "Wednesday , Nov. 15 , 2017",
+          "enhancement": {
+            "timex": [
+              {
+                "start_date": "2017-11-15T00:00:00",
+                "end_date": "2017-11-15T23:59:59"
+              }
+            ]
+          },
+          "nlpIndexSentence": 6
         }
       ],
       "label": "when"

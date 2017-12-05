@@ -1105,7 +1105,54 @@
       "label": "why"
     },
     "where": {
-      "extracted": [],
+      "extracted": [
+        {
+          "parts": [
+            [
+              {
+                "nlpToken": {
+                  "index": 40,
+                  "word": "Germany",
+                  "originalText": "Germany",
+                  "lemma": "Germany",
+                  "characterOffsetBegin": 646,
+                  "characterOffsetEnd": 653,
+                  "pos": "NNP",
+                  "ner": "LOCATION",
+                  "speaker": "38",
+                  "before": " ",
+                  "after": ""
+                }
+              },
+              "NNP"
+            ]
+          ],
+          "score": 1.0000000000000002,
+          "text": "Germany",
+          "enhancement": {
+            "openstreetmap_nominatim": {
+              "place_id": "178386877",
+              "licence": "Data \u00a9 OpenStreetMap contributors, ODbL 1.0. http://www.openstreetmap.org/copyright",
+              "osm_type": "relation",
+              "osm_id": "51477",
+              "boundingbox": [
+                47.2701114,
+                55.099161,
+                5.8663153,
+                15.0419319
+              ],
+              "lat": "51.0834196",
+              "lon": "10.4234469",
+              "display_name": "Deutschland, Europe",
+              "class": "boundary",
+              "type": "administrative",
+              "importance": 0.23266028173366,
+              "icon": "https://nominatim.openstreetmap.org/images/mapicons/poi_boundary_administrative.p.20.png"
+            }
+          },
+          "nlpIndexSentence": 4
+        }
+      ],
       "label": "where"
     },
     "when": {
@@ -1115,12 +1162,12 @@
             [
               {
                 "nlpToken": {
-                  "index": 17,
+                  "index": 27,
                   "word": "Friday",
                   "originalText": "Friday",
                   "lemma": "Friday",
-                  "characterOffsetBegin": 148,
-                  "characterOffsetEnd": 154,
+                  "characterOffsetBegin": 371,
+                  "characterOffsetEnd": 377,
                   "pos": "NNP",
                   "ner": "DATE",
                   "normalizedNER": "2017-10-20",
@@ -1128,7 +1175,7 @@
                   "before": " ",
                   "after": "",
                   "timex": {
-                    "tid": "t1",
+                    "tid": "t2",
                     "type": "DATE",
                     "value": "2017-10-20"
                   }
@@ -1137,9 +1184,17 @@
               "NNP"
             ]
           ],
-          "score": 0.791913214990138,
+          "score": 0.6030769230769231,
           "text": "Friday",
-          "nlpIndexSentence": 1
+          "enhancement": {
+            "timex": [
+              {
+                "start_date": "2017-10-20T00:00:00",
+                "end_date": "2017-10-20T23:59:59"
+              }
+            ]
+          },
+          "nlpIndexSentence": 3
         }
       ],
       "label": "when"

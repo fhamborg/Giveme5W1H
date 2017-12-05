@@ -47,7 +47,6 @@ class Document(object):
         self._processed = None
         self._enhancement = {}
 
-
     def is_preprocessed(self, preprocessed=None):
         if preprocessed is True or preprocessed is False:
             self._preprocessed = preprocessed
@@ -78,6 +77,7 @@ class Document(object):
             if candidate.startswith(extractor):
                 return True
         return False
+
     def reset_candidates(self):
         """
         resetting candidates will force each extractor to extract them again before evaluation
@@ -135,7 +135,6 @@ class Document(object):
 
     def get_rawData(self):
         return self._rawData
-
 
     def get_lemma_map(self):
         """

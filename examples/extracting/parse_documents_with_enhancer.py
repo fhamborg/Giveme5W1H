@@ -2,7 +2,6 @@ import logging
 import os
 
 from Giveme5W_enhancer.enhancer.aida import Aida
-from Giveme5W_enhancer.enhancer.heideltime import Heideltime
 from extractor.extractor import FiveWExtractor
 from extractor.tools.file.handler import Handler
 from extractors import action_extractor
@@ -29,13 +28,14 @@ if __name__ == '__main__':
         'gold_standard': os.path.dirname(__file__) + rel_datasets_path + 'gold_standard',
         'bbc': os.path.dirname(__file__) + rel_datasets_path + 'bbc',
         'google_news': os.path.dirname(__file__) + rel_datasets_path + 'google_news',
+        'news_cluster': os.path.dirname(__file__) + rel_datasets_path + 'news_cluster',
         'local': os.path.dirname(__file__)
     }
 
     #
     # Switch here between the predefined datasets or local for the local folder
     #
-    basePath = dataset_helper['google_news']
+    basePath = dataset_helper['news_cluster']
     #
     #
     #
@@ -55,7 +55,7 @@ if __name__ == '__main__':
         cause_extractor.CauseExtractor(),
         method_extractor.MethodExtractor()
     ], enhancement=[
-        Heideltime(['when']),
+        # Heideltime(['when']),
         Aida(['how', 'when', 'why', 'where', 'what', 'who'])
     ])
 
@@ -79,7 +79,7 @@ if __name__ == '__main__':
             # .set_limit(1)
 
             # Optional: resume ability, skip input file if its already in output
-            .skip_documents_with_output()
+            # .skip_documents_with_output()
 
             # load and saves all document runtime objects for further programming
             # .preload_and_cache_documents()

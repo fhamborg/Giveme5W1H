@@ -60,7 +60,7 @@ if __name__ == '__main__':
      .set_preprocessed_path(preprocessedPath)
 
      # limit the documents read from the input directory (handy for development)
-     .set_limit(2)
+     # .set_limit(2)
 
      # execute it
      .process())

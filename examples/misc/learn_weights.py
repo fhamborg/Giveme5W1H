@@ -4,12 +4,12 @@ import math
 import os
 import pickle
 import queue
-import sys
 from threading import Thread
 
 from extractor.extractor import FiveWExtractor
 from extractor.tools.file.handler import Handler
 from extractor.tools.util import cmp_text, cmp_date, cmp_location
+
 
 # Add path to allow execution though console
 # sys.path.insert(0, '/'.join(os.path.realpath(__file__).split('/')[:-2]))

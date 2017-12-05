@@ -194,7 +194,7 @@
                   "characterOffsetBegin": 240,
                   "characterOffsetEnd": 246,
                   "pos": "NNP",
-                  "ner": "PERSON",
+                  "ner": "O",
                   "speaker": "PER0",
                   "before": " ",
                   "after": " "
@@ -391,7 +391,53 @@
       "label": "why"
     },
     "where": {
-      "extracted": [],
+      "extracted": [
+        {
+          "parts": [
+            [
+              {
+                "nlpToken": {
+                  "index": 14,
+                  "word": "Britain",
+                  "originalText": "Britain",
+                  "lemma": "Britain",
+                  "characterOffsetBegin": 687,
+                  "characterOffsetEnd": 694,
+                  "pos": "NNP",
+                  "ner": "LOCATION",
+                  "speaker": "PER0",
+                  "before": " ",
+                  "after": " "
+                }
+              },
+              "NNP"
+            ]
+          ],
+          "score": 1.0000000000000002,
+          "text": "Britain",
+          "enhancement": {
+            "openstreetmap_nominatim": {
+              "place_id": "217424811",
+              "licence": "Data \u00a9 OpenStreetMap contributors, ODbL 1.0. http://www.openstreetmap.org/copyright",
+              "osm_type": "relation",
+              "osm_id": "6038068",
+              "boundingbox": [
+                49.9586975,
+                58.672078,
+                -6.2280845,
+                1.7632199
+              ],
+              "lat": "54.31536155",
+              "lon": "-1.91802349480124",
+              "display_name": "Great Britain, Richmondshire, North Yorkshire, Yorkshire and the Humber, England, UK",
+              "class": "place",
+              "type": "island",
+              "importance": 0.27719267735245
+            }
+          },
+          "nlpIndexSentence": 5
+        }
+      ],
       "label": "where"
     },
     "when": {
@@ -401,31 +447,39 @@
             [
               {
                 "nlpToken": {
-                  "index": 10,
-                  "word": "October",
-                  "originalText": "October",
-                  "lemma": "October",
-                  "characterOffsetBegin": 361,
-                  "characterOffsetEnd": 368,
-                  "pos": "NNP",
+                  "index": 16,
+                  "word": "today",
+                  "originalText": "today",
+                  "lemma": "today",
+                  "characterOffsetBegin": 224,
+                  "characterOffsetEnd": 229,
+                  "pos": "NN",
                   "ner": "DATE",
-                  "normalizedNER": "2017-10",
+                  "normalizedNER": "2017-11-16",
                   "speaker": "PER0",
                   "before": " ",
-                  "after": " ",
+                  "after": "",
                   "timex": {
-                    "tid": "t4",
+                    "tid": "t3",
                     "type": "DATE",
-                    "value": "2017-10"
+                    "value": "2017-11-16"
                   }
                 }
               },
-              "NNP"
+              "NN"
             ]
           ],
-          "score": 0.8482051282051282,
-          "text": "October",
-          "nlpIndexSentence": 3
+          "score": 0.5709878858024692,
+          "text": "today",
+          "enhancement": {
+            "timex": [
+              {
+                "start_date": "2017-11-16T00:00:00",
+                "end_date": "2017-11-16T23:59:59"
+              }
+            ]
+          },
+          "nlpIndexSentence": 2
         }
       ],
       "label": "when"

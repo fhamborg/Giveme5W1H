@@ -426,7 +426,54 @@
       "label": "why"
     },
     "where": {
-      "extracted": [],
+      "extracted": [
+        {
+          "parts": [
+            [
+              {
+                "nlpToken": {
+                  "index": 8,
+                  "word": "Germany",
+                  "originalText": "Germany",
+                  "lemma": "Germany",
+                  "characterOffsetBegin": 446,
+                  "characterOffsetEnd": 453,
+                  "pos": "NNP",
+                  "ner": "LOCATION",
+                  "speaker": "PER0",
+                  "before": " ",
+                  "after": ""
+                }
+              },
+              "NNP"
+            ]
+          ],
+          "score": 1.0,
+          "text": "Germany",
+          "enhancement": {
+            "openstreetmap_nominatim": {
+              "place_id": "178386877",
+              "licence": "Data \u00a9 OpenStreetMap contributors, ODbL 1.0. http://www.openstreetmap.org/copyright",
+              "osm_type": "relation",
+              "osm_id": "51477",
+              "boundingbox": [
+                47.2701114,
+                55.099161,
+                5.8663153,
+                15.0419319
+              ],
+              "lat": "51.0834196",
+              "lon": "10.4234469",
+              "display_name": "Deutschland, Europe",
+              "class": "boundary",
+              "type": "administrative",
+              "importance": 0.23266028173366,
+              "icon": "https://nominatim.openstreetmap.org/images/mapicons/poi_boundary_administrative.p.20.png"
+            }
+          },
+          "nlpIndexSentence": 4
+        }
+      ],
       "label": "where"
     },
     "when": {
@@ -436,79 +483,39 @@
             [
               {
                 "nlpToken": {
-                  "index": 11,
-                  "word": "the",
-                  "originalText": "the",
-                  "lemma": "the",
-                  "characterOffsetBegin": 1785,
-                  "characterOffsetEnd": 1788,
-                  "pos": "DT",
+                  "index": 16,
+                  "word": "Friday",
+                  "originalText": "Friday",
+                  "lemma": "Friday",
+                  "characterOffsetBegin": 493,
+                  "characterOffsetEnd": 499,
+                  "pos": "NNP",
                   "ner": "DATE",
-                  "normalizedNER": "2017-11-12",
+                  "normalizedNER": "2017-11-10",
                   "speaker": "PER0",
                   "before": " ",
                   "after": " ",
                   "timex": {
-                    "tid": "t7",
+                    "tid": "t3",
                     "type": "DATE",
-                    "value": "2017-11-12"
+                    "value": "2017-11-10"
                   }
                 }
               },
-              "DT"
-            ],
-            [
-              {
-                "nlpToken": {
-                  "index": 12,
-                  "word": "next",
-                  "originalText": "next",
-                  "lemma": "next",
-                  "characterOffsetBegin": 1789,
-                  "characterOffsetEnd": 1793,
-                  "pos": "JJ",
-                  "ner": "DATE",
-                  "normalizedNER": "2017-11-12",
-                  "speaker": "PER0",
-                  "before": " ",
-                  "after": " ",
-                  "timex": {
-                    "tid": "t7",
-                    "type": "DATE",
-                    "value": "2017-11-12"
-                  }
-                }
-              },
-              "JJ"
-            ],
-            [
-              {
-                "nlpToken": {
-                  "index": 13,
-                  "word": "day",
-                  "originalText": "day",
-                  "lemma": "day",
-                  "characterOffsetBegin": 1794,
-                  "characterOffsetEnd": 1797,
-                  "pos": "NN",
-                  "ner": "DATE",
-                  "normalizedNER": "2017-11-12",
-                  "speaker": "PER0",
-                  "before": " ",
-                  "after": " ",
-                  "timex": {
-                    "tid": "t7",
-                    "type": "DATE",
-                    "value": "2017-11-12"
-                  }
-                }
-              },
-              "NN"
+              "NNP"
             ]
           ],
-          "score": 0.6383265856950068,
-          "text": "the next day",
-          "nlpIndexSentence": 12
+          "score": 0.8069972425276154,
+          "text": "Friday",
+          "enhancement": {
+            "timex": [
+              {
+                "start_date": "2017-11-10T00:00:00",
+                "end_date": "2017-11-10T23:59:59"
+              }
+            ]
+          },
+          "nlpIndexSentence": 4
         }
       ],
       "label": "when"

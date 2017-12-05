@@ -338,14 +338,14 @@
                   "characterOffsetEnd": 433,
                   "pos": "NNP",
                   "ner": "DATE",
-                  "normalizedNER": "XXXX-WXX-1TNI",
+                  "normalizedNER": "2017-11-13TNI",
                   "speaker": "PER0",
                   "before": " ",
                   "after": " ",
                   "timex": {
-                    "tid": "t2",
+                    "tid": "t3",
                     "type": "TIME",
-                    "value": "XXXX-WXX-1TNI"
+                    "value": "2017-11-13TNI"
                   }
                 }
               },
@@ -362,14 +362,14 @@
                   "characterOffsetEnd": 439,
                   "pos": "NN",
                   "ner": "TIME",
-                  "normalizedNER": "XXXX-WXX-1TNI",
+                  "normalizedNER": "2017-11-13TNI",
                   "speaker": "PER0",
                   "before": " ",
                   "after": " ",
                   "timex": {
-                    "tid": "t2",
+                    "tid": "t3",
                     "type": "TIME",
-                    "value": "XXXX-WXX-1TNI"
+                    "value": "2017-11-13TNI"
                   }
                 }
               },
@@ -747,55 +747,87 @@
             [
               {
                 "nlpToken": {
-                  "index": 28,
-                  "word": "this",
-                  "originalText": "this",
-                  "lemma": "this",
-                  "characterOffsetBegin": 199,
-                  "characterOffsetEnd": 203,
-                  "pos": "DT",
-                  "ner": "DATE",
-                  "normalizedNER": "THIS P1Y",
+                  "index": 12,
+                  "word": "8",
+                  "originalText": "8",
+                  "lemma": "8",
+                  "characterOffsetBegin": 3324,
+                  "characterOffsetEnd": 3325,
+                  "pos": "CD",
+                  "ner": "TIME",
+                  "normalizedNER": "2017-11-14T08:00",
                   "speaker": "PER0",
                   "before": " ",
                   "after": " ",
                   "timex": {
-                    "tid": "t1",
-                    "type": "DATE",
-                    "altValue": "THIS P1Y"
+                    "tid": "t14",
+                    "type": "TIME",
+                    "value": "2017-11-14T08:00"
                   }
                 }
               },
-              "DT"
+              "CD"
             ],
             [
               {
                 "nlpToken": {
-                  "index": 29,
-                  "word": "year",
-                  "originalText": "year",
-                  "lemma": "year",
-                  "characterOffsetBegin": 204,
-                  "characterOffsetEnd": 208,
+                  "index": 13,
+                  "word": "a.m.",
+                  "originalText": "a.m.",
+                  "lemma": "a.m.",
+                  "characterOffsetBegin": 3326,
+                  "characterOffsetEnd": 3330,
                   "pos": "NN",
-                  "ner": "DATE",
-                  "normalizedNER": "THIS P1Y",
+                  "ner": "TIME",
+                  "normalizedNER": "2017-11-14T08:00",
                   "speaker": "PER0",
                   "before": " ",
-                  "after": "",
+                  "after": " ",
                   "timex": {
-                    "tid": "t1",
-                    "type": "DATE",
-                    "altValue": "THIS P1Y"
+                    "tid": "t14",
+                    "type": "TIME",
+                    "value": "2017-11-14T08:00"
                   }
                 }
               },
               "NN"
+            ],
+            [
+              {
+                "nlpToken": {
+                  "index": 14,
+                  "word": "Tuesday",
+                  "originalText": "Tuesday",
+                  "lemma": "Tuesday",
+                  "characterOffsetBegin": 3331,
+                  "characterOffsetEnd": 3338,
+                  "pos": "NNP",
+                  "ner": "DATE",
+                  "normalizedNER": "2017-11-14T08:00",
+                  "speaker": "PER0",
+                  "before": " ",
+                  "after": "",
+                  "timex": {
+                    "tid": "t14",
+                    "type": "TIME",
+                    "value": "2017-11-14T08:00"
+                  }
+                }
+              },
+              "NNP"
             ]
           ],
-          "score": 0.8885172798216276,
-          "text": "this year",
-          "nlpIndexSentence": 1
+          "score": 0.6809403415190552,
+          "text": "8 a.m. Tuesday",
+          "enhancement": {
+            "timex": [
+              {
+                "start_date": "2017-11-14T08:00:00",
+                "end_date": "2017-11-14T08:00:59"
+              }
+            ]
+          },
+          "nlpIndexSentence": 31
         }
       ],
       "label": "when"

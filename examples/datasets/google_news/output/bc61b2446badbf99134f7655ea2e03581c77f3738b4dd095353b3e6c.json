@@ -614,7 +614,54 @@
       "label": "why"
     },
     "where": {
-      "extracted": [],
+      "extracted": [
+        {
+          "parts": [
+            [
+              {
+                "nlpToken": {
+                  "index": 22,
+                  "word": "America",
+                  "originalText": "America",
+                  "lemma": "America",
+                  "characterOffsetBegin": 4449,
+                  "characterOffsetEnd": 4456,
+                  "pos": "NNP",
+                  "ner": "LOCATION",
+                  "speaker": "PER0",
+                  "before": " ",
+                  "after": " "
+                }
+              },
+              "NNP"
+            ]
+          ],
+          "score": 1.0,
+          "text": "America",
+          "enhancement": {
+            "openstreetmap_nominatim": {
+              "place_id": "220845259",
+              "licence": "Data \u00a9 OpenStreetMap contributors, ODbL 1.0. http://www.openstreetmap.org/copyright",
+              "osm_type": "relation",
+              "osm_id": "7762944",
+              "boundingbox": [
+                4.8165393,
+                4.8194642,
+                -75.6911194,
+                -75.6872277
+              ],
+              "lat": "4.81804785",
+              "lon": "-75.6888617199333",
+              "display_name": "America, Pereira, Risaralda, Colombia",
+              "class": "boundary",
+              "type": "administrative",
+              "importance": 0.185,
+              "icon": "https://nominatim.openstreetmap.org/images/mapicons/poi_boundary_administrative.p.20.png"
+            }
+          },
+          "nlpIndexSentence": 31
+        }
+      ],
       "label": "where"
     },
     "when": {
@@ -624,31 +671,63 @@
             [
               {
                 "nlpToken": {
-                  "index": 6,
-                  "word": "today",
-                  "originalText": "today",
-                  "lemma": "today",
-                  "characterOffsetBegin": 1751,
-                  "characterOffsetEnd": 1756,
-                  "pos": "NN",
+                  "index": 26,
+                  "word": "Nov.",
+                  "originalText": "Nov.",
+                  "lemma": "Nov.",
+                  "characterOffsetBegin": 2530,
+                  "characterOffsetEnd": 2534,
+                  "pos": "NNP",
                   "ner": "DATE",
-                  "normalizedNER": "2017-11-13",
-                  "speaker": "PER1",
+                  "normalizedNER": "2017-11-17",
+                  "speaker": "PER0",
                   "before": " ",
-                  "after": "",
+                  "after": " ",
                   "timex": {
-                    "tid": "t5",
+                    "tid": "t11",
                     "type": "DATE",
-                    "value": "2017-11-13"
+                    "value": "2017-11-17"
                   }
                 }
               },
-              "NN"
+              "NNP"
+            ],
+            [
+              {
+                "nlpToken": {
+                  "index": 27,
+                  "word": "17",
+                  "originalText": "17",
+                  "lemma": "17",
+                  "characterOffsetBegin": 2535,
+                  "characterOffsetEnd": 2537,
+                  "pos": "CD",
+                  "ner": "DATE",
+                  "normalizedNER": "2017-11-17",
+                  "speaker": "PER0",
+                  "before": " ",
+                  "after": "",
+                  "timex": {
+                    "tid": "t11",
+                    "type": "DATE",
+                    "value": "2017-11-17"
+                  }
+                }
+              },
+              "CD"
             ]
           ],
-          "score": 0.7802197802197802,
-          "text": "today",
-          "nlpIndexSentence": 12
+          "score": 0.592460901675485,
+          "text": "Nov. 17",
+          "enhancement": {
+            "timex": [
+              {
+                "start_date": "2017-11-17T00:00:00",
+                "end_date": "2017-11-17T23:59:59"
+              }
+            ]
+          },
+          "nlpIndexSentence": 16
         }
       ],
       "label": "when"

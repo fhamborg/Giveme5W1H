@@ -78,42 +78,20 @@
               "NN"
             ]
           ],
-          "score": 0.8110661268556005,
+          "score": 0.8603305758609487,
           "text": "last week",
+          "enhancement": {
+            "timex": [
+              {
+                "start_date": "2017-11-12T00:00:00",
+                "end_date": "2017-11-18T23:59:59"
+              }
+            ]
+          },
           "nlpIndexSentence": 4
         }
       ],
       "label": "when"
-    },
-    "how": {
-      "extracted": [
-        {
-          "parts": [
-            [
-              {
-                "nlpToken": {
-                  "index": 9,
-                  "word": "green",
-                  "originalText": "green",
-                  "lemma": "green",
-                  "characterOffsetBegin": 655,
-                  "characterOffsetEnd": 660,
-                  "pos": "JJ",
-                  "ner": "O",
-                  "speaker": "PER0",
-                  "before": " ",
-                  "after": " "
-                }
-              },
-              "JJ"
-            ]
-          ],
-          "score": 1.2450980392156863,
-          "text": "green",
-          "nlpIndexSentence": 7
-        }
-      ],
-      "label": "how"
     },
     "who": {
       "extracted": [
@@ -408,6 +386,36 @@
         }
       ],
       "label": "what"
+    },
+    "how": {
+      "extracted": [
+        {
+          "parts": [
+            [
+              {
+                "nlpToken": {
+                  "index": 9,
+                  "word": "green",
+                  "originalText": "green",
+                  "lemma": "green",
+                  "characterOffsetBegin": 655,
+                  "characterOffsetEnd": 660,
+                  "pos": "JJ",
+                  "ner": "O",
+                  "speaker": "PER0",
+                  "before": " ",
+                  "after": " "
+                }
+              },
+              "JJ"
+            ]
+          ],
+          "score": 1.2450980392156863,
+          "text": "green",
+          "nlpIndexSentence": 7
+        }
+      ],
+      "label": "how"
     },
     "why": {
       "extracted": [

@@ -1,28 +1,14 @@
-import json
 import logging
-import math
-import os
-import pickle
 import queue
-import socket
-import datetime
-import sys
 from threading import Thread
-from dateutil.relativedelta import relativedelta as rd
 
-
-import time
-
-from combined_scoring import distance_of_candidate
+from extractor.root import path
 from extractors import environment_extractor, action_extractor, cause_extractor, method_extractor
 from misc.learn_weights_new.learn import Learn
 from misc.learn_weights_new.work_queue import WorkQueue
 
-from combined_scoring import distance_of_candidate
-from extractor.extractor import FiveWExtractor
-from extractor.root import path
-from extractor.tools.file.handler import Handler
-from extractor.tools.util import cmp_text, cmp_date, cmp_location
+inputPath = path('../examples/datasets/gold_standard/data')
+preprocessedPath = path('../examples/datasets/gold_standard/cache')
 
 
 class Worker(Thread):
@@ -37,42 +23,95 @@ class Worker(Thread):
             _learn.process()
             self._queue.task_done()
 
+
+def method():
+    a_queue = WorkQueue(generator='method')
+    a_queue.setup_scoring_parameters()
+    a_queue.setup_extracting_parameters()
+    a_queue.load()
+
+    extractors = {
+        'method': method_extractor.MethodExtractor()
+    }
+
+    learn = Learn(extractors=extractors, preprocessed_path=preprocessedPath, input_path=inputPath,
+                  combined_scorer=None, queue=a_queue)
+    return learn
+
+
+def cause():
+    a_queue = WorkQueue(generator='cause')
+    a_queue.setup_scoring_parameters()
+    a_queue.setup_extracting_parameters()
+    a_queue.load()
+
+    extractors = {
+        'cause': cause_extractor.CauseExtractor()
+    }
+
+    learn = Learn(extractors=extractors, preprocessed_path=preprocessedPath, input_path=inputPath,
+                  combined_scorer=None, queue=a_queue)
+    return learn
+
+
+def environment():
+    a_queue = WorkQueue(generator='environment')
+    a_queue.setup_scoring_parameters()
+    a_queue.setup_extracting_parameters()
+    a_queue.load()
+
+    extractors = {
+        'environment': environment_extractor.EnvironmentExtractor(),
+        # 'cause': cause_extractor.CauseExtractor(),
+        # 'method': method_extractor.MethodExtractor()
+    }
+
+    learn = Learn(extractors=extractors, preprocessed_path=preprocessedPath, input_path=inputPath,
+                  combined_scorer=None, queue=a_queue)
+    return learn
+
+
+def action():
+    a_queue = WorkQueue(generator='action')
+    a_queue.setup_scoring_parameters()
+    a_queue.setup_extracting_parameters()
+    a_queue.load()
+
+    extractors = {
+        'action': action_extractor.ActionExtractor(),
+        # 'environment': environment_extractor.EnvironmentExtractor(),
+        # 'cause': cause_extractor.CauseExtractor(),
+        # 'method': method_extractor.MethodExtractor()
+    }
+    learn = Learn(extractors=extractors, preprocessed_path=preprocessedPath, input_path=inputPath,
+                  combined_scorer=None, queue=a_queue)
+    return learn
+
+
 if __name__ == '__main__':
     log = logging.getLogger('GiveMe5W')
-    log.setLevel(logging.INFO)
-    sh = logging.StreamHandler()
-    sh.setLevel(logging.INFO)
-    log.addHandler(sh)
 
     # thread safe queue
     q = queue.Queue()
 
-    # basic parameter
-    inputPath = path('../examples/datasets/gold_standard/data')
-    preprocessedPath = path('../examples/datasets/gold_standard/cache')
+    ######################################################
+    # WARNING SOMETHING IN NLTK-WORDNET IS NOT RUNNABLE WITH MULTI THREADS (NOT FURTHER INSPECTED)
+    # THEREFORE RUN ONE AFTER ANOTHER OR AS NEW INSTANCE
+    ######################################################
 
-    queue = WorkQueue('default')
-    queue.setup_scoring_parameters()
-    queue.setup_extracting_parameters()
-    queue.load()
 
-    extractors = {
-        'action': action_extractor.ActionExtractor(),
-        'environment': environment_extractor.EnvironmentExtractor(),
-        'cause': cause_extractor.CauseExtractor(),
-        'method': method_extractor.MethodExtractor()
-    }
-    #combined_scorer = distance_of_candidate.DistanceOfCandidate(('what', 'who'), ('how'))
-    combined_scorer = None
-
-    learn = Learn(extractors=extractors, preprocessed_path=preprocessedPath, input_path=inputPath, combined_scorer=combined_scorer, queue=queue)
-    q.put(learn)
-
+    # basic leaner
+    log.setLevel(logging.WARNING)
+    q.put(action())
+    #q.put(environment())
+    #q.put(cause())
+    #q.put(method())
+    log.setLevel(logging.INFO)
     # creating worker threads
-    for i in range(8):
+    for i in range(4):
         t = Worker(q)
         t.daemon = True
         t.start()
 
-    # wait till oll extractors are done
+    # wait till all extractors are done
     q.join()

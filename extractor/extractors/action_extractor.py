@@ -12,7 +12,7 @@ class ActionExtractor(AbsExtractor):
 
     """
 
-    def __init__(self, weights: (float, float, float) = (0.2, 0.9, 0.4), minimal_length_of_tokens: int=3):
+    def __init__(self, weights: (float, float, float) = (0.2, 0.9, 0.4), minimal_length_of_tokens: int = 3):
         self._minimal_length_of_tokens = minimal_length_of_tokens
 
         # weights used in the candidate evaluation:

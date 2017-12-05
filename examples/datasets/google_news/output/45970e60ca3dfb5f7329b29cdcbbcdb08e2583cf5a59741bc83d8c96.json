@@ -21,94 +21,6 @@
   "category": "IPhone-X Green-Line",
   "dId": "45970e60ca3dfb5f7329b29cdcbbcdb08e2583cf5a59741bc83d8c96",
   "fiveWoneH": {
-    "where": {
-      "extracted": [],
-      "label": "where"
-    },
-    "when": {
-      "extracted": [
-        {
-          "parts": [
-            [
-              {
-                "nlpToken": {
-                  "index": 66,
-                  "word": "earlier",
-                  "originalText": "earlier",
-                  "lemma": "earlier",
-                  "characterOffsetBegin": 684,
-                  "characterOffsetEnd": 691,
-                  "pos": "RBR",
-                  "ner": "DATE",
-                  "normalizedNER": "2017-W46",
-                  "speaker": "PER0",
-                  "before": " ",
-                  "after": " ",
-                  "timex": {
-                    "tid": "t1",
-                    "type": "DATE",
-                    "value": "2017-W46"
-                  }
-                }
-              },
-              "RBR"
-            ],
-            [
-              {
-                "nlpToken": {
-                  "index": 67,
-                  "word": "this",
-                  "originalText": "this",
-                  "lemma": "this",
-                  "characterOffsetBegin": 692,
-                  "characterOffsetEnd": 696,
-                  "pos": "DT",
-                  "ner": "DATE",
-                  "normalizedNER": "2017-W46",
-                  "speaker": "PER0",
-                  "before": " ",
-                  "after": " ",
-                  "timex": {
-                    "tid": "t1",
-                    "type": "DATE",
-                    "value": "2017-W46"
-                  }
-                }
-              },
-              "DT"
-            ],
-            [
-              {
-                "nlpToken": {
-                  "index": 68,
-                  "word": "week",
-                  "originalText": "week",
-                  "lemma": "week",
-                  "characterOffsetBegin": 697,
-                  "characterOffsetEnd": 701,
-                  "pos": "NN",
-                  "ner": "DATE",
-                  "normalizedNER": "2017-W46",
-                  "speaker": "PER0",
-                  "before": " ",
-                  "after": "",
-                  "timex": {
-                    "tid": "t1",
-                    "type": "DATE",
-                    "value": "2017-W46"
-                  }
-                }
-              },
-              "NN"
-            ]
-          ],
-          "score": 0.715099715099715,
-          "text": "earlier this week",
-          "nlpIndexSentence": 4
-        }
-      ],
-      "label": "when"
-    },
     "how": {
       "extracted": [
         {
@@ -303,6 +215,102 @@
         }
       ],
       "label": "what"
+    },
+    "where": {
+      "extracted": [],
+      "label": "where"
+    },
+    "when": {
+      "extracted": [
+        {
+          "parts": [
+            [
+              {
+                "nlpToken": {
+                  "index": 66,
+                  "word": "earlier",
+                  "originalText": "earlier",
+                  "lemma": "earlier",
+                  "characterOffsetBegin": 684,
+                  "characterOffsetEnd": 691,
+                  "pos": "RBR",
+                  "ner": "DATE",
+                  "normalizedNER": "2017-W46",
+                  "speaker": "PER0",
+                  "before": " ",
+                  "after": " ",
+                  "timex": {
+                    "tid": "t1",
+                    "type": "DATE",
+                    "value": "2017-W46"
+                  }
+                }
+              },
+              "RBR"
+            ],
+            [
+              {
+                "nlpToken": {
+                  "index": 67,
+                  "word": "this",
+                  "originalText": "this",
+                  "lemma": "this",
+                  "characterOffsetBegin": 692,
+                  "characterOffsetEnd": 696,
+                  "pos": "DT",
+                  "ner": "DATE",
+                  "normalizedNER": "2017-W46",
+                  "speaker": "PER0",
+                  "before": " ",
+                  "after": " ",
+                  "timex": {
+                    "tid": "t1",
+                    "type": "DATE",
+                    "value": "2017-W46"
+                  }
+                }
+              },
+              "DT"
+            ],
+            [
+              {
+                "nlpToken": {
+                  "index": 68,
+                  "word": "week",
+                  "originalText": "week",
+                  "lemma": "week",
+                  "characterOffsetBegin": 697,
+                  "characterOffsetEnd": 701,
+                  "pos": "NN",
+                  "ner": "DATE",
+                  "normalizedNER": "2017-W46",
+                  "speaker": "PER0",
+                  "before": " ",
+                  "after": "",
+                  "timex": {
+                    "tid": "t1",
+                    "type": "DATE",
+                    "value": "2017-W46"
+                  }
+                }
+              },
+              "NN"
+            ]
+          ],
+          "score": 0.6921434413580246,
+          "text": "earlier this week",
+          "enhancement": {
+            "timex": [
+              {
+                "start_date": "2017-11-19T00:00:00",
+                "end_date": "2017-11-25T23:59:59"
+              }
+            ]
+          },
+          "nlpIndexSentence": 4
+        }
+      ],
+      "label": "when"
     },
     "why": {
       "extracted": [

@@ -1,5 +1,6 @@
 import datetime
 import logging
+
 from geopy.distance import great_circle
 from geopy.exc import GeocoderServiceError
 from geopy.geocoders import Nominatim
@@ -8,6 +9,7 @@ from parsedatetime import parsedatetime as pdt
 from extractor.candidate import Candidate
 from extractor.extractors.abs_extractor import AbsExtractor
 from extractor.tools.timex import Timex
+from tools.cache_manager import CacheManager
 
 
 class EnvironmentExtractor(AbsExtractor):
@@ -15,13 +17,20 @@ class EnvironmentExtractor(AbsExtractor):
     The EnvironmentExtractor tries to extract the location and time the event happened.
     """
 
-    def __init__(self, weights=((0.5, 0.8), (0.8, 0.7, 0.5, 0.5)), phrase_range_location: int = 3, phrase_range_time_date: int = 1, time_range: int = 86400, host = 'nominatim.openstreetmap.org'):
+    one_minute_in_s = 60
+    one_hour_in_s = one_minute_in_s * 60
+    one_day_in_s = one_hour_in_s * 24
+    two_days_in_s = one_day_in_s * 2
+    one_month_in_s = one_day_in_s * 30
+
+    def __init__(self, weights=((0.5, 0.8), (0.8, 0.7, 0.5, 0.5, 0.5)), phrase_range_location: int = 3,
+                 time_range: int = 86400, host='nominatim.openstreetmap.org'):
         """
         Init the Nominatim connection as well as the calender object used for date interpretation.
 
         :param weights: Weights used to evaluate answer candidates.
         :type weights: ((Float, Float), (Float, Float, Float)), weights used in the candidate evaluation:
-        ((position, frequency), (position, frequency, entailment, distance_from_publisher_date))
+        ((position, frequency), (position, frequency, entailment, distance_from_publisher_date, accurate))
         :param host: Address of the Nominatim host
         :type host: String
         """
@@ -42,8 +51,8 @@ class EnvironmentExtractor(AbsExtractor):
         self.time_delta = time_range  # 24h in seconds
 
         self._phrase_range_location = phrase_range_location
-        self._phrase_range_time_date = phrase_range_time_date
 
+        self._cache_nominatim = CacheManager.instance().get_cache('../examples/caches/Nominatim')
 
     def _evaluate_candidates(self, document):
         locations = self._evaluate_locations(document)
@@ -53,7 +62,6 @@ class EnvironmentExtractor(AbsExtractor):
         # there are now duplicates
         document.set_answer('where', locations)
         document.set_answer('when', dates)
-
 
     def _extract_timex_candidates(self, tokens):
         timex_dates = {}
@@ -80,7 +88,6 @@ class EnvironmentExtractor(AbsExtractor):
 
         return candidate_list
 
-
     def _extract_candidates(self, document):
         """
         Extracts all locations, dates and times.
@@ -106,8 +113,14 @@ class EnvironmentExtractor(AbsExtractor):
 
                 # look-up geocode in Nominatim
                 try:
-                    location_string = [t['originalText'] for t in candidate[0]]
-                    location = self.geocoder.geocode(' '.join(location_string))
+                    location_array = [t['originalText'] for t in candidate[0]]
+                    location_string = ' '.join(location_array)
+
+                    location = self._cache_nominatim.get(location_string)
+                    if location is None:
+                        location = self.geocoder.geocode(location_string)
+                        self._cache_nominatim.cache(location_string, location)
+
                     if location is not None:
                         # fetch pos and append to candidates
                         ca = Candidate()
@@ -130,7 +143,7 @@ class EnvironmentExtractor(AbsExtractor):
                 # some timex  have only a altValue field, this bugfix is ignoring them
                 # gold_standard
                 # 51bd183bdd5c2ea99cdc5f0dfe49feb816b0185371c8f30842549c33
-                #'altValue' (5223107824) -> '2016-11-11-WXX-5 INTERSECT PTXH'
+                # 'altValue' (5223107824) -> '2016-11-11-WXX-5 INTERSECT PTXH'
                 timex_date_value = timex_candidate[0][0]['timex'].get('value')
                 if timex_date_value:
                     timex_obj = Timex.from_timex_text(timex_date_value)
@@ -144,7 +157,6 @@ class EnvironmentExtractor(AbsExtractor):
 
         document.set_candidates(self.get_id() + 'Locatios', locations)
         document.set_candidates(self.get_id() + 'TimexDates', timex_candidates);
-
 
     def _evaluate_locations(self, document):
         """
@@ -227,7 +239,6 @@ class EnvironmentExtractor(AbsExtractor):
             ranked.set_parts(parts)
         return ranked_locations
 
-
     def _evaluate_timex_dates(self, document):
         """
         Calculate a confidence score for extracted timex candidates.
@@ -261,8 +272,6 @@ class EnvironmentExtractor(AbsExtractor):
 
         max_n_similar = 0
         max_n_entailment = 0
-        two_days_in_s = 60 * 60 * 24 * 2
-        one_month_in_s = 60 * 60 * 24 * 30
 
         for index, candidate in enumerate(scoring_candidates):
             candidate_timex = candidate[2]
@@ -276,12 +285,12 @@ class EnvironmentExtractor(AbsExtractor):
                 # similar date check. Dates are considered related if they differ at most 24h (time_delta). we do this only for
                 # date ranges that are at most 2 days long. that is because we are mostly interested in the day range, and
                 # it also seems not useful to compare if two years are within a range of 24h.
-                if abs(candidate_duration.total_seconds()) <= two_days_in_s and abs(
-                        neighbor_candidate_duration.total_seconds()) <= two_days_in_s:
+                if abs(candidate_duration.total_seconds()) <= EnvironmentExtractor.two_days_in_s and abs(
+                        neighbor_candidate_duration.total_seconds()) <= EnvironmentExtractor.two_days_in_s:
                     if abs((
-                               candidate_timex.get_start_date() - neighbor_candidate_timex.get_start_date()).total_seconds()) <= self.time_delta or \
+                                       candidate_timex.get_start_date() - neighbor_candidate_timex.get_start_date()).total_seconds()) <= self.time_delta or \
                                     abs((
-                                            candidate_timex.get_end_date() - neighbor_candidate_timex.get_end_date()).total_seconds()) <= self.time_delta:
+                                                    candidate_timex.get_end_date() - neighbor_candidate_timex.get_end_date()).total_seconds()) <= self.time_delta:
                         candidate[3] += 1
 
                 # full entailment check: if a date X is entailed in another date Y, increase the frequency of X
@@ -304,8 +313,15 @@ class EnvironmentExtractor(AbsExtractor):
 
             # distance from publisher date
             distance_in_secs = candidate[2].get_min_distance_in_seconds_to_datetime(reference_date)
-            normalized_distance_score = 1 - min(distance_in_secs / one_month_in_s, 1)  # we cut off after one month
+            normalized_distance_score = 1 - min(distance_in_secs / EnvironmentExtractor.one_month_in_s,
+                                                1)  # we cut off after one month
             score += weights[3] * normalized_distance_score
+
+            # accuracy (ideally one minute only, max is one year) logarithmic
+            normalized_duration = ((candidate[2].get_duration().total_seconds() - EnvironmentExtractor.one_minute_in_s)
+                                   / (EnvironmentExtractor.one_month_in_s - EnvironmentExtractor.one_minute_in_s))
+            # TODO should be logarithmic
+            score += weights[4] * (1 - normalized_duration)
 
             if score > 0:
                 score /= weights_sum

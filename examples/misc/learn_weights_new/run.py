@@ -1,5 +1,6 @@
 import logging
 import queue
+import threading
 from threading import Thread
 
 from extractor.root import path
@@ -24,7 +25,7 @@ class Worker(Thread):
             self._queue.task_done()
 
 
-def method():
+def method(lock):
     a_queue = WorkQueue(generator='method')
     a_queue.setup_scoring_parameters()
     a_queue.setup_extracting_parameters()
@@ -34,12 +35,12 @@ def method():
         'method': method_extractor.MethodExtractor()
     }
 
-    learn = Learn(extractors=extractors, preprocessed_path=preprocessedPath, input_path=inputPath,
+    learn = Learn(lock=lock,extractors=extractors, preprocessed_path=preprocessedPath, input_path=inputPath,
                   combined_scorer=None, queue=a_queue)
     return learn
 
 
-def cause():
+def cause(lock):
     a_queue = WorkQueue(generator='cause')
     a_queue.setup_scoring_parameters()
     a_queue.setup_extracting_parameters()
@@ -49,41 +50,39 @@ def cause():
         'cause': cause_extractor.CauseExtractor()
     }
 
-    learn = Learn(extractors=extractors, preprocessed_path=preprocessedPath, input_path=inputPath,
+    learn = Learn(lock=lock,extractors=extractors, preprocessed_path=preprocessedPath, input_path=inputPath,
                   combined_scorer=None, queue=a_queue)
     return learn
 
 
-def environment():
+def environment(lock):
     a_queue = WorkQueue(generator='environment')
     a_queue.setup_scoring_parameters()
     a_queue.setup_extracting_parameters()
     a_queue.load()
 
     extractors = {
-        'environment': environment_extractor.EnvironmentExtractor(),
-        # 'cause': cause_extractor.CauseExtractor(),
-        # 'method': method_extractor.MethodExtractor()
+        'environment': environment_extractor.EnvironmentExtractor()
     }
 
-    learn = Learn(extractors=extractors, preprocessed_path=preprocessedPath, input_path=inputPath,
+    learn = Learn(lock=lock,extractors=extractors, preprocessed_path=preprocessedPath, input_path=inputPath,
                   combined_scorer=None, queue=a_queue)
     return learn
 
 
-def action():
+def action(lock):
     a_queue = WorkQueue(generator='action')
     a_queue.setup_scoring_parameters()
     a_queue.setup_extracting_parameters()
     a_queue.load()
 
     extractors = {
-        'action': action_extractor.ActionExtractor(),
+        'action': action_extractor.ActionExtractor()
         # 'environment': environment_extractor.EnvironmentExtractor(),
         # 'cause': cause_extractor.CauseExtractor(),
         # 'method': method_extractor.MethodExtractor()
     }
-    learn = Learn(extractors=extractors, preprocessed_path=preprocessedPath, input_path=inputPath,
+    learn = Learn(lock=lock,extractors=extractors, preprocessed_path=preprocessedPath, input_path=inputPath,
                   combined_scorer=None, queue=a_queue)
     return learn
 
@@ -93,19 +92,14 @@ if __name__ == '__main__':
 
     # thread safe queue
     q = queue.Queue()
+    lock = threading.Lock() # Wordnet is not threadsave
 
-    ######################################################
-    # WARNING SOMETHING IN NLTK-WORDNET IS NOT RUNNABLE WITH MULTI THREADS (NOT FURTHER INSPECTED)
-    # THEREFORE RUN ONE AFTER ANOTHER OR AS NEW INSTANCE
-    ######################################################
-
-
-    # basic leaner
+    # basic learner
     log.setLevel(logging.WARNING)
-    q.put(action())
-    #q.put(environment())
-    #q.put(cause())
-    #q.put(method())
+    #q.put(action(lock))
+    q.put(environment(lock))
+    #q.put(cause(lock))
+    #q.put(method(lock))
     log.setLevel(logging.INFO)
     # creating worker threads
     for i in range(4):

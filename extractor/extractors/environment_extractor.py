@@ -11,7 +11,6 @@ from extractor.extractors.abs_extractor import AbsExtractor
 from extractor.tools.timex import Timex
 from tools.cache_manager import CacheManager
 
-
 class EnvironmentExtractor(AbsExtractor):
     """
     The EnvironmentExtractor tries to extract the location and time the event happened.
@@ -51,7 +50,6 @@ class EnvironmentExtractor(AbsExtractor):
         self.time_delta = time_range  # 24h in seconds
 
         self._phrase_range_location = phrase_range_location
-
         self._cache_nominatim = CacheManager.instance().get_cache('../examples/caches/Nominatim')
 
     def _evaluate_candidates(self, document):
@@ -116,10 +114,19 @@ class EnvironmentExtractor(AbsExtractor):
                     location_array = [t['originalText'] for t in candidate[0]]
                     location_string = ' '.join(location_array)
 
+                    # there is an exception if request went wrong,
+                    # None values are not cached,
+                    # therefore -1 is used to cache requests without result
                     location = self._cache_nominatim.get(location_string)
                     if location is None:
                         location = self.geocoder.geocode(location_string)
-                        self._cache_nominatim.cache(location_string, location)
+
+                        if location is None:
+                            self._cache_nominatim.cache(location_string, -1)
+                        else:
+                            self._cache_nominatim.cache(location_string, location)
+                    if location == -1:
+                        location = None
 
                     if location is not None:
                         # fetch pos and append to candidates

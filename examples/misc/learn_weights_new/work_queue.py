@@ -21,8 +21,8 @@ class WorkQueue(object):
         self.time_range = None
         self._queue = None
         self._queue_processed = None
-        self._queue_path = os.path.dirname(__file__) + '/cache/' + self._id + '_queue.prickle'
-        self._queue_processed_path = os.path.dirname(__file__) + '/cache/' + self._id + '_queue_processed.prickle'
+        self._queue_path = os.path.dirname(__file__) + '/queue_caches/' + self._id + '_queue.prickle'
+        self._queue_processed_path = os.path.dirname(__file__) + '/queue_caches/' + self._id + '_queue_processed.prickle'
         self._unique_weights = {}
 
         if generator is None:
@@ -36,6 +36,9 @@ class WorkQueue(object):
 
     def get_queue_count(self):
         return len(self._queue)
+
+    def get_id(self):
+        return self._id
 
     def setup_scoring_parameters(self, weight_start: float = 0, weight_stop: float = 1,
                                  weight_step_size: float = 0.1):
@@ -182,14 +185,17 @@ class WorkQueue(object):
                                 'extracting_parameters': {}})
 
     def _generate_environment(self):
+        weight_start = 0
+        weight_step_size = 0.2
+        weight_stop = 1
         # (0.5, 0.8), (0.8, 0.7, 0.5, 0.5, 0.5)
         for i in self._weights_range:
             for j in self._weights_range:
-                for k in self._weights_range:
-                    for l in self._weights_range:
-                        for m in self._weights_range:
-                            for n in self._weights_range:
-                                for o in self._weights_range:
+                for k in np.arange(weight_start, weight_stop, weight_step_size):
+                    for l in np.arange(weight_start, weight_stop, weight_step_size):
+                        for m in np.arange(weight_start, weight_stop, weight_step_size):
+                            for n in np.arange(weight_start, weight_stop, weight_step_size):
+                                for o in np.arange(weight_start, weight_stop, weight_step_size):
                                     weights = (i, j, k, l, m, n, o)
                                     if self.vector_is_unique(weights):
                                         self._queue.append({
@@ -214,8 +220,7 @@ class WorkQueue(object):
 
     def _generate_default(self):
         """
-        https://www.hackmath.net/en/calculator/combinations-and-permutations?n=19&k=4&order=1&repeat=1
-        130321 per
+        https://www.hackmath.net/en/calculator/combinations-and-permutations?n=19&k=4&order=1&repeat=1130321 per
         :return:
         """
         extracting_parameters_id = 0

@@ -1,3 +1,4 @@
+import logging
 import os
 import pickle
 
@@ -24,6 +25,7 @@ class WorkQueue(object):
         self._queue_path = os.path.dirname(__file__) + '/queue_caches/' + self._id + '_queue.prickle'
         self._queue_processed_path = os.path.dirname(__file__) + '/queue_caches/' + self._id + '_queue_processed.prickle'
         self._unique_weights = {}
+        self._log = logging.getLogger('GiveMe5W')
 
         if generator is None:
             self._queue_processed = []
@@ -60,11 +62,11 @@ class WorkQueue(object):
             with open(self._queue_processed_path, 'rb') as ff:
                 self._queue_processed = pickle.load(ff)
 
-            print("weightinstance found! continue processing :)")
+            self._log.info("weightinstance found! continue processing :)")
 
 
         else:
-            print('generating a new queue')
+            self._log.info('generating a new queue')
             self._queue_processed = []
             self._queue = []
             self._unique_weights = {}

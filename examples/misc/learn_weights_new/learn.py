@@ -1,4 +1,5 @@
 import datetime
+import logging
 import time
 from itertools import product
 
@@ -10,6 +11,7 @@ from nltk.corpus import wordnet
 from extractor.extractor import FiveWExtractor
 from extractor.root import path
 from extractor.tools.file.handler import Handler
+from misc.learn_weights_new.metrics.normalized_google_distance import NormalizedGoogleDistance
 
 from tools.cache_manager import CacheManager
 
@@ -39,10 +41,13 @@ class Learn(object):
 
         self._cache_nominatim = CacheManager.instance().get_cache('../examples/caches/Nominatim')
         self._cache_ngd = CacheManager.instance().get_cache('../examples/caches/NGD')
+        self._log = logging.getLogger('GiveMe5W')
+        self._ngd = NormalizedGoogleDistance()
 
+    def cmp_text_ngd(self, annotation, candidate):
+        return self._ngd.get_distance(annotation, candidate)
 
-
-    def cmp_text(self, annotation, candidate):
+    def cmp_text_word_net(self, annotation, candidate):
         """
         Compare the retrieved answer with the annotation using WordNet path distance.
 
@@ -219,20 +224,20 @@ class Learn(object):
                     topAnnotation = annotation[2]
                     if topAnnotation:
                         tmp_score = scoring(topAnnotation, answer)
-                        score = max(tmp_score, score)
+                        score = min(tmp_score, score)
         result[question] = (question, weights, score)
 
     def _log_progress(self, queue, documents, start, end):
         count = queue.get_queue_count()
         doc_count = len(documents)
 
-        print(queue.get_id() + ':Combinations: ' + str(count))
-        print(queue.get_id() + ':There are ' + str(count * doc_count) + ' steps to go (docs * combinations)')
+        self._log.info(queue.get_id() + ':Combinations: ' + str(count))
+        self._log.info(queue.get_id() + ':There are ' + str(count * doc_count) + ' steps to go (docs * combinations)')
         if (start and end):
             time_range = (end - start).total_seconds()
             time_range = time_range * count
             # No proper average this is very rough
-            print(queue.get_id() + ':Rough estimated time left:' + str(fmt.format(rd(seconds=time_range))))
+            self._log.info(queue.get_id() + ':Rough estimated time left:' + str(fmt.format(rd(seconds=time_range))))
 
     def process(self):
         # grab utilities to parse dates and locations from the EnvironmentExtractor
@@ -302,7 +307,7 @@ class Learn(object):
                         if question in answers and len(answers[question]) > 0:
                             used_weights = extractor.weights
                             top_answer = answers[question][0].get_parts_as_text()
-                            self._cmp_helper(self.cmp_text, question, top_answer, annotation, used_weights, result)
+                            self._cmp_helper(self.cmp_text_ngd, question, top_answer, annotation, used_weights, result)
 
                     extractor = self._extractors.get('action')
                     if extractor:
@@ -310,12 +315,12 @@ class Learn(object):
                         question = 'what'
                         if question in answers and len(answers[question]) > 0:
                             top_answer = answers[question][0].get_parts_as_text()
-                            self._cmp_helper(self.cmp_text,'what', top_answer, annotation, used_weights, result)
+                            self._cmp_helper(self.cmp_text_ngd,'what', top_answer, annotation, used_weights, result)
 
                         question = 'who'
                         if question in answers and len(answers[question]) > 0:
                             top_answer = answers[question][0].get_parts_as_text()
-                            self._cmp_helper(self.cmp_text,question, top_answer, annotation, used_weights, result)
+                            self._cmp_helper(self.cmp_text_ngd,question, top_answer, annotation, used_weights, result)
 
                     extractor = self._extractors.get('method')
                     if extractor:
@@ -323,7 +328,7 @@ class Learn(object):
                         question = 'how'
                         if question in answers and len(answers[question]) > 0:
                             top_answer = answers[question][0].get_parts_as_text()
-                            self._cmp_helper(self.cmp_text,question, top_answer, annotation, used_weights, result)
+                            self._cmp_helper(self.cmp_text_ngd, question, top_answer, annotation, used_weights, result)
 
                     extractor = self._extractors.get('environment')
                     if extractor:

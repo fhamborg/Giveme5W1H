@@ -1,6 +1,7 @@
 import datetime
 import logging
 
+import math
 from geopy.distance import great_circle
 from geopy.exc import GeocoderServiceError
 from geopy.geocoders import Nominatim
@@ -21,6 +22,11 @@ class EnvironmentExtractor(AbsExtractor):
     one_day_in_s = one_hour_in_s * 24
     two_days_in_s = one_day_in_s * 2
     one_month_in_s = one_day_in_s * 30
+
+    # used for normalisation of time
+    a_min = math.log(one_minute_in_s)
+    a_max = math.log(one_month_in_s*12)# a year
+    a_min_minus_max = (a_max - a_min)
 
     def __init__(self, weights=((0.5, 0.8), (0.8, 0.7, 0.5, 0.5, 0.5)), phrase_range_location: int = 3,
                  time_range: int = 86400, host='nominatim.openstreetmap.org'):
@@ -325,8 +331,9 @@ class EnvironmentExtractor(AbsExtractor):
             score += weights[3] * normalized_distance_score
 
             # accuracy (ideally one minute only, max is one year) logarithmic
-            normalized_duration = ((candidate[2].get_duration().total_seconds() - EnvironmentExtractor.one_minute_in_s)
-                                   / (EnvironmentExtractor.one_month_in_s - EnvironmentExtractor.one_minute_in_s))
+
+            normalized_duration = ((math.log(candidate[2].get_duration().total_seconds()) - EnvironmentExtractor.a_min)
+                                    / EnvironmentExtractor.a_min_minus_max)
             # TODO should be logarithmic
             score += weights[4] * (1 - normalized_duration)
 

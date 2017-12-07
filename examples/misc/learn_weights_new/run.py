@@ -89,9 +89,9 @@ def action(lock):
 
 if __name__ == '__main__':
     log = logging.getLogger('GiveMe5W')
-    log.setLevel(logging.DEBUG)
+    log.setLevel(logging.INFO)
     sh = logging.StreamHandler()
-    sh.setLevel(logging.DEBUG)
+    sh.setLevel(logging.INFO)
     log.addHandler(sh)
 
     # thread safe queue
@@ -99,9 +99,9 @@ if __name__ == '__main__':
     lock = threading.Lock() # Wordnet is not threadsave
 
     # basic learner
-    #q.put(action(lock))
-    q.put(environment(lock))
-    #q.put(cause(lock))
+    q.put(action(lock))
+    #q.put(environment(lock))
+    q.put(cause(lock))
     #q.put(method(lock))
     #log.setLevel(logging.WARNING)
     # creating worker threads

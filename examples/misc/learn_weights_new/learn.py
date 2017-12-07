@@ -256,7 +256,6 @@ class Learn(object):
             next_item = self._queue.next()
             if next_item is not None:
                 if _pre_extracting_parameters_id:
-
                     if _pre_extracting_parameters_id != next_item['extracting_parameters_id']:
                         print("reset candidates - extracting values changed")
                         for document in self._documents:
@@ -355,5 +354,5 @@ class Learn(object):
                 self._log_progress(self._queue, self._documents, combination_start_stamp, combination_end_stamp)
             else:
                 print('done')
-                self._queue.pop(persist=True)
+                self._queue.persist()
                 break

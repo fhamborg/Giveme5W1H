@@ -97,8 +97,7 @@ class WorkQueue(object):
 
     def pop(self, persist: bool = True):
         """
-        takes an item from the process queue. and attached it with the result to the
-        queue_processed queue
+        takes an item from the process queue.
 
         :param result:
         :return:

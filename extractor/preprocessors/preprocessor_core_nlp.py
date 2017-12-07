@@ -61,7 +61,7 @@ class Preprocessor:
                     'originalText': 'BUGFIX',
                     'lemma': 'BUGFIX',
                     'characterOffsetBegin': 0,
-                    'characterOffsetEnd': 1,
+                    'characterOffsetEnd': 0,
                     'pos': 'BUGFIX',
                     'ner': 'BUGFIX',
                     'speaker': 'BUGFIX',

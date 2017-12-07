@@ -6,7 +6,7 @@ import json
 import pickle
 
 import os
-
+import statistics
 
 
 def test(testss: str):
@@ -15,6 +15,12 @@ def test(testss: str):
 def weights_to_string(weights):
     scaled_weights_string = [str(x) for x in weights]
     return ''.join(scaled_weights_string)
+
+
+def stats(numbers):
+    return {"mean": statistics.mean(numbers),
+            "median": statistics.median(numbers)}
+
 
 
 if __name__ == '__main__':
@@ -58,3 +64,9 @@ if __name__ == '__main__':
     with open('result/evaluation_only_avg'+'.json', 'w') as data_file:
         data_file.write(json.dumps(nice_format, sort_keys=False, indent=4))
         data_file.close()
+
+    # find the best weights per document (per question)
+
+    # find the best weights per average score (per question)
+
+

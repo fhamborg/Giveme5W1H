@@ -105,13 +105,16 @@ class WorkQueue(object):
         """
         self._queue.pop()
         if persist:
-            with open(self._queue_path, 'wb') as f:
-                # Pickle the 'data' document using the highest protocol available.
-                pickle.dump(self._queue, f, pickle.HIGHEST_PROTOCOL)
+            self.persist()
 
-            with open(self._queue_processed_path, 'wb') as f:
-                # Pickle the 'data' document using the highest protocol available.
-                pickle.dump(self._queue_processed, f, pickle.HIGHEST_PROTOCOL)
+    def persist(self):
+        with open(self._queue_path, 'wb') as f:
+            # Pickle the 'data' document using the highest protocol available.
+            pickle.dump(self._queue, f, pickle.HIGHEST_PROTOCOL)
+
+        with open(self._queue_processed_path, 'wb') as f:
+            # Pickle the 'data' document using the highest protocol available.
+            pickle.dump(self._queue_processed, f, pickle.HIGHEST_PROTOCOL)
 
     def next(self):
         if len(self._queue) > 0:
@@ -134,7 +137,7 @@ class WorkQueue(object):
         :return:
         """
         if sum(weights) == 0:
-            False
+            return False
 
         # set se first not null weight to * 1000 (int) (overcome floating error)
         for weight in weights:
@@ -144,8 +147,8 @@ class WorkQueue(object):
         # scale vector
         scaled_weights = []
         for weight in weights:
-            if weight != 0:
-                scaled_weights.append(int(scaleFactor * weight))
+            #if weight != 0:
+            scaled_weights.append(int(scaleFactor * weight))
 
         # build a string representation
         scaled_weights_string = [str(x) for x in scaled_weights]

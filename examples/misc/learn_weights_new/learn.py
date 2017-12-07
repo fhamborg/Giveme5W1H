@@ -141,6 +141,10 @@ class Learn(object):
         if candidate is None:
             return -1
 
+        location = self._cache_nominatim.get(candidate)
+        if location is not None:
+            return location
+
         self._lock.acquire()
 
         location = self._geocoder.geocode(candidate)
@@ -347,8 +351,9 @@ class Learn(object):
                     self._queue.resolve_document(next_item, document.get_document_id(), result)
 
                 combination_end_stamp = datetime.datetime.now()
-                self._queue.pop(persist=True)
+                self._queue.pop(persist=False)
                 self._log_progress(self._queue, self._documents, combination_start_stamp, combination_end_stamp)
             else:
                 print('done')
+                self._queue.pop(persist=True)
                 break

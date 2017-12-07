@@ -13,7 +13,7 @@ class Timex:
     _date_format_week = '%Y-W%W' + '-%w'
     _date_format_day = '%Y-%m-%d'
     _date_format_time_nosecs = '%Y-%m-%dT%H:%M'
-    _log = logging.getLogger('GiveMe5W')
+    #_log = logging.getLogger('GiveMe5W')
 
     def __init__(self, start_datetime, end_datetime):
         self._start_date = start_datetime

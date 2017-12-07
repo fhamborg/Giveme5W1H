@@ -49,8 +49,11 @@ class Preprocessor:
             # spitted numbers in the same token are called as they have been split to different tokens
             # this leads to a wrong index, everything in this sentence is lost till the end of that sentence
             self.log.error('fix the doc around(reformat number,remove special characters):' + s)
+            # print the last two tokens to make it spotable
+            self.log.error(self._tokens[-1])
+            self.log.error(self._tokens[-2])
 
-            # further we can`t return None because this would break further extractors
+            # further we can`t return None because this would break extractors
             # therefore we use this bugfix object
             # TODO: reason if it make sense to reject these documents at all, because result isn`t reliable at all
             # TODO: flag document at least with some error flags

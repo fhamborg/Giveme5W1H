@@ -99,11 +99,11 @@ if __name__ == '__main__':
     lock = threading.Lock() # Wordnet is not threadsave
 
     # basic learner
-    #q.put(action(lock))
+    q.put(action(lock))
     q.put(environment(lock))
-    #q.put(cause(lock))
-    #q.put(method(lock))
-    #log.setLevel(logging.WARNING)
+    q.put(cause(lock))
+    q.put(method(lock))
+    log.setLevel(logging.ERROR)
     # creating worker threads
     for i in range(4):
         t = Worker(q)

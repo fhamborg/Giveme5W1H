@@ -19,12 +19,12 @@
             [
               {
                 "nlpToken": {
-                  "index": 8,
-                  "word": "took",
-                  "originalText": "took",
-                  "lemma": "take",
-                  "characterOffsetBegin": 2672,
-                  "characterOffsetEnd": 2676,
+                  "index": 9,
+                  "word": "increased",
+                  "originalText": "increased",
+                  "lemma": "increase",
+                  "characterOffsetBegin": 956,
+                  "characterOffsetEnd": 965,
                   "pos": "VBD",
                   "ner": "O",
                   "speaker": "PER0",
@@ -35,9 +35,9 @@
               "VBD"
             ]
           ],
-          "score": 1.325252067520109,
-          "text": "took",
-          "nlpIndexSentence": 24
+          "score": 1.0,
+          "text": "increased",
+          "nlpIndexSentence": 7
         }
       ]
     },
@@ -153,6 +153,7 @@
       "annotated": [
         {
           "coderPhraseCount": 3,
+          "parsed": "2016-11-08",
           "text": "November 8, 2016"
         }
       ],
@@ -180,19 +181,7 @@
                     "type": "DATE",
                     "value": "2016-11-08"
                   }
-                },
-                "heideltime": [
-                  {
-                    "@tid": "t6",
-                    "@type": "DATE",
-                    "@value": "2016-11-08",
-                    "#text": "November 8, 2016",
-                    "characterOffset": [
-                      2031,
-                      2047
-                    ]
-                  }
-                ]
+                }
               },
               "NNP"
             ],
@@ -216,19 +205,7 @@
                     "type": "DATE",
                     "value": "2016-11-08"
                   }
-                },
-                "heideltime": [
-                  {
-                    "@tid": "t6",
-                    "@type": "DATE",
-                    "@value": "2016-11-08",
-                    "#text": "November 8, 2016",
-                    "characterOffset": [
-                      2031,
-                      2047
-                    ]
-                  }
-                ]
+                }
               },
               "CD"
             ],
@@ -252,19 +229,7 @@
                     "type": "DATE",
                     "value": "2016-11-08"
                   }
-                },
-                "heideltime": [
-                  {
-                    "@tid": "t6",
-                    "@type": "DATE",
-                    "@value": "2016-11-08",
-                    "#text": "November 8, 2016",
-                    "characterOffset": [
-                      2031,
-                      2047
-                    ]
-                  }
-                ]
+                }
               },
               ","
             ],
@@ -288,25 +253,19 @@
                     "type": "DATE",
                     "value": "2016-11-08"
                   }
-                },
-                "heideltime": [
-                  {
-                    "@tid": "t6",
-                    "@type": "DATE",
-                    "@value": "2016-11-08",
-                    "#text": "November 8, 2016",
-                    "characterOffset": [
-                      2031,
-                      2047
-                    ]
-                  }
-                ]
+                }
               },
               "CD"
             ]
           ],
-          "score": 0.8605128205128205,
+          "score": 0.8151008961177628,
           "text": "November 8 , 2016",
+          "enhancement": {
+            "timex": {
+              "start_date": "2016-11-08T00:00:00",
+              "end_date": "2016-11-08T23:59:59"
+            }
+          },
           "nlpIndexSentence": 17
         }
       ]
@@ -336,66 +295,7 @@
                   "speaker": "PER0",
                   "before": " ",
                   "after": ""
-                },
-                "aida": [
-                  {
-                    "mention": {
-                      "allEntities": [
-                        {
-                          "kbIdentifier": "YAGO:United_Kingdom",
-                          "disambiguationScore": "1"
-                        }
-                      ],
-                      "offset": 3488,
-                      "name": "UK",
-                      "length": 2,
-                      "bestEntity": {
-                        "kbIdentifier": "YAGO:United_Kingdom",
-                        "disambiguationScore": "1"
-                      }
-                    },
-                    "bestEntityMetadata": {
-                      "knowledgebase": "YAGO",
-                      "depictionurl": "http://upload.wikimedia.org/wikipedia/commons/f/f7/Royal_Coat_of_Arms_of_the_United_Kingdom_%28Scotland%29.svg",
-                      "depictionthumbnailurl": "http://upload.wikimedia.org/wikipedia/commons/thumbRoyal_Coat_of_Arms_of_the_United_Kingdom_%28Scotland%29.svg/200px-Royal_Coat_of_Arms_of_the_United_Kingdom_%28Scotland%29.svg",
-                      "importance": 1.3927510649671017e-06,
-                      "entityId": "United_Kingdom",
-                      "type": [
-                        "YAGO_wordnet_system_108435388",
-                        "YAGO_wordnet_district_108552138",
-                        "YAGO_yagoPermanentlyLocatedEntity",
-                        "YAGO_yagoLegalActorGeo",
-                        "YAGO_wordnet_state_108654360",
-                        "YAGO_wikicategory_Member_states_of_the_Council_of_Europe",
-                        "YAGO_wordnet_country_108544813",
-                        "YAGO_wikicategory_Member_states_of_the_United_Nations",
-                        "YAGO_wordnet_economy_108366753",
-                        "YAGO_wordnet_island_109316454",
-                        "YAGO_wikicategory_British_Islands",
-                        "YAGO_wordnet_abstraction_100002137",
-                        "YAGO_wordnet_region_108630985",
-                        "YAGO_wikicategory_English\\u002dspeaking_countries_and_territories",
-                        "YAGO_yagoGeoEntity",
-                        "YAGO_wordnet_physical_entity_100001930",
-                        "YAGO_wordnet_entity_100001740",
-                        "YAGO_wikicategory_Member_states_of_NATO",
-                        "YAGO_wordnet_object_100002684",
-                        "YAGO_wordnet_land_109334396",
-                        "YAGO_wordnet_group_100031264",
-                        "YAGO_wikicategory_Island_countries",
-                        "YAGO_wordnet_location_100027167",
-                        "YAGO_wordnet_administrative_district_108491826",
-                        "YAGO_wikicategory_Countries_in_Europe",
-                        "YAGO_wikicategory_Member_states_of_the_European_Union",
-                        "YAGO_wikicategory_Member_states_of_the_Commonwealth_of_Nations",
-                        "YAGO_wikicategory_European_Union_member_economies",
-                        "YAGO_wikicategory_Member_states_of_the_Union_for_the_Mediterranean"
-                      ],
-                      "readableRepr": "United Kingdom",
-                      "url": "http://en.wikipedia.org/wiki/United%20Kingdom"
-                    }
-                  }
-                ]
+                }
               },
               "NNP"
             ]
@@ -456,55 +356,7 @@
                   "speaker": "PER0",
                   "before": " ",
                   "after": " "
-                },
-                "aida": [
-                  {
-                    "mention": {
-                      "allEntities": [
-                        {
-                          "kbIdentifier": "YAGO:Stanley_Donwood",
-                          "disambiguationScore": "1"
-                        }
-                      ],
-                      "offset": 2958,
-                      "name": "Dan Rickwood",
-                      "length": 12,
-                      "bestEntity": {
-                        "kbIdentifier": "YAGO:Stanley_Donwood",
-                        "disambiguationScore": "1"
-                      }
-                    },
-                    "bestEntityMetadata": {
-                      "knowledgebase": "YAGO",
-                      "depictionurl": null,
-                      "depictionthumbnailurl": null,
-                      "importance": 0.0776937825085508,
-                      "entityId": "Stanley_Donwood",
-                      "type": [
-                        "YAGO_wordnet_intellectual_109621545",
-                        "YAGO_yagoLegalActorGeo",
-                        "YAGO_wordnet_person_100007846",
-                        "YAGO_wikicategory_Living_people",
-                        "YAGO_wordnet_artist_109812338",
-                        "YAGO_yagoLegalActor",
-                        "YAGO_wordnet_creator_109614315",
-                        "YAGO_wordnet_living_thing_100004258",
-                        "YAGO_wordnet_scholar_110557854",
-                        "YAGO_wikicategory_English_artists",
-                        "YAGO_wordnet_physical_entity_100001930",
-                        "YAGO_wordnet_causal_agent_100007347",
-                        "YAGO_wordnet_alumnus_109786338",
-                        "YAGO_wordnet_entity_100001740",
-                        "YAGO_wordnet_object_100002684",
-                        "YAGO_wordnet_organism_100004475",
-                        "YAGO_wikicategory_Alumni_of_the_University_of_Exeter",
-                        "YAGO_wordnet_whole_100003553"
-                      ],
-                      "readableRepr": "Stanley Donwood",
-                      "url": "http://en.wikipedia.org/wiki/Stanley%20Donwood"
-                    }
-                  }
-                ]
+                }
               },
               "NNP"
             ],
@@ -522,55 +374,7 @@
                   "speaker": "PER0",
                   "before": " ",
                   "after": " "
-                },
-                "aida": [
-                  {
-                    "mention": {
-                      "allEntities": [
-                        {
-                          "kbIdentifier": "YAGO:Stanley_Donwood",
-                          "disambiguationScore": "1"
-                        }
-                      ],
-                      "offset": 2958,
-                      "name": "Dan Rickwood",
-                      "length": 12,
-                      "bestEntity": {
-                        "kbIdentifier": "YAGO:Stanley_Donwood",
-                        "disambiguationScore": "1"
-                      }
-                    },
-                    "bestEntityMetadata": {
-                      "knowledgebase": "YAGO",
-                      "depictionurl": null,
-                      "depictionthumbnailurl": null,
-                      "importance": 0.0776937825085508,
-                      "entityId": "Stanley_Donwood",
-                      "type": [
-                        "YAGO_wordnet_intellectual_109621545",
-                        "YAGO_yagoLegalActorGeo",
-                        "YAGO_wordnet_person_100007846",
-                        "YAGO_wikicategory_Living_people",
-                        "YAGO_wordnet_artist_109812338",
-                        "YAGO_yagoLegalActor",
-                        "YAGO_wordnet_creator_109614315",
-                        "YAGO_wordnet_living_thing_100004258",
-                        "YAGO_wordnet_scholar_110557854",
-                        "YAGO_wikicategory_English_artists",
-                        "YAGO_wordnet_physical_entity_100001930",
-                        "YAGO_wordnet_causal_agent_100007347",
-                        "YAGO_wordnet_alumnus_109786338",
-                        "YAGO_wordnet_entity_100001740",
-                        "YAGO_wordnet_object_100002684",
-                        "YAGO_wordnet_organism_100004475",
-                        "YAGO_wikicategory_Alumni_of_the_University_of_Exeter",
-                        "YAGO_wordnet_whole_100003553"
-                      ],
-                      "readableRepr": "Stanley Donwood",
-                      "url": "http://en.wikipedia.org/wiki/Stanley%20Donwood"
-                    }
-                  }
-                ]
+                }
               },
               "NNP"
             ]
@@ -609,244 +413,10 @@
                 }
               },
               "NNP"
-            ],
-            [
-              {
-                "nlpToken": {
-                  "index": 2,
-                  "word": "increase",
-                  "originalText": "increase",
-                  "lemma": "increase",
-                  "characterOffsetBegin": 10,
-                  "characterOffsetEnd": 18,
-                  "pos": "VB",
-                  "ner": "O",
-                  "speaker": "PER0",
-                  "before": " ",
-                  "after": " "
-                }
-              },
-              "VB"
-            ],
-            [
-              {
-                "nlpToken": {
-                  "index": 3,
-                  "word": "the",
-                  "originalText": "the",
-                  "lemma": "the",
-                  "characterOffsetBegin": 19,
-                  "characterOffsetEnd": 22,
-                  "pos": "DT",
-                  "ner": "O",
-                  "speaker": "PER0",
-                  "before": " ",
-                  "after": " "
-                }
-              },
-              "DT"
-            ],
-            [
-              {
-                "nlpToken": {
-                  "index": 4,
-                  "word": "gaps",
-                  "originalText": "gaps",
-                  "lemma": "gap",
-                  "characterOffsetBegin": 23,
-                  "characterOffsetEnd": 27,
-                  "pos": "NNS",
-                  "ner": "O",
-                  "speaker": "PER0",
-                  "before": " ",
-                  "after": " "
-                }
-              },
-              "NNS"
-            ],
-            [
-              {
-                "nlpToken": {
-                  "index": 5,
-                  "word": "between",
-                  "originalText": "between",
-                  "lemma": "between",
-                  "characterOffsetBegin": 28,
-                  "characterOffsetEnd": 35,
-                  "pos": "IN",
-                  "ner": "O",
-                  "speaker": "PER0",
-                  "before": " ",
-                  "after": " "
-                }
-              },
-              "IN"
-            ],
-            [
-              {
-                "nlpToken": {
-                  "index": 6,
-                  "word": "the",
-                  "originalText": "the",
-                  "lemma": "the",
-                  "characterOffsetBegin": 36,
-                  "characterOffsetEnd": 39,
-                  "pos": "DT",
-                  "ner": "O",
-                  "speaker": "PER0",
-                  "before": " ",
-                  "after": " "
-                }
-              },
-              "DT"
-            ],
-            [
-              {
-                "nlpToken": {
-                  "index": 7,
-                  "word": "bar",
-                  "originalText": "bar",
-                  "lemma": "bar",
-                  "characterOffsetBegin": 40,
-                  "characterOffsetEnd": 43,
-                  "pos": "NN",
-                  "ner": "O",
-                  "speaker": "PER0",
-                  "before": " ",
-                  "after": ""
-                }
-              },
-              "NN"
-            ],
-            [
-              {
-                "nlpToken": {
-                  "index": 8,
-                  "word": "'s",
-                  "originalText": "'s",
-                  "lemma": "'s",
-                  "characterOffsetBegin": 43,
-                  "characterOffsetEnd": 45,
-                  "pos": "POS",
-                  "ner": "O",
-                  "speaker": "PER0",
-                  "before": "",
-                  "after": " "
-                }
-              },
-              "POS"
-            ],
-            [
-              {
-                "nlpToken": {
-                  "index": 9,
-                  "word": "iconic",
-                  "originalText": "iconic",
-                  "lemma": "iconic",
-                  "characterOffsetBegin": 46,
-                  "characterOffsetEnd": 52,
-                  "pos": "JJ",
-                  "ner": "O",
-                  "speaker": "PER0",
-                  "before": " ",
-                  "after": " "
-                }
-              },
-              "JJ"
-            ],
-            [
-              {
-                "nlpToken": {
-                  "index": 10,
-                  "word": "peaks",
-                  "originalText": "peaks",
-                  "lemma": "peak",
-                  "characterOffsetBegin": 53,
-                  "characterOffsetEnd": 58,
-                  "pos": "NNS",
-                  "ner": "O",
-                  "speaker": "PER0",
-                  "before": " ",
-                  "after": " "
-                }
-              },
-              "NNS"
-            ],
-            [
-              {
-                "nlpToken": {
-                  "index": 11,
-                  "word": "to",
-                  "originalText": "to",
-                  "lemma": "to",
-                  "characterOffsetBegin": 59,
-                  "characterOffsetEnd": 61,
-                  "pos": "TO",
-                  "ner": "O",
-                  "speaker": "PER0",
-                  "before": " ",
-                  "after": " "
-                }
-              },
-              "TO"
-            ],
-            [
-              {
-                "nlpToken": {
-                  "index": 12,
-                  "word": "make",
-                  "originalText": "make",
-                  "lemma": "make",
-                  "characterOffsetBegin": 62,
-                  "characterOffsetEnd": 66,
-                  "pos": "VB",
-                  "ner": "O",
-                  "speaker": "PER0",
-                  "before": " ",
-                  "after": " "
-                }
-              },
-              "VB"
-            ],
-            [
-              {
-                "nlpToken": {
-                  "index": 13,
-                  "word": "them",
-                  "originalText": "them",
-                  "lemma": "they",
-                  "characterOffsetBegin": 67,
-                  "characterOffsetEnd": 71,
-                  "pos": "PRP",
-                  "ner": "O",
-                  "speaker": "PER0",
-                  "before": " ",
-                  "after": " "
-                }
-              },
-              "PRP"
-            ],
-            [
-              {
-                "nlpToken": {
-                  "index": 14,
-                  "word": "lighter",
-                  "originalText": "lighter",
-                  "lemma": "lighter",
-                  "characterOffsetBegin": 72,
-                  "characterOffsetEnd": 79,
-                  "pos": "JJR",
-                  "ner": "O",
-                  "speaker": "PER0",
-                  "before": " ",
-                  "after": ""
-                }
-              },
-              "JJR"
             ]
           ],
           "score": 0.42857142857142855,
-          "text": "Toblerone increase the gaps between the bar 's iconic peaks to make them lighter"
+          "text": "Toblerone"
         }
       ]
     }

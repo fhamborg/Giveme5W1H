@@ -35,7 +35,7 @@
               "JJ"
             ]
           ],
-          "score": 1.641025641025641,
+          "score": 1.0,
           "text": "new",
           "nlpIndexSentence": 4
         }
@@ -120,51 +120,7 @@
                   "speaker": "PER0",
                   "before": " ",
                   "after": " "
-                },
-                "aida": [
-                  {
-                    "mention": {
-                      "allEntities": [
-                        {
-                          "kbIdentifier": "YAGO:Federal_Bureau_of_Investigation",
-                          "disambiguationScore": "1"
-                        }
-                      ],
-                      "offset": 41,
-                      "name": "FBI",
-                      "length": 3,
-                      "bestEntity": {
-                        "kbIdentifier": "YAGO:Federal_Bureau_of_Investigation",
-                        "disambiguationScore": "1"
-                      }
-                    },
-                    "bestEntityMetadata": {
-                      "knowledgebase": "YAGO",
-                      "depictionurl": "http://upload.wikimedia.org/wikipedia/commons/7/70/US-FBI-ShadedSeal.svg",
-                      "depictionthumbnailurl": "http://upload.wikimedia.org/wikipedia/commons/thumbUS-FBI-ShadedSeal.svg/200px-US-FBI-ShadedSeal.svg",
-                      "importance": 0.00025682329637993355,
-                      "entityId": "Federal_Bureau_of_Investigation",
-                      "type": [
-                        "YAGO_yagoPermanentlyLocatedEntity",
-                        "YAGO_yagoLegalActorGeo",
-                        "YAGO_wordnet_organization_108008335",
-                        "YAGO_wordnet_social_group_107950920",
-                        "YAGO_wordnet_entity_100001740",
-                        "YAGO_wikicategory_United_States_intelligence_agencies",
-                        "YAGO_wordnet_unit_108189659",
-                        "YAGO_wordnet_intelligence_108339454",
-                        "YAGO_wikicategory_Government_agencies_established_in_1908",
-                        "YAGO_wordnet_group_100031264",
-                        "YAGO_wordnet_administrative_unit_108077292",
-                        "YAGO_wordnet_agency_108337324",
-                        "YAGO_yagoLegalActor",
-                        "YAGO_wordnet_abstraction_100002137"
-                      ],
-                      "readableRepr": "Federal Bureau of Investigation",
-                      "url": "http://en.wikipedia.org/wiki/Federal%20Bureau%20of%20Investigation"
-                    }
-                  }
-                ]
+                }
               },
               "NNP"
             ],
@@ -196,6 +152,7 @@
       "annotated": [
         {
           "coderPhraseCount": 3,
+          "parsed": "2016-11-12",
           "text": "Saturday"
         }
       ],
@@ -206,43 +163,37 @@
             [
               {
                 "nlpToken": {
-                  "index": 28,
+                  "index": 12,
                   "word": "Saturday",
                   "originalText": "Saturday",
                   "lemma": "Saturday",
-                  "characterOffsetBegin": 2270,
-                  "characterOffsetEnd": 2278,
+                  "characterOffsetBegin": 4126,
+                  "characterOffsetEnd": 4134,
                   "pos": "NNP",
                   "ner": "DATE",
-                  "normalizedNER": "XXXX-WXX-6",
+                  "normalizedNER": "2016-11-12",
                   "speaker": "PER0",
                   "before": " ",
                   "after": "",
                   "timex": {
-                    "tid": "t13",
+                    "tid": "t20",
                     "type": "DATE",
-                    "value": "XXXX-WXX-6"
+                    "value": "2016-11-12"
                   }
-                },
-                "heideltime": [
-                  {
-                    "@tid": "t13",
-                    "@type": "DATE",
-                    "@value": "2016-11-12",
-                    "#text": "Saturday",
-                    "characterOffset": [
-                      2270,
-                      2278
-                    ]
-                  }
-                ]
+                }
               },
               "NNP"
             ]
           ],
-          "score": 0.6786324786324786,
+          "score": 0.5807884604181743,
           "text": "Saturday",
-          "nlpIndexSentence": 16
+          "enhancement": {
+            "timex": {
+              "start_date": "2016-11-12T00:00:00",
+              "end_date": "2016-11-12T23:59:59"
+            }
+          },
+          "nlpIndexSentence": 28
         }
       ]
     },
@@ -270,51 +221,7 @@
                   "speaker": "PER0",
                   "before": " ",
                   "after": " "
-                },
-                "aida": [
-                  {
-                    "mention": {
-                      "allEntities": [
-                        {
-                          "kbIdentifier": "YAGO:New_York",
-                          "disambiguationScore": "1"
-                        }
-                      ],
-                      "offset": 614,
-                      "name": "New York",
-                      "length": 8,
-                      "bestEntity": {
-                        "kbIdentifier": "YAGO:New_York",
-                        "disambiguationScore": "1"
-                      }
-                    },
-                    "bestEntityMetadata": {
-                      "knowledgebase": "YAGO",
-                      "depictionurl": "http://upload.wikimedia.org/wikipedia/commons/1/1a/Flag_of_New_York.svg",
-                      "depictionthumbnailurl": "http://upload.wikimedia.org/wikipedia/commons/thumbFlag_of_New_York.svg/200px-Flag_of_New_York.svg",
-                      "importance": 6.963755324835509e-06,
-                      "entityId": "New_York",
-                      "type": [
-                        "YAGO_yagoGeoEntity",
-                        "YAGO_yagoPermanentlyLocatedEntity",
-                        "YAGO_wordnet_physical_entity_100001930",
-                        "YAGO_wikicategory_Former_British_colonies",
-                        "YAGO_yagoLegalActorGeo",
-                        "YAGO_wordnet_social_group_107950920",
-                        "YAGO_wordnet_entity_100001740",
-                        "YAGO_wordnet_object_100002684",
-                        "YAGO_wordnet_group_100031264",
-                        "YAGO_wordnet_colony_108374049",
-                        "YAGO_wordnet_body_107965085",
-                        "YAGO_wordnet_location_100027167",
-                        "YAGO_wikicategory_locations",
-                        "YAGO_wordnet_abstraction_100002137"
-                      ],
-                      "readableRepr": "New York",
-                      "url": "http://en.wikipedia.org/wiki/New%20York"
-                    }
-                  }
-                ]
+                }
               },
               "NNP"
             ],
@@ -332,51 +239,7 @@
                   "speaker": "PER0",
                   "before": " ",
                   "after": ""
-                },
-                "aida": [
-                  {
-                    "mention": {
-                      "allEntities": [
-                        {
-                          "kbIdentifier": "YAGO:New_York",
-                          "disambiguationScore": "1"
-                        }
-                      ],
-                      "offset": 614,
-                      "name": "New York",
-                      "length": 8,
-                      "bestEntity": {
-                        "kbIdentifier": "YAGO:New_York",
-                        "disambiguationScore": "1"
-                      }
-                    },
-                    "bestEntityMetadata": {
-                      "knowledgebase": "YAGO",
-                      "depictionurl": "http://upload.wikimedia.org/wikipedia/commons/1/1a/Flag_of_New_York.svg",
-                      "depictionthumbnailurl": "http://upload.wikimedia.org/wikipedia/commons/thumbFlag_of_New_York.svg/200px-Flag_of_New_York.svg",
-                      "importance": 6.963755324835509e-06,
-                      "entityId": "New_York",
-                      "type": [
-                        "YAGO_yagoGeoEntity",
-                        "YAGO_yagoPermanentlyLocatedEntity",
-                        "YAGO_wordnet_physical_entity_100001930",
-                        "YAGO_wikicategory_Former_British_colonies",
-                        "YAGO_yagoLegalActorGeo",
-                        "YAGO_wordnet_social_group_107950920",
-                        "YAGO_wordnet_entity_100001740",
-                        "YAGO_wordnet_object_100002684",
-                        "YAGO_wordnet_group_100031264",
-                        "YAGO_wordnet_colony_108374049",
-                        "YAGO_wordnet_body_107965085",
-                        "YAGO_wordnet_location_100027167",
-                        "YAGO_wikicategory_locations",
-                        "YAGO_wordnet_abstraction_100002137"
-                      ],
-                      "readableRepr": "New York",
-                      "url": "http://en.wikipedia.org/wiki/New%20York"
-                    }
-                  }
-                ]
+                }
               },
               "NNP"
             ]
@@ -433,111 +296,7 @@
                   "speaker": "PER0",
                   "before": " ",
                   "after": " "
-                },
-                "aida": [
-                  {
-                    "mention": {
-                      "allEntities": [
-                        {
-                          "kbIdentifier": "YAGO:Bill_Clinton",
-                          "disambiguationScore": "1"
-                        }
-                      ],
-                      "offset": 16,
-                      "name": "Clinton",
-                      "length": 7,
-                      "bestEntity": {
-                        "kbIdentifier": "YAGO:Bill_Clinton",
-                        "disambiguationScore": "1"
-                      }
-                    },
-                    "bestEntityMetadata": {
-                      "knowledgebase": "YAGO",
-                      "depictionurl": "http://upload.wikimedia.org/wikipedia/commons/d/d3/Bill_Clinton.jpg",
-                      "depictionthumbnailurl": "http://upload.wikimedia.org/wikipedia/commons/thumbBill_Clinton.jpg/200px-Bill_Clinton.jpg",
-                      "importance": 0.00010167082774259843,
-                      "entityId": "Bill_Clinton",
-                      "type": [
-                        "YAGO_wikicategory_Grand_Crosses_of_the_Order_of_Good_Hope",
-                        "YAGO_wikicategory_Arkansas_lawyers",
-                        "YAGO_wordnet_lawyer_110249950",
-                        "YAGO_wordnet_official_110372373",
-                        "YAGO_wordnet_militant_110315837",
-                        "YAGO_wikicategory_Ambassadors_of_the_United_States_to_Haiti",
-                        "YAGO_wordnet_living_thing_100004258",
-                        "YAGO_wikicategory_Fellows_of_the_American_Academy_of_Arts_and_Sciences",
-                        "YAGO_wikicategory_American_health_activists",
-                        "YAGO_wordnet_ambassador_109787534",
-                        "YAGO_wikicategory_Honorary_Fellows_of_University_College\\u002c_Oxford",
-                        "YAGO_wordnet_object_100002684",
-                        "YAGO_wikicategory_21st\\u002dcentury_American_writers",
-                        "YAGO_wikicategory_20th\\u002dcentury_American_writers",
-                        "YAGO_wordnet_worker_109632518",
-                        "YAGO_wordnet_president_110467179",
-                        "YAGO_wordnet_cross_103135532",
-                        "YAGO_wordnet_diplomat_110013927",
-                        "YAGO_wordnet_colleague_109935990",
-                        "YAGO_wordnet_adult_109605289",
-                        "YAGO_wikicategory_People_from_Hot_Springs\\u002c_Arkansas",
-                        "YAGO_wikicategory_United_Nations_officials",
-                        "YAGO_wikicategory_Governors_of_Arkansas",
-                        "YAGO_wikicategory_Democratic_Party_state_governors_of_the_United_States",
-                        "YAGO_wordnet_band_102784218",
-                        "YAGO_wikicategory_Living_people",
-                        "YAGO_wikicategory_Yale_Law_School_alumni",
-                        "YAGO_wikicategory_People_from_Hope\\u002c_Arkansas",
-                        "YAGO_wordnet_leader_109623038",
-                        "YAGO_yagoGeoEntity",
-                        "YAGO_wordnet_scholar_110557854",
-                        "YAGO_wordnet_collar_103068181",
-                        "YAGO_wordnet_alumnus_109786338",
-                        "YAGO_wikicategory_American_humanitarians",
-                        "YAGO_wordnet_entity_100001740",
-                        "YAGO_wikicategory_Impeached_United_States_officials",
-                        "YAGO_wikicategory_Presidents_of_the_United_States",
-                        "YAGO_wordnet_organism_100004475",
-                        "YAGO_wikicategory_American_legal_scholars",
-                        "YAGO_wordnet_politician_110451263",
-                        "YAGO_wordnet_whole_100003553",
-                        "YAGO_wordnet_skilled_worker_110605985",
-                        "YAGO_wikicategory_Grand_Companions_of_the_Order_of_Logohu",
-                        "YAGO_yagoPermanentlyLocatedEntity",
-                        "YAGO_yagoLegalActorGeo",
-                        "YAGO_wordnet_person_100007846",
-                        "YAGO_wordnet_peer_109626238",
-                        "YAGO_wordnet_good_person_110138767",
-                        "YAGO_wordnet_friend_110112591",
-                        "YAGO_wikicategory_American_Rhodes_Scholars",
-                        "YAGO_wordnet_head_of_state_110164747",
-                        "YAGO_wikicategory_Alumni_of_University_College\\u002c_Oxford",
-                        "YAGO_wordnet_governor_110140314",
-                        "YAGO_wordnet_strip_104339291",
-                        "YAGO_wordnet_companion_109945905",
-                        "YAGO_wordnet_representative_110522035",
-                        "YAGO_wordnet_humanitarian_110191613",
-                        "YAGO_wikicategory_Democratic_Party_Presidents_of_the_United_States",
-                        "YAGO_wordnet_intellectual_109621545",
-                        "YAGO_wordnet_negotiator_110351874",
-                        "YAGO_wordnet_disputant_109615465",
-                        "YAGO_wordnet_structure_104341686",
-                        "YAGO_wordnet_reformer_110515194",
-                        "YAGO_yagoLegalActor",
-                        "YAGO_wordnet_professional_110480253",
-                        "YAGO_wordnet_physical_entity_100001930",
-                        "YAGO_wordnet_causal_agent_100007347",
-                        "YAGO_wikicategory_People_associated_with_the_Lewinsky_scandal",
-                        "YAGO_wordnet_communicator_109610660",
-                        "YAGO_wordnet_benefactor_109608709",
-                        "YAGO_wordnet_writer_110794014",
-                        "YAGO_wordnet_artifact_100021939",
-                        "YAGO_wikicategory_Collars_of_the_Order_of_the_White_Lion",
-                        "YAGO_wordnet_associate_109816771"
-                      ],
-                      "readableRepr": "Bill Clinton",
-                      "url": "http://en.wikipedia.org/wiki/Bill%20Clinton"
-                    }
-                  }
-                ]
+                }
               },
               "NNP"
             ]
@@ -594,14 +353,14 @@
                   "characterOffsetEnd": 1658,
                   "pos": "CD",
                   "ner": "DATE",
-                  "normalizedNER": "XXXX-10-28",
+                  "normalizedNER": "2016-10-28",
                   "speaker": "PER0",
                   "before": " ",
                   "after": " ",
                   "timex": {
                     "tid": "t8",
                     "type": "DATE",
-                    "value": "XXXX-10-28"
+                    "value": "2016-10-28"
                   }
                 }
               },
@@ -618,14 +377,14 @@
                   "characterOffsetEnd": 1666,
                   "pos": "NNP",
                   "ner": "DATE",
-                  "normalizedNER": "XXXX-10-28",
+                  "normalizedNER": "2016-10-28",
                   "speaker": "PER0",
                   "before": " ",
                   "after": "",
                   "timex": {
                     "tid": "t8",
                     "type": "DATE",
-                    "value": "XXXX-10-28"
+                    "value": "2016-10-28"
                   }
                 }
               },
@@ -681,65 +440,7 @@
                   "speaker": "PER0",
                   "before": " ",
                   "after": " "
-                },
-                "aida": [
-                  {
-                    "mention": {
-                      "allEntities": [
-                        {
-                          "kbIdentifier": "YAGO:James_Comey",
-                          "disambiguationScore": "1"
-                        }
-                      ],
-                      "offset": 1671,
-                      "name": "Comey",
-                      "length": 5,
-                      "bestEntity": {
-                        "kbIdentifier": "YAGO:James_Comey",
-                        "disambiguationScore": "1"
-                      }
-                    },
-                    "bestEntityMetadata": {
-                      "knowledgebase": "YAGO",
-                      "depictionurl": "http://upload.wikimedia.org/wikipedia/commons/a/a0/Comey-FBI-Portrait.jpg",
-                      "depictionthumbnailurl": "http://upload.wikimedia.org/wikipedia/commons/thumbComey-FBI-Portrait.jpg/200px-Comey-FBI-Portrait.jpg",
-                      "importance": 0.12782223593927272,
-                      "entityId": "James_Comey",
-                      "type": [
-                        "YAGO_wordnet_owner_110389398",
-                        "YAGO_wikicategory_People_from_Allendale\\u002c_New_Jersey",
-                        "YAGO_yagoLegalActorGeo",
-                        "YAGO_wikicategory_United_States_Attorneys_for_the_Southern_District_of_New_York",
-                        "YAGO_wordnet_person_100007846",
-                        "YAGO_wikicategory_Living_people",
-                        "YAGO_wordnet_lawyer_110249950",
-                        "YAGO_wordnet_official_110372373",
-                        "YAGO_wikicategory_People_from_Yonkers\\u002c_New_York",
-                        "YAGO_yagoLegalActor",
-                        "YAGO_wordnet_professional_110480253",
-                        "YAGO_wordnet_living_thing_100004258",
-                        "YAGO_wordnet_leader_109623038",
-                        "YAGO_wordnet_physical_entity_100001930",
-                        "YAGO_wordnet_head_110162991",
-                        "YAGO_wordnet_causal_agent_100007347",
-                        "YAGO_wordnet_director_110014939",
-                        "YAGO_wordnet_entity_100001740",
-                        "YAGO_wordnet_object_100002684",
-                        "YAGO_wordnet_holder_110180178",
-                        "YAGO_wordnet_organism_100004475",
-                        "YAGO_wordnet_administrator_109770949",
-                        "YAGO_wordnet_worker_109632518",
-                        "YAGO_wordnet_officeholder_110371450",
-                        "YAGO_wordnet_whole_100003553",
-                        "YAGO_wordnet_skilled_worker_110605985",
-                        "YAGO_wikicategory_Directors_of_the_FBI",
-                        "YAGO_wordnet_adult_109605289"
-                      ],
-                      "readableRepr": "James Comey",
-                      "url": "http://en.wikipedia.org/wiki/James%20Comey"
-                    }
-                  }
-                ]
+                }
               },
               "NNP"
             ],
@@ -775,46 +476,7 @@
                   "speaker": "PER0",
                   "before": " ",
                   "after": " "
-                },
-                "aida": [
-                  {
-                    "mention": {
-                      "allEntities": [
-                        {
-                          "kbIdentifier": "YAGO:United_States_Congress",
-                          "disambiguationScore": "0.13099"
-                        }
-                      ],
-                      "offset": 1686,
-                      "name": "Congress",
-                      "length": 8,
-                      "bestEntity": {
-                        "kbIdentifier": "YAGO:United_States_Congress",
-                        "disambiguationScore": "0.13099"
-                      }
-                    },
-                    "bestEntityMetadata": {
-                      "knowledgebase": "YAGO",
-                      "depictionurl": "http://upload.wikimedia.org/wikipedia/commons/4/4b/Seal_of_the_United_States_Congress.svg",
-                      "depictionthumbnailurl": "http://upload.wikimedia.org/wikipedia/commons/thumbSeal_of_the_United_States_Congress.svg/200px-Seal_of_the_United_States_Congress.svg",
-                      "importance": 0.00010417777965953922,
-                      "entityId": "United_States_Congress",
-                      "type": [
-                        "YAGO_wordnet_social_group_107950920",
-                        "YAGO_wikicategory_Bicameral_legislatures",
-                        "YAGO_wordnet_entity_100001740",
-                        "YAGO_wikicategory_National_legislatures",
-                        "YAGO_wordnet_legislature_108163273",
-                        "YAGO_wordnet_group_100031264",
-                        "YAGO_wordnet_abstraction_100002137",
-                        "YAGO_wordnet_gathering_107975026",
-                        "YAGO_wordnet_assembly_108163792"
-                      ],
-                      "readableRepr": "United States Congress",
-                      "url": "http://en.wikipedia.org/wiki/United%20States%20Congress"
-                    }
-                  }
-                ]
+                }
               },
               "NNP"
             ],
@@ -868,51 +530,7 @@
                   "speaker": "PER0",
                   "before": " ",
                   "after": " "
-                },
-                "aida": [
-                  {
-                    "mention": {
-                      "allEntities": [
-                        {
-                          "kbIdentifier": "YAGO:Federal_Bureau_of_Investigation",
-                          "disambiguationScore": "1"
-                        }
-                      ],
-                      "offset": 1704,
-                      "name": "FBI",
-                      "length": 3,
-                      "bestEntity": {
-                        "kbIdentifier": "YAGO:Federal_Bureau_of_Investigation",
-                        "disambiguationScore": "1"
-                      }
-                    },
-                    "bestEntityMetadata": {
-                      "knowledgebase": "YAGO",
-                      "depictionurl": "http://upload.wikimedia.org/wikipedia/commons/7/70/US-FBI-ShadedSeal.svg",
-                      "depictionthumbnailurl": "http://upload.wikimedia.org/wikipedia/commons/thumbUS-FBI-ShadedSeal.svg/200px-US-FBI-ShadedSeal.svg",
-                      "importance": 0.00025682329637993355,
-                      "entityId": "Federal_Bureau_of_Investigation",
-                      "type": [
-                        "YAGO_yagoPermanentlyLocatedEntity",
-                        "YAGO_yagoLegalActorGeo",
-                        "YAGO_wordnet_organization_108008335",
-                        "YAGO_wordnet_social_group_107950920",
-                        "YAGO_wordnet_entity_100001740",
-                        "YAGO_wikicategory_United_States_intelligence_agencies",
-                        "YAGO_wordnet_unit_108189659",
-                        "YAGO_wordnet_intelligence_108339454",
-                        "YAGO_wikicategory_Government_agencies_established_in_1908",
-                        "YAGO_wordnet_group_100031264",
-                        "YAGO_wordnet_administrative_unit_108077292",
-                        "YAGO_wordnet_agency_108337324",
-                        "YAGO_yagoLegalActor",
-                        "YAGO_wordnet_abstraction_100002137"
-                      ],
-                      "readableRepr": "Federal Bureau of Investigation",
-                      "url": "http://en.wikipedia.org/wiki/Federal%20Bureau%20of%20Investigation"
-                    }
-                  }
-                ]
+                }
               },
               "NNP"
             ],
@@ -1110,111 +728,7 @@
                   "speaker": "PER0",
                   "before": " ",
                   "after": ""
-                },
-                "aida": [
-                  {
-                    "mention": {
-                      "allEntities": [
-                        {
-                          "kbIdentifier": "YAGO:Bill_Clinton",
-                          "disambiguationScore": "1"
-                        }
-                      ],
-                      "offset": 1770,
-                      "name": "Clinton",
-                      "length": 7,
-                      "bestEntity": {
-                        "kbIdentifier": "YAGO:Bill_Clinton",
-                        "disambiguationScore": "1"
-                      }
-                    },
-                    "bestEntityMetadata": {
-                      "knowledgebase": "YAGO",
-                      "depictionurl": "http://upload.wikimedia.org/wikipedia/commons/d/d3/Bill_Clinton.jpg",
-                      "depictionthumbnailurl": "http://upload.wikimedia.org/wikipedia/commons/thumbBill_Clinton.jpg/200px-Bill_Clinton.jpg",
-                      "importance": 0.00010167082774259843,
-                      "entityId": "Bill_Clinton",
-                      "type": [
-                        "YAGO_wikicategory_Grand_Crosses_of_the_Order_of_Good_Hope",
-                        "YAGO_wikicategory_Arkansas_lawyers",
-                        "YAGO_wordnet_lawyer_110249950",
-                        "YAGO_wordnet_official_110372373",
-                        "YAGO_wordnet_militant_110315837",
-                        "YAGO_wikicategory_Ambassadors_of_the_United_States_to_Haiti",
-                        "YAGO_wordnet_living_thing_100004258",
-                        "YAGO_wikicategory_Fellows_of_the_American_Academy_of_Arts_and_Sciences",
-                        "YAGO_wikicategory_American_health_activists",
-                        "YAGO_wordnet_ambassador_109787534",
-                        "YAGO_wikicategory_Honorary_Fellows_of_University_College\\u002c_Oxford",
-                        "YAGO_wordnet_object_100002684",
-                        "YAGO_wikicategory_21st\\u002dcentury_American_writers",
-                        "YAGO_wikicategory_20th\\u002dcentury_American_writers",
-                        "YAGO_wordnet_worker_109632518",
-                        "YAGO_wordnet_president_110467179",
-                        "YAGO_wordnet_cross_103135532",
-                        "YAGO_wordnet_diplomat_110013927",
-                        "YAGO_wordnet_colleague_109935990",
-                        "YAGO_wordnet_adult_109605289",
-                        "YAGO_wikicategory_People_from_Hot_Springs\\u002c_Arkansas",
-                        "YAGO_wikicategory_United_Nations_officials",
-                        "YAGO_wikicategory_Governors_of_Arkansas",
-                        "YAGO_wikicategory_Democratic_Party_state_governors_of_the_United_States",
-                        "YAGO_wordnet_band_102784218",
-                        "YAGO_wikicategory_Living_people",
-                        "YAGO_wikicategory_Yale_Law_School_alumni",
-                        "YAGO_wikicategory_People_from_Hope\\u002c_Arkansas",
-                        "YAGO_wordnet_leader_109623038",
-                        "YAGO_yagoGeoEntity",
-                        "YAGO_wordnet_scholar_110557854",
-                        "YAGO_wordnet_collar_103068181",
-                        "YAGO_wordnet_alumnus_109786338",
-                        "YAGO_wikicategory_American_humanitarians",
-                        "YAGO_wordnet_entity_100001740",
-                        "YAGO_wikicategory_Impeached_United_States_officials",
-                        "YAGO_wikicategory_Presidents_of_the_United_States",
-                        "YAGO_wordnet_organism_100004475",
-                        "YAGO_wikicategory_American_legal_scholars",
-                        "YAGO_wordnet_politician_110451263",
-                        "YAGO_wordnet_whole_100003553",
-                        "YAGO_wordnet_skilled_worker_110605985",
-                        "YAGO_wikicategory_Grand_Companions_of_the_Order_of_Logohu",
-                        "YAGO_yagoPermanentlyLocatedEntity",
-                        "YAGO_yagoLegalActorGeo",
-                        "YAGO_wordnet_person_100007846",
-                        "YAGO_wordnet_peer_109626238",
-                        "YAGO_wordnet_good_person_110138767",
-                        "YAGO_wordnet_friend_110112591",
-                        "YAGO_wikicategory_American_Rhodes_Scholars",
-                        "YAGO_wordnet_head_of_state_110164747",
-                        "YAGO_wikicategory_Alumni_of_University_College\\u002c_Oxford",
-                        "YAGO_wordnet_governor_110140314",
-                        "YAGO_wordnet_strip_104339291",
-                        "YAGO_wordnet_companion_109945905",
-                        "YAGO_wordnet_representative_110522035",
-                        "YAGO_wordnet_humanitarian_110191613",
-                        "YAGO_wikicategory_Democratic_Party_Presidents_of_the_United_States",
-                        "YAGO_wordnet_intellectual_109621545",
-                        "YAGO_wordnet_negotiator_110351874",
-                        "YAGO_wordnet_disputant_109615465",
-                        "YAGO_wordnet_structure_104341686",
-                        "YAGO_wordnet_reformer_110515194",
-                        "YAGO_yagoLegalActor",
-                        "YAGO_wordnet_professional_110480253",
-                        "YAGO_wordnet_physical_entity_100001930",
-                        "YAGO_wordnet_causal_agent_100007347",
-                        "YAGO_wikicategory_People_associated_with_the_Lewinsky_scandal",
-                        "YAGO_wordnet_communicator_109610660",
-                        "YAGO_wordnet_benefactor_109608709",
-                        "YAGO_wordnet_writer_110794014",
-                        "YAGO_wordnet_artifact_100021939",
-                        "YAGO_wikicategory_Collars_of_the_Order_of_the_White_Lion",
-                        "YAGO_wordnet_associate_109816771"
-                      ],
-                      "readableRepr": "Bill Clinton",
-                      "url": "http://en.wikipedia.org/wiki/Bill%20Clinton"
-                    }
-                  }
-                ]
+                }
               },
               "NNP"
             ],
@@ -1232,443 +746,13 @@
                   "speaker": "PER0",
                   "before": "",
                   "after": " "
-                },
-                "aida": [
-                  {
-                    "mention": {
-                      "allEntities": [
-                        {
-                          "kbIdentifier": "YAGO:Bill_Clinton",
-                          "disambiguationScore": "1"
-                        }
-                      ],
-                      "offset": 1770,
-                      "name": "Clinton",
-                      "length": 7,
-                      "bestEntity": {
-                        "kbIdentifier": "YAGO:Bill_Clinton",
-                        "disambiguationScore": "1"
-                      }
-                    },
-                    "bestEntityMetadata": {
-                      "knowledgebase": "YAGO",
-                      "depictionurl": "http://upload.wikimedia.org/wikipedia/commons/d/d3/Bill_Clinton.jpg",
-                      "depictionthumbnailurl": "http://upload.wikimedia.org/wikipedia/commons/thumbBill_Clinton.jpg/200px-Bill_Clinton.jpg",
-                      "importance": 0.00010167082774259843,
-                      "entityId": "Bill_Clinton",
-                      "type": [
-                        "YAGO_wikicategory_Grand_Crosses_of_the_Order_of_Good_Hope",
-                        "YAGO_wikicategory_Arkansas_lawyers",
-                        "YAGO_wordnet_lawyer_110249950",
-                        "YAGO_wordnet_official_110372373",
-                        "YAGO_wordnet_militant_110315837",
-                        "YAGO_wikicategory_Ambassadors_of_the_United_States_to_Haiti",
-                        "YAGO_wordnet_living_thing_100004258",
-                        "YAGO_wikicategory_Fellows_of_the_American_Academy_of_Arts_and_Sciences",
-                        "YAGO_wikicategory_American_health_activists",
-                        "YAGO_wordnet_ambassador_109787534",
-                        "YAGO_wikicategory_Honorary_Fellows_of_University_College\\u002c_Oxford",
-                        "YAGO_wordnet_object_100002684",
-                        "YAGO_wikicategory_21st\\u002dcentury_American_writers",
-                        "YAGO_wikicategory_20th\\u002dcentury_American_writers",
-                        "YAGO_wordnet_worker_109632518",
-                        "YAGO_wordnet_president_110467179",
-                        "YAGO_wordnet_cross_103135532",
-                        "YAGO_wordnet_diplomat_110013927",
-                        "YAGO_wordnet_colleague_109935990",
-                        "YAGO_wordnet_adult_109605289",
-                        "YAGO_wikicategory_People_from_Hot_Springs\\u002c_Arkansas",
-                        "YAGO_wikicategory_United_Nations_officials",
-                        "YAGO_wikicategory_Governors_of_Arkansas",
-                        "YAGO_wikicategory_Democratic_Party_state_governors_of_the_United_States",
-                        "YAGO_wordnet_band_102784218",
-                        "YAGO_wikicategory_Living_people",
-                        "YAGO_wikicategory_Yale_Law_School_alumni",
-                        "YAGO_wikicategory_People_from_Hope\\u002c_Arkansas",
-                        "YAGO_wordnet_leader_109623038",
-                        "YAGO_yagoGeoEntity",
-                        "YAGO_wordnet_scholar_110557854",
-                        "YAGO_wordnet_collar_103068181",
-                        "YAGO_wordnet_alumnus_109786338",
-                        "YAGO_wikicategory_American_humanitarians",
-                        "YAGO_wordnet_entity_100001740",
-                        "YAGO_wikicategory_Impeached_United_States_officials",
-                        "YAGO_wikicategory_Presidents_of_the_United_States",
-                        "YAGO_wordnet_organism_100004475",
-                        "YAGO_wikicategory_American_legal_scholars",
-                        "YAGO_wordnet_politician_110451263",
-                        "YAGO_wordnet_whole_100003553",
-                        "YAGO_wordnet_skilled_worker_110605985",
-                        "YAGO_wikicategory_Grand_Companions_of_the_Order_of_Logohu",
-                        "YAGO_yagoPermanentlyLocatedEntity",
-                        "YAGO_yagoLegalActorGeo",
-                        "YAGO_wordnet_person_100007846",
-                        "YAGO_wordnet_peer_109626238",
-                        "YAGO_wordnet_good_person_110138767",
-                        "YAGO_wordnet_friend_110112591",
-                        "YAGO_wikicategory_American_Rhodes_Scholars",
-                        "YAGO_wordnet_head_of_state_110164747",
-                        "YAGO_wikicategory_Alumni_of_University_College\\u002c_Oxford",
-                        "YAGO_wordnet_governor_110140314",
-                        "YAGO_wordnet_strip_104339291",
-                        "YAGO_wordnet_companion_109945905",
-                        "YAGO_wordnet_representative_110522035",
-                        "YAGO_wordnet_humanitarian_110191613",
-                        "YAGO_wikicategory_Democratic_Party_Presidents_of_the_United_States",
-                        "YAGO_wordnet_intellectual_109621545",
-                        "YAGO_wordnet_negotiator_110351874",
-                        "YAGO_wordnet_disputant_109615465",
-                        "YAGO_wordnet_structure_104341686",
-                        "YAGO_wordnet_reformer_110515194",
-                        "YAGO_yagoLegalActor",
-                        "YAGO_wordnet_professional_110480253",
-                        "YAGO_wordnet_physical_entity_100001930",
-                        "YAGO_wordnet_causal_agent_100007347",
-                        "YAGO_wikicategory_People_associated_with_the_Lewinsky_scandal",
-                        "YAGO_wordnet_communicator_109610660",
-                        "YAGO_wordnet_benefactor_109608709",
-                        "YAGO_wordnet_writer_110794014",
-                        "YAGO_wordnet_artifact_100021939",
-                        "YAGO_wikicategory_Collars_of_the_Order_of_the_White_Lion",
-                        "YAGO_wordnet_associate_109816771"
-                      ],
-                      "readableRepr": "Bill Clinton",
-                      "url": "http://en.wikipedia.org/wiki/Bill%20Clinton"
-                    }
-                  }
-                ]
+                }
               },
               ","
-            ],
-            [
-              {
-                "nlpToken": {
-                  "index": 23,
-                  "word": ",",
-                  "originalText": ",",
-                  "lemma": ",",
-                  "characterOffsetBegin": 1777,
-                  "characterOffsetEnd": 1778,
-                  "pos": ",",
-                  "ner": "O",
-                  "speaker": "PER0",
-                  "before": "",
-                  "after": " "
-                },
-                "aida": [
-                  {
-                    "mention": {
-                      "allEntities": [
-                        {
-                          "kbIdentifier": "YAGO:Bill_Clinton",
-                          "disambiguationScore": "1"
-                        }
-                      ],
-                      "offset": 1770,
-                      "name": "Clinton",
-                      "length": 7,
-                      "bestEntity": {
-                        "kbIdentifier": "YAGO:Bill_Clinton",
-                        "disambiguationScore": "1"
-                      }
-                    },
-                    "bestEntityMetadata": {
-                      "knowledgebase": "YAGO",
-                      "depictionurl": "http://upload.wikimedia.org/wikipedia/commons/d/d3/Bill_Clinton.jpg",
-                      "depictionthumbnailurl": "http://upload.wikimedia.org/wikipedia/commons/thumbBill_Clinton.jpg/200px-Bill_Clinton.jpg",
-                      "importance": 0.00010167082774259843,
-                      "entityId": "Bill_Clinton",
-                      "type": [
-                        "YAGO_wikicategory_Grand_Crosses_of_the_Order_of_Good_Hope",
-                        "YAGO_wikicategory_Arkansas_lawyers",
-                        "YAGO_wordnet_lawyer_110249950",
-                        "YAGO_wordnet_official_110372373",
-                        "YAGO_wordnet_militant_110315837",
-                        "YAGO_wikicategory_Ambassadors_of_the_United_States_to_Haiti",
-                        "YAGO_wordnet_living_thing_100004258",
-                        "YAGO_wikicategory_Fellows_of_the_American_Academy_of_Arts_and_Sciences",
-                        "YAGO_wikicategory_American_health_activists",
-                        "YAGO_wordnet_ambassador_109787534",
-                        "YAGO_wikicategory_Honorary_Fellows_of_University_College\\u002c_Oxford",
-                        "YAGO_wordnet_object_100002684",
-                        "YAGO_wikicategory_21st\\u002dcentury_American_writers",
-                        "YAGO_wikicategory_20th\\u002dcentury_American_writers",
-                        "YAGO_wordnet_worker_109632518",
-                        "YAGO_wordnet_president_110467179",
-                        "YAGO_wordnet_cross_103135532",
-                        "YAGO_wordnet_diplomat_110013927",
-                        "YAGO_wordnet_colleague_109935990",
-                        "YAGO_wordnet_adult_109605289",
-                        "YAGO_wikicategory_People_from_Hot_Springs\\u002c_Arkansas",
-                        "YAGO_wikicategory_United_Nations_officials",
-                        "YAGO_wikicategory_Governors_of_Arkansas",
-                        "YAGO_wikicategory_Democratic_Party_state_governors_of_the_United_States",
-                        "YAGO_wordnet_band_102784218",
-                        "YAGO_wikicategory_Living_people",
-                        "YAGO_wikicategory_Yale_Law_School_alumni",
-                        "YAGO_wikicategory_People_from_Hope\\u002c_Arkansas",
-                        "YAGO_wordnet_leader_109623038",
-                        "YAGO_yagoGeoEntity",
-                        "YAGO_wordnet_scholar_110557854",
-                        "YAGO_wordnet_collar_103068181",
-                        "YAGO_wordnet_alumnus_109786338",
-                        "YAGO_wikicategory_American_humanitarians",
-                        "YAGO_wordnet_entity_100001740",
-                        "YAGO_wikicategory_Impeached_United_States_officials",
-                        "YAGO_wikicategory_Presidents_of_the_United_States",
-                        "YAGO_wordnet_organism_100004475",
-                        "YAGO_wikicategory_American_legal_scholars",
-                        "YAGO_wordnet_politician_110451263",
-                        "YAGO_wordnet_whole_100003553",
-                        "YAGO_wordnet_skilled_worker_110605985",
-                        "YAGO_wikicategory_Grand_Companions_of_the_Order_of_Logohu",
-                        "YAGO_yagoPermanentlyLocatedEntity",
-                        "YAGO_yagoLegalActorGeo",
-                        "YAGO_wordnet_person_100007846",
-                        "YAGO_wordnet_peer_109626238",
-                        "YAGO_wordnet_good_person_110138767",
-                        "YAGO_wordnet_friend_110112591",
-                        "YAGO_wikicategory_American_Rhodes_Scholars",
-                        "YAGO_wordnet_head_of_state_110164747",
-                        "YAGO_wikicategory_Alumni_of_University_College\\u002c_Oxford",
-                        "YAGO_wordnet_governor_110140314",
-                        "YAGO_wordnet_strip_104339291",
-                        "YAGO_wordnet_companion_109945905",
-                        "YAGO_wordnet_representative_110522035",
-                        "YAGO_wordnet_humanitarian_110191613",
-                        "YAGO_wikicategory_Democratic_Party_Presidents_of_the_United_States",
-                        "YAGO_wordnet_intellectual_109621545",
-                        "YAGO_wordnet_negotiator_110351874",
-                        "YAGO_wordnet_disputant_109615465",
-                        "YAGO_wordnet_structure_104341686",
-                        "YAGO_wordnet_reformer_110515194",
-                        "YAGO_yagoLegalActor",
-                        "YAGO_wordnet_professional_110480253",
-                        "YAGO_wordnet_physical_entity_100001930",
-                        "YAGO_wordnet_causal_agent_100007347",
-                        "YAGO_wikicategory_People_associated_with_the_Lewinsky_scandal",
-                        "YAGO_wordnet_communicator_109610660",
-                        "YAGO_wordnet_benefactor_109608709",
-                        "YAGO_wordnet_writer_110794014",
-                        "YAGO_wordnet_artifact_100021939",
-                        "YAGO_wikicategory_Collars_of_the_Order_of_the_White_Lion",
-                        "YAGO_wordnet_associate_109816771"
-                      ],
-                      "readableRepr": "Bill Clinton",
-                      "url": "http://en.wikipedia.org/wiki/Bill%20Clinton"
-                    }
-                  }
-                ]
-              },
-              ","
-            ],
-            [
-              {
-                "nlpToken": {
-                  "index": 24,
-                  "word": "thus",
-                  "originalText": "thus",
-                  "lemma": "thus",
-                  "characterOffsetBegin": 1779,
-                  "characterOffsetEnd": 1783,
-                  "pos": "RB",
-                  "ner": "O",
-                  "speaker": "PER0",
-                  "before": " ",
-                  "after": " "
-                }
-              },
-              "RB"
-            ],
-            [
-              {
-                "nlpToken": {
-                  "index": 25,
-                  "word": "reviving",
-                  "originalText": "reviving",
-                  "lemma": "revive",
-                  "characterOffsetBegin": 1784,
-                  "characterOffsetEnd": 1792,
-                  "pos": "VBG",
-                  "ner": "O",
-                  "speaker": "PER0",
-                  "before": " ",
-                  "after": " "
-                }
-              },
-              "VBG"
-            ],
-            [
-              {
-                "nlpToken": {
-                  "index": 26,
-                  "word": "an",
-                  "originalText": "an",
-                  "lemma": "a",
-                  "characterOffsetBegin": 1793,
-                  "characterOffsetEnd": 1795,
-                  "pos": "DT",
-                  "ner": "O",
-                  "speaker": "PER0",
-                  "before": " ",
-                  "after": " "
-                }
-              },
-              "DT"
-            ],
-            [
-              {
-                "nlpToken": {
-                  "index": 27,
-                  "word": "investigation",
-                  "originalText": "investigation",
-                  "lemma": "investigation",
-                  "characterOffsetBegin": 1796,
-                  "characterOffsetEnd": 1809,
-                  "pos": "NN",
-                  "ner": "O",
-                  "speaker": "PER0",
-                  "before": " ",
-                  "after": " "
-                }
-              },
-              "NN"
-            ],
-            [
-              {
-                "nlpToken": {
-                  "index": 28,
-                  "word": "which",
-                  "originalText": "which",
-                  "lemma": "which",
-                  "characterOffsetBegin": 1810,
-                  "characterOffsetEnd": 1815,
-                  "pos": "WDT",
-                  "ner": "O",
-                  "speaker": "PER0",
-                  "before": " ",
-                  "after": " "
-                }
-              },
-              "WDT"
-            ],
-            [
-              {
-                "nlpToken": {
-                  "index": 29,
-                  "word": "had",
-                  "originalText": "had",
-                  "lemma": "have",
-                  "characterOffsetBegin": 1816,
-                  "characterOffsetEnd": 1819,
-                  "pos": "VBD",
-                  "ner": "O",
-                  "speaker": "PER0",
-                  "before": " ",
-                  "after": " "
-                }
-              },
-              "VBD"
-            ],
-            [
-              {
-                "nlpToken": {
-                  "index": 30,
-                  "word": "been",
-                  "originalText": "been",
-                  "lemma": "be",
-                  "characterOffsetBegin": 1820,
-                  "characterOffsetEnd": 1824,
-                  "pos": "VBN",
-                  "ner": "O",
-                  "speaker": "PER0",
-                  "before": " ",
-                  "after": " "
-                }
-              },
-              "VBN"
-            ],
-            [
-              {
-                "nlpToken": {
-                  "index": 31,
-                  "word": "completed",
-                  "originalText": "completed",
-                  "lemma": "complete",
-                  "characterOffsetBegin": 1825,
-                  "characterOffsetEnd": 1834,
-                  "pos": "VBN",
-                  "ner": "O",
-                  "speaker": "PER0",
-                  "before": " ",
-                  "after": " "
-                }
-              },
-              "VBN"
-            ],
-            [
-              {
-                "nlpToken": {
-                  "index": 32,
-                  "word": "in",
-                  "originalText": "in",
-                  "lemma": "in",
-                  "characterOffsetBegin": 1835,
-                  "characterOffsetEnd": 1837,
-                  "pos": "IN",
-                  "ner": "O",
-                  "speaker": "PER0",
-                  "before": " ",
-                  "after": " "
-                }
-              },
-              "IN"
-            ],
-            [
-              {
-                "nlpToken": {
-                  "index": 33,
-                  "word": "July",
-                  "originalText": "July",
-                  "lemma": "July",
-                  "characterOffsetBegin": 1838,
-                  "characterOffsetEnd": 1842,
-                  "pos": "NNP",
-                  "ner": "DATE",
-                  "normalizedNER": "XXXX-07",
-                  "speaker": "PER0",
-                  "before": " ",
-                  "after": "",
-                  "timex": {
-                    "tid": "t9",
-                    "type": "DATE",
-                    "value": "XXXX-07"
-                  }
-                }
-              },
-              "NNP"
-            ],
-            [
-              {
-                "nlpToken": {
-                  "index": 34,
-                  "word": ".",
-                  "originalText": ".",
-                  "lemma": ".",
-                  "characterOffsetBegin": 1842,
-                  "characterOffsetEnd": 1843,
-                  "pos": ".",
-                  "ner": "O",
-                  "speaker": "PER0",
-                  "before": "",
-                  "after": " "
-                }
-              },
-              "."
             ]
           ],
           "score": 0.5066666666666666,
-          "text": "On 28 October , Mr Comey informed Congress that the FBI was examining newly discovered emails sent or received by Mrs Clinton , , thus reviving an investigation which had been completed in July .",
+          "text": "On 28 October , Mr Comey informed Congress that the FBI was examining newly discovered emails sent or received by Mrs Clinton ,",
           "nlpIndexSentence": 14
         }
       ]

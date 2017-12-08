@@ -19,15 +19,15 @@
             [
               {
                 "nlpToken": {
-                  "index": 36,
+                  "index": 18,
                   "word": "best",
                   "originalText": "best",
                   "lemma": "best",
-                  "characterOffsetBegin": 499,
-                  "characterOffsetEnd": 503,
+                  "characterOffsetBegin": 181,
+                  "characterOffsetEnd": 185,
                   "pos": "JJS",
                   "ner": "O",
-                  "speaker": "PER0",
+                  "speaker": "PER2",
                   "before": " ",
                   "after": " "
                 }
@@ -35,9 +35,9 @@
               "JJS"
             ]
           ],
-          "score": 1.5067750677506777,
+          "score": 1.0,
           "text": "best",
-          "nlpIndexSentence": 3
+          "nlpIndexSentence": 1
         }
       ]
     },
@@ -135,6 +135,7 @@
       "annotated": [
         {
           "coderPhraseCount": 3,
+          "parsed": "2017-11-13",
           "text": "Sunday's Brazilian Grand Prix"
         }
       ],
@@ -145,79 +146,37 @@
             [
               {
                 "nlpToken": {
-                  "index": 28,
-                  "word": "Sunday",
-                  "originalText": "Sunday",
-                  "lemma": "Sunday",
-                  "characterOffsetBegin": 1414,
-                  "characterOffsetEnd": 1420,
-                  "pos": "NNP",
+                  "index": 7,
+                  "word": "today",
+                  "originalText": "today",
+                  "lemma": "today",
+                  "characterOffsetBegin": 2745,
+                  "characterOffsetEnd": 2750,
+                  "pos": "NN",
                   "ner": "DATE",
-                  "normalizedNER": "XXXX-WXX-7TNI",
-                  "speaker": "PER0",
+                  "normalizedNER": "2016-11-13",
+                  "speaker": "PER9",
                   "before": " ",
                   "after": " ",
                   "timex": {
-                    "tid": "t4",
-                    "type": "TIME",
-                    "value": "XXXX-WXX-7TNI"
+                    "tid": "t7",
+                    "type": "DATE",
+                    "value": "2016-11-13"
                   }
-                },
-                "heideltime": [
-                  {
-                    "@tid": "t6",
-                    "@type": "TIME",
-                    "@value": "2016-11-13TNI",
-                    "#text": "Sunday night",
-                    "characterOffset": [
-                      1414,
-                      1426
-                    ]
-                  }
-                ]
-              },
-              "NNP"
-            ],
-            [
-              {
-                "nlpToken": {
-                  "index": 29,
-                  "word": "night",
-                  "originalText": "night",
-                  "lemma": "night",
-                  "characterOffsetBegin": 1421,
-                  "characterOffsetEnd": 1426,
-                  "pos": "NN",
-                  "ner": "TIME",
-                  "normalizedNER": "XXXX-WXX-7TNI",
-                  "speaker": "PER0",
-                  "before": " ",
-                  "after": "",
-                  "timex": {
-                    "tid": "t4",
-                    "type": "TIME",
-                    "value": "XXXX-WXX-7TNI"
-                  }
-                },
-                "heideltime": [
-                  {
-                    "@tid": "t6",
-                    "@type": "TIME",
-                    "@value": "2016-11-13TNI",
-                    "#text": "Sunday night",
-                    "characterOffset": [
-                      1414,
-                      1426
-                    ]
-                  }
-                ]
+                }
               },
               "NN"
             ]
           ],
-          "score": 0.7435897435897436,
-          "text": "Sunday night",
-          "nlpIndexSentence": 7
+          "score": 0.6664472456915429,
+          "text": "today",
+          "enhancement": {
+            "timex": {
+              "start_date": "2016-11-13T00:00:00",
+              "end_date": "2016-11-13T23:59:59"
+            }
+          },
+          "nlpIndexSentence": 19
         }
       ]
     },
@@ -250,63 +209,7 @@
                   "speaker": "PER0",
                   "before": " ",
                   "after": ""
-                },
-                "aida": [
-                  {
-                    "mention": {
-                      "allEntities": [
-                        {
-                          "kbIdentifier": "YAGO:Brazil",
-                          "disambiguationScore": "0.62339"
-                        }
-                      ],
-                      "offset": 94,
-                      "name": "Brazil",
-                      "length": 6,
-                      "bestEntity": {
-                        "kbIdentifier": "YAGO:Brazil",
-                        "disambiguationScore": "0.62339"
-                      }
-                    },
-                    "bestEntityMetadata": {
-                      "knowledgebase": "YAGO",
-                      "depictionurl": "http://upload.wikimedia.org/wikipedia/en/0/05/Flag_of_Brazil.svg",
-                      "depictionthumbnailurl": "http://upload.wikimedia.org/wikipedia/en/thumbFlag_of_Brazil.svg/200px-Flag_of_Brazil.svg",
-                      "importance": 7.79940596381577e-06,
-                      "entityId": "Brazil",
-                      "type": [
-                        "YAGO_wordnet_system_108435388",
-                        "YAGO_wordnet_district_108552138",
-                        "YAGO_wikicategory_Countries_in_South_America",
-                        "YAGO_yagoPermanentlyLocatedEntity",
-                        "YAGO_yagoLegalActorGeo",
-                        "YAGO_wikicategory_Portuguese\\u002dspeaking_countries_and_territories",
-                        "YAGO_wordnet_state_108654360",
-                        "YAGO_wikicategory_Member_states_of_the_Union_of_South_American_Nations",
-                        "YAGO_wordnet_country_108544813",
-                        "YAGO_wikicategory_Member_states_of_the_United_Nations",
-                        "YAGO_wordnet_economy_108366753",
-                        "YAGO_wordnet_abstraction_100002137",
-                        "YAGO_wordnet_region_108630985",
-                        "YAGO_yagoGeoEntity",
-                        "YAGO_wikicategory_Romance_countries_and_territories",
-                        "YAGO_wikicategory_World_Trade_Organization_member_economies",
-                        "YAGO_wikicategory_Member_states_of_the_Community_of_Portuguese_Language_Countries",
-                        "YAGO_wordnet_physical_entity_100001930",
-                        "YAGO_wordnet_entity_100001740",
-                        "YAGO_wikicategory_Member_states_of_Mercosur",
-                        "YAGO_wordnet_object_100002684",
-                        "YAGO_wordnet_group_100031264",
-                        "YAGO_wikicategory_Latin_American_countries",
-                        "YAGO_wikicategory_States_and_territories_established_in_1822",
-                        "YAGO_wordnet_location_100027167",
-                        "YAGO_wordnet_administrative_district_108491826"
-                      ],
-                      "readableRepr": "Brazil",
-                      "url": "http://en.wikipedia.org/wiki/Brazil"
-                    }
-                  }
-                ]
+                }
               },
               "NNP"
             ]
@@ -362,65 +265,7 @@
                   "speaker": "PER0",
                   "before": " ",
                   "after": " "
-                },
-                "aida": [
-                  {
-                    "mention": {
-                      "allEntities": [
-                        {
-                          "kbIdentifier": "YAGO:Daniel_Ricciardo",
-                          "disambiguationScore": "1"
-                        }
-                      ],
-                      "offset": 1092,
-                      "name": "Daniel Ricciardo",
-                      "length": 16,
-                      "bestEntity": {
-                        "kbIdentifier": "YAGO:Daniel_Ricciardo",
-                        "disambiguationScore": "1"
-                      }
-                    },
-                    "bestEntityMetadata": {
-                      "knowledgebase": "YAGO",
-                      "depictionurl": "http://upload.wikimedia.org/wikipedia/commons/8/82/Daniel_Ricciardo_2011.JPG",
-                      "depictionthumbnailurl": "http://upload.wikimedia.org/wikipedia/commons/thumbDaniel_Ricciardo_2011.JPG/200px-Daniel_Ricciardo_2011.JPG",
-                      "importance": 0.014369569837691576,
-                      "entityId": "Daniel_Ricciardo",
-                      "type": [
-                        "YAGO_wikicategory_Formula_Ford_drivers",
-                        "YAGO_yagoLegalActorGeo",
-                        "YAGO_wikicategory_Toro_Rosso_Formula_One_drivers",
-                        "YAGO_wikicategory_Formula_Renault_3\\u002e5_Series_drivers",
-                        "YAGO_wordnet_operator_110378412",
-                        "YAGO_wikicategory_Formula_BMW_UK_drivers",
-                        "YAGO_wordnet_driver_110034906",
-                        "YAGO_wordnet_person_100007846",
-                        "YAGO_wikicategory_Living_people",
-                        "YAGO_wikicategory_HRT_Formula_One_drivers",
-                        "YAGO_yagoLegalActor",
-                        "YAGO_wikicategory_British_Formula_Three_Championship_drivers",
-                        "YAGO_wikicategory_Formula_Renault_2\\u002e0_WEC_drivers",
-                        "YAGO_wordnet_living_thing_100004258",
-                        "YAGO_wikicategory_Australian_people_of_Italian_descent",
-                        "YAGO_wordnet_physical_entity_100001930",
-                        "YAGO_wikicategory_Racing_drivers_from_Western_Australia",
-                        "YAGO_wordnet_causal_agent_100007347",
-                        "YAGO_wikicategory_Australian_Formula_One_drivers",
-                        "YAGO_wordnet_entity_100001740",
-                        "YAGO_wordnet_object_100002684",
-                        "YAGO_wikicategory_Formula_3_Euro_Series_drivers",
-                        "YAGO_wordnet_organism_100004475",
-                        "YAGO_wikicategory_Eurocup_Formula_Renault_2\\u002e0_drivers",
-                        "YAGO_wikicategory_People_educated_at_Newman_College\\u002c_Perth",
-                        "YAGO_wikicategory_Formula_BMW_Asia_drivers",
-                        "YAGO_wikicategory_Italian_Formula_Renault_2\\u002e0_drivers",
-                        "YAGO_wordnet_whole_100003553"
-                      ],
-                      "readableRepr": "Daniel Ricciardo",
-                      "url": "http://en.wikipedia.org/wiki/Daniel%20Ricciardo"
-                    }
-                  }
-                ]
+                }
               },
               "NNP"
             ]
@@ -463,119 +308,10 @@
                 }
               },
               "PRP"
-            ],
-            [
-              {
-                "nlpToken": {
-                  "index": 8,
-                  "word": "overtook",
-                  "originalText": "overtook",
-                  "lemma": "overtake",
-                  "characterOffsetBegin": 138,
-                  "characterOffsetEnd": 146,
-                  "pos": "VBD",
-                  "ner": "O",
-                  "speaker": "PER0",
-                  "before": " ",
-                  "after": " "
-                }
-              },
-              "VBD"
-            ],
-            [
-              {
-                "nlpToken": {
-                  "index": 9,
-                  "word": "13",
-                  "originalText": "13",
-                  "lemma": "13",
-                  "characterOffsetBegin": 147,
-                  "characterOffsetEnd": 149,
-                  "pos": "CD",
-                  "ner": "NUMBER",
-                  "normalizedNER": "13.0",
-                  "speaker": "PER0",
-                  "before": " ",
-                  "after": " "
-                }
-              },
-              "CD"
-            ],
-            [
-              {
-                "nlpToken": {
-                  "index": 10,
-                  "word": "cars",
-                  "originalText": "cars",
-                  "lemma": "car",
-                  "characterOffsetBegin": 150,
-                  "characterOffsetEnd": 154,
-                  "pos": "NNS",
-                  "ner": "O",
-                  "speaker": "PER0",
-                  "before": " ",
-                  "after": " "
-                }
-              },
-              "NNS"
-            ],
-            [
-              {
-                "nlpToken": {
-                  "index": 11,
-                  "word": "in",
-                  "originalText": "in",
-                  "lemma": "in",
-                  "characterOffsetBegin": 155,
-                  "characterOffsetEnd": 157,
-                  "pos": "IN",
-                  "ner": "O",
-                  "speaker": "PER0",
-                  "before": " ",
-                  "after": " "
-                }
-              },
-              "IN"
-            ],
-            [
-              {
-                "nlpToken": {
-                  "index": 12,
-                  "word": "heavy",
-                  "originalText": "heavy",
-                  "lemma": "heavy",
-                  "characterOffsetBegin": 158,
-                  "characterOffsetEnd": 163,
-                  "pos": "JJ",
-                  "ner": "O",
-                  "speaker": "PER0",
-                  "before": " ",
-                  "after": " "
-                }
-              },
-              "JJ"
-            ],
-            [
-              {
-                "nlpToken": {
-                  "index": 13,
-                  "word": "rain",
-                  "originalText": "rain",
-                  "lemma": "rain",
-                  "characterOffsetBegin": 164,
-                  "characterOffsetEnd": 168,
-                  "pos": "NN",
-                  "ner": "O",
-                  "speaker": "PER0",
-                  "before": " ",
-                  "after": " "
-                }
-              },
-              "NN"
             ]
           ],
           "score": 0.41904761904761906,
-          "text": "he overtook 13 cars in heavy rain",
+          "text": "he",
           "nlpIndexSentence": 1
         }
       ]

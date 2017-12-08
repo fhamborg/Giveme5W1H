@@ -35,7 +35,7 @@ if __name__ == '__main__':
     #
     # Switch here between the predefined datasets or local for the local folder
     #
-    basePath = dataset_helper['news_cluster']
+    basePath = dataset_helper['gold_standard']
     #
     #
     #
@@ -56,7 +56,7 @@ if __name__ == '__main__':
         method_extractor.MethodExtractor()
     ], enhancement=[
         # Heideltime(['when']),
-        Aida(['how', 'when', 'why', 'where', 'what', 'who'])
+        #Aida(['how', 'when', 'why', 'where', 'what', 'who'])
     ])
 
     inputPath = basePath + '/data'

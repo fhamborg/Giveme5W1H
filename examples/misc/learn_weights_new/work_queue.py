@@ -1,3 +1,4 @@
+import logging
 import os
 import pickle
 
@@ -21,9 +22,10 @@ class WorkQueue(object):
         self.time_range = None
         self._queue = None
         self._queue_processed = None
-        self._queue_path = os.path.dirname(__file__) + '/cache/' + self._id + '_queue.prickle'
-        self._queue_processed_path = os.path.dirname(__file__) + '/cache/' + self._id + '_queue_processed.prickle'
+        self._queue_path = os.path.dirname(__file__) + '/queue_caches/' + self._id + '_queue.prickle'
+        self._queue_processed_path = os.path.dirname(__file__) + '/queue_caches/' + self._id + '_queue_processed.prickle'
         self._unique_weights = {}
+        self._log = logging.getLogger('GiveMe5W')
 
         if generator is None:
             self._queue_processed = []
@@ -36,6 +38,9 @@ class WorkQueue(object):
 
     def get_queue_count(self):
         return len(self._queue)
+
+    def get_id(self):
+        return self._id
 
     def setup_scoring_parameters(self, weight_start: float = 0, weight_stop: float = 1,
                                  weight_step_size: float = 0.1):
@@ -57,11 +62,11 @@ class WorkQueue(object):
             with open(self._queue_processed_path, 'rb') as ff:
                 self._queue_processed = pickle.load(ff)
 
-            print("weightinstance found! continue processing :)")
+            self._log.info("weightinstance found! continue processing :)")
 
 
         else:
-            print('generating a new queue')
+            self._log.info('generating a new queue')
             self._queue_processed = []
             self._queue = []
             self._unique_weights = {}
@@ -92,21 +97,23 @@ class WorkQueue(object):
 
     def pop(self, persist: bool = True):
         """
-        takes an item from the process queue. and attached it with the result to the
-        queue_processed queue
+        takes an item from the process queue.
 
         :param result:
         :return:
         """
         self._queue.pop()
         if persist:
-            with open(self._queue_path, 'wb') as f:
-                # Pickle the 'data' document using the highest protocol available.
-                pickle.dump(self._queue, f, pickle.HIGHEST_PROTOCOL)
+            self.persist()
 
-            with open(self._queue_processed_path, 'wb') as f:
-                # Pickle the 'data' document using the highest protocol available.
-                pickle.dump(self._queue_processed, f, pickle.HIGHEST_PROTOCOL)
+    def persist(self):
+        with open(self._queue_path, 'wb') as f:
+            # Pickle the 'data' document using the highest protocol available.
+            pickle.dump(self._queue, f, pickle.HIGHEST_PROTOCOL)
+
+        with open(self._queue_processed_path, 'wb') as f:
+            # Pickle the 'data' document using the highest protocol available.
+            pickle.dump(self._queue_processed, f, pickle.HIGHEST_PROTOCOL)
 
     def next(self):
         if len(self._queue) > 0:
@@ -129,7 +136,7 @@ class WorkQueue(object):
         :return:
         """
         if sum(weights) == 0:
-            False
+            return False
 
         # set se first not null weight to * 1000 (int) (overcome floating error)
         for weight in weights:
@@ -139,8 +146,8 @@ class WorkQueue(object):
         # scale vector
         scaled_weights = []
         for weight in weights:
-            if weight != 0:
-                scaled_weights.append(int(scaleFactor * weight))
+            #if weight != 0:
+            scaled_weights.append(int(scaleFactor * weight))
 
         # build a string representation
         scaled_weights_string = [str(x) for x in scaled_weights]
@@ -182,14 +189,17 @@ class WorkQueue(object):
                                 'extracting_parameters': {}})
 
     def _generate_environment(self):
+        weight_start = 0
+        weight_step_size = 0.2
+        weight_stop = 1
         # (0.5, 0.8), (0.8, 0.7, 0.5, 0.5, 0.5)
         for i in self._weights_range:
             for j in self._weights_range:
-                for k in self._weights_range:
-                    for l in self._weights_range:
-                        for m in self._weights_range:
-                            for n in self._weights_range:
-                                for o in self._weights_range:
+                for k in np.arange(weight_start, weight_stop, weight_step_size):
+                    for l in np.arange(weight_start, weight_stop, weight_step_size):
+                        for m in np.arange(weight_start, weight_stop, weight_step_size):
+                            for n in np.arange(weight_start, weight_stop, weight_step_size):
+                                for o in np.arange(weight_start, weight_stop, weight_step_size):
                                     weights = (i, j, k, l, m, n, o)
                                     if self.vector_is_unique(weights):
                                         self._queue.append({
@@ -214,8 +224,7 @@ class WorkQueue(object):
 
     def _generate_default(self):
         """
-        https://www.hackmath.net/en/calculator/combinations-and-permutations?n=19&k=4&order=1&repeat=1
-        130321 per
+        https://www.hackmath.net/en/calculator/combinations-and-permutations?n=19&k=4&order=1&repeat=1130321 per
         :return:
         """
         extracting_parameters_id = 0

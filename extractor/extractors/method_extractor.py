@@ -8,12 +8,15 @@ class MethodExtractor(AbsExtractor):
     The MethodExtractor tries to extract the methods.
     """
 
+    # CONJUNCTIONS IN ENGLISH: MEANING, TYPES AND USES,  ISSN 2348-3164
+    # http://grammarist.com/grammar/conjunctions/
     _copulative_conjunction = ['and', 'as', 'both', 'because', 'even', 'for', 'if ', 'that', 'then', 'since', 'seeing',
                                'so', 'after']
 
-    _stop_words = ['and', 'but', 'lead', 'is', 'has', 'have', 'went', 'was', 'been', 'were', 'get', 'are', 'do', 'so',
-                   'due', 'well', 'very', 'on', 'too', 'be', 'i', 'and', 'have', 'the', 'a', ',', '.', '', 'not', "n't",
-                   'am', 'as', 'even', 'however', 'other', 'just', 'over', 'more', 'say', 'also']
+    # https://github.com/igorbrigadir/stopwords
+    # https://github.com/igorbrigadir/stopwords/blob/master/en/nltk.txt
+    _stop_words = ['i', 'me', 'my', 'myself', 'we', 'our', 'ours', 'ourselves', 'you', 'your', 'yours', 'yourself', 'yourselves', 'he', 'him', 'his', 'himself', 'she', 'her', 'hers', 'herself', 'it', 'its', 'itself', 'they', 'them', 'their', 'theirs', 'themselves', 'what', 'which', 'who', 'whom', 'this', 'that', 'these', 'those', 'am', 'is', 'are', 'was', 'were', 'be', 'been', 'being', 'have', 'has', 'had', 'having', 'do', 'does', 'did', 'doing', 'a', 'an', 'the', 'and', 'but', 'if', 'or', 'because', 'as', 'until', 'while', 'of', 'at', 'by', 'for', 'with', 'about', 'against', 'between', 'into', 'through', 'during', 'before', 'after', 'above', 'below', 'to', 'from', 'up', 'down', 'in', 'out', 'on', 'off', 'over', 'under', 'again', 'further', 'then', 'once', 'here', 'there', 'when', 'where', 'why', 'how', 'all', 'any', 'both', 'each', 'few', 'more', 'most', 'other', 'some', 'such', 'no', 'nor', 'not', 'only', 'own', 'same', 'so', 'than', 'too', 'very', 's', 't', 'can', 'will', 'just', 'don', 'should', 'now', 'd', 'll', 'm', 'o', 're', 've', 'y', 'ain', 'aren', 'couldn', 'didn', 'doesn', 'hadn', 'hasn', 'haven', 'isn', 'ma', 'mightn', 'mustn', 'needn', 'shan', 'shouldn', 'wasn', 'weren', 'won', 'wouldn']
+
     _stop_ner = ['TIME', 'DATE', 'ORGANIZATION', 'DURATION', 'ORDINAL']
 
     def __init__(self, weights: (float, float) = [1.0, 1.0]):
@@ -77,16 +80,16 @@ class MethodExtractor(AbsExtractor):
                                 # convert list objects back to tuples for backward compatibility
                                 candidates.append(
                                     [candidate_parts, None, tree.stanfordCoreNLPResult['index'], 'prepos'])
-                        else:
+                        #else:
                             # look at the sentence to the left side
                             # because of the tree structure simplest way is to go multiple times up and then walk back
-                            atree = subtree.parent().parent().parent()
-                            if atree:
-                                relevantParts = self._pos_linked_to_corenlp_tokens(atree)
-                                candidate_parts = self._find_vb_cc_vb_parts(relevantParts)
-                                if candidate_parts:
-                                    candidates.append(
-                                        [candidate_parts, None, tree.stanfordCoreNLPResult['index'], 'prepos'])
+                         #   atree = subtree.parent().parent().parent()
+                          #  if atree:
+                           #     relevantParts = self._pos_linked_to_corenlp_tokens(atree)
+                            #    candidate_parts = self._find_vb_cc_vb_parts(relevantParts)
+                             #   if candidate_parts:
+                              #      candidates.append(
+                               #         [candidate_parts, None, tree.stanfordCoreNLPResult['index'], 'prepos'])
 
         return candidates
 
@@ -197,7 +200,9 @@ class MethodExtractor(AbsExtractor):
     def _find_vb_cc_vb_parts(self, relevant_parts):
         """
          walks though the given subtree and returns all parts which are a part of
-         JJ VB [CC] JJ VB  chain, starting from the first word
+         JJ VB [CC] JJ VB  chain, starting from the first word.
+
+
 
         :param relevant_parts:
         :return:

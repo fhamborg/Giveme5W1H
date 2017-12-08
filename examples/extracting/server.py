@@ -9,8 +9,8 @@ from extractor.extractor import FiveWExtractor
 from extractor.tools.file.reader import Reader
 from extractor.tools.file.writer import Writer
 
-# from Giveme5W_enhancer.heideltime import Heideltime
-# from Giveme5W_enhancer.aida import Aida
+# - - from Giveme5W_enhancer.heideltime import Heideltime
+# - - from Giveme5W_enhancer.aida import Aida
 
 """
 This is a simple example on how to use flask to create a rest api for our extractor.

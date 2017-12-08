@@ -1,6 +1,7 @@
 import datetime
 import logging
 
+import math
 from geopy.distance import great_circle
 from geopy.exc import GeocoderServiceError
 from geopy.geocoders import Nominatim
@@ -10,7 +11,6 @@ from extractor.candidate import Candidate
 from extractor.extractors.abs_extractor import AbsExtractor
 from extractor.tools.timex import Timex
 from tools.cache_manager import CacheManager
-
 
 class EnvironmentExtractor(AbsExtractor):
     """
@@ -22,6 +22,11 @@ class EnvironmentExtractor(AbsExtractor):
     one_day_in_s = one_hour_in_s * 24
     two_days_in_s = one_day_in_s * 2
     one_month_in_s = one_day_in_s * 30
+
+    # used for normalisation of time
+    a_min = math.log(one_minute_in_s)
+    a_max = math.log(one_month_in_s*12)# a year
+    a_min_minus_max = (a_max - a_min)
 
     def __init__(self, weights=((0.5, 0.8), (0.8, 0.7, 0.5, 0.5, 0.5)), phrase_range_location: int = 3,
                  time_range: int = 86400, host='nominatim.openstreetmap.org'):
@@ -51,7 +56,6 @@ class EnvironmentExtractor(AbsExtractor):
         self.time_delta = time_range  # 24h in seconds
 
         self._phrase_range_location = phrase_range_location
-
         self._cache_nominatim = CacheManager.instance().get_cache('../examples/caches/Nominatim')
 
     def _evaluate_candidates(self, document):
@@ -116,10 +120,19 @@ class EnvironmentExtractor(AbsExtractor):
                     location_array = [t['originalText'] for t in candidate[0]]
                     location_string = ' '.join(location_array)
 
+                    # there is an exception if request went wrong,
+                    # None values are not cached,
+                    # therefore -1 is used to cache requests without result
                     location = self._cache_nominatim.get(location_string)
                     if location is None:
                         location = self.geocoder.geocode(location_string)
-                        self._cache_nominatim.cache(location_string, location)
+
+                        if location is None:
+                            self._cache_nominatim.cache(location_string, -1)
+                        else:
+                            self._cache_nominatim.cache(location_string, location)
+                    if location == -1:
+                        location = None
 
                     if location is not None:
                         # fetch pos and append to candidates
@@ -262,7 +275,7 @@ class EnvironmentExtractor(AbsExtractor):
         for candidateO in oCandidates:
             candidate = candidateO.get_raw()
             candidate_timex = candidateO.get_calculations('timex')
-            logging.getLogger('GiveMe5W').debug(candidate_timex)
+            #logging.getLogger('GiveMe5W').debug(candidate_timex)
 
             # first token, sentence index, time, number of similar dates, number of candidates that entail this one, candidateO
             scoring_candidate = [candidate[0], candidateO.get_sentence_index(), candidate_timex, 1, 1, candidateO]
@@ -318,9 +331,10 @@ class EnvironmentExtractor(AbsExtractor):
             score += weights[3] * normalized_distance_score
 
             # accuracy (ideally one minute only, max is one year) logarithmic
-            normalized_duration = ((candidate[2].get_duration().total_seconds() - EnvironmentExtractor.one_minute_in_s)
-                                   / (EnvironmentExtractor.one_month_in_s - EnvironmentExtractor.one_minute_in_s))
-            # TODO should be logarithmic
+
+            normalized_duration = ((math.log(candidate[2].get_duration().total_seconds()) - EnvironmentExtractor.a_min)
+                                    / EnvironmentExtractor.a_min_minus_max)
+
             score += weights[4] * (1 - normalized_duration)
 
             if score > 0:

@@ -19,12 +19,12 @@
             [
               {
                 "nlpToken": {
-                  "index": 7,
+                  "index": 15,
                   "word": "already",
                   "originalText": "already",
                   "lemma": "already",
-                  "characterOffsetBegin": 559,
-                  "characterOffsetEnd": 566,
+                  "characterOffsetBegin": 378,
+                  "characterOffsetEnd": 385,
                   "pos": "RB",
                   "ner": "O",
                   "speaker": "PER0",
@@ -35,9 +35,9 @@
               "RB"
             ]
           ],
-          "score": 1.5850815850815851,
+          "score": 1.0,
           "text": "already",
-          "nlpIndexSentence": 6
+          "nlpIndexSentence": 4
         }
       ]
     },
@@ -207,6 +207,7 @@
       "annotated": [
         {
           "coderPhraseCount": 3,
+          "parsed": "2016-11-07",
           "text": "Sunday"
         }
       ],
@@ -225,34 +226,28 @@
                   "characterOffsetEnd": 621,
                   "pos": "NNP",
                   "ner": "DATE",
-                  "normalizedNER": "XXXX-WXX-7",
+                  "normalizedNER": "2016-11-06",
                   "speaker": "PER0",
                   "before": " ",
                   "after": " ",
                   "timex": {
                     "tid": "t1",
                     "type": "DATE",
-                    "value": "XXXX-WXX-7"
+                    "value": "2016-11-06"
                   }
-                },
-                "heideltime": [
-                  {
-                    "@tid": "t1",
-                    "@type": "DATE",
-                    "@value": "2016-11-06",
-                    "#text": "Sunday",
-                    "characterOffset": [
-                      615,
-                      621
-                    ]
-                  }
-                ]
+                }
               },
               "NNP"
             ]
           ],
-          "score": 0.8153846153846154,
+          "score": 0.7712206877844294,
           "text": "Sunday",
+          "enhancement": {
+            "timex": {
+              "start_date": "2016-11-06T00:00:00",
+              "end_date": "2016-11-06T23:59:59"
+            }
+          },
           "nlpIndexSentence": 7
         }
       ]
@@ -281,55 +276,7 @@
                   "speaker": "PER0",
                   "before": " ",
                   "after": " "
-                },
-                "aida": [
-                  {
-                    "mention": {
-                      "allEntities": [
-                        {
-                          "kbIdentifier": "YAGO:Pennsylvania",
-                          "disambiguationScore": "0.11934"
-                        }
-                      ],
-                      "offset": 1514,
-                      "name": "Pennsylvania",
-                      "length": 12,
-                      "bestEntity": {
-                        "kbIdentifier": "YAGO:Pennsylvania",
-                        "disambiguationScore": "0.11934"
-                      }
-                    },
-                    "bestEntityMetadata": {
-                      "knowledgebase": "YAGO",
-                      "depictionurl": "http://upload.wikimedia.org/wikipedia/commons/f/f7/Flag_of_Pennsylvania.svg",
-                      "depictionthumbnailurl": "http://upload.wikimedia.org/wikipedia/commons/thumbFlag_of_Pennsylvania.svg/200px-Flag_of_Pennsylvania.svg",
-                      "importance": 1.64344625666118e-05,
-                      "entityId": "Pennsylvania",
-                      "type": [
-                        "YAGO_wordnet_district_108552138",
-                        "YAGO_yagoPermanentlyLocatedEntity",
-                        "YAGO_yagoLegalActorGeo",
-                        "YAGO_wordnet_state_108654360",
-                        "YAGO_wordnet_region_108630985",
-                        "YAGO_yagoGeoEntity",
-                        "YAGO_wordnet_physical_entity_100001930",
-                        "YAGO_wikicategory_Northeastern_United_States",
-                        "YAGO_wordnet_site_108651247",
-                        "YAGO_wordnet_entity_100001740",
-                        "YAGO_wordnet_object_100002684",
-                        "YAGO_wikicategory_States_and_territories_established_in_1787",
-                        "YAGO_wordnet_tract_108673395",
-                        "YAGO_wikicategory_Populated_places_in_the_United_States_with_German\\u002dAmerican_plurality_populations",
-                        "YAGO_wordnet_geographical_area_108574314",
-                        "YAGO_wordnet_location_100027167",
-                        "YAGO_wordnet_administrative_district_108491826",
-                        "YAGO_wikicategory_States_of_the_United_States"
-                      ],
-                      "readableRepr": "Pennsylvania",
-                      "url": "http://en.wikipedia.org/wiki/Pennsylvania"
-                    }
-                  }
-                ]
+                }
               },
               "NNP"
             ],
@@ -365,56 +312,7 @@
                   "speaker": "PER0",
                   "before": " ",
                   "after": " "
-                },
-                "aida": [
-                  {
-                    "mention": {
-                      "allEntities": [
-                        {
-                          "kbIdentifier": "YAGO:Ohio",
-                          "disambiguationScore": "0.18608"
-                        }
-                      ],
-                      "offset": 1531,
-                      "name": "Ohio",
-                      "length": 4,
-                      "bestEntity": {
-                        "kbIdentifier": "YAGO:Ohio",
-                        "disambiguationScore": "0.18608"
-                      }
-                    },
-                    "bestEntityMetadata": {
-                      "knowledgebase": "YAGO",
-                      "depictionurl": "http://upload.wikimedia.org/wikipedia/commons/4/4c/Flag_of_Ohio.svg",
-                      "depictionthumbnailurl": "http://upload.wikimedia.org/wikipedia/commons/thumbFlag_of_Ohio.svg/200px-Flag_of_Ohio.svg",
-                      "importance": 2.5348069382401254e-05,
-                      "entityId": "Ohio",
-                      "type": [
-                        "YAGO_wordnet_district_108552138",
-                        "YAGO_yagoPermanentlyLocatedEntity",
-                        "YAGO_yagoLegalActorGeo",
-                        "YAGO_wikicategory_Midwestern_United_States",
-                        "YAGO_wordnet_state_108654360",
-                        "YAGO_wikicategory_States_and_territories_established_in_1803",
-                        "YAGO_wikicategory_locations",
-                        "YAGO_wordnet_region_108630985",
-                        "YAGO_yagoGeoEntity",
-                        "YAGO_wordnet_physical_entity_100001930",
-                        "YAGO_wordnet_site_108651247",
-                        "YAGO_wordnet_entity_100001740",
-                        "YAGO_wordnet_object_100002684",
-                        "YAGO_wordnet_tract_108673395",
-                        "YAGO_wikicategory_Populated_places_in_the_United_States_with_German\\u002dAmerican_plurality_populations",
-                        "YAGO_wordnet_geographical_area_108574314",
-                        "YAGO_wordnet_location_100027167",
-                        "YAGO_wordnet_administrative_district_108491826",
-                        "YAGO_wikicategory_States_of_the_United_States"
-                      ],
-                      "readableRepr": "Ohio",
-                      "url": "http://en.wikipedia.org/wiki/Ohio"
-                    }
-                  }
-                ]
+                }
               },
               "NNP"
             ]
@@ -474,65 +372,7 @@
                   "speaker": "PER0",
                   "before": " ",
                   "after": ""
-                },
-                "aida": [
-                  {
-                    "mention": {
-                      "allEntities": [
-                        {
-                          "kbIdentifier": "YAGO:James_Comey",
-                          "disambiguationScore": "1"
-                        }
-                      ],
-                      "offset": 117,
-                      "name": "James B. Comey",
-                      "length": 14,
-                      "bestEntity": {
-                        "kbIdentifier": "YAGO:James_Comey",
-                        "disambiguationScore": "1"
-                      }
-                    },
-                    "bestEntityMetadata": {
-                      "knowledgebase": "YAGO",
-                      "depictionurl": "http://upload.wikimedia.org/wikipedia/commons/a/a0/Comey-FBI-Portrait.jpg",
-                      "depictionthumbnailurl": "http://upload.wikimedia.org/wikipedia/commons/thumbComey-FBI-Portrait.jpg/200px-Comey-FBI-Portrait.jpg",
-                      "importance": 0.12782223593927272,
-                      "entityId": "James_Comey",
-                      "type": [
-                        "YAGO_wordnet_owner_110389398",
-                        "YAGO_wikicategory_People_from_Allendale\\u002c_New_Jersey",
-                        "YAGO_yagoLegalActorGeo",
-                        "YAGO_wikicategory_United_States_Attorneys_for_the_Southern_District_of_New_York",
-                        "YAGO_wordnet_person_100007846",
-                        "YAGO_wikicategory_Living_people",
-                        "YAGO_wordnet_lawyer_110249950",
-                        "YAGO_wordnet_official_110372373",
-                        "YAGO_wikicategory_People_from_Yonkers\\u002c_New_York",
-                        "YAGO_yagoLegalActor",
-                        "YAGO_wordnet_professional_110480253",
-                        "YAGO_wordnet_living_thing_100004258",
-                        "YAGO_wordnet_leader_109623038",
-                        "YAGO_wordnet_physical_entity_100001930",
-                        "YAGO_wordnet_head_110162991",
-                        "YAGO_wordnet_causal_agent_100007347",
-                        "YAGO_wordnet_director_110014939",
-                        "YAGO_wordnet_entity_100001740",
-                        "YAGO_wordnet_object_100002684",
-                        "YAGO_wordnet_holder_110180178",
-                        "YAGO_wordnet_organism_100004475",
-                        "YAGO_wordnet_administrator_109770949",
-                        "YAGO_wordnet_worker_109632518",
-                        "YAGO_wordnet_officeholder_110371450",
-                        "YAGO_wordnet_whole_100003553",
-                        "YAGO_wordnet_skilled_worker_110605985",
-                        "YAGO_wikicategory_Directors_of_the_FBI",
-                        "YAGO_wordnet_adult_109605289"
-                      ],
-                      "readableRepr": "James Comey",
-                      "url": "http://en.wikipedia.org/wiki/James%20Comey"
-                    }
-                  }
-                ]
+                }
               },
               "NNP"
             ]
@@ -571,136 +411,10 @@
                 }
               },
               "PRP"
-            ],
-            [
-              {
-                "nlpToken": {
-                  "index": 9,
-                  "word": "have",
-                  "originalText": "have",
-                  "lemma": "have",
-                  "characterOffsetBegin": 186,
-                  "characterOffsetEnd": 190,
-                  "pos": "VBP",
-                  "ner": "O",
-                  "speaker": "PER0",
-                  "before": " ",
-                  "after": " "
-                }
-              },
-              "VBP"
-            ],
-            [
-              {
-                "nlpToken": {
-                  "index": 10,
-                  "word": "ever",
-                  "originalText": "ever",
-                  "lemma": "ever",
-                  "characterOffsetBegin": 191,
-                  "characterOffsetEnd": 195,
-                  "pos": "RB",
-                  "ner": "O",
-                  "speaker": "PER0",
-                  "before": " ",
-                  "after": " "
-                }
-              },
-              "RB"
-            ],
-            [
-              {
-                "nlpToken": {
-                  "index": 11,
-                  "word": "watched",
-                  "originalText": "watched",
-                  "lemma": "watch",
-                  "characterOffsetBegin": 196,
-                  "characterOffsetEnd": 203,
-                  "pos": "VBN",
-                  "ner": "O",
-                  "speaker": "PER0",
-                  "before": " ",
-                  "after": " "
-                }
-              },
-              "VBN"
-            ],
-            [
-              {
-                "nlpToken": {
-                  "index": 12,
-                  "word": "a",
-                  "originalText": "a",
-                  "lemma": "a",
-                  "characterOffsetBegin": 204,
-                  "characterOffsetEnd": 205,
-                  "pos": "DT",
-                  "ner": "O",
-                  "speaker": "PER0",
-                  "before": " ",
-                  "after": " "
-                }
-              },
-              "DT"
-            ],
-            [
-              {
-                "nlpToken": {
-                  "index": 13,
-                  "word": "procedural",
-                  "originalText": "procedural",
-                  "lemma": "procedural",
-                  "characterOffsetBegin": 206,
-                  "characterOffsetEnd": 216,
-                  "pos": "JJ",
-                  "ner": "O",
-                  "speaker": "PER0",
-                  "before": " ",
-                  "after": " "
-                }
-              },
-              "JJ"
-            ],
-            [
-              {
-                "nlpToken": {
-                  "index": 14,
-                  "word": "crime",
-                  "originalText": "crime",
-                  "lemma": "crime",
-                  "characterOffsetBegin": 217,
-                  "characterOffsetEnd": 222,
-                  "pos": "NN",
-                  "ner": "O",
-                  "speaker": "PER0",
-                  "before": " ",
-                  "after": " "
-                }
-              },
-              "NN"
-            ],
-            [
-              {
-                "nlpToken": {
-                  "index": 15,
-                  "word": "drama",
-                  "originalText": "drama",
-                  "lemma": "drama",
-                  "characterOffsetBegin": 223,
-                  "characterOffsetEnd": 228,
-                  "pos": "NN",
-                  "ner": "O",
-                  "speaker": "PER0",
-                  "before": " ",
-                  "after": ""
-                }
-              },
-              "NN"
             ]
           ],
           "score": 0.4114285714285714,
-          "text": "you have ever watched a procedural crime drama",
+          "text": "you",
           "nlpIndexSentence": 3
         }
       ]

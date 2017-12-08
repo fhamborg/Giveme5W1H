@@ -123,7 +123,7 @@ class Learn(object):
                 parsed=entire_annotation[3].get('parsed')
                 if parsed is None:
                     return -2
-                parsed = dateutil.parser.parse()
+                parsed = dateutil.parser.parse(parsed)
 
             else:
                 # there is no way to compare these dates without a proper date annotation

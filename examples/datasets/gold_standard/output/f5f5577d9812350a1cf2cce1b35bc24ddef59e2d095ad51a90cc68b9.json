@@ -1,0 +1,428 @@
+{
+  "filename": "f5f5577d9812350a1cf2cce1b35bc24ddef59e2d095ad51a90cc68b9",
+  "title": "Croydon tram crash: Five dead after vehicle overturns in south London",
+  "mimeType": "text/xml",
+  "parsingError": "true",
+  "date_publish": "2016-11-09 00:00:00",
+  "fiveWoneH": {
+    "who": {
+      "extracted": [
+        {
+          "text": "The London Mayor",
+          "parts": [
+            [
+              {
+                "nlpToken": {
+                  "characterOffsetBegin": 239,
+                  "word": "The",
+                  "lemma": "the",
+                  "characterOffsetEnd": 242,
+                  "speaker": "PER0",
+                  "ner": "O",
+                  "after": " ",
+                  "originalText": "The",
+                  "before": " ",
+                  "index": 1,
+                  "pos": "DT"
+                }
+              },
+              "DT"
+            ],
+            [
+              {
+                "nlpToken": {
+                  "characterOffsetBegin": 243,
+                  "word": "London",
+                  "lemma": "London",
+                  "characterOffsetEnd": 249,
+                  "speaker": "PER0",
+                  "ner": "LOCATION",
+                  "after": " ",
+                  "originalText": "London",
+                  "before": " ",
+                  "index": 2,
+                  "pos": "NNP"
+                }
+              },
+              "NNP"
+            ],
+            [
+              {
+                "nlpToken": {
+                  "characterOffsetBegin": 250,
+                  "word": "Mayor",
+                  "lemma": "Mayor",
+                  "characterOffsetEnd": 255,
+                  "speaker": "PER0",
+                  "ner": "O",
+                  "after": " ",
+                  "originalText": "Mayor",
+                  "before": " ",
+                  "index": 3,
+                  "pos": "NNP"
+                }
+              },
+              "NNP"
+            ]
+          ],
+          "nlpIndexSentence": 3,
+          "score": 1.0
+        }
+      ],
+      "annotated": [
+        {
+          "text": "five people",
+          "coderPhraseCount": 2
+        }
+      ],
+      "label": "who"
+    },
+    "when": {
+      "extracted": [
+        {
+          "text": "Sunday",
+          "enhancement": {
+            "timex": {
+              "start_date": "2016-11-06T00:00:00",
+              "end_date": "2016-11-06T23:59:59"
+            }
+          },
+          "parts": [
+            [
+              {
+                "nlpToken": {
+                  "after": " ",
+                  "word": "Sunday",
+                  "lemma": "Sunday",
+                  "timex": {
+                    "value": "2016-11-06",
+                    "tid": "t8",
+                    "type": "DATE"
+                  },
+                  "before": " ",
+                  "characterOffsetEnd": 4642,
+                  "pos": "NNP",
+                  "speaker": "PER0",
+                  "ner": "ORGANIZATION",
+                  "characterOffsetBegin": 4636,
+                  "originalText": "Sunday",
+                  "index": 249
+                }
+              },
+              "NNP"
+            ]
+          ],
+          "nlpIndexSentence": 28,
+          "score": 0.68344284570624
+        }
+      ],
+      "annotated": [
+        {
+          "text": "about 6.10am or 6.15am",
+          "coderPhraseCount": 3
+        }
+      ],
+      "label": "when"
+    },
+    "how": {
+      "extracted": [
+        {
+          "text": "overturns",
+          "parts": [
+            [
+              {
+                "nlpToken": {
+                  "characterOffsetBegin": 44,
+                  "word": "overturns",
+                  "lemma": "overturn",
+                  "characterOffsetEnd": 53,
+                  "speaker": "PER0",
+                  "ner": "O",
+                  "after": " ",
+                  "originalText": "overturns",
+                  "before": " ",
+                  "index": 9,
+                  "pos": "VBZ"
+                }
+              },
+              "VBZ"
+            ]
+          ],
+          "score": 1.0
+        }
+      ],
+      "annotated": [
+        {
+          "text": "overturns",
+          "coderPhraseCount": 3
+        }
+      ],
+      "label": "how"
+    },
+    "where": {
+      "extracted": [
+        {
+          "text": "London",
+          "enhancement": {
+            "openstreetmap_nominatim": {
+              "place_id": "179118272",
+              "licence": "Data \u00a9 OpenStreetMap contributors, ODbL 1.0. http://www.openstreetmap.org/copyright",
+              "type": "city",
+              "class": "place",
+              "osm_id": "65606",
+              "boundingbox": [
+                51.2867602,
+                51.6918741,
+                -0.5103751,
+                0.3340155
+              ],
+              "osm_type": "relation",
+              "lon": "-0.1276474",
+              "display_name": "London, Greater London, England, UK",
+              "importance": 0.32637239413505,
+              "icon": "https://nominatim.openstreetmap.org/images/mapicons/poi_place_city.p.20.png",
+              "lat": "51.5073219"
+            }
+          },
+          "parts": [
+            [
+              {
+                "nlpToken": {
+                  "characterOffsetBegin": 63,
+                  "word": "London",
+                  "lemma": "London",
+                  "characterOffsetEnd": 69,
+                  "speaker": "PER0",
+                  "ner": "LOCATION",
+                  "after": "",
+                  "originalText": "London",
+                  "before": " ",
+                  "index": 12,
+                  "pos": "NNP"
+                }
+              },
+              "NNP"
+            ]
+          ],
+          "score": 1.0
+        }
+      ],
+      "annotated": [
+        {
+          "text": "Croydon, south London",
+          "coderPhraseCount": 3
+        }
+      ],
+      "label": "where"
+    },
+    "why": {
+      "extracted": [
+        {
+          "text": "The London Mayor",
+          "parts": [
+            [
+              {
+                "nlpToken": {
+                  "characterOffsetBegin": 239,
+                  "word": "The",
+                  "lemma": "the",
+                  "speaker": "PER0",
+                  "after": " ",
+                  "pos": "DT",
+                  "ner": "O",
+                  "before": " ",
+                  "characterOffsetEnd": 242,
+                  "index": 1,
+                  "originalText": "The"
+                }
+              },
+              "DT"
+            ],
+            [
+              {
+                "nlpToken": {
+                  "characterOffsetBegin": 243,
+                  "word": "London",
+                  "lemma": "London",
+                  "speaker": "PER0",
+                  "after": " ",
+                  "pos": "NNP",
+                  "ner": "LOCATION",
+                  "before": " ",
+                  "characterOffsetEnd": 249,
+                  "index": 2,
+                  "originalText": "London"
+                }
+              },
+              "NNP"
+            ],
+            [
+              {
+                "nlpToken": {
+                  "characterOffsetBegin": 250,
+                  "word": "Mayor",
+                  "lemma": "Mayor",
+                  "speaker": "PER0",
+                  "after": " ",
+                  "pos": "NNP",
+                  "ner": "O",
+                  "before": " ",
+                  "characterOffsetEnd": 255,
+                  "index": 3,
+                  "originalText": "Mayor"
+                }
+              },
+              "NNP"
+            ]
+          ],
+          "nlpIndexSentence": 3,
+          "score": 0.4114285714285714
+        }
+      ],
+      "annotated": [
+        {
+          "text": "tram overturned",
+          "coderPhraseCount": 3
+        }
+      ],
+      "label": "why"
+    },
+    "what": {
+      "extracted": [
+        {
+          "text": "has warned that the death toll",
+          "parts": [
+            [
+              {
+                "nlpToken": {
+                  "characterOffsetBegin": 256,
+                  "word": "has",
+                  "lemma": "have",
+                  "characterOffsetEnd": 259,
+                  "speaker": "PER0",
+                  "ner": "O",
+                  "after": " ",
+                  "originalText": "has",
+                  "before": " ",
+                  "index": 4,
+                  "pos": "VBZ"
+                }
+              },
+              "VBZ"
+            ],
+            [
+              {
+                "nlpToken": {
+                  "characterOffsetBegin": 260,
+                  "word": "warned",
+                  "lemma": "warn",
+                  "characterOffsetEnd": 266,
+                  "speaker": "PER0",
+                  "ner": "O",
+                  "after": " ",
+                  "originalText": "warned",
+                  "before": " ",
+                  "index": 5,
+                  "pos": "VBN"
+                }
+              },
+              "VBN"
+            ],
+            [
+              {
+                "nlpToken": {
+                  "characterOffsetBegin": 267,
+                  "word": "that",
+                  "lemma": "that",
+                  "characterOffsetEnd": 271,
+                  "speaker": "PER0",
+                  "ner": "O",
+                  "after": " ",
+                  "originalText": "that",
+                  "before": " ",
+                  "index": 6,
+                  "pos": "IN"
+                }
+              },
+              "IN"
+            ],
+            [
+              {
+                "nlpToken": {
+                  "characterOffsetBegin": 272,
+                  "word": "the",
+                  "lemma": "the",
+                  "characterOffsetEnd": 275,
+                  "speaker": "PER0",
+                  "ner": "O",
+                  "after": " ",
+                  "originalText": "the",
+                  "before": " ",
+                  "index": 7,
+                  "pos": "DT"
+                }
+              },
+              "DT"
+            ],
+            [
+              {
+                "nlpToken": {
+                  "characterOffsetBegin": 276,
+                  "word": "death",
+                  "lemma": "death",
+                  "characterOffsetEnd": 281,
+                  "speaker": "PER0",
+                  "ner": "O",
+                  "after": " ",
+                  "originalText": "death",
+                  "before": " ",
+                  "index": 8,
+                  "pos": "NN"
+                }
+              },
+              "NN"
+            ],
+            [
+              {
+                "nlpToken": {
+                  "characterOffsetBegin": 282,
+                  "word": "toll",
+                  "lemma": "toll",
+                  "characterOffsetEnd": 286,
+                  "speaker": "PER0",
+                  "ner": "O",
+                  "after": " ",
+                  "originalText": "toll",
+                  "before": " ",
+                  "index": 9,
+                  "pos": "NN"
+                }
+              },
+              "NN"
+            ]
+          ],
+          "nlpIndexSentence": 3,
+          "score": 1.0
+        }
+      ],
+      "annotated": [
+        {
+          "text": "tram crash",
+          "coderPhraseCount": 2
+        },
+        {
+          "text": "are dead",
+          "coderPhraseCount": 2
+        }
+      ],
+      "label": "what"
+    }
+  },
+  "description": "At least five people are dead after a tram overturned in Croydon, south London. Two people remain trapped and more than 50 people have been injured after the accident. The London Mayor has warned that the death toll 'may well increase'. The driver of the tram has been arrested, British Transport Police said.",
+  "text": "At least five people are dead after a tram overturned in Croydon, south London. Two people remain trapped and more than 50 people have been injured after the accident. The London Mayor has warned that the death toll 'may well increase'. The driver of the tram has been arrested, British Transport Police said. Five people were initially trapped after the accident but three have been rescued from the wreckage. The accident involved a vehicle and two carriages and occurred near a tunnel, Transport for London said. The overturned tram remains on its side next to an underpass. More than 70 firefighters, eight fire engines and four rescue units are at the scene and people have been asked to avoid the area. (Lucy Pasha Robinson / The Independent) St George's Hospital in Tooting, said 20 people have been brought in for treatment of which four are seriously injured. One man told The Croydon Advertiser his wife had phoned him from on board the train and to say she was trapped and could not get up. Croydon resident Hannah Collier, 23, said it was raining heavily at the time of the incident. She told the BBC: \"I was in bed watching the election when I heard a big crash, which I thought was the wind. \"Then I heard people shouting and then the emergency services arriving. Chris Grayling on Croydon tram crash \"Later I saw at least one person being brought out on a stretcher.\" Adil Salahi, whose property overlooks the track, told Press Association the he heard a \"sudden\" noise. The 76-year-old said: \"It was about 6.10am or 6.15am and because I was praying. I could not move and try to check what it is. I thought it was something in the garage doors. Then I thought it was some lorry.\" Liam Lehane, from the London Ambulance Service, described many of those hurt as \"walking wounded\" but said others suffered serious injuries. Investigations have been launched after the tram derailed (Reuters) London Mayor Sadiq Khan issued a statement that said he was in contact with the emergency services and said his thoughts were with those involved. \"Terrible accident in Croydon,\" Boris Johnson said in a tweet, \"my thoughts and prayers are with the victims and their families\". A spokesperson from the British Transport Police said: \"Officers from British Transport Police attended alongside officers from London Fire Brigade, London Ambulance Service and the Metropolitan Police. Mike Brown, Transport Commissioner, on Croydon tram crash \"Together, we are currently working to free two people still trapped. A number of people have been taken to hospital with injuries and sadly we can say there has been some loss of life.\" He said British Transport Police and the Rail Accident Investigations branch had launched independent investigations into the incident. UK news in pictures 19 show all UK news in pictures 1/19 The Palm House is illuminated as Kew Gardens launch their festive illuminated trail Getty 2/19 Wolfgang Buttress' Hive Installation is illuminated as Kew Gardens launch their festive illuminated trail Getty 3/19 The Palm House is illuminated as Kew Gardens launch their festive illuminated trail in London, England. The world-famous Royal Botanic Gardens will be lit by over 60,000 lights and includes eight artworks by British and international artists Getty 4/19 Launch of the new Design Museum co-hosted by Alexandra Shulman, Sir Terence Conran and Deyan Sudjic in London, United Kingdom Getty 5/19 Andy Murray of Great Britain lifts the trophy following his victory during the Singles Final against Novak Djokovic of Serbia at the O2 Arena in London, England Getty 6/19 Storm Angus brought hurricane force winds to southern Britain which brought flooding and power cuts to thousands of homes Getty 7/19 Mother Jean Leadbeater, father Gordon Leadbeater and sister Kim Leadbeater of late Labour MP Jo Cox, arrive to attend the ongoing trial of Thomas Mair, the man accused of murdering her at the Old Bailey Getty 8/19 Joe Corre, son of Vivienne Westwood and Malcolm McLaren, burns a God Save The Queen T-Shirt at Buckingham Palace Getty 9/19 Actor Kevin Spacey and Barcelona footballer Gerard Pique attend the Singles Final between Novak Djokovic of Serbia and Andy Murray of Great Britain at the O2 Arena Getty 10/19 Queen Elizabeth II lays a wreath during the annual Remembrance Sunday Service at the Cenotaph on Whitehall in London, England Getty 11/19 The Prince of Wales arrives at the Guards' Chapel in Wellington Barracks, London for a service and to lay a wreath at the Guards' Memorial for the Welsh Guards' Regimental Remembrance Sunday PA wire 12/19 British Prime Minister Theresa May, Jeremy Corbyn Leader of the Labour Party and Angus Robertson, Deputy Leader of the Scottish National Party with former British Prime Minister's David Cameron, Tony Blair and Sir John Major during the Remembrance Sunday ceremony at the Cenotaph in London, Britain EPA 13/19 Prime Minister Theresa May, Labour leader Jeremy Corbyn, Liberal Democrats leader Tim Farron, and Westminster Leader of the Scottish National Party Angus Roberston take part in the Remembrance Sunday ceremony at the Cenotaph in Westminster, central London Reuters 14/19 Veterans wait on Horse Guards Parade for the start of the Remembrance Sunday ceremony at the Cenotaph in Westminster, central London Reuters 15/19 People across the UK gathered to pay tribute to service personnel who have died during conflicts, as part of the annual Remembrance Sunday ceremonies ge 16/19 Members of Scotland's armed forces and veterans gather to commemorate and pay respect to the sacrifice of service men and women who fought in the two World Wars and subsequent conflicts in Fort William, Scotland Getty 17/19 The 689th Lord Mayor of the City of London Andrew Parmley waves from his carriage during The Lord Mayor's Show Getty 18/19 The Lord Mayor procession passes by St Pauls Cathedral in London EPA 19/19 Spectators watch as the Lord Mayor of the City of London's carriage arrives outside the Royal Courts of Justice during the Lord Mayor's Show in London, England Getty It is believed to be the first tram crash involving fatalities on board since 1959, when two women passengers and the driver died after a tram caught fire in Shettlestone Road, Glasgow, following a collision with a lorry. London Tramlink have confirmed no services are operating between Reeves Corner and Addington Village/Harrington Road. (Lucy Pasha Robinson / The Independent) This is a breaking news story, more follows...",
+  "url": "http://www.independent.co.uk/news/uk/home-news/five-trapped-40-injured-after-tram-overturns-south-london-croydon-a7406496.html",
+  "publisher": "independent",
+  "originalFilename": "independent-9",
+  "category": "tram",
+  "dId": "f5f5577d9812350a1cf2cce1b35bc24ddef59e2d095ad51a90cc68b9"
+}

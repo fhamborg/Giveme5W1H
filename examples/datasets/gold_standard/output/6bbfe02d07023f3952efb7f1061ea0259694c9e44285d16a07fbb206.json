@@ -1,161 +1,74 @@
 {
-  "dId": "6bbfe02d07023f3952efb7f1061ea0259694c9e44285d16a07fbb206",
-  "date_publish": "2016-11-06 05:00:06",
-  "description": "The F.B.I. removed a dark cloud that has been hanging over Hillary Clinton's campaign two days before Election Day.",
   "filename": "6bbfe02d07023f3952efb7f1061ea0259694c9e44285d16a07fbb206",
+  "title": "Presidential Election: No New Conclusion in Clinton Email Case",
+  "mimeType": "text/xml",
+  "url": "http://www.nytimes.com/2016/11/06/us/politics/presidential-election.html",
   "fiveWoneH": {
-    "how": {
-      "annotated": [
-        {
-          "coderPhraseCount": 3
-        }
-      ],
-      "label": "how",
+    "who": {
       "extracted": [
         {
+          "text": "Mr. Trump",
           "parts": [
             [
               {
                 "nlpToken": {
-                  "index": 2,
-                  "word": "final",
-                  "originalText": "final",
-                  "lemma": "final",
-                  "characterOffsetBegin": 432,
-                  "characterOffsetEnd": 437,
-                  "pos": "JJ",
-                  "ner": "O",
+                  "characterOffsetBegin": 695,
+                  "word": "Mr.",
+                  "lemma": "Mr.",
+                  "characterOffsetEnd": 698,
                   "speaker": "PER0",
+                  "ner": "O",
+                  "after": " ",
+                  "originalText": "Mr.",
                   "before": " ",
-                  "after": " "
+                  "index": 17,
+                  "pos": "NNP"
                 }
               },
-              "JJ"
-            ]
-          ],
-          "score": 1.0,
-          "text": "final",
-          "nlpIndexSentence": 5
-        }
-      ]
-    },
-    "what": {
-      "annotated": [
-        {
-          "coderPhraseCount": 2,
-          "text": "removed a dark cloud that has been hanging over Hillary Clinton\\u2019s campaign"
-        },
-        {
-          "coderPhraseCount": 2,
-          "text": "The final polls are trickling in"
-        }
-      ],
-      "label": "what",
-      "extracted": [
-        {
-          "parts": [
-            [
-              {
-                "nlpToken": {
-                  "index": 19,
-                  "word": "holds",
-                  "originalText": "holds",
-                  "lemma": "hold",
-                  "characterOffsetBegin": 886,
-                  "characterOffsetEnd": 891,
-                  "pos": "VBZ",
-                  "ner": "O",
-                  "speaker": "PER0",
-                  "before": " ",
-                  "after": " "
-                }
-              },
-              "VBZ"
+              "NNP"
             ],
             [
               {
                 "nlpToken": {
-                  "index": 20,
-                  "word": "a",
-                  "originalText": "a",
-                  "lemma": "a",
-                  "characterOffsetBegin": 892,
-                  "characterOffsetEnd": 893,
-                  "pos": "DT",
-                  "ner": "O",
+                  "characterOffsetBegin": 699,
+                  "word": "Trump",
+                  "lemma": "Trump",
+                  "characterOffsetEnd": 704,
                   "speaker": "PER0",
+                  "ner": "PERSON",
+                  "after": " ",
+                  "originalText": "Trump",
                   "before": " ",
-                  "after": " "
-                }
-              },
-              "DT"
-            ],
-            [
-              {
-                "nlpToken": {
-                  "index": 21,
-                  "word": "lead",
-                  "originalText": "lead",
-                  "lemma": "lead",
-                  "characterOffsetBegin": 894,
-                  "characterOffsetEnd": 898,
-                  "pos": "NN",
-                  "ner": "O",
-                  "speaker": "PER0",
-                  "before": " ",
-                  "after": " "
-                }
-              },
-              "NN"
-            ]
-          ],
-          "score": 1.0,
-          "text": "holds a lead",
-          "nlpIndexSentence": 8
-        }
-      ]
-    },
-    "when": {
-      "annotated": [
-        {
-          "coderPhraseCount": 3,
-          "text": "two days before Election Day"
-        },
-        {
-          "coderPhraseCount": 2,
-          "text": "Sunday"
-        }
-      ],
-      "label": "when",
-      "extracted": [
-        {
-          "parts": [
-            [
-              {
-                "nlpToken": {
-                  "index": 2,
-                  "word": "Sunday",
-                  "originalText": "Sunday",
-                  "lemma": "Sunday",
-                  "characterOffsetBegin": 4984,
-                  "characterOffsetEnd": 4990,
-                  "pos": "NNP",
-                  "ner": "DATE",
-                  "normalizedNER": "2016-11-06",
-                  "speaker": "PER0",
-                  "before": " ",
-                  "after": "",
-                  "timex": {
-                    "tid": "t18",
-                    "type": "DATE",
-                    "value": "2016-11-06"
-                  }
+                  "index": 18,
+                  "pos": "NNP"
                 }
               },
               "NNP"
             ]
           ],
-          "score": 0.6456184501301085,
+          "nlpIndexSentence": 5,
+          "score": 1.0
+        }
+      ],
+      "annotated": [
+        {
+          "text": "Hillary Clinton",
+          "coderPhraseCount": 3
+        },
+        {
+          "text": "Donald J. Trump",
+          "coderPhraseCount": 3
+        },
+        {
+          "text": "F.B.I.",
+          "coderPhraseCount": 2
+        }
+      ],
+      "label": "who"
+    },
+    "when": {
+      "extracted": [
+        {
           "text": "Sunday",
           "enhancement": {
             "timex": {
@@ -163,46 +76,128 @@
               "end_date": "2016-11-06T23:59:59"
             }
           },
-          "nlpIndexSentence": 47
-        }
-      ]
-    },
-    "where": {
-      "annotated": [
-        {
-          "coderPhraseCount": 3
-        }
-      ],
-      "label": "where",
-      "extracted": [
-        {
           "parts": [
             [
               {
                 "nlpToken": {
-                  "index": 29,
-                  "word": "Florida",
-                  "originalText": "Florida",
-                  "lemma": "Florida",
-                  "characterOffsetBegin": 4394,
-                  "characterOffsetEnd": 4401,
-                  "pos": "NNP",
-                  "ner": "LOCATION",
-                  "speaker": "PER0",
+                  "characterOffsetBegin": 4803,
+                  "word": "Sunday",
+                  "lemma": "Sunday",
+                  "timex": {
+                    "value": "2016-11-06",
+                    "tid": "t17",
+                    "type": "DATE"
+                  },
                   "before": " ",
-                  "after": ""
+                  "characterOffsetEnd": 4809,
+                  "originalText": "Sunday",
+                  "normalizedNER": "2016-11-06",
+                  "speaker": "PER0",
+                  "after": "",
+                  "ner": "DATE",
+                  "index": 2,
+                  "pos": "NNP"
                 }
               },
               "NNP"
             ]
           ],
-          "score": 1.0,
+          "nlpIndexSentence": 44,
+          "score": 0.6622851167967752
+        }
+      ],
+      "annotated": [
+        {
+          "text": "two days before Election Day",
+          "coderPhraseCount": 3
+        },
+        {
+          "text": "Sunday",
+          "coderPhraseCount": 2
+        }
+      ],
+      "label": "when"
+    },
+    "why": {
+      "extracted": [
+        {
+          "text": "He",
+          "parts": [
+            [
+              {
+                "nlpToken": {
+                  "characterOffsetBegin": 118,
+                  "word": "He",
+                  "lemma": "he",
+                  "speaker": "PER0",
+                  "after": " ",
+                  "pos": "PRP",
+                  "ner": "O",
+                  "before": " ",
+                  "characterOffsetEnd": 120,
+                  "index": 1,
+                  "originalText": "He"
+                }
+              },
+              "PRP"
+            ]
+          ],
+          "nlpIndexSentence": 1,
+          "score": 0.4244047619047619
+        }
+      ],
+      "annotated": [
+        {
+          "coderPhraseCount": 3
+        }
+      ],
+      "label": "why"
+    },
+    "how": {
+      "extracted": [
+        {
+          "text": "final",
+          "parts": [
+            [
+              {
+                "nlpToken": {
+                  "characterOffsetBegin": 251,
+                  "word": "final",
+                  "lemma": "final",
+                  "characterOffsetEnd": 256,
+                  "speaker": "PER0",
+                  "ner": "O",
+                  "after": " ",
+                  "originalText": "final",
+                  "before": " ",
+                  "index": 2,
+                  "pos": "JJ"
+                }
+              },
+              "JJ"
+            ]
+          ],
+          "nlpIndexSentence": 2,
+          "score": 1.0
+        }
+      ],
+      "annotated": [
+        {
+          "coderPhraseCount": 3
+        }
+      ],
+      "label": "how"
+    },
+    "where": {
+      "extracted": [
+        {
           "text": "Florida",
           "enhancement": {
             "openstreetmap_nominatim": {
               "place_id": "179310340",
               "licence": "Data \u00a9 OpenStreetMap contributors, ODbL 1.0. http://www.openstreetmap.org/copyright",
-              "osm_type": "relation",
+              "type": "administrative",
+              "class": "boundary",
               "osm_id": "162050",
               "boundingbox": [
                 24.396308,
@@ -210,105 +205,82 @@
                 -87.634896,
                 -79.974306
               ],
-              "lat": "27.7567667",
+              "osm_type": "relation",
               "lon": "-81.4639835",
               "display_name": "Florida, United States of America",
-              "class": "boundary",
-              "type": "administrative",
               "importance": 0.3027318975823,
-              "icon": "https://nominatim.openstreetmap.org/images/mapicons/poi_boundary_administrative.p.20.png"
+              "icon": "https://nominatim.openstreetmap.org/images/mapicons/poi_boundary_administrative.p.20.png",
+              "lat": "27.7567667"
             }
           },
-          "nlpIndexSentence": 41
-        }
-      ]
-    },
-    "who": {
-      "annotated": [
-        {
-          "coderPhraseCount": 3,
-          "text": "Hillary Clinton"
-        },
-        {
-          "coderPhraseCount": 3,
-          "text": "Donald J. Trump"
-        },
-        {
-          "coderPhraseCount": 2,
-          "text": "F.B.I."
-        }
-      ],
-      "label": "who",
-      "extracted": [
-        {
           "parts": [
             [
               {
                 "nlpToken": {
-                  "index": 17,
-                  "word": "Mr.",
-                  "originalText": "Mr.",
-                  "lemma": "Mr.",
-                  "characterOffsetBegin": 876,
-                  "characterOffsetEnd": 879,
-                  "pos": "NNP",
-                  "ner": "O",
+                  "characterOffsetBegin": 4213,
+                  "word": "Florida",
+                  "lemma": "Florida",
+                  "characterOffsetEnd": 4220,
                   "speaker": "PER0",
+                  "ner": "LOCATION",
+                  "after": "",
+                  "originalText": "Florida",
                   "before": " ",
-                  "after": " "
-                }
-              },
-              "NNP"
-            ],
-            [
-              {
-                "nlpToken": {
-                  "index": 18,
-                  "word": "Trump",
-                  "originalText": "Trump",
-                  "lemma": "Trump",
-                  "characterOffsetBegin": 880,
-                  "characterOffsetEnd": 885,
-                  "pos": "NNP",
-                  "ner": "PERSON",
-                  "speaker": "PER0",
-                  "before": " ",
-                  "after": " "
+                  "index": 29,
+                  "pos": "NNP"
                 }
               },
               "NNP"
             ]
           ],
-          "score": 1.0,
-          "text": "Mr. Trump",
-          "nlpIndexSentence": 8
+          "nlpIndexSentence": 38,
+          "score": 1.0
         }
-      ]
-    },
-    "why": {
+      ],
       "annotated": [
         {
           "coderPhraseCount": 3
         }
       ],
-      "label": "why",
+      "label": "where"
+    },
+    "what": {
       "extracted": [
         {
+          "text": "holds a lead",
           "parts": [
             [
               {
                 "nlpToken": {
-                  "index": 1,
-                  "word": "The",
-                  "originalText": "The",
-                  "lemma": "the",
-                  "characterOffsetBegin": 64,
-                  "characterOffsetEnd": 67,
-                  "pos": "DT",
-                  "ner": "O",
+                  "characterOffsetBegin": 705,
+                  "word": "holds",
+                  "lemma": "hold",
+                  "characterOffsetEnd": 710,
                   "speaker": "PER0",
+                  "ner": "O",
+                  "after": " ",
+                  "originalText": "holds",
                   "before": " ",
-                  "after": " "
+                  "index": 19,
+                  "pos": "VBZ"
+                }
+              },
+              "VBZ"
+            ],
+            [
+              {
+                "nlpToken": {
+                  "characterOffsetBegin": 711,
+                  "word": "a",
+                  "lemma": "a",
+                  "characterOffsetEnd": 712,
+                  "speaker": "PER0",
+                  "ner": "O",
+                  "after": " ",
+                  "originalText": "a",
+                  "before": " ",
+                  "index": 20,
+                  "pos": "DT"
                 }
               },
               "DT"
@@ -316,34 +288,44 @@
             [
               {
                 "nlpToken": {
-                  "index": 2,
-                  "word": "F.B.I.",
-                  "originalText": "F.B.I.",
-                  "lemma": "F.B.I.",
-                  "characterOffsetBegin": 68,
-                  "characterOffsetEnd": 74,
-                  "pos": "NNP",
-                  "ner": "ORGANIZATION",
+                  "characterOffsetBegin": 713,
+                  "word": "lead",
+                  "lemma": "lead",
+                  "characterOffsetEnd": 717,
                   "speaker": "PER0",
+                  "ner": "O",
+                  "after": " ",
+                  "originalText": "lead",
                   "before": " ",
-                  "after": " "
+                  "index": 21,
+                  "pos": "NN"
                 }
               },
-              "NNP"
+              "NN"
             ]
           ],
-          "score": 0.4244047619047619,
-          "text": "The F.B.I.",
-          "nlpIndexSentence": 1
+          "nlpIndexSentence": 5,
+          "score": 1.0
         }
-      ]
+      ],
+      "annotated": [
+        {
+          "text": "removed a dark cloud that has been hanging over Hillary Clinton\\u2019s campaign",
+          "coderPhraseCount": 2
+        },
+        {
+          "text": "The final polls are trickling in",
+          "coderPhraseCount": 2
+        }
+      ],
+      "label": "what"
     }
   },
-  "mimeType": "text/xml",
-  "originalFilename": "nytimes-2",
+  "description": "The F.B.I. removed a dark cloud that has been hanging over Hillary Clinton's campaign two days before Election Day.",
+  "text": "For Donald J. Trump, Sunday was about seeking a path to the presidency not blocked by Latino, black and Asian voters. He went to the Upper Midwest, into long-shot states like Minnesota that have not voted Republican for president in a generation. The final polls are trickling in and Clinton is retaining a modest lead nationally. According to a new NBC News/Wall Street Journal national poll, 44 percent of likely voters support Mrs. Clinton and 40 percent back Mr. Trump. Mrs. Clinton holds big leads with women and minority voters, while men, white voters and senior citizens buttress Mr. Trump's support. Mrs. Clinton is also doing better with those who have already cast their ballots, but Mr. Trump holds a lead among voters who plan to do so on Election Day. Advertisement Continue reading the main story Newt Gingrich laments the self-inflicted damage Trump has done to his campaign. Mr. Gingrich, a staunch ally of Mr. Trump and a finalist to be his running mate, said on NBC's \"Meet the Press\" that the Republican nominee would be doing much better if he had shown more discipline. \"I think he has hurt his campaign at times by saying things that were unwise, and I think at times he's been truly a historic figure,\" Mr. Gingrich said. Mr. Gingrich, a former Republican House speaker, praised Mr. Trump's big ideas and outreach to African-Americans. However, he suggested that Mr. Trump has often caused distractions from an otherwise strong message. \"On the one hand, he's one of the most brilliant marketers I've ever seen,\" Mr. Gingrich said. \"And on the other hand, for a while there, he was undercutting himself.\" He added: \"I suspect if he had not done that, he'd be ahead by 10 or 15 points right now.\" Get the Morning Briefing by Email What you need to know to start your day, delivered to your inbox Monday through Friday. Please verify you're not a robot by clicking the box. Invalid email address. Please re-enter. You must select a newsletter to subscribe to. Sign Up Receive occasional updates and special offers for The New York Times's products and services. Thank you for subscribing. An error has occurred. Please try again later. View all New York Times newsletters. Talk of rigging the vote rises again. The chairman of the Nevada Republican Party, Michael McDonald, complained on Saturday night that some polls were being kept open longer than they should have been in Clark County so that \"a certain group\" could vote. On Sunday morning, Kellyanne Conway, Mr. Trump's campaign manager, echoed that concern in an interview with CNN in which she suggested that \"special favors\" were being done for Democratic voters. \"It's concerning when you hear reports about special favors and perhaps special rules for Democratic voters,\" Ms. Conway said, offering no evidence of a different set of rules. \"We already know that their presidential nominee has special rules for her.\" Mr. Trump has for months complained of a rigged system and has said that if he loses the election and there are reports of problems at the polls he might challenge the result. PolitiFact gave Trump a \"Pants on Fire\" grade over his claim that Obama abused a Trump supporter. In the final weekend of the race, Mr. Trump has been clinging to a new myth about President Obama and deriding him for lashing out at a pro-Trump protester at a rally on Friday. Advertisement Continue reading the main story Mr. Trump said that Mr. Obama was \"really screaming\" at the protester and that his behavior was a \"disgrace.\" \"If I spoke the way Obama spoke to that protester they would say 'he became unhinged,'\" Mr. Trump declared. On Sunday, Politifact, the fact-checking website, analyzed the tape of Mr. Obama at the rally to determine whether Mr. Trump's criticism was fair. \"Obama defended the protester's right to speak out, and didn't scream at him,\" according to PolitiFact's Allison Graves. \"In fact, Obama's remarks were directed at Clinton supporters, not the protester.\" Mr. Obama expressed exasperation on Sunday at Mr. Trump's willingness to deceive his supporters so blatantly about the situation. \"He thought it was ok to just lie in front of all of his supporters,\" Mr. Obama said at a rally for Mrs. Clinton in Florida. \"Wasn't even trying to be sneaky about it.\" In the final push, Clinton looked to Khan and LeBron. Mrs. Clinton has campaigned with a powerhouse lineup of supporters over the past week, and two people joined her on Sunday are among the most potent. In Ohio, she appeared alongside LeBron James, the Cleveland Cavaliers star and a revered figure in the biggest swing state leaning toward Mr. Trump. In New Hampshire, Mrs. Clinton was joined by an electrifying figure of a different kind: Khizr Khan, whose August clash with Mr. Trump proved disastrous for the Republican nominee. On Sunday, he discussed supportive stories people have shared with him and his wife, Ghazala Khan, after Mr. Trump attacked them following his conventionremarks.",
   "parsingError": "true",
   "publisher": "nytimes",
-  "text": "For Donald J. Trump, Sunday was about seeking a path to the presidency not blocked by Latino, black and Asian voters. He went to the Upper Midwest, into long-shot states like Minnesota that have not voted Republican for president in a generation. The final polls are trickling in and Clinton is retaining a modest lead nationally. According to a new NBC News/Wall Street Journal national poll, 44 percent of likely voters support Mrs. Clinton and 40 percent back Mr. Trump. Mrs. Clinton holds big leads with women and minority voters, while men, white voters and senior citizens buttress Mr. Trump's support. Mrs. Clinton is also doing better with those who have already cast their ballots, but Mr. Trump holds a lead among voters who plan to do so on Election Day. Advertisement Continue reading the main story Newt Gingrich laments the self-inflicted damage Trump has done to his campaign. Mr. Gingrich, a staunch ally of Mr. Trump and a finalist to be his running mate, said on NBC's \"Meet the Press\" that the Republican nominee would be doing much better if he had shown more discipline. \"I think he has hurt his campaign at times by saying things that were unwise, and I think at times he's been truly a historic figure,\" Mr. Gingrich said. Mr. Gingrich, a former Republican House speaker, praised Mr. Trump's big ideas and outreach to African-Americans. However, he suggested that Mr. Trump has often caused distractions from an otherwise strong message. \"On the one hand, he's one of the most brilliant marketers I've ever seen,\" Mr. Gingrich said. \"And on the other hand, for a while there, he was undercutting himself.\" He added: \"I suspect if he had not done that, he'd be ahead by 10 or 15 points right now.\" Get the Morning Briefing by Email What you need to know to start your day, delivered to your inbox Monday through Friday. Please verify you're not a robot by clicking the box. Invalid email address. Please re-enter. You must select a newsletter to subscribe to. Sign Up Receive occasional updates and special offers for The New York Times's products and services. Thank you for subscribing. An error has occurred. Please try again later. View all New York Times newsletters. Talk of rigging the vote rises again. The chairman of the Nevada Republican Party, Michael McDonald, complained on Saturday night that some polls were being kept open longer than they should have been in Clark County so that \"a certain group\" could vote. On Sunday morning, Kellyanne Conway, Mr. Trump's campaign manager, echoed that concern in an interview with CNN in which she suggested that \"special favors\" were being done for Democratic voters. \"It's concerning when you hear reports about special favors and perhaps special rules for Democratic voters,\" Ms. Conway said, offering no evidence of a different set of rules. \"We already know that their presidential nominee has special rules for her.\" Mr. Trump has for months complained of a rigged system and has said that if he loses the election and there are reports of problems at the polls he might challenge the result. PolitiFact gave Trump a \"Pants on Fire\" grade over his claim that Obama abused a Trump supporter. In the final weekend of the race, Mr. Trump has been clinging to a new myth about President Obama and deriding him for lashing out at a pro-Trump protester at a rally on Friday. Advertisement Continue reading the main story Mr. Trump said that Mr. Obama was \"really screaming\" at the protester and that his behavior was a \"disgrace.\" \"If I spoke the way Obama spoke to that protester they would say 'he became unhinged,'\" Mr. Trump declared. On Sunday, Politifact, the fact-checking website, analyzed the tape of Mr. Obama at the rally to determine whether Mr. Trump's criticism was fair. \"Obama defended the protester's right to speak out, and didn't scream at him,\" according to PolitiFact's Allison Graves. \"In fact, Obama's remarks were directed at Clinton supporters, not the protester.\" Mr. Obama expressed exasperation on Sunday at Mr. Trump's willingness to deceive his supporters so blatantly about the situation. \"He thought it was ok to just lie in front of all of his supporters,\" Mr. Obama said at a rally for Mrs. Clinton in Florida. \"Wasn't even trying to be sneaky about it.\" In the final push, Clinton looked to Khan and LeBron. Mrs. Clinton has campaigned with a powerhouse lineup of supporters over the past week, and two people joined her on Sunday are among the most potent. In Ohio, she appeared alongside LeBron James, the Cleveland Cavaliers star and a revered figure in the biggest swing state leaning toward Mr. Trump. In New Hampshire, Mrs. Clinton was joined by an electrifying figure of a different kind: Khizr Khan, whose August clash with Mr. Trump proved disastrous for the Republican nominee. On Sunday, he discussed supportive stories people have shared with him and his wife, Ghazala Khan, after Mr. Trump attacked them following his conventionremarks.",
-  "title": "Presidential Election: No New Conclusion in Clinton Email Case",
-  "url": "http://www.nytimes.com/2016/11/06/us/politics/presidential-election.html"
+  "originalFilename": "nytimes-2",
+  "date_publish": "2016-11-06 05:00:06",
+  "dId": "6bbfe02d07023f3952efb7f1061ea0259694c9e44285d16a07fbb206"
 }

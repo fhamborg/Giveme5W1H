@@ -1,0 +1,441 @@
+{
+  "filename": "dc32a2c6d5ca11c5e6b73e43e3a5d327b28b4ee1ef2ac9cda7c0635f",
+  "title": "Several dead and dozens injured after tram overturns in London",
+  "mimeType": "text/xml",
+  "url": "http://nypost.com/2016/11/09/several-dead-and-dozens-injured-after-tram-overturns-in-london/",
+  "category": "tram",
+  "fiveWoneH": {
+    "who": {
+      "extracted": [
+        {
+          "text": "The driver",
+          "parts": [
+            [
+              {
+                "nlpToken": {
+                  "characterOffsetBegin": 853,
+                  "word": "The",
+                  "lemma": "the",
+                  "characterOffsetEnd": 856,
+                  "speaker": "PER0",
+                  "ner": "O",
+                  "after": " ",
+                  "originalText": "The",
+                  "before": " ",
+                  "index": 1,
+                  "pos": "DT"
+                }
+              },
+              "DT"
+            ],
+            [
+              {
+                "nlpToken": {
+                  "characterOffsetBegin": 857,
+                  "word": "driver",
+                  "lemma": "driver",
+                  "characterOffsetEnd": 863,
+                  "speaker": "PER0",
+                  "ner": "O",
+                  "after": " ",
+                  "originalText": "driver",
+                  "before": " ",
+                  "index": 2,
+                  "pos": "NN"
+                }
+              },
+              "NN"
+            ]
+          ],
+          "nlpIndexSentence": 5,
+          "score": 1.0
+        }
+      ],
+      "annotated": [
+        {
+          "text": "At least seven people",
+          "coderPhraseCount": 2
+        },
+        {
+          "text": "driver",
+          "coderPhraseCount": 2
+        }
+      ],
+      "label": "who"
+    },
+    "when": {
+      "extracted": [
+        {
+          "text": "8 a.m.",
+          "enhancement": {
+            "timex": {
+              "start_date": "2016-11-08T08:00:00",
+              "end_date": "2016-11-08T08:00:59"
+            }
+          },
+          "parts": [
+            [
+              {
+                "nlpToken": {
+                  "characterOffsetBegin": 4440,
+                  "word": "8",
+                  "lemma": "8",
+                  "timex": {
+                    "value": "2016-11-08T08:00",
+                    "tid": "t14",
+                    "type": "TIME"
+                  },
+                  "before": " ",
+                  "characterOffsetEnd": 4441,
+                  "originalText": "8",
+                  "normalizedNER": "2016-11-08T08:00",
+                  "speaker": "220",
+                  "after": " ",
+                  "ner": "TIME",
+                  "index": 13,
+                  "pos": "CD"
+                }
+              },
+              "CD"
+            ],
+            [
+              {
+                "nlpToken": {
+                  "characterOffsetBegin": 4442,
+                  "word": "a.m.",
+                  "lemma": "a.m.",
+                  "timex": {
+                    "value": "2016-11-08T08:00",
+                    "tid": "t14",
+                    "type": "TIME"
+                  },
+                  "before": " ",
+                  "characterOffsetEnd": 4446,
+                  "originalText": "a.m.",
+                  "normalizedNER": "2016-11-08T08:00",
+                  "speaker": "220",
+                  "after": " ",
+                  "ner": "TIME",
+                  "index": 14,
+                  "pos": "NN"
+                }
+              },
+              "NN"
+            ]
+          ],
+          "nlpIndexSentence": 38,
+          "score": 0.7401993772472077
+        }
+      ],
+      "annotated": [
+        {
+          "text": "Wednesday morning",
+          "coderPhraseCount": 3,
+          "parsed": "2016-11-09"
+        },
+        {
+          "text": "at about 6.15 a.m.",
+          "coderPhraseCount": 2,
+          "parsed": "2016-11-09"
+        }
+      ],
+      "label": "when"
+    },
+    "why": {
+      "extracted": [
+        {
+          "text": "more than 50 others",
+          "parts": [
+            [
+              {
+                "nlpToken": {
+                  "characterOffsetBegin": 38,
+                  "word": "more",
+                  "lemma": "more",
+                  "speaker": "PER0",
+                  "after": " ",
+                  "pos": "JJR",
+                  "ner": "O",
+                  "before": " ",
+                  "characterOffsetEnd": 42,
+                  "index": 8,
+                  "originalText": "more"
+                }
+              },
+              "JJR"
+            ],
+            [
+              {
+                "nlpToken": {
+                  "characterOffsetBegin": 43,
+                  "word": "than",
+                  "lemma": "than",
+                  "speaker": "PER0",
+                  "after": " ",
+                  "pos": "IN",
+                  "ner": "O",
+                  "before": " ",
+                  "characterOffsetEnd": 47,
+                  "index": 9,
+                  "originalText": "than"
+                }
+              },
+              "IN"
+            ],
+            [
+              {
+                "nlpToken": {
+                  "characterOffsetBegin": 48,
+                  "word": "50",
+                  "lemma": "50",
+                  "characterOffsetEnd": 50,
+                  "before": " ",
+                  "after": " ",
+                  "originalText": "50",
+                  "normalizedNER": ">50.0",
+                  "speaker": "PER0",
+                  "ner": "NUMBER",
+                  "index": 10,
+                  "pos": "CD"
+                }
+              },
+              "CD"
+            ],
+            [
+              {
+                "nlpToken": {
+                  "characterOffsetBegin": 51,
+                  "word": "others",
+                  "lemma": "other",
+                  "speaker": "PER0",
+                  "after": " ",
+                  "pos": "NNS",
+                  "ner": "O",
+                  "before": " ",
+                  "characterOffsetEnd": 57,
+                  "index": 11,
+                  "originalText": "others"
+                }
+              },
+              "NNS"
+            ]
+          ],
+          "score": 0.42857142857142855
+        }
+      ],
+      "annotated": [
+        {
+          "coderPhraseCount": 3
+        }
+      ],
+      "label": "why"
+    },
+    "how": {
+      "extracted": [
+        {
+          "text": "was praying",
+          "parts": [
+            [
+              {
+                "nlpToken": {
+                  "characterOffsetBegin": 2001,
+                  "word": "was",
+                  "lemma": "be",
+                  "characterOffsetEnd": 2004,
+                  "speaker": "94",
+                  "ner": "O",
+                  "after": " ",
+                  "originalText": "was",
+                  "before": " ",
+                  "index": 5,
+                  "pos": "VBD"
+                }
+              },
+              "VBD"
+            ],
+            [
+              {
+                "nlpToken": {
+                  "characterOffsetBegin": 2005,
+                  "word": "praying",
+                  "lemma": "pray",
+                  "characterOffsetEnd": 2012,
+                  "speaker": "94",
+                  "ner": "O",
+                  "after": " ",
+                  "originalText": "praying",
+                  "before": " ",
+                  "index": 6,
+                  "pos": "VBG"
+                }
+              },
+              "VBG"
+            ]
+          ],
+          "nlpIndexSentence": 16,
+          "score": 1.0
+        }
+      ],
+      "annotated": [
+        {
+          "text": "derailed and overturned",
+          "coderPhraseCount": 3
+        }
+      ],
+      "label": "how"
+    },
+    "where": {
+      "extracted": [
+        {
+          "text": "London",
+          "enhancement": {
+            "openstreetmap_nominatim": {
+              "place_id": "179118272",
+              "licence": "Data \u00a9 OpenStreetMap contributors, ODbL 1.0. http://www.openstreetmap.org/copyright",
+              "type": "city",
+              "class": "place",
+              "osm_id": "65606",
+              "boundingbox": [
+                51.2867602,
+                51.6918741,
+                -0.5103751,
+                0.3340155
+              ],
+              "osm_type": "relation",
+              "lon": "-0.1276474",
+              "display_name": "London, Greater London, England, UK",
+              "importance": 0.32637239413505,
+              "icon": "https://nominatim.openstreetmap.org/images/mapicons/poi_place_city.p.20.png",
+              "lat": "51.5073219"
+            }
+          },
+          "parts": [
+            [
+              {
+                "nlpToken": {
+                  "characterOffsetBegin": 165,
+                  "word": "London",
+                  "lemma": "London",
+                  "characterOffsetEnd": 171,
+                  "speaker": "PER0",
+                  "ner": "LOCATION",
+                  "after": "",
+                  "originalText": "London",
+                  "before": " ",
+                  "index": 30,
+                  "pos": "NNP"
+                }
+              },
+              "NNP"
+            ]
+          ],
+          "score": 1.0000000000000002
+        }
+      ],
+      "annotated": [
+        {
+          "text": "Sandilands commuter train stop in Croydon",
+          "coderPhraseCount": 3
+        }
+      ],
+      "label": "where"
+    },
+    "what": {
+      "extracted": [
+        {
+          "text": "was not yet named",
+          "parts": [
+            [
+              {
+                "nlpToken": {
+                  "characterOffsetBegin": 864,
+                  "word": "was",
+                  "lemma": "be",
+                  "characterOffsetEnd": 867,
+                  "speaker": "PER0",
+                  "ner": "O",
+                  "after": " ",
+                  "originalText": "was",
+                  "before": " ",
+                  "index": 3,
+                  "pos": "VBD"
+                }
+              },
+              "VBD"
+            ],
+            [
+              {
+                "nlpToken": {
+                  "characterOffsetBegin": 868,
+                  "word": "not",
+                  "lemma": "not",
+                  "characterOffsetEnd": 871,
+                  "speaker": "PER0",
+                  "ner": "O",
+                  "after": " ",
+                  "originalText": "not",
+                  "before": " ",
+                  "index": 4,
+                  "pos": "RB"
+                }
+              },
+              "RB"
+            ],
+            [
+              {
+                "nlpToken": {
+                  "characterOffsetBegin": 872,
+                  "word": "yet",
+                  "lemma": "yet",
+                  "characterOffsetEnd": 875,
+                  "speaker": "PER0",
+                  "ner": "O",
+                  "after": " ",
+                  "originalText": "yet",
+                  "before": " ",
+                  "index": 5,
+                  "pos": "RB"
+                }
+              },
+              "RB"
+            ],
+            [
+              {
+                "nlpToken": {
+                  "characterOffsetBegin": 876,
+                  "word": "named",
+                  "lemma": "name",
+                  "characterOffsetEnd": 881,
+                  "speaker": "PER0",
+                  "ner": "O",
+                  "after": "",
+                  "originalText": "named",
+                  "before": " ",
+                  "index": 6,
+                  "pos": "VBN"
+                }
+              },
+              "VBN"
+            ]
+          ],
+          "nlpIndexSentence": 5,
+          "score": 1.0
+        }
+      ],
+      "annotated": [
+        {
+          "text": "Several dead and dozens injured after tram overturns",
+          "coderPhraseCount": 3
+        }
+      ],
+      "label": "what"
+    }
+  },
+  "description": "At least seven people were killed and more than 50 others were injured when a tram - whose driver was later arrested -- derailed and overturned Wednesday morning in London, according to reports.\n\n\n\nEmergency personnel responded to the accident near the Sandilands commuter train stop in Croydon, a large suburb to the south of the city, The Telegraph reported.\n\n\n\n\"A number of people have been taken to hospital with injuries and sadly we can say there has been some loss of life,\" Assistant Chief Constable Robin Smith from British Transport Police told Reuters.\n\n\n\n\"It is too early for us to confirm numbers but we are working hard to assess the ongoing incident and are continuing to focus on recovery efforts,\" he added.\n\n\n\nLiam Lehane of the London Ambulance Service described many of those hurt as \"walking wounded\" but said others suffered serious injuries.\n\n\n\nThe driver was not yet named, and its unclear why he was arrested.\n\n\n\nThe crowded tram's derailment during the morning rush hour occurred during heavy rain at a point at which the track branches, The Telegraph reported.\n\n\n\nThe cause of the tragedy was being investigated.\n\n\n\n\"I heard a massive crash at about 6.15 a.m., then heard shouting, then the emergency services arrived,\" said resident Hannah Collier, 23. \"They started bringing up the casualties -- some very seriously injured.\"\n\n\n\nOne of the passengers called her husband from the overturned train and told him she \"couldn't get up,\" the Croydon Advertiser reported.\n\n\n\nA 73-year-old man, Roger Smith, who lives near the stop told the Daily Mail that \"the tram comes down a steep hill and then the tracks bear left and right. It has come off the track as if it's carried on down the hill instead of turning.\"\n\n\n\nAnother man who was praying when the accident occurred said he was unaware of the seriousness of the crash at first.\n\n\n\n\"I was praying at around 6:10 a.m. when I heard a loud crash. It sounded like a lorry had smashed into my garage, it was so loud,\" Adil Salahi, 76, told the Mail.\n\n\n\n\"But because I was praying I did not know what had happened. It was not until I heard it on the news at around 8 a.m. that I went to my window and could see the tram,\" he said. \"Trams don't make much noise so this was very unusual at this time of day.\"",
+  "text": "At least seven people were killed and more than 50 others were injured when a tram - whose driver was later arrested -- derailed and overturned Wednesday morning in London, according to reports. Emergency personnel responded to the accident near the Sandilands commuter train stop in Croydon, a large suburb to the south of the city, The Telegraph reported. \"A number of people have been taken to hospital with injuries and sadly we can say there has been some loss of life,\" Assistant Chief Constable Robin Smith from British Transport Police told Reuters. \"It is too early for us to confirm numbers but we are working hard to assess the ongoing incident and are continuing to focus on recovery efforts,\" he added. Liam Lehane of the London Ambulance Service described many of those hurt as \"walking wounded\" but said others suffered serious injuries. The driver was not yet named, and its unclear why he was arrested. The crowded tram's derailment during the morning rush hour occurred during heavy rain at a point at which the track branches, The Telegraph reported. The cause of the tragedy was being investigated. \"I heard a massive crash at about 6.15 a.m., then heard shouting, then the emergency services arrived,\" said resident Hannah Collier, 23. \"They started bringing up the casualties -- some very seriously injured.\" One of the passengers called her husband from the overturned train and told him she \"couldn't get up,\" the Croydon Advertiser reported. A 73-year-old man, Roger Smith, who lives near the stop told the Daily Mail that \"the tram comes down a steep hill and then the tracks bear left and right. It has come off the track as if it's carried on down the hill instead of turning.\" Another man who was praying when the accident occurred said he was unaware of the seriousness of the crash at first. \"I was praying at around 6:10 a.m. when I heard a loud crash. It sounded like a lorry had smashed into my garage, it was so loud,\" Adil Salahi, 76, told the Mail. \"But because I was praying I did not know what had happened. It was not until I heard it on the news at around 8 a.m. that I went to my window and could see the tram,\" he said. \"Trams don't make much noise so this was very unusual at this time of day.\"",
+  "parsingError": "true",
+  "publisher": "nypost",
+  "originalFilename": "nypost-7",
+  "date_publish": "2016-11-09 12:52:29",
+  "dId": "dc32a2c6d5ca11c5e6b73e43e3a5d327b28b4ee1ef2ac9cda7c0635f"
+}

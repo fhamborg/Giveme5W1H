@@ -1,89 +1,29 @@
 {
-  "category": "clinton blames comey",
-  "dId": "8812ee196c646231a28a742f956502469f892ac7682bf9b4fa6686c4",
-  "date_publish": "2016-11-13 08:24:23",
-  "description": "Source tells Politico that Clinton made comments during call with megadonors, as Hispanic Chamber of Commerce chief blames lack of Latino outreach",
   "filename": "8812ee196c646231a28a742f956502469f892ac7682bf9b4fa6686c4",
+  "title": "Hillary Clinton blames Comey letters for election defeat, reports say",
+  "mimeType": "text/xml",
+  "url": "https://www.theguardian.com/us-news/2016/nov/12/hillary-clinton-james-comey-letters-emails-election-defeat",
+  "category": "clinton blames comey",
   "fiveWoneH": {
-    "how": {
-      "annotated": [
-        {
-          "coderPhraseCount": 2,
-          "text": "two letters to Congress"
-        }
-      ],
-      "label": "how",
+    "who": {
       "extracted": [
         {
+          "text": "Hillary Clinton",
           "parts": [
             [
               {
                 "nlpToken": {
-                  "index": 9,
-                  "word": "saying",
-                  "originalText": "saying",
-                  "lemma": "say",
-                  "characterOffsetBegin": 983,
-                  "characterOffsetEnd": 989,
-                  "pos": "VBG",
-                  "ner": "O",
+                  "characterOffsetBegin": 0,
+                  "word": "Hillary",
+                  "lemma": "Hillary",
+                  "characterOffsetEnd": 7,
                   "speaker": "PER0",
-                  "before": " ",
-                  "after": " "
-                }
-              },
-              "VBG"
-            ]
-          ],
-          "score": 1.0,
-          "text": "saying",
-          "nlpIndexSentence": 6
-        }
-      ]
-    },
-    "what": {
-      "annotated": [
-        {
-          "coderPhraseCount": 3,
-          "text": "blames Comey letters for election defeat"
-        }
-      ],
-      "label": "what",
-      "extracted": [
-        {
-          "parts": [
-            [
-              {
-                "nlpToken": {
-                  "index": 3,
-                  "word": "blames",
-                  "originalText": "blames",
-                  "lemma": "blame",
-                  "characterOffsetBegin": 16,
-                  "characterOffsetEnd": 22,
-                  "pos": "VBZ",
-                  "ner": "O",
-                  "speaker": "PER0",
-                  "before": " ",
-                  "after": " "
-                }
-              },
-              "VBZ"
-            ],
-            [
-              {
-                "nlpToken": {
-                  "index": 4,
-                  "word": "Comey",
-                  "originalText": "Comey",
-                  "lemma": "Comey",
-                  "characterOffsetBegin": 23,
-                  "characterOffsetEnd": 28,
-                  "pos": "NNP",
                   "ner": "PERSON",
-                  "speaker": "PER0",
-                  "before": " ",
-                  "after": " "
+                  "after": " ",
+                  "originalText": "Hillary",
+                  "before": "",
+                  "index": 1,
+                  "pos": "NNP"
                 }
               },
               "NNP"
@@ -91,83 +31,36 @@
             [
               {
                 "nlpToken": {
-                  "index": 5,
-                  "word": "letters",
-                  "originalText": "letters",
-                  "lemma": "letter",
-                  "characterOffsetBegin": 29,
-                  "characterOffsetEnd": 36,
-                  "pos": "NNS",
-                  "ner": "O",
+                  "characterOffsetBegin": 8,
+                  "word": "Clinton",
+                  "lemma": "Clinton",
+                  "characterOffsetEnd": 15,
                   "speaker": "PER0",
+                  "ner": "PERSON",
+                  "after": " ",
+                  "originalText": "Clinton",
                   "before": " ",
-                  "after": " "
+                  "index": 2,
+                  "pos": "NNP"
                 }
               },
-              "NNS"
-            ],
-            [
-              {
-                "nlpToken": {
-                  "index": 11,
-                  "word": "say",
-                  "originalText": "say",
-                  "lemma": "say",
-                  "characterOffsetBegin": 66,
-                  "characterOffsetEnd": 69,
-                  "pos": "VBP",
-                  "ner": "O",
-                  "speaker": "PER0",
-                  "before": " ",
-                  "after": ""
-                }
-              },
-              "VBP"
+              "NNP"
             ]
           ],
-          "score": 1.0,
-          "text": "blames Comey letters say"
+          "score": 1.0
         }
-      ]
+      ],
+      "annotated": [
+        {
+          "text": "Hillary Clinton",
+          "coderPhraseCount": 3
+        }
+      ],
+      "label": "who"
     },
     "when": {
-      "annotated": [
-        {
-          "coderPhraseCount": 2,
-          "parsed": "2016-11-12",
-          "text": "Saturday"
-        }
-      ],
-      "label": "when",
       "extracted": [
         {
-          "parts": [
-            [
-              {
-                "nlpToken": {
-                  "index": 1,
-                  "word": "Saturday",
-                  "originalText": "Saturday",
-                  "lemma": "Saturday",
-                  "characterOffsetBegin": 2941,
-                  "characterOffsetEnd": 2949,
-                  "pos": "NNP",
-                  "ner": "DATE",
-                  "normalizedNER": "2016-11-12",
-                  "speaker": "PER0",
-                  "before": " ",
-                  "after": "",
-                  "timex": {
-                    "tid": "t10",
-                    "type": "DATE",
-                    "value": "2016-11-12"
-                  }
-                }
-              },
-              "NNP"
-            ]
-          ],
-          "score": 0.6976080334634417,
           "text": "Saturday",
           "enhancement": {
             "timex": {
@@ -175,46 +68,151 @@
               "end_date": "2016-11-12T23:59:59"
             }
           },
-          "nlpIndexSentence": 18
-        }
-      ]
-    },
-    "where": {
-      "annotated": [
-        {
-          "coderPhraseCount": 3
-        }
-      ],
-      "label": "where",
-      "extracted": [
-        {
           "parts": [
             [
               {
                 "nlpToken": {
-                  "index": 11,
-                  "word": "Massachusetts",
-                  "originalText": "Massachusetts",
-                  "lemma": "Massachusetts",
-                  "characterOffsetBegin": 4327,
-                  "characterOffsetEnd": 4340,
-                  "pos": "NNP",
-                  "ner": "LOCATION",
-                  "speaker": "PER0",
+                  "characterOffsetBegin": 2722,
+                  "word": "Saturday",
+                  "lemma": "Saturday",
+                  "timex": {
+                    "value": "2016-11-12",
+                    "tid": "t10",
+                    "type": "DATE"
+                  },
                   "before": " ",
-                  "after": " "
+                  "characterOffsetEnd": 2730,
+                  "originalText": "Saturday",
+                  "normalizedNER": "2016-11-12",
+                  "speaker": "PER0",
+                  "after": "",
+                  "ner": "DATE",
+                  "index": 1,
+                  "pos": "NNP"
                 }
               },
               "NNP"
             ]
           ],
-          "score": 1.0,
+          "nlpIndexSentence": 16,
+          "score": 0.7183151041705124
+        }
+      ],
+      "annotated": [
+        {
+          "text": "Saturday",
+          "coderPhraseCount": 2,
+          "parsed": "2016-11-12"
+        }
+      ],
+      "label": "when"
+    },
+    "why": {
+      "extracted": [
+        {
+          "text": "Hillary Clinton",
+          "parts": [
+            [
+              {
+                "nlpToken": {
+                  "characterOffsetBegin": 0,
+                  "word": "Hillary",
+                  "lemma": "Hillary",
+                  "speaker": "PER0",
+                  "after": " ",
+                  "pos": "NNP",
+                  "ner": "PERSON",
+                  "before": "",
+                  "characterOffsetEnd": 7,
+                  "index": 1,
+                  "originalText": "Hillary"
+                }
+              },
+              "NNP"
+            ],
+            [
+              {
+                "nlpToken": {
+                  "characterOffsetBegin": 8,
+                  "word": "Clinton",
+                  "lemma": "Clinton",
+                  "speaker": "PER0",
+                  "after": " ",
+                  "pos": "NNP",
+                  "ner": "PERSON",
+                  "before": " ",
+                  "characterOffsetEnd": 15,
+                  "index": 2,
+                  "originalText": "Clinton"
+                }
+              },
+              "NNP"
+            ]
+          ],
+          "score": 0.42857142857142855
+        }
+      ],
+      "annotated": [
+        {
+          "text": "Comey\\u2019s letter raising doubts that were groundless",
+          "coderPhraseCount": 1
+        },
+        {
+          "text": "Comey\\u2019s letter in the last 11 days of the election both helped depress our turnout and also drove away some of our critical support among college-educated white voters \\u2013 particularly in the suburbs",
+          "coderPhraseCount": 1
+        },
+        {
+          "coderPhraseCount": 1
+        }
+      ],
+      "label": "why"
+    },
+    "how": {
+      "extracted": [
+        {
+          "text": "saying",
+          "parts": [
+            [
+              {
+                "nlpToken": {
+                  "characterOffsetBegin": 764,
+                  "word": "saying",
+                  "lemma": "say",
+                  "characterOffsetEnd": 770,
+                  "speaker": "PER0",
+                  "ner": "O",
+                  "after": " ",
+                  "originalText": "saying",
+                  "before": " ",
+                  "index": 9,
+                  "pos": "VBG"
+                }
+              },
+              "VBG"
+            ]
+          ],
+          "nlpIndexSentence": 4,
+          "score": 1.0
+        }
+      ],
+      "annotated": [
+        {
+          "text": "two letters to Congress",
+          "coderPhraseCount": 2
+        }
+      ],
+      "label": "how"
+    },
+    "where": {
+      "extracted": [
+        {
           "text": "Massachusetts",
           "enhancement": {
             "openstreetmap_nominatim": {
               "place_id": "178151284",
               "licence": "Data \u00a9 OpenStreetMap contributors, ODbL 1.0. http://www.openstreetmap.org/copyright",
-              "osm_type": "relation",
+              "type": "administrative",
+              "class": "boundary",
               "osm_id": "61315",
               "boundingbox": [
                 41.1888589,
@@ -222,138 +220,159 @@
                 -73.508142,
                 -69.8601042
               ],
-              "lat": "42.3788774",
+              "osm_type": "relation",
               "lon": "-72.032366",
               "display_name": "Massachusetts, United States of America",
-              "class": "boundary",
-              "type": "administrative",
               "importance": 0.30375195802466,
-              "icon": "https://nominatim.openstreetmap.org/images/mapicons/poi_boundary_administrative.p.20.png"
+              "icon": "https://nominatim.openstreetmap.org/images/mapicons/poi_boundary_administrative.p.20.png",
+              "lat": "42.3788774"
             }
           },
-          "nlpIndexSentence": 28
-        }
-      ]
-    },
-    "who": {
-      "annotated": [
-        {
-          "coderPhraseCount": 3,
-          "text": "Hillary Clinton"
-        }
-      ],
-      "label": "who",
-      "extracted": [
-        {
           "parts": [
             [
               {
                 "nlpToken": {
-                  "index": 1,
-                  "word": "Hillary",
-                  "originalText": "Hillary",
-                  "lemma": "Hillary",
-                  "characterOffsetBegin": 0,
-                  "characterOffsetEnd": 7,
-                  "pos": "NNP",
-                  "ner": "PERSON",
+                  "characterOffsetBegin": 4108,
+                  "word": "Massachusetts",
+                  "lemma": "Massachusetts",
+                  "characterOffsetEnd": 4121,
                   "speaker": "PER0",
-                  "before": "",
-                  "after": " "
-                }
-              },
-              "NNP"
-            ],
-            [
-              {
-                "nlpToken": {
-                  "index": 2,
-                  "word": "Clinton",
-                  "originalText": "Clinton",
-                  "lemma": "Clinton",
-                  "characterOffsetBegin": 8,
-                  "characterOffsetEnd": 15,
-                  "pos": "NNP",
-                  "ner": "PERSON",
-                  "speaker": "PER0",
+                  "ner": "LOCATION",
+                  "after": " ",
+                  "originalText": "Massachusetts",
                   "before": " ",
-                  "after": " "
+                  "index": 11,
+                  "pos": "NNP"
                 }
               },
               "NNP"
             ]
           ],
-          "score": 1.0,
-          "text": "Hillary Clinton"
-        }
-      ]
-    },
-    "why": {
-      "annotated": [
-        {
-          "coderPhraseCount": 1,
-          "text": "Comey\\u2019s letter raising doubts that were groundless"
-        },
-        {
-          "coderPhraseCount": 1,
-          "text": "Comey\\u2019s letter in the last 11 days of the election both helped depress our turnout and also drove away some of our critical support among college-educated white voters \\u2013 particularly in the suburbs"
-        },
-        {
-          "coderPhraseCount": 1
+          "nlpIndexSentence": 26,
+          "score": 1.0
         }
       ],
-      "label": "why",
+      "annotated": [
+        {
+          "coderPhraseCount": 3
+        }
+      ],
+      "label": "where"
+    },
+    "what": {
       "extracted": [
         {
+          "text": "has reportedly blamed two letters",
           "parts": [
             [
               {
                 "nlpToken": {
-                  "index": 1,
-                  "word": "Hillary",
-                  "originalText": "Hillary",
-                  "lemma": "Hillary",
-                  "characterOffsetBegin": 0,
-                  "characterOffsetEnd": 7,
-                  "pos": "NNP",
-                  "ner": "PERSON",
+                  "characterOffsetBegin": 16,
+                  "word": "has",
+                  "lemma": "have",
+                  "characterOffsetEnd": 19,
                   "speaker": "PER0",
-                  "before": "",
-                  "after": " "
+                  "ner": "O",
+                  "after": " ",
+                  "originalText": "has",
+                  "before": " ",
+                  "index": 3,
+                  "pos": "VBZ"
                 }
               },
-              "NNP"
+              "VBZ"
             ],
             [
               {
                 "nlpToken": {
-                  "index": 2,
-                  "word": "Clinton",
-                  "originalText": "Clinton",
-                  "lemma": "Clinton",
-                  "characterOffsetBegin": 8,
-                  "characterOffsetEnd": 15,
-                  "pos": "NNP",
-                  "ner": "PERSON",
+                  "characterOffsetBegin": 20,
+                  "word": "reportedly",
+                  "lemma": "reportedly",
+                  "characterOffsetEnd": 30,
                   "speaker": "PER0",
+                  "ner": "O",
+                  "after": " ",
+                  "originalText": "reportedly",
                   "before": " ",
-                  "after": " "
+                  "index": 4,
+                  "pos": "RB"
                 }
               },
-              "NNP"
+              "RB"
+            ],
+            [
+              {
+                "nlpToken": {
+                  "characterOffsetBegin": 31,
+                  "word": "blamed",
+                  "lemma": "blame",
+                  "characterOffsetEnd": 37,
+                  "speaker": "PER0",
+                  "ner": "O",
+                  "after": " ",
+                  "originalText": "blamed",
+                  "before": " ",
+                  "index": 5,
+                  "pos": "VBN"
+                }
+              },
+              "VBN"
+            ],
+            [
+              {
+                "nlpToken": {
+                  "characterOffsetBegin": 38,
+                  "word": "two",
+                  "lemma": "two",
+                  "before": " ",
+                  "characterOffsetEnd": 41,
+                  "originalText": "two",
+                  "normalizedNER": "2.0",
+                  "speaker": "PER0",
+                  "after": " ",
+                  "ner": "NUMBER",
+                  "index": 6,
+                  "pos": "CD"
+                }
+              },
+              "CD"
+            ],
+            [
+              {
+                "nlpToken": {
+                  "characterOffsetBegin": 42,
+                  "word": "letters",
+                  "lemma": "letter",
+                  "characterOffsetEnd": 49,
+                  "speaker": "PER0",
+                  "ner": "O",
+                  "after": " ",
+                  "originalText": "letters",
+                  "before": " ",
+                  "index": 7,
+                  "pos": "NNS"
+                }
+              },
+              "NNS"
             ]
           ],
-          "score": 0.42857142857142855,
-          "text": "Hillary Clinton"
+          "score": 1.0
         }
-      ]
+      ],
+      "annotated": [
+        {
+          "text": "blames Comey letters for election defeat",
+          "coderPhraseCount": 3
+        }
+      ],
+      "label": "what"
     }
   },
-  "mimeType": "text/xml",
-  "originalFilename": "theguardian-4",
+  "description": "Source tells Politico that Clinton made comments during call with megadonors, as Hispanic Chamber of Commerce chief blames lack of Latino outreach",
+  "text": "Hillary Clinton has reportedly blamed two letters to Congress by FBI director James Comey for her defeat by Donald Trump in the US presidential election. Politico was first to report that Clinton made the comments on Saturday, in a call with donors who gave more than $100,000 to her campaign. Clinton's presidential run ended with a narrow victory in the popular vote but defeat - by 290 votes to 228, with Michigan and New Hampshire yet to declare - in the electoral college that decides the presidency. An individual who was on the donors' call, Politico reported, claimed Clinton said the first letter prompted a fall in favourable polling but there was a rebound before the second letter \"awakened Donald Trump's voters\". The New York Times quoted a donor as saying Clinton said: \"There are lots of reasons why an election like this is not successful ... our analysis is that Comey's letter raising doubts that were groundless, baseless, proven to be, stopped our momentum.\" The comments, which were similar to reported remarks by other campaign sources, contrasted with anger from Javier Palomarez, president and chief executive of the US Hispanic Chamber of Commerce (USHCC). He told the Guardian on Saturday it was Clinton's neglect of Latino voters that handed the presidency to Trump. Comey made headlines on 28 October with his first letter, 11 days before the vote. In the letter, he told members of Congress that new emails had been discovered that could be relevant to a completed investigation into Clinton's use of a private email server while secretary of state. The original investigation had ended in July with no charge against Clinton, who Comey said had been \"extremely careless\" in her conduct, but not to the extent of criminal or intentional wrongdoing. The new emails were discovered, it was reported, on a device belonging to Anthony Weiner, the estranged husband of Clinton aide Huma Abedin, during an investigation into Weiner for for allegedly exchanging lewd messages with a minor. Republicans responded with bafflement at Comey's break with policy and decades of precedent, and furious senior Democrats suggested the FBI director may have violated the Hatch Act, a federal statute that bars political activity by senior officials. Comey's second letter was sent last Sunday, two days before the election. In it, he said a review of the newly discovered emails had been completed, and that it found no evidence to merit reopening the investigation of Clinton. Republicans, including Trump, responded angrily, alleging that the review could not have been completed correctly in so short a time. Reports said 650,000 emails were in question, although that number was not officially confirmed. Saturday's reported remarks mirrored comments, previously reported by Politico, in an email from Navin Nayak, Clinton's head of opinion research. \"We believe that we lost this election in the last week,\" the magazine reported Nayak as writing on Thursday. \"Comey's letter in the last 11 days of the election both helped depress our turnout and also drove away some of our critical support among college-educated white voters - particularly in the suburbs. \"We also think Comey's [second] letter, which was intended to absolve [Secretary] Clinton, actually helped to bolster Trump's turnout.\" Resistance and anger: progressives urge Democratic party to stand up and fight Read more Clinton did not speak on election night, instead delivering a concession speech at a hotel in New York on Wednesday. In excerpts from an interview to be broadcast by CBS on Sunday, Trump discussed the call he took from his Democratic opponent in the small hours of that morning. \"So Hillary called and it was a lovely call,\" he said, adding: \"She couldn't have been nicer. She just said, 'Congratulations, Donald, well done.' And I said, 'I want to thank you very much, you were a great competitor.'\" Politico's source said Clinton seemed \"sad but hopeful\" on the donors call, as she discussed the importance to Democrats of political engagement in the future. In a speech to the AFL-CIO on Thursday, the Massachusetts senator Elizabeth Warren attributed Clinton's defeat to a failed economic message, saying: \"The final results may have divided us but the entire electorate embraced deep, fundamental reform of our economic system and our political system.\" Palomarez, head of an organisation which represents 4.2m Hispanic-owned businesses, blamed Clinton's failure on a lack of engagement with Latino voters. He told the Guardian: \"We thought this election cycle would be different. Unfortunately, Hillary Clinton was advised once again by Beltway advisers who knew it all, had the models and the projections, but who called it wrong.\"",
   "parsingError": "true",
   "publisher": "theguardian",
-  "text": "Hillary Clinton has reportedly blamed two letters to Congress by FBI director James Comey for her defeat by Donald Trump in the US presidential election. Politico was first to report that Clinton made the comments on Saturday, in a call with donors who gave more than $100,000 to her campaign. Clinton's presidential run ended with a narrow victory in the popular vote but defeat - by 290 votes to 228, with Michigan and New Hampshire yet to declare - in the electoral college that decides the presidency. An individual who was on the donors' call, Politico reported, claimed Clinton said the first letter prompted a fall in favourable polling but there was a rebound before the second letter \"awakened Donald Trump's voters\". The New York Times quoted a donor as saying Clinton said: \"There are lots of reasons why an election like this is not successful ... our analysis is that Comey's letter raising doubts that were groundless, baseless, proven to be, stopped our momentum.\" The comments, which were similar to reported remarks by other campaign sources, contrasted with anger from Javier Palomarez, president and chief executive of the US Hispanic Chamber of Commerce (USHCC). He told the Guardian on Saturday it was Clinton's neglect of Latino voters that handed the presidency to Trump. Comey made headlines on 28 October with his first letter, 11 days before the vote. In the letter, he told members of Congress that new emails had been discovered that could be relevant to a completed investigation into Clinton's use of a private email server while secretary of state. The original investigation had ended in July with no charge against Clinton, who Comey said had been \"extremely careless\" in her conduct, but not to the extent of criminal or intentional wrongdoing. The new emails were discovered, it was reported, on a device belonging to Anthony Weiner, the estranged husband of Clinton aide Huma Abedin, during an investigation into Weiner for for allegedly exchanging lewd messages with a minor. Republicans responded with bafflement at Comey's break with policy and decades of precedent, and furious senior Democrats suggested the FBI director may have violated the Hatch Act, a federal statute that bars political activity by senior officials. Comey's second letter was sent last Sunday, two days before the election. In it, he said a review of the newly discovered emails had been completed, and that it found no evidence to merit reopening the investigation of Clinton. Republicans, including Trump, responded angrily, alleging that the review could not have been completed correctly in so short a time. Reports said 650,000 emails were in question, although that number was not officially confirmed. Saturday's reported remarks mirrored comments, previously reported by Politico, in an email from Navin Nayak, Clinton's head of opinion research. \"We believe that we lost this election in the last week,\" the magazine reported Nayak as writing on Thursday. \"Comey's letter in the last 11 days of the election both helped depress our turnout and also drove away some of our critical support among college-educated white voters - particularly in the suburbs. \"We also think Comey's [second] letter, which was intended to absolve [Secretary] Clinton, actually helped to bolster Trump's turnout.\" Resistance and anger: progressives urge Democratic party to stand up and fight Read more Clinton did not speak on election night, instead delivering a concession speech at a hotel in New York on Wednesday. In excerpts from an interview to be broadcast by CBS on Sunday, Trump discussed the call he took from his Democratic opponent in the small hours of that morning. \"So Hillary called and it was a lovely call,\" he said, adding: \"She couldn't have been nicer. She just said, 'Congratulations, Donald, well done.' And I said, 'I want to thank you very much, you were a great competitor.'\" Politico's source said Clinton seemed \"sad but hopeful\" on the donors call, as she discussed the importance to Democrats of political engagement in the future. In a speech to the AFL-CIO on Thursday, the Massachusetts senator Elizabeth Warren attributed Clinton's defeat to a failed economic message, saying: \"The final results may have divided us but the entire electorate embraced deep, fundamental reform of our economic system and our political system.\" Palomarez, head of an organisation which represents 4.2m Hispanic-owned businesses, blamed Clinton's failure on a lack of engagement with Latino voters. He told the Guardian: \"We thought this election cycle would be different. Unfortunately, Hillary Clinton was advised once again by Beltway advisers who knew it all, had the models and the projections, but who called it wrong.\"",
-  "title": "Hillary Clinton blames Comey letters for election defeat, reports say",
-  "url": "https://www.theguardian.com/us-news/2016/nov/12/hillary-clinton-james-comey-letters-emails-election-defeat"
+  "originalFilename": "theguardian-4",
+  "date_publish": "2016-11-13 08:24:23",
+  "dId": "8812ee196c646231a28a742f956502469f892ac7682bf9b4fa6686c4"
 }

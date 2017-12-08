@@ -1,75 +1,241 @@
 {
-  "category": "trump and obama",
-  "dId": "7fbb50905e081bf1054c7b198e1ea965a38cf318ce971bb989bfe369",
-  "date_publish": "2016-11-11 00:00:00",
-  "description": "A body language expert has analysed President Barack Obama and Donald Trump's mannerisms during their meeting at the White House. The two men both gave positive feedback about the 90-minute conversation but after years of clashing, it was clear there was some tension between them.  Patti Wood, a body language expert, analysed the two men, concluding that Mr Obama was \"resigned and not hopeful\", while Mr Trump was \"serious and perhaps fearful\".",
   "filename": "7fbb50905e081bf1054c7b198e1ea965a38cf318ce971bb989bfe369",
+  "title": "Donald Trump meets Barack Obama: What the body language of the President and President-elect tells us",
+  "mimeType": "text/xml",
+  "url": "http://www.independent.co.uk/news/world/americas/donald-trump-meets-barack-obama-body-language-president-president-elect-a7412186.html",
+  "category": "trump and obama",
   "fiveWoneH": {
-    "how": {
-      "annotated": [
-        {
-          "coderPhraseCount": 2,
-          "text": "analysed"
-        },
-        {
-          "coderPhraseCount": 2,
-          "text": "tension"
-        }
-      ],
-      "label": "how",
+    "who": {
       "extracted": [
         {
+          "text": "Mr Obama",
           "parts": [
             [
               {
                 "nlpToken": {
-                  "index": 23,
-                  "word": "hopeful",
-                  "originalText": "hopeful",
-                  "lemma": "hopeful",
-                  "characterOffsetBegin": 491,
-                  "characterOffsetEnd": 498,
-                  "pos": "JJ",
+                  "characterOffsetBegin": 356,
+                  "word": "Mr",
+                  "lemma": "Mr",
+                  "characterOffsetEnd": 358,
+                  "speaker": "PER0",
                   "ner": "O",
-                  "speaker": "24",
+                  "after": " ",
+                  "originalText": "Mr",
                   "before": " ",
-                  "after": ""
+                  "index": 16,
+                  "pos": "NNP"
+                }
+              },
+              "NNP"
+            ],
+            [
+              {
+                "nlpToken": {
+                  "characterOffsetBegin": 359,
+                  "word": "Obama",
+                  "lemma": "Obama",
+                  "characterOffsetEnd": 364,
+                  "speaker": "PER0",
+                  "ner": "PERSON",
+                  "after": " ",
+                  "originalText": "Obama",
+                  "before": " ",
+                  "index": 17,
+                  "pos": "NNP"
+                }
+              },
+              "NNP"
+            ]
+          ],
+          "nlpIndexSentence": 2,
+          "score": 1.0
+        }
+      ],
+      "annotated": [
+        {
+          "text": "Patti Wood, a body language expert",
+          "coderPhraseCount": 3
+        }
+      ],
+      "label": "who"
+    },
+    "when": {
+      "extracted": [],
+      "annotated": [
+        {
+          "coderPhraseCount": 3,
+          "parsed": "2016-11-10"
+        }
+      ],
+      "label": "when"
+    },
+    "why": {
+      "extracted": [
+        {
+          "text": "there",
+          "parts": [
+            [
+              {
+                "nlpToken": {
+                  "characterOffsetBegin": 245,
+                  "word": "there",
+                  "lemma": "there",
+                  "speaker": "PER0",
+                  "after": " ",
+                  "pos": "EX",
+                  "ner": "O",
+                  "before": " ",
+                  "characterOffsetEnd": 250,
+                  "index": 21,
+                  "originalText": "there"
+                }
+              },
+              "EX"
+            ]
+          ],
+          "nlpIndexSentence": 1,
+          "score": 0.42142857142857143
+        }
+      ],
+      "annotated": [
+        {
+          "coderPhraseCount": 3
+        }
+      ],
+      "label": "why"
+    },
+    "how": {
+      "extracted": [
+        {
+          "text": "hopeful",
+          "parts": [
+            [
+              {
+                "nlpToken": {
+                  "characterOffsetBegin": 387,
+                  "word": "hopeful",
+                  "lemma": "hopeful",
+                  "characterOffsetEnd": 394,
+                  "speaker": "22",
+                  "ner": "O",
+                  "after": "",
+                  "originalText": "hopeful",
+                  "before": " ",
+                  "index": 23,
+                  "pos": "JJ"
                 }
               },
               "JJ"
             ]
           ],
-          "score": 1.0,
-          "text": "hopeful",
-          "nlpIndexSentence": 3
-        }
-      ]
-    },
-    "what": {
-      "annotated": [
-        {
-          "coderPhraseCount": 3,
-          "text": "analysed President Barack Obama and Donald Trump's mannerisms"
+          "nlpIndexSentence": 2,
+          "score": 1.0
         }
       ],
-      "label": "what",
+      "annotated": [
+        {
+          "text": "analysed",
+          "coderPhraseCount": 2
+        },
+        {
+          "text": "tension",
+          "coderPhraseCount": 2
+        }
+      ],
+      "label": "how"
+    },
+    "where": {
       "extracted": [
         {
+          "text": "White House",
+          "enhancement": {
+            "openstreetmap_nominatim": {
+              "importance": 0.3519189346824,
+              "osm_type": "way",
+              "osm_id": "238241022",
+              "type": "government",
+              "lon": "-77.0365534886228",
+              "display_name": "White House, 1600, Pennsylvania Avenue Northwest, Golden Triangle, Washington, District of Columbia, 20500, United States of America",
+              "class": "office",
+              "lat": "38.8976998",
+              "licence": "Data \u00a9 OpenStreetMap contributors, ODbL 1.0. http://www.openstreetmap.org/copyright",
+              "place_id": "127954863",
+              "boundingbox": [
+                38.8974898,
+                38.897911,
+                -77.0368542,
+                -77.0362526
+              ]
+            }
+          },
           "parts": [
             [
               {
                 "nlpToken": {
-                  "index": 18,
-                  "word": "was",
-                  "originalText": "was",
-                  "lemma": "be",
-                  "characterOffsetBegin": 469,
-                  "characterOffsetEnd": 472,
-                  "pos": "VBD",
-                  "ner": "O",
+                  "characterOffsetBegin": 117,
+                  "word": "White",
+                  "lemma": "White",
+                  "characterOffsetEnd": 122,
                   "speaker": "PER0",
+                  "ner": "LOCATION",
+                  "after": " ",
+                  "originalText": "White",
                   "before": " ",
-                  "after": " "
+                  "index": 20,
+                  "pos": "NNP"
+                }
+              },
+              "NNP"
+            ],
+            [
+              {
+                "nlpToken": {
+                  "characterOffsetBegin": 123,
+                  "word": "House",
+                  "lemma": "House",
+                  "characterOffsetEnd": 128,
+                  "speaker": "PER0",
+                  "ner": "LOCATION",
+                  "after": "",
+                  "originalText": "House",
+                  "before": " ",
+                  "index": 21,
+                  "pos": "NNP"
+                }
+              },
+              "NNP"
+            ]
+          ],
+          "score": 1.0
+        }
+      ],
+      "annotated": [
+        {
+          "text": "White House",
+          "coderPhraseCount": 2
+        }
+      ],
+      "label": "where"
+    },
+    "what": {
+      "extracted": [
+        {
+          "text": "was \" resigned and not hopeful \" , while Mr Trump",
+          "parts": [
+            [
+              {
+                "nlpToken": {
+                  "characterOffsetBegin": 365,
+                  "word": "was",
+                  "lemma": "be",
+                  "characterOffsetEnd": 368,
+                  "speaker": "PER0",
+                  "ner": "O",
+                  "after": " ",
+                  "originalText": "was",
+                  "before": " ",
+                  "index": 18,
+                  "pos": "VBD"
                 }
               },
               "VBD"
@@ -77,17 +243,17 @@
             [
               {
                 "nlpToken": {
-                  "index": 19,
+                  "characterOffsetBegin": 369,
                   "word": "``",
-                  "originalText": "\"",
                   "lemma": "``",
-                  "characterOffsetBegin": 473,
-                  "characterOffsetEnd": 474,
-                  "pos": "``",
-                  "ner": "O",
+                  "characterOffsetEnd": 370,
                   "speaker": "PER0",
+                  "ner": "O",
+                  "after": "",
+                  "originalText": "\"",
                   "before": " ",
-                  "after": ""
+                  "index": 19,
+                  "pos": "``"
                 }
               },
               "``"
@@ -95,17 +261,17 @@
             [
               {
                 "nlpToken": {
-                  "index": 20,
+                  "characterOffsetBegin": 370,
                   "word": "resigned",
-                  "originalText": "resigned",
                   "lemma": "resigned",
-                  "characterOffsetBegin": 474,
-                  "characterOffsetEnd": 482,
-                  "pos": "JJ",
+                  "characterOffsetEnd": 378,
+                  "speaker": "22",
                   "ner": "O",
-                  "speaker": "24",
+                  "after": " ",
+                  "originalText": "resigned",
                   "before": "",
-                  "after": " "
+                  "index": 20,
+                  "pos": "JJ"
                 }
               },
               "JJ"
@@ -113,17 +279,17 @@
             [
               {
                 "nlpToken": {
-                  "index": 21,
+                  "characterOffsetBegin": 379,
                   "word": "and",
-                  "originalText": "and",
                   "lemma": "and",
-                  "characterOffsetBegin": 483,
-                  "characterOffsetEnd": 486,
-                  "pos": "CC",
+                  "characterOffsetEnd": 382,
+                  "speaker": "22",
                   "ner": "O",
-                  "speaker": "24",
+                  "after": " ",
+                  "originalText": "and",
                   "before": " ",
-                  "after": " "
+                  "index": 21,
+                  "pos": "CC"
                 }
               },
               "CC"
@@ -131,17 +297,17 @@
             [
               {
                 "nlpToken": {
-                  "index": 22,
+                  "characterOffsetBegin": 383,
                   "word": "not",
-                  "originalText": "not",
                   "lemma": "not",
-                  "characterOffsetBegin": 487,
-                  "characterOffsetEnd": 490,
-                  "pos": "RB",
+                  "characterOffsetEnd": 386,
+                  "speaker": "22",
                   "ner": "O",
-                  "speaker": "24",
+                  "after": " ",
+                  "originalText": "not",
                   "before": " ",
-                  "after": " "
+                  "index": 22,
+                  "pos": "RB"
                 }
               },
               "RB"
@@ -149,17 +315,17 @@
             [
               {
                 "nlpToken": {
-                  "index": 23,
+                  "characterOffsetBegin": 387,
                   "word": "hopeful",
-                  "originalText": "hopeful",
                   "lemma": "hopeful",
-                  "characterOffsetBegin": 491,
-                  "characterOffsetEnd": 498,
-                  "pos": "JJ",
+                  "characterOffsetEnd": 394,
+                  "speaker": "22",
                   "ner": "O",
-                  "speaker": "24",
+                  "after": "",
+                  "originalText": "hopeful",
                   "before": " ",
-                  "after": ""
+                  "index": 23,
+                  "pos": "JJ"
                 }
               },
               "JJ"
@@ -167,17 +333,17 @@
             [
               {
                 "nlpToken": {
-                  "index": 24,
+                  "characterOffsetBegin": 394,
                   "word": "''",
-                  "originalText": "\"",
                   "lemma": "''",
-                  "characterOffsetBegin": 498,
-                  "characterOffsetEnd": 499,
-                  "pos": "''",
-                  "ner": "O",
+                  "characterOffsetEnd": 395,
                   "speaker": "PER0",
+                  "ner": "O",
+                  "after": "",
+                  "originalText": "\"",
                   "before": "",
-                  "after": ""
+                  "index": 24,
+                  "pos": "''"
                 }
               },
               "''"
@@ -185,17 +351,17 @@
             [
               {
                 "nlpToken": {
-                  "index": 25,
+                  "characterOffsetBegin": 395,
                   "word": ",",
-                  "originalText": ",",
                   "lemma": ",",
-                  "characterOffsetBegin": 499,
-                  "characterOffsetEnd": 500,
-                  "pos": ",",
-                  "ner": "O",
+                  "characterOffsetEnd": 396,
                   "speaker": "PER0",
+                  "ner": "O",
+                  "after": " ",
+                  "originalText": ",",
                   "before": "",
-                  "after": " "
+                  "index": 25,
+                  "pos": ","
                 }
               },
               ","
@@ -203,17 +369,17 @@
             [
               {
                 "nlpToken": {
-                  "index": 26,
+                  "characterOffsetBegin": 397,
                   "word": "while",
-                  "originalText": "while",
                   "lemma": "while",
-                  "characterOffsetBegin": 501,
-                  "characterOffsetEnd": 506,
-                  "pos": "IN",
-                  "ner": "O",
+                  "characterOffsetEnd": 402,
                   "speaker": "PER0",
+                  "ner": "O",
+                  "after": " ",
+                  "originalText": "while",
                   "before": " ",
-                  "after": " "
+                  "index": 26,
+                  "pos": "IN"
                 }
               },
               "IN"
@@ -221,17 +387,17 @@
             [
               {
                 "nlpToken": {
+                  "characterOffsetBegin": 403,
+                  "word": "Mr",
+                  "lemma": "Mr",
+                  "characterOffsetEnd": 405,
+                  "speaker": "PER0",
+                  "ner": "O",
+                  "after": " ",
+                  "originalText": "Mr",
+                  "before": " ",
                   "index": 27,
-                  "word": "Mr",
-                  "originalText": "Mr",
-                  "lemma": "Mr",
-                  "characterOffsetBegin": 507,
-                  "characterOffsetEnd": 509,
-                  "pos": "NNP",
-                  "ner": "O",
-                  "speaker": "PER0",
-                  "before": " ",
-                  "after": " "
+                  "pos": "NNP"
                 }
               },
               "NNP"
@@ -239,207 +405,40 @@
             [
               {
                 "nlpToken": {
-                  "index": 28,
+                  "characterOffsetBegin": 406,
                   "word": "Trump",
-                  "originalText": "Trump",
                   "lemma": "Trump",
-                  "characterOffsetBegin": 510,
-                  "characterOffsetEnd": 515,
-                  "pos": "NNP",
+                  "characterOffsetEnd": 411,
+                  "speaker": "PER0",
                   "ner": "PERSON",
-                  "speaker": "PER0",
+                  "after": " ",
+                  "originalText": "Trump",
                   "before": " ",
-                  "after": " "
+                  "index": 28,
+                  "pos": "NNP"
                 }
               },
               "NNP"
             ]
           ],
-          "score": 1.0,
-          "text": "was \" resigned and not hopeful \" , while Mr Trump",
-          "nlpIndexSentence": 3
-        }
-      ]
-    },
-    "when": {
-      "annotated": [
-        {
-          "coderPhraseCount": 3,
-          "parsed": "2017-11-10"
+          "nlpIndexSentence": 2,
+          "score": 1.0
         }
       ],
-      "label": "when",
-      "extracted": []
-    },
-    "where": {
       "annotated": [
         {
-          "coderPhraseCount": 2,
-          "text": "White House"
-        }
-      ],
-      "label": "where",
-      "extracted": [
-        {
-          "parts": [
-            [
-              {
-                "nlpToken": {
-                  "index": 20,
-                  "word": "White",
-                  "originalText": "White",
-                  "lemma": "White",
-                  "characterOffsetBegin": 220,
-                  "characterOffsetEnd": 225,
-                  "pos": "NNP",
-                  "ner": "LOCATION",
-                  "speaker": "PER0",
-                  "before": " ",
-                  "after": " "
-                }
-              },
-              "NNP"
-            ],
-            [
-              {
-                "nlpToken": {
-                  "index": 21,
-                  "word": "House",
-                  "originalText": "House",
-                  "lemma": "House",
-                  "characterOffsetBegin": 226,
-                  "characterOffsetEnd": 231,
-                  "pos": "NNP",
-                  "ner": "LOCATION",
-                  "speaker": "PER0",
-                  "before": " ",
-                  "after": ""
-                }
-              },
-              "NNP"
-            ]
-          ],
-          "score": 1.0,
-          "text": "White House",
-          "enhancement": {
-            "openstreetmap_nominatim": {
-              "place_id": "127954863",
-              "licence": "Data \u00a9 OpenStreetMap contributors, ODbL 1.0. http://www.openstreetmap.org/copyright",
-              "osm_type": "way",
-              "osm_id": "238241022",
-              "boundingbox": [
-                38.8974898,
-                38.897911,
-                -77.0368542,
-                -77.0362526
-              ],
-              "lat": "38.8976998",
-              "lon": "-77.0365534886228",
-              "display_name": "White House, 1600, Pennsylvania Avenue Northwest, Golden Triangle, Washington, District of Columbia, 20500, United States of America",
-              "class": "office",
-              "type": "government",
-              "importance": 0.3519189346824
-            }
-          },
-          "nlpIndexSentence": 1
-        }
-      ]
-    },
-    "who": {
-      "annotated": [
-        {
-          "coderPhraseCount": 3,
-          "text": "Patti Wood, a body language expert"
-        }
-      ],
-      "label": "who",
-      "extracted": [
-        {
-          "parts": [
-            [
-              {
-                "nlpToken": {
-                  "index": 16,
-                  "word": "Mr",
-                  "originalText": "Mr",
-                  "lemma": "Mr",
-                  "characterOffsetBegin": 460,
-                  "characterOffsetEnd": 462,
-                  "pos": "NNP",
-                  "ner": "O",
-                  "speaker": "PER0",
-                  "before": " ",
-                  "after": " "
-                }
-              },
-              "NNP"
-            ],
-            [
-              {
-                "nlpToken": {
-                  "index": 17,
-                  "word": "Obama",
-                  "originalText": "Obama",
-                  "lemma": "Obama",
-                  "characterOffsetBegin": 463,
-                  "characterOffsetEnd": 468,
-                  "pos": "NNP",
-                  "ner": "PERSON",
-                  "speaker": "PER0",
-                  "before": " ",
-                  "after": " "
-                }
-              },
-              "NNP"
-            ]
-          ],
-          "score": 1.0,
-          "text": "Mr Obama",
-          "nlpIndexSentence": 3
-        }
-      ]
-    },
-    "why": {
-      "annotated": [
-        {
+          "text": "analysed President Barack Obama and Donald Trump's mannerisms",
           "coderPhraseCount": 3
         }
       ],
-      "label": "why",
-      "extracted": [
-        {
-          "parts": [
-            [
-              {
-                "nlpToken": {
-                  "index": 21,
-                  "word": "there",
-                  "originalText": "there",
-                  "lemma": "there",
-                  "characterOffsetBegin": 348,
-                  "characterOffsetEnd": 353,
-                  "pos": "EX",
-                  "ner": "O",
-                  "speaker": "PER0",
-                  "before": " ",
-                  "after": " "
-                }
-              },
-              "EX"
-            ]
-          ],
-          "score": 0.4142857142857143,
-          "text": "there",
-          "nlpIndexSentence": 2
-        }
-      ]
+      "label": "what"
     }
   },
-  "mimeType": "text/xml",
-  "originalFilename": "independent-7",
+  "description": "A body language expert has analysed President Barack Obama and Donald Trump's mannerisms during their meeting at the White House. The two men both gave positive feedback about the 90-minute conversation but after years of clashing, it was clear there was some tension between them.  Patti Wood, a body language expert, analysed the two men, concluding that Mr Obama was \"resigned and not hopeful\", while Mr Trump was \"serious and perhaps fearful\".",
+  "text": "A body language expert has analysed President Barack Obama and Donald Trump's mannerisms during their meeting at the White House. The two men both gave positive feedback about the 90-minute conversation but after years of clashing, it was clear there was some tension between them. Patti Wood, a body language expert, analysed the two men, concluding that Mr Obama was \"resigned and not hopeful\", while Mr Trump was \"serious and perhaps fearful\". \"If you look at the seating position - their lower legs, they are both in the male, alpha position saying 'I am a man',\" Ms Wood told the Daily Mail. Mr Obama had his legs much further apart than Mr Trump's, which Ms Wood claims shows the current President is subconsciously exerting dominance. The hand position of the two men, in particular Mr Trump's, also proved to be interesting. The President-elect was doing the \"downward prayer position\" while sitting beside Mr Obama. \"My read is that he has learned something he didn't know before. It's a tentative hand position,\" Ms Wood said. \"Trump holds his own hands as he begins speaking which is an indication he needs to comfort himself.\" Mr Obama was resting his arms on his legs which apparently indicated he was weary. World reaction to President Trump: In pictures 29 show all World reaction to President Trump: In pictures 1/29 London, England AP 2/29 London, England Reuters 3/29 Manila, Philippines Getty Images 4/29 Manila, Philippines Getty 5/29 Mosul , Iraq Getty 6/29 Manila, Philippines AP 7/29 New Delhi, India Reuters 8/29 Karachi, Pakistan EPA 9/29 Jakarta, Indonesia Reuters 10/29 Lagos, Nigeria AP 11/29 Kabul, Afghanistan AP 12/29 Jerusalem. Israel Reuters 13/29 Moscow, Russia Reuters 14/29 Seoul, South Korea AP 15/29 Lagos, Nigeria AP 16/29 Peshawar, Pakistan EPA 17/29 Jakarta, Indonesia Reuters 18/29 Hyderabad, India AP 19/29 Kolkata, India AP 20/29 Sydney, Australia Getty 21/29 Sydney, Australia AP 22/29 Aleppo, Syria Reuters 23/29 Mexico City, Mexico AP 24/29 Port-of-Spain, Trinidad and Tobago Reuters 25/29 Jerusalem, Israel EPA 26/29 Baghdad, Iraq Rex 27/29 Gaza Strip, Palestinian Territories Rex 28/29 Tokyo, Japan Rex 29/29 Mexico City, Mexico Getty \"There is a part where he says he has been encouraged. As he says it he closes his eyes. I call that an eye block. That tells me he doesn't feel totally encouraged,\" Ms Wood told the Daily Mail. \"Obama was extremely fatigued, resigned and not hopeful but very presidential. Trump was serious and showed indications he heard information that made him fearful.\" Mr Trump took to Twitter after the meeting to quash any rumours of tension between the pair. \"A fantastic day in D.C. Met with President Obama for first time. Really good meeting, great chemistry. Melania liked Mrs. O a lot!,\" he wrote.",
   "parsingError": "true",
   "publisher": "independent",
-  "text": "A body language expert has analysed President Barack Obama and Donald Trump's mannerisms during their meeting at the White House. The two men both gave positive feedback about the 90-minute conversation but after years of clashing, it was clear there was some tension between them. Patti Wood, a body language expert, analysed the two men, concluding that Mr Obama was \"resigned and not hopeful\", while Mr Trump was \"serious and perhaps fearful\". \"If you look at the seating position - their lower legs, they are both in the male, alpha position saying 'I am a man',\" Ms Wood told the Daily Mail. Mr Obama had his legs much further apart than Mr Trump's, which Ms Wood claims shows the current President is subconsciously exerting dominance. The hand position of the two men, in particular Mr Trump's, also proved to be interesting. The President-elect was doing the \"downward prayer position\" while sitting beside Mr Obama. \"My read is that he has learned something he didn't know before. It's a tentative hand position,\" Ms Wood said. \"Trump holds his own hands as he begins speaking which is an indication he needs to comfort himself.\" Mr Obama was resting his arms on his legs which apparently indicated he was weary. World reaction to President Trump: In pictures 29 show all World reaction to President Trump: In pictures 1/29 London, England AP 2/29 London, England Reuters 3/29 Manila, Philippines Getty Images 4/29 Manila, Philippines Getty 5/29 Mosul , Iraq Getty 6/29 Manila, Philippines AP 7/29 New Delhi, India Reuters 8/29 Karachi, Pakistan EPA 9/29 Jakarta, Indonesia Reuters 10/29 Lagos, Nigeria AP 11/29 Kabul, Afghanistan AP 12/29 Jerusalem. Israel Reuters 13/29 Moscow, Russia Reuters 14/29 Seoul, South Korea AP 15/29 Lagos, Nigeria AP 16/29 Peshawar, Pakistan EPA 17/29 Jakarta, Indonesia Reuters 18/29 Hyderabad, India AP 19/29 Kolkata, India AP 20/29 Sydney, Australia Getty 21/29 Sydney, Australia AP 22/29 Aleppo, Syria Reuters 23/29 Mexico City, Mexico AP 24/29 Port-of-Spain, Trinidad and Tobago Reuters 25/29 Jerusalem, Israel EPA 26/29 Baghdad, Iraq Rex 27/29 Gaza Strip, Palestinian Territories Rex 28/29 Tokyo, Japan Rex 29/29 Mexico City, Mexico Getty \"There is a part where he says he has been encouraged. As he says it he closes his eyes. I call that an eye block. That tells me he doesn't feel totally encouraged,\" Ms Wood told the Daily Mail. \"Obama was extremely fatigued, resigned and not hopeful but very presidential. Trump was serious and showed indications he heard information that made him fearful.\" Mr Trump took to Twitter after the meeting to quash any rumours of tension between the pair. \"A fantastic day in D.C. Met with President Obama for first time. Really good meeting, great chemistry. Melania liked Mrs. O a lot!,\" he wrote.",
-  "title": "Donald Trump meets Barack Obama: What the body language of the President and President-elect tells us",
-  "url": "http://www.independent.co.uk/news/world/americas/donald-trump-meets-barack-obama-body-language-president-president-elect-a7412186.html"
+  "originalFilename": "independent-7",
+  "date_publish": "2016-11-11 00:00:00",
+  "dId": "7fbb50905e081bf1054c7b198e1ea965a38cf318ce971bb989bfe369"
 }

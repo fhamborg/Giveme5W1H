@@ -1,0 +1,371 @@
+{
+  "filename": "dccb7b8de2a86a406c6a42ad1aab22701680c111206a66c6a64ee036",
+  "title": "Trump rally shooting: Five shot in Seattle close to anti-Donald Trump protest",
+  "mimeType": "text/xml",
+  "parsingError": "true",
+  "date_publish": "2016-11-10 03:42:00",
+  "fiveWoneH": {
+    "who": {
+      "extracted": [
+        {
+          "text": "Seattle police",
+          "parts": [
+            [
+              {
+                "nlpToken": {
+                  "characterOffsetBegin": 79,
+                  "word": "Seattle",
+                  "lemma": "Seattle",
+                  "characterOffsetEnd": 86,
+                  "speaker": "PER0",
+                  "ner": "LOCATION",
+                  "after": " ",
+                  "originalText": "Seattle",
+                  "before": " ",
+                  "index": 1,
+                  "pos": "NNP"
+                }
+              },
+              "NNP"
+            ],
+            [
+              {
+                "nlpToken": {
+                  "characterOffsetBegin": 87,
+                  "word": "police",
+                  "lemma": "police",
+                  "characterOffsetEnd": 93,
+                  "speaker": "PER0",
+                  "ner": "O",
+                  "after": " ",
+                  "originalText": "police",
+                  "before": " ",
+                  "index": 2,
+                  "pos": "NNS"
+                }
+              },
+              "NNS"
+            ]
+          ],
+          "nlpIndexSentence": 1,
+          "score": 1.0
+        }
+      ],
+      "annotated": [
+        {
+          "text": "five people",
+          "coderPhraseCount": 3
+        }
+      ],
+      "label": "who"
+    },
+    "when": {
+      "extracted": [
+        {
+          "text": "November 10 , 2016",
+          "enhancement": {
+            "timex": {
+              "start_date": "2016-11-10T00:00:00",
+              "end_date": "2016-11-10T23:59:59"
+            }
+          },
+          "parts": [
+            [
+              {
+                "nlpToken": {
+                  "after": " ",
+                  "word": "November",
+                  "lemma": "November",
+                  "timex": {
+                    "value": "2016-11-10",
+                    "tid": "t3",
+                    "type": "DATE"
+                  },
+                  "before": " ",
+                  "characterOffsetEnd": 1711,
+                  "pos": "NNP",
+                  "normalizedNER": "2016-11-10",
+                  "speaker": "PER0",
+                  "ner": "DATE",
+                  "characterOffsetBegin": 1703,
+                  "originalText": "November",
+                  "index": 8
+                }
+              },
+              "NNP"
+            ],
+            [
+              {
+                "nlpToken": {
+                  "after": "",
+                  "word": "10",
+                  "lemma": "10",
+                  "timex": {
+                    "value": "2016-11-10",
+                    "tid": "t3",
+                    "type": "DATE"
+                  },
+                  "before": " ",
+                  "characterOffsetEnd": 1714,
+                  "pos": "CD",
+                  "normalizedNER": "2016-11-10",
+                  "speaker": "PER0",
+                  "ner": "DATE",
+                  "characterOffsetBegin": 1712,
+                  "originalText": "10",
+                  "index": 9
+                }
+              },
+              "CD"
+            ],
+            [
+              {
+                "nlpToken": {
+                  "after": " ",
+                  "word": ",",
+                  "lemma": ",",
+                  "timex": {
+                    "value": "2016-11-10",
+                    "tid": "t3",
+                    "type": "DATE"
+                  },
+                  "before": "",
+                  "characterOffsetEnd": 1715,
+                  "pos": ",",
+                  "normalizedNER": "2016-11-10",
+                  "speaker": "PER0",
+                  "ner": "DATE",
+                  "characterOffsetBegin": 1714,
+                  "originalText": ",",
+                  "index": 10
+                }
+              },
+              ","
+            ],
+            [
+              {
+                "nlpToken": {
+                  "after": " ",
+                  "word": "2016",
+                  "lemma": "2016",
+                  "timex": {
+                    "value": "2016-11-10",
+                    "tid": "t3",
+                    "type": "DATE"
+                  },
+                  "before": " ",
+                  "characterOffsetEnd": 1720,
+                  "pos": "CD",
+                  "normalizedNER": "2016-11-10",
+                  "speaker": "PER0",
+                  "ner": "DATE",
+                  "characterOffsetBegin": 1716,
+                  "originalText": "2016",
+                  "index": 11
+                }
+              },
+              "CD"
+            ]
+          ],
+          "nlpIndexSentence": 13,
+          "score": 0.6759197618585034
+        }
+      ],
+      "annotated": [
+        {
+          "text": "just hours after he was elected the next US President",
+          "coderPhraseCount": 2
+        }
+      ],
+      "label": "when"
+    },
+    "how": {
+      "extracted": [
+        {
+          "text": "close",
+          "parts": [
+            [
+              {
+                "nlpToken": {
+                  "characterOffsetBegin": 43,
+                  "word": "close",
+                  "lemma": "close",
+                  "characterOffsetEnd": 48,
+                  "speaker": "PER0",
+                  "ner": "O",
+                  "after": " ",
+                  "originalText": "close",
+                  "before": " ",
+                  "index": 9,
+                  "pos": "RB"
+                }
+              },
+              "RB"
+            ]
+          ],
+          "score": 1.0
+        }
+      ],
+      "annotated": [
+        {
+          "text": "have been shot",
+          "coderPhraseCount": 3
+        }
+      ],
+      "label": "how"
+    },
+    "where": {
+      "extracted": [
+        {
+          "text": "Seattle",
+          "enhancement": {
+            "openstreetmap_nominatim": {
+              "place_id": "178311857",
+              "licence": "Data \u00a9 OpenStreetMap contributors, ODbL 1.0. http://www.openstreetmap.org/copyright",
+              "type": "city",
+              "class": "place",
+              "osm_id": "237385",
+              "boundingbox": [
+                47.4810022,
+                47.7341357,
+                -122.459696,
+                -122.224433
+              ],
+              "osm_type": "relation",
+              "lon": "-122.3300624",
+              "display_name": "Seattle, King County, Washington, United States of America",
+              "importance": 0.2828859963469,
+              "icon": "https://nominatim.openstreetmap.org/images/mapicons/poi_place_city.p.20.png",
+              "lat": "47.6038321"
+            }
+          },
+          "parts": [
+            [
+              {
+                "nlpToken": {
+                  "characterOffsetBegin": 35,
+                  "word": "Seattle",
+                  "lemma": "Seattle",
+                  "characterOffsetEnd": 42,
+                  "speaker": "PER0",
+                  "ner": "LOCATION",
+                  "after": " ",
+                  "originalText": "Seattle",
+                  "before": " ",
+                  "index": 8,
+                  "pos": "NNP"
+                }
+              },
+              "NNP"
+            ]
+          ],
+          "score": 1.0000000000000002
+        }
+      ],
+      "annotated": [
+        {
+          "text": "Seattle",
+          "coderPhraseCount": 3
+        }
+      ],
+      "label": "where"
+    },
+    "why": {
+      "extracted": [
+        {
+          "text": "they",
+          "parts": [
+            [
+              {
+                "nlpToken": {
+                  "characterOffsetBegin": 103,
+                  "word": "they",
+                  "lemma": "they",
+                  "speaker": "PER0",
+                  "after": " ",
+                  "pos": "PRP",
+                  "ner": "O",
+                  "before": " ",
+                  "characterOffsetEnd": 107,
+                  "index": 4,
+                  "originalText": "they"
+                }
+              },
+              "PRP"
+            ]
+          ],
+          "nlpIndexSentence": 1,
+          "score": 0.4152380952380952
+        }
+      ],
+      "annotated": [
+        {
+          "text": "personal argument",
+          "coderPhraseCount": 3
+        }
+      ],
+      "label": "why"
+    },
+    "what": {
+      "extracted": [
+        {
+          "text": "revealed they",
+          "parts": [
+            [
+              {
+                "nlpToken": {
+                  "characterOffsetBegin": 94,
+                  "word": "revealed",
+                  "lemma": "reveal",
+                  "characterOffsetEnd": 102,
+                  "speaker": "PER0",
+                  "ner": "O",
+                  "after": " ",
+                  "originalText": "revealed",
+                  "before": " ",
+                  "index": 3,
+                  "pos": "VBD"
+                }
+              },
+              "VBD"
+            ],
+            [
+              {
+                "nlpToken": {
+                  "characterOffsetBegin": 103,
+                  "word": "they",
+                  "lemma": "they",
+                  "characterOffsetEnd": 107,
+                  "speaker": "PER0",
+                  "ner": "O",
+                  "after": " ",
+                  "originalText": "they",
+                  "before": " ",
+                  "index": 4,
+                  "pos": "PRP"
+                }
+              },
+              "PRP"
+            ]
+          ],
+          "nlpIndexSentence": 1,
+          "score": 1.0
+        }
+      ],
+      "annotated": [
+        {
+          "text": "have been shot",
+          "coderPhraseCount": 3
+        }
+      ],
+      "label": "what"
+    }
+  },
+  "description": "AT LEAST five people have been shot close to an anti-Donald Trump rally just hours after he was elected the next US President.",
+  "text": "Seattle police revealed they are investigating a shooting with \"multiple victims\" close to the protest against the Republican. The Seattle Fire Department said that crews were treating five patients with gunshot wounds includding four men and one woman, with one of the males suffering life-threatening injuries. TWITTER At least five people have been shot in Seattle A swathe of police - including the gang unit - ambulance and fire crews have descended on the scene to investigate the shooting, with the alleged shooter still at large. The anti-Trump rally turned into a march and was just a few streets away from the shooting, in Third Avenue. Witnesses said they heard multiple rounds of gunshots before police responded to the incident. SEATTLE TIMES The incident is being investigated by detectives SEATTLEPI Police have cordoned off the scene and the gang unit is investigating The shots were fired in an area that protesters had passed through during the night but Seattle police police Assistant Chief Robert Merner said the incident did not relate to the rally. He said \"It's not related to the protest at all. It appears to be some type of personal argument.\" SEATTLE TIMES The gunman is still on the run A statement from the police department added: \"Detectives are on scene and have closed several streets in the area as police collect evidence and search for witnesses. \"Police are still gathering information about the suspect, who is believed to be an adult male.\" 3/Pine shooting NOT believed to be connected to earlier demonstration at Westlake. Investigation ongoing. -- Seattle Police Dept. (@SeattlePD) November 10, 2016 ",
+  "url": "http://www.express.co.uk/news/world/730721/Five-gunned-Seattle-shot-anti-Donald-Trump-US-President-Washington-victory-Republican",
+  "publisher": "express",
+  "originalFilename": "express-4",
+  "category": "seattle shooting",
+  "dId": "dccb7b8de2a86a406c6a42ad1aab22701680c111206a66c6a64ee036"
+}

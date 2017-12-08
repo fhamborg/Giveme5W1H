@@ -29,7 +29,7 @@ if __name__ == '__main__':
     #
     # Switch here between the predefined datasets or local for the local folder
     #
-    basePath = dataset_helper['google_news']
+    basePath = dataset_helper['gold_standard']
     #
     #
     #

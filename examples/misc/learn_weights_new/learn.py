@@ -99,6 +99,9 @@ class Learn(object):
         self._lock.release()
         return score / len(syn_a) + len(syn_b)
 
+    def cmp_date_timex(self, annotation, candidate):
+        pass
+
     def cmp_date(self, annotation, candidate):
         """
         Compare the retrieved answer with the annotation by calculating the time difference in seconds.

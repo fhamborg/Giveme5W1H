@@ -334,7 +334,7 @@ class EnvironmentExtractor(AbsExtractor):
 
             normalized_duration = ((math.log(candidate[2].get_duration().total_seconds()) - EnvironmentExtractor.a_min)
                                     / EnvironmentExtractor.a_min_minus_max)
-            # TODO should be logarithmic
+
             score += weights[4] * (1 - normalized_duration)
 
             if score > 0:

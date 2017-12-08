@@ -34,18 +34,18 @@ this script adds the exact event date to each annotated when phrase under "parse
 Adjust them afterwards by hand
 """
 event_dates = {
-    "f1": date(2017, 11, 13),
-    "trump and obama": date(2017, 11, 10),
-    "seattle shooting": date(2017, 11, 9),
-    "gaga protests": date(2017, 11, 9),
+    "f1": date(2016, 11, 13),
+    "trump and obama": date(2016, 11, 10),
+    "seattle shooting": date(2016, 11, 9),
+    "gaga protests": date(2016, 11, 9),
     "cubs win championship": date(2016, 11, 2),
     "china well": date(2016, 11, 12),
     "clinton blames comey": date(2016, 11, 12),
-    "clinton clear": date(2017, 11, 7),
+    "clinton clear": date(2016, 11, 7),
     "consulate attack": date(2016, 11, 10),
     "toberone-gate": date(2016, 11, 8),
-    "tram": date(2017, 11, 9),
-    "tram victims": date(2017, 11, 12)
+    "tram": date(2016, 11, 9),
+    "tram victims": date(2016, 11, 12)
 }
 
 # make it json-able

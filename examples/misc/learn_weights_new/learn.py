@@ -3,6 +3,7 @@ import logging
 import time
 from itertools import product
 
+import math
 from dateutil.relativedelta import relativedelta as rd
 from geopy.distance import vincenty
 from nltk import word_tokenize
@@ -12,13 +13,25 @@ from extractor.extractor import FiveWExtractor
 from extractor.root import path
 from extractor.tools.file.handler import Handler
 from misc.learn_weights_new.metrics.normalized_google_distance import NormalizedGoogleDistance
-
+import dateutil.parser
 from tools.cache_manager import CacheManager
 
 fmt = '{0.days} days {0.hours} hours {0.minutes} minutes {0.seconds} seconds'
 
 
 class Learn(object):
+    one_minute_in_s = 60
+    one_hour_in_s = one_minute_in_s * 60
+    one_day_in_s = one_hour_in_s * 24
+    two_days_in_s = one_day_in_s * 2
+    one_month_in_s = one_day_in_s * 30
+
+    # used for normalisation of time
+    a_min = math.log(one_minute_in_s)
+    a_max = math.log(one_month_in_s)  # a month
+    a_min_minus_max = (a_max - a_min)
+
+
     def __init__(self, lock, input_path, preprocessed_path, extractors, queue, combined_scorer=None, ):
 
         # load docs an extractor
@@ -44,12 +57,14 @@ class Learn(object):
         self._log = logging.getLogger('GiveMe5W')
         self._ngd = NormalizedGoogleDistance()
 
-    def cmp_text_ngd(self, annotation, candidate):
+    def cmp_text_ngd(self, annotation, candidate, entire_annotation):
         return self._ngd.get_distance(annotation, candidate)
 
-    def cmp_text_word_net(self, annotation, candidate):
+    def cmp_text_word_net(self, annotation, candidate, entire_annotation):
         """
         Compare the retrieved answer with the annotation using WordNet path distance.
+
+        THIS IS VERY SLOW, RESULTS ARE NOT CACHED
 
         :param annotation: The correct Answer
         :type annotation: String
@@ -99,10 +114,36 @@ class Learn(object):
         self._lock.release()
         return score / len(syn_a) + len(syn_b)
 
-    def cmp_date_timex(self, annotation, candidate):
-        pass
+    def cmp_date_timex(self, annotation, candidate, entire_annotation):
 
-    def cmp_date(self, annotation, candidate):
+
+
+        if candidate:
+            if len(entire_annotation) > 3:
+                parsed = dateutil.parser.parse(entire_annotation[3]['parsed'])
+            else:
+                # there is no way to compare these dates without a proper date annotation
+                return -2
+
+
+            start = dateutil.parser.parse(candidate['start_date'])
+            end = dateutil.parser.parse(candidate['end_date'])
+
+            timespan = end - start
+            timespan_in_sec = timespan.total_seconds()
+
+            center_timestamp = start + datetime.timedelta(seconds=(timespan_in_sec/2))
+
+            distance_of_anno_and_extracted = abs((center_timestamp - parsed).total_seconds())
+
+            normalized_duration = (math.log(distance_of_anno_and_extracted) - Learn.a_min) / Learn.a_min_minus_max
+            return normalized_duration
+        else:
+            return -1
+
+
+
+    def cmp_date(self, annotation, candidate, entire_annotation):
         """
         Compare the retrieved answer with the annotation by calculating the time difference in seconds.
 
@@ -163,7 +204,7 @@ class Learn(object):
 
         return location
 
-    def cmp_location(self, annotation, candidate):
+    def cmp_location(self, annotation, candidate, entire_annotation):
         """
         Compare the retrieved answer with the annotation using geocoding and comparing the real world distance.
 
@@ -230,7 +271,7 @@ class Learn(object):
                 if len(annotation) > 2:
                     topAnnotation = annotation[2]
                     if topAnnotation:
-                        tmp_score = scoring(topAnnotation, answer)
+                        tmp_score = scoring(topAnnotation, answer, annotation)
                         score = min(tmp_score, score)
         result[question] = (question, weights, score)
 
@@ -341,8 +382,8 @@ class Learn(object):
                         used_weights = extractor.weights
                         question = 'when'
                         if question in answers and len(answers[question]) > 0:
-                            top_answer = answers[question][0].get_parts_as_text()
-                            self._cmp_helper(self.cmp_date,question, top_answer, annotation, used_weights, result)
+                            top_answer = answers[question][0].get_enhancement('timex')
+                            self._cmp_helper(self.cmp_date_timex,question, top_answer, annotation, used_weights, result)
 
                         question = 'where'
                         if question in answers and len(answers[question]) > 0:

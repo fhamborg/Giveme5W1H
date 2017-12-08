@@ -14,61 +14,25 @@
             [
               {
                 "nlpToken": {
-                  "index": 11,
-                  "word": "derailed",
-                  "originalText": "derailed",
-                  "lemma": "derail",
-                  "characterOffsetBegin": 150,
-                  "characterOffsetEnd": 158,
-                  "pos": "VBD",
-                  "ner": "O",
-                  "speaker": "PER0",
-                  "before": " ",
-                  "after": " "
-                }
-              },
-              "VBD"
-            ],
-            [
-              {
-                "nlpToken": {
-                  "index": 12,
-                  "word": "and",
-                  "originalText": "and",
-                  "lemma": "and",
-                  "characterOffsetBegin": 159,
-                  "characterOffsetEnd": 162,
-                  "pos": "CC",
-                  "ner": "O",
-                  "speaker": "PER0",
-                  "before": " ",
-                  "after": " "
-                }
-              },
-              "CC"
-            ],
-            [
-              {
-                "nlpToken": {
-                  "index": 13,
+                  "index": 45,
                   "word": "overturned",
                   "originalText": "overturned",
                   "lemma": "overturn",
-                  "characterOffsetBegin": 163,
-                  "characterOffsetEnd": 173,
-                  "pos": "VBD",
+                  "characterOffsetBegin": 2454,
+                  "characterOffsetEnd": 2464,
+                  "pos": "VBN",
                   "ner": "O",
-                  "speaker": "PER0",
+                  "speaker": "130",
                   "before": " ",
                   "after": " "
                 }
               },
-              "VBD"
+              "VBN"
             ]
           ],
-          "score": 1.626724339490297,
-          "text": "derailed and overturned",
-          "nlpIndexSentence": 1
+          "score": 1.0,
+          "text": "overturned",
+          "nlpIndexSentence": 15
         }
       ]
     },
@@ -171,6 +135,7 @@
       "annotated": [
         {
           "coderPhraseCount": 3,
+          "parsed": "2016-11-09",
           "text": "at around 6am"
         }
       ],
@@ -181,123 +146,37 @@
             [
               {
                 "nlpToken": {
-                  "index": 24,
+                  "index": 55,
                   "word": "6am",
                   "originalText": "6am",
                   "lemma": "6am",
-                  "characterOffsetBegin": 316,
-                  "characterOffsetEnd": 319,
+                  "characterOffsetBegin": 1456,
+                  "characterOffsetEnd": 1459,
                   "pos": "JJ",
                   "ner": "TIME",
-                  "normalizedNER": "T06:00",
+                  "normalizedNER": "2016-11-09T06:00",
                   "speaker": "PER0",
                   "before": " ",
-                  "after": "",
-                  "timex": {
-                    "tid": "t1",
-                    "type": "TIME",
-                    "value": "T06:00"
-                  }
-                },
-                "heideltime": [
-                  {
-                    "@tid": "t1",
-                    "@type": "TIME",
-                    "@value": "XXXX-XX-XXT06:00",
-                    "@mod": "APPROX",
-                    "#text": "around 6am.",
-                    "characterOffset": [
-                      309,
-                      320
-                    ]
-                  },
-                  {
-                    "@tid": "t2",
-                    "@type": "TIME",
-                    "@value": "XXXX-XX-XXT06:00",
-                    "@mod": "APPROX",
-                    "#text": "around 6am.",
-                    "characterOffset": [
-                      309,
-                      320
-                    ]
-                  },
-                  {
-                    "@tid": "t3",
-                    "@type": "TIME",
-                    "@value": "XXXX-XX-XXT06:00",
-                    "#text": "6am",
-                    "characterOffset": [
-                      316,
-                      319
-                    ]
-                  }
-                ]
-              },
-              "JJ"
-            ],
-            [
-              {
-                "nlpToken": {
-                  "index": 25,
-                  "word": ".",
-                  "originalText": ".",
-                  "lemma": ".",
-                  "characterOffsetBegin": 319,
-                  "characterOffsetEnd": 320,
-                  "pos": ".",
-                  "ner": "TIME",
-                  "normalizedNER": "T06:00",
-                  "speaker": "PER0",
-                  "before": "",
                   "after": " ",
                   "timex": {
-                    "tid": "t1",
+                    "tid": "t3",
                     "type": "TIME",
-                    "value": "T06:00"
+                    "value": "2016-11-09T06:00"
                   }
-                },
-                "heideltime": [
-                  {
-                    "@tid": "t1",
-                    "@type": "TIME",
-                    "@value": "XXXX-XX-XXT06:00",
-                    "@mod": "APPROX",
-                    "#text": "around 6am.",
-                    "characterOffset": [
-                      309,
-                      320
-                    ]
-                  },
-                  {
-                    "@tid": "t2",
-                    "@type": "TIME",
-                    "@value": "XXXX-XX-XXT06:00",
-                    "@mod": "APPROX",
-                    "#text": "around 6am.",
-                    "characterOffset": [
-                      309,
-                      320
-                    ]
-                  },
-                  {
-                    "@tid": "t3",
-                    "@type": "TIME",
-                    "@value": "XXXX-XX-XXT06:00",
-                    "#text": "6am",
-                    "characterOffset": [
-                      316,
-                      319
-                    ]
-                  }
-                ]
+                }
               },
-              "."
+              "JJ"
             ]
           ],
-          "score": 0.8543371522094926,
-          "text": "6am .",
-          "nlpIndexSentence": 2
+          "score": 0.7064126439270081,
+          "text": "6am",
+          "enhancement": {
+            "timex": {
+              "start_date": "2016-11-09T06:00:00",
+              "end_date": "2016-11-09T06:00:59"
+            }
+          },
+          "nlpIndexSentence": 11
         }
       ]
     },
@@ -330,65 +209,7 @@
                   "speaker": "PER0",
                   "before": "",
                   "after": " "
-                },
-                "aida": [
-                  {
-                    "mention": {
-                      "allEntities": [
-                        {
-                          "kbIdentifier": "YAGO:Croydon",
-                          "disambiguationScore": "0.23558"
-                        }
-                      ],
-                      "offset": 0,
-                      "name": "Croydon",
-                      "length": 7,
-                      "bestEntity": {
-                        "kbIdentifier": "YAGO:Croydon",
-                        "disambiguationScore": "0.23558"
-                      }
-                    },
-                    "bestEntityMetadata": {
-                      "knowledgebase": "YAGO",
-                      "depictionurl": "http://upload.wikimedia.org/wikipedia/commons/0/08/Croydon_Town_Hall_-_geograph.org.uk_-_432983.jpg",
-                      "depictionthumbnailurl": "http://upload.wikimedia.org/wikipedia/commons/thumbCroydon_Town_Hall_-_geograph.org.uk_-_432983.jpg/200px-Croydon_Town_Hall_-_geograph.org.uk_-_432983.jpg",
-                      "importance": 0.0007512499244432548,
-                      "entityId": "Croydon",
-                      "type": [
-                        "YAGO_wordnet_district_108552138",
-                        "YAGO_yagoPermanentlyLocatedEntity",
-                        "YAGO_yagoLegalActorGeo",
-                        "YAGO_wordnet_medium_106254669",
-                        "YAGO_wordnet_urban_area_108675967",
-                        "YAGO_wikicategory_Market_towns_in_Surrey",
-                        "YAGO_wordnet_municipality_108626283",
-                        "YAGO_wordnet_instrumentality_103575240",
-                        "YAGO_wordnet_market_town_108672073",
-                        "YAGO_wikicategory_locations",
-                        "YAGO_wikicategory_Districts_of_London_listed_in_the_Domesday_Book",
-                        "YAGO_wordnet_region_108630985",
-                        "YAGO_yagoGeoEntity",
-                        "YAGO_wordnet_physical_entity_100001930",
-                        "YAGO_wikicategory_Districts_of_Croydon",
-                        "YAGO_wikicategory_Post_towns_in_the_CR_postcode_area",
-                        "YAGO_wordnet_entity_100001740",
-                        "YAGO_wordnet_object_100002684",
-                        "YAGO_wordnet_area_108497294",
-                        "YAGO_wordnet_geographical_area_108574314",
-                        "YAGO_wikicategory_Areas_of_London",
-                        "YAGO_wikicategory_Market_towns_in_London",
-                        "YAGO_wordnet_location_100027167",
-                        "YAGO_wordnet_whole_100003553",
-                        "YAGO_wikicategory_Media_and_communications_in_Croydon",
-                        "YAGO_wordnet_artifact_100021939",
-                        "YAGO_wordnet_administrative_district_108491826",
-                        "YAGO_wordnet_town_108665504"
-                      ],
-                      "readableRepr": "Croydon",
-                      "url": "http://en.wikipedia.org/wiki/Croydon"
-                    }
-                  }
-                ]
+                }
               },
               "NNP"
             ]
@@ -448,65 +269,7 @@
                   "speaker": "PER0",
                   "before": " ",
                   "after": " "
-                },
-                "aida": [
-                  {
-                    "mention": {
-                      "allEntities": [
-                        {
-                          "kbIdentifier": "YAGO:Croydon",
-                          "disambiguationScore": "0.23568"
-                        }
-                      ],
-                      "offset": 3163,
-                      "name": "Croydon",
-                      "length": 7,
-                      "bestEntity": {
-                        "kbIdentifier": "YAGO:Croydon",
-                        "disambiguationScore": "0.23568"
-                      }
-                    },
-                    "bestEntityMetadata": {
-                      "knowledgebase": "YAGO",
-                      "depictionurl": "http://upload.wikimedia.org/wikipedia/commons/0/08/Croydon_Town_Hall_-_geograph.org.uk_-_432983.jpg",
-                      "depictionthumbnailurl": "http://upload.wikimedia.org/wikipedia/commons/thumbCroydon_Town_Hall_-_geograph.org.uk_-_432983.jpg/200px-Croydon_Town_Hall_-_geograph.org.uk_-_432983.jpg",
-                      "importance": 0.0007512499244432548,
-                      "entityId": "Croydon",
-                      "type": [
-                        "YAGO_wordnet_district_108552138",
-                        "YAGO_yagoPermanentlyLocatedEntity",
-                        "YAGO_yagoLegalActorGeo",
-                        "YAGO_wordnet_medium_106254669",
-                        "YAGO_wordnet_urban_area_108675967",
-                        "YAGO_wikicategory_Market_towns_in_Surrey",
-                        "YAGO_wordnet_municipality_108626283",
-                        "YAGO_wordnet_instrumentality_103575240",
-                        "YAGO_wordnet_market_town_108672073",
-                        "YAGO_wikicategory_locations",
-                        "YAGO_wikicategory_Districts_of_London_listed_in_the_Domesday_Book",
-                        "YAGO_wordnet_region_108630985",
-                        "YAGO_yagoGeoEntity",
-                        "YAGO_wordnet_physical_entity_100001930",
-                        "YAGO_wikicategory_Districts_of_Croydon",
-                        "YAGO_wikicategory_Post_towns_in_the_CR_postcode_area",
-                        "YAGO_wordnet_entity_100001740",
-                        "YAGO_wordnet_object_100002684",
-                        "YAGO_wordnet_area_108497294",
-                        "YAGO_wordnet_geographical_area_108574314",
-                        "YAGO_wikicategory_Areas_of_London",
-                        "YAGO_wikicategory_Market_towns_in_London",
-                        "YAGO_wordnet_location_100027167",
-                        "YAGO_wordnet_whole_100003553",
-                        "YAGO_wikicategory_Media_and_communications_in_Croydon",
-                        "YAGO_wordnet_artifact_100021939",
-                        "YAGO_wordnet_administrative_district_108491826",
-                        "YAGO_wordnet_town_108665504"
-                      ],
-                      "readableRepr": "Croydon",
-                      "url": "http://en.wikipedia.org/wiki/Croydon"
-                    }
-                  }
-                ]
+                }
               },
               "NNP"
             ],
@@ -593,14 +356,14 @@
                   "characterOffsetEnd": 3197,
                   "pos": "NNP",
                   "ner": "DATE",
-                  "normalizedNER": "XXXX-11-09",
+                  "normalizedNER": "2016-11-09",
                   "speaker": "PER0",
                   "before": " ",
                   "after": " ",
                   "timex": {
                     "tid": "t8",
                     "type": "DATE",
-                    "value": "XXXX-11-09"
+                    "value": "2016-11-09"
                   }
                 }
               },
@@ -617,14 +380,14 @@
                   "characterOffsetEnd": 3199,
                   "pos": "CD",
                   "ner": "DATE",
-                  "normalizedNER": "XXXX-11-09",
+                  "normalizedNER": "2016-11-09",
                   "speaker": "PER0",
                   "before": " ",
                   "after": "",
                   "timex": {
                     "tid": "t8",
                     "type": "DATE",
-                    "value": "XXXX-11-09"
+                    "value": "2016-11-09"
                   }
                 }
               },
@@ -737,279 +500,10 @@
                 }
               },
               "PRP"
-            ],
-            [
-              {
-                "nlpToken": {
-                  "index": 11,
-                  "word": "came",
-                  "originalText": "came",
-                  "lemma": "come",
-                  "characterOffsetBegin": 244,
-                  "characterOffsetEnd": 248,
-                  "pos": "VBD",
-                  "ner": "O",
-                  "speaker": "PER0",
-                  "before": " ",
-                  "after": " "
-                }
-              },
-              "VBD"
-            ],
-            [
-              {
-                "nlpToken": {
-                  "index": 12,
-                  "word": "off",
-                  "originalText": "off",
-                  "lemma": "off",
-                  "characterOffsetBegin": 249,
-                  "characterOffsetEnd": 252,
-                  "pos": "RP",
-                  "ner": "O",
-                  "speaker": "PER0",
-                  "before": " ",
-                  "after": " "
-                }
-              },
-              "RP"
-            ],
-            [
-              {
-                "nlpToken": {
-                  "index": 13,
-                  "word": "the",
-                  "originalText": "the",
-                  "lemma": "the",
-                  "characterOffsetBegin": 253,
-                  "characterOffsetEnd": 256,
-                  "pos": "DT",
-                  "ner": "O",
-                  "speaker": "PER0",
-                  "before": " ",
-                  "after": " "
-                }
-              },
-              "DT"
-            ],
-            [
-              {
-                "nlpToken": {
-                  "index": 14,
-                  "word": "tracks",
-                  "originalText": "tracks",
-                  "lemma": "track",
-                  "characterOffsetBegin": 257,
-                  "characterOffsetEnd": 263,
-                  "pos": "NNS",
-                  "ner": "O",
-                  "speaker": "PER0",
-                  "before": " ",
-                  "after": " "
-                }
-              },
-              "NNS"
-            ],
-            [
-              {
-                "nlpToken": {
-                  "index": 15,
-                  "word": "in",
-                  "originalText": "in",
-                  "lemma": "in",
-                  "characterOffsetBegin": 264,
-                  "characterOffsetEnd": 266,
-                  "pos": "IN",
-                  "ner": "O",
-                  "speaker": "PER0",
-                  "before": " ",
-                  "after": " "
-                }
-              },
-              "IN"
-            ],
-            [
-              {
-                "nlpToken": {
-                  "index": 16,
-                  "word": "a",
-                  "originalText": "a",
-                  "lemma": "a",
-                  "characterOffsetBegin": 267,
-                  "characterOffsetEnd": 268,
-                  "pos": "DT",
-                  "ner": "O",
-                  "speaker": "PER0",
-                  "before": " ",
-                  "after": " "
-                }
-              },
-              "DT"
-            ],
-            [
-              {
-                "nlpToken": {
-                  "index": 17,
-                  "word": "tunnel",
-                  "originalText": "tunnel",
-                  "lemma": "tunnel",
-                  "characterOffsetBegin": 269,
-                  "characterOffsetEnd": 275,
-                  "pos": "NN",
-                  "ner": "O",
-                  "speaker": "PER0",
-                  "before": " ",
-                  "after": " "
-                }
-              },
-              "NN"
-            ],
-            [
-              {
-                "nlpToken": {
-                  "index": 18,
-                  "word": "near",
-                  "originalText": "near",
-                  "lemma": "near",
-                  "characterOffsetBegin": 276,
-                  "characterOffsetEnd": 280,
-                  "pos": "IN",
-                  "ner": "O",
-                  "speaker": "PER0",
-                  "before": " ",
-                  "after": " "
-                }
-              },
-              "IN"
-            ],
-            [
-              {
-                "nlpToken": {
-                  "index": 19,
-                  "word": "Sandlilands",
-                  "originalText": "Sandlilands",
-                  "lemma": "Sandlilands",
-                  "characterOffsetBegin": 281,
-                  "characterOffsetEnd": 292,
-                  "pos": "NNPS",
-                  "ner": "LOCATION",
-                  "speaker": "PER0",
-                  "before": " ",
-                  "after": " "
-                },
-                "aida": [
-                  {
-                    "mention": {
-                      "allEntities": [],
-                      "offset": 281,
-                      "name": "Sandlilands",
-                      "length": 11
-                    },
-                    "bestEntityMetadata": null
-                  }
-                ]
-              },
-              "NNPS"
-            ],
-            [
-              {
-                "nlpToken": {
-                  "index": 20,
-                  "word": "tram",
-                  "originalText": "tram",
-                  "lemma": "tram",
-                  "characterOffsetBegin": 293,
-                  "characterOffsetEnd": 297,
-                  "pos": "NN",
-                  "ner": "O",
-                  "speaker": "PER0",
-                  "before": " ",
-                  "after": " "
-                }
-              },
-              "NN"
-            ],
-            [
-              {
-                "nlpToken": {
-                  "index": 21,
-                  "word": "station",
-                  "originalText": "station",
-                  "lemma": "station",
-                  "characterOffsetBegin": 298,
-                  "characterOffsetEnd": 305,
-                  "pos": "NN",
-                  "ner": "O",
-                  "speaker": "PER0",
-                  "before": " ",
-                  "after": " "
-                }
-              },
-              "NN"
-            ],
-            [
-              {
-                "nlpToken": {
-                  "index": 22,
-                  "word": "at",
-                  "originalText": "at",
-                  "lemma": "at",
-                  "characterOffsetBegin": 306,
-                  "characterOffsetEnd": 308,
-                  "pos": "IN",
-                  "ner": "O",
-                  "speaker": "PER0",
-                  "before": " ",
-                  "after": " "
-                }
-              },
-              "IN"
-            ],
-            [
-              {
-                "nlpToken": {
-                  "index": 23,
-                  "word": "around",
-                  "originalText": "around",
-                  "lemma": "around",
-                  "characterOffsetBegin": 309,
-                  "characterOffsetEnd": 315,
-                  "pos": "IN",
-                  "ner": "O",
-                  "speaker": "PER0",
-                  "before": " ",
-                  "after": " "
-                }
-              },
-              "IN"
-            ],
-            [
-              {
-                "nlpToken": {
-                  "index": 24,
-                  "word": "6am",
-                  "originalText": "6am",
-                  "lemma": "6am",
-                  "characterOffsetBegin": 316,
-                  "characterOffsetEnd": 319,
-                  "pos": "JJ",
-                  "ner": "TIME",
-                  "normalizedNER": "T06:00",
-                  "speaker": "PER0",
-                  "before": " ",
-                  "after": "",
-                  "timex": {
-                    "tid": "t1",
-                    "type": "TIME",
-                    "value": "T06:00"
-                  }
-                }
-              },
-              "JJ"
             ]
           ],
           "score": 0.42006079027355625,
-          "text": "it came off the tracks in a tunnel near Sandlilands tram station at around 6am",
+          "text": "it",
           "nlpIndexSentence": 2
         }
       ]

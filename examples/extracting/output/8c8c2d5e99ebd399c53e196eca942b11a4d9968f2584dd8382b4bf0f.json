@@ -16,7 +16,34 @@
           "text": "on a grounder to third"
         }
       ],
-      "label": "how"
+      "label": "how",
+      "extracted": [
+        {
+          "parts": [
+            [
+              {
+                "nlpToken": {
+                  "index": 21,
+                  "word": "scored",
+                  "originalText": "scored",
+                  "lemma": "score",
+                  "characterOffsetBegin": 695,
+                  "characterOffsetEnd": 701,
+                  "pos": "VBD",
+                  "ner": "O",
+                  "speaker": "PER0",
+                  "before": " ",
+                  "after": " "
+                }
+              },
+              "VBD"
+            ]
+          ],
+          "score": 1.0,
+          "text": "scored",
+          "nlpIndexSentence": 5
+        }
+      ]
     },
     "what": {
       "annotated": [
@@ -25,7 +52,106 @@
           "text": "epic World Series finale"
         }
       ],
-      "label": "what"
+      "label": "what",
+      "extracted": [
+        {
+          "parts": [
+            [
+              {
+                "nlpToken": {
+                  "index": 15,
+                  "word": "celebrate",
+                  "originalText": "celebrate",
+                  "lemma": "celebrate",
+                  "characterOffsetBegin": 158,
+                  "characterOffsetEnd": 167,
+                  "pos": "VB",
+                  "ner": "O",
+                  "speaker": "PER0",
+                  "before": " ",
+                  "after": " "
+                }
+              },
+              "VB"
+            ],
+            [
+              {
+                "nlpToken": {
+                  "index": 16,
+                  "word": "their",
+                  "originalText": "their",
+                  "lemma": "they",
+                  "characterOffsetBegin": 168,
+                  "characterOffsetEnd": 173,
+                  "pos": "PRP$",
+                  "ner": "O",
+                  "speaker": "PER0",
+                  "before": " ",
+                  "after": " "
+                }
+              },
+              "PRP$"
+            ],
+            [
+              {
+                "nlpToken": {
+                  "index": 17,
+                  "word": "World",
+                  "originalText": "World",
+                  "lemma": "World",
+                  "characterOffsetBegin": 174,
+                  "characterOffsetEnd": 179,
+                  "pos": "NNP",
+                  "ner": "MISC",
+                  "speaker": "PER0",
+                  "before": " ",
+                  "after": " "
+                }
+              },
+              "NNP"
+            ],
+            [
+              {
+                "nlpToken": {
+                  "index": 18,
+                  "word": "Series",
+                  "originalText": "Series",
+                  "lemma": "Series",
+                  "characterOffsetBegin": 180,
+                  "characterOffsetEnd": 186,
+                  "pos": "NNP",
+                  "ner": "MISC",
+                  "speaker": "PER0",
+                  "before": " ",
+                  "after": " "
+                }
+              },
+              "NNP"
+            ],
+            [
+              {
+                "nlpToken": {
+                  "index": 19,
+                  "word": "title",
+                  "originalText": "title",
+                  "lemma": "title",
+                  "characterOffsetBegin": 187,
+                  "characterOffsetEnd": 192,
+                  "pos": "NN",
+                  "ner": "O",
+                  "speaker": "PER0",
+                  "before": " ",
+                  "after": " "
+                }
+              },
+              "NN"
+            ]
+          ],
+          "score": 1.0,
+          "text": "celebrate their World Series title",
+          "nlpIndexSentence": 2
+        }
+      ]
     },
     "when": {
       "annotated": [
@@ -34,7 +160,94 @@
           "text": "early minutes of Thursday morning"
         }
       ],
-      "label": "when"
+      "label": "when",
+      "extracted": [
+        {
+          "parts": [
+            [
+              {
+                "nlpToken": {
+                  "index": 20,
+                  "word": "108",
+                  "originalText": "108",
+                  "lemma": "108",
+                  "characterOffsetBegin": 5470,
+                  "characterOffsetEnd": 5473,
+                  "pos": "CD",
+                  "ner": "TIME",
+                  "normalizedNER": "1908-11-03T08:15",
+                  "speaker": "PER0",
+                  "before": " ",
+                  "after": " ",
+                  "timex": {
+                    "tid": "t16",
+                    "type": "TIME",
+                    "value": "1908-11-03T08:15"
+                  }
+                }
+              },
+              "CD"
+            ],
+            [
+              {
+                "nlpToken": {
+                  "index": 21,
+                  "word": "years",
+                  "originalText": "years",
+                  "lemma": "year",
+                  "characterOffsetBegin": 5474,
+                  "characterOffsetEnd": 5479,
+                  "pos": "NNS",
+                  "ner": "TIME",
+                  "normalizedNER": "1908-11-03T08:15",
+                  "speaker": "PER0",
+                  "before": " ",
+                  "after": " ",
+                  "timex": {
+                    "tid": "t16",
+                    "type": "TIME",
+                    "value": "1908-11-03T08:15"
+                  }
+                }
+              },
+              "NNS"
+            ],
+            [
+              {
+                "nlpToken": {
+                  "index": 22,
+                  "word": "ago",
+                  "originalText": "ago",
+                  "lemma": "ago",
+                  "characterOffsetBegin": 5480,
+                  "characterOffsetEnd": 5483,
+                  "pos": "RB",
+                  "ner": "TIME",
+                  "normalizedNER": "1908-11-03T08:15",
+                  "speaker": "PER0",
+                  "before": " ",
+                  "after": "",
+                  "timex": {
+                    "tid": "t16",
+                    "type": "TIME",
+                    "value": "1908-11-03T08:15"
+                  }
+                }
+              },
+              "RB"
+            ]
+          ],
+          "score": 0.7045139556024447,
+          "text": "108 years ago",
+          "enhancement": {
+            "timex": {
+              "start_date": "1908-11-03T08:15:00",
+              "end_date": "1908-11-03T08:15:59"
+            }
+          },
+          "nlpIndexSentence": 45
+        }
+      ]
     },
     "where": {
       "annotated": [
@@ -43,7 +256,55 @@
           "text": "CLEVELAND"
         }
       ],
-      "label": "where"
+      "label": "where",
+      "extracted": [
+        {
+          "parts": [
+            [
+              {
+                "nlpToken": {
+                  "index": 1,
+                  "word": "CLEVELAND",
+                  "originalText": "CLEVELAND",
+                  "lemma": "CLEVELAND",
+                  "characterOffsetBegin": 55,
+                  "characterOffsetEnd": 64,
+                  "pos": "NNP",
+                  "ner": "LOCATION",
+                  "speaker": "PER0",
+                  "before": " ",
+                  "after": " "
+                }
+              },
+              "NNP"
+            ]
+          ],
+          "score": 1.0,
+          "text": "CLEVELAND",
+          "enhancement": {
+            "openstreetmap_nominatim": {
+              "place_id": "177736691",
+              "licence": "Data \u00a9 OpenStreetMap contributors, ODbL 1.0. http://www.openstreetmap.org/copyright",
+              "osm_type": "relation",
+              "osm_id": "182130",
+              "boundingbox": [
+                41.390628,
+                41.604436,
+                -81.8790937,
+                -81.532744
+              ],
+              "lat": "41.5051613",
+              "lon": "-81.6934446",
+              "display_name": "Cleveland, Cuyahoga County, Ohio, United States of America",
+              "class": "place",
+              "type": "city",
+              "importance": 0.2621855967315,
+              "icon": "https://nominatim.openstreetmap.org/images/mapicons/poi_place_city.p.20.png"
+            }
+          },
+          "nlpIndexSentence": 1
+        }
+      ]
     },
     "who": {
       "annotated": [
@@ -52,7 +313,52 @@
           "text": "Cubs"
         }
       ],
-      "label": "who"
+      "label": "who",
+      "extracted": [
+        {
+          "parts": [
+            [
+              {
+                "nlpToken": {
+                  "index": 13,
+                  "word": "the",
+                  "originalText": "the",
+                  "lemma": "the",
+                  "characterOffsetBegin": 149,
+                  "characterOffsetEnd": 152,
+                  "pos": "DT",
+                  "ner": "O",
+                  "speaker": "PER0",
+                  "before": " ",
+                  "after": " "
+                }
+              },
+              "DT"
+            ],
+            [
+              {
+                "nlpToken": {
+                  "index": 14,
+                  "word": "Cubs",
+                  "originalText": "Cubs",
+                  "lemma": "Cubs",
+                  "characterOffsetBegin": 153,
+                  "characterOffsetEnd": 157,
+                  "pos": "NNP",
+                  "ner": "O",
+                  "speaker": "PER0",
+                  "before": " ",
+                  "after": " "
+                }
+              },
+              "NNP"
+            ]
+          ],
+          "score": 1.0,
+          "text": "the Cubs",
+          "nlpIndexSentence": 2
+        }
+      ]
     },
     "why": {
       "annotated": [
@@ -68,7 +374,34 @@
           "coderPhraseCount": 1
         }
       ],
-      "label": "why"
+      "label": "why",
+      "extracted": [
+        {
+          "parts": [
+            [
+              {
+                "nlpToken": {
+                  "index": 1,
+                  "word": "There",
+                  "originalText": "There",
+                  "lemma": "there",
+                  "characterOffsetBegin": 85,
+                  "characterOffsetEnd": 90,
+                  "pos": "EX",
+                  "ner": "O",
+                  "speaker": "PER0",
+                  "before": "\n\n\n\n",
+                  "after": " "
+                }
+              },
+              "EX"
+            ]
+          ],
+          "score": 0.42427035330261137,
+          "text": "There",
+          "nlpIndexSentence": 2
+        }
+      ]
     }
   },
   "mimeType": "text/xml",

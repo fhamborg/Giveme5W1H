@@ -39,7 +39,7 @@
               "JJ"
             ]
           ],
-          "score": 1.600199900049975,
+          "score": 1.0,
           "text": "serious"
         }
       ]
@@ -137,6 +137,7 @@
       "annotated": [
         {
           "coderPhraseCount": 2,
+          "parsed": "2016-11-13",
           "text": "Brazilian Grand Prix"
         }
       ],
@@ -147,43 +148,37 @@
             [
               {
                 "nlpToken": {
-                  "index": 41,
-                  "word": "2015",
-                  "originalText": "2015",
-                  "lemma": "2015",
-                  "characterOffsetBegin": 2886,
-                  "characterOffsetEnd": 2890,
-                  "pos": "CD",
+                  "index": 45,
+                  "word": "Sunday",
+                  "originalText": "Sunday",
+                  "lemma": "Sunday",
+                  "characterOffsetBegin": 5588,
+                  "characterOffsetEnd": 5594,
+                  "pos": "NNP",
                   "ner": "DATE",
-                  "normalizedNER": "2015",
+                  "normalizedNER": "2016-11-13",
                   "speaker": "PER0",
                   "before": " ",
-                  "after": " ",
+                  "after": "",
                   "timex": {
-                    "tid": "t5",
+                    "tid": "t11",
                     "type": "DATE",
-                    "value": "2015"
+                    "value": "2016-11-13"
                   }
-                },
-                "heideltime": [
-                  {
-                    "@tid": "t4",
-                    "@type": "DATE",
-                    "@value": "2015",
-                    "#text": "2015",
-                    "characterOffset": [
-                      2886,
-                      2890
-                    ]
-                  }
-                ]
+                }
               },
-              "CD"
+              "NNP"
             ]
           ],
-          "score": 0.7350427350427351,
-          "text": "2015",
-          "nlpIndexSentence": 11
+          "score": 0.6785781746905274,
+          "text": "Sunday",
+          "enhancement": {
+            "timex": {
+              "start_date": "2016-11-13T00:00:00",
+              "end_date": "2016-11-13T23:59:59"
+            }
+          },
+          "nlpIndexSentence": 28
         }
       ]
     },
@@ -220,63 +215,7 @@
                   "speaker": "PER0",
                   "before": " ",
                   "after": " "
-                },
-                "aida": [
-                  {
-                    "mention": {
-                      "allEntities": [
-                        {
-                          "kbIdentifier": "YAGO:Brazil",
-                          "disambiguationScore": "0.54364"
-                        }
-                      ],
-                      "offset": 1031,
-                      "name": "Brazil",
-                      "length": 6,
-                      "bestEntity": {
-                        "kbIdentifier": "YAGO:Brazil",
-                        "disambiguationScore": "0.54364"
-                      }
-                    },
-                    "bestEntityMetadata": {
-                      "knowledgebase": "YAGO",
-                      "depictionurl": "http://upload.wikimedia.org/wikipedia/en/0/05/Flag_of_Brazil.svg",
-                      "depictionthumbnailurl": "http://upload.wikimedia.org/wikipedia/en/thumbFlag_of_Brazil.svg/200px-Flag_of_Brazil.svg",
-                      "importance": 7.79940596381577e-06,
-                      "entityId": "Brazil",
-                      "type": [
-                        "YAGO_wordnet_system_108435388",
-                        "YAGO_wordnet_district_108552138",
-                        "YAGO_wikicategory_Countries_in_South_America",
-                        "YAGO_yagoPermanentlyLocatedEntity",
-                        "YAGO_yagoLegalActorGeo",
-                        "YAGO_wikicategory_Portuguese\\u002dspeaking_countries_and_territories",
-                        "YAGO_wordnet_state_108654360",
-                        "YAGO_wikicategory_Member_states_of_the_Union_of_South_American_Nations",
-                        "YAGO_wordnet_country_108544813",
-                        "YAGO_wikicategory_Member_states_of_the_United_Nations",
-                        "YAGO_wordnet_economy_108366753",
-                        "YAGO_wordnet_abstraction_100002137",
-                        "YAGO_wordnet_region_108630985",
-                        "YAGO_yagoGeoEntity",
-                        "YAGO_wikicategory_Romance_countries_and_territories",
-                        "YAGO_wikicategory_World_Trade_Organization_member_economies",
-                        "YAGO_wikicategory_Member_states_of_the_Community_of_Portuguese_Language_Countries",
-                        "YAGO_wordnet_physical_entity_100001930",
-                        "YAGO_wordnet_entity_100001740",
-                        "YAGO_wikicategory_Member_states_of_Mercosur",
-                        "YAGO_wordnet_object_100002684",
-                        "YAGO_wordnet_group_100031264",
-                        "YAGO_wikicategory_Latin_American_countries",
-                        "YAGO_wikicategory_States_and_territories_established_in_1822",
-                        "YAGO_wordnet_location_100027167",
-                        "YAGO_wordnet_administrative_district_108491826"
-                      ],
-                      "readableRepr": "Brazil",
-                      "url": "http://en.wikipedia.org/wiki/Brazil"
-                    }
-                  }
-                ]
+                }
               },
               "NNP"
             ]
@@ -388,18 +327,7 @@
                   "speaker": "PER0",
                   "before": " ",
                   "after": " "
-                },
-                "aida": [
-                  {
-                    "mention": {
-                      "allEntities": [],
-                      "offset": 17,
-                      "name": "Max Verstappen",
-                      "length": 14
-                    },
-                    "bestEntityMetadata": null
-                  }
-                ]
+                }
               },
               "NNP"
             ],
@@ -417,18 +345,7 @@
                   "speaker": "PER0",
                   "before": " ",
                   "after": " "
-                },
-                "aida": [
-                  {
-                    "mention": {
-                      "allEntities": [],
-                      "offset": 17,
-                      "name": "Max Verstappen",
-                      "length": 14
-                    },
-                    "bestEntityMetadata": null
-                  }
-                ]
+                }
               },
               "NNP"
             ]
@@ -466,406 +383,10 @@
                 }
               },
               "PRP"
-            ],
-            [
-              {
-                "nlpToken": {
-                  "index": 15,
-                  "word": "clipped",
-                  "originalText": "clipped",
-                  "lemma": "clip",
-                  "characterOffsetBegin": 152,
-                  "characterOffsetEnd": 159,
-                  "pos": "VBD",
-                  "ner": "O",
-                  "speaker": "PER0",
-                  "before": " ",
-                  "after": " "
-                }
-              },
-              "VBD"
-            ],
-            [
-              {
-                "nlpToken": {
-                  "index": 16,
-                  "word": "the",
-                  "originalText": "the",
-                  "lemma": "the",
-                  "characterOffsetBegin": 160,
-                  "characterOffsetEnd": 163,
-                  "pos": "DT",
-                  "ner": "O",
-                  "speaker": "PER0",
-                  "before": " ",
-                  "after": " "
-                }
-              },
-              "DT"
-            ],
-            [
-              {
-                "nlpToken": {
-                  "index": 17,
-                  "word": "curb",
-                  "originalText": "curb",
-                  "lemma": "curb",
-                  "characterOffsetBegin": 164,
-                  "characterOffsetEnd": 168,
-                  "pos": "NN",
-                  "ner": "O",
-                  "speaker": "PER0",
-                  "before": " ",
-                  "after": " "
-                }
-              },
-              "NN"
-            ],
-            [
-              {
-                "nlpToken": {
-                  "index": 18,
-                  "word": "on",
-                  "originalText": "on",
-                  "lemma": "on",
-                  "characterOffsetBegin": 169,
-                  "characterOffsetEnd": 171,
-                  "pos": "IN",
-                  "ner": "O",
-                  "speaker": "PER0",
-                  "before": " ",
-                  "after": " "
-                }
-              },
-              "IN"
-            ],
-            [
-              {
-                "nlpToken": {
-                  "index": 19,
-                  "word": "the",
-                  "originalText": "the",
-                  "lemma": "the",
-                  "characterOffsetBegin": 172,
-                  "characterOffsetEnd": 175,
-                  "pos": "DT",
-                  "ner": "O",
-                  "speaker": "PER0",
-                  "before": " ",
-                  "after": " "
-                }
-              },
-              "DT"
-            ],
-            [
-              {
-                "nlpToken": {
-                  "index": 20,
-                  "word": "entrance",
-                  "originalText": "entrance",
-                  "lemma": "entrance",
-                  "characterOffsetBegin": 176,
-                  "characterOffsetEnd": 184,
-                  "pos": "NN",
-                  "ner": "O",
-                  "speaker": "PER0",
-                  "before": " ",
-                  "after": " "
-                }
-              },
-              "NN"
-            ],
-            [
-              {
-                "nlpToken": {
-                  "index": 21,
-                  "word": "to",
-                  "originalText": "to",
-                  "lemma": "to",
-                  "characterOffsetBegin": 185,
-                  "characterOffsetEnd": 187,
-                  "pos": "TO",
-                  "ner": "O",
-                  "speaker": "PER0",
-                  "before": " ",
-                  "after": " "
-                }
-              },
-              "TO"
-            ],
-            [
-              {
-                "nlpToken": {
-                  "index": 22,
-                  "word": "the",
-                  "originalText": "the",
-                  "lemma": "the",
-                  "characterOffsetBegin": 188,
-                  "characterOffsetEnd": 191,
-                  "pos": "DT",
-                  "ner": "O",
-                  "speaker": "PER0",
-                  "before": " ",
-                  "after": " "
-                }
-              },
-              "DT"
-            ],
-            [
-              {
-                "nlpToken": {
-                  "index": 23,
-                  "word": "long",
-                  "originalText": "long",
-                  "lemma": "long",
-                  "characterOffsetBegin": 192,
-                  "characterOffsetEnd": 196,
-                  "pos": "JJ",
-                  "ner": "O",
-                  "speaker": "PER0",
-                  "before": " ",
-                  "after": " "
-                }
-              },
-              "JJ"
-            ],
-            [
-              {
-                "nlpToken": {
-                  "index": 24,
-                  "word": "home",
-                  "originalText": "home",
-                  "lemma": "home",
-                  "characterOffsetBegin": 197,
-                  "characterOffsetEnd": 201,
-                  "pos": "NN",
-                  "ner": "O",
-                  "speaker": "PER0",
-                  "before": " ",
-                  "after": " "
-                }
-              },
-              "NN"
-            ],
-            [
-              {
-                "nlpToken": {
-                  "index": 25,
-                  "word": "straight",
-                  "originalText": "straight",
-                  "lemma": "straight",
-                  "characterOffsetBegin": 202,
-                  "characterOffsetEnd": 210,
-                  "pos": "RB",
-                  "ner": "O",
-                  "speaker": "PER0",
-                  "before": " ",
-                  "after": ""
-                }
-              },
-              "RB"
-            ],
-            [
-              {
-                "nlpToken": {
-                  "index": 26,
-                  "word": ",",
-                  "originalText": ",",
-                  "lemma": ",",
-                  "characterOffsetBegin": 210,
-                  "characterOffsetEnd": 211,
-                  "pos": ",",
-                  "ner": "O",
-                  "speaker": "PER0",
-                  "before": "",
-                  "after": " "
-                }
-              },
-              ","
-            ],
-            [
-              {
-                "nlpToken": {
-                  "index": 27,
-                  "word": "spinning",
-                  "originalText": "spinning",
-                  "lemma": "spin",
-                  "characterOffsetBegin": 212,
-                  "characterOffsetEnd": 220,
-                  "pos": "VBG",
-                  "ner": "O",
-                  "speaker": "PER0",
-                  "before": " ",
-                  "after": " "
-                }
-              },
-              "VBG"
-            ],
-            [
-              {
-                "nlpToken": {
-                  "index": 28,
-                  "word": "his",
-                  "originalText": "his",
-                  "lemma": "he",
-                  "characterOffsetBegin": 221,
-                  "characterOffsetEnd": 224,
-                  "pos": "PRP$",
-                  "ner": "O",
-                  "speaker": "PER0",
-                  "before": " ",
-                  "after": " "
-                }
-              },
-              "PRP$"
-            ],
-            [
-              {
-                "nlpToken": {
-                  "index": 29,
-                  "word": "car",
-                  "originalText": "car",
-                  "lemma": "car",
-                  "characterOffsetBegin": 225,
-                  "characterOffsetEnd": 228,
-                  "pos": "NN",
-                  "ner": "O",
-                  "speaker": "PER0",
-                  "before": " ",
-                  "after": " "
-                }
-              },
-              "NN"
-            ],
-            [
-              {
-                "nlpToken": {
-                  "index": 30,
-                  "word": "sideways",
-                  "originalText": "sideways",
-                  "lemma": "sideways",
-                  "characterOffsetBegin": 229,
-                  "characterOffsetEnd": 237,
-                  "pos": "RB",
-                  "ner": "O",
-                  "speaker": "PER0",
-                  "before": " ",
-                  "after": " "
-                }
-              },
-              "RB"
-            ],
-            [
-              {
-                "nlpToken": {
-                  "index": 31,
-                  "word": "and",
-                  "originalText": "and",
-                  "lemma": "and",
-                  "characterOffsetBegin": 238,
-                  "characterOffsetEnd": 241,
-                  "pos": "CC",
-                  "ner": "O",
-                  "speaker": "PER0",
-                  "before": " ",
-                  "after": " "
-                }
-              },
-              "CC"
-            ],
-            [
-              {
-                "nlpToken": {
-                  "index": 32,
-                  "word": "sliding",
-                  "originalText": "sliding",
-                  "lemma": "slide",
-                  "characterOffsetBegin": 242,
-                  "characterOffsetEnd": 249,
-                  "pos": "VBG",
-                  "ner": "O",
-                  "speaker": "PER0",
-                  "before": " ",
-                  "after": " "
-                }
-              },
-              "VBG"
-            ],
-            [
-              {
-                "nlpToken": {
-                  "index": 33,
-                  "word": "dangerously",
-                  "originalText": "dangerously",
-                  "lemma": "dangerously",
-                  "characterOffsetBegin": 250,
-                  "characterOffsetEnd": 261,
-                  "pos": "RB",
-                  "ner": "O",
-                  "speaker": "PER0",
-                  "before": " ",
-                  "after": " "
-                }
-              },
-              "RB"
-            ],
-            [
-              {
-                "nlpToken": {
-                  "index": 34,
-                  "word": "down",
-                  "originalText": "down",
-                  "lemma": "down",
-                  "characterOffsetBegin": 262,
-                  "characterOffsetEnd": 266,
-                  "pos": "IN",
-                  "ner": "O",
-                  "speaker": "PER0",
-                  "before": " ",
-                  "after": " "
-                }
-              },
-              "IN"
-            ],
-            [
-              {
-                "nlpToken": {
-                  "index": 35,
-                  "word": "the",
-                  "originalText": "the",
-                  "lemma": "the",
-                  "characterOffsetBegin": 267,
-                  "characterOffsetEnd": 270,
-                  "pos": "DT",
-                  "ner": "O",
-                  "speaker": "PER0",
-                  "before": " ",
-                  "after": " "
-                }
-              },
-              "DT"
-            ],
-            [
-              {
-                "nlpToken": {
-                  "index": 36,
-                  "word": "track",
-                  "originalText": "track",
-                  "lemma": "track",
-                  "characterOffsetBegin": 271,
-                  "characterOffsetEnd": 276,
-                  "pos": "NN",
-                  "ner": "O",
-                  "speaker": "PER0",
-                  "before": " ",
-                  "after": ""
-                }
-              },
-              "NN"
             ]
           ],
           "score": 0.4225108225108225,
-          "text": "he clipped the curb on the entrance to the long home straight , spinning his car sideways and sliding dangerously down the track",
+          "text": "he",
           "nlpIndexSentence": 1
         }
       ]

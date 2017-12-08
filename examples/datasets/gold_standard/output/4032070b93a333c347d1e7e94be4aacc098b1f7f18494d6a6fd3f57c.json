@@ -23,25 +23,25 @@
             [
               {
                 "nlpToken": {
-                  "index": 25,
-                  "word": "fast",
-                  "originalText": "fast",
-                  "lemma": "fast",
-                  "characterOffsetBegin": 312,
-                  "characterOffsetEnd": 316,
-                  "pos": "RB",
+                  "index": 6,
+                  "word": "say",
+                  "originalText": "say",
+                  "lemma": "say",
+                  "characterOffsetBegin": 116,
+                  "characterOffsetEnd": 119,
+                  "pos": "VBP",
                   "ner": "O",
                   "speaker": "PER0",
                   "before": " ",
-                  "after": ""
+                  "after": " "
                 }
               },
-              "RB"
+              "VBP"
             ]
           ],
-          "score": 1.6042576926652412,
-          "text": "fast",
-          "nlpIndexSentence": 2
+          "score": 1.0,
+          "text": "say",
+          "nlpIndexSentence": 1
         }
       ]
     },
@@ -175,10 +175,12 @@
       "annotated": [
         {
           "coderPhraseCount": 3,
+          "parsed": "2017-11-09",
           "text": "Wednesday morning"
         },
         {
           "coderPhraseCount": 3,
+          "parsed": "2017-11-09",
           "text": "at about 6.10am"
         }
       ],
@@ -189,79 +191,85 @@
             [
               {
                 "nlpToken": {
-                  "index": 32,
-                  "word": "Wednesday",
-                  "originalText": "Wednesday",
-                  "lemma": "Wednesday",
-                  "characterOffsetBegin": 345,
-                  "characterOffsetEnd": 354,
-                  "pos": "NNP",
-                  "ner": "DATE",
-                  "normalizedNER": "XXXX-WXX-3TMO",
-                  "speaker": "PER0",
+                  "index": 17,
+                  "word": "about",
+                  "originalText": "about",
+                  "lemma": "about",
+                  "characterOffsetBegin": 5131,
+                  "characterOffsetEnd": 5136,
+                  "pos": "IN",
+                  "ner": "TIME",
+                  "normalizedNER": "2016-11-09T15:00",
+                  "speaker": "308",
                   "before": " ",
                   "after": " ",
                   "timex": {
-                    "tid": "t1",
+                    "tid": "t20",
                     "type": "TIME",
-                    "value": "XXXX-WXX-3TMO"
+                    "value": "2016-11-09T15:00"
                   }
-                },
-                "heideltime": [
-                  {
-                    "@tid": "t2",
-                    "@type": "TIME",
-                    "@value": "2016-11-09TMO",
-                    "#text": "Wednesday morning",
-                    "characterOffset": [
-                      345,
-                      362
-                    ]
-                  }
-                ]
+                }
               },
-              "NNP"
+              "IN"
             ],
             [
               {
                 "nlpToken": {
-                  "index": 33,
-                  "word": "morning",
-                  "originalText": "morning",
-                  "lemma": "morning",
-                  "characterOffsetBegin": 355,
-                  "characterOffsetEnd": 362,
-                  "pos": "NN",
+                  "index": 18,
+                  "word": "6.15",
+                  "originalText": "6.15",
+                  "lemma": "6.15",
+                  "characterOffsetBegin": 5137,
+                  "characterOffsetEnd": 5141,
+                  "pos": "CD",
                   "ner": "TIME",
-                  "normalizedNER": "XXXX-WXX-3TMO",
-                  "speaker": "PER0",
+                  "normalizedNER": "2016-11-09T15:00",
+                  "speaker": "308",
                   "before": " ",
                   "after": "",
                   "timex": {
-                    "tid": "t1",
+                    "tid": "t20",
                     "type": "TIME",
-                    "value": "XXXX-WXX-3TMO"
+                    "value": "2016-11-09T15:00"
                   }
-                },
-                "heideltime": [
-                  {
-                    "@tid": "t2",
-                    "@type": "TIME",
-                    "@value": "2016-11-09TMO",
-                    "#text": "Wednesday morning",
-                    "characterOffset": [
-                      345,
-                      362
-                    ]
-                  }
-                ]
+                }
               },
-              "NN"
+              "CD"
+            ],
+            [
+              {
+                "nlpToken": {
+                  "index": 19,
+                  "word": "am",
+                  "originalText": "am",
+                  "lemma": "am",
+                  "characterOffsetBegin": 5141,
+                  "characterOffsetEnd": 5143,
+                  "pos": "RB",
+                  "ner": "TIME",
+                  "normalizedNER": "2016-11-09T15:00",
+                  "speaker": "308",
+                  "before": "",
+                  "after": "",
+                  "timex": {
+                    "tid": "t20",
+                    "type": "TIME",
+                    "value": "2016-11-09T15:00"
+                  }
+                }
+              },
+              "RB"
             ]
           ],
-          "score": 0.8344322344322345,
-          "text": "Wednesday morning",
-          "nlpIndexSentence": 2
+          "score": 0.801175337530667,
+          "text": "about 6.15 am",
+          "enhancement": {
+            "timex": {
+              "start_date": "2016-11-09T15:00:00",
+              "end_date": "2016-11-09T15:00:59"
+            }
+          },
+          "nlpIndexSentence": 49
         }
       ]
     },
@@ -294,65 +302,7 @@
                   "speaker": "PER0",
                   "before": "",
                   "after": " "
-                },
-                "aida": [
-                  {
-                    "mention": {
-                      "allEntities": [
-                        {
-                          "kbIdentifier": "YAGO:Croydon",
-                          "disambiguationScore": "1"
-                        }
-                      ],
-                      "offset": 0,
-                      "name": "Croydon",
-                      "length": 7,
-                      "bestEntity": {
-                        "kbIdentifier": "YAGO:Croydon",
-                        "disambiguationScore": "1"
-                      }
-                    },
-                    "bestEntityMetadata": {
-                      "knowledgebase": "YAGO",
-                      "depictionurl": "http://upload.wikimedia.org/wikipedia/commons/0/08/Croydon_Town_Hall_-_geograph.org.uk_-_432983.jpg",
-                      "depictionthumbnailurl": "http://upload.wikimedia.org/wikipedia/commons/thumbCroydon_Town_Hall_-_geograph.org.uk_-_432983.jpg/200px-Croydon_Town_Hall_-_geograph.org.uk_-_432983.jpg",
-                      "importance": 0.0007512499244432548,
-                      "entityId": "Croydon",
-                      "type": [
-                        "YAGO_wordnet_district_108552138",
-                        "YAGO_yagoPermanentlyLocatedEntity",
-                        "YAGO_yagoLegalActorGeo",
-                        "YAGO_wordnet_medium_106254669",
-                        "YAGO_wordnet_urban_area_108675967",
-                        "YAGO_wikicategory_Market_towns_in_Surrey",
-                        "YAGO_wordnet_municipality_108626283",
-                        "YAGO_wordnet_instrumentality_103575240",
-                        "YAGO_wordnet_market_town_108672073",
-                        "YAGO_wikicategory_locations",
-                        "YAGO_wikicategory_Districts_of_London_listed_in_the_Domesday_Book",
-                        "YAGO_wordnet_region_108630985",
-                        "YAGO_yagoGeoEntity",
-                        "YAGO_wordnet_physical_entity_100001930",
-                        "YAGO_wikicategory_Districts_of_Croydon",
-                        "YAGO_wikicategory_Post_towns_in_the_CR_postcode_area",
-                        "YAGO_wordnet_entity_100001740",
-                        "YAGO_wordnet_object_100002684",
-                        "YAGO_wordnet_area_108497294",
-                        "YAGO_wordnet_geographical_area_108574314",
-                        "YAGO_wikicategory_Areas_of_London",
-                        "YAGO_wikicategory_Market_towns_in_London",
-                        "YAGO_wordnet_location_100027167",
-                        "YAGO_wordnet_whole_100003553",
-                        "YAGO_wikicategory_Media_and_communications_in_Croydon",
-                        "YAGO_wordnet_artifact_100021939",
-                        "YAGO_wordnet_administrative_district_108491826",
-                        "YAGO_wordnet_town_108665504"
-                      ],
-                      "readableRepr": "Croydon",
-                      "url": "http://en.wikipedia.org/wiki/Croydon"
-                    }
-                  }
-                ]
+                }
               },
               "NNP"
             ]
@@ -416,64 +366,7 @@
                   "speaker": "PER0",
                   "before": " ",
                   "after": " "
-                },
-                "aida": [
-                  {
-                    "mention": {
-                      "allEntities": [
-                        {
-                          "kbIdentifier": "YAGO:Patrick_Bamford",
-                          "disambiguationScore": "0.11572"
-                        }
-                      ],
-                      "offset": 1026,
-                      "name": "Bamford",
-                      "length": 7,
-                      "bestEntity": {
-                        "kbIdentifier": "YAGO:Patrick_Bamford",
-                        "disambiguationScore": "0.11572"
-                      }
-                    },
-                    "bestEntityMetadata": {
-                      "knowledgebase": "YAGO",
-                      "depictionurl": "http://upload.wikimedia.org/wikipedia/commons/1/17/Patrick_Bamford.jpg",
-                      "depictionthumbnailurl": "http://upload.wikimedia.org/wikipedia/commons/thumbPatrick_Bamford.jpg/200px-Patrick_Bamford.jpg",
-                      "importance": 0.10041038802880321,
-                      "entityId": "Patrick_Bamford",
-                      "type": [
-                        "YAGO_wordnet_player_110439851",
-                        "YAGO_yagoLegalActorGeo",
-                        "YAGO_wordnet_athlete_109820263",
-                        "YAGO_wordnet_basketball_player_109842047",
-                        "YAGO_wordnet_football_player_110101634",
-                        "YAGO_wikicategory_Association_football_forwards",
-                        "YAGO_wordnet_person_100007846",
-                        "YAGO_wikicategory_Living_people",
-                        "YAGO_wikicategory_The_Football_League_players",
-                        "YAGO_wordnet_forward_110105733",
-                        "YAGO_wikicategory_Nottingham_Forest_F\\u002eC\\u002e_players",
-                        "YAGO_wikicategory_Milton_Keynes_Dons_F\\u002eC\\u002e_players",
-                        "YAGO_yagoLegalActor",
-                        "YAGO_wordnet_contestant_109613191",
-                        "YAGO_wikicategory_Chelsea_F\\u002eC\\u002e_players",
-                        "YAGO_wikicategory_English_people_of_Irish_descent",
-                        "YAGO_wikicategory_England_youth_international_footballers",
-                        "YAGO_wordnet_living_thing_100004258",
-                        "YAGO_wordnet_physical_entity_100001930",
-                        "YAGO_wordnet_causal_agent_100007347",
-                        "YAGO_wikicategory_English_footballers",
-                        "YAGO_wordnet_entity_100001740",
-                        "YAGO_wordnet_object_100002684",
-                        "YAGO_wikicategory_People_from_Newark\\u002don\\u002dTrent",
-                        "YAGO_wordnet_organism_100004475",
-                        "YAGO_wikicategory_People_educated_at_Nottingham_High_School",
-                        "YAGO_wordnet_whole_100003553"
-                      ],
-                      "readableRepr": "Patrick Bamford",
-                      "url": "http://en.wikipedia.org/wiki/Patrick%20Bamford"
-                    }
-                  }
-                ]
+                }
               },
               "NNP"
             ]
@@ -530,406 +423,10 @@
                 }
               },
               "NN"
-            ],
-            [
-              {
-                "nlpToken": {
-                  "index": 12,
-                  "word": "left",
-                  "originalText": "left",
-                  "lemma": "leave",
-                  "characterOffsetBegin": 426,
-                  "characterOffsetEnd": 430,
-                  "pos": "VBD",
-                  "ner": "O",
-                  "speaker": "PER0",
-                  "before": " ",
-                  "after": " "
-                }
-              },
-              "VBD"
-            ],
-            [
-              {
-                "nlpToken": {
-                  "index": 13,
-                  "word": "the",
-                  "originalText": "the",
-                  "lemma": "the",
-                  "characterOffsetBegin": 431,
-                  "characterOffsetEnd": 434,
-                  "pos": "DT",
-                  "ner": "O",
-                  "speaker": "PER0",
-                  "before": " ",
-                  "after": " "
-                }
-              },
-              "DT"
-            ],
-            [
-              {
-                "nlpToken": {
-                  "index": 14,
-                  "word": "tracks",
-                  "originalText": "tracks",
-                  "lemma": "track",
-                  "characterOffsetBegin": 435,
-                  "characterOffsetEnd": 441,
-                  "pos": "NNS",
-                  "ner": "O",
-                  "speaker": "PER0",
-                  "before": " ",
-                  "after": ""
-                }
-              },
-              "NNS"
-            ],
-            [
-              {
-                "nlpToken": {
-                  "index": 15,
-                  "word": ",",
-                  "originalText": ",",
-                  "lemma": ",",
-                  "characterOffsetBegin": 441,
-                  "characterOffsetEnd": 442,
-                  "pos": ",",
-                  "ner": "O",
-                  "speaker": "PER0",
-                  "before": "",
-                  "after": " "
-                }
-              },
-              ","
-            ],
-            [
-              {
-                "nlpToken": {
-                  "index": 16,
-                  "word": "with",
-                  "originalText": "with",
-                  "lemma": "with",
-                  "characterOffsetBegin": 443,
-                  "characterOffsetEnd": 447,
-                  "pos": "IN",
-                  "ner": "O",
-                  "speaker": "PER0",
-                  "before": " ",
-                  "after": " "
-                }
-              },
-              "IN"
-            ],
-            [
-              {
-                "nlpToken": {
-                  "index": 17,
-                  "word": "bodies",
-                  "originalText": "bodies",
-                  "lemma": "body",
-                  "characterOffsetBegin": 448,
-                  "characterOffsetEnd": 454,
-                  "pos": "NNS",
-                  "ner": "O",
-                  "speaker": "PER0",
-                  "before": " ",
-                  "after": " "
-                }
-              },
-              "NNS"
-            ],
-            [
-              {
-                "nlpToken": {
-                  "index": 18,
-                  "word": "and",
-                  "originalText": "and",
-                  "lemma": "and",
-                  "characterOffsetBegin": 455,
-                  "characterOffsetEnd": 458,
-                  "pos": "CC",
-                  "ner": "O",
-                  "speaker": "PER0",
-                  "before": " ",
-                  "after": " "
-                }
-              },
-              "CC"
-            ],
-            [
-              {
-                "nlpToken": {
-                  "index": 19,
-                  "word": "blood",
-                  "originalText": "blood",
-                  "lemma": "blood",
-                  "characterOffsetBegin": 459,
-                  "characterOffsetEnd": 464,
-                  "pos": "NN",
-                  "ner": "O",
-                  "speaker": "PER0",
-                  "before": " ",
-                  "after": " "
-                }
-              },
-              "NN"
-            ],
-            [
-              {
-                "nlpToken": {
-                  "index": 20,
-                  "word": "inside",
-                  "originalText": "inside",
-                  "lemma": "inside",
-                  "characterOffsetBegin": 465,
-                  "characterOffsetEnd": 471,
-                  "pos": "IN",
-                  "ner": "O",
-                  "speaker": "PER0",
-                  "before": " ",
-                  "after": " "
-                }
-              },
-              "IN"
-            ],
-            [
-              {
-                "nlpToken": {
-                  "index": 21,
-                  "word": "the",
-                  "originalText": "the",
-                  "lemma": "the",
-                  "characterOffsetBegin": 472,
-                  "characterOffsetEnd": 475,
-                  "pos": "DT",
-                  "ner": "O",
-                  "speaker": "PER0",
-                  "before": " ",
-                  "after": " "
-                }
-              },
-              "DT"
-            ],
-            [
-              {
-                "nlpToken": {
-                  "index": 22,
-                  "word": "carriages",
-                  "originalText": "carriages",
-                  "lemma": "carriage",
-                  "characterOffsetBegin": 476,
-                  "characterOffsetEnd": 485,
-                  "pos": "NNS",
-                  "ner": "O",
-                  "speaker": "PER0",
-                  "before": " ",
-                  "after": " "
-                }
-              },
-              "NNS"
-            ],
-            [
-              {
-                "nlpToken": {
-                  "index": 23,
-                  "word": "following",
-                  "originalText": "following",
-                  "lemma": "follow",
-                  "characterOffsetBegin": 486,
-                  "characterOffsetEnd": 495,
-                  "pos": "VBG",
-                  "ner": "O",
-                  "speaker": "PER0",
-                  "before": " ",
-                  "after": " "
-                }
-              },
-              "VBG"
-            ],
-            [
-              {
-                "nlpToken": {
-                  "index": 24,
-                  "word": "the",
-                  "originalText": "the",
-                  "lemma": "the",
-                  "characterOffsetBegin": 496,
-                  "characterOffsetEnd": 499,
-                  "pos": "DT",
-                  "ner": "O",
-                  "speaker": "PER0",
-                  "before": " ",
-                  "after": " "
-                }
-              },
-              "DT"
-            ],
-            [
-              {
-                "nlpToken": {
-                  "index": 25,
-                  "word": "derailment",
-                  "originalText": "derailment",
-                  "lemma": "derailment",
-                  "characterOffsetBegin": 500,
-                  "characterOffsetEnd": 510,
-                  "pos": "NN",
-                  "ner": "O",
-                  "speaker": "PER0",
-                  "before": " ",
-                  "after": ""
-                }
-              },
-              "NN"
-            ],
-            [
-              {
-                "nlpToken": {
-                  "index": 26,
-                  "word": ",",
-                  "originalText": ",",
-                  "lemma": ",",
-                  "characterOffsetBegin": 510,
-                  "characterOffsetEnd": 511,
-                  "pos": ",",
-                  "ner": "O",
-                  "speaker": "PER0",
-                  "before": "",
-                  "after": " "
-                }
-              },
-              ","
-            ],
-            [
-              {
-                "nlpToken": {
-                  "index": 27,
-                  "word": "which",
-                  "originalText": "which",
-                  "lemma": "which",
-                  "characterOffsetBegin": 512,
-                  "characterOffsetEnd": 517,
-                  "pos": "WDT",
-                  "ner": "O",
-                  "speaker": "PER0",
-                  "before": " ",
-                  "after": " "
-                }
-              },
-              "WDT"
-            ],
-            [
-              {
-                "nlpToken": {
-                  "index": 28,
-                  "word": "occurred",
-                  "originalText": "occurred",
-                  "lemma": "occur",
-                  "characterOffsetBegin": 518,
-                  "characterOffsetEnd": 526,
-                  "pos": "VBD",
-                  "ner": "O",
-                  "speaker": "PER0",
-                  "before": " ",
-                  "after": " "
-                }
-              },
-              "VBD"
-            ],
-            [
-              {
-                "nlpToken": {
-                  "index": 29,
-                  "word": "at",
-                  "originalText": "at",
-                  "lemma": "at",
-                  "characterOffsetBegin": 527,
-                  "characterOffsetEnd": 529,
-                  "pos": "IN",
-                  "ner": "O",
-                  "speaker": "PER0",
-                  "before": " ",
-                  "after": " "
-                }
-              },
-              "IN"
-            ],
-            [
-              {
-                "nlpToken": {
-                  "index": 30,
-                  "word": "about",
-                  "originalText": "about",
-                  "lemma": "about",
-                  "characterOffsetBegin": 530,
-                  "characterOffsetEnd": 535,
-                  "pos": "IN",
-                  "ner": "TIME",
-                  "normalizedNER": "T10:00",
-                  "speaker": "PER0",
-                  "before": " ",
-                  "after": " ",
-                  "timex": {
-                    "tid": "t2",
-                    "type": "TIME",
-                    "value": "T10:00"
-                  }
-                }
-              },
-              "IN"
-            ],
-            [
-              {
-                "nlpToken": {
-                  "index": 31,
-                  "word": "6.10",
-                  "originalText": "6.10",
-                  "lemma": "6.10",
-                  "characterOffsetBegin": 536,
-                  "characterOffsetEnd": 540,
-                  "pos": "CD",
-                  "ner": "TIME",
-                  "normalizedNER": "T10:00",
-                  "speaker": "PER0",
-                  "before": " ",
-                  "after": "",
-                  "timex": {
-                    "tid": "t2",
-                    "type": "TIME",
-                    "value": "T10:00"
-                  }
-                }
-              },
-              "CD"
-            ],
-            [
-              {
-                "nlpToken": {
-                  "index": 32,
-                  "word": "am",
-                  "originalText": "am",
-                  "lemma": "am",
-                  "characterOffsetBegin": 540,
-                  "characterOffsetEnd": 542,
-                  "pos": "RB",
-                  "ner": "TIME",
-                  "normalizedNER": "T10:00",
-                  "speaker": "PER0",
-                  "before": "",
-                  "after": "",
-                  "timex": {
-                    "tid": "t2",
-                    "type": "TIME",
-                    "value": "T10:00"
-                  }
-                }
-              },
-              "RB"
             ]
           ],
-          "score": 0.42,
-          "text": "the tram left the tracks , with bodies and blood inside the carriages following the derailment , which occurred at about 6.10 am",
+          "score": 0.41961620469083155,
+          "text": "the tram",
           "nlpIndexSentence": 3
         }
       ]
@@ -939,7 +436,7 @@
   "originalFilename": "theguardian-8",
   "parsingError": "true",
   "publisher": "theguardian",
-  "text": "At least seven people have been killed and more than 50 taken to hospital after a tram, believed to have been going too fast, crashed in south London on Wednesday morning. Survivors of the accident said people went flying as the tram left the tracks, with bodies and blood inside the carriages following the derailment, which occurred at about 6.10am. Some passengers said the driver of the vehicle, who was arrested afterwards, had blacked out. Martin Bamford, 30, from Croydon, one of those on the tram, recalled it speeding up. \"Everyone just literally went flying,\" he said. Speaking outside Croydon University hospital, where he was being treated for broken ribs, he added: \"It was just terrifying. There was a woman that was on top of me ... I don't think she made it at all. She wasn't responsive. There was blood everywhere.\" Bamford said he asked the driver if he was OK: \"He said: 'Yeah.'I said to him, 'What happened?' He said he thinks he blacked out.\" Royal Navy veteran Kevin Snow, 57, was one of those injured. He said the tram failed to slow down at its usual point coming out of a tunnel between the Lloyd Park and Sandilands stops. \"Usually, as you come out the tunnel, you feel the brakes, but I didn't seem to at all. I thought, 'He should be braking in a minute.' The next thing I knew we were on our side. Everyone was screaming and shouting, a lot of people were injured - lots couldn't move.\" He said the tram slid for between eight and 10 seconds before coming to a halt. \"It seemed like for ever that everyone was trying to get out, but we couldn't find a way out. \"All I could think about was if no one called the emergency services, could another tram hit us?\" The Rail Accident Investigation Branch (RAIB) said: \"Initial indications suggest that the tram was travelling at a significantly higher speed than is permitted.\" British Transport police Asst Ch Con Robin Smith said the force was investigating whether the driver fell asleep, alongside \"a number of factors\". He said officers would be \"working through the night\" at the scene, and staff would be present for a \"number of days\". He said: \"We have a very difficult and very challenging scene. \"We have carriages that are lying on their side ... which will eventually have to be moved carefully. And at the same time, us being able to understand exactly what happened.\" The 42-year-old male driver, from Beckenham, is being held on suspicion of manslaughter and is currently in custody, British Transport police said. The crash occurred near to Sandilands junction on a sharp, left-hand curve as the tram was approaching a stop as it travelled from New Addington to Wimbledon. There is a 12mph (20km/h) speed limit on the section in question, which is on old rail tracks. The Croydon trams have a top speed of around 50mph. After news the crash broke, claims emerged on Facebook that an incident had occurred on the same stretch of line on 31 October, though there were no reports that anyone was hurt. In a post written that day, Andy Nias, from Croydon, wrote: \"30 of us on the tram this morning and we all thought our time was up ... tram driver took the hard corner to Sandilands at 40mph!! I swear the tram lifted on to one side. Everyone still shaking ... it's mad.\" In a further post on Wednesday, Nias said he had reported the incident to British Transport police, who advised him not to speak to journalists. Another man, James Tofield, who is also from Croydon, said he too was on the tram on 31 October. On Wednesday evening, he posted an image online of a text message to his partner dated that morning. It read: \"The driver went round the bend so fast, u no the tunnel ... when u r coming up to Sandilands, he's obviously forgot there's a bend approaching, smacked on the brakes and somehow the tram managed to stay on the track.\" He said he intended to report the incident to both Transport for London (TfL) and the police. TfL said it was aware of the claims but refused to comment further because an investigation was ongoing. British Transport police did not respond to a request for comment. Wednesday's crash is the worst accident on the rail and tram networks since 2004, when seven people were killed in a rail crash near Ufton Nervet in Berkshire, when a car driver trying to kill himself caused a serious accident. There have been no fatalities on board a tram in the UK since 1959, when two female passengers and the driver died when a tram caught fire in Shettlestone Road, Glasgow, after a collision with a lorry. Martin Harris, who was on his way to work, called his mother, Jane, after the crash to tell her a body was lying on top of him. She told the Telegraph that he had told her \"it looked like the driver had fallen asleep\". Jane Harris added: \"He was on the tram, the tram was going really fast, the tram went over, my son had a dead body on him.\" Nearby resident Hannah Collier, 23, said: \"I heard a massive crash at about 6.15am, then heard shouting, then the emergency services arrived. They started bringing up the casualties, some very seriously injured.\" Eight fire engines, five fire rescue units containing specialist rescue equipment and 22 ambulance crews were involved in the rescue operation. A spokeswoman for the London ambulance service said eight people had serious or life-threatening injuries, 20 of those injured were taken to St George's university hospital in Tooting and 31 to Croydon university hospital. Croydon Health Services NHS trust urged members of the public with minor ailments to go to their GP or a walk-in centre instead of the hospital to ease pressure on staff. A casualty helpline was set up for relatives and friends to call. Mike Brown, London's transport commissioner, said: \"Our thoughts are with those who sadly lost their lives in this incident, those who were injured and the families of those affected. We are working closely with the emergency services on-site and will continue to work with them during the investigation into what happened.\" Finn Brennan, of the train drivers' union Aslef, said the incident was \"truly dreadful\". He said: \"Lives have been lost and there are many serious injuries. This is a tragedy for all those involved. For the women and men who set out this morning on their journey to work and suffered this awful accident and their families, the grief and pain must be terrible. \"There should be no rush to judgment or to place blame until the facts are known.\" Transport expert Christian Wolmar, who is also Labour's candidate in the Richmond Park byelection, said trams generally had an excellent safety record and most accidents that did occur involved road vehicles or pedestrians. \"This sort of accident is incredibly rare, particularly because it's on a section that used to be a railway and there are no cars around,\" he said. The Croydon tram is London's only tram network. It uses a mix of on-street and segregated running for its 17 miles (27km) of track. More than 27 million passengers used the service in 2015-16. A casualty bureau number has been set up for relatives and friends to call - 0800 056 0154. If you witnessed the accident, or have any information you'd like to share, you can fill in the form below - anonymously if you prefer. * This article was amended on 10 November 2016 to remove a section of a quote that gave an incorrect weight of 300 tonnes for the tram; it weighs about 37 tonnes.",
+  "text": "At least seven people have been killed and more than 50 taken to hospital after a tram, believed to have been going too fast, crashed in south London on Wednesday morning. Survivors of the accident said people went flying as the tram left the tracks, with bodies and blood inside the carriages following the derailment, which occurred at about 6.10am. Some passengers said the driver of the vehicle, who was arrested afterwards, had blacked out. Martin Bamford, 30, from Croydon, one of those on the tram, recalled it speeding up. \"Everyone just literally went flying,\" he said. Speaking outside Croydon University hospital, where he was being treated for broken ribs, he added: \"It was just terrifying. There was a woman that was on top of me ... I don't think she made it at all. She wasn't responsive. There was blood everywhere.\" Bamford said he asked the driver if he was OK: \"He said: 'Yeah.'I said to him, 'What happened?' He said he thinks he blacked out.\" Royal Navy veteran Kevin Snow, 57, was one of those injured. He said the tram failed to slow down at its usual point coming out of a tunnel between the Lloyd Park and Sandilands stops. \"Usually, as you come out the tunnel, you feel the brakes, but I didn't seem to at all. I thought, 'He should be braking in a minute.' The next thing I knew we were on our side. Everyone was screaming and shouting, a lot of people were injured - lots couldn't move.\" He said the tram slid for between eight and 10 seconds before coming to a halt. \"It seemed like for ever that everyone was trying to get out, but we couldn't find a way out. \"All I could think about was if no one called the emergency services, could another tram hit us?\" The Rail Accident Investigation Branch (RAIB) said: \"Initial indications suggest that the tram was travelling at a significantly higher speed than is permitted.\" British Transport police Asst Ch Con Robin Smith said the force was investigating whether the driver fell asleep, alongside \"a number of factors\". He said officers would be \"working through the night\" at the scene, and staff would be present for a \"number of days\". He said: \"We have a very difficult and very challenging scene. \"We have carriages that are lying on their side ... which will eventually have to be moved carefully. And at the same time, us being able to understand exactly what happened.\" The 42-year-old male driver, from Beckenham, is being held on suspicion of manslaughter and is currently in custody, British Transport police said. The crash occurred near to Sandilands junction on a sharp, left-hand curve as the tram was approaching a stop as it travelled from New Addington to Wimbledon. There is a 12mph (20km/h) speed limit on the section in question, which is on old rail tracks. The Croydon trams have a top speed of around 50mph. After news the crash broke, claims emerged on Facebook that an incident had occurred on the same stretch of line on 31 October, though there were no reports that anyone was hurt. In a post written that day, Andy Nias, from Croydon, wrote: \"30 of us on the tram this morning and we all thought our time was up ... tram driver took the hard corner to Sandilands at 40mph!! I swear the tram lifted on to one side. Everyone still shaking ... it's mad.\" In a further post on Wednesday, Nias said he had reported the incident to British Transport police, who advised him not to speak to journalists. Another man, James Tofield, who is also from Croydon, said he too was on the tram on 31 October. On Wednesday evening, he posted an image online of a text message to his partner dated that morning. It read: \"The driver went round the bend so fast, u no the tunnel ... when u r coming up to Sandilands, he's obviously forgot there's a bend approaching, smacked on the brakes and somehow the tram managed to stay on the track.\" He said he intended to report the incident to both Transport for London (TfL) and the police. TfL said it was aware of the claims but refused to comment further because an investigation was ongoing. British Transport police did not respond to a request for comment. Wednesday's crash is the worst accident on the rail and tram networks since 2004, when seven people were killed in a rail crash near Ufton Nervet in Berkshire, when a car driver trying to kill himself caused a serious accident. There have been no fatalities on board a tram in the UK since 1959, when two female passengers and the driver died when a tram caught fire in Shettlestone Road, Glasgow, after a collision with a lorry. Martin Harris, who was on his way to work, called his mother, Jane, after the crash to tell her a body was lying on top of him. She told the Telegraph that he had told her \"it looked like the driver had fallen asleep\". Jane Harris added: \"He was on the tram, the tram was going really fast, the tram went over, my son had a dead body on him.\" Nearby resident Hannah Collier, 23, said: \"I heard a massive crash at about 6.15am, then heard shouting, then the emergency services arrived. They started bringing up the casualties, some very seriously injured.\" Eight fire engines, five fire rescue units containing specialist rescue equipment and 22 ambulance crews were involved in the rescue operation. A spokeswoman for the London ambulance service said eight people had serious or life-threatening injuries, 20 of those injured were taken to St George's university hospital in Tooting and 31 to Croydon university hospital. Croydon Health Services NHS trust urged members of the public with minor ailments to go to their GP or a walk-in centre instead of the hospital to ease pressure on staff. A casualty helpline was set up for relatives and friends to call. Mike Brown, London's transport commissioner, said: \"Our thoughts are with those who sadly lost their lives in this incident, those who were injured and the families of those affected. We are working closely with the emergency services on-site and will continue to work with them during the investigation into what happened.\" Finn Brennan, of the train drivers' union Aslef, said the incident was \"truly dreadful\". He said: \"Lives have been lost and there are many serious injuries. This is a tragedy for all those involved. For the women and men who set out this morning on their journey to work and suffered this awful accident and their families, the grief and pain must be terrible. \"There should be no rush to judgment or to place blame until the facts are known.\" Transport expert Christian Wolmar, who is also Labour's candidate in the Richmond Park byelection, said trams generally had an excellent safety record and most accidents that did occur involved road vehicles or pedestrians. \"This sort of accident is incredibly rare, particularly because it's on a section that used to be a railway and there are no cars around,\" he said. The Croydon tram is London's only tram network. It uses a mix of on-street and segregated running for its 17 miles (27km) of track. More than 27 million passengers used the service in 2015-16.",
   "title": "Croydon tram driver 'blacked out' in crash that killed seven, claim passengers",
   "url": "https://www.theguardian.com/uk-news/2016/nov/09/croydon-tram-crash-kills-at-least-seven-and-injures-more-than-50"
 }

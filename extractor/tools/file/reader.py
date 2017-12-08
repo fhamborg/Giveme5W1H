@@ -62,7 +62,7 @@ class Reader(object):
                             tmp_anno = annotationsForGivMe5W.setdefault(question, [])
                             for annotation in annotated:
                                 # None, None is added for comp. reasons
-                                tmp_anno.append([None, None, annotation.get('text')])
+                                tmp_anno.append([None, None, annotation.get('text'), annotation])
                 document.set_annotations(annotationsForGivMe5W)
 
         return document

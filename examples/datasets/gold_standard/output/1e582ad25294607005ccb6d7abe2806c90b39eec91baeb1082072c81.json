@@ -39,7 +39,7 @@
               "JJ"
             ]
           ],
-          "score": 1.425925925925926,
+          "score": 1.0,
           "text": "fine",
           "nlpIndexSentence": 6
         }
@@ -349,6 +349,7 @@
       "annotated": [
         {
           "coderPhraseCount": 2,
+          "parsed": "2016-11-10",
           "text": "this afternoon"
         }
       ],
@@ -359,79 +360,37 @@
             [
               {
                 "nlpToken": {
-                  "index": 7,
-                  "word": "this",
-                  "originalText": "this",
-                  "lemma": "this",
-                  "characterOffsetBegin": 217,
-                  "characterOffsetEnd": 221,
-                  "pos": "DT",
-                  "ner": "DATE",
-                  "normalizedNER": "THIS AF",
-                  "speaker": "PER0",
-                  "before": " ",
-                  "after": " ",
-                  "timex": {
-                    "tid": "t1",
-                    "type": "DATE",
-                    "altValue": "THIS AF"
-                  }
-                },
-                "heideltime": [
-                  {
-                    "@tid": "t1",
-                    "@type": "TIME",
-                    "@value": "2016-11-10TAF",
-                    "#text": "this afternoon",
-                    "characterOffset": [
-                      217,
-                      231
-                    ]
-                  }
-                ]
-              },
-              "DT"
-            ],
-            [
-              {
-                "nlpToken": {
-                  "index": 8,
-                  "word": "afternoon",
-                  "originalText": "afternoon",
-                  "lemma": "afternoon",
-                  "characterOffsetBegin": 222,
-                  "characterOffsetEnd": 231,
+                  "index": 49,
+                  "word": "yesterday",
+                  "originalText": "yesterday",
+                  "lemma": "yesterday",
+                  "characterOffsetBegin": 2323,
+                  "characterOffsetEnd": 2332,
                   "pos": "NN",
-                  "ner": "DATE",
-                  "normalizedNER": "THIS AF",
+                  "ner": "TIME",
+                  "normalizedNER": "2016-11-09T03:00",
                   "speaker": "PER0",
                   "before": " ",
                   "after": " ",
                   "timex": {
-                    "tid": "t1",
-                    "type": "DATE",
-                    "altValue": "THIS AF"
+                    "tid": "t10",
+                    "type": "TIME",
+                    "value": "2016-11-09T03:00"
                   }
-                },
-                "heideltime": [
-                  {
-                    "@tid": "t1",
-                    "@type": "TIME",
-                    "@value": "2016-11-10TAF",
-                    "#text": "this afternoon",
-                    "characterOffset": [
-                      217,
-                      231
-                    ]
-                  }
-                ]
+                }
               },
               "NN"
             ]
           ],
-          "score": 0.7670011148272017,
-          "text": "this afternoon",
-          "nlpIndexSentence": 3
+          "score": 0.7595435326193672,
+          "text": "yesterday",
+          "enhancement": {
+            "timex": {
+              "start_date": "2016-11-09T03:00:00",
+              "end_date": "2016-11-09T03:00:59"
+            }
+          },
+          "nlpIndexSentence": 16
         }
       ]
     },
@@ -464,74 +423,7 @@
                   "speaker": "PER0",
                   "before": " ",
                   "after": " "
-                },
-                "aida": [
-                  {
-                    "mention": {
-                      "allEntities": [
-                        {
-                          "kbIdentifier": "YAGO:White_House",
-                          "disambiguationScore": "0.36622"
-                        }
-                      ],
-                      "offset": 57,
-                      "name": "White House",
-                      "length": 11,
-                      "bestEntity": {
-                        "kbIdentifier": "YAGO:White_House",
-                        "disambiguationScore": "0.36622"
-                      }
-                    },
-                    "bestEntityMetadata": {
-                      "knowledgebase": "YAGO",
-                      "depictionurl": "http://upload.wikimedia.org/wikipedia/commons/d/db/Location_map_Washington%2C_D.C._central.png",
-                      "depictionthumbnailurl": "http://upload.wikimedia.org/wikipedia/commons/thumbLocation_map_Washington%2C_D.C._central.png/200px-Location_map_Washington%2C_D.C._central.png",
-                      "importance": 0.0001545953682113483,
-                      "entityId": "White_House",
-                      "type": [
-                        "YAGO_yagoPermanentlyLocatedEntity",
-                        "YAGO_yagoLegalActorGeo",
-                        "YAGO_wordnet_museum_103800563",
-                        "YAGO_wordnet_palace_103878066",
-                        "YAGO_wikicategory_Palaces_in_the_United_States",
-                        "YAGO_wikicategory_Buildings_of_the_United_States_government_in_Washington\\u002c_D\\u002eC\\u002e",
-                        "YAGO_wikicategory_Buildings_and_structures_in_the_United_States_destroyed_by_arson",
-                        "YAGO_wordnet_address_108491027",
-                        "YAGO_wordnet_residence_108558963",
-                        "YAGO_wordnet_dwelling_103259505",
-                        "YAGO_wordnet_mansion_103719053",
-                        "YAGO_wordnet_housing_103546340",
-                        "YAGO_wordnet_landmark_108624891",
-                        "YAGO_wordnet_object_100002684",
-                        "YAGO_wordnet_position_108621598",
-                        "YAGO_wordnet_house_103544360",
-                        "YAGO_wikicategory_Houses_completed_in_1800",
-                        "YAGO_wordnet_location_100027167",
-                        "YAGO_wikicategory_Historic_house_museums_in_Washington\\u002c_D\\u002eC\\u002e",
-                        "YAGO_wikicategory_Neoclassical_palaces",
-                        "YAGO_wikicategory_Houses_on_the_National_Register_of_Historic_Places_in_Washington\\u002c_D\\u002eC\\u002e",
-                        "YAGO_wordnet_point_108620061",
-                        "YAGO_wordnet_geographic_point_108578706",
-                        "YAGO_wikicategory_Rebuilt_buildings_and_structures_in_the_United_States",
-                        "YAGO_wordnet_structure_104341686",
-                        "YAGO_wordnet_facility_103315023",
-                        "YAGO_wordnet_depository_103177349",
-                        "YAGO_wikicategory_National_Historic_Landmarks_in_Washington\\u002c_D\\u002eC\\u002e",
-                        "YAGO_yagoGeoEntity",
-                        "YAGO_wordnet_physical_entity_100001930",
-                        "YAGO_wordnet_building_102913152",
-                        "YAGO_wikicategory_Presidential_palaces",
-                        "YAGO_wordnet_entity_100001740",
-                        "YAGO_wikicategory_Presidential_museums_in_Washington\\u002c_D\\u002eC\\u002e",
-                        "YAGO_wordnet_whole_100003553",
-                        "YAGO_wikicategory_Presidential_residences_in_the_United_States",
-                        "YAGO_wordnet_artifact_100021939"
-                      ],
-                      "readableRepr": "White House",
-                      "url": "http://en.wikipedia.org/wiki/White%20House"
-                    }
-                  }
-                ]
+                }
               },
               "NNP"
             ],
@@ -549,74 +441,7 @@
                   "speaker": "PER0",
                   "before": " ",
                   "after": ""
-                },
-                "aida": [
-                  {
-                    "mention": {
-                      "allEntities": [
-                        {
-                          "kbIdentifier": "YAGO:White_House",
-                          "disambiguationScore": "0.36622"
-                        }
-                      ],
-                      "offset": 57,
-                      "name": "White House",
-                      "length": 11,
-                      "bestEntity": {
-                        "kbIdentifier": "YAGO:White_House",
-                        "disambiguationScore": "0.36622"
-                      }
-                    },
-                    "bestEntityMetadata": {
-                      "knowledgebase": "YAGO",
-                      "depictionurl": "http://upload.wikimedia.org/wikipedia/commons/d/db/Location_map_Washington%2C_D.C._central.png",
-                      "depictionthumbnailurl": "http://upload.wikimedia.org/wikipedia/commons/thumbLocation_map_Washington%2C_D.C._central.png/200px-Location_map_Washington%2C_D.C._central.png",
-                      "importance": 0.0001545953682113483,
-                      "entityId": "White_House",
-                      "type": [
-                        "YAGO_yagoPermanentlyLocatedEntity",
-                        "YAGO_yagoLegalActorGeo",
-                        "YAGO_wordnet_museum_103800563",
-                        "YAGO_wordnet_palace_103878066",
-                        "YAGO_wikicategory_Palaces_in_the_United_States",
-                        "YAGO_wikicategory_Buildings_of_the_United_States_government_in_Washington\\u002c_D\\u002eC\\u002e",
-                        "YAGO_wikicategory_Buildings_and_structures_in_the_United_States_destroyed_by_arson",
-                        "YAGO_wordnet_address_108491027",
-                        "YAGO_wordnet_residence_108558963",
-                        "YAGO_wordnet_dwelling_103259505",
-                        "YAGO_wordnet_mansion_103719053",
-                        "YAGO_wordnet_housing_103546340",
-                        "YAGO_wordnet_landmark_108624891",
-                        "YAGO_wordnet_object_100002684",
-                        "YAGO_wordnet_position_108621598",
-                        "YAGO_wordnet_house_103544360",
-                        "YAGO_wikicategory_Houses_completed_in_1800",
-                        "YAGO_wordnet_location_100027167",
-                        "YAGO_wikicategory_Historic_house_museums_in_Washington\\u002c_D\\u002eC\\u002e",
-                        "YAGO_wikicategory_Neoclassical_palaces",
-                        "YAGO_wikicategory_Houses_on_the_National_Register_of_Historic_Places_in_Washington\\u002c_D\\u002eC\\u002e",
-                        "YAGO_wordnet_point_108620061",
-                        "YAGO_wordnet_geographic_point_108578706",
-                        "YAGO_wikicategory_Rebuilt_buildings_and_structures_in_the_United_States",
-                        "YAGO_wordnet_structure_104341686",
-                        "YAGO_wordnet_facility_103315023",
-                        "YAGO_wordnet_depository_103177349",
-                        "YAGO_wikicategory_National_Historic_Landmarks_in_Washington\\u002c_D\\u002eC\\u002e",
-                        "YAGO_yagoGeoEntity",
-                        "YAGO_wordnet_physical_entity_100001930",
-                        "YAGO_wordnet_building_102913152",
-                        "YAGO_wikicategory_Presidential_palaces",
-                        "YAGO_wordnet_entity_100001740",
-                        "YAGO_wikicategory_Presidential_museums_in_Washington\\u002c_D\\u002eC\\u002e",
-                        "YAGO_wordnet_whole_100003553",
-                        "YAGO_wikicategory_Presidential_residences_in_the_United_States",
-                        "YAGO_wordnet_artifact_100021939"
-                      ],
-                      "readableRepr": "White House",
-                      "url": "http://en.wikipedia.org/wiki/White%20House"
-                    }
-                  }
-                ]
+                }
               },
               "NNP"
             ]
@@ -671,83 +496,7 @@
                   "speaker": "PER0",
                   "before": " ",
                   "after": " "
-                },
-                "aida": [
-                  {
-                    "mention": {
-                      "allEntities": [
-                        {
-                          "kbIdentifier": "YAGO:Michelle_Obama",
-                          "disambiguationScore": "1"
-                        }
-                      ],
-                      "offset": 1977,
-                      "name": "Michelle Obama",
-                      "length": 14,
-                      "bestEntity": {
-                        "kbIdentifier": "YAGO:Michelle_Obama",
-                        "disambiguationScore": "1"
-                      }
-                    },
-                    "bestEntityMetadata": {
-                      "knowledgebase": "YAGO",
-                      "depictionurl": "http://upload.wikimedia.org/wikipedia/commons/4/4b/Michelle_Obama_2013_official_portrait.jpg",
-                      "depictionthumbnailurl": "http://upload.wikimedia.org/wikipedia/commons/thumbMichelle_Obama_2013_official_portrait.jpg/200px-Michelle_Obama_2013_official_portrait.jpg",
-                      "importance": 0.0025944166838207175,
-                      "entityId": "Michelle_Obama",
-                      "type": [
-                        "YAGO_yagoLegalActorGeo",
-                        "YAGO_wikicategory_21st\\u002dcentury_women_writers",
-                        "YAGO_wikicategory_African\\u002dAmerican_women_writers",
-                        "YAGO_wikicategory_American_philanthropists",
-                        "YAGO_wordnet_person_100007846",
-                        "YAGO_wordnet_lawyer_110249950",
-                        "YAGO_wordnet_militant_110315837",
-                        "YAGO_wordnet_good_person_110138767",
-                        "YAGO_wikicategory_Writers_from_Chicago\\u002c_Illinois",
-                        "YAGO_wordnet_living_thing_100004258",
-                        "YAGO_wikicategory_American_health_activists",
-                        "YAGO_wikicategory_Whitney_M\\u002e_Young_Magnet_High_School_alumni",
-                        "YAGO_wordnet_object_100002684",
-                        "YAGO_wikicategory_American_women_writers",
-                        "YAGO_wikicategory_Women_in_Illinois_politics",
-                        "YAGO_wikicategory_21st\\u002dcentury_American_writers",
-                        "YAGO_wikicategory_Princeton_University_alumni",
-                        "YAGO_wordnet_adult_109605289",
-                        "YAGO_wordnet_intellectual_109621545",
-                        "YAGO_wikicategory_First_Ladies_of_the_United_States",
-                        "YAGO_wordnet_woman_110787470",
-                        "YAGO_wikicategory_Living_people",
-                        "YAGO_wikicategory_American_garden_writers",
-                        "YAGO_wordnet_disputant_109615465",
-                        "YAGO_wordnet_reformer_110515194",
-                        "YAGO_yagoLegalActor",
-                        "YAGO_wordnet_female_109619168",
-                        "YAGO_wordnet_professional_110480253",
-                        "YAGO_wordnet_philanthropist_110421956",
-                        "YAGO_wordnet_scholar_110557854",
-                        "YAGO_wordnet_physical_entity_100001930",
-                        "YAGO_wordnet_causal_agent_100007347",
-                        "YAGO_wordnet_alumnus_109786338",
-                        "YAGO_wordnet_entity_100001740",
-                        "YAGO_wordnet_first_lady_110092880",
-                        "YAGO_wordnet_organism_100004475",
-                        "YAGO_wordnet_communicator_109610660",
-                        "YAGO_wordnet_benefactor_109608709",
-                        "YAGO_wordnet_donor_110025730",
-                        "YAGO_wordnet_writer_110794014",
-                        "YAGO_wikicategory_Anti\\u002dobesity_activists",
-                        "YAGO_wordnet_whole_100003553",
-                        "YAGO_wikicategory_Harvard_Law_School_alumni",
-                        "YAGO_wordnet_achiever_109762821",
-                        "YAGO_wikicategory_Illinois_lawyers",
-                        "YAGO_wikicategory_African\\u002dAmerican_female_lawyers"
-                      ],
-                      "readableRepr": "Michelle Obama",
-                      "url": "http://en.wikipedia.org/wiki/Michelle%20Obama"
-                    }
-                  }
-                ]
+                }
               },
               "NNP"
             ]
@@ -855,74 +604,7 @@
                   "speaker": "PER0",
                   "before": " ",
                   "after": " "
-                },
-                "aida": [
-                  {
-                    "mention": {
-                      "allEntities": [
-                        {
-                          "kbIdentifier": "YAGO:White_House",
-                          "disambiguationScore": "0.36622"
-                        }
-                      ],
-                      "offset": 205,
-                      "name": "White House",
-                      "length": 11,
-                      "bestEntity": {
-                        "kbIdentifier": "YAGO:White_House",
-                        "disambiguationScore": "0.36622"
-                      }
-                    },
-                    "bestEntityMetadata": {
-                      "knowledgebase": "YAGO",
-                      "depictionurl": "http://upload.wikimedia.org/wikipedia/commons/d/db/Location_map_Washington%2C_D.C._central.png",
-                      "depictionthumbnailurl": "http://upload.wikimedia.org/wikipedia/commons/thumbLocation_map_Washington%2C_D.C._central.png/200px-Location_map_Washington%2C_D.C._central.png",
-                      "importance": 0.0001545953682113483,
-                      "entityId": "White_House",
-                      "type": [
-                        "YAGO_yagoPermanentlyLocatedEntity",
-                        "YAGO_yagoLegalActorGeo",
-                        "YAGO_wordnet_museum_103800563",
-                        "YAGO_wordnet_palace_103878066",
-                        "YAGO_wikicategory_Palaces_in_the_United_States",
-                        "YAGO_wikicategory_Buildings_of_the_United_States_government_in_Washington\\u002c_D\\u002eC\\u002e",
-                        "YAGO_wikicategory_Buildings_and_structures_in_the_United_States_destroyed_by_arson",
-                        "YAGO_wordnet_address_108491027",
-                        "YAGO_wordnet_residence_108558963",
-                        "YAGO_wordnet_dwelling_103259505",
-                        "YAGO_wordnet_mansion_103719053",
-                        "YAGO_wordnet_housing_103546340",
-                        "YAGO_wordnet_landmark_108624891",
-                        "YAGO_wordnet_object_100002684",
-                        "YAGO_wordnet_position_108621598",
-                        "YAGO_wordnet_house_103544360",
-                        "YAGO_wikicategory_Houses_completed_in_1800",
-                        "YAGO_wordnet_location_100027167",
-                        "YAGO_wikicategory_Historic_house_museums_in_Washington\\u002c_D\\u002eC\\u002e",
-                        "YAGO_wikicategory_Neoclassical_palaces",
-                        "YAGO_wikicategory_Houses_on_the_National_Register_of_Historic_Places_in_Washington\\u002c_D\\u002eC\\u002e",
-                        "YAGO_wordnet_point_108620061",
-                        "YAGO_wordnet_geographic_point_108578706",
-                        "YAGO_wikicategory_Rebuilt_buildings_and_structures_in_the_United_States",
-                        "YAGO_wordnet_structure_104341686",
-                        "YAGO_wordnet_facility_103315023",
-                        "YAGO_wordnet_depository_103177349",
-                        "YAGO_wikicategory_National_Historic_Landmarks_in_Washington\\u002c_D\\u002eC\\u002e",
-                        "YAGO_yagoGeoEntity",
-                        "YAGO_wordnet_physical_entity_100001930",
-                        "YAGO_wordnet_building_102913152",
-                        "YAGO_wikicategory_Presidential_palaces",
-                        "YAGO_wordnet_entity_100001740",
-                        "YAGO_wikicategory_Presidential_museums_in_Washington\\u002c_D\\u002eC\\u002e",
-                        "YAGO_wordnet_whole_100003553",
-                        "YAGO_wikicategory_Presidential_residences_in_the_United_States",
-                        "YAGO_wordnet_artifact_100021939"
-                      ],
-                      "readableRepr": "White House",
-                      "url": "http://en.wikipedia.org/wiki/White%20House"
-                    }
-                  }
-                ]
+                }
               },
               "NNP"
             ],
@@ -940,74 +622,7 @@
                   "speaker": "PER0",
                   "before": " ",
                   "after": " "
-                },
-                "aida": [
-                  {
-                    "mention": {
-                      "allEntities": [
-                        {
-                          "kbIdentifier": "YAGO:White_House",
-                          "disambiguationScore": "0.36622"
-                        }
-                      ],
-                      "offset": 205,
-                      "name": "White House",
-                      "length": 11,
-                      "bestEntity": {
-                        "kbIdentifier": "YAGO:White_House",
-                        "disambiguationScore": "0.36622"
-                      }
-                    },
-                    "bestEntityMetadata": {
-                      "knowledgebase": "YAGO",
-                      "depictionurl": "http://upload.wikimedia.org/wikipedia/commons/d/db/Location_map_Washington%2C_D.C._central.png",
-                      "depictionthumbnailurl": "http://upload.wikimedia.org/wikipedia/commons/thumbLocation_map_Washington%2C_D.C._central.png/200px-Location_map_Washington%2C_D.C._central.png",
-                      "importance": 0.0001545953682113483,
-                      "entityId": "White_House",
-                      "type": [
-                        "YAGO_yagoPermanentlyLocatedEntity",
-                        "YAGO_yagoLegalActorGeo",
-                        "YAGO_wordnet_museum_103800563",
-                        "YAGO_wordnet_palace_103878066",
-                        "YAGO_wikicategory_Palaces_in_the_United_States",
-                        "YAGO_wikicategory_Buildings_of_the_United_States_government_in_Washington\\u002c_D\\u002eC\\u002e",
-                        "YAGO_wikicategory_Buildings_and_structures_in_the_United_States_destroyed_by_arson",
-                        "YAGO_wordnet_address_108491027",
-                        "YAGO_wordnet_residence_108558963",
-                        "YAGO_wordnet_dwelling_103259505",
-                        "YAGO_wordnet_mansion_103719053",
-                        "YAGO_wordnet_housing_103546340",
-                        "YAGO_wordnet_landmark_108624891",
-                        "YAGO_wordnet_object_100002684",
-                        "YAGO_wordnet_position_108621598",
-                        "YAGO_wordnet_house_103544360",
-                        "YAGO_wikicategory_Houses_completed_in_1800",
-                        "YAGO_wordnet_location_100027167",
-                        "YAGO_wikicategory_Historic_house_museums_in_Washington\\u002c_D\\u002eC\\u002e",
-                        "YAGO_wikicategory_Neoclassical_palaces",
-                        "YAGO_wikicategory_Houses_on_the_National_Register_of_Historic_Places_in_Washington\\u002c_D\\u002eC\\u002e",
-                        "YAGO_wordnet_point_108620061",
-                        "YAGO_wordnet_geographic_point_108578706",
-                        "YAGO_wikicategory_Rebuilt_buildings_and_structures_in_the_United_States",
-                        "YAGO_wordnet_structure_104341686",
-                        "YAGO_wordnet_facility_103315023",
-                        "YAGO_wordnet_depository_103177349",
-                        "YAGO_wikicategory_National_Historic_Landmarks_in_Washington\\u002c_D\\u002eC\\u002e",
-                        "YAGO_yagoGeoEntity",
-                        "YAGO_wordnet_physical_entity_100001930",
-                        "YAGO_wordnet_building_102913152",
-                        "YAGO_wikicategory_Presidential_palaces",
-                        "YAGO_wordnet_entity_100001740",
-                        "YAGO_wikicategory_Presidential_museums_in_Washington\\u002c_D\\u002eC\\u002e",
-                        "YAGO_wordnet_whole_100003553",
-                        "YAGO_wikicategory_Presidential_residences_in_the_United_States",
-                        "YAGO_wordnet_artifact_100021939"
-                      ],
-                      "readableRepr": "White House",
-                      "url": "http://en.wikipedia.org/wiki/White%20House"
-                    }
-                  }
-                ]
+                }
               },
               "NNP"
             ],
@@ -1021,15 +636,15 @@
                   "characterOffsetBegin": 217,
                   "characterOffsetEnd": 221,
                   "pos": "DT",
-                  "ner": "DATE",
-                  "normalizedNER": "THIS AF",
+                  "ner": "TIME",
+                  "normalizedNER": "2016-11-10TAF",
                   "speaker": "PER0",
                   "before": " ",
                   "after": " ",
                   "timex": {
                     "tid": "t1",
-                    "type": "DATE",
-                    "altValue": "THIS AF"
+                    "type": "TIME",
+                    "value": "2016-11-10TAF"
                   }
                 }
               },
@@ -1045,380 +660,23 @@
                   "characterOffsetBegin": 222,
                   "characterOffsetEnd": 231,
                   "pos": "NN",
-                  "ner": "DATE",
-                  "normalizedNER": "THIS AF",
+                  "ner": "TIME",
+                  "normalizedNER": "2016-11-10TAF",
                   "speaker": "PER0",
                   "before": " ",
                   "after": " ",
                   "timex": {
                     "tid": "t1",
-                    "type": "DATE",
-                    "altValue": "THIS AF"
+                    "type": "TIME",
+                    "value": "2016-11-10TAF"
                   }
                 }
               },
               "NN"
-            ],
-            [
-              {
-                "nlpToken": {
-                  "index": 9,
-                  "word": "was",
-                  "originalText": "was",
-                  "lemma": "be",
-                  "characterOffsetBegin": 232,
-                  "characterOffsetEnd": 235,
-                  "pos": "VBD",
-                  "ner": "O",
-                  "speaker": "PER0",
-                  "before": " ",
-                  "after": " "
-                }
-              },
-              "VBD"
-            ],
-            [
-              {
-                "nlpToken": {
-                  "index": 10,
-                  "word": "the",
-                  "originalText": "the",
-                  "lemma": "the",
-                  "characterOffsetBegin": 236,
-                  "characterOffsetEnd": 239,
-                  "pos": "DT",
-                  "ner": "O",
-                  "speaker": "PER0",
-                  "before": " ",
-                  "after": " "
-                }
-              },
-              "DT"
-            ],
-            [
-              {
-                "nlpToken": {
-                  "index": 11,
-                  "word": "first",
-                  "originalText": "first",
-                  "lemma": "first",
-                  "characterOffsetBegin": 240,
-                  "characterOffsetEnd": 245,
-                  "pos": "JJ",
-                  "ner": "ORDINAL",
-                  "normalizedNER": "1.0",
-                  "speaker": "PER0",
-                  "before": " ",
-                  "after": " "
-                }
-              },
-              "JJ"
-            ],
-            [
-              {
-                "nlpToken": {
-                  "index": 12,
-                  "word": "public",
-                  "originalText": "public",
-                  "lemma": "public",
-                  "characterOffsetBegin": 246,
-                  "characterOffsetEnd": 252,
-                  "pos": "JJ",
-                  "ner": "O",
-                  "speaker": "PER0",
-                  "before": " ",
-                  "after": " "
-                }
-              },
-              "JJ"
-            ],
-            [
-              {
-                "nlpToken": {
-                  "index": 13,
-                  "word": "step",
-                  "originalText": "step",
-                  "lemma": "step",
-                  "characterOffsetBegin": 253,
-                  "characterOffsetEnd": 257,
-                  "pos": "NN",
-                  "ner": "O",
-                  "speaker": "PER0",
-                  "before": " ",
-                  "after": " "
-                }
-              },
-              "NN"
-            ],
-            [
-              {
-                "nlpToken": {
-                  "index": 14,
-                  "word": "in",
-                  "originalText": "in",
-                  "lemma": "in",
-                  "characterOffsetBegin": 258,
-                  "characterOffsetEnd": 260,
-                  "pos": "IN",
-                  "ner": "O",
-                  "speaker": "PER0",
-                  "before": " ",
-                  "after": " "
-                }
-              },
-              "IN"
-            ],
-            [
-              {
-                "nlpToken": {
-                  "index": 15,
-                  "word": "a",
-                  "originalText": "a",
-                  "lemma": "a",
-                  "characterOffsetBegin": 261,
-                  "characterOffsetEnd": 262,
-                  "pos": "DT",
-                  "ner": "O",
-                  "speaker": "PER0",
-                  "before": " ",
-                  "after": " "
-                }
-              },
-              "DT"
-            ],
-            [
-              {
-                "nlpToken": {
-                  "index": 16,
-                  "word": "transition",
-                  "originalText": "transition",
-                  "lemma": "transition",
-                  "characterOffsetBegin": 263,
-                  "characterOffsetEnd": 273,
-                  "pos": "NN",
-                  "ner": "O",
-                  "speaker": "PER0",
-                  "before": " ",
-                  "after": " "
-                }
-              },
-              "NN"
-            ],
-            [
-              {
-                "nlpToken": {
-                  "index": 17,
-                  "word": "of",
-                  "originalText": "of",
-                  "lemma": "of",
-                  "characterOffsetBegin": 274,
-                  "characterOffsetEnd": 276,
-                  "pos": "IN",
-                  "ner": "O",
-                  "speaker": "PER0",
-                  "before": " ",
-                  "after": " "
-                }
-              },
-              "IN"
-            ],
-            [
-              {
-                "nlpToken": {
-                  "index": 18,
-                  "word": "power",
-                  "originalText": "power",
-                  "lemma": "power",
-                  "characterOffsetBegin": 277,
-                  "characterOffsetEnd": 282,
-                  "pos": "NN",
-                  "ner": "O",
-                  "speaker": "PER0",
-                  "before": " ",
-                  "after": " "
-                }
-              },
-              "NN"
-            ],
-            [
-              {
-                "nlpToken": {
-                  "index": 19,
-                  "word": "since",
-                  "originalText": "since",
-                  "lemma": "since",
-                  "characterOffsetBegin": 283,
-                  "characterOffsetEnd": 288,
-                  "pos": "IN",
-                  "ner": "O",
-                  "speaker": "PER0",
-                  "before": " ",
-                  "after": " "
-                }
-              },
-              "IN"
-            ],
-            [
-              {
-                "nlpToken": {
-                  "index": 20,
-                  "word": "his",
-                  "originalText": "his",
-                  "lemma": "he",
-                  "characterOffsetBegin": 289,
-                  "characterOffsetEnd": 292,
-                  "pos": "PRP$",
-                  "ner": "O",
-                  "speaker": "PER0",
-                  "before": " ",
-                  "after": " "
-                }
-              },
-              "PRP$"
-            ],
-            [
-              {
-                "nlpToken": {
-                  "index": 21,
-                  "word": "stunning",
-                  "originalText": "stunning",
-                  "lemma": "stunning",
-                  "characterOffsetBegin": 293,
-                  "characterOffsetEnd": 301,
-                  "pos": "JJ",
-                  "ner": "O",
-                  "speaker": "PER0",
-                  "before": " ",
-                  "after": " "
-                }
-              },
-              "JJ"
-            ],
-            [
-              {
-                "nlpToken": {
-                  "index": 22,
-                  "word": "US",
-                  "originalText": "US",
-                  "lemma": "US",
-                  "characterOffsetBegin": 302,
-                  "characterOffsetEnd": 304,
-                  "pos": "NNP",
-                  "ner": "LOCATION",
-                  "speaker": "PER0",
-                  "before": " ",
-                  "after": " "
-                },
-                "aida": [
-                  {
-                    "mention": {
-                      "allEntities": [
-                        {
-                          "kbIdentifier": "YAGO:United_States",
-                          "disambiguationScore": "1"
-                        }
-                      ],
-                      "offset": 302,
-                      "name": "US",
-                      "length": 2,
-                      "bestEntity": {
-                        "kbIdentifier": "YAGO:United_States",
-                        "disambiguationScore": "1"
-                      }
-                    },
-                    "bestEntityMetadata": {
-                      "knowledgebase": "YAGO",
-                      "depictionurl": "http://upload.wikimedia.org/wikipedia/en/a/a4/Flag_of_the_United_States.svg",
-                      "depictionthumbnailurl": "http://upload.wikimedia.org/wikipedia/en/thumbFlag_of_the_United_States.svg/200px-Flag_of_the_United_States.svg",
-                      "importance": 0.0,
-                      "entityId": "United_States",
-                      "type": [
-                        "YAGO_wordnet_system_108435388",
-                        "YAGO_yagoPermanentlyLocatedEntity",
-                        "YAGO_yagoLegalActorGeo",
-                        "YAGO_wordnet_organization_108008335",
-                        "YAGO_wordnet_state_100024720",
-                        "YAGO_wordnet_democracy_108361329",
-                        "YAGO_wordnet_union_114418395",
-                        "YAGO_wordnet_unit_108189659",
-                        "YAGO_wikicategory_Superpowers",
-                        "YAGO_wordnet_cognition_100023271",
-                        "YAGO_wordnet_coalition_114418662",
-                        "YAGO_wordnet_political_system_108367880",
-                        "YAGO_wordnet_attribute_100024264",
-                        "YAGO_wordnet_abstraction_100002137",
-                        "YAGO_wordnet_attitude_106193203",
-                        "YAGO_wordnet_alliance_114418822",
-                        "YAGO_wordnet_group_100031264",
-                        "YAGO_wordnet_psychological_feature_100023100",
-                        "YAGO_wordnet_body_107965085",
-                        "YAGO_wordnet_political_orientation_106212839",
-                        "YAGO_wordnet_democracy_106217103",
-                        "YAGO_wordnet_political_unit_108359949",
-                        "YAGO_wikicategory_Former_British_colonies",
-                        "YAGO_wordnet_economy_108366753",
-                        "YAGO_yagoLegalActor",
-                        "YAGO_wikicategory_G8_nations",
-                        "YAGO_yagoGeoEntity",
-                        "YAGO_wordnet_social_group_107950920",
-                        "YAGO_wordnet_entity_100001740",
-                        "YAGO_wordnet_colony_108374049",
-                        "YAGO_wikicategory_Liberal_democracies",
-                        "YAGO_wikicategory_G20_nations",
-                        "YAGO_wikicategory_Former_confederations",
-                        "YAGO_wordnet_state_108168978",
-                        "YAGO_wikicategory_Federal_constitutional_republics",
-                        "YAGO_wordnet_world_power_108177592",
-                        "YAGO_wikicategory_Republics",
-                        "YAGO_wordnet_orientation_106208021"
-                      ],
-                      "readableRepr": "United States",
-                      "url": "http://en.wikipedia.org/wiki/United%20States"
-                    }
-                  }
-                ]
-              },
-              "NNP"
-            ],
-            [
-              {
-                "nlpToken": {
-                  "index": 23,
-                  "word": "election",
-                  "originalText": "election",
-                  "lemma": "election",
-                  "characterOffsetBegin": 305,
-                  "characterOffsetEnd": 313,
-                  "pos": "NN",
-                  "ner": "O",
-                  "speaker": "PER0",
-                  "before": " ",
-                  "after": " "
-                }
-              },
-              "NN"
-            ],
-            [
-              {
-                "nlpToken": {
-                  "index": 24,
-                  "word": "win",
-                  "originalText": "win",
-                  "lemma": "win",
-                  "characterOffsetBegin": 314,
-                  "characterOffsetEnd": 317,
-                  "pos": "VB",
-                  "ner": "O",
-                  "speaker": "PER0",
-                  "before": " ",
-                  "after": ""
-                }
-              },
-              "VB"
             ]
           ],
           "score": 0.40248447204968946,
-          "text": "The meeting at the White House this afternoon was the first public step in a transition of power since his stunning US election win",
+          "text": "The meeting at the White House this afternoon",
           "nlpIndexSentence": 3
         }
       ]

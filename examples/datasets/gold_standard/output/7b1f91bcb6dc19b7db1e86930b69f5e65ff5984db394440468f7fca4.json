@@ -23,25 +23,25 @@
             [
               {
                 "nlpToken": {
-                  "index": 16,
-                  "word": "local",
-                  "originalText": "local",
-                  "lemma": "local",
-                  "characterOffsetBegin": 591,
-                  "characterOffsetEnd": 596,
-                  "pos": "JJ",
+                  "index": 3,
+                  "word": "well",
+                  "originalText": "well",
+                  "lemma": "well",
+                  "characterOffsetBegin": 1458,
+                  "characterOffsetEnd": 1462,
+                  "pos": "RB",
                   "ner": "O",
                   "speaker": "PER0",
                   "before": " ",
                   "after": " "
                 }
               },
-              "JJ"
+              "RB"
             ]
           ],
-          "score": 1.5151515151515151,
-          "text": "local",
-          "nlpIndexSentence": 5
+          "score": 1.0,
+          "text": "well",
+          "nlpIndexSentence": 9
         }
       ]
     },
@@ -323,10 +323,12 @@
       "annotated": [
         {
           "coderPhraseCount": 2,
+          "parsed": "2016-11-12",
           "text": "11am local time on Sunday"
         },
         {
           "coderPhraseCount": 2,
+          "parsed": "2016-11-12",
           "text": "November 6"
         }
       ],
@@ -337,43 +339,37 @@
             [
               {
                 "nlpToken": {
-                  "index": 19,
+                  "index": 32,
                   "word": "Sunday",
                   "originalText": "Sunday",
                   "lemma": "Sunday",
-                  "characterOffsetBegin": 605,
-                  "characterOffsetEnd": 611,
+                  "characterOffsetBegin": 2144,
+                  "characterOffsetEnd": 2150,
                   "pos": "NNP",
                   "ner": "DATE",
-                  "normalizedNER": "XXXX-WXX-7",
+                  "normalizedNER": "2016-11-06",
                   "speaker": "PER0",
                   "before": " ",
                   "after": " ",
                   "timex": {
-                    "tid": "t4",
+                    "tid": "t10",
                     "type": "DATE",
-                    "value": "XXXX-WXX-7"
+                    "value": "2016-11-06"
                   }
-                },
-                "heideltime": [
-                  {
-                    "@tid": "t3",
-                    "@type": "DATE",
-                    "@value": "2016-11-06",
-                    "#text": "Sunday",
-                    "characterOffset": [
-                      605,
-                      611
-                    ]
-                  }
-                ]
+                }
               },
               "NNP"
             ]
           ],
-          "score": 0.7894736842105263,
+          "score": 0.7159058797380791,
           "text": "Sunday",
-          "nlpIndexSentence": 5
+          "enhancement": {
+            "timex": {
+              "start_date": "2016-11-06T00:00:00",
+              "end_date": "2016-11-06T23:59:59"
+            }
+          },
+          "nlpIndexSentence": 13
         }
       ]
     },
@@ -406,60 +402,7 @@
                   "speaker": "PER0",
                   "before": " ",
                   "after": ""
-                },
-                "aida": [
-                  {
-                    "mention": {
-                      "allEntities": [
-                        {
-                          "kbIdentifier": "YAGO:China",
-                          "disambiguationScore": "0.376"
-                        }
-                      ],
-                      "offset": 221,
-                      "name": "China",
-                      "length": 5,
-                      "bestEntity": {
-                        "kbIdentifier": "YAGO:China",
-                        "disambiguationScore": "0.376"
-                      }
-                    },
-                    "bestEntityMetadata": {
-                      "knowledgebase": "YAGO",
-                      "depictionurl": "http://upload.wikimedia.org/wikipedia/commons/f/fa/Flag_of_the_People%27s_Republic_of_China.svg",
-                      "depictionthumbnailurl": "http://upload.wikimedia.org/wikipedia/commons/thumbFlag_of_the_People%27s_Republic_of_China.svg/200px-Flag_of_the_People%27s_Republic_of_China.svg",
-                      "importance": 9.192157028782871e-06,
-                      "entityId": "China",
-                      "type": [
-                        "YAGO_wordnet_system_108435388",
-                        "YAGO_wordnet_district_108552138",
-                        "YAGO_wikicategory_East_Asian_countries",
-                        "YAGO_yagoPermanentlyLocatedEntity",
-                        "YAGO_yagoLegalActorGeo",
-                        "YAGO_wordnet_state_108654360",
-                        "YAGO_wordnet_country_108544813",
-                        "YAGO_wikicategory_Member_states_of_the_United_Nations",
-                        "YAGO_wordnet_economy_108366753",
-                        "YAGO_wikicategory_States_and_territories_established_in_1949",
-                        "YAGO_wikicategory_Communist_states",
-                        "YAGO_wordnet_abstraction_100002137",
-                        "YAGO_wordnet_region_108630985",
-                        "YAGO_yagoGeoEntity",
-                        "YAGO_wordnet_physical_entity_100001930",
-                        "YAGO_wikicategory_Central_Asian_countries",
-                        "YAGO_wordnet_entity_100001740",
-                        "YAGO_wikicategory_Single\\u002dparty_states",
-                        "YAGO_wordnet_object_100002684",
-                        "YAGO_wordnet_group_100031264",
-                        "YAGO_wordnet_location_100027167",
-                        "YAGO_wordnet_administrative_district_108491826",
-                        "YAGO_wikicategory_Chinese\\u002dspeaking_countries_and_territories"
-                      ],
-                      "readableRepr": "China",
-                      "url": "http://en.wikipedia.org/wiki/China"
-                    }
-                  }
-                ]
+                }
               },
               "NNP"
             ]
@@ -598,18 +541,7 @@
                   "speaker": "PER0",
                   "before": " ",
                   "after": " "
-                },
-                "aida": [
-                  {
-                    "mention": {
-                      "allEntities": [],
-                      "offset": 111,
-                      "name": "Zhao Zicong",
-                      "length": 11
-                    },
-                    "bestEntityMetadata": null
-                  }
-                ]
+                }
               },
               "NNP"
             ],
@@ -627,401 +559,13 @@
                   "speaker": "PER0",
                   "before": " ",
                   "after": " "
-                },
-                "aida": [
-                  {
-                    "mention": {
-                      "allEntities": [],
-                      "offset": 111,
-                      "name": "Zhao Zicong",
-                      "length": 11
-                    },
-                    "bestEntityMetadata": null
-                  }
-                ]
-              },
-              "NNP"
-            ],
-            [
-              {
-                "nlpToken": {
-                  "index": 4,
-                  "word": "fell",
-                  "originalText": "fell",
-                  "lemma": "fall",
-                  "characterOffsetBegin": 123,
-                  "characterOffsetEnd": 127,
-                  "pos": "VBD",
-                  "ner": "O",
-                  "speaker": "PER0",
-                  "before": " ",
-                  "after": " "
                 }
-              },
-              "VBD"
-            ],
-            [
-              {
-                "nlpToken": {
-                  "index": 5,
-                  "word": "into",
-                  "originalText": "into",
-                  "lemma": "into",
-                  "characterOffsetBegin": 128,
-                  "characterOffsetEnd": 132,
-                  "pos": "IN",
-                  "ner": "O",
-                  "speaker": "PER0",
-                  "before": " ",
-                  "after": " "
-                }
-              },
-              "IN"
-            ],
-            [
-              {
-                "nlpToken": {
-                  "index": 6,
-                  "word": "the",
-                  "originalText": "the",
-                  "lemma": "the",
-                  "characterOffsetBegin": 133,
-                  "characterOffsetEnd": 136,
-                  "pos": "DT",
-                  "ner": "O",
-                  "speaker": "PER0",
-                  "before": " ",
-                  "after": " "
-                }
-              },
-              "DT"
-            ],
-            [
-              {
-                "nlpToken": {
-                  "index": 7,
-                  "word": "12-inch-wide",
-                  "originalText": "12-inch-wide",
-                  "lemma": "12-inch-wide",
-                  "characterOffsetBegin": 137,
-                  "characterOffsetEnd": 149,
-                  "pos": "JJ",
-                  "ner": "O",
-                  "speaker": "PER0",
-                  "before": " ",
-                  "after": " "
-                }
-              },
-              "JJ"
-            ],
-            [
-              {
-                "nlpToken": {
-                  "index": 8,
-                  "word": "well",
-                  "originalText": "well",
-                  "lemma": "well",
-                  "characterOffsetBegin": 150,
-                  "characterOffsetEnd": 154,
-                  "pos": "NN",
-                  "ner": "O",
-                  "speaker": "PER0",
-                  "before": " ",
-                  "after": " "
-                }
-              },
-              "NN"
-            ],
-            [
-              {
-                "nlpToken": {
-                  "index": 9,
-                  "word": "by",
-                  "originalText": "by",
-                  "lemma": "by",
-                  "characterOffsetBegin": 155,
-                  "characterOffsetEnd": 157,
-                  "pos": "IN",
-                  "ner": "O",
-                  "speaker": "PER0",
-                  "before": " ",
-                  "after": " "
-                }
-              },
-              "IN"
-            ],
-            [
-              {
-                "nlpToken": {
-                  "index": 10,
-                  "word": "accident",
-                  "originalText": "accident",
-                  "lemma": "accident",
-                  "characterOffsetBegin": 158,
-                  "characterOffsetEnd": 166,
-                  "pos": "NN",
-                  "ner": "O",
-                  "speaker": "PER0",
-                  "before": " ",
-                  "after": " "
-                }
-              },
-              "NN"
-            ],
-            [
-              {
-                "nlpToken": {
-                  "index": 11,
-                  "word": "while",
-                  "originalText": "while",
-                  "lemma": "while",
-                  "characterOffsetBegin": 167,
-                  "characterOffsetEnd": 172,
-                  "pos": "IN",
-                  "ner": "O",
-                  "speaker": "PER0",
-                  "before": " ",
-                  "after": " "
-                }
-              },
-              "IN"
-            ],
-            [
-              {
-                "nlpToken": {
-                  "index": 12,
-                  "word": "working",
-                  "originalText": "working",
-                  "lemma": "work",
-                  "characterOffsetBegin": 173,
-                  "characterOffsetEnd": 180,
-                  "pos": "VBG",
-                  "ner": "O",
-                  "speaker": "PER0",
-                  "before": " ",
-                  "after": " "
-                }
-              },
-              "VBG"
-            ],
-            [
-              {
-                "nlpToken": {
-                  "index": 13,
-                  "word": "with",
-                  "originalText": "with",
-                  "lemma": "with",
-                  "characterOffsetBegin": 181,
-                  "characterOffsetEnd": 185,
-                  "pos": "IN",
-                  "ner": "O",
-                  "speaker": "PER0",
-                  "before": " ",
-                  "after": " "
-                }
-              },
-              "IN"
-            ],
-            [
-              {
-                "nlpToken": {
-                  "index": 14,
-                  "word": "his",
-                  "originalText": "his",
-                  "lemma": "he",
-                  "characterOffsetBegin": 186,
-                  "characterOffsetEnd": 189,
-                  "pos": "PRP$",
-                  "ner": "O",
-                  "speaker": "PER0",
-                  "before": " ",
-                  "after": " "
-                }
-              },
-              "PRP$"
-            ],
-            [
-              {
-                "nlpToken": {
-                  "index": 15,
-                  "word": "father",
-                  "originalText": "father",
-                  "lemma": "father",
-                  "characterOffsetBegin": 190,
-                  "characterOffsetEnd": 196,
-                  "pos": "NN",
-                  "ner": "O",
-                  "speaker": "PER0",
-                  "before": " ",
-                  "after": " "
-                }
-              },
-              "NN"
-            ],
-            [
-              {
-                "nlpToken": {
-                  "index": 16,
-                  "word": "in",
-                  "originalText": "in",
-                  "lemma": "in",
-                  "characterOffsetBegin": 197,
-                  "characterOffsetEnd": 199,
-                  "pos": "IN",
-                  "ner": "O",
-                  "speaker": "PER0",
-                  "before": " ",
-                  "after": " "
-                }
-              },
-              "IN"
-            ],
-            [
-              {
-                "nlpToken": {
-                  "index": 17,
-                  "word": "a",
-                  "originalText": "a",
-                  "lemma": "a",
-                  "characterOffsetBegin": 200,
-                  "characterOffsetEnd": 201,
-                  "pos": "DT",
-                  "ner": "O",
-                  "speaker": "PER0",
-                  "before": " ",
-                  "after": " "
-                }
-              },
-              "DT"
-            ],
-            [
-              {
-                "nlpToken": {
-                  "index": 18,
-                  "word": "village",
-                  "originalText": "village",
-                  "lemma": "village",
-                  "characterOffsetBegin": 202,
-                  "characterOffsetEnd": 209,
-                  "pos": "NN",
-                  "ner": "O",
-                  "speaker": "PER0",
-                  "before": " ",
-                  "after": " "
-                }
-              },
-              "NN"
-            ],
-            [
-              {
-                "nlpToken": {
-                  "index": 19,
-                  "word": "in",
-                  "originalText": "in",
-                  "lemma": "in",
-                  "characterOffsetBegin": 210,
-                  "characterOffsetEnd": 212,
-                  "pos": "IN",
-                  "ner": "O",
-                  "speaker": "PER0",
-                  "before": " ",
-                  "after": " "
-                }
-              },
-              "IN"
-            ],
-            [
-              {
-                "nlpToken": {
-                  "index": 20,
-                  "word": "central",
-                  "originalText": "central",
-                  "lemma": "central",
-                  "characterOffsetBegin": 213,
-                  "characterOffsetEnd": 220,
-                  "pos": "JJ",
-                  "ner": "O",
-                  "speaker": "PER0",
-                  "before": " ",
-                  "after": " "
-                }
-              },
-              "JJ"
-            ],
-            [
-              {
-                "nlpToken": {
-                  "index": 21,
-                  "word": "China",
-                  "originalText": "China",
-                  "lemma": "China",
-                  "characterOffsetBegin": 221,
-                  "characterOffsetEnd": 226,
-                  "pos": "NNP",
-                  "ner": "LOCATION",
-                  "speaker": "PER0",
-                  "before": " ",
-                  "after": ""
-                },
-                "aida": [
-                  {
-                    "mention": {
-                      "allEntities": [
-                        {
-                          "kbIdentifier": "YAGO:China",
-                          "disambiguationScore": "0.376"
-                        }
-                      ],
-                      "offset": 221,
-                      "name": "China",
-                      "length": 5,
-                      "bestEntity": {
-                        "kbIdentifier": "YAGO:China",
-                        "disambiguationScore": "0.376"
-                      }
-                    },
-                    "bestEntityMetadata": {
-                      "knowledgebase": "YAGO",
-                      "depictionurl": "http://upload.wikimedia.org/wikipedia/commons/f/fa/Flag_of_the_People%27s_Republic_of_China.svg",
-                      "depictionthumbnailurl": "http://upload.wikimedia.org/wikipedia/commons/thumbFlag_of_the_People%27s_Republic_of_China.svg/200px-Flag_of_the_People%27s_Republic_of_China.svg",
-                      "importance": 9.192157028782871e-06,
-                      "entityId": "China",
-                      "type": [
-                        "YAGO_wordnet_system_108435388",
-                        "YAGO_wordnet_district_108552138",
-                        "YAGO_wikicategory_East_Asian_countries",
-                        "YAGO_yagoPermanentlyLocatedEntity",
-                        "YAGO_yagoLegalActorGeo",
-                        "YAGO_wordnet_state_108654360",
-                        "YAGO_wordnet_country_108544813",
-                        "YAGO_wikicategory_Member_states_of_the_United_Nations",
-                        "YAGO_wordnet_economy_108366753",
-                        "YAGO_wikicategory_States_and_territories_established_in_1949",
-                        "YAGO_wikicategory_Communist_states",
-                        "YAGO_wordnet_abstraction_100002137",
-                        "YAGO_wordnet_region_108630985",
-                        "YAGO_yagoGeoEntity",
-                        "YAGO_wordnet_physical_entity_100001930",
-                        "YAGO_wikicategory_Central_Asian_countries",
-                        "YAGO_wordnet_entity_100001740",
-                        "YAGO_wikicategory_Single\\u002dparty_states",
-                        "YAGO_wordnet_object_100002684",
-                        "YAGO_wordnet_group_100031264",
-                        "YAGO_wordnet_location_100027167",
-                        "YAGO_wordnet_administrative_district_108491826",
-                        "YAGO_wikicategory_Chinese\\u002dspeaking_countries_and_territories"
-                      ],
-                      "readableRepr": "China",
-                      "url": "http://en.wikipedia.org/wiki/China"
-                    }
-                  }
-                ]
               },
               "NNP"
             ]
           ],
           "score": 0.41804511278195494,
-          "text": "Five-year-old Zhao Zicong fell into the 12-inch-wide well by accident while working with his father in a village in central China",
+          "text": "Five-year-old Zhao Zicong",
           "nlpIndexSentence": 1
         }
       ]

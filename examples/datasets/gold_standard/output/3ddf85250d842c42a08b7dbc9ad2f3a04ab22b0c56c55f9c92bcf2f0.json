@@ -38,7 +38,7 @@
               "JJ"
             ]
           ],
-          "score": 1.6229508196721312,
+          "score": 1.0,
           "text": "presidential"
         }
       ]
@@ -86,75 +86,7 @@
                   "speaker": "PER0",
                   "before": " ",
                   "after": " "
-                },
-                "aida": [
-                  {
-                    "mention": {
-                      "allEntities": [
-                        {
-                          "kbIdentifier": "YAGO:United_States",
-                          "disambiguationScore": "1"
-                        }
-                      ],
-                      "offset": 28,
-                      "name": "US",
-                      "length": 2,
-                      "bestEntity": {
-                        "kbIdentifier": "YAGO:United_States",
-                        "disambiguationScore": "1"
-                      }
-                    },
-                    "bestEntityMetadata": {
-                      "knowledgebase": "YAGO",
-                      "depictionurl": "http://upload.wikimedia.org/wikipedia/en/a/a4/Flag_of_the_United_States.svg",
-                      "depictionthumbnailurl": "http://upload.wikimedia.org/wikipedia/en/thumbFlag_of_the_United_States.svg/200px-Flag_of_the_United_States.svg",
-                      "importance": 0.0,
-                      "entityId": "United_States",
-                      "type": [
-                        "YAGO_wordnet_system_108435388",
-                        "YAGO_yagoPermanentlyLocatedEntity",
-                        "YAGO_yagoLegalActorGeo",
-                        "YAGO_wordnet_organization_108008335",
-                        "YAGO_wordnet_state_100024720",
-                        "YAGO_wordnet_democracy_108361329",
-                        "YAGO_wordnet_union_114418395",
-                        "YAGO_wordnet_unit_108189659",
-                        "YAGO_wikicategory_Superpowers",
-                        "YAGO_wordnet_cognition_100023271",
-                        "YAGO_wordnet_coalition_114418662",
-                        "YAGO_wordnet_political_system_108367880",
-                        "YAGO_wordnet_attribute_100024264",
-                        "YAGO_wordnet_abstraction_100002137",
-                        "YAGO_wordnet_attitude_106193203",
-                        "YAGO_wordnet_alliance_114418822",
-                        "YAGO_wordnet_group_100031264",
-                        "YAGO_wordnet_psychological_feature_100023100",
-                        "YAGO_wordnet_body_107965085",
-                        "YAGO_wordnet_political_orientation_106212839",
-                        "YAGO_wordnet_democracy_106217103",
-                        "YAGO_wordnet_political_unit_108359949",
-                        "YAGO_wikicategory_Former_British_colonies",
-                        "YAGO_wordnet_economy_108366753",
-                        "YAGO_yagoLegalActor",
-                        "YAGO_wikicategory_G8_nations",
-                        "YAGO_yagoGeoEntity",
-                        "YAGO_wordnet_social_group_107950920",
-                        "YAGO_wordnet_entity_100001740",
-                        "YAGO_wordnet_colony_108374049",
-                        "YAGO_wikicategory_Liberal_democracies",
-                        "YAGO_wikicategory_G20_nations",
-                        "YAGO_wikicategory_Former_confederations",
-                        "YAGO_wordnet_state_108168978",
-                        "YAGO_wikicategory_Federal_constitutional_republics",
-                        "YAGO_wordnet_world_power_108177592",
-                        "YAGO_wikicategory_Republics",
-                        "YAGO_wordnet_orientation_106208021"
-                      ],
-                      "readableRepr": "United States",
-                      "url": "http://en.wikipedia.org/wiki/United%20States"
-                    }
-                  }
-                ]
+                }
               },
               "NNP"
             ]
@@ -167,7 +99,8 @@
     "when": {
       "annotated": [
         {
-          "coderPhraseCount": 3
+          "coderPhraseCount": 3,
+          "parsed": "2016-11-12"
         }
       ],
       "label": "when",
@@ -177,115 +110,85 @@
             [
               {
                 "nlpToken": {
-                  "index": 10,
-                  "word": "the",
-                  "originalText": "the",
-                  "lemma": "the",
-                  "characterOffsetBegin": 1221,
-                  "characterOffsetEnd": 1224,
-                  "pos": "DT",
-                  "ner": "DATE",
-                  "normalizedNER": "PREV_IMMEDIATE P1W",
-                  "speaker": "82",
-                  "before": " ",
-                  "after": " ",
-                  "timex": {
-                    "tid": "t5",
-                    "type": "DATE",
-                    "altValue": "PREV_IMMEDIATE P1W"
-                  }
-                },
-                "heideltime": [
-                  {
-                    "@tid": "t1",
-                    "@type": "DATE",
-                    "@value": "2016-W44",
-                    "#text": "the last week",
-                    "characterOffset": [
-                      1221,
-                      1234
-                    ]
-                  }
-                ]
-              },
-              "DT"
-            ],
-            [
-              {
-                "nlpToken": {
-                  "index": 11,
-                  "word": "last",
-                  "originalText": "last",
-                  "lemma": "last",
-                  "characterOffsetBegin": 1225,
-                  "characterOffsetEnd": 1229,
+                  "index": 1,
+                  "word": "Several",
+                  "originalText": "Several",
+                  "lemma": "several",
+                  "characterOffsetBegin": 3267,
+                  "characterOffsetEnd": 3274,
                   "pos": "JJ",
-                  "ner": "DATE",
-                  "normalizedNER": "PREV_IMMEDIATE P1W",
-                  "speaker": "82",
+                  "ner": "TIME",
+                  "normalizedNER": "2016-11-12T01:17",
+                  "speaker": "PER0",
                   "before": " ",
                   "after": " ",
                   "timex": {
-                    "tid": "t5",
-                    "type": "DATE",
-                    "altValue": "PREV_IMMEDIATE P1W"
+                    "tid": "t16",
+                    "type": "TIME",
+                    "value": "2016-11-12T01:17"
                   }
-                },
-                "heideltime": [
-                  {
-                    "@tid": "t1",
-                    "@type": "DATE",
-                    "@value": "2016-W44",
-                    "#text": "the last week",
-                    "characterOffset": [
-                      1221,
-                      1234
-                    ]
-                  }
-                ]
+                }
               },
               "JJ"
             ],
             [
               {
                 "nlpToken": {
-                  "index": 12,
-                  "word": "week",
-                  "originalText": "week",
-                  "lemma": "week",
-                  "characterOffsetBegin": 1230,
-                  "characterOffsetEnd": 1234,
-                  "pos": "NN",
-                  "ner": "DATE",
-                  "normalizedNER": "PREV_IMMEDIATE P1W",
-                  "speaker": "82",
+                  "index": 2,
+                  "word": "days",
+                  "originalText": "days",
+                  "lemma": "day",
+                  "characterOffsetBegin": 3275,
+                  "characterOffsetEnd": 3279,
+                  "pos": "NNS",
+                  "ner": "TIME",
+                  "normalizedNER": "2016-11-12T01:17",
+                  "speaker": "PER0",
+                  "before": " ",
+                  "after": " ",
+                  "timex": {
+                    "tid": "t16",
+                    "type": "TIME",
+                    "value": "2016-11-12T01:17"
+                  }
+                }
+              },
+              "NNS"
+            ],
+            [
+              {
+                "nlpToken": {
+                  "index": 3,
+                  "word": "later",
+                  "originalText": "later",
+                  "lemma": "later",
+                  "characterOffsetBegin": 3280,
+                  "characterOffsetEnd": 3285,
+                  "pos": "RB",
+                  "ner": "TIME",
+                  "normalizedNER": "2016-11-12T01:17",
+                  "speaker": "PER0",
                   "before": " ",
                   "after": "",
                   "timex": {
-                    "tid": "t5",
-                    "type": "DATE",
-                    "altValue": "PREV_IMMEDIATE P1W"
+                    "tid": "t16",
+                    "type": "TIME",
+                    "value": "2016-11-12T01:17"
                   }
-                },
-                "heideltime": [
-                  {
-                    "@tid": "t1",
-                    "@type": "DATE",
-                    "@value": "2016-W44",
-                    "#text": "the last week",
-                    "characterOffset": [
-                      1221,
-                      1234
-                    ]
-                  }
-                ]
+                }
               },
-              "NN"
+              "RB"
             ]
           ],
-          "score": 0.78698224852071,
-          "text": "the last week",
-          "nlpIndexSentence": 7
+          "score": 0.6730006543523043,
+          "text": "Several days later",
+          "enhancement": {
+            "timex": {
+              "start_date": "2016-11-12T01:17:00",
+              "end_date": "2016-11-12T01:17:59"
+            }
+          },
+          "nlpIndexSentence": 21
         }
       ]
     },
@@ -313,75 +216,7 @@
                   "speaker": "PER0",
                   "before": " ",
                   "after": " "
-                },
-                "aida": [
-                  {
-                    "mention": {
-                      "allEntities": [
-                        {
-                          "kbIdentifier": "YAGO:United_States",
-                          "disambiguationScore": "1"
-                        }
-                      ],
-                      "offset": 28,
-                      "name": "US",
-                      "length": 2,
-                      "bestEntity": {
-                        "kbIdentifier": "YAGO:United_States",
-                        "disambiguationScore": "1"
-                      }
-                    },
-                    "bestEntityMetadata": {
-                      "knowledgebase": "YAGO",
-                      "depictionurl": "http://upload.wikimedia.org/wikipedia/en/a/a4/Flag_of_the_United_States.svg",
-                      "depictionthumbnailurl": "http://upload.wikimedia.org/wikipedia/en/thumbFlag_of_the_United_States.svg/200px-Flag_of_the_United_States.svg",
-                      "importance": 0.0,
-                      "entityId": "United_States",
-                      "type": [
-                        "YAGO_wordnet_system_108435388",
-                        "YAGO_yagoPermanentlyLocatedEntity",
-                        "YAGO_yagoLegalActorGeo",
-                        "YAGO_wordnet_organization_108008335",
-                        "YAGO_wordnet_state_100024720",
-                        "YAGO_wordnet_democracy_108361329",
-                        "YAGO_wordnet_union_114418395",
-                        "YAGO_wordnet_unit_108189659",
-                        "YAGO_wikicategory_Superpowers",
-                        "YAGO_wordnet_cognition_100023271",
-                        "YAGO_wordnet_coalition_114418662",
-                        "YAGO_wordnet_political_system_108367880",
-                        "YAGO_wordnet_attribute_100024264",
-                        "YAGO_wordnet_abstraction_100002137",
-                        "YAGO_wordnet_attitude_106193203",
-                        "YAGO_wordnet_alliance_114418822",
-                        "YAGO_wordnet_group_100031264",
-                        "YAGO_wordnet_psychological_feature_100023100",
-                        "YAGO_wordnet_body_107965085",
-                        "YAGO_wordnet_political_orientation_106212839",
-                        "YAGO_wordnet_democracy_106217103",
-                        "YAGO_wordnet_political_unit_108359949",
-                        "YAGO_wikicategory_Former_British_colonies",
-                        "YAGO_wordnet_economy_108366753",
-                        "YAGO_yagoLegalActor",
-                        "YAGO_wikicategory_G8_nations",
-                        "YAGO_yagoGeoEntity",
-                        "YAGO_wordnet_social_group_107950920",
-                        "YAGO_wordnet_entity_100001740",
-                        "YAGO_wordnet_colony_108374049",
-                        "YAGO_wikicategory_Liberal_democracies",
-                        "YAGO_wikicategory_G20_nations",
-                        "YAGO_wikicategory_Former_confederations",
-                        "YAGO_wordnet_state_108168978",
-                        "YAGO_wikicategory_Federal_constitutional_republics",
-                        "YAGO_wordnet_world_power_108177592",
-                        "YAGO_wikicategory_Republics",
-                        "YAGO_wordnet_orientation_106208021"
-                      ],
-                      "readableRepr": "United States",
-                      "url": "http://en.wikipedia.org/wiki/United%20States"
-                    }
-                  }
-                ]
+                }
               },
               "NNP"
             ]
@@ -437,133 +272,7 @@
                   "speaker": "PER0",
                   "before": "",
                   "after": " "
-                },
-                "aida": [
-                  {
-                    "mention": {
-                      "allEntities": [
-                        {
-                          "kbIdentifier": "YAGO:Hillary_Rodham_Clinton",
-                          "disambiguationScore": "1"
-                        }
-                      ],
-                      "offset": 0,
-                      "name": "Hillary Clinton",
-                      "length": 15,
-                      "bestEntity": {
-                        "kbIdentifier": "YAGO:Hillary_Rodham_Clinton",
-                        "disambiguationScore": "1"
-                      }
-                    },
-                    "bestEntityMetadata": {
-                      "knowledgebase": "YAGO",
-                      "depictionurl": "http://upload.wikimedia.org/wikipedia/commons/2/27/Hillary_Clinton_official_Secretary_of_State_portrait_crop.jpg",
-                      "depictionthumbnailurl": "http://upload.wikimedia.org/wikipedia/commons/thumbHillary_Clinton_official_Secretary_of_State_portrait_crop.jpg/200px-Hillary_Clinton_official_Secretary_of_State_portrait_crop.jpg",
-                      "importance": 0.0011849526060740102,
-                      "entityId": "Hillary_Rodham_Clinton",
-                      "type": [
-                        "YAGO_wordnet_owner_110389398",
-                        "YAGO_wordnet_senator_110578471",
-                        "YAGO_wikicategory_Grand_Crosses_of_the_Order_of_Sikatuna",
-                        "YAGO_wikicategory_Children\\u0027s_rights_activists",
-                        "YAGO_wikicategory_Arkansas_lawyers",
-                        "YAGO_wordnet_lawyer_110249950",
-                        "YAGO_wordnet_official_110372373",
-                        "YAGO_wordnet_secretary_110570019",
-                        "YAGO_wordnet_militant_110315837",
-                        "YAGO_wordnet_living_thing_100004258",
-                        "YAGO_wikicategory_Fellows_of_the_American_Academy_of_Arts_and_Sciences",
-                        "YAGO_wikicategory_People_from_Park_Ridge\\u002c_Illinois",
-                        "YAGO_wordnet_director_110014939",
-                        "YAGO_wordnet_object_100002684",
-                        "YAGO_wordnet_legislator_110253995",
-                        "YAGO_wikicategory_American_women_writers",
-                        "YAGO_wikicategory_21st\\u002dcentury_American_writers",
-                        "YAGO_wikicategory_20th\\u002dcentury_American_writers",
-                        "YAGO_wikicategory_American_people_of_French\\u002dCanadian_descent",
-                        "YAGO_wordnet_administrator_109770949",
-                        "YAGO_wikicategory_American_women_diplomats",
-                        "YAGO_wikicategory_Directors_of_Walmart",
-                        "YAGO_wordnet_worker_109632518",
-                        "YAGO_wordnet_president_110467179",
-                        "YAGO_wordnet_cross_103135532",
-                        "YAGO_wordnet_diplomat_110013927",
-                        "YAGO_wordnet_autobiographer_109825296",
-                        "YAGO_wordnet_colleague_109935990",
-                        "YAGO_wikicategory_American_people_of_French_descent",
-                        "YAGO_wordnet_adult_109605289",
-                        "YAGO_wikicategory_Democratic_Party_United_States_Senators",
-                        "YAGO_wikicategory_First_Ladies_of_the_United_States",
-                        "YAGO_wordnet_woman_110787470",
-                        "YAGO_wordnet_lawgiver_110249270",
-                        "YAGO_wikicategory_Living_people",
-                        "YAGO_wikicategory_Yale_Law_School_alumni",
-                        "YAGO_wordnet_executive_110069645",
-                        "YAGO_wordnet_female_109619168",
-                        "YAGO_wordnet_leader_109623038",
-                        "YAGO_yagoGeoEntity",
-                        "YAGO_wordnet_scholar_110557854",
-                        "YAGO_wordnet_head_110162991",
-                        "YAGO_wordnet_feminist_110084635",
-                        "YAGO_wordnet_alumnus_109786338",
-                        "YAGO_wikicategory_American_feminists",
-                        "YAGO_wordnet_entity_100001740",
-                        "YAGO_wordnet_holder_110180178",
-                        "YAGO_wordnet_organism_100004475",
-                        "YAGO_wikicategory_American_legal_scholars",
-                        "YAGO_wikicategory_American_female_lawyers",
-                        "YAGO_wordnet_politician_110451263",
-                        "YAGO_wikicategory_United_States_Senators_from_New_York",
-                        "YAGO_wordnet_whole_100003553",
-                        "YAGO_wordnet_achiever_109762821",
-                        "YAGO_wordnet_skilled_worker_110605985",
-                        "YAGO_yagoPermanentlyLocatedEntity",
-                        "YAGO_yagoLegalActorGeo",
-                        "YAGO_wikicategory_Methodist_feminists",
-                        "YAGO_wikicategory_Female_United_States_Senators",
-                        "YAGO_wikicategory_21st\\u002dcentury_women_writers",
-                        "YAGO_wikicategory_Westchester_County\\u002c_New_York_politicians",
-                        "YAGO_wikicategory_Women_in_New_York_politics",
-                        "YAGO_wordnet_person_100007846",
-                        "YAGO_wikicategory_American_people_of_Welsh_descent",
-                        "YAGO_wordnet_peer_109626238",
-                        "YAGO_wikicategory_American_legal_writers",
-                        "YAGO_wikicategory_First_Ladies_and_Gentlemen_of_Arkansas",
-                        "YAGO_wikicategory_Female_foreign_ministers",
-                        "YAGO_wordnet_head_of_state_110164747",
-                        "YAGO_wikicategory_20th\\u002dcentury_women_writers",
-                        "YAGO_wikicategory_Writers_from_New_York",
-                        "YAGO_wordnet_representative_110522035",
-                        "YAGO_wordnet_biographer_109855433",
-                        "YAGO_wikicategory_Presidents_of_the_United_Nations_Security_Council",
-                        "YAGO_wordnet_intellectual_109621545",
-                        "YAGO_wordnet_negotiator_110351874",
-                        "YAGO_wikicategory_United_States_Secretaries_of_State",
-                        "YAGO_wordnet_minister_110320863",
-                        "YAGO_wordnet_disputant_109615465",
-                        "YAGO_wikicategory_American_people_of_Scottish_descent",
-                        "YAGO_wordnet_structure_104341686",
-                        "YAGO_wordnet_reformer_110515194",
-                        "YAGO_wikicategory_American_autobiographers",
-                        "YAGO_yagoLegalActor",
-                        "YAGO_wordnet_professional_110480253",
-                        "YAGO_wordnet_physical_entity_100001930",
-                        "YAGO_wordnet_causal_agent_100007347",
-                        "YAGO_wikicategory_Wellesley_College_alumni",
-                        "YAGO_wordnet_first_lady_110092880",
-                        "YAGO_wordnet_foreign_minister_110103794",
-                        "YAGO_wordnet_communicator_109610660",
-                        "YAGO_wordnet_officeholder_110371450",
-                        "YAGO_wordnet_writer_110794014",
-                        "YAGO_wordnet_artifact_100021939",
-                        "YAGO_wikicategory_American_people_of_English_descent",
-                        "YAGO_wordnet_associate_109816771"
-                      ],
-                      "readableRepr": "Hillary Rodham Clinton",
-                      "url": "http://en.wikipedia.org/wiki/Hillary%20Rodham%20Clinton"
-                    }
-                  }
-                ]
+                }
               },
               "NNP"
             ],
@@ -581,133 +290,7 @@
                   "speaker": "PER0",
                   "before": " ",
                   "after": " "
-                },
-                "aida": [
-                  {
-                    "mention": {
-                      "allEntities": [
-                        {
-                          "kbIdentifier": "YAGO:Hillary_Rodham_Clinton",
-                          "disambiguationScore": "1"
-                        }
-                      ],
-                      "offset": 0,
-                      "name": "Hillary Clinton",
-                      "length": 15,
-                      "bestEntity": {
-                        "kbIdentifier": "YAGO:Hillary_Rodham_Clinton",
-                        "disambiguationScore": "1"
-                      }
-                    },
-                    "bestEntityMetadata": {
-                      "knowledgebase": "YAGO",
-                      "depictionurl": "http://upload.wikimedia.org/wikipedia/commons/2/27/Hillary_Clinton_official_Secretary_of_State_portrait_crop.jpg",
-                      "depictionthumbnailurl": "http://upload.wikimedia.org/wikipedia/commons/thumbHillary_Clinton_official_Secretary_of_State_portrait_crop.jpg/200px-Hillary_Clinton_official_Secretary_of_State_portrait_crop.jpg",
-                      "importance": 0.0011849526060740102,
-                      "entityId": "Hillary_Rodham_Clinton",
-                      "type": [
-                        "YAGO_wordnet_owner_110389398",
-                        "YAGO_wordnet_senator_110578471",
-                        "YAGO_wikicategory_Grand_Crosses_of_the_Order_of_Sikatuna",
-                        "YAGO_wikicategory_Children\\u0027s_rights_activists",
-                        "YAGO_wikicategory_Arkansas_lawyers",
-                        "YAGO_wordnet_lawyer_110249950",
-                        "YAGO_wordnet_official_110372373",
-                        "YAGO_wordnet_secretary_110570019",
-                        "YAGO_wordnet_militant_110315837",
-                        "YAGO_wordnet_living_thing_100004258",
-                        "YAGO_wikicategory_Fellows_of_the_American_Academy_of_Arts_and_Sciences",
-                        "YAGO_wikicategory_People_from_Park_Ridge\\u002c_Illinois",
-                        "YAGO_wordnet_director_110014939",
-                        "YAGO_wordnet_object_100002684",
-                        "YAGO_wordnet_legislator_110253995",
-                        "YAGO_wikicategory_American_women_writers",
-                        "YAGO_wikicategory_21st\\u002dcentury_American_writers",
-                        "YAGO_wikicategory_20th\\u002dcentury_American_writers",
-                        "YAGO_wikicategory_American_people_of_French\\u002dCanadian_descent",
-                        "YAGO_wordnet_administrator_109770949",
-                        "YAGO_wikicategory_American_women_diplomats",
-                        "YAGO_wikicategory_Directors_of_Walmart",
-                        "YAGO_wordnet_worker_109632518",
-                        "YAGO_wordnet_president_110467179",
-                        "YAGO_wordnet_cross_103135532",
-                        "YAGO_wordnet_diplomat_110013927",
-                        "YAGO_wordnet_autobiographer_109825296",
-                        "YAGO_wordnet_colleague_109935990",
-                        "YAGO_wikicategory_American_people_of_French_descent",
-                        "YAGO_wordnet_adult_109605289",
-                        "YAGO_wikicategory_Democratic_Party_United_States_Senators",
-                        "YAGO_wikicategory_First_Ladies_of_the_United_States",
-                        "YAGO_wordnet_woman_110787470",
-                        "YAGO_wordnet_lawgiver_110249270",
-                        "YAGO_wikicategory_Living_people",
-                        "YAGO_wikicategory_Yale_Law_School_alumni",
-                        "YAGO_wordnet_executive_110069645",
-                        "YAGO_wordnet_female_109619168",
-                        "YAGO_wordnet_leader_109623038",
-                        "YAGO_yagoGeoEntity",
-                        "YAGO_wordnet_scholar_110557854",
-                        "YAGO_wordnet_head_110162991",
-                        "YAGO_wordnet_feminist_110084635",
-                        "YAGO_wordnet_alumnus_109786338",
-                        "YAGO_wikicategory_American_feminists",
-                        "YAGO_wordnet_entity_100001740",
-                        "YAGO_wordnet_holder_110180178",
-                        "YAGO_wordnet_organism_100004475",
-                        "YAGO_wikicategory_American_legal_scholars",
-                        "YAGO_wikicategory_American_female_lawyers",
-                        "YAGO_wordnet_politician_110451263",
-                        "YAGO_wikicategory_United_States_Senators_from_New_York",
-                        "YAGO_wordnet_whole_100003553",
-                        "YAGO_wordnet_achiever_109762821",
-                        "YAGO_wordnet_skilled_worker_110605985",
-                        "YAGO_yagoPermanentlyLocatedEntity",
-                        "YAGO_yagoLegalActorGeo",
-                        "YAGO_wikicategory_Methodist_feminists",
-                        "YAGO_wikicategory_Female_United_States_Senators",
-                        "YAGO_wikicategory_21st\\u002dcentury_women_writers",
-                        "YAGO_wikicategory_Westchester_County\\u002c_New_York_politicians",
-                        "YAGO_wikicategory_Women_in_New_York_politics",
-                        "YAGO_wordnet_person_100007846",
-                        "YAGO_wikicategory_American_people_of_Welsh_descent",
-                        "YAGO_wordnet_peer_109626238",
-                        "YAGO_wikicategory_American_legal_writers",
-                        "YAGO_wikicategory_First_Ladies_and_Gentlemen_of_Arkansas",
-                        "YAGO_wikicategory_Female_foreign_ministers",
-                        "YAGO_wordnet_head_of_state_110164747",
-                        "YAGO_wikicategory_20th\\u002dcentury_women_writers",
-                        "YAGO_wikicategory_Writers_from_New_York",
-                        "YAGO_wordnet_representative_110522035",
-                        "YAGO_wordnet_biographer_109855433",
-                        "YAGO_wikicategory_Presidents_of_the_United_Nations_Security_Council",
-                        "YAGO_wordnet_intellectual_109621545",
-                        "YAGO_wordnet_negotiator_110351874",
-                        "YAGO_wikicategory_United_States_Secretaries_of_State",
-                        "YAGO_wordnet_minister_110320863",
-                        "YAGO_wordnet_disputant_109615465",
-                        "YAGO_wikicategory_American_people_of_Scottish_descent",
-                        "YAGO_wordnet_structure_104341686",
-                        "YAGO_wordnet_reformer_110515194",
-                        "YAGO_wikicategory_American_autobiographers",
-                        "YAGO_yagoLegalActor",
-                        "YAGO_wordnet_professional_110480253",
-                        "YAGO_wordnet_physical_entity_100001930",
-                        "YAGO_wordnet_causal_agent_100007347",
-                        "YAGO_wikicategory_Wellesley_College_alumni",
-                        "YAGO_wordnet_first_lady_110092880",
-                        "YAGO_wordnet_foreign_minister_110103794",
-                        "YAGO_wordnet_communicator_109610660",
-                        "YAGO_wordnet_officeholder_110371450",
-                        "YAGO_wordnet_writer_110794014",
-                        "YAGO_wordnet_artifact_100021939",
-                        "YAGO_wikicategory_American_people_of_English_descent",
-                        "YAGO_wordnet_associate_109816771"
-                      ],
-                      "readableRepr": "Hillary Rodham Clinton",
-                      "url": "http://en.wikipedia.org/wiki/Hillary%20Rodham%20Clinton"
-                    }
-                  }
-                ]
+                }
               },
               "NNP"
             ],
@@ -760,133 +343,7 @@
                   "speaker": "PER0",
                   "before": "",
                   "after": " "
-                },
-                "aida": [
-                  {
-                    "mention": {
-                      "allEntities": [
-                        {
-                          "kbIdentifier": "YAGO:Hillary_Rodham_Clinton",
-                          "disambiguationScore": "1"
-                        }
-                      ],
-                      "offset": 0,
-                      "name": "Hillary Clinton",
-                      "length": 15,
-                      "bestEntity": {
-                        "kbIdentifier": "YAGO:Hillary_Rodham_Clinton",
-                        "disambiguationScore": "1"
-                      }
-                    },
-                    "bestEntityMetadata": {
-                      "knowledgebase": "YAGO",
-                      "depictionurl": "http://upload.wikimedia.org/wikipedia/commons/2/27/Hillary_Clinton_official_Secretary_of_State_portrait_crop.jpg",
-                      "depictionthumbnailurl": "http://upload.wikimedia.org/wikipedia/commons/thumbHillary_Clinton_official_Secretary_of_State_portrait_crop.jpg/200px-Hillary_Clinton_official_Secretary_of_State_portrait_crop.jpg",
-                      "importance": 0.0011849526060740102,
-                      "entityId": "Hillary_Rodham_Clinton",
-                      "type": [
-                        "YAGO_wordnet_owner_110389398",
-                        "YAGO_wordnet_senator_110578471",
-                        "YAGO_wikicategory_Grand_Crosses_of_the_Order_of_Sikatuna",
-                        "YAGO_wikicategory_Children\\u0027s_rights_activists",
-                        "YAGO_wikicategory_Arkansas_lawyers",
-                        "YAGO_wordnet_lawyer_110249950",
-                        "YAGO_wordnet_official_110372373",
-                        "YAGO_wordnet_secretary_110570019",
-                        "YAGO_wordnet_militant_110315837",
-                        "YAGO_wordnet_living_thing_100004258",
-                        "YAGO_wikicategory_Fellows_of_the_American_Academy_of_Arts_and_Sciences",
-                        "YAGO_wikicategory_People_from_Park_Ridge\\u002c_Illinois",
-                        "YAGO_wordnet_director_110014939",
-                        "YAGO_wordnet_object_100002684",
-                        "YAGO_wordnet_legislator_110253995",
-                        "YAGO_wikicategory_American_women_writers",
-                        "YAGO_wikicategory_21st\\u002dcentury_American_writers",
-                        "YAGO_wikicategory_20th\\u002dcentury_American_writers",
-                        "YAGO_wikicategory_American_people_of_French\\u002dCanadian_descent",
-                        "YAGO_wordnet_administrator_109770949",
-                        "YAGO_wikicategory_American_women_diplomats",
-                        "YAGO_wikicategory_Directors_of_Walmart",
-                        "YAGO_wordnet_worker_109632518",
-                        "YAGO_wordnet_president_110467179",
-                        "YAGO_wordnet_cross_103135532",
-                        "YAGO_wordnet_diplomat_110013927",
-                        "YAGO_wordnet_autobiographer_109825296",
-                        "YAGO_wordnet_colleague_109935990",
-                        "YAGO_wikicategory_American_people_of_French_descent",
-                        "YAGO_wordnet_adult_109605289",
-                        "YAGO_wikicategory_Democratic_Party_United_States_Senators",
-                        "YAGO_wikicategory_First_Ladies_of_the_United_States",
-                        "YAGO_wordnet_woman_110787470",
-                        "YAGO_wordnet_lawgiver_110249270",
-                        "YAGO_wikicategory_Living_people",
-                        "YAGO_wikicategory_Yale_Law_School_alumni",
-                        "YAGO_wordnet_executive_110069645",
-                        "YAGO_wordnet_female_109619168",
-                        "YAGO_wordnet_leader_109623038",
-                        "YAGO_yagoGeoEntity",
-                        "YAGO_wordnet_scholar_110557854",
-                        "YAGO_wordnet_head_110162991",
-                        "YAGO_wordnet_feminist_110084635",
-                        "YAGO_wordnet_alumnus_109786338",
-                        "YAGO_wikicategory_American_feminists",
-                        "YAGO_wordnet_entity_100001740",
-                        "YAGO_wordnet_holder_110180178",
-                        "YAGO_wordnet_organism_100004475",
-                        "YAGO_wikicategory_American_legal_scholars",
-                        "YAGO_wikicategory_American_female_lawyers",
-                        "YAGO_wordnet_politician_110451263",
-                        "YAGO_wikicategory_United_States_Senators_from_New_York",
-                        "YAGO_wordnet_whole_100003553",
-                        "YAGO_wordnet_achiever_109762821",
-                        "YAGO_wordnet_skilled_worker_110605985",
-                        "YAGO_yagoPermanentlyLocatedEntity",
-                        "YAGO_yagoLegalActorGeo",
-                        "YAGO_wikicategory_Methodist_feminists",
-                        "YAGO_wikicategory_Female_United_States_Senators",
-                        "YAGO_wikicategory_21st\\u002dcentury_women_writers",
-                        "YAGO_wikicategory_Westchester_County\\u002c_New_York_politicians",
-                        "YAGO_wikicategory_Women_in_New_York_politics",
-                        "YAGO_wordnet_person_100007846",
-                        "YAGO_wikicategory_American_people_of_Welsh_descent",
-                        "YAGO_wordnet_peer_109626238",
-                        "YAGO_wikicategory_American_legal_writers",
-                        "YAGO_wikicategory_First_Ladies_and_Gentlemen_of_Arkansas",
-                        "YAGO_wikicategory_Female_foreign_ministers",
-                        "YAGO_wordnet_head_of_state_110164747",
-                        "YAGO_wikicategory_20th\\u002dcentury_women_writers",
-                        "YAGO_wikicategory_Writers_from_New_York",
-                        "YAGO_wordnet_representative_110522035",
-                        "YAGO_wordnet_biographer_109855433",
-                        "YAGO_wikicategory_Presidents_of_the_United_Nations_Security_Council",
-                        "YAGO_wordnet_intellectual_109621545",
-                        "YAGO_wordnet_negotiator_110351874",
-                        "YAGO_wikicategory_United_States_Secretaries_of_State",
-                        "YAGO_wordnet_minister_110320863",
-                        "YAGO_wordnet_disputant_109615465",
-                        "YAGO_wikicategory_American_people_of_Scottish_descent",
-                        "YAGO_wordnet_structure_104341686",
-                        "YAGO_wordnet_reformer_110515194",
-                        "YAGO_wikicategory_American_autobiographers",
-                        "YAGO_yagoLegalActor",
-                        "YAGO_wordnet_professional_110480253",
-                        "YAGO_wordnet_physical_entity_100001930",
-                        "YAGO_wordnet_causal_agent_100007347",
-                        "YAGO_wikicategory_Wellesley_College_alumni",
-                        "YAGO_wordnet_first_lady_110092880",
-                        "YAGO_wordnet_foreign_minister_110103794",
-                        "YAGO_wordnet_communicator_109610660",
-                        "YAGO_wordnet_officeholder_110371450",
-                        "YAGO_wordnet_writer_110794014",
-                        "YAGO_wordnet_artifact_100021939",
-                        "YAGO_wikicategory_American_people_of_English_descent",
-                        "YAGO_wordnet_associate_109816771"
-                      ],
-                      "readableRepr": "Hillary Rodham Clinton",
-                      "url": "http://en.wikipedia.org/wiki/Hillary%20Rodham%20Clinton"
-                    }
-                  }
-                ]
+                }
               },
               "NNP"
             ],
@@ -904,133 +361,7 @@
                   "speaker": "PER0",
                   "before": " ",
                   "after": " "
-                },
-                "aida": [
-                  {
-                    "mention": {
-                      "allEntities": [
-                        {
-                          "kbIdentifier": "YAGO:Hillary_Rodham_Clinton",
-                          "disambiguationScore": "1"
-                        }
-                      ],
-                      "offset": 0,
-                      "name": "Hillary Clinton",
-                      "length": 15,
-                      "bestEntity": {
-                        "kbIdentifier": "YAGO:Hillary_Rodham_Clinton",
-                        "disambiguationScore": "1"
-                      }
-                    },
-                    "bestEntityMetadata": {
-                      "knowledgebase": "YAGO",
-                      "depictionurl": "http://upload.wikimedia.org/wikipedia/commons/2/27/Hillary_Clinton_official_Secretary_of_State_portrait_crop.jpg",
-                      "depictionthumbnailurl": "http://upload.wikimedia.org/wikipedia/commons/thumbHillary_Clinton_official_Secretary_of_State_portrait_crop.jpg/200px-Hillary_Clinton_official_Secretary_of_State_portrait_crop.jpg",
-                      "importance": 0.0011849526060740102,
-                      "entityId": "Hillary_Rodham_Clinton",
-                      "type": [
-                        "YAGO_wordnet_owner_110389398",
-                        "YAGO_wordnet_senator_110578471",
-                        "YAGO_wikicategory_Grand_Crosses_of_the_Order_of_Sikatuna",
-                        "YAGO_wikicategory_Children\\u0027s_rights_activists",
-                        "YAGO_wikicategory_Arkansas_lawyers",
-                        "YAGO_wordnet_lawyer_110249950",
-                        "YAGO_wordnet_official_110372373",
-                        "YAGO_wordnet_secretary_110570019",
-                        "YAGO_wordnet_militant_110315837",
-                        "YAGO_wordnet_living_thing_100004258",
-                        "YAGO_wikicategory_Fellows_of_the_American_Academy_of_Arts_and_Sciences",
-                        "YAGO_wikicategory_People_from_Park_Ridge\\u002c_Illinois",
-                        "YAGO_wordnet_director_110014939",
-                        "YAGO_wordnet_object_100002684",
-                        "YAGO_wordnet_legislator_110253995",
-                        "YAGO_wikicategory_American_women_writers",
-                        "YAGO_wikicategory_21st\\u002dcentury_American_writers",
-                        "YAGO_wikicategory_20th\\u002dcentury_American_writers",
-                        "YAGO_wikicategory_American_people_of_French\\u002dCanadian_descent",
-                        "YAGO_wordnet_administrator_109770949",
-                        "YAGO_wikicategory_American_women_diplomats",
-                        "YAGO_wikicategory_Directors_of_Walmart",
-                        "YAGO_wordnet_worker_109632518",
-                        "YAGO_wordnet_president_110467179",
-                        "YAGO_wordnet_cross_103135532",
-                        "YAGO_wordnet_diplomat_110013927",
-                        "YAGO_wordnet_autobiographer_109825296",
-                        "YAGO_wordnet_colleague_109935990",
-                        "YAGO_wikicategory_American_people_of_French_descent",
-                        "YAGO_wordnet_adult_109605289",
-                        "YAGO_wikicategory_Democratic_Party_United_States_Senators",
-                        "YAGO_wikicategory_First_Ladies_of_the_United_States",
-                        "YAGO_wordnet_woman_110787470",
-                        "YAGO_wordnet_lawgiver_110249270",
-                        "YAGO_wikicategory_Living_people",
-                        "YAGO_wikicategory_Yale_Law_School_alumni",
-                        "YAGO_wordnet_executive_110069645",
-                        "YAGO_wordnet_female_109619168",
-                        "YAGO_wordnet_leader_109623038",
-                        "YAGO_yagoGeoEntity",
-                        "YAGO_wordnet_scholar_110557854",
-                        "YAGO_wordnet_head_110162991",
-                        "YAGO_wordnet_feminist_110084635",
-                        "YAGO_wordnet_alumnus_109786338",
-                        "YAGO_wikicategory_American_feminists",
-                        "YAGO_wordnet_entity_100001740",
-                        "YAGO_wordnet_holder_110180178",
-                        "YAGO_wordnet_organism_100004475",
-                        "YAGO_wikicategory_American_legal_scholars",
-                        "YAGO_wikicategory_American_female_lawyers",
-                        "YAGO_wordnet_politician_110451263",
-                        "YAGO_wikicategory_United_States_Senators_from_New_York",
-                        "YAGO_wordnet_whole_100003553",
-                        "YAGO_wordnet_achiever_109762821",
-                        "YAGO_wordnet_skilled_worker_110605985",
-                        "YAGO_yagoPermanentlyLocatedEntity",
-                        "YAGO_yagoLegalActorGeo",
-                        "YAGO_wikicategory_Methodist_feminists",
-                        "YAGO_wikicategory_Female_United_States_Senators",
-                        "YAGO_wikicategory_21st\\u002dcentury_women_writers",
-                        "YAGO_wikicategory_Westchester_County\\u002c_New_York_politicians",
-                        "YAGO_wikicategory_Women_in_New_York_politics",
-                        "YAGO_wordnet_person_100007846",
-                        "YAGO_wikicategory_American_people_of_Welsh_descent",
-                        "YAGO_wordnet_peer_109626238",
-                        "YAGO_wikicategory_American_legal_writers",
-                        "YAGO_wikicategory_First_Ladies_and_Gentlemen_of_Arkansas",
-                        "YAGO_wikicategory_Female_foreign_ministers",
-                        "YAGO_wordnet_head_of_state_110164747",
-                        "YAGO_wikicategory_20th\\u002dcentury_women_writers",
-                        "YAGO_wikicategory_Writers_from_New_York",
-                        "YAGO_wordnet_representative_110522035",
-                        "YAGO_wordnet_biographer_109855433",
-                        "YAGO_wikicategory_Presidents_of_the_United_Nations_Security_Council",
-                        "YAGO_wordnet_intellectual_109621545",
-                        "YAGO_wordnet_negotiator_110351874",
-                        "YAGO_wikicategory_United_States_Secretaries_of_State",
-                        "YAGO_wordnet_minister_110320863",
-                        "YAGO_wordnet_disputant_109615465",
-                        "YAGO_wikicategory_American_people_of_Scottish_descent",
-                        "YAGO_wordnet_structure_104341686",
-                        "YAGO_wordnet_reformer_110515194",
-                        "YAGO_wikicategory_American_autobiographers",
-                        "YAGO_yagoLegalActor",
-                        "YAGO_wordnet_professional_110480253",
-                        "YAGO_wordnet_physical_entity_100001930",
-                        "YAGO_wordnet_causal_agent_100007347",
-                        "YAGO_wikicategory_Wellesley_College_alumni",
-                        "YAGO_wordnet_first_lady_110092880",
-                        "YAGO_wordnet_foreign_minister_110103794",
-                        "YAGO_wordnet_communicator_109610660",
-                        "YAGO_wordnet_officeholder_110371450",
-                        "YAGO_wordnet_writer_110794014",
-                        "YAGO_wordnet_artifact_100021939",
-                        "YAGO_wikicategory_American_people_of_English_descent",
-                        "YAGO_wordnet_associate_109816771"
-                      ],
-                      "readableRepr": "Hillary Rodham Clinton",
-                      "url": "http://en.wikipedia.org/wiki/Hillary%20Rodham%20Clinton"
-                    }
-                  }
-                ]
+                }
               },
               "NNP"
             ],
@@ -1051,548 +382,10 @@
                 }
               },
               "NN"
-            ],
-            [
-              {
-                "nlpToken": {
-                  "index": 4,
-                  "word": "blames",
-                  "originalText": "blames",
-                  "lemma": "blame",
-                  "characterOffsetBegin": 21,
-                  "characterOffsetEnd": 27,
-                  "pos": "VBZ",
-                  "ner": "O",
-                  "speaker": "PER0",
-                  "before": " ",
-                  "after": " "
-                }
-              },
-              "VBZ"
-            ],
-            [
-              {
-                "nlpToken": {
-                  "index": 5,
-                  "word": "US",
-                  "originalText": "US",
-                  "lemma": "US",
-                  "characterOffsetBegin": 28,
-                  "characterOffsetEnd": 30,
-                  "pos": "NNP",
-                  "ner": "LOCATION",
-                  "speaker": "PER0",
-                  "before": " ",
-                  "after": " "
-                },
-                "aida": [
-                  {
-                    "mention": {
-                      "allEntities": [
-                        {
-                          "kbIdentifier": "YAGO:United_States",
-                          "disambiguationScore": "1"
-                        }
-                      ],
-                      "offset": 28,
-                      "name": "US",
-                      "length": 2,
-                      "bestEntity": {
-                        "kbIdentifier": "YAGO:United_States",
-                        "disambiguationScore": "1"
-                      }
-                    },
-                    "bestEntityMetadata": {
-                      "knowledgebase": "YAGO",
-                      "depictionurl": "http://upload.wikimedia.org/wikipedia/en/a/a4/Flag_of_the_United_States.svg",
-                      "depictionthumbnailurl": "http://upload.wikimedia.org/wikipedia/en/thumbFlag_of_the_United_States.svg/200px-Flag_of_the_United_States.svg",
-                      "importance": 0.0,
-                      "entityId": "United_States",
-                      "type": [
-                        "YAGO_wordnet_system_108435388",
-                        "YAGO_yagoPermanentlyLocatedEntity",
-                        "YAGO_yagoLegalActorGeo",
-                        "YAGO_wordnet_organization_108008335",
-                        "YAGO_wordnet_state_100024720",
-                        "YAGO_wordnet_democracy_108361329",
-                        "YAGO_wordnet_union_114418395",
-                        "YAGO_wordnet_unit_108189659",
-                        "YAGO_wikicategory_Superpowers",
-                        "YAGO_wordnet_cognition_100023271",
-                        "YAGO_wordnet_coalition_114418662",
-                        "YAGO_wordnet_political_system_108367880",
-                        "YAGO_wordnet_attribute_100024264",
-                        "YAGO_wordnet_abstraction_100002137",
-                        "YAGO_wordnet_attitude_106193203",
-                        "YAGO_wordnet_alliance_114418822",
-                        "YAGO_wordnet_group_100031264",
-                        "YAGO_wordnet_psychological_feature_100023100",
-                        "YAGO_wordnet_body_107965085",
-                        "YAGO_wordnet_political_orientation_106212839",
-                        "YAGO_wordnet_democracy_106217103",
-                        "YAGO_wordnet_political_unit_108359949",
-                        "YAGO_wikicategory_Former_British_colonies",
-                        "YAGO_wordnet_economy_108366753",
-                        "YAGO_yagoLegalActor",
-                        "YAGO_wikicategory_G8_nations",
-                        "YAGO_yagoGeoEntity",
-                        "YAGO_wordnet_social_group_107950920",
-                        "YAGO_wordnet_entity_100001740",
-                        "YAGO_wordnet_colony_108374049",
-                        "YAGO_wikicategory_Liberal_democracies",
-                        "YAGO_wikicategory_G20_nations",
-                        "YAGO_wikicategory_Former_confederations",
-                        "YAGO_wordnet_state_108168978",
-                        "YAGO_wikicategory_Federal_constitutional_republics",
-                        "YAGO_wordnet_world_power_108177592",
-                        "YAGO_wikicategory_Republics",
-                        "YAGO_wordnet_orientation_106208021"
-                      ],
-                      "readableRepr": "United States",
-                      "url": "http://en.wikipedia.org/wiki/United%20States"
-                    }
-                  }
-                ]
-              },
-              "NNP"
-            ],
-            [
-              {
-                "nlpToken": {
-                  "index": 6,
-                  "word": "presidential",
-                  "originalText": "presidential",
-                  "lemma": "presidential",
-                  "characterOffsetBegin": 31,
-                  "characterOffsetEnd": 43,
-                  "pos": "JJ",
-                  "ner": "O",
-                  "speaker": "PER0",
-                  "before": " ",
-                  "after": " "
-                }
-              },
-              "JJ"
-            ],
-            [
-              {
-                "nlpToken": {
-                  "index": 7,
-                  "word": "loss",
-                  "originalText": "loss",
-                  "lemma": "loss",
-                  "characterOffsetBegin": 44,
-                  "characterOffsetEnd": 48,
-                  "pos": "NN",
-                  "ner": "O",
-                  "speaker": "PER0",
-                  "before": " ",
-                  "after": " "
-                }
-              },
-              "NN"
-            ],
-            [
-              {
-                "nlpToken": {
-                  "index": 8,
-                  "word": "to",
-                  "originalText": "to",
-                  "lemma": "to",
-                  "characterOffsetBegin": 49,
-                  "characterOffsetEnd": 51,
-                  "pos": "TO",
-                  "ner": "O",
-                  "speaker": "PER0",
-                  "before": " ",
-                  "after": " "
-                }
-              },
-              "TO"
-            ],
-            [
-              {
-                "nlpToken": {
-                  "index": 9,
-                  "word": "Donald",
-                  "originalText": "Donald",
-                  "lemma": "Donald",
-                  "characterOffsetBegin": 52,
-                  "characterOffsetEnd": 58,
-                  "pos": "NNP",
-                  "ner": "PERSON",
-                  "speaker": "PER0",
-                  "before": " ",
-                  "after": " "
-                },
-                "aida": [
-                  {
-                    "mention": {
-                      "allEntities": [
-                        {
-                          "kbIdentifier": "YAGO:Donald_Trump",
-                          "disambiguationScore": "0.98339"
-                        }
-                      ],
-                      "offset": 52,
-                      "name": "Donald Trump",
-                      "length": 12,
-                      "bestEntity": {
-                        "kbIdentifier": "YAGO:Donald_Trump",
-                        "disambiguationScore": "0.98339"
-                      }
-                    },
-                    "bestEntityMetadata": {
-                      "knowledgebase": "YAGO",
-                      "depictionurl": "http://upload.wikimedia.org/wikipedia/commons/e/ee/Donald_Trump_by_Gage_Skidmore.jpg",
-                      "depictionthumbnailurl": "http://upload.wikimedia.org/wikipedia/commons/thumbDonald_Trump_by_Gage_Skidmore.jpg/200px-Donald_Trump_by_Gage_Skidmore.jpg",
-                      "importance": 0.0017462312852557522,
-                      "entityId": "Donald_Trump",
-                      "type": [
-                        "YAGO_wordnet_petitioner_110420031",
-                        "YAGO_wikicategory_People_from_Queens\\u002c_New_York",
-                        "YAGO_wikicategory_American_people_of_German_descent",
-                        "YAGO_wikicategory_Writers_from_New_York_City",
-                        "YAGO_wikicategory_American_billionaires",
-                        "YAGO_wikicategory_People_from_Manhattan",
-                        "YAGO_wikicategory_American_beauty_pageant_owners",
-                        "YAGO_wordnet_adviser_109774266",
-                        "YAGO_wordnet_participant_110401829",
-                        "YAGO_wordnet_militant_110315837",
-                        "YAGO_wordnet_living_thing_100004258",
-                        "YAGO_wikicategory_New_York_Military_Academy_alumni",
-                        "YAGO_wordnet_director_110014939",
-                        "YAGO_wordnet_object_100002684",
-                        "YAGO_wikicategory_American_reality_television_producers",
-                        "YAGO_wordnet_specialist_110631941",
-                        "YAGO_wikicategory_21st\\u002dcentury_American_writers",
-                        "YAGO_wikicategory_20th\\u002dcentury_American_writers",
-                        "YAGO_wordnet_administrator_109770949",
-                        "YAGO_wordnet_businessman_109882007",
-                        "YAGO_wordnet_financier_110090020",
-                        "YAGO_wordnet_rich_person_110529231",
-                        "YAGO_wikicategory_American_financial_commentators",
-                        "YAGO_wordnet_important_person_110200781",
-                        "YAGO_wikicategory_Conspiracy_theorists",
-                        "YAGO_wordnet_adult_109605289",
-                        "YAGO_wordnet_expert_109617867",
-                        "YAGO_wikicategory_American_stock_traders",
-                        "YAGO_wikicategory_Living_people",
-                        "YAGO_wordnet_stock_trader_110657835",
-                        "YAGO_wordnet_executive_110069645",
-                        "YAGO_wordnet_leader_109623038",
-                        "YAGO_wikicategory_Fordham_University_alumni",
-                        "YAGO_wordnet_scholar_110557854",
-                        "YAGO_wordnet_head_110162991",
-                        "YAGO_wordnet_alumnus_109786338",
-                        "YAGO_wordnet_solicitor_110623354",
-                        "YAGO_wikicategory_People_from_Palm_Beach\\u002c_Florida",
-                        "YAGO_wikicategory_American_investment_advisors",
-                        "YAGO_wordnet_entity_100001740",
-                        "YAGO_wordnet_investor_110216106",
-                        "YAGO_wikicategory_Participants_in_American_reality_television_series",
-                        "YAGO_wordnet_organism_100004475",
-                        "YAGO_wordnet_fundraiser_110116478",
-                        "YAGO_wordnet_theorist_110706812",
-                        "YAGO_wordnet_restaurateur_110524869",
-                        "YAGO_wordnet_maker_110284064",
-                        "YAGO_wordnet_interior_designer_110210648",
-                        "YAGO_wordnet_capitalist_109609232",
-                        "YAGO_wordnet_whole_100003553",
-                        "YAGO_wikicategory_Board_game_designers",
-                        "YAGO_wordnet_authority_109824361",
-                        "YAGO_wikicategory_American_restaurateurs",
-                        "YAGO_yagoLegalActorGeo",
-                        "YAGO_wordnet_manufacturer_110292316",
-                        "YAGO_wordnet_person_100007846",
-                        "YAGO_wordnet_peer_109626238",
-                        "YAGO_wordnet_billionaire_110529684",
-                        "YAGO_wordnet_businessperson_109882716",
-                        "YAGO_wordnet_merchant_110309896",
-                        "YAGO_wikicategory_American_video_game_designers",
-                        "YAGO_wikicategory_American_television_hosts",
-                        "YAGO_wordnet_applicant_109607280",
-                        "YAGO_wordnet_host_110187130",
-                        "YAGO_wordnet_socialite_110619409",
-                        "YAGO_wordnet_owner_110388924",
-                        "YAGO_wordnet_trader_110720453",
-                        "YAGO_wikicategory_American_radio_producers",
-                        "YAGO_wikicategory_United_States_Football_League_executives",
-                        "YAGO_wordnet_intellectual_109621545",
-                        "YAGO_wikicategory_Writers_from_Florida",
-                        "YAGO_wordnet_investment_adviser_110215815",
-                        "YAGO_wikicategory_American_investors",
-                        "YAGO_wordnet_disputant_109615465",
-                        "YAGO_wikicategory_American_people_of_Scottish_descent",
-                        "YAGO_wordnet_reformer_110515194",
-                        "YAGO_wordnet_observer_110369528",
-                        "YAGO_wikicategory_American_socialites",
-                        "YAGO_wikicategory_American_business_writers",
-                        "YAGO_wikicategory_American_airline_chief_executives",
-                        "YAGO_yagoLegalActor",
-                        "YAGO_wordnet_creator_109614315",
-                        "YAGO_wordnet_physical_entity_100001930",
-                        "YAGO_wikicategory_American_political_fundraisers",
-                        "YAGO_wordnet_causal_agent_100007347",
-                        "YAGO_wikicategory_Television_producers_from_New_York",
-                        "YAGO_wikicategory_American_game_show_hosts",
-                        "YAGO_wikicategory_American_financiers",
-                        "YAGO_wordnet_communicator_109610660",
-                        "YAGO_wordnet_writer_110794014",
-                        "YAGO_wikicategory_American_television_directors",
-                        "YAGO_wikicategory_American_financial_literacy_activists",
-                        "YAGO_wordnet_associate_109816771"
-                      ],
-                      "readableRepr": "Donald Trump",
-                      "url": "http://en.wikipedia.org/wiki/Donald%20Trump"
-                    }
-                  }
-                ]
-              },
-              "NNP"
-            ],
-            [
-              {
-                "nlpToken": {
-                  "index": 10,
-                  "word": "Trump",
-                  "originalText": "Trump",
-                  "lemma": "Trump",
-                  "characterOffsetBegin": 59,
-                  "characterOffsetEnd": 64,
-                  "pos": "NNP",
-                  "ner": "PERSON",
-                  "speaker": "PER0",
-                  "before": " ",
-                  "after": " "
-                },
-                "aida": [
-                  {
-                    "mention": {
-                      "allEntities": [
-                        {
-                          "kbIdentifier": "YAGO:Donald_Trump",
-                          "disambiguationScore": "0.98339"
-                        }
-                      ],
-                      "offset": 52,
-                      "name": "Donald Trump",
-                      "length": 12,
-                      "bestEntity": {
-                        "kbIdentifier": "YAGO:Donald_Trump",
-                        "disambiguationScore": "0.98339"
-                      }
-                    },
-                    "bestEntityMetadata": {
-                      "knowledgebase": "YAGO",
-                      "depictionurl": "http://upload.wikimedia.org/wikipedia/commons/e/ee/Donald_Trump_by_Gage_Skidmore.jpg",
-                      "depictionthumbnailurl": "http://upload.wikimedia.org/wikipedia/commons/thumbDonald_Trump_by_Gage_Skidmore.jpg/200px-Donald_Trump_by_Gage_Skidmore.jpg",
-                      "importance": 0.0017462312852557522,
-                      "entityId": "Donald_Trump",
-                      "type": [
-                        "YAGO_wordnet_petitioner_110420031",
-                        "YAGO_wikicategory_People_from_Queens\\u002c_New_York",
-                        "YAGO_wikicategory_American_people_of_German_descent",
-                        "YAGO_wikicategory_Writers_from_New_York_City",
-                        "YAGO_wikicategory_American_billionaires",
-                        "YAGO_wikicategory_People_from_Manhattan",
-                        "YAGO_wikicategory_American_beauty_pageant_owners",
-                        "YAGO_wordnet_adviser_109774266",
-                        "YAGO_wordnet_participant_110401829",
-                        "YAGO_wordnet_militant_110315837",
-                        "YAGO_wordnet_living_thing_100004258",
-                        "YAGO_wikicategory_New_York_Military_Academy_alumni",
-                        "YAGO_wordnet_director_110014939",
-                        "YAGO_wordnet_object_100002684",
-                        "YAGO_wikicategory_American_reality_television_producers",
-                        "YAGO_wordnet_specialist_110631941",
-                        "YAGO_wikicategory_21st\\u002dcentury_American_writers",
-                        "YAGO_wikicategory_20th\\u002dcentury_American_writers",
-                        "YAGO_wordnet_administrator_109770949",
-                        "YAGO_wordnet_businessman_109882007",
-                        "YAGO_wordnet_financier_110090020",
-                        "YAGO_wordnet_rich_person_110529231",
-                        "YAGO_wikicategory_American_financial_commentators",
-                        "YAGO_wordnet_important_person_110200781",
-                        "YAGO_wikicategory_Conspiracy_theorists",
-                        "YAGO_wordnet_adult_109605289",
-                        "YAGO_wordnet_expert_109617867",
-                        "YAGO_wikicategory_American_stock_traders",
-                        "YAGO_wikicategory_Living_people",
-                        "YAGO_wordnet_stock_trader_110657835",
-                        "YAGO_wordnet_executive_110069645",
-                        "YAGO_wordnet_leader_109623038",
-                        "YAGO_wikicategory_Fordham_University_alumni",
-                        "YAGO_wordnet_scholar_110557854",
-                        "YAGO_wordnet_head_110162991",
-                        "YAGO_wordnet_alumnus_109786338",
-                        "YAGO_wordnet_solicitor_110623354",
-                        "YAGO_wikicategory_People_from_Palm_Beach\\u002c_Florida",
-                        "YAGO_wikicategory_American_investment_advisors",
-                        "YAGO_wordnet_entity_100001740",
-                        "YAGO_wordnet_investor_110216106",
-                        "YAGO_wikicategory_Participants_in_American_reality_television_series",
-                        "YAGO_wordnet_organism_100004475",
-                        "YAGO_wordnet_fundraiser_110116478",
-                        "YAGO_wordnet_theorist_110706812",
-                        "YAGO_wordnet_restaurateur_110524869",
-                        "YAGO_wordnet_maker_110284064",
-                        "YAGO_wordnet_interior_designer_110210648",
-                        "YAGO_wordnet_capitalist_109609232",
-                        "YAGO_wordnet_whole_100003553",
-                        "YAGO_wikicategory_Board_game_designers",
-                        "YAGO_wordnet_authority_109824361",
-                        "YAGO_wikicategory_American_restaurateurs",
-                        "YAGO_yagoLegalActorGeo",
-                        "YAGO_wordnet_manufacturer_110292316",
-                        "YAGO_wordnet_person_100007846",
-                        "YAGO_wordnet_peer_109626238",
-                        "YAGO_wordnet_billionaire_110529684",
-                        "YAGO_wordnet_businessperson_109882716",
-                        "YAGO_wordnet_merchant_110309896",
-                        "YAGO_wikicategory_American_video_game_designers",
-                        "YAGO_wikicategory_American_television_hosts",
-                        "YAGO_wordnet_applicant_109607280",
-                        "YAGO_wordnet_host_110187130",
-                        "YAGO_wordnet_socialite_110619409",
-                        "YAGO_wordnet_owner_110388924",
-                        "YAGO_wordnet_trader_110720453",
-                        "YAGO_wikicategory_American_radio_producers",
-                        "YAGO_wikicategory_United_States_Football_League_executives",
-                        "YAGO_wordnet_intellectual_109621545",
-                        "YAGO_wikicategory_Writers_from_Florida",
-                        "YAGO_wordnet_investment_adviser_110215815",
-                        "YAGO_wikicategory_American_investors",
-                        "YAGO_wordnet_disputant_109615465",
-                        "YAGO_wikicategory_American_people_of_Scottish_descent",
-                        "YAGO_wordnet_reformer_110515194",
-                        "YAGO_wordnet_observer_110369528",
-                        "YAGO_wikicategory_American_socialites",
-                        "YAGO_wikicategory_American_business_writers",
-                        "YAGO_wikicategory_American_airline_chief_executives",
-                        "YAGO_yagoLegalActor",
-                        "YAGO_wordnet_creator_109614315",
-                        "YAGO_wordnet_physical_entity_100001930",
-                        "YAGO_wikicategory_American_political_fundraisers",
-                        "YAGO_wordnet_causal_agent_100007347",
-                        "YAGO_wikicategory_Television_producers_from_New_York",
-                        "YAGO_wikicategory_American_game_show_hosts",
-                        "YAGO_wikicategory_American_financiers",
-                        "YAGO_wordnet_communicator_109610660",
-                        "YAGO_wordnet_writer_110794014",
-                        "YAGO_wikicategory_American_television_directors",
-                        "YAGO_wikicategory_American_financial_literacy_activists",
-                        "YAGO_wordnet_associate_109816771"
-                      ],
-                      "readableRepr": "Donald Trump",
-                      "url": "http://en.wikipedia.org/wiki/Donald%20Trump"
-                    }
-                  }
-                ]
-              },
-              "NNP"
-            ],
-            [
-              {
-                "nlpToken": {
-                  "index": 11,
-                  "word": "on",
-                  "originalText": "on",
-                  "lemma": "on",
-                  "characterOffsetBegin": 65,
-                  "characterOffsetEnd": 67,
-                  "pos": "IN",
-                  "ner": "O",
-                  "speaker": "PER0",
-                  "before": " ",
-                  "after": " "
-                }
-              },
-              "IN"
-            ],
-            [
-              {
-                "nlpToken": {
-                  "index": 12,
-                  "word": "FBI",
-                  "originalText": "FBI",
-                  "lemma": "FBI",
-                  "characterOffsetBegin": 68,
-                  "characterOffsetEnd": 71,
-                  "pos": "NNP",
-                  "ner": "ORGANIZATION",
-                  "speaker": "PER0",
-                  "before": " ",
-                  "after": " "
-                },
-                "aida": [
-                  {
-                    "mention": {
-                      "allEntities": [
-                        {
-                          "kbIdentifier": "YAGO:Federal_Bureau_of_Investigation",
-                          "disambiguationScore": "0.99192"
-                        }
-                      ],
-                      "offset": 68,
-                      "name": "FBI",
-                      "length": 3,
-                      "bestEntity": {
-                        "kbIdentifier": "YAGO:Federal_Bureau_of_Investigation",
-                        "disambiguationScore": "0.99192"
-                      }
-                    },
-                    "bestEntityMetadata": {
-                      "knowledgebase": "YAGO",
-                      "depictionurl": "http://upload.wikimedia.org/wikipedia/commons/7/70/US-FBI-ShadedSeal.svg",
-                      "depictionthumbnailurl": "http://upload.wikimedia.org/wikipedia/commons/thumbUS-FBI-ShadedSeal.svg/200px-US-FBI-ShadedSeal.svg",
-                      "importance": 0.00025682329637993355,
-                      "entityId": "Federal_Bureau_of_Investigation",
-                      "type": [
-                        "YAGO_yagoPermanentlyLocatedEntity",
-                        "YAGO_yagoLegalActorGeo",
-                        "YAGO_wordnet_organization_108008335",
-                        "YAGO_wordnet_social_group_107950920",
-                        "YAGO_wordnet_entity_100001740",
-                        "YAGO_wikicategory_United_States_intelligence_agencies",
-                        "YAGO_wordnet_unit_108189659",
-                        "YAGO_wordnet_intelligence_108339454",
-                        "YAGO_wikicategory_Government_agencies_established_in_1908",
-                        "YAGO_wordnet_group_100031264",
-                        "YAGO_wordnet_administrative_unit_108077292",
-                        "YAGO_wordnet_agency_108337324",
-                        "YAGO_yagoLegalActor",
-                        "YAGO_wordnet_abstraction_100002137"
-                      ],
-                      "readableRepr": "Federal Bureau of Investigation",
-                      "url": "http://en.wikipedia.org/wiki/Federal%20Bureau%20of%20Investigation"
-                    }
-                  }
-                ]
-              },
-              "NNP"
-            ],
-            [
-              {
-                "nlpToken": {
-                  "index": 13,
-                  "word": "chief",
-                  "originalText": "chief",
-                  "lemma": "chief",
-                  "characterOffsetBegin": 72,
-                  "characterOffsetEnd": 77,
-                  "pos": "NN",
-                  "ner": "O",
-                  "speaker": "PER0",
-                  "before": " ",
-                  "after": " "
-                }
-              },
-              "NN"
             ]
           ],
           "score": 0.42857142857142855,
-          "text": "Hillary Clinton aide blames US presidential loss to Donald Trump on FBI chief"
+          "text": "Hillary Clinton aide"
         }
       ]
     }

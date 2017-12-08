@@ -120,7 +120,11 @@ class Learn(object):
 
         if candidate:
             if len(entire_annotation) > 3:
-                parsed = dateutil.parser.parse(entire_annotation[3]['parsed'])
+                parsed=entire_annotation[3].get('parsed')
+                if parsed is None:
+                    return -2
+                parsed = dateutil.parser.parse()
+
             else:
                 # there is no way to compare these dates without a proper date annotation
                 return -2
@@ -250,7 +254,7 @@ class Learn(object):
                 # set a path to save an load preprocessed documents
                 .set_preprocessed_path(preprocessedPath)
                 # limit the the to process documents (nice for development)
-                .set_limit(1)
+                #.set_limit(1)
                 # add an optional extractor (it would do basically just copying without...)
                 .set_extractor(extractor_object)
                 # saves all document objects for further programming

@@ -19,13 +19,14 @@ class MethodExtractor(AbsExtractor):
 
     _stop_ner = ['TIME', 'DATE', 'ORGANIZATION', 'DURATION', 'ORDINAL']
 
-    def __init__(self, weights: (float, float) = [1.0, 1.0]):
+    def __init__(self, weights: (float, float) = [1.0, 1.0], conjunction_check_left_side: bool=False):
         """
          weights used in the candidate evaluation:
         (position, frequency)
         :param weights: 
         """
         self.weights = weights
+        self._conjunction_check_left_side = conjunction_check_left_side
 
     def _extract_candidates(self, document: Document):
         candidates = []
@@ -80,16 +81,16 @@ class MethodExtractor(AbsExtractor):
                                 # convert list objects back to tuples for backward compatibility
                                 candidates.append(
                                     [candidate_parts, None, tree.stanfordCoreNLPResult['index'], 'prepos'])
-                        #else:
+                        elif self._conjunction_check_left_side is True:
                             # look at the sentence to the left side
                             # because of the tree structure simplest way is to go multiple times up and then walk back
-                         #   atree = subtree.parent().parent().parent()
-                          #  if atree:
-                           #     relevantParts = self._pos_linked_to_corenlp_tokens(atree)
-                            #    candidate_parts = self._find_vb_cc_vb_parts(relevantParts)
-                             #   if candidate_parts:
-                              #      candidates.append(
-                               #         [candidate_parts, None, tree.stanfordCoreNLPResult['index'], 'prepos'])
+                            atree = subtree.parent().parent().parent()
+                            if atree:
+                                relevantParts = self._pos_linked_to_corenlp_tokens(atree)
+                                candidate_parts = self._find_vb_cc_vb_parts(relevantParts)
+                                if candidate_parts:
+                                    candidates.append(
+                                        [candidate_parts, None, tree.stanfordCoreNLPResult['index'], 'prepos'])
 
         return candidates
 

@@ -58,7 +58,11 @@ class Learn(object):
         self._ngd = NormalizedGoogleDistance()
 
     def cmp_text_ngd(self, annotation, candidate, entire_annotation):
-        return self._ngd.get_distance(annotation, candidate)
+        """ result is a distance from 0..N 0 = similar,
+            (at the time of writing) greater 4 is absolute not correlated
+        """
+        result = self._ngd.get_distance(annotation, candidate)
+        return result
 
     def cmp_text_word_net(self, annotation, candidate, entire_annotation):
         """
@@ -115,9 +119,13 @@ class Learn(object):
         return score / len(syn_a) + len(syn_b)
 
     def cmp_date_timex(self, annotation, candidate, entire_annotation):
-
-
-
+        """
+        result is a distance from 0..1 0 = same point in time, 1 (a_max) a month or more apart
+        :param annotation:
+        :param candidate:
+        :param entire_annotation:
+        :return:
+        """
         if candidate:
             if len(entire_annotation) > 3:
                 parsed=entire_annotation[3].get('parsed')
@@ -211,7 +219,7 @@ class Learn(object):
     def cmp_location(self, annotation, candidate, entire_annotation):
         """
         Compare the retrieved answer with the annotation using geocoding and comparing the real world distance.
-
+        returns distance in kilometers
         :param annotation: The geocoded correct Answer
         :type annotation: Location
         :param candidate: The retrieved Answer
@@ -219,14 +227,17 @@ class Learn(object):
 
         :return: Float
         """
+        if annotation is None:
+            # annotation is None
+            return -1
 
         annotation = self.nominatim(annotation)
         if annotation == -1:
-            # annotation is None or the annotation could'nt be parsed
-            return -1
+            # or the annotation could'nt be parsed
+            return -3
         elif candidate is None:
             # no answer was extracted
-            return -2
+            return -4
 
         location = self.nominatim(candidate)
         if location == -1:
@@ -265,9 +276,9 @@ class Learn(object):
 
         return docments, extractor_object
 
-    def _cmp_helper(self, scoring, question, answer, annotations, weights, result):
+    def _cmp_helper_min(self, scoring, question, answer, annotations, weights, result):
         # TODO: use named entity, if any
-        score = -1
+        scores = []
         # check if there is an annotaton and an answer
         if answer and question in annotations and len(annotations[question]) > 0:
             #topAnswer = answers[question][0].get_parts_as_text()
@@ -276,8 +287,31 @@ class Learn(object):
                     topAnnotation = annotation[2]
                     if topAnnotation:
                         tmp_score = scoring(topAnnotation, answer, annotation)
-                        score = min(tmp_score, score)
-        result[question] = (question, weights, score)
+                        scores.append(tmp_score)
+
+        no_error_values = [x for x in scores if x and x >= 0]
+        if len(no_error_values) > 0:
+            smallest_none_error = min(no_error_values)
+            result[question] = (question, weights, smallest_none_error, scores)
+        else:
+            # no annotation
+            result[question] = (question, weights, -1, scores)
+
+    def _cmp_helper_max(self, scoring, question, answer, annotations, weights, result):
+        # TODO: use named entity, if any
+        scores = []
+        # check if there is an annotaton and an answer
+        if answer and question in annotations and len(annotations[question]) > 0:
+            #topAnswer = answers[question][0].get_parts_as_text()
+            for annotation in annotations[question]:
+                if len(annotation) > 2:
+                    topAnnotation = annotation[2]
+                    if topAnnotation:
+                        tmp_score = scoring(topAnnotation, answer, annotation)
+                        scores.append(tmp_score)
+
+        smallest_none_error = max(x for x in scores if x and x > 0)
+        result[question] = (question, weights, smallest_none_error, scores)
 
     def _log_progress(self, queue, documents, start, end):
         count = queue.get_queue_count()
@@ -297,7 +331,6 @@ class Learn(object):
 
         self._log_progress(self._queue, self._documents, None, None)
         # make sure caller can read that...
-        time.sleep(5)
 
         _pre_extracting_parameters_id = None
         while True:
@@ -358,7 +391,7 @@ class Learn(object):
                         if question in answers and len(answers[question]) > 0:
                             used_weights = extractor.weights
                             top_answer = answers[question][0].get_parts_as_text()
-                            self._cmp_helper(self.cmp_text_ngd, question, top_answer, annotation, used_weights, result)
+                            self._cmp_helper_min(self.cmp_text_ngd, question, top_answer, annotation, used_weights, result)
 
                     extractor = self._extractors.get('action')
                     if extractor:
@@ -366,12 +399,12 @@ class Learn(object):
                         question = 'what'
                         if question in answers and len(answers[question]) > 0:
                             top_answer = answers[question][0].get_parts_as_text()
-                            self._cmp_helper(self.cmp_text_ngd,'what', top_answer, annotation, used_weights, result)
+                            self._cmp_helper_min(self.cmp_text_ngd,'what', top_answer, annotation, used_weights, result)
 
                         question = 'who'
                         if question in answers and len(answers[question]) > 0:
                             top_answer = answers[question][0].get_parts_as_text()
-                            self._cmp_helper(self.cmp_text_ngd,question, top_answer, annotation, used_weights, result)
+                            self._cmp_helper_min(self.cmp_text_ngd,question, top_answer, annotation, used_weights, result)
 
                     extractor = self._extractors.get('method')
                     if extractor:
@@ -379,7 +412,7 @@ class Learn(object):
                         question = 'how'
                         if question in answers and len(answers[question]) > 0:
                             top_answer = answers[question][0].get_parts_as_text()
-                            self._cmp_helper(self.cmp_text_ngd, question, top_answer, annotation, used_weights, result)
+                            self._cmp_helper_min(self.cmp_text_ngd, question, top_answer, annotation, used_weights, result)
 
                     extractor = self._extractors.get('environment')
                     if extractor:
@@ -387,12 +420,12 @@ class Learn(object):
                         question = 'when'
                         if question in answers and len(answers[question]) > 0:
                             top_answer = answers[question][0].get_enhancement('timex')
-                            self._cmp_helper(self.cmp_date_timex,question, top_answer, annotation, used_weights, result)
+                            self._cmp_helper_min(self.cmp_date_timex,question, top_answer, annotation, used_weights, result)
 
                         question = 'where'
                         if question in answers and len(answers[question]) > 0:
                             top_answer = answers[question][0].get_parts_as_text()
-                            self._cmp_helper(self.cmp_location, question, top_answer, annotation, used_weights, result)
+                            self._cmp_helper_min(self.cmp_location, question, top_answer, annotation, used_weights, result)
 
                     # done save it to the result
                     self._queue.resolve_document(next_item, document.get_document_id(), result)

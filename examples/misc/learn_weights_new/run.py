@@ -99,9 +99,9 @@ if __name__ == '__main__':
     lock = threading.Lock() # Wordnet is not threadsave
 
     # basic learner
-    log.setLevel(logging.ERROR)
-    #q.put(action(lock))
-    q.put(environment(lock))
+    #log.setLevel(logging.ERROR)
+    q.put(action(lock))
+    #q.put(environment(lock))
     #q.put(cause(lock))
     #q.put(method(lock))
     log.setLevel(logging.ERROR)

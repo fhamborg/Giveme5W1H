@@ -5,41 +5,35 @@ import glob
 import json
 import pickle
 
-import os
 import statistics
 
-
-def test(testss: str):
-    a = testss
-    pass
 def weights_to_string(weights):
     scaled_weights_string = [str(x) for x in weights]
     return ''.join(scaled_weights_string)
-
 
 def stats(numbers):
     return {"mean": statistics.mean(numbers),
             "median": statistics.median(numbers)}
 
+def read_file(results, file_path, score_results):
+    #filename = os.path.basename(file_path)
+    for result in results:
+        for question in result:
+            question_scores = score_results.setdefault(question, {})
+            weights = result[question][1]
 
+            comb = question_scores.setdefault(weights_to_string(weights), {'weights': weights, 'scores': []})
+            if result[question][2] != -1:
+                print('a')
+            comb['scores'].append(result[question][2])
 
 if __name__ == '__main__':
 
     score_results = {}
-    for file_path in glob.glob('cache/*processed.prickle'):
+    for file_path in glob.glob('queue_caches/*processed.prickle'):
         with open(file_path, 'rb') as ff:
             results = pickle.load(ff)
-        filename = os.path.basename(file_path)
-        a_id = filename.partition("_")[0]
-
-        combination_pointer = {}
-        for result in results:
-
-            for question in result:
-                question_scores = score_results.setdefault(question, {})
-                weights = result[question][1]
-                comb = question_scores.setdefault(weights_to_string(weights), { 'weights': weights, 'scores': []})
-                comb['scores'].append(result[question][2])
+        read_file(results, file_path, score_results)
 
     for question in score_results:
         for combination_string in score_results[question]:

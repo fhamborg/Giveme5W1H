@@ -8,20 +8,22 @@ import pickle
 import statistics
 
 
-
 def normalize(question, data):
     pass
+
 
 def weights_to_string(weights):
     scaled_weights_string = [str(x) for x in weights]
     return ''.join(scaled_weights_string)
 
+
 def stats(numbers):
     return {"mean": statistics.mean(numbers),
             "median": statistics.median(numbers)}
 
+
 def read_file(path):
-    #filename = os.path.basename(file_path)
+    # filename = os.path.basename(file_path)
     score_results = {}
     for file_path in glob.glob(path):
         with open(file_path, 'rb') as ff:
@@ -35,42 +37,64 @@ def read_file(path):
                 comb['scores_doc'].append(result[question][2])
     return score_results
 
+
 def remove_errors(list):
-     return [x for x in list if x and x >= 0]
+    return [x for x in list if x and x >= 0]
+
+
+def index_of_best(list):
+    """
+
+    :param list:
+    :return:
+    """
+    a_list = remove_errors(list)
+    return list.index(min(a_list))
+
 
 if __name__ == '__main__':
 
     # read all available prickles
     score_results = read_file('queue_caches/*processed.prickle')
 
-    # 1. Crit.: has a high score on average per weight (documents are merged)t
+    # write raw results
+    with open('result/evaluation_full' + '.json', 'w') as data_file:
+        data_file.write(json.dumps(score_results, sort_keys=False, indent=4))
+        data_file.close()
+
+    #
+    # 1. Crit.: has a low dist on average per weight (documents are merged)
+    # 3. Crit.: weight with lowest error rate per documents (documents are merged)
     score_per_average = {}
+    results_error_rate = {}
     for question in score_results:
         for combination_string in score_results[question]:
             combo = score_results[question][combination_string]
-            a_sum = sum(combo['scores_doc'])
 
-            combo['avg'] = a_sum / len(combo['scores_doc'])
+            scores_cleaned = remove_errors(combo['scores_doc'])
+            errors = remove_errors(combo['scores_doc']) - len(scores_cleaned)
+            a_sum = sum(scores_cleaned)
+
+            combo['avg'] = a_sum / len(scores_cleaned)
             score_per_average[combination_string] = {
                 'score': a_sum
             }
 
-    # write raw results
-    with open('result/evaluation_full'+'.json', 'w') as data_file:
-        data_file.write(json.dumps(score_results, sort_keys=False, indent=4))
-        data_file.close()
+            results_error_rate[combination_string] = {
+                'errors': errors
+            }
 
+    # convert to list...
+    results_error_rate = list(results_error_rate.values())
+    score_per_average = list(score_per_average.values())
+    # ...and sort
+    results_error_rate.sort(key=lambda x: x['avg'], reverse=True)
+    score_per_average.sort(key=lambda x: x['avg'], reverse=True)
 
-    # has a high score on average per weight (documents are merged)
-
-
-    # has a high score per document top N weights per document are merged into a list
-    best_weight_per_document = {}
-
-    # lowest error rate per weight ( -minus values, ignoring -1 that's no annotation?)
-    results_error_rate = {}
-
-
+    print('best scoring weights:')
+    print(score_per_average[:10])
+    print('lowest error rate:')
+    print(results_error_rate[:10])
 
     # nice formattet full output, if anyone need is
     nice_format = {}

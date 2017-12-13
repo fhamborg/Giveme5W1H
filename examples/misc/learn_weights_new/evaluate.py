@@ -3,10 +3,12 @@ checks all result files an writes the best candidates to evaluate.json
 """
 import glob
 import json
+import operator
 import pickle
 import collections
 
 import statistics
+from itertools import groupby
 
 compare = lambda x, y: collections.Counter(x) == collections.Counter(y)
 
@@ -32,18 +34,34 @@ def read_file(path):
             for question in result:
                 question_scores = score_results.setdefault(question, {})
                 weights = result[question][1]
+                weights_fixed =[]
+                # fix floating error
+                for i in weights:
+                    weights_fixed.append(round(i, 2))
 
-                comb = question_scores.setdefault(weights_to_string(weights), {'weights': weights, 'scores_doc': []})
+
+                comb = question_scores.setdefault(weights_to_string(weights_fixed), {'weights': weights_fixed, 'scores_doc': []})
                 comb['scores_doc'].append(result[question][2])
     return score_results
 
 
 def remove_errors(list):
-    return [x for x in list if x and x >= 0]
+    """
+    returns a list where all -1 are replace with the biggest value and all oder negative entries are removed at all
+    :param list:
+    :return:
+    """
+    # remove no annotation error, by replacing with worst distance
+    a_max = max(list)
+    tmp = [a_max if v is -1 else v for v in list]
+
+    # remove other errors
+    result = [x for x in tmp if x and x >= 0]
+    return result
 
 def normalize(list):
     """
-    this is assuming that there is a min with ß
+    this is assuming that there is a min with 0
     :param list:
     :return:
     """
@@ -72,14 +90,18 @@ def merge_top(a_list, accessor):
 
     for entry in a_list:
         if entry[accessor] == result[accessor]:
-            weights.append(entry.get('weight'))
+            a_weight = entry.get('weight')
+            if a_weight:
+                weights.append(a_weight)
         else:
-            return result
+            break
+    return result
+
 
 def find_golden_weights(a_list):
     """
-    checks for an overlap in  'lowest_error', 'best_dist'
-
+    checks for an overlap in 'lowest_error' and 'best_dist'
+    copies all overlapping weights to golden_weights
     :param results:
     :return:
     """
@@ -90,6 +112,41 @@ def find_golden_weights(a_list):
                 result.append(lowest_error)
     a_list['golden_weights'] = result
 
+
+def golden_weights_to_ranges(a_list):
+    """
+    converts golden weights to ranges per weight to make importance more visible
+    [0.1, 0.1] [0.2, 0.1] [0.3, 0.9]
+    ->
+    [0.1 - 0.3]
+    [0.1 - 0.1] [0.9 - 0.9]
+
+    "EXPERIMENTAL - NOT VERY WELL TESTED"
+
+    :param a_list: 
+    :return: 
+    """
+    golden_weights = a_list.get('golden_weights')
+    if golden_weights and len(golden_weights) > 0:
+        # slots for each weight
+        weights = [[]] * len(golden_weights[0])
+        for combination in a_list['golden_weights']:
+            for i, weight in enumerate(combination):
+                weights[i].append(weight)
+
+        result = []
+        for weight in weights:
+            uniqu_weights = list(set(weight))
+            uniqu_weights.sort()
+
+            groups = []
+            uniquekeys = []
+            # lambda (x, y): x + y -> x_y: x_y[0] + x_y[1], lambda x_y: x_y[0] - x_y[1]
+            for k, g in groupby(enumerate(uniqu_weights)):
+                groups.append(list(g))  # Store group iterator as a list
+                uniquekeys.append(k)
+            result.append(groups)
+        a_list['golden_groups'] = result
 
 def index_of_best(list):
     """
@@ -122,10 +179,11 @@ if __name__ == '__main__':
 
             raw_scores = combo['scores_doc']
             scores_cleaned = remove_errors(raw_scores)
+            scores_norm = normalize(raw_scores)
             errors = len(raw_scores) - len(scores_cleaned)
-            a_sum = sum(normalize(raw_scores))
+            a_sum = sum(scores_norm)
 
-            combo['avg'] = a_sum / len(scores_cleaned)
+            combo['avg'] = a_sum / len(scores_norm)
             score_per_average.setdefault(question,{})[combination_string] = {
                 'score': a_sum,
                 'avg': combo['avg'],
@@ -168,10 +226,10 @@ if __name__ == '__main__':
             'best_dist': merge_top(score_per_average_list, 'avg')
         }
         find_golden_weights(final_result[question])
-
+        golden_weights_to_ranges(final_result[question])
 
     print(json.dumps(final_result, sort_keys=False, indent=4))
-    with open('result/final_result_avg' + '.json', 'w') as data_file:
+    with open('result/final_result' + '.json', 'w') as data_file:
         data_file.write(json.dumps(final_result, sort_keys=False, indent=4))
         data_file.close()
 

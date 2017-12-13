@@ -33,7 +33,7 @@ def read_file(path):
                 question_scores = score_results.setdefault(question, {})
                 weights = result[question][1]
 
-                comb = question_scores.setdefault(weights_to_string(weights), {'weights': weights, 'scores': []})
+                comb = question_scores.setdefault(weights_to_string(weights), {'weights': weights, 'scores_doc': []})
                 comb['scores_doc'].append(result[question][2])
     return score_results
 
@@ -72,29 +72,34 @@ if __name__ == '__main__':
             combo = score_results[question][combination_string]
 
             scores_cleaned = remove_errors(combo['scores_doc'])
-            errors = remove_errors(combo['scores_doc']) - len(scores_cleaned)
+            errors = len(combo['scores_doc']) - len(scores_cleaned)
             a_sum = sum(scores_cleaned)
 
             combo['avg'] = a_sum / len(scores_cleaned)
-            score_per_average[combination_string] = {
-                'score': a_sum
+            score_per_average.setdefault(question,{})[combination_string] = {
+                'score': a_sum,
+                'avg': combo['avg'],
+                'weight': combo['weights']
             }
 
-            results_error_rate[combination_string] = {
-                'errors': errors
+            results_error_rate.setdefault(question,{})[combination_string] = {
+                'errors': errors,
+                'weight': combo['weights']
             }
 
-    # convert to list...
-    results_error_rate = list(results_error_rate.values())
-    score_per_average = list(score_per_average.values())
-    # ...and sort
-    results_error_rate.sort(key=lambda x: x['avg'], reverse=True)
-    score_per_average.sort(key=lambda x: x['avg'], reverse=True)
+    for question in results_error_rate:
+        print(question)
+        results_error_rate_list = list(results_error_rate[question].values())
+        score_per_average_list = list(score_per_average[question].values())
 
-    print('best scoring weights:')
-    print(score_per_average[:10])
-    print('lowest error rate:')
-    print(results_error_rate[:10])
+        results_error_rate_list.sort(key=lambda x: x['errors'], reverse=False)
+        score_per_average_list.sort(key=lambda x: x['avg'], reverse=False)
+
+        print('lowest error rate:')
+        print(json.dumps(results_error_rate_list[:30], sort_keys=False, indent=4))
+
+        print('best scoring weights:')
+        print(json.dumps(score_per_average_list[:30], sort_keys=False, indent=4))
 
     # nice formattet full output, if anyone need is
     nice_format = {}
@@ -102,7 +107,7 @@ if __name__ == '__main__':
         question_scores = nice_format.setdefault(question, [])
         for combination_string in score_results[question]:
             combo = score_results[question][combination_string]
-            del combo['scores']
+            del combo['scores_doc']
             question_scores.append(combo)
 
     with open('result/evaluation_only_avg' + '.json', 'w') as data_file:

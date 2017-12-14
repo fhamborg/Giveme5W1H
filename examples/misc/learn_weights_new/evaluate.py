@@ -37,7 +37,7 @@ def read_file(path):
                 weights_fixed =[]
                 # fix floating error
                 for i in weights:
-                    weights_fixed.append(round(i, 2))
+                    weights_fixed.append(round(i, 1))
 
 
                 comb = question_scores.setdefault(weights_to_string(weights_fixed), {'weights': weights_fixed, 'scores_doc': []})
@@ -113,24 +113,47 @@ def find_golden_weights(a_list):
     a_list['golden_weights'] = result
 
 
+
+def to_ranges(iterable):
+    iterable = sorted(set(iterable))
+    for key, group in groupby(enumerate(iterable),
+                                        lambda t: t[1] - t[0]):
+        group = list(group)
+        yield group[0][1], group[-1][1]
+
+def to_ranges_wrapper(iterable):
+
+    # to int
+    for ita, i in enumerate(iterable):
+        iterable[ita] = int(iterable[ita] * 10)
+
+    result = list(to_ranges(iterable))
+
+    return result
+
 def golden_weights_to_ranges(a_list):
     """
     converts golden weights to ranges per weight to make importance more visible
     [0.1, 0.1] [0.2, 0.1] [0.3, 0.9]
-    ->
-    [0.1 - 0.3]
-    [0.1 - 0.1] [0.9 - 0.9]
 
+    this function works only well with 0.1 step weights, result is not  converted back to float
+    ---->
+    {
+        0: [1 - 3]
+        1: [1 - 1] [0.9 - 0.9]
+    }
     "EXPERIMENTAL - NOT VERY WELL TESTED"
 
     :param a_list: 
     :return: 
     """
-    golden_weights = a_list.get('golden_weights')
+    golden_weights = a_list.get('best_dist')['weights']
     if golden_weights and len(golden_weights) > 0:
         # slots for each weight
-        weights = [[]] * len(golden_weights[0])
-        for combination in a_list['golden_weights']:
+
+        weights =  [[] for _ in range(len(golden_weights[0]))]
+        #weights = [[]] *
+        for combination in golden_weights:
             for i, weight in enumerate(combination):
                 weights[i].append(weight)
 
@@ -138,14 +161,8 @@ def golden_weights_to_ranges(a_list):
         for weight in weights:
             uniqu_weights = list(set(weight))
             uniqu_weights.sort()
-
-            groups = []
-            uniquekeys = []
-            # lambda (x, y): x + y -> x_y: x_y[0] + x_y[1], lambda x_y: x_y[0] - x_y[1]
-            for k, g in groupby(enumerate(uniqu_weights)):
-                groups.append(list(g))  # Store group iterator as a list
-                uniquekeys.append(k)
-            result.append(groups)
+            result.append(
+            to_ranges_wrapper(uniqu_weights))
         a_list['golden_groups'] = result
 
 def index_of_best(list):
@@ -183,10 +200,10 @@ if __name__ == '__main__':
             errors = len(raw_scores) - len(scores_cleaned)
             a_sum = sum(scores_norm)
 
-            combo['avg'] = a_sum / len(scores_norm)
-            score_per_average.setdefault(question,{})[combination_string] = {
+            combo['norm_avg'] = a_sum / len(scores_norm)
+            score_per_average.setdefault(question, {})[combination_string] = {
                 'score': a_sum,
-                'avg': combo['avg'],
+                'norm_avg': combo['norm_avg'],
                 'weight': combo['weights']
             }
 
@@ -208,7 +225,7 @@ if __name__ == '__main__':
         data_file.write(json.dumps(nice_format, sort_keys=False, indent=4))
         data_file.close()
 
-    # finally, get the best weighting and dave it to a file
+    # finally, get the best weighting and save it to a file
     final_result = {}
     for question in results_error_rate:
 
@@ -216,21 +233,24 @@ if __name__ == '__main__':
         score_per_average_list = list(score_per_average[question].values())
 
         results_error_rate_list.sort(key=lambda x: x['errors'], reverse=False)
-        score_per_average_list.sort(key=lambda x: x['avg'], reverse=False)
-
-
-
+        score_per_average_list.sort(key=lambda x: x['norm_avg'], reverse=False)
 
         final_result[question] = {
-            'lowest_error': merge_top(results_error_rate_list, 'errors'),
-            'best_dist': merge_top(score_per_average_list, 'avg')
+        #     'lowest_error': merge_top(results_error_rate_list, 'errors'),
+            'best_dist': merge_top(score_per_average_list, 'norm_avg')
         }
-        find_golden_weights(final_result[question])
+
+
+        #find_golden_weights(final_result[question])
+
+
         golden_weights_to_ranges(final_result[question])
 
-    print(json.dumps(final_result, sort_keys=False, indent=4))
-    with open('result/final_result' + '.json', 'w') as data_file:
-        data_file.write(json.dumps(final_result, sort_keys=False, indent=4))
-        data_file.close()
+    #print(json.dumps(final_result, sort_keys=False, indent=4))
+
+    for question in final_result:
+        with open('result/final_result_' +question+ '.json', 'w') as data_file:
+            data_file.write(json.dumps(final_result[question], sort_keys=False, indent=4))
+            data_file.close()
 
 

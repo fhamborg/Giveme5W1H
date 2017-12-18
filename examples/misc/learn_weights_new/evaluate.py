@@ -1,34 +1,30 @@
 """
-checks all result files an writes the best candidates to evaluate.json
+checks all result files(all xxxxx_processed.prickle) an writes results to /result/
 """
 import glob
 import json
-import operator
 import pickle
-import collections
 
 import statistics
 from itertools import groupby
 
 
-
-
-compare = lambda x, y: collections.Counter(x) == collections.Counter(y)
-
-
-
 def weights_to_string(weights):
+    """
+    converts an array of ints to string
+    :param weights:
+    :return:
+    """
     scaled_weights_string = [str(x) for x in weights]
     return ''.join(scaled_weights_string)
 
 
-def stats(numbers):
-    return {"mean": statistics.mean(numbers),
-            "median": statistics.median(numbers)}
-
-
 def read_file(path):
-    # filename = os.path.basename(file_path)
+    """
+    reads a file
+    :param path:
+    :return:
+    """
     score_results = {}
     for file_path in glob.glob(path):
         with open(file_path, 'rb') as ff:
@@ -101,34 +97,29 @@ def merge_top(a_list, accessor):
     return result
 
 
-def find_golden_weights(a_list):
-    """
-    checks for an overlap in 'lowest_error' and 'best_dist'
-    copies all overlapping weights to golden_weights
-    :param results:
-    :return:
-    """
-    result = []
-    for lowest_error in a_list['lowest_error']['weights']:
-        for best_dist in a_list['best_dist']['weights']:
-            if compare(lowest_error, best_dist):
-                result.append(lowest_error)
-    a_list['golden_weights'] = result
-
 
 
 def to_ranges(iterable):
+    """
+    finds range of ints in a list of ints, this returns a generator!!
+    :param iterable:
+    :return:
+    """
     iterable = sorted(set(iterable))
     for key, group in groupby(enumerate(iterable),
                                         lambda t: t[1] - t[0]):
         group = list(group)
         yield group[0][1], group[-1][1]
 
-def to_ranges_wrapper(iterable):
+def to_ranges_wrapper(iterable, decimals: int=10):
+    """
+    converts a list of float to ints and finds range in this list
+    :param iterable:
+    :return:
+    """
 
-    # to int
     for ita, i in enumerate(iterable):
-        iterable[ita] = int(iterable[ita] * 10)
+        iterable[ita] = int(iterable[ita] * decimals)
 
     result = list(to_ranges(iterable))
 

@@ -49,7 +49,6 @@ class MethodExtractor(AbsExtractor):
         :param weights: 
         """
         self.weights = weights
-        #self._conjunction_check_left_side = conjunction_check_left_side
         self._extension_strategy = extension_strategy
         if extension_strategy is ExtensionStrategy.Range:
             self._phrase_range = phrase_range

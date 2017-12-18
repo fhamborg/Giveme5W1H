@@ -9,7 +9,7 @@ class DistanceOfCandidate(AbsCombinedScoring):
     re-score the  dependant_questions-candidates bases on the sentence-distance to the best primary_questions-candidates.
     """
     def __init__(self, primary_questions: List[str] = ['what', 'who'], dependant_questions: str = 'how', n_top_candidates: int=1,
-                 weight=[1, 1, 1], normalize: bool=True):
+                 weight=[1, 1], normalize: bool=True):
         """
         :param primary_questions
         :param dependant_questions

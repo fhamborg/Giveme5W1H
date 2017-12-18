@@ -20,6 +20,11 @@ fmt = '{0.days} days {0.hours} hours {0.minutes} minutes {0.seconds} seconds'
 
 
 class Learn(object):
+    """
+    Wrapper class to learn weights and parameter.
+    A lock object must be shared to ensure proper usage of caches and online resources.
+
+    """
     one_minute_in_s = 60
     one_hour_in_s = one_minute_in_s * 60
     one_day_in_s = one_hour_in_s * 24
@@ -31,13 +36,11 @@ class Learn(object):
     a_max = math.log(one_month_in_s)  # a month
     a_min_minus_max = (a_max - a_min)
 
-
     def __init__(self, lock, input_path, preprocessed_path, extractors, queue, combined_scorer=None, ):
-
         # load docs an extractor
         self._input_path = input_path
         self._pre_processed_path = preprocessed_path
-        self._documents, self._extractor_object = self.load_documents(extractors, combined_scorer)
+        self._documents, self._extractor_object, self._combined_scorer = self.load_documents(extractors, combined_scorer)
 
         self._extractors = extractors
         if self._extractors.get('environment'):
@@ -47,7 +50,7 @@ class Learn(object):
             self._geocoder = None
             self._calendar = None
 
-        self._combined_scorer = combined_scorer
+        #self._combined_scorer = combined_scorer
         # object to work on (holds the todos)
         self._queue = queue
         self._lock = lock
@@ -244,7 +247,6 @@ class Learn(object):
             # retrieved answer couldn't be parsed
             return -3
 
-
         return vincenty(annotation.point, location.point).kilometers
 
     def load_documents(self, extractors, combined_scorer):
@@ -274,7 +276,7 @@ class Learn(object):
                 .process().get_documents()
         )
 
-        return docments, extractor_object
+        return docments, extractor_object, combined_scorer
 
     def _cmp_helper_min(self, scoring, question, answer, annotations, weights, result):
         # TODO: use named entity, if any
@@ -326,9 +328,6 @@ class Learn(object):
             self._log.info(queue.get_id() + ':Rough estimated time left:' + str(fmt.format(rd(seconds=time_range))))
 
     def process(self):
-        # grab utilities to parse dates and locations from the EnvironmentExtractor
-
-
         self._log_progress(self._queue, self._documents, None, None)
         # make sure caller can read that...
 
@@ -346,89 +345,104 @@ class Learn(object):
 
                 # adjust weights
                 weights = next_item['scoring_parameters']['weights']
+                if self._combined_scorer:
+                    # Combined scoring is happening after candidate extraction,
+                    # be sure that you did set optimal weights
+                    self._combined_scorer.weights = (weights[0], weights[1])
+                else:
 
-                if self._extractors.get('action'):
-                    #
-                    self._extractors['action'].weights = (weights[0], weights[1], weights[2])
+                    if self._extractors.get('action'):
+                        #
+                        self._extractors['action'].weights = (weights[0], weights[1], weights[2])
 
-                if self._extractors.get('environment'):
-                    # time
-                    self._extractors['environment'].weights = (
-                    (weights[0], weights[1]), (weights[0], weights[1], weights[2], weights[3], weights[4]))
+                    if self._extractors.get('environment'):
+                        # time
+                        self._extractors['environment'].weights = (
+                        (weights[0], weights[1]), (weights[0], weights[1], weights[2], weights[3], weights[4]))
 
-                if self._extractors.get('cause'):
-                    # cause - (position, conjunction, adverb, verb)
-                    self._extractors['cause'].weights = (weights[0], weights[1], weights[2], weights[3])
+                    if self._extractors.get('cause'):
+                        # cause - (position, conjunction, adverb, verb)
+                        self._extractors['cause'].weights = (weights[0], weights[1], weights[2], weights[3])
 
-                if self._extractors.get('method'):
-                    # method - (position, frequency)
-                    self._extractors['method'].weights = (weights[0], weights[1])
+                    if self._extractors.get('method'):
+                        # method - (position, frequency)
+                        self._extractors['method'].weights = (weights[0], weights[1])
+
 
                 combination_start_stamp = datetime.datetime.now()
                 # run for all documents
                 for document in self._documents:
 
-                    #try:
+                    # try:
                     self._extractor_object.parse(document)
-                    #except socket.timeout:
-                    #    print('online service (prob nominatim) did`t work, we ignore this')
 
                     annotation = document.get_annotations()
                     answers = document.get_answers()
 
-                    #
-                    # Extractors are based on their naming Cause, Method etc.
-                    # answer(and their questions) have a very different structure
-                    # Therefore the following lines are simple copy&paste to reorganise
-                    # from one the the other format
-                    #
-
                     result = {}
+                    if self._combined_scorer:
+                        # Combined scoring is happening after candidate extraction,
+                        # be sure that you did set optimal weights
+                        used_weights = self._combined_scorer.weights
+                        question = 'combined_scoring'
+                        if question in answers and len(answers['how']) > 0:
+                            top_answer = answers['how'][0].get_parts_as_text()
+                            self._cmp_helper_min(self.cmp_text_ngd, question, top_answer, annotation, used_weights,
+                                                 result)
+                        self._queue.resolve_document(next_item, document.get_document_id(), result)
 
-                    extractor = self._extractors.get('cause')
-                    if extractor:
-                        question = 'why'
-                        if question in answers and len(answers[question]) > 0:
+                    else:
+                        #
+                        # Extractors are based on their naming Cause, Method etc.
+                        # answer(and their questions) have a very different structure
+                        # Therefore the following lines are simple copy&paste to reorganise
+                        # from one the the other format
+                        #
+
+                        extractor = self._extractors.get('cause')
+                        if extractor:
+                            question = 'why'
+                            if question in answers and len(answers[question]) > 0:
+                                used_weights = extractor.weights
+                                top_answer = answers[question][0].get_parts_as_text()
+                                self._cmp_helper_min(self.cmp_text_ngd, question, top_answer, annotation, used_weights, result)
+
+                        extractor = self._extractors.get('action')
+                        if extractor:
                             used_weights = extractor.weights
-                            top_answer = answers[question][0].get_parts_as_text()
-                            self._cmp_helper_min(self.cmp_text_ngd, question, top_answer, annotation, used_weights, result)
+                            question = 'what'
+                            if question in answers and len(answers[question]) > 0:
+                                top_answer = answers[question][0].get_parts_as_text()
+                                self._cmp_helper_min(self.cmp_text_ngd,'what', top_answer, annotation, used_weights, result)
 
-                    extractor = self._extractors.get('action')
-                    if extractor:
-                        used_weights = extractor.weights
-                        question = 'what'
-                        if question in answers and len(answers[question]) > 0:
-                            top_answer = answers[question][0].get_parts_as_text()
-                            self._cmp_helper_min(self.cmp_text_ngd,'what', top_answer, annotation, used_weights, result)
+                            question = 'who'
+                            if question in answers and len(answers[question]) > 0:
+                                top_answer = answers[question][0].get_parts_as_text()
+                                self._cmp_helper_min(self.cmp_text_ngd,question, top_answer, annotation, used_weights, result)
 
-                        question = 'who'
-                        if question in answers and len(answers[question]) > 0:
-                            top_answer = answers[question][0].get_parts_as_text()
-                            self._cmp_helper_min(self.cmp_text_ngd,question, top_answer, annotation, used_weights, result)
+                        extractor = self._extractors.get('method')
+                        if extractor:
+                            used_weights = extractor.weights
+                            question = 'how'
+                            if question in answers and len(answers[question]) > 0:
+                                top_answer = answers[question][0].get_parts_as_text()
+                                self._cmp_helper_min(self.cmp_text_ngd, question, top_answer, annotation, used_weights, result)
 
-                    extractor = self._extractors.get('method')
-                    if extractor:
-                        used_weights = extractor.weights
-                        question = 'how'
-                        if question in answers and len(answers[question]) > 0:
-                            top_answer = answers[question][0].get_parts_as_text()
-                            self._cmp_helper_min(self.cmp_text_ngd, question, top_answer, annotation, used_weights, result)
+                        extractor = self._extractors.get('environment')
+                        if extractor:
+                            used_weights = extractor.weights
+                            question = 'when'
+                            if question in answers and len(answers[question]) > 0:
+                                top_answer = answers[question][0].get_enhancement('timex')
+                                self._cmp_helper_min(self.cmp_date_timex,question, top_answer, annotation, used_weights, result)
 
-                    extractor = self._extractors.get('environment')
-                    if extractor:
-                        used_weights = extractor.weights
-                        question = 'when'
-                        if question in answers and len(answers[question]) > 0:
-                            top_answer = answers[question][0].get_enhancement('timex')
-                            self._cmp_helper_min(self.cmp_date_timex,question, top_answer, annotation, used_weights, result)
+                            question = 'where'
+                            if question in answers and len(answers[question]) > 0:
+                                top_answer = answers[question][0].get_parts_as_text()
+                                self._cmp_helper_min(self.cmp_location, question, top_answer, annotation, used_weights, result)
 
-                        question = 'where'
-                        if question in answers and len(answers[question]) > 0:
-                            top_answer = answers[question][0].get_parts_as_text()
-                            self._cmp_helper_min(self.cmp_location, question, top_answer, annotation, used_weights, result)
-
-                    # done save it to the result
-                    self._queue.resolve_document(next_item, document.get_document_id(), result)
+                        # done save it to the result
+                        self._queue.resolve_document(next_item, document.get_document_id(), result)
 
                 combination_end_stamp = datetime.datetime.now()
                 self._queue.pop(persist=False)

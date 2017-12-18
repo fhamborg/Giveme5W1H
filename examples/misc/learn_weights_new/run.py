@@ -3,6 +3,7 @@ import queue
 import threading
 from threading import Thread
 
+from combined_scoring import distance_of_candidate
 from extractor.root import path
 from extractors import environment_extractor, action_extractor, cause_extractor, method_extractor
 from misc.learn_weights_new.learn import Learn
@@ -94,13 +95,15 @@ def default_combined_scoring(lock):
     a_queue.load()
 
     extractors = {
-        #'action': action_extractor.ActionExtractor()
-        # 'environment': environment_extractor.EnvironmentExtractor(),
-        # 'cause': cause_extractor.CauseExtractor(),
-         'method': method_extractor.MethodExtractor()
+         'action': action_extractor.ActionExtractor() # provider for what an who
     }
+    # set optimal weights learned beforehand
+    extractors['action'].weights = [0.7, 0.3, 0.9]
+
+    combined_scorer = distance_of_candidate.DistanceOfCandidate(['what', 'who'], 'how')
+
     learn = Learn(lock=lock,extractors=extractors, preprocessed_path=preprocessedPath, input_path=inputPath,
-                  combined_scorer=None, queue=a_queue)
+                  combined_scorer=combined_scorer, queue=a_queue)
     return learn
 
 
@@ -118,9 +121,10 @@ if __name__ == '__main__':
     # basic learner
     # log.setLevel(logging.ERROR)
     # q.put(action(lock))
-    q.put(environment(lock))
+    #q.put(environment(lock))
     # q.put(cause(lock))
     # q.put(method(lock))
+    q.put(default_combined_scoring(lock))
     # log.setLevel(logging.ERROR)
     # creating worker threads
     for i in range(4):

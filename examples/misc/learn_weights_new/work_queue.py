@@ -83,6 +83,8 @@ class WorkQueue(object):
                 self._generate_environment()
             elif self._generator == 'action':
                 self._generate_action()
+            elif self._generator == 'combined_scoring':
+                self._generate_combined_scoring()
 
     def resolve_document(self, last_item, dId, result):
         """
@@ -228,6 +230,18 @@ class WorkQueue(object):
                                 'weights': weights
                             },
                             'extracting_parameters': {}})
+
+    def _generate_combined_scoring(self):
+        for i in self._weights_range:
+            for j in self._weights_range:
+                weights = (i, j)
+                if self.vector_is_unique(weights):
+                    self._queue.append({
+                        'extracting_parameters_id': 1,
+                        'scoring_parameters': {
+                            'weights': weights
+                        },
+                        'extracting_parameters': {}})
 
     def _generate_default(self):
         """

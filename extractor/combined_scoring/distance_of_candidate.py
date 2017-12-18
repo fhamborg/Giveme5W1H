@@ -6,7 +6,26 @@ from document import Document
 
 class DistanceOfCandidate(AbsCombinedScoring):
     """
-    re-score the  dependant_questions-candidates bases on the sentence-distance to the best primary_questions-candidates.
+    Rescoring of dependant_questions-candidates bases on the sentence-distance to the best primary_questions-candidate(s).
+
+    For two primary_questions a and b; n_top_candidates=1, this is roughly:
+    new_score = old_score +
+                ABS(primary_top_candidate_a_index - dependant_candidate_index) * W1 +
+                ABS(primary_top_candidate_b_index - dependant_candidate_index) * W2
+
+    For two primary_questions a and b; n_top_candidates=2, this is roughly:
+    new_score = old_score +
+                AVG(
+                      ABS(primary_top_candidate_a_index - dependant_candidate_index)
+                    + ABS(primary_top-1_candidate_a_index - dependant_candidate_index) ) * W1 +
+                AVG(
+                    ABS(primary_top-1_candidate_b_index - dependant_candidate_index) * W2,
+                    ABS(primary_top_candidate_b_index - dependant_candidate_index)) * W2)
+
+
+    Score is Normalized afterwards
+
+
     """
     def __init__(self, primary_questions: List[str] = ['what', 'who'], dependant_questions: str = 'how', n_top_candidates: int=1,
                  weight=[1, 1], normalize: bool=True):

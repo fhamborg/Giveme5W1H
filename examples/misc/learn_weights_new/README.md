@@ -8,4 +8,4 @@
 * Each result is cached for each combination change
 * run evaluate to extract results
 
-``` delete/rename the files in /cache/ if you want to start over ```
+``` delete/rename the files in /queue_caches/ if you want to start over ```

@@ -87,6 +87,23 @@ def action(lock):
     return learn
 
 
+def default_combined_scoring(lock):
+    a_queue = WorkQueue(generator='combined_scoring')
+    a_queue.setup_scoring_parameters()
+    a_queue.setup_extracting_parameters()
+    a_queue.load()
+
+    extractors = {
+        #'action': action_extractor.ActionExtractor()
+        # 'environment': environment_extractor.EnvironmentExtractor(),
+        # 'cause': cause_extractor.CauseExtractor(),
+         'method': method_extractor.MethodExtractor()
+    }
+    learn = Learn(lock=lock,extractors=extractors, preprocessed_path=preprocessedPath, input_path=inputPath,
+                  combined_scorer=None, queue=a_queue)
+    return learn
+
+
 if __name__ == '__main__':
     log = logging.getLogger('GiveMe5W')
     log.setLevel(logging.INFO)

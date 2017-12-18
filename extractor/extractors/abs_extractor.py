@@ -17,17 +17,7 @@ class AbsExtractor:
     """
 
     __metaclass__ = ABCMeta
-    weights = None
     wn_corpus = False
-
-    def __init__(self, weights=None):
-        """
-        Initiates the extractor, weights can be passed to overwrite default settings.
-
-        :param weights: Weights used to evaluate answer candidates.
-        """
-        if weights is not None:
-            self.weights = weights
 
     @abstractmethod
     def _extract_candidates(self, document):
@@ -150,6 +140,7 @@ class AbsExtractor:
             cd.set_parts(candidate[0])
             cd.set_score(candidate[1])
             cd.set_sentence_index(candidate[2] if 2 < len(candidate) else None)
+            cd.set_type(candidate[3] if 3 < len(candidate) else None)
 
             # cd.set_text_index(text_index)
 

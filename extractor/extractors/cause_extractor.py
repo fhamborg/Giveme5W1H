@@ -53,8 +53,7 @@ class CauseExtractor(AbsExtractor):
             self.log.warning('Could not find corpus for WordNet, will now try to download the corpus.')
             nltk.download('wordnet')
 
-        if weights:
-            self.weights = weights
+        self.weights = weights
 
         # translate causal verbs into synsets
         synsets = []

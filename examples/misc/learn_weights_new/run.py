@@ -95,6 +95,7 @@ def default_combined_scoring(lock):
     a_queue.load()
 
     extractors = {
+        'method': method_extractor.MethodExtractor(),
          'action': action_extractor.ActionExtractor() # provider for what an who
     }
     # set optimal weights learned beforehand

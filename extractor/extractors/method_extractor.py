@@ -117,12 +117,11 @@ class MethodExtractor(AbsExtractor):
                                 # format fix
                                 candidate_parts_fixed = []
                                 for candidate_part in candidate_parts:
-                                    candidate_parts_fixed.append(({'nlpToken': candidate_part} ,candidate_part['pos'],candidate_part))
+                                    candidate_parts_fixed.append(({'nlpToken': candidate_part}, candidate_part['pos'],candidate_part))
 
                                 # get the CoreNLP tokens for each part e.g lemmas etc.
                                 # convert list objects back to tuples for backward compatibility
                                 candidates.append([candidate_parts_fixed, None, _index, 'prepos'])
-
 
         return candidates
 

@@ -4,8 +4,6 @@ checks all result files(all xxxxx_processed.prickle) an writes results to /resul
 import glob
 import json
 import pickle
-
-import statistics
 from itertools import groupby
 
 
@@ -19,7 +17,7 @@ def weights_to_string(weights):
     return ''.join(scaled_weights_string)
 
 
-def read_file(path):
+def read_file(path, combined_scoring):
     """
     reads a file
     :param path:
@@ -27,8 +25,14 @@ def read_file(path):
     """
     score_results = {}
     for file_path in glob.glob(path):
+        if not combined_scoring and "combined_scoring" in file_path:
+            continue
+        if combined_scoring and "combined_scoring" not in file_path:
+            continue
+
         with open(file_path, 'rb') as ff:
             results = pickle.load(ff)
+
         for result in results:
             for question in result:
                 question_scores = score_results.setdefault(question, {})
@@ -37,7 +41,6 @@ def read_file(path):
                 # fix floating error
                 for i in weights:
                     weights_fixed.append(round(i, 1))
-
 
                 comb = question_scores.setdefault(weights_to_string(weights_fixed), {'weights': weights_fixed, 'scores_doc': []})
                 comb['scores_doc'].append(result[question][2])
@@ -57,6 +60,7 @@ def remove_errors(list):
     # remove other errors
     result = [x for x in tmp if x and x >= 0]
     return result
+
 
 def normalize(list):
     """
@@ -146,7 +150,6 @@ def golden_weights_to_ranges(a_list):
         # slots for each weight
 
         weights =  [[] for _ in range(len(golden_weights[0]))]
-        #weights = [[]] *
         for combination in golden_weights:
             for i, weight in enumerate(combination):
                 weights[i].append(weight)
@@ -169,13 +172,13 @@ def index_of_best(list):
     return list.index(min(a_list))
 
 
-if __name__ == '__main__':
-
-    # read all available prickles
-    score_results = read_file('queue_caches/*processed.prickle')
+def evaluate(score_results, combined_scoring):
+    praefix = ''
+    if combined_scoring:
+        praefix = 'combined_scoring_'
 
     # write raw results
-    with open('result/evaluation_full' + '.json', 'w') as data_file:
+    with open('result/'+praefix+'evaluation_full' + '.json', 'w') as data_file:
         data_file.write(json.dumps(score_results, sort_keys=False, indent=4))
         data_file.close()
 
@@ -183,7 +186,7 @@ if __name__ == '__main__':
     # 1. Crit.: has a low dist on average per weight (documents are merged)
     # 3. Crit.: weight with lowest error rate per documents (documents are merged)
     score_per_average = {}
-    results_error_rate = {}
+    # results_error_rate = {}
     for question in score_results:
         for combination_string in score_results[question]:
             combo = score_results[question][combination_string]
@@ -201,10 +204,10 @@ if __name__ == '__main__':
                 'weight': combo['weights']
             }
 
-            results_error_rate.setdefault(question,{})[combination_string] = {
-                'errors': errors,
-                'weight': combo['weights']
-            }
+            # results_error_rate.setdefault(question,{})[combination_string] = {
+            #     'errors': errors,
+            #     'weight': combo['weights']
+            # }
 
             # nice formattet full output, if anyone needs is
     nice_format = {}
@@ -215,36 +218,39 @@ if __name__ == '__main__':
             del combo['scores_doc']
             question_scores.append(combo)
 
-    with open('result/evaluation_only_avg' + '.json', 'w') as data_file:
+    with open('result/'+praefix+'evaluation_only_avg' + '.json', 'w') as data_file:
         data_file.write(json.dumps(nice_format, sort_keys=False, indent=4))
         data_file.close()
 
     # finally, get the best weighting and save it to a file
     final_result = {}
-    for question in results_error_rate:
-
-        results_error_rate_list = list(results_error_rate[question].values())
+    for question in score_per_average:
         score_per_average_list = list(score_per_average[question].values())
 
-        results_error_rate_list.sort(key=lambda x: x['errors'], reverse=False)
         score_per_average_list.sort(key=lambda x: x['norm_avg'], reverse=False)
 
         final_result[question] = {
-        #     'lowest_error': merge_top(results_error_rate_list, 'errors'),
             'best_dist': merge_top(score_per_average_list, 'norm_avg')
         }
 
-
-        #find_golden_weights(final_result[question])
-
-
         golden_weights_to_ranges(final_result[question])
 
-    #print(json.dumps(final_result, sort_keys=False, indent=4))
-
     for question in final_result:
-        with open('result/final_result_' +question+ '.json', 'w') as data_file:
+        with open('result/'+praefix+'final_result_' + question + '.json', 'w') as data_file:
             data_file.write(json.dumps(final_result[question], sort_keys=False, indent=4))
             data_file.close()
+
+
+if __name__ == '__main__':
+
+    # read all available prickles
+    #score_results = read_file('queue_caches/*processed.prickle', combined_scoring=False)
+    #evaluate(score_results, combined_scoring=False)
+
+    # read all available prickles
+    score_results = read_file('queue_caches/*processed.prickle', combined_scoring=True)
+    evaluate(score_results, combined_scoring=True)
+
+
 
 

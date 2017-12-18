@@ -384,9 +384,9 @@ class Learn(object):
                         # Combined scoring is happening after candidate extraction,
                         # be sure that you did set optimal weights
                         used_weights = self._combined_scorer.weights
-                        question = 'combined_scoring'
-                        if question in answers and len(answers['how']) > 0:
-                            top_answer = answers['how'][0].get_parts_as_text()
+                        question = 'how'
+                        if question in answers and len(answers[question]) > 0:
+                            top_answer = answers[question][0].get_parts_as_text()
                             self._cmp_helper_min(self.cmp_text_ngd, question, top_answer, annotation, used_weights,
                                                  result)
                         self._queue.resolve_document(next_item, document.get_document_id(), result)

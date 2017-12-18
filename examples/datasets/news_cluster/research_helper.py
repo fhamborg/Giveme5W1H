@@ -3,7 +3,7 @@ import webbrowser
 
 ''' 
  This tool will open all relevant publisher sites with the given keyword and well defined search parameter
- - inspect all pages an pick 1-2 relevant news per event 
+ - inspect all pages and pick 1-2 relevant news per event 
  - they should annotated the same event at the same days 
 '''
 

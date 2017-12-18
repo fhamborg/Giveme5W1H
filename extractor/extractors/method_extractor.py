@@ -1,32 +1,58 @@
+import enum
+from enum import Enum, auto
+
 from document import Document
 from extractor.candidate import Candidate
 from extractor.extractors.abs_extractor import AbsExtractor
 
 
+@enum.unique
+class ExtensionStrategy(Enum):
+    Range = auto()
+    Blacklist = auto()
+
 class MethodExtractor(AbsExtractor):
     """
-    The MethodExtractor tries to extract the methods.
+    The MethodExtractor extracts the methods.
     """
 
-    # CONJUNCTIONS IN ENGLISH: MEANING, TYPES AND USES,  ISSN 2348-3164
+    # CONJUNCTIONS IN ENGLISH: MEANING, TYPES AND USES, ISSN 2348-3164
     # http://grammarist.com/grammar/conjunctions/
     _copulative_conjunction = ['and', 'as', 'both', 'because', 'even', 'for', 'if ', 'that', 'then', 'since', 'seeing',
                                'so', 'after']
 
     # https://github.com/igorbrigadir/stopwords
     # https://github.com/igorbrigadir/stopwords/blob/master/en/nltk.txt
-    _stop_words = ['i', 'me', 'my', 'myself', 'we', 'our', 'ours', 'ourselves', 'you', 'your', 'yours', 'yourself', 'yourselves', 'he', 'him', 'his', 'himself', 'she', 'her', 'hers', 'herself', 'it', 'its', 'itself', 'they', 'them', 'their', 'theirs', 'themselves', 'what', 'which', 'who', 'whom', 'this', 'that', 'these', 'those', 'am', 'is', 'are', 'was', 'were', 'be', 'been', 'being', 'have', 'has', 'had', 'having', 'do', 'does', 'did', 'doing', 'a', 'an', 'the', 'and', 'but', 'if', 'or', 'because', 'as', 'until', 'while', 'of', 'at', 'by', 'for', 'with', 'about', 'against', 'between', 'into', 'through', 'during', 'before', 'after', 'above', 'below', 'to', 'from', 'up', 'down', 'in', 'out', 'on', 'off', 'over', 'under', 'again', 'further', 'then', 'once', 'here', 'there', 'when', 'where', 'why', 'how', 'all', 'any', 'both', 'each', 'few', 'more', 'most', 'other', 'some', 'such', 'no', 'nor', 'not', 'only', 'own', 'same', 'so', 'than', 'too', 'very', 's', 't', 'can', 'will', 'just', 'don', 'should', 'now', 'd', 'll', 'm', 'o', 're', 've', 'y', 'ain', 'aren', 'couldn', 'didn', 'doesn', 'hadn', 'hasn', 'haven', 'isn', 'ma', 'mightn', 'mustn', 'needn', 'shan', 'shouldn', 'wasn', 'weren', 'won', 'wouldn']
+    _stop_words = ['i', 'me', 'my', 'myself', 'we', 'our', 'ours', 'ourselves', 'you', 'your', 'yours', 'yourself',
+                   'yourselves', 'he', 'him', 'his', 'himself', 'she', 'her', 'hers', 'herself', 'it', 'its', 'itself',
+                   'they', 'them', 'their', 'theirs', 'themselves', 'what', 'which', 'who', 'whom', 'this', 'that',
+                   'these', 'those', 'am', 'is', 'are', 'was', 'were', 'be', 'been', 'being', 'have', 'has', 'had',
+                   'having', 'do', 'does', 'did', 'doing', 'a', 'an', 'the', 'and', 'but', 'if', 'or', 'because', 'as',
+                   'until', 'while', 'of', 'at', 'by', 'for', 'with', 'about', 'against', 'between', 'into', 'through',
+                   'during', 'before', 'after', 'above', 'below', 'to', 'from', 'up', 'down', 'in', 'out', 'on', 'off',
+                   'over', 'under', 'again', 'further', 'then', 'once', 'here', 'there', 'when', 'where', 'why', 'how',
+                   'all', 'any', 'both', 'each', 'few', 'more', 'most', 'other', 'some', 'such', 'no', 'nor', 'not',
+                   'only', 'own', 'same', 'so', 'than', 'too', 'very', 's', 't', 'can', 'will', 'just', 'don', 'should',
+                   'now', 'd', 'll', 'm', 'o', 're', 've', 'y', 'ain', 'aren', 'couldn', 'didn', 'doesn', 'hadn',
+                   'hasn', 'haven', 'isn', 'ma', 'mightn', 'mustn', 'needn', 'shan', 'shouldn', 'wasn', 'weren', 'won',
+                   'wouldn']
 
     _stop_ner = ['TIME', 'DATE', 'ORGANIZATION', 'DURATION', 'ORDINAL']
 
-    def __init__(self, weights: (float, float) = [1.0, 1.0], conjunction_check_left_side: bool=False):
+    # end of sentence, quote, quote
+    _blacklist = ['.', '"', '\'']
+
+    def __init__(self, weights: (float, float) = [1.0, 1.0, 1.0, 1.0], extension_strategy: ExtensionStrategy = ExtensionStrategy.Range, phrase_range: int = 3):
         """
-         weights used in the candidate evaluation:
-        (position, frequency)
+        weights used in the candidate evaluation:
+        (position, frequency, conjunction, adjectives/adverbs)
         :param weights: 
         """
         self.weights = weights
-        self._conjunction_check_left_side = conjunction_check_left_side
+        #self._conjunction_check_left_side = conjunction_check_left_side
+        self._extension_strategy = extension_strategy
+        if extension_strategy is ExtensionStrategy.Range:
+            self._phrase_range = phrase_range
 
     def _extract_candidates(self, document: Document):
         candidates = []
@@ -36,11 +62,11 @@ class MethodExtractor(AbsExtractor):
         for i, tree in enumerate(postrees):
             for candidate in self._extract_tree_for_prepos_conjunctions(tree):
                 candidates.append(candidate)
-        candidates = self._filter_duplicates(candidates)
+        candidates = self._filter_duplicates(candidates, exact=False)
 
         # candidate detection
         # All kind of adjectives
-        candidates_ad = self._filter_duplicates(self._extract_ad_candidates(document))
+        candidates_ad = self._filter_duplicates(self._extract_ad_candidates(document), exact=False)
 
         # join the candidates
         candidates = candidates + candidates_ad
@@ -73,24 +99,31 @@ class MethodExtractor(AbsExtractor):
                         # the left sibling is taken as candidate
                         if right_sibling.leaves()[0]['nlpToken']['ner'] not in self._stop_ner:
 
-                            right_sibling_pos = self._pos_linked_to_corenlp_tokens(right_sibling)
-                            candidate_parts = self._find_vb_cc_vb_parts(right_sibling_pos)
+                            tokens = right_sibling.root().stanfordCoreNLPResult['tokens']
+                            _index = subtree[0]['nlpToken']['index'] + 1
+
+                            if self._extension_strategy is ExtensionStrategy.Blacklist:
+                                #
+                                candidate_parts = []
+                                for token in tokens[_index - 1:]:
+                                    if token['lemma'] not in self._blacklist and token['ner'] not in self._stop_ner:
+                                        candidate_parts.append(token)
+                                    else:
+                                        break
+
+                            elif self._extension_strategy is ExtensionStrategy.Range:
+                                candidate_parts = tokens[_index - 1 :_index + self._phrase_range]
 
                             if candidate_parts:
+                                # format fix
+                                candidate_parts_fixed = []
+                                for candidate_part in candidate_parts:
+                                    candidate_parts_fixed.append(({'nlpToken': candidate_part} ,candidate_part['pos'],candidate_part))
+
                                 # get the CoreNLP tokens for each part e.g lemmas etc.
                                 # convert list objects back to tuples for backward compatibility
-                                candidates.append(
-                                    [candidate_parts, None, tree.stanfordCoreNLPResult['index'], 'prepos'])
-                        elif self._conjunction_check_left_side is True:
-                            # look at the sentence to the left side
-                            # because of the tree structure simplest way is to go multiple times up and then walk back
-                            atree = subtree.parent().parent().parent()
-                            if atree:
-                                relevantParts = self._pos_linked_to_corenlp_tokens(atree)
-                                candidate_parts = self._find_vb_cc_vb_parts(relevantParts)
-                                if candidate_parts:
-                                    candidates.append(
-                                        [candidate_parts, None, tree.stanfordCoreNLPResult['index'], 'prepos'])
+                                candidates.append([candidate_parts_fixed, None, _index, 'prepos'])
+
 
         return candidates
 
@@ -135,19 +168,19 @@ class MethodExtractor(AbsExtractor):
             # remove any prev. calculations
             candidate.reset_calculations()
 
-            maxLemma = 0
+            max_lemma = 0
             for part in candidate.get_parts():
                 lemma = part[0]['nlpToken']['lemma']
                 lemma_count = 0
                 # ignore lemma count for stopwords, because they are very frequent
                 if lemma not in self._stop_words:
                     lemma_count = lemma_map[lemma]
-                if lemma_count > maxLemma:
-                    maxLemma = lemma_count
+                if lemma_count > max_lemma:
+                    max_lemma = lemma_count
                 if lemma_count > global_max_lemma:
                     global_max_lemma = lemma_count
             # assign the greatest lemma to the candidate
-            candidate.set_calculations('lemma_count', maxLemma)
+            candidate.set_calculations('lemma_count', max_lemma)
 
         # normalize frequency (per lemma)
         for candidate in candidates:
@@ -162,11 +195,19 @@ class MethodExtractor(AbsExtractor):
 
         # calculate score
         score_max = 0
-        weights_sum = sum(self.weights)
+        # weights_sum = sum(self.weights)
         for candidate in candidates:
+
+            type_weight = 1
+            if candidate.get_type() == 'adjectiv':
+                type_weight = self.weights[2]
+            elif candidate.get_type() == 'prepos':
+                type_weight = self.weights[3]
+
+
             score = ((candidate.get_calculations('lemma_count_norm') * self.weights[1] +
                       candidate.get_calculations('position_frequency_norm') * self.weights[0]
-                      ) / weights_sum)
+                      ) + (1 * type_weight))
             candidate.set_score(score)
             if score > score_max:
                 score_max = score

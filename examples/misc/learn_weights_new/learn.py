@@ -366,8 +366,7 @@ class Learn(object):
 
                     if self._extractors.get('method'):
                         # method - (position, frequency)
-                        self._extractors['method'].weights = (weights[0], weights[1])
-
+                        self._extractors['method'].weights = (weights[0], weights[1], weights[2], weights[3])
 
                 combination_start_stamp = datetime.datetime.now()
                 # run for all documents

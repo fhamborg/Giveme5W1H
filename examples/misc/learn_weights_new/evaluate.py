@@ -244,8 +244,8 @@ def evaluate(score_results, combined_scoring):
 if __name__ == '__main__':
 
     # read all available prickles
-    #score_results = read_file('queue_caches/*processed.prickle', combined_scoring=False)
-    #evaluate(score_results, combined_scoring=False)
+    score_results = read_file('queue_caches/*processed.prickle', combined_scoring=False)
+    evaluate(score_results, combined_scoring=False)
 
     # read all available prickles
     score_results = read_file('queue_caches/*processed.prickle', combined_scoring=True)

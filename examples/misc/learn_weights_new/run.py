@@ -1,3 +1,7 @@
+"""
+Helper to run learn with different configurations.
+Be sure to remove the training set from input before running
+"""
 import logging
 import queue
 import threading
@@ -122,10 +126,10 @@ if __name__ == '__main__':
     # basic learner
     # log.setLevel(logging.ERROR)
     # q.put(action(lock))
-    #q.put(environment(lock))
+    # q.put(environment(lock))
     # q.put(cause(lock))
-    # q.put(method(lock))
-    q.put(default_combined_scoring(lock))
+    q.put(method(lock))
+    #q.put(default_combined_scoring(lock))
     # log.setLevel(logging.ERROR)
     # creating worker threads
     for i in range(4):

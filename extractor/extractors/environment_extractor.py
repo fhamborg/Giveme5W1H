@@ -60,7 +60,6 @@ class EnvironmentExtractor(AbsExtractor):
 
     def _evaluate_candidates(self, document):
         locations = self._evaluate_locations(document)
-        # dates = self._evaluate_dates(document)
         dates = self._evaluate_timex_dates(document)
 
         # there are now duplicates

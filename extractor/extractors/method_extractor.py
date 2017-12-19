@@ -8,8 +8,8 @@ from extractor.extractors.abs_extractor import AbsExtractor
 
 @enum.unique
 class ExtensionStrategy(Enum):
-    Range = auto()
-    Blacklist = auto()
+    Range = 1
+    Blacklist = 2
 
 class MethodExtractor(AbsExtractor):
     """
@@ -39,10 +39,10 @@ class MethodExtractor(AbsExtractor):
 
     _stop_ner = ['TIME', 'DATE', 'ORGANIZATION', 'DURATION', 'ORDINAL']
 
-    # end of sentence, quote, quote
-    _blacklist = ['.', '"', '\'']
+    # end of sentence, quote, PERIOD, COLON, QUOTE
+    _blacklist = ['.', '"', '\'',';']
 
-    def __init__(self, weights: (float, float) = [1.0, 1.0, 1.0, 1.0], extension_strategy: ExtensionStrategy = ExtensionStrategy.Range, phrase_range: int = 3):
+    def __init__(self, weights: (float, float) = [1.0, 1.0, 1.0, 1.0], extension_strategy: ExtensionStrategy = ExtensionStrategy.Blacklist, phrase_range: int = 3):
         """
         weights used in the candidate evaluation:
         (position, frequency, conjunction, adjectives/adverbs)
@@ -102,7 +102,8 @@ class MethodExtractor(AbsExtractor):
                             _index = subtree[0]['nlpToken']['index'] + 1
 
                             if self._extension_strategy is ExtensionStrategy.Blacklist:
-                                #
+
+
                                 candidate_parts = []
                                 for token in tokens[_index - 1:]:
                                     if token['lemma'] not in self._blacklist and token['ner'] not in self._stop_ner:
@@ -241,8 +242,6 @@ class MethodExtractor(AbsExtractor):
         """
          walks though the given subtree and returns all parts which are a part of
          JJ VB [CC] JJ VB  chain, starting from the first word.
-
-
 
         :param relevant_parts:
         :return:

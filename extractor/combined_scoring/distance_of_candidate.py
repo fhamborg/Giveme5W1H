@@ -8,22 +8,24 @@ class DistanceOfCandidate(AbsCombinedScoring):
     """
     Rescoring of dependant_questions-candidates bases on the sentence-distance to the best primary_questions-candidate(s).
 
-    For two primary_questions a and b; n_top_candidates=1, this is roughly:
+    For two primary_questions a and b; n_top_candidates=1,
+    where ABS return the normalized absolute distance between 0..1
+
     new_score = old_score +
-                ABS(primary_top_candidate_a_index - dependant_candidate_index) * W1 +
-                ABS(primary_top_candidate_b_index - dependant_candidate_index) * W2
+                1-ABS(primary_top_candidate_a_index - dependant_candidate_index) * W1 +
+                1-ABS(primary_top_candidate_b_index - dependant_candidate_index) * W2
 
     For two primary_questions a and b; n_top_candidates=2, this is roughly:
     new_score = old_score +
                 AVG(
-                      ABS(primary_top_candidate_a_index - dependant_candidate_index)
-                    + ABS(primary_top-1_candidate_a_index - dependant_candidate_index) ) * W1 +
+                      1-ABS(primary_top_candidate_a_index - dependant_candidate_index)
+                    + 1-ABS(primary_top-1_candidate_a_index - dependant_candidate_index) ) * W1 +
                 AVG(
-                    ABS(primary_top-1_candidate_b_index - dependant_candidate_index) * W2,
-                    ABS(primary_top_candidate_b_index - dependant_candidate_index)) * W2)
+                    1-ABS(primary_top-1_candidate_b_index - dependant_candidate_index) * W2,
+                    1-ABS(primary_top_candidate_b_index - dependant_candidate_index)) * W2)
 
 
-    Score is Normalized afterwards
+    Score is Normalized afterwards to 1..0
 
 
     """

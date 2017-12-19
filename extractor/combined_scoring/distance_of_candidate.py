@@ -29,8 +29,10 @@ class DistanceOfCandidate(AbsCombinedScoring):
 
 
     """
-    def __init__(self, primary_questions: List[str] = ['what', 'who'], dependant_questions: str = 'how', n_top_candidates: int=1,
-                 weight=[1, 1], normalize: bool=True):
+
+    def __init__(self, primary_questions: List[str] = ['what', 'who'], dependant_questions: str = 'how',
+                 n_top_candidates: int = 1,
+                 weight=[1, 1], normalize: bool = True):
         """
         :param primary_questions
         :param dependant_questions

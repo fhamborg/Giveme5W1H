@@ -6,9 +6,19 @@
   "category": "toberone-gate",
   "fiveWoneH": {
     "who": {
+      "annotated": [
+        {
+          "text": "Toblerone",
+          "coderPhraseCount": 3
+        },
+        {
+          "text": "Mondelez International",
+          "coderPhraseCount": 2
+        }
+      ],
+      "label": "who",
       "extracted": [
         {
-          "text": "The 150g Toblerone",
           "parts": [
             [
               {
@@ -65,61 +75,12 @@
               "NN"
             ]
           ],
-          "score": 1.0
+          "score": 1.0,
+          "text": "The 150g Toblerone"
         }
-      ],
-      "annotated": [
-        {
-          "text": "Toblerone",
-          "coderPhraseCount": 3
-        },
-        {
-          "text": "Mondelez International",
-          "coderPhraseCount": 2
-        }
-      ],
-      "label": "who"
+      ]
     },
     "when": {
-      "extracted": [
-        {
-          "text": "Christmas",
-          "enhancement": {
-            "timex": {
-              "start_date": "2016-12-25T00:00:00",
-              "end_date": "2016-12-25T23:59:59"
-            }
-          },
-          "parts": [
-            [
-              {
-                "nlpToken": {
-                  "characterOffsetBegin": 1505,
-                  "word": "Christmas",
-                  "lemma": "Christmas",
-                  "timex": {
-                    "value": "2016-12-25",
-                    "tid": "t1",
-                    "type": "DATE"
-                  },
-                  "before": " ",
-                  "characterOffsetEnd": 1514,
-                  "originalText": "Christmas",
-                  "normalizedNER": "2016-12-25",
-                  "speaker": "PER0",
-                  "after": " ",
-                  "ner": "DATE",
-                  "index": 10,
-                  "pos": "NNP"
-                }
-              },
-              "NNP"
-            ]
-          ],
-          "nlpIndexSentence": 12,
-          "score": 0.6345540211177628
-        }
-      ],
       "annotated": [
         {
           "coderPhraseCount": 3,
@@ -129,32 +90,6 @@
       "label": "when"
     },
     "why": {
-      "extracted": [
-        {
-          "text": "they",
-          "parts": [
-            [
-              {
-                "nlpToken": {
-                  "characterOffsetBegin": 221,
-                  "word": "they",
-                  "lemma": "they",
-                  "speaker": "PER0",
-                  "after": " ",
-                  "pos": "PRP",
-                  "ner": "O",
-                  "before": " ",
-                  "characterOffsetEnd": 225,
-                  "index": 37,
-                  "originalText": "they"
-                }
-              },
-              "PRP"
-            ]
-          ],
-          "score": 0.42857142857142855
-        }
-      ],
       "annotated": [
         {
           "text": "attempt to meet rising costs",
@@ -164,88 +99,294 @@
       "label": "why"
     },
     "how": {
-      "extracted": [
-        {
-          "text": "distinctive",
-          "parts": [
-            [
-              {
-                "nlpToken": {
-                  "characterOffsetBegin": 66,
-                  "word": "distinctive",
-                  "lemma": "distinctive",
-                  "characterOffsetEnd": 77,
-                  "speaker": "PER0",
-                  "ner": "O",
-                  "after": " ",
-                  "originalText": "distinctive",
-                  "before": " ",
-                  "index": 11,
-                  "pos": "JJ"
-                }
-              },
-              "JJ"
-            ]
-          ],
-          "score": 1.0
-        }
-      ],
       "annotated": [
         {
           "text": "space out the distinctive",
           "coderPhraseCount": 3
         }
       ],
-      "label": "how"
-    },
-    "where": {
+      "label": "how",
       "extracted": [
         {
-          "text": "UK",
-          "enhancement": {
-            "openstreetmap_nominatim": {
-              "place_id": "179731133",
-              "licence": "Data \u00a9 OpenStreetMap contributors, ODbL 1.0. http://www.openstreetmap.org/copyright",
-              "type": "administrative",
-              "class": "boundary",
-              "osm_id": "62149",
-              "boundingbox": [
-                49.674,
-                61.061,
-                -14.015517,
-                2.0919117
-              ],
-              "osm_type": "relation",
-              "lon": "-3.2765753",
-              "display_name": "UK",
-              "importance": 0.3267301409654,
-              "icon": "https://nominatim.openstreetmap.org/images/mapicons/poi_boundary_administrative.p.20.png",
-              "lat": "54.7023545"
-            }
-          },
           "parts": [
             [
               {
                 "nlpToken": {
-                  "characterOffsetBegin": 190,
-                  "word": "UK",
-                  "lemma": "UK",
-                  "characterOffsetEnd": 192,
+                  "characterOffsetBegin": 2272,
+                  "word": "``",
+                  "lemma": "``",
+                  "characterOffsetEnd": 2273,
                   "speaker": "PER0",
-                  "ner": "LOCATION",
-                  "after": " ",
-                  "originalText": "UK",
+                  "ner": "O",
+                  "after": "",
+                  "originalText": "\"",
                   "before": " ",
-                  "index": 30,
-                  "pos": "NNP"
+                  "index": 4,
+                  "pos": "``"
                 }
               },
-              "NNP"
+              "``"
+            ],
+            [
+              {
+                "nlpToken": {
+                  "characterOffsetBegin": 2273,
+                  "word": "like",
+                  "lemma": "like",
+                  "characterOffsetEnd": 2277,
+                  "speaker": "123",
+                  "ner": "O",
+                  "after": " ",
+                  "originalText": "like",
+                  "before": "",
+                  "index": 5,
+                  "pos": "IN"
+                }
+              },
+              "IN"
+            ],
+            [
+              {
+                "nlpToken": {
+                  "characterOffsetBegin": 2278,
+                  "word": "many",
+                  "lemma": "many",
+                  "characterOffsetEnd": 2282,
+                  "speaker": "123",
+                  "ner": "O",
+                  "after": " ",
+                  "originalText": "many",
+                  "before": " ",
+                  "index": 6,
+                  "pos": "JJ"
+                }
+              },
+              "JJ"
+            ],
+            [
+              {
+                "nlpToken": {
+                  "characterOffsetBegin": 2283,
+                  "word": "other",
+                  "lemma": "other",
+                  "characterOffsetEnd": 2288,
+                  "speaker": "123",
+                  "ner": "O",
+                  "after": " ",
+                  "originalText": "other",
+                  "before": " ",
+                  "index": 7,
+                  "pos": "JJ"
+                }
+              },
+              "JJ"
+            ],
+            [
+              {
+                "nlpToken": {
+                  "characterOffsetBegin": 2289,
+                  "word": "companies",
+                  "lemma": "company",
+                  "characterOffsetEnd": 2298,
+                  "speaker": "123",
+                  "ner": "O",
+                  "after": "",
+                  "originalText": "companies",
+                  "before": " ",
+                  "index": 8,
+                  "pos": "NNS"
+                }
+              },
+              "NNS"
+            ],
+            [
+              {
+                "nlpToken": {
+                  "characterOffsetBegin": 2298,
+                  "word": ",",
+                  "lemma": ",",
+                  "characterOffsetEnd": 2299,
+                  "speaker": "123",
+                  "ner": "O",
+                  "after": " ",
+                  "originalText": ",",
+                  "before": "",
+                  "index": 9,
+                  "pos": ","
+                }
+              },
+              ","
+            ],
+            [
+              {
+                "nlpToken": {
+                  "characterOffsetBegin": 2300,
+                  "word": "we",
+                  "lemma": "we",
+                  "characterOffsetEnd": 2302,
+                  "speaker": "123",
+                  "ner": "O",
+                  "after": " ",
+                  "originalText": "we",
+                  "before": " ",
+                  "index": 10,
+                  "pos": "PRP"
+                }
+              },
+              "PRP"
+            ],
+            [
+              {
+                "nlpToken": {
+                  "characterOffsetBegin": 2303,
+                  "word": "are",
+                  "lemma": "be",
+                  "characterOffsetEnd": 2306,
+                  "speaker": "123",
+                  "ner": "O",
+                  "after": " ",
+                  "originalText": "are",
+                  "before": " ",
+                  "index": 11,
+                  "pos": "VBP"
+                }
+              },
+              "VBP"
+            ],
+            [
+              {
+                "nlpToken": {
+                  "characterOffsetBegin": 2307,
+                  "word": "experiencing",
+                  "lemma": "experience",
+                  "characterOffsetEnd": 2319,
+                  "speaker": "123",
+                  "ner": "O",
+                  "after": " ",
+                  "originalText": "experiencing",
+                  "before": " ",
+                  "index": 12,
+                  "pos": "VBG"
+                }
+              },
+              "VBG"
+            ],
+            [
+              {
+                "nlpToken": {
+                  "characterOffsetBegin": 2320,
+                  "word": "higher",
+                  "lemma": "higher",
+                  "characterOffsetEnd": 2326,
+                  "speaker": "123",
+                  "ner": "O",
+                  "after": " ",
+                  "originalText": "higher",
+                  "before": " ",
+                  "index": 13,
+                  "pos": "JJR"
+                }
+              },
+              "JJR"
+            ],
+            [
+              {
+                "nlpToken": {
+                  "characterOffsetBegin": 2327,
+                  "word": "costs",
+                  "lemma": "cost",
+                  "characterOffsetEnd": 2332,
+                  "speaker": "123",
+                  "ner": "O",
+                  "after": " ",
+                  "originalText": "costs",
+                  "before": " ",
+                  "index": 14,
+                  "pos": "NNS"
+                }
+              },
+              "NNS"
+            ],
+            [
+              {
+                "nlpToken": {
+                  "characterOffsetBegin": 2333,
+                  "word": "for",
+                  "lemma": "for",
+                  "characterOffsetEnd": 2336,
+                  "speaker": "123",
+                  "ner": "O",
+                  "after": " ",
+                  "originalText": "for",
+                  "before": " ",
+                  "index": 15,
+                  "pos": "IN"
+                }
+              },
+              "IN"
+            ],
+            [
+              {
+                "nlpToken": {
+                  "characterOffsetBegin": 2337,
+                  "word": "numerous",
+                  "lemma": "numerous",
+                  "characterOffsetEnd": 2345,
+                  "speaker": "123",
+                  "ner": "O",
+                  "after": " ",
+                  "originalText": "numerous",
+                  "before": " ",
+                  "index": 16,
+                  "pos": "JJ"
+                }
+              },
+              "JJ"
+            ],
+            [
+              {
+                "nlpToken": {
+                  "characterOffsetBegin": 2346,
+                  "word": "ingredients",
+                  "lemma": "ingredient",
+                  "characterOffsetEnd": 2357,
+                  "speaker": "123",
+                  "ner": "O",
+                  "after": "",
+                  "originalText": "ingredients",
+                  "before": " ",
+                  "index": 17,
+                  "pos": "NNS"
+                }
+              },
+              "NNS"
+            ],
+            [
+              {
+                "nlpToken": {
+                  "characterOffsetBegin": 2357,
+                  "word": "''",
+                  "lemma": "''",
+                  "characterOffsetEnd": 2358,
+                  "speaker": "PER0",
+                  "ner": "O",
+                  "after": "",
+                  "originalText": "\"",
+                  "before": "",
+                  "index": 18,
+                  "pos": "''"
+                }
+              },
+              "''"
             ]
           ],
-          "score": 1.0000000000000002
+          "score": 1.0,
+          "text": "\" like many other companies , we are experiencing higher costs for numerous ingredients \"",
+          "nlpIndexSentence": 4
         }
-      ],
+      ]
+    },
+    "where": {
       "annotated": [
         {
           "text": "UK",
@@ -255,9 +396,19 @@
       "label": "where"
     },
     "what": {
+      "annotated": [
+        {
+          "text": "changes the look and weight of two bars ",
+          "coderPhraseCount": 3
+        },
+        {
+          "text": "change upsets fans",
+          "coderPhraseCount": 2
+        }
+      ],
+      "label": "what",
       "extracted": [
         {
-          "text": "features larger gaps",
           "parts": [
             [
               {
@@ -314,20 +465,10 @@
               "NNS"
             ]
           ],
-          "score": 1.0
+          "score": 1.0,
+          "text": "features larger gaps"
         }
-      ],
-      "annotated": [
-        {
-          "text": "changes the look and weight of two bars ",
-          "coderPhraseCount": 3
-        },
-        {
-          "text": "change upsets fans",
-          "coderPhraseCount": 2
-        }
-      ],
-      "label": "what"
+      ]
     }
   },
   "description": "Toblerone changes the look and weight of two bars sold in the UK in an attempt to meet rising costs.",

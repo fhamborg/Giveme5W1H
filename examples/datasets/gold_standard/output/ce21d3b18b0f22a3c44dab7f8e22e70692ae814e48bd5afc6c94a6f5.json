@@ -6,9 +6,23 @@
   "category": "toberone-gate",
   "fiveWoneH": {
     "who": {
-      "extracted": [
+      "annotated": [
+        {
+          "text": "Toblerone fans",
+          "coderPhraseCount": 3
+        },
         {
           "text": "Toblerone",
+          "coderPhraseCount": 2
+        },
+        {
+          "text": "Mondelez International",
+          "coderPhraseCount": 2
+        }
+      ],
+      "label": "who",
+      "extracted": [
+        {
           "parts": [
             [
               {
@@ -29,138 +43,13 @@
               "NN"
             ]
           ],
-          "nlpIndexSentence": 3,
-          "score": 1.0
-        }
-      ],
-      "annotated": [
-        {
-          "text": "Toblerone fans",
-          "coderPhraseCount": 3
-        },
-        {
+          "score": 1.0,
           "text": "Toblerone",
-          "coderPhraseCount": 2
-        },
-        {
-          "text": "Mondelez International",
-          "coderPhraseCount": 2
+          "nlpIndexSentence": 3
         }
-      ],
-      "label": "who"
+      ]
     },
     "when": {
-      "extracted": [
-        {
-          "text": "November 8 , 2016",
-          "enhancement": {
-            "timex": {
-              "start_date": "2016-11-08T00:00:00",
-              "end_date": "2016-11-08T23:59:59"
-            }
-          },
-          "parts": [
-            [
-              {
-                "nlpToken": {
-                  "characterOffsetBegin": 4528,
-                  "word": "November",
-                  "lemma": "November",
-                  "timex": {
-                    "value": "2016-11-08",
-                    "tid": "t13",
-                    "type": "DATE"
-                  },
-                  "before": " ",
-                  "characterOffsetEnd": 4536,
-                  "originalText": "November",
-                  "normalizedNER": "2016-11-08",
-                  "speaker": "PER0",
-                  "after": " ",
-                  "ner": "DATE",
-                  "index": 35,
-                  "pos": "NNP"
-                }
-              },
-              "NNP"
-            ],
-            [
-              {
-                "nlpToken": {
-                  "characterOffsetBegin": 4537,
-                  "word": "8",
-                  "lemma": "8",
-                  "timex": {
-                    "value": "2016-11-08",
-                    "tid": "t13",
-                    "type": "DATE"
-                  },
-                  "before": " ",
-                  "characterOffsetEnd": 4538,
-                  "originalText": "8",
-                  "normalizedNER": "2016-11-08",
-                  "speaker": "PER0",
-                  "after": "",
-                  "ner": "DATE",
-                  "index": 36,
-                  "pos": "CD"
-                }
-              },
-              "CD"
-            ],
-            [
-              {
-                "nlpToken": {
-                  "characterOffsetBegin": 4538,
-                  "word": ",",
-                  "lemma": ",",
-                  "timex": {
-                    "value": "2016-11-08",
-                    "tid": "t13",
-                    "type": "DATE"
-                  },
-                  "before": "",
-                  "characterOffsetEnd": 4539,
-                  "originalText": ",",
-                  "normalizedNER": "2016-11-08",
-                  "speaker": "PER0",
-                  "after": " ",
-                  "ner": "DATE",
-                  "index": 37,
-                  "pos": ","
-                }
-              },
-              ","
-            ],
-            [
-              {
-                "nlpToken": {
-                  "characterOffsetBegin": 4540,
-                  "word": "2016",
-                  "lemma": "2016",
-                  "timex": {
-                    "value": "2016-11-08",
-                    "tid": "t13",
-                    "type": "DATE"
-                  },
-                  "before": " ",
-                  "characterOffsetEnd": 4544,
-                  "originalText": "2016",
-                  "normalizedNER": "2016-11-08",
-                  "speaker": "PER0",
-                  "after": " ",
-                  "ner": "DATE",
-                  "index": 38,
-                  "pos": "CD"
-                }
-              },
-              "CD"
-            ]
-          ],
-          "nlpIndexSentence": 32,
-          "score": 0.6870254222731917
-        }
-      ],
       "annotated": [
         {
           "text": "November 8, 2016",
@@ -171,32 +60,6 @@
       "label": "when"
     },
     "why": {
-      "extracted": [
-        {
-          "text": "TOBLERONE",
-          "parts": [
-            [
-              {
-                "nlpToken": {
-                  "characterOffsetBegin": 267,
-                  "word": "TOBLERONE",
-                  "lemma": "toblerone",
-                  "speaker": "PER0",
-                  "after": " ",
-                  "pos": "NN",
-                  "ner": "O",
-                  "before": " ",
-                  "characterOffsetEnd": 276,
-                  "index": 53,
-                  "originalText": "TOBLERONE"
-                }
-              },
-              "NN"
-            ]
-          ],
-          "score": 0.42857142857142855
-        }
-      ],
       "annotated": [
         {
           "text": "gap between triangles is increased",
@@ -210,32 +73,6 @@
       "label": "why"
     },
     "how": {
-      "extracted": [
-        {
-          "text": "changing",
-          "parts": [
-            [
-              {
-                "nlpToken": {
-                  "characterOffsetBegin": 322,
-                  "word": "changing",
-                  "lemma": "change",
-                  "characterOffsetEnd": 330,
-                  "speaker": "PER0",
-                  "ner": "O",
-                  "after": " ",
-                  "originalText": "changing",
-                  "before": " ",
-                  "index": 61,
-                  "pos": "VBG"
-                }
-              },
-              "VBG"
-            ]
-          ],
-          "score": 1.0
-        }
-      ],
       "annotated": [
         {
           "text": "increased the gap between the peaks",
@@ -246,57 +83,108 @@
           "coderPhraseCount": 1
         }
       ],
-      "label": "how"
-    },
-    "where": {
+      "label": "how",
       "extracted": [
         {
-          "text": "UK",
-          "enhancement": {
-            "openstreetmap_nominatim": {
-              "place_id": "179731133",
-              "licence": "Data \u00a9 OpenStreetMap contributors, ODbL 1.0. http://www.openstreetmap.org/copyright",
-              "type": "administrative",
-              "class": "boundary",
-              "osm_id": "62149",
-              "boundingbox": [
-                49.674,
-                61.061,
-                -14.015517,
-                2.0919117
-              ],
-              "osm_type": "relation",
-              "lon": "-3.2765753",
-              "display_name": "UK",
-              "importance": 0.3267301409654,
-              "icon": "https://nominatim.openstreetmap.org/images/mapicons/poi_boundary_administrative.p.20.png",
-              "lat": "54.7023545"
-            }
-          },
           "parts": [
             [
               {
                 "nlpToken": {
-                  "characterOffsetBegin": 1802,
-                  "word": "UK",
-                  "lemma": "UK",
-                  "characterOffsetEnd": 1804,
-                  "speaker": "graphic",
-                  "ner": "LOCATION",
-                  "after": " ",
-                  "originalText": "UK",
+                  "characterOffsetBegin": 3661,
+                  "word": "Mondelez",
+                  "lemma": "Mondelez",
+                  "characterOffsetEnd": 3669,
+                  "speaker": "PER0",
+                  "ner": "O",
+                  "after": "",
+                  "originalText": "Mondelez",
                   "before": " ",
-                  "index": 59,
+                  "index": 4,
                   "pos": "NNP"
                 }
               },
               "NNP"
+            ],
+            [
+              {
+                "nlpToken": {
+                  "characterOffsetBegin": 3669,
+                  "word": ",",
+                  "lemma": ",",
+                  "characterOffsetEnd": 3670,
+                  "speaker": "PER0",
+                  "ner": "O",
+                  "after": " ",
+                  "originalText": ",",
+                  "before": "",
+                  "index": 5,
+                  "pos": ","
+                }
+              },
+              ","
+            ],
+            [
+              {
+                "nlpToken": {
+                  "characterOffsetBegin": 3671,
+                  "word": "which",
+                  "lemma": "which",
+                  "characterOffsetEnd": 3676,
+                  "speaker": "PER0",
+                  "ner": "O",
+                  "after": " ",
+                  "originalText": "which",
+                  "before": " ",
+                  "index": 6,
+                  "pos": "WDT"
+                }
+              },
+              "WDT"
+            ],
+            [
+              {
+                "nlpToken": {
+                  "characterOffsetBegin": 3677,
+                  "word": "also",
+                  "lemma": "also",
+                  "characterOffsetEnd": 3681,
+                  "speaker": "PER0",
+                  "ner": "O",
+                  "after": " ",
+                  "originalText": "also",
+                  "before": " ",
+                  "index": 7,
+                  "pos": "RB"
+                }
+              },
+              "RB"
+            ],
+            [
+              {
+                "nlpToken": {
+                  "characterOffsetBegin": 3682,
+                  "word": "owns",
+                  "lemma": "own",
+                  "characterOffsetEnd": 3686,
+                  "speaker": "PER0",
+                  "ner": "O",
+                  "after": " ",
+                  "originalText": "owns",
+                  "before": " ",
+                  "index": 8,
+                  "pos": "VBZ"
+                }
+              },
+              "VBZ"
             ]
           ],
-          "nlpIndexSentence": 8,
-          "score": 1.0
+          "score": 1.0,
+          "text": "Mondelez , which also owns",
+          "nlpIndexSentence": 4
         }
-      ],
+      ]
+    },
+    "where": {
       "annotated": [
         {
           "coderPhraseCount": 3
@@ -305,9 +193,15 @@
       "label": "where"
     },
     "what": {
+      "annotated": [
+        {
+          "text": "Toblerone fans outraged",
+          "coderPhraseCount": 3
+        }
+      ],
+      "label": "what",
       "extracted": [
         {
-          "text": "change the look",
           "parts": [
             [
               {
@@ -364,17 +258,11 @@
               "NN"
             ]
           ],
-          "nlpIndexSentence": 3,
-          "score": 1.0
+          "score": 1.0,
+          "text": "change the look",
+          "nlpIndexSentence": 3
         }
-      ],
-      "annotated": [
-        {
-          "text": "Toblerone fans outraged",
-          "coderPhraseCount": 3
-        }
-      ],
-      "label": "what"
+      ]
     }
   },
   "description": "Product makers Mondelez International has increased the gap between the peaks to reduce the weight of the chocolate bars\n",

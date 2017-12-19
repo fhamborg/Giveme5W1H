@@ -6,9 +6,19 @@
   "category": "tram",
   "fiveWoneH": {
     "who": {
+      "annotated": [
+        {
+          "text": "Police",
+          "coderPhraseCount": 3
+        },
+        {
+          "text": "tram driver",
+          "coderPhraseCount": 2
+        }
+      ],
+      "label": "who",
       "extracted": [
         {
-          "text": "The driver , a 42-year-old man , from Beckenham ,",
           "parts": [
             [
               {
@@ -197,61 +207,12 @@
               ","
             ]
           ],
-          "score": 1.0
+          "score": 1.0,
+          "text": "The driver , a 42-year-old man , from Beckenham ,"
         }
-      ],
-      "annotated": [
-        {
-          "text": "Police",
-          "coderPhraseCount": 3
-        },
-        {
-          "text": "tram driver",
-          "coderPhraseCount": 2
-        }
-      ],
-      "label": "who"
+      ]
     },
     "when": {
-      "extracted": [
-        {
-          "text": "Wednesday",
-          "enhancement": {
-            "timex": {
-              "start_date": "2016-11-09T00:00:00",
-              "end_date": "2016-11-09T23:59:59"
-            }
-          },
-          "parts": [
-            [
-              {
-                "nlpToken": {
-                  "characterOffsetBegin": 827,
-                  "word": "Wednesday",
-                  "lemma": "Wednesday",
-                  "timex": {
-                    "value": "2016-11-09",
-                    "tid": "t6",
-                    "type": "DATE"
-                  },
-                  "before": " ",
-                  "characterOffsetEnd": 836,
-                  "originalText": "Wednesday",
-                  "normalizedNER": "2016-11-09",
-                  "speaker": "PER0",
-                  "after": "",
-                  "ner": "DATE",
-                  "index": 21,
-                  "pos": "NNP"
-                }
-              },
-              "NNP"
-            ]
-          ],
-          "nlpIndexSentence": 6,
-          "score": 0.7428636275992443
-        }
-      ],
       "annotated": [
         {
           "text": "Wednesday",
@@ -262,33 +223,6 @@
       "label": "when"
     },
     "why": {
-      "extracted": [
-        {
-          "text": "Investigators",
-          "parts": [
-            [
-              {
-                "nlpToken": {
-                  "characterOffsetBegin": 241,
-                  "word": "Investigators",
-                  "lemma": "investigator",
-                  "speaker": "PER0",
-                  "after": " ",
-                  "pos": "NNS",
-                  "ner": "O",
-                  "before": " ",
-                  "characterOffsetEnd": 254,
-                  "index": 1,
-                  "originalText": "Investigators"
-                }
-              },
-              "NNS"
-            ]
-          ],
-          "nlpIndexSentence": 2,
-          "score": 0.3885714285714285
-        }
-      ],
       "annotated": [
         {
           "text": "significantly higher speed than is permitted",
@@ -306,90 +240,41 @@
       "label": "why"
     },
     "how": {
-      "extracted": [
-        {
-          "text": "mobile",
-          "parts": [
-            [
-              {
-                "nlpToken": {
-                  "characterOffsetBegin": 497,
-                  "word": "mobile",
-                  "lemma": "mobile",
-                  "characterOffsetEnd": 503,
-                  "speaker": "PER0",
-                  "ner": "O",
-                  "after": " ",
-                  "originalText": "mobile",
-                  "before": " ",
-                  "index": 20,
-                  "pos": "JJ"
-                }
-              },
-              "JJ"
-            ]
-          ],
-          "nlpIndexSentence": 3,
-          "score": 1.0
-        }
-      ],
       "annotated": [
         {
           "text": "higher speed than is permitted",
           "coderPhraseCount": 3
         }
       ],
-      "label": "how"
-    },
-    "where": {
+      "label": "how",
       "extracted": [
         {
-          "text": "Croydon",
-          "enhancement": {
-            "openstreetmap_nominatim": {
-              "place_id": "117537",
-              "licence": "Data \u00a9 OpenStreetMap contributors, ODbL 1.0. http://www.openstreetmap.org/copyright",
-              "type": "town",
-              "class": "place",
-              "osm_id": "21262496",
-              "boundingbox": [
-                51.3313049,
-                51.4113049,
-                -0.141957,
-                -0.061957
-              ],
-              "osm_type": "node",
-              "lon": "-0.101957",
-              "display_name": "Croydon, London, Greater London, England, CR0 1SZ, UK",
-              "importance": 0.23943987893565,
-              "icon": "https://nominatim.openstreetmap.org/images/mapicons/poi_place_town.p.20.png",
-              "lat": "51.3713049"
-            }
-          },
           "parts": [
             [
               {
                 "nlpToken": {
-                  "characterOffsetBegin": 816,
-                  "word": "Croydon",
-                  "lemma": "Croydon",
-                  "characterOffsetEnd": 823,
+                  "characterOffsetBegin": 156,
+                  "word": "dead",
+                  "lemma": "dead",
+                  "characterOffsetEnd": 160,
                   "speaker": "PER0",
-                  "ner": "LOCATION",
-                  "after": " ",
-                  "originalText": "Croydon",
+                  "ner": "O",
+                  "after": "",
+                  "originalText": "dead",
                   "before": " ",
-                  "index": 19,
-                  "pos": "NNP"
+                  "index": 33,
+                  "pos": "JJ"
                 }
               },
-              "NNP"
+              "JJ"
             ]
           ],
-          "nlpIndexSentence": 6,
-          "score": 1.0
+          "score": 1.0,
+          "text": "dead"
         }
-      ],
+      ]
+    },
+    "where": {
       "annotated": [
         {
           "text": "Croydon",
@@ -399,9 +284,15 @@
       "label": "where"
     },
     "what": {
+      "annotated": [
+        {
+          "text": "set to check driver's mobile phone records",
+          "coderPhraseCount": 2
+        }
+      ],
+      "label": "what",
       "extracted": [
         {
-          "text": "was released on bail , as Dane Chinnery",
           "parts": [
             [
               {
@@ -548,16 +439,10 @@
               "NNP"
             ]
           ],
-          "score": 1.0
+          "score": 1.0,
+          "text": "was released on bail , as Dane Chinnery"
         }
-      ],
-      "annotated": [
-        {
-          "text": "set to check driver's mobile phone records",
-          "coderPhraseCount": 2
-        }
-      ],
-      "label": "what"
+      ]
     }
   },
   "description": "Mobile phone records of a tram driver arrested over the deaths of six men and a woman in a horror crash are likely to be examined by police, casting doubt on claims he may have \"blacked out\".",

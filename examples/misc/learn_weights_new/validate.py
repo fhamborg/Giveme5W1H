@@ -2,30 +2,15 @@
 evaluates the scores for the given documents
 """
 
-import datetime
 import json
-import logging
 import threading
-import time
-from itertools import product
-
-import math
-
-from dateutil.relativedelta import relativedelta as rd
-from geopy.distance import vincenty
-from nltk import word_tokenize
-from nltk.corpus import wordnet
 
 from extractor.extractor import FiveWExtractor
 from extractor.root import path
 from extractor.tools.file.handler import Handler
 from extractors import action_extractor, environment_extractor, cause_extractor, method_extractor
-from misc.learn_weights_new.evaluate import remove_errors, normalize
-from misc.learn_weights_new.metrics.normalized_google_distance import NormalizedGoogleDistance
-import dateutil.parser
-
+from misc.learn_weights_new.evaluate import normalize
 from misc.learn_weights_new.run import action
-from tools.cache_manager import CacheManager
 
 _inputPath = path('../examples/datasets/gold_standard/data')
 _preprocessedPath = path('../examples/datasets/gold_standard/cache')
@@ -49,7 +34,7 @@ if __name__ == '__main__':
         ),
         cause_extractor.CauseExtractor(
 
-            weights=[0,0,0.1,0]
+            weights=[0, 0, 0.1, 0]
         ),
         method_extractor.MethodExtractor(
             weights=[0.9, 0.9, 0.8, 0.2]
@@ -72,43 +57,48 @@ if __name__ == '__main__':
             .process().get_documents()
     )
 
-
     results = []
     # calculate score
     for document in documents:
         result = {}
         annotation = document.get_annotations()
         answers = document.get_answers()
-        used_weights = [] # dosent matter here
+        used_weights = []  # dosent matter here
         question = 'why'
         if question in answers and len(answers[question]) > 0:
             top_answer = answers[question][0].get_parts_as_text()
-            learn_instance._cmp_helper_min(learn_instance.cmp_text_ngd, question, top_answer, annotation, used_weights, result)
+            learn_instance._cmp_helper_min(learn_instance.cmp_text_ngd, question, top_answer, annotation, used_weights,
+                                           result)
 
         question = 'what'
         if question in answers and len(answers[question]) > 0:
             top_answer = answers[question][0].get_parts_as_text()
-            learn_instance._cmp_helper_min(learn_instance.cmp_text_ngd, 'what', top_answer, annotation, used_weights, result)
+            learn_instance._cmp_helper_min(learn_instance.cmp_text_ngd, 'what', top_answer, annotation, used_weights,
+                                           result)
 
         question = 'who'
         if question in answers and len(answers[question]) > 0:
             top_answer = answers[question][0].get_parts_as_text()
-            learn_instance._cmp_helper_min(learn_instance.cmp_text_ngd, question, top_answer, annotation, used_weights, result)
+            learn_instance._cmp_helper_min(learn_instance.cmp_text_ngd, question, top_answer, annotation, used_weights,
+                                           result)
 
         question = 'how'
         if question in answers and len(answers[question]) > 0:
             top_answer = answers[question][0].get_parts_as_text()
-            learn_instance._cmp_helper_min(learn_instance.cmp_text_ngd, question, top_answer, annotation, used_weights, result)
+            learn_instance._cmp_helper_min(learn_instance.cmp_text_ngd, question, top_answer, annotation, used_weights,
+                                           result)
 
         question = 'when'
         if question in answers and len(answers[question]) > 0:
             top_answer = answers[question][0].get_enhancement('timex')
-            learn_instance._cmp_helper_min(learn_instance.cmp_date_timex, question, top_answer, annotation, used_weights, result)
+            learn_instance._cmp_helper_min(learn_instance.cmp_date_timex, question, top_answer, annotation,
+                                           used_weights, result)
 
         question = 'where'
         if question in answers and len(answers[question]) > 0:
             top_answer = answers[question][0].get_parts_as_text()
-            learn_instance._cmp_helper_min(learn_instance.cmp_location, question, top_answer, annotation, used_weights, result)
+            learn_instance._cmp_helper_min(learn_instance.cmp_location, question, top_answer, annotation, used_weights,
+                                           result)
         results.append(result)
 
     # write raw results
@@ -126,7 +116,6 @@ if __name__ == '__main__':
         scores_norm = normalize(result_avg[result_avg_question])
         a_sum = sum(scores_norm)
         result_avg[result_avg_question] = a_sum / len(scores_norm)
-
 
     # write raw results
     with open('result/VALIDATION_AVG.json', 'w') as data_file:

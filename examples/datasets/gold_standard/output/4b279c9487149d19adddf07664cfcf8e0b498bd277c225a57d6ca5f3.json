@@ -6,9 +6,22 @@
   "category": "consulate attack",
   "fiveWoneH": {
     "who": {
+      "annotated": [
+        {
+          "text": "two people",
+          "coderPhraseCount": 1
+        },
+        {
+          "text": "AN EXPLOSION",
+          "coderPhraseCount": 1
+        },
+        {
+          "coderPhraseCount": 1
+        }
+      ],
+      "label": "who",
       "extracted": [
         {
-          "text": "AN EXPLOSION outside the German consulate in the city of Mazar-i-Sharif in northern Afghanistan",
           "parts": [
             [
               {
@@ -263,89 +276,13 @@
               "NNP"
             ]
           ],
-          "nlpIndexSentence": 6,
-          "score": 1.0
+          "score": 1.0,
+          "text": "AN EXPLOSION outside the German consulate in the city of Mazar-i-Sharif in northern Afghanistan",
+          "nlpIndexSentence": 6
         }
-      ],
-      "annotated": [
-        {
-          "text": "two people",
-          "coderPhraseCount": 1
-        },
-        {
-          "text": "AN EXPLOSION",
-          "coderPhraseCount": 1
-        },
-        {
-          "coderPhraseCount": 1
-        }
-      ],
-      "label": "who"
+      ]
     },
     "when": {
-      "extracted": [
-        {
-          "text": "11:30 pm",
-          "enhancement": {
-            "timex": {
-              "start_date": "2016-11-09T23:30:00",
-              "end_date": "2016-11-09T23:30:59"
-            }
-          },
-          "parts": [
-            [
-              {
-                "nlpToken": {
-                  "characterOffsetBegin": 402,
-                  "word": "11:30",
-                  "lemma": "11:30",
-                  "timex": {
-                    "value": "2016-11-09T23:30",
-                    "tid": "t1",
-                    "type": "TIME"
-                  },
-                  "before": " ",
-                  "characterOffsetEnd": 407,
-                  "originalText": "11:30",
-                  "normalizedNER": "2016-11-09T23:30",
-                  "speaker": "PER0",
-                  "after": "",
-                  "ner": "TIME",
-                  "index": 6,
-                  "pos": "CD"
-                }
-              },
-              "CD"
-            ],
-            [
-              {
-                "nlpToken": {
-                  "characterOffsetBegin": 407,
-                  "word": "pm",
-                  "lemma": "pm",
-                  "timex": {
-                    "value": "2016-11-09T23:30",
-                    "tid": "t1",
-                    "type": "TIME"
-                  },
-                  "before": "",
-                  "characterOffsetEnd": 409,
-                  "originalText": "pm",
-                  "normalizedNER": "2016-11-09T23:30",
-                  "speaker": "PER0",
-                  "after": " ",
-                  "ner": "TIME",
-                  "index": 7,
-                  "pos": "NN"
-                }
-              },
-              "NN"
-            ]
-          ],
-          "nlpIndexSentence": 3,
-          "score": 0.8812473177968844
-        }
-      ],
       "annotated": [
         {
           "text": "around 11:30pm local time",
@@ -356,68 +293,6 @@
       "label": "when"
     },
     "why": {
-      "extracted": [
-        {
-          "text": "Explosion and gunfire",
-          "parts": [
-            [
-              {
-                "nlpToken": {
-                  "characterOffsetBegin": 0,
-                  "word": "Explosion",
-                  "lemma": "explosion",
-                  "speaker": "PER0",
-                  "after": " ",
-                  "pos": "NN",
-                  "ner": "O",
-                  "before": "",
-                  "characterOffsetEnd": 9,
-                  "index": 1,
-                  "originalText": "Explosion"
-                }
-              },
-              "NN"
-            ],
-            [
-              {
-                "nlpToken": {
-                  "characterOffsetBegin": 10,
-                  "word": "and",
-                  "lemma": "and",
-                  "speaker": "PER0",
-                  "after": " ",
-                  "pos": "CC",
-                  "ner": "O",
-                  "before": " ",
-                  "characterOffsetEnd": 13,
-                  "index": 2,
-                  "originalText": "and"
-                }
-              },
-              "CC"
-            ],
-            [
-              {
-                "nlpToken": {
-                  "characterOffsetBegin": 14,
-                  "word": "gunfire",
-                  "lemma": "gunfire",
-                  "speaker": "PER0",
-                  "after": " ",
-                  "pos": "NN",
-                  "ner": "O",
-                  "before": " ",
-                  "characterOffsetEnd": 21,
-                  "index": 3,
-                  "originalText": "gunfire"
-                }
-              },
-              "NN"
-            ]
-          ],
-          "score": 0.42857142857142855
-        }
-      ],
       "annotated": [
         {
           "coderPhraseCount": 3
@@ -426,32 +301,6 @@
       "label": "why"
     },
     "how": {
-      "extracted": [
-        {
-          "text": "outside",
-          "parts": [
-            [
-              {
-                "nlpToken": {
-                  "characterOffsetBegin": 31,
-                  "word": "outside",
-                  "lemma": "outside",
-                  "characterOffsetEnd": 38,
-                  "speaker": "PER0",
-                  "ner": "O",
-                  "after": " ",
-                  "originalText": "outside",
-                  "before": " ",
-                  "index": 5,
-                  "pos": "JJ"
-                }
-              },
-              "JJ"
-            ]
-          ],
-          "score": 1.0
-        }
-      ],
       "annotated": [
         {
           "text": "laden with explosives",
@@ -462,56 +311,36 @@
           "coderPhraseCount": 1
         }
       ],
-      "label": "how"
-    },
-    "where": {
+      "label": "how",
       "extracted": [
         {
-          "text": "Afghanistan",
-          "enhancement": {
-            "openstreetmap_nominatim": {
-              "place_id": "179284910",
-              "licence": "Data \u00a9 OpenStreetMap contributors, ODbL 1.0. http://www.openstreetmap.org/copyright",
-              "type": "administrative",
-              "class": "boundary",
-              "osm_id": "303427",
-              "boundingbox": [
-                29.3772,
-                38.4910682,
-                60.5176034,
-                74.889862
-              ],
-              "osm_type": "relation",
-              "lon": "66.2385139",
-              "display_name": "\u0627\u0641\u063a\u0627\u0646\u0633\u062a\u0627\u0646",
-              "importance": 0.18835296801136,
-              "icon": "https://nominatim.openstreetmap.org/images/mapicons/poi_boundary_administrative.p.20.png",
-              "lat": "33.7680065"
-            }
-          },
           "parts": [
             [
               {
                 "nlpToken": {
-                  "characterOffsetBegin": 59,
-                  "word": "Afghanistan",
-                  "lemma": "Afghanistan",
-                  "characterOffsetEnd": 70,
+                  "characterOffsetBegin": 578,
+                  "word": "German",
+                  "lemma": "german",
+                  "characterOffsetEnd": 584,
                   "speaker": "PER0",
-                  "ner": "LOCATION",
+                  "ner": "MISC",
                   "after": " ",
-                  "originalText": "Afghanistan",
+                  "originalText": "German",
                   "before": " ",
-                  "index": 9,
-                  "pos": "NNP"
+                  "index": 5,
+                  "pos": "JJ"
                 }
               },
-              "NNP"
+              "JJ"
             ]
           ],
-          "score": 1.0
+          "score": 1.0,
+          "text": "German",
+          "nlpIndexSentence": 6
         }
-      ],
+      ]
+    },
+    "where": {
       "annotated": [
         {
           "text": "Mazar-i-Sharif",
@@ -521,9 +350,23 @@
       "label": "where"
     },
     "what": {
+      "annotated": [
+        {
+          "text": "Explosion and gunfire outside German consulate",
+          "coderPhraseCount": 2
+        },
+        {
+          "text": "killed two people",
+          "coderPhraseCount": 2
+        },
+        {
+          "text": "blast was followed by gunfire",
+          "coderPhraseCount": 2
+        }
+      ],
+      "label": "what",
       "extracted": [
         {
-          "text": "has killed two people",
           "parts": [
             [
               {
@@ -599,25 +442,11 @@
               "NNS"
             ]
           ],
-          "nlpIndexSentence": 6,
-          "score": 1.0
+          "score": 1.0,
+          "text": "has killed two people",
+          "nlpIndexSentence": 6
         }
-      ],
-      "annotated": [
-        {
-          "text": "Explosion and gunfire outside German consulate",
-          "coderPhraseCount": 2
-        },
-        {
-          "text": "killed two people",
-          "coderPhraseCount": 2
-        },
-        {
-          "text": "blast was followed by gunfire",
-          "coderPhraseCount": 2
-        }
-      ],
-      "label": "what"
+      ]
     }
   },
   "description": "AN EXPLOSION outside the German consulate in the city of Mazar-i-Sharif in northern Afghanistan has killed two people.",

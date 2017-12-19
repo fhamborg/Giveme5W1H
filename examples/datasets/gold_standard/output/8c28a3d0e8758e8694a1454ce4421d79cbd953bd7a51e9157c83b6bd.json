@@ -6,9 +6,19 @@
   "category": "cubs win championship",
   "fiveWoneH": {
     "who": {
+      "annotated": [
+        {
+          "text": "HILLARY CLINTON, Bill Murray and Barack Obama",
+          "coderPhraseCount": 3
+        },
+        {
+          "text": "Cubs",
+          "coderPhraseCount": 3
+        }
+      ],
+      "label": "who",
       "extracted": [
         {
-          "text": "Bill Murray and Barack Obama",
           "parts": [
             [
               {
@@ -101,61 +111,12 @@
               "NNP"
             ]
           ],
-          "score": 1.0
+          "score": 1.0,
+          "text": "Bill Murray and Barack Obama"
         }
-      ],
-      "annotated": [
-        {
-          "text": "HILLARY CLINTON, Bill Murray and Barack Obama",
-          "coderPhraseCount": 3
-        },
-        {
-          "text": "Cubs",
-          "coderPhraseCount": 3
-        }
-      ],
-      "label": "who"
+      ]
     },
     "when": {
-      "extracted": [
-        {
-          "text": "Today",
-          "enhancement": {
-            "timex": {
-              "start_date": "2016-11-03T00:00:00",
-              "end_date": "2016-11-03T23:59:59"
-            }
-          },
-          "parts": [
-            [
-              {
-                "nlpToken": {
-                  "characterOffsetBegin": 2738,
-                  "word": "Today",
-                  "lemma": "Today",
-                  "timex": {
-                    "value": "2016-11-03",
-                    "tid": "t11",
-                    "type": "DATE"
-                  },
-                  "before": " ",
-                  "characterOffsetEnd": 2743,
-                  "originalText": "Today",
-                  "normalizedNER": "2016-11-03",
-                  "speaker": "PER0",
-                  "after": " ",
-                  "ner": "DATE",
-                  "index": 2,
-                  "pos": "NNP"
-                }
-              },
-              "NNP"
-            ]
-          ],
-          "nlpIndexSentence": 16,
-          "score": 0.7204204244323092
-        }
-      ],
       "annotated": [
         {
           "coderPhraseCount": 3,
@@ -165,68 +126,6 @@
       "label": "when"
     },
     "why": {
-      "extracted": [
-        {
-          "text": "Ben Zobrist 's",
-          "parts": [
-            [
-              {
-                "nlpToken": {
-                  "characterOffsetBegin": 0,
-                  "word": "Ben",
-                  "lemma": "Ben",
-                  "speaker": "PER0",
-                  "after": " ",
-                  "pos": "NNP",
-                  "ner": "PERSON",
-                  "before": "",
-                  "characterOffsetEnd": 3,
-                  "index": 1,
-                  "originalText": "Ben"
-                }
-              },
-              "NNP"
-            ],
-            [
-              {
-                "nlpToken": {
-                  "characterOffsetBegin": 4,
-                  "word": "Zobrist",
-                  "lemma": "Zobrist",
-                  "speaker": "PER0",
-                  "after": "",
-                  "pos": "NNP",
-                  "ner": "PERSON",
-                  "before": " ",
-                  "characterOffsetEnd": 11,
-                  "index": 2,
-                  "originalText": "Zobrist"
-                }
-              },
-              "NNP"
-            ],
-            [
-              {
-                "nlpToken": {
-                  "characterOffsetBegin": 11,
-                  "word": "'s",
-                  "lemma": "'s",
-                  "speaker": "PER0",
-                  "after": " ",
-                  "pos": "POS",
-                  "ner": "O",
-                  "before": "",
-                  "characterOffsetEnd": 13,
-                  "index": 3,
-                  "originalText": "'s"
-                }
-              },
-              "POS"
-            ]
-          ],
-          "score": 0.42857142857142855
-        }
-      ],
       "annotated": [
         {
           "text": "Cubs end 108-year curse",
@@ -236,89 +135,40 @@
       "label": "why"
     },
     "how": {
-      "extracted": [
-        {
-          "text": "win",
-          "parts": [
-            [
-              {
-                "nlpToken": {
-                  "characterOffsetBegin": 672,
-                  "word": "win",
-                  "lemma": "win",
-                  "characterOffsetEnd": 675,
-                  "speaker": "PER0",
-                  "ner": "O",
-                  "after": " ",
-                  "originalText": "win",
-                  "before": " ",
-                  "index": 25,
-                  "pos": "VB"
-                }
-              },
-              "VB"
-            ]
-          ],
-          "nlpIndexSentence": 2,
-          "score": 1.0
-        }
-      ],
       "annotated": [
         {
           "coderPhraseCount": 3
         }
       ],
-      "label": "how"
-    },
-    "where": {
+      "label": "how",
       "extracted": [
         {
-          "text": "England",
-          "enhancement": {
-            "openstreetmap_nominatim": {
-              "place_id": "179157803",
-              "licence": "Data \u00a9 OpenStreetMap contributors, ODbL 1.0. http://www.openstreetmap.org/copyright",
-              "type": "administrative",
-              "class": "boundary",
-              "osm_id": "58447",
-              "boundingbox": [
-                49.674,
-                55.917,
-                -6.7047494,
-                2.0919117
-              ],
-              "osm_type": "relation",
-              "lon": "-0.540240286617432",
-              "display_name": "England, UK",
-              "importance": 0.33076201865326,
-              "icon": "https://nominatim.openstreetmap.org/images/mapicons/poi_boundary_administrative.p.20.png",
-              "lat": "52.7954791"
-            }
-          },
           "parts": [
             [
               {
                 "nlpToken": {
-                  "characterOffsetBegin": 1426,
-                  "word": "England",
-                  "lemma": "England",
-                  "characterOffsetEnd": 1433,
+                  "characterOffsetBegin": 153,
+                  "word": "new",
+                  "lemma": "new",
+                  "characterOffsetEnd": 156,
                   "speaker": "PER0",
-                  "ner": "LOCATION",
-                  "after": "",
-                  "originalText": "England",
+                  "ner": "O",
+                  "after": " ",
+                  "originalText": "new",
                   "before": " ",
-                  "index": 161,
-                  "pos": "NNP"
+                  "index": 31,
+                  "pos": "JJ"
                 }
               },
-              "NNP"
+              "JJ"
             ]
           ],
-          "nlpIndexSentence": 2,
-          "score": 1.0
+          "score": 1.0,
+          "text": "new"
         }
-      ],
+      ]
+    },
+    "where": {
       "annotated": [
         {
           "coderPhraseCount": 3
@@ -327,9 +177,15 @@
       "label": "where"
     },
     "what": {
+      "annotated": [
+        {
+          "text": "lead celebrations",
+          "coderPhraseCount": 3
+        }
+      ],
+      "label": "what",
       "extracted": [
         {
-          "text": "led the celebrations",
           "parts": [
             [
               {
@@ -386,16 +242,10 @@
               "NNS"
             ]
           ],
-          "score": 1.0
+          "score": 1.0,
+          "text": "led the celebrations"
         }
-      ],
-      "annotated": [
-        {
-          "text": "lead celebrations",
-          "coderPhraseCount": 3
-        }
-      ],
-      "label": "what"
+      ]
     }
   },
   "description": "Ben Zobrist's tenth-inning double off Bryan Shaw broke a 6-6 tie and Joe Maddon's men saw off Cleveland Indians 8-7.",

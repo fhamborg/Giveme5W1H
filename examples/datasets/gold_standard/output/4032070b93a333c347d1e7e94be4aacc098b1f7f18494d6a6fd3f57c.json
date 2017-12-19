@@ -6,9 +6,23 @@
   "category": "tram",
   "fiveWoneH": {
     "who": {
+      "annotated": [
+        {
+          "text": "tram driver",
+          "coderPhraseCount": 3
+        },
+        {
+          "text": "At least seven people",
+          "coderPhraseCount": 2
+        },
+        {
+          "text": "more than 50",
+          "coderPhraseCount": 2
+        }
+      ],
+      "label": "who",
       "extracted": [
         {
-          "text": "Bamford",
           "parts": [
             [
               {
@@ -29,114 +43,13 @@
               "NNP"
             ]
           ],
-          "nlpIndexSentence": 5,
-          "score": 1.0
+          "score": 1.0,
+          "text": "Bamford",
+          "nlpIndexSentence": 5
         }
-      ],
-      "annotated": [
-        {
-          "text": "tram driver",
-          "coderPhraseCount": 3
-        },
-        {
-          "text": "At least seven people",
-          "coderPhraseCount": 2
-        },
-        {
-          "text": "more than 50",
-          "coderPhraseCount": 2
-        }
-      ],
-      "label": "who"
+      ]
     },
     "when": {
-      "extracted": [
-        {
-          "text": "about 6.15 am",
-          "enhancement": {
-            "timex": {
-              "start_date": "2016-11-09T15:00:00",
-              "end_date": "2016-11-09T15:00:59"
-            }
-          },
-          "parts": [
-            [
-              {
-                "nlpToken": {
-                  "characterOffsetBegin": 4939,
-                  "word": "about",
-                  "lemma": "about",
-                  "timex": {
-                    "value": "2016-11-09T15:00",
-                    "tid": "t20",
-                    "type": "TIME"
-                  },
-                  "before": " ",
-                  "characterOffsetEnd": 4944,
-                  "originalText": "about",
-                  "normalizedNER": "2016-11-09T15:00",
-                  "speaker": "295",
-                  "after": " ",
-                  "ner": "TIME",
-                  "index": 17,
-                  "pos": "IN"
-                }
-              },
-              "IN"
-            ],
-            [
-              {
-                "nlpToken": {
-                  "characterOffsetBegin": 4945,
-                  "word": "6.15",
-                  "lemma": "6.15",
-                  "timex": {
-                    "value": "2016-11-09T15:00",
-                    "tid": "t20",
-                    "type": "TIME"
-                  },
-                  "before": " ",
-                  "characterOffsetEnd": 4949,
-                  "originalText": "6.15",
-                  "normalizedNER": "2016-11-09T15:00",
-                  "speaker": "295",
-                  "after": "",
-                  "ner": "TIME",
-                  "index": 18,
-                  "pos": "CD"
-                }
-              },
-              "CD"
-            ],
-            [
-              {
-                "nlpToken": {
-                  "characterOffsetBegin": 4949,
-                  "word": "am",
-                  "lemma": "am",
-                  "timex": {
-                    "value": "2016-11-09T15:00",
-                    "tid": "t20",
-                    "type": "TIME"
-                  },
-                  "before": "",
-                  "characterOffsetEnd": 4951,
-                  "originalText": "am",
-                  "normalizedNER": "2016-11-09T15:00",
-                  "speaker": "295",
-                  "after": "",
-                  "ner": "TIME",
-                  "index": 19,
-                  "pos": "RB"
-                }
-              },
-              "RB"
-            ]
-          ],
-          "nlpIndexSentence": 47,
-          "score": 0.8118864876623615
-        }
-      ],
       "annotated": [
         {
           "text": "Wednesday morning",
@@ -152,51 +65,6 @@
       "label": "when"
     },
     "why": {
-      "extracted": [
-        {
-          "text": "the tram",
-          "parts": [
-            [
-              {
-                "nlpToken": {
-                  "characterOffsetBegin": 225,
-                  "word": "the",
-                  "lemma": "the",
-                  "speaker": "PER0",
-                  "after": " ",
-                  "pos": "DT",
-                  "ner": "O",
-                  "before": " ",
-                  "characterOffsetEnd": 228,
-                  "index": 10,
-                  "originalText": "the"
-                }
-              },
-              "DT"
-            ],
-            [
-              {
-                "nlpToken": {
-                  "characterOffsetBegin": 229,
-                  "word": "tram",
-                  "lemma": "tram",
-                  "speaker": "PER0",
-                  "after": " ",
-                  "pos": "NN",
-                  "ner": "O",
-                  "before": " ",
-                  "characterOffsetEnd": 233,
-                  "index": 11,
-                  "originalText": "tram"
-                }
-              },
-              "NN"
-            ]
-          ],
-          "nlpIndexSentence": 1,
-          "score": 0.4256302521008403
-        }
-      ],
       "annotated": [
         {
           "text": "believed to have been going too fast",
@@ -206,32 +74,6 @@
       "label": "why"
     },
     "how": {
-      "extracted": [
-        {
-          "text": "fast",
-          "parts": [
-            [
-              {
-                "nlpToken": {
-                  "characterOffsetBegin": 120,
-                  "word": "fast",
-                  "lemma": "fast",
-                  "characterOffsetEnd": 124,
-                  "speaker": "PER0",
-                  "ner": "O",
-                  "after": "",
-                  "originalText": "fast",
-                  "before": " ",
-                  "index": 25,
-                  "pos": "RB"
-                }
-              },
-              "RB"
-            ]
-          ],
-          "score": 1.0
-        }
-      ],
       "annotated": [
         {
           "text": "been going too fast",
@@ -242,57 +84,360 @@
           "coderPhraseCount": 2
         }
       ],
-      "label": "how"
-    },
-    "where": {
+      "label": "how",
       "extracted": [
         {
-          "text": "Croydon",
-          "enhancement": {
-            "openstreetmap_nominatim": {
-              "place_id": "117537",
-              "licence": "Data \u00a9 OpenStreetMap contributors, ODbL 1.0. http://www.openstreetmap.org/copyright",
-              "type": "town",
-              "class": "place",
-              "osm_id": "21262496",
-              "boundingbox": [
-                51.3313049,
-                51.4113049,
-                -0.141957,
-                -0.061957
-              ],
-              "osm_type": "node",
-              "lon": "-0.101957",
-              "display_name": "Croydon, London, Greater London, England, CR0 1SZ, UK",
-              "importance": 0.23943987893565,
-              "icon": "https://nominatim.openstreetmap.org/images/mapicons/poi_place_town.p.20.png",
-              "lat": "51.3713049"
-            }
-          },
           "parts": [
             [
               {
                 "nlpToken": {
-                  "characterOffsetBegin": 471,
-                  "word": "Croydon",
-                  "lemma": "Croydon",
-                  "characterOffsetEnd": 478,
-                  "speaker": "PER0",
-                  "ner": "LOCATION",
-                  "after": "",
-                  "originalText": "Croydon",
+                  "characterOffsetBegin": 1163,
+                  "word": "you",
+                  "lemma": "you",
+                  "characterOffsetEnd": 1166,
+                  "speaker": "65",
+                  "ner": "O",
+                  "after": " ",
+                  "originalText": "you",
                   "before": " ",
-                  "index": 7,
-                  "pos": "NNP"
+                  "index": 5,
+                  "pos": "PRP"
                 }
               },
-              "NNP"
+              "PRP"
+            ],
+            [
+              {
+                "nlpToken": {
+                  "characterOffsetBegin": 1167,
+                  "word": "come",
+                  "lemma": "come",
+                  "characterOffsetEnd": 1171,
+                  "speaker": "65",
+                  "ner": "O",
+                  "after": " ",
+                  "originalText": "come",
+                  "before": " ",
+                  "index": 6,
+                  "pos": "VBP"
+                }
+              },
+              "VBP"
+            ],
+            [
+              {
+                "nlpToken": {
+                  "characterOffsetBegin": 1172,
+                  "word": "out",
+                  "lemma": "out",
+                  "characterOffsetEnd": 1175,
+                  "speaker": "65",
+                  "ner": "O",
+                  "after": " ",
+                  "originalText": "out",
+                  "before": " ",
+                  "index": 7,
+                  "pos": "RP"
+                }
+              },
+              "RP"
+            ],
+            [
+              {
+                "nlpToken": {
+                  "characterOffsetBegin": 1176,
+                  "word": "the",
+                  "lemma": "the",
+                  "characterOffsetEnd": 1179,
+                  "speaker": "65",
+                  "ner": "O",
+                  "after": " ",
+                  "originalText": "the",
+                  "before": " ",
+                  "index": 8,
+                  "pos": "DT"
+                }
+              },
+              "DT"
+            ],
+            [
+              {
+                "nlpToken": {
+                  "characterOffsetBegin": 1180,
+                  "word": "tunnel",
+                  "lemma": "tunnel",
+                  "characterOffsetEnd": 1186,
+                  "speaker": "65",
+                  "ner": "O",
+                  "after": "",
+                  "originalText": "tunnel",
+                  "before": " ",
+                  "index": 9,
+                  "pos": "NN"
+                }
+              },
+              "NN"
+            ],
+            [
+              {
+                "nlpToken": {
+                  "characterOffsetBegin": 1186,
+                  "word": ",",
+                  "lemma": ",",
+                  "characterOffsetEnd": 1187,
+                  "speaker": "65",
+                  "ner": "O",
+                  "after": " ",
+                  "originalText": ",",
+                  "before": "",
+                  "index": 10,
+                  "pos": ","
+                }
+              },
+              ","
+            ],
+            [
+              {
+                "nlpToken": {
+                  "characterOffsetBegin": 1188,
+                  "word": "you",
+                  "lemma": "you",
+                  "characterOffsetEnd": 1191,
+                  "speaker": "65",
+                  "ner": "O",
+                  "after": " ",
+                  "originalText": "you",
+                  "before": " ",
+                  "index": 11,
+                  "pos": "PRP"
+                }
+              },
+              "PRP"
+            ],
+            [
+              {
+                "nlpToken": {
+                  "characterOffsetBegin": 1192,
+                  "word": "feel",
+                  "lemma": "feel",
+                  "characterOffsetEnd": 1196,
+                  "speaker": "65",
+                  "ner": "O",
+                  "after": " ",
+                  "originalText": "feel",
+                  "before": " ",
+                  "index": 12,
+                  "pos": "VBP"
+                }
+              },
+              "VBP"
+            ],
+            [
+              {
+                "nlpToken": {
+                  "characterOffsetBegin": 1197,
+                  "word": "the",
+                  "lemma": "the",
+                  "characterOffsetEnd": 1200,
+                  "speaker": "65",
+                  "ner": "O",
+                  "after": " ",
+                  "originalText": "the",
+                  "before": " ",
+                  "index": 13,
+                  "pos": "DT"
+                }
+              },
+              "DT"
+            ],
+            [
+              {
+                "nlpToken": {
+                  "characterOffsetBegin": 1201,
+                  "word": "brakes",
+                  "lemma": "brake",
+                  "characterOffsetEnd": 1207,
+                  "speaker": "65",
+                  "ner": "O",
+                  "after": "",
+                  "originalText": "brakes",
+                  "before": " ",
+                  "index": 14,
+                  "pos": "NNS"
+                }
+              },
+              "NNS"
+            ],
+            [
+              {
+                "nlpToken": {
+                  "characterOffsetBegin": 1207,
+                  "word": ",",
+                  "lemma": ",",
+                  "characterOffsetEnd": 1208,
+                  "speaker": "65",
+                  "ner": "O",
+                  "after": " ",
+                  "originalText": ",",
+                  "before": "",
+                  "index": 15,
+                  "pos": ","
+                }
+              },
+              ","
+            ],
+            [
+              {
+                "nlpToken": {
+                  "characterOffsetBegin": 1209,
+                  "word": "but",
+                  "lemma": "but",
+                  "characterOffsetEnd": 1212,
+                  "speaker": "65",
+                  "ner": "O",
+                  "after": " ",
+                  "originalText": "but",
+                  "before": " ",
+                  "index": 16,
+                  "pos": "CC"
+                }
+              },
+              "CC"
+            ],
+            [
+              {
+                "nlpToken": {
+                  "characterOffsetBegin": 1213,
+                  "word": "I",
+                  "lemma": "I",
+                  "characterOffsetEnd": 1214,
+                  "speaker": "65",
+                  "ner": "O",
+                  "after": " ",
+                  "originalText": "I",
+                  "before": " ",
+                  "index": 17,
+                  "pos": "PRP"
+                }
+              },
+              "PRP"
+            ],
+            [
+              {
+                "nlpToken": {
+                  "characterOffsetBegin": 1215,
+                  "word": "did",
+                  "lemma": "do",
+                  "characterOffsetEnd": 1218,
+                  "speaker": "65",
+                  "ner": "O",
+                  "after": "",
+                  "originalText": "did",
+                  "before": " ",
+                  "index": 18,
+                  "pos": "VBD"
+                }
+              },
+              "VBD"
+            ],
+            [
+              {
+                "nlpToken": {
+                  "characterOffsetBegin": 1218,
+                  "word": "n't",
+                  "lemma": "not",
+                  "characterOffsetEnd": 1221,
+                  "speaker": "65",
+                  "ner": "O",
+                  "after": " ",
+                  "originalText": "n't",
+                  "before": "",
+                  "index": 19,
+                  "pos": "RB"
+                }
+              },
+              "RB"
+            ],
+            [
+              {
+                "nlpToken": {
+                  "characterOffsetBegin": 1222,
+                  "word": "seem",
+                  "lemma": "seem",
+                  "characterOffsetEnd": 1226,
+                  "speaker": "65",
+                  "ner": "O",
+                  "after": " ",
+                  "originalText": "seem",
+                  "before": " ",
+                  "index": 20,
+                  "pos": "VB"
+                }
+              },
+              "VB"
+            ],
+            [
+              {
+                "nlpToken": {
+                  "characterOffsetBegin": 1227,
+                  "word": "to",
+                  "lemma": "to",
+                  "characterOffsetEnd": 1229,
+                  "speaker": "65",
+                  "ner": "O",
+                  "after": " ",
+                  "originalText": "to",
+                  "before": " ",
+                  "index": 21,
+                  "pos": "TO"
+                }
+              },
+              "TO"
+            ],
+            [
+              {
+                "nlpToken": {
+                  "characterOffsetBegin": 1230,
+                  "word": "at",
+                  "lemma": "at",
+                  "characterOffsetEnd": 1232,
+                  "speaker": "65",
+                  "ner": "O",
+                  "after": " ",
+                  "originalText": "at",
+                  "before": " ",
+                  "index": 22,
+                  "pos": "IN"
+                }
+              },
+              "IN"
+            ],
+            [
+              {
+                "nlpToken": {
+                  "characterOffsetBegin": 1233,
+                  "word": "all",
+                  "lemma": "all",
+                  "characterOffsetEnd": 1236,
+                  "speaker": "65",
+                  "ner": "O",
+                  "after": "",
+                  "originalText": "all",
+                  "before": " ",
+                  "index": 23,
+                  "pos": "DT"
+                }
+              },
+              "DT"
             ]
           ],
-          "nlpIndexSentence": 3,
-          "score": 1.0000000000000002
+          "score": 1.0,
+          "text": "you come out the tunnel , you feel the brakes , but I did n't seem to at all",
+          "nlpIndexSentence": 5
         }
-      ],
+      ]
+    },
+    "where": {
       "annotated": [
         {
           "text": "Croydon",
@@ -306,9 +451,15 @@
       "label": "where"
     },
     "what": {
+      "annotated": [
+        {
+          "text": "arrested",
+          "coderPhraseCount": 2
+        }
+      ],
+      "label": "what",
       "extracted": [
         {
-          "text": "was being treated for broken ribs",
           "parts": [
             [
               {
@@ -419,17 +570,11 @@
               "NNS"
             ]
           ],
-          "nlpIndexSentence": 5,
-          "score": 1.0
+          "score": 1.0,
+          "text": "was being treated for broken ribs",
+          "nlpIndexSentence": 5
         }
-      ],
-      "annotated": [
-        {
-          "text": "arrested",
-          "coderPhraseCount": 2
-        }
-      ],
-      "label": "what"
+      ]
     }
   },
   "description": "Driver is arrested as investigators say they believe tram was going too fast when it derailed in south London\n",

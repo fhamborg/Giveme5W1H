@@ -6,9 +6,19 @@
   "category": "china well",
   "fiveWoneH": {
     "who": {
+      "annotated": [
+        {
+          "text": "Five-year-old Zhao Zicong",
+          "coderPhraseCount": 3
+        },
+        {
+          "text": "team of rescuers",
+          "coderPhraseCount": 3
+        }
+      ],
+      "label": "who",
       "extracted": [
         {
-          "text": "the well",
           "parts": [
             [
               {
@@ -47,62 +57,13 @@
               "NN"
             ]
           ],
-          "nlpIndexSentence": 6,
-          "score": 1.0
+          "score": 1.0,
+          "text": "the well",
+          "nlpIndexSentence": 6
         }
-      ],
-      "annotated": [
-        {
-          "text": "Five-year-old Zhao Zicong",
-          "coderPhraseCount": 3
-        },
-        {
-          "text": "team of rescuers",
-          "coderPhraseCount": 3
-        }
-      ],
-      "label": "who"
+      ]
     },
     "when": {
-      "extracted": [
-        {
-          "text": "Sunday",
-          "enhancement": {
-            "timex": {
-              "start_date": "2016-11-06T00:00:00",
-              "end_date": "2016-11-06T23:59:59"
-            }
-          },
-          "parts": [
-            [
-              {
-                "nlpToken": {
-                  "characterOffsetBegin": 1845,
-                  "word": "Sunday",
-                  "lemma": "Sunday",
-                  "timex": {
-                    "value": "2016-11-06",
-                    "tid": "t9",
-                    "type": "DATE"
-                  },
-                  "before": " ",
-                  "characterOffsetEnd": 1851,
-                  "originalText": "Sunday",
-                  "normalizedNER": "2016-11-06",
-                  "speaker": "PER0",
-                  "after": " ",
-                  "ner": "DATE",
-                  "index": 32,
-                  "pos": "NNP"
-                }
-              },
-              "NNP"
-            ]
-          ],
-          "nlpIndexSentence": 9,
-          "score": 0.7720462306152719
-        }
-      ],
       "annotated": [
         {
           "text": "11am local time on Sunday",
@@ -118,33 +79,6 @@
       "label": "when"
     },
     "why": {
-      "extracted": [
-        {
-          "text": "Excavators",
-          "parts": [
-            [
-              {
-                "nlpToken": {
-                  "characterOffsetBegin": 516,
-                  "word": "Excavators",
-                  "lemma": "excavator",
-                  "speaker": "PER0",
-                  "after": " ",
-                  "pos": "NNS",
-                  "ner": "O",
-                  "before": " ",
-                  "characterOffsetEnd": 526,
-                  "index": 1,
-                  "originalText": "Excavators"
-                }
-              },
-              "NNS"
-            ]
-          ],
-          "nlpIndexSentence": 3,
-          "score": 0.3969924812030075
-        }
-      ],
       "annotated": [
         {
           "text": "to save the child",
@@ -154,33 +88,6 @@
       "label": "why"
     },
     "how": {
-      "extracted": [
-        {
-          "text": "well",
-          "parts": [
-            [
-              {
-                "nlpToken": {
-                  "characterOffsetBegin": 668,
-                  "word": "well",
-                  "lemma": "well",
-                  "characterOffsetEnd": 672,
-                  "speaker": "PER0",
-                  "ner": "O",
-                  "after": " ",
-                  "originalText": "well",
-                  "before": " ",
-                  "index": 29,
-                  "pos": "RB"
-                }
-              },
-              "RB"
-            ]
-          ],
-          "nlpIndexSentence": 3,
-          "score": 1.0
-        }
-      ],
       "annotated": [
         {
           "text": "fell into the 12-inch-wide well",
@@ -191,56 +98,612 @@
           "coderPhraseCount": 1
         }
       ],
-      "label": "how"
-    },
-    "where": {
+      "label": "how",
       "extracted": [
         {
-          "text": "China",
-          "enhancement": {
-            "openstreetmap_nominatim": {
-              "place_id": "179360170",
-              "licence": "Data \u00a9 OpenStreetMap contributors, ODbL 1.0. http://www.openstreetmap.org/copyright",
-              "type": "administrative",
-              "class": "boundary",
-              "osm_id": "5605656",
-              "boundingbox": [
-                25.0671341,
-                25.9161824,
-                -99.4612273,
-                -98.421576
-              ],
-              "osm_type": "relation",
-              "lon": "-98.9811115045569",
-              "display_name": "China, Nuevo Le\u00f3n, M\u00e9xico",
-              "importance": 0.2225,
-              "icon": "https://nominatim.openstreetmap.org/images/mapicons/poi_boundary_administrative.p.20.png",
-              "lat": "25.4915799"
-            }
-          },
           "parts": [
             [
               {
                 "nlpToken": {
-                  "characterOffsetBegin": 89,
-                  "word": "China",
-                  "lemma": "China",
-                  "characterOffsetEnd": 94,
+                  "characterOffsetBegin": 1485,
+                  "word": "the",
+                  "lemma": "the",
+                  "characterOffsetEnd": 1488,
                   "speaker": "PER0",
-                  "ner": "LOCATION",
+                  "ner": "O",
                   "after": " ",
-                  "originalText": "China",
+                  "originalText": "the",
                   "before": " ",
-                  "index": 16,
-                  "pos": "NNP"
+                  "index": 2,
+                  "pos": "DT"
                 }
               },
-              "NNP"
+              "DT"
+            ],
+            [
+              {
+                "nlpToken": {
+                  "characterOffsetBegin": 1489,
+                  "word": "family",
+                  "lemma": "family",
+                  "characterOffsetEnd": 1495,
+                  "speaker": "PER0",
+                  "ner": "O",
+                  "after": " ",
+                  "originalText": "family",
+                  "before": " ",
+                  "index": 3,
+                  "pos": "NN"
+                }
+              },
+              "NN"
+            ],
+            [
+              {
+                "nlpToken": {
+                  "characterOffsetBegin": 1496,
+                  "word": "alerted",
+                  "lemma": "alert",
+                  "characterOffsetEnd": 1503,
+                  "speaker": "PER0",
+                  "ner": "O",
+                  "after": " ",
+                  "originalText": "alerted",
+                  "before": " ",
+                  "index": 4,
+                  "pos": "VBD"
+                }
+              },
+              "VBD"
+            ],
+            [
+              {
+                "nlpToken": {
+                  "characterOffsetBegin": 1504,
+                  "word": "the",
+                  "lemma": "the",
+                  "characterOffsetEnd": 1507,
+                  "speaker": "PER0",
+                  "ner": "O",
+                  "after": " ",
+                  "originalText": "the",
+                  "before": " ",
+                  "index": 5,
+                  "pos": "DT"
+                }
+              },
+              "DT"
+            ],
+            [
+              {
+                "nlpToken": {
+                  "characterOffsetBegin": 1508,
+                  "word": "local",
+                  "lemma": "local",
+                  "characterOffsetEnd": 1513,
+                  "speaker": "PER0",
+                  "ner": "O",
+                  "after": " ",
+                  "originalText": "local",
+                  "before": " ",
+                  "index": 6,
+                  "pos": "JJ"
+                }
+              },
+              "JJ"
+            ],
+            [
+              {
+                "nlpToken": {
+                  "characterOffsetBegin": 1514,
+                  "word": "authority",
+                  "lemma": "authority",
+                  "characterOffsetEnd": 1523,
+                  "speaker": "PER0",
+                  "ner": "O",
+                  "after": "",
+                  "originalText": "authority",
+                  "before": " ",
+                  "index": 7,
+                  "pos": "NN"
+                }
+              },
+              "NN"
+            ],
+            [
+              {
+                "nlpToken": {
+                  "characterOffsetBegin": 1523,
+                  "word": ",",
+                  "lemma": ",",
+                  "characterOffsetEnd": 1524,
+                  "speaker": "PER0",
+                  "ner": "O",
+                  "after": " ",
+                  "originalText": ",",
+                  "before": "",
+                  "index": 8,
+                  "pos": ","
+                }
+              },
+              ","
+            ],
+            [
+              {
+                "nlpToken": {
+                  "characterOffsetBegin": 1525,
+                  "word": "a",
+                  "lemma": "a",
+                  "characterOffsetEnd": 1526,
+                  "speaker": "PER0",
+                  "ner": "O",
+                  "after": " ",
+                  "originalText": "a",
+                  "before": " ",
+                  "index": 9,
+                  "pos": "DT"
+                }
+              },
+              "DT"
+            ],
+            [
+              {
+                "nlpToken": {
+                  "characterOffsetBegin": 1527,
+                  "word": "team",
+                  "lemma": "team",
+                  "characterOffsetEnd": 1531,
+                  "speaker": "PER0",
+                  "ner": "O",
+                  "after": " ",
+                  "originalText": "team",
+                  "before": " ",
+                  "index": 10,
+                  "pos": "NN"
+                }
+              },
+              "NN"
+            ],
+            [
+              {
+                "nlpToken": {
+                  "characterOffsetBegin": 1532,
+                  "word": "of",
+                  "lemma": "of",
+                  "characterOffsetEnd": 1534,
+                  "speaker": "PER0",
+                  "ner": "O",
+                  "after": " ",
+                  "originalText": "of",
+                  "before": " ",
+                  "index": 11,
+                  "pos": "IN"
+                }
+              },
+              "IN"
+            ],
+            [
+              {
+                "nlpToken": {
+                  "characterOffsetBegin": 1535,
+                  "word": "rescuers",
+                  "lemma": "rescuer",
+                  "characterOffsetEnd": 1543,
+                  "speaker": "PER0",
+                  "ner": "O",
+                  "after": "",
+                  "originalText": "rescuers",
+                  "before": " ",
+                  "index": 12,
+                  "pos": "NNS"
+                }
+              },
+              "NNS"
+            ],
+            [
+              {
+                "nlpToken": {
+                  "characterOffsetBegin": 1543,
+                  "word": ",",
+                  "lemma": ",",
+                  "characterOffsetEnd": 1544,
+                  "speaker": "PER0",
+                  "ner": "O",
+                  "after": " ",
+                  "originalText": ",",
+                  "before": "",
+                  "index": 13,
+                  "pos": ","
+                }
+              },
+              ","
+            ],
+            [
+              {
+                "nlpToken": {
+                  "characterOffsetBegin": 1545,
+                  "word": "including",
+                  "lemma": "include",
+                  "characterOffsetEnd": 1554,
+                  "speaker": "PER0",
+                  "ner": "O",
+                  "after": " ",
+                  "originalText": "including",
+                  "before": " ",
+                  "index": 14,
+                  "pos": "VBG"
+                }
+              },
+              "VBG"
+            ],
+            [
+              {
+                "nlpToken": {
+                  "characterOffsetBegin": 1555,
+                  "word": "police",
+                  "lemma": "police",
+                  "characterOffsetEnd": 1561,
+                  "speaker": "PER0",
+                  "ner": "O",
+                  "after": " ",
+                  "originalText": "police",
+                  "before": " ",
+                  "index": 15,
+                  "pos": "NN"
+                }
+              },
+              "NN"
+            ],
+            [
+              {
+                "nlpToken": {
+                  "characterOffsetBegin": 1562,
+                  "word": "officers",
+                  "lemma": "officer",
+                  "characterOffsetEnd": 1570,
+                  "speaker": "PER0",
+                  "ner": "O",
+                  "after": "",
+                  "originalText": "officers",
+                  "before": " ",
+                  "index": 16,
+                  "pos": "NNS"
+                }
+              },
+              "NNS"
+            ],
+            [
+              {
+                "nlpToken": {
+                  "characterOffsetBegin": 1570,
+                  "word": ",",
+                  "lemma": ",",
+                  "characterOffsetEnd": 1571,
+                  "speaker": "PER0",
+                  "ner": "O",
+                  "after": " ",
+                  "originalText": ",",
+                  "before": "",
+                  "index": 17,
+                  "pos": ","
+                }
+              },
+              ","
+            ],
+            [
+              {
+                "nlpToken": {
+                  "characterOffsetBegin": 1572,
+                  "word": "firefighters",
+                  "lemma": "firefighter",
+                  "characterOffsetEnd": 1584,
+                  "speaker": "PER0",
+                  "ner": "O",
+                  "after": "",
+                  "originalText": "firefighters",
+                  "before": " ",
+                  "index": 18,
+                  "pos": "NNS"
+                }
+              },
+              "NNS"
+            ],
+            [
+              {
+                "nlpToken": {
+                  "characterOffsetBegin": 1584,
+                  "word": ",",
+                  "lemma": ",",
+                  "characterOffsetEnd": 1585,
+                  "speaker": "PER0",
+                  "ner": "O",
+                  "after": " ",
+                  "originalText": ",",
+                  "before": "",
+                  "index": 19,
+                  "pos": ","
+                }
+              },
+              ","
+            ],
+            [
+              {
+                "nlpToken": {
+                  "characterOffsetBegin": 1586,
+                  "word": "paramedics",
+                  "lemma": "paramedic",
+                  "characterOffsetEnd": 1596,
+                  "speaker": "PER0",
+                  "ner": "O",
+                  "after": " ",
+                  "originalText": "paramedics",
+                  "before": " ",
+                  "index": 20,
+                  "pos": "NNS"
+                }
+              },
+              "NNS"
+            ],
+            [
+              {
+                "nlpToken": {
+                  "characterOffsetBegin": 1597,
+                  "word": "and",
+                  "lemma": "and",
+                  "characterOffsetEnd": 1600,
+                  "speaker": "PER0",
+                  "ner": "O",
+                  "after": " ",
+                  "originalText": "and",
+                  "before": " ",
+                  "index": 21,
+                  "pos": "CC"
+                }
+              },
+              "CC"
+            ],
+            [
+              {
+                "nlpToken": {
+                  "characterOffsetBegin": 1601,
+                  "word": "local",
+                  "lemma": "local",
+                  "characterOffsetEnd": 1606,
+                  "speaker": "PER0",
+                  "ner": "O",
+                  "after": " ",
+                  "originalText": "local",
+                  "before": " ",
+                  "index": 22,
+                  "pos": "JJ"
+                }
+              },
+              "JJ"
+            ],
+            [
+              {
+                "nlpToken": {
+                  "characterOffsetBegin": 1607,
+                  "word": "volunteers",
+                  "lemma": "volunteer",
+                  "characterOffsetEnd": 1617,
+                  "speaker": "PER0",
+                  "ner": "O",
+                  "after": " ",
+                  "originalText": "volunteers",
+                  "before": " ",
+                  "index": 23,
+                  "pos": "NNS"
+                }
+              },
+              "NNS"
+            ],
+            [
+              {
+                "nlpToken": {
+                  "characterOffsetBegin": 1618,
+                  "word": "were",
+                  "lemma": "be",
+                  "characterOffsetEnd": 1622,
+                  "speaker": "PER0",
+                  "ner": "O",
+                  "after": " ",
+                  "originalText": "were",
+                  "before": " ",
+                  "index": 24,
+                  "pos": "VBD"
+                }
+              },
+              "VBD"
+            ],
+            [
+              {
+                "nlpToken": {
+                  "characterOffsetBegin": 1623,
+                  "word": "sent",
+                  "lemma": "send",
+                  "characterOffsetEnd": 1627,
+                  "speaker": "PER0",
+                  "ner": "O",
+                  "after": " ",
+                  "originalText": "sent",
+                  "before": " ",
+                  "index": 25,
+                  "pos": "VBN"
+                }
+              },
+              "VBN"
+            ],
+            [
+              {
+                "nlpToken": {
+                  "characterOffsetBegin": 1628,
+                  "word": "to",
+                  "lemma": "to",
+                  "characterOffsetEnd": 1630,
+                  "speaker": "PER0",
+                  "ner": "O",
+                  "after": " ",
+                  "originalText": "to",
+                  "before": " ",
+                  "index": 26,
+                  "pos": "TO"
+                }
+              },
+              "TO"
+            ],
+            [
+              {
+                "nlpToken": {
+                  "characterOffsetBegin": 1631,
+                  "word": "the",
+                  "lemma": "the",
+                  "characterOffsetEnd": 1634,
+                  "speaker": "PER0",
+                  "ner": "O",
+                  "after": " ",
+                  "originalText": "the",
+                  "before": " ",
+                  "index": 27,
+                  "pos": "DT"
+                }
+              },
+              "DT"
+            ],
+            [
+              {
+                "nlpToken": {
+                  "characterOffsetBegin": 1635,
+                  "word": "scene",
+                  "lemma": "scene",
+                  "characterOffsetEnd": 1640,
+                  "speaker": "PER0",
+                  "ner": "O",
+                  "after": " ",
+                  "originalText": "scene",
+                  "before": " ",
+                  "index": 28,
+                  "pos": "NN"
+                }
+              },
+              "NN"
+            ],
+            [
+              {
+                "nlpToken": {
+                  "characterOffsetBegin": 1641,
+                  "word": "to",
+                  "lemma": "to",
+                  "characterOffsetEnd": 1643,
+                  "speaker": "PER0",
+                  "ner": "O",
+                  "after": " ",
+                  "originalText": "to",
+                  "before": " ",
+                  "index": 29,
+                  "pos": "TO"
+                }
+              },
+              "TO"
+            ],
+            [
+              {
+                "nlpToken": {
+                  "characterOffsetBegin": 1644,
+                  "word": "search",
+                  "lemma": "search",
+                  "characterOffsetEnd": 1650,
+                  "speaker": "PER0",
+                  "ner": "O",
+                  "after": " ",
+                  "originalText": "search",
+                  "before": " ",
+                  "index": 30,
+                  "pos": "VB"
+                }
+              },
+              "VB"
+            ],
+            [
+              {
+                "nlpToken": {
+                  "characterOffsetBegin": 1651,
+                  "word": "for",
+                  "lemma": "for",
+                  "characterOffsetEnd": 1654,
+                  "speaker": "PER0",
+                  "ner": "O",
+                  "after": " ",
+                  "originalText": "for",
+                  "before": " ",
+                  "index": 31,
+                  "pos": "IN"
+                }
+              },
+              "IN"
+            ],
+            [
+              {
+                "nlpToken": {
+                  "characterOffsetBegin": 1655,
+                  "word": "the",
+                  "lemma": "the",
+                  "characterOffsetEnd": 1658,
+                  "speaker": "PER0",
+                  "ner": "O",
+                  "after": " ",
+                  "originalText": "the",
+                  "before": " ",
+                  "index": 32,
+                  "pos": "DT"
+                }
+              },
+              "DT"
+            ],
+            [
+              {
+                "nlpToken": {
+                  "characterOffsetBegin": 1659,
+                  "word": "trapped",
+                  "lemma": "trap",
+                  "characterOffsetEnd": 1666,
+                  "speaker": "PER0",
+                  "ner": "O",
+                  "after": " ",
+                  "originalText": "trapped",
+                  "before": " ",
+                  "index": 33,
+                  "pos": "VBN"
+                }
+              },
+              "VBN"
+            ],
+            [
+              {
+                "nlpToken": {
+                  "characterOffsetBegin": 1667,
+                  "word": "boy",
+                  "lemma": "boy",
+                  "characterOffsetEnd": 1670,
+                  "speaker": "PER0",
+                  "ner": "O",
+                  "after": "",
+                  "originalText": "boy",
+                  "before": " ",
+                  "index": 34,
+                  "pos": "NN"
+                }
+              },
+              "NN"
             ]
           ],
-          "score": 1.0
+          "score": 1.0,
+          "text": "the family alerted the local authority , a team of rescuers , including police officers , firefighters , paramedics and local volunteers were sent to the scene to search for the trapped boy",
+          "nlpIndexSentence": 2
         }
-      ],
+      ]
+    },
+    "where": {
       "annotated": [
         {
           "text": "Zhongmengchang Village of Lixian County in Baoding",
@@ -254,9 +717,19 @@
       "label": "where"
     },
     "what": {
+      "annotated": [
+        {
+          "text": "fell into a well",
+          "coderPhraseCount": 3
+        },
+        {
+          "text": "trying to save",
+          "coderPhraseCount": 2
+        }
+      ],
+      "label": "what",
       "extracted": [
         {
-          "text": "was located near their house and had been used to irrigate the nearby fields",
           "parts": [
             [
               {
@@ -511,21 +984,11 @@
               "NNS"
             ]
           ],
-          "nlpIndexSentence": 6,
-          "score": 1.0
+          "score": 1.0,
+          "text": "was located near their house and had been used to irrigate the nearby fields",
+          "nlpIndexSentence": 6
         }
-      ],
-      "annotated": [
-        {
-          "text": "fell into a well",
-          "coderPhraseCount": 3
-        },
-        {
-          "text": "trying to save",
-          "coderPhraseCount": 2
-        }
-      ],
-      "label": "what"
+      ]
     }
   },
   "description": "Five-year-old Zhao Zicong fell into the 12-inch-wide well by accident while working with his father in a village in central China. The condition of the boy remains unknown as rescue operation goes on.",

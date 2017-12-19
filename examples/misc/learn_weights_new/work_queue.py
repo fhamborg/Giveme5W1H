@@ -25,7 +25,8 @@ class WorkQueue(object):
         self._queue = None
         self._queue_processed = None
         self._queue_path = os.path.dirname(__file__) + '/queue_caches/' + self._id + '_queue.prickle'
-        self._queue_processed_path = os.path.dirname(__file__) + '/queue_caches/' + self._id + '_queue_processed.prickle'
+        self._queue_processed_path = os.path.dirname(
+            __file__) + '/queue_caches/' + self._id + '_queue_processed.prickle'
         self._unique_weights = {}
         self._log = logging.getLogger('GiveMe5W')
 
@@ -150,7 +151,7 @@ class WorkQueue(object):
         # scale vector
         scaled_weights = []
         for weight in weights:
-            #if weight != 0:
+            # if weight != 0:
             scaled_weights.append(int(scaleFactor * weight))
 
         # build a string representation

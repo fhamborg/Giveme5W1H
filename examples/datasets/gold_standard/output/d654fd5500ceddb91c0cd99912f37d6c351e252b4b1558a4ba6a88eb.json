@@ -6,9 +6,23 @@
   "category": "clinton clear",
   "fiveWoneH": {
     "who": {
+      "annotated": [
+        {
+          "text": "FBI",
+          "coderPhraseCount": 3
+        },
+        {
+          "text": "James Comey",
+          "coderPhraseCount": 2
+        },
+        {
+          "text": "Hillary Clinton",
+          "coderPhraseCount": 2
+        }
+      ],
+      "label": "who",
       "extracted": [
         {
-          "text": "Clinton",
           "parts": [
             [
               {
@@ -29,65 +43,12 @@
               "NNP"
             ]
           ],
-          "score": 1.0
+          "score": 1.0,
+          "text": "Clinton"
         }
-      ],
-      "annotated": [
-        {
-          "text": "FBI",
-          "coderPhraseCount": 3
-        },
-        {
-          "text": "James Comey",
-          "coderPhraseCount": 2
-        },
-        {
-          "text": "Hillary Clinton",
-          "coderPhraseCount": 2
-        }
-      ],
-      "label": "who"
+      ]
     },
     "when": {
-      "extracted": [
-        {
-          "text": "Sunday",
-          "enhancement": {
-            "timex": {
-              "start_date": "2016-11-06T00:00:00",
-              "end_date": "2016-11-06T23:59:59"
-            }
-          },
-          "parts": [
-            [
-              {
-                "nlpToken": {
-                  "characterOffsetBegin": 1571,
-                  "word": "Sunday",
-                  "lemma": "Sunday",
-                  "timex": {
-                    "value": "2016-11-06",
-                    "tid": "t8",
-                    "type": "DATE"
-                  },
-                  "before": " ",
-                  "characterOffsetEnd": 1577,
-                  "originalText": "Sunday",
-                  "normalizedNER": "2016-11-06",
-                  "speaker": "PER0",
-                  "after": "",
-                  "ner": "DATE",
-                  "index": 43,
-                  "pos": "NNP"
-                }
-              },
-              "NNP"
-            ]
-          ],
-          "nlpIndexSentence": 8,
-          "score": 0.6997276965292855
-        }
-      ],
       "annotated": [
         {
           "text": "Sunday",
@@ -98,32 +59,6 @@
       "label": "when"
     },
     "why": {
-      "extracted": [
-        {
-          "text": "she",
-          "parts": [
-            [
-              {
-                "nlpToken": {
-                  "characterOffsetBegin": 138,
-                  "word": "she",
-                  "lemma": "she",
-                  "speaker": "PER0",
-                  "after": " ",
-                  "pos": "PRP",
-                  "ner": "O",
-                  "before": " ",
-                  "characterOffsetEnd": 141,
-                  "index": 27,
-                  "originalText": "she"
-                }
-              },
-              "PRP"
-            ]
-          ],
-          "score": 0.42857142857142855
-        }
-      ],
       "annotated": [
         {
           "text": "have not changed conclusion",
@@ -140,32 +75,6 @@
       "label": "why"
     },
     "how": {
-      "extracted": [
-        {
-          "text": "new",
-          "parts": [
-            [
-              {
-                "nlpToken": {
-                  "characterOffsetBegin": 30,
-                  "word": "new",
-                  "lemma": "new",
-                  "characterOffsetEnd": 33,
-                  "speaker": "PER0",
-                  "ner": "O",
-                  "after": " ",
-                  "originalText": "new",
-                  "before": " ",
-                  "index": 7,
-                  "pos": "JJ"
-                }
-              },
-              "JJ"
-            ]
-          ],
-          "score": 1.0
-        }
-      ],
       "annotated": [
         {
           "text": "in a letter",
@@ -176,57 +85,702 @@
           "coderPhraseCount": 1
         }
       ],
-      "label": "how"
-    },
-    "where": {
+      "label": "how",
       "extracted": [
         {
-          "text": "Michigan",
-          "enhancement": {
-            "openstreetmap_nominatim": {
-              "place_id": "179080064",
-              "licence": "Data \u00a9 OpenStreetMap contributors, ODbL 1.0. http://www.openstreetmap.org/copyright",
-              "type": "administrative",
-              "class": "boundary",
-              "osm_id": "165789",
-              "boundingbox": [
-                41.6961536,
-                48.306063,
-                -90.4186202,
-                -82.1228056
-              ],
-              "osm_type": "relation",
-              "lon": "-84.6824346",
-              "display_name": "Michigan, United States of America",
-              "importance": 0.29753559432137,
-              "icon": "https://nominatim.openstreetmap.org/images/mapicons/poi_boundary_administrative.p.20.png",
-              "lat": "43.6211955"
-            }
-          },
           "parts": [
             [
               {
                 "nlpToken": {
-                  "characterOffsetBegin": 2958,
-                  "word": "Michigan",
-                  "lemma": "Michigan",
-                  "characterOffsetEnd": 2966,
+                  "characterOffsetBegin": 2110,
+                  "word": "news",
+                  "lemma": "news",
+                  "characterOffsetEnd": 2114,
                   "speaker": "PER0",
-                  "ner": "LOCATION",
-                  "after": "",
-                  "originalText": "Michigan",
+                  "ner": "O",
+                  "after": " ",
+                  "originalText": "news",
                   "before": " ",
                   "index": 2,
+                  "pos": "NN"
+                }
+              },
+              "NN"
+            ],
+            [
+              {
+                "nlpToken": {
+                  "characterOffsetBegin": 2115,
+                  "word": "broke",
+                  "lemma": "break",
+                  "characterOffsetEnd": 2120,
+                  "speaker": "PER0",
+                  "ner": "O",
+                  "after": "",
+                  "originalText": "broke",
+                  "before": " ",
+                  "index": 3,
+                  "pos": "VBD"
+                }
+              },
+              "VBD"
+            ],
+            [
+              {
+                "nlpToken": {
+                  "characterOffsetBegin": 2120,
+                  "word": ",",
+                  "lemma": ",",
+                  "characterOffsetEnd": 2121,
+                  "speaker": "PER0",
+                  "ner": "O",
+                  "after": " ",
+                  "originalText": ",",
+                  "before": "",
+                  "index": 4,
+                  "pos": ","
+                }
+              },
+              ","
+            ],
+            [
+              {
+                "nlpToken": {
+                  "characterOffsetBegin": 2122,
+                  "word": "aides",
+                  "lemma": "aide",
+                  "characterOffsetEnd": 2127,
+                  "speaker": "PER0",
+                  "ner": "O",
+                  "after": " ",
+                  "originalText": "aides",
+                  "before": " ",
+                  "index": 5,
+                  "pos": "NNS"
+                }
+              },
+              "NNS"
+            ],
+            [
+              {
+                "nlpToken": {
+                  "characterOffsetBegin": 2128,
+                  "word": "huddled",
+                  "lemma": "huddle",
+                  "characterOffsetEnd": 2135,
+                  "speaker": "PER0",
+                  "ner": "O",
+                  "after": " ",
+                  "originalText": "huddled",
+                  "before": " ",
+                  "index": 6,
+                  "pos": "VBD"
+                }
+              },
+              "VBD"
+            ],
+            [
+              {
+                "nlpToken": {
+                  "characterOffsetBegin": 2136,
+                  "word": "toward",
+                  "lemma": "toward",
+                  "characterOffsetEnd": 2142,
+                  "speaker": "PER0",
+                  "ner": "O",
+                  "after": " ",
+                  "originalText": "toward",
+                  "before": " ",
+                  "index": 7,
+                  "pos": "IN"
+                }
+              },
+              "IN"
+            ],
+            [
+              {
+                "nlpToken": {
+                  "characterOffsetBegin": 2143,
+                  "word": "the",
+                  "lemma": "the",
+                  "characterOffsetEnd": 2146,
+                  "speaker": "PER0",
+                  "ner": "O",
+                  "after": " ",
+                  "originalText": "the",
+                  "before": " ",
+                  "index": 8,
+                  "pos": "DT"
+                }
+              },
+              "DT"
+            ],
+            [
+              {
+                "nlpToken": {
+                  "characterOffsetBegin": 2147,
+                  "word": "front",
+                  "lemma": "front",
+                  "characterOffsetEnd": 2152,
+                  "speaker": "PER0",
+                  "ner": "O",
+                  "after": " ",
+                  "originalText": "front",
+                  "before": " ",
+                  "index": 9,
+                  "pos": "NN"
+                }
+              },
+              "NN"
+            ],
+            [
+              {
+                "nlpToken": {
+                  "characterOffsetBegin": 2153,
+                  "word": "of",
+                  "lemma": "of",
+                  "characterOffsetEnd": 2155,
+                  "speaker": "PER0",
+                  "ner": "O",
+                  "after": " ",
+                  "originalText": "of",
+                  "before": " ",
+                  "index": 10,
+                  "pos": "IN"
+                }
+              },
+              "IN"
+            ],
+            [
+              {
+                "nlpToken": {
+                  "characterOffsetBegin": 2156,
+                  "word": "the",
+                  "lemma": "the",
+                  "characterOffsetEnd": 2159,
+                  "speaker": "PER0",
+                  "ner": "O",
+                  "after": " ",
+                  "originalText": "the",
+                  "before": " ",
+                  "index": 11,
+                  "pos": "DT"
+                }
+              },
+              "DT"
+            ],
+            [
+              {
+                "nlpToken": {
+                  "characterOffsetBegin": 2160,
+                  "word": "plane",
+                  "lemma": "plane",
+                  "characterOffsetEnd": 2165,
+                  "speaker": "PER0",
+                  "ner": "O",
+                  "after": "",
+                  "originalText": "plane",
+                  "before": " ",
+                  "index": 12,
+                  "pos": "NN"
+                }
+              },
+              "NN"
+            ],
+            [
+              {
+                "nlpToken": {
+                  "characterOffsetBegin": 2165,
+                  "word": ",",
+                  "lemma": ",",
+                  "characterOffsetEnd": 2166,
+                  "speaker": "PER0",
+                  "ner": "O",
+                  "after": " ",
+                  "originalText": ",",
+                  "before": "",
+                  "index": 13,
+                  "pos": ","
+                }
+              },
+              ","
+            ],
+            [
+              {
+                "nlpToken": {
+                  "characterOffsetBegin": 2167,
+                  "word": "reading",
+                  "lemma": "read",
+                  "characterOffsetEnd": 2174,
+                  "speaker": "PER0",
+                  "ner": "O",
+                  "after": " ",
+                  "originalText": "reading",
+                  "before": " ",
+                  "index": 14,
+                  "pos": "VBG"
+                }
+              },
+              "VBG"
+            ],
+            [
+              {
+                "nlpToken": {
+                  "characterOffsetBegin": 2175,
+                  "word": "from",
+                  "lemma": "from",
+                  "characterOffsetEnd": 2179,
+                  "speaker": "PER0",
+                  "ner": "O",
+                  "after": " ",
+                  "originalText": "from",
+                  "before": " ",
+                  "index": 15,
+                  "pos": "IN"
+                }
+              },
+              "IN"
+            ],
+            [
+              {
+                "nlpToken": {
+                  "characterOffsetBegin": 2180,
+                  "word": "an",
+                  "lemma": "a",
+                  "characterOffsetEnd": 2182,
+                  "speaker": "PER0",
+                  "ner": "O",
+                  "after": " ",
+                  "originalText": "an",
+                  "before": " ",
+                  "index": 16,
+                  "pos": "DT"
+                }
+              },
+              "DT"
+            ],
+            [
+              {
+                "nlpToken": {
+                  "characterOffsetBegin": 2183,
+                  "word": "iPad",
+                  "lemma": "iPad",
+                  "characterOffsetEnd": 2187,
+                  "speaker": "PER0",
+                  "ner": "O",
+                  "after": "",
+                  "originalText": "iPad",
+                  "before": " ",
+                  "index": 17,
                   "pos": "NNP"
                 }
               },
               "NNP"
+            ],
+            [
+              {
+                "nlpToken": {
+                  "characterOffsetBegin": 2187,
+                  "word": ",",
+                  "lemma": ",",
+                  "characterOffsetEnd": 2188,
+                  "speaker": "PER0",
+                  "ner": "O",
+                  "after": " ",
+                  "originalText": ",",
+                  "before": "",
+                  "index": 18,
+                  "pos": ","
+                }
+              },
+              ","
+            ],
+            [
+              {
+                "nlpToken": {
+                  "characterOffsetBegin": 2189,
+                  "word": "and",
+                  "lemma": "and",
+                  "characterOffsetEnd": 2192,
+                  "speaker": "PER0",
+                  "ner": "O",
+                  "after": " ",
+                  "originalText": "and",
+                  "before": " ",
+                  "index": 19,
+                  "pos": "CC"
+                }
+              },
+              "CC"
+            ],
+            [
+              {
+                "nlpToken": {
+                  "characterOffsetBegin": 2193,
+                  "word": "spokeswoman",
+                  "lemma": "spokeswoman",
+                  "characterOffsetEnd": 2204,
+                  "speaker": "PER0",
+                  "ner": "O",
+                  "after": " ",
+                  "originalText": "spokeswoman",
+                  "before": " ",
+                  "index": 20,
+                  "pos": "NN"
+                }
+              },
+              "NN"
+            ],
+            [
+              {
+                "nlpToken": {
+                  "characterOffsetBegin": 2205,
+                  "word": "Jennifer",
+                  "lemma": "Jennifer",
+                  "characterOffsetEnd": 2213,
+                  "speaker": "PER0",
+                  "ner": "PERSON",
+                  "after": " ",
+                  "originalText": "Jennifer",
+                  "before": " ",
+                  "index": 21,
+                  "pos": "NNP"
+                }
+              },
+              "NNP"
+            ],
+            [
+              {
+                "nlpToken": {
+                  "characterOffsetBegin": 2214,
+                  "word": "Palmieri",
+                  "lemma": "Palmieri",
+                  "characterOffsetEnd": 2222,
+                  "speaker": "PER0",
+                  "ner": "PERSON",
+                  "after": " ",
+                  "originalText": "Palmieri",
+                  "before": " ",
+                  "index": 22,
+                  "pos": "NNP"
+                }
+              },
+              "NNP"
+            ],
+            [
+              {
+                "nlpToken": {
+                  "characterOffsetBegin": 2223,
+                  "word": "entered",
+                  "lemma": "enter",
+                  "characterOffsetEnd": 2230,
+                  "speaker": "PER0",
+                  "ner": "O",
+                  "after": " ",
+                  "originalText": "entered",
+                  "before": " ",
+                  "index": 23,
+                  "pos": "VBD"
+                }
+              },
+              "VBD"
+            ],
+            [
+              {
+                "nlpToken": {
+                  "characterOffsetBegin": 2231,
+                  "word": "Clinton",
+                  "lemma": "Clinton",
+                  "characterOffsetEnd": 2238,
+                  "speaker": "PER0",
+                  "ner": "PERSON",
+                  "after": "",
+                  "originalText": "Clinton",
+                  "before": " ",
+                  "index": 24,
+                  "pos": "NNP"
+                }
+              },
+              "NNP"
+            ],
+            [
+              {
+                "nlpToken": {
+                  "characterOffsetBegin": 2238,
+                  "word": "'s",
+                  "lemma": "'s",
+                  "characterOffsetEnd": 2240,
+                  "speaker": "PER0",
+                  "ner": "O",
+                  "after": " ",
+                  "originalText": "'s",
+                  "before": "",
+                  "index": 25,
+                  "pos": "POS"
+                }
+              },
+              "POS"
+            ],
+            [
+              {
+                "nlpToken": {
+                  "characterOffsetBegin": 2241,
+                  "word": "cabin",
+                  "lemma": "cabin",
+                  "characterOffsetEnd": 2246,
+                  "speaker": "PER0",
+                  "ner": "O",
+                  "after": "",
+                  "originalText": "cabin",
+                  "before": " ",
+                  "index": 26,
+                  "pos": "NN"
+                }
+              },
+              "NN"
+            ],
+            [
+              {
+                "nlpToken": {
+                  "characterOffsetBegin": 2246,
+                  "word": ",",
+                  "lemma": ",",
+                  "characterOffsetEnd": 2247,
+                  "speaker": "PER0",
+                  "ner": "O",
+                  "after": " ",
+                  "originalText": ",",
+                  "before": "",
+                  "index": 27,
+                  "pos": ","
+                }
+              },
+              ","
+            ],
+            [
+              {
+                "nlpToken": {
+                  "characterOffsetBegin": 2248,
+                  "word": "shielded",
+                  "lemma": "shield",
+                  "characterOffsetEnd": 2256,
+                  "speaker": "PER0",
+                  "ner": "O",
+                  "after": " ",
+                  "originalText": "shielded",
+                  "before": " ",
+                  "index": 28,
+                  "pos": "VBN"
+                }
+              },
+              "VBN"
+            ],
+            [
+              {
+                "nlpToken": {
+                  "characterOffsetBegin": 2257,
+                  "word": "by",
+                  "lemma": "by",
+                  "characterOffsetEnd": 2259,
+                  "speaker": "PER0",
+                  "ner": "O",
+                  "after": " ",
+                  "originalText": "by",
+                  "before": " ",
+                  "index": 29,
+                  "pos": "IN"
+                }
+              },
+              "IN"
+            ],
+            [
+              {
+                "nlpToken": {
+                  "characterOffsetBegin": 2260,
+                  "word": "a",
+                  "lemma": "a",
+                  "characterOffsetEnd": 2261,
+                  "speaker": "PER0",
+                  "ner": "O",
+                  "after": " ",
+                  "originalText": "a",
+                  "before": " ",
+                  "index": 30,
+                  "pos": "DT"
+                }
+              },
+              "DT"
+            ],
+            [
+              {
+                "nlpToken": {
+                  "characterOffsetBegin": 2262,
+                  "word": "curtain",
+                  "lemma": "curtain",
+                  "characterOffsetEnd": 2269,
+                  "speaker": "PER0",
+                  "ner": "O",
+                  "after": "",
+                  "originalText": "curtain",
+                  "before": " ",
+                  "index": 31,
+                  "pos": "NN"
+                }
+              },
+              "NN"
+            ],
+            [
+              {
+                "nlpToken": {
+                  "characterOffsetBegin": 2269,
+                  "word": ",",
+                  "lemma": ",",
+                  "characterOffsetEnd": 2270,
+                  "speaker": "PER0",
+                  "ner": "O",
+                  "after": " ",
+                  "originalText": ",",
+                  "before": "",
+                  "index": 32,
+                  "pos": ","
+                }
+              },
+              ","
+            ],
+            [
+              {
+                "nlpToken": {
+                  "characterOffsetBegin": 2271,
+                  "word": "moments",
+                  "lemma": "moment",
+                  "characterOffsetEnd": 2278,
+                  "speaker": "PER0",
+                  "ner": "O",
+                  "after": " ",
+                  "originalText": "moments",
+                  "before": " ",
+                  "index": 33,
+                  "pos": "NNS"
+                }
+              },
+              "NNS"
+            ],
+            [
+              {
+                "nlpToken": {
+                  "characterOffsetBegin": 2279,
+                  "word": "before",
+                  "lemma": "before",
+                  "characterOffsetEnd": 2285,
+                  "speaker": "PER0",
+                  "ner": "O",
+                  "after": " ",
+                  "originalText": "before",
+                  "before": " ",
+                  "index": 34,
+                  "pos": "IN"
+                }
+              },
+              "IN"
+            ],
+            [
+              {
+                "nlpToken": {
+                  "characterOffsetBegin": 2286,
+                  "word": "she",
+                  "lemma": "she",
+                  "characterOffsetEnd": 2289,
+                  "speaker": "PER0",
+                  "ner": "O",
+                  "after": " ",
+                  "originalText": "she",
+                  "before": " ",
+                  "index": 35,
+                  "pos": "PRP"
+                }
+              },
+              "PRP"
+            ],
+            [
+              {
+                "nlpToken": {
+                  "characterOffsetBegin": 2290,
+                  "word": "spoke",
+                  "lemma": "speak",
+                  "characterOffsetEnd": 2295,
+                  "speaker": "PER0",
+                  "ner": "O",
+                  "after": " ",
+                  "originalText": "spoke",
+                  "before": " ",
+                  "index": 36,
+                  "pos": "VBD"
+                }
+              },
+              "VBD"
+            ],
+            [
+              {
+                "nlpToken": {
+                  "characterOffsetBegin": 2296,
+                  "word": "to",
+                  "lemma": "to",
+                  "characterOffsetEnd": 2298,
+                  "speaker": "PER0",
+                  "ner": "O",
+                  "after": " ",
+                  "originalText": "to",
+                  "before": " ",
+                  "index": 37,
+                  "pos": "TO"
+                }
+              },
+              "TO"
+            ],
+            [
+              {
+                "nlpToken": {
+                  "characterOffsetBegin": 2299,
+                  "word": "the",
+                  "lemma": "the",
+                  "characterOffsetEnd": 2302,
+                  "speaker": "PER0",
+                  "ner": "O",
+                  "after": " ",
+                  "originalText": "the",
+                  "before": " ",
+                  "index": 38,
+                  "pos": "DT"
+                }
+              },
+              "DT"
+            ],
+            [
+              {
+                "nlpToken": {
+                  "characterOffsetBegin": 2303,
+                  "word": "press",
+                  "lemma": "press",
+                  "characterOffsetEnd": 2308,
+                  "speaker": "PER0",
+                  "ner": "O",
+                  "after": "",
+                  "originalText": "press",
+                  "before": " ",
+                  "index": 39,
+                  "pos": "NN"
+                }
+              },
+              "NN"
             ]
           ],
-          "nlpIndexSentence": 17,
-          "score": 1.0
+          "score": 1.0,
+          "text": "news broke , aides huddled toward the front of the plane , reading from an iPad , and spokeswoman Jennifer Palmieri entered Clinton 's cabin , shielded by a curtain , moments before she spoke to the press",
+          "nlpIndexSentence": 2
         }
-      ],
+      ]
+    },
+    "where": {
       "annotated": [
         {
           "coderPhraseCount": 3
@@ -235,9 +789,15 @@
       "label": "where"
     },
     "what": {
+      "annotated": [
+        {
+          "text": "has found no criminal wrongdoing in new Clinton emails",
+          "coderPhraseCount": 3
+        }
+      ],
+      "label": "what",
       "extracted": [
         {
-          "text": "committed no criminal wrongdoing",
           "parts": [
             [
               {
@@ -312,16 +872,10 @@
               "NN"
             ]
           ],
-          "score": 1.0
+          "score": 1.0,
+          "text": "committed no criminal wrongdoing"
         }
-      ],
-      "annotated": [
-        {
-          "text": "has found no criminal wrongdoing in new Clinton emails",
-          "coderPhraseCount": 3
-        }
-      ],
-      "label": "what"
+      ]
     }
   },
   "description": "James Comey says batch of emails 'have not changed conclusion' but Trump doubts review, saying: 'You can't review 650,000 emails in eight days'",

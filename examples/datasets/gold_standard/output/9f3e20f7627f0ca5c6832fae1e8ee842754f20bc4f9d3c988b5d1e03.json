@@ -6,9 +6,15 @@
   "category": "clinton clear",
   "fiveWoneH": {
     "who": {
+      "annotated": [
+        {
+          "text": "Donald Trump",
+          "coderPhraseCount": 3
+        }
+      ],
+      "label": "who",
       "extracted": [
         {
-          "text": "Hillary Clinton",
           "parts": [
             [
               {
@@ -47,58 +53,13 @@
               "NNP"
             ]
           ],
-          "nlpIndexSentence": 5,
-          "score": 1.0
+          "score": 1.0,
+          "text": "Hillary Clinton",
+          "nlpIndexSentence": 5
         }
-      ],
-      "annotated": [
-        {
-          "text": "Donald Trump",
-          "coderPhraseCount": 3
-        }
-      ],
-      "label": "who"
+      ]
     },
     "when": {
-      "extracted": [
-        {
-          "text": "today",
-          "enhancement": {
-            "timex": {
-              "start_date": "2016-11-07T00:00:00",
-              "end_date": "2016-11-07T23:59:59"
-            }
-          },
-          "parts": [
-            [
-              {
-                "nlpToken": {
-                  "characterOffsetBegin": 3316,
-                  "word": "today",
-                  "lemma": "today",
-                  "timex": {
-                    "value": "2016-11-07",
-                    "tid": "t11",
-                    "type": "DATE"
-                  },
-                  "before": " ",
-                  "characterOffsetEnd": 3321,
-                  "originalText": "today",
-                  "normalizedNER": "2016-11-07",
-                  "speaker": "PER0",
-                  "after": " ",
-                  "ner": "DATE",
-                  "index": 9,
-                  "pos": "NN"
-                }
-              },
-              "NN"
-            ]
-          ],
-          "nlpIndexSentence": 15,
-          "score": 0.6630101039366928
-        }
-      ],
       "annotated": [
         {
           "coderPhraseCount": 2,
@@ -108,32 +69,6 @@
       "label": "when"
     },
     "why": {
-      "extracted": [
-        {
-          "text": "there",
-          "parts": [
-            [
-              {
-                "nlpToken": {
-                  "characterOffsetBegin": 27,
-                  "word": "there",
-                  "lemma": "there",
-                  "speaker": "PER0",
-                  "after": " ",
-                  "pos": "EX",
-                  "ner": "O",
-                  "before": " ",
-                  "characterOffsetEnd": 32,
-                  "index": 5,
-                  "originalText": "there"
-                }
-              },
-              "EX"
-            ]
-          ],
-          "score": 0.42857142857142855
-        }
-      ],
       "annotated": [
         {
           "text": "Trump repeated his claims that a shadowy conspiracy is working to foil his bid to become president",
@@ -143,32 +78,6 @@
       "label": "why"
     },
     "how": {
-      "extracted": [
-        {
-          "text": "announced",
-          "parts": [
-            [
-              {
-                "nlpToken": {
-                  "characterOffsetBegin": 272,
-                  "word": "announced",
-                  "lemma": "announce",
-                  "characterOffsetEnd": 281,
-                  "speaker": "PER0",
-                  "ner": "O",
-                  "after": " ",
-                  "originalText": "announced",
-                  "before": " ",
-                  "index": 57,
-                  "pos": "VBD"
-                }
-              },
-              "VBD"
-            ]
-          ],
-          "score": 1.0
-        }
-      ],
       "annotated": [
         {
           "text": "announced",
@@ -179,57 +88,486 @@
           "coderPhraseCount": 1
         }
       ],
-      "label": "how"
-    },
-    "where": {
+      "label": "how",
       "extracted": [
         {
-          "text": "Minnesota",
-          "enhancement": {
-            "openstreetmap_nominatim": {
-              "place_id": "177600715",
-              "licence": "Data \u00a9 OpenStreetMap contributors, ODbL 1.0. http://www.openstreetmap.org/copyright",
-              "type": "administrative",
-              "class": "boundary",
-              "osm_id": "165471",
-              "boundingbox": [
-                43.4994288,
-                49.3844901,
-                -97.2392619,
-                -89.483385
-              ],
-              "osm_type": "relation",
-              "lon": "-94.6113288",
-              "display_name": "Minnesota, United States of America",
-              "importance": 0.29675663016581,
-              "icon": "https://nominatim.openstreetmap.org/images/mapicons/poi_boundary_administrative.p.20.png",
-              "lat": "45.9896587"
-            }
-          },
           "parts": [
             [
               {
                 "nlpToken": {
-                  "characterOffsetBegin": 4269,
-                  "word": "Minnesota",
-                  "lemma": "Minnesota",
-                  "characterOffsetEnd": 4278,
+                  "characterOffsetBegin": 4760,
+                  "word": "then",
+                  "lemma": "then",
+                  "characterOffsetEnd": 4764,
                   "speaker": "PER0",
-                  "ner": "LOCATION",
+                  "ner": "O",
+                  "after": "",
+                  "originalText": "then",
+                  "before": " ",
+                  "index": 2,
+                  "pos": "RB"
+                }
+              },
+              "RB"
+            ],
+            [
+              {
+                "nlpToken": {
+                  "characterOffsetBegin": 4764,
+                  "word": ",",
+                  "lemma": ",",
+                  "characterOffsetEnd": 4765,
+                  "speaker": "PER0",
+                  "ner": "O",
                   "after": " ",
-                  "originalText": "Minnesota",
+                  "originalText": ",",
+                  "before": "",
+                  "index": 3,
+                  "pos": ","
+                }
+              },
+              ","
+            ],
+            [
+              {
+                "nlpToken": {
+                  "characterOffsetBegin": 4766,
+                  "word": "national",
+                  "lemma": "national",
+                  "characterOffsetEnd": 4774,
+                  "speaker": "PER0",
+                  "ner": "O",
+                  "after": " ",
+                  "originalText": "national",
+                  "before": " ",
+                  "index": 4,
+                  "pos": "JJ"
+                }
+              },
+              "JJ"
+            ],
+            [
+              {
+                "nlpToken": {
+                  "characterOffsetBegin": 4775,
+                  "word": "polls",
+                  "lemma": "poll",
+                  "characterOffsetEnd": 4780,
+                  "speaker": "PER0",
+                  "ner": "O",
+                  "after": " ",
+                  "originalText": "polls",
+                  "before": " ",
+                  "index": 5,
+                  "pos": "NNS"
+                }
+              },
+              "NNS"
+            ],
+            [
+              {
+                "nlpToken": {
+                  "characterOffsetBegin": 4781,
+                  "word": "and",
+                  "lemma": "and",
+                  "characterOffsetEnd": 4784,
+                  "speaker": "PER0",
+                  "ner": "O",
+                  "after": " ",
+                  "originalText": "and",
+                  "before": " ",
+                  "index": 6,
+                  "pos": "CC"
+                }
+              },
+              "CC"
+            ],
+            [
+              {
+                "nlpToken": {
+                  "characterOffsetBegin": 4785,
+                  "word": "battleground",
+                  "lemma": "battleground",
+                  "characterOffsetEnd": 4797,
+                  "speaker": "PER0",
+                  "ner": "O",
+                  "after": " ",
+                  "originalText": "battleground",
                   "before": " ",
                   "index": 7,
+                  "pos": "NN"
+                }
+              },
+              "NN"
+            ],
+            [
+              {
+                "nlpToken": {
+                  "characterOffsetBegin": 4798,
+                  "word": "states",
+                  "lemma": "state",
+                  "characterOffsetEnd": 4804,
+                  "speaker": "PER0",
+                  "ner": "O",
+                  "after": " ",
+                  "originalText": "states",
+                  "before": " ",
+                  "index": 8,
+                  "pos": "NNS"
+                }
+              },
+              "NNS"
+            ],
+            [
+              {
+                "nlpToken": {
+                  "characterOffsetBegin": 4805,
+                  "word": "have",
+                  "lemma": "have",
+                  "characterOffsetEnd": 4809,
+                  "speaker": "PER0",
+                  "ner": "O",
+                  "after": " ",
+                  "originalText": "have",
+                  "before": " ",
+                  "index": 9,
+                  "pos": "VBP"
+                }
+              },
+              "VBP"
+            ],
+            [
+              {
+                "nlpToken": {
+                  "characterOffsetBegin": 4810,
+                  "word": "tightened",
+                  "lemma": "tighten",
+                  "characterOffsetEnd": 4819,
+                  "speaker": "PER0",
+                  "ner": "O",
+                  "after": "",
+                  "originalText": "tightened",
+                  "before": " ",
+                  "index": 10,
+                  "pos": "VBN"
+                }
+              },
+              "VBN"
+            ],
+            [
+              {
+                "nlpToken": {
+                  "characterOffsetBegin": 4819,
+                  "word": ",",
+                  "lemma": ",",
+                  "characterOffsetEnd": 4820,
+                  "speaker": "PER0",
+                  "ner": "O",
+                  "after": " ",
+                  "originalText": ",",
+                  "before": "",
+                  "index": 11,
+                  "pos": ","
+                }
+              },
+              ","
+            ],
+            [
+              {
+                "nlpToken": {
+                  "characterOffsetBegin": 4821,
+                  "word": "though",
+                  "lemma": "though",
+                  "characterOffsetEnd": 4827,
+                  "speaker": "PER0",
+                  "ner": "O",
+                  "after": " ",
+                  "originalText": "though",
+                  "before": " ",
+                  "index": 12,
+                  "pos": "IN"
+                }
+              },
+              "IN"
+            ],
+            [
+              {
+                "nlpToken": {
+                  "characterOffsetBegin": 4828,
+                  "word": "Clinton",
+                  "lemma": "Clinton",
+                  "characterOffsetEnd": 4835,
+                  "speaker": "PER0",
+                  "ner": "PERSON",
+                  "after": " ",
+                  "originalText": "Clinton",
+                  "before": " ",
+                  "index": 13,
                   "pos": "NNP"
                 }
               },
               "NNP"
+            ],
+            [
+              {
+                "nlpToken": {
+                  "characterOffsetBegin": 4836,
+                  "word": "still",
+                  "lemma": "still",
+                  "characterOffsetEnd": 4841,
+                  "speaker": "PER0",
+                  "ner": "O",
+                  "after": " ",
+                  "originalText": "still",
+                  "before": " ",
+                  "index": 14,
+                  "pos": "RB"
+                }
+              },
+              "RB"
+            ],
+            [
+              {
+                "nlpToken": {
+                  "characterOffsetBegin": 4842,
+                  "word": "appears",
+                  "lemma": "appear",
+                  "characterOffsetEnd": 4849,
+                  "speaker": "PER0",
+                  "ner": "O",
+                  "after": " ",
+                  "originalText": "appears",
+                  "before": " ",
+                  "index": 15,
+                  "pos": "VBZ"
+                }
+              },
+              "VBZ"
+            ],
+            [
+              {
+                "nlpToken": {
+                  "characterOffsetBegin": 4850,
+                  "word": "to",
+                  "lemma": "to",
+                  "characterOffsetEnd": 4852,
+                  "speaker": "PER0",
+                  "ner": "O",
+                  "after": " ",
+                  "originalText": "to",
+                  "before": " ",
+                  "index": 16,
+                  "pos": "TO"
+                }
+              },
+              "TO"
+            ],
+            [
+              {
+                "nlpToken": {
+                  "characterOffsetBegin": 4853,
+                  "word": "hold",
+                  "lemma": "hold",
+                  "characterOffsetEnd": 4857,
+                  "speaker": "PER0",
+                  "ner": "O",
+                  "after": " ",
+                  "originalText": "hold",
+                  "before": " ",
+                  "index": 17,
+                  "pos": "VB"
+                }
+              },
+              "VB"
+            ],
+            [
+              {
+                "nlpToken": {
+                  "characterOffsetBegin": 4858,
+                  "word": "an",
+                  "lemma": "a",
+                  "characterOffsetEnd": 4860,
+                  "speaker": "PER0",
+                  "ner": "O",
+                  "after": " ",
+                  "originalText": "an",
+                  "before": " ",
+                  "index": 18,
+                  "pos": "DT"
+                }
+              },
+              "DT"
+            ],
+            [
+              {
+                "nlpToken": {
+                  "characterOffsetBegin": 4861,
+                  "word": "edge",
+                  "lemma": "edge",
+                  "characterOffsetEnd": 4865,
+                  "speaker": "PER0",
+                  "ner": "O",
+                  "after": " ",
+                  "originalText": "edge",
+                  "before": " ",
+                  "index": 19,
+                  "pos": "NN"
+                }
+              },
+              "NN"
+            ],
+            [
+              {
+                "nlpToken": {
+                  "characterOffsetBegin": 4866,
+                  "word": "over",
+                  "lemma": "over",
+                  "characterOffsetEnd": 4870,
+                  "speaker": "PER0",
+                  "ner": "O",
+                  "after": " ",
+                  "originalText": "over",
+                  "before": " ",
+                  "index": 20,
+                  "pos": "IN"
+                }
+              },
+              "IN"
+            ],
+            [
+              {
+                "nlpToken": {
+                  "characterOffsetBegin": 4871,
+                  "word": "Trump",
+                  "lemma": "Trump",
+                  "characterOffsetEnd": 4876,
+                  "speaker": "PER0",
+                  "ner": "PERSON",
+                  "after": " ",
+                  "originalText": "Trump",
+                  "before": " ",
+                  "index": 21,
+                  "pos": "NNP"
+                }
+              },
+              "NNP"
+            ],
+            [
+              {
+                "nlpToken": {
+                  "characterOffsetBegin": 4877,
+                  "word": "in",
+                  "lemma": "in",
+                  "characterOffsetEnd": 4879,
+                  "speaker": "PER0",
+                  "ner": "O",
+                  "after": " ",
+                  "originalText": "in",
+                  "before": " ",
+                  "index": 22,
+                  "pos": "IN"
+                }
+              },
+              "IN"
+            ],
+            [
+              {
+                "nlpToken": {
+                  "characterOffsetBegin": 4880,
+                  "word": "the",
+                  "lemma": "the",
+                  "characterOffsetEnd": 4883,
+                  "speaker": "PER0",
+                  "ner": "O",
+                  "after": " ",
+                  "originalText": "the",
+                  "before": " ",
+                  "index": 23,
+                  "pos": "DT"
+                }
+              },
+              "DT"
+            ],
+            [
+              {
+                "nlpToken": {
+                  "characterOffsetBegin": 4884,
+                  "word": "campaign",
+                  "lemma": "campaign",
+                  "characterOffsetEnd": 4892,
+                  "speaker": "PER0",
+                  "ner": "O",
+                  "after": "",
+                  "originalText": "campaign",
+                  "before": " ",
+                  "index": 24,
+                  "pos": "NN"
+                }
+              },
+              "NN"
+            ],
+            [
+              {
+                "nlpToken": {
+                  "characterOffsetBegin": 4892,
+                  "word": "'s",
+                  "lemma": "'s",
+                  "characterOffsetEnd": 4894,
+                  "speaker": "PER0",
+                  "ner": "O",
+                  "after": " ",
+                  "originalText": "'s",
+                  "before": "",
+                  "index": 25,
+                  "pos": "POS"
+                }
+              },
+              "POS"
+            ],
+            [
+              {
+                "nlpToken": {
+                  "characterOffsetBegin": 4895,
+                  "word": "last",
+                  "lemma": "last",
+                  "characterOffsetEnd": 4899,
+                  "speaker": "PER0",
+                  "ner": "O",
+                  "after": " ",
+                  "originalText": "last",
+                  "before": " ",
+                  "index": 26,
+                  "pos": "JJ"
+                }
+              },
+              "JJ"
+            ],
+            [
+              {
+                "nlpToken": {
+                  "characterOffsetBegin": 4900,
+                  "word": "moments",
+                  "lemma": "moment",
+                  "characterOffsetEnd": 4907,
+                  "speaker": "PER0",
+                  "ner": "O",
+                  "after": "",
+                  "originalText": "moments",
+                  "before": " ",
+                  "index": 27,
+                  "pos": "NNS"
+                }
+              },
+              "NNS"
             ]
           ],
-          "nlpIndexSentence": 19,
-          "score": 1.0
+          "score": 1.0,
+          "text": "then , national polls and battleground states have tightened , though Clinton still appears to hold an edge over Trump in the campaign 's last moments",
+          "nlpIndexSentence": 2
         }
-      ],
+      ]
+    },
+    "where": {
       "annotated": [
         {
           "text": "Sterling Heights, Michigan",
@@ -239,9 +577,15 @@
       "label": "where"
     },
     "what": {
+      "annotated": [
+        {
+          "text": "slams \\u2018rigged\\u2019 FBI",
+          "coderPhraseCount": 3
+        }
+      ],
+      "label": "what",
       "extracted": [
         {
-          "text": "is guilty",
           "parts": [
             [
               {
@@ -280,17 +624,11 @@
               "JJ"
             ]
           ],
-          "nlpIndexSentence": 5,
-          "score": 1.0
+          "score": 1.0,
+          "text": "is guilty",
+          "nlpIndexSentence": 5
         }
-      ],
-      "annotated": [
-        {
-          "text": "slams \\u2018rigged\\u2019 FBI",
-          "coderPhraseCount": 3
-        }
-      ],
-      "label": "what"
+      ]
     }
   },
   "description": "Donald Trump slams 'rigged' FBI and claims it is impossible to read 650,000 emails in eight days",

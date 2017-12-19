@@ -1,323 +1,38 @@
 {
+  "originalFilename": "nytimes-3",
+  "category": "clinton blames comey",
+  "publisher": "nytimes",
+  "url": "http://www.nytimes.com/2016/11/13/us/politics/hillary-clinton-james-comey.html",
+  "mimeType": "text/xml",
   "filename": "f326929913960e17a3afe71085002a532beaca6d68c0770372a1832d",
   "title": "Hillary Clinton Blames F.B.I. Director for Election Loss",
-  "mimeType": "text/xml",
-  "parsingError": "true",
-  "date_publish": "2016-11-12 15:25:02",
+  "dId": "f326929913960e17a3afe71085002a532beaca6d68c0770372a1832d",
   "fiveWoneH": {
-    "who": {
-      "extracted": [
-        {
-          "text": "Hillary Clinton",
-          "parts": [
-            [
-              {
-                "nlpToken": {
-                  "characterOffsetBegin": 0,
-                  "word": "Hillary",
-                  "lemma": "Hillary",
-                  "characterOffsetEnd": 7,
-                  "speaker": "PER0",
-                  "ner": "PERSON",
-                  "after": " ",
-                  "originalText": "Hillary",
-                  "before": "",
-                  "index": 1,
-                  "pos": "NNP"
-                }
-              },
-              "NNP"
-            ],
-            [
-              {
-                "nlpToken": {
-                  "characterOffsetBegin": 8,
-                  "word": "Clinton",
-                  "lemma": "Clinton",
-                  "characterOffsetEnd": 15,
-                  "speaker": "PER0",
-                  "ner": "PERSON",
-                  "after": " ",
-                  "originalText": "Clinton",
-                  "before": " ",
-                  "index": 2,
-                  "pos": "NNP"
-                }
-              },
-              "NNP"
-            ]
-          ],
-          "score": 1.0
-        }
-      ],
-      "annotated": [
-        {
-          "text": "Hillary Clinton",
-          "coderPhraseCount": 3
-        }
-      ],
-      "label": "who"
-    },
-    "when": {
-      "extracted": [
-        {
-          "text": "the last minute",
-          "enhancement": {
-            "timex": {
-              "start_date": "2016-11-12T05:01:00",
-              "end_date": "2016-11-12T05:01:59"
-            }
-          },
-          "parts": [
-            [
-              {
-                "nlpToken": {
-                  "after": " ",
-                  "word": "the",
-                  "lemma": "the",
-                  "timex": {
-                    "value": "2016-11-12T05:01",
-                    "tid": "t17",
-                    "type": "TIME"
-                  },
-                  "before": " ",
-                  "characterOffsetEnd": 4819,
-                  "pos": "DT",
-                  "normalizedNER": "2016-11-12T05:01",
-                  "speaker": "PER0",
-                  "ner": "TIME",
-                  "characterOffsetBegin": 4816,
-                  "originalText": "the",
-                  "index": 36
-                }
-              },
-              "DT"
-            ],
-            [
-              {
-                "nlpToken": {
-                  "after": " ",
-                  "word": "last",
-                  "lemma": "last",
-                  "timex": {
-                    "value": "2016-11-12T05:01",
-                    "tid": "t17",
-                    "type": "TIME"
-                  },
-                  "before": " ",
-                  "characterOffsetEnd": 4824,
-                  "pos": "JJ",
-                  "normalizedNER": "2016-11-12T05:01",
-                  "speaker": "PER0",
-                  "ner": "TIME",
-                  "characterOffsetBegin": 4820,
-                  "originalText": "last",
-                  "index": 37
-                }
-              },
-              "JJ"
-            ],
-            [
-              {
-                "nlpToken": {
-                  "after": "",
-                  "word": "minute",
-                  "lemma": "minute",
-                  "timex": {
-                    "value": "2016-11-12T05:01",
-                    "tid": "t17",
-                    "type": "TIME"
-                  },
-                  "before": " ",
-                  "characterOffsetEnd": 4831,
-                  "pos": "NN",
-                  "normalizedNER": "2016-11-12T05:01",
-                  "speaker": "PER0",
-                  "ner": "TIME",
-                  "characterOffsetBegin": 4825,
-                  "originalText": "minute",
-                  "index": 38
-                }
-              },
-              "NN"
-            ]
-          ],
-          "nlpIndexSentence": 28,
-          "score": 0.6931121683527072
-        }
-      ],
-      "annotated": [
-        {
-          "coderPhraseCount": 3
-        }
-      ],
-      "label": "when"
-    },
-    "how": {
-      "extracted": [
-        {
-          "text": "said",
-          "parts": [
-            [
-              {
-                "nlpToken": {
-                  "characterOffsetBegin": 3118,
-                  "word": "said",
-                  "lemma": "say",
-                  "characterOffsetEnd": 3122,
-                  "speaker": "PER0",
-                  "ner": "O",
-                  "after": " ",
-                  "originalText": "said",
-                  "before": " ",
-                  "index": 12,
-                  "pos": "VBD"
-                }
-              },
-              "VBD"
-            ]
-          ],
-          "nlpIndexSentence": 18,
-          "score": 1.0
-        }
-      ],
-      "annotated": [
-        {
-          "text": "Blames",
-          "coderPhraseCount": 3
-        }
-      ],
-      "label": "how"
-    },
-    "where": {
-      "extracted": [
-        {
-          "text": "Nevada",
-          "enhancement": {
-            "openstreetmap_nominatim": {
-              "place_id": "177609862",
-              "licence": "Data \u00a9 OpenStreetMap contributors, ODbL 1.0. http://www.openstreetmap.org/copyright",
-              "type": "administrative",
-              "class": "boundary",
-              "osm_id": "165473",
-              "boundingbox": [
-                35.0018757,
-                42.002207,
-                -120.0057276,
-                -114.039648
-              ],
-              "osm_type": "relation",
-              "lon": "-116.8537227",
-              "display_name": "Nevada, United States of America",
-              "importance": 0.28636169022291,
-              "icon": "https://nominatim.openstreetmap.org/images/mapicons/poi_boundary_administrative.p.20.png",
-              "lat": "39.5158825"
-            }
-          },
-          "parts": [
-            [
-              {
-                "nlpToken": {
-                  "characterOffsetBegin": 2519,
-                  "word": "Nevada",
-                  "lemma": "Nevada",
-                  "characterOffsetEnd": 2525,
-                  "speaker": "PER0",
-                  "ner": "LOCATION",
-                  "after": "",
-                  "originalText": "Nevada",
-                  "before": " ",
-                  "index": 41,
-                  "pos": "NNP"
-                }
-              },
-              "NNP"
-            ]
-          ],
-          "nlpIndexSentence": 15,
-          "score": 1.0
-        }
-      ],
-      "annotated": [
-        {
-          "text": "Saturday",
-          "coderPhraseCount": 3
-        }
-      ],
-      "label": "where"
-    },
-    "why": {
-      "extracted": [
-        {
-          "text": "Hillary Clinton",
-          "parts": [
-            [
-              {
-                "nlpToken": {
-                  "characterOffsetBegin": 0,
-                  "word": "Hillary",
-                  "lemma": "Hillary",
-                  "speaker": "PER0",
-                  "after": " ",
-                  "pos": "NNP",
-                  "ner": "PERSON",
-                  "before": "",
-                  "characterOffsetEnd": 7,
-                  "index": 1,
-                  "originalText": "Hillary"
-                }
-              },
-              "NNP"
-            ],
-            [
-              {
-                "nlpToken": {
-                  "characterOffsetBegin": 8,
-                  "word": "Clinton",
-                  "lemma": "Clinton",
-                  "speaker": "PER0",
-                  "after": " ",
-                  "pos": "NNP",
-                  "ner": "PERSON",
-                  "before": " ",
-                  "characterOffsetEnd": 15,
-                  "index": 2,
-                  "originalText": "Clinton"
-                }
-              },
-              "NNP"
-            ]
-          ],
-          "score": 0.42857142857142855
-        }
-      ],
-      "annotated": [
-        {
-          "text": "he had revived the inquiry into her use of a private email server caused her to lose",
-          "coderPhraseCount": 3
-        }
-      ],
-      "label": "why"
-    },
     "what": {
+      "annotated": [
+        {
+          "coderPhraseCount": 3,
+          "text": "Blames F.B.I. Director for Election Loss"
+        }
+      ],
+      "label": "what",
       "extracted": [
         {
-          "text": "Blames F.B.I. Director",
           "parts": [
             [
               {
                 "nlpToken": {
-                  "characterOffsetBegin": 16,
+                  "before": " ",
                   "word": "Blames",
+                  "index": 3,
                   "lemma": "blame",
-                  "characterOffsetEnd": 22,
-                  "speaker": "PER0",
+                  "characterOffsetBegin": 16,
+                  "pos": "VBZ",
+                  "originalText": "Blames",
                   "ner": "O",
                   "after": " ",
-                  "originalText": "Blames",
-                  "before": " ",
-                  "index": 3,
-                  "pos": "VBZ"
+                  "characterOffsetEnd": 22,
+                  "speaker": "PER0"
                 }
               },
               "VBZ"
@@ -325,17 +40,17 @@
             [
               {
                 "nlpToken": {
-                  "characterOffsetBegin": 23,
+                  "before": " ",
                   "word": "F.B.I.",
+                  "index": 4,
                   "lemma": "F.B.I.",
-                  "characterOffsetEnd": 29,
-                  "speaker": "PER0",
+                  "characterOffsetBegin": 23,
+                  "pos": "NNP",
+                  "originalText": "F.B.I.",
                   "ner": "ORGANIZATION",
                   "after": " ",
-                  "originalText": "F.B.I.",
-                  "before": " ",
-                  "index": 4,
-                  "pos": "NNP"
+                  "characterOffsetEnd": 29,
+                  "speaker": "PER0"
                 }
               },
               "NNP"
@@ -343,39 +58,379 @@
             [
               {
                 "nlpToken": {
-                  "characterOffsetBegin": 30,
+                  "before": " ",
                   "word": "Director",
+                  "index": 5,
                   "lemma": "Director",
-                  "characterOffsetEnd": 38,
-                  "speaker": "PER0",
+                  "characterOffsetBegin": 30,
+                  "pos": "NNP",
+                  "originalText": "Director",
                   "ner": "O",
                   "after": " ",
-                  "originalText": "Director",
-                  "before": " ",
-                  "index": 5,
-                  "pos": "NNP"
+                  "characterOffsetEnd": 38,
+                  "speaker": "PER0"
                 }
               },
               "NNP"
             ]
           ],
-          "score": 1.0
+          "score": 1.0,
+          "text": "Blames F.B.I. Director"
         }
-      ],
+      ]
+    },
+    "how": {
       "annotated": [
         {
-          "text": "Blames F.B.I. Director for Election Loss",
+          "coderPhraseCount": 3,
+          "text": "Blames"
+        }
+      ],
+      "label": "how",
+      "extracted": [
+        {
+          "parts": [
+            [
+              {
+                "nlpToken": {
+                  "before": " ",
+                  "word": "leading",
+                  "index": 2,
+                  "lemma": "lead",
+                  "characterOffsetBegin": 389,
+                  "pos": "VBG",
+                  "originalText": "leading",
+                  "ner": "O",
+                  "after": " ",
+                  "characterOffsetEnd": 396,
+                  "speaker": "PER0"
+                }
+              },
+              "VBG"
+            ],
+            [
+              {
+                "nlpToken": {
+                  "before": " ",
+                  "word": "in",
+                  "index": 3,
+                  "lemma": "in",
+                  "characterOffsetBegin": 397,
+                  "pos": "IN",
+                  "originalText": "in",
+                  "ner": "O",
+                  "after": " ",
+                  "characterOffsetEnd": 399,
+                  "speaker": "PER0"
+                }
+              },
+              "IN"
+            ],
+            [
+              {
+                "nlpToken": {
+                  "before": " ",
+                  "word": "polls",
+                  "index": 4,
+                  "lemma": "poll",
+                  "characterOffsetBegin": 400,
+                  "pos": "NNS",
+                  "originalText": "polls",
+                  "ner": "O",
+                  "after": " ",
+                  "characterOffsetEnd": 405,
+                  "speaker": "PER0"
+                }
+              },
+              "NNS"
+            ],
+            [
+              {
+                "nlpToken": {
+                  "before": " ",
+                  "word": "in",
+                  "index": 5,
+                  "lemma": "in",
+                  "characterOffsetBegin": 406,
+                  "pos": "IN",
+                  "originalText": "in",
+                  "ner": "O",
+                  "after": " ",
+                  "characterOffsetEnd": 408,
+                  "speaker": "PER0"
+                }
+              },
+              "IN"
+            ],
+            [
+              {
+                "nlpToken": {
+                  "before": " ",
+                  "word": "many",
+                  "index": 6,
+                  "lemma": "many",
+                  "characterOffsetBegin": 409,
+                  "pos": "JJ",
+                  "originalText": "many",
+                  "ner": "O",
+                  "after": " ",
+                  "characterOffsetEnd": 413,
+                  "speaker": "PER0"
+                }
+              },
+              "JJ"
+            ],
+            [
+              {
+                "nlpToken": {
+                  "before": " ",
+                  "word": "battleground",
+                  "index": 7,
+                  "lemma": "battleground",
+                  "characterOffsetBegin": 414,
+                  "pos": "NN",
+                  "originalText": "battleground",
+                  "ner": "O",
+                  "after": " ",
+                  "characterOffsetEnd": 426,
+                  "speaker": "PER0"
+                }
+              },
+              "NN"
+            ],
+            [
+              {
+                "nlpToken": {
+                  "before": " ",
+                  "word": "states",
+                  "index": 8,
+                  "lemma": "state",
+                  "characterOffsetBegin": 427,
+                  "pos": "NNS",
+                  "originalText": "states",
+                  "ner": "O",
+                  "after": "",
+                  "characterOffsetEnd": 433,
+                  "speaker": "PER0"
+                }
+              },
+              "NNS"
+            ],
+            [
+              {
+                "nlpToken": {
+                  "before": "",
+                  "word": ",",
+                  "index": 9,
+                  "lemma": ",",
+                  "characterOffsetBegin": 433,
+                  "pos": ",",
+                  "originalText": ",",
+                  "ner": "O",
+                  "after": " ",
+                  "characterOffsetEnd": 434,
+                  "speaker": "PER0"
+                }
+              },
+              ","
+            ],
+            [
+              {
+                "nlpToken": {
+                  "before": " ",
+                  "word": "Mrs.",
+                  "index": 10,
+                  "lemma": "Mrs.",
+                  "characterOffsetBegin": 435,
+                  "pos": "NNP",
+                  "originalText": "Mrs.",
+                  "ner": "O",
+                  "after": " ",
+                  "characterOffsetEnd": 439,
+                  "speaker": "PER0"
+                }
+              },
+              "NNP"
+            ],
+            [
+              {
+                "nlpToken": {
+                  "before": " ",
+                  "word": "Clinton",
+                  "index": 11,
+                  "lemma": "Clinton",
+                  "characterOffsetBegin": 440,
+                  "pos": "NNP",
+                  "originalText": "Clinton",
+                  "ner": "PERSON",
+                  "after": " ",
+                  "characterOffsetEnd": 447,
+                  "speaker": "PER0"
+                }
+              },
+              "NNP"
+            ],
+            [
+              {
+                "nlpToken": {
+                  "before": " ",
+                  "word": "told",
+                  "index": 12,
+                  "lemma": "tell",
+                  "characterOffsetBegin": 448,
+                  "pos": "VBD",
+                  "originalText": "told",
+                  "ner": "O",
+                  "after": " ",
+                  "characterOffsetEnd": 452,
+                  "speaker": "PER0"
+                }
+              },
+              "VBD"
+            ],
+            [
+              {
+                "nlpToken": {
+                  "before": " ",
+                  "word": "the",
+                  "index": 13,
+                  "lemma": "the",
+                  "characterOffsetBegin": 453,
+                  "pos": "DT",
+                  "originalText": "the",
+                  "ner": "O",
+                  "after": " ",
+                  "characterOffsetEnd": 456,
+                  "speaker": "PER0"
+                }
+              },
+              "DT"
+            ],
+            [
+              {
+                "nlpToken": {
+                  "before": " ",
+                  "word": "donors",
+                  "index": 14,
+                  "lemma": "donor",
+                  "characterOffsetBegin": 457,
+                  "pos": "NNS",
+                  "originalText": "donors",
+                  "ner": "O",
+                  "after": " ",
+                  "characterOffsetEnd": 463,
+                  "speaker": "PER0"
+                }
+              },
+              "NNS"
+            ],
+            [
+              {
+                "nlpToken": {
+                  "before": " ",
+                  "word": "on",
+                  "index": 15,
+                  "lemma": "on",
+                  "characterOffsetBegin": 464,
+                  "pos": "IN",
+                  "originalText": "on",
+                  "ner": "O",
+                  "after": " ",
+                  "characterOffsetEnd": 466,
+                  "speaker": "PER0"
+                }
+              },
+              "IN"
+            ]
+          ],
+          "score": 1.0,
+          "text": "leading in polls in many battleground states , Mrs. Clinton told the donors on",
+          "nlpIndexSentence": 2
+        }
+      ]
+    },
+    "when": {
+      "annotated": [
+        {
           "coderPhraseCount": 3
         }
       ],
-      "label": "what"
+      "label": "when"
+    },
+    "why": {
+      "annotated": [
+        {
+          "coderPhraseCount": 3,
+          "text": "he had revived the inquiry into her use of a private email server caused her to lose"
+        }
+      ],
+      "label": "why"
+    },
+    "who": {
+      "annotated": [
+        {
+          "coderPhraseCount": 3,
+          "text": "Hillary Clinton"
+        }
+      ],
+      "label": "who",
+      "extracted": [
+        {
+          "parts": [
+            [
+              {
+                "nlpToken": {
+                  "before": "",
+                  "word": "Hillary",
+                  "index": 1,
+                  "lemma": "Hillary",
+                  "characterOffsetBegin": 0,
+                  "pos": "NNP",
+                  "originalText": "Hillary",
+                  "ner": "PERSON",
+                  "after": " ",
+                  "characterOffsetEnd": 7,
+                  "speaker": "PER0"
+                }
+              },
+              "NNP"
+            ],
+            [
+              {
+                "nlpToken": {
+                  "before": " ",
+                  "word": "Clinton",
+                  "index": 2,
+                  "lemma": "Clinton",
+                  "characterOffsetBegin": 8,
+                  "pos": "NNP",
+                  "originalText": "Clinton",
+                  "ner": "PERSON",
+                  "after": " ",
+                  "characterOffsetEnd": 15,
+                  "speaker": "PER0"
+                }
+              },
+              "NNP"
+            ]
+          ],
+          "score": 1.0,
+          "text": "Hillary Clinton"
+        }
+      ]
+    },
+    "where": {
+      "annotated": [
+        {
+          "coderPhraseCount": 3,
+          "text": "Saturday"
+        }
+      ],
+      "label": "where"
     }
   },
   "description": "Mrs. Clinton said on Saturday that the announcement by James B. Comey 11 days before the election that he had revived the inquiry into her use of a private email server caused her to lose.",
+  "parsingError": "true",
   "text": "Her campaign said the seemingly positive outcome had only hurt it with voters who did not trust Mrs. Clinton and were receptive to Mr. Trump's claims of a \"rigged system.\" In particular, white suburban women who had been on the fence were reminded of the email imbroglio and broke decidedly in Mr. Trump's favor, aides said. After leading in polls in many battleground states, Mrs. Clinton told the donors on Saturday, \"we dropped, and we had to keep really pushing to regain our advantage, which going into last weekend we had.\" \"We were once again up in all but two of the battleground states, and we were up considerably in some that we ended up losing,\" Mrs. Clinton said. \"And we were feeling like we had to put it back together.\" Presidential candidates have a long history of blaming forces outside their control for their losses. In 2004, John Kerry linked his defeat to a videotape of Osama bin Laden that appeared days before the election, stoking fears about terrorism. In 2012, Mitt Romney told donors he had lost because President Obama had vowed to bestow \"gifts\" on Democratic special interests groups, namely African-Americans, Hispanics and young people. Mrs. Clinton's contention appears to be more rooted in reality -- and hard data. An internal campaign memo with polling data said that \"there is no question that a week from Election Day, Secretary Clinton was poised for a historic win,\" but that, in the end, \"late-breaking developments in the race proved one hurdle too many for us to overcome.\" Mrs. Clinton lost narrowly in several battleground states, and by the time all ballots are counted, she appears poised to win the popular vote by more than two million votes. Still, Mrs. Clinton's instinct to shun any personal responsibility angered some Democrats. Several donors on the call, while deeply bitter about Mr. Comey's actions, said they believed that Mrs. Clinton and her campaign had suffered avoidable missteps that handed the election to an unacceptable opponent. They pointed to the campaign's lack of a compelling message for white working-class voters and to decisions years ago by Mrs. Clinton to use a private email address at the State Department and to accept millions of dollars for speeches to Wall Street. \"There is a special place in hell for Clinton staff, allegedly including Cheryl Mills, that okayed the email server setup,\" Jim Manley, a Democratic strategist and former senior aide to Senator Harry Reid of Nevada, wrote on Sidewire, a social media site, referring to a longtime aide and lawyer to Mrs. Clinton. Mrs. Clinton's campaign was so confident in her victory that her aides popped open Champagne on the campaign plane early Tuesday. But that conviction, aides would later learn, was based largely on erroneous data showing that young, black and Latino voters and suburban women who had been turned off by Mr. Trump's comments but viewed Mrs. Clinton unfavorably would turn out for her in higher numbers than they ultimately did. Exit polls conducted by Edison Research found that among people who said they had decided in the final week before Election Day, 47 percent voted for Mr. Trump and 42 percent for Mrs. Clinton. As early as Wednesday morning, aides began to explain to Democrats shaken by the loss that the campaign's sophisticated data modeling had not taken into account the bombshell F.B.I. announcement. Mr. Comey's letters to Congress went against the F.B.I.'s longstanding tradition of avoiding decisions that could affect elections, but he told aides that he felt he had no choice because he had already weighed in on the case so publicly. In July, he had taken the unusual step of publicly announcing that the F.B.I. would not charge Mrs. Clinton. At the time, she believed she had finally put the issue to rest. And after the final debate on Oct. 19 in Las Vegas, she emerged in such a strong position that she began to focus on campaigning for down-ballot Democrats and planned a campaign stop in traditionally Republican Arizona. \"We felt so good about where we were,\" Mrs. Clinton told donors. Before Mr. Comey's first letter to Congress, she added, \"we just had a real wind at our back.\" Mr. Trump seized on the letter, telling voters in Nevada the Saturday before Election Day that \"the F.B.I. has reopened its criminal investigation into Hillary Clinton,\" and that the matter \"would grind government to a halt\" should Mrs. Clinton win the White House. The F.B.I.'s examination of the new emails did not in fact reopen the investigation. Democratic pollsters attributed Mr. Trump's laser-thin victories in Pennsylvania, Michigan and Wisconsin -- states that President Obama had won -- largely to a drifting of college-educated suburban women to the Republican nominee at the last minute, because of the renewed focus on Mrs. Clinton's email server. \"We lost with college-educated whites after leading with them all summer,\" a Clinton spokesman, Brian Fallon, said on Wednesday. \"Five more days of reminders about Comey, and they gravitated back to Trump.\" Before Mrs. Clinton spoke on Saturday, her finance director, Dennis Cheng, thanked the donors on the call, each of whom had raised at least $100,000. The campaign brought in nearly $1 billion to spend heavily on data efforts, to disperse hundreds of staff members to battleground states, and to air television advertisements -- only to fall short to Mr. Trump's upstart operation. Donors conceded that, ultimately, no amount of money could match Mr. Trump's crisp pitch, aimed at the economically downtrodden, to \"make America great again.\" \"You can have the greatest field program, and we did -- he had nothing,\" said Jay S. Jacobs, a prominent New York Democrat and donor to Mrs. Clinton. \"You can have better ads, paid for by greater funds, and we did. Unfortunately, Trump had the winning argument.\" Mrs. Clinton has kept a low profile since her concession speech at a Midtown Manhattan hotel on Wednesday. On Thursday, a young mother with her 13-month-old daughter spotted Mrs. Clinton walking her dogs near her home in Chappaqua, N.Y., posting a photo of the defeated candidate on Facebook that quickly went viral along with the hashtag #ImStillWithHer. On Friday night, Mrs. Clinton thanked volunteers on a nationwide conference call. \"Look, I'm not going to sugarcoat it,\" she said, sighing. \"These have been very, very tough days.\"",
-  "url": "http://www.nytimes.com/2016/11/13/us/politics/hillary-clinton-james-comey.html",
-  "publisher": "nytimes",
-  "originalFilename": "nytimes-3",
-  "category": "clinton blames comey",
-  "dId": "f326929913960e17a3afe71085002a532beaca6d68c0770372a1832d"
+  "date_publish": "2016-11-12 15:25:02"
 }

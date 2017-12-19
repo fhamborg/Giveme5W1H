@@ -6,9 +6,15 @@
   "category": "trump and obama",
   "fiveWoneH": {
     "who": {
+      "annotated": [
+        {
+          "text": "Barack Obama",
+          "coderPhraseCount": 3
+        }
+      ],
+      "label": "who",
       "extracted": [
         {
-          "text": "US President Barack Obama",
           "parts": [
             [
               {
@@ -83,57 +89,12 @@
               "NNP"
             ]
           ],
-          "score": 1.0
+          "score": 1.0,
+          "text": "US President Barack Obama"
         }
-      ],
-      "annotated": [
-        {
-          "text": "Barack Obama",
-          "coderPhraseCount": 3
-        }
-      ],
-      "label": "who"
+      ]
     },
     "when": {
-      "extracted": [
-        {
-          "text": "Thursday",
-          "enhancement": {
-            "timex": {
-              "start_date": "2016-11-10T00:00:00",
-              "end_date": "2016-11-10T23:59:59"
-            }
-          },
-          "parts": [
-            [
-              {
-                "nlpToken": {
-                  "characterOffsetBegin": 268,
-                  "word": "Thursday",
-                  "lemma": "Thursday",
-                  "timex": {
-                    "value": "2016-11-10",
-                    "tid": "t2",
-                    "type": "DATE"
-                  },
-                  "before": " ",
-                  "characterOffsetEnd": 276,
-                  "originalText": "Thursday",
-                  "normalizedNER": "2016-11-10",
-                  "speaker": "PER0",
-                  "after": "",
-                  "ner": "DATE",
-                  "index": 35,
-                  "pos": "NNP"
-                }
-              },
-              "NNP"
-            ]
-          ],
-          "nlpIndexSentence": 1,
-          "score": 0.6930725396362813
-        }
-      ],
       "annotated": [
         {
           "text": "Thursday",
@@ -144,33 +105,6 @@
       "label": "when"
     },
     "why": {
-      "extracted": [
-        {
-          "text": "it",
-          "parts": [
-            [
-              {
-                "nlpToken": {
-                  "characterOffsetBegin": 177,
-                  "word": "it",
-                  "lemma": "it",
-                  "speaker": "PER0",
-                  "after": " ",
-                  "pos": "PRP",
-                  "ner": "O",
-                  "before": " ",
-                  "characterOffsetEnd": 179,
-                  "index": 15,
-                  "originalText": "it"
-                }
-              },
-              "PRP"
-            ]
-          ],
-          "nlpIndexSentence": 1,
-          "score": 0.4174603174603174
-        }
-      ],
       "annotated": [
         {
           "coderPhraseCount": 2
@@ -179,88 +113,204 @@
       "label": "why"
     },
     "how": {
-      "extracted": [
-        {
-          "text": "excellent",
-          "parts": [
-            [
-              {
-                "nlpToken": {
-                  "characterOffsetBegin": 96,
-                  "word": "excellent",
-                  "lemma": "excellent",
-                  "characterOffsetEnd": 105,
-                  "speaker": "2",
-                  "ner": "O",
-                  "after": "",
-                  "originalText": "excellent",
-                  "before": "",
-                  "index": 16,
-                  "pos": "JJ"
-                }
-              },
-              "JJ"
-            ]
-          ],
-          "score": 1.0
-        }
-      ],
       "annotated": [
         {
           "text": "excellent",
           "coderPhraseCount": 2
         }
       ],
-      "label": "how"
-    },
-    "where": {
+      "label": "how",
       "extracted": [
         {
-          "text": "US",
-          "enhancement": {
-            "openstreetmap_nominatim": {
-              "place_id": "177579678",
-              "licence": "Data \u00a9 OpenStreetMap contributors, ODbL 1.0. http://www.openstreetmap.org/copyright",
-              "type": "administrative",
-              "class": "boundary",
-              "osm_id": "148838",
-              "boundingbox": [
-                -14.7608358,
-                71.6048217,
-                -180.0,
-                180.0
-              ],
-              "osm_type": "relation",
-              "lon": "-100.4458825",
-              "display_name": "United States of America",
-              "importance": 0.2361730870995,
-              "icon": "https://nominatim.openstreetmap.org/images/mapicons/poi_boundary_administrative.p.20.png",
-              "lat": "39.7837304"
-            }
-          },
           "parts": [
             [
               {
                 "nlpToken": {
-                  "characterOffsetBegin": 0,
-                  "word": "US",
-                  "lemma": "US",
-                  "characterOffsetEnd": 2,
+                  "characterOffsetBegin": 400,
+                  "word": "they",
+                  "lemma": "they",
+                  "characterOffsetEnd": 404,
                   "speaker": "PER0",
-                  "ner": "LOCATION",
+                  "ner": "O",
                   "after": " ",
-                  "originalText": "US",
-                  "before": "",
-                  "index": 1,
-                  "pos": "NNP"
+                  "originalText": "they",
+                  "before": " ",
+                  "index": 4,
+                  "pos": "PRP"
                 }
               },
-              "NNP"
+              "PRP"
+            ],
+            [
+              {
+                "nlpToken": {
+                  "characterOffsetBegin": 405,
+                  "word": "had",
+                  "lemma": "have",
+                  "characterOffsetEnd": 408,
+                  "speaker": "PER0",
+                  "ner": "O",
+                  "after": " ",
+                  "originalText": "had",
+                  "before": " ",
+                  "index": 5,
+                  "pos": "VBD"
+                }
+              },
+              "VBD"
+            ],
+            [
+              {
+                "nlpToken": {
+                  "characterOffsetBegin": 409,
+                  "word": "talked",
+                  "lemma": "talk",
+                  "characterOffsetEnd": 415,
+                  "speaker": "PER0",
+                  "ner": "O",
+                  "after": " ",
+                  "originalText": "talked",
+                  "before": " ",
+                  "index": 6,
+                  "pos": "VBN"
+                }
+              },
+              "VBN"
+            ],
+            [
+              {
+                "nlpToken": {
+                  "characterOffsetBegin": 416,
+                  "word": "about",
+                  "lemma": "about",
+                  "characterOffsetEnd": 421,
+                  "speaker": "PER0",
+                  "ner": "O",
+                  "after": " ",
+                  "originalText": "about",
+                  "before": " ",
+                  "index": 7,
+                  "pos": "IN"
+                }
+              },
+              "IN"
+            ],
+            [
+              {
+                "nlpToken": {
+                  "characterOffsetBegin": 422,
+                  "word": "a",
+                  "lemma": "a",
+                  "characterOffsetEnd": 423,
+                  "speaker": "PER0",
+                  "ner": "O",
+                  "after": " ",
+                  "originalText": "a",
+                  "before": " ",
+                  "index": 8,
+                  "pos": "DT"
+                }
+              },
+              "DT"
+            ],
+            [
+              {
+                "nlpToken": {
+                  "characterOffsetBegin": 424,
+                  "word": "``",
+                  "lemma": "``",
+                  "characterOffsetEnd": 425,
+                  "speaker": "PER0",
+                  "ner": "O",
+                  "after": "",
+                  "originalText": "\"",
+                  "before": " ",
+                  "index": 9,
+                  "pos": "``"
+                }
+              },
+              "``"
+            ],
+            [
+              {
+                "nlpToken": {
+                  "characterOffsetBegin": 425,
+                  "word": "wide-range",
+                  "lemma": "wide-range",
+                  "characterOffsetEnd": 435,
+                  "speaker": "21",
+                  "ner": "O",
+                  "after": "",
+                  "originalText": "wide-range",
+                  "before": "",
+                  "index": 10,
+                  "pos": "JJ"
+                }
+              },
+              "JJ"
+            ],
+            [
+              {
+                "nlpToken": {
+                  "characterOffsetBegin": 435,
+                  "word": "''",
+                  "lemma": "''",
+                  "characterOffsetEnd": 436,
+                  "speaker": "PER0",
+                  "ner": "O",
+                  "after": " ",
+                  "originalText": "\"",
+                  "before": "",
+                  "index": 11,
+                  "pos": "''"
+                }
+              },
+              "''"
+            ],
+            [
+              {
+                "nlpToken": {
+                  "characterOffsetBegin": 437,
+                  "word": "of",
+                  "lemma": "of",
+                  "characterOffsetEnd": 439,
+                  "speaker": "PER0",
+                  "ner": "O",
+                  "after": " ",
+                  "originalText": "of",
+                  "before": " ",
+                  "index": 12,
+                  "pos": "IN"
+                }
+              },
+              "IN"
+            ],
+            [
+              {
+                "nlpToken": {
+                  "characterOffsetBegin": 440,
+                  "word": "issues",
+                  "lemma": "issue",
+                  "characterOffsetEnd": 446,
+                  "speaker": "PER0",
+                  "ner": "O",
+                  "after": "",
+                  "originalText": "issues",
+                  "before": " ",
+                  "index": 13,
+                  "pos": "NNS"
+                }
+              },
+              "NNS"
             ]
           ],
-          "score": 1.0
+          "score": 1.0,
+          "text": "they had talked about a \" wide-range \" of issues",
+          "nlpIndexSentence": 4
         }
-      ],
+      ]
+    },
+    "where": {
       "annotated": [
         {
           "text": "White House",
@@ -270,9 +320,15 @@
       "label": "where"
     },
     "what": {
+      "annotated": [
+        {
+          "text": "describes first meeting with Donald Trump at White House as 'excellent'",
+          "coderPhraseCount": 3
+        }
+      ],
+      "label": "what",
       "extracted": [
         {
-          "text": "has described his first meeting",
           "parts": [
             [
               {
@@ -366,16 +422,10 @@
               "NN"
             ]
           ],
-          "score": 1.0
+          "score": 1.0,
+          "text": "has described his first meeting"
         }
-      ],
-      "annotated": [
-        {
-          "text": "describes first meeting with Donald Trump at White House as 'excellent'",
-          "coderPhraseCount": 3
-        }
-      ],
-      "label": "what"
+      ]
     }
   },
   "description": "US President Barack Obama has described his first meeting with President-elect Donald Trump as \"excellent\". Mr Trump, who stormed to a shock election victory on Wednesday, said it was a \"great honour\" to meet Mr Obama at the White House during the transition talks on Thursday. The President said he was \"encouraged\" by their \"excellent\" discussion, which lasted for more than an hour.",

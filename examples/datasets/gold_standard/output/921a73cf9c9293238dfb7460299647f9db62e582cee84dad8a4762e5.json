@@ -1,262 +1,38 @@
 {
+  "originalFilename": "nytimes-1",
+  "category": "consulate attack",
+  "publisher": "nytimes",
+  "url": "http://www.nytimes.com/2016/11/11/world/asia/taliban-strike-german-consulate-in-afghan-city-of-mazar-i-sharif.html?_r=0",
+  "mimeType": "text/xml",
   "filename": "921a73cf9c9293238dfb7460299647f9db62e582cee84dad8a4762e5",
   "title": "Taliban Strike German Consulate in Afghan City of Mazar-i-Sharif",
-  "mimeType": "text/xml",
-  "parsingError": "true",
-  "date_publish": "2016-11-10 15:50:40",
+  "dId": "921a73cf9c9293238dfb7460299647f9db62e582cee84dad8a4762e5",
   "fiveWoneH": {
-    "who": {
-      "extracted": [
-        {
-          "text": "Taliban insurgents",
-          "parts": [
-            [
-              {
-                "nlpToken": {
-                  "characterOffsetBegin": 95,
-                  "word": "Taliban",
-                  "lemma": "Taliban",
-                  "characterOffsetEnd": 102,
-                  "speaker": "PER0",
-                  "ner": "ORGANIZATION",
-                  "after": " ",
-                  "originalText": "Taliban",
-                  "before": " ",
-                  "index": 6,
-                  "pos": "NNP"
-                }
-              },
-              "NNP"
-            ],
-            [
-              {
-                "nlpToken": {
-                  "characterOffsetBegin": 103,
-                  "word": "insurgents",
-                  "lemma": "insurgent",
-                  "characterOffsetEnd": 113,
-                  "speaker": "PER0",
-                  "ner": "O",
-                  "after": " ",
-                  "originalText": "insurgents",
-                  "before": " ",
-                  "index": 7,
-                  "pos": "NNS"
-                }
-              },
-              "NNS"
-            ]
-          ],
-          "nlpIndexSentence": 1,
-          "score": 1.0
-        }
-      ],
-      "annotated": [
-        {
-          "text": "Taliban",
-          "coderPhraseCount": 3
-        }
-      ],
-      "label": "who"
-    },
-    "when": {
-      "extracted": [
-        {
-          "text": "Today",
-          "enhancement": {
-            "timex": {
-              "start_date": "2016-11-10T00:00:00",
-              "end_date": "2016-11-10T23:59:59"
-            }
-          },
-          "parts": [
-            [
-              {
-                "nlpToken": {
-                  "after": "",
-                  "word": "Today",
-                  "lemma": "today",
-                  "timex": {
-                    "value": "2016-11-10",
-                    "tid": "t2",
-                    "type": "DATE"
-                  },
-                  "before": " ",
-                  "characterOffsetEnd": 1004,
-                  "pos": "NN",
-                  "normalizedNER": "2016-11-10",
-                  "speaker": "PER0",
-                  "ner": "DATE",
-                  "characterOffsetBegin": 999,
-                  "originalText": "Today",
-                  "index": 1
-                }
-              },
-              "NN"
-            ]
-          ],
-          "nlpIndexSentence": 6,
-          "score": 0.8393328920025365
-        }
-      ],
-      "annotated": [
-        {
-          "text": "Thursday night",
-          "coderPhraseCount": 3
-        }
-      ],
-      "label": "when"
-    },
-    "how": {
-      "extracted": [
-        {
-          "text": "German",
-          "parts": [
-            [
-              {
-                "nlpToken": {
-                  "characterOffsetBegin": 15,
-                  "word": "German",
-                  "lemma": "german",
-                  "characterOffsetEnd": 21,
-                  "speaker": "PER0",
-                  "ner": "O",
-                  "after": " ",
-                  "originalText": "German",
-                  "before": " ",
-                  "index": 3,
-                  "pos": "JJ"
-                }
-              },
-              "JJ"
-            ]
-          ],
-          "score": 1.0
-        }
-      ],
-      "annotated": [
-        {
-          "text": "with a suicide car bomb",
-          "coderPhraseCount": 3
-        },
-        {
-          "text": "gunfire and an explosion",
-          "coderPhraseCount": 1
-        }
-      ],
-      "label": "how"
-    },
-    "where": {
-      "extracted": [
-        {
-          "text": "Mazar-i-Sharif",
-          "enhancement": {
-            "openstreetmap_nominatim": {
-              "place_id": "179561037",
-              "licence": "Data \u00a9 OpenStreetMap contributors, ODbL 1.0. http://www.openstreetmap.org/copyright",
-              "type": "administrative",
-              "class": "boundary",
-              "osm_id": "6572774",
-              "boundingbox": [
-                36.6828226,
-                36.7382081,
-                67.082892,
-                67.153133
-              ],
-              "osm_type": "relation",
-              "lon": "67.1193562447236",
-              "display_name": "\u0645\u0632\u0627\u0631 \u0634\u0631\u06cc\u0641, \u0628\u0644\u062e, \u0627\u0641\u063a\u0627\u0646\u0633\u062a\u0627\u0646",
-              "importance": 0.11265216828756,
-              "icon": "https://nominatim.openstreetmap.org/images/mapicons/poi_boundary_administrative.p.20.png",
-              "lat": "36.708556"
-            }
-          },
-          "parts": [
-            [
-              {
-                "nlpToken": {
-                  "characterOffsetBegin": 50,
-                  "word": "Mazar-i-Sharif",
-                  "lemma": "Mazar-i-Sharif",
-                  "characterOffsetEnd": 64,
-                  "speaker": "PER0",
-                  "ner": "LOCATION",
-                  "after": "",
-                  "originalText": "Mazar-i-Sharif",
-                  "before": " ",
-                  "index": 9,
-                  "pos": "NNP"
-                }
-              },
-              "NNP"
-            ]
-          ],
-          "score": 1.0
-        }
-      ],
-      "annotated": [
-        {
-          "text": "Afghan City of Mazar-i-Sharif",
-          "coderPhraseCount": 3
-        }
-      ],
-      "label": "where"
-    },
-    "why": {
-      "extracted": [
-        {
-          "text": "there",
-          "parts": [
-            [
-              {
-                "nlpToken": {
-                  "characterOffsetBegin": 389,
-                  "word": "there",
-                  "lemma": "there",
-                  "speaker": "PER0",
-                  "after": " ",
-                  "pos": "EX",
-                  "ner": "O",
-                  "before": " ",
-                  "characterOffsetEnd": 394,
-                  "index": 17,
-                  "originalText": "there"
-                }
-              },
-              "EX"
-            ]
-          ],
-          "nlpIndexSentence": 2,
-          "score": 0.4119047619047619
-        }
-      ],
-      "annotated": [
-        {
-          "text": "reprisal for airstrikes in Kunduz",
-          "coderPhraseCount": 3
-        }
-      ],
-      "label": "why"
-    },
     "what": {
+      "annotated": [
+        {
+          "coderPhraseCount": 3,
+          "text": "two people were killed and 84 wounded"
+        }
+      ],
+      "label": "what",
       "extracted": [
         {
-          "text": "struck at the German Consulate in the northern commercial hub late Thursday night",
           "parts": [
             [
               {
                 "nlpToken": {
-                  "characterOffsetBegin": 114,
+                  "before": " ",
                   "word": "struck",
+                  "index": 8,
                   "lemma": "strike",
-                  "characterOffsetEnd": 120,
-                  "speaker": "PER0",
+                  "characterOffsetBegin": 114,
+                  "pos": "VBD",
+                  "originalText": "struck",
                   "ner": "O",
                   "after": " ",
-                  "originalText": "struck",
-                  "before": " ",
-                  "index": 8,
-                  "pos": "VBD"
+                  "characterOffsetEnd": 120,
+                  "speaker": "PER0"
                 }
               },
               "VBD"
@@ -264,17 +40,17 @@
             [
               {
                 "nlpToken": {
-                  "characterOffsetBegin": 121,
+                  "before": " ",
                   "word": "at",
+                  "index": 9,
                   "lemma": "at",
-                  "characterOffsetEnd": 123,
-                  "speaker": "PER0",
+                  "characterOffsetBegin": 121,
+                  "pos": "IN",
+                  "originalText": "at",
                   "ner": "O",
                   "after": " ",
-                  "originalText": "at",
-                  "before": " ",
-                  "index": 9,
-                  "pos": "IN"
+                  "characterOffsetEnd": 123,
+                  "speaker": "PER0"
                 }
               },
               "IN"
@@ -282,17 +58,17 @@
             [
               {
                 "nlpToken": {
-                  "characterOffsetBegin": 124,
+                  "before": " ",
                   "word": "the",
+                  "index": 10,
                   "lemma": "the",
-                  "characterOffsetEnd": 127,
-                  "speaker": "PER0",
+                  "characterOffsetBegin": 124,
+                  "pos": "DT",
+                  "originalText": "the",
                   "ner": "O",
                   "after": " ",
-                  "originalText": "the",
-                  "before": " ",
-                  "index": 10,
-                  "pos": "DT"
+                  "characterOffsetEnd": 127,
+                  "speaker": "PER0"
                 }
               },
               "DT"
@@ -300,17 +76,17 @@
             [
               {
                 "nlpToken": {
-                  "characterOffsetBegin": 128,
+                  "before": " ",
                   "word": "German",
+                  "index": 11,
                   "lemma": "german",
-                  "characterOffsetEnd": 134,
-                  "speaker": "PER0",
+                  "characterOffsetBegin": 128,
+                  "pos": "JJ",
+                  "originalText": "German",
                   "ner": "MISC",
                   "after": " ",
-                  "originalText": "German",
-                  "before": " ",
-                  "index": 11,
-                  "pos": "JJ"
+                  "characterOffsetEnd": 134,
+                  "speaker": "PER0"
                 }
               },
               "JJ"
@@ -318,17 +94,17 @@
             [
               {
                 "nlpToken": {
-                  "characterOffsetBegin": 135,
+                  "before": " ",
                   "word": "Consulate",
+                  "index": 12,
                   "lemma": "Consulate",
-                  "characterOffsetEnd": 144,
-                  "speaker": "PER0",
+                  "characterOffsetBegin": 135,
+                  "pos": "NNP",
+                  "originalText": "Consulate",
                   "ner": "O",
                   "after": " ",
-                  "originalText": "Consulate",
-                  "before": " ",
-                  "index": 12,
-                  "pos": "NNP"
+                  "characterOffsetEnd": 144,
+                  "speaker": "PER0"
                 }
               },
               "NNP"
@@ -336,17 +112,17 @@
             [
               {
                 "nlpToken": {
-                  "characterOffsetBegin": 145,
+                  "before": " ",
                   "word": "in",
+                  "index": 13,
                   "lemma": "in",
-                  "characterOffsetEnd": 147,
-                  "speaker": "PER0",
+                  "characterOffsetBegin": 145,
+                  "pos": "IN",
+                  "originalText": "in",
                   "ner": "O",
                   "after": " ",
-                  "originalText": "in",
-                  "before": " ",
-                  "index": 13,
-                  "pos": "IN"
+                  "characterOffsetEnd": 147,
+                  "speaker": "PER0"
                 }
               },
               "IN"
@@ -354,17 +130,17 @@
             [
               {
                 "nlpToken": {
-                  "characterOffsetBegin": 148,
+                  "before": " ",
                   "word": "the",
+                  "index": 14,
                   "lemma": "the",
-                  "characterOffsetEnd": 151,
-                  "speaker": "PER0",
+                  "characterOffsetBegin": 148,
+                  "pos": "DT",
+                  "originalText": "the",
                   "ner": "O",
                   "after": " ",
-                  "originalText": "the",
-                  "before": " ",
-                  "index": 14,
-                  "pos": "DT"
+                  "characterOffsetEnd": 151,
+                  "speaker": "PER0"
                 }
               },
               "DT"
@@ -372,17 +148,17 @@
             [
               {
                 "nlpToken": {
-                  "characterOffsetBegin": 152,
+                  "before": " ",
                   "word": "northern",
-                  "lemma": "northern",
-                  "characterOffsetEnd": 160,
-                  "speaker": "PER0",
-                  "ner": "O",
-                  "after": " ",
-                  "originalText": "northern",
-                  "before": " ",
                   "index": 15,
-                  "pos": "JJ"
+                  "lemma": "northern",
+                  "characterOffsetBegin": 152,
+                  "pos": "JJ",
+                  "originalText": "northern",
+                  "ner": "O",
+                  "after": " ",
+                  "characterOffsetEnd": 160,
+                  "speaker": "PER0"
                 }
               },
               "JJ"
@@ -390,17 +166,17 @@
             [
               {
                 "nlpToken": {
-                  "characterOffsetBegin": 161,
+                  "before": " ",
                   "word": "commercial",
+                  "index": 16,
                   "lemma": "commercial",
-                  "characterOffsetEnd": 171,
-                  "speaker": "PER0",
+                  "characterOffsetBegin": 161,
+                  "pos": "JJ",
+                  "originalText": "commercial",
                   "ner": "O",
                   "after": " ",
-                  "originalText": "commercial",
-                  "before": " ",
-                  "index": 16,
-                  "pos": "JJ"
+                  "characterOffsetEnd": 171,
+                  "speaker": "PER0"
                 }
               },
               "JJ"
@@ -408,17 +184,17 @@
             [
               {
                 "nlpToken": {
-                  "characterOffsetBegin": 172,
+                  "before": " ",
                   "word": "hub",
+                  "index": 17,
                   "lemma": "hub",
-                  "characterOffsetEnd": 175,
-                  "speaker": "PER0",
+                  "characterOffsetBegin": 172,
+                  "pos": "NN",
+                  "originalText": "hub",
                   "ner": "O",
                   "after": " ",
-                  "originalText": "hub",
-                  "before": " ",
-                  "index": 17,
-                  "pos": "NN"
+                  "characterOffsetEnd": 175,
+                  "speaker": "PER0"
                 }
               },
               "NN"
@@ -426,23 +202,23 @@
             [
               {
                 "nlpToken": {
+                  "index": 20,
+                  "pos": "JJ",
+                  "originalText": "late",
+                  "ner": "TIME",
                   "after": " ",
+                  "characterOffsetEnd": 198,
+                  "before": " ",
                   "word": "late",
+                  "characterOffsetBegin": 194,
+                  "normalizedNER": "2016-11-10TNI",
                   "lemma": "late",
                   "timex": {
-                    "value": "2016-11-10TNI",
                     "tid": "t1",
-                    "type": "TIME"
+                    "type": "TIME",
+                    "value": "2016-11-10TNI"
                   },
-                  "before": " ",
-                  "characterOffsetEnd": 198,
-                  "pos": "JJ",
-                  "normalizedNER": "2016-11-10TNI",
-                  "speaker": "PER0",
-                  "ner": "TIME",
-                  "characterOffsetBegin": 194,
-                  "originalText": "late",
-                  "index": 20
+                  "speaker": "PER0"
                 }
               },
               "JJ"
@@ -450,23 +226,23 @@
             [
               {
                 "nlpToken": {
+                  "index": 21,
+                  "pos": "NNP",
+                  "originalText": "Thursday",
+                  "ner": "TIME",
                   "after": " ",
+                  "characterOffsetEnd": 207,
+                  "before": " ",
                   "word": "Thursday",
+                  "characterOffsetBegin": 199,
+                  "normalizedNER": "2016-11-10TNI",
                   "lemma": "Thursday",
                   "timex": {
-                    "value": "2016-11-10TNI",
                     "tid": "t1",
-                    "type": "TIME"
+                    "type": "TIME",
+                    "value": "2016-11-10TNI"
                   },
-                  "before": " ",
-                  "characterOffsetEnd": 207,
-                  "pos": "NNP",
-                  "normalizedNER": "2016-11-10TNI",
-                  "speaker": "PER0",
-                  "ner": "TIME",
-                  "characterOffsetBegin": 199,
-                  "originalText": "Thursday",
-                  "index": 21
+                  "speaker": "PER0"
                 }
               },
               "NNP"
@@ -474,46 +250,536 @@
             [
               {
                 "nlpToken": {
+                  "index": 22,
+                  "pos": "NN",
+                  "originalText": "night",
+                  "ner": "TIME",
                   "after": "",
+                  "characterOffsetEnd": 213,
+                  "before": " ",
                   "word": "night",
+                  "characterOffsetBegin": 208,
+                  "normalizedNER": "2016-11-10TNI",
                   "lemma": "night",
                   "timex": {
-                    "value": "2016-11-10TNI",
                     "tid": "t1",
-                    "type": "TIME"
+                    "type": "TIME",
+                    "value": "2016-11-10TNI"
                   },
-                  "before": " ",
-                  "characterOffsetEnd": 213,
-                  "pos": "NN",
-                  "normalizedNER": "2016-11-10TNI",
-                  "speaker": "PER0",
-                  "ner": "TIME",
-                  "characterOffsetBegin": 208,
-                  "originalText": "night",
-                  "index": 22
+                  "speaker": "PER0"
                 }
               },
               "NN"
             ]
           ],
-          "nlpIndexSentence": 1,
-          "score": 1.0
+          "score": 1.0,
+          "text": "struck at the German Consulate in the northern commercial hub late Thursday night",
+          "nlpIndexSentence": 1
         }
-      ],
+      ]
+    },
+    "how": {
       "annotated": [
         {
-          "text": "two people were killed and 84 wounded",
-          "coderPhraseCount": 3
+          "coderPhraseCount": 3,
+          "text": "with a suicide car bomb"
+        },
+        {
+          "coderPhraseCount": 1,
+          "text": "gunfire and an explosion"
         }
       ],
-      "label": "what"
+      "label": "how",
+      "extracted": [
+        {
+          "parts": [
+            [
+              {
+                "nlpToken": {
+                  "before": " ",
+                  "word": "the",
+                  "index": 4,
+                  "lemma": "the",
+                  "characterOffsetBegin": 1913,
+                  "pos": "DT",
+                  "originalText": "the",
+                  "ner": "O",
+                  "after": " ",
+                  "characterOffsetEnd": 1916,
+                  "speaker": "PER0"
+                }
+              },
+              "DT"
+            ],
+            [
+              {
+                "nlpToken": {
+                  "before": " ",
+                  "word": "German",
+                  "index": 5,
+                  "lemma": "german",
+                  "characterOffsetBegin": 1917,
+                  "pos": "JJ",
+                  "originalText": "German",
+                  "ner": "MISC",
+                  "after": " ",
+                  "characterOffsetEnd": 1923,
+                  "speaker": "PER0"
+                }
+              },
+              "JJ"
+            ],
+            [
+              {
+                "nlpToken": {
+                  "before": " ",
+                  "word": "special",
+                  "index": 6,
+                  "lemma": "special",
+                  "characterOffsetBegin": 1924,
+                  "pos": "JJ",
+                  "originalText": "special",
+                  "ner": "O",
+                  "after": " ",
+                  "characterOffsetEnd": 1931,
+                  "speaker": "PER0"
+                }
+              },
+              "JJ"
+            ],
+            [
+              {
+                "nlpToken": {
+                  "before": " ",
+                  "word": "forces",
+                  "index": 7,
+                  "lemma": "force",
+                  "characterOffsetBegin": 1932,
+                  "pos": "NNS",
+                  "originalText": "forces",
+                  "ner": "O",
+                  "after": " ",
+                  "characterOffsetEnd": 1938,
+                  "speaker": "PER0"
+                }
+              },
+              "NNS"
+            ],
+            [
+              {
+                "nlpToken": {
+                  "before": " ",
+                  "word": "command",
+                  "index": 8,
+                  "lemma": "command",
+                  "characterOffsetBegin": 1939,
+                  "pos": "NN",
+                  "originalText": "command",
+                  "ner": "O",
+                  "after": " ",
+                  "characterOffsetEnd": 1946,
+                  "speaker": "PER0"
+                }
+              },
+              "NN"
+            ],
+            [
+              {
+                "nlpToken": {
+                  "before": " ",
+                  "word": "at",
+                  "index": 9,
+                  "lemma": "at",
+                  "characterOffsetBegin": 1947,
+                  "pos": "IN",
+                  "originalText": "at",
+                  "ner": "O",
+                  "after": " ",
+                  "characterOffsetEnd": 1949,
+                  "speaker": "PER0"
+                }
+              },
+              "IN"
+            ],
+            [
+              {
+                "nlpToken": {
+                  "before": " ",
+                  "word": "its",
+                  "index": 10,
+                  "lemma": "its",
+                  "characterOffsetBegin": 1950,
+                  "pos": "PRP$",
+                  "originalText": "its",
+                  "ner": "O",
+                  "after": " ",
+                  "characterOffsetEnd": 1953,
+                  "speaker": "PER0"
+                }
+              },
+              "PRP$"
+            ],
+            [
+              {
+                "nlpToken": {
+                  "before": " ",
+                  "word": "headquarters",
+                  "index": 11,
+                  "lemma": "headquarters",
+                  "characterOffsetBegin": 1954,
+                  "pos": "NN",
+                  "originalText": "headquarters",
+                  "ner": "O",
+                  "after": " ",
+                  "characterOffsetEnd": 1966,
+                  "speaker": "PER0"
+                }
+              },
+              "NN"
+            ],
+            [
+              {
+                "nlpToken": {
+                  "before": " ",
+                  "word": "in",
+                  "index": 12,
+                  "lemma": "in",
+                  "characterOffsetBegin": 1967,
+                  "pos": "IN",
+                  "originalText": "in",
+                  "ner": "O",
+                  "after": " ",
+                  "characterOffsetEnd": 1969,
+                  "speaker": "PER0"
+                }
+              },
+              "IN"
+            ],
+            [
+              {
+                "nlpToken": {
+                  "before": " ",
+                  "word": "Potsdam",
+                  "index": 13,
+                  "lemma": "Potsdam",
+                  "characterOffsetBegin": 1970,
+                  "pos": "NNP",
+                  "originalText": "Potsdam",
+                  "ner": "LOCATION",
+                  "after": "",
+                  "characterOffsetEnd": 1977,
+                  "speaker": "PER0"
+                }
+              },
+              "NNP"
+            ],
+            [
+              {
+                "nlpToken": {
+                  "before": "",
+                  "word": ",",
+                  "index": 14,
+                  "lemma": ",",
+                  "characterOffsetBegin": 1977,
+                  "pos": ",",
+                  "originalText": ",",
+                  "ner": "O",
+                  "after": " ",
+                  "characterOffsetEnd": 1978,
+                  "speaker": "PER0"
+                }
+              },
+              ","
+            ],
+            [
+              {
+                "nlpToken": {
+                  "before": " ",
+                  "word": "Germany",
+                  "index": 15,
+                  "lemma": "Germany",
+                  "characterOffsetBegin": 1979,
+                  "pos": "NNP",
+                  "originalText": "Germany",
+                  "ner": "LOCATION",
+                  "after": "",
+                  "characterOffsetEnd": 1986,
+                  "speaker": "PER0"
+                }
+              },
+              "NNP"
+            ],
+            [
+              {
+                "nlpToken": {
+                  "before": "",
+                  "word": ",",
+                  "index": 16,
+                  "lemma": ",",
+                  "characterOffsetBegin": 1986,
+                  "pos": ",",
+                  "originalText": ",",
+                  "ner": "O",
+                  "after": " ",
+                  "characterOffsetEnd": 1987,
+                  "speaker": "PER0"
+                }
+              },
+              ","
+            ],
+            [
+              {
+                "nlpToken": {
+                  "before": " ",
+                  "word": "said",
+                  "index": 17,
+                  "lemma": "say",
+                  "characterOffsetBegin": 1988,
+                  "pos": "VBD",
+                  "originalText": "said",
+                  "ner": "O",
+                  "after": " ",
+                  "characterOffsetEnd": 1992,
+                  "speaker": "PER0"
+                }
+              },
+              "VBD"
+            ],
+            [
+              {
+                "nlpToken": {
+                  "before": " ",
+                  "word": "that",
+                  "index": 18,
+                  "lemma": "that",
+                  "characterOffsetBegin": 1993,
+                  "pos": "IN",
+                  "originalText": "that",
+                  "ner": "O",
+                  "after": " ",
+                  "characterOffsetEnd": 1997,
+                  "speaker": "PER0"
+                }
+              },
+              "IN"
+            ],
+            [
+              {
+                "nlpToken": {
+                  "before": " ",
+                  "word": "Afghan",
+                  "index": 19,
+                  "lemma": "Afghan",
+                  "characterOffsetBegin": 1998,
+                  "pos": "NNP",
+                  "originalText": "Afghan",
+                  "ner": "MISC",
+                  "after": " ",
+                  "characterOffsetEnd": 2004,
+                  "speaker": "PER0"
+                }
+              },
+              "NNP"
+            ],
+            [
+              {
+                "nlpToken": {
+                  "before": " ",
+                  "word": "police",
+                  "index": 20,
+                  "lemma": "police",
+                  "characterOffsetBegin": 2005,
+                  "pos": "NN",
+                  "originalText": "police",
+                  "ner": "O",
+                  "after": " ",
+                  "characterOffsetEnd": 2011,
+                  "speaker": "PER0"
+                }
+              },
+              "NN"
+            ],
+            [
+              {
+                "nlpToken": {
+                  "before": " ",
+                  "word": "forces",
+                  "index": 21,
+                  "lemma": "force",
+                  "characterOffsetBegin": 2012,
+                  "pos": "NNS",
+                  "originalText": "forces",
+                  "ner": "O",
+                  "after": " ",
+                  "characterOffsetEnd": 2018,
+                  "speaker": "PER0"
+                }
+              },
+              "NNS"
+            ],
+            [
+              {
+                "nlpToken": {
+                  "before": " ",
+                  "word": "responded",
+                  "index": 22,
+                  "lemma": "respond",
+                  "characterOffsetBegin": 2019,
+                  "pos": "VBD",
+                  "originalText": "responded",
+                  "ner": "O",
+                  "after": " ",
+                  "characterOffsetEnd": 2028,
+                  "speaker": "PER0"
+                }
+              },
+              "VBD"
+            ],
+            [
+              {
+                "nlpToken": {
+                  "before": " ",
+                  "word": "and",
+                  "index": 23,
+                  "lemma": "and",
+                  "characterOffsetBegin": 2029,
+                  "pos": "CC",
+                  "originalText": "and",
+                  "ner": "O",
+                  "after": " ",
+                  "characterOffsetEnd": 2032,
+                  "speaker": "PER0"
+                }
+              },
+              "CC"
+            ],
+            [
+              {
+                "nlpToken": {
+                  "before": " ",
+                  "word": "fought",
+                  "index": 24,
+                  "lemma": "fight",
+                  "characterOffsetBegin": 2033,
+                  "pos": "VBD",
+                  "originalText": "fought",
+                  "ner": "O",
+                  "after": " ",
+                  "characterOffsetEnd": 2039,
+                  "speaker": "PER0"
+                }
+              },
+              "VBD"
+            ],
+            [
+              {
+                "nlpToken": {
+                  "before": " ",
+                  "word": "with",
+                  "index": 25,
+                  "lemma": "with",
+                  "characterOffsetBegin": 2040,
+                  "pos": "IN",
+                  "originalText": "with",
+                  "ner": "O",
+                  "after": " ",
+                  "characterOffsetEnd": 2044,
+                  "speaker": "PER0"
+                }
+              },
+              "IN"
+            ]
+          ],
+          "score": 1.0,
+          "text": "the German special forces command at its headquarters in Potsdam , Germany , said that Afghan police forces responded and fought with",
+          "nlpIndexSentence": 4
+        }
+      ]
+    },
+    "when": {
+      "annotated": [
+        {
+          "coderPhraseCount": 3,
+          "text": "Thursday night"
+        }
+      ],
+      "label": "when"
+    },
+    "why": {
+      "annotated": [
+        {
+          "coderPhraseCount": 3,
+          "text": "reprisal for airstrikes in Kunduz"
+        }
+      ],
+      "label": "why"
+    },
+    "who": {
+      "annotated": [
+        {
+          "coderPhraseCount": 3,
+          "text": "Taliban"
+        }
+      ],
+      "label": "who",
+      "extracted": [
+        {
+          "parts": [
+            [
+              {
+                "nlpToken": {
+                  "before": " ",
+                  "word": "Taliban",
+                  "index": 6,
+                  "lemma": "Taliban",
+                  "characterOffsetBegin": 95,
+                  "pos": "NNP",
+                  "originalText": "Taliban",
+                  "ner": "ORGANIZATION",
+                  "after": " ",
+                  "characterOffsetEnd": 102,
+                  "speaker": "PER0"
+                }
+              },
+              "NNP"
+            ],
+            [
+              {
+                "nlpToken": {
+                  "before": " ",
+                  "word": "insurgents",
+                  "index": 7,
+                  "lemma": "insurgent",
+                  "characterOffsetBegin": 103,
+                  "pos": "NNS",
+                  "originalText": "insurgents",
+                  "ner": "O",
+                  "after": " ",
+                  "characterOffsetEnd": 113,
+                  "speaker": "PER0"
+                }
+              },
+              "NNS"
+            ]
+          ],
+          "score": 1.0,
+          "text": "Taliban insurgents",
+          "nlpIndexSentence": 1
+        }
+      ]
+    },
+    "where": {
+      "annotated": [
+        {
+          "coderPhraseCount": 3,
+          "text": "Afghan City of Mazar-i-Sharif"
+        }
+      ],
+      "label": "where"
     }
   },
   "description": "At least two people were killed and 84 wounded when the insurgents struck with a suicide car bomb near a hotel being used by German diplomats, Afghan officials said.",
+  "parsingError": "true",
   "text": "Photo KUNDUZ, Afghanistan -- Taliban insurgents struck at the German Consulate in the northern commercial hub of Mazar-i-Sharif late Thursday night, killing at least two people and wounding at least 90, Afghan officials said. Sayid Sarwar Hussaini, spokesman for the regional police zone in northern Afghanistan, said that there were two large explosions at the Mazar Hotel, which German diplomats have been using as their consulate in the city. A suicide car bomb apparently initiated the attack at the compound's security wall, followed by gunfire and an explosion inside the hotel. The provincial police force issued a statement saying that no German Consulate personnel had been hurt, and that the police had cleared the consulate of attackers. Mirwais Rabee, the head of the public health department in Balkh Province, which includes Mazar-i-Sharif, said that the casualties had been transferred to the regional hospital there. Today's Headlines: Asia Edition Get news and analysis from Asia and around the world delivered to your inbox every day in the Asian morning. Please verify you're not a robot by clicking the box. Invalid email address. Please re-enter. You must select a newsletter to subscribe to. Sign Up Receive occasional updates and special offers for The New York Times's products and services. Thank you for subscribing. An error has occurred. Please try again later. View all New York Times newsletters. A Taliban spokesman, Zabihullah Mujahid, called the attack a reprisal for airstrikes in Kunduz this week. German troops have been based in northern Afghanistan for years. After the end of the formal NATO combat mission in 2015, roughly 1,000 German service members have remained at a multinational military base near Mazar-i-Sharif, mostly responsible for training and supporting Afghan security forces. A spokesman for the German special forces command at its headquarters in Potsdam, Germany, said that Afghan police forces responded and fought with Taliban attackers soon after the initial bombing outside the consulate. He said that soldiers from the military base nearby also came to the scene. Advertisement Continue reading the main story Even as the Taliban have pushed major offensives in Afghanistan in recent years, including in the nearby northern city of Kunduz, attacks have been relatively rare in Mazar-i-Sharif.",
-  "url": "http://www.nytimes.com/2016/11/11/world/asia/taliban-strike-german-consulate-in-afghan-city-of-mazar-i-sharif.html?_r=0",
-  "publisher": "nytimes",
-  "originalFilename": "nytimes-1",
-  "category": "consulate attack",
-  "dId": "921a73cf9c9293238dfb7460299647f9db62e582cee84dad8a4762e5"
+  "date_publish": "2016-11-10 15:50:40"
 }

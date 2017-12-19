@@ -6,9 +6,19 @@
   "category": "tram victims",
   "fiveWoneH": {
     "who": {
+      "annotated": [
+        {
+          "text": "British Transport Police",
+          "coderPhraseCount": 3
+        },
+        {
+          "text": "Donald Collett, 62, from Croydon, Philip Logan, 52, from New Addington and Robert Huxley, 63",
+          "coderPhraseCount": 2
+        }
+      ],
+      "label": "who",
       "extracted": [
         {
-          "text": "Mark Smith , Philip Seary , Dane Chinnery and Dorota Rynkiewicz",
           "parts": [
             [
               {
@@ -209,86 +219,13 @@
               "NNP"
             ]
           ],
-          "nlpIndexSentence": 4,
-          "score": 1.0
+          "score": 1.0,
+          "text": "Mark Smith , Philip Seary , Dane Chinnery and Dorota Rynkiewicz",
+          "nlpIndexSentence": 4
         }
-      ],
-      "annotated": [
-        {
-          "text": "British Transport Police",
-          "coderPhraseCount": 3
-        },
-        {
-          "text": "Donald Collett, 62, from Croydon, Philip Logan, 52, from New Addington and Robert Huxley, 63",
-          "coderPhraseCount": 2
-        }
-      ],
-      "label": "who"
+      ]
     },
     "when": {
-      "extracted": [
-        {
-          "text": "6.10 am",
-          "enhancement": {
-            "timex": {
-              "start_date": "2016-11-09T10:00:00",
-              "end_date": "2016-11-09T10:00:59"
-            }
-          },
-          "parts": [
-            [
-              {
-                "nlpToken": {
-                  "characterOffsetBegin": 6160,
-                  "word": "6.10",
-                  "lemma": "6.10",
-                  "timex": {
-                    "value": "2016-11-09T10:00",
-                    "tid": "t17",
-                    "type": "TIME"
-                  },
-                  "before": " ",
-                  "characterOffsetEnd": 6164,
-                  "originalText": "6.10",
-                  "normalizedNER": "2016-11-09T10:00",
-                  "speaker": "PER0",
-                  "after": "",
-                  "ner": "TIME",
-                  "index": 42,
-                  "pos": "CD"
-                }
-              },
-              "CD"
-            ],
-            [
-              {
-                "nlpToken": {
-                  "characterOffsetBegin": 6164,
-                  "word": "am",
-                  "lemma": "am",
-                  "timex": {
-                    "value": "2016-11-09T10:00",
-                    "tid": "t17",
-                    "type": "TIME"
-                  },
-                  "before": "",
-                  "characterOffsetEnd": 6166,
-                  "originalText": "am",
-                  "normalizedNER": "2016-11-09T10:00",
-                  "speaker": "PER0",
-                  "after": " ",
-                  "ner": "TIME",
-                  "index": 43,
-                  "pos": "RB"
-                }
-              },
-              "RB"
-            ]
-          ],
-          "nlpIndexSentence": 47,
-          "score": 0.7351996528204
-        }
-      ],
       "annotated": [
         {
           "text": "Saturday",
@@ -299,33 +236,6 @@
       "label": "when"
     },
     "why": {
-      "extracted": [
-        {
-          "text": "They",
-          "parts": [
-            [
-              {
-                "nlpToken": {
-                  "characterOffsetBegin": 629,
-                  "word": "They",
-                  "lemma": "they",
-                  "speaker": "PER0",
-                  "after": " ",
-                  "pos": "PRP",
-                  "ner": "O",
-                  "before": " ",
-                  "characterOffsetEnd": 633,
-                  "index": 19,
-                  "originalText": "They"
-                }
-              },
-              "PRP"
-            ]
-          ],
-          "nlpIndexSentence": 4,
-          "score": 0.4142857142857143
-        }
-      ],
       "annotated": [
         {
           "coderPhraseCount": 3
@@ -334,89 +244,258 @@
       "label": "why"
     },
     "how": {
-      "extracted": [
-        {
-          "text": "south",
-          "parts": [
-            [
-              {
-                "nlpToken": {
-                  "characterOffsetBegin": 214,
-                  "word": "south",
-                  "lemma": "south",
-                  "characterOffsetEnd": 219,
-                  "speaker": "PER0",
-                  "ner": "O",
-                  "after": " ",
-                  "originalText": "south",
-                  "before": " ",
-                  "index": 24,
-                  "pos": "JJ"
-                }
-              },
-              "JJ"
-            ]
-          ],
-          "nlpIndexSentence": 1,
-          "score": 1.0
-        }
-      ],
       "annotated": [
         {
           "text": "identify",
           "coderPhraseCount": 2
         }
       ],
-      "label": "how"
-    },
-    "where": {
+      "label": "how",
       "extracted": [
         {
-          "text": "Croydon",
-          "enhancement": {
-            "openstreetmap_nominatim": {
-              "place_id": "117537",
-              "licence": "Data \u00a9 OpenStreetMap contributors, ODbL 1.0. http://www.openstreetmap.org/copyright",
-              "type": "town",
-              "class": "place",
-              "osm_id": "21262496",
-              "boundingbox": [
-                51.3313049,
-                51.4113049,
-                -0.141957,
-                -0.061957
-              ],
-              "osm_type": "node",
-              "lon": "-0.101957",
-              "display_name": "Croydon, London, Greater London, England, CR0 1SZ, UK",
-              "importance": 0.23943987893565,
-              "icon": "https://nominatim.openstreetmap.org/images/mapicons/poi_place_town.p.20.png",
-              "lat": "51.3713049"
-            }
-          },
           "parts": [
             [
               {
                 "nlpToken": {
-                  "characterOffsetBegin": 25,
-                  "word": "Croydon",
-                  "lemma": "Croydon",
-                  "characterOffsetEnd": 32,
-                  "speaker": "PER0",
-                  "ner": "LOCATION",
-                  "after": " ",
-                  "originalText": "Croydon",
+                  "characterOffsetBegin": 4705,
+                  "word": "life",
+                  "lemma": "life",
+                  "characterOffsetEnd": 4709,
+                  "speaker": "PER28",
+                  "ner": "O",
+                  "after": "",
+                  "originalText": "life",
                   "before": " ",
+                  "index": 5,
+                  "pos": "NN"
+                }
+              },
+              "NN"
+            ],
+            [
+              {
+                "nlpToken": {
+                  "characterOffsetBegin": 4709,
+                  "word": "''",
+                  "lemma": "''",
+                  "characterOffsetEnd": 4710,
+                  "speaker": "PER0",
+                  "ner": "O",
+                  "after": "",
+                  "originalText": "\"",
+                  "before": "",
                   "index": 6,
+                  "pos": "''"
+                }
+              },
+              "''"
+            ],
+            [
+              {
+                "nlpToken": {
+                  "characterOffsetBegin": 4710,
+                  "word": ":",
+                  "lemma": ":",
+                  "characterOffsetEnd": 4711,
+                  "speaker": "PER0",
+                  "ner": "O",
+                  "after": " ",
+                  "originalText": ":",
+                  "before": "",
+                  "index": 7,
+                  "pos": ":"
+                }
+              },
+              ":"
+            ],
+            [
+              {
+                "nlpToken": {
+                  "characterOffsetBegin": 4712,
+                  "word": "Philip",
+                  "lemma": "Philip",
+                  "characterOffsetEnd": 4718,
+                  "speaker": "PER0",
+                  "ner": "PERSON",
+                  "after": " ",
+                  "originalText": "Philip",
+                  "before": " ",
+                  "index": 8,
                   "pos": "NNP"
                 }
               },
               "NNP"
+            ],
+            [
+              {
+                "nlpToken": {
+                  "characterOffsetBegin": 4719,
+                  "word": "Logan",
+                  "lemma": "Logan",
+                  "characterOffsetEnd": 4724,
+                  "speaker": "PER0",
+                  "ner": "PERSON",
+                  "after": " ",
+                  "originalText": "Logan",
+                  "before": " ",
+                  "index": 9,
+                  "pos": "NNP"
+                }
+              },
+              "NNP"
+            ],
+            [
+              {
+                "nlpToken": {
+                  "characterOffsetBegin": 4725,
+                  "word": "was",
+                  "lemma": "be",
+                  "characterOffsetEnd": 4728,
+                  "speaker": "PER0",
+                  "ner": "O",
+                  "after": " ",
+                  "originalText": "was",
+                  "before": " ",
+                  "index": 10,
+                  "pos": "VBD"
+                }
+              },
+              "VBD"
+            ],
+            [
+              {
+                "nlpToken": {
+                  "characterOffsetBegin": 4729,
+                  "word": "a",
+                  "lemma": "a",
+                  "characterOffsetEnd": 4730,
+                  "speaker": "PER0",
+                  "ner": "O",
+                  "after": " ",
+                  "originalText": "a",
+                  "before": " ",
+                  "index": 11,
+                  "pos": "DT"
+                }
+              },
+              "DT"
+            ],
+            [
+              {
+                "nlpToken": {
+                  "characterOffsetBegin": 4731,
+                  "word": "father-of-four",
+                  "lemma": "father-of-four",
+                  "characterOffsetEnd": 4745,
+                  "speaker": "PER0",
+                  "ner": "O",
+                  "after": "",
+                  "originalText": "father-of-four",
+                  "before": " ",
+                  "index": 12,
+                  "pos": "NN"
+                }
+              },
+              "NN"
+            ],
+            [
+              {
+                "nlpToken": {
+                  "characterOffsetBegin": 4745,
+                  "word": ",",
+                  "lemma": ",",
+                  "characterOffsetEnd": 4746,
+                  "speaker": "PER0",
+                  "ner": "O",
+                  "after": " ",
+                  "originalText": ",",
+                  "before": "",
+                  "index": 13,
+                  "pos": ","
+                }
+              },
+              ","
+            ],
+            [
+              {
+                "nlpToken": {
+                  "characterOffsetBegin": 4747,
+                  "word": "grandfather",
+                  "lemma": "grandfather",
+                  "characterOffsetEnd": 4758,
+                  "speaker": "PER0",
+                  "ner": "O",
+                  "after": " ",
+                  "originalText": "grandfather",
+                  "before": " ",
+                  "index": 14,
+                  "pos": "NN"
+                }
+              },
+              "NN"
+            ],
+            [
+              {
+                "nlpToken": {
+                  "characterOffsetBegin": 4759,
+                  "word": "and",
+                  "lemma": "and",
+                  "characterOffsetEnd": 4762,
+                  "speaker": "PER0",
+                  "ner": "O",
+                  "after": " ",
+                  "originalText": "and",
+                  "before": " ",
+                  "index": 15,
+                  "pos": "CC"
+                }
+              },
+              "CC"
+            ],
+            [
+              {
+                "nlpToken": {
+                  "characterOffsetBegin": 4763,
+                  "word": "great-grandfather",
+                  "lemma": "great-grandfather",
+                  "characterOffsetEnd": 4780,
+                  "speaker": "PER0",
+                  "ner": "O",
+                  "after": " ",
+                  "originalText": "great-grandfather",
+                  "before": " ",
+                  "index": 16,
+                  "pos": "NN"
+                }
+              },
+              "NN"
+            ],
+            [
+              {
+                "nlpToken": {
+                  "characterOffsetBegin": 4781,
+                  "word": "-LRB-",
+                  "lemma": "-lrb-",
+                  "characterOffsetEnd": 4782,
+                  "speaker": "PER0",
+                  "ner": "O",
+                  "after": "",
+                  "originalText": "(",
+                  "before": " ",
+                  "index": 17,
+                  "pos": "-LRB-"
+                }
+              },
+              "-LRB-"
             ]
           ],
-          "score": 1.0000000000000002
+          "score": 1.0,
+          "text": "life \" : Philip Logan was a father-of-four , grandfather and great-grandfather (",
+          "nlpIndexSentence": 5
         }
-      ],
+      ]
+    },
+    "where": {
       "annotated": [
         {
           "text": "Croydon",
@@ -426,9 +505,19 @@
       "label": "where"
     },
     "what": {
+      "annotated": [
+        {
+          "text": "identify three remaining victims",
+          "coderPhraseCount": 3
+        },
+        {
+          "text": "tram crash",
+          "coderPhraseCount": 2
+        }
+      ],
+      "label": "what",
       "extracted": [
         {
-          "text": "died on Wednesday",
           "parts": [
             [
               {
@@ -491,21 +580,11 @@
               "NNP"
             ]
           ],
-          "nlpIndexSentence": 4,
-          "score": 1.0
+          "score": 1.0,
+          "text": "died on Wednesday",
+          "nlpIndexSentence": 4
         }
-      ],
-      "annotated": [
-        {
-          "text": "identify three remaining victims",
-          "coderPhraseCount": 3
-        },
-        {
-          "text": "tram crash",
-          "coderPhraseCount": 2
-        }
-      ],
-      "label": "what"
+      ]
     }
   },
   "description": "The seven victims of the Croydon tram tragedy have now all been identified. British Transport Police formally released the names of six men and one woman killed when a packed commuter tram derailed on Wednesday in south London. Three men and a woman were named among the dead by friends and relatives but the identities of the remaining three men were unknown until Saturday afternoon.",

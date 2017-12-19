@@ -2,13 +2,6 @@
     Collection of utility methods    
 """
 
-import time
-from itertools import product
-
-from geopy.distance import vincenty
-from nltk.corpus import wordnet
-from nltk.tokenize import word_tokenize
-
 
 def bytes_2_human_readable(number_of_bytes):
     """
@@ -44,6 +37,7 @@ def bytes_2_human_readable(number_of_bytes):
     number_of_bytes = round(number_of_bytes, precision)
 
     return str(number_of_bytes) + ' ' + unit
+
 #
 #
 # def cmp_text(annotation, candidate):

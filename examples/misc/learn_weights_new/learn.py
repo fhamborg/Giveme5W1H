@@ -1,9 +1,10 @@
 import datetime
 import logging
+import math
 import time
 from itertools import product
 
-import math
+import dateutil.parser
 from dateutil.relativedelta import relativedelta as rd
 from geopy.distance import vincenty
 from nltk import word_tokenize
@@ -13,7 +14,6 @@ from extractor.extractor import FiveWExtractor
 from extractor.root import path
 from extractor.tools.file.handler import Handler
 from misc.learn_weights_new.metrics.normalized_google_distance import NormalizedGoogleDistance
-import dateutil.parser
 from tools.cache_manager import CacheManager
 
 fmt = '{0.days} days {0.hours} hours {0.minutes} minutes {0.seconds} seconds'
@@ -40,7 +40,8 @@ class Learn(object):
         # load docs an extractor
         self._input_path = input_path
         self._pre_processed_path = preprocessed_path
-        self._documents, self._extractor_object, self._combined_scorer = self.load_documents(extractors, combined_scorer)
+        self._documents, self._extractor_object, self._combined_scorer = self.load_documents(extractors,
+                                                                                             combined_scorer)
 
         self._extractors = extractors
         if self._extractors.get('environment'):
@@ -50,7 +51,7 @@ class Learn(object):
             self._geocoder = None
             self._calendar = None
 
-        #self._combined_scorer = combined_scorer
+        # self._combined_scorer = combined_scorer
         # object to work on (holds the todos)
         self._queue = queue
         self._lock = lock
@@ -131,7 +132,7 @@ class Learn(object):
         """
         if candidate:
             if len(entire_annotation) > 3:
-                parsed=entire_annotation[3].get('parsed')
+                parsed = entire_annotation[3].get('parsed')
                 if parsed is None:
                     return -2
                 parsed = dateutil.parser.parse(parsed)
@@ -140,14 +141,13 @@ class Learn(object):
                 # there is no way to compare these dates without a proper date annotation
                 return -2
 
-
             start = dateutil.parser.parse(candidate['start_date'])
             end = dateutil.parser.parse(candidate['end_date'])
 
             timespan = end - start
             timespan_in_sec = timespan.total_seconds()
 
-            center_timestamp = start + datetime.timedelta(seconds=(timespan_in_sec/2))
+            center_timestamp = start + datetime.timedelta(seconds=(timespan_in_sec / 2))
 
             distance_of_anno_and_extracted = abs((center_timestamp - parsed).total_seconds())
 
@@ -155,8 +155,6 @@ class Learn(object):
             return normalized_duration
         else:
             return -1
-
-
 
     def cmp_date(self, annotation, candidate, entire_annotation):
         """
@@ -267,7 +265,7 @@ class Learn(object):
                 # set a path to save an load preprocessed documents
                 .set_preprocessed_path(preprocessedPath)
                 # limit the the to process documents (nice for development)
-                #.set_limit(1)
+                # .set_limit(1)
                 # add an optional extractor (it would do basically just copying without...)
                 .set_extractor(extractor_object)
                 # saves all document objects for further programming
@@ -283,7 +281,7 @@ class Learn(object):
         scores = []
         # check if there is an annotaton and an answer
         if answer and question in annotations and len(annotations[question]) > 0:
-            #topAnswer = answers[question][0].get_parts_as_text()
+            # topAnswer = answers[question][0].get_parts_as_text()
             for annotation in annotations[question]:
                 if len(annotation) > 2:
                     topAnnotation = annotation[2]
@@ -304,7 +302,7 @@ class Learn(object):
         scores = []
         # check if there is an annotaton and an answer
         if answer and question in annotations and len(annotations[question]) > 0:
-            #topAnswer = answers[question][0].get_parts_as_text()
+            # topAnswer = answers[question][0].get_parts_as_text()
             for annotation in annotations[question]:
                 if len(annotation) > 2:
                     topAnnotation = annotation[2]
@@ -358,7 +356,7 @@ class Learn(object):
                     if self._extractors.get('environment'):
                         # time
                         self._extractors['environment'].weights = (
-                        (weights[0], weights[1]), (weights[0], weights[1], weights[2], weights[3], weights[4]))
+                            (weights[0], weights[1]), (weights[0], weights[1], weights[2], weights[3], weights[4]))
 
                     if self._extractors.get('cause'):
                         # cause - (position, conjunction, adverb, verb)
@@ -404,7 +402,8 @@ class Learn(object):
                             if question in answers and len(answers[question]) > 0:
                                 used_weights = extractor.weights
                                 top_answer = answers[question][0].get_parts_as_text()
-                                self._cmp_helper_min(self.cmp_text_ngd, question, top_answer, annotation, used_weights, result)
+                                self._cmp_helper_min(self.cmp_text_ngd, question, top_answer, annotation, used_weights,
+                                                     result)
 
                         extractor = self._extractors.get('action')
                         if extractor:
@@ -412,12 +411,14 @@ class Learn(object):
                             question = 'what'
                             if question in answers and len(answers[question]) > 0:
                                 top_answer = answers[question][0].get_parts_as_text()
-                                self._cmp_helper_min(self.cmp_text_ngd,'what', top_answer, annotation, used_weights, result)
+                                self._cmp_helper_min(self.cmp_text_ngd, 'what', top_answer, annotation, used_weights,
+                                                     result)
 
                             question = 'who'
                             if question in answers and len(answers[question]) > 0:
                                 top_answer = answers[question][0].get_parts_as_text()
-                                self._cmp_helper_min(self.cmp_text_ngd,question, top_answer, annotation, used_weights, result)
+                                self._cmp_helper_min(self.cmp_text_ngd, question, top_answer, annotation, used_weights,
+                                                     result)
 
                         extractor = self._extractors.get('method')
                         if extractor:
@@ -425,7 +426,8 @@ class Learn(object):
                             question = 'how'
                             if question in answers and len(answers[question]) > 0:
                                 top_answer = answers[question][0].get_parts_as_text()
-                                self._cmp_helper_min(self.cmp_text_ngd, question, top_answer, annotation, used_weights, result)
+                                self._cmp_helper_min(self.cmp_text_ngd, question, top_answer, annotation, used_weights,
+                                                     result)
 
                         extractor = self._extractors.get('environment')
                         if extractor:
@@ -433,12 +435,14 @@ class Learn(object):
                             question = 'when'
                             if question in answers and len(answers[question]) > 0:
                                 top_answer = answers[question][0].get_enhancement('timex')
-                                self._cmp_helper_min(self.cmp_date_timex,question, top_answer, annotation, used_weights, result)
+                                self._cmp_helper_min(self.cmp_date_timex, question, top_answer, annotation,
+                                                     used_weights, result)
 
                             question = 'where'
                             if question in answers and len(answers[question]) > 0:
                                 top_answer = answers[question][0].get_parts_as_text()
-                                self._cmp_helper_min(self.cmp_location, question, top_answer, annotation, used_weights, result)
+                                self._cmp_helper_min(self.cmp_location, question, top_answer, annotation, used_weights,
+                                                     result)
 
                         # done save it to the result
                         self._queue.resolve_document(next_item, document.get_document_id(), result)

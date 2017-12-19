@@ -6,9 +6,19 @@
   "category": "f1",
   "fiveWoneH": {
     "who": {
+      "annotated": [
+        {
+          "text": "Max Verstappen",
+          "coderPhraseCount": 3
+        },
+        {
+          "text": "father, Jos",
+          "coderPhraseCount": 2
+        }
+      ],
+      "label": "who",
       "extracted": [
         {
-          "text": "Max",
           "parts": [
             [
               {
@@ -29,24 +39,13 @@
               "NNP"
             ]
           ],
-          "nlpIndexSentence": 6,
-          "score": 1.0
+          "score": 1.0,
+          "text": "Max",
+          "nlpIndexSentence": 6
         }
-      ],
-      "annotated": [
-        {
-          "text": "Max Verstappen",
-          "coderPhraseCount": 3
-        },
-        {
-          "text": "father, Jos",
-          "coderPhraseCount": 2
-        }
-      ],
-      "label": "who"
+      ]
     },
     "when": {
-      "extracted": [],
       "annotated": [
         {
           "text": "Sunday's Brazilian Grand Prix",
@@ -57,33 +56,6 @@
       "label": "when"
     },
     "why": {
-      "extracted": [
-        {
-          "text": "I",
-          "parts": [
-            [
-              {
-                "nlpToken": {
-                  "characterOffsetBegin": 101,
-                  "word": "I",
-                  "lemma": "I",
-                  "speaker": "6",
-                  "after": "",
-                  "pos": "PRP",
-                  "ner": "O",
-                  "before": "",
-                  "characterOffsetEnd": 102,
-                  "index": 2,
-                  "originalText": "I"
-                }
-              },
-              "PRP"
-            ]
-          ],
-          "nlpIndexSentence": 1,
-          "score": 0.4119047619047619
-        }
-      ],
       "annotated": [
         {
           "text": "charging from 16th place to finish third",
@@ -93,33 +65,6 @@
       "label": "why"
     },
     "how": {
-      "extracted": [
-        {
-          "text": "good",
-          "parts": [
-            [
-              {
-                "nlpToken": {
-                  "characterOffsetBegin": 319,
-                  "word": "good",
-                  "lemma": "good",
-                  "characterOffsetEnd": 323,
-                  "speaker": "6",
-                  "ner": "O",
-                  "after": " ",
-                  "originalText": "good",
-                  "before": " ",
-                  "index": 3,
-                  "pos": "JJ"
-                }
-              },
-              "JJ"
-            ]
-          ],
-          "nlpIndexSentence": 3,
-          "score": 1.0
-        }
-      ],
       "annotated": [
         {
           "text": "brilliance",
@@ -130,57 +75,307 @@
           "coderPhraseCount": 1
         }
       ],
-      "label": "how"
-    },
-    "where": {
+      "label": "how",
       "extracted": [
         {
-          "text": "Brazil",
-          "enhancement": {
-            "openstreetmap_nominatim": {
-              "place_id": "179383758",
-              "licence": "Data \u00a9 OpenStreetMap contributors, ODbL 1.0. http://www.openstreetmap.org/copyright",
-              "type": "administrative",
-              "class": "boundary",
-              "osm_id": "59470",
-              "boundingbox": [
-                -33.8689056,
-                5.2842873,
-                -73.9830625,
-                -28.6341164
-              ],
-              "osm_type": "relation",
-              "lon": "-53.2",
-              "display_name": "Brasil",
-              "importance": 0.21948000558855,
-              "icon": "https://nominatim.openstreetmap.org/images/mapicons/poi_boundary_administrative.p.20.png",
-              "lat": "-10.3333333"
-            }
-          },
           "parts": [
             [
               {
                 "nlpToken": {
-                  "characterOffsetBegin": 937,
-                  "word": "Brazil",
-                  "lemma": "Brazil",
-                  "characterOffsetEnd": 943,
-                  "speaker": "PER1",
-                  "ner": "LOCATION",
-                  "after": "",
-                  "originalText": "Brazil",
+                  "characterOffsetBegin": 17,
+                  "word": "he",
+                  "lemma": "he",
+                  "characterOffsetEnd": 19,
+                  "speaker": "6",
+                  "ner": "O",
+                  "after": " ",
+                  "originalText": "he",
                   "before": " ",
-                  "index": 25,
+                  "index": 6,
+                  "pos": "PRP"
+                }
+              },
+              "PRP"
+            ],
+            [
+              {
+                "nlpToken": {
+                  "characterOffsetBegin": 20,
+                  "word": "surprised",
+                  "lemma": "surprise",
+                  "characterOffsetEnd": 29,
+                  "speaker": "6",
+                  "ner": "O",
+                  "after": " ",
+                  "originalText": "surprised",
+                  "before": " ",
+                  "index": 7,
+                  "pos": "VBD"
+                }
+              },
+              "VBD"
+            ],
+            [
+              {
+                "nlpToken": {
+                  "characterOffsetBegin": 30,
+                  "word": "me",
+                  "lemma": "I",
+                  "characterOffsetEnd": 32,
+                  "speaker": "6",
+                  "ner": "O",
+                  "after": "",
+                  "originalText": "me",
+                  "before": " ",
+                  "index": 8,
+                  "pos": "PRP"
+                }
+              },
+              "PRP"
+            ],
+            [
+              {
+                "nlpToken": {
+                  "characterOffsetBegin": 32,
+                  "word": ",",
+                  "lemma": ",",
+                  "characterOffsetEnd": 33,
+                  "speaker": "6",
+                  "ner": "O",
+                  "after": "",
+                  "originalText": ",",
+                  "before": "",
+                  "index": 9,
+                  "pos": ","
+                }
+              },
+              ","
+            ],
+            [
+              {
+                "nlpToken": {
+                  "characterOffsetBegin": 33,
+                  "word": "''",
+                  "lemma": "''",
+                  "characterOffsetEnd": 34,
+                  "speaker": "PER1",
+                  "ner": "O",
+                  "after": " ",
+                  "originalText": "\"",
+                  "before": "",
+                  "index": 10,
+                  "pos": "''"
+                }
+              },
+              "''"
+            ],
+            [
+              {
+                "nlpToken": {
+                  "characterOffsetBegin": 35,
+                  "word": "said",
+                  "lemma": "say",
+                  "characterOffsetEnd": 39,
+                  "speaker": "PER1",
+                  "ner": "O",
+                  "after": " ",
+                  "originalText": "said",
+                  "before": " ",
+                  "index": 11,
+                  "pos": "VBD"
+                }
+              },
+              "VBD"
+            ],
+            [
+              {
+                "nlpToken": {
+                  "characterOffsetBegin": 40,
+                  "word": "father",
+                  "lemma": "father",
+                  "characterOffsetEnd": 46,
+                  "speaker": "PER1",
+                  "ner": "O",
+                  "after": "",
+                  "originalText": "father",
+                  "before": " ",
+                  "index": 12,
+                  "pos": "NN"
+                }
+              },
+              "NN"
+            ],
+            [
+              {
+                "nlpToken": {
+                  "characterOffsetBegin": 46,
+                  "word": ",",
+                  "lemma": ",",
+                  "characterOffsetEnd": 47,
+                  "speaker": "PER1",
+                  "ner": "O",
+                  "after": " ",
+                  "originalText": ",",
+                  "before": "",
+                  "index": 13,
+                  "pos": ","
+                }
+              },
+              ","
+            ],
+            [
+              {
+                "nlpToken": {
+                  "characterOffsetBegin": 48,
+                  "word": "Jos",
+                  "lemma": "Jos",
+                  "characterOffsetEnd": 51,
+                  "speaker": "PER1",
+                  "ner": "PERSON",
+                  "after": "",
+                  "originalText": "Jos",
+                  "before": " ",
+                  "index": 14,
                   "pos": "NNP"
                 }
               },
               "NNP"
+            ],
+            [
+              {
+                "nlpToken": {
+                  "characterOffsetBegin": 51,
+                  "word": ",",
+                  "lemma": ",",
+                  "characterOffsetEnd": 52,
+                  "speaker": "PER1",
+                  "ner": "O",
+                  "after": " ",
+                  "originalText": ",",
+                  "before": "",
+                  "index": 15,
+                  "pos": ","
+                }
+              },
+              ","
+            ],
+            [
+              {
+                "nlpToken": {
+                  "characterOffsetBegin": 53,
+                  "word": "who",
+                  "lemma": "who",
+                  "characterOffsetEnd": 56,
+                  "speaker": "PER1",
+                  "ner": "O",
+                  "after": " ",
+                  "originalText": "who",
+                  "before": " ",
+                  "index": 16,
+                  "pos": "WP"
+                }
+              },
+              "WP"
+            ],
+            [
+              {
+                "nlpToken": {
+                  "characterOffsetBegin": 57,
+                  "word": "competed",
+                  "lemma": "compete",
+                  "characterOffsetEnd": 65,
+                  "speaker": "PER1",
+                  "ner": "O",
+                  "after": " ",
+                  "originalText": "competed",
+                  "before": " ",
+                  "index": 17,
+                  "pos": "VBD"
+                }
+              },
+              "VBD"
+            ],
+            [
+              {
+                "nlpToken": {
+                  "characterOffsetBegin": 66,
+                  "word": "in",
+                  "lemma": "in",
+                  "characterOffsetEnd": 68,
+                  "speaker": "PER1",
+                  "ner": "O",
+                  "after": " ",
+                  "originalText": "in",
+                  "before": " ",
+                  "index": 18,
+                  "pos": "IN"
+                }
+              },
+              "IN"
+            ],
+            [
+              {
+                "nlpToken": {
+                  "characterOffsetBegin": 69,
+                  "word": "Formula",
+                  "lemma": "Formula",
+                  "characterOffsetEnd": 76,
+                  "speaker": "PER1",
+                  "ner": "O",
+                  "after": " ",
+                  "originalText": "Formula",
+                  "before": " ",
+                  "index": 19,
+                  "pos": "NNP"
+                }
+              },
+              "NNP"
+            ],
+            [
+              {
+                "nlpToken": {
+                  "characterOffsetBegin": 77,
+                  "word": "One",
+                  "lemma": "one",
+                  "before": " ",
+                  "characterOffsetEnd": 80,
+                  "originalText": "One",
+                  "normalizedNER": "1.0",
+                  "speaker": "PER1",
+                  "after": " ",
+                  "ner": "NUMBER",
+                  "index": 20,
+                  "pos": "CD"
+                }
+              },
+              "CD"
+            ],
+            [
+              {
+                "nlpToken": {
+                  "characterOffsetBegin": 81,
+                  "word": "from",
+                  "lemma": "from",
+                  "characterOffsetEnd": 85,
+                  "speaker": "PER1",
+                  "ner": "O",
+                  "after": " ",
+                  "originalText": "from",
+                  "before": " ",
+                  "index": 21,
+                  "pos": "IN"
+                }
+              },
+              "IN"
             ]
           ],
-          "nlpIndexSentence": 11,
-          "score": 1.0
+          "score": 1.0,
+          "text": "he surprised me , \" said father , Jos , who competed in Formula One from",
+          "nlpIndexSentence": 6
         }
-      ],
+      ]
+    },
+    "where": {
       "annotated": [
         {
           "text": "Brazilian Grand Prix",
@@ -190,9 +385,15 @@
       "label": "where"
     },
     "what": {
+      "annotated": [
+        {
+          "text": "even stuns his dad by storming home into third place",
+          "coderPhraseCount": 3
+        }
+      ],
+      "label": "what",
       "extracted": [
         {
-          "text": "was outstanding with the passes",
           "parts": [
             [
               {
@@ -285,17 +486,11 @@
               "NNS"
             ]
           ],
-          "nlpIndexSentence": 6,
-          "score": 1.0
+          "score": 1.0,
+          "text": "was outstanding with the passes",
+          "nlpIndexSentence": 6
         }
-      ],
-      "annotated": [
-        {
-          "text": "even stuns his dad by storming home into third place",
-          "coderPhraseCount": 3
-        }
-      ],
-      "label": "what"
+      ]
     }
   },
   "description": "The jaw-dropping brilliance of Max Verstappen, who leapfrogged both Kimi Raikkonen and Nico Rosberg before charging from 16th place to finish third in Brazil, took even his own father aback.",

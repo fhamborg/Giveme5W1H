@@ -6,9 +6,15 @@
   "category": "trump and obama",
   "fiveWoneH": {
     "who": {
+      "annotated": [
+        {
+          "text": "Donald Trump",
+          "coderPhraseCount": 3
+        }
+      ],
+      "label": "who",
       "extracted": [
         {
-          "text": "Trump",
           "parts": [
             [
               {
@@ -29,58 +35,13 @@
               "NNP"
             ]
           ],
-          "nlpIndexSentence": 1,
-          "score": 1.0
+          "score": 1.0,
+          "text": "Trump",
+          "nlpIndexSentence": 1
         }
-      ],
-      "annotated": [
-        {
-          "text": "Donald Trump",
-          "coderPhraseCount": 3
-        }
-      ],
-      "label": "who"
+      ]
     },
     "when": {
-      "extracted": [
-        {
-          "text": "today",
-          "enhancement": {
-            "timex": {
-              "start_date": "2016-11-10T00:00:00",
-              "end_date": "2016-11-10T23:59:59"
-            }
-          },
-          "parts": [
-            [
-              {
-                "nlpToken": {
-                  "characterOffsetBegin": 7644,
-                  "word": "today",
-                  "lemma": "today",
-                  "timex": {
-                    "value": "2016-11-10",
-                    "tid": "t15",
-                    "type": "DATE"
-                  },
-                  "before": " ",
-                  "characterOffsetEnd": 7649,
-                  "originalText": "today",
-                  "normalizedNER": "2016-11-10",
-                  "speaker": "PER0",
-                  "after": " ",
-                  "ner": "DATE",
-                  "index": 7,
-                  "pos": "NN"
-                }
-              },
-              "NN"
-            ]
-          ],
-          "nlpIndexSentence": 39,
-          "score": 0.6461035324346353
-        }
-      ],
       "annotated": [
         {
           "text": "today",
@@ -91,33 +52,6 @@
       "label": "when"
     },
     "why": {
-      "extracted": [
-        {
-          "text": "he",
-          "parts": [
-            [
-              {
-                "nlpToken": {
-                  "characterOffsetBegin": 476,
-                  "word": "he",
-                  "lemma": "he",
-                  "speaker": "PER0",
-                  "after": " ",
-                  "pos": "PRP",
-                  "ner": "O",
-                  "before": " ",
-                  "characterOffsetEnd": 478,
-                  "index": 10,
-                  "originalText": "he"
-                }
-              },
-              "PRP"
-            ]
-          ],
-          "nlpIndexSentence": 1,
-          "score": 0.42357142857142854
-        }
-      ],
       "annotated": [
         {
           "text": "for power transition talks with outgoing President Barack Obama",
@@ -127,77 +61,64 @@
       "label": "why"
     },
     "how": {
-      "extracted": [
-        {
-          "text": "new",
-          "parts": [
-            [
-              {
-                "nlpToken": {
-                  "characterOffsetBegin": 173,
-                  "word": "new",
-                  "lemma": "new",
-                  "characterOffsetEnd": 176,
-                  "speaker": "PER0",
-                  "ner": "O",
-                  "after": " ",
-                  "originalText": "new",
-                  "before": " ",
-                  "index": 31,
-                  "pos": "JJ"
-                }
-              },
-              "JJ"
-            ]
-          ],
-          "score": 1.0
-        }
-      ],
       "annotated": [
         {
           "coderPhraseCount": 2
         }
       ],
-      "label": "how"
-    },
-    "where": {
+      "label": "how",
       "extracted": [
         {
-          "text": "White House",
-          "enhancement": {
-            "openstreetmap_nominatim": {
-              "importance": 0.3519189346824,
-              "osm_type": "way",
-              "osm_id": "238241022",
-              "type": "government",
-              "lon": "-77.0365534886228",
-              "display_name": "White House, 1600, Pennsylvania Avenue Northwest, Golden Triangle, Washington, District of Columbia, 20500, United States of America",
-              "class": "office",
-              "lat": "38.8976998",
-              "licence": "Data \u00a9 OpenStreetMap contributors, ODbL 1.0. http://www.openstreetmap.org/copyright",
-              "place_id": "127954863",
-              "boundingbox": [
-                38.8974898,
-                38.897911,
-                -77.0368542,
-                -77.0362526
-              ]
-            }
-          },
           "parts": [
             [
               {
                 "nlpToken": {
-                  "characterOffsetBegin": 350,
-                  "word": "White",
-                  "lemma": "White",
-                  "characterOffsetEnd": 355,
+                  "characterOffsetBegin": 4932,
+                  "word": "lunch",
+                  "lemma": "lunch",
+                  "characterOffsetEnd": 4937,
                   "speaker": "PER0",
-                  "ner": "LOCATION",
-                  "after": " ",
-                  "originalText": "White",
+                  "ner": "O",
+                  "after": "",
+                  "originalText": "lunch",
                   "before": " ",
-                  "index": 66,
+                  "index": 2,
+                  "pos": "NN"
+                }
+              },
+              "NN"
+            ],
+            [
+              {
+                "nlpToken": {
+                  "characterOffsetBegin": 4937,
+                  "word": ",",
+                  "lemma": ",",
+                  "characterOffsetEnd": 4938,
+                  "speaker": "PER0",
+                  "ner": "O",
+                  "after": " ",
+                  "originalText": ",",
+                  "before": "",
+                  "index": 3,
+                  "pos": ","
+                }
+              },
+              ","
+            ],
+            [
+              {
+                "nlpToken": {
+                  "characterOffsetBegin": 4939,
+                  "word": "Trump",
+                  "lemma": "Trump",
+                  "characterOffsetEnd": 4944,
+                  "speaker": "PER0",
+                  "ner": "PERSON",
+                  "after": " ",
+                  "originalText": "Trump",
+                  "before": " ",
+                  "index": 4,
                   "pos": "NNP"
                 }
               },
@@ -206,25 +127,173 @@
             [
               {
                 "nlpToken": {
-                  "characterOffsetBegin": 356,
-                  "word": "House",
-                  "lemma": "House",
-                  "characterOffsetEnd": 361,
+                  "characterOffsetBegin": 4945,
+                  "word": "and",
+                  "lemma": "and",
+                  "characterOffsetEnd": 4948,
                   "speaker": "PER0",
-                  "ner": "LOCATION",
+                  "ner": "O",
                   "after": " ",
-                  "originalText": "House",
+                  "originalText": "and",
                   "before": " ",
-                  "index": 67,
+                  "index": 5,
+                  "pos": "CC"
+                }
+              },
+              "CC"
+            ],
+            [
+              {
+                "nlpToken": {
+                  "characterOffsetBegin": 4949,
+                  "word": "vice-president",
+                  "lemma": "vice-president",
+                  "characterOffsetEnd": 4963,
+                  "speaker": "PER0",
+                  "ner": "O",
+                  "after": " ",
+                  "originalText": "vice-president",
+                  "before": " ",
+                  "index": 6,
+                  "pos": "NN"
+                }
+              },
+              "NN"
+            ],
+            [
+              {
+                "nlpToken": {
+                  "characterOffsetBegin": 4964,
+                  "word": "elect",
+                  "lemma": "elect",
+                  "characterOffsetEnd": 4969,
+                  "speaker": "PER0",
+                  "ner": "O",
+                  "after": " ",
+                  "originalText": "elect",
+                  "before": " ",
+                  "index": 7,
+                  "pos": "VBP"
+                }
+              },
+              "VBP"
+            ],
+            [
+              {
+                "nlpToken": {
+                  "characterOffsetBegin": 4970,
+                  "word": "Mike",
+                  "lemma": "Mike",
+                  "characterOffsetEnd": 4974,
+                  "speaker": "PER0",
+                  "ner": "PERSON",
+                  "after": " ",
+                  "originalText": "Mike",
+                  "before": " ",
+                  "index": 8,
                   "pos": "NNP"
                 }
               },
               "NNP"
+            ],
+            [
+              {
+                "nlpToken": {
+                  "characterOffsetBegin": 4975,
+                  "word": "Pence",
+                  "lemma": "Pence",
+                  "characterOffsetEnd": 4980,
+                  "speaker": "PER0",
+                  "ner": "PERSON",
+                  "after": " ",
+                  "originalText": "Pence",
+                  "before": " ",
+                  "index": 9,
+                  "pos": "NNP"
+                }
+              },
+              "NNP"
+            ],
+            [
+              {
+                "nlpToken": {
+                  "characterOffsetBegin": 4981,
+                  "word": "had",
+                  "lemma": "have",
+                  "characterOffsetEnd": 4984,
+                  "speaker": "PER0",
+                  "ner": "O",
+                  "after": " ",
+                  "originalText": "had",
+                  "before": " ",
+                  "index": 10,
+                  "pos": "VBD"
+                }
+              },
+              "VBD"
+            ],
+            [
+              {
+                "nlpToken": {
+                  "characterOffsetBegin": 4985,
+                  "word": "a",
+                  "lemma": "a",
+                  "characterOffsetEnd": 4986,
+                  "speaker": "PER0",
+                  "ner": "O",
+                  "after": " ",
+                  "originalText": "a",
+                  "before": " ",
+                  "index": 11,
+                  "pos": "DT"
+                }
+              },
+              "DT"
+            ],
+            [
+              {
+                "nlpToken": {
+                  "characterOffsetBegin": 4987,
+                  "word": "meeting",
+                  "lemma": "meeting",
+                  "characterOffsetEnd": 4994,
+                  "speaker": "PER0",
+                  "ner": "O",
+                  "after": " ",
+                  "originalText": "meeting",
+                  "before": " ",
+                  "index": 12,
+                  "pos": "NN"
+                }
+              },
+              "NN"
+            ],
+            [
+              {
+                "nlpToken": {
+                  "characterOffsetBegin": 4995,
+                  "word": "with",
+                  "lemma": "with",
+                  "characterOffsetEnd": 4999,
+                  "speaker": "PER0",
+                  "ner": "O",
+                  "after": " ",
+                  "originalText": "with",
+                  "before": " ",
+                  "index": 13,
+                  "pos": "IN"
+                }
+              },
+              "IN"
             ]
           ],
-          "score": 1.0
+          "score": 1.0,
+          "text": "lunch , Trump and vice-president elect Mike Pence had a meeting with",
+          "nlpIndexSentence": 2
         }
-      ],
+      ]
+    },
+    "where": {
       "annotated": [
         {
           "text": "Washington",
@@ -238,9 +307,15 @@
       "label": "where"
     },
     "what": {
+      "annotated": [
+        {
+          "text": "arrives at the White House",
+          "coderPhraseCount": 3
+        }
+      ],
+      "label": "what",
       "extracted": [
         {
-          "text": "was palpable as Obama",
           "parts": [
             [
               {
@@ -315,17 +390,11 @@
               "NNP"
             ]
           ],
-          "nlpIndexSentence": 1,
-          "score": 1.0
+          "score": 1.0,
+          "text": "was palpable as Obama",
+          "nlpIndexSentence": 1
         }
-      ],
-      "annotated": [
-        {
-          "text": "arrives at the White House",
-          "coderPhraseCount": 3
-        }
-      ],
-      "label": "what"
+      ]
     }
   },
   "description": "The president-elect touched down in Washington today and was taken directly to the White House",

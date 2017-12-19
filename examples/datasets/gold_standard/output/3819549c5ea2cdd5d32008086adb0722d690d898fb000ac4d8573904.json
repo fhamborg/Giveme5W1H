@@ -6,9 +6,15 @@
   "category": "f1",
   "fiveWoneH": {
     "who": {
+      "annotated": [
+        {
+          "text": "Red Bull boss Christian Horner",
+          "coderPhraseCount": 3
+        }
+      ],
+      "label": "who",
       "extracted": [
         {
-          "text": "Ricciardo",
           "parts": [
             [
               {
@@ -29,58 +35,13 @@
               "NNP"
             ]
           ],
-          "nlpIndexSentence": 3,
-          "score": 1.0
+          "score": 1.0,
+          "text": "Ricciardo",
+          "nlpIndexSentence": 3
         }
-      ],
-      "annotated": [
-        {
-          "text": "Red Bull boss Christian Horner",
-          "coderPhraseCount": 3
-        }
-      ],
-      "label": "who"
+      ]
     },
     "when": {
-      "extracted": [
-        {
-          "text": "today",
-          "enhancement": {
-            "timex": {
-              "start_date": "2016-11-13T00:00:00",
-              "end_date": "2016-11-13T23:59:59"
-            }
-          },
-          "parts": [
-            [
-              {
-                "nlpToken": {
-                  "characterOffsetBegin": 2525,
-                  "word": "today",
-                  "lemma": "today",
-                  "timex": {
-                    "value": "2016-11-13",
-                    "tid": "t7",
-                    "type": "DATE"
-                  },
-                  "before": " ",
-                  "characterOffsetEnd": 2530,
-                  "originalText": "today",
-                  "normalizedNER": "2016-11-13",
-                  "speaker": "PER7",
-                  "after": " ",
-                  "ner": "DATE",
-                  "index": 7,
-                  "pos": "NN"
-                }
-              },
-              "NN"
-            ]
-          ],
-          "nlpIndexSentence": 17,
-          "score": 0.7016564809007781
-        }
-      ],
       "annotated": [
         {
           "text": "Sunday's Brazilian Grand Prix",
@@ -91,33 +52,6 @@
       "label": "when"
     },
     "why": {
-      "extracted": [
-        {
-          "text": "he",
-          "parts": [
-            [
-              {
-                "nlpToken": {
-                  "characterOffsetBegin": 284,
-                  "word": "he",
-                  "lemma": "he",
-                  "speaker": "PER0",
-                  "after": " ",
-                  "pos": "PRP",
-                  "ner": "O",
-                  "before": " ",
-                  "characterOffsetEnd": 286,
-                  "index": 37,
-                  "originalText": "he"
-                }
-              },
-              "PRP"
-            ]
-          ],
-          "nlpIndexSentence": 1,
-          "score": 0.4194805194805195
-        }
-      ],
       "annotated": [
         {
           "text": "Verstappen overtook half the field in the closing stages of the rain-soaked race",
@@ -131,89 +65,96 @@
       "label": "why"
     },
     "how": {
-      "extracted": [
-        {
-          "text": "subscribing",
-          "parts": [
-            [
-              {
-                "nlpToken": {
-                  "characterOffsetBegin": 67,
-                  "word": "subscribing",
-                  "lemma": "subscribe",
-                  "characterOffsetEnd": 78,
-                  "speaker": "PER0",
-                  "ner": "O",
-                  "after": "",
-                  "originalText": "subscribing",
-                  "before": " ",
-                  "index": 13,
-                  "pos": "VBG"
-                }
-              },
-              "VBG"
-            ]
-          ],
-          "score": 1.0
-        }
-      ],
       "annotated": [
         {
           "text": "incredible performance",
           "coderPhraseCount": 3
         }
       ],
-      "label": "how"
-    },
-    "where": {
+      "label": "how",
       "extracted": [
         {
-          "text": "Brazil",
-          "enhancement": {
-            "openstreetmap_nominatim": {
-              "place_id": "179383758",
-              "licence": "Data \u00a9 OpenStreetMap contributors, ODbL 1.0. http://www.openstreetmap.org/copyright",
-              "type": "administrative",
-              "class": "boundary",
-              "osm_id": "59470",
-              "boundingbox": [
-                -33.8689056,
-                5.2842873,
-                -73.9830625,
-                -28.6341164
-              ],
-              "osm_type": "relation",
-              "lon": "-53.2",
-              "display_name": "Brasil",
-              "importance": 0.21948000558855,
-              "icon": "https://nominatim.openstreetmap.org/images/mapicons/poi_boundary_administrative.p.20.png",
-              "lat": "-10.3333333"
-            }
-          },
           "parts": [
             [
               {
                 "nlpToken": {
-                  "characterOffsetBegin": 2734,
-                  "word": "Brazil",
-                  "lemma": "Brazil",
-                  "characterOffsetEnd": 2740,
+                  "characterOffsetBegin": 2235,
+                  "word": "the",
+                  "lemma": "the",
+                  "characterOffsetEnd": 2238,
                   "speaker": "PER0",
-                  "ner": "LOCATION",
-                  "after": "",
-                  "originalText": "Brazil",
+                  "ner": "O",
+                  "after": " ",
+                  "originalText": "the",
                   "before": " ",
-                  "index": 16,
-                  "pos": "NNP"
+                  "index": 14,
+                  "pos": "DT"
                 }
               },
-              "NNP"
+              "DT"
+            ],
+            [
+              {
+                "nlpToken": {
+                  "characterOffsetBegin": 2239,
+                  "word": "win",
+                  "lemma": "win",
+                  "characterOffsetEnd": 2242,
+                  "speaker": "PER0",
+                  "ner": "O",
+                  "after": "",
+                  "originalText": "win",
+                  "before": " ",
+                  "index": 15,
+                  "pos": "VBP"
+                }
+              },
+              "VBP"
+            ],
+            [
+              {
+                "nlpToken": {
+                  "characterOffsetBegin": 2242,
+                  "word": ",",
+                  "lemma": ",",
+                  "characterOffsetEnd": 2243,
+                  "speaker": "PER0",
+                  "ner": "O",
+                  "after": " ",
+                  "originalText": ",",
+                  "before": "",
+                  "index": 16,
+                  "pos": ","
+                }
+              },
+              ","
+            ],
+            [
+              {
+                "nlpToken": {
+                  "characterOffsetBegin": 2244,
+                  "word": "but",
+                  "lemma": "but",
+                  "characterOffsetEnd": 2247,
+                  "speaker": "PER0",
+                  "ner": "O",
+                  "after": " ",
+                  "originalText": "but",
+                  "before": " ",
+                  "index": 17,
+                  "pos": "CC"
+                }
+              },
+              "CC"
             ]
           ],
-          "nlpIndexSentence": 20,
-          "score": 1.0
+          "score": 1.0,
+          "text": "the win , but",
+          "nlpIndexSentence": 14
         }
-      ],
+      ]
+    },
+    "where": {
       "annotated": [
         {
           "text": "Brazil",
@@ -227,9 +168,15 @@
       "label": "where"
     },
     "what": {
+      "annotated": [
+        {
+          "text": "hails Max Verstappen's \\\"amazing\\\" podium-winning performance",
+          "coderPhraseCount": 3
+        }
+      ],
+      "label": "what",
       "extracted": [
         {
-          "text": "opted to pit him",
           "parts": [
             [
               {
@@ -304,17 +251,11 @@
               "PRP"
             ]
           ],
-          "nlpIndexSentence": 3,
-          "score": 1.0
+          "score": 1.0,
+          "text": "opted to pit him",
+          "nlpIndexSentence": 3
         }
-      ],
-      "annotated": [
-        {
-          "text": "hails Max Verstappen's \\\"amazing\\\" podium-winning performance",
-          "coderPhraseCount": 3
-        }
-      ],
-      "label": "what"
+      ]
     }
   },
   "description": "Horner called the drive in which he overtook 13 cars in heavy rain \"one of the best drives I've seen in Formula One\"",

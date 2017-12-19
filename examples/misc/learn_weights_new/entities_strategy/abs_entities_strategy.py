@@ -1,9 +1,7 @@
 from abc import abstractmethod
 
 
-
 class AbsEntitiesStrategy(object):
-
     def __init__(self):
         self._values = []
 
@@ -38,4 +36,3 @@ class AbsEntitiesStrategy(object):
     @abstractmethod
     def _calculate_result(self):
         pass
-

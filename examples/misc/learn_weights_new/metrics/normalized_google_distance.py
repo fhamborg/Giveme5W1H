@@ -14,11 +14,11 @@ class NormalizedGoogleDistance(AbsMetric):
 
     this is a port from newsCluster
     """
+
     def __init__(self, *args, **kwargs):
         super(NormalizedGoogleDistance, self).__init__(*args, **kwargs)
 
         self._log_M = math.log(80580446510)
-
 
     def _get_de_hit_count(self, html_element):
         if html_element and len(html_element) > 0 and html_element[0].text:
@@ -49,7 +49,8 @@ class NormalizedGoogleDistance(AbsMetric):
             return cache_content
         cookies = dict(CONSENT='YES+DE.de+20160407-02-0')
         # https://sites.google.com/site/tomihasa/google-language-codes
-        result = requests.get('https://www.google.de/search', params={'q': " ".join(candidates), 'hl':'de'}, cookies=cookies)
+        result = requests.get('https://www.google.de/search', params={'q': " ".join(candidates), 'hl': 'de'},
+                              cookies=cookies)
         tree = html.fromstring(result.content)
 
         if result is not None:
@@ -57,7 +58,8 @@ class NormalizedGoogleDistance(AbsMetric):
             if tree.attrib['lang'].startswith('de'):
                 x = self._get_de_hit_count(html_element)
             else:
-                logging.error('google may redirect to your country - you must implement your country specific _get_xx_hit_count')
+                logging.error(
+                    'google may redirect to your country - you must implement your country specific _get_xx_hit_count')
 
             self._cache.cache_complex(candidates, x)
 

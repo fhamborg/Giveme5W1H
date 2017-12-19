@@ -40,7 +40,7 @@ def method(lock):
         'method': method_extractor.MethodExtractor()
     }
 
-    learn = Learn(lock=lock,extractors=extractors, preprocessed_path=preprocessedPath, input_path=inputPath,
+    learn = Learn(lock=lock, extractors=extractors, preprocessed_path=preprocessedPath, input_path=inputPath,
                   combined_scorer=None, queue=a_queue)
     return learn
 
@@ -55,7 +55,7 @@ def cause(lock):
         'cause': cause_extractor.CauseExtractor()
     }
 
-    learn = Learn(lock=lock,extractors=extractors, preprocessed_path=preprocessedPath, input_path=inputPath,
+    learn = Learn(lock=lock, extractors=extractors, preprocessed_path=preprocessedPath, input_path=inputPath,
                   combined_scorer=None, queue=a_queue)
     return learn
 
@@ -70,7 +70,7 @@ def environment(lock):
         'environment': environment_extractor.EnvironmentExtractor()
     }
 
-    learn = Learn(lock=lock,extractors=extractors, preprocessed_path=preprocessedPath, input_path=inputPath,
+    learn = Learn(lock=lock, extractors=extractors, preprocessed_path=preprocessedPath, input_path=inputPath,
                   combined_scorer=None, queue=a_queue)
     return learn
 
@@ -82,12 +82,12 @@ def action(lock):
     a_queue.load()
 
     extractors = {
-        #'action': action_extractor.ActionExtractor()
+        # 'action': action_extractor.ActionExtractor()
         # 'environment': environment_extractor.EnvironmentExtractor(),
         # 'cause': cause_extractor.CauseExtractor(),
-         'method': method_extractor.MethodExtractor()
+        'method': method_extractor.MethodExtractor()
     }
-    learn = Learn(lock=lock,extractors=extractors, preprocessed_path=preprocessedPath, input_path=inputPath,
+    learn = Learn(lock=lock, extractors=extractors, preprocessed_path=preprocessedPath, input_path=inputPath,
                   combined_scorer=None, queue=a_queue)
     return learn
 
@@ -100,14 +100,14 @@ def default_combined_scoring(lock):
 
     extractors = {
         'method': method_extractor.MethodExtractor(),
-         'action': action_extractor.ActionExtractor() # provider for what an who
+        'action': action_extractor.ActionExtractor()  # provider for what an who
     }
     # set optimal weights learned beforehand
     extractors['action'].weights = [0.7, 0.3, 0.9]
 
     combined_scorer = distance_of_candidate.DistanceOfCandidate(['what', 'who'], 'how')
 
-    learn = Learn(lock=lock,extractors=extractors, preprocessed_path=preprocessedPath, input_path=inputPath,
+    learn = Learn(lock=lock, extractors=extractors, preprocessed_path=preprocessedPath, input_path=inputPath,
                   combined_scorer=combined_scorer, queue=a_queue)
     return learn
 
@@ -121,7 +121,7 @@ if __name__ == '__main__':
 
     # thread safe queue
     q = queue.Queue()
-    lock = threading.Lock() # Wordnet is not threadsave
+    lock = threading.Lock()  # Wordnet is not threadsave
 
     # basic learner
     # log.setLevel(logging.ERROR)
@@ -129,7 +129,7 @@ if __name__ == '__main__':
     # q.put(environment(lock))
     # q.put(cause(lock))
     q.put(method(lock))
-    #q.put(default_combined_scoring(lock))
+    # q.put(default_combined_scoring(lock))
     # log.setLevel(logging.ERROR)
     # creating worker threads
     for i in range(4):

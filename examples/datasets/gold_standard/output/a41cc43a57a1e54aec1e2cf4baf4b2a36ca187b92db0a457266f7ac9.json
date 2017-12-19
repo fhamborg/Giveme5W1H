@@ -6,9 +6,19 @@
   "category": "f1",
   "fiveWoneH": {
     "who": {
-      "extracted": [
+      "annotated": [
         {
           "text": "Kimi Raikkonen",
+          "coderPhraseCount": 3
+        },
+        {
+          "text": "Sebastian Vettel",
+          "coderPhraseCount": 3
+        }
+      ],
+      "label": "who",
+      "extracted": [
+        {
           "parts": [
             [
               {
@@ -47,23 +57,12 @@
               "NNP"
             ]
           ],
-          "score": 1.0
+          "score": 1.0,
+          "text": "Kimi Raikkonen"
         }
-      ],
-      "annotated": [
-        {
-          "text": "Kimi Raikkonen",
-          "coderPhraseCount": 3
-        },
-        {
-          "text": "Sebastian Vettel",
-          "coderPhraseCount": 3
-        }
-      ],
-      "label": "who"
+      ]
     },
     "when": {
-      "extracted": [],
       "annotated": [
         {
           "text": "on lap 20",
@@ -83,104 +82,6 @@
       "label": "when"
     },
     "why": {
-      "extracted": [
-        {
-          "text": "A chaotic Brazilian Grand Prix",
-          "parts": [
-            [
-              {
-                "nlpToken": {
-                  "characterOffsetBegin": 0,
-                  "word": "A",
-                  "lemma": "a",
-                  "speaker": "PER0",
-                  "after": " ",
-                  "pos": "DT",
-                  "ner": "O",
-                  "before": "",
-                  "characterOffsetEnd": 1,
-                  "index": 1,
-                  "originalText": "A"
-                }
-              },
-              "DT"
-            ],
-            [
-              {
-                "nlpToken": {
-                  "characterOffsetBegin": 2,
-                  "word": "chaotic",
-                  "lemma": "chaotic",
-                  "speaker": "PER0",
-                  "after": " ",
-                  "pos": "JJ",
-                  "ner": "O",
-                  "before": " ",
-                  "characterOffsetEnd": 9,
-                  "index": 2,
-                  "originalText": "chaotic"
-                }
-              },
-              "JJ"
-            ],
-            [
-              {
-                "nlpToken": {
-                  "characterOffsetBegin": 10,
-                  "word": "Brazilian",
-                  "lemma": "brazilian",
-                  "speaker": "PER0",
-                  "after": " ",
-                  "pos": "JJ",
-                  "ner": "MISC",
-                  "before": " ",
-                  "characterOffsetEnd": 19,
-                  "index": 3,
-                  "originalText": "Brazilian"
-                }
-              },
-              "JJ"
-            ],
-            [
-              {
-                "nlpToken": {
-                  "characterOffsetBegin": 20,
-                  "word": "Grand",
-                  "lemma": "Grand",
-                  "speaker": "PER0",
-                  "after": " ",
-                  "pos": "NNP",
-                  "ner": "MISC",
-                  "before": " ",
-                  "characterOffsetEnd": 25,
-                  "index": 4,
-                  "originalText": "Grand"
-                }
-              },
-              "NNP"
-            ],
-            [
-              {
-                "nlpToken": {
-                  "characterOffsetBegin": 26,
-                  "word": "Prix",
-                  "lemma": "Prix",
-                  "speaker": "PER0",
-                  "after": " ",
-                  "pos": "NNP",
-                  "ner": "MISC",
-                  "before": " ",
-                  "characterOffsetEnd": 30,
-                  "index": 5,
-                  "originalText": "Prix"
-                }
-              },
-              "NNP"
-            ]
-          ],
-          "score": 0.42857142857142855
-        }
-      ],
       "annotated": [
         {
           "text": "treacherous conditions",
@@ -190,32 +91,6 @@
       "label": "why"
     },
     "how": {
-      "extracted": [
-        {
-          "text": "crashed",
-          "parts": [
-            [
-              {
-                "nlpToken": {
-                  "characterOffsetBegin": 76,
-                  "word": "crashed",
-                  "lemma": "crash",
-                  "characterOffsetEnd": 83,
-                  "speaker": "PER0",
-                  "ner": "O",
-                  "after": " ",
-                  "originalText": "crashed",
-                  "before": " ",
-                  "index": 14,
-                  "pos": "VBD"
-                }
-              },
-              "VBD"
-            ]
-          ],
-          "score": 1.0
-        }
-      ],
       "annotated": [
         {
           "text": "lost control",
@@ -226,56 +101,35 @@
           "coderPhraseCount": 1
         }
       ],
-      "label": "how"
-    },
-    "where": {
+      "label": "how",
       "extracted": [
         {
-          "text": "Interlagos",
-          "enhancement": {
-            "openstreetmap_nominatim": {
-              "place_id": "548530",
-              "licence": "Data \u00a9 OpenStreetMap contributors, ODbL 1.0. http://www.openstreetmap.org/copyright",
-              "type": "suburb",
-              "class": "place",
-              "osm_id": "205197916",
-              "boundingbox": [
-                -23.7211674,
-                -23.6811674,
-                -46.7282912,
-                -46.6882912
-              ],
-              "osm_type": "node",
-              "lon": "-46.7082912",
-              "display_name": "Interlagos, Socorro, SP, Microrregi\u00e3o de S\u00e3o Paulo, RMSP, Mesorregi\u00e3o Metropolitana de S\u00e3o Paulo, SP, Regi\u00e3o Sudeste, 04783 020, Brasil",
-              "importance": 0.18245308668878,
-              "icon": "https://nominatim.openstreetmap.org/images/mapicons/poi_place_village.p.20.png",
-              "lat": "-23.7011674"
-            }
-          },
           "parts": [
             [
               {
                 "nlpToken": {
-                  "characterOffsetBegin": 121,
-                  "word": "Interlagos",
-                  "lemma": "Interlagos",
-                  "characterOffsetEnd": 131,
+                  "characterOffsetBegin": 10,
+                  "word": "Brazilian",
+                  "lemma": "brazilian",
+                  "characterOffsetEnd": 19,
                   "speaker": "PER0",
-                  "ner": "LOCATION",
-                  "after": "",
-                  "originalText": "Interlagos",
+                  "ner": "MISC",
+                  "after": " ",
+                  "originalText": "Brazilian",
                   "before": " ",
-                  "index": 21,
-                  "pos": "NNP"
+                  "index": 3,
+                  "pos": "JJ"
                 }
               },
-              "NNP"
+              "JJ"
             ]
           ],
-          "score": 1.0
+          "score": 1.0,
+          "text": "Brazilian"
         }
-      ],
+      ]
+    },
+    "where": {
       "annotated": [
         {
           "text": "Interlagos",
@@ -289,9 +143,19 @@
       "label": "where"
     },
     "what": {
+      "annotated": [
+        {
+          "text": "Brazilian Grand Prix thrown into chaos",
+          "coderPhraseCount": 2
+        },
+        {
+          "text": "Kimi Raikkonen crashed",
+          "coderPhraseCount": 2
+        }
+      ],
+      "label": "what",
       "extracted": [
         {
-          "text": "crashed out in the treacherous conditions at Interlagos",
           "parts": [
             [
               {
@@ -438,20 +302,10 @@
               "NNP"
             ]
           ],
-          "score": 1.0
+          "score": 1.0,
+          "text": "crashed out in the treacherous conditions at Interlagos"
         }
-      ],
-      "annotated": [
-        {
-          "text": "Brazilian Grand Prix thrown into chaos",
-          "coderPhraseCount": 2
-        },
-        {
-          "text": "Kimi Raikkonen crashed",
-          "coderPhraseCount": 2
-        }
-      ],
-      "label": "what"
+      ]
     }
   },
   "description": "A chaotic Brazilian Grand Prix was suspended on lap 20 after Kimi Raikkonen crashed out in the treacherous conditions at Interlagos as Sebastian Vettel labelled the conditions 'stupid'.",

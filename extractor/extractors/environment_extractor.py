@@ -1,7 +1,7 @@
 import datetime
 import logging
-
 import math
+
 from geopy.distance import great_circle
 from geopy.exc import GeocoderServiceError
 from geopy.geocoders import Nominatim
@@ -11,6 +11,7 @@ from extractor.candidate import Candidate
 from extractor.extractors.abs_extractor import AbsExtractor
 from extractor.tools.timex import Timex
 from tools.cache_manager import CacheManager
+
 
 class EnvironmentExtractor(AbsExtractor):
     """
@@ -25,7 +26,7 @@ class EnvironmentExtractor(AbsExtractor):
 
     # used for normalisation of time
     a_min = math.log(one_minute_in_s)
-    a_max = math.log(one_month_in_s*12)# a year
+    a_max = math.log(one_month_in_s * 12)  # a year
     a_min_minus_max = (a_max - a_min)
 
     def __init__(self, weights=((0.5, 0.8), (0.8, 0.7, 0.5, 0.5, 0.5)), phrase_range_location: int = 3,
@@ -274,7 +275,7 @@ class EnvironmentExtractor(AbsExtractor):
         for candidateO in oCandidates:
             candidate = candidateO.get_raw()
             candidate_timex = candidateO.get_calculations('timex')
-            #logging.getLogger('GiveMe5W').debug(candidate_timex)
+            # logging.getLogger('GiveMe5W').debug(candidate_timex)
 
             # first token, sentence index, time, number of similar dates, number of candidates that entail this one, candidateO
             scoring_candidate = [candidate[0], candidateO.get_sentence_index(), candidate_timex, 1, 1, candidateO]
@@ -332,7 +333,7 @@ class EnvironmentExtractor(AbsExtractor):
             # accuracy (ideally one minute only, max is one year) logarithmic
 
             normalized_duration = ((math.log(candidate[2].get_duration().total_seconds()) - EnvironmentExtractor.a_min)
-                                    / EnvironmentExtractor.a_min_minus_max)
+                                   / EnvironmentExtractor.a_min_minus_max)
 
             score += weights[4] * (1 - normalized_duration)
 

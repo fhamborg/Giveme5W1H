@@ -6,9 +6,15 @@
   "category": "consulate attack",
   "fiveWoneH": {
     "who": {
+      "annotated": [
+        {
+          "text": "suicide bomber",
+          "coderPhraseCount": 3
+        }
+      ],
+      "label": "who",
       "extracted": [
         {
-          "text": "Taliban",
           "parts": [
             [
               {
@@ -29,82 +35,13 @@
               "NNP"
             ]
           ],
-          "nlpIndexSentence": 2,
-          "score": 1.0
+          "score": 1.0,
+          "text": "Taliban",
+          "nlpIndexSentence": 2
         }
-      ],
-      "annotated": [
-        {
-          "text": "suicide bomber",
-          "coderPhraseCount": 3
-        }
-      ],
-      "label": "who"
+      ]
     },
     "when": {
-      "extracted": [
-        {
-          "text": "last week",
-          "enhancement": {
-            "timex": {
-              "start_date": "2016-11-06T00:00:00",
-              "end_date": "2016-11-12T23:59:59"
-            }
-          },
-          "parts": [
-            [
-              {
-                "nlpToken": {
-                  "characterOffsetBegin": 420,
-                  "word": "last",
-                  "lemma": "last",
-                  "timex": {
-                    "value": "2016-W44",
-                    "tid": "t1",
-                    "type": "DATE"
-                  },
-                  "before": " ",
-                  "characterOffsetEnd": 424,
-                  "originalText": "last",
-                  "normalizedNER": "2016-W44",
-                  "speaker": "PER0",
-                  "after": " ",
-                  "ner": "DATE",
-                  "index": 14,
-                  "pos": "JJ"
-                }
-              },
-              "JJ"
-            ],
-            [
-              {
-                "nlpToken": {
-                  "characterOffsetBegin": 425,
-                  "word": "week",
-                  "lemma": "week",
-                  "timex": {
-                    "value": "2016-W44",
-                    "tid": "t1",
-                    "type": "DATE"
-                  },
-                  "before": " ",
-                  "characterOffsetEnd": 429,
-                  "originalText": "week",
-                  "normalizedNER": "2016-W44",
-                  "speaker": "PER0",
-                  "after": " ",
-                  "ner": "DATE",
-                  "index": 15,
-                  "pos": "NN"
-                }
-              },
-              "NN"
-            ]
-          ],
-          "nlpIndexSentence": 2,
-          "score": 0.8504424492822271
-        }
-      ],
       "annotated": [
         {
           "coderPhraseCount": 3,
@@ -114,33 +51,6 @@
       "label": "when"
     },
     "why": {
-      "extracted": [
-        {
-          "text": "Gunman",
-          "parts": [
-            [
-              {
-                "nlpToken": {
-                  "characterOffsetBegin": 229,
-                  "word": "Gunman",
-                  "lemma": "gunman",
-                  "speaker": "PER0",
-                  "after": " ",
-                  "pos": "NN",
-                  "ner": "O",
-                  "before": " ",
-                  "characterOffsetEnd": 235,
-                  "index": 1,
-                  "originalText": "Gunman"
-                }
-              },
-              "NN"
-            ]
-          ],
-          "nlpIndexSentence": 1,
-          "score": 0.4194805194805195
-        }
-      ],
       "annotated": [
         {
           "text": "retaliation for air strikes last week in Kunduz province",
@@ -150,66 +60,142 @@
       "label": "why"
     },
     "how": {
-      "extracted": [
-        {
-          "text": "German",
-          "parts": [
-            [
-              {
-                "nlpToken": {
-                  "characterOffsetBegin": 131,
-                  "word": "German",
-                  "lemma": "german",
-                  "characterOffsetEnd": 137,
-                  "speaker": "PER0",
-                  "ner": "MISC",
-                  "after": " ",
-                  "originalText": "German",
-                  "before": " ",
-                  "index": 23,
-                  "pos": "JJ"
-                }
-              },
-              "JJ"
-            ]
-          ],
-          "score": 1.0
-        }
-      ],
       "annotated": [
         {
           "text": "rams a truck",
           "coderPhraseCount": 3
         }
       ],
-      "label": "how"
-    },
-    "where": {
+      "label": "how",
       "extracted": [
         {
-          "text": "Mazar-e-Sharif",
-          "enhancement": {
-            "openstreetmap_nominatim": {
-              "place_id": "25073727",
-              "licence": "Data \u00a9 OpenStreetMap contributors, ODbL 1.0. http://www.openstreetmap.org/copyright",
-              "type": "city",
-              "class": "place",
-              "osm_id": "2396275966",
-              "boundingbox": [
-                36.5513366,
-                36.8713366,
-                66.9487511,
-                67.2687511
-              ],
-              "osm_type": "node",
-              "lon": "67.1087511",
-              "display_name": "\u0645\u0632\u0627\u0631 \u0634\u0631\u06cc\u0641, \u0628\u0644\u062e, \u0627\u0641\u063a\u0627\u0646\u0633\u062a\u0627\u0646",
-              "importance": 0.11153510918303,
-              "icon": "https://nominatim.openstreetmap.org/images/mapicons/poi_place_city.p.20.png",
-              "lat": "36.7113366"
-            }
-          },
           "parts": [
+            [
+              {
+                "nlpToken": {
+                  "characterOffsetBegin": 264,
+                  "word": "the",
+                  "lemma": "the",
+                  "characterOffsetEnd": 267,
+                  "speaker": "PER0",
+                  "ner": "O",
+                  "after": " ",
+                  "originalText": "the",
+                  "before": " ",
+                  "index": 6,
+                  "pos": "DT"
+                }
+              },
+              "DT"
+            ],
+            [
+              {
+                "nlpToken": {
+                  "characterOffsetBegin": 268,
+                  "word": "blast",
+                  "lemma": "blast",
+                  "characterOffsetEnd": 273,
+                  "speaker": "PER0",
+                  "ner": "O",
+                  "after": "",
+                  "originalText": "blast",
+                  "before": " ",
+                  "index": 7,
+                  "pos": "NN"
+                }
+              },
+              "NN"
+            ],
+            [
+              {
+                "nlpToken": {
+                  "characterOffsetBegin": 273,
+                  "word": ",",
+                  "lemma": ",",
+                  "characterOffsetEnd": 274,
+                  "speaker": "PER0",
+                  "ner": "O",
+                  "after": " ",
+                  "originalText": ",",
+                  "before": "",
+                  "index": 8,
+                  "pos": ","
+                }
+              },
+              ","
+            ],
+            [
+              {
+                "nlpToken": {
+                  "characterOffsetBegin": 275,
+                  "word": "in",
+                  "lemma": "in",
+                  "characterOffsetEnd": 277,
+                  "speaker": "PER0",
+                  "ner": "O",
+                  "after": " ",
+                  "originalText": "in",
+                  "before": " ",
+                  "index": 9,
+                  "pos": "IN"
+                }
+              },
+              "IN"
+            ],
+            [
+              {
+                "nlpToken": {
+                  "characterOffsetBegin": 278,
+                  "word": "the",
+                  "lemma": "the",
+                  "characterOffsetEnd": 281,
+                  "speaker": "PER0",
+                  "ner": "O",
+                  "after": " ",
+                  "originalText": "the",
+                  "before": " ",
+                  "index": 10,
+                  "pos": "DT"
+                }
+              },
+              "DT"
+            ],
+            [
+              {
+                "nlpToken": {
+                  "characterOffsetBegin": 282,
+                  "word": "city",
+                  "lemma": "city",
+                  "characterOffsetEnd": 286,
+                  "speaker": "PER0",
+                  "ner": "O",
+                  "after": " ",
+                  "originalText": "city",
+                  "before": " ",
+                  "index": 11,
+                  "pos": "NN"
+                }
+              },
+              "NN"
+            ],
+            [
+              {
+                "nlpToken": {
+                  "characterOffsetBegin": 287,
+                  "word": "of",
+                  "lemma": "of",
+                  "characterOffsetEnd": 289,
+                  "speaker": "PER0",
+                  "ner": "O",
+                  "after": " ",
+                  "originalText": "of",
+                  "before": " ",
+                  "index": 12,
+                  "pos": "IN"
+                }
+              },
+              "IN"
+            ],
             [
               {
                 "nlpToken": {
@@ -227,12 +213,141 @@
                 }
               },
               "NNP"
+            ],
+            [
+              {
+                "nlpToken": {
+                  "characterOffsetBegin": 304,
+                  "word": ",",
+                  "lemma": ",",
+                  "characterOffsetEnd": 305,
+                  "speaker": "PER0",
+                  "ner": "O",
+                  "after": " ",
+                  "originalText": ",",
+                  "before": "",
+                  "index": 14,
+                  "pos": ","
+                }
+              },
+              ","
+            ],
+            [
+              {
+                "nlpToken": {
+                  "characterOffsetBegin": 306,
+                  "word": "battling",
+                  "lemma": "battle",
+                  "characterOffsetEnd": 314,
+                  "speaker": "PER0",
+                  "ner": "O",
+                  "after": " ",
+                  "originalText": "battling",
+                  "before": " ",
+                  "index": 15,
+                  "pos": "VBG"
+                }
+              },
+              "VBG"
+            ],
+            [
+              {
+                "nlpToken": {
+                  "characterOffsetBegin": 315,
+                  "word": "with",
+                  "lemma": "with",
+                  "characterOffsetEnd": 319,
+                  "speaker": "PER0",
+                  "ner": "O",
+                  "after": " ",
+                  "originalText": "with",
+                  "before": " ",
+                  "index": 16,
+                  "pos": "IN"
+                }
+              },
+              "IN"
+            ],
+            [
+              {
+                "nlpToken": {
+                  "characterOffsetBegin": 320,
+                  "word": "German",
+                  "lemma": "german",
+                  "characterOffsetEnd": 326,
+                  "speaker": "PER0",
+                  "ner": "MISC",
+                  "after": " ",
+                  "originalText": "German",
+                  "before": " ",
+                  "index": 17,
+                  "pos": "JJ"
+                }
+              },
+              "JJ"
+            ],
+            [
+              {
+                "nlpToken": {
+                  "characterOffsetBegin": 327,
+                  "word": "and",
+                  "lemma": "and",
+                  "characterOffsetEnd": 330,
+                  "speaker": "PER0",
+                  "ner": "O",
+                  "after": " ",
+                  "originalText": "and",
+                  "before": " ",
+                  "index": 18,
+                  "pos": "CC"
+                }
+              },
+              "CC"
+            ],
+            [
+              {
+                "nlpToken": {
+                  "characterOffsetBegin": 331,
+                  "word": "Afghan",
+                  "lemma": "Afghan",
+                  "characterOffsetEnd": 337,
+                  "speaker": "PER0",
+                  "ner": "MISC",
+                  "after": " ",
+                  "originalText": "Afghan",
+                  "before": " ",
+                  "index": 19,
+                  "pos": "NNP"
+                }
+              },
+              "NNP"
+            ],
+            [
+              {
+                "nlpToken": {
+                  "characterOffsetBegin": 338,
+                  "word": "forces",
+                  "lemma": "force",
+                  "characterOffsetEnd": 344,
+                  "speaker": "PER0",
+                  "ner": "O",
+                  "after": "",
+                  "originalText": "forces",
+                  "before": " ",
+                  "index": 20,
+                  "pos": "NNS"
+                }
+              },
+              "NNS"
             ]
           ],
-          "nlpIndexSentence": 1,
-          "score": 1.0
+          "score": 1.0,
+          "text": "the blast , in the city of Mazar-e-Sharif , battling with German and Afghan forces",
+          "nlpIndexSentence": 6
         }
-      ],
+      ]
+    },
+    "where": {
       "annotated": [
         {
           "text": "Mazar-e-Sharif",
@@ -242,9 +357,19 @@
       "label": "where"
     },
     "what": {
+      "annotated": [
+        {
+          "text": "Fatal attack on German consulate",
+          "coderPhraseCount": 2
+        },
+        {
+          "text": "rams a truck into the German consulate",
+          "coderPhraseCount": 2
+        }
+      ],
+      "label": "what",
       "extracted": [
         {
-          "text": "carried out the attack",
           "parts": [
             [
               {
@@ -319,21 +444,11 @@
               "NN"
             ]
           ],
-          "nlpIndexSentence": 2,
-          "score": 1.0
+          "score": 1.0,
+          "text": "carried out the attack",
+          "nlpIndexSentence": 2
         }
-      ],
-      "annotated": [
-        {
-          "text": "Fatal attack on German consulate",
-          "coderPhraseCount": 2
-        },
-        {
-          "text": "rams a truck into the German consulate",
-          "coderPhraseCount": 2
-        }
-      ],
-      "label": "what"
+      ]
     }
   },
   "description": "A suicide bomber rams a truck into the German consulate in Mazar-e-Sharif, killing four people.",

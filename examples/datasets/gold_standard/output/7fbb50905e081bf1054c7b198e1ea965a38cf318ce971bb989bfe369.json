@@ -6,9 +6,15 @@
   "category": "trump and obama",
   "fiveWoneH": {
     "who": {
+      "annotated": [
+        {
+          "text": "Patti Wood, a body language expert",
+          "coderPhraseCount": 3
+        }
+      ],
+      "label": "who",
       "extracted": [
         {
-          "text": "Mr Obama",
           "parts": [
             [
               {
@@ -47,20 +53,13 @@
               "NNP"
             ]
           ],
-          "nlpIndexSentence": 2,
-          "score": 1.0
+          "score": 1.0,
+          "text": "Mr Obama",
+          "nlpIndexSentence": 2
         }
-      ],
-      "annotated": [
-        {
-          "text": "Patti Wood, a body language expert",
-          "coderPhraseCount": 3
-        }
-      ],
-      "label": "who"
+      ]
     },
     "when": {
-      "extracted": [],
       "annotated": [
         {
           "coderPhraseCount": 3,
@@ -70,33 +69,6 @@
       "label": "when"
     },
     "why": {
-      "extracted": [
-        {
-          "text": "there",
-          "parts": [
-            [
-              {
-                "nlpToken": {
-                  "characterOffsetBegin": 245,
-                  "word": "there",
-                  "lemma": "there",
-                  "speaker": "PER0",
-                  "after": " ",
-                  "pos": "EX",
-                  "ner": "O",
-                  "before": " ",
-                  "characterOffsetEnd": 250,
-                  "index": 21,
-                  "originalText": "there"
-                }
-              },
-              "EX"
-            ]
-          ],
-          "nlpIndexSentence": 1,
-          "score": 0.42142857142857143
-        }
-      ],
       "annotated": [
         {
           "coderPhraseCount": 3
@@ -105,33 +77,6 @@
       "label": "why"
     },
     "how": {
-      "extracted": [
-        {
-          "text": "hopeful",
-          "parts": [
-            [
-              {
-                "nlpToken": {
-                  "characterOffsetBegin": 387,
-                  "word": "hopeful",
-                  "lemma": "hopeful",
-                  "characterOffsetEnd": 394,
-                  "speaker": "22",
-                  "ner": "O",
-                  "after": "",
-                  "originalText": "hopeful",
-                  "before": " ",
-                  "index": 23,
-                  "pos": "JJ"
-                }
-              },
-              "JJ"
-            ]
-          ],
-          "nlpIndexSentence": 2,
-          "score": 1.0
-        }
-      ],
       "annotated": [
         {
           "text": "analysed",
@@ -142,73 +87,144 @@
           "coderPhraseCount": 2
         }
       ],
-      "label": "how"
-    },
-    "where": {
+      "label": "how",
       "extracted": [
         {
-          "text": "White House",
-          "enhancement": {
-            "openstreetmap_nominatim": {
-              "importance": 0.3519189346824,
-              "osm_type": "way",
-              "osm_id": "238241022",
-              "type": "government",
-              "lon": "-77.0365534886228",
-              "display_name": "White House, 1600, Pennsylvania Avenue Northwest, Golden Triangle, Washington, District of Columbia, 20500, United States of America",
-              "class": "office",
-              "lat": "38.8976998",
-              "licence": "Data \u00a9 OpenStreetMap contributors, ODbL 1.0. http://www.openstreetmap.org/copyright",
-              "place_id": "127954863",
-              "boundingbox": [
-                38.8974898,
-                38.897911,
-                -77.0368542,
-                -77.0362526
-              ]
-            }
-          },
           "parts": [
             [
               {
                 "nlpToken": {
-                  "characterOffsetBegin": 117,
-                  "word": "White",
-                  "lemma": "White",
-                  "characterOffsetEnd": 122,
-                  "speaker": "PER0",
-                  "ner": "LOCATION",
+                  "characterOffsetBegin": 2242,
+                  "word": "he",
+                  "lemma": "he",
+                  "characterOffsetEnd": 2244,
+                  "speaker": "188",
+                  "ner": "O",
                   "after": " ",
-                  "originalText": "White",
+                  "originalText": "he",
                   "before": " ",
-                  "index": 20,
-                  "pos": "NNP"
+                  "index": 2,
+                  "pos": "PRP"
                 }
               },
-              "NNP"
+              "PRP"
             ],
             [
               {
                 "nlpToken": {
-                  "characterOffsetBegin": 123,
-                  "word": "House",
-                  "lemma": "House",
-                  "characterOffsetEnd": 128,
-                  "speaker": "PER0",
-                  "ner": "LOCATION",
-                  "after": "",
-                  "originalText": "House",
+                  "characterOffsetBegin": 2245,
+                  "word": "says",
+                  "lemma": "say",
+                  "characterOffsetEnd": 2249,
+                  "speaker": "188",
+                  "ner": "O",
+                  "after": " ",
+                  "originalText": "says",
                   "before": " ",
-                  "index": 21,
-                  "pos": "NNP"
+                  "index": 3,
+                  "pos": "VBZ"
                 }
               },
-              "NNP"
+              "VBZ"
+            ],
+            [
+              {
+                "nlpToken": {
+                  "characterOffsetBegin": 2250,
+                  "word": "it",
+                  "lemma": "it",
+                  "characterOffsetEnd": 2252,
+                  "speaker": "188",
+                  "ner": "O",
+                  "after": " ",
+                  "originalText": "it",
+                  "before": " ",
+                  "index": 4,
+                  "pos": "PRP"
+                }
+              },
+              "PRP"
+            ],
+            [
+              {
+                "nlpToken": {
+                  "characterOffsetBegin": 2253,
+                  "word": "he",
+                  "lemma": "he",
+                  "characterOffsetEnd": 2255,
+                  "speaker": "188",
+                  "ner": "O",
+                  "after": " ",
+                  "originalText": "he",
+                  "before": " ",
+                  "index": 5,
+                  "pos": "PRP"
+                }
+              },
+              "PRP"
+            ],
+            [
+              {
+                "nlpToken": {
+                  "characterOffsetBegin": 2256,
+                  "word": "closes",
+                  "lemma": "close",
+                  "characterOffsetEnd": 2262,
+                  "speaker": "188",
+                  "ner": "O",
+                  "after": " ",
+                  "originalText": "closes",
+                  "before": " ",
+                  "index": 6,
+                  "pos": "VBZ"
+                }
+              },
+              "VBZ"
+            ],
+            [
+              {
+                "nlpToken": {
+                  "characterOffsetBegin": 2263,
+                  "word": "his",
+                  "lemma": "he",
+                  "characterOffsetEnd": 2266,
+                  "speaker": "188",
+                  "ner": "O",
+                  "after": " ",
+                  "originalText": "his",
+                  "before": " ",
+                  "index": 7,
+                  "pos": "PRP$"
+                }
+              },
+              "PRP$"
+            ],
+            [
+              {
+                "nlpToken": {
+                  "characterOffsetBegin": 2267,
+                  "word": "eyes",
+                  "lemma": "eye",
+                  "characterOffsetEnd": 2271,
+                  "speaker": "188",
+                  "ner": "O",
+                  "after": "",
+                  "originalText": "eyes",
+                  "before": " ",
+                  "index": 8,
+                  "pos": "NNS"
+                }
+              },
+              "NNS"
             ]
           ],
-          "score": 1.0
+          "score": 1.0,
+          "text": "he says it he closes his eyes",
+          "nlpIndexSentence": 2
         }
-      ],
+      ]
+    },
+    "where": {
       "annotated": [
         {
           "text": "White House",
@@ -218,9 +234,15 @@
       "label": "where"
     },
     "what": {
+      "annotated": [
+        {
+          "text": "analysed President Barack Obama and Donald Trump's mannerisms",
+          "coderPhraseCount": 3
+        }
+      ],
+      "label": "what",
       "extracted": [
         {
-          "text": "was \" resigned and not hopeful \" , while Mr Trump",
           "parts": [
             [
               {
@@ -421,17 +443,11 @@
               "NNP"
             ]
           ],
-          "nlpIndexSentence": 2,
-          "score": 1.0
+          "score": 1.0,
+          "text": "was \" resigned and not hopeful \" , while Mr Trump",
+          "nlpIndexSentence": 2
         }
-      ],
-      "annotated": [
-        {
-          "text": "analysed President Barack Obama and Donald Trump's mannerisms",
-          "coderPhraseCount": 3
-        }
-      ],
-      "label": "what"
+      ]
     }
   },
   "description": "A body language expert has analysed President Barack Obama and Donald Trump's mannerisms during their meeting at the White House. The two men both gave positive feedback about the 90-minute conversation but after years of clashing, it was clear there was some tension between them.  Patti Wood, a body language expert, analysed the two men, concluding that Mr Obama was \"resigned and not hopeful\", while Mr Trump was \"serious and perhaps fearful\".",

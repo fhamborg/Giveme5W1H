@@ -6,9 +6,15 @@
   "category": "seattle shooting",
   "fiveWoneH": {
     "who": {
+      "annotated": [
+        {
+          "text": "A gunman",
+          "coderPhraseCount": 3
+        }
+      ],
+      "label": "who",
       "extracted": [
         {
-          "text": "7-11 manager Sharon Keith",
           "parts": [
             [
               {
@@ -84,58 +90,13 @@
               "NNP"
             ]
           ],
-          "nlpIndexSentence": 7,
-          "score": 1.0
+          "score": 1.0,
+          "text": "7-11 manager Sharon Keith",
+          "nlpIndexSentence": 7
         }
-      ],
-      "annotated": [
-        {
-          "text": "A gunman",
-          "coderPhraseCount": 3
-        }
-      ],
-      "label": "who"
+      ]
     },
     "when": {
-      "extracted": [
-        {
-          "text": "march",
-          "enhancement": {
-            "timex": {
-              "start_date": "2017-03-01T00:00:00",
-              "end_date": "2017-03-31T23:59:59"
-            }
-          },
-          "parts": [
-            [
-              {
-                "nlpToken": {
-                  "characterOffsetBegin": 2758,
-                  "word": "march",
-                  "lemma": "march",
-                  "timex": {
-                    "value": "2017-03",
-                    "tid": "t7",
-                    "type": "DATE"
-                  },
-                  "before": " ",
-                  "characterOffsetEnd": 2763,
-                  "originalText": "march",
-                  "normalizedNER": "2017-03",
-                  "speaker": "PER0",
-                  "after": " ",
-                  "ner": "DATE",
-                  "index": 3,
-                  "pos": "NN"
-                }
-              },
-              "NN"
-            ]
-          ],
-          "nlpIndexSentence": 16,
-          "score": 0.4606883464109315
-        }
-      ],
       "annotated": [
         {
           "text": "Wednesday night",
@@ -146,50 +107,6 @@
       "label": "when"
     },
     "why": {
-      "extracted": [
-        {
-          "text": "A gunman",
-          "parts": [
-            [
-              {
-                "nlpToken": {
-                  "characterOffsetBegin": 0,
-                  "word": "A",
-                  "lemma": "a",
-                  "speaker": "PER0",
-                  "after": " ",
-                  "pos": "DT",
-                  "ner": "O",
-                  "before": "",
-                  "characterOffsetEnd": 1,
-                  "index": 1,
-                  "originalText": "A"
-                }
-              },
-              "DT"
-            ],
-            [
-              {
-                "nlpToken": {
-                  "characterOffsetBegin": 2,
-                  "word": "gunman",
-                  "lemma": "gunman",
-                  "speaker": "PER0",
-                  "after": " ",
-                  "pos": "NN",
-                  "ner": "O",
-                  "before": " ",
-                  "characterOffsetEnd": 8,
-                  "index": 2,
-                  "originalText": "gunman"
-                }
-              },
-              "NN"
-            ]
-          ],
-          "score": 0.42857142857142855
-        }
-      ],
       "annotated": [
         {
           "text": "some type of personal argument",
@@ -199,33 +116,6 @@
       "label": "why"
     },
     "how": {
-      "extracted": [
-        {
-          "text": "multiple",
-          "parts": [
-            [
-              {
-                "nlpToken": {
-                  "characterOffsetBegin": 861,
-                  "word": "multiple",
-                  "lemma": "multiple",
-                  "characterOffsetEnd": 869,
-                  "speaker": "PER0",
-                  "ner": "O",
-                  "after": " ",
-                  "originalText": "multiple",
-                  "before": " ",
-                  "index": 34,
-                  "pos": "JJ"
-                }
-              },
-              "JJ"
-            ]
-          ],
-          "nlpIndexSentence": 5,
-          "score": 1.0
-        }
-      ],
       "annotated": [
         {
           "text": "near",
@@ -236,56 +126,234 @@
           "coderPhraseCount": 0
         }
       ],
-      "label": "how"
-    },
-    "where": {
+      "label": "how",
       "extracted": [
         {
-          "text": "Seattle",
-          "enhancement": {
-            "openstreetmap_nominatim": {
-              "place_id": "178311857",
-              "licence": "Data \u00a9 OpenStreetMap contributors, ODbL 1.0. http://www.openstreetmap.org/copyright",
-              "type": "city",
-              "class": "place",
-              "osm_id": "237385",
-              "boundingbox": [
-                47.4810022,
-                47.7341357,
-                -122.459696,
-                -122.224433
-              ],
-              "osm_type": "relation",
-              "lon": "-122.3300624",
-              "display_name": "Seattle, King County, Washington, United States of America",
-              "importance": 0.2828859963469,
-              "icon": "https://nominatim.openstreetmap.org/images/mapicons/poi_place_city.p.20.png",
-              "lat": "47.6038321"
-            }
-          },
           "parts": [
             [
               {
                 "nlpToken": {
-                  "characterOffsetBegin": 33,
-                  "word": "Seattle",
-                  "lemma": "Seattle",
-                  "characterOffsetEnd": 40,
+                  "characterOffsetBegin": 1714,
+                  "word": ",",
+                  "lemma": ",",
+                  "characterOffsetEnd": 1715,
                   "speaker": "PER0",
-                  "ner": "LOCATION",
+                  "ner": "O",
                   "after": " ",
-                  "originalText": "Seattle",
-                  "before": " ",
+                  "originalText": ",",
+                  "before": "",
                   "index": 7,
-                  "pos": "NNP"
+                  "pos": ","
                 }
               },
-              "NNP"
+              ","
+            ],
+            [
+              {
+                "nlpToken": {
+                  "characterOffsetBegin": 1716,
+                  "word": "there",
+                  "lemma": "there",
+                  "characterOffsetEnd": 1721,
+                  "speaker": "PER0",
+                  "ner": "O",
+                  "after": " ",
+                  "originalText": "there",
+                  "before": " ",
+                  "index": 8,
+                  "pos": "EX"
+                }
+              },
+              "EX"
+            ],
+            [
+              {
+                "nlpToken": {
+                  "characterOffsetBegin": 1722,
+                  "word": "were",
+                  "lemma": "be",
+                  "characterOffsetEnd": 1726,
+                  "speaker": "PER0",
+                  "ner": "O",
+                  "after": " ",
+                  "originalText": "were",
+                  "before": " ",
+                  "index": 9,
+                  "pos": "VBD"
+                }
+              },
+              "VBD"
+            ],
+            [
+              {
+                "nlpToken": {
+                  "characterOffsetBegin": 1727,
+                  "word": "multiple",
+                  "lemma": "multiple",
+                  "characterOffsetEnd": 1735,
+                  "speaker": "PER0",
+                  "ner": "O",
+                  "after": " ",
+                  "originalText": "multiple",
+                  "before": " ",
+                  "index": 10,
+                  "pos": "JJ"
+                }
+              },
+              "JJ"
+            ],
+            [
+              {
+                "nlpToken": {
+                  "characterOffsetBegin": 1736,
+                  "word": "people",
+                  "lemma": "people",
+                  "characterOffsetEnd": 1742,
+                  "speaker": "PER0",
+                  "ner": "O",
+                  "after": " ",
+                  "originalText": "people",
+                  "before": " ",
+                  "index": 11,
+                  "pos": "NNS"
+                }
+              },
+              "NNS"
+            ],
+            [
+              {
+                "nlpToken": {
+                  "characterOffsetBegin": 1743,
+                  "word": "down",
+                  "lemma": "down",
+                  "characterOffsetEnd": 1747,
+                  "speaker": "PER0",
+                  "ner": "O",
+                  "after": "",
+                  "originalText": "down",
+                  "before": " ",
+                  "index": 12,
+                  "pos": "RB"
+                }
+              },
+              "RB"
+            ],
+            [
+              {
+                "nlpToken": {
+                  "characterOffsetBegin": 1747,
+                  "word": ",",
+                  "lemma": ",",
+                  "characterOffsetEnd": 1748,
+                  "speaker": "PER0",
+                  "ner": "O",
+                  "after": " ",
+                  "originalText": ",",
+                  "before": "",
+                  "index": 13,
+                  "pos": ","
+                }
+              },
+              ","
+            ],
+            [
+              {
+                "nlpToken": {
+                  "characterOffsetBegin": 1749,
+                  "word": "a",
+                  "lemma": "a",
+                  "characterOffsetEnd": 1750,
+                  "speaker": "PER0",
+                  "ner": "O",
+                  "after": " ",
+                  "originalText": "a",
+                  "before": " ",
+                  "index": 14,
+                  "pos": "DT"
+                }
+              },
+              "DT"
+            ],
+            [
+              {
+                "nlpToken": {
+                  "characterOffsetBegin": 1751,
+                  "word": "lot",
+                  "lemma": "lot",
+                  "characterOffsetEnd": 1754,
+                  "speaker": "PER0",
+                  "ner": "O",
+                  "after": " ",
+                  "originalText": "lot",
+                  "before": " ",
+                  "index": 15,
+                  "pos": "NN"
+                }
+              },
+              "NN"
+            ],
+            [
+              {
+                "nlpToken": {
+                  "characterOffsetBegin": 1755,
+                  "word": "of",
+                  "lemma": "of",
+                  "characterOffsetEnd": 1757,
+                  "speaker": "PER0",
+                  "ner": "O",
+                  "after": " ",
+                  "originalText": "of",
+                  "before": " ",
+                  "index": 16,
+                  "pos": "IN"
+                }
+              },
+              "IN"
+            ],
+            [
+              {
+                "nlpToken": {
+                  "characterOffsetBegin": 1758,
+                  "word": "blood",
+                  "lemma": "blood",
+                  "characterOffsetEnd": 1763,
+                  "speaker": "PER0",
+                  "ner": "O",
+                  "after": "",
+                  "originalText": "blood",
+                  "before": " ",
+                  "index": 17,
+                  "pos": "NN"
+                }
+              },
+              "NN"
+            ],
+            [
+              {
+                "nlpToken": {
+                  "characterOffsetBegin": 1763,
+                  "word": ",",
+                  "lemma": ",",
+                  "characterOffsetEnd": 1764,
+                  "speaker": "PER0",
+                  "ner": "O",
+                  "after": "",
+                  "originalText": ",",
+                  "before": "",
+                  "index": 18,
+                  "pos": ","
+                }
+              },
+              ","
             ]
           ],
-          "score": 1.0
+          "score": 1.0,
+          "text": ", there were multiple people down , a lot of blood ,",
+          "nlpIndexSentence": 7
         }
-      ],
+      ]
+    },
+    "where": {
       "annotated": [
         {
           "text": "downtown Seattle",
@@ -295,9 +363,19 @@
       "label": "where"
     },
     "what": {
+      "annotated": [
+        {
+          "text": "opened fire",
+          "coderPhraseCount": 3
+        },
+        {
+          "text": "Trump protest march in Seattle marred by shooting",
+          "coderPhraseCount": 2
+        }
+      ],
+      "label": "what",
       "extracted": [
         {
-          "text": "told reporters",
           "parts": [
             [
               {
@@ -336,21 +414,11 @@
               "NNS"
             ]
           ],
-          "nlpIndexSentence": 7,
-          "score": 1.0
+          "score": 1.0,
+          "text": "told reporters",
+          "nlpIndexSentence": 7
         }
-      ],
-      "annotated": [
-        {
-          "text": "opened fire",
-          "coderPhraseCount": 3
-        },
-        {
-          "text": "Trump protest march in Seattle marred by shooting",
-          "coderPhraseCount": 2
-        }
-      ],
-      "label": "what"
+      ]
     }
   },
   "description": "The shooting didn't seem to be related to the anti-Trump demonstrations but stemmed from 'some type of personal argument', Seattle police assistant chief Robert Merner said.",

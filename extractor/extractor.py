@@ -61,7 +61,6 @@ class FiveWExtractor:
                 method_extractor.MethodExtractor()
             ]
 
-
         if combined_scorers is not None:
             self.combinedScorers = combined_scorers
         else:

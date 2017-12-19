@@ -6,9 +6,19 @@
   "category": "tram victims",
   "fiveWoneH": {
     "who": {
+      "annotated": [
+        {
+          "text": "Donald Collett, Philip Logan and Robert Huxley",
+          "coderPhraseCount": 2
+        },
+        {
+          "text": "Police",
+          "coderPhraseCount": 2
+        }
+      ],
+      "label": "who",
       "extracted": [
         {
-          "text": "Two of the victims - 19-year-old Dane Chinnery and Philip Seary , 57 -",
           "parts": [
             [
               {
@@ -271,134 +281,13 @@
               ":"
             ]
           ],
-          "nlpIndexSentence": 19,
-          "score": 1.0
+          "score": 1.0,
+          "text": "Two of the victims - 19-year-old Dane Chinnery and Philip Seary , 57 -",
+          "nlpIndexSentence": 19
         }
-      ],
-      "annotated": [
-        {
-          "text": "Donald Collett, Philip Logan and Robert Huxley",
-          "coderPhraseCount": 2
-        },
-        {
-          "text": "Police",
-          "coderPhraseCount": 2
-        }
-      ],
-      "label": "who"
+      ]
     },
     "when": {
-      "extracted": [
-        {
-          "text": "6.10 am on Tuesday",
-          "enhancement": {
-            "timex": {
-              "start_date": "2016-11-08T10:00:00",
-              "end_date": "2016-11-08T10:00:59"
-            }
-          },
-          "parts": [
-            [
-              {
-                "nlpToken": {
-                  "characterOffsetBegin": 8756,
-                  "word": "6.10",
-                  "lemma": "6.10",
-                  "timex": {
-                    "value": "2016-11-08T10:00",
-                    "tid": "t38",
-                    "type": "TIME"
-                  },
-                  "before": " ",
-                  "characterOffsetEnd": 8760,
-                  "originalText": "6.10",
-                  "normalizedNER": "2016-11-08T10:00",
-                  "speaker": "PER0",
-                  "after": "",
-                  "ner": "TIME",
-                  "index": 5,
-                  "pos": "CD"
-                }
-              },
-              "CD"
-            ],
-            [
-              {
-                "nlpToken": {
-                  "characterOffsetBegin": 8760,
-                  "word": "am",
-                  "lemma": "be",
-                  "timex": {
-                    "value": "2016-11-08T10:00",
-                    "tid": "t38",
-                    "type": "TIME"
-                  },
-                  "before": "",
-                  "characterOffsetEnd": 8762,
-                  "originalText": "am",
-                  "normalizedNER": "2016-11-08T10:00",
-                  "speaker": "PER0",
-                  "after": " ",
-                  "ner": "TIME",
-                  "index": 6,
-                  "pos": "VBP"
-                }
-              },
-              "VBP"
-            ],
-            [
-              {
-                "nlpToken": {
-                  "characterOffsetBegin": 8763,
-                  "word": "on",
-                  "lemma": "on",
-                  "timex": {
-                    "value": "2016-11-08T10:00",
-                    "tid": "t38",
-                    "type": "TIME"
-                  },
-                  "before": " ",
-                  "characterOffsetEnd": 8765,
-                  "originalText": "on",
-                  "normalizedNER": "2016-11-08T10:00",
-                  "speaker": "PER0",
-                  "after": " ",
-                  "ner": "TIME",
-                  "index": 7,
-                  "pos": "IN"
-                }
-              },
-              "IN"
-            ],
-            [
-              {
-                "nlpToken": {
-                  "characterOffsetBegin": 8766,
-                  "word": "Tuesday",
-                  "lemma": "Tuesday",
-                  "timex": {
-                    "value": "2016-11-08T10:00",
-                    "tid": "t38",
-                    "type": "TIME"
-                  },
-                  "before": " ",
-                  "characterOffsetEnd": 8773,
-                  "originalText": "Tuesday",
-                  "normalizedNER": "2016-11-08T10:00",
-                  "speaker": "PER0",
-                  "after": " ",
-                  "ner": "DATE",
-                  "index": 8,
-                  "pos": "NNP"
-                }
-              },
-              "NNP"
-            ]
-          ],
-          "nlpIndexSentence": 52,
-          "score": 0.686686626326067
-        }
-      ],
       "annotated": [
         {
           "text": "Wednesday",
@@ -409,33 +298,6 @@
       "label": "when"
     },
     "why": {
-      "extracted": [
-        {
-          "text": "it",
-          "parts": [
-            [
-              {
-                "nlpToken": {
-                  "characterOffsetBegin": 209,
-                  "word": "it",
-                  "lemma": "it",
-                  "speaker": "PER0",
-                  "after": " ",
-                  "pos": "PRP",
-                  "ner": "O",
-                  "before": " ",
-                  "characterOffsetEnd": 211,
-                  "index": 18,
-                  "originalText": "it"
-                }
-              },
-              "PRP"
-            ]
-          ],
-          "nlpIndexSentence": 1,
-          "score": 0.4262458471760797
-        }
-      ],
       "annotated": [
         {
           "text": "above the permitted speed",
@@ -453,10 +315,183 @@
       "label": "why"
     },
     "how": {
+      "annotated": [
+        {
+          "text": "high speed",
+          "coderPhraseCount": 2
+        },
+        {
+          "text": "crash",
+          "coderPhraseCount": 2
+        }
+      ],
+      "label": "how",
       "extracted": [
         {
-          "text": "left",
           "parts": [
+            [
+              {
+                "nlpToken": {
+                  "characterOffsetBegin": 1334,
+                  "word": "video",
+                  "lemma": "video",
+                  "characterOffsetEnd": 1339,
+                  "speaker": "PER0",
+                  "ner": "O",
+                  "after": " ",
+                  "originalText": "video",
+                  "before": " ",
+                  "index": 4,
+                  "pos": "NN"
+                }
+              },
+              "NN"
+            ],
+            [
+              {
+                "nlpToken": {
+                  "characterOffsetBegin": 1340,
+                  "word": "Donald",
+                  "lemma": "Donald",
+                  "characterOffsetEnd": 1346,
+                  "speaker": "PER0",
+                  "ner": "PERSON",
+                  "after": " ",
+                  "originalText": "Donald",
+                  "before": " ",
+                  "index": 5,
+                  "pos": "NNP"
+                }
+              },
+              "NNP"
+            ],
+            [
+              {
+                "nlpToken": {
+                  "characterOffsetBegin": 1347,
+                  "word": "Collett",
+                  "lemma": "Collett",
+                  "characterOffsetEnd": 1354,
+                  "speaker": "PER0",
+                  "ner": "PERSON",
+                  "after": "",
+                  "originalText": "Collett",
+                  "before": " ",
+                  "index": 6,
+                  "pos": "NNP"
+                }
+              },
+              "NNP"
+            ],
+            [
+              {
+                "nlpToken": {
+                  "characterOffsetBegin": 1354,
+                  "word": ",",
+                  "lemma": ",",
+                  "characterOffsetEnd": 1355,
+                  "speaker": "PER0",
+                  "ner": "O",
+                  "after": " ",
+                  "originalText": ",",
+                  "before": "",
+                  "index": 7,
+                  "pos": ","
+                }
+              },
+              ","
+            ],
+            [
+              {
+                "nlpToken": {
+                  "characterOffsetBegin": 1356,
+                  "word": "62",
+                  "lemma": "62",
+                  "before": " ",
+                  "characterOffsetEnd": 1358,
+                  "originalText": "62",
+                  "normalizedNER": "62.0",
+                  "speaker": "PER0",
+                  "after": "",
+                  "ner": "NUMBER",
+                  "index": 8,
+                  "pos": "CD"
+                }
+              },
+              "CD"
+            ],
+            [
+              {
+                "nlpToken": {
+                  "characterOffsetBegin": 1358,
+                  "word": ",",
+                  "lemma": ",",
+                  "characterOffsetEnd": 1359,
+                  "speaker": "PER0",
+                  "ner": "O",
+                  "after": " ",
+                  "originalText": ",",
+                  "before": "",
+                  "index": 9,
+                  "pos": ","
+                }
+              },
+              ","
+            ],
+            [
+              {
+                "nlpToken": {
+                  "characterOffsetBegin": 1360,
+                  "word": "of",
+                  "lemma": "of",
+                  "characterOffsetEnd": 1362,
+                  "speaker": "PER0",
+                  "ner": "O",
+                  "after": " ",
+                  "originalText": "of",
+                  "before": " ",
+                  "index": 10,
+                  "pos": "IN"
+                }
+              },
+              "IN"
+            ],
+            [
+              {
+                "nlpToken": {
+                  "characterOffsetBegin": 1363,
+                  "word": "Croydon",
+                  "lemma": "Croydon",
+                  "characterOffsetEnd": 1370,
+                  "speaker": "PER0",
+                  "ner": "LOCATION",
+                  "after": " ",
+                  "originalText": "Croydon",
+                  "before": " ",
+                  "index": 11,
+                  "pos": "NNP"
+                }
+              },
+              "NNP"
+            ],
+            [
+              {
+                "nlpToken": {
+                  "characterOffsetBegin": 1371,
+                  "word": "-LRB-",
+                  "lemma": "-lrb-",
+                  "characterOffsetEnd": 1372,
+                  "speaker": "PER0",
+                  "ner": "O",
+                  "after": "",
+                  "originalText": "(",
+                  "before": " ",
+                  "index": 12,
+                  "pos": "-LRB-"
+                }
+              },
+              "-LRB-"
+            ],
             [
               {
                 "nlpToken": {
@@ -474,72 +509,1258 @@
                 }
               },
               "VBN"
-            ]
-          ],
-          "nlpIndexSentence": 13,
-          "score": 1.0
-        }
-      ],
-      "annotated": [
-        {
-          "text": "high speed",
-          "coderPhraseCount": 2
-        },
-        {
-          "text": "crash",
-          "coderPhraseCount": 2
-        }
-      ],
-      "label": "how"
-    },
-    "where": {
-      "extracted": [
-        {
-          "text": "Croydon",
-          "enhancement": {
-            "openstreetmap_nominatim": {
-              "place_id": "117537",
-              "licence": "Data \u00a9 OpenStreetMap contributors, ODbL 1.0. http://www.openstreetmap.org/copyright",
-              "type": "town",
-              "class": "place",
-              "osm_id": "21262496",
-              "boundingbox": [
-                51.3313049,
-                51.4113049,
-                -0.141957,
-                -0.061957
-              ],
-              "osm_type": "node",
-              "lon": "-0.101957",
-              "display_name": "Croydon, London, Greater London, England, CR0 1SZ, UK",
-              "importance": 0.23943987893565,
-              "icon": "https://nominatim.openstreetmap.org/images/mapicons/poi_place_town.p.20.png",
-              "lat": "51.3713049"
-            }
-          },
-          "parts": [
+            ],
             [
               {
                 "nlpToken": {
-                  "characterOffsetBegin": 25,
+                  "characterOffsetBegin": 1376,
+                  "word": "-RRB-",
+                  "lemma": "-rrb-",
+                  "characterOffsetEnd": 1377,
+                  "speaker": "PER0",
+                  "ner": "O",
+                  "after": "",
+                  "originalText": ")",
+                  "before": "",
+                  "index": 14,
+                  "pos": "-RRB-"
+                }
+              },
+              "-RRB-"
+            ],
+            [
+              {
+                "nlpToken": {
+                  "characterOffsetBegin": 1377,
+                  "word": ";",
+                  "lemma": ";",
+                  "characterOffsetEnd": 1378,
+                  "speaker": "PER0",
+                  "ner": "O",
+                  "after": " ",
+                  "originalText": ";",
+                  "before": "",
+                  "index": 15,
+                  "pos": ":"
+                }
+              },
+              ":"
+            ],
+            [
+              {
+                "nlpToken": {
+                  "characterOffsetBegin": 1379,
+                  "word": "and",
+                  "lemma": "and",
+                  "characterOffsetEnd": 1382,
+                  "speaker": "PER0",
+                  "ner": "O",
+                  "after": " ",
+                  "originalText": "and",
+                  "before": " ",
+                  "index": 16,
+                  "pos": "CC"
+                }
+              },
+              "CC"
+            ],
+            [
+              {
+                "nlpToken": {
+                  "characterOffsetBegin": 1383,
+                  "word": "Philip",
+                  "lemma": "Philip",
+                  "characterOffsetEnd": 1389,
+                  "speaker": "PER0",
+                  "ner": "PERSON",
+                  "after": " ",
+                  "originalText": "Philip",
+                  "before": " ",
+                  "index": 17,
+                  "pos": "NNP"
+                }
+              },
+              "NNP"
+            ],
+            [
+              {
+                "nlpToken": {
+                  "characterOffsetBegin": 1390,
+                  "word": "Logan",
+                  "lemma": "Logan",
+                  "characterOffsetEnd": 1395,
+                  "speaker": "PER0",
+                  "ner": "PERSON",
+                  "after": "",
+                  "originalText": "Logan",
+                  "before": " ",
+                  "index": 18,
+                  "pos": "NNP"
+                }
+              },
+              "NNP"
+            ],
+            [
+              {
+                "nlpToken": {
+                  "characterOffsetBegin": 1395,
+                  "word": ",",
+                  "lemma": ",",
+                  "characterOffsetEnd": 1396,
+                  "speaker": "PER0",
+                  "ner": "O",
+                  "after": " ",
+                  "originalText": ",",
+                  "before": "",
+                  "index": 19,
+                  "pos": ","
+                }
+              },
+              ","
+            ],
+            [
+              {
+                "nlpToken": {
+                  "characterOffsetBegin": 1397,
+                  "word": "52",
+                  "lemma": "52",
+                  "before": " ",
+                  "characterOffsetEnd": 1399,
+                  "originalText": "52",
+                  "normalizedNER": "52.0",
+                  "speaker": "PER0",
+                  "after": "",
+                  "ner": "NUMBER",
+                  "index": 20,
+                  "pos": "CD"
+                }
+              },
+              "CD"
+            ],
+            [
+              {
+                "nlpToken": {
+                  "characterOffsetBegin": 1399,
+                  "word": ",",
+                  "lemma": ",",
+                  "characterOffsetEnd": 1400,
+                  "speaker": "PER0",
+                  "ner": "O",
+                  "after": " ",
+                  "originalText": ",",
+                  "before": "",
+                  "index": 21,
+                  "pos": ","
+                }
+              },
+              ","
+            ],
+            [
+              {
+                "nlpToken": {
+                  "characterOffsetBegin": 1401,
+                  "word": "from",
+                  "lemma": "from",
+                  "characterOffsetEnd": 1405,
+                  "speaker": "PER0",
+                  "ner": "O",
+                  "after": " ",
+                  "originalText": "from",
+                  "before": " ",
+                  "index": 22,
+                  "pos": "IN"
+                }
+              },
+              "IN"
+            ],
+            [
+              {
+                "nlpToken": {
+                  "characterOffsetBegin": 1406,
+                  "word": "New",
+                  "lemma": "New",
+                  "characterOffsetEnd": 1409,
+                  "speaker": "PER0",
+                  "ner": "LOCATION",
+                  "after": " ",
+                  "originalText": "New",
+                  "before": " ",
+                  "index": 23,
+                  "pos": "NNP"
+                }
+              },
+              "NNP"
+            ],
+            [
+              {
+                "nlpToken": {
+                  "characterOffsetBegin": 1410,
+                  "word": "Addington",
+                  "lemma": "Addington",
+                  "characterOffsetEnd": 1419,
+                  "speaker": "PER0",
+                  "ner": "LOCATION",
+                  "after": "",
+                  "originalText": "Addington",
+                  "before": " ",
+                  "index": 24,
+                  "pos": "NNP"
+                }
+              },
+              "NNP"
+            ],
+            [
+              {
+                "nlpToken": {
+                  "characterOffsetBegin": 1419,
+                  "word": ",",
+                  "lemma": ",",
+                  "characterOffsetEnd": 1420,
+                  "speaker": "PER0",
+                  "ner": "O",
+                  "after": " ",
+                  "originalText": ",",
+                  "before": "",
+                  "index": 25,
+                  "pos": ","
+                }
+              },
+              ","
+            ],
+            [
+              {
+                "nlpToken": {
+                  "characterOffsetBegin": 1421,
+                  "word": "South",
+                  "lemma": "South",
+                  "characterOffsetEnd": 1426,
+                  "speaker": "PER0",
+                  "ner": "LOCATION",
+                  "after": " ",
+                  "originalText": "South",
+                  "before": " ",
+                  "index": 26,
+                  "pos": "NNP"
+                }
+              },
+              "NNP"
+            ],
+            [
+              {
+                "nlpToken": {
+                  "characterOffsetBegin": 1427,
+                  "word": "London",
+                  "lemma": "London",
+                  "characterOffsetEnd": 1433,
+                  "speaker": "PER0",
+                  "ner": "LOCATION",
+                  "after": "",
+                  "originalText": "London",
+                  "before": " ",
+                  "index": 27,
+                  "pos": "NNP"
+                }
+              },
+              "NNP"
+            ],
+            [
+              {
+                "nlpToken": {
+                  "characterOffsetBegin": 1433,
+                  "word": ",",
+                  "lemma": ",",
+                  "characterOffsetEnd": 1434,
+                  "speaker": "PER0",
+                  "ner": "O",
+                  "after": " ",
+                  "originalText": ",",
+                  "before": "",
+                  "index": 28,
+                  "pos": ","
+                }
+              },
+              ","
+            ],
+            [
+              {
+                "nlpToken": {
+                  "characterOffsetBegin": 1435,
+                  "word": "who",
+                  "lemma": "who",
+                  "characterOffsetEnd": 1438,
+                  "speaker": "PER0",
+                  "ner": "O",
+                  "after": " ",
+                  "originalText": "who",
+                  "before": " ",
+                  "index": 29,
+                  "pos": "WP"
+                }
+              },
+              "WP"
+            ],
+            [
+              {
+                "nlpToken": {
+                  "characterOffsetBegin": 1439,
+                  "word": "died",
+                  "lemma": "die",
+                  "characterOffsetEnd": 1443,
+                  "speaker": "PER0",
+                  "ner": "O",
+                  "after": " ",
+                  "originalText": "died",
+                  "before": " ",
+                  "index": 30,
+                  "pos": "VBD"
+                }
+              },
+              "VBD"
+            ],
+            [
+              {
+                "nlpToken": {
+                  "characterOffsetBegin": 1444,
+                  "word": "in",
+                  "lemma": "in",
+                  "characterOffsetEnd": 1446,
+                  "speaker": "PER0",
+                  "ner": "O",
+                  "after": " ",
+                  "originalText": "in",
+                  "before": " ",
+                  "index": 31,
+                  "pos": "IN"
+                }
+              },
+              "IN"
+            ],
+            [
+              {
+                "nlpToken": {
+                  "characterOffsetBegin": 1447,
+                  "word": "the",
+                  "lemma": "the",
+                  "characterOffsetEnd": 1450,
+                  "speaker": "PER0",
+                  "ner": "O",
+                  "after": " ",
+                  "originalText": "the",
+                  "before": " ",
+                  "index": 32,
+                  "pos": "DT"
+                }
+              },
+              "DT"
+            ],
+            [
+              {
+                "nlpToken": {
+                  "characterOffsetBegin": 1451,
+                  "word": "crash",
+                  "lemma": "crash",
+                  "characterOffsetEnd": 1456,
+                  "speaker": "PER0",
+                  "ner": "O",
+                  "after": " ",
+                  "originalText": "crash",
+                  "before": " ",
+                  "index": 33,
+                  "pos": "NN"
+                }
+              },
+              "NN"
+            ],
+            [
+              {
+                "nlpToken": {
+                  "characterOffsetBegin": 1457,
+                  "word": "Dane",
+                  "lemma": "dane",
+                  "characterOffsetEnd": 1461,
+                  "speaker": "PER0",
+                  "ner": "PERSON",
+                  "after": " ",
+                  "originalText": "Dane",
+                  "before": " ",
+                  "index": 34,
+                  "pos": "NN"
+                }
+              },
+              "NN"
+            ],
+            [
+              {
+                "nlpToken": {
+                  "characterOffsetBegin": 1462,
+                  "word": "Chinnery",
+                  "lemma": "Chinnery",
+                  "characterOffsetEnd": 1470,
+                  "speaker": "PER0",
+                  "ner": "PERSON",
+                  "after": " ",
+                  "originalText": "Chinnery",
+                  "before": " ",
+                  "index": 35,
+                  "pos": "NNP"
+                }
+              },
+              "NNP"
+            ],
+            [
+              {
+                "nlpToken": {
+                  "characterOffsetBegin": 1471,
+                  "word": "-LRB-",
+                  "lemma": "-lrb-",
+                  "characterOffsetEnd": 1472,
+                  "speaker": "PER0",
+                  "ner": "O",
+                  "after": "",
+                  "originalText": "(",
+                  "before": " ",
+                  "index": 36,
+                  "pos": "-LRB-"
+                }
+              },
+              "-LRB-"
+            ],
+            [
+              {
+                "nlpToken": {
+                  "characterOffsetBegin": 1472,
+                  "word": "pictured",
+                  "lemma": "picture",
+                  "characterOffsetEnd": 1480,
+                  "speaker": "PER0",
+                  "ner": "O",
+                  "after": " ",
+                  "originalText": "pictured",
+                  "before": "",
+                  "index": 37,
+                  "pos": "VBN"
+                }
+              },
+              "VBN"
+            ],
+            [
+              {
+                "nlpToken": {
+                  "characterOffsetBegin": 1481,
+                  "word": "left",
+                  "lemma": "left",
+                  "characterOffsetEnd": 1485,
+                  "speaker": "PER0",
+                  "ner": "O",
+                  "after": "",
+                  "originalText": "left",
+                  "before": " ",
+                  "index": 38,
+                  "pos": "NN"
+                }
+              },
+              "NN"
+            ],
+            [
+              {
+                "nlpToken": {
+                  "characterOffsetBegin": 1485,
+                  "word": "-RRB-",
+                  "lemma": "-rrb-",
+                  "characterOffsetEnd": 1486,
+                  "speaker": "PER0",
+                  "ner": "O",
+                  "after": "",
+                  "originalText": ")",
+                  "before": "",
+                  "index": 39,
+                  "pos": "-RRB-"
+                }
+              },
+              "-RRB-"
+            ],
+            [
+              {
+                "nlpToken": {
+                  "characterOffsetBegin": 1486,
+                  "word": ",",
+                  "lemma": ",",
+                  "characterOffsetEnd": 1487,
+                  "speaker": "PER0",
+                  "ner": "O",
+                  "after": " ",
+                  "originalText": ",",
+                  "before": "",
+                  "index": 40,
+                  "pos": ","
+                }
+              },
+              ","
+            ],
+            [
+              {
+                "nlpToken": {
+                  "characterOffsetBegin": 1488,
+                  "word": "Mark",
+                  "lemma": "Mark",
+                  "characterOffsetEnd": 1492,
+                  "speaker": "PER0",
+                  "ner": "PERSON",
+                  "after": " ",
+                  "originalText": "Mark",
+                  "before": " ",
+                  "index": 41,
+                  "pos": "NNP"
+                }
+              },
+              "NNP"
+            ],
+            [
+              {
+                "nlpToken": {
+                  "characterOffsetBegin": 1493,
+                  "word": "Smith",
+                  "lemma": "Smith",
+                  "characterOffsetEnd": 1498,
+                  "speaker": "PER0",
+                  "ner": "PERSON",
+                  "after": " ",
+                  "originalText": "Smith",
+                  "before": " ",
+                  "index": 42,
+                  "pos": "NNP"
+                }
+              },
+              "NNP"
+            ],
+            [
+              {
+                "nlpToken": {
+                  "characterOffsetBegin": 1499,
+                  "word": "-LRB-",
+                  "lemma": "-lrb-",
+                  "characterOffsetEnd": 1500,
+                  "speaker": "PER0",
+                  "ner": "O",
+                  "after": "",
+                  "originalText": "(",
+                  "before": " ",
+                  "index": 43,
+                  "pos": "-LRB-"
+                }
+              },
+              "-LRB-"
+            ],
+            [
+              {
+                "nlpToken": {
+                  "characterOffsetBegin": 1500,
+                  "word": "centre",
+                  "lemma": "centre",
+                  "characterOffsetEnd": 1506,
+                  "speaker": "PER0",
+                  "ner": "O",
+                  "after": " ",
+                  "originalText": "centre",
+                  "before": "",
+                  "index": 44,
+                  "pos": "NN"
+                }
+              },
+              "NN"
+            ],
+            [
+              {
+                "nlpToken": {
+                  "characterOffsetBegin": 1507,
+                  "word": "left",
+                  "lemma": "leave",
+                  "characterOffsetEnd": 1511,
+                  "speaker": "PER0",
+                  "ner": "O",
+                  "after": "",
+                  "originalText": "left",
+                  "before": " ",
+                  "index": 45,
+                  "pos": "VBN"
+                }
+              },
+              "VBN"
+            ],
+            [
+              {
+                "nlpToken": {
+                  "characterOffsetBegin": 1511,
+                  "word": "-RRB-",
+                  "lemma": "-rrb-",
+                  "characterOffsetEnd": 1512,
+                  "speaker": "PER0",
+                  "ner": "O",
+                  "after": "",
+                  "originalText": ")",
+                  "before": "",
+                  "index": 46,
+                  "pos": "-RRB-"
+                }
+              },
+              "-RRB-"
+            ],
+            [
+              {
+                "nlpToken": {
+                  "characterOffsetBegin": 1512,
+                  "word": ",",
+                  "lemma": ",",
+                  "characterOffsetEnd": 1513,
+                  "speaker": "PER0",
+                  "ner": "O",
+                  "after": " ",
+                  "originalText": ",",
+                  "before": "",
+                  "index": 47,
+                  "pos": ","
+                }
+              },
+              ","
+            ],
+            [
+              {
+                "nlpToken": {
+                  "characterOffsetBegin": 1514,
+                  "word": "Phil",
+                  "lemma": "Phil",
+                  "characterOffsetEnd": 1518,
+                  "speaker": "PER0",
+                  "ner": "PERSON",
+                  "after": " ",
+                  "originalText": "Phil",
+                  "before": " ",
+                  "index": 48,
+                  "pos": "NNP"
+                }
+              },
+              "NNP"
+            ],
+            [
+              {
+                "nlpToken": {
+                  "characterOffsetBegin": 1519,
+                  "word": "Seary",
+                  "lemma": "Seary",
+                  "characterOffsetEnd": 1524,
+                  "speaker": "PER0",
+                  "ner": "PERSON",
+                  "after": " ",
+                  "originalText": "Seary",
+                  "before": " ",
+                  "index": 49,
+                  "pos": "NNP"
+                }
+              },
+              "NNP"
+            ],
+            [
+              {
+                "nlpToken": {
+                  "characterOffsetBegin": 1525,
+                  "word": "-LRB-",
+                  "lemma": "-lrb-",
+                  "characterOffsetEnd": 1526,
+                  "speaker": "PER0",
+                  "ner": "O",
+                  "after": "",
+                  "originalText": "(",
+                  "before": " ",
+                  "index": 50,
+                  "pos": "-LRB-"
+                }
+              },
+              "-LRB-"
+            ],
+            [
+              {
+                "nlpToken": {
+                  "characterOffsetBegin": 1526,
+                  "word": "centre",
+                  "lemma": "centre",
+                  "characterOffsetEnd": 1532,
+                  "speaker": "PER0",
+                  "ner": "O",
+                  "after": " ",
+                  "originalText": "centre",
+                  "before": "",
+                  "index": 51,
+                  "pos": "NN"
+                }
+              },
+              "NN"
+            ],
+            [
+              {
+                "nlpToken": {
+                  "characterOffsetBegin": 1533,
+                  "word": "right",
+                  "lemma": "right",
+                  "characterOffsetEnd": 1538,
+                  "speaker": "PER0",
+                  "ner": "O",
+                  "after": "",
+                  "originalText": "right",
+                  "before": " ",
+                  "index": 52,
+                  "pos": "NN"
+                }
+              },
+              "NN"
+            ],
+            [
+              {
+                "nlpToken": {
+                  "characterOffsetBegin": 1538,
+                  "word": "-RRB-",
+                  "lemma": "-rrb-",
+                  "characterOffsetEnd": 1539,
+                  "speaker": "PER0",
+                  "ner": "O",
+                  "after": " ",
+                  "originalText": ")",
+                  "before": "",
+                  "index": 53,
+                  "pos": "-RRB-"
+                }
+              },
+              "-RRB-"
+            ],
+            [
+              {
+                "nlpToken": {
+                  "characterOffsetBegin": 1540,
+                  "word": "and",
+                  "lemma": "and",
+                  "characterOffsetEnd": 1543,
+                  "speaker": "PER0",
+                  "ner": "O",
+                  "after": " ",
+                  "originalText": "and",
+                  "before": " ",
+                  "index": 54,
+                  "pos": "CC"
+                }
+              },
+              "CC"
+            ],
+            [
+              {
+                "nlpToken": {
+                  "characterOffsetBegin": 1544,
+                  "word": "Dorota",
+                  "lemma": "Dorota",
+                  "characterOffsetEnd": 1550,
+                  "speaker": "PER0",
+                  "ner": "PERSON",
+                  "after": " ",
+                  "originalText": "Dorota",
+                  "before": " ",
+                  "index": 55,
+                  "pos": "NNP"
+                }
+              },
+              "NNP"
+            ],
+            [
+              {
+                "nlpToken": {
+                  "characterOffsetBegin": 1551,
+                  "word": "Rynkiewicz",
+                  "lemma": "Rynkiewicz",
+                  "characterOffsetEnd": 1561,
+                  "speaker": "PER0",
+                  "ner": "PERSON",
+                  "after": " ",
+                  "originalText": "Rynkiewicz",
+                  "before": " ",
+                  "index": 56,
+                  "pos": "NNP"
+                }
+              },
+              "NNP"
+            ],
+            [
+              {
+                "nlpToken": {
+                  "characterOffsetBegin": 1562,
+                  "word": "-LRB-",
+                  "lemma": "-lrb-",
+                  "characterOffsetEnd": 1563,
+                  "speaker": "PER0",
+                  "ner": "O",
+                  "after": "",
+                  "originalText": "(",
+                  "before": " ",
+                  "index": 57,
+                  "pos": "-LRB-"
+                }
+              },
+              "-LRB-"
+            ],
+            [
+              {
+                "nlpToken": {
+                  "characterOffsetBegin": 1563,
+                  "word": "far",
+                  "lemma": "far",
+                  "characterOffsetEnd": 1566,
+                  "speaker": "PER0",
+                  "ner": "O",
+                  "after": " ",
+                  "originalText": "far",
+                  "before": "",
+                  "index": 58,
+                  "pos": "RB"
+                }
+              },
+              "RB"
+            ],
+            [
+              {
+                "nlpToken": {
+                  "characterOffsetBegin": 1567,
+                  "word": "right",
+                  "lemma": "right",
+                  "characterOffsetEnd": 1572,
+                  "speaker": "PER0",
+                  "ner": "O",
+                  "after": "",
+                  "originalText": "right",
+                  "before": " ",
+                  "index": 59,
+                  "pos": "JJ"
+                }
+              },
+              "JJ"
+            ],
+            [
+              {
+                "nlpToken": {
+                  "characterOffsetBegin": 1572,
+                  "word": "-RRB-",
+                  "lemma": "-rrb-",
+                  "characterOffsetEnd": 1573,
+                  "speaker": "PER0",
+                  "ner": "O",
+                  "after": " ",
+                  "originalText": ")",
+                  "before": "",
+                  "index": 60,
+                  "pos": "-RRB-"
+                }
+              },
+              "-RRB-"
+            ],
+            [
+              {
+                "nlpToken": {
+                  "characterOffsetBegin": 1574,
+                  "word": "all",
+                  "lemma": "all",
+                  "characterOffsetEnd": 1577,
+                  "speaker": "PER0",
+                  "ner": "O",
+                  "after": " ",
+                  "originalText": "all",
+                  "before": " ",
+                  "index": 61,
+                  "pos": "DT"
+                }
+              },
+              "DT"
+            ],
+            [
+              {
+                "nlpToken": {
+                  "characterOffsetBegin": 1578,
+                  "word": "died",
+                  "lemma": "die",
+                  "characterOffsetEnd": 1582,
+                  "speaker": "PER0",
+                  "ner": "O",
+                  "after": " ",
+                  "originalText": "died",
+                  "before": " ",
+                  "index": 62,
+                  "pos": "VBD"
+                }
+              },
+              "VBD"
+            ],
+            [
+              {
+                "nlpToken": {
+                  "characterOffsetBegin": 1583,
+                  "word": "in",
+                  "lemma": "in",
+                  "characterOffsetEnd": 1585,
+                  "speaker": "PER0",
+                  "ner": "O",
+                  "after": " ",
+                  "originalText": "in",
+                  "before": " ",
+                  "index": 63,
+                  "pos": "IN"
+                }
+              },
+              "IN"
+            ],
+            [
+              {
+                "nlpToken": {
+                  "characterOffsetBegin": 1586,
+                  "word": "the",
+                  "lemma": "the",
+                  "characterOffsetEnd": 1589,
+                  "speaker": "PER0",
+                  "ner": "O",
+                  "after": " ",
+                  "originalText": "the",
+                  "before": " ",
+                  "index": 64,
+                  "pos": "DT"
+                }
+              },
+              "DT"
+            ],
+            [
+              {
+                "nlpToken": {
+                  "characterOffsetBegin": 1590,
                   "word": "Croydon",
                   "lemma": "Croydon",
-                  "characterOffsetEnd": 32,
+                  "characterOffsetEnd": 1597,
                   "speaker": "PER0",
                   "ner": "LOCATION",
                   "after": " ",
                   "originalText": "Croydon",
                   "before": " ",
-                  "index": 4,
+                  "index": 65,
                   "pos": "NNP"
                 }
               },
               "NNP"
+            ],
+            [
+              {
+                "nlpToken": {
+                  "characterOffsetBegin": 1598,
+                  "word": "tram",
+                  "lemma": "tram",
+                  "characterOffsetEnd": 1602,
+                  "speaker": "PER0",
+                  "ner": "O",
+                  "after": " ",
+                  "originalText": "tram",
+                  "before": " ",
+                  "index": 66,
+                  "pos": "NN"
+                }
+              },
+              "NN"
+            ],
+            [
+              {
+                "nlpToken": {
+                  "characterOffsetBegin": 1603,
+                  "word": "crash",
+                  "lemma": "crash",
+                  "characterOffsetEnd": 1608,
+                  "speaker": "PER0",
+                  "ner": "O",
+                  "after": " ",
+                  "originalText": "crash",
+                  "before": " ",
+                  "index": 67,
+                  "pos": "NN"
+                }
+              },
+              "NN"
+            ],
+            [
+              {
+                "nlpToken": {
+                  "characterOffsetBegin": 1609,
+                  "word": "Rail",
+                  "lemma": "Rail",
+                  "characterOffsetEnd": 1613,
+                  "speaker": "PER0",
+                  "ner": "O",
+                  "after": " ",
+                  "originalText": "Rail",
+                  "before": " ",
+                  "index": 68,
+                  "pos": "NNP"
+                }
+              },
+              "NNP"
+            ],
+            [
+              {
+                "nlpToken": {
+                  "characterOffsetBegin": 1614,
+                  "word": "workers",
+                  "lemma": "worker",
+                  "characterOffsetEnd": 1621,
+                  "speaker": "PER0",
+                  "ner": "O",
+                  "after": " ",
+                  "originalText": "workers",
+                  "before": " ",
+                  "index": 69,
+                  "pos": "NNS"
+                }
+              },
+              "NNS"
+            ],
+            [
+              {
+                "nlpToken": {
+                  "characterOffsetBegin": 1622,
+                  "word": "at",
+                  "lemma": "at",
+                  "characterOffsetEnd": 1624,
+                  "speaker": "PER0",
+                  "ner": "O",
+                  "after": " ",
+                  "originalText": "at",
+                  "before": " ",
+                  "index": 70,
+                  "pos": "IN"
+                }
+              },
+              "IN"
+            ],
+            [
+              {
+                "nlpToken": {
+                  "characterOffsetBegin": 1625,
+                  "word": "the",
+                  "lemma": "the",
+                  "characterOffsetEnd": 1628,
+                  "speaker": "PER0",
+                  "ner": "O",
+                  "after": " ",
+                  "originalText": "the",
+                  "before": " ",
+                  "index": 71,
+                  "pos": "DT"
+                }
+              },
+              "DT"
+            ],
+            [
+              {
+                "nlpToken": {
+                  "characterOffsetBegin": 1629,
+                  "word": "site",
+                  "lemma": "site",
+                  "characterOffsetEnd": 1633,
+                  "speaker": "PER0",
+                  "ner": "O",
+                  "after": " ",
+                  "originalText": "site",
+                  "before": " ",
+                  "index": 72,
+                  "pos": "NN"
+                }
+              },
+              "NN"
+            ],
+            [
+              {
+                "nlpToken": {
+                  "characterOffsetBegin": 1634,
+                  "word": "work",
+                  "lemma": "work",
+                  "characterOffsetEnd": 1638,
+                  "speaker": "PER0",
+                  "ner": "O",
+                  "after": " ",
+                  "originalText": "work",
+                  "before": " ",
+                  "index": 73,
+                  "pos": "NN"
+                }
+              },
+              "NN"
+            ],
+            [
+              {
+                "nlpToken": {
+                  "characterOffsetBegin": 1639,
+                  "word": "to",
+                  "lemma": "to",
+                  "characterOffsetEnd": 1641,
+                  "speaker": "PER0",
+                  "ner": "O",
+                  "after": " ",
+                  "originalText": "to",
+                  "before": " ",
+                  "index": 74,
+                  "pos": "TO"
+                }
+              },
+              "TO"
+            ],
+            [
+              {
+                "nlpToken": {
+                  "characterOffsetBegin": 1642,
+                  "word": "fix",
+                  "lemma": "fix",
+                  "characterOffsetEnd": 1645,
+                  "speaker": "PER0",
+                  "ner": "O",
+                  "after": " ",
+                  "originalText": "fix",
+                  "before": " ",
+                  "index": 75,
+                  "pos": "VB"
+                }
+              },
+              "VB"
+            ],
+            [
+              {
+                "nlpToken": {
+                  "characterOffsetBegin": 1646,
+                  "word": "the",
+                  "lemma": "the",
+                  "characterOffsetEnd": 1649,
+                  "speaker": "PER0",
+                  "ner": "O",
+                  "after": " ",
+                  "originalText": "the",
+                  "before": " ",
+                  "index": 76,
+                  "pos": "DT"
+                }
+              },
+              "DT"
+            ],
+            [
+              {
+                "nlpToken": {
+                  "characterOffsetBegin": 1650,
+                  "word": "track",
+                  "lemma": "track",
+                  "characterOffsetEnd": 1655,
+                  "speaker": "PER0",
+                  "ner": "O",
+                  "after": " ",
+                  "originalText": "track",
+                  "before": " ",
+                  "index": 77,
+                  "pos": "NN"
+                }
+              },
+              "NN"
+            ],
+            [
+              {
+                "nlpToken": {
+                  "characterOffsetBegin": 1656,
+                  "word": "where",
+                  "lemma": "where",
+                  "characterOffsetEnd": 1661,
+                  "speaker": "PER0",
+                  "ner": "O",
+                  "after": " ",
+                  "originalText": "where",
+                  "before": " ",
+                  "index": 78,
+                  "pos": "WRB"
+                }
+              },
+              "WRB"
+            ],
+            [
+              {
+                "nlpToken": {
+                  "characterOffsetBegin": 1662,
+                  "word": "the",
+                  "lemma": "the",
+                  "characterOffsetEnd": 1665,
+                  "speaker": "PER0",
+                  "ner": "O",
+                  "after": " ",
+                  "originalText": "the",
+                  "before": " ",
+                  "index": 79,
+                  "pos": "DT"
+                }
+              },
+              "DT"
+            ],
+            [
+              {
+                "nlpToken": {
+                  "characterOffsetBegin": 1666,
+                  "word": "tram",
+                  "lemma": "tram",
+                  "characterOffsetEnd": 1670,
+                  "speaker": "PER0",
+                  "ner": "O",
+                  "after": " ",
+                  "originalText": "tram",
+                  "before": " ",
+                  "index": 80,
+                  "pos": "NN"
+                }
+              },
+              "NN"
+            ],
+            [
+              {
+                "nlpToken": {
+                  "characterOffsetBegin": 1671,
+                  "word": "derailed",
+                  "lemma": "derail",
+                  "characterOffsetEnd": 1679,
+                  "speaker": "PER0",
+                  "ner": "O",
+                  "after": " ",
+                  "originalText": "derailed",
+                  "before": " ",
+                  "index": 81,
+                  "pos": "VBD"
+                }
+              },
+              "VBD"
+            ],
+            [
+              {
+                "nlpToken": {
+                  "characterOffsetBegin": 1680,
+                  "word": "on",
+                  "lemma": "on",
+                  "characterOffsetEnd": 1682,
+                  "speaker": "PER0",
+                  "ner": "O",
+                  "after": " ",
+                  "originalText": "on",
+                  "before": " ",
+                  "index": 82,
+                  "pos": "IN"
+                }
+              },
+              "IN"
             ]
           ],
-          "score": 1.0
+          "score": 1.0,
+          "text": "video Donald Collett , 62 , of Croydon ( left ) ; and Philip Logan , 52 , from New Addington , South London , who died in the crash Dane Chinnery ( pictured left ) , Mark Smith ( centre left ) , Phil Seary ( centre right ) and Dorota Rynkiewicz ( far right ) all died in the Croydon tram crash Rail workers at the site work to fix the track where the tram derailed on",
+          "nlpIndexSentence": 4
         }
-      ],
+      ]
+    },
+    "where": {
       "annotated": [
         {
           "text": "Croydon",
@@ -549,9 +1770,19 @@
       "label": "where"
     },
     "what": {
+      "annotated": [
+        {
+          "text": "name final three victims",
+          "coderPhraseCount": 2
+        },
+        {
+          "text": "died",
+          "coderPhraseCount": 2
+        }
+      ],
+      "label": "what",
       "extracted": [
         {
-          "text": "were fanatical fans",
           "parts": [
             [
               {
@@ -608,21 +1839,11 @@
               "NNS"
             ]
           ],
-          "nlpIndexSentence": 19,
-          "score": 1.0
+          "score": 1.0,
+          "text": "were fanatical fans",
+          "nlpIndexSentence": 19
         }
-      ],
-      "annotated": [
-        {
-          "text": "name final three victims",
-          "coderPhraseCount": 2
-        },
-        {
-          "text": "died",
-          "coderPhraseCount": 2
-        }
-      ],
-      "label": "what"
+      ]
     }
   },
   "description": "Police investigating the Croydon tram crash have named the final three victims as Donald Collett, Philip Logan and Robert Huxley.",

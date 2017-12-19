@@ -1,285 +1,38 @@
 {
+  "originalFilename": "usatoday-6",
+  "category": "tram",
+  "publisher": "usatoday",
+  "url": "http://www.usatoday.com/story/news/2016/11/09/least-7-killed-tram-accident-south-london/93549248/",
+  "mimeType": "text/xml",
   "filename": "ba38e52fb1cb4d5008d3c8f16d3c3f405fd86e63272246f9d3dfea6f",
   "title": "At least 7 killed in tram accident in south London",
-  "mimeType": "text/xml",
-  "parsingError": "true",
-  "date_publish": "2016-11-09 18:50:08",
+  "dId": "ba38e52fb1cb4d5008d3c8f16d3c3f405fd86e63272246f9d3dfea6f",
   "fiveWoneH": {
-    "who": {
-      "extracted": [
-        {
-          "text": "Bamford",
-          "parts": [
-            [
-              {
-                "nlpToken": {
-                  "characterOffsetBegin": 1244,
-                  "word": "Bamford",
-                  "lemma": "Bamford",
-                  "characterOffsetEnd": 1251,
-                  "speaker": "PER0",
-                  "ner": "PERSON",
-                  "after": " ",
-                  "originalText": "Bamford",
-                  "before": " ",
-                  "index": 24,
-                  "pos": "NNP"
-                }
-              },
-              "NNP"
-            ]
-          ],
-          "nlpIndexSentence": 9,
-          "score": 1.0
-        }
-      ],
-      "annotated": [
-        {
-          "text": "A least seven people",
-          "coderPhraseCount": 2
-        }
-      ],
-      "label": "who"
-    },
-    "when": {
-      "extracted": [
-        {
-          "text": "Wednesday",
-          "enhancement": {
-            "timex": {
-              "start_date": "2016-11-09T00:00:00",
-              "end_date": "2016-11-09T23:59:59"
-            }
-          },
-          "parts": [
-            [
-              {
-                "nlpToken": {
-                  "after": " ",
-                  "word": "Wednesday",
-                  "lemma": "Wednesday",
-                  "timex": {
-                    "value": "2016-11-09",
-                    "tid": "t2",
-                    "type": "DATE"
-                  },
-                  "before": " ",
-                  "characterOffsetEnd": 249,
-                  "pos": "NNP",
-                  "normalizedNER": "2016-11-09",
-                  "speaker": "PER0",
-                  "ner": "DATE",
-                  "characterOffsetBegin": 240,
-                  "originalText": "Wednesday",
-                  "index": 12
-                }
-              },
-              "NNP"
-            ]
-          ],
-          "nlpIndexSentence": 2,
-          "score": 0.7419860631475377
-        }
-      ],
-      "annotated": [
-        {
-          "text": "Nov. 9, 2016",
-          "coderPhraseCount": 3
-        },
-        {
-          "text": "Wednesday",
-          "coderPhraseCount": 3
-        }
-      ],
-      "label": "when"
-    },
-    "how": {
-      "extracted": [
-        {
-          "text": "two-car",
-          "parts": [
-            [
-              {
-                "nlpToken": {
-                  "characterOffsetBegin": 995,
-                  "word": "two-car",
-                  "lemma": "two-car",
-                  "characterOffsetEnd": 1002,
-                  "speaker": "PER0",
-                  "ner": "O",
-                  "after": " ",
-                  "originalText": "two-car",
-                  "before": " ",
-                  "index": 10,
-                  "pos": "JJ"
-                }
-              },
-              "JJ"
-            ]
-          ],
-          "nlpIndexSentence": 7,
-          "score": 1.0
-        }
-      ],
-      "annotated": [
-        {
-          "text": "jumped the rails on a sharp curve",
-          "coderPhraseCount": 3
-        },
-        {
-          "text": "derailed",
-          "coderPhraseCount": 2
-        }
-      ],
-      "label": "how"
-    },
-    "where": {
-      "extracted": [
-        {
-          "text": "London",
-          "enhancement": {
-            "openstreetmap_nominatim": {
-              "place_id": "179118272",
-              "licence": "Data \u00a9 OpenStreetMap contributors, ODbL 1.0. http://www.openstreetmap.org/copyright",
-              "type": "city",
-              "class": "place",
-              "osm_id": "65606",
-              "boundingbox": [
-                51.2867602,
-                51.6918741,
-                -0.5103751,
-                0.3340155
-              ],
-              "osm_type": "relation",
-              "lon": "-0.1276474",
-              "display_name": "London, Greater London, England, UK",
-              "importance": 0.32637239413505,
-              "icon": "https://nominatim.openstreetmap.org/images/mapicons/poi_place_city.p.20.png",
-              "lat": "51.5073219"
-            }
-          },
-          "parts": [
-            [
-              {
-                "nlpToken": {
-                  "characterOffsetBegin": 44,
-                  "word": "London",
-                  "lemma": "London",
-                  "characterOffsetEnd": 50,
-                  "speaker": "PER0",
-                  "ner": "LOCATION",
-                  "after": "",
-                  "originalText": "London",
-                  "before": " ",
-                  "index": 10,
-                  "pos": "NNP"
-                }
-              },
-              "NNP"
-            ]
-          ],
-          "score": 1.0000000000000002
-        }
-      ],
-      "annotated": [
-        {
-          "text": "Croydon, London",
-          "coderPhraseCount": 3
-        }
-      ],
-      "label": "where"
-    },
-    "why": {
-      "extracted": [
-        {
-          "text": "At least 7",
-          "parts": [
-            [
-              {
-                "nlpToken": {
-                  "characterOffsetBegin": 0,
-                  "word": "At",
-                  "lemma": "at",
-                  "speaker": "PER0",
-                  "after": " ",
-                  "pos": "IN",
-                  "ner": "O",
-                  "before": "",
-                  "characterOffsetEnd": 2,
-                  "index": 1,
-                  "originalText": "At"
-                }
-              },
-              "IN"
-            ],
-            [
-              {
-                "nlpToken": {
-                  "characterOffsetBegin": 3,
-                  "word": "least",
-                  "lemma": "least",
-                  "speaker": "PER0",
-                  "after": " ",
-                  "pos": "JJS",
-                  "ner": "O",
-                  "before": " ",
-                  "characterOffsetEnd": 8,
-                  "index": 2,
-                  "originalText": "least"
-                }
-              },
-              "JJS"
-            ],
-            [
-              {
-                "nlpToken": {
-                  "after": " ",
-                  "word": "7",
-                  "lemma": "7",
-                  "characterOffsetEnd": 10,
-                  "before": " ",
-                  "characterOffsetBegin": 9,
-                  "index": 3,
-                  "normalizedNER": ">=7.0",
-                  "speaker": "PER0",
-                  "ner": "NUMBER",
-                  "originalText": "7",
-                  "pos": "CD"
-                }
-              },
-              "CD"
-            ]
-          ],
-          "score": 0.42857142857142855
-        }
-      ],
-      "annotated": [
-        {
-          "text": "the tram was apparently traveling faster than permitted on a curve",
-          "coderPhraseCount": 3
-        }
-      ],
-      "label": "why"
-    },
     "what": {
+      "annotated": [
+        {
+          "coderPhraseCount": 3,
+          "text": "At least 7 killed in tram accident"
+        }
+      ],
+      "label": "what",
       "extracted": [
         {
-          "text": "do n't think she",
           "parts": [
             [
               {
                 "nlpToken": {
-                  "characterOffsetBegin": 1211,
+                  "before": " ",
                   "word": "do",
+                  "index": 14,
                   "lemma": "do",
-                  "characterOffsetEnd": 1213,
-                  "speaker": "61",
+                  "characterOffsetBegin": 1211,
+                  "pos": "VBP",
+                  "originalText": "do",
                   "ner": "O",
                   "after": "",
-                  "originalText": "do",
-                  "before": " ",
-                  "index": 14,
-                  "pos": "VBP"
+                  "characterOffsetEnd": 1213,
+                  "speaker": "61"
                 }
               },
               "VBP"
@@ -287,17 +40,17 @@
             [
               {
                 "nlpToken": {
-                  "characterOffsetBegin": 1213,
+                  "before": "",
                   "word": "n't",
+                  "index": 15,
                   "lemma": "not",
-                  "characterOffsetEnd": 1216,
-                  "speaker": "61",
+                  "characterOffsetBegin": 1213,
+                  "pos": "RB",
+                  "originalText": "n't",
                   "ner": "O",
                   "after": " ",
-                  "originalText": "n't",
-                  "before": "",
-                  "index": 15,
-                  "pos": "RB"
+                  "characterOffsetEnd": 1216,
+                  "speaker": "61"
                 }
               },
               "RB"
@@ -305,17 +58,17 @@
             [
               {
                 "nlpToken": {
-                  "characterOffsetBegin": 1217,
+                  "before": " ",
                   "word": "think",
+                  "index": 16,
                   "lemma": "think",
-                  "characterOffsetEnd": 1222,
-                  "speaker": "61",
+                  "characterOffsetBegin": 1217,
+                  "pos": "VB",
+                  "originalText": "think",
                   "ner": "O",
                   "after": " ",
-                  "originalText": "think",
-                  "before": " ",
-                  "index": 16,
-                  "pos": "VB"
+                  "characterOffsetEnd": 1222,
+                  "speaker": "61"
                 }
               },
               "VB"
@@ -323,40 +76,390 @@
             [
               {
                 "nlpToken": {
-                  "characterOffsetBegin": 1223,
+                  "before": " ",
                   "word": "she",
+                  "index": 17,
                   "lemma": "she",
-                  "characterOffsetEnd": 1226,
-                  "speaker": "61",
+                  "characterOffsetBegin": 1223,
+                  "pos": "PRP",
+                  "originalText": "she",
                   "ner": "O",
                   "after": " ",
-                  "originalText": "she",
-                  "before": " ",
-                  "index": 17,
-                  "pos": "PRP"
+                  "characterOffsetEnd": 1226,
+                  "speaker": "61"
                 }
               },
               "PRP"
             ]
           ],
-          "nlpIndexSentence": 9,
-          "score": 1.0
+          "score": 1.0,
+          "text": "do n't think she",
+          "nlpIndexSentence": 9
         }
-      ],
+      ]
+    },
+    "how": {
       "annotated": [
         {
-          "text": "At least 7 killed in tram accident",
-          "coderPhraseCount": 3
+          "coderPhraseCount": 3,
+          "text": "jumped the rails on a sharp curve"
+        },
+        {
+          "coderPhraseCount": 2,
+          "text": "derailed"
         }
       ],
-      "label": "what"
+      "label": "how",
+      "extracted": [
+        {
+          "parts": [
+            [
+              {
+                "nlpToken": {
+                  "before": " ",
+                  "word": "the",
+                  "index": 13,
+                  "lemma": "the",
+                  "characterOffsetBegin": 625,
+                  "pos": "DT",
+                  "originalText": "the",
+                  "ner": "O",
+                  "after": " ",
+                  "characterOffsetEnd": 628,
+                  "speaker": "31"
+                }
+              },
+              "DT"
+            ],
+            [
+              {
+                "nlpToken": {
+                  "before": " ",
+                  "word": "tram",
+                  "index": 14,
+                  "lemma": "tram",
+                  "characterOffsetBegin": 629,
+                  "pos": "NN",
+                  "originalText": "tram",
+                  "ner": "O",
+                  "after": " ",
+                  "characterOffsetEnd": 633,
+                  "speaker": "31"
+                }
+              },
+              "NN"
+            ],
+            [
+              {
+                "nlpToken": {
+                  "before": " ",
+                  "word": "was",
+                  "index": 15,
+                  "lemma": "be",
+                  "characterOffsetBegin": 634,
+                  "pos": "VBD",
+                  "originalText": "was",
+                  "ner": "O",
+                  "after": " ",
+                  "characterOffsetEnd": 637,
+                  "speaker": "31"
+                }
+              },
+              "VBD"
+            ],
+            [
+              {
+                "nlpToken": {
+                  "before": " ",
+                  "word": "traveling",
+                  "index": 16,
+                  "lemma": "travel",
+                  "characterOffsetBegin": 638,
+                  "pos": "VBG",
+                  "originalText": "traveling",
+                  "ner": "O",
+                  "after": " ",
+                  "characterOffsetEnd": 647,
+                  "speaker": "31"
+                }
+              },
+              "VBG"
+            ],
+            [
+              {
+                "nlpToken": {
+                  "before": " ",
+                  "word": "at",
+                  "index": 17,
+                  "lemma": "at",
+                  "characterOffsetBegin": 648,
+                  "pos": "IN",
+                  "originalText": "at",
+                  "ner": "O",
+                  "after": " ",
+                  "characterOffsetEnd": 650,
+                  "speaker": "31"
+                }
+              },
+              "IN"
+            ],
+            [
+              {
+                "nlpToken": {
+                  "before": " ",
+                  "word": "a",
+                  "index": 18,
+                  "lemma": "a",
+                  "characterOffsetBegin": 651,
+                  "pos": "DT",
+                  "originalText": "a",
+                  "ner": "O",
+                  "after": " ",
+                  "characterOffsetEnd": 652,
+                  "speaker": "31"
+                }
+              },
+              "DT"
+            ],
+            [
+              {
+                "nlpToken": {
+                  "before": " ",
+                  "word": "significantly",
+                  "index": 19,
+                  "lemma": "significantly",
+                  "characterOffsetBegin": 653,
+                  "pos": "RB",
+                  "originalText": "significantly",
+                  "ner": "O",
+                  "after": " ",
+                  "characterOffsetEnd": 666,
+                  "speaker": "31"
+                }
+              },
+              "RB"
+            ],
+            [
+              {
+                "nlpToken": {
+                  "before": " ",
+                  "word": "higher",
+                  "index": 20,
+                  "lemma": "higher",
+                  "characterOffsetBegin": 667,
+                  "pos": "JJR",
+                  "originalText": "higher",
+                  "ner": "O",
+                  "after": " ",
+                  "characterOffsetEnd": 673,
+                  "speaker": "31"
+                }
+              },
+              "JJR"
+            ],
+            [
+              {
+                "nlpToken": {
+                  "before": " ",
+                  "word": "speed",
+                  "index": 21,
+                  "lemma": "speed",
+                  "characterOffsetBegin": 674,
+                  "pos": "NN",
+                  "originalText": "speed",
+                  "ner": "O",
+                  "after": " ",
+                  "characterOffsetEnd": 679,
+                  "speaker": "31"
+                }
+              },
+              "NN"
+            ],
+            [
+              {
+                "nlpToken": {
+                  "before": " ",
+                  "word": "than",
+                  "index": 22,
+                  "lemma": "than",
+                  "characterOffsetBegin": 680,
+                  "pos": "IN",
+                  "originalText": "than",
+                  "ner": "O",
+                  "after": " ",
+                  "characterOffsetEnd": 684,
+                  "speaker": "31"
+                }
+              },
+              "IN"
+            ],
+            [
+              {
+                "nlpToken": {
+                  "before": " ",
+                  "word": "is",
+                  "index": 23,
+                  "lemma": "be",
+                  "characterOffsetBegin": 685,
+                  "pos": "VBZ",
+                  "originalText": "is",
+                  "ner": "O",
+                  "after": " ",
+                  "characterOffsetEnd": 687,
+                  "speaker": "31"
+                }
+              },
+              "VBZ"
+            ],
+            [
+              {
+                "nlpToken": {
+                  "before": " ",
+                  "word": "permitted",
+                  "index": 24,
+                  "lemma": "permit",
+                  "characterOffsetBegin": 688,
+                  "pos": "VBN",
+                  "originalText": "permitted",
+                  "ner": "O",
+                  "after": "",
+                  "characterOffsetEnd": 697,
+                  "speaker": "31"
+                }
+              },
+              "VBN"
+            ],
+            [
+              {
+                "nlpToken": {
+                  "before": "",
+                  "word": ",",
+                  "index": 25,
+                  "lemma": ",",
+                  "characterOffsetBegin": 697,
+                  "pos": ",",
+                  "originalText": ",",
+                  "ner": "O",
+                  "after": "",
+                  "characterOffsetEnd": 698,
+                  "speaker": "31"
+                }
+              },
+              ","
+            ],
+            [
+              {
+                "nlpToken": {
+                  "before": "",
+                  "word": "''",
+                  "index": 26,
+                  "lemma": "''",
+                  "characterOffsetBegin": 698,
+                  "pos": "''",
+                  "originalText": "\"",
+                  "ner": "O",
+                  "after": " ",
+                  "characterOffsetEnd": 699,
+                  "speaker": "PER0"
+                }
+              },
+              "''"
+            ],
+            [
+              {
+                "nlpToken": {
+                  "before": " ",
+                  "word": "the",
+                  "index": 27,
+                  "lemma": "the",
+                  "characterOffsetBegin": 700,
+                  "pos": "DT",
+                  "originalText": "the",
+                  "ner": "O",
+                  "after": " ",
+                  "characterOffsetEnd": 703,
+                  "speaker": "PER0"
+                }
+              },
+              "DT"
+            ]
+          ],
+          "score": 1.0,
+          "text": "the tram was traveling at a significantly higher speed than is permitted , \" the",
+          "nlpIndexSentence": 13
+        }
+      ]
+    },
+    "when": {
+      "annotated": [
+        {
+          "coderPhraseCount": 3,
+          "text": "Nov. 9, 2016"
+        },
+        {
+          "coderPhraseCount": 3,
+          "text": "Wednesday"
+        }
+      ],
+      "label": "when"
+    },
+    "why": {
+      "annotated": [
+        {
+          "coderPhraseCount": 3,
+          "text": "the tram was apparently traveling faster than permitted on a curve"
+        }
+      ],
+      "label": "why"
+    },
+    "who": {
+      "annotated": [
+        {
+          "coderPhraseCount": 2,
+          "text": "A least seven people"
+        }
+      ],
+      "label": "who",
+      "extracted": [
+        {
+          "parts": [
+            [
+              {
+                "nlpToken": {
+                  "before": " ",
+                  "word": "Bamford",
+                  "index": 24,
+                  "lemma": "Bamford",
+                  "characterOffsetBegin": 1244,
+                  "pos": "NNP",
+                  "originalText": "Bamford",
+                  "ner": "PERSON",
+                  "after": " ",
+                  "characterOffsetEnd": 1251,
+                  "speaker": "PER0"
+                }
+              },
+              "NNP"
+            ]
+          ],
+          "score": 1.0,
+          "text": "Bamford",
+          "nlpIndexSentence": 9
+        }
+      ]
+    },
+    "where": {
+      "annotated": [
+        {
+          "coderPhraseCount": 3,
+          "text": "Croydon, London"
+        }
+      ],
+      "label": "where"
     }
   },
   "description": "Investigators say the tram was apparently traveling faster than permitted on a curve",
+  "parsingError": "true",
   "text": "A photo issued by the Rail Accident Investigation Branch of the tram which derailed near the Sandilands stop in Croydon, London, Nov. 9, 2016. (Photo: AP) A least seven people were killed Wednesday when a two-car tram jumped the rails on a sharp curve in south London and flipped on its side, according to British rail investigators and media reports. The Rail Accident Investigation Branch said the tram was negotiating a \"sharp, left-hand curve with a speed limit of 12 mph\" when it tipped over. \"The derailment occurred on the curve and initial indications suggest that the tram was traveling at a significantly higher speed than is permitted,\" the RAIB said in a statement. Police said more than 50 people were injured in the accident that occurred next to an underpass in the Croydon area. Emergency workers labored for hours to free five people trapped in the wreckage. Authorities arrested the 42-year-old driver of the London Tramlink two-car vehicle, according to Sky News. Martin Bamford, 30, a passenger, said the train sped up and \"everyone just literally went flying,\" the Associated Press reports. \"There was a woman that was on top of me ... I don't think she made it at all,\" Bamford said outside Croydon University Hospital, where he was treated for rib injuries. \"She wasn't responsive. There was blood everywhere.\" Bamford said the driver told him that \"he thinks he blacked out.\" The British capital's only tram network operates in the southern end of the city, serving 27 million passengers in the past year. Wednesday's derailment is the first tram accident with onboard fatalities since the 1950s, but official figures show 20 people were injured in 112 tram-related accidents between March 2015 and March 2016, including one derailment and two collisions with other trams. Read or Share this story: http://usat.ly/2fD4PNp",
-  "url": "http://www.usatoday.com/story/news/2016/11/09/least-7-killed-tram-accident-south-london/93549248/",
-  "publisher": "usatoday",
-  "originalFilename": "usatoday-6",
-  "category": "tram",
-  "dId": "ba38e52fb1cb4d5008d3c8f16d3c3f405fd86e63272246f9d3dfea6f"
+  "date_publish": "2016-11-09 18:50:08"
 }

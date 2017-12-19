@@ -6,9 +6,15 @@
   "category": "clinton blames comey",
   "fiveWoneH": {
     "who": {
-      "extracted": [
+      "annotated": [
         {
           "text": "Hillary Clinton",
+          "coderPhraseCount": 3
+        }
+      ],
+      "label": "who",
+      "extracted": [
+        {
           "parts": [
             [
               {
@@ -47,57 +53,12 @@
               "NNP"
             ]
           ],
-          "score": 1.0
+          "score": 1.0,
+          "text": "Hillary Clinton"
         }
-      ],
-      "annotated": [
-        {
-          "text": "Hillary Clinton",
-          "coderPhraseCount": 3
-        }
-      ],
-      "label": "who"
+      ]
     },
     "when": {
-      "extracted": [
-        {
-          "text": "Saturday",
-          "enhancement": {
-            "timex": {
-              "start_date": "2016-11-12T00:00:00",
-              "end_date": "2016-11-12T23:59:59"
-            }
-          },
-          "parts": [
-            [
-              {
-                "nlpToken": {
-                  "characterOffsetBegin": 2722,
-                  "word": "Saturday",
-                  "lemma": "Saturday",
-                  "timex": {
-                    "value": "2016-11-12",
-                    "tid": "t10",
-                    "type": "DATE"
-                  },
-                  "before": " ",
-                  "characterOffsetEnd": 2730,
-                  "originalText": "Saturday",
-                  "normalizedNER": "2016-11-12",
-                  "speaker": "PER0",
-                  "after": "",
-                  "ner": "DATE",
-                  "index": 1,
-                  "pos": "NNP"
-                }
-              },
-              "NNP"
-            ]
-          ],
-          "nlpIndexSentence": 16,
-          "score": 0.7183151041705124
-        }
-      ],
       "annotated": [
         {
           "text": "Saturday",
@@ -108,50 +69,6 @@
       "label": "when"
     },
     "why": {
-      "extracted": [
-        {
-          "text": "Hillary Clinton",
-          "parts": [
-            [
-              {
-                "nlpToken": {
-                  "characterOffsetBegin": 0,
-                  "word": "Hillary",
-                  "lemma": "Hillary",
-                  "speaker": "PER0",
-                  "after": " ",
-                  "pos": "NNP",
-                  "ner": "PERSON",
-                  "before": "",
-                  "characterOffsetEnd": 7,
-                  "index": 1,
-                  "originalText": "Hillary"
-                }
-              },
-              "NNP"
-            ],
-            [
-              {
-                "nlpToken": {
-                  "characterOffsetBegin": 8,
-                  "word": "Clinton",
-                  "lemma": "Clinton",
-                  "speaker": "PER0",
-                  "after": " ",
-                  "pos": "NNP",
-                  "ner": "PERSON",
-                  "before": " ",
-                  "characterOffsetEnd": 15,
-                  "index": 2,
-                  "originalText": "Clinton"
-                }
-              },
-              "NNP"
-            ]
-          ],
-          "score": 0.42857142857142855
-        }
-      ],
       "annotated": [
         {
           "text": "Comey\\u2019s letter raising doubts that were groundless",
@@ -168,90 +85,114 @@
       "label": "why"
     },
     "how": {
-      "extracted": [
-        {
-          "text": "saying",
-          "parts": [
-            [
-              {
-                "nlpToken": {
-                  "characterOffsetBegin": 764,
-                  "word": "saying",
-                  "lemma": "say",
-                  "characterOffsetEnd": 770,
-                  "speaker": "PER0",
-                  "ner": "O",
-                  "after": " ",
-                  "originalText": "saying",
-                  "before": " ",
-                  "index": 9,
-                  "pos": "VBG"
-                }
-              },
-              "VBG"
-            ]
-          ],
-          "nlpIndexSentence": 4,
-          "score": 1.0
-        }
-      ],
       "annotated": [
         {
           "text": "two letters to Congress",
           "coderPhraseCount": 2
         }
       ],
-      "label": "how"
-    },
-    "where": {
+      "label": "how",
       "extracted": [
         {
-          "text": "Massachusetts",
-          "enhancement": {
-            "openstreetmap_nominatim": {
-              "place_id": "178151284",
-              "licence": "Data \u00a9 OpenStreetMap contributors, ODbL 1.0. http://www.openstreetmap.org/copyright",
-              "type": "administrative",
-              "class": "boundary",
-              "osm_id": "61315",
-              "boundingbox": [
-                41.1888589,
-                42.8867135,
-                -73.508142,
-                -69.8601042
-              ],
-              "osm_type": "relation",
-              "lon": "-72.032366",
-              "display_name": "Massachusetts, United States of America",
-              "importance": 0.30375195802466,
-              "icon": "https://nominatim.openstreetmap.org/images/mapicons/poi_boundary_administrative.p.20.png",
-              "lat": "42.3788774"
-            }
-          },
           "parts": [
             [
               {
                 "nlpToken": {
-                  "characterOffsetBegin": 4108,
-                  "word": "Massachusetts",
-                  "lemma": "Massachusetts",
-                  "characterOffsetEnd": 4121,
+                  "characterOffsetBegin": 4784,
+                  "word": "election",
+                  "lemma": "election",
+                  "characterOffsetEnd": 4792,
                   "speaker": "PER0",
-                  "ner": "LOCATION",
+                  "ner": "O",
                   "after": " ",
-                  "originalText": "Massachusetts",
+                  "originalText": "election",
                   "before": " ",
-                  "index": 11,
-                  "pos": "NNP"
+                  "index": 7,
+                  "pos": "NN"
                 }
               },
-              "NNP"
+              "NN"
+            ],
+            [
+              {
+                "nlpToken": {
+                  "characterOffsetBegin": 4793,
+                  "word": "defeat",
+                  "lemma": "defeat",
+                  "characterOffsetEnd": 4799,
+                  "speaker": "PER0",
+                  "ner": "O",
+                  "after": "",
+                  "originalText": "defeat",
+                  "before": " ",
+                  "index": 8,
+                  "pos": "NN"
+                }
+              },
+              "NN"
+            ],
+            [
+              {
+                "nlpToken": {
+                  "characterOffsetBegin": 4799,
+                  "word": ",",
+                  "lemma": ",",
+                  "characterOffsetEnd": 4800,
+                  "speaker": "PER0",
+                  "ner": "O",
+                  "after": " ",
+                  "originalText": ",",
+                  "before": "",
+                  "index": 9,
+                  "pos": ","
+                }
+              },
+              ","
+            ],
+            [
+              {
+                "nlpToken": {
+                  "characterOffsetBegin": 4801,
+                  "word": "reports",
+                  "lemma": "report",
+                  "characterOffsetEnd": 4808,
+                  "speaker": "PER0",
+                  "ner": "O",
+                  "after": " ",
+                  "originalText": "reports",
+                  "before": " ",
+                  "index": 10,
+                  "pos": "NNS"
+                }
+              },
+              "NNS"
+            ],
+            [
+              {
+                "nlpToken": {
+                  "characterOffsetBegin": 4809,
+                  "word": "say",
+                  "lemma": "say",
+                  "characterOffsetEnd": 4812,
+                  "speaker": "PER0",
+                  "ner": "O",
+                  "after": "",
+                  "originalText": "say",
+                  "before": " ",
+                  "index": 11,
+                  "pos": "VBP"
+                }
+              },
+              "VBP"
             ]
           ],
-          "nlpIndexSentence": 26,
-          "score": 1.0
+          "score": 1.0,
+          "text": "election defeat , reports say",
+          "nlpIndexSentence": 7
         }
-      ],
+      ]
+    },
+    "where": {
       "annotated": [
         {
           "coderPhraseCount": 3
@@ -260,9 +201,15 @@
       "label": "where"
     },
     "what": {
+      "annotated": [
+        {
+          "text": "blames Comey letters for election defeat",
+          "coderPhraseCount": 3
+        }
+      ],
+      "label": "what",
       "extracted": [
         {
-          "text": "has reportedly blamed two letters",
           "parts": [
             [
               {
@@ -356,16 +303,10 @@
               "NNS"
             ]
           ],
-          "score": 1.0
+          "score": 1.0,
+          "text": "has reportedly blamed two letters"
         }
-      ],
-      "annotated": [
-        {
-          "text": "blames Comey letters for election defeat",
-          "coderPhraseCount": 3
-        }
-      ],
-      "label": "what"
+      ]
     }
   },
   "description": "Source tells Politico that Clinton made comments during call with megadonors, as Hispanic Chamber of Commerce chief blames lack of Latino outreach",

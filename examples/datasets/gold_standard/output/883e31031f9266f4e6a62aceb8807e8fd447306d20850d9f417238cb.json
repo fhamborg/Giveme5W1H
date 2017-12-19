@@ -6,9 +6,15 @@
   "category": "gaga protests",
   "fiveWoneH": {
     "who": {
+      "annotated": [
+        {
+          "text": "Lady Gaga",
+          "coderPhraseCount": 3
+        }
+      ],
+      "label": "who",
       "extracted": [
         {
-          "text": "Hillary",
           "parts": [
             [
               {
@@ -29,82 +35,13 @@
               "NNP"
             ]
           ],
-          "nlpIndexSentence": 13,
-          "score": 1.0
+          "score": 1.0,
+          "text": "Hillary",
+          "nlpIndexSentence": 13
         }
-      ],
-      "annotated": [
-        {
-          "text": "Lady Gaga",
-          "coderPhraseCount": 3
-        }
-      ],
-      "label": "who"
+      ]
     },
     "when": {
-      "extracted": [
-        {
-          "text": "Earlier today",
-          "enhancement": {
-            "timex": {
-              "start_date": "2016-11-09T00:00:00",
-              "end_date": "2016-11-09T23:59:59"
-            }
-          },
-          "parts": [
-            [
-              {
-                "nlpToken": {
-                  "characterOffsetBegin": 1628,
-                  "word": "Earlier",
-                  "lemma": "earlier",
-                  "timex": {
-                    "value": "2016-11-09",
-                    "tid": "t3",
-                    "type": "DATE"
-                  },
-                  "before": " ",
-                  "characterOffsetEnd": 1635,
-                  "originalText": "Earlier",
-                  "normalizedNER": "2016-11-09",
-                  "speaker": "PER0",
-                  "after": " ",
-                  "ner": "DATE",
-                  "index": 1,
-                  "pos": "JJR"
-                }
-              },
-              "JJR"
-            ],
-            [
-              {
-                "nlpToken": {
-                  "characterOffsetBegin": 1636,
-                  "word": "today",
-                  "lemma": "today",
-                  "timex": {
-                    "value": "2016-11-09",
-                    "tid": "t3",
-                    "type": "DATE"
-                  },
-                  "before": " ",
-                  "characterOffsetEnd": 1641,
-                  "originalText": "today",
-                  "normalizedNER": "2016-11-09",
-                  "speaker": "PER0",
-                  "after": "",
-                  "ner": "DATE",
-                  "index": 2,
-                  "pos": "NN"
-                }
-              },
-              "NN"
-            ]
-          ],
-          "nlpIndexSentence": 15,
-          "score": 0.7983053523100662
-        }
-      ],
       "annotated": [
         {
           "text": "Wednesday",
@@ -115,33 +52,6 @@
       "label": "when"
     },
     "why": {
-      "extracted": [
-        {
-          "text": "she",
-          "parts": [
-            [
-              {
-                "nlpToken": {
-                  "characterOffsetBegin": 215,
-                  "word": "she",
-                  "lemma": "she",
-                  "speaker": "PER0",
-                  "after": " ",
-                  "pos": "PRP",
-                  "ner": "O",
-                  "before": " ",
-                  "characterOffsetEnd": 218,
-                  "index": 26,
-                  "originalText": "she"
-                }
-              },
-              "PRP"
-            ]
-          ],
-          "nlpIndexSentence": 1,
-          "score": 0.42316602316602314
-        }
-      ],
       "annotated": [
         {
           "text": "was disappointed with the results of the election",
@@ -151,23 +61,82 @@
       "label": "why"
     },
     "how": {
+      "annotated": [
+        {
+          "coderPhraseCount": 3
+        }
+      ],
+      "label": "how",
       "extracted": [
         {
-          "text": "were coming",
           "parts": [
             [
               {
                 "nlpToken": {
-                  "characterOffsetBegin": 691,
+                  "characterOffsetBegin": 1097,
+                  "word": "the",
+                  "lemma": "the",
+                  "characterOffsetEnd": 1100,
+                  "speaker": "PER0",
+                  "ner": "O",
+                  "after": " ",
+                  "originalText": "the",
+                  "before": " ",
+                  "index": 13,
+                  "pos": "DT"
+                }
+              },
+              "DT"
+            ],
+            [
+              {
+                "nlpToken": {
+                  "characterOffsetBegin": 1101,
+                  "word": "nail-biting",
+                  "lemma": "nail-biting",
+                  "characterOffsetEnd": 1112,
+                  "speaker": "PER0",
+                  "ner": "O",
+                  "after": " ",
+                  "originalText": "nail-biting",
+                  "before": " ",
+                  "index": 14,
+                  "pos": "JJ"
+                }
+              },
+              "JJ"
+            ],
+            [
+              {
+                "nlpToken": {
+                  "characterOffsetBegin": 1113,
+                  "word": "results",
+                  "lemma": "result",
+                  "characterOffsetEnd": 1120,
+                  "speaker": "PER0",
+                  "ner": "O",
+                  "after": " ",
+                  "originalText": "results",
+                  "before": " ",
+                  "index": 15,
+                  "pos": "NNS"
+                }
+              },
+              "NNS"
+            ],
+            [
+              {
+                "nlpToken": {
+                  "characterOffsetBegin": 1121,
                   "word": "were",
                   "lemma": "be",
-                  "characterOffsetEnd": 695,
+                  "characterOffsetEnd": 1125,
                   "speaker": "PER0",
                   "ner": "O",
                   "after": " ",
                   "originalText": "were",
                   "before": " ",
-                  "index": 9,
+                  "index": 16,
                   "pos": "VBD"
                 }
               },
@@ -176,82 +145,281 @@
             [
               {
                 "nlpToken": {
-                  "characterOffsetBegin": 696,
+                  "characterOffsetBegin": 1126,
                   "word": "coming",
                   "lemma": "come",
-                  "characterOffsetEnd": 702,
+                  "characterOffsetEnd": 1132,
                   "speaker": "PER0",
                   "ner": "O",
                   "after": " ",
                   "originalText": "coming",
                   "before": " ",
-                  "index": 10,
+                  "index": 17,
                   "pos": "VBG"
                 }
               },
               "VBG"
-            ]
-          ],
-          "nlpIndexSentence": 4,
-          "score": 1.0
-        }
-      ],
-      "annotated": [
-        {
-          "coderPhraseCount": 3
-        }
-      ],
-      "label": "how"
-    },
-    "where": {
-      "extracted": [
-        {
-          "text": "US",
-          "enhancement": {
-            "openstreetmap_nominatim": {
-              "place_id": "177579678",
-              "licence": "Data \u00a9 OpenStreetMap contributors, ODbL 1.0. http://www.openstreetmap.org/copyright",
-              "type": "administrative",
-              "class": "boundary",
-              "osm_id": "148838",
-              "boundingbox": [
-                -14.7608358,
-                71.6048217,
-                -180.0,
-                180.0
-              ],
-              "osm_type": "relation",
-              "lon": "-100.4458825",
-              "display_name": "United States of America",
-              "importance": 0.2361730870995,
-              "icon": "https://nominatim.openstreetmap.org/images/mapicons/poi_boundary_administrative.p.20.png",
-              "lat": "39.7837304"
-            }
-          },
-          "parts": [
+            ],
             [
               {
                 "nlpToken": {
-                  "characterOffsetBegin": 173,
-                  "word": "US",
-                  "lemma": "US",
-                  "characterOffsetEnd": 175,
+                  "characterOffsetBegin": 1133,
+                  "word": "in",
+                  "lemma": "in",
+                  "characterOffsetEnd": 1135,
                   "speaker": "PER0",
-                  "ner": "LOCATION",
-                  "after": " ",
-                  "originalText": "US",
+                  "ner": "O",
+                  "after": "",
+                  "originalText": "in",
                   "before": " ",
+                  "index": 18,
+                  "pos": "IN"
+                }
+              },
+              "IN"
+            ],
+            [
+              {
+                "nlpToken": {
+                  "characterOffsetBegin": 1135,
+                  "word": ",",
+                  "lemma": ",",
+                  "characterOffsetEnd": 1136,
+                  "speaker": "PER0",
+                  "ner": "O",
+                  "after": " ",
+                  "originalText": ",",
+                  "before": "",
                   "index": 19,
+                  "pos": ","
+                }
+              },
+              ","
+            ],
+            [
+              {
+                "nlpToken": {
+                  "characterOffsetBegin": 1137,
+                  "word": "with",
+                  "lemma": "with",
+                  "characterOffsetEnd": 1141,
+                  "speaker": "PER0",
+                  "ner": "O",
+                  "after": " ",
+                  "originalText": "with",
+                  "before": " ",
+                  "index": 20,
+                  "pos": "IN"
+                }
+              },
+              "IN"
+            ],
+            [
+              {
+                "nlpToken": {
+                  "characterOffsetBegin": 1142,
+                  "word": "Donald",
+                  "lemma": "Donald",
+                  "characterOffsetEnd": 1148,
+                  "speaker": "PER0",
+                  "ner": "PERSON",
+                  "after": " ",
+                  "originalText": "Donald",
+                  "before": " ",
+                  "index": 21,
                   "pos": "NNP"
                 }
               },
               "NNP"
+            ],
+            [
+              {
+                "nlpToken": {
+                  "characterOffsetBegin": 1149,
+                  "word": "Trump",
+                  "lemma": "Trump",
+                  "characterOffsetEnd": 1154,
+                  "speaker": "PER0",
+                  "ner": "PERSON",
+                  "after": " ",
+                  "originalText": "Trump",
+                  "before": " ",
+                  "index": 22,
+                  "pos": "NNP"
+                }
+              },
+              "NNP"
+            ],
+            [
+              {
+                "nlpToken": {
+                  "characterOffsetBegin": 1155,
+                  "word": "looking",
+                  "lemma": "look",
+                  "characterOffsetEnd": 1162,
+                  "speaker": "PER0",
+                  "ner": "O",
+                  "after": " ",
+                  "originalText": "looking",
+                  "before": " ",
+                  "index": 23,
+                  "pos": "VBG"
+                }
+              },
+              "VBG"
+            ],
+            [
+              {
+                "nlpToken": {
+                  "characterOffsetBegin": 1163,
+                  "word": "more",
+                  "lemma": "more",
+                  "characterOffsetEnd": 1167,
+                  "speaker": "PER0",
+                  "ner": "O",
+                  "after": " ",
+                  "originalText": "more",
+                  "before": " ",
+                  "index": 24,
+                  "pos": "RBR"
+                }
+              },
+              "RBR"
+            ],
+            [
+              {
+                "nlpToken": {
+                  "characterOffsetBegin": 1168,
+                  "word": "likely",
+                  "lemma": "likely",
+                  "characterOffsetEnd": 1174,
+                  "speaker": "PER0",
+                  "ner": "O",
+                  "after": " ",
+                  "originalText": "likely",
+                  "before": " ",
+                  "index": 25,
+                  "pos": "JJ"
+                }
+              },
+              "JJ"
+            ],
+            [
+              {
+                "nlpToken": {
+                  "characterOffsetBegin": 1175,
+                  "word": "to",
+                  "lemma": "to",
+                  "characterOffsetEnd": 1177,
+                  "speaker": "PER0",
+                  "ner": "O",
+                  "after": " ",
+                  "originalText": "to",
+                  "before": " ",
+                  "index": 26,
+                  "pos": "TO"
+                }
+              },
+              "TO"
+            ],
+            [
+              {
+                "nlpToken": {
+                  "characterOffsetBegin": 1178,
+                  "word": "beat",
+                  "lemma": "beat",
+                  "characterOffsetEnd": 1182,
+                  "speaker": "PER0",
+                  "ner": "O",
+                  "after": " ",
+                  "originalText": "beat",
+                  "before": " ",
+                  "index": 27,
+                  "pos": "VB"
+                }
+              },
+              "VB"
+            ],
+            [
+              {
+                "nlpToken": {
+                  "characterOffsetBegin": 1183,
+                  "word": "Hillary",
+                  "lemma": "Hillary",
+                  "characterOffsetEnd": 1190,
+                  "speaker": "PER0",
+                  "ner": "PERSON",
+                  "after": " ",
+                  "originalText": "Hillary",
+                  "before": " ",
+                  "index": 28,
+                  "pos": "NNP"
+                }
+              },
+              "NNP"
+            ],
+            [
+              {
+                "nlpToken": {
+                  "characterOffsetBegin": 1191,
+                  "word": "to",
+                  "lemma": "to",
+                  "characterOffsetEnd": 1193,
+                  "speaker": "PER0",
+                  "ner": "O",
+                  "after": " ",
+                  "originalText": "to",
+                  "before": " ",
+                  "index": 29,
+                  "pos": "TO"
+                }
+              },
+              "TO"
+            ],
+            [
+              {
+                "nlpToken": {
+                  "characterOffsetBegin": 1194,
+                  "word": "become",
+                  "lemma": "become",
+                  "characterOffsetEnd": 1200,
+                  "speaker": "PER0",
+                  "ner": "O",
+                  "after": " ",
+                  "originalText": "become",
+                  "before": " ",
+                  "index": 30,
+                  "pos": "VB"
+                }
+              },
+              "VB"
+            ],
+            [
+              {
+                "nlpToken": {
+                  "characterOffsetBegin": 1201,
+                  "word": "the",
+                  "lemma": "the",
+                  "characterOffsetEnd": 1204,
+                  "speaker": "PER0",
+                  "ner": "O",
+                  "after": " ",
+                  "originalText": "the",
+                  "before": " ",
+                  "index": 31,
+                  "pos": "DT"
+                }
+              },
+              "DT"
             ]
           ],
-          "nlpIndexSentence": 1,
-          "score": 1.0
+          "score": 1.0,
+          "text": "the nail-biting results were coming in , with Donald Trump looking more likely to beat Hillary to become the",
+          "nlpIndexSentence": 13
         }
-      ],
+      ]
+    },
+    "where": {
       "annotated": [
         {
           "text": "Trump Tower",
@@ -261,9 +429,15 @@
       "label": "where"
     },
     "what": {
+      "annotated": [
+        {
+          "text": "protests outside Trump Tower",
+          "coderPhraseCount": 3
+        }
+      ],
+      "label": "what",
       "extracted": [
         {
-          "text": "is hosting her election party",
           "parts": [
             [
               {
@@ -356,17 +530,11 @@
               "NN"
             ]
           ],
-          "nlpIndexSentence": 13,
-          "score": 1.0
+          "score": 1.0,
+          "text": "is hosting her election party",
+          "nlpIndexSentence": 13
         }
-      ],
-      "annotated": [
-        {
-          "text": "protests outside Trump Tower",
-          "coderPhraseCount": 3
-        }
-      ],
-      "label": "what"
+      ]
     }
   },
   "description": "The Paparazzi singer was disappointed with the results of the election",

@@ -1,11 +1,8 @@
 import glob
+import os
 from datetime import date
 
-import os
-
 from flask import json
-
-from datasets.gold_standard.legacy.generate_annotations_new import result
 
 
 def deep_access(x, path):
@@ -18,7 +15,7 @@ def deep_access(x, path):
     key_list = path.split('.')
     val = x
     for key in key_list:
-        if val :
+        if val:
             if isinstance(val, list):
                 val = val[int(key)]
             else:
@@ -26,7 +23,6 @@ def deep_access(x, path):
         else:
             return None
     return val
-
 
 
 """
@@ -63,7 +59,7 @@ for filepath in glob.glob(os.path.dirname(__file__) + '/../data/*.json'):
             for anno in annotated:
                 anno['parsed'] = event_dates[data['category']]
 
-        #save it back
+        # save it back
         with open(filepath, 'w', encoding='utf8') as outfile:
             outfile.write(json.dumps(data, indent=2, sort_keys=True))
             outfile.close()

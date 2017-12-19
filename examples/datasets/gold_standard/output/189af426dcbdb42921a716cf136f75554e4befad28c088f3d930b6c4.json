@@ -1,29 +1,39 @@
 {
-  "filename": "189af426dcbdb42921a716cf136f75554e4befad28c088f3d930b6c4",
-  "title": "Tram Derails in Croydon, Near London, Killing at Least 7",
-  "mimeType": "text/xml",
-  "url": "http://www.nytimes.com/2016/11/10/world/europe/tram-derails-croydon-london.html",
   "category": "tram",
+  "dId": "189af426dcbdb42921a716cf136f75554e4befad28c088f3d930b6c4",
+  "date_publish": "2016-11-09 08:46:26",
+  "description": "The police said that the driver had been arrested after the deadly accident in Croydon, south of the British capital.",
+  "filename": "189af426dcbdb42921a716cf136f75554e4befad28c088f3d930b6c4",
   "fiveWoneH": {
-    "who": {
+    "how": {
+      "annotated": [
+        {
+          "coderPhraseCount": 3,
+          "text": "a tram derailed"
+        },
+        {
+          "coderPhraseCount": 2,
+          "text": "unclear"
+        }
+      ],
+      "label": "how",
       "extracted": [
         {
-          "text": "The police",
           "parts": [
             [
               {
                 "nlpToken": {
-                  "characterOffsetBegin": 397,
-                  "word": "The",
+                  "index": 5,
+                  "word": "the",
+                  "originalText": "the",
                   "lemma": "the",
-                  "characterOffsetEnd": 400,
-                  "speaker": "PER0",
+                  "characterOffsetBegin": 79,
+                  "characterOffsetEnd": 82,
+                  "pos": "DT",
                   "ner": "O",
-                  "after": " ",
-                  "originalText": "The",
+                  "speaker": "PER0",
                   "before": " ",
-                  "index": 1,
-                  "pos": "DT"
+                  "after": " "
                 }
               },
               "DT"
@@ -31,338 +41,35 @@
             [
               {
                 "nlpToken": {
-                  "characterOffsetBegin": 401,
-                  "word": "police",
-                  "lemma": "police",
-                  "characterOffsetEnd": 407,
-                  "speaker": "PER0",
+                  "index": 6,
+                  "word": "driver",
+                  "originalText": "driver",
+                  "lemma": "driver",
+                  "characterOffsetBegin": 83,
+                  "characterOffsetEnd": 89,
+                  "pos": "NN",
                   "ner": "O",
-                  "after": " ",
-                  "originalText": "police",
-                  "before": " ",
-                  "index": 2,
-                  "pos": "NNS"
-                }
-              },
-              "NNS"
-            ]
-          ],
-          "nlpIndexSentence": 4,
-          "score": 1.0
-        }
-      ],
-      "annotated": [
-        {
-          "text": "At least seven people",
-          "coderPhraseCount": 1
-        },
-        {
-          "text": "Tram",
-          "coderPhraseCount": 1
-        },
-        {
-          "coderPhraseCount": 1
-        }
-      ],
-      "label": "who"
-    },
-    "when": {
-      "extracted": [
-        {
-          "text": "6 a.m.",
-          "enhancement": {
-            "timex": {
-              "start_date": "2016-11-09T06:00:00",
-              "end_date": "2016-11-09T06:00:59"
-            }
-          },
-          "parts": [
-            [
-              {
-                "nlpToken": {
-                  "characterOffsetBegin": 489,
-                  "word": "6",
-                  "lemma": "6",
-                  "timex": {
-                    "value": "2016-11-09T06:00",
-                    "tid": "t2",
-                    "type": "TIME"
-                  },
-                  "before": " ",
-                  "characterOffsetEnd": 490,
-                  "originalText": "6",
-                  "normalizedNER": "2016-11-09T06:00",
                   "speaker": "PER0",
-                  "after": " ",
-                  "ner": "TIME",
-                  "index": 19,
-                  "pos": "CD"
+                  "before": " ",
+                  "after": " "
                 }
               },
-              "CD"
+              "NN"
             ],
             [
               {
                 "nlpToken": {
-                  "characterOffsetBegin": 491,
-                  "word": "a.m.",
-                  "lemma": "a.m.",
-                  "timex": {
-                    "value": "2016-11-09T06:00",
-                    "tid": "t2",
-                    "type": "TIME"
-                  },
-                  "before": " ",
-                  "characterOffsetEnd": 495,
-                  "originalText": "a.m.",
-                  "normalizedNER": "2016-11-09T06:00",
-                  "speaker": "PER0",
-                  "after": "",
-                  "ner": "TIME",
-                  "index": 20,
-                  "pos": "RB"
-                }
-              },
-              "RB"
-            ]
-          ],
-          "nlpIndexSentence": 4,
-          "score": 0.8810560516299238
-        }
-      ],
-      "annotated": [
-        {
-          "text": "Wednesday",
-          "coderPhraseCount": 3,
-          "parsed": "2016-11-09"
-        }
-      ],
-      "label": "when"
-    },
-    "why": {
-      "extracted": [
-        {
-          "text": "officers , firefighters and paramedics",
-          "parts": [
-            [
-              {
-                "nlpToken": {
-                  "characterOffsetBegin": 501,
-                  "word": "officers",
-                  "lemma": "officer",
-                  "speaker": "PER0",
-                  "after": "",
-                  "pos": "NNS",
+                  "index": 7,
+                  "word": "had",
+                  "originalText": "had",
+                  "lemma": "have",
+                  "characterOffsetBegin": 90,
+                  "characterOffsetEnd": 93,
+                  "pos": "VBD",
                   "ner": "O",
-                  "before": " ",
-                  "characterOffsetEnd": 509,
-                  "index": 23,
-                  "originalText": "officers"
-                }
-              },
-              "NNS"
-            ],
-            [
-              {
-                "nlpToken": {
-                  "characterOffsetBegin": 509,
-                  "word": ",",
-                  "lemma": ",",
                   "speaker": "PER0",
-                  "after": " ",
-                  "pos": ",",
-                  "ner": "O",
-                  "before": "",
-                  "characterOffsetEnd": 510,
-                  "index": 24,
-                  "originalText": ","
-                }
-              },
-              ","
-            ],
-            [
-              {
-                "nlpToken": {
-                  "characterOffsetBegin": 511,
-                  "word": "firefighters",
-                  "lemma": "firefighter",
-                  "speaker": "PER0",
-                  "after": " ",
-                  "pos": "NNS",
-                  "ner": "O",
                   "before": " ",
-                  "characterOffsetEnd": 523,
-                  "index": 25,
-                  "originalText": "firefighters"
-                }
-              },
-              "NNS"
-            ],
-            [
-              {
-                "nlpToken": {
-                  "characterOffsetBegin": 524,
-                  "word": "and",
-                  "lemma": "and",
-                  "speaker": "PER0",
-                  "after": " ",
-                  "pos": "CC",
-                  "ner": "O",
-                  "before": " ",
-                  "characterOffsetEnd": 527,
-                  "index": 26,
-                  "originalText": "and"
-                }
-              },
-              "CC"
-            ],
-            [
-              {
-                "nlpToken": {
-                  "characterOffsetBegin": 528,
-                  "word": "paramedics",
-                  "lemma": "paramedic",
-                  "speaker": "PER0",
-                  "after": " ",
-                  "pos": "NNS",
-                  "ner": "O",
-                  "before": " ",
-                  "characterOffsetEnd": 538,
-                  "index": 27,
-                  "originalText": "paramedics"
-                }
-              },
-              "NNS"
-            ]
-          ],
-          "nlpIndexSentence": 4,
-          "score": 0.3396825396825397
-        }
-      ],
-      "annotated": [
-        {
-          "text": "The cause of the accident was unclear",
-          "coderPhraseCount": 2
-        }
-      ],
-      "label": "why"
-    },
-    "how": {
-      "extracted": [
-        {
-          "text": "British",
-          "parts": [
-            [
-              {
-                "nlpToken": {
-                  "characterOffsetBegin": 458,
-                  "word": "British",
-                  "lemma": "british",
-                  "characterOffsetEnd": 465,
-                  "speaker": "PER0",
-                  "ner": "MISC",
-                  "after": " ",
-                  "originalText": "British",
-                  "before": " ",
-                  "index": 14,
-                  "pos": "JJ"
-                }
-              },
-              "JJ"
-            ]
-          ],
-          "nlpIndexSentence": 4,
-          "score": 1.0
-        }
-      ],
-      "annotated": [
-        {
-          "text": "a tram derailed",
-          "coderPhraseCount": 3
-        },
-        {
-          "text": "unclear",
-          "coderPhraseCount": 2
-        }
-      ],
-      "label": "how"
-    },
-    "where": {
-      "extracted": [
-        {
-          "text": "LONDON",
-          "enhancement": {
-            "openstreetmap_nominatim": {
-              "place_id": "179118272",
-              "licence": "Data \u00a9 OpenStreetMap contributors, ODbL 1.0. http://www.openstreetmap.org/copyright",
-              "type": "city",
-              "class": "place",
-              "osm_id": "65606",
-              "boundingbox": [
-                51.2867602,
-                51.6918741,
-                -0.5103751,
-                0.3340155
-              ],
-              "osm_type": "relation",
-              "lon": "-0.1276474",
-              "display_name": "London, Greater London, England, UK",
-              "importance": 0.31637239413505,
-              "icon": "https://nominatim.openstreetmap.org/images/mapicons/poi_place_city.p.20.png",
-              "lat": "51.5073219"
-            }
-          },
-          "parts": [
-            [
-              {
-                "nlpToken": {
-                  "characterOffsetBegin": 183,
-                  "word": "LONDON",
-                  "lemma": "LONDON",
-                  "characterOffsetEnd": 189,
-                  "speaker": "PER0",
-                  "ner": "LOCATION",
-                  "after": " ",
-                  "originalText": "LONDON",
-                  "before": " ",
-                  "index": 2,
-                  "pos": "NNP"
-                }
-              },
-              "NNP"
-            ]
-          ],
-          "nlpIndexSentence": 3,
-          "score": 1.0
-        }
-      ],
-      "annotated": [
-        {
-          "text": "Croydon, Near London",
-          "coderPhraseCount": 3
-        }
-      ],
-      "label": "where"
-    },
-    "what": {
-      "extracted": [
-        {
-          "text": "were called to the scene , south of the British capital , shortly after 6 a.m.",
-          "parts": [
-            [
-              {
-                "nlpToken": {
-                  "characterOffsetBegin": 408,
-                  "word": "were",
-                  "lemma": "be",
-                  "characterOffsetEnd": 412,
-                  "speaker": "PER0",
-                  "ner": "O",
-                  "after": " ",
-                  "originalText": "were",
-                  "before": " ",
-                  "index": 3,
-                  "pos": "VBD"
+                  "after": " "
                 }
               },
               "VBD"
@@ -370,17 +77,17 @@
             [
               {
                 "nlpToken": {
-                  "characterOffsetBegin": 413,
-                  "word": "called",
-                  "lemma": "call",
-                  "characterOffsetEnd": 419,
-                  "speaker": "PER0",
+                  "index": 8,
+                  "word": "been",
+                  "originalText": "been",
+                  "lemma": "be",
+                  "characterOffsetBegin": 94,
+                  "characterOffsetEnd": 98,
+                  "pos": "VBN",
                   "ner": "O",
-                  "after": " ",
-                  "originalText": "called",
+                  "speaker": "PER0",
                   "before": " ",
-                  "index": 4,
-                  "pos": "VBN"
+                  "after": " "
                 }
               },
               "VBN"
@@ -388,107 +95,35 @@
             [
               {
                 "nlpToken": {
-                  "characterOffsetBegin": 420,
-                  "word": "to",
-                  "lemma": "to",
-                  "characterOffsetEnd": 422,
-                  "speaker": "PER0",
+                  "index": 9,
+                  "word": "arrested",
+                  "originalText": "arrested",
+                  "lemma": "arrest",
+                  "characterOffsetBegin": 99,
+                  "characterOffsetEnd": 107,
+                  "pos": "VBN",
                   "ner": "O",
-                  "after": " ",
-                  "originalText": "to",
+                  "speaker": "PER0",
                   "before": " ",
-                  "index": 5,
-                  "pos": "TO"
+                  "after": " "
                 }
               },
-              "TO"
+              "VBN"
             ],
             [
               {
                 "nlpToken": {
-                  "characterOffsetBegin": 423,
-                  "word": "the",
-                  "lemma": "the",
-                  "characterOffsetEnd": 426,
-                  "speaker": "PER0",
-                  "ner": "O",
-                  "after": " ",
-                  "originalText": "the",
-                  "before": " ",
-                  "index": 6,
-                  "pos": "DT"
-                }
-              },
-              "DT"
-            ],
-            [
-              {
-                "nlpToken": {
-                  "characterOffsetBegin": 427,
-                  "word": "scene",
-                  "lemma": "scene",
-                  "characterOffsetEnd": 432,
-                  "speaker": "PER0",
-                  "ner": "O",
-                  "after": " ",
-                  "originalText": "scene",
-                  "before": " ",
-                  "index": 7,
-                  "pos": "NN"
-                }
-              },
-              "NN"
-            ],
-            [
-              {
-                "nlpToken": {
-                  "characterOffsetBegin": 443,
-                  "word": ",",
-                  "lemma": ",",
-                  "characterOffsetEnd": 444,
-                  "speaker": "PER0",
-                  "ner": "O",
-                  "after": " ",
-                  "originalText": ",",
-                  "before": "",
                   "index": 10,
-                  "pos": ","
-                }
-              },
-              ","
-            ],
-            [
-              {
-                "nlpToken": {
-                  "characterOffsetBegin": 445,
-                  "word": "south",
-                  "lemma": "south",
-                  "characterOffsetEnd": 450,
-                  "speaker": "PER0",
+                  "word": "after",
+                  "originalText": "after",
+                  "lemma": "after",
+                  "characterOffsetBegin": 108,
+                  "characterOffsetEnd": 113,
+                  "pos": "IN",
                   "ner": "O",
-                  "after": " ",
-                  "originalText": "south",
-                  "before": " ",
-                  "index": 11,
-                  "pos": "RB"
-                }
-              },
-              "RB"
-            ],
-            [
-              {
-                "nlpToken": {
-                  "characterOffsetBegin": 451,
-                  "word": "of",
-                  "lemma": "of",
-                  "characterOffsetEnd": 453,
                   "speaker": "PER0",
-                  "ner": "O",
-                  "after": " ",
-                  "originalText": "of",
                   "before": " ",
-                  "index": 12,
-                  "pos": "IN"
+                  "after": " "
                 }
               },
               "IN"
@@ -496,17 +131,17 @@
             [
               {
                 "nlpToken": {
-                  "characterOffsetBegin": 454,
+                  "index": 11,
                   "word": "the",
-                  "lemma": "the",
-                  "characterOffsetEnd": 457,
-                  "speaker": "PER0",
-                  "ner": "O",
-                  "after": " ",
                   "originalText": "the",
+                  "lemma": "the",
+                  "characterOffsetBegin": 114,
+                  "characterOffsetEnd": 117,
+                  "pos": "DT",
+                  "ner": "O",
+                  "speaker": "PER0",
                   "before": " ",
-                  "index": 13,
-                  "pos": "DT"
+                  "after": " "
                 }
               },
               "DT"
@@ -514,17 +149,17 @@
             [
               {
                 "nlpToken": {
-                  "characterOffsetBegin": 458,
-                  "word": "British",
-                  "lemma": "british",
-                  "characterOffsetEnd": 465,
+                  "index": 12,
+                  "word": "deadly",
+                  "originalText": "deadly",
+                  "lemma": "deadly",
+                  "characterOffsetBegin": 118,
+                  "characterOffsetEnd": 124,
+                  "pos": "JJ",
+                  "ner": "O",
                   "speaker": "PER0",
-                  "ner": "MISC",
-                  "after": " ",
-                  "originalText": "British",
                   "before": " ",
-                  "index": 14,
-                  "pos": "JJ"
+                  "after": " "
                 }
               },
               "JJ"
@@ -532,17 +167,17 @@
             [
               {
                 "nlpToken": {
-                  "characterOffsetBegin": 466,
-                  "word": "capital",
-                  "lemma": "capital",
-                  "characterOffsetEnd": 473,
-                  "speaker": "PER0",
+                  "index": 13,
+                  "word": "accident",
+                  "originalText": "accident",
+                  "lemma": "accident",
+                  "characterOffsetBegin": 125,
+                  "characterOffsetEnd": 133,
+                  "pos": "NN",
                   "ner": "O",
-                  "after": "",
-                  "originalText": "capital",
+                  "speaker": "PER0",
                   "before": " ",
-                  "index": 15,
-                  "pos": "NN"
+                  "after": " "
                 }
               },
               "NN"
@@ -550,53 +185,17 @@
             [
               {
                 "nlpToken": {
-                  "characterOffsetBegin": 473,
-                  "word": ",",
-                  "lemma": ",",
-                  "characterOffsetEnd": 474,
-                  "speaker": "PER0",
+                  "index": 14,
+                  "word": "in",
+                  "originalText": "in",
+                  "lemma": "in",
+                  "characterOffsetBegin": 134,
+                  "characterOffsetEnd": 136,
+                  "pos": "IN",
                   "ner": "O",
-                  "after": " ",
-                  "originalText": ",",
-                  "before": "",
-                  "index": 16,
-                  "pos": ","
-                }
-              },
-              ","
-            ],
-            [
-              {
-                "nlpToken": {
-                  "characterOffsetBegin": 475,
-                  "word": "shortly",
-                  "lemma": "shortly",
-                  "characterOffsetEnd": 482,
                   "speaker": "PER0",
-                  "ner": "O",
-                  "after": " ",
-                  "originalText": "shortly",
                   "before": " ",
-                  "index": 17,
-                  "pos": "RB"
-                }
-              },
-              "RB"
-            ],
-            [
-              {
-                "nlpToken": {
-                  "characterOffsetBegin": 483,
-                  "word": "after",
-                  "lemma": "after",
-                  "characterOffsetEnd": 488,
-                  "speaker": "PER0",
-                  "ner": "O",
-                  "after": " ",
-                  "originalText": "after",
-                  "before": " ",
-                  "index": 18,
-                  "pos": "IN"
+                  "after": " "
                 }
               },
               "IN"
@@ -604,23 +203,423 @@
             [
               {
                 "nlpToken": {
-                  "characterOffsetBegin": 489,
-                  "word": "6",
-                  "lemma": "6",
-                  "timex": {
-                    "value": "2016-11-09T06:00",
-                    "tid": "t2",
-                    "type": "TIME"
-                  },
+                  "index": 15,
+                  "word": "Croydon",
+                  "originalText": "Croydon",
+                  "lemma": "Croydon",
+                  "characterOffsetBegin": 137,
+                  "characterOffsetEnd": 144,
+                  "pos": "NNP",
+                  "ner": "LOCATION",
+                  "speaker": "PER0",
                   "before": " ",
-                  "characterOffsetEnd": 490,
+                  "after": ""
+                }
+              },
+              "NNP"
+            ],
+            [
+              {
+                "nlpToken": {
+                  "index": 16,
+                  "word": ",",
+                  "originalText": ",",
+                  "lemma": ",",
+                  "characterOffsetBegin": 144,
+                  "characterOffsetEnd": 145,
+                  "pos": ",",
+                  "ner": "O",
+                  "speaker": "PER0",
+                  "before": "",
+                  "after": " "
+                }
+              },
+              ","
+            ],
+            [
+              {
+                "nlpToken": {
+                  "index": 17,
+                  "word": "south",
+                  "originalText": "south",
+                  "lemma": "south",
+                  "characterOffsetBegin": 146,
+                  "characterOffsetEnd": 151,
+                  "pos": "RB",
+                  "ner": "O",
+                  "speaker": "PER0",
+                  "before": " ",
+                  "after": " "
+                }
+              },
+              "RB"
+            ],
+            [
+              {
+                "nlpToken": {
+                  "index": 18,
+                  "word": "of",
+                  "originalText": "of",
+                  "lemma": "of",
+                  "characterOffsetBegin": 152,
+                  "characterOffsetEnd": 154,
+                  "pos": "IN",
+                  "ner": "O",
+                  "speaker": "PER0",
+                  "before": " ",
+                  "after": " "
+                }
+              },
+              "IN"
+            ],
+            [
+              {
+                "nlpToken": {
+                  "index": 19,
+                  "word": "the",
+                  "originalText": "the",
+                  "lemma": "the",
+                  "characterOffsetBegin": 155,
+                  "characterOffsetEnd": 158,
+                  "pos": "DT",
+                  "ner": "O",
+                  "speaker": "PER0",
+                  "before": " ",
+                  "after": " "
+                }
+              },
+              "DT"
+            ],
+            [
+              {
+                "nlpToken": {
+                  "index": 20,
+                  "word": "British",
+                  "originalText": "British",
+                  "lemma": "british",
+                  "characterOffsetBegin": 159,
+                  "characterOffsetEnd": 166,
+                  "pos": "JJ",
+                  "ner": "MISC",
+                  "speaker": "PER0",
+                  "before": " ",
+                  "after": " "
+                }
+              },
+              "JJ"
+            ],
+            [
+              {
+                "nlpToken": {
+                  "index": 21,
+                  "word": "capital",
+                  "originalText": "capital",
+                  "lemma": "capital",
+                  "characterOffsetBegin": 167,
+                  "characterOffsetEnd": 174,
+                  "pos": "NN",
+                  "ner": "O",
+                  "speaker": "PER0",
+                  "before": " ",
+                  "after": ""
+                }
+              },
+              "NN"
+            ]
+          ],
+          "score": 1.0,
+          "text": "the driver had been arrested after the deadly accident in Croydon , south of the British capital",
+          "nlpIndexSentence": 5
+        }
+      ]
+    },
+    "what": {
+      "annotated": [
+        {
+          "coderPhraseCount": 3,
+          "text": "Killing at Least 7"
+        },
+        {
+          "coderPhraseCount": 2,
+          "text": "Derails"
+        }
+      ],
+      "label": "what",
+      "extracted": [
+        {
+          "parts": [
+            [
+              {
+                "nlpToken": {
+                  "index": 3,
+                  "word": "were",
+                  "originalText": "were",
+                  "lemma": "be",
+                  "characterOffsetBegin": 408,
+                  "characterOffsetEnd": 412,
+                  "pos": "VBD",
+                  "ner": "O",
+                  "speaker": "PER0",
+                  "before": " ",
+                  "after": " "
+                }
+              },
+              "VBD"
+            ],
+            [
+              {
+                "nlpToken": {
+                  "index": 4,
+                  "word": "called",
+                  "originalText": "called",
+                  "lemma": "call",
+                  "characterOffsetBegin": 413,
+                  "characterOffsetEnd": 419,
+                  "pos": "VBN",
+                  "ner": "O",
+                  "speaker": "PER0",
+                  "before": " ",
+                  "after": " "
+                }
+              },
+              "VBN"
+            ],
+            [
+              {
+                "nlpToken": {
+                  "index": 5,
+                  "word": "to",
+                  "originalText": "to",
+                  "lemma": "to",
+                  "characterOffsetBegin": 420,
+                  "characterOffsetEnd": 422,
+                  "pos": "TO",
+                  "ner": "O",
+                  "speaker": "PER0",
+                  "before": " ",
+                  "after": " "
+                }
+              },
+              "TO"
+            ],
+            [
+              {
+                "nlpToken": {
+                  "index": 6,
+                  "word": "the",
+                  "originalText": "the",
+                  "lemma": "the",
+                  "characterOffsetBegin": 423,
+                  "characterOffsetEnd": 426,
+                  "pos": "DT",
+                  "ner": "O",
+                  "speaker": "PER0",
+                  "before": " ",
+                  "after": " "
+                }
+              },
+              "DT"
+            ],
+            [
+              {
+                "nlpToken": {
+                  "index": 7,
+                  "word": "scene",
+                  "originalText": "scene",
+                  "lemma": "scene",
+                  "characterOffsetBegin": 427,
+                  "characterOffsetEnd": 432,
+                  "pos": "NN",
+                  "ner": "O",
+                  "speaker": "PER0",
+                  "before": " ",
+                  "after": " "
+                }
+              },
+              "NN"
+            ],
+            [
+              {
+                "nlpToken": {
+                  "index": 10,
+                  "word": ",",
+                  "originalText": ",",
+                  "lemma": ",",
+                  "characterOffsetBegin": 443,
+                  "characterOffsetEnd": 444,
+                  "pos": ",",
+                  "ner": "O",
+                  "speaker": "PER0",
+                  "before": "",
+                  "after": " "
+                }
+              },
+              ","
+            ],
+            [
+              {
+                "nlpToken": {
+                  "index": 11,
+                  "word": "south",
+                  "originalText": "south",
+                  "lemma": "south",
+                  "characterOffsetBegin": 445,
+                  "characterOffsetEnd": 450,
+                  "pos": "RB",
+                  "ner": "O",
+                  "speaker": "PER0",
+                  "before": " ",
+                  "after": " "
+                }
+              },
+              "RB"
+            ],
+            [
+              {
+                "nlpToken": {
+                  "index": 12,
+                  "word": "of",
+                  "originalText": "of",
+                  "lemma": "of",
+                  "characterOffsetBegin": 451,
+                  "characterOffsetEnd": 453,
+                  "pos": "IN",
+                  "ner": "O",
+                  "speaker": "PER0",
+                  "before": " ",
+                  "after": " "
+                }
+              },
+              "IN"
+            ],
+            [
+              {
+                "nlpToken": {
+                  "index": 13,
+                  "word": "the",
+                  "originalText": "the",
+                  "lemma": "the",
+                  "characterOffsetBegin": 454,
+                  "characterOffsetEnd": 457,
+                  "pos": "DT",
+                  "ner": "O",
+                  "speaker": "PER0",
+                  "before": " ",
+                  "after": " "
+                }
+              },
+              "DT"
+            ],
+            [
+              {
+                "nlpToken": {
+                  "index": 14,
+                  "word": "British",
+                  "originalText": "British",
+                  "lemma": "british",
+                  "characterOffsetBegin": 458,
+                  "characterOffsetEnd": 465,
+                  "pos": "JJ",
+                  "ner": "MISC",
+                  "speaker": "PER0",
+                  "before": " ",
+                  "after": " "
+                }
+              },
+              "JJ"
+            ],
+            [
+              {
+                "nlpToken": {
+                  "index": 15,
+                  "word": "capital",
+                  "originalText": "capital",
+                  "lemma": "capital",
+                  "characterOffsetBegin": 466,
+                  "characterOffsetEnd": 473,
+                  "pos": "NN",
+                  "ner": "O",
+                  "speaker": "PER0",
+                  "before": " ",
+                  "after": ""
+                }
+              },
+              "NN"
+            ],
+            [
+              {
+                "nlpToken": {
+                  "index": 16,
+                  "word": ",",
+                  "originalText": ",",
+                  "lemma": ",",
+                  "characterOffsetBegin": 473,
+                  "characterOffsetEnd": 474,
+                  "pos": ",",
+                  "ner": "O",
+                  "speaker": "PER0",
+                  "before": "",
+                  "after": " "
+                }
+              },
+              ","
+            ],
+            [
+              {
+                "nlpToken": {
+                  "index": 17,
+                  "word": "shortly",
+                  "originalText": "shortly",
+                  "lemma": "shortly",
+                  "characterOffsetBegin": 475,
+                  "characterOffsetEnd": 482,
+                  "pos": "RB",
+                  "ner": "O",
+                  "speaker": "PER0",
+                  "before": " ",
+                  "after": " "
+                }
+              },
+              "RB"
+            ],
+            [
+              {
+                "nlpToken": {
+                  "index": 18,
+                  "word": "after",
+                  "originalText": "after",
+                  "lemma": "after",
+                  "characterOffsetBegin": 483,
+                  "characterOffsetEnd": 488,
+                  "pos": "IN",
+                  "ner": "O",
+                  "speaker": "PER0",
+                  "before": " ",
+                  "after": " "
+                }
+              },
+              "IN"
+            ],
+            [
+              {
+                "nlpToken": {
+                  "index": 19,
+                  "word": "6",
                   "originalText": "6",
+                  "lemma": "6",
+                  "characterOffsetBegin": 489,
+                  "characterOffsetEnd": 490,
+                  "pos": "CD",
+                  "ner": "TIME",
                   "normalizedNER": "2016-11-09T06:00",
                   "speaker": "PER0",
+                  "before": " ",
                   "after": " ",
-                  "ner": "TIME",
-                  "index": 19,
-                  "pos": "CD"
+                  "timex": {
+                    "tid": "t2",
+                    "type": "TIME",
+                    "value": "2016-11-09T06:00"
+                  }
                 }
               },
               "CD"
@@ -628,50 +627,129 @@
             [
               {
                 "nlpToken": {
-                  "characterOffsetBegin": 491,
+                  "index": 20,
                   "word": "a.m.",
-                  "lemma": "a.m.",
-                  "timex": {
-                    "value": "2016-11-09T06:00",
-                    "tid": "t2",
-                    "type": "TIME"
-                  },
-                  "before": " ",
-                  "characterOffsetEnd": 495,
                   "originalText": "a.m.",
+                  "lemma": "a.m.",
+                  "characterOffsetBegin": 491,
+                  "characterOffsetEnd": 495,
+                  "pos": "RB",
+                  "ner": "TIME",
                   "normalizedNER": "2016-11-09T06:00",
                   "speaker": "PER0",
+                  "before": " ",
                   "after": "",
-                  "ner": "TIME",
-                  "index": 20,
-                  "pos": "RB"
+                  "timex": {
+                    "tid": "t2",
+                    "type": "TIME",
+                    "value": "2016-11-09T06:00"
+                  }
                 }
               },
               "RB"
             ]
           ],
-          "nlpIndexSentence": 4,
-          "score": 1.0
+          "score": 1.0,
+          "text": "were called to the scene , south of the British capital , shortly after 6 a.m.",
+          "nlpIndexSentence": 4
         }
-      ],
+      ]
+    },
+    "when": {
       "annotated": [
         {
-          "text": "Killing at Least 7",
-          "coderPhraseCount": 3
-        },
-        {
-          "text": "Derails",
-          "coderPhraseCount": 2
+          "coderPhraseCount": 3,
+          "parsed": "2016-11-09",
+          "text": "Wednesday"
         }
       ],
-      "label": "what"
+      "label": "when"
+    },
+    "where": {
+      "annotated": [
+        {
+          "coderPhraseCount": 3,
+          "text": "Croydon, Near London"
+        }
+      ],
+      "label": "where"
+    },
+    "who": {
+      "annotated": [
+        {
+          "coderPhraseCount": 1,
+          "text": "At least seven people"
+        },
+        {
+          "coderPhraseCount": 1,
+          "text": "Tram"
+        },
+        {
+          "coderPhraseCount": 1
+        }
+      ],
+      "label": "who",
+      "extracted": [
+        {
+          "parts": [
+            [
+              {
+                "nlpToken": {
+                  "index": 1,
+                  "word": "The",
+                  "originalText": "The",
+                  "lemma": "the",
+                  "characterOffsetBegin": 397,
+                  "characterOffsetEnd": 400,
+                  "pos": "DT",
+                  "ner": "O",
+                  "speaker": "PER0",
+                  "before": " ",
+                  "after": " "
+                }
+              },
+              "DT"
+            ],
+            [
+              {
+                "nlpToken": {
+                  "index": 2,
+                  "word": "police",
+                  "originalText": "police",
+                  "lemma": "police",
+                  "characterOffsetBegin": 401,
+                  "characterOffsetEnd": 407,
+                  "pos": "NNS",
+                  "ner": "O",
+                  "speaker": "PER0",
+                  "before": " ",
+                  "after": " "
+                }
+              },
+              "NNS"
+            ]
+          ],
+          "score": 1.0,
+          "text": "The police",
+          "nlpIndexSentence": 4
+        }
+      ]
+    },
+    "why": {
+      "annotated": [
+        {
+          "coderPhraseCount": 2,
+          "text": "The cause of the accident was unclear"
+        }
+      ],
+      "label": "why"
     }
   },
-  "description": "The police said that the driver had been arrested after the deadly accident in Croydon, south of the British capital.",
-  "text": "Photo LONDON -- At least seven people were killed and dozens more were injured when a tram derailed near London on Wednesday, the British police and emergency services said, and the driver of the tram has been arrested. The police were called to the scene in Croydon, south of the British capital, shortly after 6 a.m., and officers, firefighters and paramedics worked through the morning to free people who were trapped inside the tram, the British Transport Police said in a statement. \"At least seven people are now confirmed as having died as a result of the incident,\" the transport police said in a statement. The cause of the accident was unclear, the police said, and an investigation was opened. Several of the injured were treated at the scene and 51 were taken to the hospital, Peter McKenna, the deputy director of operations for the London Ambulance Service, said in a statement. Mr. McKenna said that the service's hazardous area response team had been sent to the site of the accident.",
+  "mimeType": "text/xml",
+  "originalFilename": "nytimes-5",
   "parsingError": "true",
   "publisher": "nytimes",
-  "originalFilename": "nytimes-5",
-  "date_publish": "2016-11-09 08:46:26",
-  "dId": "189af426dcbdb42921a716cf136f75554e4befad28c088f3d930b6c4"
+  "text": "Photo LONDON -- At least seven people were killed and dozens more were injured when a tram derailed near London on Wednesday, the British police and emergency services said, and the driver of the tram has been arrested. The police were called to the scene in Croydon, south of the British capital, shortly after 6 a.m., and officers, firefighters and paramedics worked through the morning to free people who were trapped inside the tram, the British Transport Police said in a statement. \"At least seven people are now confirmed as having died as a result of the incident,\" the transport police said in a statement. The cause of the accident was unclear, the police said, and an investigation was opened. Several of the injured were treated at the scene and 51 were taken to the hospital, Peter McKenna, the deputy director of operations for the London Ambulance Service, said in a statement. Mr. McKenna said that the service's hazardous area response team had been sent to the site of the accident.",
+  "title": "Tram Derails in Croydon, Near London, Killing at Least 7",
+  "url": "http://www.nytimes.com/2016/11/10/world/europe/tram-derails-croydon-london.html"
 }

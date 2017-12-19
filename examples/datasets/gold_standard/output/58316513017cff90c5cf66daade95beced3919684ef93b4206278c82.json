@@ -6,9 +6,19 @@
   "category": "trump and obama",
   "fiveWoneH": {
     "who": {
+      "annotated": [
+        {
+          "text": "Donald Trump",
+          "coderPhraseCount": 3
+        },
+        {
+          "text": "Barack Obama",
+          "coderPhraseCount": 3
+        }
+      ],
+      "label": "who",
       "extracted": [
         {
-          "text": "the billionaire",
           "parts": [
             [
               {
@@ -47,62 +57,13 @@
               "NN"
             ]
           ],
-          "nlpIndexSentence": 3,
-          "score": 1.0
+          "score": 1.0,
+          "text": "the billionaire",
+          "nlpIndexSentence": 3
         }
-      ],
-      "annotated": [
-        {
-          "text": "Donald Trump",
-          "coderPhraseCount": 3
-        },
-        {
-          "text": "Barack Obama",
-          "coderPhraseCount": 3
-        }
-      ],
-      "label": "who"
+      ]
     },
     "when": {
-      "extracted": [
-        {
-          "text": "today",
-          "enhancement": {
-            "timex": {
-              "start_date": "2016-11-10T00:00:00",
-              "end_date": "2016-11-10T23:59:59"
-            }
-          },
-          "parts": [
-            [
-              {
-                "nlpToken": {
-                  "characterOffsetBegin": 767,
-                  "word": "today",
-                  "lemma": "today",
-                  "timex": {
-                    "value": "2016-11-10",
-                    "tid": "t4",
-                    "type": "DATE"
-                  },
-                  "before": " ",
-                  "characterOffsetEnd": 772,
-                  "originalText": "today",
-                  "normalizedNER": "2016-11-10",
-                  "speaker": "PER0",
-                  "after": " ",
-                  "ner": "DATE",
-                  "index": 2,
-                  "pos": "NN"
-                }
-              },
-              "NN"
-            ]
-          ],
-          "nlpIndexSentence": 5,
-          "score": 0.8805340236897793
-        }
-      ],
       "annotated": [
         {
           "text": "today",
@@ -113,33 +74,6 @@
       "label": "when"
     },
     "why": {
-      "extracted": [
-        {
-          "text": "It",
-          "parts": [
-            [
-              {
-                "nlpToken": {
-                  "characterOffsetBegin": 259,
-                  "word": "It",
-                  "lemma": "it",
-                  "speaker": "PER0",
-                  "after": " ",
-                  "pos": "PRP",
-                  "ner": "O",
-                  "before": " ",
-                  "characterOffsetEnd": 261,
-                  "index": 1,
-                  "originalText": "It"
-                }
-              },
-              "PRP"
-            ]
-          ],
-          "nlpIndexSentence": 2,
-          "score": 0.42057142857142854
-        }
-      ],
       "annotated": [
         {
           "coderPhraseCount": 2
@@ -148,88 +82,293 @@
       "label": "why"
     },
     "how": {
-      "extracted": [
-        {
-          "text": "subscribing",
-          "parts": [
-            [
-              {
-                "nlpToken": {
-                  "characterOffsetBegin": 70,
-                  "word": "subscribing",
-                  "lemma": "subscribe",
-                  "characterOffsetEnd": 81,
-                  "speaker": "PER0",
-                  "ner": "O",
-                  "after": "",
-                  "originalText": "subscribing",
-                  "before": " ",
-                  "index": 13,
-                  "pos": "VBG"
-                }
-              },
-              "VBG"
-            ]
-          ],
-          "score": 1.0
-        }
-      ],
       "annotated": [
         {
           "coderPhraseCount": 3
         }
       ],
-      "label": "how"
-    },
-    "where": {
+      "label": "how",
       "extracted": [
         {
-          "text": "US",
-          "enhancement": {
-            "openstreetmap_nominatim": {
-              "place_id": "177579678",
-              "licence": "Data \u00a9 OpenStreetMap contributors, ODbL 1.0. http://www.openstreetmap.org/copyright",
-              "type": "administrative",
-              "class": "boundary",
-              "osm_id": "148838",
-              "boundingbox": [
-                -14.7608358,
-                71.6048217,
-                -180.0,
-                180.0
-              ],
-              "osm_type": "relation",
-              "lon": "-100.4458825",
-              "display_name": "United States of America",
-              "importance": 0.2361730870995,
-              "icon": "https://nominatim.openstreetmap.org/images/mapicons/poi_boundary_administrative.p.20.png",
-              "lat": "39.7837304"
-            }
-          },
           "parts": [
             [
               {
                 "nlpToken": {
-                  "characterOffsetBegin": 508,
-                  "word": "US",
-                  "lemma": "US",
-                  "characterOffsetEnd": 510,
+                  "characterOffsetBegin": 1797,
+                  "word": "the",
+                  "lemma": "the",
+                  "characterOffsetEnd": 1800,
                   "speaker": "PER0",
-                  "ner": "LOCATION",
+                  "ner": "O",
                   "after": " ",
-                  "originalText": "US",
+                  "originalText": "the",
                   "before": " ",
-                  "index": 31,
+                  "index": 2,
+                  "pos": "DT"
+                }
+              },
+              "DT"
+            ],
+            [
+              {
+                "nlpToken": {
+                  "characterOffsetBegin": 1801,
+                  "word": "meeting",
+                  "lemma": "meeting",
+                  "characterOffsetEnd": 1808,
+                  "speaker": "PER0",
+                  "ner": "O",
+                  "after": "",
+                  "originalText": "meeting",
+                  "before": " ",
+                  "index": 3,
+                  "pos": "NN"
+                }
+              },
+              "NN"
+            ],
+            [
+              {
+                "nlpToken": {
+                  "characterOffsetBegin": 1808,
+                  "word": ",",
+                  "lemma": ",",
+                  "characterOffsetEnd": 1809,
+                  "speaker": "PER0",
+                  "ner": "O",
+                  "after": " ",
+                  "originalText": ",",
+                  "before": "",
+                  "index": 4,
+                  "pos": ","
+                }
+              },
+              ","
+            ],
+            [
+              {
+                "nlpToken": {
+                  "characterOffsetBegin": 1810,
+                  "word": "Trump",
+                  "lemma": "Trump",
+                  "characterOffsetEnd": 1815,
+                  "speaker": "PER0",
+                  "ner": "PERSON",
+                  "after": " ",
+                  "originalText": "Trump",
+                  "before": " ",
+                  "index": 5,
                   "pos": "NNP"
                 }
               },
               "NNP"
+            ],
+            [
+              {
+                "nlpToken": {
+                  "characterOffsetBegin": 1816,
+                  "word": "described",
+                  "lemma": "describe",
+                  "characterOffsetEnd": 1825,
+                  "speaker": "PER0",
+                  "ner": "O",
+                  "after": " ",
+                  "originalText": "described",
+                  "before": " ",
+                  "index": 6,
+                  "pos": "VBD"
+                }
+              },
+              "VBD"
+            ],
+            [
+              {
+                "nlpToken": {
+                  "characterOffsetBegin": 1826,
+                  "word": "the",
+                  "lemma": "the",
+                  "characterOffsetEnd": 1829,
+                  "speaker": "PER0",
+                  "ner": "O",
+                  "after": " ",
+                  "originalText": "the",
+                  "before": " ",
+                  "index": 7,
+                  "pos": "DT"
+                }
+              },
+              "DT"
+            ],
+            [
+              {
+                "nlpToken": {
+                  "characterOffsetBegin": 1830,
+                  "word": "outgoing",
+                  "lemma": "outgoing",
+                  "characterOffsetEnd": 1838,
+                  "speaker": "PER0",
+                  "ner": "O",
+                  "after": " ",
+                  "originalText": "outgoing",
+                  "before": " ",
+                  "index": 8,
+                  "pos": "JJ"
+                }
+              },
+              "JJ"
+            ],
+            [
+              {
+                "nlpToken": {
+                  "characterOffsetBegin": 1839,
+                  "word": "President",
+                  "lemma": "President",
+                  "characterOffsetEnd": 1848,
+                  "speaker": "PER0",
+                  "ner": "O",
+                  "after": " ",
+                  "originalText": "President",
+                  "before": " ",
+                  "index": 9,
+                  "pos": "NNP"
+                }
+              },
+              "NNP"
+            ],
+            [
+              {
+                "nlpToken": {
+                  "characterOffsetBegin": 1849,
+                  "word": "as",
+                  "lemma": "as",
+                  "characterOffsetEnd": 1851,
+                  "speaker": "PER0",
+                  "ner": "O",
+                  "after": " ",
+                  "originalText": "as",
+                  "before": " ",
+                  "index": 10,
+                  "pos": "IN"
+                }
+              },
+              "IN"
+            ],
+            [
+              {
+                "nlpToken": {
+                  "characterOffsetBegin": 1852,
+                  "word": "a",
+                  "lemma": "a",
+                  "characterOffsetEnd": 1853,
+                  "speaker": "PER0",
+                  "ner": "O",
+                  "after": " ",
+                  "originalText": "a",
+                  "before": " ",
+                  "index": 11,
+                  "pos": "DT"
+                }
+              },
+              "DT"
+            ],
+            [
+              {
+                "nlpToken": {
+                  "characterOffsetBegin": 1854,
+                  "word": "``",
+                  "lemma": "``",
+                  "characterOffsetEnd": 1855,
+                  "speaker": "PER0",
+                  "ner": "O",
+                  "after": "",
+                  "originalText": "\"",
+                  "before": " ",
+                  "index": 12,
+                  "pos": "``"
+                }
+              },
+              "``"
+            ],
+            [
+              {
+                "nlpToken": {
+                  "characterOffsetBegin": 1855,
+                  "word": "very",
+                  "lemma": "very",
+                  "characterOffsetEnd": 1859,
+                  "speaker": "107",
+                  "ner": "O",
+                  "after": " ",
+                  "originalText": "very",
+                  "before": "",
+                  "index": 13,
+                  "pos": "RB"
+                }
+              },
+              "RB"
+            ],
+            [
+              {
+                "nlpToken": {
+                  "characterOffsetBegin": 1860,
+                  "word": "good",
+                  "lemma": "good",
+                  "characterOffsetEnd": 1864,
+                  "speaker": "107",
+                  "ner": "O",
+                  "after": "",
+                  "originalText": "good",
+                  "before": " ",
+                  "index": 14,
+                  "pos": "JJ"
+                }
+              },
+              "JJ"
+            ],
+            [
+              {
+                "nlpToken": {
+                  "characterOffsetBegin": 1864,
+                  "word": "''",
+                  "lemma": "''",
+                  "characterOffsetEnd": 1865,
+                  "speaker": "PER0",
+                  "ner": "O",
+                  "after": " ",
+                  "originalText": "\"",
+                  "before": "",
+                  "index": 15,
+                  "pos": "''"
+                }
+              },
+              "''"
+            ],
+            [
+              {
+                "nlpToken": {
+                  "characterOffsetBegin": 1866,
+                  "word": "man",
+                  "lemma": "man",
+                  "characterOffsetEnd": 1869,
+                  "speaker": "PER0",
+                  "ner": "O",
+                  "after": "",
+                  "originalText": "man",
+                  "before": " ",
+                  "index": 16,
+                  "pos": "NN"
+                }
+              },
+              "NN"
             ]
           ],
-          "nlpIndexSentence": 3,
-          "score": 1.0
+          "score": 1.0,
+          "text": "the meeting , Trump described the outgoing President as a \" very good \" man",
+          "nlpIndexSentence": 2
         }
-      ],
+      ]
+    },
+    "where": {
       "annotated": [
         {
           "text": "White House",
@@ -239,9 +378,15 @@
       "label": "where"
     },
     "what": {
+      "annotated": [
+        {
+          "text": "hold 90-minute White House transition meeting",
+          "coderPhraseCount": 3
+        }
+      ],
+      "label": "what",
       "extracted": [
         {
-          "text": "led his campaign",
           "parts": [
             [
               {
@@ -298,17 +443,11 @@
               "NN"
             ]
           ],
-          "nlpIndexSentence": 3,
-          "score": 1.0
+          "score": 1.0,
+          "text": "led his campaign",
+          "nlpIndexSentence": 3
         }
-      ],
-      "annotated": [
-        {
-          "text": "hold 90-minute White House transition meeting",
-          "coderPhraseCount": 3
-        }
-      ],
-      "label": "what"
+      ]
     }
   },
   "description": "The 44th President invited the 45th President elect to the White House for the first time since the election, to discuss handover arrangements",

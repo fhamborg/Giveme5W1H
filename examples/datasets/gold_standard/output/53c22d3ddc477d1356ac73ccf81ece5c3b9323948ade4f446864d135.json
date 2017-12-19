@@ -6,9 +6,19 @@
   "category": "clinton clear",
   "fiveWoneH": {
     "who": {
-      "extracted": [
+      "annotated": [
         {
           "text": "FBI",
+          "coderPhraseCount": 3
+        },
+        {
+          "text": "Hillary Clinton",
+          "coderPhraseCount": 2
+        }
+      ],
+      "label": "who",
+      "extracted": [
+        {
           "parts": [
             [
               {
@@ -29,61 +39,12 @@
               "NNP"
             ]
           ],
-          "score": 1.0
+          "score": 1.0,
+          "text": "FBI"
         }
-      ],
-      "annotated": [
-        {
-          "text": "FBI",
-          "coderPhraseCount": 3
-        },
-        {
-          "text": "Hillary Clinton",
-          "coderPhraseCount": 2
-        }
-      ],
-      "label": "who"
+      ]
     },
     "when": {
-      "extracted": [
-        {
-          "text": "Sunday",
-          "enhancement": {
-            "timex": {
-              "start_date": "2016-11-06T00:00:00",
-              "end_date": "2016-11-06T23:59:59"
-            }
-          },
-          "parts": [
-            [
-              {
-                "nlpToken": {
-                  "characterOffsetBegin": 4571,
-                  "word": "Sunday",
-                  "lemma": "Sunday",
-                  "timex": {
-                    "value": "2016-11-06",
-                    "tid": "t18",
-                    "type": "DATE"
-                  },
-                  "before": " ",
-                  "characterOffsetEnd": 4577,
-                  "originalText": "Sunday",
-                  "normalizedNER": "2016-11-06",
-                  "speaker": "PER0",
-                  "after": " ",
-                  "ner": "DATE",
-                  "index": 19,
-                  "pos": "NNP"
-                }
-              },
-              "NNP"
-            ]
-          ],
-          "nlpIndexSentence": 30,
-          "score": 0.6492190574578663
-        }
-      ],
       "annotated": [
         {
           "text": "Nov 6",
@@ -99,32 +60,6 @@
       "label": "when"
     },
     "why": {
-      "extracted": [
-        {
-          "text": "it",
-          "parts": [
-            [
-              {
-                "nlpToken": {
-                  "characterOffsetBegin": 146,
-                  "word": "it",
-                  "lemma": "it",
-                  "speaker": "PER0",
-                  "after": " ",
-                  "pos": "PRP",
-                  "ner": "O",
-                  "before": " ",
-                  "characterOffsetEnd": 148,
-                  "index": 30,
-                  "originalText": "it"
-                }
-              },
-              "PRP"
-            ]
-          ],
-          "score": 0.42857142857142855
-        }
-      ],
       "annotated": [
         {
           "text": "no criminal charges were warranted",
@@ -134,32 +69,6 @@
       "label": "why"
     },
     "how": {
-      "extracted": [
-        {
-          "text": "criminal",
-          "parts": [
-            [
-              {
-                "nlpToken": {
-                  "characterOffsetBegin": 186,
-                  "word": "criminal",
-                  "lemma": "criminal",
-                  "characterOffsetEnd": 194,
-                  "speaker": "PER0",
-                  "ner": "O",
-                  "after": " ",
-                  "originalText": "criminal",
-                  "before": " ",
-                  "index": 38,
-                  "pos": "JJ"
-                }
-              },
-              "JJ"
-            ]
-          ],
-          "score": 1.0
-        }
-      ],
       "annotated": [
         {
           "text": "accused the FBI",
@@ -170,56 +79,126 @@
           "coderPhraseCount": 1
         }
       ],
-      "label": "how"
-    },
-    "where": {
+      "label": "how",
       "extracted": [
         {
-          "text": "U.S.",
-          "enhancement": {
-            "openstreetmap_nominatim": {
-              "place_id": "136017889",
-              "licence": "Data \u00a9 OpenStreetMap contributors, ODbL 1.0. http://www.openstreetmap.org/copyright",
-              "type": "fuel",
-              "class": "amenity",
-              "osm_id": "276671197",
-              "boundingbox": [
-                45.1895505,
-                45.1896185,
-                -88.7322087,
-                -88.7321082
-              ],
-              "osm_type": "way",
-              "lon": "-88.73215845",
-              "display_name": "U.S., State Highway 55, Sunny Waters, Lily, Town of Langlade, Langlade County, Wisconsin, 54462, United States of America",
-              "importance": 0.201,
-              "icon": "https://nominatim.openstreetmap.org/images/mapicons/transport_fuel.p.20.png",
-              "lat": "45.1895845"
-            }
-          },
           "parts": [
             [
               {
                 "nlpToken": {
-                  "characterOffsetBegin": 372,
-                  "word": "U.S.",
-                  "lemma": "U.S.",
-                  "characterOffsetEnd": 376,
-                  "speaker": "PER0",
-                  "ner": "LOCATION",
+                  "characterOffsetBegin": 3243,
+                  "word": "the",
+                  "lemma": "the",
+                  "characterOffsetEnd": 3246,
+                  "speaker": "197",
+                  "ner": "O",
                   "after": " ",
-                  "originalText": "U.S.",
+                  "originalText": "the",
                   "before": " ",
-                  "index": 67,
-                  "pos": "NNP"
+                  "index": 5,
+                  "pos": "DT"
                 }
               },
-              "NNP"
+              "DT"
+            ],
+            [
+              {
+                "nlpToken": {
+                  "characterOffsetBegin": 3247,
+                  "word": "new",
+                  "lemma": "new",
+                  "characterOffsetEnd": 3250,
+                  "speaker": "197",
+                  "ner": "O",
+                  "after": " ",
+                  "originalText": "new",
+                  "before": " ",
+                  "index": 6,
+                  "pos": "JJ"
+                }
+              },
+              "JJ"
+            ],
+            [
+              {
+                "nlpToken": {
+                  "characterOffsetBegin": 3251,
+                  "word": "emails",
+                  "lemma": "email",
+                  "characterOffsetEnd": 3257,
+                  "speaker": "197",
+                  "ner": "O",
+                  "after": " ",
+                  "originalText": "emails",
+                  "before": " ",
+                  "index": 7,
+                  "pos": "NNS"
+                }
+              },
+              "NNS"
+            ],
+            [
+              {
+                "nlpToken": {
+                  "characterOffsetBegin": 3258,
+                  "word": "were",
+                  "lemma": "be",
+                  "characterOffsetEnd": 3262,
+                  "speaker": "197",
+                  "ner": "O",
+                  "after": " ",
+                  "originalText": "were",
+                  "before": " ",
+                  "index": 8,
+                  "pos": "VBD"
+                }
+              },
+              "VBD"
+            ],
+            [
+              {
+                "nlpToken": {
+                  "characterOffsetBegin": 3263,
+                  "word": "meaningless",
+                  "lemma": "meaningless",
+                  "characterOffsetEnd": 3274,
+                  "speaker": "197",
+                  "ner": "O",
+                  "after": "",
+                  "originalText": "meaningless",
+                  "before": " ",
+                  "index": 9,
+                  "pos": "JJ"
+                }
+              },
+              "JJ"
+            ],
+            [
+              {
+                "nlpToken": {
+                  "characterOffsetBegin": 3274,
+                  "word": ",",
+                  "lemma": ",",
+                  "characterOffsetEnd": 3275,
+                  "speaker": "197",
+                  "ner": "O",
+                  "after": " ",
+                  "originalText": ",",
+                  "before": "",
+                  "index": 10,
+                  "pos": ","
+                }
+              },
+              ","
             ]
           ],
-          "score": 1.0
+          "score": 1.0,
+          "text": "the new emails were meaningless ,",
+          "nlpIndexSentence": 5
         }
-      ],
+      ]
+    },
+    "where": {
       "annotated": [
         {
           "text": "WASHINGTON",
@@ -229,9 +208,15 @@
       "label": "where"
     },
     "what": {
+      "annotated": [
+        {
+          "text": "clears Clinton in email review",
+          "coderPhraseCount": 3
+        }
+      ],
+      "label": "what",
       "extracted": [
         {
-          "text": "clears Clinton in email review two days",
           "parts": [
             [
               {
@@ -372,16 +357,10 @@
               "NNS"
             ]
           ],
-          "score": 1.0
+          "score": 1.0,
+          "text": "clears Clinton in email review two days"
         }
-      ],
-      "annotated": [
-        {
-          "text": "clears Clinton in email review",
-          "coderPhraseCount": 3
-        }
-      ],
-      "label": "what"
+      ]
     }
   },
   "description": "By Alana Wise and Mark Hosenball WASHINGTON, Nov 6 (Reuters) - The FBI said on Sunday it stood by its earlier finding that no criminal charges were warranted...",

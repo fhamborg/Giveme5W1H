@@ -8,6 +8,7 @@ class Best(AbsEntitiesStrategy):
     returns the best value (under the light of metrics and distances this menas the smalles value is taken)
     calculate
     """
+
     def _calculate_result(self):
         result = min(self._values)
         if result is not None:

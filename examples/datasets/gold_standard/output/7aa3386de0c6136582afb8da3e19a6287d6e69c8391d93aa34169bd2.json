@@ -6,9 +6,15 @@
   "category": "cubs win championship",
   "fiveWoneH": {
     "who": {
+      "annotated": [
+        {
+          "text": "Chicago Cubs",
+          "coderPhraseCount": 3
+        }
+      ],
+      "label": "who",
       "extracted": [
         {
-          "text": "Chicago Cubs players",
           "parts": [
             [
               {
@@ -65,129 +71,12 @@
               "NNS"
             ]
           ],
-          "score": 1.0
+          "score": 1.0,
+          "text": "Chicago Cubs players"
         }
-      ],
-      "annotated": [
-        {
-          "text": "Chicago Cubs",
-          "coderPhraseCount": 3
-        }
-      ],
-      "label": "who"
+      ]
     },
     "when": {
-      "extracted": [
-        {
-          "text": "Nov. 2 , 2016",
-          "enhancement": {
-            "timex": {
-              "start_date": "2016-11-02T00:00:00",
-              "end_date": "2016-11-02T23:59:59"
-            }
-          },
-          "parts": [
-            [
-              {
-                "nlpToken": {
-                  "characterOffsetBegin": 3335,
-                  "word": "Nov.",
-                  "lemma": "Nov.",
-                  "timex": {
-                    "value": "2016-11-02",
-                    "tid": "t23",
-                    "type": "DATE"
-                  },
-                  "before": " ",
-                  "characterOffsetEnd": 3339,
-                  "originalText": "Nov.",
-                  "normalizedNER": "2016-11-02",
-                  "speaker": "PER0",
-                  "after": " ",
-                  "ner": "DATE",
-                  "index": 1,
-                  "pos": "NNP"
-                }
-              },
-              "NNP"
-            ],
-            [
-              {
-                "nlpToken": {
-                  "characterOffsetBegin": 3340,
-                  "word": "2",
-                  "lemma": "2",
-                  "timex": {
-                    "value": "2016-11-02",
-                    "tid": "t23",
-                    "type": "DATE"
-                  },
-                  "before": " ",
-                  "characterOffsetEnd": 3341,
-                  "originalText": "2",
-                  "normalizedNER": "2016-11-02",
-                  "speaker": "PER0",
-                  "after": "",
-                  "ner": "DATE",
-                  "index": 2,
-                  "pos": "CD"
-                }
-              },
-              "CD"
-            ],
-            [
-              {
-                "nlpToken": {
-                  "characterOffsetBegin": 3341,
-                  "word": ",",
-                  "lemma": ",",
-                  "timex": {
-                    "value": "2016-11-02",
-                    "tid": "t23",
-                    "type": "DATE"
-                  },
-                  "before": "",
-                  "characterOffsetEnd": 3342,
-                  "originalText": ",",
-                  "normalizedNER": "2016-11-02",
-                  "speaker": "PER0",
-                  "after": " ",
-                  "ner": "DATE",
-                  "index": 3,
-                  "pos": ","
-                }
-              },
-              ","
-            ],
-            [
-              {
-                "nlpToken": {
-                  "characterOffsetBegin": 3343,
-                  "word": "2016",
-                  "lemma": "2016",
-                  "timex": {
-                    "value": "2016-11-02",
-                    "tid": "t23",
-                    "type": "DATE"
-                  },
-                  "before": " ",
-                  "characterOffsetEnd": 3347,
-                  "originalText": "2016",
-                  "normalizedNER": "2016-11-02",
-                  "speaker": "PER0",
-                  "after": " ",
-                  "ner": "DATE",
-                  "index": 4,
-                  "pos": "CD"
-                }
-              },
-              "CD"
-            ]
-          ],
-          "nlpIndexSentence": 31,
-          "score": 0.6705654171291587
-        }
-      ],
       "annotated": [
         {
           "text": "12:47 a.m. Thursday",
@@ -203,32 +92,6 @@
       "label": "when"
     },
     "why": {
-      "extracted": [
-        {
-          "text": "they",
-          "parts": [
-            [
-              {
-                "nlpToken": {
-                  "characterOffsetBegin": 57,
-                  "word": "they",
-                  "lemma": "they",
-                  "speaker": "PER0",
-                  "after": " ",
-                  "pos": "PRP",
-                  "ner": "O",
-                  "before": " ",
-                  "characterOffsetEnd": 61,
-                  "index": 10,
-                  "originalText": "they"
-                }
-              },
-              "PRP"
-            ]
-          ],
-          "score": 0.42857142857142855
-        }
-      ],
       "annotated": [
         {
           "text": "10-inning victory over the Cleveland Indians",
@@ -245,33 +108,6 @@
       "label": "why"
     },
     "how": {
-      "extracted": [
-        {
-          "text": "clear",
-          "parts": [
-            [
-              {
-                "nlpToken": {
-                  "characterOffsetBegin": 818,
-                  "word": "clear",
-                  "lemma": "clear",
-                  "characterOffsetEnd": 823,
-                  "speaker": "PER0",
-                  "ner": "O",
-                  "after": " ",
-                  "originalText": "clear",
-                  "before": " ",
-                  "index": 22,
-                  "pos": "JJ"
-                }
-              },
-              "JJ"
-            ]
-          ],
-          "nlpIndexSentence": 5,
-          "score": 1.0
-        }
-      ],
       "annotated": [
         {
           "text": "delay",
@@ -282,57 +118,180 @@
           "coderPhraseCount": 1
         }
       ],
-      "label": "how"
-    },
-    "where": {
+      "label": "how",
       "extracted": [
         {
-          "text": "Chicago",
-          "enhancement": {
-            "openstreetmap_nominatim": {
-              "place_id": "178038280",
-              "licence": "Data \u00a9 OpenStreetMap contributors, ODbL 1.0. http://www.openstreetmap.org/copyright",
-              "type": "city",
-              "class": "place",
-              "osm_id": "122604",
-              "boundingbox": [
-                41.643919,
-                42.0230219,
-                -87.940101,
-                -87.5239841
-              ],
-              "osm_type": "relation",
-              "lon": "-87.6244212",
-              "display_name": "Chicago, Cook County, Illinois, United States of America",
-              "importance": 0.30566190262222,
-              "icon": "https://nominatim.openstreetmap.org/images/mapicons/poi_place_city.p.20.png",
-              "lat": "41.8755546"
-            }
-          },
           "parts": [
             [
               {
                 "nlpToken": {
-                  "characterOffsetBegin": 321,
-                  "word": "Chicago",
-                  "lemma": "Chicago",
-                  "characterOffsetEnd": 328,
-                  "speaker": "PER0",
-                  "ner": "LOCATION",
+                  "characterOffsetBegin": 5787,
+                  "word": "he",
+                  "lemma": "he",
+                  "characterOffsetEnd": 5789,
+                  "speaker": "PER12",
+                  "ner": "O",
                   "after": "",
-                  "originalText": "Chicago",
+                  "originalText": "he",
                   "before": " ",
-                  "index": 21,
-                  "pos": "NNP"
+                  "index": 5,
+                  "pos": "PRP"
                 }
               },
-              "NNP"
+              "PRP"
+            ],
+            [
+              {
+                "nlpToken": {
+                  "characterOffsetBegin": 5789,
+                  "word": "'s",
+                  "lemma": "be",
+                  "characterOffsetEnd": 5791,
+                  "speaker": "PER12",
+                  "ner": "O",
+                  "after": " ",
+                  "originalText": "'s",
+                  "before": "",
+                  "index": 6,
+                  "pos": "VBZ"
+                }
+              },
+              "VBZ"
+            ],
+            [
+              {
+                "nlpToken": {
+                  "characterOffsetBegin": 5792,
+                  "word": "probably",
+                  "lemma": "probably",
+                  "characterOffsetEnd": 5800,
+                  "speaker": "PER12",
+                  "ner": "O",
+                  "after": " ",
+                  "originalText": "probably",
+                  "before": " ",
+                  "index": 7,
+                  "pos": "RB"
+                }
+              },
+              "RB"
+            ],
+            [
+              {
+                "nlpToken": {
+                  "characterOffsetBegin": 5801,
+                  "word": "tired",
+                  "lemma": "tire",
+                  "characterOffsetEnd": 5806,
+                  "speaker": "PER12",
+                  "ner": "O",
+                  "after": "",
+                  "originalText": "tired",
+                  "before": " ",
+                  "index": 8,
+                  "pos": "VBN"
+                }
+              },
+              "VBN"
+            ],
+            [
+              {
+                "nlpToken": {
+                  "characterOffsetBegin": 5806,
+                  "word": ",",
+                  "lemma": ",",
+                  "characterOffsetEnd": 5807,
+                  "speaker": "PER12",
+                  "ner": "O",
+                  "after": " ",
+                  "originalText": ",",
+                  "before": "",
+                  "index": 9,
+                  "pos": ","
+                }
+              },
+              ","
+            ],
+            [
+              {
+                "nlpToken": {
+                  "characterOffsetBegin": 5808,
+                  "word": "as",
+                  "lemma": "as",
+                  "characterOffsetEnd": 5810,
+                  "speaker": "PER12",
+                  "ner": "O",
+                  "after": " ",
+                  "originalText": "as",
+                  "before": " ",
+                  "index": 10,
+                  "pos": "IN"
+                }
+              },
+              "IN"
+            ],
+            [
+              {
+                "nlpToken": {
+                  "characterOffsetBegin": 5811,
+                  "word": "he",
+                  "lemma": "he",
+                  "characterOffsetEnd": 5813,
+                  "speaker": "PER12",
+                  "ner": "O",
+                  "after": " ",
+                  "originalText": "he",
+                  "before": " ",
+                  "index": 11,
+                  "pos": "PRP"
+                }
+              },
+              "PRP"
+            ],
+            [
+              {
+                "nlpToken": {
+                  "characterOffsetBegin": 5814,
+                  "word": "should",
+                  "lemma": "should",
+                  "characterOffsetEnd": 5820,
+                  "speaker": "PER12",
+                  "ner": "O",
+                  "after": " ",
+                  "originalText": "should",
+                  "before": " ",
+                  "index": 12,
+                  "pos": "MD"
+                }
+              },
+              "MD"
+            ],
+            [
+              {
+                "nlpToken": {
+                  "characterOffsetBegin": 5821,
+                  "word": "be",
+                  "lemma": "be",
+                  "characterOffsetEnd": 5823,
+                  "speaker": "PER12",
+                  "ner": "O",
+                  "after": "",
+                  "originalText": "be",
+                  "before": " ",
+                  "index": 13,
+                  "pos": "VB"
+                }
+              },
+              "VB"
             ]
           ],
-          "nlpIndexSentence": 2,
-          "score": 1.0000000000000002
+          "score": 1.0,
+          "text": "he 's probably tired , as he should be",
+          "nlpIndexSentence": 5
         }
-      ],
+      ]
+    },
+    "where": {
       "annotated": [
         {
           "coderPhraseCount": 3
@@ -341,9 +300,15 @@
       "label": "where"
     },
     "what": {
+      "annotated": [
+        {
+          "text": "won the World Series",
+          "coderPhraseCount": 2
+        }
+      ],
+      "label": "what",
       "extracted": [
         {
-          "text": "soaked each other",
           "parts": [
             [
               {
@@ -400,16 +365,10 @@
               "JJ"
             ]
           ],
-          "score": 1.0
+          "score": 1.0,
+          "text": "soaked each other"
         }
-      ],
-      "annotated": [
-        {
-          "text": "won the World Series",
-          "coderPhraseCount": 2
-        }
-      ],
-      "label": "what"
+      ]
     }
   },
   "description": "Chicago rides out a late collapse and a rain delay to beat Cleveland for its first title in 108 years.",

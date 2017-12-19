@@ -5,9 +5,23 @@
   "url": "http://www.nytimes.com/2016/11/06/us/politics/presidential-election.html",
   "fiveWoneH": {
     "who": {
+      "annotated": [
+        {
+          "text": "Hillary Clinton",
+          "coderPhraseCount": 3
+        },
+        {
+          "text": "Donald J. Trump",
+          "coderPhraseCount": 3
+        },
+        {
+          "text": "F.B.I.",
+          "coderPhraseCount": 2
+        }
+      ],
+      "label": "who",
       "extracted": [
         {
-          "text": "Mr. Trump",
           "parts": [
             [
               {
@@ -46,66 +60,13 @@
               "NNP"
             ]
           ],
-          "nlpIndexSentence": 5,
-          "score": 1.0
+          "score": 1.0,
+          "text": "Mr. Trump",
+          "nlpIndexSentence": 5
         }
-      ],
-      "annotated": [
-        {
-          "text": "Hillary Clinton",
-          "coderPhraseCount": 3
-        },
-        {
-          "text": "Donald J. Trump",
-          "coderPhraseCount": 3
-        },
-        {
-          "text": "F.B.I.",
-          "coderPhraseCount": 2
-        }
-      ],
-      "label": "who"
+      ]
     },
     "when": {
-      "extracted": [
-        {
-          "text": "Sunday",
-          "enhancement": {
-            "timex": {
-              "start_date": "2016-11-06T00:00:00",
-              "end_date": "2016-11-06T23:59:59"
-            }
-          },
-          "parts": [
-            [
-              {
-                "nlpToken": {
-                  "characterOffsetBegin": 4803,
-                  "word": "Sunday",
-                  "lemma": "Sunday",
-                  "timex": {
-                    "value": "2016-11-06",
-                    "tid": "t17",
-                    "type": "DATE"
-                  },
-                  "before": " ",
-                  "characterOffsetEnd": 4809,
-                  "originalText": "Sunday",
-                  "normalizedNER": "2016-11-06",
-                  "speaker": "PER0",
-                  "after": "",
-                  "ner": "DATE",
-                  "index": 2,
-                  "pos": "NNP"
-                }
-              },
-              "NNP"
-            ]
-          ],
-          "nlpIndexSentence": 44,
-          "score": 0.6622851167967752
-        }
-      ],
       "annotated": [
         {
           "text": "two days before Election Day",
@@ -119,33 +80,6 @@
       "label": "when"
     },
     "why": {
-      "extracted": [
-        {
-          "text": "He",
-          "parts": [
-            [
-              {
-                "nlpToken": {
-                  "characterOffsetBegin": 118,
-                  "word": "He",
-                  "lemma": "he",
-                  "speaker": "PER0",
-                  "after": " ",
-                  "pos": "PRP",
-                  "ner": "O",
-                  "before": " ",
-                  "characterOffsetEnd": 120,
-                  "index": 1,
-                  "originalText": "He"
-                }
-              },
-              "PRP"
-            ]
-          ],
-          "nlpIndexSentence": 1,
-          "score": 0.4244047619047619
-        }
-      ],
       "annotated": [
         {
           "coderPhraseCount": 3
@@ -154,89 +88,95 @@
       "label": "why"
     },
     "how": {
-      "extracted": [
-        {
-          "text": "final",
-          "parts": [
-            [
-              {
-                "nlpToken": {
-                  "characterOffsetBegin": 251,
-                  "word": "final",
-                  "lemma": "final",
-                  "characterOffsetEnd": 256,
-                  "speaker": "PER0",
-                  "ner": "O",
-                  "after": " ",
-                  "originalText": "final",
-                  "before": " ",
-                  "index": 2,
-                  "pos": "JJ"
-                }
-              },
-              "JJ"
-            ]
-          ],
-          "nlpIndexSentence": 2,
-          "score": 1.0
-        }
-      ],
       "annotated": [
         {
           "coderPhraseCount": 3
         }
       ],
-      "label": "how"
-    },
-    "where": {
+      "label": "how",
       "extracted": [
         {
-          "text": "Florida",
-          "enhancement": {
-            "openstreetmap_nominatim": {
-              "place_id": "179310340",
-              "licence": "Data \u00a9 OpenStreetMap contributors, ODbL 1.0. http://www.openstreetmap.org/copyright",
-              "type": "administrative",
-              "class": "boundary",
-              "osm_id": "162050",
-              "boundingbox": [
-                24.396308,
-                31.000968,
-                -87.634896,
-                -79.974306
-              ],
-              "osm_type": "relation",
-              "lon": "-81.4639835",
-              "display_name": "Florida, United States of America",
-              "importance": 0.3027318975823,
-              "icon": "https://nominatim.openstreetmap.org/images/mapicons/poi_boundary_administrative.p.20.png",
-              "lat": "27.7567667"
-            }
-          },
           "parts": [
             [
               {
                 "nlpToken": {
-                  "characterOffsetBegin": 4213,
-                  "word": "Florida",
-                  "lemma": "Florida",
-                  "characterOffsetEnd": 4220,
+                  "characterOffsetBegin": 4,
+                  "word": "Donald",
+                  "lemma": "Donald",
+                  "characterOffsetEnd": 10,
                   "speaker": "PER0",
-                  "ner": "LOCATION",
-                  "after": "",
-                  "originalText": "Florida",
+                  "ner": "PERSON",
+                  "after": " ",
+                  "originalText": "Donald",
                   "before": " ",
-                  "index": 29,
+                  "index": 2,
                   "pos": "NNP"
                 }
               },
               "NNP"
+            ],
+            [
+              {
+                "nlpToken": {
+                  "characterOffsetBegin": 11,
+                  "word": "J.",
+                  "lemma": "J.",
+                  "characterOffsetEnd": 13,
+                  "speaker": "PER0",
+                  "ner": "PERSON",
+                  "after": " ",
+                  "originalText": "J.",
+                  "before": " ",
+                  "index": 3,
+                  "pos": "NNP"
+                }
+              },
+              "NNP"
+            ],
+            [
+              {
+                "nlpToken": {
+                  "characterOffsetBegin": 14,
+                  "word": "Trump",
+                  "lemma": "Trump",
+                  "characterOffsetEnd": 19,
+                  "speaker": "PER0",
+                  "ner": "PERSON",
+                  "after": "",
+                  "originalText": "Trump",
+                  "before": " ",
+                  "index": 4,
+                  "pos": "NNP"
+                }
+              },
+              "NNP"
+            ],
+            [
+              {
+                "nlpToken": {
+                  "characterOffsetBegin": 19,
+                  "word": ",",
+                  "lemma": ",",
+                  "characterOffsetEnd": 20,
+                  "speaker": "PER0",
+                  "ner": "O",
+                  "after": " ",
+                  "originalText": ",",
+                  "before": "",
+                  "index": 5,
+                  "pos": ","
+                }
+              },
+              ","
             ]
           ],
-          "nlpIndexSentence": 38,
-          "score": 1.0
+          "score": 1.0,
+          "text": "Donald J. Trump ,",
+          "nlpIndexSentence": 2
         }
-      ],
+      ]
+    },
+    "where": {
       "annotated": [
         {
           "coderPhraseCount": 3
@@ -245,9 +185,19 @@
       "label": "where"
     },
     "what": {
+      "annotated": [
+        {
+          "text": "removed a dark cloud that has been hanging over Hillary Clinton\\u2019s campaign",
+          "coderPhraseCount": 2
+        },
+        {
+          "text": "The final polls are trickling in",
+          "coderPhraseCount": 2
+        }
+      ],
+      "label": "what",
       "extracted": [
         {
-          "text": "holds a lead",
           "parts": [
             [
               {
@@ -304,21 +254,11 @@
               "NN"
             ]
           ],
-          "nlpIndexSentence": 5,
-          "score": 1.0
+          "score": 1.0,
+          "text": "holds a lead",
+          "nlpIndexSentence": 5
         }
-      ],
-      "annotated": [
-        {
-          "text": "removed a dark cloud that has been hanging over Hillary Clinton\\u2019s campaign",
-          "coderPhraseCount": 2
-        },
-        {
-          "text": "The final polls are trickling in",
-          "coderPhraseCount": 2
-        }
-      ],
-      "label": "what"
+      ]
     }
   },
   "description": "The F.B.I. removed a dark cloud that has been hanging over Hillary Clinton's campaign two days before Election Day.",

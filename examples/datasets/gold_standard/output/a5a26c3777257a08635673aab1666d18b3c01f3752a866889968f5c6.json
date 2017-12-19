@@ -6,9 +6,19 @@
   "category": "f1",
   "fiveWoneH": {
     "who": {
+      "annotated": [
+        {
+          "text": "Max Verstappen",
+          "coderPhraseCount": 3
+        },
+        {
+          "text": "Kimi Raikkonen",
+          "coderPhraseCount": 2
+        }
+      ],
+      "label": "who",
       "extracted": [
         {
-          "text": "Verstappen",
           "parts": [
             [
               {
@@ -29,182 +39,13 @@
               "NNP"
             ]
           ],
-          "nlpIndexSentence": 2,
-          "score": 1.0
+          "score": 1.0,
+          "text": "Verstappen",
+          "nlpIndexSentence": 2
         }
-      ],
-      "annotated": [
-        {
-          "text": "Max Verstappen",
-          "coderPhraseCount": 3
-        },
-        {
-          "text": "Kimi Raikkonen",
-          "coderPhraseCount": 2
-        }
-      ],
-      "label": "who"
+      ]
     },
     "when": {
-      "extracted": [
-        {
-          "text": "Tue , March 22 , 2016",
-          "enhancement": {
-            "timex": {
-              "start_date": "2016-03-22T00:00:00",
-              "end_date": "2016-03-22T23:59:59"
-            }
-          },
-          "parts": [
-            [
-              {
-                "nlpToken": {
-                  "characterOffsetBegin": 450,
-                  "word": "Tue",
-                  "lemma": "Tue",
-                  "timex": {
-                    "value": "2016-03-22",
-                    "tid": "t2",
-                    "type": "DATE"
-                  },
-                  "before": " ",
-                  "characterOffsetEnd": 453,
-                  "originalText": "Tue",
-                  "normalizedNER": "2016-03-22",
-                  "speaker": "PER0",
-                  "after": "",
-                  "ner": "DATE",
-                  "index": 6,
-                  "pos": "NNP"
-                }
-              },
-              "NNP"
-            ],
-            [
-              {
-                "nlpToken": {
-                  "characterOffsetBegin": 453,
-                  "word": ",",
-                  "lemma": ",",
-                  "timex": {
-                    "value": "2016-03-22",
-                    "tid": "t2",
-                    "type": "DATE"
-                  },
-                  "before": "",
-                  "characterOffsetEnd": 454,
-                  "originalText": ",",
-                  "normalizedNER": "2016-03-22",
-                  "speaker": "PER0",
-                  "after": " ",
-                  "ner": "DATE",
-                  "index": 7,
-                  "pos": ","
-                }
-              },
-              ","
-            ],
-            [
-              {
-                "nlpToken": {
-                  "characterOffsetBegin": 455,
-                  "word": "March",
-                  "lemma": "March",
-                  "timex": {
-                    "value": "2016-03-22",
-                    "tid": "t2",
-                    "type": "DATE"
-                  },
-                  "before": " ",
-                  "characterOffsetEnd": 460,
-                  "originalText": "March",
-                  "normalizedNER": "2016-03-22",
-                  "speaker": "PER0",
-                  "after": " ",
-                  "ner": "DATE",
-                  "index": 8,
-                  "pos": "NNP"
-                }
-              },
-              "NNP"
-            ],
-            [
-              {
-                "nlpToken": {
-                  "characterOffsetBegin": 461,
-                  "word": "22",
-                  "lemma": "22",
-                  "timex": {
-                    "value": "2016-03-22",
-                    "tid": "t2",
-                    "type": "DATE"
-                  },
-                  "before": " ",
-                  "characterOffsetEnd": 463,
-                  "originalText": "22",
-                  "normalizedNER": "2016-03-22",
-                  "speaker": "PER0",
-                  "after": "",
-                  "ner": "DATE",
-                  "index": 9,
-                  "pos": "CD"
-                }
-              },
-              "CD"
-            ],
-            [
-              {
-                "nlpToken": {
-                  "characterOffsetBegin": 463,
-                  "word": ",",
-                  "lemma": ",",
-                  "timex": {
-                    "value": "2016-03-22",
-                    "tid": "t2",
-                    "type": "DATE"
-                  },
-                  "before": "",
-                  "characterOffsetEnd": 464,
-                  "originalText": ",",
-                  "normalizedNER": "2016-03-22",
-                  "speaker": "PER0",
-                  "after": " ",
-                  "ner": "DATE",
-                  "index": 10,
-                  "pos": ","
-                }
-              },
-              ","
-            ],
-            [
-              {
-                "nlpToken": {
-                  "characterOffsetBegin": 465,
-                  "word": "2016",
-                  "lemma": "2016",
-                  "timex": {
-                    "value": "2016-03-22",
-                    "tid": "t2",
-                    "type": "DATE"
-                  },
-                  "before": " ",
-                  "characterOffsetEnd": 469,
-                  "originalText": "2016",
-                  "normalizedNER": "2016-03-22",
-                  "speaker": "PER0",
-                  "after": " ",
-                  "ner": "DATE",
-                  "index": 11,
-                  "pos": "CD"
-                }
-              },
-              "CD"
-            ]
-          ],
-          "nlpIndexSentence": 3,
-          "score": 0.6684934150571568
-        }
-      ],
       "annotated": [
         {
           "text": "Tue, March 22, 2016",
@@ -215,122 +56,6 @@
       "label": "when"
     },
     "why": {
-      "extracted": [
-        {
-          "text": "The penultimate race of the season",
-          "parts": [
-            [
-              {
-                "nlpToken": {
-                  "characterOffsetBegin": 0,
-                  "word": "The",
-                  "lemma": "the",
-                  "speaker": "PER0",
-                  "after": " ",
-                  "pos": "DT",
-                  "ner": "O",
-                  "before": "",
-                  "characterOffsetEnd": 3,
-                  "index": 1,
-                  "originalText": "The"
-                }
-              },
-              "DT"
-            ],
-            [
-              {
-                "nlpToken": {
-                  "characterOffsetBegin": 4,
-                  "word": "penultimate",
-                  "lemma": "penultimate",
-                  "speaker": "PER0",
-                  "after": " ",
-                  "pos": "NN",
-                  "ner": "O",
-                  "before": " ",
-                  "characterOffsetEnd": 15,
-                  "index": 2,
-                  "originalText": "penultimate"
-                }
-              },
-              "NN"
-            ],
-            [
-              {
-                "nlpToken": {
-                  "characterOffsetBegin": 16,
-                  "word": "race",
-                  "lemma": "race",
-                  "speaker": "PER0",
-                  "after": " ",
-                  "pos": "NN",
-                  "ner": "O",
-                  "before": " ",
-                  "characterOffsetEnd": 20,
-                  "index": 3,
-                  "originalText": "race"
-                }
-              },
-              "NN"
-            ],
-            [
-              {
-                "nlpToken": {
-                  "characterOffsetBegin": 21,
-                  "word": "of",
-                  "lemma": "of",
-                  "speaker": "PER0",
-                  "after": " ",
-                  "pos": "IN",
-                  "ner": "O",
-                  "before": " ",
-                  "characterOffsetEnd": 23,
-                  "index": 4,
-                  "originalText": "of"
-                }
-              },
-              "IN"
-            ],
-            [
-              {
-                "nlpToken": {
-                  "characterOffsetBegin": 24,
-                  "word": "the",
-                  "lemma": "the",
-                  "speaker": "PER0",
-                  "after": " ",
-                  "pos": "DT",
-                  "ner": "O",
-                  "before": " ",
-                  "characterOffsetEnd": 27,
-                  "index": 5,
-                  "originalText": "the"
-                }
-              },
-              "DT"
-            ],
-            [
-              {
-                "nlpToken": {
-                  "characterOffsetBegin": 28,
-                  "word": "season",
-                  "lemma": "season",
-                  "speaker": "PER0",
-                  "after": " ",
-                  "pos": "NN",
-                  "ner": "O",
-                  "before": " ",
-                  "characterOffsetEnd": 34,
-                  "index": 6,
-                  "originalText": "season"
-                }
-              },
-              "NN"
-            ]
-          ],
-          "score": 0.42857142857142855
-        }
-      ],
       "annotated": [
         {
           "text": "wet conditions",
@@ -340,9 +65,15 @@
       "label": "why"
     },
     "how": {
+      "annotated": [
+        {
+          "text": "narrowly avoids crash",
+          "coderPhraseCount": 3
+        }
+      ],
+      "label": "how",
       "extracted": [
         {
-          "text": "wet",
           "parts": [
             [
               {
@@ -363,65 +94,12 @@
               "JJ"
             ]
           ],
-          "score": 1.0
+          "score": 1.0,
+          "text": "wet"
         }
-      ],
-      "annotated": [
-        {
-          "text": "narrowly avoids crash",
-          "coderPhraseCount": 3
-        }
-      ],
-      "label": "how"
+      ]
     },
     "where": {
-      "extracted": [
-        {
-          "text": "Interlagos",
-          "enhancement": {
-            "openstreetmap_nominatim": {
-              "place_id": "548530",
-              "licence": "Data \u00a9 OpenStreetMap contributors, ODbL 1.0. http://www.openstreetmap.org/copyright",
-              "type": "suburb",
-              "class": "place",
-              "osm_id": "205197916",
-              "boundingbox": [
-                -23.7211674,
-                -23.6811674,
-                -46.7282912,
-                -46.6882912
-              ],
-              "osm_type": "node",
-              "lon": "-46.7082912",
-              "display_name": "Interlagos, Socorro, SP, Microrregi\u00e3o de S\u00e3o Paulo, RMSP, Mesorregi\u00e3o Metropolitana de S\u00e3o Paulo, SP, Regi\u00e3o Sudeste, 04783 020, Brasil",
-              "importance": 0.18245308668878,
-              "icon": "https://nominatim.openstreetmap.org/images/mapicons/poi_place_village.p.20.png",
-              "lat": "-23.7011674"
-            }
-          },
-          "parts": [
-            [
-              {
-                "nlpToken": {
-                  "characterOffsetBegin": 120,
-                  "word": "Interlagos",
-                  "lemma": "Interlagos",
-                  "characterOffsetEnd": 130,
-                  "speaker": "PER0",
-                  "ner": "LOCATION",
-                  "after": "",
-                  "originalText": "Interlagos",
-                  "before": " ",
-                  "index": 23,
-                  "pos": "NNP"
-                }
-              },
-              "NNP"
-            ]
-          ],
-          "score": 1.0
-        }
-      ],
       "annotated": [
         {
           "text": "Brazilian Grand Prix",
@@ -435,9 +113,15 @@
       "label": "where"
     },
     "what": {
+      "annotated": [
+        {
+          "text": "narrowly avoids crash",
+          "coderPhraseCount": 3
+        }
+      ],
+      "label": "what",
       "extracted": [
         {
-          "text": "coming within millimetres",
           "parts": [
             [
               {
@@ -494,17 +178,11 @@
               "NNS"
             ]
           ],
-          "nlpIndexSentence": 2,
-          "score": 1.0
+          "score": 1.0,
+          "text": "coming within millimetres",
+          "nlpIndexSentence": 2
         }
-      ],
-      "annotated": [
-        {
-          "text": "narrowly avoids crash",
-          "coderPhraseCount": 3
-        }
-      ],
-      "label": "what"
+      ]
     }
   },
   "description": "MAX VERSTAPPEN showed off his brilliant reflexes as he swerved to avoid a sliding Kimi Raikkonen at a soaking Brazilian Grand Prix.",

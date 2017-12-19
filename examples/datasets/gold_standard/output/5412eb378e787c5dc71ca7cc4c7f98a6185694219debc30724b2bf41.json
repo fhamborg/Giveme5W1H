@@ -6,9 +6,19 @@
   "category": "tram",
   "fiveWoneH": {
     "who": {
+      "annotated": [
+        {
+          "text": "At least seven passengers",
+          "coderPhraseCount": 3
+        },
+        {
+          "text": "male driver",
+          "coderPhraseCount": 2
+        }
+      ],
+      "label": "who",
       "extracted": [
         {
-          "text": "a speeding tram",
           "parts": [
             [
               {
@@ -65,110 +75,13 @@
               "NN"
             ]
           ],
-          "nlpIndexSentence": 1,
-          "score": 1.0
+          "score": 1.0,
+          "text": "a speeding tram",
+          "nlpIndexSentence": 1
         }
-      ],
-      "annotated": [
-        {
-          "text": "At least seven passengers",
-          "coderPhraseCount": 3
-        },
-        {
-          "text": "male driver",
-          "coderPhraseCount": 2
-        }
-      ],
-      "label": "who"
+      ]
     },
     "when": {
-      "extracted": [
-        {
-          "text": "6.13 am today",
-          "enhancement": {
-            "timex": {
-              "start_date": "2016-11-09T13:00:00",
-              "end_date": "2016-11-09T13:00:59"
-            }
-          },
-          "parts": [
-            [
-              {
-                "nlpToken": {
-                  "characterOffsetBegin": 537,
-                  "word": "6.13",
-                  "lemma": "6.13",
-                  "timex": {
-                    "value": "2016-11-09T13:00",
-                    "tid": "t3",
-                    "type": "TIME"
-                  },
-                  "before": " ",
-                  "characterOffsetEnd": 541,
-                  "originalText": "6.13",
-                  "normalizedNER": "2016-11-09T13:00",
-                  "speaker": "PER0",
-                  "after": "",
-                  "ner": "TIME",
-                  "index": 33,
-                  "pos": "CD"
-                }
-              },
-              "CD"
-            ],
-            [
-              {
-                "nlpToken": {
-                  "characterOffsetBegin": 541,
-                  "word": "am",
-                  "lemma": "be",
-                  "timex": {
-                    "value": "2016-11-09T13:00",
-                    "tid": "t3",
-                    "type": "TIME"
-                  },
-                  "before": "",
-                  "characterOffsetEnd": 543,
-                  "originalText": "am",
-                  "normalizedNER": "2016-11-09T13:00",
-                  "speaker": "PER0",
-                  "after": " ",
-                  "ner": "TIME",
-                  "index": 34,
-                  "pos": "VBP"
-                }
-              },
-              "VBP"
-            ],
-            [
-              {
-                "nlpToken": {
-                  "characterOffsetBegin": 544,
-                  "word": "today",
-                  "lemma": "today",
-                  "timex": {
-                    "value": "2016-11-09T13:00",
-                    "tid": "t3",
-                    "type": "TIME"
-                  },
-                  "before": " ",
-                  "characterOffsetEnd": 549,
-                  "originalText": "today",
-                  "normalizedNER": "2016-11-09T13:00",
-                  "speaker": "PER0",
-                  "after": "",
-                  "ner": "TIME",
-                  "index": 35,
-                  "pos": "NN"
-                }
-              },
-              "NN"
-            ]
-          ],
-          "nlpIndexSentence": 2,
-          "score": 0.9094257789961789
-        }
-      ],
       "annotated": [
         {
           "text": "6.13am today",
@@ -179,70 +92,6 @@
       "label": "when"
     },
     "why": {
-      "extracted": [
-        {
-          "text": "more than 50",
-          "parts": [
-            [
-              {
-                "nlpToken": {
-                  "characterOffsetBegin": 266,
-                  "word": "more",
-                  "lemma": "more",
-                  "speaker": "PER0",
-                  "after": " ",
-                  "pos": "JJR",
-                  "ner": "O",
-                  "before": " ",
-                  "characterOffsetEnd": 270,
-                  "index": 16,
-                  "originalText": "more"
-                }
-              },
-              "JJR"
-            ],
-            [
-              {
-                "nlpToken": {
-                  "characterOffsetBegin": 271,
-                  "word": "than",
-                  "lemma": "than",
-                  "speaker": "PER0",
-                  "after": " ",
-                  "pos": "IN",
-                  "ner": "O",
-                  "before": " ",
-                  "characterOffsetEnd": 275,
-                  "index": 17,
-                  "originalText": "than"
-                }
-              },
-              "IN"
-            ],
-            [
-              {
-                "nlpToken": {
-                  "characterOffsetBegin": 276,
-                  "word": "50",
-                  "lemma": "50",
-                  "characterOffsetEnd": 278,
-                  "before": " ",
-                  "after": " ",
-                  "originalText": "50",
-                  "normalizedNER": ">50.0",
-                  "speaker": "PER0",
-                  "ner": "NUMBER",
-                  "index": 18,
-                  "pos": "CD"
-                }
-              },
-              "CD"
-            ]
-          ],
-          "nlpIndexSentence": 1,
-          "score": 0.4244047619047619
-        }
-      ],
       "annotated": [
         {
           "text": "going \\u201ctoo fast round the bend\\u201d",
@@ -252,33 +101,6 @@
       "label": "why"
     },
     "how": {
-      "extracted": [
-        {
-          "text": "next",
-          "parts": [
-            [
-              {
-                "nlpToken": {
-                  "characterOffsetBegin": 1004,
-                  "word": "next",
-                  "lemma": "next",
-                  "characterOffsetEnd": 1008,
-                  "speaker": "PER0",
-                  "ner": "O",
-                  "after": " ",
-                  "originalText": "next",
-                  "before": " ",
-                  "index": 8,
-                  "pos": "JJ"
-                }
-              },
-              "JJ"
-            ]
-          ],
-          "nlpIndexSentence": 7,
-          "score": 1.0
-        }
-      ],
       "annotated": [
         {
           "text": "speeding",
@@ -289,34 +111,298 @@
           "coderPhraseCount": 1
         }
       ],
-      "label": "how"
-    },
-    "where": {
+      "label": "how",
       "extracted": [
         {
-          "text": "Croydon , South London",
-          "enhancement": {
-            "openstreetmap_nominatim": {
-              "place_id": "117537",
-              "licence": "Data \u00a9 OpenStreetMap contributors, ODbL 1.0. http://www.openstreetmap.org/copyright",
-              "type": "town",
-              "class": "place",
-              "osm_id": "21262496",
-              "boundingbox": [
-                51.3313049,
-                51.4113049,
-                -0.141957,
-                -0.061957
-              ],
-              "osm_type": "node",
-              "lon": "-0.101957",
-              "display_name": "Croydon, London, Greater London, England, CR0 1SZ, UK",
-              "importance": 0.34943987893565,
-              "icon": "https://nominatim.openstreetmap.org/images/mapicons/poi_place_town.p.20.png",
-              "lat": "51.3713049"
-            }
-          },
           "parts": [
+            [
+              {
+                "nlpToken": {
+                  "characterOffsetBegin": 393,
+                  "word": "``",
+                  "lemma": "``",
+                  "characterOffsetEnd": 394,
+                  "speaker": "PER0",
+                  "ner": "O",
+                  "after": "",
+                  "originalText": "\"",
+                  "before": " ",
+                  "index": 8,
+                  "pos": "``"
+                }
+              },
+              "``"
+            ],
+            [
+              {
+                "nlpToken": {
+                  "characterOffsetBegin": 394,
+                  "word": "serious",
+                  "lemma": "serious",
+                  "characterOffsetEnd": 401,
+                  "speaker": "PER1",
+                  "ner": "O",
+                  "after": " ",
+                  "originalText": "serious",
+                  "before": "",
+                  "index": 9,
+                  "pos": "JJ"
+                }
+              },
+              "JJ"
+            ],
+            [
+              {
+                "nlpToken": {
+                  "characterOffsetBegin": 402,
+                  "word": "or",
+                  "lemma": "or",
+                  "characterOffsetEnd": 404,
+                  "speaker": "PER1",
+                  "ner": "O",
+                  "after": " ",
+                  "originalText": "or",
+                  "before": " ",
+                  "index": 10,
+                  "pos": "CC"
+                }
+              },
+              "CC"
+            ],
+            [
+              {
+                "nlpToken": {
+                  "characterOffsetBegin": 405,
+                  "word": "life-threatening",
+                  "lemma": "life-threatening",
+                  "characterOffsetEnd": 421,
+                  "speaker": "PER1",
+                  "ner": "O",
+                  "after": " ",
+                  "originalText": "life-threatening",
+                  "before": " ",
+                  "index": 11,
+                  "pos": "JJ"
+                }
+              },
+              "JJ"
+            ],
+            [
+              {
+                "nlpToken": {
+                  "characterOffsetBegin": 422,
+                  "word": "injuries",
+                  "lemma": "injury",
+                  "characterOffsetEnd": 430,
+                  "speaker": "PER1",
+                  "ner": "O",
+                  "after": "",
+                  "originalText": "injuries",
+                  "before": " ",
+                  "index": 12,
+                  "pos": "NNS"
+                }
+              },
+              "NNS"
+            ],
+            [
+              {
+                "nlpToken": {
+                  "characterOffsetBegin": 430,
+                  "word": "''",
+                  "lemma": "''",
+                  "characterOffsetEnd": 431,
+                  "speaker": "PER0",
+                  "ner": "O",
+                  "after": " ",
+                  "originalText": "\"",
+                  "before": "",
+                  "index": 13,
+                  "pos": "''"
+                }
+              },
+              "''"
+            ],
+            [
+              {
+                "nlpToken": {
+                  "characterOffsetBegin": 432,
+                  "word": "after",
+                  "lemma": "after",
+                  "characterOffsetEnd": 437,
+                  "speaker": "PER0",
+                  "ner": "O",
+                  "after": " ",
+                  "originalText": "after",
+                  "before": " ",
+                  "index": 14,
+                  "pos": "IN"
+                }
+              },
+              "IN"
+            ],
+            [
+              {
+                "nlpToken": {
+                  "characterOffsetBegin": 438,
+                  "word": "the",
+                  "lemma": "the",
+                  "characterOffsetEnd": 441,
+                  "speaker": "PER0",
+                  "ner": "O",
+                  "after": " ",
+                  "originalText": "the",
+                  "before": " ",
+                  "index": 15,
+                  "pos": "DT"
+                }
+              },
+              "DT"
+            ],
+            [
+              {
+                "nlpToken": {
+                  "characterOffsetBegin": 442,
+                  "word": "two-carriage",
+                  "lemma": "two-carriage",
+                  "characterOffsetEnd": 454,
+                  "speaker": "PER0",
+                  "ner": "O",
+                  "after": " ",
+                  "originalText": "two-carriage",
+                  "before": " ",
+                  "index": 16,
+                  "pos": "JJ"
+                }
+              },
+              "JJ"
+            ],
+            [
+              {
+                "nlpToken": {
+                  "characterOffsetBegin": 455,
+                  "word": "vehicle",
+                  "lemma": "vehicle",
+                  "characterOffsetEnd": 462,
+                  "speaker": "PER0",
+                  "ner": "O",
+                  "after": " ",
+                  "originalText": "vehicle",
+                  "before": " ",
+                  "index": 17,
+                  "pos": "NN"
+                }
+              },
+              "NN"
+            ],
+            [
+              {
+                "nlpToken": {
+                  "characterOffsetBegin": 463,
+                  "word": "tipped",
+                  "lemma": "tip",
+                  "characterOffsetEnd": 469,
+                  "speaker": "PER0",
+                  "ner": "O",
+                  "after": " ",
+                  "originalText": "tipped",
+                  "before": " ",
+                  "index": 18,
+                  "pos": "VBD"
+                }
+              },
+              "VBD"
+            ],
+            [
+              {
+                "nlpToken": {
+                  "characterOffsetBegin": 470,
+                  "word": "over",
+                  "lemma": "over",
+                  "characterOffsetEnd": 474,
+                  "speaker": "PER0",
+                  "ner": "O",
+                  "after": " ",
+                  "originalText": "over",
+                  "before": " ",
+                  "index": 19,
+                  "pos": "RP"
+                }
+              },
+              "RP"
+            ],
+            [
+              {
+                "nlpToken": {
+                  "characterOffsetBegin": 475,
+                  "word": "at",
+                  "lemma": "at",
+                  "characterOffsetEnd": 477,
+                  "speaker": "PER0",
+                  "ner": "O",
+                  "after": " ",
+                  "originalText": "at",
+                  "before": " ",
+                  "index": 20,
+                  "pos": "IN"
+                }
+              },
+              "IN"
+            ],
+            [
+              {
+                "nlpToken": {
+                  "characterOffsetBegin": 478,
+                  "word": "a",
+                  "lemma": "a",
+                  "characterOffsetEnd": 479,
+                  "speaker": "PER0",
+                  "ner": "O",
+                  "after": " ",
+                  "originalText": "a",
+                  "before": " ",
+                  "index": 21,
+                  "pos": "DT"
+                }
+              },
+              "DT"
+            ],
+            [
+              {
+                "nlpToken": {
+                  "characterOffsetBegin": 480,
+                  "word": "bend",
+                  "lemma": "bend",
+                  "characterOffsetEnd": 484,
+                  "speaker": "PER0",
+                  "ner": "O",
+                  "after": " ",
+                  "originalText": "bend",
+                  "before": " ",
+                  "index": 22,
+                  "pos": "NN"
+                }
+              },
+              "NN"
+            ],
+            [
+              {
+                "nlpToken": {
+                  "characterOffsetBegin": 485,
+                  "word": "in",
+                  "lemma": "in",
+                  "characterOffsetEnd": 487,
+                  "speaker": "PER0",
+                  "ner": "O",
+                  "after": " ",
+                  "originalText": "in",
+                  "before": " ",
+                  "index": 23,
+                  "pos": "IN"
+                }
+              },
+              "IN"
+            ],
             [
               {
                 "nlpToken": {
@@ -388,12 +474,105 @@
                 }
               },
               "NNP"
+            ],
+            [
+              {
+                "nlpToken": {
+                  "characterOffsetBegin": 509,
+                  "word": ",",
+                  "lemma": ",",
+                  "characterOffsetEnd": 510,
+                  "speaker": "PER0",
+                  "ner": "O",
+                  "after": " ",
+                  "originalText": ",",
+                  "before": "",
+                  "index": 28,
+                  "pos": ","
+                }
+              },
+              ","
+            ],
+            [
+              {
+                "nlpToken": {
+                  "characterOffsetBegin": 511,
+                  "word": "during",
+                  "lemma": "during",
+                  "characterOffsetEnd": 517,
+                  "speaker": "PER0",
+                  "ner": "O",
+                  "after": " ",
+                  "originalText": "during",
+                  "before": " ",
+                  "index": 29,
+                  "pos": "IN"
+                }
+              },
+              "IN"
+            ],
+            [
+              {
+                "nlpToken": {
+                  "characterOffsetBegin": 518,
+                  "word": "torrential",
+                  "lemma": "torrential",
+                  "characterOffsetEnd": 528,
+                  "speaker": "PER0",
+                  "ner": "O",
+                  "after": " ",
+                  "originalText": "torrential",
+                  "before": " ",
+                  "index": 30,
+                  "pos": "JJ"
+                }
+              },
+              "JJ"
+            ],
+            [
+              {
+                "nlpToken": {
+                  "characterOffsetBegin": 529,
+                  "word": "rain",
+                  "lemma": "rain",
+                  "characterOffsetEnd": 533,
+                  "speaker": "PER0",
+                  "ner": "O",
+                  "after": " ",
+                  "originalText": "rain",
+                  "before": " ",
+                  "index": 31,
+                  "pos": "NN"
+                }
+              },
+              "NN"
+            ],
+            [
+              {
+                "nlpToken": {
+                  "characterOffsetBegin": 534,
+                  "word": "at",
+                  "lemma": "at",
+                  "characterOffsetEnd": 536,
+                  "speaker": "PER0",
+                  "ner": "O",
+                  "after": " ",
+                  "originalText": "at",
+                  "before": " ",
+                  "index": 32,
+                  "pos": "IN"
+                }
+              },
+              "IN"
             ]
           ],
-          "nlpIndexSentence": 2,
-          "score": 1.0
+          "score": 1.0,
+          "text": "\" serious or life-threatening injuries \" after the two-carriage vehicle tipped over at a bend in Croydon , South London , during torrential rain at",
+          "nlpIndexSentence": 8
         }
-      ],
+      ]
+    },
+    "where": {
       "annotated": [
         {
           "text": "Croydon, South London",
@@ -403,9 +582,15 @@
       "label": "where"
     },
     "what": {
+      "annotated": [
+        {
+          "text": "tram crash",
+          "coderPhraseCount": 2
+        }
+      ],
+      "label": "what",
       "extracted": [
         {
-          "text": "derailed and turned over in a dawn crash",
           "parts": [
             [
               {
@@ -558,17 +743,11 @@
               "NN"
             ]
           ],
-          "nlpIndexSentence": 1,
-          "score": 1.0
+          "score": 1.0,
+          "text": "derailed and turned over in a dawn crash",
+          "nlpIndexSentence": 1
         }
-      ],
-      "annotated": [
-        {
-          "text": "tram crash",
-          "coderPhraseCount": 2
-        }
-      ],
-      "label": "what"
+      ]
     }
   },
   "description": "Eight of those hurt were treated for \"serious or life-threatening injuries\" after the two-carriage vehicle tipped over at a bend in Croydon, South London\n",

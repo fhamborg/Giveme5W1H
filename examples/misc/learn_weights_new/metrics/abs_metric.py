@@ -3,6 +3,7 @@ from abc import abstractmethod
 from misc.learn_weights_new.entities_strategy.best import Best
 from tools.cache_manager import CacheManager
 
+
 class AbsMetric(object):
     def __init__(self, cache_dir='../examples/caches', pre_processors=None, multipleEntitiesStrategy=Best()):
         """
@@ -36,7 +37,7 @@ class AbsMetric(object):
         return self._pre_processors
 
     def get_accessor(self):
-        return  self._accessor
+        return self._accessor
 
     def get_distance(self, candidates_a, candidates_b):
         """
@@ -60,7 +61,6 @@ class AbsMetric(object):
         else:
             return None
 
-
         return result
 
     @abstractmethod
@@ -72,5 +72,3 @@ class AbsMetric(object):
         :return:
         """
         return None
-
-

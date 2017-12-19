@@ -1,5 +1,5 @@
 import enum
-from enum import Enum, auto
+from enum import Enum
 
 from document import Document
 from extractor.candidate import Candidate
@@ -10,6 +10,7 @@ from extractor.extractors.abs_extractor import AbsExtractor
 class ExtensionStrategy(Enum):
     Range = 1
     Blacklist = 2
+
 
 class MethodExtractor(AbsExtractor):
     """
@@ -40,9 +41,10 @@ class MethodExtractor(AbsExtractor):
     _stop_ner = ['TIME', 'DATE', 'ORGANIZATION', 'DURATION', 'ORDINAL']
 
     # end of sentence, quote, PERIOD, COLON, QUOTE
-    _blacklist = ['.', '"', '\'',';']
+    _blacklist = ['.', '"', '\'', ';']
 
-    def __init__(self, weights: (float, float) = [1.0, 1.0, 1.0, 1.0], extension_strategy: ExtensionStrategy = ExtensionStrategy.Blacklist, phrase_range: int = 3):
+    def __init__(self, weights: (float, float) = [1.0, 1.0, 1.0, 1.0],
+                 extension_strategy: ExtensionStrategy = ExtensionStrategy.Blacklist, phrase_range: int = 3):
         """
         weights used in the candidate evaluation:
         (position, frequency, conjunction, adjectives/adverbs)
@@ -103,7 +105,6 @@ class MethodExtractor(AbsExtractor):
 
                             if self._extension_strategy is ExtensionStrategy.Blacklist:
 
-
                                 candidate_parts = []
                                 for token in tokens[_index - 1:]:
                                     if token['lemma'] not in self._blacklist and token['ner'] not in self._stop_ner:
@@ -112,13 +113,14 @@ class MethodExtractor(AbsExtractor):
                                         break
 
                             elif self._extension_strategy is ExtensionStrategy.Range:
-                                candidate_parts = tokens[_index - 1 :_index + self._phrase_range]
+                                candidate_parts = tokens[_index - 1:_index + self._phrase_range]
 
                             if candidate_parts:
                                 # format fix
                                 candidate_parts_fixed = []
                                 for candidate_part in candidate_parts:
-                                    candidate_parts_fixed.append(({'nlpToken': candidate_part}, candidate_part['pos'],candidate_part))
+                                    candidate_parts_fixed.append(
+                                        ({'nlpToken': candidate_part}, candidate_part['pos'], candidate_part))
 
                                 # get the CoreNLP tokens for each part e.g lemmas etc.
                                 # convert list objects back to tuples for backward compatibility
@@ -202,7 +204,6 @@ class MethodExtractor(AbsExtractor):
                 type_weight = self.weights[2]
             elif candidate.get_type() == 'prepos':
                 type_weight = self.weights[3]
-
 
             score = ((candidate.get_calculations('lemma_count_norm') * self.weights[1] +
                       candidate.get_calculations('position_frequency_norm') * self.weights[0]

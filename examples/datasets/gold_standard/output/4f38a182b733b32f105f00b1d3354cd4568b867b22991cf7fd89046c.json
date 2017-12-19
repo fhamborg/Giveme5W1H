@@ -6,9 +6,19 @@
   "category": "clinton clear",
   "fiveWoneH": {
     "who": {
+      "annotated": [
+        {
+          "text": "Hillary Clinton",
+          "coderPhraseCount": 3
+        },
+        {
+          "text": "FBI",
+          "coderPhraseCount": 2
+        }
+      ],
+      "label": "who",
       "extracted": [
         {
-          "text": "Clinton",
           "parts": [
             [
               {
@@ -29,110 +39,13 @@
               "NNP"
             ]
           ],
-          "nlpIndexSentence": 3,
-          "score": 1.0
+          "score": 1.0,
+          "text": "Clinton",
+          "nlpIndexSentence": 3
         }
-      ],
-      "annotated": [
-        {
-          "text": "Hillary Clinton",
-          "coderPhraseCount": 3
-        },
-        {
-          "text": "FBI",
-          "coderPhraseCount": 2
-        }
-      ],
-      "label": "who"
+      ]
     },
     "when": {
-      "extracted": [
-        {
-          "text": "A fortnight ago",
-          "enhancement": {
-            "timex": {
-              "start_date": "2016-10-23T01:55:00",
-              "end_date": "2016-10-23T01:55:59"
-            }
-          },
-          "parts": [
-            [
-              {
-                "nlpToken": {
-                  "characterOffsetBegin": 858,
-                  "word": "A",
-                  "lemma": "a",
-                  "timex": {
-                    "value": "2016-10-23T01:55",
-                    "tid": "t4",
-                    "type": "TIME"
-                  },
-                  "before": " ",
-                  "characterOffsetEnd": 859,
-                  "originalText": "A",
-                  "normalizedNER": "2016-10-23T01:55",
-                  "speaker": "PER0",
-                  "after": " ",
-                  "ner": "TIME",
-                  "index": 53,
-                  "pos": "DT"
-                }
-              },
-              "DT"
-            ],
-            [
-              {
-                "nlpToken": {
-                  "characterOffsetBegin": 860,
-                  "word": "fortnight",
-                  "lemma": "fortnight",
-                  "timex": {
-                    "value": "2016-10-23T01:55",
-                    "tid": "t4",
-                    "type": "TIME"
-                  },
-                  "before": " ",
-                  "characterOffsetEnd": 869,
-                  "originalText": "fortnight",
-                  "normalizedNER": "2016-10-23T01:55",
-                  "speaker": "PER0",
-                  "after": " ",
-                  "ner": "TIME",
-                  "index": 54,
-                  "pos": "NN"
-                }
-              },
-              "NN"
-            ],
-            [
-              {
-                "nlpToken": {
-                  "characterOffsetBegin": 870,
-                  "word": "ago",
-                  "lemma": "ago",
-                  "timex": {
-                    "value": "2016-10-23T01:55",
-                    "tid": "t4",
-                    "type": "TIME"
-                  },
-                  "before": " ",
-                  "characterOffsetEnd": 873,
-                  "originalText": "ago",
-                  "normalizedNER": "2016-10-23T01:55",
-                  "speaker": "PER0",
-                  "after": " ",
-                  "ner": "TIME",
-                  "index": 55,
-                  "pos": "IN"
-                }
-              },
-              "IN"
-            ]
-          ],
-          "nlpIndexSentence": 4,
-          "score": 0.8646807301278661
-        }
-      ],
       "annotated": [
         {
           "text": "two days before the election",
@@ -143,33 +56,6 @@
       "label": "when"
     },
     "why": {
-      "extracted": [
-        {
-          "text": "Clinton",
-          "parts": [
-            [
-              {
-                "nlpToken": {
-                  "characterOffsetBegin": 460,
-                  "word": "Clinton",
-                  "lemma": "Clinton",
-                  "speaker": "PER0",
-                  "after": " ",
-                  "pos": "NNP",
-                  "ner": "PERSON",
-                  "before": " ",
-                  "characterOffsetEnd": 467,
-                  "index": 6,
-                  "originalText": "Clinton"
-                }
-              },
-              "NNP"
-            ]
-          ],
-          "nlpIndexSentence": 3,
-          "score": 0.3985714285714286
-        }
-      ],
       "annotated": [
         {
           "text": "FBI found no evidence of criminality in a new batch of her emails",
@@ -179,32 +65,6 @@
       "label": "why"
     },
     "how": {
-      "extracted": [
-        {
-          "text": "subscribing",
-          "parts": [
-            [
-              {
-                "nlpToken": {
-                  "characterOffsetBegin": 70,
-                  "word": "subscribing",
-                  "lemma": "subscribe",
-                  "characterOffsetEnd": 81,
-                  "speaker": "PER0",
-                  "ner": "O",
-                  "after": "",
-                  "originalText": "subscribing",
-                  "before": " ",
-                  "index": 13,
-                  "pos": "VBG"
-                }
-              },
-              "VBG"
-            ]
-          ],
-          "score": 1.0
-        }
-      ],
       "annotated": [
         {
           "text": "finished its review and found nothing",
@@ -215,83 +75,113 @@
           "coderPhraseCount": 2
         }
       ],
-      "label": "how"
-    },
-    "where": {
+      "label": "how",
       "extracted": [
         {
-          "text": "Chappaqua , New York",
-          "enhancement": {
-            "openstreetmap_nominatim": {
-              "place_id": "177763715",
-              "licence": "Data \u00a9 OpenStreetMap contributors, ODbL 1.0. http://www.openstreetmap.org/copyright",
-              "type": "administrative",
-              "class": "boundary",
-              "osm_id": "174887",
-              "boundingbox": [
-                41.152516,
-                41.168996,
-                -73.775667,
-                -73.759285
-              ],
-              "osm_type": "relation",
-              "lon": "-73.764855",
-              "display_name": "Chappaqua, Town of New Castle, New York, United States of America",
-              "importance": 0.4034440898121,
-              "icon": "https://nominatim.openstreetmap.org/images/mapicons/poi_boundary_administrative.p.20.png",
-              "lat": "41.1595399"
-            }
-          },
           "parts": [
             [
               {
                 "nlpToken": {
-                  "characterOffsetBegin": 2253,
-                  "word": "Chappaqua",
-                  "lemma": "Chappaqua",
-                  "characterOffsetEnd": 2262,
-                  "speaker": "PER0",
-                  "ner": "LOCATION",
-                  "after": "",
-                  "originalText": "Chappaqua",
-                  "before": " ",
-                  "index": 25,
-                  "pos": "NNP"
-                }
-              },
-              "NNP"
-            ],
-            [
-              {
-                "nlpToken": {
-                  "characterOffsetBegin": 2262,
-                  "word": ",",
-                  "lemma": ",",
-                  "characterOffsetEnd": 2263,
+                  "characterOffsetBegin": 2879,
+                  "word": "our",
+                  "lemma": "we",
+                  "characterOffsetEnd": 2882,
                   "speaker": "PER0",
                   "ner": "O",
                   "after": " ",
-                  "originalText": ",",
-                  "before": "",
-                  "index": 26,
-                  "pos": ","
+                  "originalText": "our",
+                  "before": " ",
+                  "index": 4,
+                  "pos": "PRP$"
                 }
               },
-              ","
+              "PRP$"
             ],
             [
               {
                 "nlpToken": {
-                  "characterOffsetBegin": 2264,
-                  "word": "New",
-                  "lemma": "New",
-                  "characterOffsetEnd": 2267,
+                  "characterOffsetBegin": 2883,
+                  "word": "full",
+                  "lemma": "full",
+                  "characterOffsetEnd": 2887,
                   "speaker": "PER0",
-                  "ner": "LOCATION",
+                  "ner": "O",
                   "after": " ",
-                  "originalText": "New",
+                  "originalText": "full",
                   "before": " ",
-                  "index": 27,
+                  "index": 5,
+                  "pos": "JJ"
+                }
+              },
+              "JJ"
+            ],
+            [
+              {
+                "nlpToken": {
+                  "characterOffsetBegin": 2888,
+                  "word": "guide",
+                  "lemma": "guide",
+                  "characterOffsetEnd": 2893,
+                  "speaker": "PER0",
+                  "ner": "O",
+                  "after": " ",
+                  "originalText": "guide",
+                  "before": " ",
+                  "index": 6,
+                  "pos": "NN"
+                }
+              },
+              "NN"
+            ],
+            [
+              {
+                "nlpToken": {
+                  "characterOffsetBegin": 2894,
+                  "word": "to",
+                  "lemma": "to",
+                  "characterOffsetEnd": 2896,
+                  "speaker": "PER0",
+                  "ner": "O",
+                  "after": " ",
+                  "originalText": "to",
+                  "before": " ",
+                  "index": 7,
+                  "pos": "TO"
+                }
+              },
+              "TO"
+            ],
+            [
+              {
+                "nlpToken": {
+                  "characterOffsetBegin": 2897,
+                  "word": "the",
+                  "lemma": "the",
+                  "characterOffsetEnd": 2900,
+                  "speaker": "PER0",
+                  "ner": "O",
+                  "after": " ",
+                  "originalText": "the",
+                  "before": " ",
+                  "index": 8,
+                  "pos": "DT"
+                }
+              },
+              "DT"
+            ],
+            [
+              {
+                "nlpToken": {
+                  "characterOffsetBegin": 2901,
+                  "word": "Hillary",
+                  "lemma": "Hillary",
+                  "characterOffsetEnd": 2908,
+                  "speaker": "PER0",
+                  "ner": "PERSON",
+                  "after": " ",
+                  "originalText": "Hillary",
+                  "before": " ",
+                  "index": 9,
                   "pos": "NNP"
                 }
               },
@@ -300,26 +190,65 @@
             [
               {
                 "nlpToken": {
-                  "characterOffsetBegin": 2268,
-                  "word": "York",
-                  "lemma": "York",
-                  "characterOffsetEnd": 2272,
+                  "characterOffsetBegin": 2909,
+                  "word": "Clinton",
+                  "lemma": "Clinton",
+                  "characterOffsetEnd": 2916,
                   "speaker": "PER0",
-                  "ner": "LOCATION",
-                  "after": "",
-                  "originalText": "York",
+                  "ner": "PERSON",
+                  "after": " ",
+                  "originalText": "Clinton",
                   "before": " ",
-                  "index": 28,
+                  "index": 10,
                   "pos": "NNP"
                 }
               },
               "NNP"
+            ],
+            [
+              {
+                "nlpToken": {
+                  "characterOffsetBegin": 2917,
+                  "word": "email",
+                  "lemma": "email",
+                  "characterOffsetEnd": 2922,
+                  "speaker": "PER0",
+                  "ner": "O",
+                  "after": " ",
+                  "originalText": "email",
+                  "before": " ",
+                  "index": 11,
+                  "pos": "VB"
+                }
+              },
+              "VB"
+            ],
+            [
+              {
+                "nlpToken": {
+                  "characterOffsetBegin": 2923,
+                  "word": "scandal",
+                  "lemma": "scandal",
+                  "characterOffsetEnd": 2930,
+                  "speaker": "PER0",
+                  "ner": "O",
+                  "after": "",
+                  "originalText": "scandal",
+                  "before": " ",
+                  "index": 12,
+                  "pos": "NN"
+                }
+              },
+              "NN"
             ]
           ],
-          "nlpIndexSentence": 12,
-          "score": 1.0
+          "score": 1.0,
+          "text": "our full guide to the Hillary Clinton email scandal",
+          "nlpIndexSentence": 4
         }
-      ],
+      ]
+    },
+    "where": {
       "annotated": [
         {
           "coderPhraseCount": 2
@@ -328,9 +257,15 @@
       "label": "where"
     },
     "what": {
+      "annotated": [
+        {
+          "text": "CLEARED by FBI over emails storm in lightning-quick probe",
+          "coderPhraseCount": 3
+        }
+      ],
+      "label": "what",
       "extracted": [
         {
-          "text": "had been careless but not criminal in handling classified material",
           "parts": [
             [
               {
@@ -513,17 +448,11 @@
               "NN"
             ]
           ],
-          "nlpIndexSentence": 3,
-          "score": 1.0
+          "score": 1.0,
+          "text": "had been careless but not criminal in handling classified material",
+          "nlpIndexSentence": 3
         }
-      ],
-      "annotated": [
-        {
-          "text": "CLEARED by FBI over emails storm in lightning-quick probe",
-          "coderPhraseCount": 3
-        }
-      ],
-      "label": "what"
+      ]
     }
   },
   "description": "A letter sent by Comey to Congress more than a week ago informing it of the newly-discovered emails had thrown Clinton's presidential race against Republican Donald Trump into turmoil",

@@ -6,9 +6,19 @@
   "category": "toberone-gate",
   "fiveWoneH": {
     "who": {
+      "annotated": [
+        {
+          "text": "Toblerone",
+          "coderPhraseCount": 3
+        },
+        {
+          "text": "Mondelez International",
+          "coderPhraseCount": 2
+        }
+      ],
+      "label": "who",
       "extracted": [
         {
-          "text": "The name Toblerone",
           "parts": [
             [
               {
@@ -65,134 +75,13 @@
               "NN"
             ]
           ],
-          "nlpIndexSentence": 20,
-          "score": 1.0
+          "score": 1.0,
+          "text": "The name Toblerone",
+          "nlpIndexSentence": 20
         }
-      ],
-      "annotated": [
-        {
-          "text": "Toblerone",
-          "coderPhraseCount": 3
-        },
-        {
-          "text": "Mondelez International",
-          "coderPhraseCount": 2
-        }
-      ],
-      "label": "who"
+      ]
     },
     "when": {
-      "extracted": [
-        {
-          "text": "November 8 , 2016",
-          "enhancement": {
-            "timex": {
-              "start_date": "2016-11-08T00:00:00",
-              "end_date": "2016-11-08T23:59:59"
-            }
-          },
-          "parts": [
-            [
-              {
-                "nlpToken": {
-                  "characterOffsetBegin": 1810,
-                  "word": "November",
-                  "lemma": "November",
-                  "timex": {
-                    "value": "2016-11-08",
-                    "tid": "t4",
-                    "type": "DATE"
-                  },
-                  "before": " ",
-                  "characterOffsetEnd": 1818,
-                  "originalText": "November",
-                  "normalizedNER": "2016-11-08",
-                  "speaker": "PER0",
-                  "after": " ",
-                  "ner": "DATE",
-                  "index": 7,
-                  "pos": "NNP"
-                }
-              },
-              "NNP"
-            ],
-            [
-              {
-                "nlpToken": {
-                  "characterOffsetBegin": 1819,
-                  "word": "8",
-                  "lemma": "8",
-                  "timex": {
-                    "value": "2016-11-08",
-                    "tid": "t4",
-                    "type": "DATE"
-                  },
-                  "before": " ",
-                  "characterOffsetEnd": 1820,
-                  "originalText": "8",
-                  "normalizedNER": "2016-11-08",
-                  "speaker": "PER0",
-                  "after": "",
-                  "ner": "DATE",
-                  "index": 8,
-                  "pos": "CD"
-                }
-              },
-              "CD"
-            ],
-            [
-              {
-                "nlpToken": {
-                  "characterOffsetBegin": 1820,
-                  "word": ",",
-                  "lemma": ",",
-                  "timex": {
-                    "value": "2016-11-08",
-                    "tid": "t4",
-                    "type": "DATE"
-                  },
-                  "before": "",
-                  "characterOffsetEnd": 1821,
-                  "originalText": ",",
-                  "normalizedNER": "2016-11-08",
-                  "speaker": "PER0",
-                  "after": " ",
-                  "ner": "DATE",
-                  "index": 9,
-                  "pos": ","
-                }
-              },
-              ","
-            ],
-            [
-              {
-                "nlpToken": {
-                  "characterOffsetBegin": 1822,
-                  "word": "2016",
-                  "lemma": "2016",
-                  "timex": {
-                    "value": "2016-11-08",
-                    "tid": "t4",
-                    "type": "DATE"
-                  },
-                  "before": " ",
-                  "characterOffsetEnd": 1826,
-                  "originalText": "2016",
-                  "normalizedNER": "2016-11-08",
-                  "speaker": "PER0",
-                  "after": " ",
-                  "ner": "DATE",
-                  "index": 10,
-                  "pos": "CD"
-                }
-              },
-              "CD"
-            ]
-          ],
-          "nlpIndexSentence": 14,
-          "score": 0.8311008961177628
-        }
-      ],
       "annotated": [
         {
           "text": "November 8, 2016",
@@ -203,32 +92,6 @@
       "label": "when"
     },
     "why": {
-      "extracted": [
-        {
-          "text": "Toblerone",
-          "parts": [
-            [
-              {
-                "nlpToken": {
-                  "characterOffsetBegin": 44,
-                  "word": "Toblerone",
-                  "lemma": "Toblerone",
-                  "speaker": "PER0",
-                  "after": " ",
-                  "pos": "NNP",
-                  "ner": "O",
-                  "before": " ",
-                  "characterOffsetEnd": 53,
-                  "index": 8,
-                  "originalText": "Toblerone"
-                }
-              },
-              "NNP"
-            ]
-          ],
-          "score": 0.42857142857142855
-        }
-      ],
       "annotated": [
         {
           "text": "to make them lighter",
@@ -238,90 +101,384 @@
       "label": "why"
     },
     "how": {
-      "extracted": [
-        {
-          "text": "increased",
-          "parts": [
-            [
-              {
-                "nlpToken": {
-                  "characterOffsetBegin": 735,
-                  "word": "increased",
-                  "lemma": "increase",
-                  "characterOffsetEnd": 744,
-                  "speaker": "PER0",
-                  "ner": "O",
-                  "after": " ",
-                  "originalText": "increased",
-                  "before": " ",
-                  "index": 9,
-                  "pos": "VBD"
-                }
-              },
-              "VBD"
-            ]
-          ],
-          "nlpIndexSentence": 4,
-          "score": 1.0
-        }
-      ],
       "annotated": [
         {
           "text": "increased the gaps between the bar's iconic triangular peaks",
           "coderPhraseCount": 1
         }
       ],
-      "label": "how"
-    },
-    "where": {
+      "label": "how",
       "extracted": [
         {
-          "text": "UK",
-          "enhancement": {
-            "openstreetmap_nominatim": {
-              "place_id": "179731133",
-              "licence": "Data \u00a9 OpenStreetMap contributors, ODbL 1.0. http://www.openstreetmap.org/copyright",
-              "type": "administrative",
-              "class": "boundary",
-              "osm_id": "62149",
-              "boundingbox": [
-                49.674,
-                61.061,
-                -14.015517,
-                2.0919117
-              ],
-              "osm_type": "relation",
-              "lon": "-3.2765753",
-              "display_name": "UK",
-              "importance": 0.3267301409654,
-              "icon": "https://nominatim.openstreetmap.org/images/mapicons/poi_boundary_administrative.p.20.png",
-              "lat": "54.7023545"
-            }
-          },
           "parts": [
             [
               {
                 "nlpToken": {
-                  "characterOffsetBegin": 3267,
-                  "word": "UK",
-                  "lemma": "UK",
-                  "characterOffsetEnd": 3269,
+                  "characterOffsetBegin": 2436,
+                  "word": "Theodor",
+                  "lemma": "Theodor",
+                  "characterOffsetEnd": 2443,
                   "speaker": "PER0",
-                  "ner": "LOCATION",
-                  "after": "",
-                  "originalText": "UK",
+                  "ner": "PERSON",
+                  "after": " ",
+                  "originalText": "Theodor",
                   "before": " ",
-                  "index": 10,
+                  "index": 6,
                   "pos": "NNP"
                 }
               },
               "NNP"
+            ],
+            [
+              {
+                "nlpToken": {
+                  "characterOffsetBegin": 2444,
+                  "word": "Tobler",
+                  "lemma": "Tobler",
+                  "characterOffsetEnd": 2450,
+                  "speaker": "PER0",
+                  "ner": "PERSON",
+                  "after": " ",
+                  "originalText": "Tobler",
+                  "before": " ",
+                  "index": 7,
+                  "pos": "NNP"
+                }
+              },
+              "NNP"
+            ],
+            [
+              {
+                "nlpToken": {
+                  "characterOffsetBegin": 2451,
+                  "word": "took",
+                  "lemma": "take",
+                  "characterOffsetEnd": 2455,
+                  "speaker": "PER0",
+                  "ner": "O",
+                  "after": " ",
+                  "originalText": "took",
+                  "before": " ",
+                  "index": 8,
+                  "pos": "VBD"
+                }
+              },
+              "VBD"
+            ],
+            [
+              {
+                "nlpToken": {
+                  "characterOffsetBegin": 2456,
+                  "word": "his",
+                  "lemma": "he",
+                  "characterOffsetEnd": 2459,
+                  "speaker": "PER0",
+                  "ner": "O",
+                  "after": " ",
+                  "originalText": "his",
+                  "before": " ",
+                  "index": 9,
+                  "pos": "PRP$"
+                }
+              },
+              "PRP$"
+            ],
+            [
+              {
+                "nlpToken": {
+                  "characterOffsetBegin": 2460,
+                  "word": "inspiration",
+                  "lemma": "inspiration",
+                  "characterOffsetEnd": 2471,
+                  "speaker": "PER0",
+                  "ner": "O",
+                  "after": " ",
+                  "originalText": "inspiration",
+                  "before": " ",
+                  "index": 10,
+                  "pos": "NN"
+                }
+              },
+              "NN"
+            ],
+            [
+              {
+                "nlpToken": {
+                  "characterOffsetBegin": 2472,
+                  "word": "from",
+                  "lemma": "from",
+                  "characterOffsetEnd": 2476,
+                  "speaker": "PER0",
+                  "ner": "O",
+                  "after": " ",
+                  "originalText": "from",
+                  "before": " ",
+                  "index": 11,
+                  "pos": "IN"
+                }
+              },
+              "IN"
+            ],
+            [
+              {
+                "nlpToken": {
+                  "characterOffsetBegin": 2477,
+                  "word": "his",
+                  "lemma": "he",
+                  "characterOffsetEnd": 2480,
+                  "speaker": "PER0",
+                  "ner": "O",
+                  "after": " ",
+                  "originalText": "his",
+                  "before": " ",
+                  "index": 12,
+                  "pos": "PRP$"
+                }
+              },
+              "PRP$"
+            ],
+            [
+              {
+                "nlpToken": {
+                  "characterOffsetBegin": 2481,
+                  "word": "mountainous",
+                  "lemma": "mountainous",
+                  "characterOffsetEnd": 2492,
+                  "speaker": "PER0",
+                  "ner": "O",
+                  "after": " ",
+                  "originalText": "mountainous",
+                  "before": " ",
+                  "index": 13,
+                  "pos": "JJ"
+                }
+              },
+              "JJ"
+            ],
+            [
+              {
+                "nlpToken": {
+                  "characterOffsetBegin": 2493,
+                  "word": "homeland",
+                  "lemma": "homeland",
+                  "characterOffsetEnd": 2501,
+                  "speaker": "PER0",
+                  "ner": "O",
+                  "after": "",
+                  "originalText": "homeland",
+                  "before": " ",
+                  "index": 14,
+                  "pos": "NN"
+                }
+              },
+              "NN"
+            ],
+            [
+              {
+                "nlpToken": {
+                  "characterOffsetBegin": 2501,
+                  "word": ",",
+                  "lemma": ",",
+                  "characterOffsetEnd": 2502,
+                  "speaker": "PER0",
+                  "ner": "O",
+                  "after": " ",
+                  "originalText": ",",
+                  "before": "",
+                  "index": 15,
+                  "pos": ","
+                }
+              },
+              ","
+            ],
+            [
+              {
+                "nlpToken": {
+                  "characterOffsetBegin": 2503,
+                  "word": "and",
+                  "lemma": "and",
+                  "characterOffsetEnd": 2506,
+                  "speaker": "PER0",
+                  "ner": "O",
+                  "after": " ",
+                  "originalText": "and",
+                  "before": " ",
+                  "index": 16,
+                  "pos": "CC"
+                }
+              },
+              "CC"
+            ],
+            [
+              {
+                "nlpToken": {
+                  "characterOffsetBegin": 2507,
+                  "word": "in",
+                  "lemma": "in",
+                  "characterOffsetEnd": 2509,
+                  "speaker": "PER0",
+                  "ner": "O",
+                  "after": " ",
+                  "originalText": "in",
+                  "before": " ",
+                  "index": 17,
+                  "pos": "IN"
+                }
+              },
+              "IN"
+            ],
+            [
+              {
+                "nlpToken": {
+                  "characterOffsetBegin": 2510,
+                  "word": "particular",
+                  "lemma": "particular",
+                  "characterOffsetEnd": 2520,
+                  "speaker": "PER0",
+                  "ner": "O",
+                  "after": " ",
+                  "originalText": "particular",
+                  "before": " ",
+                  "index": 18,
+                  "pos": "JJ"
+                }
+              },
+              "JJ"
+            ],
+            [
+              {
+                "nlpToken": {
+                  "characterOffsetBegin": 2521,
+                  "word": "the",
+                  "lemma": "the",
+                  "characterOffsetEnd": 2524,
+                  "speaker": "PER0",
+                  "ner": "O",
+                  "after": " ",
+                  "originalText": "the",
+                  "before": " ",
+                  "index": 19,
+                  "pos": "DT"
+                }
+              },
+              "DT"
+            ],
+            [
+              {
+                "nlpToken": {
+                  "characterOffsetBegin": 2525,
+                  "word": "Matterhorn",
+                  "lemma": "Matterhorn",
+                  "characterOffsetEnd": 2535,
+                  "speaker": "PER0",
+                  "ner": "O",
+                  "after": " ",
+                  "originalText": "Matterhorn",
+                  "before": " ",
+                  "index": 20,
+                  "pos": "NNP"
+                }
+              },
+              "NNP"
+            ],
+            [
+              {
+                "nlpToken": {
+                  "characterOffsetBegin": 2536,
+                  "word": "with",
+                  "lemma": "with",
+                  "characterOffsetEnd": 2540,
+                  "speaker": "PER0",
+                  "ner": "O",
+                  "after": " ",
+                  "originalText": "with",
+                  "before": " ",
+                  "index": 21,
+                  "pos": "IN"
+                }
+              },
+              "IN"
+            ],
+            [
+              {
+                "nlpToken": {
+                  "characterOffsetBegin": 2541,
+                  "word": "its",
+                  "lemma": "its",
+                  "characterOffsetEnd": 2544,
+                  "speaker": "PER0",
+                  "ner": "O",
+                  "after": " ",
+                  "originalText": "its",
+                  "before": " ",
+                  "index": 22,
+                  "pos": "PRP$"
+                }
+              },
+              "PRP$"
+            ],
+            [
+              {
+                "nlpToken": {
+                  "characterOffsetBegin": 2545,
+                  "word": "characteristic",
+                  "lemma": "characteristic",
+                  "characterOffsetEnd": 2559,
+                  "speaker": "PER0",
+                  "ner": "O",
+                  "after": " ",
+                  "originalText": "characteristic",
+                  "before": " ",
+                  "index": 23,
+                  "pos": "JJ"
+                }
+              },
+              "JJ"
+            ],
+            [
+              {
+                "nlpToken": {
+                  "characterOffsetBegin": 2560,
+                  "word": "triangular",
+                  "lemma": "triangular",
+                  "characterOffsetEnd": 2570,
+                  "speaker": "PER0",
+                  "ner": "O",
+                  "after": " ",
+                  "originalText": "triangular",
+                  "before": " ",
+                  "index": 24,
+                  "pos": "JJ"
+                }
+              },
+              "JJ"
+            ],
+            [
+              {
+                "nlpToken": {
+                  "characterOffsetBegin": 2571,
+                  "word": "shape",
+                  "lemma": "shape",
+                  "characterOffsetEnd": 2576,
+                  "speaker": "PER0",
+                  "ner": "O",
+                  "after": "",
+                  "originalText": "shape",
+                  "before": " ",
+                  "index": 25,
+                  "pos": "NN"
+                }
+              },
+              "NN"
             ]
           ],
-          "nlpIndexSentence": 26,
-          "score": 1.0
+          "score": 1.0,
+          "text": "Theodor Tobler took his inspiration from his mountainous homeland , and in particular the Matterhorn with its characteristic triangular shape",
+          "nlpIndexSentence": 6
         }
-      ],
+      ]
+    },
+    "where": {
       "annotated": [
         {
           "text": "UK",
@@ -331,9 +488,15 @@
       "label": "where"
     },
     "what": {
+      "annotated": [
+        {
+          "text": "increase the gaps between the bar's iconic peaks",
+          "coderPhraseCount": 3
+        }
+      ],
+      "label": "what",
       "extracted": [
         {
-          "text": "originates from the Swiss chocolatier 's ' combined with ' torrone '",
           "parts": [
             [
               {
@@ -552,17 +715,11 @@
               "''"
             ]
           ],
-          "nlpIndexSentence": 20,
-          "score": 1.0
+          "score": 1.0,
+          "text": "originates from the Swiss chocolatier 's ' combined with ' torrone '",
+          "nlpIndexSentence": 20
         }
-      ],
-      "annotated": [
-        {
-          "text": "increase the gaps between the bar's iconic peaks",
-          "coderPhraseCount": 3
-        }
-      ],
-      "label": "what"
+      ]
     }
   },
   "description": "The controversial change to the Swiss chocolate bar was made because of the 'higher costs for numerous ingredients' in the wake of Brexit.",

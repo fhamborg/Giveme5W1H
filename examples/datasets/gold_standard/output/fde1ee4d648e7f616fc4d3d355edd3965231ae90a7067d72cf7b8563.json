@@ -6,9 +6,15 @@
   "category": "consulate attack",
   "fiveWoneH": {
     "who": {
+      "annotated": [
+        {
+          "text": "Taliban bomber",
+          "coderPhraseCount": 3
+        }
+      ],
+      "label": "who",
       "extracted": [
         {
-          "text": "The Taliban",
           "parts": [
             [
               {
@@ -47,58 +53,13 @@
               "NNP"
             ]
           ],
-          "nlpIndexSentence": 3,
-          "score": 1.0
+          "score": 1.0,
+          "text": "The Taliban",
+          "nlpIndexSentence": 3
         }
-      ],
-      "annotated": [
-        {
-          "text": "Taliban bomber",
-          "coderPhraseCount": 3
-        }
-      ],
-      "label": "who"
+      ]
     },
     "when": {
-      "extracted": [
-        {
-          "text": "11pm",
-          "enhancement": {
-            "timex": {
-              "start_date": "2016-11-10T23:00:00",
-              "end_date": "2016-11-10T23:00:59"
-            }
-          },
-          "parts": [
-            [
-              {
-                "nlpToken": {
-                  "characterOffsetBegin": 598,
-                  "word": "11pm",
-                  "lemma": "11pm",
-                  "timex": {
-                    "value": "2016-11-10T23:00",
-                    "tid": "t1",
-                    "type": "TIME"
-                  },
-                  "before": " ",
-                  "characterOffsetEnd": 602,
-                  "originalText": "11pm",
-                  "normalizedNER": "2016-11-10T23:00",
-                  "speaker": "PER0",
-                  "after": " ",
-                  "ner": "TIME",
-                  "index": 39,
-                  "pos": "JJ"
-                }
-              },
-              "JJ"
-            ]
-          ],
-          "nlpIndexSentence": 2,
-          "score": 0.8782805151807763
-        }
-      ],
       "annotated": [
         {
           "text": "11pm local time on Thursday",
@@ -109,32 +70,6 @@
       "label": "when"
     },
     "why": {
-      "extracted": [
-        {
-          "text": "Dozens",
-          "parts": [
-            [
-              {
-                "nlpToken": {
-                  "characterOffsetBegin": 0,
-                  "word": "Dozens",
-                  "lemma": "dozen",
-                  "speaker": "PER0",
-                  "after": " ",
-                  "pos": "NNS",
-                  "ner": "O",
-                  "before": "",
-                  "characterOffsetEnd": 6,
-                  "index": 1,
-                  "originalText": "Dozens"
-                }
-              },
-              "NNS"
-            ]
-          ],
-          "score": 0.42857142857142855
-        }
-      ],
       "annotated": [
         {
           "text": "response to coalition air strikes",
@@ -144,9 +79,19 @@
       "label": "why"
     },
     "how": {
+      "annotated": [
+        {
+          "text": "suicide bomber",
+          "coderPhraseCount": 2
+        },
+        {
+          "text": "rams truck",
+          "coderPhraseCount": 2
+        }
+      ],
+      "label": "how",
       "extracted": [
         {
-          "text": "northern",
           "parts": [
             [
               {
@@ -167,69 +112,12 @@
               "JJ"
             ]
           ],
-          "score": 1.0
+          "score": 1.0,
+          "text": "northern"
         }
-      ],
-      "annotated": [
-        {
-          "text": "suicide bomber",
-          "coderPhraseCount": 2
-        },
-        {
-          "text": "rams truck",
-          "coderPhraseCount": 2
-        }
-      ],
-      "label": "how"
+      ]
     },
     "where": {
-      "extracted": [
-        {
-          "text": "Mazar-e-Sharif",
-          "enhancement": {
-            "openstreetmap_nominatim": {
-              "place_id": "25073727",
-              "licence": "Data \u00a9 OpenStreetMap contributors, ODbL 1.0. http://www.openstreetmap.org/copyright",
-              "type": "city",
-              "class": "place",
-              "osm_id": "2396275966",
-              "boundingbox": [
-                36.5513366,
-                36.8713366,
-                66.9487511,
-                67.2687511
-              ],
-              "osm_type": "node",
-              "lon": "67.1087511",
-              "display_name": "\u0645\u0632\u0627\u0631 \u0634\u0631\u06cc\u0641, \u0628\u0644\u062e, \u0627\u0641\u063a\u0627\u0646\u0633\u062a\u0627\u0646",
-              "importance": 0.11153510918303,
-              "icon": "https://nominatim.openstreetmap.org/images/mapicons/poi_place_city.p.20.png",
-              "lat": "36.7113366"
-            }
-          },
-          "parts": [
-            [
-              {
-                "nlpToken": {
-                  "characterOffsetBegin": 69,
-                  "word": "Mazar-e-Sharif",
-                  "lemma": "Mazar-e-Sharif",
-                  "characterOffsetEnd": 83,
-                  "speaker": "PER0",
-                  "ner": "LOCATION",
-                  "after": "  ",
-                  "originalText": "Mazar-e-Sharif",
-                  "before": " ",
-                  "index": 13,
-                  "pos": "NNP"
-                }
-              },
-              "NNP"
-            ]
-          ],
-          "score": 1.0
-        }
-      ],
       "annotated": [
         {
           "text": "Mazar-e-Sharif",
@@ -239,9 +127,19 @@
       "label": "where"
     },
     "what": {
+      "annotated": [
+        {
+          "text": "rams truck into German consulate",
+          "coderPhraseCount": 3
+        },
+        {
+          "text": "killing two",
+          "coderPhraseCount": 2
+        }
+      ],
+      "label": "what",
       "extracted": [
         {
-          "text": "has claimed responsibility",
           "parts": [
             [
               {
@@ -298,21 +196,11 @@
               "NN"
             ]
           ],
-          "nlpIndexSentence": 3,
-          "score": 1.0
+          "score": 1.0,
+          "text": "has claimed responsibility",
+          "nlpIndexSentence": 3
         }
-      ],
-      "annotated": [
-        {
-          "text": "rams truck into German consulate",
-          "coderPhraseCount": 3
-        },
-        {
-          "text": "killing two",
-          "coderPhraseCount": 2
-        }
-      ],
-      "label": "what"
+      ]
     }
   },
   "description": "",

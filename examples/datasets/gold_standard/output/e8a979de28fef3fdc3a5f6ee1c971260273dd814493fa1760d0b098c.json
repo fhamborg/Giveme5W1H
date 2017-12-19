@@ -6,9 +6,19 @@
   "category": "toberone-gate",
   "fiveWoneH": {
     "who": {
+      "annotated": [
+        {
+          "text": "Toblerone",
+          "coderPhraseCount": 3
+        },
+        {
+          "text": "Toblerone lovers",
+          "coderPhraseCount": 2
+        }
+      ],
+      "label": "who",
       "extracted": [
         {
-          "text": "favourite chocolate bar",
           "parts": [
             [
               {
@@ -65,23 +75,12 @@
               "NN"
             ]
           ],
-          "score": 1.0
+          "score": 1.0,
+          "text": "favourite chocolate bar"
         }
-      ],
-      "annotated": [
-        {
-          "text": "Toblerone",
-          "coderPhraseCount": 3
-        },
-        {
-          "text": "Toblerone lovers",
-          "coderPhraseCount": 2
-        }
-      ],
-      "label": "who"
+      ]
     },
     "when": {
-      "extracted": [],
       "annotated": [
         {
           "coderPhraseCount": 3,
@@ -91,87 +90,6 @@
       "label": "when"
     },
     "why": {
-      "extracted": [
-        {
-          "text": "Some of the bars",
-          "parts": [
-            [
-              {
-                "nlpToken": {
-                  "characterOffsetBegin": 618,
-                  "word": "Some",
-                  "lemma": "some",
-                  "speaker": "PER0",
-                  "after": " ",
-                  "pos": "DT",
-                  "ner": "O",
-                  "before": " ",
-                  "characterOffsetEnd": 622,
-                  "index": 2,
-                  "originalText": "Some"
-                }
-              },
-              "DT"
-            ],
-            [
-              {
-                "nlpToken": {
-                  "characterOffsetBegin": 623,
-                  "word": "of",
-                  "lemma": "of",
-                  "speaker": "PER0",
-                  "after": " ",
-                  "pos": "IN",
-                  "ner": "O",
-                  "before": " ",
-                  "characterOffsetEnd": 625,
-                  "index": 3,
-                  "originalText": "of"
-                }
-              },
-              "IN"
-            ],
-            [
-              {
-                "nlpToken": {
-                  "characterOffsetBegin": 626,
-                  "word": "the",
-                  "lemma": "the",
-                  "speaker": "PER0",
-                  "after": " ",
-                  "pos": "DT",
-                  "ner": "O",
-                  "before": " ",
-                  "characterOffsetEnd": 629,
-                  "index": 4,
-                  "originalText": "the"
-                }
-              },
-              "DT"
-            ],
-            [
-              {
-                "nlpToken": {
-                  "characterOffsetBegin": 630,
-                  "word": "bars",
-                  "lemma": "bar",
-                  "speaker": "PER0",
-                  "after": " ",
-                  "pos": "NNS",
-                  "ner": "O",
-                  "before": " ",
-                  "characterOffsetEnd": 634,
-                  "index": 5,
-                  "originalText": "bars"
-                }
-              },
-              "NNS"
-            ]
-          ],
-          "nlpIndexSentence": 4,
-          "score": 0.38646616541353385
-        }
-      ],
       "annotated": [
         {
           "text": "rising cost of ingredients",
@@ -181,9 +99,19 @@
       "label": "why"
     },
     "how": {
+      "annotated": [
+        {
+          "text": "shrinks chocolate bar",
+          "coderPhraseCount": 3
+        },
+        {
+          "text": "denies Brexit link",
+          "coderPhraseCount": 1
+        }
+      ],
+      "label": "how",
       "extracted": [
         {
-          "text": "favourite",
           "parts": [
             [
               {
@@ -202,72 +130,375 @@
                 }
               },
               "JJ"
-            ]
-          ],
-          "score": 1.0
-        }
-      ],
-      "annotated": [
-        {
-          "text": "shrinks chocolate bar",
-          "coderPhraseCount": 3
-        },
-        {
-          "text": "denies Brexit link",
-          "coderPhraseCount": 1
-        }
-      ],
-      "label": "how"
-    },
-    "where": {
-      "extracted": [
-        {
-          "text": "UK",
-          "enhancement": {
-            "openstreetmap_nominatim": {
-              "place_id": "179731133",
-              "licence": "Data \u00a9 OpenStreetMap contributors, ODbL 1.0. http://www.openstreetmap.org/copyright",
-              "type": "administrative",
-              "class": "boundary",
-              "osm_id": "62149",
-              "boundingbox": [
-                49.674,
-                61.061,
-                -14.015517,
-                2.0919117
-              ],
-              "osm_type": "relation",
-              "lon": "-3.2765753",
-              "display_name": "UK",
-              "importance": 0.3267301409654,
-              "icon": "https://nominatim.openstreetmap.org/images/mapicons/poi_boundary_administrative.p.20.png",
-              "lat": "54.7023545"
-            }
-          },
-          "parts": [
+            ],
             [
               {
                 "nlpToken": {
-                  "characterOffsetBegin": 579,
-                  "word": "UK",
-                  "lemma": "UK",
-                  "characterOffsetEnd": 581,
+                  "characterOffsetBegin": 42,
+                  "word": "chocolate",
+                  "lemma": "chocolate",
+                  "characterOffsetEnd": 51,
                   "speaker": "PER0",
-                  "ner": "LOCATION",
-                  "after": "",
-                  "originalText": "UK",
+                  "ner": "O",
+                  "after": " ",
+                  "originalText": "chocolate",
                   "before": " ",
-                  "index": 23,
-                  "pos": "NNP"
+                  "index": 7,
+                  "pos": "NN"
                 }
               },
-              "NNP"
+              "NN"
+            ],
+            [
+              {
+                "nlpToken": {
+                  "characterOffsetBegin": 52,
+                  "word": "bar",
+                  "lemma": "bar",
+                  "characterOffsetEnd": 55,
+                  "speaker": "PER0",
+                  "ner": "O",
+                  "after": " ",
+                  "originalText": "bar",
+                  "before": " ",
+                  "index": 8,
+                  "pos": "NN"
+                }
+              },
+              "NN"
+            ],
+            [
+              {
+                "nlpToken": {
+                  "characterOffsetBegin": 56,
+                  "word": "is",
+                  "lemma": "be",
+                  "characterOffsetEnd": 58,
+                  "speaker": "PER0",
+                  "ner": "O",
+                  "after": " ",
+                  "originalText": "is",
+                  "before": " ",
+                  "index": 9,
+                  "pos": "VBZ"
+                }
+              },
+              "VBZ"
+            ],
+            [
+              {
+                "nlpToken": {
+                  "characterOffsetBegin": 59,
+                  "word": "redesigned",
+                  "lemma": "redesign",
+                  "characterOffsetEnd": 69,
+                  "speaker": "PER0",
+                  "ner": "O",
+                  "after": " ",
+                  "originalText": "redesigned",
+                  "before": " ",
+                  "index": 10,
+                  "pos": "VBN"
+                }
+              },
+              "VBN"
+            ],
+            [
+              {
+                "nlpToken": {
+                  "characterOffsetBegin": 70,
+                  "word": "The",
+                  "lemma": "the",
+                  "characterOffsetEnd": 73,
+                  "speaker": "PER0",
+                  "ner": "O",
+                  "after": " ",
+                  "originalText": "The",
+                  "before": " ",
+                  "index": 11,
+                  "pos": "DT"
+                }
+              },
+              "DT"
+            ],
+            [
+              {
+                "nlpToken": {
+                  "characterOffsetBegin": 74,
+                  "word": "iconic",
+                  "lemma": "iconic",
+                  "characterOffsetEnd": 80,
+                  "speaker": "PER0",
+                  "ner": "O",
+                  "after": " ",
+                  "originalText": "iconic",
+                  "before": " ",
+                  "index": 12,
+                  "pos": "JJ"
+                }
+              },
+              "JJ"
+            ],
+            [
+              {
+                "nlpToken": {
+                  "characterOffsetBegin": 81,
+                  "word": "chocolate",
+                  "lemma": "chocolate",
+                  "characterOffsetEnd": 90,
+                  "speaker": "PER0",
+                  "ner": "O",
+                  "after": " ",
+                  "originalText": "chocolate",
+                  "before": " ",
+                  "index": 13,
+                  "pos": "NN"
+                }
+              },
+              "NN"
+            ],
+            [
+              {
+                "nlpToken": {
+                  "characterOffsetBegin": 91,
+                  "word": "bar",
+                  "lemma": "bar",
+                  "characterOffsetEnd": 94,
+                  "speaker": "PER0",
+                  "ner": "O",
+                  "after": " ",
+                  "originalText": "bar",
+                  "before": " ",
+                  "index": 14,
+                  "pos": "NN"
+                }
+              },
+              "NN"
+            ],
+            [
+              {
+                "nlpToken": {
+                  "characterOffsetBegin": 95,
+                  "word": "is",
+                  "lemma": "be",
+                  "characterOffsetEnd": 97,
+                  "speaker": "PER0",
+                  "ner": "O",
+                  "after": " ",
+                  "originalText": "is",
+                  "before": " ",
+                  "index": 15,
+                  "pos": "VBZ"
+                }
+              },
+              "VBZ"
+            ],
+            [
+              {
+                "nlpToken": {
+                  "characterOffsetBegin": 98,
+                  "word": "distinctive",
+                  "lemma": "distinctive",
+                  "characterOffsetEnd": 109,
+                  "speaker": "PER0",
+                  "ner": "O",
+                  "after": " ",
+                  "originalText": "distinctive",
+                  "before": " ",
+                  "index": 16,
+                  "pos": "JJ"
+                }
+              },
+              "JJ"
+            ],
+            [
+              {
+                "nlpToken": {
+                  "characterOffsetBegin": 110,
+                  "word": "in",
+                  "lemma": "in",
+                  "characterOffsetEnd": 112,
+                  "speaker": "PER0",
+                  "ner": "O",
+                  "after": " ",
+                  "originalText": "in",
+                  "before": " ",
+                  "index": 17,
+                  "pos": "IN"
+                }
+              },
+              "IN"
+            ],
+            [
+              {
+                "nlpToken": {
+                  "characterOffsetBegin": 113,
+                  "word": "its",
+                  "lemma": "its",
+                  "characterOffsetEnd": 116,
+                  "speaker": "PER0",
+                  "ner": "O",
+                  "after": " ",
+                  "originalText": "its",
+                  "before": " ",
+                  "index": 18,
+                  "pos": "PRP$"
+                }
+              },
+              "PRP$"
+            ],
+            [
+              {
+                "nlpToken": {
+                  "characterOffsetBegin": 117,
+                  "word": "peaking",
+                  "lemma": "peak",
+                  "characterOffsetEnd": 124,
+                  "speaker": "PER0",
+                  "ner": "O",
+                  "after": " ",
+                  "originalText": "peaking",
+                  "before": " ",
+                  "index": 19,
+                  "pos": "VBG"
+                }
+              },
+              "VBG"
+            ],
+            [
+              {
+                "nlpToken": {
+                  "characterOffsetBegin": 125,
+                  "word": "pyramid-like",
+                  "lemma": "pyramid-like",
+                  "characterOffsetEnd": 137,
+                  "speaker": "PER0",
+                  "ner": "O",
+                  "after": " ",
+                  "originalText": "pyramid-like",
+                  "before": " ",
+                  "index": 20,
+                  "pos": "JJ"
+                }
+              },
+              "JJ"
+            ],
+            [
+              {
+                "nlpToken": {
+                  "characterOffsetBegin": 138,
+                  "word": "shapes",
+                  "lemma": "shape",
+                  "characterOffsetEnd": 144,
+                  "speaker": "PER0",
+                  "ner": "O",
+                  "after": " ",
+                  "originalText": "shapes",
+                  "before": " ",
+                  "index": 21,
+                  "pos": "NNS"
+                }
+              },
+              "NNS"
+            ],
+            [
+              {
+                "nlpToken": {
+                  "characterOffsetBegin": 145,
+                  "word": "filled",
+                  "lemma": "fill",
+                  "characterOffsetEnd": 151,
+                  "speaker": "PER0",
+                  "ner": "O",
+                  "after": " ",
+                  "originalText": "filled",
+                  "before": " ",
+                  "index": 22,
+                  "pos": "VBN"
+                }
+              },
+              "VBN"
+            ],
+            [
+              {
+                "nlpToken": {
+                  "characterOffsetBegin": 152,
+                  "word": "with",
+                  "lemma": "with",
+                  "characterOffsetEnd": 156,
+                  "speaker": "PER0",
+                  "ner": "O",
+                  "after": " ",
+                  "originalText": "with",
+                  "before": " ",
+                  "index": 23,
+                  "pos": "IN"
+                }
+              },
+              "IN"
+            ],
+            [
+              {
+                "nlpToken": {
+                  "characterOffsetBegin": 157,
+                  "word": "chunks",
+                  "lemma": "chunk",
+                  "characterOffsetEnd": 163,
+                  "speaker": "PER0",
+                  "ner": "O",
+                  "after": " ",
+                  "originalText": "chunks",
+                  "before": " ",
+                  "index": 24,
+                  "pos": "NNS"
+                }
+              },
+              "NNS"
+            ],
+            [
+              {
+                "nlpToken": {
+                  "characterOffsetBegin": 164,
+                  "word": "of",
+                  "lemma": "of",
+                  "characterOffsetEnd": 166,
+                  "speaker": "PER0",
+                  "ner": "O",
+                  "after": " ",
+                  "originalText": "of",
+                  "before": " ",
+                  "index": 25,
+                  "pos": "IN"
+                }
+              },
+              "IN"
+            ],
+            [
+              {
+                "nlpToken": {
+                  "characterOffsetBegin": 167,
+                  "word": "nougat",
+                  "lemma": "nougat",
+                  "characterOffsetEnd": 173,
+                  "speaker": "PER0",
+                  "ner": "O",
+                  "after": "",
+                  "originalText": "nougat",
+                  "before": " ",
+                  "index": 26,
+                  "pos": "NN"
+                }
+              },
+              "NN"
             ]
           ],
-          "nlpIndexSentence": 3,
-          "score": 1.0
+          "score": 1.0,
+          "text": "favourite chocolate bar is redesigned The iconic chocolate bar is distinctive in its peaking pyramid-like shapes filled with chunks of nougat",
+          "nlpIndexSentence": 6
         }
-      ],
+      ]
+    },
+    "where": {
       "annotated": [
         {
           "coderPhraseCount": 2
@@ -276,9 +507,19 @@
       "label": "where"
     },
     "what": {
+      "annotated": [
+        {
+          "text": "shrinks chocolate bar",
+          "coderPhraseCount": 3
+        },
+        {
+          "text": "outraged",
+          "coderPhraseCount": 2
+        }
+      ],
+      "label": "what",
       "extracted": [
         {
-          "text": "is redesigned The iconic chocolate bar",
           "parts": [
             [
               {
@@ -389,20 +630,10 @@
               "NN"
             ]
           ],
-          "score": 1.0
+          "score": 1.0,
+          "text": "is redesigned The iconic chocolate bar"
         }
-      ],
-      "annotated": [
-        {
-          "text": "shrinks chocolate bar",
-          "coderPhraseCount": 3
-        },
-        {
-          "text": "outraged",
-          "coderPhraseCount": 2
-        }
-      ],
-      "label": "what"
+      ]
     }
   },
   "description": "TOBLERONE has angered consumers for shrinking its famous triangular chocolate chunks but the company insists Brexit is not to blame.",

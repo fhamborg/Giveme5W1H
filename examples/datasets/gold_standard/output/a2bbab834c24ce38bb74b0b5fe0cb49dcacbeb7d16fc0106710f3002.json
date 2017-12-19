@@ -1,258 +1,42 @@
 {
+  "originalFilename": "express-8",
+  "category": "tram",
+  "publisher": "express",
+  "url": "http://www.express.co.uk/news/uk/730639/Croydon-tram-crash-carnage-survivor-derailment-seven-dead",
+  "mimeType": "text/xml",
   "filename": "a2bbab834c24ce38bb74b0b5fe0cb49dcacbeb7d16fc0106710f3002",
   "title": "Croydon tram crash survivor describes 'carnage' which left seven dead",
-  "mimeType": "text/xml",
-  "parsingError": "true",
-  "date_publish": "2016-11-09 20:01:00",
+  "dId": "a2bbab834c24ce38bb74b0b5fe0cb49dcacbeb7d16fc0106710f3002",
   "fiveWoneH": {
-    "who": {
-      "extracted": [
-        {
-          "text": "tram",
-          "parts": [
-            [
-              {
-                "nlpToken": {
-                  "characterOffsetBegin": 240,
-                  "word": "tram",
-                  "lemma": "tram",
-                  "characterOffsetEnd": 244,
-                  "speaker": "PER0",
-                  "ner": "O",
-                  "after": " ",
-                  "originalText": "tram",
-                  "before": " ",
-                  "index": 10,
-                  "pos": "NN"
-                }
-              },
-              "NN"
-            ]
-          ],
-          "nlpIndexSentence": 2,
-          "score": 1.0
-        }
-      ],
-      "annotated": [
-        {
-          "text": "seven dead",
-          "coderPhraseCount": 1
-        },
-        {
-          "text": "Martin Bamford",
-          "coderPhraseCount": 1
-        },
-        {
-          "coderPhraseCount": 1
-        }
-      ],
-      "label": "who"
-    },
-    "when": {
-      "extracted": [
-        {
-          "text": "tomorrow",
-          "enhancement": {
-            "timex": {
-              "start_date": "2016-11-10T01:00:00",
-              "end_date": "2016-11-10T01:00:59"
-            }
-          },
-          "parts": [
-            [
-              {
-                "nlpToken": {
-                  "after": " ",
-                  "word": "tomorrow",
-                  "lemma": "tomorrow",
-                  "timex": {
-                    "value": "2016-11-10T01:00",
-                    "tid": "t8",
-                    "type": "TIME"
-                  },
-                  "before": " ",
-                  "characterOffsetEnd": 2139,
-                  "pos": "NN",
-                  "normalizedNER": "2016-11-10T01:00",
-                  "speaker": "PER0",
-                  "ner": "TIME",
-                  "characterOffsetBegin": 2131,
-                  "originalText": "tomorrow",
-                  "index": 11
-                }
-              },
-              "NN"
-            ]
-          ],
-          "nlpIndexSentence": 18,
-          "score": 0.7704879023794828
-        }
-      ],
-      "annotated": [
-        {
-          "text": "Wednesday morning",
-          "coderPhraseCount": 3
-        }
-      ],
-      "label": "when"
-    },
-    "how": {
-      "extracted": [
-        {
-          "text": "dead",
-          "parts": [
-            [
-              {
-                "nlpToken": {
-                  "characterOffsetBegin": 65,
-                  "word": "dead",
-                  "lemma": "dead",
-                  "characterOffsetEnd": 69,
-                  "speaker": "PER0",
-                  "ner": "O",
-                  "after": "",
-                  "originalText": "dead",
-                  "before": " ",
-                  "index": 12,
-                  "pos": "JJ"
-                }
-              },
-              "JJ"
-            ]
-          ],
-          "score": 1.0
-        }
-      ],
-      "annotated": [
-        {
-          "text": "flipped and derailed",
-          "coderPhraseCount": 3
-        }
-      ],
-      "label": "how"
-    },
-    "where": {
-      "extracted": [
-        {
-          "text": "Croydon",
-          "enhancement": {
-            "openstreetmap_nominatim": {
-              "place_id": "117537",
-              "licence": "Data \u00a9 OpenStreetMap contributors, ODbL 1.0. http://www.openstreetmap.org/copyright",
-              "type": "town",
-              "class": "place",
-              "osm_id": "21262496",
-              "boundingbox": [
-                51.3313049,
-                51.4113049,
-                -0.141957,
-                -0.061957
-              ],
-              "osm_type": "node",
-              "lon": "-0.101957",
-              "display_name": "Croydon, London, Greater London, England, CR0 1SZ, UK",
-              "importance": 0.23943987893565,
-              "icon": "https://nominatim.openstreetmap.org/images/mapicons/poi_place_town.p.20.png",
-              "lat": "51.3713049"
-            }
-          },
-          "parts": [
-            [
-              {
-                "nlpToken": {
-                  "characterOffsetBegin": 0,
-                  "word": "Croydon",
-                  "lemma": "Croydon",
-                  "characterOffsetEnd": 7,
-                  "speaker": "PER0",
-                  "ner": "LOCATION",
-                  "after": " ",
-                  "originalText": "Croydon",
-                  "before": "",
-                  "index": 1,
-                  "pos": "NNP"
-                }
-              },
-              "NNP"
-            ]
-          ],
-          "score": 1.0000000000000002
-        }
-      ],
-      "annotated": [
-        {
-          "text": "near the Sandilands stop on Addiscombe Road",
-          "coderPhraseCount": 3
-        },
-        {
-          "text": "Croydon",
-          "coderPhraseCount": 2
-        }
-      ],
-      "label": "where"
-    },
-    "why": {
-      "extracted": [
-        {
-          "text": "it",
-          "parts": [
-            [
-              {
-                "nlpToken": {
-                  "characterOffsetBegin": 250,
-                  "word": "it",
-                  "lemma": "it",
-                  "speaker": "PER0",
-                  "after": " ",
-                  "pos": "PRP",
-                  "ner": "O",
-                  "before": " ",
-                  "characterOffsetEnd": 252,
-                  "index": 12,
-                  "originalText": "it"
-                }
-              },
-              "PRP"
-            ]
-          ],
-          "nlpIndexSentence": 2,
-          "score": 0.4095238095238095
-        }
-      ],
-      "annotated": [
-        {
-          "text": "derailment",
-          "coderPhraseCount": 1
-        },
-        {
-          "text": "was travelling on the tram when it flipped and derailed",
-          "coderPhraseCount": 1
-        },
-        {
-          "coderPhraseCount": 1
-        }
-      ],
-      "label": "why"
-    },
     "what": {
+      "annotated": [
+        {
+          "coderPhraseCount": 3,
+          "text": "derailment"
+        },
+        {
+          "coderPhraseCount": 2,
+          "text": "tram crash"
+        }
+      ],
+      "label": "what",
       "extracted": [
         {
-          "text": "flipped and derailed off the tracks",
           "parts": [
             [
               {
                 "nlpToken": {
-                  "characterOffsetBegin": 253,
+                  "before": " ",
                   "word": "flipped",
+                  "index": 13,
                   "lemma": "flip",
-                  "characterOffsetEnd": 260,
-                  "speaker": "PER0",
+                  "characterOffsetBegin": 253,
+                  "pos": "VBD",
+                  "originalText": "flipped",
                   "ner": "O",
                   "after": " ",
-                  "originalText": "flipped",
-                  "before": " ",
-                  "index": 13,
-                  "pos": "VBD"
+                  "characterOffsetEnd": 260,
+                  "speaker": "PER0"
                 }
               },
               "VBD"
@@ -260,17 +44,17 @@
             [
               {
                 "nlpToken": {
-                  "characterOffsetBegin": 261,
+                  "before": " ",
                   "word": "and",
+                  "index": 14,
                   "lemma": "and",
-                  "characterOffsetEnd": 264,
-                  "speaker": "PER0",
+                  "characterOffsetBegin": 261,
+                  "pos": "CC",
+                  "originalText": "and",
                   "ner": "O",
                   "after": " ",
-                  "originalText": "and",
-                  "before": " ",
-                  "index": 14,
-                  "pos": "CC"
+                  "characterOffsetEnd": 264,
+                  "speaker": "PER0"
                 }
               },
               "CC"
@@ -278,17 +62,17 @@
             [
               {
                 "nlpToken": {
-                  "characterOffsetBegin": 265,
+                  "before": " ",
                   "word": "derailed",
+                  "index": 15,
                   "lemma": "derail",
-                  "characterOffsetEnd": 273,
-                  "speaker": "PER0",
+                  "characterOffsetBegin": 265,
+                  "pos": "VBD",
+                  "originalText": "derailed",
                   "ner": "O",
                   "after": " ",
-                  "originalText": "derailed",
-                  "before": " ",
-                  "index": 15,
-                  "pos": "VBD"
+                  "characterOffsetEnd": 273,
+                  "speaker": "PER0"
                 }
               },
               "VBD"
@@ -296,17 +80,17 @@
             [
               {
                 "nlpToken": {
-                  "characterOffsetBegin": 274,
+                  "before": " ",
                   "word": "off",
+                  "index": 16,
                   "lemma": "off",
-                  "characterOffsetEnd": 277,
-                  "speaker": "PER0",
+                  "characterOffsetBegin": 274,
+                  "pos": "RP",
+                  "originalText": "off",
                   "ner": "O",
                   "after": " ",
-                  "originalText": "off",
-                  "before": " ",
-                  "index": 16,
-                  "pos": "RP"
+                  "characterOffsetEnd": 277,
+                  "speaker": "PER0"
                 }
               },
               "RP"
@@ -314,17 +98,17 @@
             [
               {
                 "nlpToken": {
-                  "characterOffsetBegin": 278,
+                  "before": " ",
                   "word": "the",
+                  "index": 17,
                   "lemma": "the",
-                  "characterOffsetEnd": 281,
-                  "speaker": "PER0",
+                  "characterOffsetBegin": 278,
+                  "pos": "DT",
+                  "originalText": "the",
                   "ner": "O",
                   "after": " ",
-                  "originalText": "the",
-                  "before": " ",
-                  "index": 17,
-                  "pos": "DT"
+                  "characterOffsetEnd": 281,
+                  "speaker": "PER0"
                 }
               },
               "DT"
@@ -332,44 +116,274 @@
             [
               {
                 "nlpToken": {
-                  "characterOffsetBegin": 282,
+                  "before": " ",
                   "word": "tracks",
+                  "index": 18,
                   "lemma": "track",
-                  "characterOffsetEnd": 288,
-                  "speaker": "PER0",
+                  "characterOffsetBegin": 282,
+                  "pos": "NNS",
+                  "originalText": "tracks",
                   "ner": "O",
                   "after": " ",
-                  "originalText": "tracks",
-                  "before": " ",
-                  "index": 18,
-                  "pos": "NNS"
+                  "characterOffsetEnd": 288,
+                  "speaker": "PER0"
                 }
               },
               "NNS"
             ]
           ],
-          "nlpIndexSentence": 2,
-          "score": 1.0
+          "score": 1.0,
+          "text": "flipped and derailed off the tracks",
+          "nlpIndexSentence": 2
         }
-      ],
+      ]
+    },
+    "how": {
       "annotated": [
         {
-          "text": "derailment",
-          "coderPhraseCount": 3
-        },
-        {
-          "text": "tram crash",
-          "coderPhraseCount": 2
+          "coderPhraseCount": 3,
+          "text": "flipped and derailed"
         }
       ],
-      "label": "what"
+      "label": "how",
+      "extracted": [
+        {
+          "parts": [
+            [
+              {
+                "nlpToken": {
+                  "before": " ",
+                  "word": "the",
+                  "index": 11,
+                  "lemma": "the",
+                  "characterOffsetBegin": 126,
+                  "pos": "DT",
+                  "originalText": "the",
+                  "ner": "O",
+                  "after": " ",
+                  "characterOffsetEnd": 129,
+                  "speaker": "PER0"
+                }
+              },
+              "DT"
+            ],
+            [
+              {
+                "nlpToken": {
+                  "before": " ",
+                  "word": "horror",
+                  "index": 12,
+                  "lemma": "horror",
+                  "characterOffsetBegin": 130,
+                  "pos": "NN",
+                  "originalText": "horror",
+                  "ner": "O",
+                  "after": " ",
+                  "characterOffsetEnd": 136,
+                  "speaker": "PER0"
+                }
+              },
+              "NN"
+            ],
+            [
+              {
+                "nlpToken": {
+                  "before": " ",
+                  "word": "crash",
+                  "index": 13,
+                  "lemma": "crash",
+                  "characterOffsetBegin": 137,
+                  "pos": "NN",
+                  "originalText": "crash",
+                  "ner": "O",
+                  "after": "",
+                  "characterOffsetEnd": 142,
+                  "speaker": "PER0"
+                }
+              },
+              "NN"
+            ],
+            [
+              {
+                "nlpToken": {
+                  "before": "",
+                  "word": ",",
+                  "index": 14,
+                  "lemma": ",",
+                  "characterOffsetBegin": 142,
+                  "pos": ",",
+                  "originalText": ",",
+                  "ner": "O",
+                  "after": " ",
+                  "characterOffsetEnd": 143,
+                  "speaker": "PER0"
+                }
+              },
+              ","
+            ],
+            [
+              {
+                "nlpToken": {
+                  "before": " ",
+                  "word": "which",
+                  "index": 15,
+                  "lemma": "which",
+                  "characterOffsetBegin": 144,
+                  "pos": "WDT",
+                  "originalText": "which",
+                  "ner": "O",
+                  "after": " ",
+                  "characterOffsetEnd": 149,
+                  "speaker": "PER0"
+                }
+              },
+              "WDT"
+            ],
+            [
+              {
+                "nlpToken": {
+                  "before": " ",
+                  "word": "happened",
+                  "index": 16,
+                  "lemma": "happen",
+                  "characterOffsetBegin": 150,
+                  "pos": "VBD",
+                  "originalText": "happened",
+                  "ner": "O",
+                  "after": " ",
+                  "characterOffsetEnd": 158,
+                  "speaker": "PER0"
+                }
+              },
+              "VBD"
+            ],
+            [
+              {
+                "nlpToken": {
+                  "before": " ",
+                  "word": "during",
+                  "index": 17,
+                  "lemma": "during",
+                  "characterOffsetBegin": 159,
+                  "pos": "IN",
+                  "originalText": "during",
+                  "ner": "O",
+                  "after": " ",
+                  "characterOffsetEnd": 165,
+                  "speaker": "PER0"
+                }
+              },
+              "IN"
+            ],
+            [
+              {
+                "nlpToken": {
+                  "before": " ",
+                  "word": "rush",
+                  "index": 18,
+                  "lemma": "rush",
+                  "characterOffsetBegin": 166,
+                  "pos": "NN",
+                  "originalText": "rush",
+                  "ner": "O",
+                  "after": " ",
+                  "characterOffsetEnd": 170,
+                  "speaker": "PER0"
+                }
+              },
+              "NN"
+            ]
+          ],
+          "score": 1.0,
+          "text": "the horror crash , which happened during rush",
+          "nlpIndexSentence": 11
+        }
+      ]
+    },
+    "when": {
+      "annotated": [
+        {
+          "coderPhraseCount": 3,
+          "text": "Wednesday morning"
+        }
+      ],
+      "label": "when"
+    },
+    "why": {
+      "annotated": [
+        {
+          "coderPhraseCount": 1,
+          "text": "derailment"
+        },
+        {
+          "coderPhraseCount": 1,
+          "text": "was travelling on the tram when it flipped and derailed"
+        },
+        {
+          "coderPhraseCount": 1
+        }
+      ],
+      "label": "why"
+    },
+    "who": {
+      "annotated": [
+        {
+          "coderPhraseCount": 1,
+          "text": "seven dead"
+        },
+        {
+          "coderPhraseCount": 1,
+          "text": "Martin Bamford"
+        },
+        {
+          "coderPhraseCount": 1
+        }
+      ],
+      "label": "who",
+      "extracted": [
+        {
+          "parts": [
+            [
+              {
+                "nlpToken": {
+                  "before": " ",
+                  "word": "tram",
+                  "index": 10,
+                  "lemma": "tram",
+                  "characterOffsetBegin": 240,
+                  "pos": "NN",
+                  "originalText": "tram",
+                  "ner": "O",
+                  "after": " ",
+                  "characterOffsetEnd": 244,
+                  "speaker": "PER0"
+                }
+              },
+              "NN"
+            ]
+          ],
+          "score": 1.0,
+          "text": "tram",
+          "nlpIndexSentence": 2
+        }
+      ]
+    },
+    "where": {
+      "annotated": [
+        {
+          "coderPhraseCount": 3,
+          "text": "near the Sandilands stop on Addiscombe Road"
+        },
+        {
+          "coderPhraseCount": 2,
+          "text": "Croydon"
+        }
+      ],
+      "label": "where"
     }
   },
   "description": "A FATHER-of-four who survived the Croydon tram crash, which left seven dead, has described the lethal derailment like 'something out of a film' as he spoke of the \"absolute carnage\" caused when it toppled over.",
+  "parsingError": "true",
   "text": "More than 51 people were also rushed to hospital after the horror crash, which happened during rush hour on Wednesday morning. Martin Bamford, 30, was travelling on the tram when it flipped and derailed off the tracks near the Sandilands stop on Addiscombe Road. The father, from New Addington, south east London, said people were screaming for help and there was blood all over the train. Mr Bamford said: \"When we were coming through the tunnel we were going at some speed and the tram was speeding up more and more. SWNS * PA Martin Bamford survived the Croydon tram crash which left seven dead \"We were coming out of the tunnel and we hit the bend way too fast and the tram flipped. \"There was a girl who was on top of me and she did not look very much alive at all. \"She was bleeding all over the place and I don't think she made it. \"People had broken legs and head injuries. When it flipped everything went flying, people were on top of me. BBC Police have confirmed a 42-year-old man from Beckenham has been arrested following the incident There was blood everywhere and belongings and shoes Martin Bamford \"There was blood everywhere and belongings and shoes. It was absolute carnage.\" Police have confirmed a 42-year-old man from Beckenham has been arrested on suspicion of manslaughter and is currently in police custody following the deadly crash. Robin Smith, Assistant Chief Constable at the British Transport Police (BTP), confirmed there had been fatalities and called it a \"tragic\" incident. He said: \"Sadly we can say there has been some loss of life.\" Deputy Chief Constable Adrian Hanstock added: \"Our officers will continue to work tirelessly throughout the evening to formally identify them and provide care and support for their families.\" \"In the coming days, we will continue to work alongside the Rail Accident Investigation Branch to establish the circumstances of how this happened. \"At this stage it is too early to speculate on a single factor being the cause of this incident.\" The tram which flipped on its side will be removed tomorrow at the earliest, British Transport Police said. SWNS More than 51 people were also rushed to hospital after the horror crash",
-  "url": "http://www.express.co.uk/news/uk/730639/Croydon-tram-crash-carnage-survivor-derailment-seven-dead",
-  "publisher": "express",
-  "originalFilename": "express-8",
-  "category": "tram",
-  "dId": "a2bbab834c24ce38bb74b0b5fe0cb49dcacbeb7d16fc0106710f3002"
+  "date_publish": "2016-11-09 20:01:00"
 }

@@ -6,9 +6,23 @@
   "category": "clinton clear",
   "fiveWoneH": {
     "who": {
+      "annotated": [
+        {
+          "text": "Trump",
+          "coderPhraseCount": 3
+        },
+        {
+          "text": "FBI",
+          "coderPhraseCount": 2
+        },
+        {
+          "text": "Clinton",
+          "coderPhraseCount": 2
+        }
+      ],
+      "label": "who",
       "extracted": [
         {
-          "text": "Hillary Clinton",
           "parts": [
             [
               {
@@ -47,65 +61,12 @@
               "NNP"
             ]
           ],
-          "score": 1.0
+          "score": 1.0,
+          "text": "Hillary Clinton"
         }
-      ],
-      "annotated": [
-        {
-          "text": "Trump",
-          "coderPhraseCount": 3
-        },
-        {
-          "text": "FBI",
-          "coderPhraseCount": 2
-        },
-        {
-          "text": "Clinton",
-          "coderPhraseCount": 2
-        }
-      ],
-      "label": "who"
+      ]
     },
     "when": {
-      "extracted": [
-        {
-          "text": "midnight",
-          "enhancement": {
-            "timex": {
-              "start_date": "2016-11-07T00:00:00",
-              "end_date": "2016-11-07T00:00:59"
-            }
-          },
-          "parts": [
-            [
-              {
-                "nlpToken": {
-                  "characterOffsetBegin": 6100,
-                  "word": "midnight",
-                  "lemma": "midnight",
-                  "timex": {
-                    "value": "2016-11-07T00:00",
-                    "tid": "t30",
-                    "type": "TIME"
-                  },
-                  "before": " ",
-                  "characterOffsetEnd": 6108,
-                  "originalText": "midnight",
-                  "normalizedNER": "2016-11-07T00:00",
-                  "speaker": "PER0",
-                  "after": " ",
-                  "ner": "TIME",
-                  "index": 16,
-                  "pos": "NN"
-                }
-              },
-              "NN"
-            ]
-          ],
-          "nlpIndexSentence": 49,
-          "score": 0.7398437465096325
-        }
-      ],
       "annotated": [
         {
           "text": "2016",
@@ -116,51 +77,6 @@
       "label": "when"
     },
     "why": {
-      "extracted": [
-        {
-          "text": "Donald Trump",
-          "parts": [
-            [
-              {
-                "nlpToken": {
-                  "characterOffsetBegin": 88,
-                  "word": "Donald",
-                  "lemma": "Donald",
-                  "speaker": "PER0",
-                  "after": " ",
-                  "pos": "NNP",
-                  "ner": "PERSON",
-                  "before": " ",
-                  "characterOffsetEnd": 94,
-                  "index": 6,
-                  "originalText": "Donald"
-                }
-              },
-              "NNP"
-            ],
-            [
-              {
-                "nlpToken": {
-                  "characterOffsetBegin": 95,
-                  "word": "Trump",
-                  "lemma": "Trump",
-                  "speaker": "PER0",
-                  "after": " ",
-                  "pos": "NNP",
-                  "ner": "PERSON",
-                  "before": " ",
-                  "characterOffsetEnd": 100,
-                  "index": 7,
-                  "originalText": "Trump"
-                }
-              },
-              "NNP"
-            ]
-          ],
-          "nlpIndexSentence": 2,
-          "score": 0.42241758241758237
-        }
-      ],
       "annotated": [
         {
           "text": "has accused the FBI of impropriety after it once again said that Hillary Clinton should not face criminal charges",
@@ -170,90 +86,240 @@
       "label": "why"
     },
     "how": {
-      "extracted": [
-        {
-          "text": "said",
-          "parts": [
-            [
-              {
-                "nlpToken": {
-                  "characterOffsetBegin": 156,
-                  "word": "said",
-                  "lemma": "say",
-                  "characterOffsetEnd": 160,
-                  "speaker": "PER0",
-                  "ner": "O",
-                  "after": " ",
-                  "originalText": "said",
-                  "before": " ",
-                  "index": 18,
-                  "pos": "VBD"
-                }
-              },
-              "VBD"
-            ]
-          ],
-          "nlpIndexSentence": 2,
-          "score": 1.0
-        }
-      ],
       "annotated": [
         {
           "text": "has accused",
           "coderPhraseCount": 3
         }
       ],
-      "label": "how"
-    },
-    "where": {
+      "label": "how",
       "extracted": [
         {
-          "text": "US",
-          "enhancement": {
-            "openstreetmap_nominatim": {
-              "place_id": "177579678",
-              "licence": "Data \u00a9 OpenStreetMap contributors, ODbL 1.0. http://www.openstreetmap.org/copyright",
-              "type": "administrative",
-              "class": "boundary",
-              "osm_id": "148838",
-              "boundingbox": [
-                -14.7608358,
-                71.6048217,
-                -180.0,
-                180.0
-              ],
-              "osm_type": "relation",
-              "lon": "-100.4458825",
-              "display_name": "United States of America",
-              "importance": 0.2361730870995,
-              "icon": "https://nominatim.openstreetmap.org/images/mapicons/poi_boundary_administrative.p.20.png",
-              "lat": "39.7837304"
-            }
-          },
           "parts": [
             [
               {
                 "nlpToken": {
-                  "characterOffsetBegin": 542,
-                  "word": "US",
-                  "lemma": "US",
-                  "characterOffsetEnd": 544,
+                  "characterOffsetBegin": 4921,
+                  "word": "Republicans",
+                  "lemma": "Republicans",
+                  "characterOffsetEnd": 4932,
                   "speaker": "PER0",
-                  "ner": "LOCATION",
-                  "after": " ",
-                  "originalText": "US",
+                  "ner": "MISC",
+                  "after": "",
+                  "originalText": "Republicans",
                   "before": " ",
-                  "index": 17,
-                  "pos": "NNP"
+                  "index": 2,
+                  "pos": "NNPS"
                 }
               },
-              "NNP"
+              "NNPS"
+            ],
+            [
+              {
+                "nlpToken": {
+                  "characterOffsetBegin": 4932,
+                  "word": ",",
+                  "lemma": ",",
+                  "characterOffsetEnd": 4933,
+                  "speaker": "PER0",
+                  "ner": "O",
+                  "after": " ",
+                  "originalText": ",",
+                  "before": "",
+                  "index": 3,
+                  "pos": ","
+                }
+              },
+              ","
+            ],
+            [
+              {
+                "nlpToken": {
+                  "characterOffsetBegin": 4934,
+                  "word": "it",
+                  "lemma": "it",
+                  "characterOffsetEnd": 4936,
+                  "speaker": "PER0",
+                  "ner": "O",
+                  "after": " ",
+                  "originalText": "it",
+                  "before": " ",
+                  "index": 4,
+                  "pos": "PRP"
+                }
+              },
+              "PRP"
+            ],
+            [
+              {
+                "nlpToken": {
+                  "characterOffsetBegin": 4937,
+                  "word": "seems",
+                  "lemma": "seem",
+                  "characterOffsetEnd": 4942,
+                  "speaker": "PER0",
+                  "ner": "O",
+                  "after": " ",
+                  "originalText": "seems",
+                  "before": " ",
+                  "index": 5,
+                  "pos": "VBZ"
+                }
+              },
+              "VBZ"
+            ],
+            [
+              {
+                "nlpToken": {
+                  "characterOffsetBegin": 4943,
+                  "word": "the",
+                  "lemma": "the",
+                  "characterOffsetEnd": 4946,
+                  "speaker": "PER0",
+                  "ner": "O",
+                  "after": " ",
+                  "originalText": "the",
+                  "before": " ",
+                  "index": 6,
+                  "pos": "DT"
+                }
+              },
+              "DT"
+            ],
+            [
+              {
+                "nlpToken": {
+                  "characterOffsetBegin": 4947,
+                  "word": "email",
+                  "lemma": "email",
+                  "characterOffsetEnd": 4952,
+                  "speaker": "PER0",
+                  "ner": "O",
+                  "after": " ",
+                  "originalText": "email",
+                  "before": " ",
+                  "index": 7,
+                  "pos": "NN"
+                }
+              },
+              "NN"
+            ],
+            [
+              {
+                "nlpToken": {
+                  "characterOffsetBegin": 4953,
+                  "word": "server",
+                  "lemma": "server",
+                  "characterOffsetEnd": 4959,
+                  "speaker": "PER0",
+                  "ner": "O",
+                  "after": " ",
+                  "originalText": "server",
+                  "before": " ",
+                  "index": 8,
+                  "pos": "NN"
+                }
+              },
+              "NN"
+            ],
+            [
+              {
+                "nlpToken": {
+                  "characterOffsetBegin": 4960,
+                  "word": "scandal",
+                  "lemma": "scandal",
+                  "characterOffsetEnd": 4967,
+                  "speaker": "PER0",
+                  "ner": "O",
+                  "after": " ",
+                  "originalText": "scandal",
+                  "before": " ",
+                  "index": 9,
+                  "pos": "NN"
+                }
+              },
+              "NN"
+            ],
+            [
+              {
+                "nlpToken": {
+                  "characterOffsetBegin": 4968,
+                  "word": "is",
+                  "lemma": "be",
+                  "characterOffsetEnd": 4970,
+                  "speaker": "PER0",
+                  "ner": "O",
+                  "after": " ",
+                  "originalText": "is",
+                  "before": " ",
+                  "index": 10,
+                  "pos": "VBZ"
+                }
+              },
+              "VBZ"
+            ],
+            [
+              {
+                "nlpToken": {
+                  "characterOffsetBegin": 4971,
+                  "word": "far",
+                  "lemma": "far",
+                  "characterOffsetEnd": 4974,
+                  "speaker": "PER0",
+                  "ner": "O",
+                  "after": " ",
+                  "originalText": "far",
+                  "before": " ",
+                  "index": 11,
+                  "pos": "RB"
+                }
+              },
+              "RB"
+            ],
+            [
+              {
+                "nlpToken": {
+                  "characterOffsetBegin": 4975,
+                  "word": "from",
+                  "lemma": "from",
+                  "characterOffsetEnd": 4979,
+                  "speaker": "PER0",
+                  "ner": "O",
+                  "after": " ",
+                  "originalText": "from",
+                  "before": " ",
+                  "index": 12,
+                  "pos": "IN"
+                }
+              },
+              "IN"
+            ],
+            [
+              {
+                "nlpToken": {
+                  "characterOffsetBegin": 4980,
+                  "word": "over",
+                  "lemma": "over",
+                  "characterOffsetEnd": 4984,
+                  "speaker": "PER0",
+                  "ner": "O",
+                  "after": "",
+                  "originalText": "over",
+                  "before": " ",
+                  "index": 13,
+                  "pos": "IN"
+                }
+              },
+              "IN"
             ]
           ],
-          "nlpIndexSentence": 5,
-          "score": 1.0
+          "score": 1.0,
+          "text": "Republicans , it seems the email server scandal is far from over",
+          "nlpIndexSentence": 2
         }
-      ],
+      ]
+    },
+    "where": {
       "annotated": [
         {
           "text": "Detroit",
@@ -267,9 +333,15 @@
       "label": "where"
     },
     "what": {
+      "annotated": [
+        {
+          "text": "Donald Trump attacks the FBI",
+          "coderPhraseCount": 3
+        }
+      ],
+      "label": "what",
       "extracted": [
         {
-          "text": "is guilty",
           "parts": [
             [
               {
@@ -308,16 +380,10 @@
               "JJ"
             ]
           ],
-          "score": 1.0
+          "score": 1.0,
+          "text": "is guilty"
         }
-      ],
-      "annotated": [
-        {
-          "text": "Donald Trump attacks the FBI",
-          "coderPhraseCount": 3
-        }
-      ],
-      "label": "what"
+      ]
     }
   },
   "description": "Donald Trump attacks the FBI after it exonerates Hillary Clinton again, as the campaign's last day looms.",

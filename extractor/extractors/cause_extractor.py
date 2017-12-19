@@ -16,7 +16,7 @@ class CauseExtractor(AbsExtractor):
 
     adverbial_indicators = ['therefore', 'hence', 'thus', 'consequently', 'accordingly']  # 'so' has problems with JJ
     causal_conjunctions = {'consequence': 'of', 'effect': 'of', 'result': 'of', 'upshot': 'of', 'outcome': 'of',
-                            'because': '', 'due': 'to', 'stemmed': 'from'}
+                           'because': '', 'due': 'to', 'stemmed': 'from'}
 
     # list of verbs for the detection of cause-effect relations within NP-VP-NP patterns
     # this list and the TODO
@@ -90,7 +90,7 @@ class CauseExtractor(AbsExtractor):
             for candidate in self._evaluate_tree(tree):
                 candidateObject = Candidate()
                 # used by the extractor
-                candidateObject.set_raw(candidate[0]) # candidate[0] contains the cause, candidate[1] the effect
+                candidateObject.set_raw(candidate[0])  # candidate[0] contains the cause, candidate[1] the effect
                 candidateObject.set_type(candidate[2])
                 candidateObject.set_sentence_index(i)
 
@@ -214,7 +214,7 @@ class CauseExtractor(AbsExtractor):
 
             elif token in self.causal_conjunctions and ' '.join(
                     [x['nlpToken']['originalText'] for x in tokens[i:]]).lower().startswith(
-                    self.causal_conjunctions[token]):
+                self.causal_conjunctions[token]):
                 # Check if token is a clausal conjunction indicating causation
                 candidates.append(deepcopy([pos[i - 1:], pos[:i], 'biclausal']))
 

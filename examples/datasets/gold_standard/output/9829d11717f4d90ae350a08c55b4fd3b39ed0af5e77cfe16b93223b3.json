@@ -1,282 +1,38 @@
 {
+  "originalFilename": "bbc-4",
+  "category": "cubs win championship",
+  "publisher": "bbc",
+  "url": "http://www.bbc.com/sport/baseball/37857919",
+  "mimeType": "text/xml",
   "filename": "9829d11717f4d90ae350a08c55b4fd3b39ed0af5e77cfe16b93223b3",
   "title": "Chicago Cubs win World Series: 'Baseball will never be the same again'",
-  "mimeType": "text/xml",
-  "parsingError": "true",
-  "date_publish": "2016-11-03 00:00:00",
+  "dId": "9829d11717f4d90ae350a08c55b4fd3b39ed0af5e77cfe16b93223b3",
   "fiveWoneH": {
-    "who": {
-      "extracted": [
-        {
-          "text": "Chicago Cubs",
-          "parts": [
-            [
-              {
-                "nlpToken": {
-                  "characterOffsetBegin": 0,
-                  "word": "Chicago",
-                  "lemma": "Chicago",
-                  "characterOffsetEnd": 7,
-                  "speaker": "PER0",
-                  "ner": "LOCATION",
-                  "after": " ",
-                  "originalText": "Chicago",
-                  "before": "",
-                  "index": 1,
-                  "pos": "NNP"
-                }
-              },
-              "NNP"
-            ],
-            [
-              {
-                "nlpToken": {
-                  "characterOffsetBegin": 8,
-                  "word": "Cubs",
-                  "lemma": "Cubs",
-                  "characterOffsetEnd": 12,
-                  "speaker": "PER0",
-                  "ner": "ORGANIZATION",
-                  "after": " ",
-                  "originalText": "Cubs",
-                  "before": " ",
-                  "index": 2,
-                  "pos": "NNP"
-                }
-              },
-              "NNP"
-            ]
-          ],
-          "score": 1.0
-        }
-      ],
-      "annotated": [
-        {
-          "text": "Chicago Cubs",
-          "coderPhraseCount": 3
-        }
-      ],
-      "label": "who"
-    },
-    "when": {
-      "extracted": [
-        {
-          "text": "00:48",
-          "enhancement": {
-            "timex": {
-              "start_date": "2016-11-03T00:48:00",
-              "end_date": "2016-11-03T00:48:59"
-            }
-          },
-          "parts": [
-            [
-              {
-                "nlpToken": {
-                  "after": " ",
-                  "word": "00:48",
-                  "lemma": "00:48",
-                  "timex": {
-                    "value": "2016-11-03T00:48",
-                    "tid": "t2",
-                    "type": "TIME"
-                  },
-                  "before": " ",
-                  "characterOffsetEnd": 367,
-                  "pos": "CD",
-                  "normalizedNER": "2016-11-03T00:48",
-                  "speaker": "PER0",
-                  "ner": "TIME",
-                  "characterOffsetBegin": 362,
-                  "originalText": "00:48",
-                  "index": 2
-                }
-              },
-              "CD"
-            ]
-          ],
-          "nlpIndexSentence": 3,
-          "score": 0.8722499173706645
-        }
-      ],
-      "annotated": [
-        {
-          "text": "00:48",
-          "coderPhraseCount": 3
-        }
-      ],
-      "label": "when"
-    },
-    "how": {
-      "extracted": [
-        {
-          "text": "never",
-          "parts": [
-            [
-              {
-                "nlpToken": {
-                  "characterOffsetBegin": 46,
-                  "word": "never",
-                  "lemma": "never",
-                  "characterOffsetEnd": 51,
-                  "speaker": "PER0",
-                  "ner": "O",
-                  "after": " ",
-                  "originalText": "never",
-                  "before": " ",
-                  "index": 10,
-                  "pos": "RB"
-                }
-              },
-              "RB"
-            ]
-          ],
-          "score": 1.0
-        }
-      ],
-      "annotated": [
-        {
-          "text": "chopped a groundball",
-          "coderPhraseCount": 2
-        }
-      ],
-      "label": "how"
-    },
-    "where": {
-      "extracted": [
-        {
-          "text": "Chicago",
-          "enhancement": {
-            "openstreetmap_nominatim": {
-              "place_id": "178038280",
-              "licence": "Data \u00a9 OpenStreetMap contributors, ODbL 1.0. http://www.openstreetmap.org/copyright",
-              "type": "city",
-              "class": "place",
-              "osm_id": "122604",
-              "boundingbox": [
-                41.643919,
-                42.0230219,
-                -87.940101,
-                -87.5239841
-              ],
-              "osm_type": "relation",
-              "lon": "-87.6244212",
-              "display_name": "Chicago, Cook County, Illinois, United States of America",
-              "importance": 0.30566190262222,
-              "icon": "https://nominatim.openstreetmap.org/images/mapicons/poi_place_city.p.20.png",
-              "lat": "41.8755546"
-            }
-          },
-          "parts": [
-            [
-              {
-                "nlpToken": {
-                  "characterOffsetBegin": 0,
-                  "word": "Chicago",
-                  "lemma": "Chicago",
-                  "characterOffsetEnd": 7,
-                  "speaker": "PER0",
-                  "ner": "LOCATION",
-                  "after": " ",
-                  "originalText": "Chicago",
-                  "before": "",
-                  "index": 1,
-                  "pos": "NNP"
-                }
-              },
-              "NNP"
-            ]
-          ],
-          "score": 1.0000000000000002
-        }
-      ],
-      "annotated": [
-        {
-          "text": "Cleveland, Ohio",
-          "coderPhraseCount": 3
-        }
-      ],
-      "label": "where"
-    },
-    "why": {
-      "extracted": [
-        {
-          "text": "the Cubs",
-          "parts": [
-            [
-              {
-                "nlpToken": {
-                  "characterOffsetBegin": 1072,
-                  "word": "the",
-                  "lemma": "the",
-                  "speaker": "PER0",
-                  "after": " ",
-                  "pos": "DT",
-                  "ner": "O",
-                  "before": " ",
-                  "characterOffsetEnd": 1075,
-                  "index": 9,
-                  "originalText": "the"
-                }
-              },
-              "DT"
-            ],
-            [
-              {
-                "nlpToken": {
-                  "characterOffsetBegin": 1076,
-                  "word": "Cubs",
-                  "lemma": "Cubs",
-                  "speaker": "PER0",
-                  "after": " ",
-                  "pos": "NNP",
-                  "ner": "ORGANIZATION",
-                  "before": " ",
-                  "characterOffsetEnd": 1080,
-                  "index": 10,
-                  "originalText": "Cubs"
-                }
-              },
-              "NNP"
-            ]
-          ],
-          "nlpIndexSentence": 11,
-          "score": 0.398015873015873
-        }
-      ],
-      "annotated": [
-        {
-          "text": "came back after a rain delay to clinch the World Series",
-          "coderPhraseCount": 1
-        },
-        {
-          "text": "chopped a groundball to third base",
-          "coderPhraseCount": 1
-        },
-        {
-          "coderPhraseCount": 1
-        }
-      ],
-      "label": "why"
-    },
     "what": {
+      "annotated": [
+        {
+          "coderPhraseCount": 3,
+          "text": "win World Series"
+        }
+      ],
+      "label": "what",
       "extracted": [
         {
-          "text": "win World Series : ' Baseball",
           "parts": [
             [
               {
                 "nlpToken": {
-                  "characterOffsetBegin": 13,
+                  "before": " ",
                   "word": "win",
+                  "index": 3,
                   "lemma": "win",
-                  "characterOffsetEnd": 16,
-                  "speaker": "PER0",
+                  "characterOffsetBegin": 13,
+                  "pos": "VB",
+                  "originalText": "win",
                   "ner": "O",
                   "after": " ",
-                  "originalText": "win",
-                  "before": " ",
-                  "index": 3,
-                  "pos": "VB"
+                  "characterOffsetEnd": 16,
+                  "speaker": "PER0"
                 }
               },
               "VB"
@@ -284,17 +40,17 @@
             [
               {
                 "nlpToken": {
-                  "characterOffsetBegin": 17,
+                  "before": " ",
                   "word": "World",
+                  "index": 4,
                   "lemma": "World",
-                  "characterOffsetEnd": 22,
-                  "speaker": "PER0",
+                  "characterOffsetBegin": 17,
+                  "pos": "NNP",
+                  "originalText": "World",
                   "ner": "O",
                   "after": " ",
-                  "originalText": "World",
-                  "before": " ",
-                  "index": 4,
-                  "pos": "NNP"
+                  "characterOffsetEnd": 22,
+                  "speaker": "PER0"
                 }
               },
               "NNP"
@@ -302,17 +58,17 @@
             [
               {
                 "nlpToken": {
-                  "characterOffsetBegin": 23,
+                  "before": " ",
                   "word": "Series",
+                  "index": 5,
                   "lemma": "Series",
-                  "characterOffsetEnd": 29,
-                  "speaker": "PER0",
+                  "characterOffsetBegin": 23,
+                  "pos": "NNP",
+                  "originalText": "Series",
                   "ner": "O",
                   "after": "",
-                  "originalText": "Series",
-                  "before": " ",
-                  "index": 5,
-                  "pos": "NNP"
+                  "characterOffsetEnd": 29,
+                  "speaker": "PER0"
                 }
               },
               "NNP"
@@ -320,17 +76,17 @@
             [
               {
                 "nlpToken": {
-                  "characterOffsetBegin": 29,
+                  "before": "",
                   "word": ":",
+                  "index": 6,
                   "lemma": ":",
-                  "characterOffsetEnd": 30,
-                  "speaker": "PER0",
+                  "characterOffsetBegin": 29,
+                  "pos": ":",
+                  "originalText": ":",
                   "ner": "O",
                   "after": " ",
-                  "originalText": ":",
-                  "before": "",
-                  "index": 6,
-                  "pos": ":"
+                  "characterOffsetEnd": 30,
+                  "speaker": "PER0"
                 }
               },
               ":"
@@ -338,17 +94,17 @@
             [
               {
                 "nlpToken": {
-                  "characterOffsetBegin": 31,
+                  "before": " ",
                   "word": "`",
+                  "index": 7,
                   "lemma": "`",
-                  "characterOffsetEnd": 32,
-                  "speaker": "PER0",
+                  "characterOffsetBegin": 31,
+                  "pos": "``",
+                  "originalText": "'",
                   "ner": "O",
                   "after": "",
-                  "originalText": "'",
-                  "before": " ",
-                  "index": 7,
-                  "pos": "``"
+                  "characterOffsetEnd": 32,
+                  "speaker": "PER0"
                 }
               },
               "``"
@@ -356,39 +112,333 @@
             [
               {
                 "nlpToken": {
-                  "characterOffsetBegin": 32,
+                  "before": "",
                   "word": "Baseball",
+                  "index": 8,
                   "lemma": "Baseball",
-                  "characterOffsetEnd": 40,
-                  "speaker": "PER0",
+                  "characterOffsetBegin": 32,
+                  "pos": "NNP",
+                  "originalText": "Baseball",
                   "ner": "O",
                   "after": " ",
-                  "originalText": "Baseball",
-                  "before": "",
-                  "index": 8,
-                  "pos": "NNP"
+                  "characterOffsetEnd": 40,
+                  "speaker": "PER0"
                 }
               },
               "NNP"
             ]
           ],
-          "score": 1.0
+          "score": 1.0,
+          "text": "win World Series : ' Baseball"
         }
-      ],
+      ]
+    },
+    "how": {
       "annotated": [
         {
-          "text": "win World Series",
-          "coderPhraseCount": 3
+          "coderPhraseCount": 2,
+          "text": "chopped a groundball"
         }
       ],
-      "label": "what"
+      "label": "how",
+      "extracted": [
+        {
+          "parts": [
+            [
+              {
+                "nlpToken": {
+                  "before": " ",
+                  "word": "Epstein",
+                  "index": 6,
+                  "lemma": "epstein",
+                  "characterOffsetBegin": 7675,
+                  "pos": "NN",
+                  "originalText": "Epstein",
+                  "ner": "PERSON",
+                  "after": "",
+                  "characterOffsetEnd": 7682,
+                  "speaker": "PER0"
+                }
+              },
+              "NN"
+            ],
+            [
+              {
+                "nlpToken": {
+                  "before": "",
+                  "word": ",",
+                  "index": 7,
+                  "lemma": ",",
+                  "characterOffsetBegin": 7682,
+                  "pos": ",",
+                  "originalText": ",",
+                  "ner": "O",
+                  "after": " ",
+                  "characterOffsetEnd": 7683,
+                  "speaker": "PER0"
+                }
+              },
+              ","
+            ],
+            [
+              {
+                "nlpToken": {
+                  "before": " ",
+                  "word": "who",
+                  "index": 8,
+                  "lemma": "who",
+                  "characterOffsetBegin": 7684,
+                  "pos": "WP",
+                  "originalText": "who",
+                  "ner": "O",
+                  "after": " ",
+                  "characterOffsetEnd": 7687,
+                  "speaker": "PER0"
+                }
+              },
+              "WP"
+            ],
+            [
+              {
+                "nlpToken": {
+                  "before": " ",
+                  "word": "has",
+                  "index": 9,
+                  "lemma": "have",
+                  "characterOffsetBegin": 7688,
+                  "pos": "VBZ",
+                  "originalText": "has",
+                  "ner": "O",
+                  "after": " ",
+                  "characterOffsetEnd": 7691,
+                  "speaker": "PER0"
+                }
+              },
+              "VBZ"
+            ],
+            [
+              {
+                "nlpToken": {
+                  "before": " ",
+                  "word": "all",
+                  "index": 10,
+                  "lemma": "all",
+                  "characterOffsetBegin": 7692,
+                  "pos": "DT",
+                  "originalText": "all",
+                  "ner": "O",
+                  "after": " ",
+                  "characterOffsetEnd": 7695,
+                  "speaker": "PER0"
+                }
+              },
+              "DT"
+            ],
+            [
+              {
+                "nlpToken": {
+                  "before": " ",
+                  "word": "but",
+                  "index": 11,
+                  "lemma": "but",
+                  "characterOffsetBegin": 7696,
+                  "pos": "CC",
+                  "originalText": "but",
+                  "ner": "O",
+                  "after": " ",
+                  "characterOffsetEnd": 7699,
+                  "speaker": "PER0"
+                }
+              },
+              "CC"
+            ],
+            [
+              {
+                "nlpToken": {
+                  "before": " ",
+                  "word": "secured",
+                  "index": 12,
+                  "lemma": "secure",
+                  "characterOffsetBegin": 7700,
+                  "pos": "VBN",
+                  "originalText": "secured",
+                  "ner": "O",
+                  "after": " ",
+                  "characterOffsetEnd": 7707,
+                  "speaker": "PER0"
+                }
+              },
+              "VBN"
+            ],
+            [
+              {
+                "nlpToken": {
+                  "before": " ",
+                  "word": "a",
+                  "index": 13,
+                  "lemma": "a",
+                  "characterOffsetBegin": 7708,
+                  "pos": "DT",
+                  "originalText": "a",
+                  "ner": "O",
+                  "after": " ",
+                  "characterOffsetEnd": 7709,
+                  "speaker": "PER0"
+                }
+              },
+              "DT"
+            ],
+            [
+              {
+                "nlpToken": {
+                  "before": " ",
+                  "word": "place",
+                  "index": 14,
+                  "lemma": "place",
+                  "characterOffsetBegin": 7710,
+                  "pos": "NN",
+                  "originalText": "place",
+                  "ner": "O",
+                  "after": " ",
+                  "characterOffsetEnd": 7715,
+                  "speaker": "PER0"
+                }
+              },
+              "NN"
+            ],
+            [
+              {
+                "nlpToken": {
+                  "before": " ",
+                  "word": "in",
+                  "index": 15,
+                  "lemma": "in",
+                  "characterOffsetBegin": 7716,
+                  "pos": "IN",
+                  "originalText": "in",
+                  "ner": "O",
+                  "after": " ",
+                  "characterOffsetEnd": 7718,
+                  "speaker": "PER0"
+                }
+              },
+              "IN"
+            ],
+            [
+              {
+                "nlpToken": {
+                  "before": " ",
+                  "word": "the",
+                  "index": 16,
+                  "lemma": "the",
+                  "characterOffsetBegin": 7719,
+                  "pos": "DT",
+                  "originalText": "the",
+                  "ner": "O",
+                  "after": " ",
+                  "characterOffsetEnd": 7722,
+                  "speaker": "PER0"
+                }
+              },
+              "DT"
+            ]
+          ],
+          "score": 1.0,
+          "text": "Epstein , who has all but secured a place in the",
+          "nlpIndexSentence": 6
+        }
+      ]
+    },
+    "when": {
+      "annotated": [
+        {
+          "coderPhraseCount": 3,
+          "text": "00:48"
+        }
+      ],
+      "label": "when"
+    },
+    "why": {
+      "annotated": [
+        {
+          "coderPhraseCount": 1,
+          "text": "came back after a rain delay to clinch the World Series"
+        },
+        {
+          "coderPhraseCount": 1,
+          "text": "chopped a groundball to third base"
+        },
+        {
+          "coderPhraseCount": 1
+        }
+      ],
+      "label": "why"
+    },
+    "who": {
+      "annotated": [
+        {
+          "coderPhraseCount": 3,
+          "text": "Chicago Cubs"
+        }
+      ],
+      "label": "who",
+      "extracted": [
+        {
+          "parts": [
+            [
+              {
+                "nlpToken": {
+                  "before": "",
+                  "word": "Chicago",
+                  "index": 1,
+                  "lemma": "Chicago",
+                  "characterOffsetBegin": 0,
+                  "pos": "NNP",
+                  "originalText": "Chicago",
+                  "ner": "LOCATION",
+                  "after": " ",
+                  "characterOffsetEnd": 7,
+                  "speaker": "PER0"
+                }
+              },
+              "NNP"
+            ],
+            [
+              {
+                "nlpToken": {
+                  "before": " ",
+                  "word": "Cubs",
+                  "index": 2,
+                  "lemma": "Cubs",
+                  "characterOffsetBegin": 8,
+                  "pos": "NNP",
+                  "originalText": "Cubs",
+                  "ner": "ORGANIZATION",
+                  "after": " ",
+                  "characterOffsetEnd": 12,
+                  "speaker": "PER0"
+                }
+              },
+              "NNP"
+            ]
+          ],
+          "score": 1.0,
+          "text": "Chicago Cubs"
+        }
+      ]
+    },
+    "where": {
+      "annotated": [
+        {
+          "coderPhraseCount": 3,
+          "text": "Cleveland, Ohio"
+        }
+      ],
+      "label": "where"
     }
   },
   "description": "The goat curse, a tortured fanbase and a revolution - how Chicago Cubs ended 108 years of hurt by winning the World Series.",
+  "parsingError": "true",
   "text": "The Chicago Cubs were 3-1 down in the best-of-seven series and blew a three-run lead in the final game, but came back after a rain delay to clinch the World Series One of the greatest sports stories can now be written. At long last, the Chicago Cubs are champions of the baseball world. At 00:48 in Cleveland, Ohio, Michael Martinez of the hometown Indians chopped a groundball to third base. There, Kris Bryant scooped it up and fired across the diamond to Anthony Rizzo. When the ball landed in his glove, the World Series was over. So too was the Cubs' 108-year wait for a title, as a dream held by millions across numerous generations became reality. The Cubs, without a title since 1908, played seven exhilarating games against the Indians, who last won a championship in 1948. When combined, their droughts spanned 176 years. No other franchise had endured a longer wait, but there could only be one winner. Many thought this day would never arrive. A powerhouse of baseball's formative years, the Cubs played in three of the first five World Series, triumphing in 1907 and 1908. But then came a huge reversal of fortune, as fans endured over a century of failure, often in the most painful ways imaginable. Between 1910 and 1945, the Cubs won seven National League pennants, but lost each time in the World Series. Media playback is not supported on this device Chicago Cubs fans go wild after World Series win The drought was imbued with fresh intrigue in 1945, when a local tavern owner supposedly put a curse on the franchise. William Sianis, proprietor of the Billy Goat Tavern, took a goat to certain games at Wrigley Field, but he and his pet were refused admission to a World Series contest against the Detroit Tigers that year. According to legend, Sianis was so outraged he proclaimed the Cubs would never win another World Series. Surviving relatives say he even sent a telegram with such a declaration to team owner PK Wrigley. Sianis didn't have omnipotent baseball powers, but the Cubs' championship drought continued long after his death in 1970. In fact, it became the longest fallow period in the history of North American sports, as the Cubs waited 71 years for a World Series return, let alone a title. Along the way, several ghoulish incidents were attributed to the curse, such as an epic collapse in 1969 and a crucial groundball rolling through the legs of first baseman Leon Durham in a 1984 play-off game. Then there was Steve Bartman, a loyal fan who tangled with outfielder Moises Alou as he pursued a foul ball late in the sixth game of the 2003 National League Championship Series (NLCS). Up 3-0, the Cubs were five defensive outs away from returning to the World Series, but Alou's path to the ball was blocked and the Florida Marlins then scored eight unanswered runs before clinching the pennant in Game Seven. Theo Epstein was tasked with reversing this sorry narrative, and finally bringing a world title to the North Side. Among the best executives in baseball, Epstein masterminded two World Series triumphs as general manager of the Red Sox. Boston had a storied championship drought of its own, from 1918 until 2004. Epstein built a juggernaut and secured a further title in 2007, before Cubs owner Tom Ricketts hired him as president of baseball operations in 2011. Chicago Cubs leftfielder Ben Zobrist was named most valuable player of the World Series. It was the second consecutive year he has won the World Series after helping the Kansas City Royals to victory last season Jed Hoyer, one of Epstein's disciples, was appointed general manager, while player development expert Jason McLeod also joined the revolution. With smart use of cutting edge analytics and mastery of traditional scouting, they slowly changed the culture in Chicago. The Cubs finished last in each of their first four seasons, losing 94 out of 162 games per year on average. Yet much of that was by design, as Epstein and his vaunted front office looked to take advantage of rules regarding baseball's amateur draft. Each year, teams pick new players from high school or university, with the order of that selection process determined by win-loss record. The worse a team performs, the greater its chances of drafting a future superstar. Young players are also paid much less than veterans initially, affording teams far more flexibility on their payroll. This may seem like a perverse incentive to lose, but the Cubs used this strategy to replenish their organisation with elite young talent. Bryant won Rookie of the Year in 2015 before hitting 39 home runs this season. He formed a potent partnership with Rizzo, who has matured into a perennial candidate for the Most Valuable Player award. Other young stars on the team include flashy infielder Javy Baez, powerful slugger Schwarber and lithe shortstop Russell. Media playback is not supported on this device Is Chicago Cubs' 'Billy Goat Curse' finally over? To direct this talented group, Epstein lured well-respected manager Joe Maddon from Tampa Bay, and Chicago finally secured another NLCS berth under his influence in 2015. The New York Mets were too strong, but it was a huge step in the right direction for a team of apparent destiny. After adding veteran talent during the winter, Chicago finished with a 103-58 record this season, good enough to secure their first division title since 2008. The Cubs then beat San Francisco and Los Angeles in successive post-season rounds to clinch a trip back to the World Series. There, they faced the Indians, owners of baseball's second-longest championship drought. The last time Cleveland won a title, Jackie Robinson was just a year removed from integrating the Major Leagues. This clash of fates made for spectacular viewing, as two tortured fanbases dreamed and winced with every swing in momentum. Cleveland won game one 6-0, thanks to the dominant pitching of Corey Kluber and a big home run from catcher Roberto Perez. The Cubs rebounded to even the series with a 5-1 win, before Coco Crisp provided a huge pinch-hit, run-scoring single to win the third game for Cleveland 1-0. The Indians also took game four, a 7-2 win edging them within one victory of the Promised Land. Just as people began to question the Cubs, they embarked on a magical winning streak. A Bryant home run sparked a big rally to win game five 3-2 and, back at Progressive Field for game six, Chicago took advantage of a pivotal fielding misplay to score three runs in the first inning. A grand slam home run by Russell opened the floodgates, and game seven was confirmed as the Cubs ran out 9-3 victors. The deciding contest had innumerable twists, and displayed extremes of raw emotion that will never be forgotten. Chicago fans take to the streets to celebrate the Chicago Cubs victory after an 108 year wait When Rizzo squeezed the final ball in his mitt, wild celebrations engulfed the field. Players collapsed in a heap of collective happiness, before the golden trophy was presented. There was no trophy back in 1908. There were no mobile phones or internet, no radio or television, no mass-produced cars or even sliced bread. That underscores the magnitude of this moment. This was a victory for the dedicated fans who had waited 39,467 days between championships. It was a victory for all those great players who never experienced success with the Cubs, from Hack Wilson and Ernie Banks, to Ron Santo and Sammy Sosa. It was a victory that will motivate people to place Cubs caps on the gravestones of bygone loved ones and celebrate with those who shared this journey. It was a victory for Epstein, who has all but secured a place in the Hall of Fame. It was a victory for Zobrist, who was crowned World Series MVP. And yes, it was a victory for Steve Bartman, who can now enjoy a normal life. \"There's no way to describe how we feel right now,\" said Maddon. \"It frees everybody up, and the trajectory of this organisation really sets us up for many years to come.\" That's for another day. Right now, it's time to celebrate in Chicago. They finally did it, and baseball will never be the same again.",
-  "url": "http://www.bbc.com/sport/baseball/37857919",
-  "publisher": "bbc",
-  "originalFilename": "bbc-4",
-  "category": "cubs win championship",
-  "dId": "9829d11717f4d90ae350a08c55b4fd3b39ed0af5e77cfe16b93223b3"
+  "date_publish": "2016-11-03 00:00:00"
 }

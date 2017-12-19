@@ -6,9 +6,15 @@
   "category": "china well",
   "fiveWoneH": {
     "who": {
+      "annotated": [
+        {
+          "text": "Chinese boy",
+          "coderPhraseCount": 3
+        }
+      ],
+      "label": "who",
       "extracted": [
         {
-          "text": "The boy",
           "parts": [
             [
               {
@@ -47,58 +53,13 @@
               "NN"
             ]
           ],
-          "nlpIndexSentence": 5,
-          "score": 1.0
+          "score": 1.0,
+          "text": "The boy",
+          "nlpIndexSentence": 5
         }
-      ],
-      "annotated": [
-        {
-          "text": "Chinese boy",
-          "coderPhraseCount": 3
-        }
-      ],
-      "label": "who"
+      ]
     },
     "when": {
-      "extracted": [
-        {
-          "text": "Sunday",
-          "enhancement": {
-            "timex": {
-              "start_date": "2016-11-06T00:00:00",
-              "end_date": "2016-11-06T23:59:59"
-            }
-          },
-          "parts": [
-            [
-              {
-                "nlpToken": {
-                  "characterOffsetBegin": 320,
-                  "word": "Sunday",
-                  "lemma": "Sunday",
-                  "timex": {
-                    "value": "2016-11-06",
-                    "tid": "t4",
-                    "type": "DATE"
-                  },
-                  "before": " ",
-                  "characterOffsetEnd": 326,
-                  "originalText": "Sunday",
-                  "normalizedNER": "2016-11-06",
-                  "speaker": "PER0",
-                  "after": "",
-                  "ner": "DATE",
-                  "index": 15,
-                  "pos": "NNP"
-                }
-              },
-              "NNP"
-            ]
-          ],
-          "nlpIndexSentence": 1,
-          "score": 0.8605951616901534
-        }
-      ],
       "annotated": [
         {
           "text": "Sunday",
@@ -109,57 +70,6 @@
       "label": "when"
     },
     "why": {
-      "extracted": [
-        {
-          "text": "The six-year-old",
-          "parts": [
-            [
-              {
-                "nlpToken": {
-                  "characterOffsetBegin": 226,
-                  "word": "The",
-                  "lemma": "the",
-                  "speaker": "PER0",
-                  "after": " ",
-                  "pos": "DT",
-                  "ner": "O",
-                  "before": " ",
-                  "characterOffsetEnd": 229,
-                  "index": 1,
-                  "originalText": "The"
-                }
-              },
-              "DT"
-            ],
-            [
-              {
-                "nlpToken": {
-                  "characterOffsetBegin": 230,
-                  "word": "six-year-old",
-                  "lemma": "six-year-old",
-                  "timex": {
-                    "value": "P6Y",
-                    "tid": "t3",
-                    "type": "DURATION"
-                  },
-                  "characterOffsetEnd": 242,
-                  "before": " ",
-                  "after": " ",
-                  "originalText": "six-year-old",
-                  "normalizedNER": "P6Y",
-                  "speaker": "PER0",
-                  "ner": "DURATION",
-                  "index": 2,
-                  "pos": "NN"
-                }
-              },
-              "NN"
-            ]
-          ],
-          "nlpIndexSentence": 1,
-          "score": 0.4103896103896104
-        }
-      ],
       "annotated": [
         {
           "text": "trapped down an abandoned well",
@@ -173,33 +83,6 @@
       "label": "why"
     },
     "how": {
-      "extracted": [
-        {
-          "text": "well",
-          "parts": [
-            [
-              {
-                "nlpToken": {
-                  "characterOffsetBegin": 579,
-                  "word": "well",
-                  "lemma": "well",
-                  "characterOffsetEnd": 583,
-                  "speaker": "PER0",
-                  "ner": "O",
-                  "after": " ",
-                  "originalText": "well",
-                  "before": " ",
-                  "index": 6,
-                  "pos": "RB"
-                }
-              },
-              "RB"
-            ]
-          ],
-          "nlpIndexSentence": 4,
-          "score": 1.0
-        }
-      ],
       "annotated": [
         {
           "text": "harvesting vegetables",
@@ -210,75 +93,35 @@
           "coderPhraseCount": 2
         }
       ],
-      "label": "how"
-    },
-    "where": {
+      "label": "how",
       "extracted": [
         {
-          "text": "Hebei province",
-          "enhancement": {
-            "openstreetmap_nominatim": {
-              "place_id": "178007307",
-              "licence": "Data \u00a9 OpenStreetMap contributors, ODbL 1.0. http://www.openstreetmap.org/copyright",
-              "type": "administrative",
-              "class": "boundary",
-              "osm_id": "912998",
-              "boundingbox": [
-                36.0462227,
-                42.6176407,
-                113.4602737,
-                121.0248711
-              ],
-              "osm_type": "relation",
-              "lon": "116",
-              "display_name": "\u6cb3\u5317\u7701, \u4e2d\u56fd",
-              "importance": 0.16311000924312,
-              "icon": "https://nominatim.openstreetmap.org/images/mapicons/poi_boundary_administrative.p.20.png",
-              "lat": "39.0000001"
-            }
-          },
           "parts": [
             [
               {
                 "nlpToken": {
-                  "characterOffsetBegin": 274,
-                  "word": "Hebei",
-                  "lemma": "Hebei",
-                  "characterOffsetEnd": 279,
+                  "characterOffsetBegin": 160,
+                  "word": "well",
+                  "lemma": "well",
+                  "characterOffsetEnd": 164,
                   "speaker": "PER0",
-                  "ner": "LOCATION",
+                  "ner": "O",
                   "after": " ",
-                  "originalText": "Hebei",
+                  "originalText": "well",
                   "before": " ",
-                  "index": 9,
-                  "pos": "NNP"
+                  "index": 29,
+                  "pos": "RB"
                 }
               },
-              "NNP"
-            ],
-            [
-              {
-                "nlpToken": {
-                  "characterOffsetBegin": 280,
-                  "word": "province",
-                  "lemma": "province",
-                  "characterOffsetEnd": 288,
-                  "speaker": "PER0",
-                  "ner": "LOCATION",
-                  "after": " ",
-                  "originalText": "province",
-                  "before": " ",
-                  "index": 10,
-                  "pos": "NN"
-                }
-              },
-              "NN"
+              "RB"
             ]
           ],
-          "nlpIndexSentence": 1,
-          "score": 1.0
+          "score": 1.0,
+          "text": "well"
         }
-      ],
+      ]
+    },
+    "where": {
       "annotated": [
         {
           "text": "Hebei province",
@@ -288,9 +131,19 @@
       "label": "where"
     },
     "what": {
+      "annotated": [
+        {
+          "text": "found dead",
+          "coderPhraseCount": 3
+        },
+        {
+          "text": "four-day rescue operation",
+          "coderPhraseCount": 2
+        }
+      ],
+      "label": "what",
       "extracted": [
         {
-          "text": "was found without signs",
           "parts": [
             [
               {
@@ -365,21 +218,11 @@
               "NNS"
             ]
           ],
-          "nlpIndexSentence": 5,
-          "score": 1.0
+          "score": 1.0,
+          "text": "was found without signs",
+          "nlpIndexSentence": 5
         }
-      ],
-      "annotated": [
-        {
-          "text": "found dead",
-          "coderPhraseCount": 3
-        },
-        {
-          "text": "four-day rescue operation",
-          "coderPhraseCount": 2
-        }
-      ],
-      "label": "what"
+      ]
     }
   },
   "description": "A Chinese boy trapped down an abandoned well is found dead, after a four-day rescue operation.",

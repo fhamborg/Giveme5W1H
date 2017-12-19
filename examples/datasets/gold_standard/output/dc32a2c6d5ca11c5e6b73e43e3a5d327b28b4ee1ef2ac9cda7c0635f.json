@@ -6,9 +6,19 @@
   "category": "tram",
   "fiveWoneH": {
     "who": {
+      "annotated": [
+        {
+          "text": "At least seven people",
+          "coderPhraseCount": 2
+        },
+        {
+          "text": "driver",
+          "coderPhraseCount": 2
+        }
+      ],
+      "label": "who",
       "extracted": [
         {
-          "text": "The driver",
           "parts": [
             [
               {
@@ -47,86 +57,13 @@
               "NN"
             ]
           ],
-          "nlpIndexSentence": 5,
-          "score": 1.0
+          "score": 1.0,
+          "text": "The driver",
+          "nlpIndexSentence": 5
         }
-      ],
-      "annotated": [
-        {
-          "text": "At least seven people",
-          "coderPhraseCount": 2
-        },
-        {
-          "text": "driver",
-          "coderPhraseCount": 2
-        }
-      ],
-      "label": "who"
+      ]
     },
     "when": {
-      "extracted": [
-        {
-          "text": "8 a.m.",
-          "enhancement": {
-            "timex": {
-              "start_date": "2016-11-08T08:00:00",
-              "end_date": "2016-11-08T08:00:59"
-            }
-          },
-          "parts": [
-            [
-              {
-                "nlpToken": {
-                  "characterOffsetBegin": 4440,
-                  "word": "8",
-                  "lemma": "8",
-                  "timex": {
-                    "value": "2016-11-08T08:00",
-                    "tid": "t14",
-                    "type": "TIME"
-                  },
-                  "before": " ",
-                  "characterOffsetEnd": 4441,
-                  "originalText": "8",
-                  "normalizedNER": "2016-11-08T08:00",
-                  "speaker": "220",
-                  "after": " ",
-                  "ner": "TIME",
-                  "index": 13,
-                  "pos": "CD"
-                }
-              },
-              "CD"
-            ],
-            [
-              {
-                "nlpToken": {
-                  "characterOffsetBegin": 4442,
-                  "word": "a.m.",
-                  "lemma": "a.m.",
-                  "timex": {
-                    "value": "2016-11-08T08:00",
-                    "tid": "t14",
-                    "type": "TIME"
-                  },
-                  "before": " ",
-                  "characterOffsetEnd": 4446,
-                  "originalText": "a.m.",
-                  "normalizedNER": "2016-11-08T08:00",
-                  "speaker": "220",
-                  "after": " ",
-                  "ner": "TIME",
-                  "index": 14,
-                  "pos": "NN"
-                }
-              },
-              "NN"
-            ]
-          ],
-          "nlpIndexSentence": 38,
-          "score": 0.7401993772472077
-        }
-      ],
       "annotated": [
         {
           "text": "Wednesday morning",
@@ -142,87 +79,6 @@
       "label": "when"
     },
     "why": {
-      "extracted": [
-        {
-          "text": "more than 50 others",
-          "parts": [
-            [
-              {
-                "nlpToken": {
-                  "characterOffsetBegin": 38,
-                  "word": "more",
-                  "lemma": "more",
-                  "speaker": "PER0",
-                  "after": " ",
-                  "pos": "JJR",
-                  "ner": "O",
-                  "before": " ",
-                  "characterOffsetEnd": 42,
-                  "index": 8,
-                  "originalText": "more"
-                }
-              },
-              "JJR"
-            ],
-            [
-              {
-                "nlpToken": {
-                  "characterOffsetBegin": 43,
-                  "word": "than",
-                  "lemma": "than",
-                  "speaker": "PER0",
-                  "after": " ",
-                  "pos": "IN",
-                  "ner": "O",
-                  "before": " ",
-                  "characterOffsetEnd": 47,
-                  "index": 9,
-                  "originalText": "than"
-                }
-              },
-              "IN"
-            ],
-            [
-              {
-                "nlpToken": {
-                  "characterOffsetBegin": 48,
-                  "word": "50",
-                  "lemma": "50",
-                  "characterOffsetEnd": 50,
-                  "before": " ",
-                  "after": " ",
-                  "originalText": "50",
-                  "normalizedNER": ">50.0",
-                  "speaker": "PER0",
-                  "ner": "NUMBER",
-                  "index": 10,
-                  "pos": "CD"
-                }
-              },
-              "CD"
-            ],
-            [
-              {
-                "nlpToken": {
-                  "characterOffsetBegin": 51,
-                  "word": "others",
-                  "lemma": "other",
-                  "speaker": "PER0",
-                  "after": " ",
-                  "pos": "NNS",
-                  "ner": "O",
-                  "before": " ",
-                  "characterOffsetEnd": 57,
-                  "index": 11,
-                  "originalText": "others"
-                }
-              },
-              "NNS"
-            ]
-          ],
-          "score": 0.42857142857142855
-        }
-      ],
       "annotated": [
         {
           "coderPhraseCount": 3
@@ -231,107 +87,492 @@
       "label": "why"
     },
     "how": {
-      "extracted": [
-        {
-          "text": "was praying",
-          "parts": [
-            [
-              {
-                "nlpToken": {
-                  "characterOffsetBegin": 2001,
-                  "word": "was",
-                  "lemma": "be",
-                  "characterOffsetEnd": 2004,
-                  "speaker": "94",
-                  "ner": "O",
-                  "after": " ",
-                  "originalText": "was",
-                  "before": " ",
-                  "index": 5,
-                  "pos": "VBD"
-                }
-              },
-              "VBD"
-            ],
-            [
-              {
-                "nlpToken": {
-                  "characterOffsetBegin": 2005,
-                  "word": "praying",
-                  "lemma": "pray",
-                  "characterOffsetEnd": 2012,
-                  "speaker": "94",
-                  "ner": "O",
-                  "after": " ",
-                  "originalText": "praying",
-                  "before": " ",
-                  "index": 6,
-                  "pos": "VBG"
-                }
-              },
-              "VBG"
-            ]
-          ],
-          "nlpIndexSentence": 16,
-          "score": 1.0
-        }
-      ],
       "annotated": [
         {
           "text": "derailed and overturned",
           "coderPhraseCount": 3
         }
       ],
-      "label": "how"
-    },
-    "where": {
+      "label": "how",
       "extracted": [
         {
-          "text": "London",
-          "enhancement": {
-            "openstreetmap_nominatim": {
-              "place_id": "179118272",
-              "licence": "Data \u00a9 OpenStreetMap contributors, ODbL 1.0. http://www.openstreetmap.org/copyright",
-              "type": "city",
-              "class": "place",
-              "osm_id": "65606",
-              "boundingbox": [
-                51.2867602,
-                51.6918741,
-                -0.5103751,
-                0.3340155
-              ],
-              "osm_type": "relation",
-              "lon": "-0.1276474",
-              "display_name": "London, Greater London, England, UK",
-              "importance": 0.32637239413505,
-              "icon": "https://nominatim.openstreetmap.org/images/mapicons/poi_place_city.p.20.png",
-              "lat": "51.5073219"
-            }
-          },
           "parts": [
             [
               {
                 "nlpToken": {
-                  "characterOffsetBegin": 165,
-                  "word": "London",
-                  "lemma": "London",
-                  "characterOffsetEnd": 171,
-                  "speaker": "PER0",
-                  "ner": "LOCATION",
-                  "after": "",
-                  "originalText": "London",
+                  "characterOffsetBegin": 579,
+                  "word": "us",
+                  "lemma": "we",
+                  "characterOffsetEnd": 581,
+                  "speaker": "35",
+                  "ner": "O",
+                  "after": " ",
+                  "originalText": "us",
                   "before": " ",
-                  "index": 30,
-                  "pos": "NNP"
+                  "index": 7,
+                  "pos": "PRP"
                 }
               },
-              "NNP"
+              "PRP"
+            ],
+            [
+              {
+                "nlpToken": {
+                  "characterOffsetBegin": 582,
+                  "word": "to",
+                  "lemma": "to",
+                  "characterOffsetEnd": 584,
+                  "speaker": "35",
+                  "ner": "O",
+                  "after": " ",
+                  "originalText": "to",
+                  "before": " ",
+                  "index": 8,
+                  "pos": "TO"
+                }
+              },
+              "TO"
+            ],
+            [
+              {
+                "nlpToken": {
+                  "characterOffsetBegin": 585,
+                  "word": "confirm",
+                  "lemma": "confirm",
+                  "characterOffsetEnd": 592,
+                  "speaker": "35",
+                  "ner": "O",
+                  "after": " ",
+                  "originalText": "confirm",
+                  "before": " ",
+                  "index": 9,
+                  "pos": "VB"
+                }
+              },
+              "VB"
+            ],
+            [
+              {
+                "nlpToken": {
+                  "characterOffsetBegin": 593,
+                  "word": "numbers",
+                  "lemma": "number",
+                  "characterOffsetEnd": 600,
+                  "speaker": "35",
+                  "ner": "O",
+                  "after": " ",
+                  "originalText": "numbers",
+                  "before": " ",
+                  "index": 10,
+                  "pos": "NNS"
+                }
+              },
+              "NNS"
+            ],
+            [
+              {
+                "nlpToken": {
+                  "characterOffsetBegin": 601,
+                  "word": "but",
+                  "lemma": "but",
+                  "characterOffsetEnd": 604,
+                  "speaker": "35",
+                  "ner": "O",
+                  "after": " ",
+                  "originalText": "but",
+                  "before": " ",
+                  "index": 11,
+                  "pos": "CC"
+                }
+              },
+              "CC"
+            ],
+            [
+              {
+                "nlpToken": {
+                  "characterOffsetBegin": 605,
+                  "word": "we",
+                  "lemma": "we",
+                  "characterOffsetEnd": 607,
+                  "speaker": "35",
+                  "ner": "O",
+                  "after": " ",
+                  "originalText": "we",
+                  "before": " ",
+                  "index": 12,
+                  "pos": "PRP"
+                }
+              },
+              "PRP"
+            ],
+            [
+              {
+                "nlpToken": {
+                  "characterOffsetBegin": 608,
+                  "word": "are",
+                  "lemma": "be",
+                  "characterOffsetEnd": 611,
+                  "speaker": "35",
+                  "ner": "O",
+                  "after": " ",
+                  "originalText": "are",
+                  "before": " ",
+                  "index": 13,
+                  "pos": "VBP"
+                }
+              },
+              "VBP"
+            ],
+            [
+              {
+                "nlpToken": {
+                  "characterOffsetBegin": 612,
+                  "word": "working",
+                  "lemma": "work",
+                  "characterOffsetEnd": 619,
+                  "speaker": "35",
+                  "ner": "O",
+                  "after": " ",
+                  "originalText": "working",
+                  "before": " ",
+                  "index": 14,
+                  "pos": "VBG"
+                }
+              },
+              "VBG"
+            ],
+            [
+              {
+                "nlpToken": {
+                  "characterOffsetBegin": 620,
+                  "word": "hard",
+                  "lemma": "hard",
+                  "characterOffsetEnd": 624,
+                  "speaker": "35",
+                  "ner": "O",
+                  "after": " ",
+                  "originalText": "hard",
+                  "before": " ",
+                  "index": 15,
+                  "pos": "RB"
+                }
+              },
+              "RB"
+            ],
+            [
+              {
+                "nlpToken": {
+                  "characterOffsetBegin": 625,
+                  "word": "to",
+                  "lemma": "to",
+                  "characterOffsetEnd": 627,
+                  "speaker": "35",
+                  "ner": "O",
+                  "after": " ",
+                  "originalText": "to",
+                  "before": " ",
+                  "index": 16,
+                  "pos": "TO"
+                }
+              },
+              "TO"
+            ],
+            [
+              {
+                "nlpToken": {
+                  "characterOffsetBegin": 628,
+                  "word": "assess",
+                  "lemma": "assess",
+                  "characterOffsetEnd": 634,
+                  "speaker": "35",
+                  "ner": "O",
+                  "after": " ",
+                  "originalText": "assess",
+                  "before": " ",
+                  "index": 17,
+                  "pos": "VB"
+                }
+              },
+              "VB"
+            ],
+            [
+              {
+                "nlpToken": {
+                  "characterOffsetBegin": 635,
+                  "word": "the",
+                  "lemma": "the",
+                  "characterOffsetEnd": 638,
+                  "speaker": "35",
+                  "ner": "O",
+                  "after": " ",
+                  "originalText": "the",
+                  "before": " ",
+                  "index": 18,
+                  "pos": "DT"
+                }
+              },
+              "DT"
+            ],
+            [
+              {
+                "nlpToken": {
+                  "characterOffsetBegin": 639,
+                  "word": "ongoing",
+                  "lemma": "ongoing",
+                  "characterOffsetEnd": 646,
+                  "speaker": "35",
+                  "ner": "O",
+                  "after": " ",
+                  "originalText": "ongoing",
+                  "before": " ",
+                  "index": 19,
+                  "pos": "JJ"
+                }
+              },
+              "JJ"
+            ],
+            [
+              {
+                "nlpToken": {
+                  "characterOffsetBegin": 647,
+                  "word": "incident",
+                  "lemma": "incident",
+                  "characterOffsetEnd": 655,
+                  "speaker": "35",
+                  "ner": "O",
+                  "after": " ",
+                  "originalText": "incident",
+                  "before": " ",
+                  "index": 20,
+                  "pos": "NN"
+                }
+              },
+              "NN"
+            ],
+            [
+              {
+                "nlpToken": {
+                  "characterOffsetBegin": 656,
+                  "word": "and",
+                  "lemma": "and",
+                  "characterOffsetEnd": 659,
+                  "speaker": "35",
+                  "ner": "O",
+                  "after": " ",
+                  "originalText": "and",
+                  "before": " ",
+                  "index": 21,
+                  "pos": "CC"
+                }
+              },
+              "CC"
+            ],
+            [
+              {
+                "nlpToken": {
+                  "characterOffsetBegin": 660,
+                  "word": "are",
+                  "lemma": "be",
+                  "characterOffsetEnd": 663,
+                  "speaker": "35",
+                  "ner": "O",
+                  "after": " ",
+                  "originalText": "are",
+                  "before": " ",
+                  "index": 22,
+                  "pos": "VBP"
+                }
+              },
+              "VBP"
+            ],
+            [
+              {
+                "nlpToken": {
+                  "characterOffsetBegin": 664,
+                  "word": "continuing",
+                  "lemma": "continue",
+                  "characterOffsetEnd": 674,
+                  "speaker": "35",
+                  "ner": "O",
+                  "after": " ",
+                  "originalText": "continuing",
+                  "before": " ",
+                  "index": 23,
+                  "pos": "VBG"
+                }
+              },
+              "VBG"
+            ],
+            [
+              {
+                "nlpToken": {
+                  "characterOffsetBegin": 675,
+                  "word": "to",
+                  "lemma": "to",
+                  "characterOffsetEnd": 677,
+                  "speaker": "35",
+                  "ner": "O",
+                  "after": " ",
+                  "originalText": "to",
+                  "before": " ",
+                  "index": 24,
+                  "pos": "TO"
+                }
+              },
+              "TO"
+            ],
+            [
+              {
+                "nlpToken": {
+                  "characterOffsetBegin": 678,
+                  "word": "focus",
+                  "lemma": "focus",
+                  "characterOffsetEnd": 683,
+                  "speaker": "35",
+                  "ner": "O",
+                  "after": " ",
+                  "originalText": "focus",
+                  "before": " ",
+                  "index": 25,
+                  "pos": "VB"
+                }
+              },
+              "VB"
+            ],
+            [
+              {
+                "nlpToken": {
+                  "characterOffsetBegin": 684,
+                  "word": "on",
+                  "lemma": "on",
+                  "characterOffsetEnd": 686,
+                  "speaker": "35",
+                  "ner": "O",
+                  "after": " ",
+                  "originalText": "on",
+                  "before": " ",
+                  "index": 26,
+                  "pos": "IN"
+                }
+              },
+              "IN"
+            ],
+            [
+              {
+                "nlpToken": {
+                  "characterOffsetBegin": 687,
+                  "word": "recovery",
+                  "lemma": "recovery",
+                  "characterOffsetEnd": 695,
+                  "speaker": "35",
+                  "ner": "O",
+                  "after": " ",
+                  "originalText": "recovery",
+                  "before": " ",
+                  "index": 27,
+                  "pos": "NN"
+                }
+              },
+              "NN"
+            ],
+            [
+              {
+                "nlpToken": {
+                  "characterOffsetBegin": 696,
+                  "word": "efforts",
+                  "lemma": "effort",
+                  "characterOffsetEnd": 703,
+                  "speaker": "35",
+                  "ner": "O",
+                  "after": "",
+                  "originalText": "efforts",
+                  "before": " ",
+                  "index": 28,
+                  "pos": "NNS"
+                }
+              },
+              "NNS"
+            ],
+            [
+              {
+                "nlpToken": {
+                  "characterOffsetBegin": 703,
+                  "word": ",",
+                  "lemma": ",",
+                  "characterOffsetEnd": 704,
+                  "speaker": "35",
+                  "ner": "O",
+                  "after": "",
+                  "originalText": ",",
+                  "before": "",
+                  "index": 29,
+                  "pos": ","
+                }
+              },
+              ","
+            ],
+            [
+              {
+                "nlpToken": {
+                  "characterOffsetBegin": 704,
+                  "word": "''",
+                  "lemma": "''",
+                  "characterOffsetEnd": 705,
+                  "speaker": "PER0",
+                  "ner": "O",
+                  "after": " ",
+                  "originalText": "\"",
+                  "before": "",
+                  "index": 30,
+                  "pos": "''"
+                }
+              },
+              "''"
+            ],
+            [
+              {
+                "nlpToken": {
+                  "characterOffsetBegin": 706,
+                  "word": "he",
+                  "lemma": "he",
+                  "characterOffsetEnd": 708,
+                  "speaker": "PER0",
+                  "ner": "O",
+                  "after": " ",
+                  "originalText": "he",
+                  "before": " ",
+                  "index": 31,
+                  "pos": "PRP"
+                }
+              },
+              "PRP"
+            ],
+            [
+              {
+                "nlpToken": {
+                  "characterOffsetBegin": 709,
+                  "word": "added",
+                  "lemma": "add",
+                  "characterOffsetEnd": 714,
+                  "speaker": "PER0",
+                  "ner": "O",
+                  "after": "",
+                  "originalText": "added",
+                  "before": " ",
+                  "index": 32,
+                  "pos": "VBD"
+                }
+              },
+              "VBD"
             ]
           ],
-          "score": 1.0000000000000002
+          "score": 1.0,
+          "text": "us to confirm numbers but we are working hard to assess the ongoing incident and are continuing to focus on recovery efforts , \" he added",
+          "nlpIndexSentence": 7
         }
-      ],
+      ]
+    },
+    "where": {
       "annotated": [
         {
           "text": "Sandilands commuter train stop in Croydon",
@@ -341,9 +582,15 @@
       "label": "where"
     },
     "what": {
+      "annotated": [
+        {
+          "text": "Several dead and dozens injured after tram overturns",
+          "coderPhraseCount": 3
+        }
+      ],
+      "label": "what",
       "extracted": [
         {
-          "text": "was not yet named",
           "parts": [
             [
               {
@@ -418,17 +665,11 @@
               "VBN"
             ]
           ],
-          "nlpIndexSentence": 5,
-          "score": 1.0
+          "score": 1.0,
+          "text": "was not yet named",
+          "nlpIndexSentence": 5
         }
-      ],
-      "annotated": [
-        {
-          "text": "Several dead and dozens injured after tram overturns",
-          "coderPhraseCount": 3
-        }
-      ],
-      "label": "what"
+      ]
     }
   },
   "description": "At least seven people were killed and more than 50 others were injured when a tram - whose driver was later arrested -- derailed and overturned Wednesday morning in London, according to reports.\n\n\n\nEmergency personnel responded to the accident near the Sandilands commuter train stop in Croydon, a large suburb to the south of the city, The Telegraph reported.\n\n\n\n\"A number of people have been taken to hospital with injuries and sadly we can say there has been some loss of life,\" Assistant Chief Constable Robin Smith from British Transport Police told Reuters.\n\n\n\n\"It is too early for us to confirm numbers but we are working hard to assess the ongoing incident and are continuing to focus on recovery efforts,\" he added.\n\n\n\nLiam Lehane of the London Ambulance Service described many of those hurt as \"walking wounded\" but said others suffered serious injuries.\n\n\n\nThe driver was not yet named, and its unclear why he was arrested.\n\n\n\nThe crowded tram's derailment during the morning rush hour occurred during heavy rain at a point at which the track branches, The Telegraph reported.\n\n\n\nThe cause of the tragedy was being investigated.\n\n\n\n\"I heard a massive crash at about 6.15 a.m., then heard shouting, then the emergency services arrived,\" said resident Hannah Collier, 23. \"They started bringing up the casualties -- some very seriously injured.\"\n\n\n\nOne of the passengers called her husband from the overturned train and told him she \"couldn't get up,\" the Croydon Advertiser reported.\n\n\n\nA 73-year-old man, Roger Smith, who lives near the stop told the Daily Mail that \"the tram comes down a steep hill and then the tracks bear left and right. It has come off the track as if it's carried on down the hill instead of turning.\"\n\n\n\nAnother man who was praying when the accident occurred said he was unaware of the seriousness of the crash at first.\n\n\n\n\"I was praying at around 6:10 a.m. when I heard a loud crash. It sounded like a lorry had smashed into my garage, it was so loud,\" Adil Salahi, 76, told the Mail.\n\n\n\n\"But because I was praying I did not know what had happened. It was not until I heard it on the news at around 8 a.m. that I went to my window and could see the tram,\" he said. \"Trams don't make much noise so this was very unusual at this time of day.\"",

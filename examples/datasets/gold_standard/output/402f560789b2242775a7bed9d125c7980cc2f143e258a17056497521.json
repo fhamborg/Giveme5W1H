@@ -6,9 +6,15 @@
   "category": "clinton blames comey",
   "fiveWoneH": {
     "who": {
-      "extracted": [
+      "annotated": [
         {
           "text": "Hillary Clinton",
+          "coderPhraseCount": 3
+        }
+      ],
+      "label": "who",
+      "extracted": [
+        {
           "parts": [
             [
               {
@@ -47,57 +53,12 @@
               "NNP"
             ]
           ],
-          "score": 1.0
+          "score": 1.0,
+          "text": "Hillary Clinton"
         }
-      ],
-      "annotated": [
-        {
-          "text": "Hillary Clinton",
-          "coderPhraseCount": 3
-        }
-      ],
-      "label": "who"
+      ]
     },
     "when": {
-      "extracted": [
-        {
-          "text": "Saturday",
-          "enhancement": {
-            "timex": {
-              "start_date": "2016-11-12T00:00:00",
-              "end_date": "2016-11-12T23:59:59"
-            }
-          },
-          "parts": [
-            [
-              {
-                "nlpToken": {
-                  "characterOffsetBegin": 266,
-                  "word": "Saturday",
-                  "lemma": "Saturday",
-                  "timex": {
-                    "value": "2016-11-12",
-                    "tid": "t2",
-                    "type": "DATE"
-                  },
-                  "before": " ",
-                  "characterOffsetEnd": 274,
-                  "originalText": "Saturday",
-                  "normalizedNER": "2016-11-12",
-                  "speaker": "PER0",
-                  "after": "",
-                  "ner": "DATE",
-                  "index": 9,
-                  "pos": "NNP"
-                }
-              },
-              "NNP"
-            ]
-          ],
-          "nlpIndexSentence": 1,
-          "score": 0.8676803622406317
-        }
-      ],
       "annotated": [
         {
           "coderPhraseCount": 2,
@@ -107,50 +68,6 @@
       "label": "when"
     },
     "why": {
-      "extracted": [
-        {
-          "text": "Hillary Clinton",
-          "parts": [
-            [
-              {
-                "nlpToken": {
-                  "characterOffsetBegin": 0,
-                  "word": "Hillary",
-                  "lemma": "Hillary",
-                  "speaker": "PER0",
-                  "after": " ",
-                  "pos": "NNP",
-                  "ner": "PERSON",
-                  "before": "",
-                  "characterOffsetEnd": 7,
-                  "index": 1,
-                  "originalText": "Hillary"
-                }
-              },
-              "NNP"
-            ],
-            [
-              {
-                "nlpToken": {
-                  "characterOffsetBegin": 8,
-                  "word": "Clinton",
-                  "lemma": "Clinton",
-                  "speaker": "PER0",
-                  "after": " ",
-                  "pos": "NNP",
-                  "ner": "PERSON",
-                  "before": " ",
-                  "characterOffsetEnd": 15,
-                  "index": 2,
-                  "originalText": "Clinton"
-                }
-              },
-              "NNP"
-            ]
-          ],
-          "score": 0.42857142857142855
-        }
-      ],
       "annotated": [
         {
           "text": "he was reopening the investigation",
@@ -160,50 +77,6 @@
       "label": "why"
     },
     "how": {
-      "extracted": [
-        {
-          "text": "was reopening",
-          "parts": [
-            [
-              {
-                "nlpToken": {
-                  "characterOffsetBegin": 145,
-                  "word": "was",
-                  "lemma": "be",
-                  "characterOffsetEnd": 148,
-                  "speaker": "PER0",
-                  "ner": "O",
-                  "after": " ",
-                  "originalText": "was",
-                  "before": " ",
-                  "index": 29,
-                  "pos": "VBD"
-                }
-              },
-              "VBD"
-            ],
-            [
-              {
-                "nlpToken": {
-                  "characterOffsetBegin": 149,
-                  "word": "reopening",
-                  "lemma": "reopen",
-                  "characterOffsetEnd": 158,
-                  "speaker": "PER0",
-                  "ner": "O",
-                  "after": " ",
-                  "originalText": "reopening",
-                  "before": " ",
-                  "index": 30,
-                  "pos": "VBG"
-                }
-              },
-              "VBG"
-            ]
-          ],
-          "score": 1.0
-        }
-      ],
       "annotated": [
         {
           "text": "blamed her defeat",
@@ -214,56 +87,36 @@
           "coderPhraseCount": 0
         }
       ],
-      "label": "how"
-    },
-    "where": {
+      "label": "how",
       "extracted": [
         {
-          "text": "US",
-          "enhancement": {
-            "openstreetmap_nominatim": {
-              "place_id": "177579678",
-              "licence": "Data \u00a9 OpenStreetMap contributors, ODbL 1.0. http://www.openstreetmap.org/copyright",
-              "type": "administrative",
-              "class": "boundary",
-              "osm_id": "148838",
-              "boundingbox": [
-                -14.7608358,
-                71.6048217,
-                -180.0,
-                180.0
-              ],
-              "osm_type": "relation",
-              "lon": "-100.4458825",
-              "display_name": "United States of America",
-              "importance": 0.2361730870995,
-              "icon": "https://nominatim.openstreetmap.org/images/mapicons/poi_boundary_administrative.p.20.png",
-              "lat": "39.7837304"
-            }
-          },
           "parts": [
             [
               {
                 "nlpToken": {
-                  "characterOffsetBegin": 45,
-                  "word": "US",
-                  "lemma": "US",
-                  "characterOffsetEnd": 47,
+                  "characterOffsetBegin": 252,
+                  "word": "top",
+                  "lemma": "top",
+                  "characterOffsetEnd": 255,
                   "speaker": "PER0",
-                  "ner": "LOCATION",
+                  "ner": "O",
                   "after": " ",
-                  "originalText": "US",
+                  "originalText": "top",
                   "before": " ",
-                  "index": 9,
-                  "pos": "NNP"
+                  "index": 6,
+                  "pos": "JJ"
                 }
               },
-              "NNP"
+              "JJ"
             ]
           ],
-          "score": 1.0
+          "score": 1.0,
+          "text": "top",
+          "nlpIndexSentence": 1
         }
-      ],
+      ]
+    },
+    "where": {
       "annotated": [
         {
           "coderPhraseCount": 3
@@ -272,9 +125,15 @@
       "label": "where"
     },
     "what": {
+      "annotated": [
+        {
+          "text": "blames loss on FBI's James Comey",
+          "coderPhraseCount": 3
+        }
+      ],
+      "label": "what",
       "extracted": [
         {
-          "text": "has blamed her defeat",
           "parts": [
             [
               {
@@ -349,16 +208,10 @@
               "NN"
             ]
           ],
-          "score": 1.0
+          "score": 1.0,
+          "text": "has blamed her defeat"
         }
-      ],
-      "annotated": [
-        {
-          "text": "blames loss on FBI's James Comey",
-          "coderPhraseCount": 3
-        }
-      ],
-      "label": "what"
+      ]
     }
   },
   "description": "Hillary Clinton has blamed her defeat in the US election on James Comey, the FBI director, who announced days before the votes were cast that he was reopening the investigation into her handling of classified information.",

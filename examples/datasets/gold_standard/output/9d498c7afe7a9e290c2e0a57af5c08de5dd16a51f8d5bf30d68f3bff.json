@@ -6,9 +6,15 @@
   "category": "cubs win championship",
   "fiveWoneH": {
     "who": {
+      "annotated": [
+        {
+          "text": "Cubs",
+          "coderPhraseCount": 3
+        }
+      ],
+      "label": "who",
       "extracted": [
         {
-          "text": "the Cubs",
           "parts": [
             [
               {
@@ -47,129 +53,12 @@
               "NNP"
             ]
           ],
-          "score": 1.0
+          "score": 1.0,
+          "text": "the Cubs"
         }
-      ],
-      "annotated": [
-        {
-          "text": "Cubs",
-          "coderPhraseCount": 3
-        }
-      ],
-      "label": "who"
+      ]
     },
     "when": {
-      "extracted": [
-        {
-          "text": "Nov. 2 , 2016",
-          "enhancement": {
-            "timex": {
-              "start_date": "2016-11-02T00:00:00",
-              "end_date": "2016-11-02T23:59:59"
-            }
-          },
-          "parts": [
-            [
-              {
-                "nlpToken": {
-                  "characterOffsetBegin": 7063,
-                  "word": "Nov.",
-                  "lemma": "Nov.",
-                  "timex": {
-                    "value": "2016-11-02",
-                    "tid": "t38",
-                    "type": "DATE"
-                  },
-                  "before": " ",
-                  "characterOffsetEnd": 7067,
-                  "originalText": "Nov.",
-                  "normalizedNER": "2016-11-02",
-                  "speaker": "PER0",
-                  "after": " ",
-                  "ner": "DATE",
-                  "index": 43,
-                  "pos": "NNP"
-                }
-              },
-              "NNP"
-            ],
-            [
-              {
-                "nlpToken": {
-                  "characterOffsetBegin": 7068,
-                  "word": "2",
-                  "lemma": "2",
-                  "timex": {
-                    "value": "2016-11-02",
-                    "tid": "t38",
-                    "type": "DATE"
-                  },
-                  "before": " ",
-                  "characterOffsetEnd": 7069,
-                  "originalText": "2",
-                  "normalizedNER": "2016-11-02",
-                  "speaker": "PER0",
-                  "after": "",
-                  "ner": "DATE",
-                  "index": 44,
-                  "pos": "CD"
-                }
-              },
-              "CD"
-            ],
-            [
-              {
-                "nlpToken": {
-                  "characterOffsetBegin": 7069,
-                  "word": ",",
-                  "lemma": ",",
-                  "timex": {
-                    "value": "2016-11-02",
-                    "tid": "t38",
-                    "type": "DATE"
-                  },
-                  "before": "",
-                  "characterOffsetEnd": 7070,
-                  "originalText": ",",
-                  "normalizedNER": "2016-11-02",
-                  "speaker": "PER0",
-                  "after": " ",
-                  "ner": "DATE",
-                  "index": 45,
-                  "pos": ","
-                }
-              },
-              ","
-            ],
-            [
-              {
-                "nlpToken": {
-                  "characterOffsetBegin": 7071,
-                  "word": "2016",
-                  "lemma": "2016",
-                  "timex": {
-                    "value": "2016-11-02",
-                    "tid": "t38",
-                    "type": "DATE"
-                  },
-                  "before": " ",
-                  "characterOffsetEnd": 7075,
-                  "originalText": "2016",
-                  "normalizedNER": "2016-11-02",
-                  "speaker": "PER0",
-                  "after": "",
-                  "ner": "DATE",
-                  "index": 46,
-                  "pos": "CD"
-                }
-              },
-              "CD"
-            ]
-          ],
-          "nlpIndexSentence": 54,
-          "score": 0.6994228706750292
-        }
-      ],
       "annotated": [
         {
           "text": "Wednesday night",
@@ -180,50 +69,6 @@
       "label": "when"
     },
     "why": {
-      "extracted": [
-        {
-          "text": "the Cubs",
-          "parts": [
-            [
-              {
-                "nlpToken": {
-                  "characterOffsetBegin": 52,
-                  "word": "the",
-                  "lemma": "the",
-                  "speaker": "PER0",
-                  "after": " ",
-                  "pos": "DT",
-                  "ner": "O",
-                  "before": " ",
-                  "characterOffsetEnd": 55,
-                  "index": 10,
-                  "originalText": "the"
-                }
-              },
-              "DT"
-            ],
-            [
-              {
-                "nlpToken": {
-                  "characterOffsetBegin": 56,
-                  "word": "Cubs",
-                  "lemma": "Cubs",
-                  "speaker": "PER0",
-                  "after": " ",
-                  "pos": "NNP",
-                  "ner": "ORGANIZATION",
-                  "before": " ",
-                  "characterOffsetEnd": 60,
-                  "index": 11,
-                  "originalText": "Cubs"
-                }
-              },
-              "NNP"
-            ]
-          ],
-          "score": 0.42857142857142855
-        }
-      ],
       "annotated": [
         {
           "text": "rallies past Cleveland",
@@ -233,32 +78,6 @@
       "label": "why"
     },
     "how": {
-      "extracted": [
-        {
-          "text": "won",
-          "parts": [
-            [
-              {
-                "nlpToken": {
-                  "characterOffsetBegin": 61,
-                  "word": "won",
-                  "lemma": "win",
-                  "characterOffsetEnd": 64,
-                  "speaker": "PER0",
-                  "ner": "O",
-                  "after": " ",
-                  "originalText": "won",
-                  "before": " ",
-                  "index": 12,
-                  "pos": "VBD"
-                }
-              },
-              "VBD"
-            ]
-          ],
-          "score": 1.0
-        }
-      ],
       "annotated": [
         {
           "text": "three-run",
@@ -269,57 +88,864 @@
           "coderPhraseCount": 1
         }
       ],
-      "label": "how"
-    },
-    "where": {
+      "label": "how",
       "extracted": [
         {
-          "text": "Cleveland",
-          "enhancement": {
-            "openstreetmap_nominatim": {
-              "place_id": "177736691",
-              "licence": "Data \u00a9 OpenStreetMap contributors, ODbL 1.0. http://www.openstreetmap.org/copyright",
-              "type": "city",
-              "class": "place",
-              "osm_id": "182130",
-              "boundingbox": [
-                41.390628,
-                41.604436,
-                -81.8790937,
-                -81.532744
-              ],
-              "osm_type": "relation",
-              "lon": "-81.6934446",
-              "display_name": "Cleveland, Cuyahoga County, Ohio, United States of America",
-              "importance": 0.2721855967315,
-              "icon": "https://nominatim.openstreetmap.org/images/mapicons/poi_place_city.p.20.png",
-              "lat": "41.5051613"
-            }
-          },
           "parts": [
             [
               {
                 "nlpToken": {
-                  "characterOffsetBegin": 1656,
-                  "word": "Cleveland",
-                  "lemma": "Cleveland",
-                  "characterOffsetEnd": 1665,
+                  "characterOffsetBegin": 879,
+                  "word": "this",
+                  "lemma": "this",
+                  "characterOffsetEnd": 883,
                   "speaker": "PER0",
-                  "ner": "LOCATION",
+                  "ner": "O",
+                  "after": " ",
+                  "originalText": "this",
+                  "before": " ",
+                  "index": 2,
+                  "pos": "DT"
+                }
+              },
+              "DT"
+            ],
+            [
+              {
+                "nlpToken": {
+                  "characterOffsetBegin": 884,
+                  "word": "game",
+                  "lemma": "game",
+                  "characterOffsetEnd": 888,
+                  "speaker": "PER0",
+                  "ner": "O",
+                  "after": " ",
+                  "originalText": "game",
+                  "before": " ",
+                  "index": 3,
+                  "pos": "NN"
+                }
+              },
+              "NN"
+            ],
+            [
+              {
+                "nlpToken": {
+                  "characterOffsetBegin": 889,
+                  "word": "went",
+                  "lemma": "go",
+                  "characterOffsetEnd": 893,
+                  "speaker": "PER0",
+                  "ner": "O",
+                  "after": " ",
+                  "originalText": "went",
+                  "before": " ",
+                  "index": 4,
+                  "pos": "VBD"
+                }
+              },
+              "VBD"
+            ],
+            [
+              {
+                "nlpToken": {
+                  "characterOffsetBegin": 894,
+                  "word": "beyond",
+                  "lemma": "beyond",
+                  "characterOffsetEnd": 900,
+                  "speaker": "PER0",
+                  "ner": "O",
+                  "after": " ",
+                  "originalText": "beyond",
+                  "before": " ",
+                  "index": 5,
+                  "pos": "IN"
+                }
+              },
+              "IN"
+            ],
+            [
+              {
+                "nlpToken": {
+                  "characterOffsetBegin": 901,
+                  "word": "the",
+                  "lemma": "the",
+                  "characterOffsetEnd": 904,
+                  "speaker": "PER0",
+                  "ner": "O",
+                  "after": " ",
+                  "originalText": "the",
+                  "before": " ",
+                  "index": 6,
+                  "pos": "DT"
+                }
+              },
+              "DT"
+            ],
+            [
+              {
+                "nlpToken": {
+                  "characterOffsetBegin": 905,
+                  "word": "baseball",
+                  "lemma": "baseball",
+                  "characterOffsetEnd": 913,
+                  "speaker": "PER0",
+                  "ner": "O",
+                  "after": " ",
+                  "originalText": "baseball",
+                  "before": " ",
+                  "index": 7,
+                  "pos": "NN"
+                }
+              },
+              "NN"
+            ],
+            [
+              {
+                "nlpToken": {
+                  "characterOffsetBegin": 914,
+                  "word": "surreal",
+                  "lemma": "surreal",
+                  "characterOffsetEnd": 921,
+                  "speaker": "PER0",
+                  "ner": "O",
                   "after": "",
-                  "originalText": "Cleveland",
+                  "originalText": "surreal",
+                  "before": " ",
+                  "index": 8,
+                  "pos": "JJ"
+                }
+              },
+              "JJ"
+            ],
+            [
+              {
+                "nlpToken": {
+                  "characterOffsetBegin": 921,
+                  "word": ",",
+                  "lemma": ",",
+                  "characterOffsetEnd": 922,
+                  "speaker": "PER0",
+                  "ner": "O",
+                  "after": " ",
+                  "originalText": ",",
+                  "before": "",
+                  "index": 9,
+                  "pos": ","
+                }
+              },
+              ","
+            ],
+            [
+              {
+                "nlpToken": {
+                  "characterOffsetBegin": 923,
+                  "word": "because",
+                  "lemma": "because",
+                  "characterOffsetEnd": 930,
+                  "speaker": "PER0",
+                  "ner": "O",
+                  "after": " ",
+                  "originalText": "because",
+                  "before": " ",
+                  "index": 10,
+                  "pos": "IN"
+                }
+              },
+              "IN"
+            ],
+            [
+              {
+                "nlpToken": {
+                  "characterOffsetBegin": 931,
+                  "word": "it",
+                  "lemma": "it",
+                  "characterOffsetEnd": 933,
+                  "speaker": "PER0",
+                  "ner": "O",
+                  "after": " ",
+                  "originalText": "it",
                   "before": " ",
                   "index": 11,
+                  "pos": "PRP"
+                }
+              },
+              "PRP"
+            ],
+            [
+              {
+                "nlpToken": {
+                  "characterOffsetBegin": 934,
+                  "word": "provided",
+                  "lemma": "provide",
+                  "characterOffsetEnd": 942,
+                  "speaker": "PER0",
+                  "ner": "O",
+                  "after": " ",
+                  "originalText": "provided",
+                  "before": " ",
+                  "index": 12,
+                  "pos": "VBD"
+                }
+              },
+              "VBD"
+            ],
+            [
+              {
+                "nlpToken": {
+                  "characterOffsetBegin": 943,
+                  "word": "forgetfulness",
+                  "lemma": "forgetfulness",
+                  "characterOffsetEnd": 956,
+                  "speaker": "PER0",
+                  "ner": "O",
+                  "after": " ",
+                  "originalText": "forgetfulness",
+                  "before": " ",
+                  "index": 13,
+                  "pos": "NN"
+                }
+              },
+              "NN"
+            ],
+            [
+              {
+                "nlpToken": {
+                  "characterOffsetBegin": 957,
+                  "word": "and",
+                  "lemma": "and",
+                  "characterOffsetEnd": 960,
+                  "speaker": "PER0",
+                  "ner": "O",
+                  "after": " ",
+                  "originalText": "and",
+                  "before": " ",
+                  "index": 14,
+                  "pos": "CC"
+                }
+              },
+              "CC"
+            ],
+            [
+              {
+                "nlpToken": {
+                  "characterOffsetBegin": 961,
+                  "word": "forgiveness",
+                  "lemma": "forgiveness",
+                  "characterOffsetEnd": 972,
+                  "speaker": "PER0",
+                  "ner": "O",
+                  "after": " ",
+                  "originalText": "forgiveness",
+                  "before": " ",
+                  "index": 15,
+                  "pos": "NN"
+                }
+              },
+              "NN"
+            ],
+            [
+              {
+                "nlpToken": {
+                  "characterOffsetBegin": 973,
+                  "word": "for",
+                  "lemma": "for",
+                  "characterOffsetEnd": 976,
+                  "speaker": "PER0",
+                  "ner": "O",
+                  "after": " ",
+                  "originalText": "for",
+                  "before": " ",
+                  "index": 16,
+                  "pos": "IN"
+                }
+              },
+              "IN"
+            ],
+            [
+              {
+                "nlpToken": {
+                  "characterOffsetBegin": 977,
+                  "word": "several",
+                  "lemma": "several",
+                  "characterOffsetEnd": 984,
+                  "speaker": "PER0",
+                  "ner": "O",
+                  "after": " ",
+                  "originalText": "several",
+                  "before": " ",
+                  "index": 17,
+                  "pos": "JJ"
+                }
+              },
+              "JJ"
+            ],
+            [
+              {
+                "nlpToken": {
+                  "characterOffsetBegin": 985,
+                  "word": "Cubs",
+                  "lemma": "Cubs",
+                  "characterOffsetEnd": 989,
+                  "speaker": "PER0",
+                  "ner": "O",
+                  "after": " ",
+                  "originalText": "Cubs",
+                  "before": " ",
+                  "index": 18,
                   "pos": "NNP"
                 }
               },
               "NNP"
+            ],
+            [
+              {
+                "nlpToken": {
+                  "characterOffsetBegin": 990,
+                  "word": "who",
+                  "lemma": "who",
+                  "characterOffsetEnd": 993,
+                  "speaker": "PER0",
+                  "ner": "O",
+                  "after": " ",
+                  "originalText": "who",
+                  "before": " ",
+                  "index": 19,
+                  "pos": "WP"
+                }
+              },
+              "WP"
+            ],
+            [
+              {
+                "nlpToken": {
+                  "characterOffsetBegin": 994,
+                  "word": "might",
+                  "lemma": "might",
+                  "characterOffsetEnd": 999,
+                  "speaker": "PER0",
+                  "ner": "O",
+                  "after": " ",
+                  "originalText": "might",
+                  "before": " ",
+                  "index": 20,
+                  "pos": "MD"
+                }
+              },
+              "MD"
+            ],
+            [
+              {
+                "nlpToken": {
+                  "characterOffsetBegin": 1000,
+                  "word": "have",
+                  "lemma": "have",
+                  "characterOffsetEnd": 1004,
+                  "speaker": "PER0",
+                  "ner": "O",
+                  "after": " ",
+                  "originalText": "have",
+                  "before": " ",
+                  "index": 21,
+                  "pos": "VB"
+                }
+              },
+              "VB"
+            ],
+            [
+              {
+                "nlpToken": {
+                  "characterOffsetBegin": 1005,
+                  "word": "been",
+                  "lemma": "be",
+                  "characterOffsetEnd": 1009,
+                  "speaker": "PER0",
+                  "ner": "O",
+                  "after": " ",
+                  "originalText": "been",
+                  "before": " ",
+                  "index": 22,
+                  "pos": "VBN"
+                }
+              },
+              "VBN"
+            ],
+            [
+              {
+                "nlpToken": {
+                  "characterOffsetBegin": 1010,
+                  "word": "enormous",
+                  "lemma": "enormous",
+                  "characterOffsetEnd": 1018,
+                  "speaker": "PER0",
+                  "ner": "O",
+                  "after": " ",
+                  "originalText": "enormous",
+                  "before": " ",
+                  "index": 23,
+                  "pos": "JJ"
+                }
+              },
+              "JJ"
+            ],
+            [
+              {
+                "nlpToken": {
+                  "characterOffsetBegin": 1019,
+                  "word": "goats",
+                  "lemma": "goat",
+                  "characterOffsetEnd": 1024,
+                  "speaker": "PER0",
+                  "ner": "O",
+                  "after": "",
+                  "originalText": "goats",
+                  "before": " ",
+                  "index": 24,
+                  "pos": "NNS"
+                }
+              },
+              "NNS"
+            ],
+            [
+              {
+                "nlpToken": {
+                  "characterOffsetBegin": 1024,
+                  "word": ",",
+                  "lemma": ",",
+                  "characterOffsetEnd": 1025,
+                  "speaker": "PER0",
+                  "ner": "O",
+                  "after": " ",
+                  "originalText": ",",
+                  "before": "",
+                  "index": 25,
+                  "pos": ","
+                }
+              },
+              ","
+            ],
+            [
+              {
+                "nlpToken": {
+                  "characterOffsetBegin": 1026,
+                  "word": "including",
+                  "lemma": "include",
+                  "characterOffsetEnd": 1035,
+                  "speaker": "PER0",
+                  "ner": "O",
+                  "after": " ",
+                  "originalText": "including",
+                  "before": " ",
+                  "index": 26,
+                  "pos": "VBG"
+                }
+              },
+              "VBG"
+            ],
+            [
+              {
+                "nlpToken": {
+                  "characterOffsetBegin": 1036,
+                  "word": "reliever",
+                  "lemma": "reliever",
+                  "characterOffsetEnd": 1044,
+                  "speaker": "PER0",
+                  "ner": "O",
+                  "after": " ",
+                  "originalText": "reliever",
+                  "before": " ",
+                  "index": 27,
+                  "pos": "NN"
+                }
+              },
+              "NN"
+            ],
+            [
+              {
+                "nlpToken": {
+                  "characterOffsetBegin": 1045,
+                  "word": "Aroldis",
+                  "lemma": "Aroldis",
+                  "characterOffsetEnd": 1052,
+                  "speaker": "PER0",
+                  "ner": "PERSON",
+                  "after": " ",
+                  "originalText": "Aroldis",
+                  "before": " ",
+                  "index": 28,
+                  "pos": "NNP"
+                }
+              },
+              "NNP"
+            ],
+            [
+              {
+                "nlpToken": {
+                  "characterOffsetBegin": 1053,
+                  "word": "Chapman",
+                  "lemma": "Chapman",
+                  "characterOffsetEnd": 1060,
+                  "speaker": "PER0",
+                  "ner": "PERSON",
+                  "after": " ",
+                  "originalText": "Chapman",
+                  "before": " ",
+                  "index": 29,
+                  "pos": "NNP"
+                }
+              },
+              "NNP"
+            ],
+            [
+              {
+                "nlpToken": {
+                  "characterOffsetBegin": 1061,
+                  "word": "and",
+                  "lemma": "and",
+                  "characterOffsetEnd": 1064,
+                  "speaker": "PER0",
+                  "ner": "O",
+                  "after": " ",
+                  "originalText": "and",
+                  "before": " ",
+                  "index": 30,
+                  "pos": "CC"
+                }
+              },
+              "CC"
+            ],
+            [
+              {
+                "nlpToken": {
+                  "characterOffsetBegin": 1065,
+                  "word": "Manager",
+                  "lemma": "Manager",
+                  "characterOffsetEnd": 1072,
+                  "speaker": "PER0",
+                  "ner": "O",
+                  "after": " ",
+                  "originalText": "Manager",
+                  "before": " ",
+                  "index": 31,
+                  "pos": "NNP"
+                }
+              },
+              "NNP"
+            ],
+            [
+              {
+                "nlpToken": {
+                  "characterOffsetBegin": 1073,
+                  "word": "Joe",
+                  "lemma": "Joe",
+                  "characterOffsetEnd": 1076,
+                  "speaker": "PER0",
+                  "ner": "PERSON",
+                  "after": " ",
+                  "originalText": "Joe",
+                  "before": " ",
+                  "index": 32,
+                  "pos": "NNP"
+                }
+              },
+              "NNP"
+            ],
+            [
+              {
+                "nlpToken": {
+                  "characterOffsetBegin": 1077,
+                  "word": "Maddon",
+                  "lemma": "Maddon",
+                  "characterOffsetEnd": 1083,
+                  "speaker": "PER0",
+                  "ner": "PERSON",
+                  "after": "",
+                  "originalText": "Maddon",
+                  "before": " ",
+                  "index": 33,
+                  "pos": "NNP"
+                }
+              },
+              "NNP"
+            ],
+            [
+              {
+                "nlpToken": {
+                  "characterOffsetBegin": 1083,
+                  "word": ",",
+                  "lemma": ",",
+                  "characterOffsetEnd": 1084,
+                  "speaker": "PER0",
+                  "ner": "O",
+                  "after": " ",
+                  "originalText": ",",
+                  "before": "",
+                  "index": 34,
+                  "pos": ","
+                }
+              },
+              ","
+            ],
+            [
+              {
+                "nlpToken": {
+                  "characterOffsetBegin": 1085,
+                  "word": "it",
+                  "lemma": "it",
+                  "characterOffsetEnd": 1087,
+                  "speaker": "PER0",
+                  "ner": "O",
+                  "after": " ",
+                  "originalText": "it",
+                  "before": " ",
+                  "index": 35,
+                  "pos": "PRP"
+                }
+              },
+              "PRP"
+            ],
+            [
+              {
+                "nlpToken": {
+                  "characterOffsetBegin": 1088,
+                  "word": "seemed",
+                  "lemma": "seem",
+                  "characterOffsetEnd": 1094,
+                  "speaker": "PER0",
+                  "ner": "O",
+                  "after": " ",
+                  "originalText": "seemed",
+                  "before": " ",
+                  "index": 36,
+                  "pos": "VBD"
+                }
+              },
+              "VBD"
+            ],
+            [
+              {
+                "nlpToken": {
+                  "characterOffsetBegin": 1095,
+                  "word": "to",
+                  "lemma": "to",
+                  "characterOffsetEnd": 1097,
+                  "speaker": "PER0",
+                  "ner": "O",
+                  "after": " ",
+                  "originalText": "to",
+                  "before": " ",
+                  "index": 37,
+                  "pos": "TO"
+                }
+              },
+              "TO"
+            ],
+            [
+              {
+                "nlpToken": {
+                  "characterOffsetBegin": 1098,
+                  "word": "encapsulate",
+                  "lemma": "encapsulate",
+                  "characterOffsetEnd": 1109,
+                  "speaker": "PER0",
+                  "ner": "O",
+                  "after": " ",
+                  "originalText": "encapsulate",
+                  "before": " ",
+                  "index": 38,
+                  "pos": "VB"
+                }
+              },
+              "VB"
+            ],
+            [
+              {
+                "nlpToken": {
+                  "characterOffsetBegin": 1110,
+                  "word": "the",
+                  "lemma": "the",
+                  "characterOffsetEnd": 1113,
+                  "speaker": "PER0",
+                  "ner": "O",
+                  "after": " ",
+                  "originalText": "the",
+                  "before": " ",
+                  "index": 39,
+                  "pos": "DT"
+                }
+              },
+              "DT"
+            ],
+            [
+              {
+                "nlpToken": {
+                  "characterOffsetBegin": 1114,
+                  "word": "team",
+                  "lemma": "team",
+                  "characterOffsetEnd": 1118,
+                  "speaker": "PER0",
+                  "ner": "O",
+                  "after": "",
+                  "originalText": "team",
+                  "before": " ",
+                  "index": 40,
+                  "pos": "NN"
+                }
+              },
+              "NN"
+            ],
+            [
+              {
+                "nlpToken": {
+                  "characterOffsetBegin": 1118,
+                  "word": "'s",
+                  "lemma": "'s",
+                  "characterOffsetEnd": 1120,
+                  "speaker": "PER0",
+                  "ner": "O",
+                  "after": " ",
+                  "originalText": "'s",
+                  "before": "",
+                  "index": 41,
+                  "pos": "POS"
+                }
+              },
+              "POS"
+            ],
+            [
+              {
+                "nlpToken": {
+                  "characterOffsetBegin": 1121,
+                  "word": "long",
+                  "lemma": "long",
+                  "characterOffsetEnd": 1125,
+                  "speaker": "PER0",
+                  "ner": "O",
+                  "after": " ",
+                  "originalText": "long",
+                  "before": " ",
+                  "index": 42,
+                  "pos": "JJ"
+                }
+              },
+              "JJ"
+            ],
+            [
+              {
+                "nlpToken": {
+                  "characterOffsetBegin": 1126,
+                  "word": "history",
+                  "lemma": "history",
+                  "characterOffsetEnd": 1133,
+                  "speaker": "PER0",
+                  "ner": "O",
+                  "after": " ",
+                  "originalText": "history",
+                  "before": " ",
+                  "index": 43,
+                  "pos": "NN"
+                }
+              },
+              "NN"
+            ],
+            [
+              {
+                "nlpToken": {
+                  "characterOffsetBegin": 1134,
+                  "word": "of",
+                  "lemma": "of",
+                  "characterOffsetEnd": 1136,
+                  "speaker": "PER0",
+                  "ner": "O",
+                  "after": " ",
+                  "originalText": "of",
+                  "before": " ",
+                  "index": 44,
+                  "pos": "IN"
+                }
+              },
+              "IN"
+            ],
+            [
+              {
+                "nlpToken": {
+                  "characterOffsetBegin": 1137,
+                  "word": "staring",
+                  "lemma": "stare",
+                  "characterOffsetEnd": 1144,
+                  "speaker": "PER0",
+                  "ner": "O",
+                  "after": " ",
+                  "originalText": "staring",
+                  "before": " ",
+                  "index": 45,
+                  "pos": "VBG"
+                }
+              },
+              "VBG"
+            ],
+            [
+              {
+                "nlpToken": {
+                  "characterOffsetBegin": 1145,
+                  "word": "into",
+                  "lemma": "into",
+                  "characterOffsetEnd": 1149,
+                  "speaker": "PER0",
+                  "ner": "O",
+                  "after": " ",
+                  "originalText": "into",
+                  "before": " ",
+                  "index": 46,
+                  "pos": "IN"
+                }
+              },
+              "IN"
+            ],
+            [
+              {
+                "nlpToken": {
+                  "characterOffsetBegin": 1150,
+                  "word": "the",
+                  "lemma": "the",
+                  "characterOffsetEnd": 1153,
+                  "speaker": "PER0",
+                  "ner": "O",
+                  "after": " ",
+                  "originalText": "the",
+                  "before": " ",
+                  "index": 47,
+                  "pos": "DT"
+                }
+              },
+              "DT"
+            ],
+            [
+              {
+                "nlpToken": {
+                  "characterOffsetBegin": 1154,
+                  "word": "abyss",
+                  "lemma": "abyss",
+                  "characterOffsetEnd": 1159,
+                  "speaker": "PER0",
+                  "ner": "O",
+                  "after": "",
+                  "originalText": "abyss",
+                  "before": " ",
+                  "index": 48,
+                  "pos": "NN"
+                }
+              },
+              "NN"
             ]
           ],
-          "nlpIndexSentence": 10,
-          "score": 1.0
+          "score": 1.0,
+          "text": "this game went beyond the baseball surreal , because it provided forgetfulness and forgiveness for several Cubs who might have been enormous goats , including reliever Aroldis Chapman and Manager Joe Maddon , it seemed to encapsulate the team 's long history of staring into the abyss",
+          "nlpIndexSentence": 2
         }
-      ],
+      ]
+    },
+    "where": {
       "annotated": [
         {
           "coderPhraseCount": 3
@@ -328,9 +954,15 @@
       "label": "where"
     },
     "what": {
+      "annotated": [
+        {
+          "text": "are World Series champions",
+          "coderPhraseCount": 3
+        }
+      ],
+      "label": "what",
       "extracted": [
         {
-          "text": "won the World Series",
           "parts": [
             [
               {
@@ -405,16 +1037,10 @@
               "NNP"
             ]
           ],
-          "score": 1.0
+          "score": 1.0,
+          "text": "won the World Series"
         }
-      ],
-      "annotated": [
-        {
-          "text": "are World Series champions",
-          "coderPhraseCount": 3
-        }
-      ],
-      "label": "what"
+      ]
     }
   },
   "description": "COLUMN | After 108 years, a blown three-run lead in the eighth inning, a rain delay before the 10th, Chicago rallies past Cleveland in Game 7 for its first title since 1908.",

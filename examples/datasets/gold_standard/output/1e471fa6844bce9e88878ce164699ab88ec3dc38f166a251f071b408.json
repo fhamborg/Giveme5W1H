@@ -1,29 +1,39 @@
 {
-  "filename": "1e471fa6844bce9e88878ce164699ab88ec3dc38f166a251f071b408",
-  "title": "China well rescue: Race to reach boy trapped in Hebei",
-  "mimeType": "text/xml",
-  "url": "http://www.bbc.com/news/world-asia-china-37906226",
   "category": "china well",
+  "dId": "1e471fa6844bce9e88878ce164699ab88ec3dc38f166a251f071b408",
+  "date_publish": "2016-11-08 12:00:10",
+  "description": "Dozens of rescuers in China are trying to reach a five-year-old boy trapped deep down an abandoned well.",
+  "filename": "1e471fa6844bce9e88878ce164699ab88ec3dc38f166a251f071b408",
   "fiveWoneH": {
-    "who": {
+    "how": {
+      "annotated": [
+        {
+          "coderPhraseCount": 2,
+          "text": "trapped deep down"
+        },
+        {
+          "coderPhraseCount": 1,
+          "text": "trying to reach a five-year-old boy trapped"
+        }
+      ],
+      "label": "how",
       "extracted": [
         {
-          "text": "The boy",
           "parts": [
             [
               {
                 "nlpToken": {
-                  "characterOffsetBegin": 457,
-                  "word": "The",
-                  "lemma": "the",
-                  "characterOffsetEnd": 460,
-                  "speaker": "PER0",
+                  "index": 2,
+                  "word": "a",
+                  "originalText": "a",
+                  "lemma": "a",
+                  "characterOffsetBegin": 1387,
+                  "characterOffsetEnd": 1388,
+                  "pos": "DT",
                   "ner": "O",
-                  "after": " ",
-                  "originalText": "The",
+                  "speaker": "81",
                   "before": " ",
-                  "index": 1,
-                  "pos": "DT"
+                  "after": " "
                 }
               },
               "DT"
@@ -31,205 +41,71 @@
             [
               {
                 "nlpToken": {
-                  "characterOffsetBegin": 461,
-                  "word": "boy",
-                  "lemma": "boy",
-                  "characterOffsetEnd": 464,
-                  "speaker": "PER0",
+                  "index": 3,
+                  "word": "mother",
+                  "originalText": "mother",
+                  "lemma": "mother",
+                  "characterOffsetBegin": 1389,
+                  "characterOffsetEnd": 1395,
+                  "pos": "NN",
                   "ner": "O",
-                  "after": " ",
-                  "originalText": "boy",
+                  "speaker": "81",
                   "before": " ",
-                  "index": 2,
-                  "pos": "NN"
+                  "after": ""
                 }
               },
               "NN"
-            ]
-          ],
-          "nlpIndexSentence": 5,
-          "score": 1.0
-        }
-      ],
-      "annotated": [
-        {
-          "text": "Dozens of rescuers",
-          "coderPhraseCount": 3
-        },
-        {
-          "text": "five-year-old boy",
-          "coderPhraseCount": 2
-        }
-      ],
-      "label": "who"
-    },
-    "when": {
-      "extracted": [],
-      "annotated": [
-        {
-          "text": "Sunday morning",
-          "coderPhraseCount": 3,
-          "parsed": "2016-11-12"
-        }
-      ],
-      "label": "when"
-    },
-    "why": {
-      "extracted": [
-        {
-          "text": "China",
-          "parts": [
+            ],
             [
               {
                 "nlpToken": {
-                  "characterOffsetBegin": 0,
-                  "word": "China",
-                  "lemma": "China",
-                  "speaker": "PER0",
-                  "after": " ",
-                  "pos": "NNP",
-                  "ner": "LOCATION",
-                  "before": "",
-                  "characterOffsetEnd": 5,
-                  "index": 1,
-                  "originalText": "China"
-                }
-              },
-              "NNP"
-            ]
-          ],
-          "score": 0.42857142857142855
-        }
-      ],
-      "annotated": [
-        {
-          "text": "trapped deep down an abandoned well",
-          "coderPhraseCount": 1
-        },
-        {
-          "text": "no warning signs",
-          "coderPhraseCount": 1
-        },
-        {
-          "coderPhraseCount": 1
-        }
-      ],
-      "label": "why"
-    },
-    "how": {
-      "extracted": [
-        {
-          "text": "well",
-          "parts": [
-            [
-              {
-                "nlpToken": {
-                  "characterOffsetBegin": 6,
-                  "word": "well",
-                  "lemma": "well",
-                  "characterOffsetEnd": 10,
-                  "speaker": "PER0",
+                  "index": 4,
+                  "word": ",",
+                  "originalText": ",",
+                  "lemma": ",",
+                  "characterOffsetBegin": 1395,
+                  "characterOffsetEnd": 1396,
+                  "pos": ",",
                   "ner": "O",
-                  "after": " ",
-                  "originalText": "well",
-                  "before": " ",
-                  "index": 2,
-                  "pos": "RB"
-                }
-              },
-              "RB"
-            ]
-          ],
-          "score": 1.0
-        }
-      ],
-      "annotated": [
-        {
-          "text": "trapped deep down",
-          "coderPhraseCount": 2
-        },
-        {
-          "text": "trying to reach a five-year-old boy trapped",
-          "coderPhraseCount": 1
-        }
-      ],
-      "label": "how"
-    },
-    "where": {
-      "extracted": [
-        {
-          "text": "China",
-          "enhancement": {
-            "openstreetmap_nominatim": {
-              "place_id": "179360170",
-              "licence": "Data \u00a9 OpenStreetMap contributors, ODbL 1.0. http://www.openstreetmap.org/copyright",
-              "type": "administrative",
-              "class": "boundary",
-              "osm_id": "5605656",
-              "boundingbox": [
-                25.0671341,
-                25.9161824,
-                -99.4612273,
-                -98.421576
-              ],
-              "osm_type": "relation",
-              "lon": "-98.9811115045569",
-              "display_name": "China, Nuevo Le\u00f3n, M\u00e9xico",
-              "importance": 0.2225,
-              "icon": "https://nominatim.openstreetmap.org/images/mapicons/poi_boundary_administrative.p.20.png",
-              "lat": "25.4915799"
-            }
-          },
-          "parts": [
-            [
-              {
-                "nlpToken": {
-                  "characterOffsetBegin": 0,
-                  "word": "China",
-                  "lemma": "China",
-                  "characterOffsetEnd": 5,
-                  "speaker": "PER0",
-                  "ner": "LOCATION",
-                  "after": " ",
-                  "originalText": "China",
+                  "speaker": "81",
                   "before": "",
-                  "index": 1,
-                  "pos": "NNP"
+                  "after": " "
                 }
               },
-              "NNP"
-            ]
-          ],
-          "score": 1.0
-        }
-      ],
-      "annotated": [
-        {
-          "text": "Baoding, Hebei province",
-          "coderPhraseCount": 3
-        }
-      ],
-      "label": "where"
-    },
-    "what": {
-      "extracted": [
-        {
-          "text": "fell down the 40m",
-          "parts": [
+              ","
+            ],
             [
               {
                 "nlpToken": {
-                  "characterOffsetBegin": 465,
-                  "word": "fell",
-                  "lemma": "fall",
-                  "characterOffsetEnd": 469,
-                  "speaker": "PER0",
+                  "index": 5,
+                  "word": "it",
+                  "originalText": "it",
+                  "lemma": "it",
+                  "characterOffsetBegin": 1397,
+                  "characterOffsetEnd": 1399,
+                  "pos": "PRP",
                   "ner": "O",
-                  "after": " ",
-                  "originalText": "fell",
+                  "speaker": "81",
                   "before": " ",
-                  "index": 3,
-                  "pos": "VBD"
+                  "after": " "
+                }
+              },
+              "PRP"
+            ],
+            [
+              {
+                "nlpToken": {
+                  "index": 6,
+                  "word": "was",
+                  "originalText": "was",
+                  "lemma": "be",
+                  "characterOffsetBegin": 1400,
+                  "characterOffsetEnd": 1403,
+                  "pos": "VBD",
+                  "ner": "O",
+                  "speaker": "81",
+                  "before": " ",
+                  "after": " "
                 }
               },
               "VBD"
@@ -237,35 +113,71 @@
             [
               {
                 "nlpToken": {
-                  "characterOffsetBegin": 470,
-                  "word": "down",
-                  "lemma": "down",
-                  "characterOffsetEnd": 474,
-                  "speaker": "PER0",
+                  "index": 7,
+                  "word": "heartbreaking",
+                  "originalText": "heartbreaking",
+                  "lemma": "heartbreak",
+                  "characterOffsetBegin": 1404,
+                  "characterOffsetEnd": 1417,
+                  "pos": "VBG",
                   "ner": "O",
-                  "after": " ",
-                  "originalText": "down",
+                  "speaker": "81",
                   "before": " ",
-                  "index": 4,
-                  "pos": "RP"
+                  "after": " "
                 }
               },
-              "RP"
+              "VBG"
             ],
             [
               {
                 "nlpToken": {
-                  "characterOffsetBegin": 475,
-                  "word": "the",
-                  "lemma": "the",
-                  "characterOffsetEnd": 478,
-                  "speaker": "PER0",
+                  "index": 8,
+                  "word": "to",
+                  "originalText": "to",
+                  "lemma": "to",
+                  "characterOffsetBegin": 1418,
+                  "characterOffsetEnd": 1420,
+                  "pos": "TO",
                   "ner": "O",
-                  "after": " ",
-                  "originalText": "the",
+                  "speaker": "81",
                   "before": " ",
-                  "index": 5,
-                  "pos": "DT"
+                  "after": " "
+                }
+              },
+              "TO"
+            ],
+            [
+              {
+                "nlpToken": {
+                  "index": 9,
+                  "word": "see",
+                  "originalText": "see",
+                  "lemma": "see",
+                  "characterOffsetBegin": 1421,
+                  "characterOffsetEnd": 1424,
+                  "pos": "VB",
+                  "ner": "O",
+                  "speaker": "81",
+                  "before": " ",
+                  "after": " "
+                }
+              },
+              "VB"
+            ],
+            [
+              {
+                "nlpToken": {
+                  "index": 10,
+                  "word": "a",
+                  "originalText": "a",
+                  "lemma": "a",
+                  "characterOffsetBegin": 1425,
+                  "characterOffsetEnd": 1426,
+                  "pos": "DT",
+                  "ner": "O",
+                  "speaker": "81",
+                  "before": " ",
+                  "after": " "
                 }
               },
               "DT"
@@ -273,44 +185,221 @@
             [
               {
                 "nlpToken": {
-                  "characterOffsetBegin": 479,
-                  "word": "40m",
-                  "lemma": "40m",
-                  "characterOffsetEnd": 482,
-                  "speaker": "PER0",
+                  "index": 11,
+                  "word": "child",
+                  "originalText": "child",
+                  "lemma": "child",
+                  "characterOffsetBegin": 1427,
+                  "characterOffsetEnd": 1432,
+                  "pos": "NN",
                   "ner": "O",
-                  "after": " ",
-                  "originalText": "40m",
+                  "speaker": "81",
                   "before": " ",
-                  "index": 6,
-                  "pos": "NN"
+                  "after": " "
                 }
               },
               "NN"
             ]
           ],
-          "nlpIndexSentence": 5,
-          "score": 1.0
+          "score": 1.0,
+          "text": "a mother , it was heartbreaking to see a child",
+          "nlpIndexSentence": 2
         }
-      ],
+      ]
+    },
+    "what": {
       "annotated": [
         {
-          "text": "are trying to reach a five-year-old boy",
-          "coderPhraseCount": 3
+          "coderPhraseCount": 3,
+          "text": "are trying to reach a five-year-old boy"
         },
         {
-          "text": "fell down the 40m",
-          "coderPhraseCount": 2
+          "coderPhraseCount": 2,
+          "text": "fell down the 40m"
         }
       ],
-      "label": "what"
+      "label": "what",
+      "extracted": [
+        {
+          "parts": [
+            [
+              {
+                "nlpToken": {
+                  "index": 3,
+                  "word": "fell",
+                  "originalText": "fell",
+                  "lemma": "fall",
+                  "characterOffsetBegin": 465,
+                  "characterOffsetEnd": 469,
+                  "pos": "VBD",
+                  "ner": "O",
+                  "speaker": "PER0",
+                  "before": " ",
+                  "after": " "
+                }
+              },
+              "VBD"
+            ],
+            [
+              {
+                "nlpToken": {
+                  "index": 4,
+                  "word": "down",
+                  "originalText": "down",
+                  "lemma": "down",
+                  "characterOffsetBegin": 470,
+                  "characterOffsetEnd": 474,
+                  "pos": "RP",
+                  "ner": "O",
+                  "speaker": "PER0",
+                  "before": " ",
+                  "after": " "
+                }
+              },
+              "RP"
+            ],
+            [
+              {
+                "nlpToken": {
+                  "index": 5,
+                  "word": "the",
+                  "originalText": "the",
+                  "lemma": "the",
+                  "characterOffsetBegin": 475,
+                  "characterOffsetEnd": 478,
+                  "pos": "DT",
+                  "ner": "O",
+                  "speaker": "PER0",
+                  "before": " ",
+                  "after": " "
+                }
+              },
+              "DT"
+            ],
+            [
+              {
+                "nlpToken": {
+                  "index": 6,
+                  "word": "40m",
+                  "originalText": "40m",
+                  "lemma": "40m",
+                  "characterOffsetBegin": 479,
+                  "characterOffsetEnd": 482,
+                  "pos": "NN",
+                  "ner": "O",
+                  "speaker": "PER0",
+                  "before": " ",
+                  "after": " "
+                }
+              },
+              "NN"
+            ]
+          ],
+          "score": 1.0,
+          "text": "fell down the 40m",
+          "nlpIndexSentence": 5
+        }
+      ]
+    },
+    "when": {
+      "annotated": [
+        {
+          "coderPhraseCount": 3,
+          "parsed": "2016-11-12",
+          "text": "Sunday morning"
+        }
+      ],
+      "label": "when"
+    },
+    "where": {
+      "annotated": [
+        {
+          "coderPhraseCount": 3,
+          "text": "Baoding, Hebei province"
+        }
+      ],
+      "label": "where"
+    },
+    "who": {
+      "annotated": [
+        {
+          "coderPhraseCount": 3,
+          "text": "Dozens of rescuers"
+        },
+        {
+          "coderPhraseCount": 2,
+          "text": "five-year-old boy"
+        }
+      ],
+      "label": "who",
+      "extracted": [
+        {
+          "parts": [
+            [
+              {
+                "nlpToken": {
+                  "index": 1,
+                  "word": "The",
+                  "originalText": "The",
+                  "lemma": "the",
+                  "characterOffsetBegin": 457,
+                  "characterOffsetEnd": 460,
+                  "pos": "DT",
+                  "ner": "O",
+                  "speaker": "PER0",
+                  "before": " ",
+                  "after": " "
+                }
+              },
+              "DT"
+            ],
+            [
+              {
+                "nlpToken": {
+                  "index": 2,
+                  "word": "boy",
+                  "originalText": "boy",
+                  "lemma": "boy",
+                  "characterOffsetBegin": 461,
+                  "characterOffsetEnd": 464,
+                  "pos": "NN",
+                  "ner": "O",
+                  "speaker": "PER0",
+                  "before": " ",
+                  "after": " "
+                }
+              },
+              "NN"
+            ]
+          ],
+          "score": 1.0,
+          "text": "The boy",
+          "nlpIndexSentence": 5
+        }
+      ]
+    },
+    "why": {
+      "annotated": [
+        {
+          "coderPhraseCount": 1,
+          "text": "trapped deep down an abandoned well"
+        },
+        {
+          "coderPhraseCount": 1,
+          "text": "no warning signs"
+        },
+        {
+          "coderPhraseCount": 1
+        }
+      ],
+      "label": "why"
     }
   },
-  "description": "Dozens of rescuers in China are trying to reach a five-year-old boy trapped deep down an abandoned well.",
-  "text": "Image copyright The Paper Image caption Rescuers have spent days trying to rescue the boy who fell into a dry well Dozens of rescuers in China are trying to reach a five-year-old boy who is trapped deep down an abandoned well. Some 60 excavators and 100 dump trucks are being used in the search. The boy fell down the 40m dry well in Baoding, Hebei province on Sunday morning. He had been helping harvest vegetables, his father told Chinese media. The child's condition is unknown. Oxygen, food and water have been supplied. The 30cm-diameter well is too narrow for an adult to retrieve him. After two days of careful digging, rescuers have dug only 13m down the metal shaft, which threatens to collapse at any moment. An 800-square metre work area has been cleared to facilitate rescue attempts, a volunteer told The Paper, a Shanghai-based news website. The well had been left unused for five years and there were no warning signs. Visual imagery has so far failed to locate the boy. Many locals volunteered to help in the rescue, rushing to the scene after learning about the accident on WeChat, a popular communication app in China. Most netizens sent good wishes to the boy. \"It was saddening to read about such news. As a mother, it was heartbreaking to see a child fall into a well. I hope the child will be alive and alive,\" one user called 80 Hou Bu Huai wrote. Some wondered who was to blame. Weibo user S_AND_YY wrote: \"Parents have to take care of their children and it's dangerous everywhere.\" But not everyone agreed. \"The kid is in primary one already. Do his parents have to spend every minute with him? Is it possible? Shouldn't the well be the focus? If the well didn't exist, would this accident happen?\" wrote another user. Falling ground water levels in Hebei province have left many wells without water, reports say.",
+  "mimeType": "text/xml",
+  "originalFilename": "bbc-1",
   "parsingError": "true",
   "publisher": "bbc",
-  "originalFilename": "bbc-1",
-  "date_publish": "2016-11-08 12:00:10",
-  "dId": "1e471fa6844bce9e88878ce164699ab88ec3dc38f166a251f071b408"
+  "text": "Image copyright The Paper Image caption Rescuers have spent days trying to rescue the boy who fell into a dry well Dozens of rescuers in China are trying to reach a five-year-old boy who is trapped deep down an abandoned well. Some 60 excavators and 100 dump trucks are being used in the search. The boy fell down the 40m dry well in Baoding, Hebei province on Sunday morning. He had been helping harvest vegetables, his father told Chinese media. The child's condition is unknown. Oxygen, food and water have been supplied. The 30cm-diameter well is too narrow for an adult to retrieve him. After two days of careful digging, rescuers have dug only 13m down the metal shaft, which threatens to collapse at any moment. An 800-square metre work area has been cleared to facilitate rescue attempts, a volunteer told The Paper, a Shanghai-based news website. The well had been left unused for five years and there were no warning signs. Visual imagery has so far failed to locate the boy. Many locals volunteered to help in the rescue, rushing to the scene after learning about the accident on WeChat, a popular communication app in China. Most netizens sent good wishes to the boy. \"It was saddening to read about such news. As a mother, it was heartbreaking to see a child fall into a well. I hope the child will be alive and alive,\" one user called 80 Hou Bu Huai wrote. Some wondered who was to blame. Weibo user S_AND_YY wrote: \"Parents have to take care of their children and it's dangerous everywhere.\" But not everyone agreed. \"The kid is in primary one already. Do his parents have to spend every minute with him? Is it possible? Shouldn't the well be the focus? If the well didn't exist, would this accident happen?\" wrote another user. Falling ground water levels in Hebei province have left many wells without water, reports say.",
+  "title": "China well rescue: Race to reach boy trapped in Hebei",
+  "url": "http://www.bbc.com/news/world-asia-china-37906226"
 }

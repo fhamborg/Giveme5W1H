@@ -6,9 +6,15 @@
   "category": "cubs win championship",
   "fiveWoneH": {
     "who": {
+      "annotated": [
+        {
+          "text": "Chicago Cubs",
+          "coderPhraseCount": 3
+        }
+      ],
+      "label": "who",
       "extracted": [
         {
-          "text": "The Cubs",
           "parts": [
             [
               {
@@ -47,106 +53,13 @@
               "NNP"
             ]
           ],
-          "nlpIndexSentence": 2,
-          "score": 1.0
+          "score": 1.0,
+          "text": "The Cubs",
+          "nlpIndexSentence": 2
         }
-      ],
-      "annotated": [
-        {
-          "text": "Chicago Cubs",
-          "coderPhraseCount": 3
-        }
-      ],
-      "label": "who"
+      ]
     },
     "when": {
-      "extracted": [
-        {
-          "text": "midnight on Wednesday",
-          "enhancement": {
-            "timex": {
-              "start_date": "2016-11-02T00:00:00",
-              "end_date": "2016-11-02T00:00:59"
-            }
-          },
-          "parts": [
-            [
-              {
-                "nlpToken": {
-                  "characterOffsetBegin": 333,
-                  "word": "midnight",
-                  "lemma": "midnight",
-                  "timex": {
-                    "value": "2016-11-02T00:00",
-                    "tid": "t3",
-                    "type": "TIME"
-                  },
-                  "before": " ",
-                  "characterOffsetEnd": 341,
-                  "originalText": "midnight",
-                  "normalizedNER": "2016-11-02T00:00",
-                  "speaker": "PER0",
-                  "after": " ",
-                  "ner": "TIME",
-                  "index": 22,
-                  "pos": "NN"
-                }
-              },
-              "NN"
-            ],
-            [
-              {
-                "nlpToken": {
-                  "characterOffsetBegin": 342,
-                  "word": "on",
-                  "lemma": "on",
-                  "timex": {
-                    "value": "2016-11-02T00:00",
-                    "tid": "t3",
-                    "type": "TIME"
-                  },
-                  "before": " ",
-                  "characterOffsetEnd": 344,
-                  "originalText": "on",
-                  "normalizedNER": "2016-11-02T00:00",
-                  "speaker": "PER0",
-                  "after": " ",
-                  "ner": "TIME",
-                  "index": 23,
-                  "pos": "IN"
-                }
-              },
-              "IN"
-            ],
-            [
-              {
-                "nlpToken": {
-                  "characterOffsetBegin": 345,
-                  "word": "Wednesday",
-                  "lemma": "Wednesday",
-                  "timex": {
-                    "value": "2016-11-02T00:00",
-                    "tid": "t3",
-                    "type": "TIME"
-                  },
-                  "before": " ",
-                  "characterOffsetEnd": 354,
-                  "originalText": "Wednesday",
-                  "normalizedNER": "2016-11-02T00:00",
-                  "speaker": "PER0",
-                  "after": "",
-                  "ner": "DATE",
-                  "index": 24,
-                  "pos": "NNP"
-                }
-              },
-              "NNP"
-            ]
-          ],
-          "nlpIndexSentence": 2,
-          "score": 0.8562829430512596
-        }
-      ],
       "annotated": [
         {
           "text": "almost midnight on Wednesday",
@@ -157,51 +70,6 @@
       "label": "when"
     },
     "why": {
-      "extracted": [
-        {
-          "text": "The Cubs",
-          "parts": [
-            [
-              {
-                "nlpToken": {
-                  "characterOffsetBegin": 221,
-                  "word": "The",
-                  "lemma": "the",
-                  "speaker": "PER0",
-                  "after": " ",
-                  "pos": "DT",
-                  "ner": "O",
-                  "before": " ",
-                  "characterOffsetEnd": 224,
-                  "index": 1,
-                  "originalText": "The"
-                }
-              },
-              "DT"
-            ],
-            [
-              {
-                "nlpToken": {
-                  "characterOffsetBegin": 225,
-                  "word": "Cubs",
-                  "lemma": "Cubs",
-                  "speaker": "PER0",
-                  "after": " ",
-                  "pos": "NNP",
-                  "ner": "ORGANIZATION",
-                  "before": " ",
-                  "characterOffsetEnd": 229,
-                  "index": 2,
-                  "originalText": "Cubs"
-                }
-              },
-              "NNP"
-            ]
-          ],
-          "nlpIndexSentence": 2,
-          "score": 0.41318681318681316
-        }
-      ],
       "annotated": [
         {
           "text": "beat the Cleveland Indians",
@@ -218,32 +86,6 @@
       "label": "why"
     },
     "how": {
-      "extracted": [
-        {
-          "text": "subscribing",
-          "parts": [
-            [
-              {
-                "nlpToken": {
-                  "characterOffsetBegin": 67,
-                  "word": "subscribing",
-                  "lemma": "subscribe",
-                  "characterOffsetEnd": 78,
-                  "speaker": "PER0",
-                  "ner": "O",
-                  "after": "",
-                  "originalText": "subscribing",
-                  "before": " ",
-                  "index": 13,
-                  "pos": "VBG"
-                }
-              },
-              "VBG"
-            ]
-          ],
-          "score": 1.0
-        }
-      ],
       "annotated": [
         {
           "text": "extra innings which was delayed",
@@ -254,57 +96,432 @@
           "coderPhraseCount": 1
         }
       ],
-      "label": "how"
-    },
-    "where": {
+      "label": "how",
       "extracted": [
         {
-          "text": "Chicago",
-          "enhancement": {
-            "openstreetmap_nominatim": {
-              "place_id": "178038280",
-              "licence": "Data \u00a9 OpenStreetMap contributors, ODbL 1.0. http://www.openstreetmap.org/copyright",
-              "type": "city",
-              "class": "place",
-              "osm_id": "122604",
-              "boundingbox": [
-                41.643919,
-                42.0230219,
-                -87.940101,
-                -87.5239841
-              ],
-              "osm_type": "relation",
-              "lon": "-87.6244212",
-              "display_name": "Chicago, Cook County, Illinois, United States of America",
-              "importance": 0.30566190262222,
-              "icon": "https://nominatim.openstreetmap.org/images/mapicons/poi_place_city.p.20.png",
-              "lat": "41.8755546"
-            }
-          },
           "parts": [
             [
               {
                 "nlpToken": {
-                  "characterOffsetBegin": 475,
-                  "word": "Chicago",
-                  "lemma": "Chicago",
-                  "characterOffsetEnd": 482,
-                  "speaker": "PER0",
-                  "ner": "LOCATION",
-                  "after": "",
-                  "originalText": "Chicago",
+                  "characterOffsetBegin": 944,
+                  "word": "each",
+                  "lemma": "each",
+                  "characterOffsetEnd": 948,
+                  "speaker": "58",
+                  "ner": "O",
+                  "after": " ",
+                  "originalText": "each",
                   "before": " ",
-                  "index": 4,
-                  "pos": "NNP"
+                  "index": 9,
+                  "pos": "DT"
                 }
               },
-              "NNP"
+              "DT"
+            ],
+            [
+              {
+                "nlpToken": {
+                  "characterOffsetBegin": 949,
+                  "word": "other",
+                  "lemma": "other",
+                  "characterOffsetEnd": 954,
+                  "speaker": "58",
+                  "ner": "O",
+                  "after": "",
+                  "originalText": "other",
+                  "before": " ",
+                  "index": 10,
+                  "pos": "JJ"
+                }
+              },
+              "JJ"
+            ],
+            [
+              {
+                "nlpToken": {
+                  "characterOffsetBegin": 954,
+                  "word": ",",
+                  "lemma": ",",
+                  "characterOffsetEnd": 955,
+                  "speaker": "58",
+                  "ner": "O",
+                  "after": " ",
+                  "originalText": ",",
+                  "before": "",
+                  "index": 11,
+                  "pos": ","
+                }
+              },
+              ","
+            ],
+            [
+              {
+                "nlpToken": {
+                  "characterOffsetBegin": 956,
+                  "word": "takes",
+                  "lemma": "take",
+                  "characterOffsetEnd": 961,
+                  "speaker": "58",
+                  "ner": "O",
+                  "after": " ",
+                  "originalText": "takes",
+                  "before": " ",
+                  "index": 12,
+                  "pos": "VBZ"
+                }
+              },
+              "VBZ"
+            ],
+            [
+              {
+                "nlpToken": {
+                  "characterOffsetBegin": 962,
+                  "word": "care",
+                  "lemma": "care",
+                  "characterOffsetEnd": 966,
+                  "speaker": "58",
+                  "ner": "O",
+                  "after": " ",
+                  "originalText": "care",
+                  "before": " ",
+                  "index": 13,
+                  "pos": "NN"
+                }
+              },
+              "NN"
+            ],
+            [
+              {
+                "nlpToken": {
+                  "characterOffsetBegin": 967,
+                  "word": "of",
+                  "lemma": "of",
+                  "characterOffsetEnd": 969,
+                  "speaker": "58",
+                  "ner": "O",
+                  "after": " ",
+                  "originalText": "of",
+                  "before": " ",
+                  "index": 14,
+                  "pos": "IN"
+                }
+              },
+              "IN"
+            ],
+            [
+              {
+                "nlpToken": {
+                  "characterOffsetBegin": 970,
+                  "word": "each",
+                  "lemma": "each",
+                  "characterOffsetEnd": 974,
+                  "speaker": "58",
+                  "ner": "O",
+                  "after": " ",
+                  "originalText": "each",
+                  "before": " ",
+                  "index": 15,
+                  "pos": "DT"
+                }
+              },
+              "DT"
+            ],
+            [
+              {
+                "nlpToken": {
+                  "characterOffsetBegin": 975,
+                  "word": "other",
+                  "lemma": "other",
+                  "characterOffsetEnd": 980,
+                  "speaker": "58",
+                  "ner": "O",
+                  "after": " ",
+                  "originalText": "other",
+                  "before": " ",
+                  "index": 16,
+                  "pos": "JJ"
+                }
+              },
+              "JJ"
+            ],
+            [
+              {
+                "nlpToken": {
+                  "characterOffsetBegin": 981,
+                  "word": "and",
+                  "lemma": "and",
+                  "characterOffsetEnd": 984,
+                  "speaker": "58",
+                  "ner": "O",
+                  "after": " ",
+                  "originalText": "and",
+                  "before": " ",
+                  "index": 17,
+                  "pos": "CC"
+                }
+              },
+              "CC"
+            ],
+            [
+              {
+                "nlpToken": {
+                  "characterOffsetBegin": 985,
+                  "word": "picks",
+                  "lemma": "pick",
+                  "characterOffsetEnd": 990,
+                  "speaker": "58",
+                  "ner": "O",
+                  "after": " ",
+                  "originalText": "picks",
+                  "before": " ",
+                  "index": 18,
+                  "pos": "VBZ"
+                }
+              },
+              "VBZ"
+            ],
+            [
+              {
+                "nlpToken": {
+                  "characterOffsetBegin": 991,
+                  "word": "each",
+                  "lemma": "each",
+                  "characterOffsetEnd": 995,
+                  "speaker": "58",
+                  "ner": "O",
+                  "after": " ",
+                  "originalText": "each",
+                  "before": " ",
+                  "index": 19,
+                  "pos": "DT"
+                }
+              },
+              "DT"
+            ],
+            [
+              {
+                "nlpToken": {
+                  "characterOffsetBegin": 996,
+                  "word": "other",
+                  "lemma": "other",
+                  "characterOffsetEnd": 1001,
+                  "speaker": "58",
+                  "ner": "O",
+                  "after": " ",
+                  "originalText": "other",
+                  "before": " ",
+                  "index": 20,
+                  "pos": "JJ"
+                }
+              },
+              "JJ"
+            ],
+            [
+              {
+                "nlpToken": {
+                  "characterOffsetBegin": 1002,
+                  "word": "up",
+                  "lemma": "up",
+                  "characterOffsetEnd": 1004,
+                  "speaker": "58",
+                  "ner": "O",
+                  "after": " ",
+                  "originalText": "up",
+                  "before": " ",
+                  "index": 21,
+                  "pos": "RB"
+                }
+              },
+              "RB"
+            ],
+            [
+              {
+                "nlpToken": {
+                  "characterOffsetBegin": 1005,
+                  "word": "and",
+                  "lemma": "and",
+                  "characterOffsetEnd": 1008,
+                  "speaker": "58",
+                  "ner": "O",
+                  "after": " ",
+                  "originalText": "and",
+                  "before": " ",
+                  "index": 22,
+                  "pos": "CC"
+                }
+              },
+              "CC"
+            ],
+            [
+              {
+                "nlpToken": {
+                  "characterOffsetBegin": 1009,
+                  "word": "that",
+                  "lemma": "that",
+                  "characterOffsetEnd": 1013,
+                  "speaker": "58",
+                  "ner": "O",
+                  "after": "",
+                  "originalText": "that",
+                  "before": " ",
+                  "index": 23,
+                  "pos": "DT"
+                }
+              },
+              "DT"
+            ],
+            [
+              {
+                "nlpToken": {
+                  "characterOffsetBegin": 1013,
+                  "word": "'s",
+                  "lemma": "be",
+                  "characterOffsetEnd": 1015,
+                  "speaker": "58",
+                  "ner": "O",
+                  "after": " ",
+                  "originalText": "'s",
+                  "before": "",
+                  "index": 24,
+                  "pos": "VBZ"
+                }
+              },
+              "VBZ"
+            ],
+            [
+              {
+                "nlpToken": {
+                  "characterOffsetBegin": 1016,
+                  "word": "what",
+                  "lemma": "what",
+                  "characterOffsetEnd": 1020,
+                  "speaker": "58",
+                  "ner": "O",
+                  "after": " ",
+                  "originalText": "what",
+                  "before": " ",
+                  "index": 25,
+                  "pos": "WP"
+                }
+              },
+              "WP"
+            ],
+            [
+              {
+                "nlpToken": {
+                  "characterOffsetBegin": 1021,
+                  "word": "we",
+                  "lemma": "we",
+                  "characterOffsetEnd": 1023,
+                  "speaker": "58",
+                  "ner": "O",
+                  "after": " ",
+                  "originalText": "we",
+                  "before": " ",
+                  "index": 26,
+                  "pos": "PRP"
+                }
+              },
+              "PRP"
+            ],
+            [
+              {
+                "nlpToken": {
+                  "characterOffsetBegin": 1024,
+                  "word": "did",
+                  "lemma": "do",
+                  "characterOffsetEnd": 1027,
+                  "speaker": "58",
+                  "ner": "O",
+                  "after": " ",
+                  "originalText": "did",
+                  "before": " ",
+                  "index": 27,
+                  "pos": "VBD"
+                }
+              },
+              "VBD"
+            ],
+            [
+              {
+                "nlpToken": {
+                  "characterOffsetBegin": 1028,
+                  "word": "during",
+                  "lemma": "during",
+                  "characterOffsetEnd": 1034,
+                  "speaker": "58",
+                  "ner": "O",
+                  "after": " ",
+                  "originalText": "during",
+                  "before": " ",
+                  "index": 28,
+                  "pos": "IN"
+                }
+              },
+              "IN"
+            ],
+            [
+              {
+                "nlpToken": {
+                  "characterOffsetBegin": 1035,
+                  "word": "that",
+                  "lemma": "that",
+                  "characterOffsetEnd": 1039,
+                  "speaker": "58",
+                  "ner": "O",
+                  "after": " ",
+                  "originalText": "that",
+                  "before": " ",
+                  "index": 29,
+                  "pos": "DT"
+                }
+              },
+              "DT"
+            ],
+            [
+              {
+                "nlpToken": {
+                  "characterOffsetBegin": 1040,
+                  "word": "rain",
+                  "lemma": "rain",
+                  "characterOffsetEnd": 1044,
+                  "speaker": "58",
+                  "ner": "O",
+                  "after": " ",
+                  "originalText": "rain",
+                  "before": " ",
+                  "index": 30,
+                  "pos": "NN"
+                }
+              },
+              "NN"
+            ],
+            [
+              {
+                "nlpToken": {
+                  "characterOffsetBegin": 1045,
+                  "word": "delay",
+                  "lemma": "delay",
+                  "characterOffsetEnd": 1050,
+                  "speaker": "58",
+                  "ner": "O",
+                  "after": "",
+                  "originalText": "delay",
+                  "before": " ",
+                  "index": 31,
+                  "pos": "NN"
+                }
+              },
+              "NN"
             ]
           ],
-          "nlpIndexSentence": 4,
-          "score": 1.0
+          "score": 1.0,
+          "text": "each other , takes care of each other and picks each other up and that 's what we did during that rain delay",
+          "nlpIndexSentence": 9
         }
-      ],
+      ]
+    },
+    "where": {
       "annotated": [
         {
           "text": "Wrigley Field",
@@ -314,9 +531,15 @@
       "label": "where"
     },
     "what": {
+      "annotated": [
+        {
+          "text": "win World Series",
+          "coderPhraseCount": 3
+        }
+      ],
+      "label": "what",
       "extracted": [
         {
-          "text": "won 8-7",
           "parts": [
             [
               {
@@ -356,17 +579,11 @@
               "CD"
             ]
           ],
-          "nlpIndexSentence": 2,
-          "score": 1.0
+          "score": 1.0,
+          "text": "won 8-7",
+          "nlpIndexSentence": 2
         }
-      ],
-      "annotated": [
-        {
-          "text": "win World Series",
-          "coderPhraseCount": 3
-        }
-      ],
-      "label": "what"
+      ]
     }
   },
   "description": "The Cubs won 8-7 in an extra innings delayed by rain as thousands gathered outside Wrigley Field",

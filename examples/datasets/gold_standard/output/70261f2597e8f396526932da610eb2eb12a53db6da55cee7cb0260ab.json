@@ -6,9 +6,23 @@
   "category": "toberone-gate",
   "fiveWoneH": {
     "who": {
-      "extracted": [
+      "annotated": [
+        {
+          "text": "Toblerone",
+          "coderPhraseCount": 2
+        },
         {
           "text": "Fans of the iconic Toblerone bar",
+          "coderPhraseCount": 2
+        },
+        {
+          "text": "Mondelez International",
+          "coderPhraseCount": 2
+        }
+      ],
+      "label": "who",
+      "extracted": [
+        {
           "parts": [
             [
               {
@@ -119,137 +133,12 @@
               "NN"
             ]
           ],
-          "score": 1.0
+          "score": 1.0,
+          "text": "Fans of the iconic Toblerone bar"
         }
-      ],
-      "annotated": [
-        {
-          "text": "Toblerone",
-          "coderPhraseCount": 2
-        },
-        {
-          "text": "Fans of the iconic Toblerone bar",
-          "coderPhraseCount": 2
-        },
-        {
-          "text": "Mondelez International",
-          "coderPhraseCount": 2
-        }
-      ],
-      "label": "who"
+      ]
     },
     "when": {
-      "extracted": [
-        {
-          "text": "November 8 , 2016",
-          "enhancement": {
-            "timex": {
-              "start_date": "2016-11-08T00:00:00",
-              "end_date": "2016-11-08T23:59:59"
-            }
-          },
-          "parts": [
-            [
-              {
-                "nlpToken": {
-                  "characterOffsetBegin": 1499,
-                  "word": "November",
-                  "lemma": "November",
-                  "timex": {
-                    "value": "2016-11-08",
-                    "tid": "t6",
-                    "type": "DATE"
-                  },
-                  "before": " ",
-                  "characterOffsetEnd": 1507,
-                  "originalText": "November",
-                  "normalizedNER": "2016-11-08",
-                  "speaker": "PER0",
-                  "after": " ",
-                  "ner": "DATE",
-                  "index": 9,
-                  "pos": "NNP"
-                }
-              },
-              "NNP"
-            ],
-            [
-              {
-                "nlpToken": {
-                  "characterOffsetBegin": 1508,
-                  "word": "8",
-                  "lemma": "8",
-                  "timex": {
-                    "value": "2016-11-08",
-                    "tid": "t6",
-                    "type": "DATE"
-                  },
-                  "before": " ",
-                  "characterOffsetEnd": 1509,
-                  "originalText": "8",
-                  "normalizedNER": "2016-11-08",
-                  "speaker": "PER0",
-                  "after": "",
-                  "ner": "DATE",
-                  "index": 10,
-                  "pos": "CD"
-                }
-              },
-              "CD"
-            ],
-            [
-              {
-                "nlpToken": {
-                  "characterOffsetBegin": 1509,
-                  "word": ",",
-                  "lemma": ",",
-                  "timex": {
-                    "value": "2016-11-08",
-                    "tid": "t6",
-                    "type": "DATE"
-                  },
-                  "before": "",
-                  "characterOffsetEnd": 1510,
-                  "originalText": ",",
-                  "normalizedNER": "2016-11-08",
-                  "speaker": "PER0",
-                  "after": " ",
-                  "ner": "DATE",
-                  "index": 11,
-                  "pos": ","
-                }
-              },
-              ","
-            ],
-            [
-              {
-                "nlpToken": {
-                  "characterOffsetBegin": 1511,
-                  "word": "2016",
-                  "lemma": "2016",
-                  "timex": {
-                    "value": "2016-11-08",
-                    "tid": "t6",
-                    "type": "DATE"
-                  },
-                  "before": " ",
-                  "characterOffsetEnd": 1515,
-                  "originalText": "2016",
-                  "normalizedNER": "2016-11-08",
-                  "speaker": "PER0",
-                  "after": " ",
-                  "ner": "DATE",
-                  "index": 12,
-                  "pos": "CD"
-                }
-              },
-              "CD"
-            ]
-          ],
-          "nlpIndexSentence": 16,
-          "score": 0.7437847903485321
-        }
-      ],
       "annotated": [
         {
           "text": "November 7, 2016",
@@ -265,33 +154,6 @@
       "label": "when"
     },
     "why": {
-      "extracted": [
-        {
-          "text": "it",
-          "parts": [
-            [
-              {
-                "nlpToken": {
-                  "characterOffsetBegin": 175,
-                  "word": "it",
-                  "lemma": "it",
-                  "speaker": "PER0",
-                  "after": " ",
-                  "pos": "PRP",
-                  "ner": "O",
-                  "before": " ",
-                  "characterOffsetEnd": 177,
-                  "index": 10,
-                  "originalText": "it"
-                }
-              },
-              "PRP"
-            ]
-          ],
-          "nlpIndexSentence": 1,
-          "score": 0.4208791208791209
-        }
-      ],
       "annotated": [
         {
           "text": "chocolate bar shape change",
@@ -305,90 +167,835 @@
       "label": "why"
     },
     "how": {
-      "extracted": [
-        {
-          "text": "triangular",
-          "parts": [
-            [
-              {
-                "nlpToken": {
-                  "characterOffsetBegin": 218,
-                  "word": "triangular",
-                  "lemma": "triangular",
-                  "characterOffsetEnd": 228,
-                  "speaker": "PER0",
-                  "ner": "O",
-                  "after": " ",
-                  "originalText": "triangular",
-                  "before": " ",
-                  "index": 18,
-                  "pos": "JJ"
-                }
-              },
-              "JJ"
-            ]
-          ],
-          "nlpIndexSentence": 1,
-          "score": 1.0
-        }
-      ],
       "annotated": [
         {
           "text": "have hit out",
           "coderPhraseCount": 3
         }
       ],
-      "label": "how"
-    },
-    "where": {
+      "label": "how",
       "extracted": [
         {
-          "text": "UK",
-          "enhancement": {
-            "openstreetmap_nominatim": {
-              "place_id": "179731133",
-              "licence": "Data \u00a9 OpenStreetMap contributors, ODbL 1.0. http://www.openstreetmap.org/copyright",
-              "type": "administrative",
-              "class": "boundary",
-              "osm_id": "62149",
-              "boundingbox": [
-                49.674,
-                61.061,
-                -14.015517,
-                2.0919117
-              ],
-              "osm_type": "relation",
-              "lon": "-3.2765753",
-              "display_name": "UK",
-              "importance": 0.3267301409654,
-              "icon": "https://nominatim.openstreetmap.org/images/mapicons/poi_boundary_administrative.p.20.png",
-              "lat": "54.7023545"
-            }
-          },
           "parts": [
             [
               {
                 "nlpToken": {
-                  "characterOffsetBegin": 273,
+                  "characterOffsetBegin": 2052,
+                  "word": "as",
+                  "lemma": "as",
+                  "characterOffsetEnd": 2054,
+                  "speaker": "99",
+                  "ner": "O",
+                  "after": " ",
+                  "originalText": "as",
+                  "before": " ",
+                  "index": 7,
+                  "pos": "RB"
+                }
+              },
+              "RB"
+            ],
+            [
+              {
+                "nlpToken": {
+                  "characterOffsetBegin": 2055,
+                  "word": "long",
+                  "lemma": "long",
+                  "characterOffsetEnd": 2059,
+                  "speaker": "99",
+                  "ner": "O",
+                  "after": " ",
+                  "originalText": "long",
+                  "before": " ",
+                  "index": 8,
+                  "pos": "JJ"
+                }
+              },
+              "JJ"
+            ],
+            [
+              {
+                "nlpToken": {
+                  "characterOffsetBegin": 2060,
+                  "word": "as",
+                  "lemma": "as",
+                  "characterOffsetEnd": 2062,
+                  "speaker": "99",
+                  "ner": "O",
+                  "after": " ",
+                  "originalText": "as",
+                  "before": " ",
+                  "index": 9,
+                  "pos": "IN"
+                }
+              },
+              "IN"
+            ],
+            [
+              {
+                "nlpToken": {
+                  "characterOffsetBegin": 2063,
+                  "word": "possible",
+                  "lemma": "possible",
+                  "characterOffsetEnd": 2071,
+                  "speaker": "99",
+                  "ner": "O",
+                  "after": "",
+                  "originalText": "possible",
+                  "before": " ",
+                  "index": 10,
+                  "pos": "JJ"
+                }
+              },
+              "JJ"
+            ],
+            [
+              {
+                "nlpToken": {
+                  "characterOffsetBegin": 2071,
+                  "word": ",",
+                  "lemma": ",",
+                  "characterOffsetEnd": 2072,
+                  "speaker": "99",
+                  "ner": "O",
+                  "after": " ",
+                  "originalText": ",",
+                  "before": "",
+                  "index": 11,
+                  "pos": ","
+                }
+              },
+              ","
+            ],
+            [
+              {
+                "nlpToken": {
+                  "characterOffsetBegin": 2073,
+                  "word": "but",
+                  "lemma": "but",
+                  "characterOffsetEnd": 2076,
+                  "speaker": "99",
+                  "ner": "O",
+                  "after": " ",
+                  "originalText": "but",
+                  "before": " ",
+                  "index": 12,
+                  "pos": "CC"
+                }
+              },
+              "CC"
+            ],
+            [
+              {
+                "nlpToken": {
+                  "characterOffsetBegin": 2077,
+                  "word": "to",
+                  "lemma": "to",
+                  "characterOffsetEnd": 2079,
+                  "speaker": "99",
+                  "ner": "O",
+                  "after": " ",
+                  "originalText": "to",
+                  "before": " ",
+                  "index": 13,
+                  "pos": "TO"
+                }
+              },
+              "TO"
+            ],
+            [
+              {
+                "nlpToken": {
+                  "characterOffsetBegin": 2080,
+                  "word": "ensure",
+                  "lemma": "ensure",
+                  "characterOffsetEnd": 2086,
+                  "speaker": "99",
+                  "ner": "O",
+                  "after": " ",
+                  "originalText": "ensure",
+                  "before": " ",
+                  "index": 14,
+                  "pos": "VB"
+                }
+              },
+              "VB"
+            ],
+            [
+              {
+                "nlpToken": {
+                  "characterOffsetBegin": 2087,
+                  "word": "Toblerone",
+                  "lemma": "toblerone",
+                  "characterOffsetEnd": 2096,
+                  "speaker": "99",
+                  "ner": "O",
+                  "after": " ",
+                  "originalText": "Toblerone",
+                  "before": " ",
+                  "index": 15,
+                  "pos": "NN"
+                }
+              },
+              "NN"
+            ],
+            [
+              {
+                "nlpToken": {
+                  "characterOffsetBegin": 2097,
+                  "word": "remains",
+                  "lemma": "remain",
+                  "characterOffsetEnd": 2104,
+                  "speaker": "99",
+                  "ner": "O",
+                  "after": " ",
+                  "originalText": "remains",
+                  "before": " ",
+                  "index": 16,
+                  "pos": "VBZ"
+                }
+              },
+              "VBZ"
+            ],
+            [
+              {
+                "nlpToken": {
+                  "characterOffsetBegin": 2105,
+                  "word": "on-shelf",
+                  "lemma": "on-shelf",
+                  "characterOffsetEnd": 2113,
+                  "speaker": "99",
+                  "ner": "O",
+                  "after": "",
+                  "originalText": "on-shelf",
+                  "before": " ",
+                  "index": 17,
+                  "pos": "JJ"
+                }
+              },
+              "JJ"
+            ],
+            [
+              {
+                "nlpToken": {
+                  "characterOffsetBegin": 2113,
+                  "word": ",",
+                  "lemma": ",",
+                  "characterOffsetEnd": 2114,
+                  "speaker": "99",
+                  "ner": "O",
+                  "after": " ",
+                  "originalText": ",",
+                  "before": "",
+                  "index": 18,
+                  "pos": ","
+                }
+              },
+              ","
+            ],
+            [
+              {
+                "nlpToken": {
+                  "characterOffsetBegin": 2115,
+                  "word": "is",
+                  "lemma": "be",
+                  "characterOffsetEnd": 2117,
+                  "speaker": "99",
+                  "ner": "O",
+                  "after": " ",
+                  "originalText": "is",
+                  "before": " ",
+                  "index": 19,
+                  "pos": "VBZ"
+                }
+              },
+              "VBZ"
+            ],
+            [
+              {
+                "nlpToken": {
+                  "characterOffsetBegin": 2118,
+                  "word": "affordable",
+                  "lemma": "affordable",
+                  "characterOffsetEnd": 2128,
+                  "speaker": "99",
+                  "ner": "O",
+                  "after": " ",
+                  "originalText": "affordable",
+                  "before": " ",
+                  "index": 20,
+                  "pos": "JJ"
+                }
+              },
+              "JJ"
+            ],
+            [
+              {
+                "nlpToken": {
+                  "characterOffsetBegin": 2129,
+                  "word": "and",
+                  "lemma": "and",
+                  "characterOffsetEnd": 2132,
+                  "speaker": "99",
+                  "ner": "O",
+                  "after": " ",
+                  "originalText": "and",
+                  "before": " ",
+                  "index": 21,
+                  "pos": "CC"
+                }
+              },
+              "CC"
+            ],
+            [
+              {
+                "nlpToken": {
+                  "characterOffsetBegin": 2133,
+                  "word": "retains",
+                  "lemma": "retain",
+                  "characterOffsetEnd": 2140,
+                  "speaker": "99",
+                  "ner": "O",
+                  "after": " ",
+                  "originalText": "retains",
+                  "before": " ",
+                  "index": 22,
+                  "pos": "VBZ"
+                }
+              },
+              "VBZ"
+            ],
+            [
+              {
+                "nlpToken": {
+                  "characterOffsetBegin": 2141,
+                  "word": "the",
+                  "lemma": "the",
+                  "characterOffsetEnd": 2144,
+                  "speaker": "99",
+                  "ner": "O",
+                  "after": " ",
+                  "originalText": "the",
+                  "before": " ",
+                  "index": 23,
+                  "pos": "DT"
+                }
+              },
+              "DT"
+            ],
+            [
+              {
+                "nlpToken": {
+                  "characterOffsetBegin": 2145,
+                  "word": "triangular",
+                  "lemma": "triangular",
+                  "characterOffsetEnd": 2155,
+                  "speaker": "99",
+                  "ner": "O",
+                  "after": " ",
+                  "originalText": "triangular",
+                  "before": " ",
+                  "index": 24,
+                  "pos": "JJ"
+                }
+              },
+              "JJ"
+            ],
+            [
+              {
+                "nlpToken": {
+                  "characterOffsetBegin": 2156,
+                  "word": "shape",
+                  "lemma": "shape",
+                  "characterOffsetEnd": 2161,
+                  "speaker": "99",
+                  "ner": "O",
+                  "after": "",
+                  "originalText": "shape",
+                  "before": " ",
+                  "index": 25,
+                  "pos": "NN"
+                }
+              },
+              "NN"
+            ],
+            [
+              {
+                "nlpToken": {
+                  "characterOffsetBegin": 2161,
+                  "word": ",",
+                  "lemma": ",",
+                  "characterOffsetEnd": 2162,
+                  "speaker": "99",
+                  "ner": "O",
+                  "after": " ",
+                  "originalText": ",",
+                  "before": "",
+                  "index": 26,
+                  "pos": ","
+                }
+              },
+              ","
+            ],
+            [
+              {
+                "nlpToken": {
+                  "characterOffsetBegin": 2163,
+                  "word": "we",
+                  "lemma": "we",
+                  "characterOffsetEnd": 2165,
+                  "speaker": "99",
+                  "ner": "O",
+                  "after": " ",
+                  "originalText": "we",
+                  "before": " ",
+                  "index": 27,
+                  "pos": "PRP"
+                }
+              },
+              "PRP"
+            ],
+            [
+              {
+                "nlpToken": {
+                  "characterOffsetBegin": 2166,
+                  "word": "have",
+                  "lemma": "have",
+                  "characterOffsetEnd": 2170,
+                  "speaker": "99",
+                  "ner": "O",
+                  "after": " ",
+                  "originalText": "have",
+                  "before": " ",
+                  "index": 28,
+                  "pos": "VBP"
+                }
+              },
+              "VBP"
+            ],
+            [
+              {
+                "nlpToken": {
+                  "characterOffsetBegin": 2171,
+                  "word": "had",
+                  "lemma": "have",
+                  "characterOffsetEnd": 2174,
+                  "speaker": "99",
+                  "ner": "O",
+                  "after": " ",
+                  "originalText": "had",
+                  "before": " ",
+                  "index": 29,
+                  "pos": "VBN"
+                }
+              },
+              "VBN"
+            ],
+            [
+              {
+                "nlpToken": {
+                  "characterOffsetBegin": 2175,
+                  "word": "to",
+                  "lemma": "to",
+                  "characterOffsetEnd": 2177,
+                  "speaker": "99",
+                  "ner": "O",
+                  "after": " ",
+                  "originalText": "to",
+                  "before": " ",
+                  "index": 30,
+                  "pos": "TO"
+                }
+              },
+              "TO"
+            ],
+            [
+              {
+                "nlpToken": {
+                  "characterOffsetBegin": 2178,
+                  "word": "reduce",
+                  "lemma": "reduce",
+                  "characterOffsetEnd": 2184,
+                  "speaker": "99",
+                  "ner": "O",
+                  "after": " ",
+                  "originalText": "reduce",
+                  "before": " ",
+                  "index": 31,
+                  "pos": "VB"
+                }
+              },
+              "VB"
+            ],
+            [
+              {
+                "nlpToken": {
+                  "characterOffsetBegin": 2185,
+                  "word": "the",
+                  "lemma": "the",
+                  "characterOffsetEnd": 2188,
+                  "speaker": "99",
+                  "ner": "O",
+                  "after": " ",
+                  "originalText": "the",
+                  "before": " ",
+                  "index": 32,
+                  "pos": "DT"
+                }
+              },
+              "DT"
+            ],
+            [
+              {
+                "nlpToken": {
+                  "characterOffsetBegin": 2189,
+                  "word": "weight",
+                  "lemma": "weight",
+                  "characterOffsetEnd": 2195,
+                  "speaker": "99",
+                  "ner": "O",
+                  "after": " ",
+                  "originalText": "weight",
+                  "before": " ",
+                  "index": 33,
+                  "pos": "NN"
+                }
+              },
+              "NN"
+            ],
+            [
+              {
+                "nlpToken": {
+                  "characterOffsetBegin": 2196,
+                  "word": "of",
+                  "lemma": "of",
+                  "characterOffsetEnd": 2198,
+                  "speaker": "99",
+                  "ner": "O",
+                  "after": " ",
+                  "originalText": "of",
+                  "before": " ",
+                  "index": 34,
+                  "pos": "IN"
+                }
+              },
+              "IN"
+            ],
+            [
+              {
+                "nlpToken": {
+                  "characterOffsetBegin": 2199,
+                  "word": "just",
+                  "lemma": "just",
+                  "characterOffsetEnd": 2203,
+                  "speaker": "99",
+                  "ner": "O",
+                  "after": " ",
+                  "originalText": "just",
+                  "before": " ",
+                  "index": 35,
+                  "pos": "RB"
+                }
+              },
+              "RB"
+            ],
+            [
+              {
+                "nlpToken": {
+                  "characterOffsetBegin": 2204,
+                  "word": "two",
+                  "lemma": "two",
+                  "before": " ",
+                  "characterOffsetEnd": 2207,
+                  "originalText": "two",
+                  "normalizedNER": "2.0",
+                  "speaker": "99",
+                  "after": " ",
+                  "ner": "NUMBER",
+                  "index": 36,
+                  "pos": "CD"
+                }
+              },
+              "CD"
+            ],
+            [
+              {
+                "nlpToken": {
+                  "characterOffsetBegin": 2208,
+                  "word": "of",
+                  "lemma": "of",
+                  "characterOffsetEnd": 2210,
+                  "speaker": "99",
+                  "ner": "O",
+                  "after": " ",
+                  "originalText": "of",
+                  "before": " ",
+                  "index": 37,
+                  "pos": "IN"
+                }
+              },
+              "IN"
+            ],
+            [
+              {
+                "nlpToken": {
+                  "characterOffsetBegin": 2211,
+                  "word": "our",
+                  "lemma": "we",
+                  "characterOffsetEnd": 2214,
+                  "speaker": "99",
+                  "ner": "O",
+                  "after": " ",
+                  "originalText": "our",
+                  "before": " ",
+                  "index": 38,
+                  "pos": "PRP$"
+                }
+              },
+              "PRP$"
+            ],
+            [
+              {
+                "nlpToken": {
+                  "characterOffsetBegin": 2215,
+                  "word": "bars",
+                  "lemma": "bar",
+                  "characterOffsetEnd": 2219,
+                  "speaker": "99",
+                  "ner": "O",
+                  "after": " ",
+                  "originalText": "bars",
+                  "before": " ",
+                  "index": 39,
+                  "pos": "NNS"
+                }
+              },
+              "NNS"
+            ],
+            [
+              {
+                "nlpToken": {
+                  "characterOffsetBegin": 2220,
+                  "word": "in",
+                  "lemma": "in",
+                  "characterOffsetEnd": 2222,
+                  "speaker": "99",
+                  "ner": "O",
+                  "after": " ",
+                  "originalText": "in",
+                  "before": " ",
+                  "index": 40,
+                  "pos": "IN"
+                }
+              },
+              "IN"
+            ],
+            [
+              {
+                "nlpToken": {
+                  "characterOffsetBegin": 2223,
+                  "word": "the",
+                  "lemma": "the",
+                  "characterOffsetEnd": 2226,
+                  "speaker": "99",
+                  "ner": "O",
+                  "after": " ",
+                  "originalText": "the",
+                  "before": " ",
+                  "index": 41,
+                  "pos": "DT"
+                }
+              },
+              "DT"
+            ],
+            [
+              {
+                "nlpToken": {
+                  "characterOffsetBegin": 2227,
                   "word": "UK",
                   "lemma": "UK",
-                  "characterOffsetEnd": 275,
-                  "speaker": "PER0",
+                  "characterOffsetEnd": 2229,
+                  "speaker": "99",
                   "ner": "LOCATION",
-                  "after": " ",
+                  "after": "",
                   "originalText": "UK",
                   "before": " ",
-                  "index": 2,
+                  "index": 42,
                   "pos": "NNP"
                 }
               },
               "NNP"
+            ],
+            [
+              {
+                "nlpToken": {
+                  "characterOffsetBegin": 2229,
+                  "word": ",",
+                  "lemma": ",",
+                  "characterOffsetEnd": 2230,
+                  "speaker": "99",
+                  "ner": "O",
+                  "after": " ",
+                  "originalText": ",",
+                  "before": "",
+                  "index": 43,
+                  "pos": ","
+                }
+              },
+              ","
+            ],
+            [
+              {
+                "nlpToken": {
+                  "characterOffsetBegin": 2231,
+                  "word": "from",
+                  "lemma": "from",
+                  "characterOffsetEnd": 2235,
+                  "speaker": "99",
+                  "ner": "O",
+                  "after": " ",
+                  "originalText": "from",
+                  "before": " ",
+                  "index": 44,
+                  "pos": "IN"
+                }
+              },
+              "IN"
+            ],
+            [
+              {
+                "nlpToken": {
+                  "characterOffsetBegin": 2236,
+                  "word": "the",
+                  "lemma": "the",
+                  "characterOffsetEnd": 2239,
+                  "speaker": "99",
+                  "ner": "O",
+                  "after": " ",
+                  "originalText": "the",
+                  "before": " ",
+                  "index": 45,
+                  "pos": "DT"
+                }
+              },
+              "DT"
+            ],
+            [
+              {
+                "nlpToken": {
+                  "characterOffsetBegin": 2240,
+                  "word": "wider",
+                  "lemma": "wider",
+                  "characterOffsetEnd": 2245,
+                  "speaker": "99",
+                  "ner": "O",
+                  "after": " ",
+                  "originalText": "wider",
+                  "before": " ",
+                  "index": 46,
+                  "pos": "JJR"
+                }
+              },
+              "JJR"
+            ],
+            [
+              {
+                "nlpToken": {
+                  "characterOffsetBegin": 2246,
+                  "word": "range",
+                  "lemma": "range",
+                  "characterOffsetEnd": 2251,
+                  "speaker": "99",
+                  "ner": "O",
+                  "after": " ",
+                  "originalText": "range",
+                  "before": " ",
+                  "index": 47,
+                  "pos": "NN"
+                }
+              },
+              "NN"
+            ],
+            [
+              {
+                "nlpToken": {
+                  "characterOffsetBegin": 2252,
+                  "word": "of",
+                  "lemma": "of",
+                  "characterOffsetEnd": 2254,
+                  "speaker": "99",
+                  "ner": "O",
+                  "after": " ",
+                  "originalText": "of",
+                  "before": " ",
+                  "index": 48,
+                  "pos": "IN"
+                }
+              },
+              "IN"
+            ],
+            [
+              {
+                "nlpToken": {
+                  "characterOffsetBegin": 2255,
+                  "word": "available",
+                  "lemma": "available",
+                  "characterOffsetEnd": 2264,
+                  "speaker": "99",
+                  "ner": "O",
+                  "after": " ",
+                  "originalText": "available",
+                  "before": " ",
+                  "index": 49,
+                  "pos": "JJ"
+                }
+              },
+              "JJ"
+            ],
+            [
+              {
+                "nlpToken": {
+                  "characterOffsetBegin": 2265,
+                  "word": "Toblerone",
+                  "lemma": "toblerone",
+                  "characterOffsetEnd": 2274,
+                  "speaker": "99",
+                  "ner": "O",
+                  "after": " ",
+                  "originalText": "Toblerone",
+                  "before": " ",
+                  "index": 50,
+                  "pos": "NN"
+                }
+              },
+              "NN"
+            ],
+            [
+              {
+                "nlpToken": {
+                  "characterOffsetBegin": 2275,
+                  "word": "products",
+                  "lemma": "product",
+                  "characterOffsetEnd": 2283,
+                  "speaker": "99",
+                  "ner": "O",
+                  "after": "",
+                  "originalText": "products",
+                  "before": " ",
+                  "index": 51,
+                  "pos": "NNS"
+                }
+              },
+              "NNS"
             ]
           ],
-          "nlpIndexSentence": 2,
-          "score": 1.0000000000000002
+          "score": 1.0,
+          "text": "as long as possible , but to ensure Toblerone remains on-shelf , is affordable and retains the triangular shape , we have had to reduce the weight of just two of our bars in the UK , from the wider range of available Toblerone products",
+          "nlpIndexSentence": 7
         }
-      ],
+      ]
+    },
+    "where": {
       "annotated": [
         {
           "text": "UK",
@@ -398,9 +1005,15 @@
       "label": "where"
     },
     "what": {
+      "annotated": [
+        {
+          "text": "sparks anger among fans",
+          "coderPhraseCount": 3
+        }
+      ],
+      "label": "what",
       "extracted": [
         {
-          "text": "have hit out at the chocolate company 's",
           "parts": [
             [
               {
@@ -547,16 +1160,10 @@
               "POS"
             ]
           ],
-          "score": 1.0
+          "score": 1.0,
+          "text": "have hit out at the chocolate company 's"
         }
-      ],
-      "annotated": [
-        {
-          "text": "sparks anger among fans",
-          "coderPhraseCount": 3
-        }
-      ],
-      "label": "what"
+      ]
     }
   },
   "description": "Fans of the iconic Toblerone bar have hit out at the chocolate company's decision to change the shape and size of the bars. Mondelez International, which makes the bars, said it had been forced to make the distinctive triangular bars smaller because of rising costs. Their UK bars will now be made with a wider gap in between each peak - reducing the 400g bar to 360g and the 170g to 150g.",

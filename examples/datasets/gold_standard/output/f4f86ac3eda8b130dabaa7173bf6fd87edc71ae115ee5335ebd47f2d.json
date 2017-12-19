@@ -6,9 +6,19 @@
   "category": "cubs win championship",
   "fiveWoneH": {
     "who": {
+      "annotated": [
+        {
+          "text": "Sports world",
+          "coderPhraseCount": 2
+        },
+        {
+          "text": "Chicago Cubs",
+          "coderPhraseCount": 2
+        }
+      ],
+      "label": "who",
       "extracted": [
         {
-          "text": "Brett Anderson ( @BrettAnderson35 ) November 3 , 2016",
           "parts": [
             [
               {
@@ -197,134 +207,13 @@
               "CD"
             ]
           ],
-          "nlpIndexSentence": 14,
-          "score": 1.0
+          "score": 1.0,
+          "text": "Brett Anderson ( @BrettAnderson35 ) November 3 , 2016",
+          "nlpIndexSentence": 14
         }
-      ],
-      "annotated": [
-        {
-          "text": "Sports world",
-          "coderPhraseCount": 2
-        },
-        {
-          "text": "Chicago Cubs",
-          "coderPhraseCount": 2
-        }
-      ],
-      "label": "who"
+      ]
     },
     "when": {
-      "extracted": [
-        {
-          "text": "November 3 , 2016",
-          "enhancement": {
-            "timex": {
-              "start_date": "2016-11-03T00:00:00",
-              "end_date": "2016-11-03T23:59:59"
-            }
-          },
-          "parts": [
-            [
-              {
-                "nlpToken": {
-                  "characterOffsetBegin": 3224,
-                  "word": "November",
-                  "lemma": "November",
-                  "timex": {
-                    "value": "2016-11-03",
-                    "tid": "t35",
-                    "type": "DATE"
-                  },
-                  "before": " ",
-                  "characterOffsetEnd": 3232,
-                  "originalText": "November",
-                  "normalizedNER": "2016-11-03",
-                  "speaker": "PER0",
-                  "after": " ",
-                  "ner": "DATE",
-                  "index": 8,
-                  "pos": "NNP"
-                }
-              },
-              "NNP"
-            ],
-            [
-              {
-                "nlpToken": {
-                  "characterOffsetBegin": 3233,
-                  "word": "3",
-                  "lemma": "3",
-                  "timex": {
-                    "value": "2016-11-03",
-                    "tid": "t35",
-                    "type": "DATE"
-                  },
-                  "before": " ",
-                  "characterOffsetEnd": 3234,
-                  "originalText": "3",
-                  "normalizedNER": "2016-11-03",
-                  "speaker": "PER0",
-                  "after": "",
-                  "ner": "DATE",
-                  "index": 9,
-                  "pos": "CD"
-                }
-              },
-              "CD"
-            ],
-            [
-              {
-                "nlpToken": {
-                  "characterOffsetBegin": 3234,
-                  "word": ",",
-                  "lemma": ",",
-                  "timex": {
-                    "value": "2016-11-03",
-                    "tid": "t35",
-                    "type": "DATE"
-                  },
-                  "before": "",
-                  "characterOffsetEnd": 3235,
-                  "originalText": ",",
-                  "normalizedNER": "2016-11-03",
-                  "speaker": "PER0",
-                  "after": " ",
-                  "ner": "DATE",
-                  "index": 10,
-                  "pos": ","
-                }
-              },
-              ","
-            ],
-            [
-              {
-                "nlpToken": {
-                  "characterOffsetBegin": 3236,
-                  "word": "2016",
-                  "lemma": "2016",
-                  "timex": {
-                    "value": "2016-11-03",
-                    "tid": "t35",
-                    "type": "DATE"
-                  },
-                  "before": " ",
-                  "characterOffsetEnd": 3240,
-                  "originalText": "2016",
-                  "normalizedNER": "2016-11-03",
-                  "speaker": "PER0",
-                  "after": " ",
-                  "ner": "DATE",
-                  "index": 11,
-                  "pos": "CD"
-                }
-              },
-              "CD"
-            ]
-          ],
-          "nlpIndexSentence": 31,
-          "score": 0.6703704893717309
-        }
-      ],
       "annotated": [
         {
           "text": "November 03, 2016",
@@ -335,68 +224,6 @@
       "label": "when"
     },
     "why": {
-      "extracted": [
-        {
-          "text": "Chicago Cubs players",
-          "parts": [
-            [
-              {
-                "nlpToken": {
-                  "characterOffsetBegin": 0,
-                  "word": "Chicago",
-                  "lemma": "Chicago",
-                  "speaker": "PER0",
-                  "after": " ",
-                  "pos": "NNP",
-                  "ner": "ORGANIZATION",
-                  "before": "",
-                  "characterOffsetEnd": 7,
-                  "index": 1,
-                  "originalText": "Chicago"
-                }
-              },
-              "NNP"
-            ],
-            [
-              {
-                "nlpToken": {
-                  "characterOffsetBegin": 8,
-                  "word": "Cubs",
-                  "lemma": "Cubs",
-                  "speaker": "PER0",
-                  "after": " ",
-                  "pos": "NNP",
-                  "ner": "ORGANIZATION",
-                  "before": " ",
-                  "characterOffsetEnd": 12,
-                  "index": 2,
-                  "originalText": "Cubs"
-                }
-              },
-              "NNP"
-            ],
-            [
-              {
-                "nlpToken": {
-                  "characterOffsetBegin": 13,
-                  "word": "players",
-                  "lemma": "player",
-                  "speaker": "PER0",
-                  "after": " ",
-                  "pos": "NNS",
-                  "ner": "O",
-                  "before": " ",
-                  "characterOffsetEnd": 20,
-                  "index": 3,
-                  "originalText": "players"
-                }
-              },
-              "NNS"
-            ]
-          ],
-          "score": 0.42857142857142855
-        }
-      ],
       "annotated": [
         {
           "text": "Chicago Cubs are World Series champions",
@@ -413,34 +240,6 @@
       "label": "why"
     },
     "how": {
-      "extracted": [
-        {
-          "text": "first",
-          "parts": [
-            [
-              {
-                "nlpToken": {
-                  "characterOffsetBegin": 1411,
-                  "word": "first",
-                  "lemma": "first",
-                  "before": " ",
-                  "characterOffsetEnd": 1416,
-                  "originalText": "first",
-                  "normalizedNER": "1.0",
-                  "speaker": "PER0",
-                  "after": " ",
-                  "ner": "ORDINAL",
-                  "index": 13,
-                  "pos": "JJ"
-                }
-              },
-              "JJ"
-            ]
-          ],
-          "nlpIndexSentence": 18,
-          "score": 1.0
-        }
-      ],
       "annotated": [
         {
           "text": "innings",
@@ -451,57 +250,54 @@
           "coderPhraseCount": 1
         }
       ],
-      "label": "how"
-    },
-    "where": {
+      "label": "how",
       "extracted": [
         {
-          "text": "Chicago",
-          "enhancement": {
-            "openstreetmap_nominatim": {
-              "place_id": "178038280",
-              "licence": "Data \u00a9 OpenStreetMap contributors, ODbL 1.0. http://www.openstreetmap.org/copyright",
-              "type": "city",
-              "class": "place",
-              "osm_id": "122604",
-              "boundingbox": [
-                41.643919,
-                42.0230219,
-                -87.940101,
-                -87.5239841
-              ],
-              "osm_type": "relation",
-              "lon": "-87.6244212",
-              "display_name": "Chicago, Cook County, Illinois, United States of America",
-              "importance": 0.30566190262222,
-              "icon": "https://nominatim.openstreetmap.org/images/mapicons/poi_place_city.p.20.png",
-              "lat": "41.8755546"
-            }
-          },
           "parts": [
             [
               {
                 "nlpToken": {
-                  "characterOffsetBegin": 183,
-                  "word": "Chicago",
-                  "lemma": "Chicago",
-                  "characterOffsetEnd": 190,
+                  "characterOffsetBegin": 2352,
+                  "word": "Cubs",
+                  "lemma": "Cubs",
+                  "characterOffsetEnd": 2356,
                   "speaker": "PER0",
-                  "ner": "LOCATION",
+                  "ner": "MISC",
                   "after": " ",
-                  "originalText": "Chicago",
+                  "originalText": "Cubs",
                   "before": " ",
-                  "index": 10,
+                  "index": 23,
+                  "pos": "NNP"
+                }
+              },
+              "NNP"
+            ],
+            [
+              {
+                "nlpToken": {
+                  "characterOffsetBegin": 2357,
+                  "word": "Opening",
+                  "lemma": "Opening",
+                  "characterOffsetEnd": 2364,
+                  "speaker": "PER0",
+                  "ner": "MISC",
+                  "after": " ",
+                  "originalText": "Opening",
+                  "before": " ",
+                  "index": 24,
                   "pos": "NNP"
                 }
               },
               "NNP"
             ]
           ],
-          "nlpIndexSentence": 1,
-          "score": 1.0
+          "score": 1.0,
+          "text": "Cubs Opening",
+          "nlpIndexSentence": 23
         }
-      ],
+      ]
+    },
+    "where": {
       "annotated": [
         {
           "text": "Progressive Field",
@@ -511,9 +307,15 @@
       "label": "where"
     },
     "what": {
+      "annotated": [
+        {
+          "text": "reacts to the Cubs' World Series win",
+          "coderPhraseCount": 2
+        }
+      ],
+      "label": "what",
       "extracted": [
         {
-          "text": "Knew it",
           "parts": [
             [
               {
@@ -552,17 +354,11 @@
               "PRP"
             ]
           ],
-          "nlpIndexSentence": 14,
-          "score": 1.0
+          "score": 1.0,
+          "text": "Knew it",
+          "nlpIndexSentence": 14
         }
-      ],
-      "annotated": [
-        {
-          "text": "reacts to the Cubs' World Series win",
-          "coderPhraseCount": 2
-        }
-      ],
-      "label": "what"
+      ]
     }
   },
   "description": "So much shock. So much joy.",

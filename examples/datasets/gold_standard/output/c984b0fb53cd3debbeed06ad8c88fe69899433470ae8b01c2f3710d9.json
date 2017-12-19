@@ -6,9 +6,15 @@
   "category": "clinton clear",
   "fiveWoneH": {
     "who": {
+      "annotated": [
+        {
+          "text": "FBI Director James Comey",
+          "coderPhraseCount": 3
+        }
+      ],
+      "label": "who",
       "extracted": [
         {
-          "text": "Clinton",
           "parts": [
             [
               {
@@ -29,58 +35,13 @@
               "NNP"
             ]
           ],
-          "nlpIndexSentence": 2,
-          "score": 1.0
+          "score": 1.0,
+          "text": "Clinton",
+          "nlpIndexSentence": 2
         }
-      ],
-      "annotated": [
-        {
-          "text": "FBI Director James Comey",
-          "coderPhraseCount": 3
-        }
-      ],
-      "label": "who"
+      ]
     },
     "when": {
-      "extracted": [
-        {
-          "text": "Sunday",
-          "enhancement": {
-            "timex": {
-              "start_date": "2016-11-06T00:00:00",
-              "end_date": "2016-11-06T23:59:59"
-            }
-          },
-          "parts": [
-            [
-              {
-                "nlpToken": {
-                  "characterOffsetBegin": 5052,
-                  "word": "Sunday",
-                  "lemma": "Sunday",
-                  "timex": {
-                    "value": "2016-11-06",
-                    "tid": "t24",
-                    "type": "DATE"
-                  },
-                  "before": " ",
-                  "characterOffsetEnd": 5058,
-                  "originalText": "Sunday",
-                  "normalizedNER": "2016-11-06",
-                  "speaker": "PER0",
-                  "after": " ",
-                  "ner": "DATE",
-                  "index": 7,
-                  "pos": "NNP"
-                }
-              },
-              "NNP"
-            ]
-          ],
-          "nlpIndexSentence": 34,
-          "score": 0.6527911927681289
-        }
-      ],
       "annotated": [
         {
           "text": "Sunday",
@@ -91,87 +52,6 @@
       "label": "when"
     },
     "why": {
-      "extracted": [
-        {
-          "text": "FBI director James Comey",
-          "parts": [
-            [
-              {
-                "nlpToken": {
-                  "characterOffsetBegin": 236,
-                  "word": "FBI",
-                  "lemma": "FBI",
-                  "speaker": "PER0",
-                  "after": " ",
-                  "pos": "NNP",
-                  "ner": "ORGANIZATION",
-                  "before": " ",
-                  "characterOffsetEnd": 239,
-                  "index": 28,
-                  "originalText": "FBI"
-                }
-              },
-              "NNP"
-            ],
-            [
-              {
-                "nlpToken": {
-                  "characterOffsetBegin": 240,
-                  "word": "director",
-                  "lemma": "director",
-                  "speaker": "PER0",
-                  "after": " ",
-                  "pos": "NN",
-                  "ner": "O",
-                  "before": " ",
-                  "characterOffsetEnd": 248,
-                  "index": 29,
-                  "originalText": "director"
-                }
-              },
-              "NN"
-            ],
-            [
-              {
-                "nlpToken": {
-                  "characterOffsetBegin": 249,
-                  "word": "James",
-                  "lemma": "James",
-                  "speaker": "PER0",
-                  "after": " ",
-                  "pos": "NNP",
-                  "ner": "PERSON",
-                  "before": " ",
-                  "characterOffsetEnd": 254,
-                  "index": 30,
-                  "originalText": "James"
-                }
-              },
-              "NNP"
-            ],
-            [
-              {
-                "nlpToken": {
-                  "characterOffsetBegin": 255,
-                  "word": "Comey",
-                  "lemma": "Comey",
-                  "speaker": "PER0",
-                  "after": " ",
-                  "pos": "NNP",
-                  "ner": "PERSON",
-                  "before": " ",
-                  "characterOffsetEnd": 260,
-                  "index": 31,
-                  "originalText": "Comey"
-                }
-              },
-              "NNP"
-            ]
-          ],
-          "nlpIndexSentence": 1,
-          "score": 0.4238095238095238
-        }
-      ],
       "annotated": [
         {
           "text": "review of newly discovered emails has not changed his earlier conclusion",
@@ -181,90 +61,204 @@
       "label": "why"
     },
     "how": {
-      "extracted": [
-        {
-          "text": "reviewing",
-          "parts": [
-            [
-              {
-                "nlpToken": {
-                  "characterOffsetBegin": 380,
-                  "word": "reviewing",
-                  "lemma": "review",
-                  "characterOffsetEnd": 389,
-                  "speaker": "PER0",
-                  "ner": "O",
-                  "after": " ",
-                  "originalText": "reviewing",
-                  "before": " ",
-                  "index": 48,
-                  "pos": "VBG"
-                }
-              },
-              "VBG"
-            ]
-          ],
-          "nlpIndexSentence": 1,
-          "score": 1.0
-        }
-      ],
       "annotated": [
         {
           "text": "review",
           "coderPhraseCount": 2
         }
       ],
-      "label": "how"
-    },
-    "where": {
+      "label": "how",
       "extracted": [
         {
-          "text": "Cleveland",
-          "enhancement": {
-            "openstreetmap_nominatim": {
-              "place_id": "177736691",
-              "licence": "Data \u00a9 OpenStreetMap contributors, ODbL 1.0. http://www.openstreetmap.org/copyright",
-              "type": "city",
-              "class": "place",
-              "osm_id": "182130",
-              "boundingbox": [
-                41.390628,
-                41.604436,
-                -81.8790937,
-                -81.532744
-              ],
-              "osm_type": "relation",
-              "lon": "-81.6934446",
-              "display_name": "Cleveland, Cuyahoga County, Ohio, United States of America",
-              "importance": 0.2721855967315,
-              "icon": "https://nominatim.openstreetmap.org/images/mapicons/poi_place_city.p.20.png",
-              "lat": "41.5051613"
-            }
-          },
           "parts": [
             [
               {
                 "nlpToken": {
-                  "characterOffsetBegin": 1573,
-                  "word": "Cleveland",
-                  "lemma": "Cleveland",
-                  "characterOffsetEnd": 1582,
-                  "speaker": "PER0",
-                  "ner": "LOCATION",
+                  "characterOffsetBegin": 5487,
+                  "word": "the",
+                  "lemma": "the",
+                  "characterOffsetEnd": 5490,
+                  "speaker": "309",
+                  "ner": "O",
                   "after": " ",
-                  "originalText": "Cleveland",
+                  "originalText": "the",
                   "before": " ",
                   "index": 6,
+                  "pos": "DT"
+                }
+              },
+              "DT"
+            ],
+            [
+              {
+                "nlpToken": {
+                  "characterOffsetBegin": 5491,
+                  "word": "news",
+                  "lemma": "news",
+                  "characterOffsetEnd": 5495,
+                  "speaker": "309",
+                  "ner": "O",
+                  "after": " ",
+                  "originalText": "news",
+                  "before": " ",
+                  "index": 7,
+                  "pos": "NN"
+                }
+              },
+              "NN"
+            ],
+            [
+              {
+                "nlpToken": {
+                  "characterOffsetBegin": 5496,
+                  "word": "is",
+                  "lemma": "be",
+                  "characterOffsetEnd": 5498,
+                  "speaker": "309",
+                  "ner": "O",
+                  "after": " ",
+                  "originalText": "is",
+                  "before": " ",
+                  "index": 8,
+                  "pos": "VBZ"
+                }
+              },
+              "VBZ"
+            ],
+            [
+              {
+                "nlpToken": {
+                  "characterOffsetBegin": 5499,
+                  "word": "not",
+                  "lemma": "not",
+                  "characterOffsetEnd": 5502,
+                  "speaker": "309",
+                  "ner": "O",
+                  "after": " ",
+                  "originalText": "not",
+                  "before": " ",
+                  "index": 9,
+                  "pos": "RB"
+                }
+              },
+              "RB"
+            ],
+            [
+              {
+                "nlpToken": {
+                  "characterOffsetBegin": 5503,
+                  "word": "too",
+                  "lemma": "too",
+                  "characterOffsetEnd": 5506,
+                  "speaker": "309",
+                  "ner": "O",
+                  "after": " ",
+                  "originalText": "too",
+                  "before": " ",
+                  "index": 10,
+                  "pos": "RB"
+                }
+              },
+              "RB"
+            ],
+            [
+              {
+                "nlpToken": {
+                  "characterOffsetBegin": 5507,
+                  "word": "late",
+                  "lemma": "late",
+                  "characterOffsetEnd": 5511,
+                  "speaker": "309",
+                  "ner": "O",
+                  "after": "",
+                  "originalText": "late",
+                  "before": " ",
+                  "index": 11,
+                  "pos": "JJ"
+                }
+              },
+              "JJ"
+            ],
+            [
+              {
+                "nlpToken": {
+                  "characterOffsetBegin": 5511,
+                  "word": ",",
+                  "lemma": ",",
+                  "characterOffsetEnd": 5512,
+                  "speaker": "309",
+                  "ner": "O",
+                  "after": "",
+                  "originalText": ",",
+                  "before": "",
+                  "index": 12,
+                  "pos": ","
+                }
+              },
+              ","
+            ],
+            [
+              {
+                "nlpToken": {
+                  "characterOffsetBegin": 5512,
+                  "word": "''",
+                  "lemma": "''",
+                  "characterOffsetEnd": 5513,
+                  "speaker": "PER0",
+                  "ner": "O",
+                  "after": " ",
+                  "originalText": "\"",
+                  "before": "",
+                  "index": 13,
+                  "pos": "''"
+                }
+              },
+              "''"
+            ],
+            [
+              {
+                "nlpToken": {
+                  "characterOffsetBegin": 5514,
+                  "word": "Weinstein",
+                  "lemma": "Weinstein",
+                  "characterOffsetEnd": 5523,
+                  "speaker": "PER0",
+                  "ner": "PERSON",
+                  "after": " ",
+                  "originalText": "Weinstein",
+                  "before": " ",
+                  "index": 14,
                   "pos": "NNP"
                 }
               },
               "NNP"
+            ],
+            [
+              {
+                "nlpToken": {
+                  "characterOffsetBegin": 5524,
+                  "word": "said",
+                  "lemma": "say",
+                  "characterOffsetEnd": 5528,
+                  "speaker": "PER0",
+                  "ner": "O",
+                  "after": "",
+                  "originalText": "said",
+                  "before": " ",
+                  "index": 15,
+                  "pos": "VBD"
+                }
+              },
+              "VBD"
             ]
           ],
-          "nlpIndexSentence": 9,
-          "score": 1.0
+          "score": 1.0,
+          "text": "the news is not too late , \" Weinstein said",
+          "nlpIndexSentence": 6
         }
-      ],
+      ]
+    },
+    "where": {
       "annotated": [
         {
           "text": "WASHINGTON",
@@ -274,9 +268,19 @@
       "label": "where"
     },
     "what": {
+      "annotated": [
+        {
+          "text": "declares it is finally done investigating Hillary Clinton's email",
+          "coderPhraseCount": 3
+        },
+        {
+          "text": "still not recommending charges",
+          "coderPhraseCount": 2
+        }
+      ],
+      "label": "what",
       "extracted": [
         {
-          "text": "should not be prosecuted for her handling as secretary",
           "parts": [
             [
               {
@@ -441,21 +445,11 @@
               "NN"
             ]
           ],
-          "nlpIndexSentence": 2,
-          "score": 1.0
+          "score": 1.0,
+          "text": "should not be prosecuted for her handling as secretary",
+          "nlpIndexSentence": 2
         }
-      ],
-      "annotated": [
-        {
-          "text": "declares it is finally done investigating Hillary Clinton's email",
-          "coderPhraseCount": 3
-        },
-        {
-          "text": "still not recommending charges",
-          "coderPhraseCount": 2
-        }
-      ],
-      "label": "what"
+      ]
     }
   },
   "description": "FBI Director James Comey said Sunday that his agency's review of newly discovered emails has not changed his earlier conclusion that Hillary Clinton should not be prosecuted for her handling of classified information over email as secretary of State.",

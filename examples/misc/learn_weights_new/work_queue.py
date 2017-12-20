@@ -3,6 +3,7 @@ import os
 import pickle
 
 import numpy as np
+import copy
 
 from extractors.method_extractor import ExtensionStrategy
 
@@ -94,9 +95,11 @@ class WorkQueue(object):
         :param result:
         :return:
         """
-        last_item['dId'] = dId
-        last_item['result'] = result
-        self._queue_processed.append(last_item)
+
+        last_item_copy = copy.deepcopy(last_item)
+        last_item_copy['dId'] = dId
+        last_item_copy['result'] = result
+        self._queue_processed.append(last_item_copy)
 
         #return last_item
 

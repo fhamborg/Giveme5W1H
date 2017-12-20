@@ -75,10 +75,10 @@ def action(lock):
     a_queue.load()
 
     extractors = {
-        # 'action': action_extractor.ActionExtractor()
+         'action': action_extractor.ActionExtractor()
         # 'environment': environment_extractor.EnvironmentExtractor(),
         # 'cause': cause_extractor.CauseExtractor(),
-        'method': method_extractor.MethodExtractor()
+        # 'method': method_extractor.MethodExtractor()
     }
     learn = Learn(lock=lock,
                   extractors=extractors,
@@ -129,9 +129,9 @@ if __name__ == '__main__':
 
     # basic learner
     # log.setLevel(logging.ERROR)
-    #q.put(action(lock))
-    # q.put(environment(lock))
-    #q.put(cause(lock))
+    q.put(action(lock))
+    #q.put(environment(lock))
+    q.put(cause(lock))
     q.put(method(lock))
     # q.put(default_combined_scoring(lock))
     # log.setLevel(logging.ERROR)

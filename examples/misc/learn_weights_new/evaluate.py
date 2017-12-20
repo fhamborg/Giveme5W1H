@@ -7,6 +7,8 @@ import pickle
 from itertools import groupby
 
 
+
+
 def weights_to_string(weights):
     """
     converts an array of ints to string
@@ -34,9 +36,9 @@ def read_file(path, combined_scoring):
             results = pickle.load(ff)
 
         for result in results:
-            for question in result:
+            for question in result['result']:
                 question_scores = score_results.setdefault(question, {})
-                weights = result[question][1]
+                weights = result['result'][question][1]
                 weights_fixed = []
                 # fix floating error
                 for i in weights:
@@ -44,7 +46,7 @@ def read_file(path, combined_scoring):
 
                 comb = question_scores.setdefault(weights_to_string(weights_fixed),
                                                   {'weights': weights_fixed, 'scores_doc': []})
-                comb['scores_doc'].append(result[question][2])
+                comb['scores_doc'].append(result['result'][question][2])
     return score_results
 
 
@@ -194,9 +196,9 @@ def evaluate(score_results, combined_scoring):
             combo = score_results[question][combination_string]
 
             raw_scores = combo['scores_doc']
-            scores_cleaned = remove_errors(raw_scores)
+            #scores_cleaned = remove_errors(raw_scores)
             scores_norm = normalize(raw_scores)
-            errors = len(raw_scores) - len(scores_cleaned)
+            #errors = len(raw_scores) - len(scores_cleaned)
             a_sum = sum(scores_norm)
 
             combo['norm_avg'] = a_sum / len(scores_norm)
@@ -211,7 +213,7 @@ def evaluate(score_results, combined_scoring):
             #     'weight': combo['weights']
             # }
 
-            # nice formattet full output, if anyone needs is
+            # nice formatted full output, if anyone needs is
     nice_format = {}
     for question in score_results:
         question_scores = nice_format.setdefault(question, [])
@@ -246,8 +248,8 @@ def evaluate(score_results, combined_scoring):
 if __name__ == '__main__':
     # read all available prickles
     score_results = read_file('queue_caches/*processed.prickle', combined_scoring=False)
-    evaluate(score_results, combined_scoring=False)
-
+    print('a')
+    # evaluate(score_results, combined_scoring=False)
     # read all available prickles
-    score_results = read_file('queue_caches/*processed.prickle', combined_scoring=True)
-    evaluate(score_results, combined_scoring=True)
+    # score_results = read_file('queue_caches/*processed.prickle', combined_scoring=True)
+    # evaluate(score_results, combined_scoring=True)

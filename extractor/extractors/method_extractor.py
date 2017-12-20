@@ -44,7 +44,7 @@ class MethodExtractor(AbsExtractor):
     _blacklist = ['.', '"', '\'', ';']
 
     def __init__(self, weights: (float, float) = [1.0, 1.0, 1.0, 1.0],
-                 extension_strategy: ExtensionStrategy = ExtensionStrategy.Blacklist, phrase_range: int = 3):
+                 extension_strategy: ExtensionStrategy = ExtensionStrategy.Range, phrase_range: int = 3):
         """
         weights used in the candidate evaluation:
         (position, frequency, conjunction, adjectives/adverbs)

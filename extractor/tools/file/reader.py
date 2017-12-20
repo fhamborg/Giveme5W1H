@@ -67,6 +67,8 @@ class Reader(object):
 
         return document
 
+
+
     def read(self, path):
         with open(path, encoding='utf-8') as data_file:
             data = json.load(data_file)

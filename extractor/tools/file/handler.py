@@ -1,4 +1,5 @@
 import glob
+import json
 import logging
 import os
 import sys
@@ -33,6 +34,8 @@ class Handler(object):
         self._reader = Reader()
         self._writer = Writer()
         self.log = logging.getLogger('GiveMe5W')
+        self._sampling = None
+        self._sampling_accessor = None
 
     def set_extractor(self, extractor):
         self._extractor = extractor
@@ -57,16 +60,20 @@ class Handler(object):
 
     def preload_and_cache_documents(self):
         self._documents = []
-        docCounter = 0
+        doc_counter = 0
         for filepath in glob.glob(self._inputPath + '/*.json'):
-            if self._limit and docCounter >= self._limit:
-                break
-            docCounter += 1
-            doc = self._reader.read(filepath);
-            self._documents.append(doc)
-            self.log.info('Handler: preloaded ' + doc.get_title())
 
-        self.log.error('documents preloaded:\t' + str(docCounter))
+            if self._limit and doc_counter >= self._limit:
+                break
+            if self._is_in_sample(filepath):
+                doc_counter += 1
+                doc = self._reader.read(filepath);
+                self._documents.append(doc)
+                self.log.info('Handler: preloaded ' + doc.get_title())
+            else:
+                self.log.info('==> Skipped not in Sample:\t ')
+
+        self.log.error('documents preloaded:\t' + str(doc_counter))
         return self
 
     def skip_documents_with_output(self, skip=True):
@@ -79,6 +86,31 @@ class Handler(object):
         if not self._outputPath:
             self.log.error('Call set_output_path with a valid path, before you enable this option')
         return self
+
+    def set_sampling(self, sampling: str='training'):
+        """
+        read online files with matching file identifier
+        :param sampling:
+        accesor
+        :return:
+        """
+        self._sampling_accessor = sampling
+        with open(self._inputPath + '/../sampling.json', encoding='utf-8') as data_file:
+            self._sampling = json.load(data_file)[sampling]
+        return self
+
+    def _is_in_sample(self, file):
+        """
+        checks if sample is set and if given file is part of the current sample
+        :param file:
+        :return:
+        """
+        if self._sampling is None:
+            return True
+        elif os.path.basename(file) in self._sampling:
+            return True
+        else:
+            return False
 
     def get_documents(self):
         if self._documents:
@@ -121,13 +153,12 @@ class Handler(object):
         if self._documents:
             self.log.info('processing documents from memory')
             self.log.info('')
-            sys.stdout.flush()
             for document in self._documents:
-                # try:
                 self._process_document(document)
-                # except:
-                # self.log.error('skipped one dok')
+                doc_counter += 1
 
+                self.log.info('==> Processed Documents:\t ' + str(doc_counter))
+                self.log.info('')
         else:
             self.log.info('processing documents from file system')
             self.log.info('')
@@ -135,15 +166,16 @@ class Handler(object):
                 if self._limit and doc_counter >= self._limit:
                     print('limit reached')
                     break
-                doc_counter += 1
-                # try:
-                document = self._reader.read(filepath)
-                self._process_document(document)
-                # except:
-                #               self.log.error('skipped one dok')
+                if self._is_in_sample(filepath):
+                    doc_counter += 1
 
-                self.log.info('==> Processed Documents:\t ' + str(doc_counter))
-                self.log.info('')
+                    document = self._reader.read(filepath)
+                    self._process_document(document)
+
+                    self.log.info('==> Processed Documents:\t ' + str(doc_counter))
+                    self.log.info('')
+                else:
+                    self.log.info('==> Skipped not in Sample:\t ')
 
         self.log.info('')
         self.log.info('Handler: process: finished\t')

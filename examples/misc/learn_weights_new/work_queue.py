@@ -15,7 +15,7 @@ class WorkQueue(object):
         :param generator: method to generate a _queue
         """
         if id:
-            self._id = id
+            self._id = id +'_'+ generator
         else:
             self._id = generator
         self._weights_range = None
@@ -45,7 +45,7 @@ class WorkQueue(object):
     def get_id(self):
         return self._id
 
-    def setup_scoring_parameters(self, weight_start: float = 0, weight_stop: float = 1,
+    def setup_scoring_parameters(self, weight_start: float = 0.0, weight_stop: float = 1,
                                  weight_step_size: float = 0.1):
         self._weights_range = np.arange(weight_start, weight_stop, weight_step_size)
 
@@ -96,9 +96,9 @@ class WorkQueue(object):
         """
         last_item['dId'] = dId
         last_item['result'] = result
-        self._queue_processed.append(result)
+        self._queue_processed.append(last_item)
 
-        return last_item
+        #return last_item
 
     def pop(self, persist: bool = True):
         """
@@ -166,7 +166,7 @@ class WorkQueue(object):
 
     def _generate_method(self):
         # (float, float)
-        for i, extracting_parameters in enumerate([ExtensionStrategy.Range, ExtensionStrategy.Blacklist]):
+        for pm, extracting_parameters in enumerate([ExtensionStrategy.Range, ExtensionStrategy.Blacklist]):
             for i in self._weights_range:
                 for j in self._weights_range:
                     for k in self._weights_range:
@@ -174,7 +174,7 @@ class WorkQueue(object):
                             weights = (i, j, k, l)
                             if self.vector_is_unique(weights):
                                 self._queue.append({
-                                    'extracting_parameters_id': i,
+                                    'extracting_parameters_id': pm,
                                     'scoring_parameters': {
                                         'weights': weights
                                     },
@@ -234,9 +234,8 @@ class WorkQueue(object):
 
     def _generate_combined_scoring(self):
         for i in self._weights_range:
-            for j in self._weights_range:
-                weights = (i, j)
-                if self.vector_is_unique(weights):
+                weights = ( i )
+                if i:
                     self._queue.append({
                         'extracting_parameters_id': 1,
                         'scoring_parameters': {

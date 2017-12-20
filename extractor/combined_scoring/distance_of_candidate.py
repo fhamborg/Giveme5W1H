@@ -30,15 +30,16 @@ class DistanceOfCandidate(AbsCombinedScoring):
 
     """
 
-    def __init__(self, primary_questions: List[str] = ['what', 'who'], dependant_questions: str = 'how',
+    def __init__(self, primary_questions: List[str] = ['what'], dependant_questions: str = 'how',
                  n_top_candidates: int = 1,
-                 weight=[1, 1], normalize: bool = True):
+                 weight=[1], normalize: bool = True):
         """
         :param primary_questions
         :param dependant_questions
         :param n_top_candidates: n-top-candidates taken into account from each primary question.
                 Distance between is averaged,
-        :param weight: primary_questions_weight_a, primary_questions_weight_b ..). Should sum up to 1
+        :param weight: primary_questions_weight_a, primary_questions_weight_b ..). Should sum up to 1.
+                If 1 primary_questions is used the default & weight has no influence
         """
         self._primary_questions = primary_questions
         self._dependant_questions = dependant_questions
@@ -94,6 +95,7 @@ class DistanceOfCandidate(AbsCombinedScoring):
             dist_factor = 0
             for iq, question in enumerate(self._primary_questions):
                 dist_factor += distance_matrix[question][i] * self._weight[iq]
+
             dist_factor = dist_factor / len(distance_matrix)
 
             score = d_candidate.get_score() + dist_factor

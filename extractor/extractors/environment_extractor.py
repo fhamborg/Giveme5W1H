@@ -331,7 +331,6 @@ class EnvironmentExtractor(AbsExtractor):
             score += weights[3] * normalized_distance_score
 
             # accuracy (ideally one minute only, max is one year) logarithmic
-
             normalized_duration = ((math.log(candidate[2].get_duration().total_seconds()) - EnvironmentExtractor.a_min)
                                    / EnvironmentExtractor.a_min_minus_max)
 

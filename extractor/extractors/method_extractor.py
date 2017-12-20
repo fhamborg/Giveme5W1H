@@ -10,6 +10,7 @@ from extractor.extractors.abs_extractor import AbsExtractor
 class ExtensionStrategy(Enum):
     Range = 1
     Blacklist = 2
+    Blacklist_Max_Range = 3
 
 
 class MethodExtractor(AbsExtractor):
@@ -44,7 +45,7 @@ class MethodExtractor(AbsExtractor):
     _blacklist = ['.', '"', '\'', ';']
 
     def __init__(self, weights: (float, float) = [1.0, 1.0, 1.0, 1.0],
-                 extension_strategy: ExtensionStrategy = ExtensionStrategy.Range, phrase_range: int = 3):
+                 extension_strategy: ExtensionStrategy = ExtensionStrategy.Blacklist_Max_Range, phrase_range: int = 5):
         """
         weights used in the candidate evaluation:
         (position, frequency, conjunction, adjectives/adverbs)
@@ -52,8 +53,7 @@ class MethodExtractor(AbsExtractor):
         """
         self.weights = weights
         self._extension_strategy = extension_strategy
-        if extension_strategy is ExtensionStrategy.Range:
-            self._phrase_range = phrase_range
+        self._phrase_range = phrase_range
 
     def _extract_candidates(self, document: Document):
         candidates = []
@@ -103,12 +103,19 @@ class MethodExtractor(AbsExtractor):
                             tokens = right_sibling.root().stanfordCoreNLPResult['tokens']
                             _index = subtree[0]['nlpToken']['index'] + 1
 
-                            if self._extension_strategy is ExtensionStrategy.Blacklist:
+                            if self._extension_strategy is ExtensionStrategy.Blacklist or self._extension_strategy is ExtensionStrategy.Blacklist_Max_Range:
 
                                 candidate_parts = []
+                                _range = 0
+                                # walk over teh sentence, starting after the indicator
                                 for token in tokens[_index - 1:]:
                                     if token['lemma'] not in self._blacklist and token['ner'] not in self._stop_ner:
+
+                                        if self._extension_strategy is ExtensionStrategy.Blacklist_Max_Range and self._phrase_range <= _range:
+                                            break
+
                                         candidate_parts.append(token)
+                                        _range = _range + 1
                                     else:
                                         break
 

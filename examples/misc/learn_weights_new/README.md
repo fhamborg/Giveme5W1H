@@ -20,6 +20,9 @@
 ``` delete/rename the files in /queue_caches/ if you want to start over ```
 
 ## Archived results
-unzip archive.zip to reuse previous results
+* unzip archive.zip to reuse previous results queues
+* unzip full_Archive to see full evaluation results
+
  ```
  Github is limited to a filesize of 50 MB
+

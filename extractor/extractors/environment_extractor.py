@@ -231,8 +231,8 @@ class EnvironmentExtractor(AbsExtractor):
 
         for location in unique_locations:
             # calculate score based on position in text (inverted pyramid) and the number of mentions
-            score = weights[0] * (document.get_len() - location[5]) / document.get_len() + weights[1] * location[
-                6] / max_n
+            score = weights[0] * (document.get_len() - location[5]) / document.get_len() \
+                    + weights[1] * location[6] / max_n
             if score > 0:
                 score /= weights_sum
             # new the last index holds the candidate wrapper object

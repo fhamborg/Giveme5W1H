@@ -9,7 +9,7 @@ from extractors.method_extractor import ExtensionStrategy
 
 
 class WorkQueue(object):
-    def __init__(self, id: str = None, generator: str = 'default'):
+    def __init__(self, id: str = None, generator: str = 'default', pre_calculated_weights=None):
         """
 
         :param id:
@@ -39,6 +39,8 @@ class WorkQueue(object):
             self._queue_processed = []
             self._queue = []
             self._generator = generator
+
+        self._pre_calculated_weights = pre_calculated_weights
 
     def get_queue_count(self):
         return len(self._queue)
@@ -87,6 +89,9 @@ class WorkQueue(object):
                 self._generate_action()
             elif self._generator == 'combined_scoring':
                 self._generate_combined_scoring()
+            elif self._generator == 'pre_calculated':
+                self._generate_pre_calculated(self._pre_calculated_weights)
+
 
     def resolve_document(self, last_item, dId, result):
         """
@@ -166,6 +171,17 @@ class WorkQueue(object):
         else:
             self._unique_weights[scaled_weights_string] = True
             return True
+
+    def _generate_pre_calculated(self, pre_calculated_weights):
+        for pre_calculated_weight in pre_calculated_weights:
+            self._queue.append({
+                'extracting_parameters_id': 0,
+                'scoring_parameters': {
+                    'weights': pre_calculated_weight
+                },
+                'extracting_parameters': {
+                    'extension_strategy': None
+                }})
 
     def _generate_method(self):
         # (float, float)

@@ -123,19 +123,22 @@ if __name__ == '__main__':
     sh.setLevel(logging.INFO)
     log.addHandler(sh)
 
+    # basic learner
+    # log.setLevel(logging.ERROR)
+
     # thread safe queue
     q = queue.Queue()
     lock = threading.Lock()  # Wordnet is not threadsave
 
-    # basic learner
-    # log.setLevel(logging.ERROR)
+
     q.put(action(lock))
-    #q.put(environment(lock))
+    #weights = [[]]
+    #q.put(environment(lock, weights))
     q.put(cause(lock))
     q.put(method(lock))
-    # q.put(default_combined_scoring(lock))
-    # log.setLevel(logging.ERROR)
-    # creating worker threads
+
+
+
     for i in range(4):
         t = Worker(q)
         t.daemon = True

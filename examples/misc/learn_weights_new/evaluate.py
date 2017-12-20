@@ -6,9 +6,9 @@ import json
 import pickle
 from itertools import groupby
 
+import os
 
-
-
+praefix = None
 def weights_to_string(weights):
     """
     converts an array of ints to string
@@ -19,7 +19,7 @@ def weights_to_string(weights):
     return ''.join(scaled_weights_string)
 
 
-def read_file(path, combined_scoring):
+def read_file(path):
     """
     reads a file
     :param path:
@@ -27,13 +27,11 @@ def read_file(path, combined_scoring):
     """
     score_results = {}
     for file_path in glob.glob(path):
-        if not combined_scoring and "combined_scoring" in file_path:
+        if praefix and not os.path.basename(file_path).startswith(praefix):
             continue
-        if combined_scoring and "combined_scoring" not in file_path:
-            continue
-
-        with open(file_path, 'rb') as ff:
-            results = pickle.load(ff)
+        else:
+            with open(file_path, 'rb') as ff:
+                 results = pickle.load(ff)
 
         for result in results:
             for question in result['result']:
@@ -46,6 +44,7 @@ def read_file(path, combined_scoring):
 
                 comb = question_scores.setdefault(weights_to_string(weights_fixed),
                                                   {'weights': weights_fixed, 'scores_doc': []})
+                # save this score to all results
                 comb['scores_doc'].append(result['result'][question][2])
     return score_results
 
@@ -176,13 +175,10 @@ def index_of_best(list):
     return list.index(min(a_list))
 
 
-def evaluate(score_results, combined_scoring):
-    praefix = ''
-    if combined_scoring:
-        praefix = 'combined_scoring_'
+def evaluate(score_results):
 
     # write raw results
-    with open('result/' + praefix + 'evaluation_full' + '.json', 'w') as data_file:
+    with open('result/' + praefix + '_evaluation_full' + '.json', 'w') as data_file:
         data_file.write(json.dumps(score_results, sort_keys=False, indent=4))
         data_file.close()
 
@@ -222,7 +218,7 @@ def evaluate(score_results, combined_scoring):
             del combo['scores_doc']
             question_scores.append(combo)
 
-    with open('result/' + praefix + 'evaluation_only_avg' + '.json', 'w') as data_file:
+    with open('result/' + praefix + '_evaluation_only_avg' + '.json', 'w') as data_file:
         data_file.write(json.dumps(nice_format, sort_keys=False, indent=4))
         data_file.close()
 
@@ -240,16 +236,19 @@ def evaluate(score_results, combined_scoring):
         golden_weights_to_ranges(final_result[question])
 
     for question in final_result:
-        with open('result/' + praefix + 'final_result_' + question + '.json', 'w') as data_file:
+        with open('result/' + praefix + '_final_result_' + question + '.json', 'w') as data_file:
             data_file.write(json.dumps(final_result[question], sort_keys=False, indent=4))
             data_file.close()
 
 
 if __name__ == '__main__':
     # read all available prickles
-    score_results = read_file('queue_caches/*processed.prickle', combined_scoring=False)
+    praefix = 'training'
+    score_results = read_file('queue_caches/*processed.prickle')
+    evaluate(score_results)
     print('a')
-    # evaluate(score_results, combined_scoring=False)
-    # read all available prickles
-    # score_results = read_file('queue_caches/*processed.prickle', combined_scoring=True)
-    # evaluate(score_results, combined_scoring=True)
+
+    praefix = 'test'
+    score_results = read_file('queue_caches/*processed.prickle')
+    evaluate(score_results)
+

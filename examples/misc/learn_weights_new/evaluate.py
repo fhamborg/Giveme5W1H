@@ -9,6 +9,7 @@ from itertools import groupby
 import os
 
 praefix = None
+combination_identifier = None
 def weights_to_string(weights):
     """
     converts an array of ints to string

@@ -185,21 +185,21 @@ class WorkQueue(object):
 
     def _generate_method(self):
         # (float, float)
-        for pm, extracting_parameters in enumerate([ExtensionStrategy.Range, ExtensionStrategy.Blacklist]):
-            for i in self._weights_range:
-                for j in self._weights_range:
-                    for k in self._weights_range:
-                        for l in self._weights_range:
-                            weights = (i, j, k, l)
-                            if self.vector_is_unique(weights):
-                                self._queue.append({
-                                    'extracting_parameters_id': pm,
-                                    'scoring_parameters': {
-                                        'weights': weights
-                                    },
-                                    'extracting_parameters': {
-                                        'extension_strategy': extracting_parameters
-                                    }})
+        #for pm, extracting_parameters in enumerate([ExtensionStrategy.Range, ExtensionStrategy.Blacklist]):
+        for i in self._weights_range:
+            for j in self._weights_range:
+                for k in self._weights_range:
+                    for l in self._weights_range:
+                        weights = (i, j, k, l)
+                        if self.vector_is_unique(weights):
+                            self._queue.append({
+                                'extracting_parameters_id': 1,
+                                'scoring_parameters': {
+                                    'weights': weights
+                                },
+                                'extracting_parameters': {
+                                    'extension_strategy': {}
+                                }})
 
     def _generate_cause(self):
         # (float, float, float, float)
@@ -207,7 +207,6 @@ class WorkQueue(object):
             for j in self._weights_range:
                 for k in self._weights_range:
                     for l in self._weights_range:
-
                         weights = (i, j, k, l)
                         if self.vector_is_unique(weights):
                             self._queue.append({

@@ -67,7 +67,8 @@ class FiveWExtractor:
             self.log.info('No combinedScorers passed: initializing default configuration.')
 
             self.combinedScorers = [
-                distance_of_candidate.DistanceOfCandidate(['what', 'who'], 'how')
+                # ['what'], 'how'
+                distance_of_candidate.DistanceOfCandidate()
             ]
 
         self.q = queue.Queue()

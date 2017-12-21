@@ -44,7 +44,7 @@ class DistanceOfCandidate(AbsCombinedScoring):
         self._primary_questions = primary_questions
         self._dependant_questions = dependant_questions
         self._weight = weight
-        self._n_top_candidates = 1
+        self._n_top_candidates = n_top_candidates
         self._normalize = normalize
 
     def score(self, document: Document):

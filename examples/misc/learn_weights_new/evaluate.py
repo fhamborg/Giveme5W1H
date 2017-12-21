@@ -4,9 +4,12 @@ checks all result files(all xxxxx_processed.prickle) an writes results to /resul
 import glob
 import json
 import pickle
+import statistics
 from itertools import groupby
 
 import os
+
+import math
 
 praefix = None
 combination_identifier = None
@@ -132,6 +135,34 @@ def to_ranges_wrapper(iterable, decimals: int = 10):
     return result
 
 
+def stats_helper(list):
+    """
+    https://docs.python.org/3/library/statistics.html#statistics.pvariance
+    :param list:
+    :return:
+    """
+    mean = statistics.mean(list)
+    variance = statistics.pvariance(list, mu=mean)
+    mode = None
+    try:
+        mode = statistics.mode(list)
+    except statistics.StatisticsError:
+        pass
+
+    return {
+        'mean':   mean,
+        'variance': variance,
+        'standard_deviation': math.sqrt(variance),
+        'harmonic_mean': statistics.harmonic_mean(list),
+        'median':statistics.median(list),
+        'median_low':statistics.median_low(list),
+        'median_high':statistics.median_high(list),
+        'median_grouped':statistics.median_grouped(list),
+        'mode': mode
+    }
+
+
+
 def golden_weights_to_ranges(a_list):
     """
     converts golden weights to ranges per weight to make importance more visible
@@ -153,17 +184,27 @@ def golden_weights_to_ranges(a_list):
         # slots for each weight
 
         weights = [[] for _ in range(len(golden_weights[0]))]
+
+        # copy weights based on their location into new format
         for combination in golden_weights:
             for i, weight in enumerate(combination):
                 weights[i].append(weight)
 
-        result = []
+        # find the ranges per weight location
+        results = []
         for weight in weights:
             uniqu_weights = list(set(weight))
             uniqu_weights.sort()
-            result.append(
-                to_ranges_wrapper(uniqu_weights))
-        a_list['golden_groups'] = result
+
+            ranges = to_ranges_wrapper(uniqu_weights)
+            results.append({
+                'stats': stats_helper(weight),
+                'data': ranges
+            })
+
+
+
+        a_list['golden_groups'] = results
 
 
 def index_of_best(list):
@@ -193,9 +234,7 @@ def evaluate(score_results):
             combo = score_results[question][combination_string]
 
             raw_scores = combo['scores_doc']
-            #scores_cleaned = remove_errors(raw_scores)
             scores_norm = normalize(raw_scores)
-            #errors = len(raw_scores) - len(scores_cleaned)
             a_sum = sum(scores_norm)
 
             combo['norm_avg'] = a_sum / len(scores_norm)
@@ -205,12 +244,7 @@ def evaluate(score_results):
                 'weight': combo['weights']
             }
 
-            # results_error_rate.setdefault(question,{})[combination_string] = {
-            #     'errors': errors,
-            #     'weight': combo['weights']
-            # }
-
-            # nice formatted full output, if anyone needs is
+    # nice formatted full output, if anyone needs is
     nice_format = {}
     for question in score_results:
         question_scores = nice_format.setdefault(question, [])

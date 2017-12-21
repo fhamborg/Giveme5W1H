@@ -130,13 +130,12 @@ if __name__ == '__main__':
     q = queue.Queue()
     lock = threading.Lock()  # Wordnet is not threadsave
 
-
-    # q.put(action(lock))
-    # weights = [[]]
-    # q.put(environment(lock, weights))
-    # q.put(cause(lock))
+    #q.put(action(lock))
+    #weights = [[]]
+    #q.put(environment(lock, weights))
+    q.put(cause(lock))
     q.put(method(lock))
-    # q.put(default_combined_scoring)
+    #q.put(default_combined_scoring)
 
 
     for i in range(4):

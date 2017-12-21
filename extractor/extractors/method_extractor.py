@@ -246,31 +246,6 @@ class MethodExtractor(AbsExtractor):
             result.append(ca)
         return result
 
-    def _find_vb_cc_vb_parts(self, relevant_parts):
-        """
-         walks though the given subtree and returns all parts which are a part of
-         JJ VB [CC] JJ VB  chain, starting from the first word.
-
-        :param relevant_parts:
-        :return:
-        """
-        recording = False
-        candidate_parts = []
-        for relevant_part in relevant_parts:
-            if relevant_part[1].startswith('VB') or relevant_part[1].startswith('JJ') or relevant_part[1].startswith(
-                    'LS') or relevant_part[1] == 'CC':
-                candidate_parts.append(relevant_part)
-                recording = True
-            elif recording is True:
-                break
-        candidate_parts_len = len(candidate_parts)
-
-        # filter out short candidates
-        if ((candidate_parts_len == 1 and candidate_parts[0][0]['nlpToken'][
-            'lemma'] not in self._stop_words) or candidate_parts_len > 1):
-            return candidate_parts
-        return None
-
     def _is_relevant_pos(self, pos):
         # Is adjective or adverb
         if pos.startswith('JJ') or pos.startswith('RB'):

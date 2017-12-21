@@ -142,17 +142,18 @@ def stats_helper(list):
     :return:
     """
     mean = statistics.mean(list)
-    variance = statistics.pvariance(list, mu=mean)
+
     mode = None
     try:
         mode = statistics.mode(list)
     except statistics.StatisticsError:
+        # no unique mode
         pass
 
     return {
         'mean':   mean,
-        'variance': variance,
-        'standard_deviation': math.sqrt(variance),
+        'variance': statistics.pvariance(list, mu=mean),
+        'standard_deviation': statistics.pstdev(list, mu=mean),
         'harmonic_mean': statistics.harmonic_mean(list),
         'median':statistics.median(list),
         'median_low':statistics.median_low(list),

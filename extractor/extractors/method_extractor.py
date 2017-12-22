@@ -92,12 +92,10 @@ class MethodExtractor(AbsExtractor):
                 if right_sibling:
                     # check if IN candidate is copulative(also known as addition)
 
-                    # if subtree[0] in self._copulative_conjunction or subtree[0] not in self._prepositions_before:
+                    # if subtree[0] in self._copulative_conjunction
                     if subtree[0]['nlpToken']['lemma'] in self._copulative_conjunction:
-                        # candidate is after the preposition and
 
-                        # if the right sibling (potential candidate) is an location or time
-                        # the left sibling is taken as candidate
+                        # if the right sibling (potential candidate) is not an in _stop_ner (location, time..)
                         if right_sibling.leaves()[0]['nlpToken']['ner'] not in self._stop_ner:
 
                             tokens = right_sibling.root().stanfordCoreNLPResult['tokens']
@@ -107,7 +105,7 @@ class MethodExtractor(AbsExtractor):
 
                                 candidate_parts = []
                                 _range = 0
-                                # walk over teh sentence, starting after the indicator
+                                # walk over the sentence, starting after the indicator
                                 for token in tokens[_index - 1:]:
                                     if token['lemma'] not in self._blacklist and token['ner'] not in self._stop_ner:
 
@@ -246,30 +244,6 @@ class MethodExtractor(AbsExtractor):
             result.append(ca)
         return result
 
-    def _find_vb_cc_vb_parts(self, relevant_parts):
-        """
-         walks though the given subtree and returns all parts which are a part of
-         JJ VB [CC] JJ VB  chain, starting from the first word.
-
-        :param relevant_parts:
-        :return:
-        """
-        recording = False
-        candidate_parts = []
-        for relevant_part in relevant_parts:
-            if relevant_part[1].startswith('VB') or relevant_part[1].startswith('JJ') or relevant_part[1].startswith(
-                    'LS') or relevant_part[1] == 'CC':
-                candidate_parts.append(relevant_part)
-                recording = True
-            elif recording is True:
-                break
-        candidate_parts_len = len(candidate_parts)
-
-        # filter out short candidates
-        if ((candidate_parts_len == 1 and candidate_parts[0][0]['nlpToken'][
-            'lemma'] not in self._stop_words) or candidate_parts_len > 1):
-            return candidate_parts
-        return None
 
     def _is_relevant_pos(self, pos):
         # Is adjective or adverb

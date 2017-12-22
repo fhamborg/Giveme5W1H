@@ -218,12 +218,13 @@ def index_of_best(list):
     return list.index(min(a_list))
 
 
-def evaluate(score_results):
+def evaluate(score_results, write_full: bool=False):
 
     # write raw results
-    with open('result/' + praefix + '_evaluation_full' + '.json', 'w') as data_file:
-        data_file.write(json.dumps(score_results, sort_keys=False, indent=4))
-        data_file.close()
+    if write_full:
+        with open('result/' + praefix + '_evaluation_full' + '.json', 'w') as data_file:
+            data_file.write(json.dumps(score_results, sort_keys=False, indent=4))
+            data_file.close()
 
     #
     # 1. Crit.: has a low dist on average per weight (documents are merged)
@@ -246,17 +247,19 @@ def evaluate(score_results):
             }
 
     # nice formatted full output, if anyone needs is
-    nice_format = {}
-    for question in score_results:
-        question_scores = nice_format.setdefault(question, [])
-        for combination_string in score_results[question]:
-            combo = score_results[question][combination_string]
-            del combo['scores_doc']
-            question_scores.append(combo)
 
-    with open('result/' + praefix + '_evaluation_only_avg' + '.json', 'w') as data_file:
-        data_file.write(json.dumps(nice_format, sort_keys=False, indent=4))
-        data_file.close()
+    if write_full:
+        nice_format = {}
+        for question in score_results:
+            question_scores = nice_format.setdefault(question, [])
+            for combination_string in score_results[question]:
+                combo = score_results[question][combination_string]
+                del combo['scores_doc']
+                question_scores.append(combo)
+
+        with open('result/' + praefix + '_evaluation_only_avg' + '.json', 'w') as data_file:
+            data_file.write(json.dumps(nice_format, sort_keys=False, indent=4))
+            data_file.close()
 
     # finally, get the best weighting and save it to a file
     final_result = {}
@@ -281,10 +284,10 @@ if __name__ == '__main__':
     # read all available prickles
     praefix = 'training'
     score_results = read_file('queue_caches/*processed.prickle')
-    evaluate(score_results)
-    print('a')
+    evaluate(score_results,  write_full=False)
 
     praefix = 'test'
     score_results = read_file('queue_caches/*processed.prickle')
-    evaluate(score_results)
+    evaluate(score_results,  write_full=False)
+
 

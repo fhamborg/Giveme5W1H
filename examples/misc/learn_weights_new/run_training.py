@@ -132,10 +132,10 @@ if __name__ == '__main__':
 
     #q.put(action(lock))
     #weights = [[]]
-    #q.put(environment(lock, weights))
-    q.put(cause(lock))
-    q.put(method(lock))
-    #q.put(default_combined_scoring)
+    #q.put(environment(lock))
+    #q.put(cause(lock))
+    #q.put(method(lock))
+    q.put(default_combined_scoring(lock))
 
 
     for i in range(4):

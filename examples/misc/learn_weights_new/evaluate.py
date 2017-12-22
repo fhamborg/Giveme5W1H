@@ -114,8 +114,7 @@ def to_ranges(iterable):
     :return:
     """
     iterable = sorted(set(iterable))
-    for key, group in groupby(enumerate(iterable),
-                              lambda t: t[1] - t[0]):
+    for key, group in groupby(enumerate(iterable), lambda t: t[1] - t[0]):
         group = list(group)
         yield group[0][1], group[-1][1]
 
@@ -161,7 +160,6 @@ def stats_helper(list):
         'median_grouped':statistics.median_grouped(list),
         'mode': mode
     }
-
 
 
 def golden_weights_to_ranges(a_list):

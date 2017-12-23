@@ -1,5 +1,6 @@
 import logging
 import os
+import pathlib
 import pickle
 
 import numpy as np
@@ -25,9 +26,13 @@ class WorkQueue(object):
         self.time_range = None
         self._queue = None
         self._queue_processed = None
-        self._queue_path = os.path.dirname(__file__) + '/queue_caches/' + self._id + '_queue.prickle'
-        self._queue_processed_path = os.path.dirname(
-            __file__) + '/queue_caches/' + self._id + '_queue_processed.prickle'
+        self._queue_path_dir =  os.path.dirname(__file__) + '/queue_caches/'
+        self._queue_path = self._queue_path_dir + self._id + '_queue.pickle'
+        self._queue_processed_path = self._queue_path_dir + self._id + 'queue_processed.pickle'
+        self._processed_items_path = self._queue_path_dir + '/' + self._id + 'processed_items/'
+        pathlib.Path(self._processed_items_path).mkdir(parents=True, exist_ok=True)
+
+
         self._unique_weights = {}
         self._log = logging.getLogger('GiveMe5W')
 
@@ -93,20 +98,19 @@ class WorkQueue(object):
                 self._generate_pre_calculated(self._pre_calculated_weights)
 
 
-    def resolve_document(self, last_item, dId, result):
+    def resolve_document(self, last_item, dId, result, document_index):
         """
         takes a queue item, attached result per document, and appends it to queue_processed
 
         :param result:
         :return:
         """
+        unique_index = len(self._queue) * (document_index + 1)
+        last_item['dId'] = dId
+        last_item['result'] = result
 
-        last_item_copy = copy.deepcopy(last_item)
-        last_item_copy['dId'] = dId
-        last_item_copy['result'] = result
-        self._queue_processed.append(last_item_copy)
+        self.persist_processed_item(unique_index, last_item)
 
-        #return last_item
 
     def pop(self, persist: bool = True):
         """
@@ -119,14 +123,19 @@ class WorkQueue(object):
         if persist:
             self.persist()
 
+    def persist_processed_item(self, id, item):
+        with open(self._processed_items_path + str(id) + '.pickle', 'wb') as f:
+            # Pickle the 'data' document using the highest protocol available.
+            pickle.dump(item, f, pickle.HIGHEST_PROTOCOL)
+
     def persist(self):
         with open(self._queue_path, 'wb') as f:
             # Pickle the 'data' document using the highest protocol available.
             pickle.dump(self._queue, f, pickle.HIGHEST_PROTOCOL)
 
-        with open(self._queue_processed_path, 'wb') as f:
-            # Pickle the 'data' document using the highest protocol available.
-            pickle.dump(self._queue_processed, f, pickle.HIGHEST_PROTOCOL)
+       # with open(self._queue_processed_path, 'wb') as f:
+       #     # Pickle the 'data' document using the highest protocol available.
+       #     pickle.dump(self._queue_processed, f, pickle.HIGHEST_PROTOCOL)
 
     def next(self):
         if len(self._queue) > 0:

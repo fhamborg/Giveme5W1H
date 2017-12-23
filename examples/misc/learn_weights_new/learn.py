@@ -382,7 +382,7 @@ class Learn(object):
 
                 combination_start_stamp = datetime.datetime.now()
                 # run for all documents
-                for document in self._documents:
+                for i, document in enumerate(self._documents):
 
                     # try:
                     self._extractor_object.parse(document)
@@ -459,7 +459,7 @@ class Learn(object):
                                                  result)
 
                     # done save it to the result
-                    self._queue.resolve_document(next_item, document.get_document_id(), result)
+                    self._queue.resolve_document(next_item, document.get_document_id(), result, i)
 
                 combination_end_stamp = datetime.datetime.now()
                 self._queue.pop(persist=False)

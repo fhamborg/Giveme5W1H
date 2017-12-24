@@ -5,6 +5,7 @@ Be sure to remove the training set from input before running
 import logging
 import queue
 import threading
+import tracemalloc
 
 from combined_scoring import distance_of_candidate
 from extractor.root import path
@@ -130,12 +131,16 @@ if __name__ == '__main__':
     q = queue.Queue()
     lock = threading.Lock()  # Wordnet is not threadsave
 
-    #q.put(action(lock))
-    #weights = [[]]
+
+    q.put(action(lock))
     #q.put(environment(lock))
     #q.put(cause(lock))
     #q.put(method(lock))
-    q.put(default_combined_scoring(lock))
+    #q.put(default_combined_scoring(lock))
+
+
+
+
 
 
     for i in range(4):

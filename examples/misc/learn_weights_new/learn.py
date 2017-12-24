@@ -2,6 +2,7 @@ import datetime
 import logging
 import math
 import time
+import tracemalloc
 from itertools import product
 from threading import Thread
 
@@ -340,11 +341,23 @@ class Learn(object):
             self._log.info(queue.get_id() + ':Rough estimated time left:' + str(fmt.format(rd(seconds=time_range))))
 
     def process(self):
+
+        #tracemalloc.start(10)
+
+        #start = snapshot = tracemalloc.take_snapshot()
+        #try:
+        #except:
+        #    snapshot = tracemalloc.take_snapshot()
+        #    print(snapshot.statistics())
+
         self._log_progress(self._queue, self._documents, None, None)
         # make sure caller can read that...
 
         _pre_extracting_parameters_id = None
         while True:
+
+
+
             next_item = self._queue.next()
             if next_item is not None:
                 if _pre_extracting_parameters_id:
@@ -357,11 +370,6 @@ class Learn(object):
 
                 # adjust weights
                 weights = next_item['scoring_parameters']['weights']
-          #          if self._combined_scorer:
-           #             # Combined scoring is happening after candidate extraction,
-                        # be sure that you did set optimal weights
-            #            self._combined_scorer.weights = (weights[0], weights[1])
-
 
                 if self._extractors.get('action'):
                     #
@@ -461,8 +469,11 @@ class Learn(object):
                     # done save it to the result
                     self._queue.resolve_document(next_item, document.get_document_id(), result, i)
 
-                combination_end_stamp = datetime.datetime.now()
-                self._queue.pop(persist=False)
+                #combination_end_stamp = datetime.datetime.now()
+                self._queue.pop(persist=True)
+                #snapshot_2 = tracemalloc.take_snapshot()
+                #traceback', 'filename', 'lineno
+                #print(snapshot.compare_to(snapshot_2, 'traceback') )
                 #self._log_progress(self._queue, self._documents, combination_start_stamp, combination_end_stamp)
             else:
                 print('done')

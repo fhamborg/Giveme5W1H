@@ -17,35 +17,33 @@ class WorkQueue(object):
         :param generator: method to generate a _queue
         """
         if id:
-            self._id = id +'_'+ generator
+            self._id = id + '_' + generator
         else:
             self._id = generator
         self._weights_range = None
         self.phrase_range_location = None
         self.phrase_range_time_date = None
         self.time_range = None
-        self._queue = None
-        self._queue_processed = None
+        self._pre_calculated_weights = pre_calculated_weights
+        self._queue = []
+        #self._queue_processed = None
         self._queue_path_dir =  os.path.dirname(__file__) + '/queue_caches/'
         self._queue_path = self._queue_path_dir + self._id + '_queue.pickle'
-        self._queue_processed_path = self._queue_path_dir + self._id + 'queue_processed.pickle'
-        self._processed_items_path = self._queue_path_dir + '/' + self._id + 'processed_items/'
+        #self._queue_processed_path = self._queue_path_dir + self._id + 'queue_processed.pickle'
+        self._processed_items_path = self._queue_path_dir + '/' + self._id + '_processed_items/'
         pathlib.Path(self._processed_items_path).mkdir(parents=True, exist_ok=True)
-
 
         self._unique_weights = {}
         self._log = logging.getLogger('GiveMe5W')
 
         if generator is None:
-            self._queue_processed = []
-            self._queue = []
+            #self._queue_processed = []
+            #self._queue = []
             self._generator = self._generate_full_combination
         else:
-            self._queue_processed = []
-            self._queue = []
+            #self._queue_processed = []
+            #self._queue = []
             self._generator = generator
-
-        self._pre_calculated_weights = pre_calculated_weights
 
     def get_queue_count(self):
         return len(self._queue)
@@ -66,21 +64,11 @@ class WorkQueue(object):
 
     def load(self):
         if os.path.isfile(self._queue_path) and os.path.isfile(self._queue_processed_path):
-            # _preprocessedPath path is given, and there is already a preprocessed document
             with open(self._queue_path, 'rb') as ff:
                 self._queue = pickle.load(ff)
-
-            with open(self._queue_processed_path, 'rb') as ff:
-                self._queue_processed = pickle.load(ff)
-
-            self._log.info("weightinstance found! continue processing :)")
-
-
+            self._log.info("queue found! continue processing :)")
         else:
             self._log.info('generating a new queue')
-            self._queue_processed = []
-            self._queue = []
-            self._unique_weights = {}
 
             if self._generator == 'default':
                 self._generate_default()
@@ -111,31 +99,19 @@ class WorkQueue(object):
 
         self.persist_processed_item(unique_index, last_item)
 
-
     def pop(self, persist: bool = True):
-        """
-        takes an item from the process queue.
-
-        :param result:
-        :return:
-        """
         self._queue.pop()
         if persist:
             self.persist()
 
     def persist_processed_item(self, id, item):
         with open(self._processed_items_path + str(id) + '.pickle', 'wb') as f:
-            # Pickle the 'data' document using the highest protocol available.
             pickle.dump(item, f, pickle.HIGHEST_PROTOCOL)
 
     def persist(self):
         with open(self._queue_path, 'wb') as f:
             # Pickle the 'data' document using the highest protocol available.
             pickle.dump(self._queue, f, pickle.HIGHEST_PROTOCOL)
-
-       # with open(self._queue_processed_path, 'wb') as f:
-       #     # Pickle the 'data' document using the highest protocol available.
-       #     pickle.dump(self._queue_processed, f, pickle.HIGHEST_PROTOCOL)
 
     def next(self):
         if len(self._queue) > 0:

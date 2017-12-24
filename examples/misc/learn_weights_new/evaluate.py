@@ -25,19 +25,26 @@ def weights_to_string(weights):
 
 def read_file(path):
     """
-    reads a file
+    reads all processed q items an merges them into one dict
     :param path:
     :return:
     """
     score_results = {}
-    for file_path in glob.glob(path):
-        if praefix and not os.path.basename(file_path).startswith(praefix):
-            continue
-        else:
-            with open(file_path, 'rb') as ff:
-                 results = pickle.load(ff)
 
-        for result in results:
+    # walk over app items directotiey
+    for directory_path in glob.glob(path):
+        # ignore missmatching prefix one (wrong data sample)
+        if praefix and not os.path.basename(directory_path).startswith(praefix):
+            continue
+        # walk over all parts
+        entire_qu = []
+        for file_path in glob.glob(directory_path + '/*'):
+            with open(file_path, 'rb') as ff:
+                processed_item = pickle.load(ff)
+            entire_qu.append(processed_item)
+
+        # merge qu to one dict, merge per question and weight
+        for result in entire_qu:
             for question in result['result']:
                 question_scores = score_results.setdefault(question, {})
                 weights = result['result'][question][1]
@@ -50,6 +57,28 @@ def read_file(path):
                                                   {'weights': weights_fixed, 'scores_doc': []})
                 # save this score to all results
                 comb['scores_doc'].append(result['result'][question][2])
+
+
+   # for file_path in glob.glob(path):
+    #    if praefix and not os.path.basename(file_path).startswith(praefix):
+     #       continue
+      #  else:
+       #     with open(file_path, 'rb') as ff:
+        #        results = pickle.load(ff)
+
+       # for result in results:
+        #    for question in result['result']:
+         #       question_scores = score_results.setdefault(question, {})
+          #      weights = result['result'][question][1]
+           #     weights_fixed = []
+                # fix floating error
+            #    for i in weights:
+             #       weights_fixed.append(round(i, 1))
+
+            #    comb = question_scores.setdefault(weights_to_string(weights_fixed),
+                     #                             {'weights': weights_fixed, 'scores_doc': []})
+                # save this score to all results
+             #   comb['scores_doc'].append(result['result'][question][2])
     return score_results
 
 
@@ -281,7 +310,8 @@ def evaluate(score_results, write_full: bool=False):
 if __name__ == '__main__':
     # read all available prickles
     praefix = 'training'
-    score_results = read_file('queue_caches/*processed.prickle')
+    #score_results = read_file('queue_caches/*_processed*/*processed.prickle')
+    score_results = read_file('queue_caches/*_processed*/')
     evaluate(score_results,  write_full=False)
 
     praefix = 'test'

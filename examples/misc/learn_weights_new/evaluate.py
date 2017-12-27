@@ -8,11 +8,10 @@ import statistics
 from itertools import groupby
 
 import os
-
 import math
-
 #praefix = None
 #combination_identifier = None
+
 def weights_to_string(weights):
     """
     converts an array of ints to string
@@ -31,7 +30,7 @@ def process_files(path, praefix):
     """
     score_results = {}
 
-    # walk over app items directotiey
+    # walk over app items directories
     for directory_path in glob.glob(path):
         if praefix and not directory_path.find(praefix):
             continue
@@ -39,9 +38,10 @@ def process_files(path, praefix):
         # walk over all parts
         entire_qu = []
         for file_path in glob.glob(directory_path + '/*'):
-            with open(file_path, 'rb') as ff:
-                processed_item = pickle.load(ff)
-            entire_qu.append(processed_item)
+            if os.path.getsize(file_path) > 0:
+                with open(file_path, 'rb') as ff:
+                    processed_item = pickle.load(ff)
+                    entire_qu.append(processed_item)
 
         # merge qu to one dict, merge per question and weight
         for result in entire_qu:
@@ -50,19 +50,19 @@ def process_files(path, praefix):
             for question in result['result']:
                 question_scores = score_results.setdefault(question, {})
                 weights = result['result'][question][1]
-                weights_fixed = []
+                #weights_fixed = []
                 # fix floating error
-                for i in weights:
-                    weights_fixed.append(round(i, 1))
+                #for i in weights:
+                #    weights_fixed.append( round(i, 1) )
                 # create a identifier for these weights
-                weights_string = weights_to_string(weights_fixed)
+                weights_string = weights_to_string(weights)
 
                 # each item is identifierd by theri extractin parameters, weight
                 # and their answer (stored over the parent node)
                 # combination_id = result['extracting_parameter_id'] + '_' + weights_string
                 comb_for_this_parameter_id = question_scores.setdefault(result['extracting_parameters_id'], { 'extracting_parameters': result['extracting_parameters'], 'weights': {}})
 
-                comb = comb_for_this_parameter_id['weights'].setdefault(weights_string, {'weights': weights_fixed, 'scores_doc': []})
+                comb = comb_for_this_parameter_id['weights'].setdefault(weights_string, {'weights': weights, 'scores_doc': []})
 
                 #comb = question_scores.setdefault(weights_string, {'weights': weights_fixed, 'scores_doc': []})
                 # save this score to all results
@@ -133,6 +133,7 @@ def merge_top(a_list, accessor):
     :param accessor: 
     :return: 
     """
+    a_list.sort(key=lambda x: x['score'], reverse=False)
     result = a_list[0]
     weights = []
     result['weights'] = weights
@@ -264,25 +265,26 @@ def evaluate(score_results, write_full: bool=False, praefix=''):
             data_file.write(json.dumps(score_results, sort_keys=False, indent=4))
             data_file.close()
 
-    #
+
     # has a low dist on average per weight (documents are merged)
     score_per_average = {}
     # results_error_rate = {}
     for question in score_results:
         for extracting_parameters_id in score_results[question]:
             extracting_parameters = score_results[question][extracting_parameters_id]
-            for combination_string in score_results[question]:
-                combo = score_results[question][combination_string]
+            for combination_string in score_results[question][extracting_parameters_id]['weights']:
+                combo = score_results[question][extracting_parameters_id]['weights'][combination_string]
 
                 raw_scores = combo['scores_doc']
                 scores_norm = normalize(raw_scores)
                 a_sum = sum(scores_norm)
 
                 combo['norm_avg'] = a_sum / len(scores_norm)
-                score_per_average.setdefault(question, {})[combination_string] = {
+                score_per_average.setdefault(question + '_' + str(extracting_parameters_id), {})[combination_string] = {
                     'score': a_sum,
                     'norm_avg': combo['norm_avg'],
                     'weight': combo['weights']
+                   #, 'extracting_parameter': extracting_parameters
                 }
     # nice formatted full output, if anyone needs is
     if write_full:
@@ -316,16 +318,8 @@ def evaluate(score_results, write_full: bool=False, praefix=''):
             data_file.write(json.dumps(final_result[question], sort_keys=False, indent=4))
             data_file.close()
 
-
 if __name__ == '__main__':
-    # read all available prickles
-    #praefix = 'training'
-    #score_results = read_file('queue_caches/*_processed*/*processed.prickle')
-    process_files('queue_caches/*_processed*/', praefix='training')
-    #evaluate(score_results,  write_full=False)
-
-    #praefix = 'test'
+    process_files('queue_caches/*n_processed*/', praefix='training')
     process_files('queue_caches/*processed.prickle', praefix = 'test')
-    #evaluate(score_results,  write_full=False)
 
 

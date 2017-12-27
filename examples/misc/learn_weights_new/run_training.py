@@ -134,9 +134,9 @@ if __name__ == '__main__':
 
     q.put(action(lock))
     #q.put(environment(lock))
-    #q.put(cause(lock))
-    #q.put(method(lock))
-    #q.put(default_combined_scoring(lock))
+    q.put(cause(lock))
+    q.put(method(lock))
+    q.put(default_combined_scoring(lock))
 
 
 

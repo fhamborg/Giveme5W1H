@@ -63,7 +63,7 @@ class WorkQueue(object):
         self.time_range = time_range
 
     def load(self):
-        if os.path.isfile(self._queue_path) and os.path.isfile(self._queue_processed_path):
+        if os.path.isfile(self._queue_path):
             with open(self._queue_path, 'rb') as ff:
                 self._queue = pickle.load(ff)
             self._log.info("queue found! continue processing :)")

@@ -57,7 +57,7 @@ def process_files(path, praefix):
                 # create a identifier for these weights
                 weights_string = weights_to_string(weights)
 
-                # each item is identifierd by theri extractin parameters, weight
+                # each item is identified by their extracting parameters, weight
                 # and their answer (stored over the parent node)
                 # combination_id = result['extracting_parameter_id'] + '_' + weights_string
                 comb_for_this_parameter_id = question_scores.setdefault(result['extracting_parameters_id'], { 'extracting_parameters': result['extracting_parameters'], 'weights': {}})
@@ -69,28 +69,8 @@ def process_files(path, praefix):
                 comb['scores_doc'].append(result['result'][question][2])
 
 
-   # for file_path in glob.glob(path):
-    #    if praefix and not os.path.basename(file_path).startswith(praefix):
-     #       continue
-      #  else:
-       #     with open(file_path, 'rb') as ff:
-        #        results = pickle.load(ff)
 
-       # for result in results:
-        #    for question in result['result']:
-         #       question_scores = score_results.setdefault(question, {})
-          #      weights = result['result'][question][1]
-           #     weights_fixed = []
-                # fix floating error
-            #    for i in weights:
-             #       weights_fixed.append(round(i, 1))
-
-            #    comb = question_scores.setdefault(weights_to_string(weights_fixed),
-                     #                             {'weights': weights_fixed, 'scores_doc': []})
-                # save this score to all results
-             #   comb['scores_doc'].append(result['result'][question][2])
     evaluate(score_results, write_full=False, praefix=praefix )
-    #return score_results
 
 
 def remove_errors(list):
@@ -319,7 +299,7 @@ def evaluate(score_results, write_full: bool=False, praefix=''):
             data_file.close()
 
 if __name__ == '__main__':
-    process_files('queue_caches/*n_processed*/', praefix='training')
-    process_files('queue_caches/*processed.prickle', praefix = 'test')
+    #process_files('queue_caches/*_processed*/', praefix='training')
+    process_files('queue_caches/*_processed*/', praefix='test')
 
 

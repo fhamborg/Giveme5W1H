@@ -83,12 +83,12 @@ class Event(Enum):
     amazon_and_microsoft_employees_caught_up_in_sex_trafficking_sting = auto()
     alleged_galaxy_s9_components_smile_for_the_camera_theres_a_spot_for_a_headphone_jack = auto()
     ## entertainment
-    chrissy_teigen_live-tweets_nightmare_flight_after_bizarre_passenger_mishap = auto()
+    chrissy_teigen_live_tweets_nightmare_flight_after_bizarre_passenger_mishap = auto()
     cardi_b_desperately_working_to_find_offsets_hacker_after_they_leak_cheating_video__more = auto()
     rihanna_calls_for_an_end_to_gun_violence_after_death_of_her_cousin_in_barbados = auto()
     ##_sport
     american_airlines_apologizes_after_g_league_players_accused_of_stealing_blankets_thrown_off_flight = auto()
-    how_astros_first_base_coach_rich_dauer_escaped_near-death_after_world_series_parade = auto()
+    how_astros_first_base_coach_rich_dauer_escaped_near_death_after_world_series_parade = auto()
     pittsburgh_steelers_cruise_to_win_over_texans = auto()
     ##_science
     possible_meteor_lights_up_night_sky_in_new_england = auto()
@@ -122,17 +122,6 @@ class Event(Enum):
 articles = []
 
 
-
-
-
-
-
-
-
-
-
-
-
 def add_article(a_category: Category, a_topic: Topic, a_Event: Event, urls: List[str]):
     for ulr in urls:
         articles.append(
@@ -147,30 +136,30 @@ def add_article(a_category: Category, a_topic: Topic, a_Event: Event, urls: List
             }
         )
 
-    ## world
-    add_article(Category.world, Topic.unspecific, Event.less_1000_is_fighters_remain, [])
-    add_article(Category.world, Topic.unspecific, Event.tourist_boat_hits_bridge_in_germany, [])
-    add_article(Category.world, Topic.unspecific, Event.israel_approves_transfer_of_11_million_in_funding_for_west_bank_settlements, [])
-    ## business
-    add_article(Category.business, Topic.unspecific, Event.nyc_subway_work_trains_collide_in_tunnel_1_worker_injured, [])
-    add_article(Category.business, Topic.unspecific, Event.woman_gets_284_billion_electric_bil, [])
-    add_article(Category.business, Topic.unspecific, Event.erie_smashes_snowfall_record_with_flakes_still_falling, [])
-    ## technology
-    add_article(Category.business, Topic.unspecific, Event.iphone_8_and_iphone_8_plus_combined_to_outsell_the_iphone_x_in_its_launch_month, [])
-    add_article(Category.business, Topic.unspecific, Event.amazon_and_microsoft_employees_caught_up_in_sex_trafficking_sting, [])
-    add_article(Category.business, Topic.unspecific, Event.alleged_galaxy_s9_components_smile_for_the_camera_theres_a_spot_for_a_headphone_jack, [])
-    ## entertainment
-    add_article(Category.entertainment, Topic.unspecific, Event.chrissy_teigen_live-tweets_nightmare_flight_after_bizarre_passenger_mishap, [])
-    add_article(Category.entertainment, Topic.unspecific, Event.cardi_b_desperately_working_to_find_offsets_hacker_after_they_leak_cheating_video__more, [])
-    add_article(Category.entertainment, Topic.unspecific, Event.rihanna_calls_for_an_end_to_gun_violence_after_death_of_her_cousin_in_barbados, [])
-    ## sport
-    add_article(Category.sports, Topic.unspecific, Event.american_airlines_apologizes_after_g_league_players_accused_of_stealing_blankets_thrown_off_flight, [])
-    add_article(Category.sports, Topic.unspecific, Event.how_astros_first_base_coach_rich_dauer_escaped_near-death_after_world_series_parade, [])
-    add_article(Category.sports, Topic.unspecific, Event.pittsburgh_steelers_cruise_to_win_over_texans, [])
-    ## science
-    add_article(Category.science, Topic.unspecific, Event.possible_meteor_lights_up_night_sky_in_new_england, [])
-    add_article(Category.science, Topic.unspecific, Event.elon_musk_reveals_red_tesla_roadster_bound_for_mars, [])
-    add_article(Category.science, Topic.unspecific, Event.smoke_rings_spotted_in_the_ocean_from_space, [])
+## world
+add_article(Category.world, Topic.unspecific, Event.less_1000_is_fighters_remain, [])
+add_article(Category.world, Topic.unspecific, Event.tourist_boat_hits_bridge_in_germany, [])
+add_article(Category.world, Topic.unspecific, Event.israel_approves_transfer_of_11_million_in_funding_for_west_bank_settlements, [])
+## business
+add_article(Category.business, Topic.unspecific, Event.nyc_subway_work_trains_collide_in_tunnel_1_worker_injured, [])
+add_article(Category.business, Topic.unspecific, Event.woman_gets_284_billion_electric_bil, [])
+add_article(Category.business, Topic.unspecific, Event.erie_smashes_snowfall_record_with_flakes_still_falling, [])
+## technology
+add_article(Category.business, Topic.unspecific, Event.iphone_8_and_iphone_8_plus_combined_to_outsell_the_iphone_x_in_its_launch_month, [])
+add_article(Category.business, Topic.unspecific, Event.amazon_and_microsoft_employees_caught_up_in_sex_trafficking_sting, [])
+add_article(Category.business, Topic.unspecific, Event.alleged_galaxy_s9_components_smile_for_the_camera_theres_a_spot_for_a_headphone_jack, [])
+## entertainment
+add_article(Category.entertainment, Topic.unspecific, Event.chrissy_teigen_live_tweets_nightmare_flight_after_bizarre_passenger_mishap, [])
+add_article(Category.entertainment, Topic.unspecific, Event.cardi_b_desperately_working_to_find_offsets_hacker_after_they_leak_cheating_video__more, [])
+add_article(Category.entertainment, Topic.unspecific, Event.rihanna_calls_for_an_end_to_gun_violence_after_death_of_her_cousin_in_barbados, [])
+## sport
+add_article(Category.sports, Topic.unspecific, Event.american_airlines_apologizes_after_g_league_players_accused_of_stealing_blankets_thrown_off_flight, [])
+add_article(Category.sports, Topic.unspecific, Event.how_astros_first_base_coach_rich_dauer_escaped_near_death_after_world_series_parade, [])
+add_article(Category.sports, Topic.unspecific, Event.pittsburgh_steelers_cruise_to_win_over_texans, [])
+## science
+add_article(Category.science, Topic.unspecific, Event.possible_meteor_lights_up_night_sky_in_new_england, [])
+add_article(Category.science, Topic.unspecific, Event.elon_musk_reveals_red_tesla_roadster_bound_for_mars, [])
+add_article(Category.science, Topic.unspecific, Event.smoke_rings_spotted_in_the_ocean_from_space, [])
 
 
 

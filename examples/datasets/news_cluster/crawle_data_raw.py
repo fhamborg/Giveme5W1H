@@ -20,107 +20,12 @@ Used time horizon:
     2016-2017
 
 Event Source
-    https://www.infoplease.com/world/current-events/2016-current-events
-    http://eventregistry.org/search?type=events&query=%257B%2522categories%2522:%255B%257B%2522id%2522:145,%2522uri%2522:%2522dmoz%2FSports%2522,%2522label%2522:%2522Sports%2522,%2522negate%2522:false%257D,%257B%2522id%2522:380,%2522uri%2522:%2522dmoz%2FSociety%2FPolitics%2522,%2522label%2522:%2522Society%25E2%2586%2592Politics%2522,%2522negate%2522:false%257D,%257B%2522id%2522:19,%2522uri%2522:%2522dmoz%2FBusiness%2522,%2522label%2522:%2522Business%2522,%2522negate%2522:false%257D,%257B%2522id%2522:41,%2522uri%2522:%2522dmoz%2FScience%2FTechnology%2522,%2522label%2522:%2522Science%25E2%2586%2592Technology%2522,%2522negate%2522:false%257D%255D,%2522dateStart%2522:%25222016-01-01%2522,%2522dateEnd%2522:%25222016-12-31%2522,%2522lang%2522:%2522eng%2522,%2522minArticles%2522:200,%2522preferredLang%2522:%2522eng%2522%257D&tab=items&eventsSortBy=rel
-    http://googlenews.com
-    https://www.nexis.com/
-    https://en.wikipedia.org/wiki/Portal:Current_events/May_2016
 
-
-
+    Crawled from 27.12.2017 - 02.01.2018
+    https://news.google.com/news/headlines?ned=en&hl=en&gl=US
 """
 
 
-@enum.unique
-class Category(Enum):
-    global_politics = auto()  # elections  # International relations # Armed conflicts and attacks
-    economics = auto()  # Business
-    science_tech = auto()  # science
-    entertainment = auto()
-    sports = auto()
-
-    # todo: add
-    # disaster and accidents
-    # World
-
-
-@enum.unique
-class Topic(Enum):
-    unspecific = auto()
-    north_korea = auto()
-    hack = auto()
-
-
-@enum.unique
-class Event(Enum):
-    #
-    # politics
-    #
-
-    # misc
-    las_vegas_shooting = auto()
-    panama_papers = auto()  # global_politics, 3. April 2016, # Journalist Daphne Galizia
-    boko_haram_21_schoolgirls_freed = auto()
-    harambe = auto()  # 28. Mai 2016
-    truck_attack_in_nice = auto()  # 14 July 2016
-    NewYearsEveSexualAssaultsGermany = auto()
-
-    # north_korea
-    north_Korea_hokkaido_missile = auto()
-    north_Korea_Launches_satellite = auto()
-
-    hack_equifax_breach = auto()
-
-    # Gold_standart events
-    Benghazi_US_consulate_attack = auto()  # 11. September 2012,
-    croydon_tram_trash = auto()
-    f1_crash = auto()
-    cubs_win_championship = auto()
-    china_boy_well = auto()
-    # trump
-
-    # erdogan
-    # erdogan_attempted_Coup = auto()
-    # erdogan_elected = auto()
-    ##erdogan_bohmermann = auto()
-
-    # zimbabwe_President_Mugabe_resigns = auto()
-    # zimbabwe_Military_coup = auto()
-
-    #
-
-    # Tech
-    #
-    # explosive_samsung_galaxy_note = auto() not happening at a specie time
-    # dieselgate = auto()  # tech ? not happening at a specie time
-    # star_wars_battlefront_lootbox = auto()  not happening at a specie time
-    # Hacks:
-    # Equifax_breach = auto() not happening at a specie time
-    # Linkedin hack
-    # Dropbox hack
-
-
-    #
-    # Entertainment
-    # Gamescom?
-    # Box_office Batman v Superman: Dawn of Justice
-    # Box_office_Suicide Squad
-    # Apple keynote
-    # Apple headphone jack
-    # google keynote
-
-    #
-    # Sport
-    #
-
-    # SuperBowl
-
-
-    #
-    # Disaster
-    #
-
-    # Italy Earthquakes
 
 
 def write_json(path, filename, object):
@@ -134,7 +39,6 @@ def write_json(path, filename, object):
         data_file.write(json.dumps(object, sort_keys=False, indent=2))
         data_file.close()
 
-
 def json_exist_has_content(path, filename):
     _path = path + '/' + filename + '.' + 'json'
     if os.path.exists(_path):
@@ -143,7 +47,90 @@ def json_exist_has_content(path, filename):
     return False
 
 
+
+#
+# DATASET
+#
+
+@enum.unique
+class Category(Enum):
+    world = auto()
+    business = auto()
+    technology = auto()
+    entertainment = auto()
+    sports = auto()
+    science = auto()
+
+@enum.unique
+class Topic(Enum):
+    unspecific = auto()
+    legancy = auto()
+
+@enum.unique
+class Event(Enum):
+
+    # 27.12.2017
+    ## world
+    less_1000_is_fighters_remain = auto()
+    tourist_boat_hits_bridge_in_germany = auto()
+    israel_approves_transfer_of_11_million_in_funding_for_west_bank_settlements = auto()
+    ## business
+    nyc_subway_work_trains_collide_in_tunnel_1_worker_injured = auto()
+    woman_gets_284_billion_electric_bil = auto()
+    erie_smashes_snowfall_record_with_flakes_still_falling = auto()
+    ## technology
+    iphone_8_and_iphone_8_plus_combined_to_outsell_the_iphone_x_in_its_launch_month = auto()
+    amazon_and_microsoft_employees_caught_up_in_sex_trafficking_sting = auto()
+    alleged_galaxy_s9_components_smile_for_the_camera_theres_a_spot_for_a_headphone_jack = auto()
+    ## entertainment
+    chrissy_teigen_live-tweets_nightmare_flight_after_bizarre_passenger_mishap = auto()
+    cardi_b_desperately_working_to_find_offsets_hacker_after_they_leak_cheating_video__more = auto()
+    rihanna_calls_for_an_end_to_gun_violence_after_death_of_her_cousin_in_barbados = auto()
+    ##_sport
+    american_airlines_apologizes_after_g_league_players_accused_of_stealing_blankets_thrown_off_flight = auto()
+    how_astros_first_base_coach_rich_dauer_escaped_near-death_after_world_series_parade = auto()
+    pittsburgh_steelers_cruise_to_win_over_texans = auto()
+    ##_science
+    possible_meteor_lights_up_night_sky_in_new_england = auto()
+    elon_musk_reveals_red_tesla_roadster_bound_for_mars = auto()
+    smoke_rings_spotted_in_the_ocean_from_space = auto()
+
+
+    #
+    # Old
+    #
+    ## misc
+    las_vegas_shooting = auto()
+    panama_papers = auto()  # global_politics, 3. April 2016, # Journalist Daphne Galizia
+    boko_haram_21_schoolgirls_freed = auto()
+    harambe = auto()  # 28. Mai 2016
+    truck_attack_in_nice = auto()  # 14 July 2016
+    NewYearsEveSexualAssaultsGermany = auto()
+    ## north_korea
+    north_Korea_hokkaido_missile = auto()
+    north_Korea_Launches_satellite = auto()
+    ## hacks
+    hack_equifax_breach = auto()
+    ## Gold_standart events
+    Benghazi_US_consulate_attack = auto()  # 11. September 2012,
+    croydon_tram_trash = auto()
+    f1_crash = auto()
+    cubs_win_championship = auto()
+    china_boy_well = auto()
+
+
 articles = []
+
+
+
+
+
+
+
+
+
+
+
 
 
 def add_article(a_category: Category, a_topic: Topic, a_Event: Event, urls: List[str]):
@@ -160,17 +147,41 @@ def add_article(a_category: Category, a_topic: Topic, a_Event: Event, urls: List
             }
         )
 
+    ## world
+    add_article(Category.world, Topic.unspecific, Event.less_1000_is_fighters_remain, [])
+    add_article(Category.world, Topic.unspecific, Event.tourist_boat_hits_bridge_in_germany, [])
+    add_article(Category.world, Topic.unspecific, Event.israel_approves_transfer_of_11_million_in_funding_for_west_bank_settlements, [])
+    ## business
+    add_article(Category.business, Topic.unspecific, Event.nyc_subway_work_trains_collide_in_tunnel_1_worker_injured, [])
+    add_article(Category.business, Topic.unspecific, Event.woman_gets_284_billion_electric_bil, [])
+    add_article(Category.business, Topic.unspecific, Event.erie_smashes_snowfall_record_with_flakes_still_falling, [])
+    ## technology
+    add_article(Category.business, Topic.unspecific, Event.iphone_8_and_iphone_8_plus_combined_to_outsell_the_iphone_x_in_its_launch_month, [])
+    add_article(Category.business, Topic.unspecific, Event.amazon_and_microsoft_employees_caught_up_in_sex_trafficking_sting, [])
+    add_article(Category.business, Topic.unspecific, Event.alleged_galaxy_s9_components_smile_for_the_camera_theres_a_spot_for_a_headphone_jack, [])
+    ## entertainment
+    add_article(Category.entertainment, Topic.unspecific, Event.chrissy_teigen_live-tweets_nightmare_flight_after_bizarre_passenger_mishap, [])
+    add_article(Category.entertainment, Topic.unspecific, Event.cardi_b_desperately_working_to_find_offsets_hacker_after_they_leak_cheating_video__more, [])
+    add_article(Category.entertainment, Topic.unspecific, Event.rihanna_calls_for_an_end_to_gun_violence_after_death_of_her_cousin_in_barbados, [])
+    ## sport
+    add_article(Category.sports, Topic.unspecific, Event.american_airlines_apologizes_after_g_league_players_accused_of_stealing_blankets_thrown_off_flight, [])
+    add_article(Category.sports, Topic.unspecific, Event.how_astros_first_base_coach_rich_dauer_escaped_near-death_after_world_series_parade, [])
+    add_article(Category.sports, Topic.unspecific, Event.pittsburgh_steelers_cruise_to_win_over_texans, [])
+    ## science
+    add_article(Category.science, Topic.unspecific, Event.possible_meteor_lights_up_night_sky_in_new_england, [])
+    add_article(Category.science, Topic.unspecific, Event.elon_musk_reveals_red_tesla_roadster_bound_for_mars, [])
+    add_article(Category.science, Topic.unspecific, Event.smoke_rings_spotted_in_the_ocean_from_space, [])
 
-# http://www.dailymail.co.uk/wires/ap/article-4050308/Truck-rams-German-Christmas-market-killing-12-people.html
 
-add_article(Category.sports, Topic.unspecific, Event.china_boy_well, [
+
+add_article(Category.sports, Topic.legancy, Event.china_boy_well, [
     "http://www.bbc.com/news/world-asia-china-37906226",
     "http://www.bbc.com/news/world-asia-china-37946716",
     "http://www.dailymail.co.uk/news/article-3916560/Dramatic-footage-shows-rescuers-using-eighty-diggers-save-boy-fell-130ft-deep-picking-cabbages-Chinese-farm.html",
     "http://www.dailymail.co.uk/news/article-3923808/Mystery-Chinese-boy-fell-deep-massive-rescue-operation-involving-80-diggers-chute-empty.html"
 ])
 
-add_article(Category.sports, Topic.unspecific, Event.cubs_win_championship, [
+add_article(Category.sports, Topic.legancy, Event.cubs_win_championship, [
     "https://www.theguardian.com/sport/2016/nov/03/world-series-game-7-chicago-cubs-cleveland-indians-mlb",
     "https://www.washingtonpost.com/sports/believe-it-chicago-cubs-win-classic-game-7-to-win-first-world-series-since-1908/2016/11/03/99cfc9c2-a0b3-11e6-a44d-cc2898cfab06_story.html",
     "https://www.thesun.co.uk/sport/othersports/2106710/chicago-cubs-win-world-series-hillary-clinton-bill-murray-and-barack-obama-lead-celebrations-as-cubs-end-108-year-curse/",
@@ -186,7 +197,7 @@ add_article(Category.sports, Topic.unspecific, Event.cubs_win_championship, [
     "http://www.usatoday.com/story/sports/ftw/2016/11/03/sports-world-reacts-to-the-chicago-cubs-winning-their-first-world-series-since-1908/93225730/"
 ])
 
-add_article(Category.sports, Topic.unspecific, Event.f1_crash, [
+add_article(Category.sports, Topic.legancy, Event.f1_crash, [
     "http://www.dailymail.co.uk/sport/formulaone/article-3932890/Max-Verstappen-amazes-Red-Bull-principal-Christian-Horner-performance-Brazil-witnessed-special.html",
     "https://www.thesun.co.uk/sport/2177804/felipe-massa-retires-f1-legend-makes-a-very-emotional-farewell-after-crashing-in-his-last-home-race-in-brazil/",
     "http://www.dailymail.co.uk/sport/sportsnews/article-3934424/Formula-One-star-Max-Verstappen-shows-nerves-steel-avoid-accident.html",
@@ -201,7 +212,7 @@ add_article(Category.sports, Topic.unspecific, Event.f1_crash, [
     "http://www.mirror.co.uk/sport/formula-1/brazilian-f1-grand-prix-riddled-9253267"
 ])
 
-add_article(Category.global_politics, Topic.unspecific, Event.croydon_tram_trash, [
+add_article(Category.global_politics, Topic.legancy, Event.croydon_tram_trash, [
     "http://www.standard.co.uk/news/transport/croydon-tram-derailment-people-trapped-after-tram-overturns-in-at-sandilands-a3390796.html",
     "http://www.nytimes.com/2016/11/10/world/europe/tram-derails-croydon-london.html",
     "http://www.dailymail.co.uk/wires/pa/article-3919284/Five-trapped-40-injured-tram-overturns-tunnel.html",
@@ -215,7 +226,7 @@ add_article(Category.global_politics, Topic.unspecific, Event.croydon_tram_trash
     "http://www.independent.co.uk/news/uk/home-news/five-trapped-40-injured-after-tram-overturns-south-london-croydon-a7406496.html"
 ])
 
-add_article(Category.global_politics, Topic.unspecific, Event.Benghazi_US_consulate_attack, [
+add_article(Category.global_politics, Topic.legancy, Event.Benghazi_US_consulate_attack, [
     "http://www.telegraph.co.uk/news/2016/11/10/taliban-attack-german-consulate-in-northern-afghan-city-of-mazar/",
     "http://www.express.co.uk/news/world/731052/German-consulate-explosion-gunfire-Afghanistan",
     "https://www.theguardian.com/world/2016/nov/10/taliban-attack-german-consulate-mazar-i-sharif-afghanistan-nato-airstrikes-kunduz",
@@ -227,7 +238,7 @@ add_article(Category.global_politics, Topic.unspecific, Event.Benghazi_US_consul
     "http://www.bbc.com/news/world-asia-37944115"
 ])
 
-add_article(Category.global_politics, Topic.north_korea, Event.north_Korea_Launches_satellite, [
+add_article(Category.global_politics, Topic.legancy, Event.north_Korea_Launches_satellite, [
     'http://edition.cnn.com/2016/02/07/asia/gallery/north-korea-missile-launch/index.html',
     'http://www.nytimes.com/2013/01/31/world/asia/on-3d-try-south-korea-launches-satellite-into-orbit.html',
     'https://www.npr.org/2015/09/15/440443821/north-korea-says-its-ready-to-launch-satellites-aboard-rockets',
@@ -237,14 +248,14 @@ add_article(Category.global_politics, Topic.north_korea, Event.north_Korea_Launc
     'https://www.washingtonpost.com/world/north-korea-launches-satellite-sparks-fears-about-long-range-missile-program/2016/02/06/0b6084e5-afd1-42ec-8170-280883f23240_story.html'
 ])
 
-add_article(Category.global_politics, Topic.unspecific, Event.NewYearsEveSexualAssaultsGermany, [
+add_article(Category.global_politics, Topic.legancy, Event.NewYearsEveSexualAssaultsGermany, [
     'http://www.chinadaily.com.cn/opinion/2016-01/11/content_23017934.htm',
     'http://www.dailymail.co.uk/news/article-3411720/A-staggering-359-sexual-assaults-migrants-reported-Cologne-police-New-Year-s-Eve-mob-went-rampage-causing-821-complaints.html',
     'https://www.npr.org/2016/01/06/462114345/migrants-in-germany-accused-of-coordinated-sexual-assaults',
     'https://www.npr.org/sections/parallels/2016/01/05/462059765/mass-sexual-assaults-in-cologne-germany-renew-tensions-over-migrants'
 ])
 
-add_article(Category.global_politics, Topic.unspecific, Event.truck_attack_in_nice, [
+add_article(Category.global_politics, Topic.legancy, Event.truck_attack_in_nice, [
     'http://edition.cnn.com/2016/07/14/europe/nice-france-truck/index.html',
     'http://edition.cnn.com/2016/07/14/world/nice-attack-witness-accounts/index.html',
     'https://www.nytimes.com/2016/07/16/world/europe/truck-attack-nice-france.html',
@@ -260,7 +271,7 @@ add_article(Category.global_politics, Topic.unspecific, Event.truck_attack_in_ni
     'http://usa.chinadaily.com.cn/epaper/2016-07/15/content_26104748.htm'
 ])
 
-add_article(Category.global_politics, Topic.unspecific, Event.harambe, [
+add_article(Category.global_politics, Topic.legancy, Event.harambe, [
     'http://edition.cnn.com/2016/03/18/health/seaworld-blackfish-effect-circuses-zoos/index.html',
     'https://www.npr.org/sections/thetwo-way/2016/05/29/479919582/gorilla-killed-to-save-boy-at-cincinnati-zoo',
     'https://www.thesun.co.uk/news/1230550/hear-the-dramatic-moment-little-isiahs-mum-calls-for-help-after-her-son-falls-into-gorilla-enclosure-at-zoo/',
@@ -271,7 +282,7 @@ add_article(Category.global_politics, Topic.unspecific, Event.harambe, [
     'https://www.rt.com/news/344746-cincinnati-zoo-gorilla-killed/'
 ])
 
-add_article(Category.global_politics, Topic.unspecific, Event.boko_haram_21_schoolgirls_freed, [
+add_article(Category.global_politics, Topic.legancy, Event.boko_haram_21_schoolgirls_freed, [
     'http://edition.cnn.com/2016/10/13/africa/nigeria-chibok-girls-released/index.html',
     'https://www.nytimes.com/2016/10/14/world/africa/boko-haram-nigeria.html',
     'https://www.npr.org/sections/thetwo-way/2016/10/13/497803083/nigeria-says-21-schoolgirls-abducted-by-boko-haram-have-been-released',
@@ -283,7 +294,7 @@ add_article(Category.global_politics, Topic.unspecific, Event.boko_haram_21_scho
     'https://www.washingtonpost.com/world/boko-haram-militants-free-21-captive-chibok-schoolgirls-amid-talks-with-nigeria/2016/10/13/9e94610a-0ed3-4a26-96f1-6c5d7cccfdcd_story.html'
 ])
 
-add_article(Category.global_politics, Topic.hack, Event.panama_papers, [
+add_article(Category.global_politics, Topic.legancy, Event.panama_papers, [
     'http://edition.cnn.com/2016/04/04/opinions/panama-papers-ghitis/index.html',
     'http://edition.cnn.com/2016/04/04/world/panama-papers-explainer/index.html',
     'https://www.nytimes.com/2017/11/06/world/bank-of-utah-leonid-mikhelson.html',
@@ -303,7 +314,7 @@ add_article(Category.global_politics, Topic.hack, Event.panama_papers, [
 #
 # raw data set
 # add_article(Category.science_tech, Topic.hack, Event.hack_equifax_breach,  [])
-add_article(Category.science_tech, Topic.hack, Event.hack_equifax_breach, [
+add_article(Category.science_tech, Topic.legancy, Event.hack_equifax_breach, [
     "https://www.wsj.com/articles/equifax-earnings-drop-27-in-quarter-marred-by-cyberattack-1510268187",
     "https://www.bloomberg.com/news/articles/2017-11-14/how-much-will-equifax-pay",
     "https://gizmodo.com/equifax-seized-138-scammy-lookalike-domains-instead-of-1820450580",
@@ -318,7 +329,7 @@ add_article(Category.science_tech, Topic.hack, Event.hack_equifax_breach, [
     'https://www.rt.com/shows/boom-bust/402559-hurricane-harvey-irma-damage/'
 ])
 
-add_article(Category.global_politics, Topic.unspecific, Event.las_vegas_shooting, [
+add_article(Category.global_politics, Topic.legancy, Event.las_vegas_shooting, [
     'http://edition.cnn.com/videos/us/2017/10/02/vegas-witness-crowd-running.cnn',
     'http://edition.cnn.com/2017/10/02/us/gallery/las-vegas-shooting/index.html',
     'http://edition.cnn.com/videos/tv/2017/10/02/exp-tsr-elam-las-vegas-concert-mass-shooting.cnn',
@@ -336,8 +347,7 @@ add_article(Category.global_politics, Topic.unspecific, Event.las_vegas_shooting
 
 ])
 
-# TODO i think not all of them refer to the same missile/event...
-add_article(Category.global_politics, Topic.north_korea, Event.north_Korea_hokkaido_missile, [
+add_article(Category.global_politics, Topic.legancy, Event.north_Korea_hokkaido_missile, [
     'https://www.huffingtonpost.com/entry/un-condemns-north-korea-missile-test_us_59a681e0e4b00795c2a2ba10',
     'https://www.huffingtonpost.com/entry/north-korea-missile-guam_us_59a5ff61e4b084581a14339c',
     'https://www.huffingtonpost.com/entry/north-korea-missile-japan_us_59a4874fe4b050afa90c1eab',
@@ -401,7 +411,11 @@ if __name__ == '__main__':
                 data_file.write(json.dumps(data, sort_keys=False, indent=2))
 
     # preprocess into data
-    # TODO cleanup directories before writing
+    for f in glob.glob('data/*'):
+        os.remove(f)
+    for f in glob.glob('data_damaged/*'):
+        os.remove(f)
+
     for filepath in glob.glob('data_raw/*.json'):
         with open(filepath, encoding='utf-8') as data_file:
             try:

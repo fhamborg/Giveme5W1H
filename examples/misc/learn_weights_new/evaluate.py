@@ -1,6 +1,7 @@
 """
 checks all result files(all xxxxx_processed.prickle) an writes results to /result/
 """
+import csv
 import glob
 import json
 import pickle
@@ -8,9 +9,7 @@ import statistics
 from itertools import groupby
 
 import os
-import math
-#praefix = None
-#combination_identifier = None
+
 
 def weights_to_string(weights):
     """
@@ -32,45 +31,36 @@ def process_files(path, praefix):
 
     # walk over app items directories
     for directory_path in glob.glob(path):
-        if praefix and not directory_path.find(praefix):
-            continue
+        if praefix is None or (praefix and directory_path.find(praefix) != -1):
+            # walk over all parts
+            entire_qu = []
+            for file_path in glob.glob(directory_path + '/*'):
+                if os.path.getsize(file_path) > 0:
+                    with open(file_path, 'rb') as ff:
+                        processed_item = pickle.load(ff)
+                        entire_qu.append(processed_item)
 
-        # walk over all parts
-        entire_qu = []
-        for file_path in glob.glob(directory_path + '/*'):
-            if os.path.getsize(file_path) > 0:
-                with open(file_path, 'rb') as ff:
-                    processed_item = pickle.load(ff)
-                    entire_qu.append(processed_item)
+            # merge qu to one dict, merge per question and weight
+            for result in entire_qu:
+                # walk over each result object,
+                # each extractor can answer more than one question
+                for question in result['result']:
+                    question_scores = score_results.setdefault(question, {})
+                    weights = result['result'][question][1]
 
-        # merge qu to one dict, merge per question and weight
-        for result in entire_qu:
-            # walk over each result object,
-            # each extractor can answer more than one question
-            for question in result['result']:
-                question_scores = score_results.setdefault(question, {})
-                weights = result['result'][question][1]
-                #weights_fixed = []
-                # fix floating error
-                #for i in weights:
-                #    weights_fixed.append( round(i, 1) )
-                # create a identifier for these weights
-                weights_string = weights_to_string(weights)
+                    # create a identifier for these weights
+                    weights_string = weights_to_string(weights)
 
-                # each item is identified by their extracting parameters, weight
-                # and their answer (stored over the parent node)
-                # combination_id = result['extracting_parameter_id'] + '_' + weights_string
-                comb_for_this_parameter_id = question_scores.setdefault(result['extracting_parameters_id'], { 'extracting_parameters': result['extracting_parameters'], 'weights': {}})
+                    # each item is identified by their extracting parameters, weight
+                    # and their answer (stored over the parent node)
+                    comb_for_this_parameter_id = question_scores.setdefault(result['extracting_parameters_id'], { 'extracting_parameters': result['extracting_parameters'], 'weights': {}})
 
-                comb = comb_for_this_parameter_id['weights'].setdefault(weights_string, {'weights': weights, 'scores_doc': []})
+                    comb = comb_for_this_parameter_id['weights'].setdefault(weights_string, {'weights': weights, 'scores_doc': []})
 
-                #comb = question_scores.setdefault(weights_string, {'weights': weights_fixed, 'scores_doc': []})
-                # save this score to all results
-                comb['scores_doc'].append(result['result'][question][2])
+                    # save this score to all results
+                    comb['scores_doc'].append(result['result'][question][2])
 
-
-
-    evaluate(score_results, write_full=False, praefix=praefix )
+    evaluate(score_results, write_full=False, praefix=praefix)
 
 
 def remove_errors(list):
@@ -293,10 +283,29 @@ def evaluate(score_results, write_full: bool=False, praefix=''):
 
         golden_weights_to_ranges(final_result[question])
 
+
+    csv_line = [
+          'extractor',
+          'question',
+          'weight',
+          'range',
+          'mean',
+          'std'
+    ]
+    # write it as json
     for question in final_result:
         with open('result/' + praefix + '_final_result_' + question + '.json', 'w') as data_file:
             data_file.write(json.dumps(final_result[question], sort_keys=False, indent=4))
             data_file.close()
+
+    # write it as CSV
+    for question in final_result:
+        pass
+
+   # with open(os.path.dirname(__file__) + '/final_result.csv','w') as csv_file:
+    #    writer = csv.writer(csv_file)
+     #   for line in outputs:
+      #      writer.writerow(line)
 
 if __name__ == '__main__':
     process_files('queue_caches/*_processed*/', praefix='training')

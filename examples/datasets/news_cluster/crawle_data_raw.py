@@ -10,7 +10,7 @@ from typing import List
 from newsplease import NewsPlease
 
 """
-This is a dataset aiming to represent clustered news around topics.
+This is a dataset aiming to represent clustered news around topics. 
 
 
 Used publisher:
@@ -69,7 +69,7 @@ class Topic(Enum):
 @enum.unique
 class Event(Enum):
 
-    # 27.12.2017
+    # 27.12.2017 - 29.12.2017
     ## world
     less_1000_is_fighters_remain = auto()
     tourist_boat_hits_bridge_in_germany = auto()
@@ -87,13 +87,36 @@ class Event(Enum):
     cardi_b_desperately_working_to_find_offsets_hacker_after_they_leak_cheating_video__more = auto()
     rihanna_calls_for_an_end_to_gun_violence_after_death_of_her_cousin_in_barbados = auto()
     ##_sport
+    pittsburgh_steelers_cruise_to_win_over_texans = auto()
     american_airlines_apologizes_after_g_league_players_accused_of_stealing_blankets_thrown_off_flight = auto()
     how_astros_first_base_coach_rich_dauer_escaped_near_death_after_world_series_parade = auto()
-    pittsburgh_steelers_cruise_to_win_over_texans = auto()
     ##_science
     possible_meteor_lights_up_night_sky_in_new_england = auto()
-    elon_musk_reveals_red_tesla_roadster_bound_for_mars = auto()
     smoke_rings_spotted_in_the_ocean_from_space = auto()
+    elon_musk_reveals_red_tesla_roadster_bound_for_mars = auto()
+
+    # 30.12.2017 - 01.12.
+    ## world
+    north_korea_received_oil_from_russia_in_violation_of_un_sanctions_report = auto()
+    egypts_mohammed_morsi_sentenced_to_3_years_in_prison_for_insulting_judiciary = auto()
+    berlin_sets_up_new_years_eve_safe_zone_for_women_amid_sexual_assault_concerns = auto()
+    ## business = auto()
+    police_arrest_alleged_nigerian_prince_email_scammer_in_louisiana = auto()
+    digital_currency_ripple_soars_nearly_56_percent_becomes_second_largest_cryptocurrency_by_market_cap = auto()
+    goldman_sachs_feels_tax_bills_burn_with_5b_charge = auto()
+    ## technology = auto()
+    chicagos_apple_store_has_a_falling_ice_problem = auto()
+    ## entertainment = auto()
+    tamar_braxton_slams_ex_vincent_herbert_for_having_a_baby_with_other_woman = auto()
+    asking_if_kendall_jenner_is_pregnant_is_the_wrong_response_to_her_latest_selfie = auto()
+    black_mirror_uss_callister_how_the_shatner_impression_surprise_cameo_and_flawless_production_happened = auto()
+    ## sport = auto()
+    uscs_cotton_bowl_loss_was_a_wake_up_call_and_not_just_for_sam_darnold = auto()
+    packers_sign_center_linsley_to_contract_extension = auto()
+    ## science = auto()
+    the_broken_berg_stunning_nasa_image_captures_newly_created_iceberg_cracking_into_20_pieces = auto()
+    russian_space_experts_regain_control_of_1st_angola_satellite = auto()
+    january_will_bring_two_supermoons_a_blue_moon_and_a_total_lunar_eclipse = auto()
 
 
     #

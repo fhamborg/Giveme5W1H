@@ -8,7 +8,7 @@ import webbrowser
 '''
 
 # Set your search term here.
-search_term = 'Benghazi US consulate attack'
+search_term = 'Erie smashes snowfall record'
 search_term_plus = search_term.replace(' ', '+')
 search_term_encoded = urllib.parse.quote(search_term)
 urls = [

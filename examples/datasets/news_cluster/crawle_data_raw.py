@@ -21,7 +21,7 @@ Used time horizon:
 
 Event Source
 
-    Crawled from 27.12.2017 - 02.01.2018
+    Crawled from 27.12.2017 - 01.01.2018
     https://news.google.com/news/headlines?ned=en&hl=en&gl=US
 """
 
@@ -95,7 +95,7 @@ class Event(Enum):
     smoke_rings_spotted_in_the_ocean_from_space = auto()
     elon_musk_reveals_red_tesla_roadster_bound_for_mars = auto()
 
-    # 30.12.2017 - 01.12.
+    # 30.12.2017 - 31.12.
     ## world
     north_korea_received_oil_from_russia_in_violation_of_un_sanctions_report = auto()
     egypts_mohammed_morsi_sentenced_to_3_years_in_prison_for_insulting_judiciary = auto()
@@ -117,6 +117,29 @@ class Event(Enum):
     the_broken_berg_stunning_nasa_image_captures_newly_created_iceberg_cracking_into_20_pieces = auto()
     russian_space_experts_regain_control_of_1st_angola_satellite = auto()
     january_will_bring_two_supermoons_a_blue_moon_and_a_total_lunar_eclipse = auto()
+
+    # 01.01.2018
+    ## world
+    kim_jong_un_offers_rare_olive_branch_to_south_korea = auto()
+    new_york_family_of_5_among_12_killed_in_costa_rica_plane_crash = auto()
+    israel_indicts_palestinian_teenage_girl_who_punched_soldier_army = auto()
+    thousands_flee_fireworks_explosion_at_australia_beach = auto()
+    ##_business
+    time_travel_hawaiian_airlines_flight_takes_off_in_2018_lands_in_2017 = auto()
+    how_a_small_bird_managed_to_take_over_a_delta_flight = auto()
+    ##_technology
+    samsung_acknowledges_galaxy_note_8_battery_problems_says_very_few_phones_are_affected = auto()
+    ##_entertainment
+    jessica_alba_and_cash_warren_welcome_son_hayes_alba = auto()
+    sun_fun_flowers_as_129th_rose_parade_rolls_in_california = auto()
+    ##_sport
+    chicago_bears_fire_coach_john_fox_after_5_11_season = auto()
+    bruce_arians_emotional_in_announcing_retirement_from_coaching_cites_family = auto()
+    ##_science
+    new_years_day_full_moon_are_supermoons_really_that_super = auto()
+    china_promises_the_moon = auto()
+    chinas_tiangong_1_space_station_is_out_of_control_and_will_soon_fall_to_earth = auto()
+    astronauts_identify_unknown_microbes_in_space_for_first_time = auto()
 
 
     #
@@ -159,14 +182,42 @@ def add_article(a_category: Category, a_topic: Topic, a_Event: Event, urls: List
             }
         )
 
+# 27.12.2017 - 29.12.2017
 ## world
-add_article(Category.world, Topic.unspecific, Event.less_1000_is_fighters_remain, [])
-add_article(Category.world, Topic.unspecific, Event.tourist_boat_hits_bridge_in_germany, [])
-add_article(Category.world, Topic.unspecific, Event.israel_approves_transfer_of_11_million_in_funding_for_west_bank_settlements, [])
+add_article(Category.world, Topic.unspecific, Event.less_1000_is_fighters_remain, [
+
+])
+add_article(Category.world, Topic.unspecific, Event.tourist_boat_hits_bridge_in_germany, [
+    'https://www.nytimes.com/aponline/2017/12/27/world/europe/ap-eu-germany-ship-hits-bridge.html'
+    'http://www.dailymail.co.uk/wires/ap/article-5214605/Tourist-ship-strikes-highway-bridge-Germany-27-hurt.html',
+    'http://www.dw.com/en/germany-rhine-cruise-ship-hits-bridge-pylon-causing-injuries/a-41939790'
+])
+add_article(Category.world, Topic.unspecific, Event.israel_approves_transfer_of_11_million_in_funding_for_west_bank_settlements, [
+    'https://www.i24news.tv/en/news/israel/163723-171227-israel-approves-transfer-of-11-million-in-funding-for-west-bank-settlements',
+    'https://www.rt.com/news/414734-israel-annexation-west-bank-settlements/'
+    'https://www.nytimes.com/2016/06/20/world/middleeast/israel-west-bank-settlements-palestinians.html'
+])
 ## business
-add_article(Category.business, Topic.unspecific, Event.nyc_subway_work_trains_collide_in_tunnel_1_worker_injured, [])
-add_article(Category.business, Topic.unspecific, Event.woman_gets_284_billion_electric_bil, [])
-add_article(Category.business, Topic.unspecific, Event.erie_smashes_snowfall_record_with_flakes_still_falling, [])
+add_article(Category.business, Topic.unspecific, Event.nyc_subway_work_trains_collide_in_tunnel_1_worker_injured, [
+    'http://www.dailyprogress.com/news/national/wire/nyc-subway-work-trains-collide-in-tunnel-worker-injured/article_3c3b5c1a-1ab1-54e1-878a-93c6f9689e8c.html',
+    'http://abcnews.go.com/US/wireStory/nyc-subway-work-trains-collide-tunnel-worker-injured-52007031',
+    'http://www.dailymail.co.uk/news/article-5215015/NYC-subway-work-trains-collide-tunnel-1-worker-injured.html',
+    'https://www.washingtonpost.com/national/nyc-subway-work-trains-collide-in-tunnel-1-worker-injured/2017/12/27/ae5b04da-eafc-11e7-956e-baea358f9725_story.html?utm_term=.07cf57066120',
+    'https://www.nytimes.com/aponline/2017/12/27/us/ap-us-subway-work-trains-collide.html'
+])
+add_article(Category.business, Topic.unspecific, Event.woman_gets_284_billion_electric_bil, [
+    'http://www.hindustantimes.com/world-news/us-woman-gets-284-billion-electricity-bill-during-christmas-holiday-period/story-lccGPDC5vwwSg5dOm0HDpL.html',
+    'http://www.huffingtonpost.com.au/2017/12/26/american-woman-receives-284-billion-electric-bill_a_23317450/?utm_hp_ref=au-homepage',
+    'https://www.nytimes.com/aponline/2017/12/26/us/ap-us-billion-dollar-electric-bill.html',
+    'https://www.npr.org/2017/12/26/573464352/homeowner-questions-exceedingly-high-electric-bill',
+    'http://www.dailymail.co.uk/wires/ap/article-5212955/Woman-stunned-electric-bill-listed-284-billion.html',
+    'https://www.washingtonpost.com/national/woman-stunned-to-find-electric-bill-listed-as-284-billion/2017/12/26/1ccee314-ea44-11e7-956e-baea358f9725_story.html?utm_term=.f04ca1439b00'
+])
+add_article(Category.business, Topic.unspecific, Event.erie_smashes_snowfall_record_with_flakes_still_falling, [
+    'http://abcnews.go.com/US/wireStory/erie-smashes-snowfall-record-flakes-falling-52008284',
+    'http://www.dailymail.co.uk/wires/ap/article-5214463/Erie-smashes-snowfall-record-flakes-falling.html',
+    'https://www.nytimes.com/aponline/2017/12/27/us/ap-us-severe-weather-pennsylvania.html'
+])
 ## technology
 add_article(Category.business, Topic.unspecific, Event.iphone_8_and_iphone_8_plus_combined_to_outsell_the_iphone_x_in_its_launch_month, [])
 add_article(Category.business, Topic.unspecific, Event.amazon_and_microsoft_employees_caught_up_in_sex_trafficking_sting, [])
@@ -184,7 +235,51 @@ add_article(Category.science, Topic.unspecific, Event.possible_meteor_lights_up_
 add_article(Category.science, Topic.unspecific, Event.elon_musk_reveals_red_tesla_roadster_bound_for_mars, [])
 add_article(Category.science, Topic.unspecific, Event.smoke_rings_spotted_in_the_ocean_from_space, [])
 
+# 30.12.2017 - 31.12.
+## world
+add_article(Category.world, Topic.unspecific, Event.north_korea_received_oil_from_russia_in_violation_of_un_sanctions_report, [])
+add_article(Category.world, Topic.unspecific, Event.egypts_mohammed_morsi_sentenced_to_3_years_in_prison_for_insulting_judiciary, [])
+add_article(Category.world, Topic.unspecific, Event.berlin_sets_up_new_years_eve_safe_zone_for_women_amid_sexual_assault_concerns, [])
+## business, [])
+add_article(Category.business, Topic.unspecific, Event.police_arrest_alleged_nigerian_prince_email_scammer_in_louisiana, [])
+add_article(Category.business, Topic.unspecific, Event.digital_currency_ripple_soars_nearly_56_percent_becomes_second_largest_cryptocurrency_by_market_cap, [])
+add_article(Category.business, Topic.unspecific, Event.goldman_sachs_feels_tax_bills_burn_with_5b_charge, [])
+## technology, [])
+add_article(Category.technology, Topic.unspecific, Event.chicagos_apple_store_has_a_falling_ice_problem, [])
+## entertainment, [])
+add_article(Category.entertainment, Topic.unspecific, Event.tamar_braxton_slams_ex_vincent_herbert_for_having_a_baby_with_other_woman, [])
+add_article(Category.entertainment, Topic.unspecific, Event.asking_if_kendall_jenner_is_pregnant_is_the_wrong_response_to_her_latest_selfie, [])
+add_article(Category.entertainment, Topic.unspecific, Event.black_mirror_uss_callister_how_the_shatner_impression_surprise_cameo_and_flawless_production_happened, [])
+## sport, [])
+add_article(Category.sports, Topic.unspecific, Event.uscs_cotton_bowl_loss_was_a_wake_up_call_and_not_just_for_sam_darnold, [])
+add_article(Category.sports, Topic.unspecific, Event.packers_sign_center_linsley_to_contract_extension, [])
+## science, [])
+add_article(Category.science, Topic.unspecific, Event.the_broken_berg_stunning_nasa_image_captures_newly_created_iceberg_cracking_into_20_pieces, [])
+add_article(Category.science, Topic.unspecific, Event.russian_space_experts_regain_control_of_1st_angola_satellite, [])
+add_article(Category.science, Topic.unspecific, Event.january_will_bring_two_supermoons_a_blue_moon_and_a_total_lunar_eclipse, [])
 
+# 01.01.2018
+## world
+add_article(Category.world, Topic.unspecific, Event.kim_jong_un_offers_rare_olive_branch_to_south_korea, [])
+add_article(Category.world, Topic.unspecific, Event.new_york_family_of_5_among_12_killed_in_costa_rica_plane_crash, [])
+add_article(Category.world, Topic.unspecific, Event.israel_indicts_palestinian_teenage_girl_who_punched_soldier_army, [])
+add_article(Category.world, Topic.unspecific, Event.thousands_flee_fireworks_explosion_at_australia_beach, [])
+##_business
+add_article(Category.business, Topic.unspecific, Event.time_travel_hawaiian_airlines_flight_takes_off_in_2018_lands_in_2017, [])
+add_article(Category.business, Topic.unspecific, Event.how_a_small_bird_managed_to_take_over_a_delta_flight, [])
+##_technology
+add_article(Category.technology, Topic.unspecific, Event.samsung_acknowledges_galaxy_note_8_battery_problems_says_very_few_phones_are_affected, [])
+## entertainment
+add_article(Category.entertainment, Topic.unspecific, Event.jessica_alba_and_cash_warren_welcome_son_hayes_alba, [])
+add_article(Category.entertainment, Topic.unspecific, Event.sun_fun_flowers_as_129th_rose_parade_rolls_in_california, [])
+## sport
+add_article(Category.sports, Topic.unspecific, Event.chicago_bears_fire_coach_john_fox_after_5_11_season, [])
+add_article(Category.sports, Topic.unspecific, Event.bruce_arians_emotional_in_announcing_retirement_from_coaching_cites_family, [])
+##_science
+add_article(Category.science, Topic.unspecific, Event.new_years_day_full_moon_are_supermoons_really_that_super, [])
+add_article(Category.science, Topic.unspecific, Event.china_promises_the_moon, [])
+add_article(Category.science, Topic.unspecific, Event.chinas_tiangong_1_space_station_is_out_of_control_and_will_soon_fall_to_earth, [])
+add_article(Category.science, Topic.unspecific, Event.astronauts_identify_unknown_microbes_in_space_for_first_time, [])
 
 add_article(Category.sports, Topic.legancy, Event.china_boy_well, [
     "http://www.bbc.com/news/world-asia-china-37906226",

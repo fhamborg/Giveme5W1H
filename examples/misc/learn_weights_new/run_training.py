@@ -91,7 +91,7 @@ def action(lock):
 
 
 def default_combined_scoring(lock):
-    a_queue = WorkQueue(id='training_cs', generator='method')
+    a_queue = WorkQueue(id='training_cs', generator='combined_scoring')
     a_queue.setup_scoring_parameters()
     a_queue.setup_extracting_parameters()
     a_queue.load()
@@ -101,7 +101,7 @@ def default_combined_scoring(lock):
         'action': action_extractor.ActionExtractor()  # provider for what an who
     }
     # set optimal weights learned beforehand
-    extractors['action'].weights = [0.7, 0.3, 0.9]
+    # extractors['action'].weights = [0.7, 0.3, 0.9]
 
     combined_scorer = distance_of_candidate.DistanceOfCandidate(['what'], 'how')
 
@@ -133,9 +133,9 @@ if __name__ == '__main__':
 
 
     #q.put(action(lock))
-    #q.put(environment(lock))
+    q.put(environment(lock))
     #q.put(cause(lock))
-    q.put(method(lock))
+    #q.put(method(lock))
     #q.put(default_combined_scoring(lock))
 
 

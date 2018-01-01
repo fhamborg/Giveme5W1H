@@ -279,7 +279,7 @@ class Learn(object):
                 # set a path to save an load preprocessed documents
                 .set_preprocessed_path(preprocessedPath)
                 # limit the the to process documents (nice for development)
-                # .set_limit(1)
+                .set_limit(1)
                 # add an optional extractor (it would do basically just copying without...)
                 .set_sampling(sampling)
                 .set_extractor(extractor_object)
@@ -371,22 +371,26 @@ class Learn(object):
                 # adjust weights
                 weights = next_item['scoring_parameters']['weights']
 
-                if self._extractors.get('action'):
-                    #
-                    self._extractors['action'].weights = (weights[0], weights[1], weights[2])
+                if self._combined_scorer:
+                    self._combined_scorer._weight = (weights[0],)
+                else:
 
-                if self._extractors.get('environment'):
-                    # time
-                    self._extractors['environment'].weights = (
-                        (weights[0], weights[1]), (weights[0], weights[1], weights[2], weights[3], weights[4]))
+                    if self._extractors.get('action'):
+                        #
+                        self._extractors['action'].weights = (weights[0], weights[1], weights[2])
 
-                if self._extractors.get('cause'):
-                    # cause - (position, conjunction, adverb, verb)
-                    self._extractors['cause'].weights = (weights[0], weights[1], weights[2], weights[3])
+                    if self._extractors.get('environment'):
+                        # time
+                        self._extractors['environment'].weights = (
+                            (weights[0], weights[1]), (weights[0], weights[1], weights[2], weights[3], weights[4]))
 
-                if self._extractors.get('method'):
-                    # method - (position, frequency)
-                    self._extractors['method'].weights = (weights[0], weights[1], weights[2], weights[3])
+                    if self._extractors.get('cause'):
+                        # cause - (position, conjunction, adverb, verb)
+                        self._extractors['cause'].weights = (weights[0], weights[1], weights[2], weights[3])
+
+                    if self._extractors.get('method'):
+                        # method - (position, frequency)
+                        self._extractors['method'].weights = (weights[0], weights[1], weights[2], weights[3])
 
                 # combination_start_stamp = datetime.datetime.now()
 
@@ -403,7 +407,8 @@ class Learn(object):
 
                     if self._combined_scorer:
                         # Combined scoring is happening after candidate extraction
-                        used_weights = self._combined_scorer.weights
+                        used_weights = self._combined_scorer._weight
+                        question = 'how'
                         if 'how' in answers and len(answers[question]) > 0:
                             top_answer = answers[question][0].get_parts_as_text()
                         self._cmp_helper_min(self.cmp_text_ngd, question, top_answer, annotation, used_weights, result)

@@ -26,10 +26,8 @@ class WorkQueue(object):
         self.time_range = None
         self._pre_calculated_weights = pre_calculated_weights
         self._queue = []
-        #self._queue_processed = None
         self._queue_path_dir =  os.path.dirname(__file__) + '/queue_caches/'
         self._queue_path = self._queue_path_dir + self._id + '_queue.pickle'
-        #self._queue_processed_path = self._queue_path_dir + self._id + 'queue_processed.pickle'
         self._processed_items_path = self._queue_path_dir + '/' + self._id + '_processed_items/'
         pathlib.Path(self._processed_items_path).mkdir(parents=True, exist_ok=True)
 
@@ -37,12 +35,8 @@ class WorkQueue(object):
         self._log = logging.getLogger('GiveMe5W')
 
         if generator is None:
-            #self._queue_processed = []
-            #self._queue = []
             self._generator = self._generate_full_combination
         else:
-            #self._queue_processed = []
-            #self._queue = []
             self._generator = generator
 
     def get_queue_count(self):
@@ -237,7 +231,7 @@ class WorkQueue(object):
 
     def _generate_combined_scoring(self):
         for i in self._weights_range:
-                weights = ( i )
+                weights = (i, )
                 if i:
                     self._queue.append({
                         'extracting_parameters_id': 1,

@@ -388,7 +388,8 @@ class Learn(object):
                     # method - (position, frequency)
                     self._extractors['method'].weights = (weights[0], weights[1], weights[2], weights[3])
 
-                combination_start_stamp = datetime.datetime.now()
+                # combination_start_stamp = datetime.datetime.now()
+
                 # run for all documents
                 for i, document in enumerate(self._documents):
 
@@ -399,72 +400,61 @@ class Learn(object):
                     answers = document.get_answers()
 
                     result = {}
-                    #if self._combined_scorer:
-                        # Combined scoring is happening after candidate extraction,
-                        # be sure that you did set optimal weights
-                     #   used_weights = self._combined_scorer.weights
-                      #  question = 'how'
-                       # if question in answers and len(answers[question]) > 0:
-                        #    top_answer = answers[question][0].get_parts_as_text()
-                         #   self._cmp_helper_min(self.cmp_text_ngd, question, top_answer, annotation, used_weights,
-                          #                       result)
-                        #self._queue.resolve_document(next_item, document.get_document_id(), result)
 
-#                    else:
-                        #
-                        # Extractors are based on their naming Cause, Method etc.
-                        # answer(and their questions) have a very different structure
-                        # Therefore the following lines are simple copy&paste to reorganise
-                        # from one the the other format
-                        #
+                    if self._combined_scorer:
+                        # Combined scoring is happening after candidate extraction
+                        used_weights = self._combined_scorer.weights
+                        if 'how' in answers and len(answers[question]) > 0:
+                            top_answer = answers[question][0].get_parts_as_text()
+                        self._cmp_helper_min(self.cmp_text_ngd, question, top_answer, annotation, used_weights, result)
+                    else:
+                        extractor = self._extractors.get('cause')
+                        if extractor:
+                            question = 'why'
+                            if question in answers and len(answers[question]) > 0:
+                                used_weights = extractor.weights
+                                top_answer = answers[question][0].get_parts_as_text()
+                                self._cmp_helper_min(self.cmp_text_ngd, question, top_answer, annotation, used_weights,
+                                                     result)
 
-                    extractor = self._extractors.get('cause')
-                    if extractor:
-                        question = 'why'
-                        if question in answers and len(answers[question]) > 0:
+                        extractor = self._extractors.get('action')
+                        if extractor:
                             used_weights = extractor.weights
-                            top_answer = answers[question][0].get_parts_as_text()
-                            self._cmp_helper_min(self.cmp_text_ngd, question, top_answer, annotation, used_weights,
-                                                 result)
+                            question = 'what'
+                            if question in answers and len(answers[question]) > 0:
+                                top_answer = answers[question][0].get_parts_as_text()
+                                self._cmp_helper_min(self.cmp_text_ngd, 'what', top_answer, annotation, used_weights,
+                                                     result)
 
-                    extractor = self._extractors.get('action')
-                    if extractor:
-                        used_weights = extractor.weights
-                        question = 'what'
-                        if question in answers and len(answers[question]) > 0:
-                            top_answer = answers[question][0].get_parts_as_text()
-                            self._cmp_helper_min(self.cmp_text_ngd, 'what', top_answer, annotation, used_weights,
-                                                 result)
+                            question = 'who'
+                            if question in answers and len(answers[question]) > 0:
+                                top_answer = answers[question][0].get_parts_as_text()
+                                self._cmp_helper_min(self.cmp_text_ngd, question, top_answer, annotation, used_weights,
+                                                     result)
 
-                        question = 'who'
-                        if question in answers and len(answers[question]) > 0:
-                            top_answer = answers[question][0].get_parts_as_text()
-                            self._cmp_helper_min(self.cmp_text_ngd, question, top_answer, annotation, used_weights,
-                                                 result)
+                        extractor = self._extractors.get('method')
+                        if extractor:
+                            used_weights = extractor.weights
+                            question = 'how'
+                            if question in answers and len(answers[question]) > 0:
+                                top_answer = answers[question][0].get_parts_as_text()
+                                self._cmp_helper_min(self.cmp_text_ngd, question, top_answer, annotation, used_weights,
+                                                     result)
 
-                    extractor = self._extractors.get('method')
-                    if extractor:
-                        used_weights = extractor.weights
-                        question = 'how'
-                        if question in answers and len(answers[question]) > 0:
-                            top_answer = answers[question][0].get_parts_as_text()
-                            self._cmp_helper_min(self.cmp_text_ngd, question, top_answer, annotation, used_weights,
-                                                 result)
+                        extractor = self._extractors.get('environment')
+                        if extractor:
+                            used_weights = extractor.weights
+                            question = 'when'
+                            if question in answers and len(answers[question]) > 0:
+                                top_answer = answers[question][0].get_enhancement('timex')
+                                self._cmp_helper_min(self.cmp_date_timex, question, top_answer, annotation,
+                                                     used_weights, result)
 
-                    extractor = self._extractors.get('environment')
-                    if extractor:
-                        used_weights = extractor.weights
-                        question = 'when'
-                        if question in answers and len(answers[question]) > 0:
-                            top_answer = answers[question][0].get_enhancement('timex')
-                            self._cmp_helper_min(self.cmp_date_timex, question, top_answer, annotation,
-                                                 used_weights, result)
-
-                        question = 'where'
-                        if question in answers and len(answers[question]) > 0:
-                            top_answer = answers[question][0].get_parts_as_text()
-                            self._cmp_helper_min(self.cmp_location, question, top_answer, annotation, used_weights,
-                                                 result)
+                            question = 'where'
+                            if question in answers and len(answers[question]) > 0:
+                                top_answer = answers[question][0].get_parts_as_text()
+                                self._cmp_helper_min(self.cmp_location, question, top_answer, annotation, used_weights,
+                                                     result)
 
                     # done save it to the result
                     self._queue.resolve_document(next_item, document.get_document_id(), result, i)
@@ -476,6 +466,6 @@ class Learn(object):
                 #print(snapshot.compare_to(snapshot_2, 'traceback') )
                 #self._log_progress(self._queue, self._documents, combination_start_stamp, combination_end_stamp)
             else:
-                print('done')
                 self._queue.persist()
+                print('done')
                 break

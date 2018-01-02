@@ -10,6 +10,7 @@ from itertools import groupby
 
 import os
 
+from misc.learn_weights_new.csv_to_parallel_coordinates_plotter import generate_plot
 from tools import mapper
 
 
@@ -98,6 +99,7 @@ def normalize(list):
     return result
 
 
+
 def merge_top(a_list, accessor):
     """
     multiple weights can produce the same top-score, this function merges all top weights.
@@ -166,7 +168,7 @@ def stats_helper(list):
         'mean':   mean,
         'variance': statistics.pvariance(list, mu=mean),
         'standard_deviation': statistics.pstdev(list, mu=mean),
-        'harmonic_mean': statistics.harmonic_mean(list),
+        #'harmonic_mean': statistics.harmonic_mean(list),
         'median':statistics.median(list),
         'median_low':statistics.median_low(list),
         'median_high':statistics.median_high(list),
@@ -194,7 +196,6 @@ def golden_weights_to_ranges(a_list):
     golden_weights = a_list.get('best_dist')['weights']
     if golden_weights and len(golden_weights) > 0:
         # slots for each weight
-
         weights = [[] for _ in range(len(golden_weights[0]))]
 
         # copy weights based on their location into new format
@@ -239,38 +240,48 @@ def evaluate(score_results, write_full: bool=False, praefix=''):
 
 
     # has a low dist on average per weight (documents are merged)
+    score_per_average_extrem = {
+
+    }
     score_per_average = {}
     # results_error_rate = {}
     for question in score_results:
+        score_per_average_extrem
         for extracting_parameters_id in score_results[question]:
-            extracting_parameters = score_results[question][extracting_parameters_id]
+            question_extract_id = question + '_' + str(extracting_parameters_id)
+            extr = score_per_average_extrem.setdefault(question_extract_id, {
+                'min': 99,
+                'max': -99
+            })
             for combination_string in score_results[question][extracting_parameters_id]['weights']:
                 combo = score_results[question][extracting_parameters_id]['weights'][combination_string]
 
                 raw_scores = combo['scores_doc']
-                scores_norm = normalize(raw_scores)
-                a_sum = sum(scores_norm)
+                scores = remove_errors(raw_scores)
+                scores_sum = sum(raw_scores)
 
-                combo['norm_avg'] = a_sum / len(scores_norm)
-                score_per_average.setdefault(question + '_' + str(extracting_parameters_id), {})[combination_string] = {
-                    'score': a_sum,
-                    'norm_avg': combo['norm_avg'],
-                    'weight': combo['weights']
-                   #, 'extracting_parameter': extracting_parameters
+                score_per_average.setdefault(question_extract_id, {})[combination_string] = {
+                     'score': scores_sum,
+                      #'norm_avg': sum_norm / len(scores_norm),
+                     'avg': scores_sum / len(scores),
+                     'weight': combo['weights']
+                      #, 'extracting_parameter': extracting_parameters
                 }
-    # nice formatted full output, if anyone needs is
-    if write_full:
-        nice_format = {}
-        for question in score_results:
-            question_scores = nice_format.setdefault(question, [])
-            for combination_string in score_results[question]:
-                combo = score_results[question][combination_string]
-                del combo['scores_doc']
-                question_scores.append(combo)
 
-        with open('result/' + praefix + '_evaluation_only_avg' + '.json', 'w') as data_file:
-            data_file.write(json.dumps(nice_format, sort_keys=False, indent=4))
-            data_file.close()
+                extr['min'] = min(extr['min'], scores_sum)
+                extr['max'] = max(extr['max'], scores_sum)
+
+    for minmax in score_per_average_extrem:
+        minmax = score_per_average_extrem[minmax]
+        minmax['max_minus_min'] = minmax['max'] - minmax['min']
+
+    # normalize the avg weights over all weights, per question
+    for question in score_per_average:
+        items = score_per_average[question]
+        extrem_item = score_per_average_extrem[question]
+        for item_id in items:
+            item = items[item_id]
+            item['norm_avg'] = (item['score'] - extrem_item['min']) / extrem_item['max_minus_min']
 
     # finally, get the best weighting and save it to a file
     final_result = {}
@@ -285,49 +296,42 @@ def evaluate(score_results, write_full: bool=False, praefix=''):
 
         golden_weights_to_ranges(final_result[question])
 
-
-    csv_line = [
-          'extractor',
-          'question',
-          'weight',
-          'range',
-          'mean',
-          'std'
-    ]
     # write it as json
     for question in final_result:
         with open('result/' + praefix + '_final_result_' + question + '.json', 'w') as data_file:
             data_file.write(json.dumps(final_result[question], sort_keys=False, indent=4))
             data_file.close()
 
-
     # write combinations per extractor to CSV
-    for question in score_results:
-        csv_results = []
-        weights = list(score_results[question][1]['weights'].values())
+    for question in score_per_average:
+        csv_results_avg = []
+        csv_results_all = []
+        weights = list(score_per_average[question].values())
         extractor_name = mapper.question_to_extractor(question)
 
-
+        # take first weight to form a header line
         headerline = []
-        # take first weights to form a header line
-        for i, weight in enumerate(weights[1]['weights']):
+        for i, weight in enumerate(weights[1]['weight']):
             headerline.append(mapper.weight_to_string(extractor_name, i))
         headerline.append('score')
-        csv_results.append(headerline)
+        csv_results_avg.append(headerline)
+        csv_results_all.append(headerline)
 
         for weight in weights:
-            # average score over all document for these weights
-            csv_results.append( list(weight['weights']) + [weight['norm_avg']])
+            # average score over all document off these these weights
+            csv_results_avg.append(list(weight['weight']) + [weight['norm_avg']])
 
-        print('test')
-
-        with open('result/' + praefix + '_final_result_' + question + '.csv', 'w') as csv_file:
+        filename = praefix + '_final_result_' + question
+        with open('result/' + filename + '.csv', 'w') as csv_file:
             writer = csv.writer(csv_file)
-            for line in csv_results:
+            for line in csv_results_avg:
                 writer.writerow(line)
+        # generate plot files
+        generate_plot(filename, auto_open=False)
+
 
 if __name__ == '__main__':
-    process_files('queue_caches/*_processed*/', praefix='training')
-    process_files('queue_caches/*_processed*/', praefix='test')
+    process_files('queue_caches/*n_processed*/', praefix='training')
+    #process_files('queue_caches/*_processed*/', praefix='test')
 
 

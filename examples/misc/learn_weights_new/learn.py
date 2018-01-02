@@ -8,7 +8,7 @@ from threading import Thread
 
 import dateutil.parser
 from dateutil.relativedelta import relativedelta as rd
-from geopy.distance import vincenty
+from geopy.distance import great_circle
 from nltk import word_tokenize
 from nltk.corpus import wordnet
 
@@ -259,7 +259,7 @@ class Learn(object):
             # retrieved answer couldn't be parsed
             return -3
 
-        return vincenty(annotation.point, location.point).kilometers
+        return great_circle(annotation.point, location.point).kilometers
 
     def load_documents(self, extractors, combined_scorer, sampling):
         inputPath = path(self._input_path)
@@ -279,7 +279,7 @@ class Learn(object):
                 # set a path to save an load preprocessed documents
                 .set_preprocessed_path(preprocessedPath)
                 # limit the the to process documents (nice for development)
-                .set_limit(1)
+                #.set_limit(1)
                 # add an optional extractor (it would do basically just copying without...)
                 .set_sampling(sampling)
                 .set_extractor(extractor_object)

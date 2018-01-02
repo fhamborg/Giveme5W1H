@@ -7,8 +7,8 @@ import queue
 import threading
 import tracemalloc
 
-from combined_scoring import distance_of_candidate
 from extractor.root import path
+from extractor.combined_scoring import distance_of_candidate
 from extractors import environment_extractor, action_extractor, cause_extractor, method_extractor
 from misc.learn_weights_new.learn import Learn, Worker
 from misc.learn_weights_new.work_queue import WorkQueue
@@ -132,16 +132,11 @@ if __name__ == '__main__':
     lock = threading.Lock()  # Wordnet is not threadsave
 
 
-    #q.put(action(lock))
-    q.put(environment(lock))
-    #q.put(cause(lock))
-    #q.put(method(lock))
-    #q.put(default_combined_scoring(lock))
-
-
-
-
-
+    q.put(action(lock))
+    #q.put(environment(lock))
+    q.put(cause(lock))
+    q.put(method(lock))
+    q.put(default_combined_scoring(lock))
 
     for i in range(4):
         t = Worker(q)

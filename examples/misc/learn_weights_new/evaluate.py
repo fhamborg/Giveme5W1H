@@ -10,6 +10,8 @@ from itertools import groupby
 
 import os
 
+from tools import mapper
+
 
 def weights_to_string(weights):
     """
@@ -298,14 +300,31 @@ def evaluate(score_results, write_full: bool=False, praefix=''):
             data_file.write(json.dumps(final_result[question], sort_keys=False, indent=4))
             data_file.close()
 
-    # write it as CSV
-    for question in final_result:
-        pass
 
-   # with open(os.path.dirname(__file__) + '/final_result.csv','w') as csv_file:
-    #    writer = csv.writer(csv_file)
-     #   for line in outputs:
-      #      writer.writerow(line)
+    # write combinations per extractor to CSV
+    for question in score_results:
+        csv_results = []
+        weights = list(score_results[question][1]['weights'].values())
+        extractor_name = mapper.question_to_extractor(question)
+
+
+        headerline = []
+        # take first weights to form a header line
+        for i, weight in enumerate(weights[1]['weights']):
+            headerline.append(mapper.weight_to_string(extractor_name, i))
+        headerline.append('score')
+        csv_results.append(headerline)
+
+        for weight in weights:
+            # average score over all document for these weights
+            csv_results.append( list(weight['weights']) + [weight['norm_avg']])
+
+        print('test')
+
+        with open('result/' + praefix + '_final_result_' + question + '.csv', 'w') as csv_file:
+            writer = csv.writer(csv_file)
+            for line in csv_results:
+                writer.writerow(line)
 
 if __name__ == '__main__':
     process_files('queue_caches/*_processed*/', praefix='training')

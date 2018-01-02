@@ -45,7 +45,7 @@ class WorkQueue(object):
     def get_id(self):
         return self._id
 
-    def setup_scoring_parameters(self, weight_start: float = 0.0, weight_stop: float = 1,
+    def setup_scoring_parameters(self, weight_start: float = 0.0, weight_stop: float = 1.1,
                                  weight_step_size: float = 0.1):
         self._weights_range = np.arange(weight_start, weight_stop, weight_step_size)
 
@@ -154,7 +154,7 @@ class WorkQueue(object):
     def _generate_pre_calculated(self, pre_calculated_weights):
         for pre_calculated_weight in pre_calculated_weights:
             self._queue.append({
-                'extracting_parameters_id': 0,
+                'extracting_parameters_id': 1,
                 'scoring_parameters': {
                     'weights': pre_calculated_weight
                 },
@@ -197,7 +197,7 @@ class WorkQueue(object):
 
     def _generate_environment(self):
         weight_start = 0
-        weight_step_size = 0.2
+        weight_step_size = 0.1
         weight_stop = 1
         # (0.5, 0.8), (0.8, 0.7, 0.5, 0.5, 0.5)
         for i in self._weights_range:

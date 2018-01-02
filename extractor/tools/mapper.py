@@ -18,8 +18,10 @@ def weight_to_string(extractor, weight_index):
         if weight_index == 0:
             return 'position'
         elif weight_index == 1:
-            return 'adverbial indicator'
+            return 'clausal conjunction'
         elif weight_index == 2:
+            return 'adverbial indicator'
+        elif weight_index == 3:
             return 'NP-VP-NP'
     elif extractor == 'environment':
         weight_index_new = weight_index[0] * weight_index[1]

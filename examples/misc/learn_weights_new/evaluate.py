@@ -307,7 +307,8 @@ def evaluate(score_results, write_full: bool=False, praefix=''):
         csv_results_avg = []
         csv_results_all = []
         weights = list(score_per_average[question].values())
-        extractor_name = mapper.question_to_extractor(question)
+        extractor_name = mapper.question_to_extractor(question.split('_')[0])
+
 
         # take first weight to form a header line
         headerline = []
@@ -331,7 +332,7 @@ def evaluate(score_results, write_full: bool=False, praefix=''):
 
 
 if __name__ == '__main__':
-    process_files('queue_caches/*n_processed*/', praefix='training')
-    #process_files('queue_caches/*_processed*/', praefix='test')
+    process_files('queue_caches/*_processed*/', praefix='training')
+    process_files('queue_caches/*_processed*/', praefix='test')
 
 

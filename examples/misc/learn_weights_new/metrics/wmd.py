@@ -29,6 +29,8 @@ class Wmd(AbsMetric):
         # special case two None, so this articles had no answer -> similar -> low distance
         if candidates_a is None and candidates_b is None:
             result = 0
+        elif candidates_a == candidates_b:
+            result = 0
         else:
             cache_content = self._cache.get_complex([candidates_a, candidates_b])
             if cache_content:
@@ -40,6 +42,8 @@ class Wmd(AbsMetric):
                 doc1 = nlp(candidates_a)
                 doc2 = nlp(candidates_b)
                 result = (doc1.similarity(doc2))
+                # flip from Similarity to Distance
+                result = 1 - result
 
                 self._cache.cache_complex([candidates_a, candidates_b], result)
                 # print('cached')
@@ -48,4 +52,4 @@ class Wmd(AbsMetric):
         print(result)
 
 
-        return 1-result
+        return result

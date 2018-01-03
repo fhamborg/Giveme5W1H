@@ -17,6 +17,8 @@ class Wmd(AbsMetric):
     """
     def __init__(self, *args, **kwargs):
         super(Wmd, self).__init__(*args, **kwargs)
+        # nlp = spacy.load('en', create_pipeline=wm.WMD.create_spacy_pipeline)
+        self._nlp = spacy.load('en_vectors_web_lg')
 
 
     def calculate_distance(self, candidates_a, candidates_b):
@@ -37,10 +39,10 @@ class Wmd(AbsMetric):
                 result = cache_content
                 # print('cached hit')
             else:
-                #nlp = spacy.load('en', create_pipeline=wm.WMD.create_spacy_pipeline)
-                nlp = spacy.load('en_vectors_web_lg')
-                doc1 = nlp(candidates_a)
-                doc2 = nlp(candidates_b)
+
+
+                doc1 = self._nlp(candidates_a)
+                doc2 = self._nlp(candidates_b)
                 result = (doc1.similarity(doc2))
                 # flip from Similarity to Distance
                 result = 1 - result

@@ -22,5 +22,5 @@
 ## Installation
 * pip install --upgrade ortools
   * https://developers.google.com/optimization/introduction/installing/binary
-* python3 -m spacy download en_core_web_lg
+* python3 -m spacy download en_vectors_web_lg
   * https://spacy.io/usage/vectors-similarity

@@ -24,3 +24,5 @@
   * https://developers.google.com/optimization/introduction/installing/binary
 * python3 -m spacy download en
   * https://spacy.io/models/
+* python -m spacy download en_core_web_lg
+  * https://spacy.io/usage/vectors-similarity

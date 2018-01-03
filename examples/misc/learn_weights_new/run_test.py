@@ -108,7 +108,7 @@ if __name__ == '__main__':
     lock = threading.Lock()  # Wordnet is not threadsave
 
     # WHO, WHAT
-    weights = load_best_weights('./result/training_final_result_what_1.json')
+    weights = load_best_weights('./result/default/training_final_result_what_1.json')
     q.put(action(lock, weights))
 
 
@@ -117,11 +117,11 @@ if __name__ == '__main__':
     # q.put(environment(lock, weights))
 
     # WHY
-    weights = load_best_weights('./result/training_final_result_why_1.json')
+    weights = load_best_weights('./result/default/training_final_result_why_1.json')
     q.put(cause(lock, weights))
 
     # HOW
-    weights = load_best_weights('./result/training_final_result_how_1.json')
+    weights = load_best_weights('./result/default/training_final_result_how_1.json')
     q.put(method(lock, weights))
 
     for i in range(4):

@@ -281,8 +281,10 @@ def evaluate(score_results, write_full: bool=False, praefix=''):
         extrem_item = score_per_average_extrem[question]
         for item_id in items:
             item = items[item_id]
-            item['norm_avg'] = (item['score'] - extrem_item['min']) / extrem_item['max_minus_min']
-
+            if extrem_item['max_minus_min'] != 0:
+                item['norm_avg'] = (item['score'] - extrem_item['min']) / extrem_item['max_minus_min']
+            else:
+                item['norm_avg'] = (item['score'] - extrem_item['min'])
     # finally, get the best weighting and save it to a file
     final_result = {}
     for question in score_per_average:
@@ -312,7 +314,7 @@ def evaluate(score_results, write_full: bool=False, praefix=''):
 
         # take first weight to form a header line
         headerline = []
-        for i, weight in enumerate(weights[1]['weight']):
+        for i, weight in enumerate(weights[0]['weight']):
             headerline.append(mapper.weight_to_string(extractor_name, i))
         headerline.append('score')
         csv_results_avg.append(headerline)
@@ -332,7 +334,7 @@ def evaluate(score_results, write_full: bool=False, praefix=''):
 
 
 if __name__ == '__main__':
-    process_files('queue_caches/*_processed*/', praefix='training')
+    #process_files('queue_caches/*_processed*/', praefix='training')
     process_files('queue_caches/*_processed*/', praefix='test')
 
 

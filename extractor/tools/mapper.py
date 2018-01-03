@@ -44,9 +44,9 @@ def weight_to_string(extractor, weight_index):
             return 'position'
         elif weight_index == 1:
             return 'frequency'
-        elif weight_index == 1:
-            return 'conjunction'
         elif weight_index == 2:
+            return 'conjunction'
+        elif weight_index == 3:
             return 'adjectives_adverbs'
     else:
         return 'no_mapping'

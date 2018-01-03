@@ -16,6 +16,7 @@ from extractor.extractor import FiveWExtractor
 from extractor.root import path
 from extractor.tools.file.handler import Handler
 from misc.learn_weights_new.metrics.normalized_google_distance import NormalizedGoogleDistance
+from misc.learn_weights_new.metrics.wmd import Wmd
 from tools.cache_manager import CacheManager
 
 fmt = '{0.days} days {0.hours} hours {0.minutes} minutes {0.seconds} seconds'
@@ -77,6 +78,7 @@ class Learn(object):
         self._cache_ngd = CacheManager.instance().get_cache('../examples/caches/NGD')
         self._log = logging.getLogger('GiveMe5W')
         self._ngd = NormalizedGoogleDistance()
+        self._wmd = Wmd()
         self._sampling = sampling
 
     def cmp_text_ngd(self, annotation, candidate, entire_annotation):
@@ -84,6 +86,12 @@ class Learn(object):
             (at the time of writing) greater 4 is absolute not correlated
         """
         result = self._ngd.get_distance(annotation, candidate)
+        return result
+
+    def cmp_text_wmd(self, annotation, candidate, entire_annotation):
+        """
+        """
+        result = self._wmd.get_distance(annotation, candidate)
         return result
 
     def cmp_text_word_net(self, annotation, candidate, entire_annotation):
@@ -411,7 +419,7 @@ class Learn(object):
                         question = 'how'
                         if 'how' in answers and len(answers[question]) > 0:
                             top_answer = answers[question][0].get_parts_as_text()
-                        self._cmp_helper_min(self.cmp_text_ngd, question, top_answer, annotation, used_weights, result)
+                        self._cmp_helper_min(self.cmp_text_wmd, question, top_answer, annotation, used_weights, result)
                     else:
                         extractor = self._extractors.get('cause')
                         if extractor:
@@ -419,7 +427,7 @@ class Learn(object):
                             if question in answers and len(answers[question]) > 0:
                                 used_weights = extractor.weights
                                 top_answer = answers[question][0].get_parts_as_text()
-                                self._cmp_helper_min(self.cmp_text_ngd, question, top_answer, annotation, used_weights,
+                                self._cmp_helper_min(self.cmp_text_wmd, question, top_answer, annotation, used_weights,
                                                      result)
 
                         extractor = self._extractors.get('action')
@@ -428,13 +436,13 @@ class Learn(object):
                             question = 'what'
                             if question in answers and len(answers[question]) > 0:
                                 top_answer = answers[question][0].get_parts_as_text()
-                                self._cmp_helper_min(self.cmp_text_ngd, 'what', top_answer, annotation, used_weights,
+                                self._cmp_helper_min(self.cmp_text_wmd, 'what', top_answer, annotation, used_weights,
                                                      result)
 
                             question = 'who'
                             if question in answers and len(answers[question]) > 0:
                                 top_answer = answers[question][0].get_parts_as_text()
-                                self._cmp_helper_min(self.cmp_text_ngd, question, top_answer, annotation, used_weights,
+                                self._cmp_helper_min(self.cmp_text_wmd, question, top_answer, annotation, used_weights,
                                                      result)
 
                         extractor = self._extractors.get('method')
@@ -443,7 +451,7 @@ class Learn(object):
                             question = 'how'
                             if question in answers and len(answers[question]) > 0:
                                 top_answer = answers[question][0].get_parts_as_text()
-                                self._cmp_helper_min(self.cmp_text_ngd, question, top_answer, annotation, used_weights,
+                                self._cmp_helper_min(self.cmp_text_wmd, question, top_answer, annotation, used_weights,
                                                      result)
 
                         extractor = self._extractors.get('environment')

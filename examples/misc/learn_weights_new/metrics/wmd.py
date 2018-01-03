@@ -33,14 +33,17 @@ class Wmd(AbsMetric):
             cache_content = self._cache.get_complex([candidates_a, candidates_b])
             if cache_content:
                 result = cache_content
-            #    print('cached hit')
+                # print('cached hit')
             else:
                 nlp = spacy.load('en', create_pipeline=wm.WMD.create_spacy_pipeline)
                 doc1 = nlp(candidates_a)
                 doc2 = nlp(candidates_b)
                 result = (doc1.similarity(doc2))
                 self._cache.cache_complex([candidates_a, candidates_b], result)
-           #     print('cached')
+                # print('cached')
 
-        # print(result)
-        return result
+        print([candidates_a, candidates_b], end=" ")
+        print(result)
+
+
+        return 1-result

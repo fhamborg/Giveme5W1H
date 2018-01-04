@@ -87,7 +87,7 @@ class WorkQueue(object):
         :param result:
         :return:
         """
-        unique_index = len(self._queue) * (document_index + 1)
+        unique_index = str(len(self._queue)) + '_' + str(document_index)
         last_item['dId'] = dId
         last_item['result'] = result
 
@@ -99,7 +99,7 @@ class WorkQueue(object):
             self.persist()
 
     def persist_processed_item(self, id, item):
-        with open(self._processed_items_path + str(id) + '.pickle', 'wb') as f:
+        with open(self._processed_items_path + id + '.pickle', 'wb') as f:
             pickle.dump(item, f, pickle.HIGHEST_PROTOCOL)
 
     def persist(self):

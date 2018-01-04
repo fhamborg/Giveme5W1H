@@ -240,9 +240,7 @@ def evaluate(score_results, write_full: bool=False, praefix=''):
 
 
     # has a low dist on average per weight (documents are merged)
-    score_per_average_extrem = {
-
-    }
+    score_per_average_extrem = {}
     score_per_average = {}
     # results_error_rate = {}
     for question in score_results:
@@ -258,13 +256,15 @@ def evaluate(score_results, write_full: bool=False, praefix=''):
 
                 raw_scores = combo['scores_doc']
                 scores = remove_errors(raw_scores)
-                scores_sum = sum(raw_scores)
-
+                scores_sum = sum(scores)
+                avg = (scores_sum / len(scores))
+                if avg < 0.23:
+                    print('a')
 
                 score_per_average.setdefault(question_extract_id, {})[combination_string] = {
                      'score': scores_sum,
                      #'norm_score':
-                     'avg': scores_sum / len(scores),
+                     'avg': avg,
                      'weight': combo['weights']
                 }
 
@@ -290,7 +290,7 @@ def evaluate(score_results, write_full: bool=False, praefix=''):
     for question in score_per_average:
         score_per_average_list = list(score_per_average[question].values())
 
-        score_per_average_list.sort(key=lambda x: x['norm_score'], reverse=False)
+        #score_per_average_list.sort(key=lambda x: x['norm_score'], reverse=False)
 
         final_result[question] = {
             'best_dist': merge_top(score_per_average_list, 'norm_score')
@@ -334,7 +334,7 @@ def evaluate(score_results, write_full: bool=False, praefix=''):
 
 
 if __name__ == '__main__':
-    process_files('queue_caches/*_processed*/', praefix='training')
+    process_files('queue_caches/*n_processed*/', praefix='training')
     #process_files('queue_caches/*_processed*/', praefix='test')
 
 

@@ -259,12 +259,11 @@ def evaluate(score_results, write_full: bool=False, praefix=''):
                 raw_scores = combo['scores_doc']
                 scores = remove_errors(raw_scores)
                 scores_sum = sum(raw_scores)
-                if(len(scores) == 0):
-                    print('a')
 
 
                 score_per_average.setdefault(question_extract_id, {})[combination_string] = {
                      'score': scores_sum,
+                     #'norm_score':
                      'avg': scores_sum / len(scores),
                      'weight': combo['weights']
                 }
@@ -283,18 +282,18 @@ def evaluate(score_results, write_full: bool=False, praefix=''):
         for item_id in items:
             item = items[item_id]
             if extrem_item['max_minus_min'] != 0:
-                item['norm_avg'] = (item['score'] - extrem_item['min']) / extrem_item['max_minus_min']
+                item['norm_score'] = (item['score'] - extrem_item['min']) / extrem_item['max_minus_min']
             else:
-                item['norm_avg'] = (item['score'] - extrem_item['min'])
+                item['norm_score'] = (item['score'] - extrem_item['min'])
     # finally, get the best weighting and save it to a file
     final_result = {}
     for question in score_per_average:
         score_per_average_list = list(score_per_average[question].values())
 
-        score_per_average_list.sort(key=lambda x: x['norm_avg'], reverse=False)
+        score_per_average_list.sort(key=lambda x: x['norm_score'], reverse=False)
 
         final_result[question] = {
-            'best_dist': merge_top(score_per_average_list, 'norm_avg')
+            'best_dist': merge_top(score_per_average_list, 'norm_score')
         }
 
         golden_weights_to_ranges(final_result[question])
@@ -322,8 +321,8 @@ def evaluate(score_results, write_full: bool=False, praefix=''):
         csv_results_all.append(headerline)
 
         for weight in weights:
-            # average score over all document off these these weights
-            csv_results_avg.append(list(weight['weight']) + [weight['norm_avg']])
+            # average score over all document off these weights
+            csv_results_avg.append(list(weight['weight']) + [weight['avg']])
 
         filename = praefix + '_final_result_' + question
         with open('result/' + filename + '.csv', 'w') as csv_file:

@@ -259,13 +259,14 @@ def evaluate(score_results, write_full: bool=False, praefix=''):
                 raw_scores = combo['scores_doc']
                 scores = remove_errors(raw_scores)
                 scores_sum = sum(raw_scores)
+                if(len(scores) == 0):
+                    print('a')
+
 
                 score_per_average.setdefault(question_extract_id, {})[combination_string] = {
                      'score': scores_sum,
-                      #'norm_avg': sum_norm / len(scores_norm),
                      'avg': scores_sum / len(scores),
                      'weight': combo['weights']
-                      #, 'extracting_parameter': extracting_parameters
                 }
 
                 extr['min'] = min(extr['min'], scores_sum)

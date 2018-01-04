@@ -39,19 +39,21 @@ class Wmd(AbsMetric):
                 result = cache_content
                 # print('cached hit')
             else:
-
-
                 doc1 = self._nlp(candidates_a)
                 doc2 = self._nlp(candidates_b)
                 result = (doc1.similarity(doc2))
                 # flip from Similarity to Distance
                 result = 1 - result
 
+                # under some rare conditions result is nearby, but below 0 or 1
+                # this leads to wrong evaluation results because negative values are used for errors
+                if result < 0:
+                    result = 0
+                if result > 1:
+                    result = 1
+
                 self._cache.cache_complex([candidates_a, candidates_b], result)
                 # print('cached')
-
-        print([candidates_a, candidates_b], end=" ")
-        print(result)
-
-
+        # print([candidates_a, candidates_b], end=" ")
+        # print(result)
         return result

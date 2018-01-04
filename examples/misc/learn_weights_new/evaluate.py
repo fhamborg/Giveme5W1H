@@ -177,6 +177,35 @@ def stats_helper(list):
     }
 
 
+def generate_csv(praefix, score_per_average, accessor='avg' ):
+    # write combinations per extractor to CSV
+    for question in score_per_average:
+        csv_results_avg = []
+        csv_results_all = []
+        weights = list(score_per_average[question].values())
+        extractor_name = mapper.question_to_extractor(question.split('_')[0])
+
+        # take first weight to form a header line
+        headerline = []
+        for i, weight in enumerate(weights[0]['weight']):
+            headerline.append(mapper.weight_to_string(extractor_name, i))
+        headerline.append('score')
+        csv_results_avg.append(headerline)
+        csv_results_all.append(headerline)
+
+        for weight in weights:
+            # average score over all document off these weights
+            csv_results_avg.append(list(weight['weight']) + [weight[accessor]])
+
+        filename = praefix + '_final_result_' + question + '_' + accessor
+        with open('result/' + filename + '.csv', 'w') as csv_file:
+            writer = csv.writer(csv_file)
+            for line in csv_results_avg:
+                writer.writerow(line)
+        # generate plot files
+        generate_plot(filename, auto_open=False)
+
+
 def golden_weights_to_ranges(a_list):
     """
     converts golden weights to ranges per weight to make importance more visible
@@ -304,37 +333,12 @@ def evaluate(score_results, write_full: bool=False, praefix=''):
             data_file.write(json.dumps(final_result[question], sort_keys=False, indent=4))
             data_file.close()
 
-    # write combinations per extractor to CSV
-    for question in score_per_average:
-        csv_results_avg = []
-        csv_results_all = []
-        weights = list(score_per_average[question].values())
-        extractor_name = mapper.question_to_extractor(question.split('_')[0])
-
-
-        # take first weight to form a header line
-        headerline = []
-        for i, weight in enumerate(weights[0]['weight']):
-            headerline.append(mapper.weight_to_string(extractor_name, i))
-        headerline.append('score')
-        csv_results_avg.append(headerline)
-        csv_results_all.append(headerline)
-
-        for weight in weights:
-            # average score over all document off these weights
-            csv_results_avg.append(list(weight['weight']) + [weight['avg']])
-
-        filename = praefix + '_final_result_' + question
-        with open('result/' + filename + '.csv', 'w') as csv_file:
-            writer = csv.writer(csv_file)
-            for line in csv_results_avg:
-                writer.writerow(line)
-        # generate plot files
-        generate_plot(filename, auto_open=False)
+    generate_csv(praefix,score_per_average, 'avg')
+    generate_csv(praefix, score_per_average, 'norm_score')
 
 
 if __name__ == '__main__':
-    process_files('queue_caches/*n_processed*/', praefix='training')
-    #process_files('queue_caches/*_processed*/', praefix='test')
+    #process_files('queue_caches/*_processed*/', praefix='training')
+    process_files('queue_caches/*_processed*/', praefix='test')
 
 

@@ -76,7 +76,7 @@ def environment_where(lock, pre_calculated_weights):
     return learn
 
 def environment_when(lock, pre_calculated_weights):
-    a_queue = WorkQueue(id='test_environment', generator='pre_calculated', pre_calculated_weights=pre_calculated_weights)
+    a_queue = WorkQueue(id='test_environment_when', generator='pre_calculated', pre_calculated_weights=pre_calculated_weights)
 
     a_queue.load()
 
@@ -129,12 +129,13 @@ if __name__ == '__main__':
     #q.put(action(lock, weights))
 
 
-    # WHERE, WHEN
+    # WHERE,
     #weights = load_best_weights('./result/training_final_result_where_1.json')
     #q.put(environment_where(lock, weights))
 
+    # WHEN
     weights = load_best_weights('./result/training_final_result_when_1.json')
-    q.put(environment_where(lock, weights))
+    q.put(environment_when(lock, weights))
 
     # WHY
     #weights = load_best_weights('./result/training_final_result_why_1.json')

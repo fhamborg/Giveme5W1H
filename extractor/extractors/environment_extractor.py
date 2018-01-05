@@ -25,11 +25,16 @@ class EnvironmentExtractor(AbsExtractor):
     one_month_in_s = one_day_in_s * 30
 
     # used for normalisation of time
-    a_min = math.log(one_minute_in_s)
-    a_max = math.log(one_month_in_s * 12)  # a year
-    a_min_minus_max = (a_max - a_min)
+    time_norm_min = math.log(one_minute_in_s)
+    time_norm_max = math.log(one_month_in_s * 12)  # a year
+    time_norm_delta = time_norm_max - time_norm_min
 
-    def __init__(self, weights=((0.5, 0.8), (0.8, 0.7, 0.5, 0.5, 0.5)), phrase_range_location: int = 3,
+    # used for normalisation of area (in meters)
+    area_norm_min = math.log(225) # roughly one small building
+    area_norm_max = math.log(99720000000) # median country according to https://de.wikipedia.org/wiki/Liste_der_Staaten_der_Erde#Liste
+    area_norm_delta = area_norm_max - area_norm_min
+
+    def __init__(self, weights=((0.5, 0.8, 0.5, 0.5), (0.8, 0.7, 0.5, 0.5, 0.5)), phrase_range_location: int = 3,
                  time_range: int = 86400, host='nominatim.openstreetmap.org', skip_when: bool=False, skip_where: bool=False):
         """
         Init the Nominatim connection as well as the calender object used for date interpretation.
@@ -39,7 +44,7 @@ class EnvironmentExtractor(AbsExtractor):
 
         :param weights: Weights used to evaluate answer candidates.
         :type weights: ((Float, Float), (Float, Float, Float)), weights used in the candidate evaluation:
-        ((position, frequency), (position, frequency, entailment, distance_from_publisher_date, accurate))
+        ((position, frequency, entailment, accurate), (position, frequency, entailment, distance_from_publisher_date, accurate))
         :param host: Address of the Nominatim host
         :type host: String
         """
@@ -197,6 +202,7 @@ class EnvironmentExtractor(AbsExtractor):
         ranked_locations = []
         weights = self.weights[0]
         weights_sum = sum(weights)
+        max_area = 1
 
         for candidate in document.get_candidates(self.get_id() + 'Locatios'):
             # fetch the boundingbox: (min lat, max lat, min long, max long)
@@ -209,7 +215,9 @@ class EnvironmentExtractor(AbsExtractor):
                 great_circle((bb[0], bb[2]), (bb[1], bb[2])).meters)
             for i in range(4):
                 bb[i] = float(bb[i])
-            raw_locations.append([parts, location.raw['place_id'], location.point, bb, area, 0, 0, candidate])
+            raw_locations.append([parts, location.raw['place_id'], location.point, bb, area, 0, 0, candidate, 0])
+            
+            max_area = max(max_area, area)
 
         # sort locations based id
         raw_locations.sort(key=lambda x: x[1], reverse=True)
@@ -231,20 +239,36 @@ class EnvironmentExtractor(AbsExtractor):
         unique_locations.sort(key=lambda x: x[4], reverse=True)
 
         # highest frequency is used for normalization
-        max_n = 0
+        max_n = 1
+
+        # number of entailments
+        max_entailment = 1 # to avoid 0 division
 
         # check entailment of locations based on the bounding box
         for i, location in enumerate(unique_locations):
             for alt in raw_locations[i + 1:]:
                 if alt[3][0] >= location[2][0] >= alt[3][1] and alt[3][2] >= location[2][1] >= alt[3][3]:
-                    # We prefer more specific mentions, therefor we a fraction of the parent's number of mentions
-                    location[6] += alt[6] / 0.8
+                    location[8] += 1
             max_n = max(max_n, location[6])
+            max_entailment = max(max_entailment, location[8])
 
         for location in unique_locations:
-            # calculate score based on position in text (inverted pyramid) and the number of mentions
-            score = weights[0] * (document.get_len() - location[5]) / document.get_len() \
-                    + weights[1] * location[6] / max_n
+            # calculate score based on position in text
+            score = weights[0] * (document.get_len() - location[5]) / document.get_len()
+
+            # frequency (based on entailment)
+            score += weights[1] * (location[6] / max_n)
+
+            # entailment
+            score += weights[2] * (location[8] / max_entailment)
+
+            # accuracy (ideally one minute only, max is one year) logarithmic
+            normalized_area = (((math.log(location[4])+1) - EnvironmentExtractor.area_norm_min) /
+                EnvironmentExtractor.area_norm_delta)
+            normalized_area = min(normalized_area, 1)
+            normalized_area = max(normalized_area, 0)
+            score += weights[3] * (1 - normalized_area)
+
             if score > 0:
                 score /= weights_sum
             # new the last index holds the candidate wrapper object
@@ -343,8 +367,8 @@ class EnvironmentExtractor(AbsExtractor):
             score += weights[3] * normalized_distance_score
 
             # accuracy (ideally one minute only, max is one year) logarithmic
-            normalized_duration = ((math.log(candidate[2].get_duration().total_seconds()) - EnvironmentExtractor.a_min)
-                                   / EnvironmentExtractor.a_min_minus_max)
+            normalized_duration = ((math.log(candidate[2].get_duration().total_seconds()) - EnvironmentExtractor.time_norm_min)
+                                   / EnvironmentExtractor.time_norm_delta)
 
             score += weights[4] * (1 - normalized_duration)
 

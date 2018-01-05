@@ -388,9 +388,18 @@ class Learn(object):
                         self._extractors['action'].weights = (weights[0], weights[1], weights[2])
 
                     if self._extractors.get('environment'):
-                        # time
+                        # time, location
                         self._extractors['environment'].weights = (
                             (weights[0], weights[1]), (weights[0], weights[1], weights[2], weights[3], weights[4]))
+
+                    if self._extractors.get('environment_where'):
+                        # location
+                        self._extractors['environment_where'].weights = (
+                            (weights[0], weights[1]), (-1, -1, -1, -1, -1))
+                    if self._extractors.get('environment_when'):
+                        # time
+                        self._extractors['environment_when'].weights = (
+                            (-1, -1), (weights[0], weights[1], weights[2], weights[3], weights[4]))
 
                     if self._extractors.get('cause'):
                         # cause - (position, conjunction, adverb, verb)
@@ -454,16 +463,21 @@ class Learn(object):
                                 self._cmp_helper_min(self.cmp_text_wmd, question, top_answer, annotation, used_weights,
                                                      result)
 
-                        extractor = self._extractors.get('environment')
+                        #extractor = self._extractors.get('environment')
+                        extractor = self._extractors.get('environment_when')
                         if extractor:
-                            used_weights = extractor.weights
+                            used_weights = extractor.weights[1]
                             question = 'when'
                             if question in answers and len(answers[question]) > 0:
                                 top_answer = answers[question][0].get_enhancement('timex')
                                 self._cmp_helper_min(self.cmp_date_timex, question, top_answer, annotation,
                                                      used_weights, result)
 
+                        #extractor = self._extractors.get('environment')
+                        extractor = self._extractors.get('environment_where')
+                        if  extractor:
                             question = 'where'
+                            used_weights = extractor.weights[0]
                             if question in answers and len(answers[question]) > 0:
                                 top_answer = answers[question][0].get_parts_as_text()
                                 self._cmp_helper_min(self.cmp_location, question, top_answer, annotation, used_weights,

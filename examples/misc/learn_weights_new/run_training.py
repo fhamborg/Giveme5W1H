@@ -54,6 +54,36 @@ def cause(lock):
     return learn
 
 
+def environment_where(lock):
+    a_queue = WorkQueue(id='training', generator='environment_where')
+    a_queue.setup_scoring_parameters()
+    a_queue.setup_extracting_parameters()
+    a_queue.load()
+
+    extractors = {
+        'environment_where': environment_extractor.EnvironmentExtractor(skip_when=True)
+    }
+
+    learn = Learn(lock=lock, extractors=extractors, preprocessed_path=preprocessedPath, input_path=inputPath,
+                  combined_scorer=None, queue=a_queue)
+    return learn
+
+
+def environment_when(lock):
+    a_queue = WorkQueue(id='training', generator='environment_when')
+    a_queue.setup_scoring_parameters()
+    a_queue.setup_extracting_parameters()
+    a_queue.load()
+
+    extractors = {
+        'environment_when': environment_extractor.EnvironmentExtractor(skip_where=True)
+    }
+
+    learn = Learn(lock=lock, extractors=extractors, preprocessed_path=preprocessedPath, input_path=inputPath,
+                  combined_scorer=None, queue=a_queue)
+    return learn
+
+
 def environment(lock):
     a_queue = WorkQueue(id='training', generator='environment')
     a_queue.setup_scoring_parameters()
@@ -132,10 +162,14 @@ if __name__ == '__main__':
     lock = threading.Lock()  # Wordnet is not threadsave
 
 
-    q.put(action(lock))
+    #q.put(action(lock))
     #q.put(environment(lock))
-    q.put(cause(lock))
-    q.put(method(lock))
+
+    #q.put(environment_when(lock))
+    q.put(environment_where(lock))
+
+    #q.put(cause(lock))
+    #q.put(method(lock))
     #q.put(default_combined_scoring(lock))
 
     for i in range(4):

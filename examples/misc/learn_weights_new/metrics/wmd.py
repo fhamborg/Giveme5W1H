@@ -54,6 +54,6 @@ class Wmd(AbsMetric):
 
                 self._cache.cache_complex([candidates_a, candidates_b], result)
                 # print('cached')
-        # print([candidates_a, candidates_b], end=" ")
-        # print(result)
+        print([candidates_a, candidates_b], end=" ")
+        print(result)
         return result

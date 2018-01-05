@@ -72,6 +72,10 @@ class WorkQueue(object):
                 self._generate_cause()
             elif self._generator == 'environment':
                 self._generate_environment()
+            elif self._generator == 'environment_where':
+                self._generate_environment_where()
+            elif self._generator == 'environment_when':
+                self._generate_environment_when()
             elif self._generator == 'action':
                 self._generate_action()
             elif self._generator == 'combined_scoring':
@@ -194,6 +198,40 @@ class WorkQueue(object):
                                     'weights': weights
                                 },
                                 'extracting_parameters': {}})
+
+    def _generate_environment_when(self):
+        weight_start = 0
+        weight_step_size = 0.1
+        weight_stop = 1
+        # (0.5, 0.8), (0.8, 0.7, 0.5, 0.5, 0.5)
+        for i in self._weights_range:
+            for j in self._weights_range:
+                for k in self._weights_range:
+                    for l in self._weights_range:
+                        for m in self._weights_range:
+                            weights = (i, j, k, l, m)
+                            if self.vector_is_unique(weights):
+                                self._queue.append({
+                                    'extracting_parameters_id': 1,
+                                    'scoring_parameters': {
+                                        'weights': weights
+                                    },
+                                    'extracting_parameters': {}})
+    def _generate_environment_where(self):
+        weight_start = 0
+        weight_step_size = 0.1
+        weight_stop = 1
+        # (0.5, 0.8), (0.8, 0.7, 0.5, 0.5, 0.5)
+        for i in self._weights_range:
+            for j in self._weights_range:
+                weights = (i, j)
+                if self.vector_is_unique(weights):
+                    self._queue.append({
+                        'extracting_parameters_id': 1,
+                        'scoring_parameters': {
+                            'weights': weights
+                        },
+                        'extracting_parameters': {}})
 
     def _generate_environment(self):
         weight_start = 0

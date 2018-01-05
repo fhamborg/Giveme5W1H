@@ -30,9 +30,12 @@ class EnvironmentExtractor(AbsExtractor):
     a_min_minus_max = (a_max - a_min)
 
     def __init__(self, weights=((0.5, 0.8), (0.8, 0.7, 0.5, 0.5, 0.5)), phrase_range_location: int = 3,
-                 time_range: int = 86400, host='nominatim.openstreetmap.org'):
+                 time_range: int = 86400, host='nominatim.openstreetmap.org', skip_when: bool=False, skip_where: bool=False):
         """
         Init the Nominatim connection as well as the calender object used for date interpretation.
+
+        When & Where are independent from each other,
+        you can enable/disable them to increase execution speed
 
         :param weights: Weights used to evaluate answer candidates.
         :type weights: ((Float, Float), (Float, Float, Float)), weights used in the candidate evaluation:
@@ -59,13 +62,18 @@ class EnvironmentExtractor(AbsExtractor):
         self._phrase_range_location = phrase_range_location
         self._cache_nominatim = CacheManager.instance().get_cache('../examples/caches/Nominatim')
 
-    def _evaluate_candidates(self, document):
-        locations = self._evaluate_locations(document)
-        dates = self._evaluate_timex_dates(document)
+        self._skip_when = skip_when
+        self._skip_where = skip_where
 
-        # there are now duplicates
-        document.set_answer('where', locations)
-        document.set_answer('when', dates)
+    def _evaluate_candidates(self, document):
+
+        if self._skip_where is False:
+            locations = self._evaluate_locations(document)
+            document.set_answer('where', locations)
+
+        if self._skip_when is False:
+            dates = self._evaluate_timex_dates(document)
+            document.set_answer('when', dates)
 
     def _extract_timex_candidates(self, tokens):
         timex_dates = {}

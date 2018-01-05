@@ -209,7 +209,7 @@ class WorkQueue(object):
             for k in self._weights_range:
                 for l in self._weights_range:
                     for m in self._weights_range:
-                        weights = (0.6, j, k, l, m)
+                        weights = ( j, k, 0.3, l, m)
                         if self.vector_is_unique(weights):
                             self._queue.append({
                                 'extracting_parameters_id': 1,
@@ -224,14 +224,16 @@ class WorkQueue(object):
         # (0.5, 0.8), (0.8, 0.7, 0.5, 0.5, 0.5)
         for i in self._weights_range:
             for j in self._weights_range:
-                weights = (i, j)
-                if self.vector_is_unique(weights):
-                    self._queue.append({
-                        'extracting_parameters_id': 1,
-                        'scoring_parameters': {
-                            'weights': weights
-                        },
-                        'extracting_parameters': {}})
+                for l in self._weights_range:
+                    for m in self._weights_range:
+                        weights = (i, j, l, m)
+                        if self.vector_is_unique(weights):
+                            self._queue.append({
+                                'extracting_parameters_id': 1,
+                                'scoring_parameters': {
+                                    'weights': weights
+                                },
+                                'extracting_parameters': {}})
 
     def xxx_generate_environment(self):
         weight_start = 0

@@ -59,8 +59,9 @@ class DistanceOfCandidate(AbsCombinedScoring):
 
             distance_matrix[question] = []
 
-            top_max = -99
-            top_min = 99
+            top_max = float('-inf')
+            top_min = float('inf')
+
             for i, d_candidate in enumerate(dependant_candidates):
                 # calculate the avg distance to the first n candidates
                 d_index = d_candidate.get_sentence_index()

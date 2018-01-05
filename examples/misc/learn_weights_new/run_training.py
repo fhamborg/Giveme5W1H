@@ -165,8 +165,8 @@ if __name__ == '__main__':
     #q.put(action(lock))
     #q.put(environment(lock))
 
-    q.put(environment_when(lock))
-    #q.put(environment_where(lock))
+    #q.put(environment_when(lock))
+    q.put(environment_where(lock))
 
     #q.put(cause(lock))
     #q.put(method(lock))

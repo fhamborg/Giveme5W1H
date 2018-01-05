@@ -397,7 +397,7 @@ class Learn(object):
                     if self._extractors.get('environment_where'):
                         # location
                         self._extractors['environment_where'].weights = (
-                            (weights[0], weights[1]), (-1, -1, -1, -1, -1))
+                            (weights[0], weights[1], weights[2], weights[3]), (-1, -1, -1, -1, -1))
                     if self._extractors.get('environment_when'):
                         # time
                         self._extractors['environment_when'].weights = (

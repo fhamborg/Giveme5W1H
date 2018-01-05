@@ -59,7 +59,7 @@ def cause(lock, pre_calculated_weights):
 
 
 def environment_where(lock, pre_calculated_weights):
-    a_queue = WorkQueue(id='test_environment', generator='pre_calculated', pre_calculated_weights=pre_calculated_weights)
+    a_queue = WorkQueue(id='test_environment_where', generator='pre_calculated', pre_calculated_weights=pre_calculated_weights)
 
     a_queue.load()
 

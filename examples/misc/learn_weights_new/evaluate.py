@@ -277,8 +277,8 @@ def evaluate(score_results, write_full: bool=False, praefix=''):
         for extracting_parameters_id in score_results[question]:
             question_extract_id = question + '_' + str(extracting_parameters_id)
             extr = score_per_average_extrem.setdefault(question_extract_id, {
-                'min': 99,
-                'max': -99
+                'min': float('inf'),
+                'max': float('-inf')
             })
             for combination_string in score_results[question][extracting_parameters_id]['weights']:
                 combo = score_results[question][extracting_parameters_id]['weights'][combination_string]
@@ -338,7 +338,7 @@ def evaluate(score_results, write_full: bool=False, praefix=''):
 
 
 if __name__ == '__main__':
-    #process_files('queue_caches/*when_processed*/', praefix='training')
-    process_files('queue_caches/*when_pre_calculated_processed*/', praefix='test')
+    process_files('queue_caches/*when_processed*/', praefix='training')
+    #process_files('queue_caches/*when_pre_calculated_processed*/', praefix='test')
 
 

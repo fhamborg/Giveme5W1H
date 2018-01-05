@@ -263,7 +263,7 @@ class EnvironmentExtractor(AbsExtractor):
             score += weights[2] * (location[8] / max_entailment)
 
             # accuracy (ideally one minute only, max is one year) logarithmic
-            normalized_area = (((math.log(location[4])+1) - EnvironmentExtractor.area_norm_min) /
+            normalized_area = (((math.log(location[4]+1)) - EnvironmentExtractor.area_norm_min) /
                 EnvironmentExtractor.area_norm_delta)
             normalized_area = min(normalized_area, 1)
             normalized_area = max(normalized_area, 0)

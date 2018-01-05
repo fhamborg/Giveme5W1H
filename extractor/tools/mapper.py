@@ -28,20 +28,24 @@ def weight_to_string(extractor, weight_index, question: str=None):
     elif extractor == 'environment':
         if question.startswith('where'):
             if weight_index == 0:
-                return 'where_position'
+                return 'position'
             elif weight_index == 1:
-                return 'where_frequency'
+                return 'frequency'
+            elif weight_index == 2:
+                return 'entailment'
+            elif weight_index == 3:
+                return 'accurate'
         if question.startswith('when'):
             if weight_index == 0:
-                return 'when_position'
+                return 'position'
             elif weight_index == 1:
-                return 'when_frequency'
+                return 'frequency'
             elif weight_index == 2:
-                return 'when_entailment'
+                return 'entailment'
             elif weight_index == 3:
-                return 'when_distance_from_publisher_date'
+                return 'distance_from_publisher_date'
             elif weight_index == 4:
-                return 'when_accurate'
+                return 'accurate'
     elif extractor == 'method':
         if weight_index == 0:
             return 'position'
@@ -73,7 +77,7 @@ def question_to_extractor(question: str):
 
 def extractor_to_question(extractor: str):
     """
-    return questions for a extractor
+    return questions for a extractor in a tuple
     :param extractor:
     :return:
     """

@@ -148,12 +148,16 @@ class EnvironmentExtractor(AbsExtractor):
 
                     ca.set_raw(candidate[0])
                     ca.set_sentence_index(i)
-                    # thats for the internal evaluation
+                    # that's for the internal evaluation
                     ca.set_calculations('openstreetmap_nominatim', location)
-                    # thats for the output
+                    # that's for the output
                     ca.set_enhancement('openstreetmap_nominatim', location.raw)
 
                     locations.append(ca)
+                    #print('TRUE: ' + location_string)
+                #else:
+                    #print('FALSE: ' + location_string)
+
                 #except GeocoderServiceError as e:
                 #    logging.getLogger('GiveMe5W').error('openstreetmap_nominatim: Where was not extracted ')
                 #    logging.getLogger('GiveMe5W').error(str(e))

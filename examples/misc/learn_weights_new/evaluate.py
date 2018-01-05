@@ -169,10 +169,10 @@ def stats_helper(list):
         'variance': statistics.pvariance(list, mu=mean),
         'standard_deviation': statistics.pstdev(list, mu=mean),
         #'harmonic_mean': statistics.harmonic_mean(list),
-        'median':statistics.median(list),
-        'median_low':statistics.median_low(list),
-        'median_high':statistics.median_high(list),
-        'median_grouped':statistics.median_grouped(list),
+        'median': statistics.median(list),
+        'median_low': statistics.median_low(list),
+        'median_high': statistics.median_high(list),
+        'median_grouped': statistics.median_grouped(list),
         'mode': mode
     }
 
@@ -339,6 +339,6 @@ def evaluate(score_results, write_full: bool=False, praefix=''):
 
 if __name__ == '__main__':
     process_files('queue_caches/*where_processed*/', praefix='training')
-    #process_files('queue_caches/*_processed*/', praefix='test')
+    process_files('queue_caches/*where_processed*/', praefix='test')
 
 

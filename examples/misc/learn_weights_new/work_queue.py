@@ -26,7 +26,7 @@ class WorkQueue(object):
         self.time_range = None
         self._pre_calculated_weights = pre_calculated_weights
         self._queue = []
-        self._queue_path_dir =  os.path.dirname(__file__) + '/queue_caches/'
+        self._queue_path_dir = os.path.dirname(__file__) + '/queue_caches/'
         self._queue_path = self._queue_path_dir + self._id + '_queue.pickle'
         self._processed_items_path = self._queue_path_dir + '/' + self._id + '_processed_items/'
         pathlib.Path(self._processed_items_path).mkdir(parents=True, exist_ok=True)
@@ -204,19 +204,19 @@ class WorkQueue(object):
         weight_step_size = 0.1
         weight_stop = 1
         # (0.5, 0.8), (0.8, 0.7, 0.5, 0.5, 0.5)
-        for i in self._weights_range:
-            for j in self._weights_range:
-                for k in self._weights_range:
-                    for l in self._weights_range:
-                        for m in self._weights_range:
-                            weights = (i, j, k, l, m)
-                            if self.vector_is_unique(weights):
-                                self._queue.append({
-                                    'extracting_parameters_id': 1,
-                                    'scoring_parameters': {
-                                        'weights': weights
-                                    },
-                                    'extracting_parameters': {}})
+        # for i in self._weights_range:
+        for j in self._weights_range:
+            for k in self._weights_range:
+                for l in self._weights_range:
+                    for m in self._weights_range:
+                        weights = (0.6, j, k, l, m)
+                        if self.vector_is_unique(weights):
+                            self._queue.append({
+                                'extracting_parameters_id': 1,
+                                'scoring_parameters': {
+                                    'weights': weights
+                                },
+                                'extracting_parameters': {}})
     def _generate_environment_where(self):
         weight_start = 0
         weight_step_size = 0.1
@@ -233,7 +233,7 @@ class WorkQueue(object):
                         },
                         'extracting_parameters': {}})
 
-    def _generate_environment(self):
+    def xxx_generate_environment(self):
         weight_start = 0
         weight_step_size = 0.1
         weight_stop = 1

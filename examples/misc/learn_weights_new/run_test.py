@@ -58,13 +58,30 @@ def cause(lock, pre_calculated_weights):
     return learn
 
 
-def environment(lock, pre_calculated_weights):
+def environment_where(lock, pre_calculated_weights):
     a_queue = WorkQueue(id='test_environment', generator='pre_calculated', pre_calculated_weights=pre_calculated_weights)
 
     a_queue.load()
 
     extractors = {
-        'environment': environment_extractor.EnvironmentExtractor()
+        'environment_where': environment_extractor.EnvironmentExtractor(skip_when=True)
+    }
+
+    learn = Learn(lock=lock,
+                  extractors=extractors,
+                  preprocessed_path=preprocessedPath,
+                  input_path=inputPath,
+                  sampling='test',
+                  combined_scorer=None, queue=a_queue)
+    return learn
+
+def environment_when(lock, pre_calculated_weights):
+    a_queue = WorkQueue(id='test_environment', generator='pre_calculated', pre_calculated_weights=pre_calculated_weights)
+
+    a_queue.load()
+
+    extractors = {
+        'environment_when': environment_extractor.EnvironmentExtractor( skip_where=True)
     }
 
     learn = Learn(lock=lock,
@@ -108,21 +125,21 @@ if __name__ == '__main__':
     lock = threading.Lock()  # Wordnet is not threadsave
 
     # WHO, WHAT
-    weights = load_best_weights('./result/training_final_result_what_1.json')
-    q.put(action(lock, weights))
+    #weights = load_best_weights('./result/training_final_result_what_1.json')
+    #q.put(action(lock, weights))
 
 
     # WHERE, WHEN
-    # weights = load_best_weights('./result/training_final_result_where.json')
-    # q.put(environment(lock, weights))
+    weights = load_best_weights('./result/training_final_result_where_1.json')
+    q.put(environment_where(lock, weights))
 
     # WHY
-    weights = load_best_weights('./result/training_final_result_why_1.json')
-    q.put(cause(lock, weights))
+    #weights = load_best_weights('./result/training_final_result_why_1.json')
+    #q.put(cause(lock, weights))
 
     # HOW
-    weights = load_best_weights('./result/training_final_result_how_1.json')
-    q.put(method(lock, weights))
+    #weights = load_best_weights('./result/training_final_result_how_1.json')
+    #q.put(method(lock, weights))
 
     for i in range(4):
             t = Worker(q)

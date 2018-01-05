@@ -7,19 +7,27 @@ import pandas as pd
 def generate_plot(path, auto_open = True):
     df = pd.read_csv('result/'+path+'.csv')
 
+    min_max = df['score'].agg(['min', 'max'])
+
     dimensions = []
     for dimension in df.columns.values:
 
-        dimensions.append(
-            dict(range=[0, 1], label=dimension, values=df[dimension])
-        )
+        if dimension != 'score':
+            dimensions.append(
+                dict(range=[0, 1], label=dimension, values=df[dimension])
+            )
+
+        else:
+            dimensions.append(
+                dict(range=[0, min_max.max()], label=dimension, values=df[dimension])
+            )
 
     line = dict(color = df['score'],
                 colorscale = 'Viridis',
                 showscale = True,
                 reversescale = True,
                 cmin=0,
-                cmax=1
+                cmax=min_max.max()
                 )
 
     data = [
@@ -41,4 +49,4 @@ def generate_plot(path, auto_open = True):
 
 
 if __name__ == '__main__':
-    generate_plot("training_final_result_what")
+    generate_plot("training_final_result_where_1_avg")

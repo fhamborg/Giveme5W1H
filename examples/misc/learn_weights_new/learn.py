@@ -267,6 +267,8 @@ class Learn(object):
             # retrieved answer couldn't be parsed
             return -3
 
+        # 20039 is half of the earth circumference alon equator.
+        # We ignore the fact that the earth not perfect round
         return great_circle(annotation.point, location.point).kilometers
 
     def load_documents(self, extractors, combined_scorer, sampling):

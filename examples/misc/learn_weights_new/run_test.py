@@ -130,7 +130,10 @@ if __name__ == '__main__':
 
 
     # WHERE, WHEN
-    weights = load_best_weights('./result/training_final_result_where_1.json')
+    #weights = load_best_weights('./result/training_final_result_where_1.json')
+    #q.put(environment_where(lock, weights))
+
+    weights = load_best_weights('./result/training_final_result_when_1.json')
     q.put(environment_where(lock, weights))
 
     # WHY

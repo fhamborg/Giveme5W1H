@@ -312,7 +312,7 @@ class Learn(object):
                         tmp_score = scoring(topAnnotation, answer, annotation)
                         scores.append(tmp_score)
 
-        no_error_values = [x for x in scores if x and x >= 0]
+        no_error_values = [x for x in scores if x is not None and  x >= 0]
         if len(no_error_values) > 0:
             smallest_none_error = min(no_error_values)
             result[question] = (question, weights, smallest_none_error, scores)

@@ -124,39 +124,39 @@ class EnvironmentExtractor(AbsExtractor):
                                                     accessor='ner'):
 
                 # look-up geocode in Nominatim
-                try:
-                    location_array = [t['originalText'] for t in candidate[0]]
-                    location_string = ' '.join(location_array)
+                #try:
+                location_array = [t['originalText'] for t in candidate[0]]
+                location_string = ' '.join(location_array)
 
-                    # there is an exception if request went wrong,
-                    # None values are not cached,
-                    # therefore -1 is used to cache requests without result
-                    location = self._cache_nominatim.get(location_string)
+                # there is an exception if request went wrong,
+                # None values are not cached,
+                # therefore -1 is used to cache requests without result
+                location = self._cache_nominatim.get(location_string)
+                if location is None:
+                    location = self.geocoder.geocode(location_string)
+
                     if location is None:
-                        location = self.geocoder.geocode(location_string)
+                        self._cache_nominatim.cache(location_string, -1)
+                    else:
+                        self._cache_nominatim.cache(location_string, location)
+                if location == -1:
+                    location = None
 
-                        if location is None:
-                            self._cache_nominatim.cache(location_string, -1)
-                        else:
-                            self._cache_nominatim.cache(location_string, location)
-                    if location == -1:
-                        location = None
+                if location is not None:
+                    # fetch pos and append to candidates
+                    ca = Candidate()
 
-                    if location is not None:
-                        # fetch pos and append to candidates
-                        ca = Candidate()
+                    ca.set_raw(candidate[0])
+                    ca.set_sentence_index(i)
+                    # thats for the internal evaluation
+                    ca.set_calculations('openstreetmap_nominatim', location)
+                    # thats for the output
+                    ca.set_enhancement('openstreetmap_nominatim', location.raw)
 
-                        ca.set_raw(candidate[0])
-                        ca.set_sentence_index(i)
-                        # thats for the internal evaluation
-                        ca.set_calculations('openstreetmap_nominatim', location)
-                        # thats for the output
-                        ca.set_enhancement('openstreetmap_nominatim', location.raw)
-
-                        locations.append(ca)
-                except GeocoderServiceError as e:
-                    logging.getLogger('GiveMe5W').error('openstreetmap_nominatim: Where was not extracted ')
-                    logging.getLogger('GiveMe5W').error(str(e))
+                    locations.append(ca)
+                #except GeocoderServiceError as e:
+                #    logging.getLogger('GiveMe5W').error('openstreetmap_nominatim: Where was not extracted ')
+                #    logging.getLogger('GiveMe5W').error(str(e))
 
             # date candidate extraction using SUTime
             current_timex_candidates = self._extract_timex_candidates(sentence)

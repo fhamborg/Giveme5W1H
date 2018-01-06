@@ -134,8 +134,8 @@ if __name__ == '__main__':
     q.put(environment_where(lock, weights))
 
     # WHEN
-    weights = load_best_weights('./result/training_final_result_when_1.json')
-    q.put(environment_when(lock, weights))
+    #weights = load_best_weights('./result/training_final_result_when_1.json')
+    #q.put(environment_when(lock, weights))
 
     # WHY
     #weights = load_best_weights('./result/training_final_result_why_1.json')

@@ -23,7 +23,7 @@ def generate_plot(path, auto_open = True):
     line = dict(color = df['score'],
                 colorscale = 'Viridis',
                 showscale = True,
-                reversescale = False,
+                reversescale = True,
                 cmin=0,
                 cmax=min_max.max()
                 )

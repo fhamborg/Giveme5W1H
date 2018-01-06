@@ -90,8 +90,8 @@ class DistanceOfCandidate(AbsCombinedScoring):
                 norm_dist = (top_question_max - dist) / max_minus_min
                 distance_matrix[question][i] = norm_dist
 
-        candidate_min = 99
-        candidate_max = -99
+        candidate_min = float('inf')
+        candidate_max = float('-inf')
         for i, d_candidate in enumerate(dependant_candidates):
             dist_factor = 0
             for iq, question in enumerate(self._primary_questions):

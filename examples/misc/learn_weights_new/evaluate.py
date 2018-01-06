@@ -338,8 +338,8 @@ def evaluate(score_results, write_full: bool=False, praefix=''):
 
 
 if __name__ == '__main__':
-    #process_files('queue_caches/*when_processed*/', praefix='training')
-    process_files('queue_caches/*when_pre_calculated_processed*/', praefix='test')
-    process_files('queue_caches/*where_pre_calculated_processed*/', praefix='test')
+    #process_files('queue_caches/*_processed*/', praefix='training')
+    process_files('queue_caches/*pre_calculated_processed*/', praefix='test')
+    #process_files('queue_caches/*where_pre_calculated_processed*/', praefix='test')
 
 

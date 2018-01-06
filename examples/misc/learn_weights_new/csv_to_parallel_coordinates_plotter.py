@@ -16,16 +16,14 @@ def generate_plot(path, auto_open = True):
             dimensions.append(
                 dict(range=[0, 1], label=dimension, values=df[dimension])
             )
-
         else:
             dimensions.append(
                 dict(range=[0, min_max.max()], label=dimension, values=df[dimension])
             )
-
     line = dict(color = df['score'],
                 colorscale = 'Viridis',
                 showscale = True,
-                reversescale = True,
+                reversescale = False,
                 cmin=0,
                 cmax=min_max.max()
                 )

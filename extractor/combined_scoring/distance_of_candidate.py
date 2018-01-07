@@ -95,7 +95,7 @@ class DistanceOfCandidate(AbsCombinedScoring):
         for i, d_candidate in enumerate(dependant_candidates):
             dist_factor = 0
             for iq, question in enumerate(self._primary_questions):
-                dist_factor += distance_matrix[question][i] + self._weight[iq]
+                dist_factor += distance_matrix[question][i] * self._weight[iq]
 
             dist_factor = dist_factor / len(distance_matrix)
 

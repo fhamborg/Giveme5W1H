@@ -138,6 +138,10 @@ class WorkQueue(object):
         :param weights:
         :return:
         """
+
+        if len(weights) == 1:
+            # vectors with one weight are no checked, 0 is not refused
+            return True
         if sum(weights) == 0:
             return False
 
@@ -280,13 +284,12 @@ class WorkQueue(object):
     def _generate_combined_scoring(self):
         for i in self._weights_range:
             weights = (i,)
-            if i:
-                self._queue.append({
-                    'extracting_parameters_id': 1,
-                    'scoring_parameters': {
-                        'weights': weights
-                    },
-                    'extracting_parameters': {}})
+            self._queue.append({
+                'extracting_parameters_id': 1,
+                'scoring_parameters': {
+                    'weights': weights
+                },
+                'extracting_parameters': {}})
 
     def _generate_default(self):
         """

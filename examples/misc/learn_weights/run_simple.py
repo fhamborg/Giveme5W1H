@@ -75,13 +75,13 @@ if __name__ == '__main__':
 
     # who and what are using them same trainer. Declare just one !!
     # its recommended to run one by one to keep memory print low
-    # questions = ['who','why', 'where', 'when', 'how', 'cs']
+    # questions = ['who','why', 'where', 'when', 'how']
     learn_questions = ['who']
     # learn_questions = ['why']
     # learn_questions = ['where']
     # learn_questions = ['when']
     # learn_questions = ['how']
-    # learn_questions = ['cs']
+
 
     #
     # Training - with the best weights - found with evaluation

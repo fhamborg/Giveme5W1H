@@ -164,11 +164,11 @@ if __name__ == '__main__':
     # q.put(environment(lock))
 
     # q.put(environment_when(lock))
-    q.put(environment_where(lock))
+    #q.put(environment_where(lock))
 
     # q.put(cause(lock))
     # q.put(method(lock))
-    # q.put(default_combined_scoring(lock))
+    q.put(default_combined_scoring(lock))
 
     for i in range(4):
         t = Worker(q)

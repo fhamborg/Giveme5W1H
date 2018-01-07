@@ -2,7 +2,6 @@ import datetime
 import logging
 import math
 import time
-import tracemalloc
 from itertools import product
 from threading import Thread
 
@@ -15,11 +14,12 @@ from nltk.corpus import wordnet
 from extractor.extractor import FiveWExtractor
 from extractor.root import path
 from extractor.tools.file.handler import Handler
-from misc.learn_weights_new.metrics.normalized_google_distance import NormalizedGoogleDistance
-from misc.learn_weights_new.metrics.wmd import Wmd
+from misc.learn_weights.metrics.normalized_google_distance import NormalizedGoogleDistance
+from misc.learn_weights.metrics.wmd import Wmd
 from tools.cache_manager import CacheManager
 
 fmt = '{0.days} days {0.hours} hours {0.minutes} minutes {0.seconds} seconds'
+
 
 class Worker(Thread):
     def __init__(self, queue):
@@ -51,12 +51,13 @@ class Learn(object):
     a_max = math.log(one_month_in_s)  # a month
     a_min_minus_max = (a_max - a_min)
 
-    def __init__(self, lock, input_path, preprocessed_path, extractors, queue, combined_scorer=None, sampling='training', ignore_extractor = None):
+    def __init__(self, lock, input_path, preprocessed_path, extractors, queue, combined_scorer=None,
+                 sampling='training', ignore_extractor=None, persit_steps=False):
         # load docs and extractor
         self._input_path = input_path
         self._pre_processed_path = preprocessed_path
-        self._documents, self._extractor_object, self._combined_scorer = self.load_documents(extractors, combined_scorer, sampling)
-
+        self._documents, self._extractor_object, self._combined_scorer = self.load_documents(extractors,
+                                                                                             combined_scorer, sampling)
 
         self._extractors = extractors
         # removes extractors from list, if weights are not changing (for combined scoring)
@@ -75,11 +76,13 @@ class Learn(object):
         self._lock = lock
 
         self._cache_nominatim = CacheManager.instance().get_cache('../examples/caches/Nominatim')
-        self._cache_ngd = CacheManager.instance().get_cache('../examples/caches/NGD')
+
         self._log = logging.getLogger('GiveMe5W')
-        self._ngd = NormalizedGoogleDistance()
+        # self._cache_ngd = CacheManager.instance().get_cache('../examples/caches/NGD')
+        # self._ngd = NormalizedGoogleDistance()
         self._wmd = Wmd()
         self._sampling = sampling
+        self._persit_steps = persit_steps
 
     def cmp_text_ngd(self, annotation, candidate, entire_annotation):
         """ result is a distance from 0..N 0 = similar,
@@ -289,7 +292,7 @@ class Learn(object):
                 # set a path to save an load preprocessed documents
                 .set_preprocessed_path(preprocessedPath)
                 # limit the the to process documents (nice for development)
-                #.set_limit(1)
+                # .set_limit(1)
                 # add an optional extractor (it would do basically just copying without...)
                 .set_sampling(sampling)
                 .set_extractor(extractor_object)
@@ -314,7 +317,7 @@ class Learn(object):
                         tmp_score = scoring(topAnnotation, answer, annotation)
                         scores.append(tmp_score)
 
-        no_error_values = [x for x in scores if x is not None and  x >= 0]
+        no_error_values = [x for x in scores if x is not None and x >= 0]
         if len(no_error_values) > 0:
             smallest_none_error = min(no_error_values)
             result[question] = (question, weights, smallest_none_error, scores)
@@ -352,11 +355,11 @@ class Learn(object):
 
     def process(self):
 
-        #tracemalloc.start(10)
+        # tracemalloc.start(10)
 
-        #start = snapshot = tracemalloc.take_snapshot()
-        #try:
-        #except:
+        # start = snapshot = tracemalloc.take_snapshot()
+        # try:
+        # except:
         #    snapshot = tracemalloc.take_snapshot()
         #    print(snapshot.statistics())
 
@@ -365,8 +368,6 @@ class Learn(object):
 
         _pre_extracting_parameters_id = None
         while True:
-
-
 
             next_item = self._queue.next()
             if next_item is not None:
@@ -465,7 +466,7 @@ class Learn(object):
                                 self._cmp_helper_min(self.cmp_text_wmd, question, top_answer, annotation, used_weights,
                                                      result)
 
-                        #extractor = self._extractors.get('environment')
+                        # extractor = self._extractors.get('environment')
                         extractor = self._extractors.get('environment_when')
                         if extractor:
                             used_weights = extractor.weights[1]
@@ -475,9 +476,9 @@ class Learn(object):
                                 self._cmp_helper_min(self.cmp_date_timex, question, top_answer, annotation,
                                                      used_weights, result)
 
-                        #extractor = self._extractors.get('environment')
+                        # extractor = self._extractors.get('environment')
                         extractor = self._extractors.get('environment_where')
-                        if  extractor:
+                        if extractor:
                             question = 'where'
                             used_weights = extractor.weights[0]
                             if question in answers and len(answers[question]) > 0:
@@ -488,13 +489,14 @@ class Learn(object):
                     # done save it to the result
                     self._queue.resolve_document(next_item, document.get_document_id(), result, i)
 
-                #combination_end_stamp = datetime.datetime.now()
-                self._queue.pop(persist=True)
-                #snapshot_2 = tracemalloc.take_snapshot()
-                #traceback', 'filename', 'lineno
-                #print(snapshot.compare_to(snapshot_2, 'traceback') )
-                #self._log_progress(self._queue, self._documents, combination_start_stamp, combination_end_stamp)
+                # combination_end_stamp = datetime.datetime.now()
+                self._queue.pop(persist=self._persit_steps)
+                # snapshot_2 = tracemalloc.take_snapshot()
+                # traceback', 'filename', 'lineno
+                # print(snapshot.compare_to(snapshot_2, 'traceback') )
+                # self._log_progress(self._queue, self._documents, combination_start_stamp, combination_end_stamp)
             else:
+
                 self._queue.persist()
                 print('done')
                 break

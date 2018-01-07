@@ -1,6 +1,6 @@
 import logging
 
-from misc.learn_weights_new.entities_strategy.abs_entities_strategy import AbsEntitiesStrategy
+from misc.learn_weights.entities_strategy.abs_entities_strategy import AbsEntitiesStrategy
 
 
 class Average(AbsEntitiesStrategy):

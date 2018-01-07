@@ -1,10 +1,6 @@
 import spacy
-import wmd as wm
-import logging
-import math
 
-
-from misc.learn_weights_new.metrics.abs_metric import AbsMetric
+from misc.learn_weights.metrics.abs_metric import AbsMetric
 
 
 class Wmd(AbsMetric):
@@ -15,11 +11,11 @@ class Wmd(AbsMetric):
     install: https://github.com/google/or-tools
 
     """
+
     def __init__(self, *args, **kwargs):
         super(Wmd, self).__init__(*args, **kwargs)
         # nlp = spacy.load('en', create_pipeline=wm.WMD.create_spacy_pipeline)
         self._nlp = spacy.load('en_vectors_web_lg')
-
 
     def calculate_distance(self, candidates_a, candidates_b):
         """
@@ -54,6 +50,6 @@ class Wmd(AbsMetric):
 
                 self._cache.cache_complex([candidates_a, candidates_b], result)
                 # print('cached')
-        print([candidates_a, candidates_b], end=" ")
-        print(result)
+        # print([candidates_a, candidates_b], end=" ")
+        # print(result)
         return result

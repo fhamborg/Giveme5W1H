@@ -2,7 +2,8 @@
 Helper to get relation to extractors, questions and their weights
 """
 
-def weight_to_string(extractor, weight_index, question: str=None):
+
+def weight_to_string(extractor, weight_index, question: str = None):
     """
     naming for a weight
     :param extractor:
@@ -58,6 +59,7 @@ def weight_to_string(extractor, weight_index, question: str=None):
     else:
         return 'no_mapping'
 
+
 def question_to_extractor(question: str):
     """
     extractor for a given question
@@ -75,6 +77,7 @@ def question_to_extractor(question: str):
     else:
         return 'no_mapping'
 
+
 def extractor_to_question(extractor: str):
     """
     return questions for a extractor in a tuple
@@ -91,4 +94,3 @@ def extractor_to_question(extractor: str):
         return ('how',)
     else:
         return ('no_mapping',)
-

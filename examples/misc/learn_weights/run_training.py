@@ -5,13 +5,12 @@ Be sure to remove the training set from input before running
 import logging
 import queue
 import threading
-import tracemalloc
 
-from extractor.root import path
 from extractor.combined_scoring import distance_of_candidate
+from extractor.root import path
 from extractors import environment_extractor, action_extractor, cause_extractor, method_extractor
-from misc.learn_weights_new.learn import Learn, Worker
-from misc.learn_weights_new.work_queue import WorkQueue
+from misc.learn_weights.learn import Learn, Worker
+from misc.learn_weights.work_queue import WorkQueue
 
 inputPath = path('../examples/datasets/gold_standard/data')
 preprocessedPath = path('../examples/datasets/gold_standard/cache')
@@ -106,7 +105,7 @@ def action(lock):
     a_queue.load()
 
     extractors = {
-         'action': action_extractor.ActionExtractor()
+        'action': action_extractor.ActionExtractor()
         # 'environment': environment_extractor.EnvironmentExtractor(),
         # 'cause': cause_extractor.CauseExtractor(),
         # 'method': method_extractor.MethodExtractor()
@@ -161,16 +160,15 @@ if __name__ == '__main__':
     q = queue.Queue()
     lock = threading.Lock()  # Wordnet is not threadsave
 
+    # q.put(action(lock))
+    # q.put(environment(lock))
 
-    #q.put(action(lock))
-    #q.put(environment(lock))
-
-    #q.put(environment_when(lock))
+    # q.put(environment_when(lock))
     q.put(environment_where(lock))
 
-    #q.put(cause(lock))
-    #q.put(method(lock))
-    #q.put(default_combined_scoring(lock))
+    # q.put(cause(lock))
+    # q.put(method(lock))
+    # q.put(default_combined_scoring(lock))
 
     for i in range(4):
         t = Worker(q)

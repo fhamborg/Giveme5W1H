@@ -1,12 +1,10 @@
+import copy
 import logging
 import os
 import pathlib
 import pickle
 
 import numpy as np
-import copy
-
-from extractors.method_extractor import ExtensionStrategy
 
 
 class WorkQueue(object):
@@ -26,6 +24,8 @@ class WorkQueue(object):
         self.time_range = None
         self._pre_calculated_weights = pre_calculated_weights
         self._queue = []
+        self._queue_processed = []
+
         self._queue_path_dir = os.path.dirname(__file__) + '/queue_caches/'
         self._queue_path = self._queue_path_dir + self._id + '_queue.pickle'
         self._processed_items_path = self._queue_path_dir + '/' + self._id + '_processed_items/'
@@ -83,7 +83,6 @@ class WorkQueue(object):
             elif self._generator == 'pre_calculated':
                 self._generate_pre_calculated(self._pre_calculated_weights)
 
-
     def resolve_document(self, last_item, dId, result, document_index):
         """
         takes a queue item, attached result per document, and appends it to queue_processed
@@ -95,7 +94,10 @@ class WorkQueue(object):
         last_item['dId'] = dId
         last_item['result'] = result
 
-        self.persist_processed_item(unique_index, last_item)
+        # TODO evaluate if a deep copy is really necessary
+        self._queue_processed.append(copy.deepcopy(last_item))
+
+        # self.persist_processed_item(unique_index, last_item)
 
     def pop(self, persist: bool = True):
         self._queue.pop()
@@ -107,6 +109,11 @@ class WorkQueue(object):
             pickle.dump(item, f, pickle.HIGHEST_PROTOCOL)
 
     def persist(self):
+
+        with open(self._processed_items_path + str(len(self._queue)) + '.pickle', 'wb') as f:
+            pickle.dump(self._queue_processed, f, pickle.HIGHEST_PROTOCOL)
+        self._queue_processed = []
+
         with open(self._queue_path, 'wb') as f:
             # Pickle the 'data' document using the highest protocol available.
             pickle.dump(self._queue, f, pickle.HIGHEST_PROTOCOL)
@@ -168,7 +175,7 @@ class WorkQueue(object):
 
     def _generate_method(self):
         # (float, float)
-        #for pm, extracting_parameters in enumerate([ExtensionStrategy.Range, ExtensionStrategy.Blacklist]):
+        # for pm, extracting_parameters in enumerate([ExtensionStrategy.Range, ExtensionStrategy.Blacklist]):
         for i in self._weights_range:
             for j in self._weights_range:
                 for k in self._weights_range:
@@ -209,7 +216,7 @@ class WorkQueue(object):
             for k in self._weights_range:
                 for l in self._weights_range:
                     for m in self._weights_range:
-                        weights = ( j, k, 0.3, l, m)
+                        weights = (j, k, 0.3, l, m)
                         if self.vector_is_unique(weights):
                             self._queue.append({
                                 'extracting_parameters_id': 1,
@@ -217,6 +224,7 @@ class WorkQueue(object):
                                     'weights': weights
                                 },
                                 'extracting_parameters': {}})
+
     def _generate_environment_where(self):
         weight_start = 0
         weight_step_size = 0.1
@@ -271,14 +279,14 @@ class WorkQueue(object):
 
     def _generate_combined_scoring(self):
         for i in self._weights_range:
-                weights = (i, )
-                if i:
-                    self._queue.append({
-                        'extracting_parameters_id': 1,
-                        'scoring_parameters': {
-                            'weights': weights
-                        },
-                        'extracting_parameters': {}})
+            weights = (i,)
+            if i:
+                self._queue.append({
+                    'extracting_parameters_id': 1,
+                    'scoring_parameters': {
+                        'weights': weights
+                    },
+                    'extracting_parameters': {}})
 
     def _generate_default(self):
         """

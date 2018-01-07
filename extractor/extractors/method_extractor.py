@@ -244,7 +244,6 @@ class MethodExtractor(AbsExtractor):
             result.append(ca)
         return result
 
-
     def _is_relevant_pos(self, pos):
         # Is adjective or adverb
         if pos.startswith('JJ') or pos.startswith('RB'):

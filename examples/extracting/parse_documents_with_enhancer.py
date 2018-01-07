@@ -37,7 +37,6 @@ if __name__ == '__main__':
     #
     #
 
-
     # logger setup
     log = logging.getLogger('GiveMe5W')
     log.setLevel(logging.DEBUG)

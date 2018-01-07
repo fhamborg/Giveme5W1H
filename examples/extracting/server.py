@@ -106,7 +106,6 @@ def extract():
 #        return jsonify(answer)
 
 
-
 if __name__ == "__main__":
     # setup config
     # Config.get()["candidate"]["nlpIndexSentence"] = False
@@ -114,7 +113,6 @@ if __name__ == "__main__":
     # Config.get()["candidate"]["score"] = False
     # Config.get()["label"] = False
     # Config.get()["onlyTopCandidate"] = True
-
 
     # startup
     log.info("starting server on port %i", port)

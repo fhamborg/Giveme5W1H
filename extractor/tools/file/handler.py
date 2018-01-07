@@ -2,7 +2,6 @@ import glob
 import json
 import logging
 import os
-import sys
 
 from .reader import Reader
 from .writer import Writer
@@ -87,7 +86,7 @@ class Handler(object):
             self.log.error('Call set_output_path with a valid path, before you enable this option')
         return self
 
-    def set_sampling(self, sampling: str='training'):
+    def set_sampling(self, sampling: str = 'training'):
         """
         read online files with matching file identifier
         :param sampling:

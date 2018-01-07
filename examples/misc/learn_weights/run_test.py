@@ -7,11 +7,10 @@ import logging
 import queue
 import threading
 
-from combined_scoring import distance_of_candidate
 from extractor.root import path
 from extractors import environment_extractor, action_extractor, cause_extractor, method_extractor
-from misc.learn_weights_new.learn import Learn, Worker
-from misc.learn_weights_new.work_queue import WorkQueue
+from misc.learn_weights.learn import Learn, Worker
+from misc.learn_weights.work_queue import WorkQueue
 
 inputPath = path('../examples/datasets/gold_standard/data')
 preprocessedPath = path('../examples/datasets/gold_standard/cache')
@@ -59,7 +58,8 @@ def cause(lock, pre_calculated_weights):
 
 
 def environment_where(lock, pre_calculated_weights):
-    a_queue = WorkQueue(id='test_environment_where', generator='pre_calculated', pre_calculated_weights=pre_calculated_weights)
+    a_queue = WorkQueue(id='test_environment_where', generator='pre_calculated',
+                        pre_calculated_weights=pre_calculated_weights)
 
     a_queue.load()
 
@@ -75,13 +75,15 @@ def environment_where(lock, pre_calculated_weights):
                   combined_scorer=None, queue=a_queue)
     return learn
 
+
 def environment_when(lock, pre_calculated_weights):
-    a_queue = WorkQueue(id='test_environment_when', generator='pre_calculated', pre_calculated_weights=pre_calculated_weights)
+    a_queue = WorkQueue(id='test_environment_when', generator='pre_calculated',
+                        pre_calculated_weights=pre_calculated_weights)
 
     a_queue.load()
 
     extractors = {
-        'environment_when': environment_extractor.EnvironmentExtractor( skip_where=True)
+        'environment_when': environment_extractor.EnvironmentExtractor(skip_where=True)
     }
 
     learn = Learn(lock=lock,
@@ -100,7 +102,7 @@ def action(lock, pre_calculated_weights):
     a_queue.load()
 
     extractors = {
-         'action': action_extractor.ActionExtractor()
+        'action': action_extractor.ActionExtractor()
     }
     learn = Learn(lock=lock,
                   extractors=extractors,
@@ -109,7 +111,6 @@ def action(lock, pre_calculated_weights):
                   sampling='test',
                   combined_scorer=None, queue=a_queue)
     return learn
-
 
 
 if __name__ == '__main__':
@@ -128,27 +129,26 @@ if __name__ == '__main__':
     #weights = load_best_weights('./result/training_final_result_what_1.json')
     #q.put(action(lock, weights))
 
-
     # WHERE
-    weights = load_best_weights('./result/training_final_result_where_1.json')
-    q.put(environment_where(lock, weights))
+    #weights = load_best_weights('./result/training_final_result_where_1.json')
+    #q.put(environment_where(lock, weights))
 
     # WHEN
-    #weights = load_best_weights('./result/training_final_result_when_1.json')
-    #q.put(environment_when(lock, weights))
+    # weights = load_best_weights('./result/training_final_result_when_1.json')
+    # q.put(environment_when(lock, weights))
 
     # WHY
-    #weights = load_best_weights('./result/training_final_result_why_1.json')
-    #q.put(cause(lock, weights))
+    # weights = load_best_weights('./result/training_final_result_why_1.json')
+    # q.put(cause(lock, weights))
 
     # HOW
-    #weights = load_best_weights('./result/training_final_result_how_1.json')
-    #q.put(method(lock, weights))
+    # weights = load_best_weights('./result/training_final_result_how_1.json')
+    # q.put(method(lock, weights))
 
     for i in range(4):
-            t = Worker(q)
-            t.daemon = True
-            t.start()
+        t = Worker(q)
+        t.daemon = True
+        t.start()
 
     # wait till all extractors are done
     q.join()

@@ -50,17 +50,17 @@ if __name__ == '__main__':
 
     # initiate the news-please file handler with the input directory
     (Handler(inputPath)
-     # add an extractor
-     .set_extractor(extractor)
+        # add an extractor
+        .set_extractor(extractor)
 
-     # add an output directory
-     .set_output_path(outputPath)
+        # add an output directory
+        .set_output_path(outputPath)
 
-     # Optional: set a path to cache and load preprocessed documents (CoreNLP & Enhancer result)
-     .set_preprocessed_path(preprocessedPath)
+        # Optional: set a path to cache and load preprocessed documents (CoreNLP & Enhancer result)
+        .set_preprocessed_path(preprocessedPath)
 
-     # limit the documents read from the input directory (handy for development)
-     .set_limit(2)
+        # limit the documents read from the input directory (handy for development)
+        .set_limit(2)
 
-     # execute it
-     .process())
+        # execute it
+        .process())

@@ -1,9 +1,7 @@
 import datetime
-import logging
 import math
 
 from geopy.distance import great_circle
-from geopy.exc import GeocoderServiceError
 from geopy.geocoders import Nominatim
 from parsedatetime import parsedatetime as pdt
 
@@ -30,12 +28,14 @@ class EnvironmentExtractor(AbsExtractor):
     time_norm_delta = time_norm_max - time_norm_min
 
     # used for normalisation of area (in meters)
-    area_norm_min = math.log(225) # roughly one small building
-    area_norm_max = math.log(99720000000) # median country according to https://de.wikipedia.org/wiki/Liste_der_Staaten_der_Erde#Liste
+    area_norm_min = math.log(225)  # roughly one small building
+    area_norm_max = math.log(
+        99720000000)  # median country according to https://de.wikipedia.org/wiki/Liste_der_Staaten_der_Erde#Liste
     area_norm_delta = area_norm_max - area_norm_min
 
     def __init__(self, weights=((0.5, 0.8, 0.5, 0.5), (0.8, 0.7, 0.5, 0.5, 0.5)), phrase_range_location: int = 3,
-                 time_range: int = 86400, host='nominatim.openstreetmap.org', skip_when: bool=False, skip_where: bool=False):
+                 time_range: int = 86400, host='nominatim.openstreetmap.org', skip_when: bool = False,
+                 skip_where: bool = False):
         """
         Init the Nominatim connection as well as the calender object used for date interpretation.
 
@@ -129,7 +129,7 @@ class EnvironmentExtractor(AbsExtractor):
                                                     accessor='ner'):
 
                 # look-up geocode in Nominatim
-                #try:
+                # try:
                 location_array = [t['originalText'] for t in candidate[0]]
                 location_string = ' '.join(location_array)
 
@@ -159,11 +159,11 @@ class EnvironmentExtractor(AbsExtractor):
                     ca.set_enhancement('openstreetmap_nominatim', location.raw)
 
                     locations.append(ca)
-                    #print('TRUE: ' + location_string)
-                #else:
-                    #print('FALSE: ' + location_string)
+                    # print('TRUE: ' + location_string)
+                # else:
+                # print('FALSE: ' + location_string)
 
-                #except GeocoderServiceError as e:
+                # except GeocoderServiceError as e:
                 #    logging.getLogger('GiveMe5W').error('openstreetmap_nominatim: Where was not extracted ')
                 #    logging.getLogger('GiveMe5W').error(str(e))
 
@@ -216,7 +216,7 @@ class EnvironmentExtractor(AbsExtractor):
             for i in range(4):
                 bb[i] = float(bb[i])
             raw_locations.append([parts, location.raw['place_id'], location.point, bb, area, 0, 0, candidate, 0])
-            
+
             max_area = max(max_area, area)
 
         # sort locations based id
@@ -242,7 +242,7 @@ class EnvironmentExtractor(AbsExtractor):
         max_n = 1
 
         # number of entailments
-        max_entailment = 1 # to avoid 0 division
+        max_entailment = 1  # to avoid 0 division
 
         # check entailment of locations based on the bounding box
         for i, location in enumerate(unique_locations):
@@ -263,8 +263,8 @@ class EnvironmentExtractor(AbsExtractor):
             score += weights[2] * (location[8] / max_entailment)
 
             # accuracy (ideally one minute only, max is one year) logarithmic
-            normalized_area = (((math.log(location[4]+1)) - EnvironmentExtractor.area_norm_min) /
-                EnvironmentExtractor.area_norm_delta)
+            normalized_area = (((math.log(location[4] + 1)) - EnvironmentExtractor.area_norm_min) /
+                               EnvironmentExtractor.area_norm_delta)
             normalized_area = min(normalized_area, 1)
             normalized_area = max(normalized_area, 0)
             score += weights[3] * (1 - normalized_area)
@@ -337,9 +337,9 @@ class EnvironmentExtractor(AbsExtractor):
                 if abs(candidate_duration.total_seconds()) <= EnvironmentExtractor.two_days_in_s and abs(
                         neighbor_candidate_duration.total_seconds()) <= EnvironmentExtractor.two_days_in_s:
                     if abs((
-                                       candidate_timex.get_start_date() - neighbor_candidate_timex.get_start_date()).total_seconds()) <= self.time_delta or \
-                                    abs((
-                                                    candidate_timex.get_end_date() - neighbor_candidate_timex.get_end_date()).total_seconds()) <= self.time_delta:
+                                   candidate_timex.get_start_date() - neighbor_candidate_timex.get_start_date()).total_seconds()) <= self.time_delta or \
+                            abs((
+                                        candidate_timex.get_end_date() - neighbor_candidate_timex.get_end_date()).total_seconds()) <= self.time_delta:
                         candidate[3] += 1
 
                 # full entailment check: if a date X is entailed in another date Y, increase the frequency of X
@@ -367,8 +367,9 @@ class EnvironmentExtractor(AbsExtractor):
             score += weights[3] * normalized_distance_score
 
             # accuracy (ideally one minute only, max is one year) logarithmic
-            normalized_duration = ((math.log(candidate[2].get_duration().total_seconds()) - EnvironmentExtractor.time_norm_min)
-                                   / EnvironmentExtractor.time_norm_delta)
+            normalized_duration = (
+                    (math.log(candidate[2].get_duration().total_seconds()) - EnvironmentExtractor.time_norm_min)
+                    / EnvironmentExtractor.time_norm_delta)
 
             score += weights[4] * (1 - normalized_duration)
 

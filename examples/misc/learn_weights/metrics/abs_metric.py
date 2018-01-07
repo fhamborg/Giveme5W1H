@@ -1,6 +1,6 @@
 from abc import abstractmethod
 
-from misc.learn_weights_new.entities_strategy.best import Best
+from misc.learn_weights.entities_strategy.best import Best
 from tools.cache_manager import CacheManager
 
 

@@ -193,14 +193,14 @@ class CauseExtractor(AbsExtractor):
                     if (
                             post_con['phenomenon']
                     ) or (
-                                    not pre_con['entity'] and (verb_con['associate'] or verb_con['relate']) and (
-                                            post_con['abstraction'] and post_con['group'] and post_con['possession'])
+                            not pre_con['entity'] and (verb_con['associate'] or verb_con['relate']) and (
+                            post_con['abstraction'] and post_con['group'] and post_con['possession'])
                     ) or (
-                                not pre_con['entity'] and post_con['event']
+                            not pre_con['entity'] and post_con['event']
                     ) or (
-                                not pre_con['abstraction'] and (post_con['event'] or post_con['act'])
+                            not pre_con['abstraction'] and (post_con['event'] or post_con['act'])
                     ) or (
-                                verb_con['lead'] and (not post_con['entity'] and not post_con['group'])
+                            verb_con['lead'] and (not post_con['entity'] and not post_con['group'])
                     ):
                         candidates.append(deepcopy([subtree.pos(), sibling.pos(), 'NP-VP-NP']))
 
@@ -259,7 +259,7 @@ class CauseExtractor(AbsExtractor):
             if parts is not None and len(parts) > 0:
                 # following the concept of the inverted pyramid use the position for scoring
                 score = self.weights[0] * (
-                    document.get_len() - candidateObject.get_sentence_index()) / document.get_len()
+                        document.get_len() - candidateObject.get_sentence_index()) / document.get_len()
 
                 # we also consider the pattern typ used to detect the candidate
                 if candidateObject.get_type() == 'biclausal':

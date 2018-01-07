@@ -4,7 +4,7 @@ import math
 import requests
 from lxml import html
 
-from misc.learn_weights_new.metrics.abs_metric import AbsMetric
+from misc.learn_weights.metrics.abs_metric import AbsMetric
 
 
 class NormalizedGoogleDistance(AbsMetric):

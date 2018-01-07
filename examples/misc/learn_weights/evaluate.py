@@ -4,13 +4,12 @@ checks all result files(all xxxxx_processed.prickle) an writes results to /resul
 import csv
 import glob
 import json
+import os
 import pickle
 import statistics
 from itertools import groupby
 
-import os
-
-from misc.learn_weights_new.csv_to_parallel_coordinates_plotter import generate_plot
+from misc.learn_weights.csv_to_parallel_coordinates_plotter import generate_plot
 from tools import mapper
 
 
@@ -41,7 +40,7 @@ def process_files(path, praefix):
                 if os.path.getsize(file_path) > 0:
                     with open(file_path, 'rb') as ff:
                         processed_item = pickle.load(ff)
-                        entire_qu.append(processed_item)
+                        entire_qu.extend(processed_item)
 
             # merge qu to one dict, merge per question and weight
             for result in entire_qu:
@@ -56,9 +55,11 @@ def process_files(path, praefix):
 
                     # each item is identified by their extracting parameters, weight
                     # and their answer (stored over the parent node)
-                    comb_for_this_parameter_id = question_scores.setdefault(result['extracting_parameters_id'], { 'extracting_parameters': result['extracting_parameters'], 'weights': {}})
+                    comb_for_this_parameter_id = question_scores.setdefault(result['extracting_parameters_id'], {
+                        'extracting_parameters': result['extracting_parameters'], 'weights': {}})
 
-                    comb = comb_for_this_parameter_id['weights'].setdefault(weights_string, {'weights': weights, 'scores_doc': []})
+                    comb = comb_for_this_parameter_id['weights'].setdefault(weights_string,
+                                                                            {'weights': weights, 'scores_doc': []})
 
                     # save this score to all results
                     comb['scores_doc'].append(result['result'][question][2])
@@ -97,7 +98,6 @@ def normalize(list):
         result.append(entry / a_max)
 
     return result
-
 
 
 def merge_top(a_list, accessor):
@@ -165,10 +165,10 @@ def stats_helper(list):
         pass
 
     return {
-        'mean':   mean,
+        'mean': mean,
         'variance': statistics.pvariance(list, mu=mean),
         'standard_deviation': statistics.pstdev(list, mu=mean),
-        #'harmonic_mean': statistics.harmonic_mean(list),
+        # 'harmonic_mean': statistics.harmonic_mean(list),
         'median': statistics.median(list),
         'median_low': statistics.median_low(list),
         'median_high': statistics.median_high(list),
@@ -177,7 +177,7 @@ def stats_helper(list):
     }
 
 
-def generate_csv(praefix, score_per_average, accessor='avg' ):
+def generate_csv(praefix, score_per_average, accessor='avg'):
     # write combinations per extractor to CSV
     for question in score_per_average:
         csv_results_avg = []
@@ -244,8 +244,6 @@ def golden_weights_to_ranges(a_list):
                 'data': ranges
             })
 
-
-
         a_list['golden_groups'] = results
 
 
@@ -259,14 +257,12 @@ def index_of_best(list):
     return list.index(min(a_list))
 
 
-def evaluate(score_results, write_full: bool=False, praefix=''):
-
+def evaluate(score_results, write_full: bool = False, praefix=''):
     # write raw results
     if write_full:
         with open('result/' + praefix + '_evaluation_full' + '.json', 'w') as data_file:
             data_file.write(json.dumps(score_results, sort_keys=False, indent=4))
             data_file.close()
-
 
     # has a low dist on average per weight (documents are merged)
     score_per_average_extrem = {}
@@ -291,10 +287,10 @@ def evaluate(score_results, write_full: bool=False, praefix=''):
                     print('a')
 
                 score_per_average.setdefault(question_extract_id, {})[combination_string] = {
-                     'score': scores_sum,
-                     #'norm_score':
-                     'avg': avg,
-                     'weight': combo['weights']
+                    'score': scores_sum,
+                    # 'norm_score':
+                    'avg': avg,
+                    'weight': combo['weights']
                 }
 
                 extr['min'] = min(extr['min'], scores_sum)
@@ -314,12 +310,13 @@ def evaluate(score_results, write_full: bool=False, praefix=''):
                 item['norm_score'] = (item['score'] - extrem_item['min']) / extrem_item['max_minus_min']
             else:
                 item['norm_score'] = (item['score'] - extrem_item['min'])
+
     # finally, get the best weighting and save it to a file
     final_result = {}
     for question in score_per_average:
         score_per_average_list = list(score_per_average[question].values())
 
-        #score_per_average_list.sort(key=lambda x: x['norm_score'], reverse=False)
+        # score_per_average_list.sort(key=lambda x: x['norm_score'], reverse=False)
 
         final_result[question] = {
             'best_dist': merge_top(score_per_average_list, 'norm_score')
@@ -333,13 +330,11 @@ def evaluate(score_results, write_full: bool=False, praefix=''):
             data_file.write(json.dumps(final_result[question], sort_keys=False, indent=4))
             data_file.close()
 
-    generate_csv(praefix,score_per_average, 'avg')
+    generate_csv(praefix, score_per_average, 'avg')
     generate_csv(praefix, score_per_average, 'norm_score')
 
 
 if __name__ == '__main__':
     process_files('queue_caches/*where_processed*/', praefix='training')
-    #process_files('queue_caches/*pre_calculated_processed*/', praefix='test')
-    process_files('queue_caches/*where_pre_calculated_processed*/', praefix='test')
-
-
+    # process_files('queue_caches/*pre_calculated_processed*/', praefix='test')
+    # process_files('queue_caches/*where_pre_calculated_processed*/', praefix='test')

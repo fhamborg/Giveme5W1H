@@ -18,7 +18,6 @@ from misc.learn_weights.metrics.normalized_google_distance import NormalizedGoog
 from misc.learn_weights.metrics.wmd import Wmd
 from tools.cache_manager import CacheManager
 
-fmt = '{0.days} days {0.hours} hours {0.minutes} minutes {0.seconds} seconds'
 
 
 class Worker(Thread):
@@ -113,11 +112,9 @@ class Learn(object):
 
         if annotation is None or annotation is 'NULL':
             # annotation is NULL
-
             return -1
         elif candidate is None:
             # no answer was extracted
-
             return -2
 
         # fetch synsets for both answers
@@ -132,7 +129,6 @@ class Learn(object):
 
         if not any(syn_a) or not any(syn_b):
             # no synsets were found for one of the answers!
-
             return -3
 
         score = 0
@@ -184,39 +180,6 @@ class Learn(object):
             return normalized_duration
         else:
             return -1
-
-    def cmp_date(self, annotation, candidate, entire_annotation):
-        """
-        Compare the retrieved answer with the annotation by calculating the time difference in seconds.
-
-        :param annotation: The correct Answer
-        :type annotation: (time. struct_time, Integer)
-        :param candidate: The retrieved Answer
-        :type candidate: [String]
-
-        :return: Float
-        """
-
-        t = self._calendar.parse(annotation)
-        if t[1] == 0:
-            return -1
-        elif candidate is None:
-            # no answer was extracted
-            return -2
-
-        strings = []
-        for candidatepart in candidate:
-            strings.append(candidatepart[0])
-        c_time = self._calendar.parse(' '.join(strings))
-
-        if c_time[1] == 0:
-            # one of the answers couldn't be parsed
-            return -3
-
-        a = time.mktime(t[0])
-        b = time.mktime(c_time[0])
-
-        return abs(a - b)
 
     def nominatim(self, candidate):
 
@@ -325,22 +288,6 @@ class Learn(object):
             # no annotation
             result[question] = (question, weights, -1, scores)
 
-    def _cmp_helper_max(self, scoring, question, answer, annotations, weights, result):
-        # TODO: use named entity, if any
-        scores = []
-        # check if there is an annotaton and an answer
-        if answer and question in annotations and len(annotations[question]) > 0:
-            # topAnswer = answers[question][0].get_parts_as_text()
-            for annotation in annotations[question]:
-                if len(annotation) > 2:
-                    topAnnotation = annotation[2]
-                    if topAnnotation:
-                        tmp_score = scoring(topAnnotation, answer, annotation)
-                        scores.append(tmp_score)
-
-        smallest_none_error = max(x for x in scores if x and x > 0)
-        result[question] = (question, weights, smallest_none_error, scores)
-
     def _log_progress(self, queue, documents, start, end):
         count = queue.get_queue_count()
         doc_count = len(documents)
@@ -351,17 +298,10 @@ class Learn(object):
             time_range = (end - start).total_seconds()
             time_range = time_range * count
             # No proper average this is very rough
+            fmt = '{0.days} days {0.hours} hours {0.minutes} minutes {0.seconds} seconds'
             self._log.info(queue.get_id() + ':Rough estimated time left:' + str(fmt.format(rd(seconds=time_range))))
 
     def process(self):
-
-        # tracemalloc.start(10)
-
-        # start = snapshot = tracemalloc.take_snapshot()
-        # try:
-        # except:
-        #    snapshot = tracemalloc.take_snapshot()
-        #    print(snapshot.statistics())
 
         self._log_progress(self._queue, self._documents, None, None)
         # make sure caller can read that...
@@ -412,12 +352,9 @@ class Learn(object):
                         # method - (position, frequency)
                         self._extractors['method'].weights = (weights[0], weights[1], weights[2], weights[3])
 
-                # combination_start_stamp = datetime.datetime.now()
-
                 # run for all documents
                 for i, document in enumerate(self._documents):
 
-                    # try:
                     self._extractor_object.parse(document)
 
                     annotation = document.get_annotations()
@@ -466,7 +403,6 @@ class Learn(object):
                                 self._cmp_helper_min(self.cmp_text_wmd, question, top_answer, annotation, used_weights,
                                                      result)
 
-                        # extractor = self._extractors.get('environment')
                         extractor = self._extractors.get('environment_when')
                         if extractor:
                             used_weights = extractor.weights[1]
@@ -476,7 +412,6 @@ class Learn(object):
                                 self._cmp_helper_min(self.cmp_date_timex, question, top_answer, annotation,
                                                      used_weights, result)
 
-                        # extractor = self._extractors.get('environment')
                         extractor = self._extractors.get('environment_where')
                         if extractor:
                             question = 'where'
@@ -489,12 +424,7 @@ class Learn(object):
                     # done save it to the result
                     self._queue.resolve_document(next_item, document.get_document_id(), result, i)
 
-                # combination_end_stamp = datetime.datetime.now()
                 self._queue.pop(persist=self._persit_steps)
-                # snapshot_2 = tracemalloc.take_snapshot()
-                # traceback', 'filename', 'lineno
-                # print(snapshot.compare_to(snapshot_2, 'traceback') )
-                # self._log_progress(self._queue, self._documents, combination_start_stamp, combination_end_stamp)
             else:
 
                 self._queue.persist()

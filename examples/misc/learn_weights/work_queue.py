@@ -8,6 +8,9 @@ import numpy as np
 
 
 class WorkQueue(object):
+    """
+    Queue object to process a large number of combinations.
+    """
     def __init__(self, id: str = None, generator: str = 'default', pre_calculated_weights=None):
         """
 

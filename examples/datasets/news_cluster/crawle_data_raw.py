@@ -239,17 +239,47 @@ add_article(Category.business, Topic.unspecific,
 
 ## entertainment
 add_article(Category.entertainment, Topic.unspecific,
-            Event.chrissy_teigen_live_tweets_nightmare_flight_after_bizarre_passenger_mishap, [])
+            Event.chrissy_teigen_live_tweets_nightmare_flight_after_bizarre_passenger_mishap, [
+                'http://www.huffingtonpost.ca/entry/chrissy-teigen-flight-passenger-mishap_us_5a432f50e4b025f99e18a720',
+                'http://edition.cnn.com/2017/12/27/us/chrissy-teigen-flight-mixup-trnd/index.html',
+                'http://edition.cnn.com/2017/12/27/us/wrong-flight-passengers-trnd/index.html',
+                'https://www.nytimes.com/2017/12/27/travel/chrissy-teigen-flight.html',
+                'https://www.nytimes.com/reuters/2017/12/27/world/asia/27reuters-lax-flight.html',
+                'https://www.npr.org/sections/thetwo-way/2017/03/27/521649877/outrage-explanations-after-united-bans-girls-from-flight-for-wearing-leggings',
+                'http://www.dailymail.co.uk/news/article-5214223/LAX-Tokyo-flight-u-turns-unauthorized-person.html',
+                'https://www.rt.com/usa/414330-flight-unauthorized-passenger-la/',
+                'http://www.chinadaily.com.cn/cndy/2017-03/28/content_28700590.htm',
+                'https://www.washingtonpost.com/national/plane-returns-to-la-because-passenger-was-on-wrong-flight/2017/12/27/e09e620c-eb1f-11e7-956e-baea358f9725_story.html'
+            ])
+
 add_article(Category.entertainment, Topic.unspecific,
-            Event.cardi_b_desperately_working_to_find_offsets_hacker_after_they_leak_cheating_video__more, [])
+            Event.cardi_b_desperately_working_to_find_offsets_hacker_after_they_leak_cheating_video__more, [
+                'https://gazelle.popsugar.com/article/cardi-b-desperately-working-to-find-offsets-hacker-after-they-leak-cheating-video-more-7162002',
+                'http://www.dailymail.co.uk/tvshowbiz/article-5207963/Cardi-B-fans-outraged-rapper-hit-sex-tape-claims.html'
+            ])
 add_article(Category.entertainment, Topic.unspecific,
-            Event.rihanna_calls_for_an_end_to_gun_violence_after_death_of_her_cousin_in_barbados, [])
+            Event.rihanna_calls_for_an_end_to_gun_violence_after_death_of_her_cousin_in_barbados, [
+                'http://www.thisisinsider.com/rihanna-cousin-dead-calls-for-gun-control-2017-12',
+                'http://www.telegraph.co.uk/news/2017/12/27/rihanna-calls-end-gun-violence-cousin-shot-dead/',
+                'http://www.dailymail.co.uk/wires/ap/article-5216099/Rihanna-mourns-cousins-death-calls-end-gun-violence.html',
+                'https://www.rt.com/news/414348-rihanna-cousin-shot-dead/'
+                'https://www.washingtonpost.com/entertainment/music/rihanna-mourns-cousins-death-calls-an-end-to-gun-violence/2017/12/27/f83e9708-eb40-11e7-956e-baea358f9725_story.html?utm_term=.c694e89b94ef'
+            ])
 ## sport
 add_article(Category.sports, Topic.unspecific,
             Event.american_airlines_apologizes_after_g_league_players_accused_of_stealing_blankets_thrown_off_flight,
-            [])
+            [
+                'http://abcnews.go.com/Sports/american-airlines-apologizes-league-players-accused-stealing-blankets/story?id=52010243',
+                'https://www.nytimes.com/aponline/2017/12/27/us/ap-us-american-airlines-players-removed.html',
+                'http://www.dailymail.co.uk/wires/ap/article-5215769/American-sorry-accusing-NBA-G-League-players-theft.html',
+                'http://www.dailymail.co.uk/news/article-5215065/American-sorry-accusing-pro-basketball-players-theft.html',
+                'https://www.washingtonpost.com/business/american-sorry-for-accusing-pro-basketball-players-of-theft/2017/12/27/e629ec7a-eaff-11e7-956e-baea358f9725_story.html?utm_term=.0050a351a99a',
+                'https://www.washingtonpost.com/business/american-sorry-for-accusing-pro-basketball-players-of-theft/2017/12/27/5a170a8a-eb2a-11e7-956e-baea358f9725_story.html?utm_term=.af4975d3376b'
+            ])
 add_article(Category.sports, Topic.unspecific,
-            Event.how_astros_first_base_coach_rich_dauer_escaped_near_death_after_world_series_parade, [])
+            Event.how_astros_first_base_coach_rich_dauer_escaped_near_death_after_world_series_parade, [
+
+            ])
 add_article(Category.sports, Topic.unspecific, Event.pittsburgh_steelers_cruise_to_win_over_texans, [])
 ## science
 add_article(Category.science, Topic.unspecific, Event.possible_meteor_lights_up_night_sky_in_new_england, [])

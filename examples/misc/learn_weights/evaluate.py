@@ -1,5 +1,5 @@
 """
-checks all result files(all xxxxx_processed.prickle) an writes results to /result/
+checks all result files  subdirectories of queue_caches an writes results to /result/
 """
 import csv
 import glob
@@ -12,10 +12,9 @@ from itertools import groupby
 from misc.learn_weights.csv_to_parallel_coordinates_plotter import generate_plot
 from tools import mapper
 
-
 def weights_to_string(weights):
     """
-    converts an array of ints to string
+    converts an array of ints to a string.
     :param weights:
     :return:
     """
@@ -155,9 +154,10 @@ def stats_helper(list):
     :param list:
     :return:
     """
-    mean = statistics.mean(list)
 
+    mean = statistics.mean(list)
     mode = None
+
     try:
         mode = statistics.mode(list)
     except statistics.StatisticsError:
@@ -168,7 +168,6 @@ def stats_helper(list):
         'mean': mean,
         'variance': statistics.pvariance(list, mu=mean),
         'standard_deviation': statistics.pstdev(list, mu=mean),
-        # 'harmonic_mean': statistics.harmonic_mean(list),
         'median': statistics.median(list),
         'median_low': statistics.median_low(list),
         'median_high': statistics.median_high(list),
@@ -267,7 +266,7 @@ def evaluate(score_results, write_full: bool = False, praefix=''):
     # has a low dist on average per weight (documents are merged)
     score_per_average_extrem = {}
     score_per_average = {}
-    # results_error_rate = {}
+
     for question in score_results:
         score_per_average_extrem
         for extracting_parameters_id in score_results[question]:
@@ -283,12 +282,9 @@ def evaluate(score_results, write_full: bool = False, praefix=''):
                 scores = remove_errors(raw_scores)
                 scores_sum = sum(scores)
                 avg = (scores_sum / len(scores))
-                if avg < 0.23:
-                    print('a')
 
                 score_per_average.setdefault(question_extract_id, {})[combination_string] = {
                     'score': scores_sum,
-                    # 'norm_score':
                     'avg': avg,
                     'weight': combo['weights']
                 }
@@ -296,9 +292,9 @@ def evaluate(score_results, write_full: bool = False, praefix=''):
                 extr['min'] = min(extr['min'], scores_sum)
                 extr['max'] = max(extr['max'], scores_sum)
 
-    for minmax in score_per_average_extrem:
-        minmax = score_per_average_extrem[minmax]
-        minmax['max_minus_min'] = minmax['max'] - minmax['min']
+    for min_max in score_per_average_extrem:
+        min_max = score_per_average_extrem[min_max]
+        min_max['max_minus_min'] = min_max['max'] - min_max['min']
 
     # normalize the avg weights over all weights, per question
     for question in score_per_average:
@@ -315,8 +311,6 @@ def evaluate(score_results, write_full: bool = False, praefix=''):
     final_result = {}
     for question in score_per_average:
         score_per_average_list = list(score_per_average[question].values())
-
-        # score_per_average_list.sort(key=lambda x: x['norm_score'], reverse=False)
 
         final_result[question] = {
             'best_dist': merge_top(score_per_average_list, 'norm_score')
@@ -335,6 +329,8 @@ def evaluate(score_results, write_full: bool = False, praefix=''):
 
 
 if __name__ == '__main__':
+    # evaluate training
     process_files('queue_caches/*_processed*/', praefix='training')
+    # evaluate testing
     # process_files('queue_caches/*pre_calculated_processed*/', praefix='test')
     # process_files('queue_caches/*where_pre_calculated_processed*/', praefix='test')

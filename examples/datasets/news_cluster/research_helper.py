@@ -8,7 +8,7 @@ import webbrowser
 '''
 
 # Set your search term here.
-search_term = 'American Airlines apologized to two NBA'
+search_term = 'meteor lights New England'
 search_term_plus = search_term.replace(' ', '+')
 search_term_encoded = urllib.parse.quote(search_term)
 urls = [

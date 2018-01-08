@@ -44,7 +44,7 @@ class MethodExtractor(AbsExtractor):
     # end of sentence, quote, PERIOD, COLON, QUOTE
     _blacklist = ['.', '"', '\'', ';']
 
-    def __init__(self, weights: (float, float) = [0.15, 0, 0.2, 0.7],
+    def __init__(self, weights: (float, float) = [0.14, 0, 0.14, 0.72],
                  extension_strategy: ExtensionStrategy = ExtensionStrategy.Blacklist_Max_Range, phrase_range: int = 4):
         """
         weights used in the candidate evaluation:

@@ -33,7 +33,7 @@ class EnvironmentExtractor(AbsExtractor):
         99720000000)  # median country according to https://de.wikipedia.org/wiki/Liste_der_Staaten_der_Erde#Liste
     area_norm_delta = area_norm_max - area_norm_min
 
-    def __init__(self, weights=((0.45, 0.46, 0.09, 0.0), (0.24, 0.16, 0, 0.4, 0.2)), phrase_range_location: int = 3,
+    def __init__(self, weights=((0.37, 0.3, 0.3, 0.03), (0.24, 0.16, 0, 0.4, 0.2)), phrase_range_location: int = 3,
                  time_range: int = 86400, host='nominatim.openstreetmap.org', skip_when: bool = False,
                  skip_where: bool = False):
         """

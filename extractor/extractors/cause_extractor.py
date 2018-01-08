@@ -37,12 +37,12 @@ class CauseExtractor(AbsExtractor):
     constraints_hyponyms = {'entity': None, 'phenomenon': None, 'abstraction': None, 'group': None, 'possession': None,
                             'event': None, 'act': None, 'state': None}
 
-    def __init__(self, weights: (float, float, float, float) = (.5, .5, .6, .5)):
+    def __init__(self, weights: (float, float, float, float) = (.42, .58, .45, .167)):
         """
-        Load WordNet corpus
+        Load WordNet corpus.
 
         :param weights: (position, clausal conjunction, adverbial indicator, NP-VP-NP)
-        :type weights: (Float, Float)
+        :type weights: (Float, Float, Float, Float)
         """
         self.log = logging.getLogger('GiveMe5W')
 
@@ -251,7 +251,10 @@ class CauseExtractor(AbsExtractor):
         """
         # ranked_candidates = []
         candidates = document.get_candidates(self.get_id())
-        weights_sum = sum(self.weights)
+
+        # normalization sum is only first and second weight, because the second to fourth weights
+        # are only virtual weights but actually scores
+        weights_norm_sum = self.weights[0] + self.weights[1]
 
         for candidateObject in candidates:
 
@@ -268,12 +271,12 @@ class CauseExtractor(AbsExtractor):
                 elif candidateObject.get_type() == 'RB':
                     # while not as significant as biclausal indicators, adverbials are mor significant as the verbs
                     score += self.weights[2]
-                else:
-                    # NP-VP-NP
+                else: # NP-VP-NP
                     score += self.weights[3]
 
                 if score > 0:
-                    score /= weights_sum
+                    score /= weights_norm_sum
+
                 # NEW
                 candidateObject.set_score(score)
 

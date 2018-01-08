@@ -33,7 +33,7 @@ class EnvironmentExtractor(AbsExtractor):
         99720000000)  # median country according to https://de.wikipedia.org/wiki/Liste_der_Staaten_der_Erde#Liste
     area_norm_delta = area_norm_max - area_norm_min
 
-    def __init__(self, weights=((0.45, 0.46, 0.09, 0.0), (0.21, 0.13, 0.08, 0.38, 0.2)), phrase_range_location: int = 3,
+    def __init__(self, weights=((0.45, 0.46, 0.09, 0.0), (0.24, 0.16, 0, 0.4, 0.2)), phrase_range_location: int = 3,
                  time_range: int = 86400, host='nominatim.openstreetmap.org', skip_when: bool = False,
                  skip_where: bool = False):
         """
@@ -43,7 +43,7 @@ class EnvironmentExtractor(AbsExtractor):
         you can enable/disable them to increase execution speed
 
         :param weights: Weights used to evaluate answer candidates.
-        :type weights: ((Float, Float), (Float, Float, Float)), weights used in the candidate evaluation:
+        :type weights: ((Float, Float), (Float, Float, Float)), weights used in the candidate scoring:
         ((position, frequency, entailment, accurate), (position, frequency, entailment, distance_from_publisher_date, accurate))
         :param host: Address of the Nominatim host
         :type host: String

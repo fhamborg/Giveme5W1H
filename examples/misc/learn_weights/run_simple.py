@@ -73,10 +73,11 @@ if __name__ == '__main__':
     sh.setLevel(logging.INFO)
     log.addHandler(sh)
 
-    # who and what are using them same trainer. Declare just one !!
+    # who and what are using them same trainer. Declare just one !!!
+
     # its recommended to run one by one to keep memory print low
     # questions = ['who','why', 'where', 'when', 'how']
-    learn_questions = ['who']
+    learn_questions = ['what']  # output is also  who
     # learn_questions = ['why']
     # learn_questions = ['where']
     # learn_questions = ['when']
@@ -84,7 +85,7 @@ if __name__ == '__main__':
 
 
     #
-    # Training - with the best weights - found with evaluation
+    # Training - to find the best weights
     #
     q, lock = get_queue_wth_lock_and_worker()
 
@@ -100,8 +101,12 @@ if __name__ == '__main__':
     # evaluate results - by cecking all subfolders for processd woking parts
     process_files('queue_caches/*_processed*/', praefix='training')
 
+
+
+
+
     #
-    # Test - with the best weights - found with evaluation
+    # Test - with the best weights - found with training/evaluation
     #
     q, lock = get_queue_wth_lock_and_worker()
 

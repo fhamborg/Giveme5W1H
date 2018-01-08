@@ -146,8 +146,9 @@ class ActionExtractor(AbsExtractor):
                             contains_ne = True
                             break
 
-            # the last important parameter is the entailment of a named entity
-            score += self.weights[2]
+            if contains_ne:
+                # the last important parameter is the entailment of a named entity
+                score += self.weights[2]
 
             if score > 0:
                 # normalize the scoring

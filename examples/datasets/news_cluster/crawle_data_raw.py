@@ -3,6 +3,10 @@ import glob
 import hashlib
 import json
 import os.path
+import requests
+import copy
+import http
+import urllib
 from enum import Enum
 from enum import auto
 from typing import List
@@ -38,14 +42,28 @@ def write_json(path, filename, object):
         data_file.close()
 
 
-def json_exist_has_content(path, filename):
-    _path = path + '/' + filename + '.' + 'json'
+def file_exist_has_content(path, filename):
+    _path = path + '/' + filename
     if os.path.exists(_path):
         if os.stat(_path).st_size != 0:
             return True
     return False
 
 
+
+
+def check_image(article):
+    file_exist_has_content
+    # todo: skip, if already  donwlaoded
+    if article['image_url']:
+        extension = article['image_url'].split('.')[-1].split('?')[-1].lower()
+
+        if extension in ['jpg', 'jpeg', 'tiff', 'tif', 'gif', 'bmp', 'png']:
+            filename = article['dId'] + '.' + extension
+            if not file_exist_has_content('data_image', filename):
+                f = open('data_image/' + filename, 'wb')
+                f.write(requests.get(article['image_url']).content)
+                f.close()
 #
 # DATASET
 #
@@ -262,7 +280,7 @@ add_article(Category.entertainment, Topic.unspecific,
                 'http://www.thisisinsider.com/rihanna-cousin-dead-calls-for-gun-control-2017-12',
                 'http://www.telegraph.co.uk/news/2017/12/27/rihanna-calls-end-gun-violence-cousin-shot-dead/',
                 'http://www.dailymail.co.uk/wires/ap/article-5216099/Rihanna-mourns-cousins-death-calls-end-gun-violence.html',
-                'https://www.rt.com/news/414348-rihanna-cousin-shot-dead/'
+                'https://www.rt.com/news/414348-rihanna-cousin-shot-dead/',
                 'https://www.washingtonpost.com/entertainment/music/rihanna-mourns-cousins-death-calls-an-end-to-gun-violence/2017/12/27/f83e9708-eb40-11e7-956e-baea358f9725_story.html?utm_term=.c694e89b94ef'
             ])
 ## sport
@@ -273,17 +291,30 @@ add_article(Category.sports, Topic.unspecific,
                 'https://www.nytimes.com/aponline/2017/12/27/us/ap-us-american-airlines-players-removed.html',
                 'http://www.dailymail.co.uk/wires/ap/article-5215769/American-sorry-accusing-NBA-G-League-players-theft.html',
                 'http://www.dailymail.co.uk/news/article-5215065/American-sorry-accusing-pro-basketball-players-theft.html',
-                'https://www.washingtonpost.com/business/american-sorry-for-accusing-pro-basketball-players-of-theft/2017/12/27/e629ec7a-eaff-11e7-956e-baea358f9725_story.html?utm_term=.0050a351a99a',
-                'https://www.washingtonpost.com/business/american-sorry-for-accusing-pro-basketball-players-of-theft/2017/12/27/5a170a8a-eb2a-11e7-956e-baea358f9725_story.html?utm_term=.af4975d3376b'
+                'https://www.washingtonpost.com/business/american-sorry-for-accusing-pro-basketball-players-of-theft/2017/12/27/e629ec7a-eaff-11e7-956e-baea358f9725_story.html?utm_term=.0050a351a99a'
             ])
 add_article(Category.sports, Topic.unspecific,
             Event.how_astros_first_base_coach_rich_dauer_escaped_near_death_after_world_series_parade, [
-
+                'http://www.sportingnews.com/mlb/news/mlb-rich-dauer-astros-world-series-parade-the-athletic/1ufzt74dwoy31so676szepvlx',
+                'http://www.dailymail.co.uk/news/article-5214549/Houston-Astros-coach-nearly-died-World-Series-win.html',
+                'http://www.nydailynews.com/sports/baseball/astros-base-coach-died-collapsing-parade-article-1.3722556'
             ])
-add_article(Category.sports, Topic.unspecific, Event.pittsburgh_steelers_cruise_to_win_over_texans, [])
+add_article(Category.sports, Topic.unspecific, Event.pittsburgh_steelers_cruise_to_win_over_texans, [
+    'http://www.kearneyhub.com/sports/national/pittsburgh-steelers-cruise-to-win-over-texans/article_5a984248-ea63-11e7-b6b4-e7a0448030c5.html',
+    'https://www.nytimes.com/2017/12/25/sports/football/pittsburgh-steelers-playoffs.html',
+    'http://www.dailymail.co.uk/wires/pa/article-5212545/Pittsburgh-Steelers-enjoy-Christmas-cheer.html',
+    'https://www.washingtonpost.com/sports/redskins/steelers-clinch-first-round-bye-with-34-6-win-over-texans/2017/12/25/cef9456c-e9d5-11e7-956e-baea358f9725_story.html?utm_term=.f98fe018784d'
+])
 ## science
-add_article(Category.science, Topic.unspecific, Event.possible_meteor_lights_up_night_sky_in_new_england, [])
-add_article(Category.science, Topic.unspecific, Event.elon_musk_reveals_red_tesla_roadster_bound_for_mars, [])
+add_article(Category.science, Topic.unspecific, Event.possible_meteor_lights_up_night_sky_in_new_england, [
+    'https://www.nytimes.com/aponline/2017/12/27/us/ap-us-new-england-fireball.html',
+    'https://www.rt.com/usa/414380-dazzling-meteor-new-england/',
+    'https://www.washingtonpost.com/national/health-science/fireball-lights-up-social-media-evening-sky-in-new-england/2017/12/27/d6348a38-eb0d-11e7-956e-baea358f9725_story.html?utm_term=.e120302926af',
+    'http://www.cetusnews.com/news/Possible-meteor-lights-up-night-sky-in-New-England.r1o8Lm-QG.html'
+])
+add_article(Category.science, Topic.unspecific, Event.elon_musk_reveals_red_tesla_roadster_bound_for_mars, [
+
+])
 add_article(Category.science, Topic.unspecific, Event.smoke_rings_spotted_in_the_ocean_from_space, [])
 
 # 30.12.2017 - 31.12.
@@ -551,22 +582,26 @@ add_article(Category.world, Topic.legancy, Event.north_Korea_hokkaido_missile, [
 
 if __name__ == '__main__':
     # crawling itself
-    for index, info_article in enumerate(articles):
-        url = info_article['Url']
+    for index, info_article_list in enumerate(articles):
+        url = info_article_list['Url']
+
+        info_article = copy.deepcopy(info_article_list)
+        del info_article['Url']
         dId = hashlib.sha224(url.encode('utf-8')).hexdigest()
 
-        if not json_exist_has_content('data_raw', dId):
+        print(url)
+
+        if not file_exist_has_content('data_raw', dId + '.json'):
             # this is an object
             try:
                 article = NewsPlease.from_url(url)
 
+
                 # this is an dict
                 article_dict = article.get_dict()
 
-                article_dict['newsCluster'] = info_article
-
-                # enhancement for giveme5w
                 article_dict['dId'] = dId
+                article_dict['newsCluster'] = info_article
 
                 # datetime-datetime-not-json-serializable bugfix"
                 if article_dict.get('date_publish'):
@@ -574,18 +609,30 @@ if __name__ == '__main__':
                 if article_dict.get('date_download'):
                     article_dict['date_download'] = article_dict['date_download'].isoformat()
 
+                check_image(article_dict)
                 write_json('data_raw', article_dict['dId'], article_dict)
-                print(url)
-            except Exception as e:
+
+            except http.client.RemoteDisconnected as e:
                 print(e)
-                print(url)
+            except urllib.error.HTTPError as e:
+                print(e)
         else:
             print('skipped, newsCluster updated')
-            with open('data_raw' + '/' + dId + '.' + 'json', encoding='utf-8') as data_file:
+            path = 'data_raw' + '/' + dId + '.' + 'json'
+            with open(path, encoding='utf-8') as data_file:
                 data = json.load(data_file)
+                check_image(data)
                 data['newsCluster'] = info_article
-            with open('data_raw' + '/' + dId + '.' + 'json', encoding='utf-8', mode='w') as data_file:
+            with open(path, encoding='utf-8', mode='w') as data_file:
                 data_file.write(json.dumps(data, sort_keys=False, indent=2))
+
+
+
+    # crawle images, if any
+
+
+
+
 
     # preprocess into data
     for f in glob.glob('data/*'):

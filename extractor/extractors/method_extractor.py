@@ -10,7 +10,7 @@ from extractor.extractors.abs_extractor import AbsExtractor
 class ExtensionStrategy(Enum):
     Range = 1
     Blacklist = 2
-    Blacklist_Max_Range = 3
+    Blacklist_Max_Range = 5
 
 
 class MethodExtractor(AbsExtractor):

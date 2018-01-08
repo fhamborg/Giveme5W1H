@@ -2,6 +2,7 @@
 Helper to run learn with different configurations.
 Be sure to remove the training set from input before running
 """
+import csv
 import json
 import logging
 import queue
@@ -20,6 +21,37 @@ def load_best_weights(path):
     with open(path, encoding='utf-8') as data_file:
         data = json.load(data_file)
     return data['best_dist']['weights']
+
+
+def load_weights_csv(path, top_percent: float=0.05):
+    csv_content = []
+
+    header = True
+    with open(path + '.csv', 'r') as csvfile:
+        reader = csv.reader(csvfile)
+        # read header
+
+        # read file
+        for row in reader:
+            if header:
+                header = False
+                score_index = row.index("score")
+            else:
+                csv_content.append(row)
+
+    # should already be sorted, but to be sure....
+    csv_content.sort(key=lambda x: x[score_index])
+    take_top_n = int(len(csv_content) * top_percent)
+    last_weight = score_index
+
+    sub_list = csv_content[0: take_top_n]
+    final_list = [o[0:last_weight] for o in sub_list]
+
+    # string to float
+    for i,weights in enumerate(final_list):
+        for ix, weight in enumerate(weights):
+            final_list[i][ix] = float(final_list[i][ix])
+    return final_list
 
 
 def method(lock, pre_calculated_weights):
@@ -125,6 +157,7 @@ if __name__ == '__main__':
     q = queue.Queue()
     lock = threading.Lock()  # Wordnet is not threadsave
 
+    #print()
     # WHO, WHAT
     #weights = load_best_weights('./result/training_final_result_what_1.json')
     #q.put(action(lock, weights))
@@ -134,8 +167,8 @@ if __name__ == '__main__':
     #q.put(environment_where(lock, weights))
 
     # WHEN
-    # weights = load_best_weights('./result/training_final_result_when_1.json')
-    # q.put(environment_when(lock, weights))
+    weights = load_weights_csv('./result/wmd/wmd_when_fix_entailment/training_final_result_when_1_avg')
+    q.put(environment_when(lock, weights))
 
     # WHY
     # weights = load_best_weights('./result/training_final_result_why_1.json')

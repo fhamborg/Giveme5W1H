@@ -68,17 +68,24 @@ def process_files(path, praefix):
 
 def remove_errors(list):
     """
-    returns a list where all -1 are replace with the biggest value and all oder negative entries are removed at all
+    returns a list where all -1 are replace with the biggest value
     :param list:
     :return:
     """
     # remove no annotation error, by replacing with worst distance
     a_max = max(list)
-    tmp = [a_max if v is -1 else v for v in list]
-
+    error_count = 0
+    tmp = []
+    for score in list:
+        if score <= 0:
+            tmp.append(a_max)
+            error_count = error_count + 1
+        else:
+            tmp.append(score)
+    # tmp = [a_max if v is -1 else v for v in list]
     # remove other errors
-    result = [x for x in tmp if x and x >= 0]
-    return result
+    #result = [x for x in tmp if x and x >= 0]
+    return tmp, error_count, a_max
 
 
 def normalize(list):
@@ -252,7 +259,7 @@ def index_of_best(list):
     :param list:
     :return:
     """
-    a_list = remove_errors(list)
+    a_list, error_count, error = remove_errors(list)
     return list.index(min(a_list))
 
 
@@ -279,12 +286,17 @@ def evaluate(score_results, write_full: bool = False, praefix=''):
                 combo = score_results[question][extracting_parameters_id]['weights'][combination_string]
 
                 raw_scores = combo['scores_doc']
-                scores = remove_errors(raw_scores)
-                scores_sum = sum(scores)
+                scores, error_count, error = remove_errors(raw_scores)
+
+                # error is (error_count * error) - subtract it to keep score representative (e.g. km)
+                scores_sum_wrong = sum(scores)
+                scores_sum = scores_sum_wrong - (error_count * error)
+
                 avg = (scores_sum / len(scores))
 
                 score_per_average.setdefault(question_extract_id, {})[combination_string] = {
                     'score': scores_sum,
+                    'error_count': error_count,
                     'avg': avg,
                     'weight': combo['weights']
                 }
@@ -296,6 +308,8 @@ def evaluate(score_results, write_full: bool = False, praefix=''):
         min_max = score_per_average_extrem[min_max]
         min_max['max_minus_min'] = min_max['max'] - min_max['min']
 
+
+
     # normalize the avg weights over all weights, per question
     for question in score_per_average:
         items = score_per_average[question]
@@ -306,6 +320,11 @@ def evaluate(score_results, write_full: bool = False, praefix=''):
                 item['norm_score'] = (item['score'] - extrem_item['min']) / extrem_item['max_minus_min']
             else:
                 item['norm_score'] = (item['score'] - extrem_item['min'])
+
+    # sort all scores
+    #for question in score_per_average:
+     #   items = score_per_average[question]
+        #items.sort(key=lambda x: x['score'])
 
     # finally, get the best weighting and save it to a file
     final_result = {}
@@ -331,6 +350,5 @@ def evaluate(score_results, write_full: bool = False, praefix=''):
 if __name__ == '__main__':
     # evaluate training
     process_files('queue_caches/*_processed*/', praefix='training')
-    # evaluate testing
-    # process_files('queue_caches/*pre_calculated_processed*/', praefix='test')
+    process_files('queue_caches/*pre_calculated_processed*/', praefix='test')
     # process_files('queue_caches/*where_pre_calculated_processed*/', praefix='test')

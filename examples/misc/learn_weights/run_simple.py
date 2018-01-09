@@ -80,11 +80,11 @@ if __name__ == '__main__':
     # its recommended to run one by one to keep memory print low
     # questions = ['who','why', 'where', 'when', 'how']
     # learn_questions = ['what']  # output is also  who
-    # learn_questions = ['why']
+     learn_questions = ['why']
     # learn_questions = ['where']
     # learn_questions = ['when']
     # learn_questions = ['how']
-    learn_questions = ['how','what','why']
+    # learn_questions = ['how','what','why']
 
 
     #
@@ -92,7 +92,7 @@ if __name__ == '__main__':
     #
     q, lock = get_queue_wth_lock_and_worker()
 
-    #load_trainer_for_question(q, learn_questions)
+    load_trainer_for_question(q, learn_questions)
 
     # wait till all trainings are done
     q.join()
@@ -102,7 +102,7 @@ if __name__ == '__main__':
     #
 
     # evaluate results - by cecking all subfolders for processd woking parts
-    #process_files('queue_caches/*_processed*/', praefix='training')
+    process_files('queue_caches/*_processed*/', praefix='training')
 
 
 

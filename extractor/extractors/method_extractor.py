@@ -10,7 +10,7 @@ from extractor.extractors.abs_extractor import AbsExtractor
 class ExtensionStrategy(Enum):
     Range = 1
     Blacklist = 2
-    Blacklist_Max_Range = 5
+    Blacklist_Max_Range = 3
 
 
 class MethodExtractor(AbsExtractor):
@@ -45,7 +45,7 @@ class MethodExtractor(AbsExtractor):
     _blacklist = ['.', '"', '\'', ';']
 
     def __init__(self, weights: (float, float) = [0.14, 0, 0.14, 0.72],
-                 extension_strategy: ExtensionStrategy = ExtensionStrategy.Blacklist_Max_Range, phrase_range: int = 4):
+                 extension_strategy: ExtensionStrategy = ExtensionStrategy.Blacklist_Max_Range, phrase_range: int = 5):
         """
         weights used in the candidate evaluation:
         (position, frequency, conjunction, adjectives/adverbs)

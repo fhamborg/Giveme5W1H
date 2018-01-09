@@ -57,7 +57,45 @@
           "parsed": "2016-11-07"
         }
       ],
-      "label": "when"
+      "label": "when",
+      "extracted": [
+        {
+          "parts": [
+            [
+              {
+                "nlpToken": {
+                  "characterOffsetBegin": 139,
+                  "word": "Sunday",
+                  "lemma": "Sunday",
+                  "timex": {
+                    "value": "2016-11-06",
+                    "tid": "t3",
+                    "type": "DATE"
+                  },
+                  "before": " ",
+                  "characterOffsetEnd": 145,
+                  "originalText": "Sunday",
+                  "normalizedNER": "2016-11-06",
+                  "speaker": "PER0",
+                  "after": " ",
+                  "ner": "DATE",
+                  "index": 29,
+                  "pos": "NNP"
+                }
+              },
+              "NNP"
+            ]
+          ],
+          "score": 0.7737300369815271,
+          "text": "Sunday",
+          "enhancement": {
+            "timex": {
+              "start_date": "2016-11-06T00:00:00",
+              "end_date": "2016-11-06T23:59:59"
+            }
+          }
+        }
+      ]
     },
     "why": {
       "annotated": [
@@ -66,7 +104,33 @@
           "coderPhraseCount": 3
         }
       ],
-      "label": "why"
+      "label": "why",
+      "extracted": [
+        {
+          "parts": [
+            [
+              {
+                "nlpToken": {
+                  "characterOffsetBegin": 146,
+                  "word": "it",
+                  "lemma": "it",
+                  "characterOffsetEnd": 148,
+                  "speaker": "PER0",
+                  "ner": "O",
+                  "after": " ",
+                  "originalText": "it",
+                  "before": " ",
+                  "index": 30,
+                  "pos": "PRP"
+                }
+              },
+              "PRP"
+            ]
+          ],
+          "score": 0.5844155844155844,
+          "text": "it"
+        }
+      ]
     },
     "how": {
       "annotated": [
@@ -154,46 +218,10 @@
                 }
               },
               "VBD"
-            ],
-            [
-              {
-                "nlpToken": {
-                  "characterOffsetBegin": 3263,
-                  "word": "meaningless",
-                  "lemma": "meaningless",
-                  "characterOffsetEnd": 3274,
-                  "speaker": "197",
-                  "ner": "O",
-                  "after": "",
-                  "originalText": "meaningless",
-                  "before": " ",
-                  "index": 9,
-                  "pos": "JJ"
-                }
-              },
-              "JJ"
-            ],
-            [
-              {
-                "nlpToken": {
-                  "characterOffsetBegin": 3274,
-                  "word": ",",
-                  "lemma": ",",
-                  "characterOffsetEnd": 3275,
-                  "speaker": "197",
-                  "ner": "O",
-                  "after": " ",
-                  "originalText": ",",
-                  "before": "",
-                  "index": 10,
-                  "pos": ","
-                }
-              },
-              ","
             ]
           ],
           "score": 1.0,
-          "text": "the new emails were meaningless ,",
+          "text": "the new emails were",
           "nlpIndexSentence": 5
         }
       ]
@@ -205,7 +233,54 @@
           "coderPhraseCount": 3
         }
       ],
-      "label": "where"
+      "label": "where",
+      "extracted": [
+        {
+          "parts": [
+            [
+              {
+                "nlpToken": {
+                  "characterOffsetBegin": 372,
+                  "word": "U.S.",
+                  "lemma": "U.S.",
+                  "characterOffsetEnd": 376,
+                  "speaker": "PER0",
+                  "ner": "LOCATION",
+                  "after": " ",
+                  "originalText": "U.S.",
+                  "before": " ",
+                  "index": 67,
+                  "pos": "NNP"
+                }
+              },
+              "NNP"
+            ]
+          ],
+          "score": 0.7,
+          "text": "U.S.",
+          "enhancement": {
+            "openstreetmap_nominatim": {
+              "osm_id": "276671197",
+              "boundingbox": [
+                45.1895505,
+                45.1896185,
+                -88.7322087,
+                -88.7321082
+              ],
+              "licence": "Data \u00a9 OpenStreetMap contributors, ODbL 1.0. http://www.openstreetmap.org/copyright",
+              "importance": 0.201,
+              "icon": "https://nominatim.openstreetmap.org/images/mapicons/transport_fuel.p.20.png",
+              "osm_type": "way",
+              "display_name": "U.S., State Highway 55, Sunny Waters, Lily, Town of Langlade, Langlade County, Wisconsin, 54462, United States of America",
+              "lat": "45.1895845",
+              "type": "fuel",
+              "place_id": "136017889",
+              "lon": "-88.73215845",
+              "class": "amenity"
+            }
+          }
+        }
+      ]
     },
     "what": {
       "annotated": [

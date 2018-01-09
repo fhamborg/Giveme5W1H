@@ -19,25 +19,60 @@
             [
               {
                 "nlpToken": {
-                  "characterOffsetBegin": 350,
-                  "word": "Taliban",
-                  "lemma": "Taliban",
-                  "characterOffsetEnd": 357,
+                  "characterOffsetBegin": 34,
+                  "word": "The",
+                  "lemma": "the",
+                  "characterOffsetEnd": 37,
                   "speaker": "PER0",
-                  "ner": "ORGANIZATION",
+                  "ner": "O",
                   "after": " ",
-                  "originalText": "Taliban",
+                  "originalText": "The",
                   "before": " ",
-                  "index": 2,
-                  "pos": "NNP"
+                  "index": 6,
+                  "pos": "DT"
                 }
               },
-              "NNP"
+              "DT"
+            ],
+            [
+              {
+                "nlpToken": {
+                  "characterOffsetBegin": 38,
+                  "word": "massive",
+                  "lemma": "massive",
+                  "characterOffsetEnd": 45,
+                  "speaker": "PER0",
+                  "ner": "O",
+                  "after": " ",
+                  "originalText": "massive",
+                  "before": " ",
+                  "index": 7,
+                  "pos": "JJ"
+                }
+              },
+              "JJ"
+            ],
+            [
+              {
+                "nlpToken": {
+                  "characterOffsetBegin": 46,
+                  "word": "blast",
+                  "lemma": "blast",
+                  "characterOffsetEnd": 51,
+                  "speaker": "PER0",
+                  "ner": "O",
+                  "after": " ",
+                  "originalText": "blast",
+                  "before": " ",
+                  "index": 8,
+                  "pos": "NN"
+                }
+              },
+              "NN"
             ]
           ],
           "score": 1.0,
-          "text": "Taliban",
-          "nlpIndexSentence": 2
+          "text": "The massive blast"
         }
       ]
     },
@@ -48,7 +83,70 @@
           "parsed": "2016-11-10"
         }
       ],
-      "label": "when"
+      "label": "when",
+      "extracted": [
+        {
+          "parts": [
+            [
+              {
+                "nlpToken": {
+                  "characterOffsetBegin": 420,
+                  "word": "last",
+                  "lemma": "last",
+                  "timex": {
+                    "value": "2016-W44",
+                    "tid": "t1",
+                    "type": "DATE"
+                  },
+                  "before": " ",
+                  "characterOffsetEnd": 424,
+                  "originalText": "last",
+                  "normalizedNER": "2016-W44",
+                  "speaker": "PER0",
+                  "after": " ",
+                  "ner": "DATE",
+                  "index": 14,
+                  "pos": "JJ"
+                }
+              },
+              "JJ"
+            ],
+            [
+              {
+                "nlpToken": {
+                  "characterOffsetBegin": 425,
+                  "word": "week",
+                  "lemma": "week",
+                  "timex": {
+                    "value": "2016-W44",
+                    "tid": "t1",
+                    "type": "DATE"
+                  },
+                  "before": " ",
+                  "characterOffsetEnd": 429,
+                  "originalText": "week",
+                  "normalizedNER": "2016-W44",
+                  "speaker": "PER0",
+                  "after": " ",
+                  "ner": "DATE",
+                  "index": 15,
+                  "pos": "NN"
+                }
+              },
+              "NN"
+            ]
+          ],
+          "score": 0.8175373083867084,
+          "text": "last week",
+          "enhancement": {
+            "timex": {
+              "start_date": "2016-11-06T00:00:00",
+              "end_date": "2016-11-12T23:59:59"
+            }
+          },
+          "nlpIndexSentence": 2
+        }
+      ]
     },
     "why": {
       "annotated": [
@@ -57,7 +155,34 @@
           "coderPhraseCount": 3
         }
       ],
-      "label": "why"
+      "label": "why",
+      "extracted": [
+        {
+          "parts": [
+            [
+              {
+                "nlpToken": {
+                  "characterOffsetBegin": 229,
+                  "word": "Gunman",
+                  "lemma": "gunman",
+                  "characterOffsetEnd": 235,
+                  "speaker": "PER0",
+                  "ner": "O",
+                  "after": " ",
+                  "originalText": "Gunman",
+                  "before": " ",
+                  "index": 1,
+                  "pos": "NN"
+                }
+              },
+              "NN"
+            ]
+          ],
+          "score": 0.5590318772136953,
+          "text": "Gunman",
+          "nlpIndexSentence": 1
+        }
+      ]
     },
     "how": {
       "annotated": [
@@ -141,61 +266,25 @@
                 }
               },
               "IN"
-            ],
-            [
-              {
-                "nlpToken": {
-                  "characterOffsetBegin": 278,
-                  "word": "the",
-                  "lemma": "the",
-                  "characterOffsetEnd": 281,
-                  "speaker": "PER0",
-                  "ner": "O",
-                  "after": " ",
-                  "originalText": "the",
-                  "before": " ",
-                  "index": 10,
-                  "pos": "DT"
-                }
-              },
-              "DT"
-            ],
-            [
-              {
-                "nlpToken": {
-                  "characterOffsetBegin": 282,
-                  "word": "city",
-                  "lemma": "city",
-                  "characterOffsetEnd": 286,
-                  "speaker": "PER0",
-                  "ner": "O",
-                  "after": " ",
-                  "originalText": "city",
-                  "before": " ",
-                  "index": 11,
-                  "pos": "NN"
-                }
-              },
-              "NN"
-            ],
-            [
-              {
-                "nlpToken": {
-                  "characterOffsetBegin": 287,
-                  "word": "of",
-                  "lemma": "of",
-                  "characterOffsetEnd": 289,
-                  "speaker": "PER0",
-                  "ner": "O",
-                  "after": " ",
-                  "originalText": "of",
-                  "before": " ",
-                  "index": 12,
-                  "pos": "IN"
-                }
-              },
-              "IN"
-            ],
+            ]
+          ],
+          "score": 1.0,
+          "text": "the blast , in",
+          "nlpIndexSentence": 6
+        }
+      ]
+    },
+    "where": {
+      "annotated": [
+        {
+          "text": "Mazar-e-Sharif",
+          "coderPhraseCount": 3
+        }
+      ],
+      "label": "where",
+      "extracted": [
+        {
+          "parts": [
             [
               {
                 "nlpToken": {
@@ -213,148 +302,34 @@
                 }
               },
               "NNP"
-            ],
-            [
-              {
-                "nlpToken": {
-                  "characterOffsetBegin": 304,
-                  "word": ",",
-                  "lemma": ",",
-                  "characterOffsetEnd": 305,
-                  "speaker": "PER0",
-                  "ner": "O",
-                  "after": " ",
-                  "originalText": ",",
-                  "before": "",
-                  "index": 14,
-                  "pos": ","
-                }
-              },
-              ","
-            ],
-            [
-              {
-                "nlpToken": {
-                  "characterOffsetBegin": 306,
-                  "word": "battling",
-                  "lemma": "battle",
-                  "characterOffsetEnd": 314,
-                  "speaker": "PER0",
-                  "ner": "O",
-                  "after": " ",
-                  "originalText": "battling",
-                  "before": " ",
-                  "index": 15,
-                  "pos": "VBG"
-                }
-              },
-              "VBG"
-            ],
-            [
-              {
-                "nlpToken": {
-                  "characterOffsetBegin": 315,
-                  "word": "with",
-                  "lemma": "with",
-                  "characterOffsetEnd": 319,
-                  "speaker": "PER0",
-                  "ner": "O",
-                  "after": " ",
-                  "originalText": "with",
-                  "before": " ",
-                  "index": 16,
-                  "pos": "IN"
-                }
-              },
-              "IN"
-            ],
-            [
-              {
-                "nlpToken": {
-                  "characterOffsetBegin": 320,
-                  "word": "German",
-                  "lemma": "german",
-                  "characterOffsetEnd": 326,
-                  "speaker": "PER0",
-                  "ner": "MISC",
-                  "after": " ",
-                  "originalText": "German",
-                  "before": " ",
-                  "index": 17,
-                  "pos": "JJ"
-                }
-              },
-              "JJ"
-            ],
-            [
-              {
-                "nlpToken": {
-                  "characterOffsetBegin": 327,
-                  "word": "and",
-                  "lemma": "and",
-                  "characterOffsetEnd": 330,
-                  "speaker": "PER0",
-                  "ner": "O",
-                  "after": " ",
-                  "originalText": "and",
-                  "before": " ",
-                  "index": 18,
-                  "pos": "CC"
-                }
-              },
-              "CC"
-            ],
-            [
-              {
-                "nlpToken": {
-                  "characterOffsetBegin": 331,
-                  "word": "Afghan",
-                  "lemma": "Afghan",
-                  "characterOffsetEnd": 337,
-                  "speaker": "PER0",
-                  "ner": "MISC",
-                  "after": " ",
-                  "originalText": "Afghan",
-                  "before": " ",
-                  "index": 19,
-                  "pos": "NNP"
-                }
-              },
-              "NNP"
-            ],
-            [
-              {
-                "nlpToken": {
-                  "characterOffsetBegin": 338,
-                  "word": "forces",
-                  "lemma": "force",
-                  "characterOffsetEnd": 344,
-                  "speaker": "PER0",
-                  "ner": "O",
-                  "after": "",
-                  "originalText": "forces",
-                  "before": " ",
-                  "index": 20,
-                  "pos": "NNS"
-                }
-              },
-              "NNS"
             ]
           ],
-          "score": 1.0,
-          "text": "the blast , in the city of Mazar-e-Sharif , battling with German and Afghan forces",
-          "nlpIndexSentence": 6
+          "score": 0.6769085608170099,
+          "text": "Mazar-e-Sharif",
+          "enhancement": {
+            "openstreetmap_nominatim": {
+              "osm_id": "2396275966",
+              "boundingbox": [
+                36.5513366,
+                36.8713366,
+                66.9487511,
+                67.2687511
+              ],
+              "licence": "Data \u00a9 OpenStreetMap contributors, ODbL 1.0. http://www.openstreetmap.org/copyright",
+              "importance": 0.11153510918303,
+              "icon": "https://nominatim.openstreetmap.org/images/mapicons/poi_place_city.p.20.png",
+              "osm_type": "node",
+              "display_name": "\u0645\u0632\u0627\u0631 \u0634\u0631\u06cc\u0641, \u0628\u0644\u062e, \u0627\u0641\u063a\u0627\u0646\u0633\u062a\u0627\u0646",
+              "lat": "36.7113366",
+              "type": "city",
+              "place_id": "25073727",
+              "lon": "67.1087511",
+              "class": "place"
+            }
+          },
+          "nlpIndexSentence": 1
         }
       ]
-    },
-    "where": {
-      "annotated": [
-        {
-          "text": "Mazar-e-Sharif",
-          "coderPhraseCount": 3
-        }
-      ],
-      "label": "where"
     },
     "what": {
       "annotated": [
@@ -374,16 +349,16 @@
             [
               {
                 "nlpToken": {
-                  "characterOffsetBegin": 366,
-                  "word": "carried",
-                  "lemma": "carry",
-                  "characterOffsetEnd": 373,
+                  "characterOffsetBegin": 52,
+                  "word": "destroyed",
+                  "lemma": "destroy",
+                  "characterOffsetEnd": 61,
                   "speaker": "PER0",
                   "ner": "O",
                   "after": " ",
-                  "originalText": "carried",
+                  "originalText": "destroyed",
                   "before": " ",
-                  "index": 5,
+                  "index": 9,
                   "pos": "VBD"
                 }
               },
@@ -392,61 +367,78 @@
             [
               {
                 "nlpToken": {
-                  "characterOffsetBegin": 374,
-                  "word": "out",
-                  "lemma": "out",
-                  "characterOffsetEnd": 377,
+                  "characterOffsetBegin": 62,
+                  "word": "nearby",
+                  "lemma": "nearby",
+                  "characterOffsetEnd": 68,
                   "speaker": "PER0",
                   "ner": "O",
                   "after": " ",
-                  "originalText": "out",
+                  "originalText": "nearby",
                   "before": " ",
-                  "index": 6,
-                  "pos": "RP"
+                  "index": 10,
+                  "pos": "JJ"
                 }
               },
-              "RP"
+              "JJ"
             ],
             [
               {
                 "nlpToken": {
-                  "characterOffsetBegin": 378,
-                  "word": "the",
-                  "lemma": "the",
-                  "characterOffsetEnd": 381,
+                  "characterOffsetBegin": 69,
+                  "word": "buildings",
+                  "lemma": "building",
+                  "characterOffsetEnd": 78,
                   "speaker": "PER0",
                   "ner": "O",
                   "after": " ",
-                  "originalText": "the",
+                  "originalText": "buildings",
                   "before": " ",
-                  "index": 7,
-                  "pos": "DT"
+                  "index": 11,
+                  "pos": "NNS"
                 }
               },
-              "DT"
+              "NNS"
             ],
             [
               {
                 "nlpToken": {
-                  "characterOffsetBegin": 382,
-                  "word": "attack",
-                  "lemma": "attack",
-                  "characterOffsetEnd": 388,
+                  "characterOffsetBegin": 79,
+                  "word": "and",
+                  "lemma": "and",
+                  "characterOffsetEnd": 82,
                   "speaker": "PER0",
                   "ner": "O",
                   "after": " ",
-                  "originalText": "attack",
+                  "originalText": "and",
                   "before": " ",
-                  "index": 8,
-                  "pos": "NN"
+                  "index": 12,
+                  "pos": "CC"
                 }
               },
-              "NN"
+              "CC"
+            ],
+            [
+              {
+                "nlpToken": {
+                  "characterOffsetBegin": 83,
+                  "word": "cars",
+                  "lemma": "car",
+                  "characterOffsetEnd": 87,
+                  "speaker": "PER0",
+                  "ner": "O",
+                  "after": " ",
+                  "originalText": "cars",
+                  "before": " ",
+                  "index": 13,
+                  "pos": "NNS"
+                }
+              },
+              "NNS"
             ]
           ],
           "score": 1.0,
-          "text": "carried out the attack",
-          "nlpIndexSentence": 2
+          "text": "destroyed nearby buildings and cars"
         }
       ]
     }

@@ -77,23 +77,79 @@
               {
                 "nlpToken": {
                   "before": " ",
-                  "word": "close",
-                  "index": 9,
-                  "lemma": "close",
-                  "characterOffsetBegin": 43,
-                  "pos": "RB",
-                  "originalText": "close",
+                  "word": "crews",
+                  "index": 7,
+                  "lemma": "crew",
+                  "characterOffsetBegin": 244,
+                  "pos": "NNS",
+                  "originalText": "crews",
                   "ner": "O",
                   "after": " ",
-                  "characterOffsetEnd": 48,
+                  "characterOffsetEnd": 249,
                   "speaker": "PER0"
                 }
               },
-              "RB"
+              "NNS"
+            ],
+            [
+              {
+                "nlpToken": {
+                  "before": " ",
+                  "word": "were",
+                  "index": 8,
+                  "lemma": "be",
+                  "characterOffsetBegin": 250,
+                  "pos": "VBD",
+                  "originalText": "were",
+                  "ner": "O",
+                  "after": " ",
+                  "characterOffsetEnd": 254,
+                  "speaker": "PER0"
+                }
+              },
+              "VBD"
+            ],
+            [
+              {
+                "nlpToken": {
+                  "before": " ",
+                  "word": "treating",
+                  "index": 9,
+                  "lemma": "treat",
+                  "characterOffsetBegin": 255,
+                  "pos": "VBG",
+                  "originalText": "treating",
+                  "ner": "O",
+                  "after": " ",
+                  "characterOffsetEnd": 263,
+                  "speaker": "PER0"
+                }
+              },
+              "VBG"
+            ],
+            [
+              {
+                "nlpToken": {
+                  "index": 10,
+                  "pos": "CD",
+                  "originalText": "five",
+                  "ner": "NUMBER",
+                  "after": " ",
+                  "characterOffsetEnd": 268,
+                  "before": " ",
+                  "word": "five",
+                  "characterOffsetBegin": 264,
+                  "normalizedNER": "5.0",
+                  "lemma": "five",
+                  "speaker": "PER0"
+                }
+              },
+              "CD"
             ]
           ],
           "score": 1.0,
-          "text": "close"
+          "text": "crews were treating five",
+          "nlpIndexSentence": 7
         }
       ]
     },
@@ -104,7 +160,118 @@
           "text": "just hours after he was elected the next US President"
         }
       ],
-      "label": "when"
+      "label": "when",
+      "extracted": [
+        {
+          "parts": [
+            [
+              {
+                "nlpToken": {
+                  "index": 8,
+                  "pos": "NNP",
+                  "originalText": "November",
+                  "ner": "DATE",
+                  "after": " ",
+                  "characterOffsetEnd": 1711,
+                  "before": " ",
+                  "word": "November",
+                  "characterOffsetBegin": 1703,
+                  "normalizedNER": "2016-11-10",
+                  "lemma": "November",
+                  "timex": {
+                    "tid": "t3",
+                    "type": "DATE",
+                    "value": "2016-11-10"
+                  },
+                  "speaker": "PER0"
+                }
+              },
+              "NNP"
+            ],
+            [
+              {
+                "nlpToken": {
+                  "index": 9,
+                  "pos": "CD",
+                  "originalText": "10",
+                  "ner": "DATE",
+                  "after": "",
+                  "characterOffsetEnd": 1714,
+                  "before": " ",
+                  "word": "10",
+                  "characterOffsetBegin": 1712,
+                  "normalizedNER": "2016-11-10",
+                  "lemma": "10",
+                  "timex": {
+                    "tid": "t3",
+                    "type": "DATE",
+                    "value": "2016-11-10"
+                  },
+                  "speaker": "PER0"
+                }
+              },
+              "CD"
+            ],
+            [
+              {
+                "nlpToken": {
+                  "index": 10,
+                  "pos": ",",
+                  "originalText": ",",
+                  "ner": "DATE",
+                  "after": " ",
+                  "characterOffsetEnd": 1715,
+                  "before": "",
+                  "word": ",",
+                  "characterOffsetBegin": 1714,
+                  "normalizedNER": "2016-11-10",
+                  "lemma": ",",
+                  "timex": {
+                    "tid": "t3",
+                    "type": "DATE",
+                    "value": "2016-11-10"
+                  },
+                  "speaker": "PER0"
+                }
+              },
+              ","
+            ],
+            [
+              {
+                "nlpToken": {
+                  "index": 11,
+                  "pos": "CD",
+                  "originalText": "2016",
+                  "ner": "DATE",
+                  "after": " ",
+                  "characterOffsetEnd": 1720,
+                  "before": " ",
+                  "word": "2016",
+                  "characterOffsetBegin": 1716,
+                  "normalizedNER": "2016-11-10",
+                  "lemma": "2016",
+                  "timex": {
+                    "tid": "t3",
+                    "type": "DATE",
+                    "value": "2016-11-10"
+                  },
+                  "speaker": "PER0"
+                }
+              },
+              "CD"
+            ]
+          ],
+          "score": 0.6794092697857598,
+          "text": "November 10 , 2016",
+          "enhancement": {
+            "timex": {
+              "start_date": "2016-11-10T00:00:00",
+              "end_date": "2016-11-10T23:59:59"
+            }
+          },
+          "nlpIndexSentence": 13
+        }
+      ]
     },
     "why": {
       "annotated": [
@@ -113,7 +280,34 @@
           "text": "personal argument"
         }
       ],
-      "label": "why"
+      "label": "why",
+      "extracted": [
+        {
+          "parts": [
+            [
+              {
+                "nlpToken": {
+                  "before": " ",
+                  "word": "they",
+                  "index": 4,
+                  "lemma": "they",
+                  "characterOffsetBegin": 103,
+                  "pos": "PRP",
+                  "originalText": "they",
+                  "ner": "O",
+                  "after": " ",
+                  "characterOffsetEnd": 107,
+                  "speaker": "PER0"
+                }
+              },
+              "PRP"
+            ]
+          ],
+          "score": 0.5471861471861472,
+          "text": "they",
+          "nlpIndexSentence": 1
+        }
+      ]
     },
     "who": {
       "annotated": [
@@ -176,7 +370,54 @@
           "text": "Seattle"
         }
       ],
-      "label": "where"
+      "label": "where",
+      "extracted": [
+        {
+          "parts": [
+            [
+              {
+                "nlpToken": {
+                  "before": " ",
+                  "word": "Seattle",
+                  "index": 8,
+                  "lemma": "Seattle",
+                  "characterOffsetBegin": 35,
+                  "pos": "NNP",
+                  "originalText": "Seattle",
+                  "ner": "LOCATION",
+                  "after": " ",
+                  "characterOffsetEnd": 42,
+                  "speaker": "PER0"
+                }
+              },
+              "NNP"
+            ]
+          ],
+          "score": 0.6779857272123321,
+          "text": "Seattle",
+          "enhancement": {
+            "openstreetmap_nominatim": {
+              "osm_id": "237385",
+              "boundingbox": [
+                47.4810022,
+                47.7341357,
+                -122.459696,
+                -122.224433
+              ],
+              "licence": "Data \u00a9 OpenStreetMap contributors, ODbL 1.0. http://www.openstreetmap.org/copyright",
+              "importance": 0.2828859963469,
+              "icon": "https://nominatim.openstreetmap.org/images/mapicons/poi_place_city.p.20.png",
+              "osm_type": "relation",
+              "display_name": "Seattle, King County, Washington, United States of America",
+              "lat": "47.6038321",
+              "type": "city",
+              "place_id": "178311857",
+              "lon": "-122.3300624",
+              "class": "place"
+            }
+          }
+        }
+      ]
     }
   },
   "description": "AT LEAST five people have been shot close to an anti-Donald Trump rally just hours after he was elected the next US President.",

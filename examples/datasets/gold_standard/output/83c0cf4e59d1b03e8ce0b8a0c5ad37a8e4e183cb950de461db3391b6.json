@@ -66,7 +66,46 @@
           "parsed": "2016-11-12"
         }
       ],
-      "label": "when"
+      "label": "when",
+      "extracted": [
+        {
+          "parts": [
+            [
+              {
+                "nlpToken": {
+                  "characterOffsetBegin": 314,
+                  "word": "Tuesday",
+                  "lemma": "Tuesday",
+                  "timex": {
+                    "value": "2016-11-15",
+                    "tid": "t3",
+                    "type": "DATE"
+                  },
+                  "before": " ",
+                  "characterOffsetEnd": 321,
+                  "originalText": "Tuesday",
+                  "normalizedNER": "2016-11-15",
+                  "speaker": "PER0",
+                  "after": "",
+                  "ner": "DATE",
+                  "index": 17,
+                  "pos": "NNP"
+                }
+              },
+              "NNP"
+            ]
+          ],
+          "score": 0.7690730043536611,
+          "text": "Tuesday",
+          "enhancement": {
+            "timex": {
+              "start_date": "2016-11-15T00:00:00",
+              "end_date": "2016-11-15T23:59:59"
+            }
+          },
+          "nlpIndexSentence": 1
+        }
+      ]
     },
     "why": {
       "annotated": [
@@ -75,7 +114,51 @@
           "coderPhraseCount": 2
         }
       ],
-      "label": "why"
+      "label": "why",
+      "extracted": [
+        {
+          "parts": [
+            [
+              {
+                "nlpToken": {
+                  "characterOffsetBegin": 0,
+                  "word": "Hillary",
+                  "lemma": "Hillary",
+                  "characterOffsetEnd": 7,
+                  "speaker": "PER0",
+                  "ner": "PERSON",
+                  "after": " ",
+                  "originalText": "Hillary",
+                  "before": "",
+                  "index": 1,
+                  "pos": "NNP"
+                }
+              },
+              "NNP"
+            ],
+            [
+              {
+                "nlpToken": {
+                  "characterOffsetBegin": 8,
+                  "word": "Clinton",
+                  "lemma": "Clinton",
+                  "characterOffsetEnd": 15,
+                  "speaker": "PER0",
+                  "ner": "PERSON",
+                  "after": " ",
+                  "originalText": "Clinton",
+                  "before": " ",
+                  "index": 2,
+                  "pos": "NNP"
+                }
+              },
+              "NNP"
+            ]
+          ],
+          "score": 0.5844155844155844,
+          "text": "Hillary Clinton"
+        }
+      ]
     },
     "how": {
       "annotated": [
@@ -163,316 +246,10 @@
                 }
               },
               "NNS"
-            ],
-            [
-              {
-                "nlpToken": {
-                  "characterOffsetBegin": 1143,
-                  "word": "and",
-                  "lemma": "and",
-                  "characterOffsetEnd": 1146,
-                  "speaker": "PER0",
-                  "ner": "O",
-                  "after": " ",
-                  "originalText": "and",
-                  "before": " ",
-                  "index": 11,
-                  "pos": "CC"
-                }
-              },
-              "CC"
-            ],
-            [
-              {
-                "nlpToken": {
-                  "characterOffsetBegin": 1147,
-                  "word": "continued",
-                  "lemma": "continue",
-                  "characterOffsetEnd": 1156,
-                  "speaker": "PER0",
-                  "ner": "O",
-                  "after": " ",
-                  "originalText": "continued",
-                  "before": " ",
-                  "index": 12,
-                  "pos": "VBD"
-                }
-              },
-              "VBD"
-            ],
-            [
-              {
-                "nlpToken": {
-                  "characterOffsetBegin": 1157,
-                  "word": "to",
-                  "lemma": "to",
-                  "characterOffsetEnd": 1159,
-                  "speaker": "PER0",
-                  "ner": "O",
-                  "after": " ",
-                  "originalText": "to",
-                  "before": " ",
-                  "index": 13,
-                  "pos": "TO"
-                }
-              },
-              "TO"
-            ],
-            [
-              {
-                "nlpToken": {
-                  "characterOffsetBegin": 1160,
-                  "word": "believe",
-                  "lemma": "believe",
-                  "characterOffsetEnd": 1167,
-                  "speaker": "PER0",
-                  "ner": "O",
-                  "after": " ",
-                  "originalText": "believe",
-                  "before": " ",
-                  "index": 14,
-                  "pos": "VB"
-                }
-              },
-              "VB"
-            ],
-            [
-              {
-                "nlpToken": {
-                  "characterOffsetBegin": 1168,
-                  "word": "she",
-                  "lemma": "she",
-                  "characterOffsetEnd": 1171,
-                  "speaker": "PER0",
-                  "ner": "O",
-                  "after": " ",
-                  "originalText": "she",
-                  "before": " ",
-                  "index": 15,
-                  "pos": "PRP"
-                }
-              },
-              "PRP"
-            ],
-            [
-              {
-                "nlpToken": {
-                  "characterOffsetBegin": 1172,
-                  "word": "should",
-                  "lemma": "should",
-                  "characterOffsetEnd": 1178,
-                  "speaker": "PER0",
-                  "ner": "O",
-                  "after": " ",
-                  "originalText": "should",
-                  "before": " ",
-                  "index": 16,
-                  "pos": "MD"
-                }
-              },
-              "MD"
-            ],
-            [
-              {
-                "nlpToken": {
-                  "characterOffsetBegin": 1179,
-                  "word": "not",
-                  "lemma": "not",
-                  "characterOffsetEnd": 1182,
-                  "speaker": "PER0",
-                  "ner": "O",
-                  "after": " ",
-                  "originalText": "not",
-                  "before": " ",
-                  "index": 17,
-                  "pos": "RB"
-                }
-              },
-              "RB"
-            ],
-            [
-              {
-                "nlpToken": {
-                  "characterOffsetBegin": 1183,
-                  "word": "be",
-                  "lemma": "be",
-                  "characterOffsetEnd": 1185,
-                  "speaker": "PER0",
-                  "ner": "O",
-                  "after": " ",
-                  "originalText": "be",
-                  "before": " ",
-                  "index": 18,
-                  "pos": "VB"
-                }
-              },
-              "VB"
-            ],
-            [
-              {
-                "nlpToken": {
-                  "characterOffsetBegin": 1186,
-                  "word": "prosecuted",
-                  "lemma": "prosecute",
-                  "characterOffsetEnd": 1196,
-                  "speaker": "PER0",
-                  "ner": "O",
-                  "after": "",
-                  "originalText": "prosecuted",
-                  "before": " ",
-                  "index": 19,
-                  "pos": "VBN"
-                }
-              },
-              "VBN"
-            ],
-            [
-              {
-                "nlpToken": {
-                  "characterOffsetBegin": 1196,
-                  "word": ",",
-                  "lemma": ",",
-                  "characterOffsetEnd": 1197,
-                  "speaker": "PER0",
-                  "ner": "O",
-                  "after": " ",
-                  "originalText": ",",
-                  "before": "",
-                  "index": 20,
-                  "pos": ","
-                }
-              },
-              ","
-            ],
-            [
-              {
-                "nlpToken": {
-                  "characterOffsetBegin": 1198,
-                  "word": "but",
-                  "lemma": "but",
-                  "characterOffsetEnd": 1201,
-                  "speaker": "PER0",
-                  "ner": "O",
-                  "after": " ",
-                  "originalText": "but",
-                  "before": " ",
-                  "index": 21,
-                  "pos": "CC"
-                }
-              },
-              "CC"
-            ],
-            [
-              {
-                "nlpToken": {
-                  "characterOffsetBegin": 1202,
-                  "word": "the",
-                  "lemma": "the",
-                  "characterOffsetEnd": 1205,
-                  "speaker": "PER0",
-                  "ner": "O",
-                  "after": " ",
-                  "originalText": "the",
-                  "before": " ",
-                  "index": 22,
-                  "pos": "DT"
-                }
-              },
-              "DT"
-            ],
-            [
-              {
-                "nlpToken": {
-                  "characterOffsetBegin": 1206,
-                  "word": "political",
-                  "lemma": "political",
-                  "characterOffsetEnd": 1215,
-                  "speaker": "PER0",
-                  "ner": "O",
-                  "after": " ",
-                  "originalText": "political",
-                  "before": " ",
-                  "index": 23,
-                  "pos": "JJ"
-                }
-              },
-              "JJ"
-            ],
-            [
-              {
-                "nlpToken": {
-                  "characterOffsetBegin": 1216,
-                  "word": "damage",
-                  "lemma": "damage",
-                  "characterOffsetEnd": 1222,
-                  "speaker": "PER0",
-                  "ner": "O",
-                  "after": " ",
-                  "originalText": "damage",
-                  "before": " ",
-                  "index": 24,
-                  "pos": "NN"
-                }
-              },
-              "NN"
-            ],
-            [
-              {
-                "nlpToken": {
-                  "characterOffsetBegin": 1223,
-                  "word": "was",
-                  "lemma": "be",
-                  "characterOffsetEnd": 1226,
-                  "speaker": "PER0",
-                  "ner": "O",
-                  "after": " ",
-                  "originalText": "was",
-                  "before": " ",
-                  "index": 25,
-                  "pos": "VBD"
-                }
-              },
-              "VBD"
-            ],
-            [
-              {
-                "nlpToken": {
-                  "characterOffsetBegin": 1227,
-                  "word": "already",
-                  "lemma": "already",
-                  "characterOffsetEnd": 1234,
-                  "speaker": "PER0",
-                  "ner": "O",
-                  "after": " ",
-                  "originalText": "already",
-                  "before": " ",
-                  "index": 26,
-                  "pos": "RB"
-                }
-              },
-              "RB"
-            ],
-            [
-              {
-                "nlpToken": {
-                  "characterOffsetBegin": 1235,
-                  "word": "done",
-                  "lemma": "do",
-                  "characterOffsetEnd": 1239,
-                  "speaker": "PER0",
-                  "ner": "O",
-                  "after": "",
-                  "originalText": "done",
-                  "before": " ",
-                  "index": 27,
-                  "pos": "VBN"
-                }
-              },
-              "VBN"
             ]
           ],
           "score": 1.0,
-          "text": "he had reviewed emails and continued to believe she should not be prosecuted , but the political damage was already done",
+          "text": "he had reviewed emails",
           "nlpIndexSentence": 7
         }
       ]
@@ -483,7 +260,8 @@
           "coderPhraseCount": 3
         }
       ],
-      "label": "where"
+      "label": "where",
+      "extracted": []
     },
     "what": {
       "annotated": [

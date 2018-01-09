@@ -88,28 +88,10 @@
                 }
               },
               "VBD"
-            ],
-            [
-              {
-                "nlpToken": {
-                  "index": 6,
-                  "word": ",",
-                  "originalText": ",",
-                  "lemma": ",",
-                  "characterOffsetBegin": 5086,
-                  "characterOffsetEnd": 5087,
-                  "pos": ",",
-                  "ner": "O",
-                  "speaker": "PER0",
-                  "before": "",
-                  "after": " "
-                }
-              },
-              ","
             ]
           ],
           "score": 1.0,
-          "text": "the two leaders met ,",
+          "text": "the two leaders met",
           "nlpIndexSentence": 2
         }
       ]
@@ -256,7 +238,46 @@
           "text": "Thursday "
         }
       ],
-      "label": "when"
+      "label": "when",
+      "extracted": [
+        {
+          "parts": [
+            [
+              {
+                "nlpToken": {
+                  "index": 17,
+                  "word": "Thursday",
+                  "originalText": "Thursday",
+                  "lemma": "Thursday",
+                  "characterOffsetBegin": 480,
+                  "characterOffsetEnd": 488,
+                  "pos": "NNP",
+                  "ner": "DATE",
+                  "normalizedNER": "2016-11-10",
+                  "speaker": "PER0",
+                  "before": " ",
+                  "after": " ",
+                  "timex": {
+                    "tid": "t3",
+                    "type": "DATE",
+                    "value": "2016-11-10"
+                  }
+                }
+              },
+              "NNP"
+            ]
+          ],
+          "score": 0.7439215880907611,
+          "text": "Thursday",
+          "enhancement": {
+            "timex": {
+              "start_date": "2016-11-10T00:00:00",
+              "end_date": "2016-11-10T23:59:59"
+            }
+          },
+          "nlpIndexSentence": 5
+        }
+      ]
     },
     "where": {
       "annotated": [
@@ -265,7 +286,71 @@
           "text": "at the White House"
         }
       ],
-      "label": "where"
+      "label": "where",
+      "extracted": [
+        {
+          "parts": [
+            [
+              {
+                "nlpToken": {
+                  "index": 7,
+                  "word": "White",
+                  "originalText": "White",
+                  "lemma": "White",
+                  "characterOffsetBegin": 30,
+                  "characterOffsetEnd": 35,
+                  "pos": "NNP",
+                  "ner": "LOCATION",
+                  "speaker": "PER0",
+                  "before": " ",
+                  "after": " "
+                }
+              },
+              "NNP"
+            ],
+            [
+              {
+                "nlpToken": {
+                  "index": 8,
+                  "word": "House",
+                  "originalText": "House",
+                  "lemma": "House",
+                  "characterOffsetBegin": 36,
+                  "characterOffsetEnd": 41,
+                  "pos": "NNP",
+                  "ner": "LOCATION",
+                  "speaker": "PER0",
+                  "before": " ",
+                  "after": " "
+                }
+              },
+              "NNP"
+            ]
+          ],
+          "score": 0.6964375816737748,
+          "text": "White House",
+          "enhancement": {
+            "openstreetmap_nominatim": {
+              "osm_id": "238241022",
+              "osm_type": "way",
+              "display_name": "White House, 1600, Pennsylvania Avenue Northwest, Golden Triangle, Washington, District of Columbia, 20500, United States of America",
+              "lon": "-77.0365534886228",
+              "lat": "38.8976998",
+              "boundingbox": [
+                38.8974898,
+                38.897911,
+                -77.0368542,
+                -77.0362526
+              ],
+              "place_id": "127954863",
+              "licence": "Data \u00a9 OpenStreetMap contributors, ODbL 1.0. http://www.openstreetmap.org/copyright",
+              "type": "government",
+              "importance": 0.3519189346824,
+              "class": "office"
+            }
+          }
+        }
+      ]
     },
     "who": {
       "annotated": [
@@ -312,7 +397,232 @@
           "coderPhraseCount": 2
         }
       ],
-      "label": "why"
+      "label": "why",
+      "extracted": [
+        {
+          "parts": [
+            [
+              {
+                "nlpToken": {
+                  "index": 32,
+                  "word": "--",
+                  "originalText": "--",
+                  "lemma": "--",
+                  "characterOffsetBegin": 4014,
+                  "characterOffsetEnd": 4016,
+                  "pos": ":",
+                  "ner": "O",
+                  "speaker": "205",
+                  "before": " ",
+                  "after": " "
+                }
+              },
+              ":"
+            ],
+            [
+              {
+                "nlpToken": {
+                  "index": 33,
+                  "word": "because",
+                  "originalText": "because",
+                  "lemma": "because",
+                  "characterOffsetBegin": 4017,
+                  "characterOffsetEnd": 4024,
+                  "pos": "IN",
+                  "ner": "O",
+                  "speaker": "205",
+                  "before": " ",
+                  "after": " "
+                }
+              },
+              "IN"
+            ],
+            [
+              {
+                "nlpToken": {
+                  "index": 34,
+                  "word": "if",
+                  "originalText": "if",
+                  "lemma": "if",
+                  "characterOffsetBegin": 4025,
+                  "characterOffsetEnd": 4027,
+                  "pos": "IN",
+                  "ner": "O",
+                  "speaker": "205",
+                  "before": " ",
+                  "after": " "
+                }
+              },
+              "IN"
+            ],
+            [
+              {
+                "nlpToken": {
+                  "index": 35,
+                  "word": "you",
+                  "originalText": "you",
+                  "lemma": "you",
+                  "characterOffsetBegin": 4028,
+                  "characterOffsetEnd": 4031,
+                  "pos": "PRP",
+                  "ner": "O",
+                  "speaker": "205",
+                  "before": " ",
+                  "after": " "
+                }
+              },
+              "PRP"
+            ],
+            [
+              {
+                "nlpToken": {
+                  "index": 36,
+                  "word": "succeed",
+                  "originalText": "succeed",
+                  "lemma": "succeed",
+                  "characterOffsetBegin": 4032,
+                  "characterOffsetEnd": 4039,
+                  "pos": "VBP",
+                  "ner": "O",
+                  "speaker": "205",
+                  "before": " ",
+                  "after": ""
+                }
+              },
+              "VBP"
+            ],
+            [
+              {
+                "nlpToken": {
+                  "index": 37,
+                  "word": ",",
+                  "originalText": ",",
+                  "lemma": ",",
+                  "characterOffsetBegin": 4039,
+                  "characterOffsetEnd": 4040,
+                  "pos": ",",
+                  "ner": "O",
+                  "speaker": "205",
+                  "before": "",
+                  "after": " "
+                }
+              },
+              ","
+            ],
+            [
+              {
+                "nlpToken": {
+                  "index": 38,
+                  "word": "then",
+                  "originalText": "then",
+                  "lemma": "then",
+                  "characterOffsetBegin": 4041,
+                  "characterOffsetEnd": 4045,
+                  "pos": "RB",
+                  "ner": "O",
+                  "speaker": "205",
+                  "before": " ",
+                  "after": " "
+                }
+              },
+              "RB"
+            ],
+            [
+              {
+                "nlpToken": {
+                  "index": 39,
+                  "word": "the",
+                  "originalText": "the",
+                  "lemma": "the",
+                  "characterOffsetBegin": 4046,
+                  "characterOffsetEnd": 4049,
+                  "pos": "DT",
+                  "ner": "O",
+                  "speaker": "205",
+                  "before": " ",
+                  "after": " "
+                }
+              },
+              "DT"
+            ],
+            [
+              {
+                "nlpToken": {
+                  "index": 40,
+                  "word": "country",
+                  "originalText": "country",
+                  "lemma": "country",
+                  "characterOffsetBegin": 4050,
+                  "characterOffsetEnd": 4057,
+                  "pos": "NN",
+                  "ner": "O",
+                  "speaker": "205",
+                  "before": " ",
+                  "after": " "
+                }
+              },
+              "NN"
+            ],
+            [
+              {
+                "nlpToken": {
+                  "index": 41,
+                  "word": "succeeds",
+                  "originalText": "succeeds",
+                  "lemma": "succeed",
+                  "characterOffsetBegin": 4058,
+                  "characterOffsetEnd": 4066,
+                  "pos": "VBZ",
+                  "ner": "O",
+                  "speaker": "205",
+                  "before": " ",
+                  "after": ""
+                }
+              },
+              "VBZ"
+            ],
+            [
+              {
+                "nlpToken": {
+                  "index": 42,
+                  "word": ".",
+                  "originalText": ".",
+                  "lemma": ".",
+                  "characterOffsetBegin": 4066,
+                  "characterOffsetEnd": 4067,
+                  "pos": ".",
+                  "ner": "O",
+                  "speaker": "205",
+                  "before": "",
+                  "after": ""
+                }
+              },
+              "."
+            ],
+            [
+              {
+                "nlpToken": {
+                  "index": 43,
+                  "word": "''",
+                  "originalText": "\"",
+                  "lemma": "''",
+                  "characterOffsetBegin": 4067,
+                  "characterOffsetEnd": 4068,
+                  "pos": "''",
+                  "ner": "O",
+                  "speaker": "PER0",
+                  "before": "",
+                  "after": " "
+                }
+              },
+              "''"
+            ]
+          ],
+          "score": 0.8025023756731073,
+          "text": "-- because if you succeed , then the country succeeds . \"",
+          "nlpIndexSentence": 29
+        }
+      ]
     }
   },
   "mimeType": "text/xml",

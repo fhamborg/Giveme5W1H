@@ -166,118 +166,10 @@
                 }
               },
               "IN"
-            ],
-            [
-              {
-                "nlpToken": {
-                  "before": " ",
-                  "word": "all",
-                  "index": 11,
-                  "lemma": "all",
-                  "characterOffsetBegin": 1050,
-                  "pos": "PDT",
-                  "originalText": "all",
-                  "ner": "O",
-                  "after": " ",
-                  "characterOffsetEnd": 1053,
-                  "speaker": "57"
-                }
-              },
-              "PDT"
-            ],
-            [
-              {
-                "nlpToken": {
-                  "before": " ",
-                  "word": "the",
-                  "index": 12,
-                  "lemma": "the",
-                  "characterOffsetBegin": 1054,
-                  "pos": "DT",
-                  "originalText": "the",
-                  "ner": "O",
-                  "after": " ",
-                  "characterOffsetEnd": 1057,
-                  "speaker": "57"
-                }
-              },
-              "DT"
-            ],
-            [
-              {
-                "nlpToken": {
-                  "before": " ",
-                  "word": "emotions",
-                  "index": 13,
-                  "lemma": "emotion",
-                  "characterOffsetBegin": 1058,
-                  "pos": "NNS",
-                  "originalText": "emotions",
-                  "ner": "O",
-                  "after": " ",
-                  "characterOffsetEnd": 1066,
-                  "speaker": "57"
-                }
-              },
-              "NNS"
-            ],
-            [
-              {
-                "nlpToken": {
-                  "before": " ",
-                  "word": "that",
-                  "index": 14,
-                  "lemma": "that",
-                  "characterOffsetBegin": 1067,
-                  "pos": "IN",
-                  "originalText": "that",
-                  "ner": "O",
-                  "after": " ",
-                  "characterOffsetEnd": 1071,
-                  "speaker": "57"
-                }
-              },
-              "IN"
-            ],
-            [
-              {
-                "nlpToken": {
-                  "before": " ",
-                  "word": "I",
-                  "index": 15,
-                  "lemma": "I",
-                  "characterOffsetBegin": 1072,
-                  "pos": "PRP",
-                  "originalText": "I",
-                  "ner": "O",
-                  "after": " ",
-                  "characterOffsetEnd": 1073,
-                  "speaker": "57"
-                }
-              },
-              "PRP"
-            ],
-            [
-              {
-                "nlpToken": {
-                  "before": " ",
-                  "word": "felt",
-                  "index": 16,
-                  "lemma": "feel",
-                  "characterOffsetBegin": 1074,
-                  "pos": "VBD",
-                  "originalText": "felt",
-                  "ner": "O",
-                  "after": "",
-                  "characterOffsetEnd": 1078,
-                  "speaker": "57"
-                }
-              },
-              "VBD"
             ]
           ],
           "score": 1.0,
-          "text": "the love , for all the emotions that I felt",
+          "text": "the love , for",
           "nlpIndexSentence": 7
         }
       ]
@@ -289,7 +181,46 @@
           "text": "Sunday, Nov. 13, 2016"
         }
       ],
-      "label": "when"
+      "label": "when",
+      "extracted": [
+        {
+          "parts": [
+            [
+              {
+                "nlpToken": {
+                  "index": 41,
+                  "pos": "NNP",
+                  "originalText": "Sunday",
+                  "ner": "DATE",
+                  "after": "",
+                  "characterOffsetEnd": 470,
+                  "before": " ",
+                  "word": "Sunday",
+                  "characterOffsetBegin": 464,
+                  "normalizedNER": "2016-11-13",
+                  "lemma": "Sunday",
+                  "timex": {
+                    "tid": "t2",
+                    "type": "DATE",
+                    "value": "2016-11-13"
+                  },
+                  "speaker": "PER0"
+                }
+              },
+              "NNP"
+            ]
+          ],
+          "score": 0.7901071092919326,
+          "text": "Sunday",
+          "enhancement": {
+            "timex": {
+              "start_date": "2016-11-13T00:00:00",
+              "end_date": "2016-11-13T23:59:59"
+            }
+          },
+          "nlpIndexSentence": 2
+        }
+      ]
     },
     "why": {
       "annotated": [
@@ -302,7 +233,34 @@
           "text": "failed to finish his last race"
         }
       ],
-      "label": "why"
+      "label": "why",
+      "extracted": [
+        {
+          "parts": [
+            [
+              {
+                "nlpToken": {
+                  "before": " ",
+                  "word": "he",
+                  "index": 9,
+                  "lemma": "he",
+                  "characterOffsetBegin": 103,
+                  "pos": "PRP",
+                  "originalText": "he",
+                  "ner": "O",
+                  "after": " ",
+                  "characterOffsetEnd": 105,
+                  "speaker": "PER0"
+                }
+              },
+              "PRP"
+            ]
+          ],
+          "score": 0.5637325637325638,
+          "text": "he",
+          "nlpIndexSentence": 1
+        }
+      ]
     },
     "who": {
       "annotated": [
@@ -437,7 +395,55 @@
           "text": "Sao Paulo, Brazil"
         }
       ],
-      "label": "where"
+      "label": "where",
+      "extracted": [
+        {
+          "parts": [
+            [
+              {
+                "nlpToken": {
+                  "before": " ",
+                  "word": "Interlagos",
+                  "index": 29,
+                  "lemma": "Interlagos",
+                  "characterOffsetBegin": 207,
+                  "pos": "NNPS",
+                  "originalText": "Interlagos",
+                  "ner": "LOCATION",
+                  "after": " ",
+                  "characterOffsetEnd": 217,
+                  "speaker": "PER0"
+                }
+              },
+              "NNPS"
+            ]
+          ],
+          "score": 0.6829782996927322,
+          "text": "Interlagos",
+          "enhancement": {
+            "openstreetmap_nominatim": {
+              "osm_id": "205197916",
+              "boundingbox": [
+                -23.7211674,
+                -23.6811674,
+                -46.7282912,
+                -46.6882912
+              ],
+              "licence": "Data \u00a9 OpenStreetMap contributors, ODbL 1.0. http://www.openstreetmap.org/copyright",
+              "importance": 0.18245308668878,
+              "icon": "https://nominatim.openstreetmap.org/images/mapicons/poi_place_village.p.20.png",
+              "osm_type": "node",
+              "display_name": "Interlagos, Socorro, SP, Microrregi\u00e3o de S\u00e3o Paulo, RMSP, Mesorregi\u00e3o Metropolitana de S\u00e3o Paulo, SP, Regi\u00e3o Sudeste, 04783 020, Brasil",
+              "lat": "-23.7011674",
+              "type": "suburb",
+              "place_id": "548530",
+              "lon": "-46.7082912",
+              "class": "place"
+            }
+          },
+          "nlpIndexSentence": 1
+        }
+      ]
     }
   },
   "description": "Williams' veteran driver Felipe Massa failed to finish his last race in front of his home crowd at Interlagos on Sunday, but he still earned a warm and emotional goodbye",

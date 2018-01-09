@@ -161,190 +161,10 @@
                 }
               },
               "IN"
-            ],
-            [
-              {
-                "nlpToken": {
-                  "before": " ",
-                  "word": "many",
-                  "index": 6,
-                  "lemma": "many",
-                  "characterOffsetBegin": 409,
-                  "pos": "JJ",
-                  "originalText": "many",
-                  "ner": "O",
-                  "after": " ",
-                  "characterOffsetEnd": 413,
-                  "speaker": "PER0"
-                }
-              },
-              "JJ"
-            ],
-            [
-              {
-                "nlpToken": {
-                  "before": " ",
-                  "word": "battleground",
-                  "index": 7,
-                  "lemma": "battleground",
-                  "characterOffsetBegin": 414,
-                  "pos": "NN",
-                  "originalText": "battleground",
-                  "ner": "O",
-                  "after": " ",
-                  "characterOffsetEnd": 426,
-                  "speaker": "PER0"
-                }
-              },
-              "NN"
-            ],
-            [
-              {
-                "nlpToken": {
-                  "before": " ",
-                  "word": "states",
-                  "index": 8,
-                  "lemma": "state",
-                  "characterOffsetBegin": 427,
-                  "pos": "NNS",
-                  "originalText": "states",
-                  "ner": "O",
-                  "after": "",
-                  "characterOffsetEnd": 433,
-                  "speaker": "PER0"
-                }
-              },
-              "NNS"
-            ],
-            [
-              {
-                "nlpToken": {
-                  "before": "",
-                  "word": ",",
-                  "index": 9,
-                  "lemma": ",",
-                  "characterOffsetBegin": 433,
-                  "pos": ",",
-                  "originalText": ",",
-                  "ner": "O",
-                  "after": " ",
-                  "characterOffsetEnd": 434,
-                  "speaker": "PER0"
-                }
-              },
-              ","
-            ],
-            [
-              {
-                "nlpToken": {
-                  "before": " ",
-                  "word": "Mrs.",
-                  "index": 10,
-                  "lemma": "Mrs.",
-                  "characterOffsetBegin": 435,
-                  "pos": "NNP",
-                  "originalText": "Mrs.",
-                  "ner": "O",
-                  "after": " ",
-                  "characterOffsetEnd": 439,
-                  "speaker": "PER0"
-                }
-              },
-              "NNP"
-            ],
-            [
-              {
-                "nlpToken": {
-                  "before": " ",
-                  "word": "Clinton",
-                  "index": 11,
-                  "lemma": "Clinton",
-                  "characterOffsetBegin": 440,
-                  "pos": "NNP",
-                  "originalText": "Clinton",
-                  "ner": "PERSON",
-                  "after": " ",
-                  "characterOffsetEnd": 447,
-                  "speaker": "PER0"
-                }
-              },
-              "NNP"
-            ],
-            [
-              {
-                "nlpToken": {
-                  "before": " ",
-                  "word": "told",
-                  "index": 12,
-                  "lemma": "tell",
-                  "characterOffsetBegin": 448,
-                  "pos": "VBD",
-                  "originalText": "told",
-                  "ner": "O",
-                  "after": " ",
-                  "characterOffsetEnd": 452,
-                  "speaker": "PER0"
-                }
-              },
-              "VBD"
-            ],
-            [
-              {
-                "nlpToken": {
-                  "before": " ",
-                  "word": "the",
-                  "index": 13,
-                  "lemma": "the",
-                  "characterOffsetBegin": 453,
-                  "pos": "DT",
-                  "originalText": "the",
-                  "ner": "O",
-                  "after": " ",
-                  "characterOffsetEnd": 456,
-                  "speaker": "PER0"
-                }
-              },
-              "DT"
-            ],
-            [
-              {
-                "nlpToken": {
-                  "before": " ",
-                  "word": "donors",
-                  "index": 14,
-                  "lemma": "donor",
-                  "characterOffsetBegin": 457,
-                  "pos": "NNS",
-                  "originalText": "donors",
-                  "ner": "O",
-                  "after": " ",
-                  "characterOffsetEnd": 463,
-                  "speaker": "PER0"
-                }
-              },
-              "NNS"
-            ],
-            [
-              {
-                "nlpToken": {
-                  "before": " ",
-                  "word": "on",
-                  "index": 15,
-                  "lemma": "on",
-                  "characterOffsetBegin": 464,
-                  "pos": "IN",
-                  "originalText": "on",
-                  "ner": "O",
-                  "after": " ",
-                  "characterOffsetEnd": 466,
-                  "speaker": "PER0"
-                }
-              },
-              "IN"
             ]
           ],
           "score": 1.0,
-          "text": "leading in polls in many battleground states , Mrs. Clinton told the donors on",
+          "text": "leading in polls in",
           "nlpIndexSentence": 2
         }
       ]
@@ -355,7 +175,94 @@
           "coderPhraseCount": 3
         }
       ],
-      "label": "when"
+      "label": "when",
+      "extracted": [
+        {
+          "parts": [
+            [
+              {
+                "nlpToken": {
+                  "index": 36,
+                  "pos": "DT",
+                  "originalText": "the",
+                  "ner": "TIME",
+                  "after": " ",
+                  "characterOffsetEnd": 4819,
+                  "before": " ",
+                  "word": "the",
+                  "characterOffsetBegin": 4816,
+                  "normalizedNER": "2016-11-12T05:01",
+                  "lemma": "the",
+                  "timex": {
+                    "tid": "t17",
+                    "type": "TIME",
+                    "value": "2016-11-12T05:01"
+                  },
+                  "speaker": "PER0"
+                }
+              },
+              "DT"
+            ],
+            [
+              {
+                "nlpToken": {
+                  "index": 37,
+                  "pos": "JJ",
+                  "originalText": "last",
+                  "ner": "TIME",
+                  "after": " ",
+                  "characterOffsetEnd": 4824,
+                  "before": " ",
+                  "word": "last",
+                  "characterOffsetBegin": 4820,
+                  "normalizedNER": "2016-11-12T05:01",
+                  "lemma": "last",
+                  "timex": {
+                    "tid": "t17",
+                    "type": "TIME",
+                    "value": "2016-11-12T05:01"
+                  },
+                  "speaker": "PER0"
+                }
+              },
+              "JJ"
+            ],
+            [
+              {
+                "nlpToken": {
+                  "index": 38,
+                  "pos": "NN",
+                  "originalText": "minute",
+                  "ner": "TIME",
+                  "after": "",
+                  "characterOffsetEnd": 4831,
+                  "before": " ",
+                  "word": "minute",
+                  "characterOffsetBegin": 4825,
+                  "normalizedNER": "2016-11-12T05:01",
+                  "lemma": "minute",
+                  "timex": {
+                    "tid": "t17",
+                    "type": "TIME",
+                    "value": "2016-11-12T05:01"
+                  },
+                  "speaker": "PER0"
+                }
+              },
+              "NN"
+            ]
+          ],
+          "score": 0.7777592021915987,
+          "text": "the last minute",
+          "enhancement": {
+            "timex": {
+              "start_date": "2016-11-12T05:01:00",
+              "end_date": "2016-11-12T05:01:59"
+            }
+          },
+          "nlpIndexSentence": 28
+        }
+      ]
     },
     "why": {
       "annotated": [
@@ -364,7 +271,466 @@
           "text": "he had revived the inquiry into her use of a private email server caused her to lose"
         }
       ],
-      "label": "why"
+      "label": "why",
+      "extracted": [
+        {
+          "parts": [
+            [
+              {
+                "nlpToken": {
+                  "before": " ",
+                  "word": "lost",
+                  "index": 10,
+                  "lemma": "lose",
+                  "characterOffsetBegin": 1079,
+                  "pos": "VBN",
+                  "originalText": "lost",
+                  "ner": "O",
+                  "after": " ",
+                  "characterOffsetEnd": 1083,
+                  "speaker": "PER0"
+                }
+              },
+              "VBN"
+            ],
+            [
+              {
+                "nlpToken": {
+                  "before": " ",
+                  "word": "because",
+                  "index": 11,
+                  "lemma": "because",
+                  "characterOffsetBegin": 1084,
+                  "pos": "IN",
+                  "originalText": "because",
+                  "ner": "O",
+                  "after": " ",
+                  "characterOffsetEnd": 1091,
+                  "speaker": "PER0"
+                }
+              },
+              "IN"
+            ],
+            [
+              {
+                "nlpToken": {
+                  "before": " ",
+                  "word": "President",
+                  "index": 12,
+                  "lemma": "President",
+                  "characterOffsetBegin": 1092,
+                  "pos": "NNP",
+                  "originalText": "President",
+                  "ner": "O",
+                  "after": " ",
+                  "characterOffsetEnd": 1101,
+                  "speaker": "PER0"
+                }
+              },
+              "NNP"
+            ],
+            [
+              {
+                "nlpToken": {
+                  "before": " ",
+                  "word": "Obama",
+                  "index": 13,
+                  "lemma": "Obama",
+                  "characterOffsetBegin": 1102,
+                  "pos": "NNP",
+                  "originalText": "Obama",
+                  "ner": "PERSON",
+                  "after": " ",
+                  "characterOffsetEnd": 1107,
+                  "speaker": "PER0"
+                }
+              },
+              "NNP"
+            ],
+            [
+              {
+                "nlpToken": {
+                  "before": " ",
+                  "word": "had",
+                  "index": 14,
+                  "lemma": "have",
+                  "characterOffsetBegin": 1108,
+                  "pos": "VBD",
+                  "originalText": "had",
+                  "ner": "O",
+                  "after": " ",
+                  "characterOffsetEnd": 1111,
+                  "speaker": "PER0"
+                }
+              },
+              "VBD"
+            ],
+            [
+              {
+                "nlpToken": {
+                  "before": " ",
+                  "word": "vowed",
+                  "index": 15,
+                  "lemma": "vow",
+                  "characterOffsetBegin": 1112,
+                  "pos": "VBN",
+                  "originalText": "vowed",
+                  "ner": "O",
+                  "after": " ",
+                  "characterOffsetEnd": 1117,
+                  "speaker": "PER0"
+                }
+              },
+              "VBN"
+            ],
+            [
+              {
+                "nlpToken": {
+                  "before": " ",
+                  "word": "to",
+                  "index": 16,
+                  "lemma": "to",
+                  "characterOffsetBegin": 1118,
+                  "pos": "TO",
+                  "originalText": "to",
+                  "ner": "O",
+                  "after": " ",
+                  "characterOffsetEnd": 1120,
+                  "speaker": "PER0"
+                }
+              },
+              "TO"
+            ],
+            [
+              {
+                "nlpToken": {
+                  "before": " ",
+                  "word": "bestow",
+                  "index": 17,
+                  "lemma": "bestow",
+                  "characterOffsetBegin": 1121,
+                  "pos": "VB",
+                  "originalText": "bestow",
+                  "ner": "O",
+                  "after": " ",
+                  "characterOffsetEnd": 1127,
+                  "speaker": "PER0"
+                }
+              },
+              "VB"
+            ],
+            [
+              {
+                "nlpToken": {
+                  "before": " ",
+                  "word": "``",
+                  "index": 18,
+                  "lemma": "``",
+                  "characterOffsetBegin": 1128,
+                  "pos": "``",
+                  "originalText": "\"",
+                  "ner": "O",
+                  "after": "",
+                  "characterOffsetEnd": 1129,
+                  "speaker": "PER0"
+                }
+              },
+              "``"
+            ],
+            [
+              {
+                "nlpToken": {
+                  "before": "",
+                  "word": "gifts",
+                  "index": 19,
+                  "lemma": "gift",
+                  "characterOffsetBegin": 1129,
+                  "pos": "NNS",
+                  "originalText": "gifts",
+                  "ner": "O",
+                  "after": "",
+                  "characterOffsetEnd": 1134,
+                  "speaker": "61"
+                }
+              },
+              "NNS"
+            ],
+            [
+              {
+                "nlpToken": {
+                  "before": "",
+                  "word": "''",
+                  "index": 20,
+                  "lemma": "''",
+                  "characterOffsetBegin": 1134,
+                  "pos": "''",
+                  "originalText": "\"",
+                  "ner": "O",
+                  "after": " ",
+                  "characterOffsetEnd": 1135,
+                  "speaker": "PER0"
+                }
+              },
+              "''"
+            ],
+            [
+              {
+                "nlpToken": {
+                  "before": " ",
+                  "word": "on",
+                  "index": 21,
+                  "lemma": "on",
+                  "characterOffsetBegin": 1136,
+                  "pos": "IN",
+                  "originalText": "on",
+                  "ner": "O",
+                  "after": " ",
+                  "characterOffsetEnd": 1138,
+                  "speaker": "PER0"
+                }
+              },
+              "IN"
+            ],
+            [
+              {
+                "nlpToken": {
+                  "before": " ",
+                  "word": "Democratic",
+                  "index": 22,
+                  "lemma": "democratic",
+                  "characterOffsetBegin": 1139,
+                  "pos": "JJ",
+                  "originalText": "Democratic",
+                  "ner": "MISC",
+                  "after": " ",
+                  "characterOffsetEnd": 1149,
+                  "speaker": "PER0"
+                }
+              },
+              "JJ"
+            ],
+            [
+              {
+                "nlpToken": {
+                  "before": " ",
+                  "word": "special",
+                  "index": 23,
+                  "lemma": "special",
+                  "characterOffsetBegin": 1150,
+                  "pos": "JJ",
+                  "originalText": "special",
+                  "ner": "O",
+                  "after": " ",
+                  "characterOffsetEnd": 1157,
+                  "speaker": "PER0"
+                }
+              },
+              "JJ"
+            ],
+            [
+              {
+                "nlpToken": {
+                  "before": " ",
+                  "word": "interests",
+                  "index": 24,
+                  "lemma": "interest",
+                  "characterOffsetBegin": 1158,
+                  "pos": "NNS",
+                  "originalText": "interests",
+                  "ner": "O",
+                  "after": " ",
+                  "characterOffsetEnd": 1167,
+                  "speaker": "PER0"
+                }
+              },
+              "NNS"
+            ],
+            [
+              {
+                "nlpToken": {
+                  "before": " ",
+                  "word": "groups",
+                  "index": 25,
+                  "lemma": "group",
+                  "characterOffsetBegin": 1168,
+                  "pos": "NNS",
+                  "originalText": "groups",
+                  "ner": "O",
+                  "after": "",
+                  "characterOffsetEnd": 1174,
+                  "speaker": "PER0"
+                }
+              },
+              "NNS"
+            ],
+            [
+              {
+                "nlpToken": {
+                  "before": "",
+                  "word": ",",
+                  "index": 26,
+                  "lemma": ",",
+                  "characterOffsetBegin": 1174,
+                  "pos": ",",
+                  "originalText": ",",
+                  "ner": "O",
+                  "after": " ",
+                  "characterOffsetEnd": 1175,
+                  "speaker": "PER0"
+                }
+              },
+              ","
+            ],
+            [
+              {
+                "nlpToken": {
+                  "before": " ",
+                  "word": "namely",
+                  "index": 27,
+                  "lemma": "namely",
+                  "characterOffsetBegin": 1176,
+                  "pos": "RB",
+                  "originalText": "namely",
+                  "ner": "O",
+                  "after": " ",
+                  "characterOffsetEnd": 1182,
+                  "speaker": "PER0"
+                }
+              },
+              "RB"
+            ],
+            [
+              {
+                "nlpToken": {
+                  "before": " ",
+                  "word": "African-Americans",
+                  "index": 28,
+                  "lemma": "African-Americans",
+                  "characterOffsetBegin": 1183,
+                  "pos": "NNPS",
+                  "originalText": "African-Americans",
+                  "ner": "MISC",
+                  "after": "",
+                  "characterOffsetEnd": 1200,
+                  "speaker": "PER0"
+                }
+              },
+              "NNPS"
+            ],
+            [
+              {
+                "nlpToken": {
+                  "before": "",
+                  "word": ",",
+                  "index": 29,
+                  "lemma": ",",
+                  "characterOffsetBegin": 1200,
+                  "pos": ",",
+                  "originalText": ",",
+                  "ner": "O",
+                  "after": " ",
+                  "characterOffsetEnd": 1201,
+                  "speaker": "PER0"
+                }
+              },
+              ","
+            ],
+            [
+              {
+                "nlpToken": {
+                  "before": " ",
+                  "word": "Hispanics",
+                  "index": 30,
+                  "lemma": "Hispanics",
+                  "characterOffsetBegin": 1202,
+                  "pos": "NNPS",
+                  "originalText": "Hispanics",
+                  "ner": "MISC",
+                  "after": " ",
+                  "characterOffsetEnd": 1211,
+                  "speaker": "PER0"
+                }
+              },
+              "NNPS"
+            ],
+            [
+              {
+                "nlpToken": {
+                  "before": " ",
+                  "word": "and",
+                  "index": 31,
+                  "lemma": "and",
+                  "characterOffsetBegin": 1212,
+                  "pos": "CC",
+                  "originalText": "and",
+                  "ner": "O",
+                  "after": " ",
+                  "characterOffsetEnd": 1215,
+                  "speaker": "PER0"
+                }
+              },
+              "CC"
+            ],
+            [
+              {
+                "nlpToken": {
+                  "before": " ",
+                  "word": "young",
+                  "index": 32,
+                  "lemma": "young",
+                  "characterOffsetBegin": 1216,
+                  "pos": "JJ",
+                  "originalText": "young",
+                  "ner": "O",
+                  "after": " ",
+                  "characterOffsetEnd": 1221,
+                  "speaker": "PER0"
+                }
+              },
+              "JJ"
+            ],
+            [
+              {
+                "nlpToken": {
+                  "before": " ",
+                  "word": "people",
+                  "index": 33,
+                  "lemma": "people",
+                  "characterOffsetBegin": 1222,
+                  "pos": "NNS",
+                  "originalText": "people",
+                  "ner": "O",
+                  "after": "",
+                  "characterOffsetEnd": 1228,
+                  "speaker": "PER0"
+                }
+              },
+              "NNS"
+            ],
+            [
+              {
+                "nlpToken": {
+                  "before": "",
+                  "word": ".",
+                  "index": 34,
+                  "lemma": ".",
+                  "characterOffsetBegin": 1228,
+                  "pos": ".",
+                  "originalText": ".",
+                  "ner": "O",
+                  "after": " ",
+                  "characterOffsetEnd": 1229,
+                  "speaker": "PER0"
+                }
+              },
+              "."
+            ]
+          ],
+          "score": 0.898465171192444,
+          "text": "lost because President Obama had vowed to bestow \" gifts \" on Democratic special interests groups , namely African-Americans , Hispanics and young people .",
+          "nlpIndexSentence": 8
+        }
+      ]
     },
     "who": {
       "annotated": [
@@ -426,7 +792,55 @@
           "text": "Saturday"
         }
       ],
-      "label": "where"
+      "label": "where",
+      "extracted": [
+        {
+          "parts": [
+            [
+              {
+                "nlpToken": {
+                  "before": " ",
+                  "word": "Nevada",
+                  "index": 41,
+                  "lemma": "Nevada",
+                  "characterOffsetBegin": 2519,
+                  "pos": "NNP",
+                  "originalText": "Nevada",
+                  "ner": "LOCATION",
+                  "after": "",
+                  "characterOffsetEnd": 2525,
+                  "speaker": "PER0"
+                }
+              },
+              "NNP"
+            ]
+          ],
+          "score": 0.67,
+          "text": "Nevada",
+          "enhancement": {
+            "openstreetmap_nominatim": {
+              "osm_id": "165473",
+              "boundingbox": [
+                35.0018757,
+                42.002207,
+                -120.0057276,
+                -114.039648
+              ],
+              "licence": "Data \u00a9 OpenStreetMap contributors, ODbL 1.0. http://www.openstreetmap.org/copyright",
+              "importance": 0.28636169022291,
+              "icon": "https://nominatim.openstreetmap.org/images/mapicons/poi_boundary_administrative.p.20.png",
+              "osm_type": "relation",
+              "display_name": "Nevada, United States of America",
+              "lat": "39.5158825",
+              "type": "administrative",
+              "place_id": "177609862",
+              "lon": "-116.8537227",
+              "class": "boundary"
+            }
+          },
+          "nlpIndexSentence": 15
+        }
+      ]
     }
   },
   "description": "Mrs. Clinton said on Saturday that the announcement by James B. Comey 11 days before the election that he had revived the inquiry into her use of a private email server caused her to lose.",

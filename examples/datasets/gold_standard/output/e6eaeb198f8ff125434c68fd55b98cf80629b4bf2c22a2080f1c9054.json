@@ -76,24 +76,78 @@
               {
                 "nlpToken": {
                   "before": " ",
-                  "word": "unexpected",
-                  "index": 5,
-                  "lemma": "unexpected",
-                  "characterOffsetBegin": 110,
-                  "pos": "JJ",
-                  "originalText": "unexpected",
-                  "ner": "O",
+                  "word": "Americans",
+                  "index": 6,
+                  "lemma": "Americans",
+                  "characterOffsetBegin": 549,
+                  "pos": "NNPS",
+                  "originalText": "Americans",
+                  "ner": "MISC",
                   "after": " ",
-                  "characterOffsetEnd": 120,
+                  "characterOffsetEnd": 558,
                   "speaker": "PER0"
                 }
               },
-              "JJ"
+              "NNPS"
+            ],
+            [
+              {
+                "nlpToken": {
+                  "before": " ",
+                  "word": "prepared",
+                  "index": 7,
+                  "lemma": "prepare",
+                  "characterOffsetBegin": 559,
+                  "pos": "VBD",
+                  "originalText": "prepared",
+                  "ner": "O",
+                  "after": " ",
+                  "characterOffsetEnd": 567,
+                  "speaker": "PER0"
+                }
+              },
+              "VBD"
+            ],
+            [
+              {
+                "nlpToken": {
+                  "before": " ",
+                  "word": "to",
+                  "index": 8,
+                  "lemma": "to",
+                  "characterOffsetBegin": 568,
+                  "pos": "TO",
+                  "originalText": "to",
+                  "ner": "O",
+                  "after": " ",
+                  "characterOffsetEnd": 570,
+                  "speaker": "PER0"
+                }
+              },
+              "TO"
+            ],
+            [
+              {
+                "nlpToken": {
+                  "before": " ",
+                  "word": "go",
+                  "index": 9,
+                  "lemma": "go",
+                  "characterOffsetBegin": 571,
+                  "pos": "VB",
+                  "originalText": "go",
+                  "ner": "O",
+                  "after": " ",
+                  "characterOffsetEnd": 573,
+                  "speaker": "PER0"
+                }
+              },
+              "VB"
             ]
           ],
           "score": 1.0,
-          "text": "unexpected",
-          "nlpIndexSentence": 1
+          "text": "Americans prepared to go",
+          "nlpIndexSentence": 6
         }
       ]
     },
@@ -108,7 +162,46 @@
           "text": "Sunday night"
         }
       ],
-      "label": "when"
+      "label": "when",
+      "extracted": [
+        {
+          "parts": [
+            [
+              {
+                "nlpToken": {
+                  "index": 14,
+                  "pos": "NNP",
+                  "originalText": "Tuesday",
+                  "ner": "DATE",
+                  "after": "",
+                  "characterOffsetEnd": 597,
+                  "before": " ",
+                  "word": "Tuesday",
+                  "characterOffsetBegin": 590,
+                  "normalizedNER": "2016-11-08",
+                  "lemma": "Tuesday",
+                  "timex": {
+                    "tid": "t5",
+                    "type": "DATE",
+                    "value": "2016-11-08"
+                  },
+                  "speaker": "PER0"
+                }
+              },
+              "NNP"
+            ]
+          ],
+          "score": 0.7864743491508392,
+          "text": "Tuesday",
+          "enhancement": {
+            "timex": {
+              "start_date": "2016-11-08T00:00:00",
+              "end_date": "2016-11-08T23:59:59"
+            }
+          },
+          "nlpIndexSentence": 3
+        }
+      ]
     },
     "why": {
       "annotated": [
@@ -116,7 +209,33 @@
           "coderPhraseCount": 2
         }
       ],
-      "label": "why"
+      "label": "why",
+      "extracted": [
+        {
+          "parts": [
+            [
+              {
+                "nlpToken": {
+                  "before": " ",
+                  "word": "it",
+                  "index": 9,
+                  "lemma": "it",
+                  "characterOffsetBegin": 46,
+                  "pos": "PRP",
+                  "originalText": "it",
+                  "ner": "O",
+                  "after": " ",
+                  "characterOffsetEnd": 48,
+                  "speaker": "PER0"
+                }
+              },
+              "PRP"
+            ]
+          ],
+          "score": 0.5844155844155844,
+          "text": "it"
+        }
+      ]
     },
     "who": {
       "annotated": [
@@ -271,7 +390,55 @@
           "coderPhraseCount": 3
         }
       ],
-      "label": "where"
+      "label": "where",
+      "extracted": [
+        {
+          "parts": [
+            [
+              {
+                "nlpToken": {
+                  "before": " ",
+                  "word": "US",
+                  "index": 16,
+                  "lemma": "US",
+                  "characterOffsetBegin": 175,
+                  "pos": "NNP",
+                  "originalText": "US",
+                  "ner": "LOCATION",
+                  "after": " ",
+                  "characterOffsetEnd": 177,
+                  "speaker": "PER0"
+                }
+              },
+              "NNP"
+            ]
+          ],
+          "score": 0.7,
+          "text": "US",
+          "enhancement": {
+            "openstreetmap_nominatim": {
+              "osm_id": "148838",
+              "boundingbox": [
+                -14.7608358,
+                71.6048217,
+                -180.0,
+                180.0
+              ],
+              "licence": "Data \u00a9 OpenStreetMap contributors, ODbL 1.0. http://www.openstreetmap.org/copyright",
+              "importance": 0.2361730870995,
+              "icon": "https://nominatim.openstreetmap.org/images/mapicons/poi_boundary_administrative.p.20.png",
+              "osm_type": "relation",
+              "display_name": "United States of America",
+              "lat": "39.7837304",
+              "type": "administrative",
+              "place_id": "177579678",
+              "lon": "-100.4458825",
+              "class": "boundary"
+            }
+          },
+          "nlpIndexSentence": 1
+        }
+      ]
     }
   },
   "description": "Hillary Clinton received an unexpected boost to her campaign with just hours left before the US presidential election as the FBI announced on Sunday night that it had found no evidence of criminal wrongdoing in her use of a private email server.",

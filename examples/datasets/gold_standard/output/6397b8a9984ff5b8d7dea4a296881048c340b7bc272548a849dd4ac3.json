@@ -74,7 +74,46 @@
           "parsed": "2016-11-07"
         }
       ],
-      "label": "when"
+      "label": "when",
+      "extracted": [
+        {
+          "parts": [
+            [
+              {
+                "nlpToken": {
+                  "characterOffsetBegin": 6100,
+                  "word": "midnight",
+                  "lemma": "midnight",
+                  "timex": {
+                    "value": "2016-11-07T00:00",
+                    "tid": "t30",
+                    "type": "TIME"
+                  },
+                  "before": " ",
+                  "characterOffsetEnd": 6108,
+                  "originalText": "midnight",
+                  "normalizedNER": "2016-11-07T00:00",
+                  "speaker": "PER0",
+                  "after": " ",
+                  "ner": "TIME",
+                  "index": 16,
+                  "pos": "NN"
+                }
+              },
+              "NN"
+            ]
+          ],
+          "score": 0.7969079967612267,
+          "text": "midnight",
+          "enhancement": {
+            "timex": {
+              "start_date": "2016-11-07T00:00:00",
+              "end_date": "2016-11-07T00:00:59"
+            }
+          },
+          "nlpIndexSentence": 49
+        }
+      ]
     },
     "why": {
       "annotated": [
@@ -83,7 +122,52 @@
           "coderPhraseCount": 3
         }
       ],
-      "label": "why"
+      "label": "why",
+      "extracted": [
+        {
+          "parts": [
+            [
+              {
+                "nlpToken": {
+                  "characterOffsetBegin": 88,
+                  "word": "Donald",
+                  "lemma": "Donald",
+                  "characterOffsetEnd": 94,
+                  "speaker": "PER0",
+                  "ner": "PERSON",
+                  "after": " ",
+                  "originalText": "Donald",
+                  "before": " ",
+                  "index": 6,
+                  "pos": "NNP"
+                }
+              },
+              "NNP"
+            ],
+            [
+              {
+                "nlpToken": {
+                  "characterOffsetBegin": 95,
+                  "word": "Trump",
+                  "lemma": "Trump",
+                  "characterOffsetEnd": 100,
+                  "speaker": "PER0",
+                  "ner": "PERSON",
+                  "after": " ",
+                  "originalText": "Trump",
+                  "before": " ",
+                  "index": 7,
+                  "pos": "NNP"
+                }
+              },
+              "NNP"
+            ]
+          ],
+          "score": 0.5672327672327673,
+          "text": "Donald Trump",
+          "nlpIndexSentence": 2
+        }
+      ]
     },
     "how": {
       "annotated": [
@@ -167,154 +251,10 @@
                 }
               },
               "VBZ"
-            ],
-            [
-              {
-                "nlpToken": {
-                  "characterOffsetBegin": 4943,
-                  "word": "the",
-                  "lemma": "the",
-                  "characterOffsetEnd": 4946,
-                  "speaker": "PER0",
-                  "ner": "O",
-                  "after": " ",
-                  "originalText": "the",
-                  "before": " ",
-                  "index": 6,
-                  "pos": "DT"
-                }
-              },
-              "DT"
-            ],
-            [
-              {
-                "nlpToken": {
-                  "characterOffsetBegin": 4947,
-                  "word": "email",
-                  "lemma": "email",
-                  "characterOffsetEnd": 4952,
-                  "speaker": "PER0",
-                  "ner": "O",
-                  "after": " ",
-                  "originalText": "email",
-                  "before": " ",
-                  "index": 7,
-                  "pos": "NN"
-                }
-              },
-              "NN"
-            ],
-            [
-              {
-                "nlpToken": {
-                  "characterOffsetBegin": 4953,
-                  "word": "server",
-                  "lemma": "server",
-                  "characterOffsetEnd": 4959,
-                  "speaker": "PER0",
-                  "ner": "O",
-                  "after": " ",
-                  "originalText": "server",
-                  "before": " ",
-                  "index": 8,
-                  "pos": "NN"
-                }
-              },
-              "NN"
-            ],
-            [
-              {
-                "nlpToken": {
-                  "characterOffsetBegin": 4960,
-                  "word": "scandal",
-                  "lemma": "scandal",
-                  "characterOffsetEnd": 4967,
-                  "speaker": "PER0",
-                  "ner": "O",
-                  "after": " ",
-                  "originalText": "scandal",
-                  "before": " ",
-                  "index": 9,
-                  "pos": "NN"
-                }
-              },
-              "NN"
-            ],
-            [
-              {
-                "nlpToken": {
-                  "characterOffsetBegin": 4968,
-                  "word": "is",
-                  "lemma": "be",
-                  "characterOffsetEnd": 4970,
-                  "speaker": "PER0",
-                  "ner": "O",
-                  "after": " ",
-                  "originalText": "is",
-                  "before": " ",
-                  "index": 10,
-                  "pos": "VBZ"
-                }
-              },
-              "VBZ"
-            ],
-            [
-              {
-                "nlpToken": {
-                  "characterOffsetBegin": 4971,
-                  "word": "far",
-                  "lemma": "far",
-                  "characterOffsetEnd": 4974,
-                  "speaker": "PER0",
-                  "ner": "O",
-                  "after": " ",
-                  "originalText": "far",
-                  "before": " ",
-                  "index": 11,
-                  "pos": "RB"
-                }
-              },
-              "RB"
-            ],
-            [
-              {
-                "nlpToken": {
-                  "characterOffsetBegin": 4975,
-                  "word": "from",
-                  "lemma": "from",
-                  "characterOffsetEnd": 4979,
-                  "speaker": "PER0",
-                  "ner": "O",
-                  "after": " ",
-                  "originalText": "from",
-                  "before": " ",
-                  "index": 12,
-                  "pos": "IN"
-                }
-              },
-              "IN"
-            ],
-            [
-              {
-                "nlpToken": {
-                  "characterOffsetBegin": 4980,
-                  "word": "over",
-                  "lemma": "over",
-                  "characterOffsetEnd": 4984,
-                  "speaker": "PER0",
-                  "ner": "O",
-                  "after": "",
-                  "originalText": "over",
-                  "before": " ",
-                  "index": 13,
-                  "pos": "IN"
-                }
-              },
-              "IN"
             ]
           ],
           "score": 1.0,
-          "text": "Republicans , it seems the email server scandal is far from over",
+          "text": "Republicans , it seems",
           "nlpIndexSentence": 2
         }
       ]
@@ -330,7 +270,55 @@
           "coderPhraseCount": 2
         }
       ],
-      "label": "where"
+      "label": "where",
+      "extracted": [
+        {
+          "parts": [
+            [
+              {
+                "nlpToken": {
+                  "characterOffsetBegin": 542,
+                  "word": "US",
+                  "lemma": "US",
+                  "characterOffsetEnd": 544,
+                  "speaker": "PER0",
+                  "ner": "LOCATION",
+                  "after": " ",
+                  "originalText": "US",
+                  "before": " ",
+                  "index": 17,
+                  "pos": "NNP"
+                }
+              },
+              "NNP"
+            ]
+          ],
+          "score": 0.7,
+          "text": "US",
+          "enhancement": {
+            "openstreetmap_nominatim": {
+              "osm_id": "148838",
+              "boundingbox": [
+                -14.7608358,
+                71.6048217,
+                -180.0,
+                180.0
+              ],
+              "licence": "Data \u00a9 OpenStreetMap contributors, ODbL 1.0. http://www.openstreetmap.org/copyright",
+              "importance": 0.2361730870995,
+              "icon": "https://nominatim.openstreetmap.org/images/mapicons/poi_boundary_administrative.p.20.png",
+              "osm_type": "relation",
+              "display_name": "United States of America",
+              "lat": "39.7837304",
+              "type": "administrative",
+              "place_id": "177579678",
+              "lon": "-100.4458825",
+              "class": "boundary"
+            }
+          },
+          "nlpIndexSentence": 5
+        }
+      ]
     },
     "what": {
       "annotated": [

@@ -45,6 +45,7 @@ class Reader(object):
             # _preprocessedPath path is given, and there is already a preprocessed document
             with open(preprocessedFilePath, 'rb') as ff:
                 document = pickle.load(ff)
+                document.reset_candidates()
         else:
             document = Document(data.setdefault('title', ''), data.setdefault('description', ''),
                                 data.setdefault('text', ''), raw_data=data)

@@ -67,7 +67,46 @@
           "parsed": "2016-11-10"
         }
       ],
-      "label": "when"
+      "label": "when",
+      "extracted": [
+        {
+          "parts": [
+            [
+              {
+                "nlpToken": {
+                  "characterOffsetBegin": 598,
+                  "word": "11pm",
+                  "lemma": "11pm",
+                  "timex": {
+                    "value": "2016-11-10T23:00",
+                    "tid": "t1",
+                    "type": "TIME"
+                  },
+                  "before": " ",
+                  "characterOffsetEnd": 602,
+                  "originalText": "11pm",
+                  "normalizedNER": "2016-11-10T23:00",
+                  "speaker": "PER0",
+                  "after": " ",
+                  "ner": "TIME",
+                  "index": 39,
+                  "pos": "JJ"
+                }
+              },
+              "JJ"
+            ]
+          ],
+          "score": 0.9647606371763671,
+          "text": "11pm",
+          "enhancement": {
+            "timex": {
+              "start_date": "2016-11-10T23:00:00",
+              "end_date": "2016-11-10T23:00:59"
+            }
+          },
+          "nlpIndexSentence": 2
+        }
+      ]
     },
     "why": {
       "annotated": [
@@ -76,7 +115,33 @@
           "coderPhraseCount": 3
         }
       ],
-      "label": "why"
+      "label": "why",
+      "extracted": [
+        {
+          "parts": [
+            [
+              {
+                "nlpToken": {
+                  "characterOffsetBegin": 0,
+                  "word": "Dozens",
+                  "lemma": "dozen",
+                  "characterOffsetEnd": 6,
+                  "speaker": "PER0",
+                  "ner": "O",
+                  "after": " ",
+                  "originalText": "Dozens",
+                  "before": "",
+                  "index": 1,
+                  "pos": "NNS"
+                }
+              },
+              "NNS"
+            ]
+          ],
+          "score": 0.5844155844155844,
+          "text": "Dozens"
+        }
+      ]
     },
     "how": {
       "annotated": [
@@ -96,24 +161,79 @@
             [
               {
                 "nlpToken": {
-                  "characterOffsetBegin": 52,
-                  "word": "northern",
-                  "lemma": "northern",
-                  "characterOffsetEnd": 60,
+                  "characterOffsetBegin": 1132,
+                  "word": "the",
+                  "lemma": "the",
+                  "characterOffsetEnd": 1135,
                   "speaker": "PER0",
                   "ner": "O",
                   "after": " ",
-                  "originalText": "northern",
+                  "originalText": "the",
                   "before": " ",
-                  "index": 10,
-                  "pos": "JJ"
+                  "index": 5,
+                  "pos": "DT"
                 }
               },
-              "JJ"
+              "DT"
+            ],
+            [
+              {
+                "nlpToken": {
+                  "characterOffsetBegin": 1136,
+                  "word": "building",
+                  "lemma": "building",
+                  "characterOffsetEnd": 1144,
+                  "speaker": "PER0",
+                  "ner": "O",
+                  "after": " ",
+                  "originalText": "building",
+                  "before": " ",
+                  "index": 6,
+                  "pos": "NN"
+                }
+              },
+              "NN"
+            ],
+            [
+              {
+                "nlpToken": {
+                  "characterOffsetBegin": 1145,
+                  "word": "suffered",
+                  "lemma": "suffer",
+                  "characterOffsetEnd": 1153,
+                  "speaker": "PER0",
+                  "ner": "O",
+                  "after": " ",
+                  "originalText": "suffered",
+                  "before": " ",
+                  "index": 7,
+                  "pos": "VBD"
+                }
+              },
+              "VBD"
+            ],
+            [
+              {
+                "nlpToken": {
+                  "characterOffsetBegin": 1154,
+                  "word": "``",
+                  "lemma": "``",
+                  "characterOffsetEnd": 1155,
+                  "speaker": "PER0",
+                  "ner": "O",
+                  "after": "",
+                  "originalText": "\"",
+                  "before": " ",
+                  "index": 8,
+                  "pos": "``"
+                }
+              },
+              "``"
             ]
           ],
           "score": 1.0,
-          "text": "northern"
+          "text": "the building suffered \"",
+          "nlpIndexSentence": 5
         }
       ]
     },
@@ -124,7 +244,54 @@
           "coderPhraseCount": 3
         }
       ],
-      "label": "where"
+      "label": "where",
+      "extracted": [
+        {
+          "parts": [
+            [
+              {
+                "nlpToken": {
+                  "characterOffsetBegin": 69,
+                  "word": "Mazar-e-Sharif",
+                  "lemma": "Mazar-e-Sharif",
+                  "characterOffsetEnd": 83,
+                  "speaker": "PER0",
+                  "ner": "LOCATION",
+                  "after": "  ",
+                  "originalText": "Mazar-e-Sharif",
+                  "before": " ",
+                  "index": 13,
+                  "pos": "NNP"
+                }
+              },
+              "NNP"
+            ]
+          ],
+          "score": 0.6769085608170098,
+          "text": "Mazar-e-Sharif",
+          "enhancement": {
+            "openstreetmap_nominatim": {
+              "osm_id": "2396275966",
+              "boundingbox": [
+                36.5513366,
+                36.8713366,
+                66.9487511,
+                67.2687511
+              ],
+              "licence": "Data \u00a9 OpenStreetMap contributors, ODbL 1.0. http://www.openstreetmap.org/copyright",
+              "importance": 0.11153510918303,
+              "icon": "https://nominatim.openstreetmap.org/images/mapicons/poi_place_city.p.20.png",
+              "osm_type": "node",
+              "display_name": "\u0645\u0632\u0627\u0631 \u0634\u0631\u06cc\u0641, \u0628\u0644\u062e, \u0627\u0641\u063a\u0627\u0646\u0633\u062a\u0627\u0646",
+              "lat": "36.7113366",
+              "type": "city",
+              "place_id": "25073727",
+              "lon": "67.1087511",
+              "class": "place"
+            }
+          }
+        }
+      ]
     },
     "what": {
       "annotated": [

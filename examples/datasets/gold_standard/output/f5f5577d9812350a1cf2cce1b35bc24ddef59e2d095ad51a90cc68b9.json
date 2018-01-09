@@ -153,15 +153,15 @@
               {
                 "nlpToken": {
                   "before": " ",
-                  "word": "a",
-                  "index": 8,
-                  "lemma": "a",
-                  "characterOffsetBegin": 107,
+                  "word": "the",
+                  "index": 6,
+                  "lemma": "the",
+                  "characterOffsetBegin": 1947,
                   "pos": "DT",
-                  "originalText": "a",
+                  "originalText": "the",
                   "ner": "O",
                   "after": " ",
-                  "characterOffsetEnd": 108,
+                  "characterOffsetEnd": 1950,
                   "speaker": "PER0"
                 }
               },
@@ -172,14 +172,14 @@
                 "nlpToken": {
                   "before": " ",
                   "word": "tram",
-                  "index": 9,
+                  "index": 7,
                   "lemma": "tram",
-                  "characterOffsetBegin": 109,
+                  "characterOffsetBegin": 1951,
                   "pos": "NN",
                   "originalText": "tram",
                   "ner": "O",
                   "after": " ",
-                  "characterOffsetEnd": 113,
+                  "characterOffsetEnd": 1955,
                   "speaker": "PER0"
                 }
               },
@@ -189,15 +189,15 @@
               {
                 "nlpToken": {
                   "before": " ",
-                  "word": "overturned",
-                  "index": 10,
-                  "lemma": "overturn",
-                  "characterOffsetBegin": 114,
+                  "word": "derailed",
+                  "index": 8,
+                  "lemma": "derail",
+                  "characterOffsetBegin": 1956,
                   "pos": "VBN",
-                  "originalText": "overturned",
+                  "originalText": "derailed",
                   "ner": "O",
                   "after": " ",
-                  "characterOffsetEnd": 124,
+                  "characterOffsetEnd": 1964,
                   "speaker": "PER0"
                 }
               },
@@ -207,96 +207,24 @@
               {
                 "nlpToken": {
                   "before": " ",
-                  "word": "in",
-                  "index": 11,
-                  "lemma": "in",
-                  "characterOffsetBegin": 125,
-                  "pos": "IN",
-                  "originalText": "in",
+                  "word": "-LRB-",
+                  "index": 9,
+                  "lemma": "-lrb-",
+                  "characterOffsetBegin": 1965,
+                  "pos": "-LRB-",
+                  "originalText": "(",
                   "ner": "O",
-                  "after": " ",
-                  "characterOffsetEnd": 127,
-                  "speaker": "PER0"
-                }
-              },
-              "IN"
-            ],
-            [
-              {
-                "nlpToken": {
-                  "before": " ",
-                  "word": "Croydon",
-                  "index": 12,
-                  "lemma": "Croydon",
-                  "characterOffsetBegin": 128,
-                  "pos": "NNP",
-                  "originalText": "Croydon",
-                  "ner": "LOCATION",
                   "after": "",
-                  "characterOffsetEnd": 135,
+                  "characterOffsetEnd": 1966,
                   "speaker": "PER0"
                 }
               },
-              "NNP"
-            ],
-            [
-              {
-                "nlpToken": {
-                  "before": "",
-                  "word": ",",
-                  "index": 13,
-                  "lemma": ",",
-                  "characterOffsetBegin": 135,
-                  "pos": ",",
-                  "originalText": ",",
-                  "ner": "O",
-                  "after": " ",
-                  "characterOffsetEnd": 136,
-                  "speaker": "PER0"
-                }
-              },
-              ","
-            ],
-            [
-              {
-                "nlpToken": {
-                  "before": " ",
-                  "word": "south",
-                  "index": 14,
-                  "lemma": "south",
-                  "characterOffsetBegin": 137,
-                  "pos": "RB",
-                  "originalText": "south",
-                  "ner": "O",
-                  "after": " ",
-                  "characterOffsetEnd": 142,
-                  "speaker": "PER0"
-                }
-              },
-              "RB"
-            ],
-            [
-              {
-                "nlpToken": {
-                  "before": " ",
-                  "word": "London",
-                  "index": 15,
-                  "lemma": "London",
-                  "characterOffsetBegin": 143,
-                  "pos": "NNP",
-                  "originalText": "London",
-                  "ner": "LOCATION",
-                  "after": "",
-                  "characterOffsetEnd": 149,
-                  "speaker": "PER0"
-                }
-              },
-              "NNP"
+              "-LRB-"
             ]
           ],
           "score": 1.0,
-          "text": "a tram overturned in Croydon , south London",
-          "nlpIndexSentence": 8
+          "text": "the tram derailed (",
+          "nlpIndexSentence": 6
         }
       ]
     },
@@ -307,7 +235,70 @@
           "text": "about 6.10am or 6.15am"
         }
       ],
-      "label": "when"
+      "label": "when",
+      "extracted": [
+        {
+          "parts": [
+            [
+              {
+                "nlpToken": {
+                  "index": 12,
+                  "pos": "CD",
+                  "originalText": "6.15",
+                  "ner": "TIME",
+                  "after": "",
+                  "characterOffsetEnd": 1607,
+                  "before": " ",
+                  "word": "6.15",
+                  "characterOffsetBegin": 1603,
+                  "normalizedNER": "2016-11-08T15:00",
+                  "lemma": "6.15",
+                  "timex": {
+                    "tid": "t4",
+                    "type": "TIME",
+                    "value": "2016-11-08T15:00"
+                  },
+                  "speaker": "95"
+                }
+              },
+              "CD"
+            ],
+            [
+              {
+                "nlpToken": {
+                  "index": 13,
+                  "pos": "VBP",
+                  "originalText": "am",
+                  "ner": "TIME",
+                  "after": " ",
+                  "characterOffsetEnd": 1609,
+                  "before": "",
+                  "word": "am",
+                  "characterOffsetBegin": 1607,
+                  "normalizedNER": "2016-11-08T15:00",
+                  "lemma": "be",
+                  "timex": {
+                    "tid": "t4",
+                    "type": "TIME",
+                    "value": "2016-11-08T15:00"
+                  },
+                  "speaker": "95"
+                }
+              },
+              "VBP"
+            ]
+          ],
+          "score": 0.7788836089576723,
+          "text": "6.15 am",
+          "enhancement": {
+            "timex": {
+              "start_date": "2016-11-08T15:00:00",
+              "end_date": "2016-11-08T15:00:59"
+            }
+          },
+          "nlpIndexSentence": 16
+        }
+      ]
     },
     "why": {
       "annotated": [
@@ -316,7 +307,124 @@
           "text": "tram overturned"
         }
       ],
-      "label": "why"
+      "label": "why",
+      "extracted": [
+        {
+          "parts": [
+            [
+              {
+                "nlpToken": {
+                  "before": " ",
+                  "word": "and",
+                  "index": 14,
+                  "lemma": "and",
+                  "characterOffsetBegin": 1610,
+                  "pos": "CC",
+                  "originalText": "and",
+                  "ner": "O",
+                  "after": " ",
+                  "characterOffsetEnd": 1613,
+                  "speaker": "95"
+                }
+              },
+              "CC"
+            ],
+            [
+              {
+                "nlpToken": {
+                  "before": " ",
+                  "word": "because",
+                  "index": 15,
+                  "lemma": "because",
+                  "characterOffsetBegin": 1614,
+                  "pos": "IN",
+                  "originalText": "because",
+                  "ner": "O",
+                  "after": " ",
+                  "characterOffsetEnd": 1621,
+                  "speaker": "95"
+                }
+              },
+              "IN"
+            ],
+            [
+              {
+                "nlpToken": {
+                  "before": " ",
+                  "word": "I",
+                  "index": 16,
+                  "lemma": "I",
+                  "characterOffsetBegin": 1622,
+                  "pos": "PRP",
+                  "originalText": "I",
+                  "ner": "O",
+                  "after": " ",
+                  "characterOffsetEnd": 1623,
+                  "speaker": "95"
+                }
+              },
+              "PRP"
+            ],
+            [
+              {
+                "nlpToken": {
+                  "before": " ",
+                  "word": "was",
+                  "index": 17,
+                  "lemma": "be",
+                  "characterOffsetBegin": 1624,
+                  "pos": "VBD",
+                  "originalText": "was",
+                  "ner": "O",
+                  "after": " ",
+                  "characterOffsetEnd": 1627,
+                  "speaker": "95"
+                }
+              },
+              "VBD"
+            ],
+            [
+              {
+                "nlpToken": {
+                  "before": " ",
+                  "word": "praying",
+                  "index": 18,
+                  "lemma": "pray",
+                  "characterOffsetBegin": 1628,
+                  "pos": "VBG",
+                  "originalText": "praying",
+                  "ner": "O",
+                  "after": "",
+                  "characterOffsetEnd": 1635,
+                  "speaker": "95"
+                }
+              },
+              "VBG"
+            ],
+            [
+              {
+                "nlpToken": {
+                  "before": "",
+                  "word": ".",
+                  "index": 19,
+                  "lemma": ".",
+                  "characterOffsetBegin": 1635,
+                  "pos": ".",
+                  "originalText": ".",
+                  "ner": "O",
+                  "after": " ",
+                  "characterOffsetEnd": 1636,
+                  "speaker": "95"
+                }
+              },
+              "."
+            ]
+          ],
+          "score": 0.7447124304267161,
+          "text": "and because I was praying .",
+          "nlpIndexSentence": 16
+        }
+      ]
     },
     "who": {
       "annotated": [
@@ -397,7 +505,54 @@
           "text": "Croydon, south London"
         }
       ],
-      "label": "where"
+      "label": "where",
+      "extracted": [
+        {
+          "parts": [
+            [
+              {
+                "nlpToken": {
+                  "before": " ",
+                  "word": "London",
+                  "index": 12,
+                  "lemma": "London",
+                  "characterOffsetBegin": 63,
+                  "pos": "NNP",
+                  "originalText": "London",
+                  "ner": "LOCATION",
+                  "after": "",
+                  "characterOffsetEnd": 69,
+                  "speaker": "PER0"
+                }
+              },
+              "NNP"
+            ]
+          ],
+          "score": 0.6754683283979429,
+          "text": "London",
+          "enhancement": {
+            "openstreetmap_nominatim": {
+              "osm_id": "65606",
+              "boundingbox": [
+                51.2867602,
+                51.6918741,
+                -0.5103751,
+                0.3340155
+              ],
+              "licence": "Data \u00a9 OpenStreetMap contributors, ODbL 1.0. http://www.openstreetmap.org/copyright",
+              "importance": 0.32637239413505,
+              "icon": "https://nominatim.openstreetmap.org/images/mapicons/poi_place_city.p.20.png",
+              "osm_type": "relation",
+              "display_name": "London, Greater London, England, UK",
+              "lat": "51.5073219",
+              "type": "city",
+              "place_id": "179118272",
+              "lon": "-0.1276474",
+              "class": "place"
+            }
+          }
+        }
+      ]
     }
   },
   "description": "At least five people are dead after a tram overturned in Croydon, south London. Two people remain trapped and more than 50 people have been injured after the accident. The London Mayor has warned that the death toll 'may well increase'. The driver of the tram has been arrested, British Transport Police said.",

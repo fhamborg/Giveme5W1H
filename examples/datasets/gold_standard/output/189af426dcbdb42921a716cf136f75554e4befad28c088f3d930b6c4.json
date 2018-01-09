@@ -91,6 +91,64 @@
                 }
               },
               "VBN"
+            ]
+          ],
+          "score": 1.0,
+          "text": "the driver had been",
+          "nlpIndexSentence": 5
+        }
+      ]
+    },
+    "what": {
+      "annotated": [
+        {
+          "coderPhraseCount": 3,
+          "text": "Killing at Least 7"
+        },
+        {
+          "coderPhraseCount": 2,
+          "text": "Derails"
+        }
+      ],
+      "label": "what",
+      "extracted": [
+        {
+          "parts": [
+            [
+              {
+                "nlpToken": {
+                  "index": 7,
+                  "word": "had",
+                  "originalText": "had",
+                  "lemma": "have",
+                  "characterOffsetBegin": 90,
+                  "characterOffsetEnd": 93,
+                  "pos": "VBD",
+                  "ner": "O",
+                  "speaker": "PER0",
+                  "before": " ",
+                  "after": " "
+                }
+              },
+              "VBD"
+            ],
+            [
+              {
+                "nlpToken": {
+                  "index": 8,
+                  "word": "been",
+                  "originalText": "been",
+                  "lemma": "be",
+                  "characterOffsetBegin": 94,
+                  "characterOffsetEnd": 98,
+                  "pos": "VBN",
+                  "ner": "O",
+                  "speaker": "PER0",
+                  "before": " ",
+                  "after": " "
+                }
+              },
+              "VBN"
             ],
             [
               {
@@ -181,425 +239,26 @@
                 }
               },
               "NN"
-            ],
-            [
-              {
-                "nlpToken": {
-                  "index": 14,
-                  "word": "in",
-                  "originalText": "in",
-                  "lemma": "in",
-                  "characterOffsetBegin": 134,
-                  "characterOffsetEnd": 136,
-                  "pos": "IN",
-                  "ner": "O",
-                  "speaker": "PER0",
-                  "before": " ",
-                  "after": " "
-                }
-              },
-              "IN"
-            ],
-            [
-              {
-                "nlpToken": {
-                  "index": 15,
-                  "word": "Croydon",
-                  "originalText": "Croydon",
-                  "lemma": "Croydon",
-                  "characterOffsetBegin": 137,
-                  "characterOffsetEnd": 144,
-                  "pos": "NNP",
-                  "ner": "LOCATION",
-                  "speaker": "PER0",
-                  "before": " ",
-                  "after": ""
-                }
-              },
-              "NNP"
-            ],
-            [
-              {
-                "nlpToken": {
-                  "index": 16,
-                  "word": ",",
-                  "originalText": ",",
-                  "lemma": ",",
-                  "characterOffsetBegin": 144,
-                  "characterOffsetEnd": 145,
-                  "pos": ",",
-                  "ner": "O",
-                  "speaker": "PER0",
-                  "before": "",
-                  "after": " "
-                }
-              },
-              ","
-            ],
-            [
-              {
-                "nlpToken": {
-                  "index": 17,
-                  "word": "south",
-                  "originalText": "south",
-                  "lemma": "south",
-                  "characterOffsetBegin": 146,
-                  "characterOffsetEnd": 151,
-                  "pos": "RB",
-                  "ner": "O",
-                  "speaker": "PER0",
-                  "before": " ",
-                  "after": " "
-                }
-              },
-              "RB"
-            ],
-            [
-              {
-                "nlpToken": {
-                  "index": 18,
-                  "word": "of",
-                  "originalText": "of",
-                  "lemma": "of",
-                  "characterOffsetBegin": 152,
-                  "characterOffsetEnd": 154,
-                  "pos": "IN",
-                  "ner": "O",
-                  "speaker": "PER0",
-                  "before": " ",
-                  "after": " "
-                }
-              },
-              "IN"
-            ],
-            [
-              {
-                "nlpToken": {
-                  "index": 19,
-                  "word": "the",
-                  "originalText": "the",
-                  "lemma": "the",
-                  "characterOffsetBegin": 155,
-                  "characterOffsetEnd": 158,
-                  "pos": "DT",
-                  "ner": "O",
-                  "speaker": "PER0",
-                  "before": " ",
-                  "after": " "
-                }
-              },
-              "DT"
-            ],
-            [
-              {
-                "nlpToken": {
-                  "index": 20,
-                  "word": "British",
-                  "originalText": "British",
-                  "lemma": "british",
-                  "characterOffsetBegin": 159,
-                  "characterOffsetEnd": 166,
-                  "pos": "JJ",
-                  "ner": "MISC",
-                  "speaker": "PER0",
-                  "before": " ",
-                  "after": " "
-                }
-              },
-              "JJ"
-            ],
-            [
-              {
-                "nlpToken": {
-                  "index": 21,
-                  "word": "capital",
-                  "originalText": "capital",
-                  "lemma": "capital",
-                  "characterOffsetBegin": 167,
-                  "characterOffsetEnd": 174,
-                  "pos": "NN",
-                  "ner": "O",
-                  "speaker": "PER0",
-                  "before": " ",
-                  "after": ""
-                }
-              },
-              "NN"
             ]
           ],
           "score": 1.0,
-          "text": "the driver had been arrested after the deadly accident in Croydon , south of the British capital",
-          "nlpIndexSentence": 5
+          "text": "had been arrested after the deadly accident",
+          "nlpIndexSentence": 1
         }
       ]
     },
-    "what": {
+    "when": {
       "annotated": [
         {
           "coderPhraseCount": 3,
-          "text": "Killing at Least 7"
-        },
-        {
-          "coderPhraseCount": 2,
-          "text": "Derails"
+          "parsed": "2016-11-09",
+          "text": "Wednesday"
         }
       ],
-      "label": "what",
+      "label": "when",
       "extracted": [
         {
           "parts": [
-            [
-              {
-                "nlpToken": {
-                  "index": 3,
-                  "word": "were",
-                  "originalText": "were",
-                  "lemma": "be",
-                  "characterOffsetBegin": 408,
-                  "characterOffsetEnd": 412,
-                  "pos": "VBD",
-                  "ner": "O",
-                  "speaker": "PER0",
-                  "before": " ",
-                  "after": " "
-                }
-              },
-              "VBD"
-            ],
-            [
-              {
-                "nlpToken": {
-                  "index": 4,
-                  "word": "called",
-                  "originalText": "called",
-                  "lemma": "call",
-                  "characterOffsetBegin": 413,
-                  "characterOffsetEnd": 419,
-                  "pos": "VBN",
-                  "ner": "O",
-                  "speaker": "PER0",
-                  "before": " ",
-                  "after": " "
-                }
-              },
-              "VBN"
-            ],
-            [
-              {
-                "nlpToken": {
-                  "index": 5,
-                  "word": "to",
-                  "originalText": "to",
-                  "lemma": "to",
-                  "characterOffsetBegin": 420,
-                  "characterOffsetEnd": 422,
-                  "pos": "TO",
-                  "ner": "O",
-                  "speaker": "PER0",
-                  "before": " ",
-                  "after": " "
-                }
-              },
-              "TO"
-            ],
-            [
-              {
-                "nlpToken": {
-                  "index": 6,
-                  "word": "the",
-                  "originalText": "the",
-                  "lemma": "the",
-                  "characterOffsetBegin": 423,
-                  "characterOffsetEnd": 426,
-                  "pos": "DT",
-                  "ner": "O",
-                  "speaker": "PER0",
-                  "before": " ",
-                  "after": " "
-                }
-              },
-              "DT"
-            ],
-            [
-              {
-                "nlpToken": {
-                  "index": 7,
-                  "word": "scene",
-                  "originalText": "scene",
-                  "lemma": "scene",
-                  "characterOffsetBegin": 427,
-                  "characterOffsetEnd": 432,
-                  "pos": "NN",
-                  "ner": "O",
-                  "speaker": "PER0",
-                  "before": " ",
-                  "after": " "
-                }
-              },
-              "NN"
-            ],
-            [
-              {
-                "nlpToken": {
-                  "index": 10,
-                  "word": ",",
-                  "originalText": ",",
-                  "lemma": ",",
-                  "characterOffsetBegin": 443,
-                  "characterOffsetEnd": 444,
-                  "pos": ",",
-                  "ner": "O",
-                  "speaker": "PER0",
-                  "before": "",
-                  "after": " "
-                }
-              },
-              ","
-            ],
-            [
-              {
-                "nlpToken": {
-                  "index": 11,
-                  "word": "south",
-                  "originalText": "south",
-                  "lemma": "south",
-                  "characterOffsetBegin": 445,
-                  "characterOffsetEnd": 450,
-                  "pos": "RB",
-                  "ner": "O",
-                  "speaker": "PER0",
-                  "before": " ",
-                  "after": " "
-                }
-              },
-              "RB"
-            ],
-            [
-              {
-                "nlpToken": {
-                  "index": 12,
-                  "word": "of",
-                  "originalText": "of",
-                  "lemma": "of",
-                  "characterOffsetBegin": 451,
-                  "characterOffsetEnd": 453,
-                  "pos": "IN",
-                  "ner": "O",
-                  "speaker": "PER0",
-                  "before": " ",
-                  "after": " "
-                }
-              },
-              "IN"
-            ],
-            [
-              {
-                "nlpToken": {
-                  "index": 13,
-                  "word": "the",
-                  "originalText": "the",
-                  "lemma": "the",
-                  "characterOffsetBegin": 454,
-                  "characterOffsetEnd": 457,
-                  "pos": "DT",
-                  "ner": "O",
-                  "speaker": "PER0",
-                  "before": " ",
-                  "after": " "
-                }
-              },
-              "DT"
-            ],
-            [
-              {
-                "nlpToken": {
-                  "index": 14,
-                  "word": "British",
-                  "originalText": "British",
-                  "lemma": "british",
-                  "characterOffsetBegin": 458,
-                  "characterOffsetEnd": 465,
-                  "pos": "JJ",
-                  "ner": "MISC",
-                  "speaker": "PER0",
-                  "before": " ",
-                  "after": " "
-                }
-              },
-              "JJ"
-            ],
-            [
-              {
-                "nlpToken": {
-                  "index": 15,
-                  "word": "capital",
-                  "originalText": "capital",
-                  "lemma": "capital",
-                  "characterOffsetBegin": 466,
-                  "characterOffsetEnd": 473,
-                  "pos": "NN",
-                  "ner": "O",
-                  "speaker": "PER0",
-                  "before": " ",
-                  "after": ""
-                }
-              },
-              "NN"
-            ],
-            [
-              {
-                "nlpToken": {
-                  "index": 16,
-                  "word": ",",
-                  "originalText": ",",
-                  "lemma": ",",
-                  "characterOffsetBegin": 473,
-                  "characterOffsetEnd": 474,
-                  "pos": ",",
-                  "ner": "O",
-                  "speaker": "PER0",
-                  "before": "",
-                  "after": " "
-                }
-              },
-              ","
-            ],
-            [
-              {
-                "nlpToken": {
-                  "index": 17,
-                  "word": "shortly",
-                  "originalText": "shortly",
-                  "lemma": "shortly",
-                  "characterOffsetBegin": 475,
-                  "characterOffsetEnd": 482,
-                  "pos": "RB",
-                  "ner": "O",
-                  "speaker": "PER0",
-                  "before": " ",
-                  "after": " "
-                }
-              },
-              "RB"
-            ],
-            [
-              {
-                "nlpToken": {
-                  "index": 18,
-                  "word": "after",
-                  "originalText": "after",
-                  "lemma": "after",
-                  "characterOffsetBegin": 483,
-                  "characterOffsetEnd": 488,
-                  "pos": "IN",
-                  "ner": "O",
-                  "speaker": "PER0",
-                  "before": " ",
-                  "after": " "
-                }
-              },
-              "IN"
-            ],
             [
               {
                 "nlpToken": {
@@ -649,21 +308,17 @@
               "RB"
             ]
           ],
-          "score": 1.0,
-          "text": "were called to the scene , south of the British capital , shortly after 6 a.m.",
+          "score": 0.8920568452892419,
+          "text": "6 a.m.",
+          "enhancement": {
+            "timex": {
+              "start_date": "2016-11-09T06:00:00",
+              "end_date": "2016-11-09T06:00:59"
+            }
+          },
           "nlpIndexSentence": 4
         }
       ]
-    },
-    "when": {
-      "annotated": [
-        {
-          "coderPhraseCount": 3,
-          "parsed": "2016-11-09",
-          "text": "Wednesday"
-        }
-      ],
-      "label": "when"
     },
     "where": {
       "annotated": [
@@ -672,7 +327,55 @@
           "text": "Croydon, Near London"
         }
       ],
-      "label": "where"
+      "label": "where",
+      "extracted": [
+        {
+          "parts": [
+            [
+              {
+                "nlpToken": {
+                  "index": 15,
+                  "word": "Croydon",
+                  "originalText": "Croydon",
+                  "lemma": "Croydon",
+                  "characterOffsetBegin": 137,
+                  "characterOffsetEnd": 144,
+                  "pos": "NNP",
+                  "ner": "LOCATION",
+                  "speaker": "PER0",
+                  "before": " ",
+                  "after": ""
+                }
+              },
+              "NNP"
+            ]
+          ],
+          "score": 0.681465176880462,
+          "text": "Croydon",
+          "enhancement": {
+            "openstreetmap_nominatim": {
+              "osm_id": "21262496",
+              "boundingbox": [
+                51.3313049,
+                51.4113049,
+                -0.141957,
+                -0.061957
+              ],
+              "licence": "Data \u00a9 OpenStreetMap contributors, ODbL 1.0. http://www.openstreetmap.org/copyright",
+              "importance": 0.23943987893565,
+              "icon": "https://nominatim.openstreetmap.org/images/mapicons/poi_place_town.p.20.png",
+              "osm_type": "node",
+              "display_name": "Croydon, London, Greater London, England, CR0 1SZ, UK",
+              "lat": "51.3713049",
+              "type": "town",
+              "place_id": "117537",
+              "lon": "-0.101957",
+              "class": "place"
+            }
+          },
+          "nlpIndexSentence": 1
+        }
+      ]
     },
     "who": {
       "annotated": [
@@ -695,12 +398,12 @@
             [
               {
                 "nlpToken": {
-                  "index": 1,
-                  "word": "The",
-                  "originalText": "The",
+                  "index": 5,
+                  "word": "the",
+                  "originalText": "the",
                   "lemma": "the",
-                  "characterOffsetBegin": 397,
-                  "characterOffsetEnd": 400,
+                  "characterOffsetBegin": 79,
+                  "characterOffsetEnd": 82,
                   "pos": "DT",
                   "ner": "O",
                   "speaker": "PER0",
@@ -713,25 +416,25 @@
             [
               {
                 "nlpToken": {
-                  "index": 2,
-                  "word": "police",
-                  "originalText": "police",
-                  "lemma": "police",
-                  "characterOffsetBegin": 401,
-                  "characterOffsetEnd": 407,
-                  "pos": "NNS",
+                  "index": 6,
+                  "word": "driver",
+                  "originalText": "driver",
+                  "lemma": "driver",
+                  "characterOffsetBegin": 83,
+                  "characterOffsetEnd": 89,
+                  "pos": "NN",
                   "ner": "O",
                   "speaker": "PER0",
                   "before": " ",
                   "after": " "
                 }
               },
-              "NNS"
+              "NN"
             ]
           ],
           "score": 1.0,
-          "text": "The police",
-          "nlpIndexSentence": 4
+          "text": "the driver",
+          "nlpIndexSentence": 1
         }
       ]
     },
@@ -742,7 +445,106 @@
           "text": "The cause of the accident was unclear"
         }
       ],
-      "label": "why"
+      "label": "why",
+      "extracted": [
+        {
+          "parts": [
+            [
+              {
+                "nlpToken": {
+                  "index": 23,
+                  "word": "officers",
+                  "originalText": "officers",
+                  "lemma": "officer",
+                  "characterOffsetBegin": 501,
+                  "characterOffsetEnd": 509,
+                  "pos": "NNS",
+                  "ner": "O",
+                  "speaker": "PER0",
+                  "before": " ",
+                  "after": ""
+                }
+              },
+              "NNS"
+            ],
+            [
+              {
+                "nlpToken": {
+                  "index": 24,
+                  "word": ",",
+                  "originalText": ",",
+                  "lemma": ",",
+                  "characterOffsetBegin": 509,
+                  "characterOffsetEnd": 510,
+                  "pos": ",",
+                  "ner": "O",
+                  "speaker": "PER0",
+                  "before": "",
+                  "after": " "
+                }
+              },
+              ","
+            ],
+            [
+              {
+                "nlpToken": {
+                  "index": 25,
+                  "word": "firefighters",
+                  "originalText": "firefighters",
+                  "lemma": "firefighter",
+                  "characterOffsetBegin": 511,
+                  "characterOffsetEnd": 523,
+                  "pos": "NNS",
+                  "ner": "O",
+                  "speaker": "PER0",
+                  "before": " ",
+                  "after": " "
+                }
+              },
+              "NNS"
+            ],
+            [
+              {
+                "nlpToken": {
+                  "index": 26,
+                  "word": "and",
+                  "originalText": "and",
+                  "lemma": "and",
+                  "characterOffsetBegin": 524,
+                  "characterOffsetEnd": 527,
+                  "pos": "CC",
+                  "ner": "O",
+                  "speaker": "PER0",
+                  "before": " ",
+                  "after": " "
+                }
+              },
+              "CC"
+            ],
+            [
+              {
+                "nlpToken": {
+                  "index": 27,
+                  "word": "paramedics",
+                  "originalText": "paramedics",
+                  "lemma": "paramedic",
+                  "characterOffsetBegin": 528,
+                  "characterOffsetEnd": 538,
+                  "pos": "NNS",
+                  "ner": "O",
+                  "speaker": "PER0",
+                  "before": " ",
+                  "after": " "
+                }
+              },
+              "NNS"
+            ]
+          ],
+          "score": 0.3362193362193362,
+          "text": "officers , firefighters and paramedics",
+          "nlpIndexSentence": 4
+        }
+      ]
     }
   },
   "mimeType": "text/xml",

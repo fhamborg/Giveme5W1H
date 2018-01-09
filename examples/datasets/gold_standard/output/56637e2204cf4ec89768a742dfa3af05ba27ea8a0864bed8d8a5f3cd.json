@@ -220,7 +220,46 @@
           "parsed": "2016-11-09"
         }
       ],
-      "label": "when"
+      "label": "when",
+      "extracted": [
+        {
+          "parts": [
+            [
+              {
+                "nlpToken": {
+                  "characterOffsetBegin": 827,
+                  "word": "Wednesday",
+                  "lemma": "Wednesday",
+                  "timex": {
+                    "value": "2016-11-09",
+                    "tid": "t6",
+                    "type": "DATE"
+                  },
+                  "before": " ",
+                  "characterOffsetEnd": 836,
+                  "originalText": "Wednesday",
+                  "normalizedNER": "2016-11-09",
+                  "speaker": "PER0",
+                  "after": "",
+                  "ner": "DATE",
+                  "index": 21,
+                  "pos": "NNP"
+                }
+              },
+              "NNP"
+            ]
+          ],
+          "score": 0.733407880896871,
+          "text": "Wednesday",
+          "enhancement": {
+            "timex": {
+              "start_date": "2016-11-09T00:00:00",
+              "end_date": "2016-11-09T23:59:59"
+            }
+          },
+          "nlpIndexSentence": 6
+        }
+      ]
     },
     "why": {
       "annotated": [
@@ -237,7 +276,34 @@
           "coderPhraseCount": 1
         }
       ],
-      "label": "why"
+      "label": "why",
+      "extracted": [
+        {
+          "parts": [
+            [
+              {
+                "nlpToken": {
+                  "characterOffsetBegin": 241,
+                  "word": "Investigators",
+                  "lemma": "investigator",
+                  "characterOffsetEnd": 254,
+                  "speaker": "PER0",
+                  "ner": "O",
+                  "after": " ",
+                  "originalText": "Investigators",
+                  "before": " ",
+                  "index": 1,
+                  "pos": "NNS"
+                }
+              },
+              "NNS"
+            ]
+          ],
+          "score": 0.4727272727272727,
+          "text": "Investigators",
+          "nlpIndexSentence": 2
+        }
+      ]
     },
     "how": {
       "annotated": [
@@ -253,24 +319,79 @@
             [
               {
                 "nlpToken": {
-                  "characterOffsetBegin": 156,
-                  "word": "dead",
-                  "lemma": "dead",
-                  "characterOffsetEnd": 160,
+                  "characterOffsetBegin": 641,
+                  "word": "drivers",
+                  "lemma": "driver",
+                  "characterOffsetEnd": 648,
                   "speaker": "PER0",
                   "ner": "O",
-                  "after": "",
-                  "originalText": "dead",
+                  "after": " ",
+                  "originalText": "drivers",
                   "before": " ",
-                  "index": 33,
-                  "pos": "JJ"
+                  "index": 8,
+                  "pos": "NNS"
                 }
               },
-              "JJ"
+              "NNS"
+            ],
+            [
+              {
+                "nlpToken": {
+                  "characterOffsetBegin": 649,
+                  "word": "to",
+                  "lemma": "to",
+                  "characterOffsetEnd": 651,
+                  "speaker": "PER0",
+                  "ner": "O",
+                  "after": " ",
+                  "originalText": "to",
+                  "before": " ",
+                  "index": 9,
+                  "pos": "TO"
+                }
+              },
+              "TO"
+            ],
+            [
+              {
+                "nlpToken": {
+                  "characterOffsetBegin": 652,
+                  "word": "avoid",
+                  "lemma": "avoid",
+                  "characterOffsetEnd": 657,
+                  "speaker": "PER0",
+                  "ner": "O",
+                  "after": " ",
+                  "originalText": "avoid",
+                  "before": " ",
+                  "index": 10,
+                  "pos": "VB"
+                }
+              },
+              "VB"
+            ],
+            [
+              {
+                "nlpToken": {
+                  "characterOffsetBegin": 658,
+                  "word": "having",
+                  "lemma": "have",
+                  "characterOffsetEnd": 664,
+                  "speaker": "PER0",
+                  "ner": "O",
+                  "after": " ",
+                  "originalText": "having",
+                  "before": " ",
+                  "index": 11,
+                  "pos": "VBG"
+                }
+              },
+              "VBG"
             ]
           ],
           "score": 1.0,
-          "text": "dead"
+          "text": "drivers to avoid having",
+          "nlpIndexSentence": 8
         }
       ]
     },
@@ -281,7 +402,54 @@
           "coderPhraseCount": 2
         }
       ],
-      "label": "where"
+      "label": "where",
+      "extracted": [
+        {
+          "parts": [
+            [
+              {
+                "nlpToken": {
+                  "characterOffsetBegin": 36,
+                  "word": "Beckenham",
+                  "lemma": "Beckenham",
+                  "characterOffsetEnd": 45,
+                  "speaker": "PER0",
+                  "ner": "LOCATION",
+                  "after": "",
+                  "originalText": "Beckenham",
+                  "before": " ",
+                  "index": 9,
+                  "pos": "NNP"
+                }
+              },
+              "NNP"
+            ]
+          ],
+          "score": 0.6835559658570728,
+          "text": "Beckenham",
+          "enhancement": {
+            "openstreetmap_nominatim": {
+              "osm_id": "123921330",
+              "boundingbox": [
+                51.3870938,
+                51.4270938,
+                -0.0503183,
+                -0.0103183
+              ],
+              "licence": "Data \u00a9 OpenStreetMap contributors, ODbL 1.0. http://www.openstreetmap.org/copyright",
+              "importance": 0.22554784075846,
+              "icon": "https://nominatim.openstreetmap.org/images/mapicons/poi_place_village.p.20.png",
+              "osm_type": "node",
+              "display_name": "Beckenham, Bromley, London, Greater London, England, BR3 1DZ, UK",
+              "lat": "51.4070938",
+              "type": "suburb",
+              "place_id": "325377",
+              "lon": "-0.0303183",
+              "class": "place"
+            }
+          }
+        }
+      ]
     },
     "what": {
       "annotated": [

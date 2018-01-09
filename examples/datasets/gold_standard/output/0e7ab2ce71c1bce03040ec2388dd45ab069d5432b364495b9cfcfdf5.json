@@ -23,24 +23,61 @@
             [
               {
                 "nlpToken": {
-                  "index": 3,
-                  "word": "German",
-                  "originalText": "German",
-                  "lemma": "german",
-                  "characterOffsetBegin": 16,
-                  "characterOffsetEnd": 22,
-                  "pos": "JJ",
-                  "ner": "MISC",
+                  "index": 28,
+                  "word": "US",
+                  "originalText": "US",
+                  "lemma": "US",
+                  "characterOffsetBegin": 637,
+                  "characterOffsetEnd": 639,
+                  "pos": "NNP",
+                  "ner": "LOCATION",
                   "speaker": "PER0",
                   "before": " ",
                   "after": " "
                 }
               },
-              "JJ"
+              "NNP"
+            ],
+            [
+              {
+                "nlpToken": {
+                  "index": 29,
+                  "word": "air",
+                  "originalText": "air",
+                  "lemma": "air",
+                  "characterOffsetBegin": 640,
+                  "characterOffsetEnd": 643,
+                  "pos": "NN",
+                  "ner": "O",
+                  "speaker": "PER0",
+                  "before": " ",
+                  "after": " "
+                }
+              },
+              "NN"
+            ],
+            [
+              {
+                "nlpToken": {
+                  "index": 30,
+                  "word": "strikes",
+                  "originalText": "strikes",
+                  "lemma": "strike",
+                  "characterOffsetBegin": 644,
+                  "characterOffsetEnd": 651,
+                  "pos": "NNS",
+                  "ner": "O",
+                  "speaker": "PER0",
+                  "before": " ",
+                  "after": " "
+                }
+              },
+              "NNS"
             ]
           ],
           "score": 1.0,
-          "text": "German"
+          "text": "US air strikes",
+          "nlpIndexSentence": 28
         }
       ]
     },
@@ -189,7 +226,70 @@
           "text": "late Thursday"
         }
       ],
-      "label": "when"
+      "label": "when",
+      "extracted": [
+        {
+          "parts": [
+            [
+              {
+                "nlpToken": {
+                  "index": 6,
+                  "word": "late",
+                  "originalText": "late",
+                  "lemma": "late",
+                  "characterOffsetBegin": 534,
+                  "characterOffsetEnd": 538,
+                  "pos": "JJ",
+                  "ner": "DATE",
+                  "normalizedNER": "2016-11-10",
+                  "speaker": "PER0",
+                  "before": " ",
+                  "after": " ",
+                  "timex": {
+                    "tid": "t3",
+                    "type": "DATE",
+                    "value": "2016-11-10"
+                  }
+                }
+              },
+              "JJ"
+            ],
+            [
+              {
+                "nlpToken": {
+                  "index": 7,
+                  "word": "Thursday",
+                  "originalText": "Thursday",
+                  "lemma": "Thursday",
+                  "characterOffsetBegin": 539,
+                  "characterOffsetEnd": 547,
+                  "pos": "NNP",
+                  "ner": "DATE",
+                  "normalizedNER": "2016-11-10",
+                  "speaker": "PER0",
+                  "before": " ",
+                  "after": "",
+                  "timex": {
+                    "tid": "t3",
+                    "type": "DATE",
+                    "value": "2016-11-10"
+                  }
+                }
+              },
+              "NNP"
+            ]
+          ],
+          "score": 0.7646293315141549,
+          "text": "late Thursday",
+          "enhancement": {
+            "timex": {
+              "start_date": "2016-11-10T00:00:00",
+              "end_date": "2016-11-10T23:59:59"
+            }
+          },
+          "nlpIndexSentence": 4
+        }
+      ]
     },
     "where": {
       "annotated": [
@@ -198,7 +298,54 @@
           "text": "northern Afghan city of Mazar-i-Sharif"
         }
       ],
-      "label": "where"
+      "label": "where",
+      "extracted": [
+        {
+          "parts": [
+            [
+              {
+                "nlpToken": {
+                  "index": 10,
+                  "word": "Mazar-i-Sharif",
+                  "originalText": "Mazar-i-Sharif",
+                  "lemma": "Mazar-i-Sharif",
+                  "characterOffsetBegin": 60,
+                  "characterOffsetEnd": 74,
+                  "pos": "NNP",
+                  "ner": "LOCATION",
+                  "speaker": "PER0",
+                  "before": " ",
+                  "after": " "
+                }
+              },
+              "NNP"
+            ]
+          ],
+          "score": 0.6818391526232199,
+          "text": "Mazar-i-Sharif",
+          "enhancement": {
+            "openstreetmap_nominatim": {
+              "osm_id": "6572774",
+              "boundingbox": [
+                36.6828226,
+                36.7382081,
+                67.082892,
+                67.153133
+              ],
+              "licence": "Data \u00a9 OpenStreetMap contributors, ODbL 1.0. http://www.openstreetmap.org/copyright",
+              "importance": 0.11265216828756,
+              "icon": "https://nominatim.openstreetmap.org/images/mapicons/poi_boundary_administrative.p.20.png",
+              "osm_type": "relation",
+              "display_name": "\u0645\u0632\u0627\u0631 \u0634\u0631\u06cc\u0641, \u0628\u0644\u062e, \u0627\u0641\u063a\u0627\u0646\u0633\u062a\u0627\u0646",
+              "lat": "36.708556",
+              "type": "administrative",
+              "place_id": "179561037",
+              "lon": "67.1193562447236",
+              "class": "boundary"
+            }
+          }
+        }
+      ]
     },
     "who": {
       "annotated": [
@@ -549,7 +696,89 @@
           "text": "revenge attack"
         }
       ],
-      "label": "why"
+      "label": "why",
+      "extracted": [
+        {
+          "parts": [
+            [
+              {
+                "nlpToken": {
+                  "index": 27,
+                  "word": "more",
+                  "originalText": "more",
+                  "lemma": "more",
+                  "characterOffsetBegin": 240,
+                  "characterOffsetEnd": 244,
+                  "pos": "JJR",
+                  "ner": "O",
+                  "speaker": "PER0",
+                  "before": " ",
+                  "after": " "
+                }
+              },
+              "JJR"
+            ],
+            [
+              {
+                "nlpToken": {
+                  "index": 28,
+                  "word": "than",
+                  "originalText": "than",
+                  "lemma": "than",
+                  "characterOffsetBegin": 245,
+                  "characterOffsetEnd": 249,
+                  "pos": "IN",
+                  "ner": "O",
+                  "speaker": "PER0",
+                  "before": " ",
+                  "after": " "
+                }
+              },
+              "IN"
+            ],
+            [
+              {
+                "nlpToken": {
+                  "index": 29,
+                  "word": "100",
+                  "originalText": "100",
+                  "lemma": "100",
+                  "characterOffsetBegin": 250,
+                  "characterOffsetEnd": 253,
+                  "pos": "CD",
+                  "ner": "NUMBER",
+                  "normalizedNER": ">100.0",
+                  "speaker": "PER0",
+                  "before": " ",
+                  "after": " "
+                }
+              },
+              "CD"
+            ],
+            [
+              {
+                "nlpToken": {
+                  "index": 30,
+                  "word": "others",
+                  "originalText": "others",
+                  "lemma": "other",
+                  "characterOffsetBegin": 254,
+                  "characterOffsetEnd": 260,
+                  "pos": "NNS",
+                  "ner": "O",
+                  "speaker": "PER0",
+                  "before": " ",
+                  "after": " "
+                }
+              },
+              "NNS"
+            ]
+          ],
+          "score": 0.5146103896103896,
+          "text": "more than 100 others",
+          "nlpIndexSentence": 1
+        }
+      ]
     }
   },
   "mimeType": "text/xml",

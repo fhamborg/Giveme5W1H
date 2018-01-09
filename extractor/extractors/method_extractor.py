@@ -25,6 +25,7 @@ class MethodExtractor(AbsExtractor):
 
     # https://github.com/igorbrigadir/stopwords
     # https://github.com/igorbrigadir/stopwords/blob/master/en/nltk.txt
+    # enhance by punctuation marks
     _stop_words = ['i', 'me', 'my', 'myself', 'we', 'our', 'ours', 'ourselves', 'you', 'your', 'yours', 'yourself',
                    'yourselves', 'he', 'him', 'his', 'himself', 'she', 'her', 'hers', 'herself', 'it', 'its', 'itself',
                    'they', 'them', 'their', 'theirs', 'themselves', 'what', 'which', 'who', 'whom', 'this', 'that',
@@ -37,7 +38,7 @@ class MethodExtractor(AbsExtractor):
                    'only', 'own', 'same', 'so', 'than', 'too', 'very', 's', 't', 'can', 'will', 'just', 'don', 'should',
                    'now', 'd', 'll', 'm', 'o', 're', 've', 'y', 'ain', 'aren', 'couldn', 'didn', 'doesn', 'hadn',
                    'hasn', 'haven', 'isn', 'ma', 'mightn', 'mustn', 'needn', 'shan', 'shouldn', 'wasn', 'weren', 'won',
-                   'wouldn']
+                   'wouldn', ':', '.', '"', ';', ',', '\'']
 
     _stop_ner = ['TIME', 'DATE', 'ORGANIZATION', 'DURATION', 'ORDINAL']
 
@@ -45,7 +46,7 @@ class MethodExtractor(AbsExtractor):
     _blacklist = ['.', '"', '\'', ';']
 
     def __init__(self, weights: (float, float) = [0.14, 0, 0.14, 0.72],
-                 extension_strategy: ExtensionStrategy = ExtensionStrategy.Blacklist_Max_Range, phrase_range: int = 5):
+                 extension_strategy: ExtensionStrategy = ExtensionStrategy.Blacklist_Max_Range, phrase_range: int = 10, discard_threshold = 0.2):
         """
         weights used in the candidate evaluation:
         (position, frequency, conjunction, adjectives/adverbs)
@@ -146,15 +147,54 @@ class MethodExtractor(AbsExtractor):
 
         sentences = document.get_sentences()
 
-        self._maxIndex = 0
+        #self._maxIndex = 0
         for sentence in sentences:
-            for token in sentence['tokens']:
-                if token['index'] > self._maxIndex:
-                    self._maxIndex = token['index']
-                if self._is_relevant_pos(token['pos']) and token['ner'] not in self._stop_ner:
+            for i,token in enumerate(sentence['tokens']):
+                #if token['index'] > self._maxIndex:
+                #    self._maxIndex = token['index']
+                if self._is_relevant_pos(token['pos']) and \
+                        token['ner'] not in self._stop_ner and\
+                        token['lemma'] not in self._stop_words:
+
+                    if i == 0:
+                        start = i
+                    else:
+                        start = i-1
+
+
+                    # expand finding
+                    if self._extension_strategy is ExtensionStrategy.Range:
+                            tokens = sentence['tokens'][start: self._phrase_range]
+                    elif self._extension_strategy is ExtensionStrategy.Blacklist_Max_Range:
+                        # test
+                        # walk fixed range
+                        tokens = []
+                        for i in range(start, self._phrase_range):
+                            if len(sentence['tokens']) < i and sentence['tokens'][i]['lemma'] not in self._blacklist and sentence['tokens'][i]['ner'] not in self._stop_ner:
+                                tokens.append(['tokens'][i])
+                            else:
+                                break
+                    else:
+                        # no expansion
+                        tokens = [token]
+
+                    tokens_fixed = []
+                    for token in tokens:
+                        tokens_fixed.append(self._token_fix(token))
+
                     candidates.append(
-                        [[({'nlpToken': token}, token['pos'], token)], None, sentence['index'], 'adjectiv'])
+                        [tokens_fixed, None, sentence['index'], 'adjectiv'])
+
         return candidates
+
+    def _token_fix(self, token):
+        """
+        helper to craete a token based on a legacy structure. (mime leav)
+        :param token:
+        :return:
+        """
+        new_token = ({'nlpToken': token}, token['pos'], token)
+        return new_token
 
     def _evaluate_candidates(self, document: Document):
         """
@@ -168,23 +208,24 @@ class MethodExtractor(AbsExtractor):
 
         # find lemma count per candidate, consider only the the greatest count per candidate
         # (each candidate is/can be a phrase and therefore, has multiple words)
-        global_max_lemma = 0
+        global_max_lemma = -1
         for candidate in candidates:
 
             # remove any prev. calculations
             candidate.reset_calculations()
 
-            max_lemma = 0
+            max_lemma = -1
             for part in candidate.get_parts():
                 lemma = part[0]['nlpToken']['lemma']
-                lemma_count = 0
                 # ignore lemma count for stopwords, because they are very frequent
                 if lemma not in self._stop_words:
-                    lemma_count = lemma_map[lemma]
-                if lemma_count > max_lemma:
-                    max_lemma = lemma_count
-                if lemma_count > global_max_lemma:
-                    global_max_lemma = lemma_count
+                    # take also just the lemma of the indicator
+                    if (candidate.get_type() == 'adjectiv' and self._is_relevant_pos(part[0]['nlpToken']['POS'])) or \
+                            candidate.get_type() == 'prepos':
+                        lemma_count = lemma_map[lemma]
+                        max_lemma = max(max_lemma, lemma_count)
+                        global_max_lemma = max(global_max_lemma, lemma_count)
+
             # assign the greatest lemma to the candidate
             candidate.set_calculations('lemma_count', max_lemma)
 
@@ -210,17 +251,20 @@ class MethodExtractor(AbsExtractor):
             elif candidate.get_type() == 'prepos':
                 type_weight = self.weights[3]
 
-            score = ((candidate.get_calculations('lemma_count_norm') * self.weights[1] +
-                      candidate.get_calculations('position_frequency_norm') * self.weights[0]
-                      ) + (1 * type_weight))
+            score = (candidate.get_calculations('position_frequency_norm') * self.weights[0])
+            score += (candidate.get_calculations('lemma_count_norm') * self.weights[1])
+            score += type_weight
+
+            score /= sum(self.weights)
+
             candidate.set_score(score)
             if score > score_max:
                 score_max = score
 
         # normalize score
-        for candidate in candidates:
-            score = candidate.get_score()
-            candidate.set_score(score / score_max)
+        # for candidate in candidates:
+        #    score = candidate.get_score()
+        #    candidate.set_score(score / score_max)
 
         candidates.sort(key=lambda x: x.get_score(), reverse=True)
         document.set_answer('how', self._fix_format(candidates))

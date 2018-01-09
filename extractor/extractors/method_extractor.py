@@ -235,10 +235,10 @@ class MethodExtractor(AbsExtractor):
             candidate.set_calculations('lemma_count_norm', count / global_max_lemma)
 
         # normalize position - reserved order
-        sentences_count = len(document.get_sentences())
-        for candidate in candidates:
-            freq = (sentences_count - candidate.get_sentence_index()) / sentences_count
-            candidate.set_calculations('position_frequency_norm', freq)
+        #sentences_count = document.get_len()
+        #for candidate in candidates:
+        #    freq = (sentences_count - candidate.get_sentence_index()) / sentences_count
+        #    candidate.set_calculations('position_frequency_norm', freq)
 
         # calculate score
         score_max = 0
@@ -251,7 +251,7 @@ class MethodExtractor(AbsExtractor):
             elif candidate.get_type() == 'prepos':
                 type_weight = self.weights[3]
 
-            score = (candidate.get_calculations('position_frequency_norm') * self.weights[0])
+            score = ((document.get_len() - candidate.get_sentence_index() + 1) / document.get_len()) * self.weights[0]
             score += (candidate.get_calculations('lemma_count_norm') * self.weights[1])
             score += type_weight
 

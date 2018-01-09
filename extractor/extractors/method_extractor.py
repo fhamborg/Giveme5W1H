@@ -45,7 +45,7 @@ class MethodExtractor(AbsExtractor):
     # end of sentence, quote, PERIOD, COLON, QUOTE
     _blacklist = ['.', '"', '\'', ';']
 
-    def __init__(self, weights: (float, float) = [0.14, 0, 0.14, 0.72],
+    def __init__(self, weights: (float, float) = [0.34, 0.2, 0.9, 0.4],
                  extension_strategy: ExtensionStrategy = ExtensionStrategy.Blacklist_Max_Range, phrase_range: int = 10, discard_threshold = 0.2):
         """
         weights used in the candidate evaluation:
@@ -169,9 +169,13 @@ class MethodExtractor(AbsExtractor):
                         # test
                         # walk fixed range
                         tokens = []
-                        for i in range(start, self._phrase_range):
-                            if len(sentence['tokens']) < i and sentence['tokens'][i]['lemma'] not in self._blacklist and sentence['tokens'][i]['ner'] not in self._stop_ner:
-                                tokens.append(['tokens'][i])
+                        for i in range(start, self._phrase_range  + start):
+
+                            if i == start and (sentence['tokens'][i]['lemma'] in self._blacklist or sentence['tokens'][i]['lemma'] == ':'):
+                                # ignore first word if a step back would hit a blacklist word # derailed: Several ....
+                                continue
+                            if len(sentence['tokens']) > i and (sentence['tokens'][i]['lemma'] not in  self._blacklist or sentence['tokens'][i]['ner'] not in self._stop_ner):
+                                tokens.append(sentence['tokens'][i])
                             else:
                                 break
                     else:
@@ -182,8 +186,8 @@ class MethodExtractor(AbsExtractor):
                     for token in tokens:
                         tokens_fixed.append(self._token_fix(token))
 
-                    candidates.append(
-                        [tokens_fixed, None, sentence['index'], 'adjectiv'])
+                    if len(tokens_fixed):
+                        candidates.append([tokens_fixed, None, sentence['index'], 'adjectiv'])
 
         return candidates
 
@@ -220,7 +224,7 @@ class MethodExtractor(AbsExtractor):
                 # ignore lemma count for stopwords, because they are very frequent
                 if lemma not in self._stop_words:
                     # take also just the lemma of the indicator
-                    if (candidate.get_type() == 'adjectiv' and self._is_relevant_pos(part[0]['nlpToken']['POS'])) or \
+                    if (candidate.get_type() == 'adjectiv' and self._is_relevant_pos(part[0]['nlpToken']['pos'])) or \
                             candidate.get_type() == 'prepos':
                         lemma_count = lemma_map[lemma]
                         max_lemma = max(max_lemma, lemma_count)

@@ -77,4 +77,3 @@ if __name__ == '__main__':
 
     doc = Document(title, lead, text, date_publish)
     doc = extractor.parse(doc)
-d

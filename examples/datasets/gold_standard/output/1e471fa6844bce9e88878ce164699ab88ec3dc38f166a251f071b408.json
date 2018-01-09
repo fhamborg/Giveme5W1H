@@ -91,118 +91,10 @@
                 }
               },
               "PRP"
-            ],
-            [
-              {
-                "nlpToken": {
-                  "index": 6,
-                  "word": "was",
-                  "originalText": "was",
-                  "lemma": "be",
-                  "characterOffsetBegin": 1400,
-                  "characterOffsetEnd": 1403,
-                  "pos": "VBD",
-                  "ner": "O",
-                  "speaker": "81",
-                  "before": " ",
-                  "after": " "
-                }
-              },
-              "VBD"
-            ],
-            [
-              {
-                "nlpToken": {
-                  "index": 7,
-                  "word": "heartbreaking",
-                  "originalText": "heartbreaking",
-                  "lemma": "heartbreak",
-                  "characterOffsetBegin": 1404,
-                  "characterOffsetEnd": 1417,
-                  "pos": "VBG",
-                  "ner": "O",
-                  "speaker": "81",
-                  "before": " ",
-                  "after": " "
-                }
-              },
-              "VBG"
-            ],
-            [
-              {
-                "nlpToken": {
-                  "index": 8,
-                  "word": "to",
-                  "originalText": "to",
-                  "lemma": "to",
-                  "characterOffsetBegin": 1418,
-                  "characterOffsetEnd": 1420,
-                  "pos": "TO",
-                  "ner": "O",
-                  "speaker": "81",
-                  "before": " ",
-                  "after": " "
-                }
-              },
-              "TO"
-            ],
-            [
-              {
-                "nlpToken": {
-                  "index": 9,
-                  "word": "see",
-                  "originalText": "see",
-                  "lemma": "see",
-                  "characterOffsetBegin": 1421,
-                  "characterOffsetEnd": 1424,
-                  "pos": "VB",
-                  "ner": "O",
-                  "speaker": "81",
-                  "before": " ",
-                  "after": " "
-                }
-              },
-              "VB"
-            ],
-            [
-              {
-                "nlpToken": {
-                  "index": 10,
-                  "word": "a",
-                  "originalText": "a",
-                  "lemma": "a",
-                  "characterOffsetBegin": 1425,
-                  "characterOffsetEnd": 1426,
-                  "pos": "DT",
-                  "ner": "O",
-                  "speaker": "81",
-                  "before": " ",
-                  "after": " "
-                }
-              },
-              "DT"
-            ],
-            [
-              {
-                "nlpToken": {
-                  "index": 11,
-                  "word": "child",
-                  "originalText": "child",
-                  "lemma": "child",
-                  "characterOffsetBegin": 1427,
-                  "characterOffsetEnd": 1432,
-                  "pos": "NN",
-                  "ner": "O",
-                  "speaker": "81",
-                  "before": " ",
-                  "after": " "
-                }
-              },
-              "NN"
             ]
           ],
           "score": 1.0,
-          "text": "a mother , it was heartbreaking to see a child",
+          "text": "a mother , it",
           "nlpIndexSentence": 2
         }
       ]
@@ -225,79 +117,42 @@
             [
               {
                 "nlpToken": {
+                  "index": 2,
+                  "word": "well",
+                  "originalText": "well",
+                  "lemma": "well",
+                  "characterOffsetBegin": 6,
+                  "characterOffsetEnd": 10,
+                  "pos": "RB",
+                  "ner": "O",
+                  "speaker": "PER0",
+                  "before": " ",
+                  "after": " "
+                }
+              },
+              "RB"
+            ],
+            [
+              {
+                "nlpToken": {
                   "index": 3,
-                  "word": "fell",
-                  "originalText": "fell",
-                  "lemma": "fall",
-                  "characterOffsetBegin": 465,
-                  "characterOffsetEnd": 469,
-                  "pos": "VBD",
-                  "ner": "O",
-                  "speaker": "PER0",
-                  "before": " ",
-                  "after": " "
-                }
-              },
-              "VBD"
-            ],
-            [
-              {
-                "nlpToken": {
-                  "index": 4,
-                  "word": "down",
-                  "originalText": "down",
-                  "lemma": "down",
-                  "characterOffsetBegin": 470,
-                  "characterOffsetEnd": 474,
-                  "pos": "RP",
-                  "ner": "O",
-                  "speaker": "PER0",
-                  "before": " ",
-                  "after": " "
-                }
-              },
-              "RP"
-            ],
-            [
-              {
-                "nlpToken": {
-                  "index": 5,
-                  "word": "the",
-                  "originalText": "the",
-                  "lemma": "the",
-                  "characterOffsetBegin": 475,
-                  "characterOffsetEnd": 478,
-                  "pos": "DT",
-                  "ner": "O",
-                  "speaker": "PER0",
-                  "before": " ",
-                  "after": " "
-                }
-              },
-              "DT"
-            ],
-            [
-              {
-                "nlpToken": {
-                  "index": 6,
-                  "word": "40m",
-                  "originalText": "40m",
-                  "lemma": "40m",
-                  "characterOffsetBegin": 479,
-                  "characterOffsetEnd": 482,
+                  "word": "rescue",
+                  "originalText": "rescue",
+                  "lemma": "rescue",
+                  "characterOffsetBegin": 11,
+                  "characterOffsetEnd": 17,
                   "pos": "NN",
                   "ner": "O",
                   "speaker": "PER0",
                   "before": " ",
-                  "after": " "
+                  "after": ""
                 }
               },
               "NN"
             ]
           ],
           "score": 1.0,
-          "text": "fell down the 40m",
-          "nlpIndexSentence": 5
+          "text": "well rescue"
         }
       ]
     },
@@ -309,7 +164,8 @@
           "text": "Sunday morning"
         }
       ],
-      "label": "when"
+      "label": "when",
+      "extracted": []
     },
     "where": {
       "annotated": [
@@ -318,7 +174,54 @@
           "text": "Baoding, Hebei province"
         }
       ],
-      "label": "where"
+      "label": "where",
+      "extracted": [
+        {
+          "parts": [
+            [
+              {
+                "nlpToken": {
+                  "index": 1,
+                  "word": "China",
+                  "originalText": "China",
+                  "lemma": "China",
+                  "characterOffsetBegin": 0,
+                  "characterOffsetEnd": 5,
+                  "pos": "NNP",
+                  "ner": "LOCATION",
+                  "speaker": "PER0",
+                  "before": "",
+                  "after": " "
+                }
+              },
+              "NNP"
+            ]
+          ],
+          "score": 0.6734817693436626,
+          "text": "China",
+          "enhancement": {
+            "openstreetmap_nominatim": {
+              "osm_id": "5605656",
+              "boundingbox": [
+                25.0671341,
+                25.9161824,
+                -99.4612273,
+                -98.421576
+              ],
+              "licence": "Data \u00a9 OpenStreetMap contributors, ODbL 1.0. http://www.openstreetmap.org/copyright",
+              "importance": 0.2225,
+              "icon": "https://nominatim.openstreetmap.org/images/mapicons/poi_boundary_administrative.p.20.png",
+              "osm_type": "relation",
+              "display_name": "China, Nuevo Le\u00f3n, M\u00e9xico",
+              "lat": "25.4915799",
+              "type": "administrative",
+              "place_id": "179360170",
+              "lon": "-98.9811115045569",
+              "class": "boundary"
+            }
+          }
+        }
+      ]
     },
     "who": {
       "annotated": [
@@ -339,42 +242,23 @@
               {
                 "nlpToken": {
                   "index": 1,
-                  "word": "The",
-                  "originalText": "The",
-                  "lemma": "the",
-                  "characterOffsetBegin": 457,
-                  "characterOffsetEnd": 460,
-                  "pos": "DT",
-                  "ner": "O",
+                  "word": "China",
+                  "originalText": "China",
+                  "lemma": "China",
+                  "characterOffsetBegin": 0,
+                  "characterOffsetEnd": 5,
+                  "pos": "NNP",
+                  "ner": "LOCATION",
                   "speaker": "PER0",
-                  "before": " ",
+                  "before": "",
                   "after": " "
                 }
               },
-              "DT"
-            ],
-            [
-              {
-                "nlpToken": {
-                  "index": 2,
-                  "word": "boy",
-                  "originalText": "boy",
-                  "lemma": "boy",
-                  "characterOffsetBegin": 461,
-                  "characterOffsetEnd": 464,
-                  "pos": "NN",
-                  "ner": "O",
-                  "speaker": "PER0",
-                  "before": " ",
-                  "after": " "
-                }
-              },
-              "NN"
+              "NNP"
             ]
           ],
           "score": 1.0,
-          "text": "The boy",
-          "nlpIndexSentence": 5
+          "text": "China"
         }
       ]
     },
@@ -392,7 +276,33 @@
           "coderPhraseCount": 1
         }
       ],
-      "label": "why"
+      "label": "why",
+      "extracted": [
+        {
+          "parts": [
+            [
+              {
+                "nlpToken": {
+                  "index": 1,
+                  "word": "China",
+                  "originalText": "China",
+                  "lemma": "China",
+                  "characterOffsetBegin": 0,
+                  "characterOffsetEnd": 5,
+                  "pos": "NNP",
+                  "ner": "LOCATION",
+                  "speaker": "PER0",
+                  "before": "",
+                  "after": " "
+                }
+              },
+              "NNP"
+            ]
+          ],
+          "score": 0.5844155844155845,
+          "text": "China"
+        }
+      ]
     }
   },
   "mimeType": "text/xml",

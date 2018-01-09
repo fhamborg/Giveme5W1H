@@ -118,24 +118,78 @@
               {
                 "nlpToken": {
                   "before": " ",
-                  "word": "thrilling",
-                  "index": 18,
-                  "lemma": "thrilling",
-                  "characterOffsetBegin": 190,
-                  "pos": "JJ",
-                  "originalText": "thrilling",
+                  "word": "the",
+                  "index": 2,
+                  "lemma": "the",
+                  "characterOffsetBegin": 3444,
+                  "pos": "DT",
+                  "originalText": "the",
                   "ner": "O",
                   "after": " ",
-                  "characterOffsetEnd": 199,
-                  "speaker": "PER0"
+                  "characterOffsetEnd": 3447,
+                  "speaker": "PER5"
                 }
               },
-              "JJ"
+              "DT"
+            ],
+            [
+              {
+                "nlpToken": {
+                  "before": " ",
+                  "word": "rest",
+                  "index": 3,
+                  "lemma": "rest",
+                  "characterOffsetBegin": 3448,
+                  "pos": "NN",
+                  "originalText": "rest",
+                  "ner": "O",
+                  "after": " ",
+                  "characterOffsetEnd": 3452,
+                  "speaker": "PER5"
+                }
+              },
+              "NN"
+            ],
+            [
+              {
+                "nlpToken": {
+                  "before": " ",
+                  "word": "of",
+                  "index": 4,
+                  "lemma": "of",
+                  "characterOffsetBegin": 3453,
+                  "pos": "IN",
+                  "originalText": "of",
+                  "ner": "O",
+                  "after": " ",
+                  "characterOffsetEnd": 3455,
+                  "speaker": "PER5"
+                }
+              },
+              "IN"
+            ],
+            [
+              {
+                "nlpToken": {
+                  "before": " ",
+                  "word": "our",
+                  "index": 5,
+                  "lemma": "we",
+                  "characterOffsetBegin": 3456,
+                  "pos": "PRP$",
+                  "originalText": "our",
+                  "ner": "O",
+                  "after": " ",
+                  "characterOffsetEnd": 3459,
+                  "speaker": "PER5"
+                }
+              },
+              "PRP$"
             ]
           ],
           "score": 1.0,
-          "text": "thrilling",
-          "nlpIndexSentence": 1
+          "text": "the rest of our",
+          "nlpIndexSentence": 2
         }
       ]
     },
@@ -146,7 +200,8 @@
           "text": "2016"
         }
       ],
-      "label": "when"
+      "label": "when",
+      "extracted": []
     },
     "why": {
       "annotated": [
@@ -155,7 +210,52 @@
           "text": "victory against the Cleveland Indians"
         }
       ],
-      "label": "why"
+      "label": "why",
+      "extracted": [
+        {
+          "parts": [
+            [
+              {
+                "nlpToken": {
+                  "before": " ",
+                  "word": "Mike",
+                  "index": 36,
+                  "lemma": "Mike",
+                  "characterOffsetBegin": 453,
+                  "pos": "NNP",
+                  "originalText": "Mike",
+                  "ner": "PERSON",
+                  "after": " ",
+                  "characterOffsetEnd": 457,
+                  "speaker": "PER0"
+                }
+              },
+              "NNP"
+            ],
+            [
+              {
+                "nlpToken": {
+                  "before": " ",
+                  "word": "Montgomery",
+                  "index": 37,
+                  "lemma": "Montgomery",
+                  "characterOffsetBegin": 458,
+                  "pos": "NNP",
+                  "originalText": "Montgomery",
+                  "ner": "PERSON",
+                  "after": " ",
+                  "characterOffsetEnd": 468,
+                  "speaker": "PER0"
+                }
+              },
+              "NNP"
+            ]
+          ],
+          "score": 0.5471861471861472,
+          "text": "Mike Montgomery",
+          "nlpIndexSentence": 2
+        }
+      ]
     },
     "who": {
       "annotated": [
@@ -216,7 +316,55 @@
           "coderPhraseCount": 3
         }
       ],
-      "label": "where"
+      "label": "where",
+      "extracted": [
+        {
+          "parts": [
+            [
+              {
+                "nlpToken": {
+                  "before": " ",
+                  "word": "Cleveland",
+                  "index": 1,
+                  "lemma": "Cleveland",
+                  "characterOffsetBegin": 528,
+                  "pos": "NNP",
+                  "originalText": "Cleveland",
+                  "ner": "LOCATION",
+                  "after": " ",
+                  "characterOffsetEnd": 537,
+                  "speaker": "PER0"
+                }
+              },
+              "NNP"
+            ]
+          ],
+          "score": 0.6775000151814594,
+          "text": "Cleveland",
+          "enhancement": {
+            "openstreetmap_nominatim": {
+              "osm_id": "182130",
+              "boundingbox": [
+                41.390628,
+                41.604436,
+                -81.8790937,
+                -81.532744
+              ],
+              "licence": "Data \u00a9 OpenStreetMap contributors, ODbL 1.0. http://www.openstreetmap.org/copyright",
+              "importance": 0.2721855967315,
+              "icon": "https://nominatim.openstreetmap.org/images/mapicons/poi_place_city.p.20.png",
+              "osm_type": "relation",
+              "display_name": "Cleveland, Cuyahoga County, Ohio, United States of America",
+              "lat": "41.5051613",
+              "type": "city",
+              "place_id": "177736691",
+              "lon": "-81.6934446",
+              "class": "place"
+            }
+          },
+          "nlpIndexSentence": 3
+        }
+      ]
     }
   },
   "description": "The Chicago Cubs are Major League Baseball champions for the first time in 108 years after a thrilling extra-inning victory against the Cleveland Indians in game seven of the World Series. The Cubs, who had not won baseball's biggest prize since 1908, had seen a 6-3 lead evaporate in the eighth inning but, after RBIs from Ben Zobrist and Miguel Montero, Mike Montgomery gained the final out in the 10th to secure an 8-7 victory.",

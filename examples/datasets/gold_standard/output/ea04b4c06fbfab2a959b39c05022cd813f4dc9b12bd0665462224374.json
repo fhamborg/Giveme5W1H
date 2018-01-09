@@ -87,7 +87,46 @@
           "parsed": "2016-11-08"
         }
       ],
-      "label": "when"
+      "label": "when",
+      "extracted": [
+        {
+          "parts": [
+            [
+              {
+                "nlpToken": {
+                  "characterOffsetBegin": 3252,
+                  "word": "October",
+                  "lemma": "October",
+                  "timex": {
+                    "value": "2016-10",
+                    "tid": "t4",
+                    "type": "DATE"
+                  },
+                  "before": " ",
+                  "characterOffsetEnd": 3259,
+                  "originalText": "October",
+                  "normalizedNER": "2016-10",
+                  "speaker": "PER0",
+                  "after": "",
+                  "ner": "DATE",
+                  "index": 2,
+                  "pos": "NNP"
+                }
+              },
+              "NNP"
+            ]
+          ],
+          "score": 0.45206706507583383,
+          "text": "October",
+          "enhancement": {
+            "timex": {
+              "start_date": "2016-10-01T00:00:00",
+              "end_date": "2016-10-31T23:59:59"
+            }
+          },
+          "nlpIndexSentence": 26
+        }
+      ]
     },
     "why": {
       "annotated": [
@@ -96,7 +135,33 @@
           "coderPhraseCount": 3
         }
       ],
-      "label": "why"
+      "label": "why",
+      "extracted": [
+        {
+          "parts": [
+            [
+              {
+                "nlpToken": {
+                  "characterOffsetBegin": 221,
+                  "word": "they",
+                  "lemma": "they",
+                  "characterOffsetEnd": 225,
+                  "speaker": "PER0",
+                  "ner": "O",
+                  "after": " ",
+                  "originalText": "they",
+                  "before": " ",
+                  "index": 37,
+                  "pos": "PRP"
+                }
+              },
+              "PRP"
+            ]
+          ],
+          "score": 0.5844155844155844,
+          "text": "they"
+        }
+      ]
     },
     "how": {
       "annotated": [
@@ -180,208 +245,10 @@
                 }
               },
               "JJ"
-            ],
-            [
-              {
-                "nlpToken": {
-                  "characterOffsetBegin": 2289,
-                  "word": "companies",
-                  "lemma": "company",
-                  "characterOffsetEnd": 2298,
-                  "speaker": "123",
-                  "ner": "O",
-                  "after": "",
-                  "originalText": "companies",
-                  "before": " ",
-                  "index": 8,
-                  "pos": "NNS"
-                }
-              },
-              "NNS"
-            ],
-            [
-              {
-                "nlpToken": {
-                  "characterOffsetBegin": 2298,
-                  "word": ",",
-                  "lemma": ",",
-                  "characterOffsetEnd": 2299,
-                  "speaker": "123",
-                  "ner": "O",
-                  "after": " ",
-                  "originalText": ",",
-                  "before": "",
-                  "index": 9,
-                  "pos": ","
-                }
-              },
-              ","
-            ],
-            [
-              {
-                "nlpToken": {
-                  "characterOffsetBegin": 2300,
-                  "word": "we",
-                  "lemma": "we",
-                  "characterOffsetEnd": 2302,
-                  "speaker": "123",
-                  "ner": "O",
-                  "after": " ",
-                  "originalText": "we",
-                  "before": " ",
-                  "index": 10,
-                  "pos": "PRP"
-                }
-              },
-              "PRP"
-            ],
-            [
-              {
-                "nlpToken": {
-                  "characterOffsetBegin": 2303,
-                  "word": "are",
-                  "lemma": "be",
-                  "characterOffsetEnd": 2306,
-                  "speaker": "123",
-                  "ner": "O",
-                  "after": " ",
-                  "originalText": "are",
-                  "before": " ",
-                  "index": 11,
-                  "pos": "VBP"
-                }
-              },
-              "VBP"
-            ],
-            [
-              {
-                "nlpToken": {
-                  "characterOffsetBegin": 2307,
-                  "word": "experiencing",
-                  "lemma": "experience",
-                  "characterOffsetEnd": 2319,
-                  "speaker": "123",
-                  "ner": "O",
-                  "after": " ",
-                  "originalText": "experiencing",
-                  "before": " ",
-                  "index": 12,
-                  "pos": "VBG"
-                }
-              },
-              "VBG"
-            ],
-            [
-              {
-                "nlpToken": {
-                  "characterOffsetBegin": 2320,
-                  "word": "higher",
-                  "lemma": "higher",
-                  "characterOffsetEnd": 2326,
-                  "speaker": "123",
-                  "ner": "O",
-                  "after": " ",
-                  "originalText": "higher",
-                  "before": " ",
-                  "index": 13,
-                  "pos": "JJR"
-                }
-              },
-              "JJR"
-            ],
-            [
-              {
-                "nlpToken": {
-                  "characterOffsetBegin": 2327,
-                  "word": "costs",
-                  "lemma": "cost",
-                  "characterOffsetEnd": 2332,
-                  "speaker": "123",
-                  "ner": "O",
-                  "after": " ",
-                  "originalText": "costs",
-                  "before": " ",
-                  "index": 14,
-                  "pos": "NNS"
-                }
-              },
-              "NNS"
-            ],
-            [
-              {
-                "nlpToken": {
-                  "characterOffsetBegin": 2333,
-                  "word": "for",
-                  "lemma": "for",
-                  "characterOffsetEnd": 2336,
-                  "speaker": "123",
-                  "ner": "O",
-                  "after": " ",
-                  "originalText": "for",
-                  "before": " ",
-                  "index": 15,
-                  "pos": "IN"
-                }
-              },
-              "IN"
-            ],
-            [
-              {
-                "nlpToken": {
-                  "characterOffsetBegin": 2337,
-                  "word": "numerous",
-                  "lemma": "numerous",
-                  "characterOffsetEnd": 2345,
-                  "speaker": "123",
-                  "ner": "O",
-                  "after": " ",
-                  "originalText": "numerous",
-                  "before": " ",
-                  "index": 16,
-                  "pos": "JJ"
-                }
-              },
-              "JJ"
-            ],
-            [
-              {
-                "nlpToken": {
-                  "characterOffsetBegin": 2346,
-                  "word": "ingredients",
-                  "lemma": "ingredient",
-                  "characterOffsetEnd": 2357,
-                  "speaker": "123",
-                  "ner": "O",
-                  "after": "",
-                  "originalText": "ingredients",
-                  "before": " ",
-                  "index": 17,
-                  "pos": "NNS"
-                }
-              },
-              "NNS"
-            ],
-            [
-              {
-                "nlpToken": {
-                  "characterOffsetBegin": 2357,
-                  "word": "''",
-                  "lemma": "''",
-                  "characterOffsetEnd": 2358,
-                  "speaker": "PER0",
-                  "ner": "O",
-                  "after": "",
-                  "originalText": "\"",
-                  "before": "",
-                  "index": 18,
-                  "pos": "''"
-                }
-              },
-              "''"
             ]
           ],
           "score": 1.0,
-          "text": "\" like many other companies , we are experiencing higher costs for numerous ingredients \"",
+          "text": "\" like many other",
           "nlpIndexSentence": 4
         }
       ]
@@ -393,7 +260,54 @@
           "coderPhraseCount": 3
         }
       ],
-      "label": "where"
+      "label": "where",
+      "extracted": [
+        {
+          "parts": [
+            [
+              {
+                "nlpToken": {
+                  "characterOffsetBegin": 190,
+                  "word": "UK",
+                  "lemma": "UK",
+                  "characterOffsetEnd": 192,
+                  "speaker": "PER0",
+                  "ner": "LOCATION",
+                  "after": " ",
+                  "originalText": "UK",
+                  "before": " ",
+                  "index": 30,
+                  "pos": "NNP"
+                }
+              },
+              "NNP"
+            ]
+          ],
+          "score": 0.6699999999999999,
+          "text": "UK",
+          "enhancement": {
+            "openstreetmap_nominatim": {
+              "osm_id": "62149",
+              "boundingbox": [
+                49.674,
+                61.061,
+                -14.015517,
+                2.0919117
+              ],
+              "licence": "Data \u00a9 OpenStreetMap contributors, ODbL 1.0. http://www.openstreetmap.org/copyright",
+              "importance": 0.3267301409654,
+              "icon": "https://nominatim.openstreetmap.org/images/mapicons/poi_boundary_administrative.p.20.png",
+              "osm_type": "relation",
+              "display_name": "UK",
+              "lat": "54.7023545",
+              "type": "administrative",
+              "place_id": "179731133",
+              "lon": "-3.2765753",
+              "class": "boundary"
+            }
+          }
+        }
+      ]
     },
     "what": {
       "annotated": [

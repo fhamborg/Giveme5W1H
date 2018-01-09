@@ -180,190 +180,10 @@
                 }
               },
               "VB"
-            ],
-            [
-              {
-                "nlpToken": {
-                  "before": " ",
-                  "word": "a",
-                  "index": 8,
-                  "lemma": "a",
-                  "characterOffsetBegin": 1193,
-                  "pos": "DT",
-                  "originalText": "a",
-                  "ner": "O",
-                  "after": " ",
-                  "characterOffsetEnd": 1194,
-                  "speaker": "60"
-                }
-              },
-              "DT"
-            ],
-            [
-              {
-                "nlpToken": {
-                  "before": " ",
-                  "word": "prayer",
-                  "index": 9,
-                  "lemma": "prayer",
-                  "characterOffsetBegin": 1195,
-                  "pos": "NN",
-                  "originalText": "prayer",
-                  "ner": "O",
-                  "after": "",
-                  "characterOffsetEnd": 1201,
-                  "speaker": "60"
-                }
-              },
-              "NN"
-            ],
-            [
-              {
-                "nlpToken": {
-                  "before": "",
-                  "word": "''",
-                  "index": 10,
-                  "lemma": "''",
-                  "characterOffsetBegin": 1201,
-                  "pos": "''",
-                  "originalText": "\"",
-                  "ner": "O",
-                  "after": " ",
-                  "characterOffsetEnd": 1202,
-                  "speaker": "PER0"
-                }
-              },
-              "''"
-            ],
-            [
-              {
-                "nlpToken": {
-                  "before": " ",
-                  "word": "as",
-                  "index": 11,
-                  "lemma": "as",
-                  "characterOffsetBegin": 1203,
-                  "pos": "IN",
-                  "originalText": "as",
-                  "ner": "O",
-                  "after": " ",
-                  "characterOffsetEnd": 1205,
-                  "speaker": "PER0"
-                }
-              },
-              "IN"
-            ],
-            [
-              {
-                "nlpToken": {
-                  "before": " ",
-                  "word": "votes",
-                  "index": 12,
-                  "lemma": "vote",
-                  "characterOffsetBegin": 1206,
-                  "pos": "NNS",
-                  "originalText": "votes",
-                  "ner": "O",
-                  "after": " ",
-                  "characterOffsetEnd": 1211,
-                  "speaker": "PER0"
-                }
-              },
-              "NNS"
-            ],
-            [
-              {
-                "nlpToken": {
-                  "before": " ",
-                  "word": "for",
-                  "index": 13,
-                  "lemma": "for",
-                  "characterOffsetBegin": 1212,
-                  "pos": "IN",
-                  "originalText": "for",
-                  "ner": "O",
-                  "after": " ",
-                  "characterOffsetEnd": 1215,
-                  "speaker": "PER0"
-                }
-              },
-              "IN"
-            ],
-            [
-              {
-                "nlpToken": {
-                  "before": " ",
-                  "word": "Mr",
-                  "index": 14,
-                  "lemma": "Mr",
-                  "characterOffsetBegin": 1216,
-                  "pos": "NNP",
-                  "originalText": "Mr",
-                  "ner": "O",
-                  "after": " ",
-                  "characterOffsetEnd": 1218,
-                  "speaker": "PER0"
-                }
-              },
-              "NNP"
-            ],
-            [
-              {
-                "nlpToken": {
-                  "before": " ",
-                  "word": "Trump",
-                  "index": 15,
-                  "lemma": "Trump",
-                  "characterOffsetBegin": 1219,
-                  "pos": "NNP",
-                  "originalText": "Trump",
-                  "ner": "PERSON",
-                  "after": " ",
-                  "characterOffsetEnd": 1224,
-                  "speaker": "PER0"
-                }
-              },
-              "NNP"
-            ],
-            [
-              {
-                "nlpToken": {
-                  "before": " ",
-                  "word": "seeped",
-                  "index": 16,
-                  "lemma": "seep",
-                  "characterOffsetBegin": 1225,
-                  "pos": "VBD",
-                  "originalText": "seeped",
-                  "ner": "O",
-                  "after": " ",
-                  "characterOffsetEnd": 1231,
-                  "speaker": "PER0"
-                }
-              },
-              "VBD"
-            ],
-            [
-              {
-                "nlpToken": {
-                  "before": " ",
-                  "word": "in",
-                  "index": 17,
-                  "lemma": "in",
-                  "characterOffsetBegin": 1232,
-                  "pos": "IN",
-                  "originalText": "in",
-                  "ner": "O",
-                  "after": "",
-                  "characterOffsetEnd": 1234,
-                  "speaker": "PER0"
-                }
-              },
-              "IN"
             ]
           ],
           "score": 1.0,
-          "text": "America to \" say a prayer \" as votes for Mr Trump seeped in",
+          "text": "America to \" say",
           "nlpIndexSentence": 4
         }
       ]
@@ -375,7 +195,118 @@
           "text": "November 9, 2016"
         }
       ],
-      "label": "when"
+      "label": "when",
+      "extracted": [
+        {
+          "parts": [
+            [
+              {
+                "nlpToken": {
+                  "index": 16,
+                  "pos": "NNP",
+                  "originalText": "November",
+                  "ner": "DATE",
+                  "after": " ",
+                  "characterOffsetEnd": 1373,
+                  "before": " ",
+                  "word": "November",
+                  "characterOffsetBegin": 1365,
+                  "normalizedNER": "2016-11-09",
+                  "lemma": "November",
+                  "timex": {
+                    "tid": "t3",
+                    "type": "DATE",
+                    "value": "2016-11-09"
+                  },
+                  "speaker": "PER0"
+                }
+              },
+              "NNP"
+            ],
+            [
+              {
+                "nlpToken": {
+                  "index": 17,
+                  "pos": "CD",
+                  "originalText": "9",
+                  "ner": "DATE",
+                  "after": "",
+                  "characterOffsetEnd": 1375,
+                  "before": " ",
+                  "word": "9",
+                  "characterOffsetBegin": 1374,
+                  "normalizedNER": "2016-11-09",
+                  "lemma": "9",
+                  "timex": {
+                    "tid": "t3",
+                    "type": "DATE",
+                    "value": "2016-11-09"
+                  },
+                  "speaker": "PER0"
+                }
+              },
+              "CD"
+            ],
+            [
+              {
+                "nlpToken": {
+                  "index": 18,
+                  "pos": ",",
+                  "originalText": ",",
+                  "ner": "DATE",
+                  "after": " ",
+                  "characterOffsetEnd": 1376,
+                  "before": "",
+                  "word": ",",
+                  "characterOffsetBegin": 1375,
+                  "normalizedNER": "2016-11-09",
+                  "lemma": ",",
+                  "timex": {
+                    "tid": "t3",
+                    "type": "DATE",
+                    "value": "2016-11-09"
+                  },
+                  "speaker": "PER0"
+                }
+              },
+              ","
+            ],
+            [
+              {
+                "nlpToken": {
+                  "index": 19,
+                  "pos": "CD",
+                  "originalText": "2016",
+                  "ner": "DATE",
+                  "after": "  ",
+                  "characterOffsetEnd": 1381,
+                  "before": " ",
+                  "word": "2016",
+                  "characterOffsetBegin": 1377,
+                  "normalizedNER": "2016-11-09",
+                  "lemma": "2016",
+                  "timex": {
+                    "tid": "t3",
+                    "type": "DATE",
+                    "value": "2016-11-09"
+                  },
+                  "speaker": "PER0"
+                }
+              },
+              "CD"
+            ]
+          ],
+          "score": 0.7894648253413153,
+          "text": "November 9 , 2016",
+          "enhancement": {
+            "timex": {
+              "start_date": "2016-11-09T00:00:00",
+              "end_date": "2016-11-09T23:59:59"
+            }
+          },
+          "nlpIndexSentence": 10
+        }
+      ]
     },
     "why": {
       "annotated": [
@@ -384,7 +315,52 @@
           "text": "was a firm supporter of Hillary Clinton"
         }
       ],
-      "label": "why"
+      "label": "why",
+      "extracted": [
+        {
+          "parts": [
+            [
+              {
+                "nlpToken": {
+                  "before": " ",
+                  "word": "Lady",
+                  "index": 1,
+                  "lemma": "lady",
+                  "characterOffsetBegin": 65,
+                  "pos": "NN",
+                  "originalText": "Lady",
+                  "ner": "PERSON",
+                  "after": " ",
+                  "characterOffsetEnd": 69,
+                  "speaker": "PER0"
+                }
+              },
+              "NN"
+            ],
+            [
+              {
+                "nlpToken": {
+                  "before": " ",
+                  "word": "Gaga",
+                  "index": 2,
+                  "lemma": "Gaga",
+                  "characterOffsetBegin": 70,
+                  "pos": "NNP",
+                  "originalText": "Gaga",
+                  "ner": "PERSON",
+                  "after": " ",
+                  "characterOffsetEnd": 74,
+                  "speaker": "PER0"
+                }
+              },
+              "NNP"
+            ]
+          ],
+          "score": 0.5611471861471862,
+          "text": "Lady Gaga",
+          "nlpIndexSentence": 1
+        }
+      ]
     },
     "who": {
       "annotated": [
@@ -451,7 +427,71 @@
           "text": "Fifth Avenue in Midtown Manhattan"
         }
       ],
-      "label": "where"
+      "label": "where",
+      "extracted": [
+        {
+          "parts": [
+            [
+              {
+                "nlpToken": {
+                  "before": " ",
+                  "word": "Trump",
+                  "index": 10,
+                  "lemma": "Trump",
+                  "characterOffsetBegin": 52,
+                  "pos": "NNP",
+                  "originalText": "Trump",
+                  "ner": "LOCATION",
+                  "after": " ",
+                  "characterOffsetEnd": 57,
+                  "speaker": "PER0"
+                }
+              },
+              "NNP"
+            ],
+            [
+              {
+                "nlpToken": {
+                  "before": " ",
+                  "word": "Tower",
+                  "index": 11,
+                  "lemma": "Tower",
+                  "characterOffsetBegin": 58,
+                  "pos": "NNP",
+                  "originalText": "Tower",
+                  "ner": "LOCATION",
+                  "after": "",
+                  "characterOffsetEnd": 63,
+                  "speaker": "PER0"
+                }
+              },
+              "NNP"
+            ]
+          ],
+          "score": 0.6959257302474612,
+          "text": "Trump Tower",
+          "enhancement": {
+            "openstreetmap_nominatim": {
+              "osm_id": "265345374",
+              "osm_type": "way",
+              "display_name": "Trump Tower, 721/725, 5th Avenue, Diamond District, Manhattan Community Board 5, New York County, NYC, New York, 10022, United States of America",
+              "lon": "-73.9739028212589",
+              "lat": "40.7623148",
+              "boundingbox": [
+                40.7620661,
+                40.7625717,
+                -73.9742497,
+                -73.9735357
+              ],
+              "place_id": "132136253",
+              "licence": "Data \u00a9 OpenStreetMap contributors, ODbL 1.0. http://www.openstreetmap.org/copyright",
+              "type": "yes",
+              "importance": 0.28506282957193,
+              "class": "building"
+            }
+          }
+        }
+      ]
     }
   },
   "description": "Lady Gaga has staged a protest against Donald Trump's presidential victory at Trump Tower in New York. Trump Tower, a gleaming 58-story skyscraper located on Fifth Avenue in Midtown Manhattan, serves as the headquarters for The Trump Organization and is home to the primary penthouse condominium residence of the Republican property magnate.",

@@ -67,7 +67,46 @@
           "parsed": "2016-11-12"
         }
       ],
-      "label": "when"
+      "label": "when",
+      "extracted": [
+        {
+          "parts": [
+            [
+              {
+                "nlpToken": {
+                  "characterOffsetBegin": 320,
+                  "word": "Sunday",
+                  "lemma": "Sunday",
+                  "timex": {
+                    "value": "2016-11-06",
+                    "tid": "t4",
+                    "type": "DATE"
+                  },
+                  "before": " ",
+                  "characterOffsetEnd": 326,
+                  "originalText": "Sunday",
+                  "normalizedNER": "2016-11-06",
+                  "speaker": "PER0",
+                  "after": "",
+                  "ner": "DATE",
+                  "index": 15,
+                  "pos": "NNP"
+                }
+              },
+              "NNP"
+            ]
+          ],
+          "score": 0.8123271990786892,
+          "text": "Sunday",
+          "enhancement": {
+            "timex": {
+              "start_date": "2016-11-06T00:00:00",
+              "end_date": "2016-11-06T23:59:59"
+            }
+          },
+          "nlpIndexSentence": 1
+        }
+      ]
     },
     "why": {
       "annotated": [
@@ -80,7 +119,58 @@
           "coderPhraseCount": 2
         }
       ],
-      "label": "why"
+      "label": "why",
+      "extracted": [
+        {
+          "parts": [
+            [
+              {
+                "nlpToken": {
+                  "characterOffsetBegin": 226,
+                  "word": "The",
+                  "lemma": "the",
+                  "characterOffsetEnd": 229,
+                  "speaker": "PER0",
+                  "ner": "O",
+                  "after": " ",
+                  "originalText": "The",
+                  "before": " ",
+                  "index": 1,
+                  "pos": "DT"
+                }
+              },
+              "DT"
+            ],
+            [
+              {
+                "nlpToken": {
+                  "characterOffsetBegin": 230,
+                  "word": "six-year-old",
+                  "lemma": "six-year-old",
+                  "timex": {
+                    "value": "P6Y",
+                    "tid": "t3",
+                    "type": "DURATION"
+                  },
+                  "before": " ",
+                  "characterOffsetEnd": 242,
+                  "originalText": "six-year-old",
+                  "normalizedNER": "P6Y",
+                  "speaker": "PER0",
+                  "after": " ",
+                  "ner": "DURATION",
+                  "index": 2,
+                  "pos": "NN"
+                }
+              },
+              "NN"
+            ]
+          ],
+          "score": 0.5336481700118063,
+          "text": "The six-year-old",
+          "nlpIndexSentence": 1
+        }
+      ]
     },
     "how": {
       "annotated": [
@@ -100,24 +190,25 @@
             [
               {
                 "nlpToken": {
-                  "characterOffsetBegin": 160,
-                  "word": "well",
-                  "lemma": "well",
-                  "characterOffsetEnd": 164,
+                  "characterOffsetBegin": 979,
+                  "word": "huge",
+                  "lemma": "huge",
+                  "characterOffsetEnd": 983,
                   "speaker": "PER0",
                   "ner": "O",
                   "after": " ",
-                  "originalText": "well",
+                  "originalText": "huge",
                   "before": " ",
-                  "index": 29,
-                  "pos": "RB"
+                  "index": 8,
+                  "pos": "JJ"
                 }
               },
-              "RB"
+              "JJ"
             ]
           ],
           "score": 1.0,
-          "text": "well"
+          "text": "huge",
+          "nlpIndexSentence": 8
         }
       ]
     },
@@ -128,7 +219,73 @@
           "coderPhraseCount": 3
         }
       ],
-      "label": "where"
+      "label": "where",
+      "extracted": [
+        {
+          "parts": [
+            [
+              {
+                "nlpToken": {
+                  "characterOffsetBegin": 274,
+                  "word": "Hebei",
+                  "lemma": "Hebei",
+                  "characterOffsetEnd": 279,
+                  "speaker": "PER0",
+                  "ner": "LOCATION",
+                  "after": " ",
+                  "originalText": "Hebei",
+                  "before": " ",
+                  "index": 9,
+                  "pos": "NNP"
+                }
+              },
+              "NNP"
+            ],
+            [
+              {
+                "nlpToken": {
+                  "characterOffsetBegin": 280,
+                  "word": "province",
+                  "lemma": "province",
+                  "characterOffsetEnd": 288,
+                  "speaker": "PER0",
+                  "ner": "LOCATION",
+                  "after": " ",
+                  "originalText": "province",
+                  "before": " ",
+                  "index": 10,
+                  "pos": "NN"
+                }
+              },
+              "NN"
+            ]
+          ],
+          "score": 0.67,
+          "text": "Hebei province",
+          "enhancement": {
+            "openstreetmap_nominatim": {
+              "osm_id": "912998",
+              "boundingbox": [
+                36.0462227,
+                42.6176407,
+                113.4602737,
+                121.0248711
+              ],
+              "licence": "Data \u00a9 OpenStreetMap contributors, ODbL 1.0. http://www.openstreetmap.org/copyright",
+              "importance": 0.16311000924312,
+              "icon": "https://nominatim.openstreetmap.org/images/mapicons/poi_boundary_administrative.p.20.png",
+              "osm_type": "relation",
+              "display_name": "\u6cb3\u5317\u7701, \u4e2d\u56fd",
+              "lat": "39.0000001",
+              "type": "administrative",
+              "place_id": "178007307",
+              "lon": "116",
+              "class": "boundary"
+            }
+          },
+          "nlpIndexSentence": 1
+        }
+      ]
     },
     "what": {
       "annotated": [

@@ -94,24 +94,78 @@
               {
                 "nlpToken": {
                   "before": " ",
-                  "word": "double",
-                  "index": 31,
-                  "lemma": "double",
-                  "characterOffsetBegin": 271,
-                  "pos": "RB",
-                  "originalText": "double",
+                  "word": "a",
+                  "index": 21,
+                  "lemma": "a",
+                  "characterOffsetBegin": 218,
+                  "pos": "DT",
+                  "originalText": "a",
                   "ner": "O",
                   "after": " ",
-                  "characterOffsetEnd": 277,
+                  "characterOffsetEnd": 219,
                   "speaker": "PER0"
                 }
               },
-              "RB"
+              "DT"
+            ],
+            [
+              {
+                "nlpToken": {
+                  "before": " ",
+                  "word": "World",
+                  "index": 22,
+                  "lemma": "World",
+                  "characterOffsetBegin": 220,
+                  "pos": "NNP",
+                  "originalText": "World",
+                  "ner": "MISC",
+                  "after": " ",
+                  "characterOffsetEnd": 225,
+                  "speaker": "PER0"
+                }
+              },
+              "NNP"
+            ],
+            [
+              {
+                "nlpToken": {
+                  "before": " ",
+                  "word": "Series",
+                  "index": 23,
+                  "lemma": "Series",
+                  "characterOffsetBegin": 226,
+                  "pos": "NNP",
+                  "originalText": "Series",
+                  "ner": "MISC",
+                  "after": " ",
+                  "characterOffsetEnd": 232,
+                  "speaker": "PER0"
+                }
+              },
+              "NNP"
+            ],
+            [
+              {
+                "nlpToken": {
+                  "before": " ",
+                  "word": "title",
+                  "index": 24,
+                  "lemma": "title",
+                  "characterOffsetBegin": 233,
+                  "pos": "NN",
+                  "originalText": "title",
+                  "ner": "O",
+                  "after": " ",
+                  "characterOffsetEnd": 238,
+                  "speaker": "PER0"
+                }
+              },
+              "NN"
             ]
           ],
           "score": 1.0,
-          "text": "double",
-          "nlpIndexSentence": 1
+          "text": "a World Series title",
+          "nlpIndexSentence": 21
         }
       ]
     },
@@ -122,7 +176,8 @@
           "text": "in the early hours of Thursday"
         }
       ],
-      "label": "when"
+      "label": "when",
+      "extracted": []
     },
     "why": {
       "annotated": [
@@ -130,7 +185,52 @@
           "coderPhraseCount": 3
         }
       ],
-      "label": "why"
+      "label": "why",
+      "extracted": [
+        {
+          "parts": [
+            [
+              {
+                "nlpToken": {
+                  "before": " ",
+                  "word": "Ben",
+                  "index": 26,
+                  "lemma": "Ben",
+                  "characterOffsetBegin": 244,
+                  "pos": "NNP",
+                  "originalText": "Ben",
+                  "ner": "PERSON",
+                  "after": " ",
+                  "characterOffsetEnd": 247,
+                  "speaker": "PER0"
+                }
+              },
+              "NNP"
+            ],
+            [
+              {
+                "nlpToken": {
+                  "before": " ",
+                  "word": "Zobrist",
+                  "index": 27,
+                  "lemma": "Zobrist",
+                  "characterOffsetBegin": 248,
+                  "pos": "NNP",
+                  "originalText": "Zobrist",
+                  "ner": "PERSON",
+                  "after": " ",
+                  "characterOffsetEnd": 255,
+                  "speaker": "PER0"
+                }
+              },
+              "NNP"
+            ]
+          ],
+          "score": 0.4727272727272727,
+          "text": "Ben Zobrist",
+          "nlpIndexSentence": 1
+        }
+      ]
     },
     "who": {
       "annotated": [
@@ -323,7 +423,73 @@
           "coderPhraseCount": 2
         }
       ],
-      "label": "where"
+      "label": "where",
+      "extracted": [
+        {
+          "parts": [
+            [
+              {
+                "nlpToken": {
+                  "before": " ",
+                  "word": "Windy",
+                  "index": 18,
+                  "lemma": "Windy",
+                  "characterOffsetBegin": 493,
+                  "pos": "NNP",
+                  "originalText": "Windy",
+                  "ner": "LOCATION",
+                  "after": " ",
+                  "characterOffsetEnd": 498,
+                  "speaker": "PER0"
+                }
+              },
+              "NNP"
+            ],
+            [
+              {
+                "nlpToken": {
+                  "before": " ",
+                  "word": "City",
+                  "index": 19,
+                  "lemma": "City",
+                  "characterOffsetBegin": 499,
+                  "pos": "NNP",
+                  "originalText": "City",
+                  "ner": "LOCATION",
+                  "after": " ",
+                  "characterOffsetEnd": 503,
+                  "speaker": "PER0"
+                }
+              },
+              "NNP"
+            ]
+          ],
+          "score": 0.6832831418493004,
+          "text": "Windy City",
+          "enhancement": {
+            "openstreetmap_nominatim": {
+              "osm_id": "158499313",
+              "boundingbox": [
+                41.5989504,
+                41.6389504,
+                -78.895867,
+                -78.855867
+              ],
+              "licence": "Data \u00a9 OpenStreetMap contributors, ODbL 1.0. http://www.openstreetmap.org/copyright",
+              "importance": 0.26875,
+              "icon": "https://nominatim.openstreetmap.org/images/mapicons/poi_place_village.p.20.png",
+              "osm_type": "node",
+              "display_name": "Windy City, Elk County, Pennsylvania, 16734, United States of America",
+              "lat": "41.6189504",
+              "type": "hamlet",
+              "place_id": "476770",
+              "lon": "-78.875867",
+              "class": "place"
+            }
+          },
+          "nlpIndexSentence": 2
+        }
+      ]
     }
   },
   "description": "The Chicago Cubs shed themselves of the \"",

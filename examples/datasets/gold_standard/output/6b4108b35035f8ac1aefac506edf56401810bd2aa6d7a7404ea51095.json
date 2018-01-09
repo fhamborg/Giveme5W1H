@@ -51,7 +51,70 @@
           "parsed": "2016-11-13"
         }
       ],
-      "label": "when"
+      "label": "when",
+      "extracted": [
+        {
+          "parts": [
+            [
+              {
+                "nlpToken": {
+                  "characterOffsetBegin": 4446,
+                  "word": "THE",
+                  "lemma": "the",
+                  "timex": {
+                    "value": "2016-11-14",
+                    "tid": "t9",
+                    "type": "DATE"
+                  },
+                  "before": " ",
+                  "characterOffsetEnd": 4449,
+                  "originalText": "THE",
+                  "normalizedNER": "2016-11-14",
+                  "speaker": "PER0",
+                  "after": " ",
+                  "ner": "DATE",
+                  "index": 23,
+                  "pos": "DT"
+                }
+              },
+              "DT"
+            ],
+            [
+              {
+                "nlpToken": {
+                  "characterOffsetBegin": 4450,
+                  "word": "DAY",
+                  "lemma": "day",
+                  "timex": {
+                    "value": "2016-11-14",
+                    "tid": "t9",
+                    "type": "DATE"
+                  },
+                  "before": " ",
+                  "characterOffsetEnd": 4453,
+                  "originalText": "DAY",
+                  "normalizedNER": "2016-11-14",
+                  "speaker": "PER0",
+                  "after": "",
+                  "ner": "DATE",
+                  "index": 24,
+                  "pos": "NN"
+                }
+              },
+              "NN"
+            ]
+          ],
+          "score": 0.707811288556231,
+          "text": "THE DAY",
+          "enhancement": {
+            "timex": {
+              "start_date": "2016-11-14T00:00:00",
+              "end_date": "2016-11-14T23:59:59"
+            }
+          },
+          "nlpIndexSentence": 36
+        }
+      ]
     },
     "why": {
       "annotated": [
@@ -60,7 +123,51 @@
           "coderPhraseCount": 2
         }
       ],
-      "label": "why"
+      "label": "why",
+      "extracted": [
+        {
+          "parts": [
+            [
+              {
+                "nlpToken": {
+                  "characterOffsetBegin": 0,
+                  "word": "Nico",
+                  "lemma": "Nico",
+                  "characterOffsetEnd": 4,
+                  "speaker": "PER0",
+                  "ner": "PERSON",
+                  "after": " ",
+                  "originalText": "Nico",
+                  "before": "",
+                  "index": 1,
+                  "pos": "NNP"
+                }
+              },
+              "NNP"
+            ],
+            [
+              {
+                "nlpToken": {
+                  "characterOffsetBegin": 5,
+                  "word": "Rosberg",
+                  "lemma": "Rosberg",
+                  "characterOffsetEnd": 12,
+                  "speaker": "PER0",
+                  "ner": "PERSON",
+                  "after": " ",
+                  "originalText": "Rosberg",
+                  "before": " ",
+                  "index": 2,
+                  "pos": "NNP"
+                }
+              },
+              "NNP"
+            ]
+          ],
+          "score": 0.5844155844155844,
+          "text": "Nico Rosberg"
+        }
+      ]
     },
     "how": {
       "annotated": [
@@ -144,496 +251,10 @@
                 }
               },
               "NNP"
-            ],
-            [
-              {
-                "nlpToken": {
-                  "characterOffsetBegin": 3246,
-                  "word": "'s",
-                  "lemma": "'s",
-                  "characterOffsetEnd": 3248,
-                  "speaker": "PER0",
-                  "ner": "O",
-                  "after": " ",
-                  "originalText": "'s",
-                  "before": "",
-                  "index": 6,
-                  "pos": "POS"
-                }
-              },
-              "POS"
-            ],
-            [
-              {
-                "nlpToken": {
-                  "characterOffsetBegin": 3249,
-                  "word": "decision",
-                  "lemma": "decision",
-                  "characterOffsetEnd": 3257,
-                  "speaker": "PER0",
-                  "ner": "O",
-                  "after": " ",
-                  "originalText": "decision",
-                  "before": " ",
-                  "index": 7,
-                  "pos": "NN"
-                }
-              },
-              "NN"
-            ],
-            [
-              {
-                "nlpToken": {
-                  "characterOffsetBegin": 3258,
-                  "word": "made",
-                  "lemma": "make",
-                  "characterOffsetEnd": 3262,
-                  "speaker": "PER0",
-                  "ner": "O",
-                  "after": " ",
-                  "originalText": "made",
-                  "before": " ",
-                  "index": 8,
-                  "pos": "VBD"
-                }
-              },
-              "VBD"
-            ],
-            [
-              {
-                "nlpToken": {
-                  "characterOffsetBegin": 3263,
-                  "word": "no",
-                  "lemma": "no",
-                  "characterOffsetEnd": 3265,
-                  "speaker": "PER0",
-                  "ner": "O",
-                  "after": " ",
-                  "originalText": "no",
-                  "before": " ",
-                  "index": 9,
-                  "pos": "DT"
-                }
-              },
-              "DT"
-            ],
-            [
-              {
-                "nlpToken": {
-                  "characterOffsetBegin": 3266,
-                  "word": "difference",
-                  "lemma": "difference",
-                  "characterOffsetEnd": 3276,
-                  "speaker": "PER0",
-                  "ner": "O",
-                  "after": " ",
-                  "originalText": "difference",
-                  "before": " ",
-                  "index": 10,
-                  "pos": "NN"
-                }
-              },
-              "NN"
-            ],
-            [
-              {
-                "nlpToken": {
-                  "characterOffsetBegin": 3277,
-                  "word": "to",
-                  "lemma": "to",
-                  "characterOffsetEnd": 3279,
-                  "speaker": "PER0",
-                  "ner": "O",
-                  "after": " ",
-                  "originalText": "to",
-                  "before": " ",
-                  "index": 11,
-                  "pos": "TO"
-                }
-              },
-              "TO"
-            ],
-            [
-              {
-                "nlpToken": {
-                  "characterOffsetBegin": 3280,
-                  "word": "Hamilton",
-                  "lemma": "Hamilton",
-                  "characterOffsetEnd": 3288,
-                  "speaker": "PER0",
-                  "ner": "LOCATION",
-                  "after": "",
-                  "originalText": "Hamilton",
-                  "before": " ",
-                  "index": 12,
-                  "pos": "NNP"
-                }
-              },
-              "NNP"
-            ],
-            [
-              {
-                "nlpToken": {
-                  "characterOffsetBegin": 3288,
-                  "word": ",",
-                  "lemma": ",",
-                  "characterOffsetEnd": 3289,
-                  "speaker": "PER0",
-                  "ner": "O",
-                  "after": " ",
-                  "originalText": ",",
-                  "before": "",
-                  "index": 13,
-                  "pos": ","
-                }
-              },
-              ","
-            ],
-            [
-              {
-                "nlpToken": {
-                  "characterOffsetBegin": 3290,
-                  "word": "thought",
-                  "lemma": "think",
-                  "characterOffsetEnd": 3297,
-                  "speaker": "PER0",
-                  "ner": "O",
-                  "after": " ",
-                  "originalText": "thought",
-                  "before": " ",
-                  "index": 14,
-                  "pos": "VBD"
-                }
-              },
-              "VBD"
-            ],
-            [
-              {
-                "nlpToken": {
-                  "characterOffsetBegin": 3298,
-                  "word": "it",
-                  "lemma": "it",
-                  "characterOffsetEnd": 3300,
-                  "speaker": "PER0",
-                  "ner": "O",
-                  "after": " ",
-                  "originalText": "it",
-                  "before": " ",
-                  "index": 15,
-                  "pos": "PRP"
-                }
-              },
-              "PRP"
-            ],
-            [
-              {
-                "nlpToken": {
-                  "characterOffsetBegin": 3301,
-                  "word": "could",
-                  "lemma": "could",
-                  "characterOffsetEnd": 3306,
-                  "speaker": "PER0",
-                  "ner": "O",
-                  "after": " ",
-                  "originalText": "could",
-                  "before": " ",
-                  "index": 16,
-                  "pos": "MD"
-                }
-              },
-              "MD"
-            ],
-            [
-              {
-                "nlpToken": {
-                  "characterOffsetBegin": 3307,
-                  "word": "have",
-                  "lemma": "have",
-                  "characterOffsetEnd": 3311,
-                  "speaker": "PER0",
-                  "ner": "O",
-                  "after": " ",
-                  "originalText": "have",
-                  "before": " ",
-                  "index": 17,
-                  "pos": "VB"
-                }
-              },
-              "VB"
-            ],
-            [
-              {
-                "nlpToken": {
-                  "characterOffsetBegin": 3312,
-                  "word": "forced",
-                  "lemma": "force",
-                  "characterOffsetEnd": 3318,
-                  "speaker": "PER0",
-                  "ner": "O",
-                  "after": " ",
-                  "originalText": "forced",
-                  "before": " ",
-                  "index": 18,
-                  "pos": "VBN"
-                }
-              },
-              "VBN"
-            ],
-            [
-              {
-                "nlpToken": {
-                  "characterOffsetBegin": 3319,
-                  "word": "Rosberg",
-                  "lemma": "Rosberg",
-                  "characterOffsetEnd": 3326,
-                  "speaker": "PER0",
-                  "ner": "PERSON",
-                  "after": " ",
-                  "originalText": "Rosberg",
-                  "before": " ",
-                  "index": 19,
-                  "pos": "NNP"
-                }
-              },
-              "NNP"
-            ],
-            [
-              {
-                "nlpToken": {
-                  "characterOffsetBegin": 3327,
-                  "word": "into",
-                  "lemma": "into",
-                  "characterOffsetEnd": 3331,
-                  "speaker": "PER0",
-                  "ner": "O",
-                  "after": " ",
-                  "originalText": "into",
-                  "before": " ",
-                  "index": 20,
-                  "pos": "IN"
-                }
-              },
-              "IN"
-            ],
-            [
-              {
-                "nlpToken": {
-                  "characterOffsetBegin": 3332,
-                  "word": "making",
-                  "lemma": "make",
-                  "characterOffsetEnd": 3338,
-                  "speaker": "PER0",
-                  "ner": "O",
-                  "after": " ",
-                  "originalText": "making",
-                  "before": " ",
-                  "index": 21,
-                  "pos": "VBG"
-                }
-              },
-              "VBG"
-            ],
-            [
-              {
-                "nlpToken": {
-                  "characterOffsetBegin": 3339,
-                  "word": "a",
-                  "lemma": "a",
-                  "characterOffsetEnd": 3340,
-                  "speaker": "PER0",
-                  "ner": "O",
-                  "after": " ",
-                  "originalText": "a",
-                  "before": " ",
-                  "index": 22,
-                  "pos": "DT"
-                }
-              },
-              "DT"
-            ],
-            [
-              {
-                "nlpToken": {
-                  "characterOffsetBegin": 3341,
-                  "word": "mistake",
-                  "lemma": "mistake",
-                  "characterOffsetEnd": 3348,
-                  "speaker": "PER0",
-                  "ner": "O",
-                  "after": " ",
-                  "originalText": "mistake",
-                  "before": " ",
-                  "index": 23,
-                  "pos": "NN"
-                }
-              },
-              "NN"
-            ],
-            [
-              {
-                "nlpToken": {
-                  "characterOffsetBegin": 3349,
-                  "word": "that",
-                  "lemma": "that",
-                  "characterOffsetEnd": 3353,
-                  "speaker": "PER0",
-                  "ner": "O",
-                  "after": " ",
-                  "originalText": "that",
-                  "before": " ",
-                  "index": 24,
-                  "pos": "WDT"
-                }
-              },
-              "WDT"
-            ],
-            [
-              {
-                "nlpToken": {
-                  "characterOffsetBegin": 3354,
-                  "word": "would",
-                  "lemma": "would",
-                  "characterOffsetEnd": 3359,
-                  "speaker": "PER0",
-                  "ner": "O",
-                  "after": " ",
-                  "originalText": "would",
-                  "before": " ",
-                  "index": 25,
-                  "pos": "MD"
-                }
-              },
-              "MD"
-            ],
-            [
-              {
-                "nlpToken": {
-                  "characterOffsetBegin": 3360,
-                  "word": "have",
-                  "lemma": "have",
-                  "characterOffsetEnd": 3364,
-                  "speaker": "PER0",
-                  "ner": "O",
-                  "after": " ",
-                  "originalText": "have",
-                  "before": " ",
-                  "index": 26,
-                  "pos": "VB"
-                }
-              },
-              "VB"
-            ],
-            [
-              {
-                "nlpToken": {
-                  "characterOffsetBegin": 3365,
-                  "word": "put",
-                  "lemma": "put",
-                  "characterOffsetEnd": 3368,
-                  "speaker": "PER0",
-                  "ner": "O",
-                  "after": " ",
-                  "originalText": "put",
-                  "before": " ",
-                  "index": 27,
-                  "pos": "VBN"
-                }
-              },
-              "VBN"
-            ],
-            [
-              {
-                "nlpToken": {
-                  "characterOffsetBegin": 3369,
-                  "word": "him",
-                  "lemma": "he",
-                  "characterOffsetEnd": 3372,
-                  "speaker": "PER0",
-                  "ner": "O",
-                  "after": " ",
-                  "originalText": "him",
-                  "before": " ",
-                  "index": 28,
-                  "pos": "PRP"
-                }
-              },
-              "PRP"
-            ],
-            [
-              {
-                "nlpToken": {
-                  "characterOffsetBegin": 3373,
-                  "word": "out",
-                  "lemma": "out",
-                  "characterOffsetEnd": 3376,
-                  "speaker": "PER0",
-                  "ner": "O",
-                  "after": " ",
-                  "originalText": "out",
-                  "before": " ",
-                  "index": 29,
-                  "pos": "IN"
-                }
-              },
-              "IN"
-            ],
-            [
-              {
-                "nlpToken": {
-                  "characterOffsetBegin": 3377,
-                  "word": "of",
-                  "lemma": "of",
-                  "characterOffsetEnd": 3379,
-                  "speaker": "PER0",
-                  "ner": "O",
-                  "after": " ",
-                  "originalText": "of",
-                  "before": " ",
-                  "index": 30,
-                  "pos": "IN"
-                }
-              },
-              "IN"
-            ],
-            [
-              {
-                "nlpToken": {
-                  "characterOffsetBegin": 3380,
-                  "word": "the",
-                  "lemma": "the",
-                  "characterOffsetEnd": 3383,
-                  "speaker": "PER0",
-                  "ner": "O",
-                  "after": " ",
-                  "originalText": "the",
-                  "before": " ",
-                  "index": 31,
-                  "pos": "DT"
-                }
-              },
-              "DT"
-            ],
-            [
-              {
-                "nlpToken": {
-                  "characterOffsetBegin": 3384,
-                  "word": "race",
-                  "lemma": "race",
-                  "characterOffsetEnd": 3388,
-                  "speaker": "PER0",
-                  "ner": "O",
-                  "after": "",
-                  "originalText": "race",
-                  "before": " ",
-                  "index": 32,
-                  "pos": "NN"
-                }
-              },
-              "NN"
             ]
           ],
           "score": 1.0,
-          "text": "it happened , Whiting 's decision made no difference to Hamilton , thought it could have forced Rosberg into making a mistake that would have put him out of the race",
+          "text": "it happened , Whiting",
           "nlpIndexSentence": 2
         }
       ]
@@ -645,7 +266,73 @@
           "coderPhraseCount": 3
         }
       ],
-      "label": "where"
+      "label": "where",
+      "extracted": [
+        {
+          "parts": [
+            [
+              {
+                "nlpToken": {
+                  "characterOffsetBegin": 1199,
+                  "word": "Abu",
+                  "lemma": "Abu",
+                  "characterOffsetEnd": 1202,
+                  "speaker": "PER0",
+                  "ner": "LOCATION",
+                  "after": " ",
+                  "originalText": "Abu",
+                  "before": " ",
+                  "index": 29,
+                  "pos": "NNP"
+                }
+              },
+              "NNP"
+            ],
+            [
+              {
+                "nlpToken": {
+                  "characterOffsetBegin": 1203,
+                  "word": "Dhabi",
+                  "lemma": "Dhabi",
+                  "characterOffsetEnd": 1208,
+                  "speaker": "PER0",
+                  "ner": "LOCATION",
+                  "after": "",
+                  "originalText": "Dhabi",
+                  "before": " ",
+                  "index": 30,
+                  "pos": "NNP"
+                }
+              },
+              "NNP"
+            ]
+          ],
+          "score": 0.7,
+          "text": "Abu Dhabi",
+          "enhancement": {
+            "openstreetmap_nominatim": {
+              "osm_id": "5060518021",
+              "boundingbox": [
+                40.4071208,
+                40.4072208,
+                49.8460771,
+                49.8461771
+              ],
+              "licence": "Data \u00a9 OpenStreetMap contributors, ODbL 1.0. http://www.openstreetmap.org/copyright",
+              "importance": 0.201,
+              "icon": "https://nominatim.openstreetmap.org/images/mapicons/food_restaurant.p.20.png",
+              "osm_type": "node",
+              "display_name": "Abu Dhabi, M\u0259mm\u0259d Araz, D\u0259rn\u0259g\u00fcl, Bak\u0131, Bak\u0131 \u0130nzibati \u018frazisi, AZ1130, Az\u0259rbaycan",
+              "lat": "40.4071708",
+              "type": "restaurant",
+              "place_id": "63609951",
+              "lon": "49.8461271",
+              "class": "amenity"
+            }
+          },
+          "nlpIndexSentence": 4
+        }
+      ]
     },
     "what": {
       "annotated": [

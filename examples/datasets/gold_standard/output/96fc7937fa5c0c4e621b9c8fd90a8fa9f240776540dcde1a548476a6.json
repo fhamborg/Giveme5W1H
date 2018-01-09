@@ -255,118 +255,10 @@
                 }
               },
               "CC"
-            ],
-            [
-              {
-                "nlpToken": {
-                  "before": " ",
-                  "word": "insists",
-                  "index": 13,
-                  "lemma": "insist",
-                  "characterOffsetBegin": 85,
-                  "pos": "VBZ",
-                  "originalText": "insists",
-                  "ner": "O",
-                  "after": " ",
-                  "characterOffsetEnd": 92,
-                  "speaker": "PER0"
-                }
-              },
-              "VBZ"
-            ],
-            [
-              {
-                "nlpToken": {
-                  "before": " ",
-                  "word": "she",
-                  "index": 14,
-                  "lemma": "she",
-                  "characterOffsetBegin": 93,
-                  "pos": "PRP",
-                  "originalText": "she",
-                  "ner": "O",
-                  "after": " ",
-                  "characterOffsetEnd": 96,
-                  "speaker": "PER0"
-                }
-              },
-              "PRP"
-            ],
-            [
-              {
-                "nlpToken": {
-                  "before": " ",
-                  "word": "was",
-                  "index": 15,
-                  "lemma": "be",
-                  "characterOffsetBegin": 97,
-                  "pos": "VBD",
-                  "originalText": "was",
-                  "ner": "O",
-                  "after": " ",
-                  "characterOffsetEnd": 100,
-                  "speaker": "PER0"
-                }
-              },
-              "VBD"
-            ],
-            [
-              {
-                "nlpToken": {
-                  "before": " ",
-                  "word": "beating",
-                  "index": 16,
-                  "lemma": "beat",
-                  "characterOffsetBegin": 101,
-                  "pos": "VBG",
-                  "originalText": "beating",
-                  "ner": "O",
-                  "after": " ",
-                  "characterOffsetEnd": 108,
-                  "speaker": "PER0"
-                }
-              },
-              "VBG"
-            ],
-            [
-              {
-                "nlpToken": {
-                  "before": " ",
-                  "word": "Donald",
-                  "index": 17,
-                  "lemma": "Donald",
-                  "characterOffsetBegin": 109,
-                  "pos": "NNP",
-                  "originalText": "Donald",
-                  "ner": "PERSON",
-                  "after": " ",
-                  "characterOffsetEnd": 115,
-                  "speaker": "PER0"
-                }
-              },
-              "NNP"
-            ],
-            [
-              {
-                "nlpToken": {
-                  "before": " ",
-                  "word": "Trump",
-                  "index": 18,
-                  "lemma": "Trump",
-                  "characterOffsetBegin": 116,
-                  "pos": "NNP",
-                  "originalText": "Trump",
-                  "ner": "PERSON",
-                  "after": "",
-                  "characterOffsetEnd": 121,
-                  "speaker": "PER0"
-                }
-              },
-              "NNP"
             ]
           ],
           "score": 1.0,
-          "text": "presidential election defeat and insists she was beating Donald Trump",
+          "text": "presidential election defeat and",
           "nlpIndexSentence": 9
         }
       ]
@@ -377,7 +269,70 @@
           "coderPhraseCount": 3
         }
       ],
-      "label": "when"
+      "label": "when",
+      "extracted": [
+        {
+          "parts": [
+            [
+              {
+                "nlpToken": {
+                  "index": 6,
+                  "pos": "NNP",
+                  "originalText": "Sunday",
+                  "ner": "DATE",
+                  "after": " ",
+                  "characterOffsetEnd": 1329,
+                  "before": " ",
+                  "word": "Sunday",
+                  "characterOffsetBegin": 1323,
+                  "normalizedNER": "2016-11-13",
+                  "lemma": "Sunday",
+                  "timex": {
+                    "tid": "t3",
+                    "type": "DATE",
+                    "value": "2016-11-13"
+                  },
+                  "speaker": "PER0"
+                }
+              },
+              "NNP"
+            ],
+            [
+              {
+                "nlpToken": {
+                  "index": 7,
+                  "pos": "IN",
+                  "originalText": "before",
+                  "ner": "DATE",
+                  "after": " ",
+                  "characterOffsetEnd": 1336,
+                  "before": " ",
+                  "word": "before",
+                  "characterOffsetBegin": 1330,
+                  "normalizedNER": "2016-11-13",
+                  "lemma": "before",
+                  "timex": {
+                    "tid": "t3",
+                    "type": "DATE",
+                    "value": "2016-11-13"
+                  },
+                  "speaker": "PER0"
+                }
+              },
+              "IN"
+            ]
+          ],
+          "score": 0.7809635907734142,
+          "text": "Sunday before",
+          "enhancement": {
+            "timex": {
+              "start_date": "2016-11-13T00:00:00",
+              "end_date": "2016-11-13T23:59:59"
+            }
+          },
+          "nlpIndexSentence": 7
+        }
+      ]
     },
     "why": {
       "annotated": [
@@ -386,7 +341,51 @@
           "text": "the FBI's decision to revive its examination of her email accounts"
         }
       ],
-      "label": "why"
+      "label": "why",
+      "extracted": [
+        {
+          "parts": [
+            [
+              {
+                "nlpToken": {
+                  "before": "",
+                  "word": "Hillary",
+                  "index": 1,
+                  "lemma": "Hillary",
+                  "characterOffsetBegin": 0,
+                  "pos": "NNP",
+                  "originalText": "Hillary",
+                  "ner": "PERSON",
+                  "after": " ",
+                  "characterOffsetEnd": 7,
+                  "speaker": "PER0"
+                }
+              },
+              "NNP"
+            ],
+            [
+              {
+                "nlpToken": {
+                  "before": " ",
+                  "word": "Clinton",
+                  "index": 2,
+                  "lemma": "Clinton",
+                  "characterOffsetBegin": 8,
+                  "pos": "NNP",
+                  "originalText": "Clinton",
+                  "ner": "PERSON",
+                  "after": " ",
+                  "characterOffsetEnd": 15,
+                  "speaker": "PER0"
+                }
+              },
+              "NNP"
+            ]
+          ],
+          "score": 0.5844155844155844,
+          "text": "Hillary Clinton"
+        }
+      ]
     },
     "who": {
       "annotated": [
@@ -447,7 +446,55 @@
           "coderPhraseCount": 2
         }
       ],
-      "label": "where"
+      "label": "where",
+      "extracted": [
+        {
+          "parts": [
+            [
+              {
+                "nlpToken": {
+                  "before": " ",
+                  "word": "America",
+                  "index": 8,
+                  "lemma": "America",
+                  "characterOffsetBegin": 163,
+                  "pos": "NNP",
+                  "originalText": "America",
+                  "ner": "LOCATION",
+                  "after": "",
+                  "characterOffsetEnd": 170,
+                  "speaker": "PER0"
+                }
+              },
+              "NNP"
+            ]
+          ],
+          "score": 0.6903053872261045,
+          "text": "America",
+          "enhancement": {
+            "openstreetmap_nominatim": {
+              "osm_id": "7762944",
+              "boundingbox": [
+                4.8165393,
+                4.8194642,
+                -75.6911194,
+                -75.6872277
+              ],
+              "licence": "Data \u00a9 OpenStreetMap contributors, ODbL 1.0. http://www.openstreetmap.org/copyright",
+              "importance": 0.185,
+              "icon": "https://nominatim.openstreetmap.org/images/mapicons/poi_boundary_administrative.p.20.png",
+              "osm_type": "relation",
+              "display_name": "America, Pereira, Risaralda, Colombia",
+              "lat": "4.81804785",
+              "type": "administrative",
+              "place_id": "220845259",
+              "lon": "-75.6888617199333",
+              "class": "boundary"
+            }
+          },
+          "nlpIndexSentence": 1
+        }
+      ]
     }
   },
   "description": "Donald Trump beat her dream of becoming America's next President, and now Hillary Clinton has blamed the FBI's decision to revive its examination of her email accounts for her devastating defeat.",

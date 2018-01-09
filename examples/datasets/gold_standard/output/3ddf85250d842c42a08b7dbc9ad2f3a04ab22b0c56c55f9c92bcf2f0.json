@@ -209,7 +209,94 @@
           "parsed": "2016-11-12"
         }
       ],
-      "label": "when"
+      "label": "when",
+      "extracted": [
+        {
+          "parts": [
+            [
+              {
+                "nlpToken": {
+                  "characterOffsetBegin": 2994,
+                  "word": "Several",
+                  "lemma": "several",
+                  "timex": {
+                    "value": "2016-11-12T01:17",
+                    "tid": "t16",
+                    "type": "TIME"
+                  },
+                  "before": " ",
+                  "characterOffsetEnd": 3001,
+                  "originalText": "Several",
+                  "normalizedNER": "2016-11-12T01:17",
+                  "speaker": "PER0",
+                  "after": " ",
+                  "ner": "TIME",
+                  "index": 1,
+                  "pos": "JJ"
+                }
+              },
+              "JJ"
+            ],
+            [
+              {
+                "nlpToken": {
+                  "characterOffsetBegin": 3002,
+                  "word": "days",
+                  "lemma": "day",
+                  "timex": {
+                    "value": "2016-11-12T01:17",
+                    "tid": "t16",
+                    "type": "TIME"
+                  },
+                  "before": " ",
+                  "characterOffsetEnd": 3006,
+                  "originalText": "days",
+                  "normalizedNER": "2016-11-12T01:17",
+                  "speaker": "PER0",
+                  "after": " ",
+                  "ner": "TIME",
+                  "index": 2,
+                  "pos": "NNS"
+                }
+              },
+              "NNS"
+            ],
+            [
+              {
+                "nlpToken": {
+                  "characterOffsetBegin": 3007,
+                  "word": "later",
+                  "lemma": "later",
+                  "timex": {
+                    "value": "2016-11-12T01:17",
+                    "tid": "t16",
+                    "type": "TIME"
+                  },
+                  "before": " ",
+                  "characterOffsetEnd": 3012,
+                  "originalText": "later",
+                  "normalizedNER": "2016-11-12T01:17",
+                  "speaker": "PER0",
+                  "after": "",
+                  "ner": "TIME",
+                  "index": 3,
+                  "pos": "RB"
+                }
+              },
+              "RB"
+            ]
+          ],
+          "score": 0.825735857634921,
+          "text": "Several days later",
+          "enhancement": {
+            "timex": {
+              "start_date": "2016-11-12T01:17:00",
+              "end_date": "2016-11-12T01:17:59"
+            }
+          },
+          "nlpIndexSentence": 18
+        }
+      ]
     },
     "why": {
       "annotated": [
@@ -218,7 +305,195 @@
           "coderPhraseCount": 2
         }
       ],
-      "label": "why"
+      "label": "why",
+      "extracted": [
+        {
+          "parts": [
+            [
+              {
+                "nlpToken": {
+                  "characterOffsetBegin": 0,
+                  "word": "A",
+                  "lemma": "a",
+                  "characterOffsetEnd": 1,
+                  "speaker": "PER0",
+                  "ner": "O",
+                  "after": " ",
+                  "originalText": "A",
+                  "before": "",
+                  "index": 1,
+                  "pos": "DT"
+                }
+              },
+              "DT"
+            ],
+            [
+              {
+                "nlpToken": {
+                  "characterOffsetBegin": 2,
+                  "word": "TOP",
+                  "lemma": "top",
+                  "characterOffsetEnd": 5,
+                  "speaker": "PER0",
+                  "ner": "O",
+                  "after": " ",
+                  "originalText": "TOP",
+                  "before": " ",
+                  "index": 2,
+                  "pos": "NN"
+                }
+              },
+              "NN"
+            ],
+            [
+              {
+                "nlpToken": {
+                  "characterOffsetBegin": 6,
+                  "word": "aide",
+                  "lemma": "aide",
+                  "characterOffsetEnd": 10,
+                  "speaker": "PER0",
+                  "ner": "O",
+                  "after": " ",
+                  "originalText": "aide",
+                  "before": " ",
+                  "index": 3,
+                  "pos": "NN"
+                }
+              },
+              "NN"
+            ],
+            [
+              {
+                "nlpToken": {
+                  "characterOffsetBegin": 11,
+                  "word": "to",
+                  "lemma": "to",
+                  "characterOffsetEnd": 13,
+                  "speaker": "PER0",
+                  "ner": "O",
+                  "after": " ",
+                  "originalText": "to",
+                  "before": " ",
+                  "index": 4,
+                  "pos": "TO"
+                }
+              },
+              "TO"
+            ],
+            [
+              {
+                "nlpToken": {
+                  "characterOffsetBegin": 14,
+                  "word": "failed",
+                  "lemma": "fail",
+                  "characterOffsetEnd": 20,
+                  "speaker": "PER0",
+                  "ner": "O",
+                  "after": " ",
+                  "originalText": "failed",
+                  "before": " ",
+                  "index": 5,
+                  "pos": "VBN"
+                }
+              },
+              "VBN"
+            ],
+            [
+              {
+                "nlpToken": {
+                  "characterOffsetBegin": 21,
+                  "word": "US",
+                  "lemma": "US",
+                  "characterOffsetEnd": 23,
+                  "speaker": "PER0",
+                  "ner": "LOCATION",
+                  "after": " ",
+                  "originalText": "US",
+                  "before": " ",
+                  "index": 6,
+                  "pos": "NNP"
+                }
+              },
+              "NNP"
+            ],
+            [
+              {
+                "nlpToken": {
+                  "characterOffsetBegin": 24,
+                  "word": "presidential",
+                  "lemma": "presidential",
+                  "characterOffsetEnd": 36,
+                  "speaker": "PER0",
+                  "ner": "O",
+                  "after": " ",
+                  "originalText": "presidential",
+                  "before": " ",
+                  "index": 7,
+                  "pos": "JJ"
+                }
+              },
+              "JJ"
+            ],
+            [
+              {
+                "nlpToken": {
+                  "characterOffsetBegin": 37,
+                  "word": "contender",
+                  "lemma": "contender",
+                  "characterOffsetEnd": 46,
+                  "speaker": "PER0",
+                  "ner": "O",
+                  "after": " ",
+                  "originalText": "contender",
+                  "before": " ",
+                  "index": 8,
+                  "pos": "NN"
+                }
+              },
+              "NN"
+            ],
+            [
+              {
+                "nlpToken": {
+                  "characterOffsetBegin": 47,
+                  "word": "Hillary",
+                  "lemma": "Hillary",
+                  "characterOffsetEnd": 54,
+                  "speaker": "PER0",
+                  "ner": "PERSON",
+                  "after": " ",
+                  "originalText": "Hillary",
+                  "before": " ",
+                  "index": 9,
+                  "pos": "NNP"
+                }
+              },
+              "NNP"
+            ],
+            [
+              {
+                "nlpToken": {
+                  "characterOffsetBegin": 55,
+                  "word": "Clinton",
+                  "lemma": "Clinton",
+                  "characterOffsetEnd": 62,
+                  "speaker": "PER0",
+                  "ner": "PERSON",
+                  "after": " ",
+                  "originalText": "Clinton",
+                  "before": " ",
+                  "index": 10,
+                  "pos": "NNP"
+                }
+              },
+              "NNP"
+            ]
+          ],
+          "score": 0.5844155844155844,
+          "text": "A TOP aide to failed US presidential contender Hillary Clinton"
+        }
+      ]
     },
     "how": {
       "annotated": [
@@ -237,294 +512,42 @@
             [
               {
                 "nlpToken": {
-                  "characterOffsetBegin": 2751,
-                  "word": "agents",
-                  "lemma": "agent",
-                  "characterOffsetEnd": 2757,
-                  "speaker": "PER0",
-                  "ner": "O",
-                  "after": " ",
-                  "originalText": "agents",
-                  "before": " ",
-                  "index": 5,
-                  "pos": "NNS"
-                }
-              },
-              "NNS"
-            ],
-            [
-              {
-                "nlpToken": {
-                  "characterOffsetBegin": 2758,
-                  "word": "had",
-                  "lemma": "have",
-                  "characterOffsetEnd": 2761,
-                  "speaker": "PER0",
-                  "ner": "O",
-                  "after": " ",
-                  "originalText": "had",
-                  "before": " ",
-                  "index": 6,
-                  "pos": "VBD"
-                }
-              },
-              "VBD"
-            ],
-            [
-              {
-                "nlpToken": {
-                  "characterOffsetBegin": 2762,
-                  "word": "seized",
-                  "lemma": "seize",
-                  "characterOffsetEnd": 2768,
-                  "speaker": "PER0",
-                  "ner": "O",
-                  "after": " ",
-                  "originalText": "seized",
-                  "before": " ",
-                  "index": 7,
-                  "pos": "VBN"
-                }
-              },
-              "VBN"
-            ],
-            [
-              {
-                "nlpToken": {
-                  "characterOffsetBegin": 2769,
-                  "word": "a",
-                  "lemma": "a",
-                  "characterOffsetEnd": 2770,
-                  "speaker": "PER0",
-                  "ner": "O",
-                  "after": " ",
-                  "originalText": "a",
-                  "before": " ",
-                  "index": 8,
-                  "pos": "DT"
-                }
-              },
-              "DT"
-            ],
-            [
-              {
-                "nlpToken": {
-                  "characterOffsetBegin": 2771,
-                  "word": "laptop",
-                  "lemma": "laptop",
-                  "characterOffsetEnd": 2777,
-                  "speaker": "PER0",
-                  "ner": "O",
-                  "after": " ",
-                  "originalText": "laptop",
-                  "before": " ",
-                  "index": 9,
-                  "pos": "NN"
-                }
-              },
-              "NN"
-            ],
-            [
-              {
-                "nlpToken": {
-                  "characterOffsetBegin": 2778,
-                  "word": "shared",
-                  "lemma": "share",
-                  "characterOffsetEnd": 2784,
-                  "speaker": "PER0",
-                  "ner": "O",
-                  "after": " ",
-                  "originalText": "shared",
-                  "before": " ",
-                  "index": 10,
-                  "pos": "VBN"
-                }
-              },
-              "VBN"
-            ],
-            [
-              {
-                "nlpToken": {
-                  "characterOffsetBegin": 2785,
-                  "word": "by",
-                  "lemma": "by",
-                  "characterOffsetEnd": 2787,
-                  "speaker": "PER0",
-                  "ner": "O",
-                  "after": " ",
-                  "originalText": "by",
-                  "before": " ",
-                  "index": 11,
-                  "pos": "IN"
-                }
-              },
-              "IN"
-            ],
-            [
-              {
-                "nlpToken": {
-                  "characterOffsetBegin": 2788,
-                  "word": "Clinton",
-                  "lemma": "Clinton",
-                  "characterOffsetEnd": 2795,
-                  "speaker": "PER0",
-                  "ner": "PERSON",
-                  "after": " ",
-                  "originalText": "Clinton",
-                  "before": " ",
-                  "index": 12,
-                  "pos": "NNP"
-                }
-              },
-              "NNP"
-            ],
-            [
-              {
-                "nlpToken": {
-                  "characterOffsetBegin": 2796,
-                  "word": "aide",
-                  "lemma": "aide",
-                  "characterOffsetEnd": 2800,
-                  "speaker": "PER0",
-                  "ner": "O",
-                  "after": " ",
-                  "originalText": "aide",
-                  "before": " ",
-                  "index": 13,
-                  "pos": "NN"
-                }
-              },
-              "NN"
-            ],
-            [
-              {
-                "nlpToken": {
-                  "characterOffsetBegin": 2801,
-                  "word": "Huma",
-                  "lemma": "Huma",
-                  "characterOffsetEnd": 2805,
-                  "speaker": "PER0",
-                  "ner": "PERSON",
-                  "after": " ",
-                  "originalText": "Huma",
-                  "before": " ",
-                  "index": 14,
-                  "pos": "NNP"
-                }
-              },
-              "NNP"
-            ],
-            [
-              {
-                "nlpToken": {
-                  "characterOffsetBegin": 2806,
-                  "word": "Abedin",
-                  "lemma": "Abedin",
-                  "characterOffsetEnd": 2812,
-                  "speaker": "PER0",
-                  "ner": "PERSON",
-                  "after": " ",
-                  "originalText": "Abedin",
-                  "before": " ",
-                  "index": 15,
-                  "pos": "NNP"
-                }
-              },
-              "NNP"
-            ],
-            [
-              {
-                "nlpToken": {
-                  "characterOffsetBegin": 2813,
-                  "word": "and",
-                  "lemma": "and",
-                  "characterOffsetEnd": 2816,
-                  "speaker": "PER0",
-                  "ner": "O",
-                  "after": " ",
-                  "originalText": "and",
-                  "before": " ",
-                  "index": 16,
-                  "pos": "CC"
-                }
-              },
-              "CC"
-            ],
-            [
-              {
-                "nlpToken": {
-                  "characterOffsetBegin": 2817,
-                  "word": "her",
-                  "lemma": "she",
-                  "characterOffsetEnd": 2820,
-                  "speaker": "PER0",
-                  "ner": "O",
-                  "after": " ",
-                  "originalText": "her",
-                  "before": " ",
-                  "index": 17,
-                  "pos": "PRP$"
-                }
-              },
-              "PRP$"
-            ],
-            [
-              {
-                "nlpToken": {
-                  "characterOffsetBegin": 2821,
-                  "word": "husband",
-                  "lemma": "husband",
-                  "characterOffsetEnd": 2828,
-                  "speaker": "PER0",
-                  "ner": "O",
-                  "after": " ",
-                  "originalText": "husband",
-                  "before": " ",
-                  "index": 18,
-                  "pos": "NN"
-                }
-              },
-              "NN"
-            ],
-            [
-              {
-                "nlpToken": {
-                  "characterOffsetBegin": 2829,
-                  "word": "Anthony",
-                  "lemma": "Anthony",
-                  "characterOffsetEnd": 2836,
-                  "speaker": "PER0",
-                  "ner": "PERSON",
-                  "after": " ",
-                  "originalText": "Anthony",
-                  "before": " ",
-                  "index": 19,
-                  "pos": "NNP"
-                }
-              },
-              "NNP"
-            ],
-            [
-              {
-                "nlpToken": {
-                  "characterOffsetBegin": 2837,
-                  "word": "Weiner",
-                  "lemma": "Weiner",
-                  "characterOffsetEnd": 2843,
+                  "characterOffsetBegin": 750,
+                  "word": "Comey",
+                  "lemma": "Comey",
+                  "characterOffsetEnd": 755,
                   "speaker": "PER0",
                   "ner": "PERSON",
                   "after": "",
-                  "originalText": "Weiner",
+                  "originalText": "Comey",
                   "before": " ",
-                  "index": 20,
+                  "index": 5,
                   "pos": "NNP"
                 }
               },
               "NNP"
+            ],
+            [
+              {
+                "nlpToken": {
+                  "characterOffsetBegin": 755,
+                  "word": "'s",
+                  "lemma": "'s",
+                  "characterOffsetEnd": 757,
+                  "speaker": "PER0",
+                  "ner": "O",
+                  "after": " ",
+                  "originalText": "'s",
+                  "before": "",
+                  "index": 6,
+                  "pos": "POS"
+                }
+              },
+              "POS"
             ]
           ],
           "score": 1.0,
-          "text": "agents had seized a laptop shared by Clinton aide Huma Abedin and her husband Anthony Weiner",
+          "text": "Comey 's",
           "nlpIndexSentence": 5
         }
       ]
@@ -535,7 +558,54 @@
           "coderPhraseCount": 2
         }
       ],
-      "label": "where"
+      "label": "where",
+      "extracted": [
+        {
+          "parts": [
+            [
+              {
+                "nlpToken": {
+                  "characterOffsetBegin": 21,
+                  "word": "US",
+                  "lemma": "US",
+                  "characterOffsetEnd": 23,
+                  "speaker": "PER0",
+                  "ner": "LOCATION",
+                  "after": " ",
+                  "originalText": "US",
+                  "before": " ",
+                  "index": 6,
+                  "pos": "NNP"
+                }
+              },
+              "NNP"
+            ]
+          ],
+          "score": 0.7,
+          "text": "US",
+          "enhancement": {
+            "openstreetmap_nominatim": {
+              "osm_id": "148838",
+              "boundingbox": [
+                -14.7608358,
+                71.6048217,
+                -180.0,
+                180.0
+              ],
+              "licence": "Data \u00a9 OpenStreetMap contributors, ODbL 1.0. http://www.openstreetmap.org/copyright",
+              "importance": 0.2361730870995,
+              "icon": "https://nominatim.openstreetmap.org/images/mapicons/poi_boundary_administrative.p.20.png",
+              "osm_type": "relation",
+              "display_name": "United States of America",
+              "lat": "39.7837304",
+              "type": "administrative",
+              "place_id": "177579678",
+              "lon": "-100.4458825",
+              "class": "boundary"
+            }
+          }
+        }
+      ]
     },
     "what": {
       "annotated": [

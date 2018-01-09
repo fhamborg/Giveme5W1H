@@ -19,16 +19,16 @@
             [
               {
                 "nlpToken": {
-                  "characterOffsetBegin": 879,
-                  "word": "Ricciardo",
-                  "lemma": "Ricciardo",
-                  "characterOffsetEnd": 888,
+                  "characterOffsetBegin": 1624,
+                  "word": "Verstappen",
+                  "lemma": "Verstappen",
+                  "characterOffsetEnd": 1634,
                   "speaker": "PER0",
                   "ner": "PERSON",
                   "after": " ",
-                  "originalText": "Ricciardo",
+                  "originalText": "Verstappen",
                   "before": " ",
-                  "index": 20,
+                  "index": 5,
                   "pos": "NNP"
                 }
               },
@@ -36,8 +36,8 @@
             ]
           ],
           "score": 1.0,
-          "text": "Ricciardo",
-          "nlpIndexSentence": 3
+          "text": "Verstappen",
+          "nlpIndexSentence": 1
         }
       ]
     },
@@ -49,7 +49,46 @@
           "parsed": "2016-11-13"
         }
       ],
-      "label": "when"
+      "label": "when",
+      "extracted": [
+        {
+          "parts": [
+            [
+              {
+                "nlpToken": {
+                  "characterOffsetBegin": 235,
+                  "word": "Sunday",
+                  "lemma": "Sunday",
+                  "timex": {
+                    "value": "2016-11-13",
+                    "tid": "t2",
+                    "type": "DATE"
+                  },
+                  "before": " ",
+                  "characterOffsetEnd": 241,
+                  "originalText": "Sunday",
+                  "normalizedNER": "2016-11-13",
+                  "speaker": "PER0",
+                  "after": "",
+                  "ner": "DATE",
+                  "index": 27,
+                  "pos": "NNP"
+                }
+              },
+              "NNP"
+            ]
+          ],
+          "score": 0.7714804257902491,
+          "text": "Sunday",
+          "enhancement": {
+            "timex": {
+              "start_date": "2016-11-13T00:00:00",
+              "end_date": "2016-11-13T23:59:59"
+            }
+          },
+          "nlpIndexSentence": 1
+        }
+      ]
     },
     "why": {
       "annotated": [
@@ -62,7 +101,34 @@
           "coderPhraseCount": 2
         }
       ],
-      "label": "why"
+      "label": "why",
+      "extracted": [
+        {
+          "parts": [
+            [
+              {
+                "nlpToken": {
+                  "characterOffsetBegin": 284,
+                  "word": "he",
+                  "lemma": "he",
+                  "characterOffsetEnd": 286,
+                  "speaker": "PER0",
+                  "ner": "O",
+                  "after": " ",
+                  "originalText": "he",
+                  "before": " ",
+                  "index": 37,
+                  "pos": "PRP"
+                }
+              },
+              "PRP"
+            ]
+          ],
+          "score": 0.5590318772136953,
+          "text": "he",
+          "nlpIndexSentence": 1
+        }
+      ]
     },
     "how": {
       "annotated": [
@@ -78,34 +144,34 @@
             [
               {
                 "nlpToken": {
-                  "characterOffsetBegin": 2235,
-                  "word": "the",
-                  "lemma": "the",
-                  "characterOffsetEnd": 2238,
-                  "speaker": "PER0",
+                  "characterOffsetBegin": 2611,
+                  "word": "I",
+                  "lemma": "I",
+                  "characterOffsetEnd": 2612,
+                  "speaker": "PER7",
                   "ner": "O",
                   "after": " ",
-                  "originalText": "the",
+                  "originalText": "I",
                   "before": " ",
-                  "index": 14,
-                  "pos": "DT"
+                  "index": 12,
+                  "pos": "PRP"
                 }
               },
-              "DT"
+              "PRP"
             ],
             [
               {
                 "nlpToken": {
-                  "characterOffsetBegin": 2239,
-                  "word": "win",
-                  "lemma": "win",
-                  "characterOffsetEnd": 2242,
-                  "speaker": "PER0",
+                  "characterOffsetBegin": 2613,
+                  "word": "am",
+                  "lemma": "be",
+                  "characterOffsetEnd": 2615,
+                  "speaker": "PER7",
                   "ner": "O",
-                  "after": "",
-                  "originalText": "win",
+                  "after": " ",
+                  "originalText": "am",
                   "before": " ",
-                  "index": 15,
+                  "index": 13,
                   "pos": "VBP"
                 }
               },
@@ -114,43 +180,43 @@
             [
               {
                 "nlpToken": {
-                  "characterOffsetBegin": 2242,
-                  "word": ",",
-                  "lemma": ",",
-                  "characterOffsetEnd": 2243,
-                  "speaker": "PER0",
+                  "characterOffsetBegin": 2616,
+                  "word": "quite",
+                  "lemma": "quite",
+                  "characterOffsetEnd": 2621,
+                  "speaker": "PER7",
                   "ner": "O",
                   "after": " ",
-                  "originalText": ",",
-                  "before": "",
-                  "index": 16,
-                  "pos": ","
+                  "originalText": "quite",
+                  "before": " ",
+                  "index": 14,
+                  "pos": "RB"
                 }
               },
-              ","
+              "RB"
             ],
             [
               {
                 "nlpToken": {
-                  "characterOffsetBegin": 2244,
-                  "word": "but",
-                  "lemma": "but",
-                  "characterOffsetEnd": 2247,
-                  "speaker": "PER0",
+                  "characterOffsetBegin": 2622,
+                  "word": "a",
+                  "lemma": "a",
+                  "characterOffsetEnd": 2623,
+                  "speaker": "PER7",
                   "ner": "O",
                   "after": " ",
-                  "originalText": "but",
+                  "originalText": "a",
                   "before": " ",
-                  "index": 17,
-                  "pos": "CC"
+                  "index": 15,
+                  "pos": "DT"
                 }
               },
-              "CC"
+              "DT"
             ]
           ],
           "score": 1.0,
-          "text": "the win , but",
-          "nlpIndexSentence": 14
+          "text": "I am quite a",
+          "nlpIndexSentence": 12
         }
       ]
     },
@@ -165,7 +231,55 @@
           "coderPhraseCount": 2
         }
       ],
-      "label": "where"
+      "label": "where",
+      "extracted": [
+        {
+          "parts": [
+            [
+              {
+                "nlpToken": {
+                  "characterOffsetBegin": 555,
+                  "word": "Hamilton",
+                  "lemma": "Hamilton",
+                  "characterOffsetEnd": 563,
+                  "speaker": "PER0",
+                  "ner": "LOCATION",
+                  "after": " ",
+                  "originalText": "Hamilton",
+                  "before": " ",
+                  "index": 12,
+                  "pos": "NNP"
+                }
+              },
+              "NNP"
+            ]
+          ],
+          "score": 0.6770523338265432,
+          "text": "Hamilton",
+          "enhancement": {
+            "openstreetmap_nominatim": {
+              "osm_id": "18996031",
+              "boundingbox": [
+                43.095205,
+                43.415205,
+                -80.028202,
+                -79.708202
+              ],
+              "licence": "Data \u00a9 OpenStreetMap contributors, ODbL 1.0. http://www.openstreetmap.org/copyright",
+              "importance": 0.25076532892375,
+              "icon": "https://nominatim.openstreetmap.org/images/mapicons/poi_place_city.p.20.png",
+              "osm_type": "node",
+              "display_name": "Hamilton, Ontario, L8N 1A3, Canada",
+              "lat": "43.255205",
+              "type": "city",
+              "place_id": "112762",
+              "lon": "-79.868202",
+              "class": "place"
+            }
+          },
+          "nlpIndexSentence": 3
+        }
+      ]
     },
     "what": {
       "annotated": [
@@ -181,79 +295,97 @@
             [
               {
                 "nlpToken": {
-                  "characterOffsetBegin": 684,
-                  "word": "opted",
-                  "lemma": "opt",
-                  "characterOffsetEnd": 689,
+                  "characterOffsetBegin": 178,
+                  "word": "has",
+                  "lemma": "have",
+                  "characterOffsetEnd": 181,
                   "speaker": "PER0",
                   "ner": "O",
                   "after": " ",
-                  "originalText": "opted",
+                  "originalText": "has",
                   "before": " ",
-                  "index": 33,
-                  "pos": "VBD"
+                  "index": 19,
+                  "pos": "VBZ"
                 }
               },
-              "VBD"
+              "VBZ"
             ],
             [
               {
                 "nlpToken": {
-                  "characterOffsetBegin": 690,
-                  "word": "to",
-                  "lemma": "to",
-                  "characterOffsetEnd": 692,
+                  "characterOffsetBegin": 182,
+                  "word": "described",
+                  "lemma": "describe",
+                  "characterOffsetEnd": 191,
                   "speaker": "PER0",
                   "ner": "O",
                   "after": " ",
-                  "originalText": "to",
+                  "originalText": "described",
                   "before": " ",
-                  "index": 34,
-                  "pos": "TO"
+                  "index": 20,
+                  "pos": "VBN"
                 }
               },
-              "TO"
+              "VBN"
             ],
             [
               {
                 "nlpToken": {
-                  "characterOffsetBegin": 693,
-                  "word": "pit",
-                  "lemma": "pit",
-                  "characterOffsetEnd": 696,
+                  "characterOffsetBegin": 192,
+                  "word": "Max",
+                  "lemma": "Max",
+                  "characterOffsetEnd": 195,
                   "speaker": "PER0",
-                  "ner": "O",
+                  "ner": "PERSON",
                   "after": " ",
-                  "originalText": "pit",
+                  "originalText": "Max",
                   "before": " ",
-                  "index": 35,
-                  "pos": "VB"
+                  "index": 21,
+                  "pos": "NNP"
                 }
               },
-              "VB"
+              "NNP"
             ],
             [
               {
                 "nlpToken": {
-                  "characterOffsetBegin": 697,
-                  "word": "him",
-                  "lemma": "he",
-                  "characterOffsetEnd": 700,
+                  "characterOffsetBegin": 196,
+                  "word": "Verstappen",
+                  "lemma": "Verstappen",
+                  "characterOffsetEnd": 206,
+                  "speaker": "PER0",
+                  "ner": "PERSON",
+                  "after": "",
+                  "originalText": "Verstappen",
+                  "before": " ",
+                  "index": 22,
+                  "pos": "NNP"
+                }
+              },
+              "NNP"
+            ],
+            [
+              {
+                "nlpToken": {
+                  "characterOffsetBegin": 206,
+                  "word": "'s",
+                  "lemma": "'s",
+                  "characterOffsetEnd": 208,
                   "speaker": "PER0",
                   "ner": "O",
                   "after": " ",
-                  "originalText": "him",
-                  "before": " ",
-                  "index": 36,
-                  "pos": "PRP"
+                  "originalText": "'s",
+                  "before": "",
+                  "index": 23,
+                  "pos": "POS"
                 }
               },
-              "PRP"
+              "POS"
             ]
           ],
           "score": 1.0,
-          "text": "opted to pit him",
-          "nlpIndexSentence": 3
+          "text": "has described Max Verstappen 's",
+          "nlpIndexSentence": 1
         }
       ]
     }

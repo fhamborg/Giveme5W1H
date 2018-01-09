@@ -315,7 +315,7 @@ class Learn(object):
                     if _pre_extracting_parameters_id != next_item['extracting_parameters_id']:
                         print("reset candidates - extracting values changed")
                         for document in self._documents:
-                            document.reset_candidates
+                            document.reset_candidates()
 
                 _pre_extracting_parameters_id = next_item['extracting_parameters_id']
 

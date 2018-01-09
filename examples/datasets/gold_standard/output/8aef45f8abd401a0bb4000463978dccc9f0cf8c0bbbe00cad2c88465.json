@@ -56,7 +56,46 @@
           "parsed": "2016-11-09"
         }
       ],
-      "label": "when"
+      "label": "when",
+      "extracted": [
+        {
+          "parts": [
+            [
+              {
+                "nlpToken": {
+                  "characterOffsetBegin": 6463,
+                  "word": "11pm",
+                  "lemma": "11pm",
+                  "timex": {
+                    "value": "2016-11-08T23:00",
+                    "tid": "t20",
+                    "type": "TIME"
+                  },
+                  "before": " ",
+                  "characterOffsetEnd": 6467,
+                  "originalText": "11pm",
+                  "normalizedNER": "2016-11-08T23:00",
+                  "speaker": "PER0",
+                  "after": "",
+                  "ner": "TIME",
+                  "index": 11,
+                  "pos": "NN"
+                }
+              },
+              "NN"
+            ]
+          ],
+          "score": 0.9333244717571731,
+          "text": "11pm",
+          "enhancement": {
+            "timex": {
+              "start_date": "2016-11-08T23:00:00",
+              "end_date": "2016-11-08T23:00:59"
+            }
+          },
+          "nlpIndexSentence": 33
+        }
+      ]
     },
     "why": {
       "annotated": [
@@ -65,7 +104,33 @@
           "coderPhraseCount": 3
         }
       ],
-      "label": "why"
+      "label": "why",
+      "extracted": [
+        {
+          "parts": [
+            [
+              {
+                "nlpToken": {
+                  "characterOffsetBegin": 96,
+                  "word": "HATE",
+                  "lemma": "HATE",
+                  "characterOffsetEnd": 100,
+                  "speaker": "PER0",
+                  "ner": "O",
+                  "after": " ",
+                  "originalText": "HATE",
+                  "before": " ",
+                  "index": 20,
+                  "pos": "NNP"
+                }
+              },
+              "NNP"
+            ]
+          ],
+          "score": 0.5844155844155844,
+          "text": "HATE"
+        }
+      ]
     },
     "how": {
       "annotated": [
@@ -81,16 +146,52 @@
             [
               {
                 "nlpToken": {
-                  "characterOffsetBegin": 3213,
-                  "word": "Trump",
-                  "lemma": "Trump",
-                  "characterOffsetEnd": 3218,
+                  "characterOffsetBegin": 6,
+                  "word": "the",
+                  "lemma": "the",
+                  "characterOffsetEnd": 9,
+                  "speaker": "PER0",
+                  "ner": "O",
+                  "after": " ",
+                  "originalText": "the",
+                  "before": " ",
+                  "index": 2,
+                  "pos": "DT"
+                }
+              },
+              "DT"
+            ],
+            [
+              {
+                "nlpToken": {
+                  "characterOffsetBegin": 10,
+                  "word": "defeat",
+                  "lemma": "defeat",
+                  "characterOffsetEnd": 16,
+                  "speaker": "PER0",
+                  "ner": "O",
+                  "after": " ",
+                  "originalText": "defeat",
+                  "before": " ",
+                  "index": 3,
+                  "pos": "NN"
+                }
+              },
+              "NN"
+            ],
+            [
+              {
+                "nlpToken": {
+                  "characterOffsetBegin": 17,
+                  "word": "Hillary",
+                  "lemma": "Hillary",
+                  "characterOffsetEnd": 24,
                   "speaker": "PER0",
                   "ner": "PERSON",
                   "after": " ",
-                  "originalText": "Trump",
+                  "originalText": "Hillary",
                   "before": " ",
-                  "index": 3,
+                  "index": 4,
                   "pos": "NNP"
                 }
               },
@@ -99,268 +200,16 @@
             [
               {
                 "nlpToken": {
-                  "characterOffsetBegin": 3219,
-                  "word": "triumphed",
-                  "lemma": "triumph",
-                  "characterOffsetEnd": 3228,
-                  "speaker": "PER0",
-                  "ner": "O",
-                  "after": "",
-                  "originalText": "triumphed",
-                  "before": " ",
-                  "index": 4,
-                  "pos": "VBD"
-                }
-              },
-              "VBD"
-            ],
-            [
-              {
-                "nlpToken": {
-                  "characterOffsetBegin": 3228,
-                  "word": ",",
-                  "lemma": ",",
-                  "characterOffsetEnd": 3229,
+                  "characterOffsetBegin": 25,
+                  "word": "superfan",
+                  "lemma": "superfan",
+                  "characterOffsetEnd": 33,
                   "speaker": "PER0",
                   "ner": "O",
                   "after": " ",
-                  "originalText": ",",
-                  "before": "",
+                  "originalText": "superfan",
+                  "before": " ",
                   "index": 5,
-                  "pos": ","
-                }
-              },
-              ","
-            ],
-            [
-              {
-                "nlpToken": {
-                  "characterOffsetBegin": 3230,
-                  "word": "scores",
-                  "lemma": "score",
-                  "characterOffsetEnd": 3236,
-                  "speaker": "PER0",
-                  "ner": "O",
-                  "after": " ",
-                  "originalText": "scores",
-                  "before": " ",
-                  "index": 6,
-                  "pos": "NNS"
-                }
-              },
-              "NNS"
-            ],
-            [
-              {
-                "nlpToken": {
-                  "characterOffsetBegin": 3237,
-                  "word": "of",
-                  "lemma": "of",
-                  "characterOffsetEnd": 3239,
-                  "speaker": "PER0",
-                  "ner": "O",
-                  "after": " ",
-                  "originalText": "of",
-                  "before": " ",
-                  "index": 7,
-                  "pos": "IN"
-                }
-              },
-              "IN"
-            ],
-            [
-              {
-                "nlpToken": {
-                  "characterOffsetBegin": 3240,
-                  "word": "celebrities",
-                  "lemma": "celebrity",
-                  "characterOffsetEnd": 3251,
-                  "speaker": "PER0",
-                  "ner": "O",
-                  "after": " ",
-                  "originalText": "celebrities",
-                  "before": " ",
-                  "index": 8,
-                  "pos": "NNS"
-                }
-              },
-              "NNS"
-            ],
-            [
-              {
-                "nlpToken": {
-                  "characterOffsetBegin": 3252,
-                  "word": "took",
-                  "lemma": "take",
-                  "characterOffsetEnd": 3256,
-                  "speaker": "PER0",
-                  "ner": "O",
-                  "after": " ",
-                  "originalText": "took",
-                  "before": " ",
-                  "index": 9,
-                  "pos": "VBD"
-                }
-              },
-              "VBD"
-            ],
-            [
-              {
-                "nlpToken": {
-                  "characterOffsetBegin": 3257,
-                  "word": "to",
-                  "lemma": "to",
-                  "characterOffsetEnd": 3259,
-                  "speaker": "PER0",
-                  "ner": "O",
-                  "after": " ",
-                  "originalText": "to",
-                  "before": " ",
-                  "index": 10,
-                  "pos": "TO"
-                }
-              },
-              "TO"
-            ],
-            [
-              {
-                "nlpToken": {
-                  "characterOffsetBegin": 3260,
-                  "word": "social",
-                  "lemma": "social",
-                  "characterOffsetEnd": 3266,
-                  "speaker": "PER0",
-                  "ner": "O",
-                  "after": " ",
-                  "originalText": "social",
-                  "before": " ",
-                  "index": 11,
-                  "pos": "JJ"
-                }
-              },
-              "JJ"
-            ],
-            [
-              {
-                "nlpToken": {
-                  "characterOffsetBegin": 3267,
-                  "word": "media",
-                  "lemma": "media",
-                  "characterOffsetEnd": 3272,
-                  "speaker": "PER0",
-                  "ner": "O",
-                  "after": " ",
-                  "originalText": "media",
-                  "before": " ",
-                  "index": 12,
-                  "pos": "NNS"
-                }
-              },
-              "NNS"
-            ],
-            [
-              {
-                "nlpToken": {
-                  "characterOffsetBegin": 3273,
-                  "word": "to",
-                  "lemma": "to",
-                  "characterOffsetEnd": 3275,
-                  "speaker": "PER0",
-                  "ner": "O",
-                  "after": " ",
-                  "originalText": "to",
-                  "before": " ",
-                  "index": 13,
-                  "pos": "TO"
-                }
-              },
-              "TO"
-            ],
-            [
-              {
-                "nlpToken": {
-                  "characterOffsetBegin": 3276,
-                  "word": "express",
-                  "lemma": "express",
-                  "characterOffsetEnd": 3283,
-                  "speaker": "PER0",
-                  "ner": "O",
-                  "after": " ",
-                  "originalText": "express",
-                  "before": " ",
-                  "index": 14,
-                  "pos": "VB"
-                }
-              },
-              "VB"
-            ],
-            [
-              {
-                "nlpToken": {
-                  "characterOffsetBegin": 3284,
-                  "word": "their",
-                  "lemma": "they",
-                  "characterOffsetEnd": 3289,
-                  "speaker": "PER0",
-                  "ner": "O",
-                  "after": " ",
-                  "originalText": "their",
-                  "before": " ",
-                  "index": 15,
-                  "pos": "PRP$"
-                }
-              },
-              "PRP$"
-            ],
-            [
-              {
-                "nlpToken": {
-                  "characterOffsetBegin": 3290,
-                  "word": "disappointment",
-                  "lemma": "disappointment",
-                  "characterOffsetEnd": 3304,
-                  "speaker": "PER0",
-                  "ner": "O",
-                  "after": " ",
-                  "originalText": "disappointment",
-                  "before": " ",
-                  "index": 16,
-                  "pos": "NN"
-                }
-              },
-              "NN"
-            ],
-            [
-              {
-                "nlpToken": {
-                  "characterOffsetBegin": 3305,
-                  "word": "and",
-                  "lemma": "and",
-                  "characterOffsetEnd": 3308,
-                  "speaker": "PER0",
-                  "ner": "O",
-                  "after": " ",
-                  "originalText": "and",
-                  "before": " ",
-                  "index": 17,
-                  "pos": "CC"
-                }
-              },
-              "CC"
-            ],
-            [
-              {
-                "nlpToken": {
-                  "characterOffsetBegin": 3309,
-                  "word": "despair",
-                  "lemma": "despair",
-                  "characterOffsetEnd": 3316,
-                  "speaker": "PER0",
-                  "ner": "O",
-                  "after": "",
-                  "originalText": "despair",
-                  "before": " ",
-                  "index": 18,
                   "pos": "NN"
                 }
               },
@@ -368,8 +217,8 @@
             ]
           ],
           "score": 1.0,
-          "text": "Trump triumphed , scores of celebrities took to social media to express their disappointment and despair",
-          "nlpIndexSentence": 3
+          "text": "the defeat Hillary superfan",
+          "nlpIndexSentence": 2
         }
       ]
     },
@@ -380,7 +229,55 @@
           "coderPhraseCount": 2
         }
       ],
-      "label": "where"
+      "label": "where",
+      "extracted": [
+        {
+          "parts": [
+            [
+              {
+                "nlpToken": {
+                  "characterOffsetBegin": 931,
+                  "word": "America",
+                  "lemma": "America",
+                  "characterOffsetEnd": 938,
+                  "speaker": "PER0",
+                  "ner": "LOCATION",
+                  "after": "",
+                  "originalText": "America",
+                  "before": " ",
+                  "index": 16,
+                  "pos": "NNP"
+                }
+              },
+              "NNP"
+            ]
+          ],
+          "score": 0.6903053872261045,
+          "text": "America",
+          "enhancement": {
+            "openstreetmap_nominatim": {
+              "osm_id": "7762944",
+              "boundingbox": [
+                4.8165393,
+                4.8194642,
+                -75.6911194,
+                -75.6872277
+              ],
+              "licence": "Data \u00a9 OpenStreetMap contributors, ODbL 1.0. http://www.openstreetmap.org/copyright",
+              "importance": 0.185,
+              "icon": "https://nominatim.openstreetmap.org/images/mapicons/poi_boundary_administrative.p.20.png",
+              "osm_type": "relation",
+              "display_name": "America, Pereira, Risaralda, Colombia",
+              "lat": "4.81804785",
+              "type": "administrative",
+              "place_id": "220845259",
+              "lon": "-75.6888617199333",
+              "class": "boundary"
+            }
+          },
+          "nlpIndexSentence": 3
+        }
+      ]
     },
     "what": {
       "annotated": [

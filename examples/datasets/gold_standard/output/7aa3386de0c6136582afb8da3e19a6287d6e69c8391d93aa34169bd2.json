@@ -89,7 +89,118 @@
           "parsed": "2016-11-02"
         }
       ],
-      "label": "when"
+      "label": "when",
+      "extracted": [
+        {
+          "parts": [
+            [
+              {
+                "nlpToken": {
+                  "characterOffsetBegin": 3335,
+                  "word": "Nov.",
+                  "lemma": "Nov.",
+                  "timex": {
+                    "value": "2016-11-02",
+                    "tid": "t23",
+                    "type": "DATE"
+                  },
+                  "before": " ",
+                  "characterOffsetEnd": 3339,
+                  "originalText": "Nov.",
+                  "normalizedNER": "2016-11-02",
+                  "speaker": "PER0",
+                  "after": " ",
+                  "ner": "DATE",
+                  "index": 1,
+                  "pos": "NNP"
+                }
+              },
+              "NNP"
+            ],
+            [
+              {
+                "nlpToken": {
+                  "characterOffsetBegin": 3340,
+                  "word": "2",
+                  "lemma": "2",
+                  "timex": {
+                    "value": "2016-11-02",
+                    "tid": "t23",
+                    "type": "DATE"
+                  },
+                  "before": " ",
+                  "characterOffsetEnd": 3341,
+                  "originalText": "2",
+                  "normalizedNER": "2016-11-02",
+                  "speaker": "PER0",
+                  "after": "",
+                  "ner": "DATE",
+                  "index": 2,
+                  "pos": "CD"
+                }
+              },
+              "CD"
+            ],
+            [
+              {
+                "nlpToken": {
+                  "characterOffsetBegin": 3341,
+                  "word": ",",
+                  "lemma": ",",
+                  "timex": {
+                    "value": "2016-11-02",
+                    "tid": "t23",
+                    "type": "DATE"
+                  },
+                  "before": "",
+                  "characterOffsetEnd": 3342,
+                  "originalText": ",",
+                  "normalizedNER": "2016-11-02",
+                  "speaker": "PER0",
+                  "after": " ",
+                  "ner": "DATE",
+                  "index": 3,
+                  "pos": ","
+                }
+              },
+              ","
+            ],
+            [
+              {
+                "nlpToken": {
+                  "characterOffsetBegin": 3343,
+                  "word": "2016",
+                  "lemma": "2016",
+                  "timex": {
+                    "value": "2016-11-02",
+                    "tid": "t23",
+                    "type": "DATE"
+                  },
+                  "before": " ",
+                  "characterOffsetEnd": 3347,
+                  "originalText": "2016",
+                  "normalizedNER": "2016-11-02",
+                  "speaker": "PER0",
+                  "after": " ",
+                  "ner": "DATE",
+                  "index": 4,
+                  "pos": "CD"
+                }
+              },
+              "CD"
+            ]
+          ],
+          "score": 0.4258750817515718,
+          "text": "Nov. 2 , 2016",
+          "enhancement": {
+            "timex": {
+              "start_date": "2016-11-02T00:00:00",
+              "end_date": "2016-11-02T23:59:59"
+            }
+          },
+          "nlpIndexSentence": 31
+        }
+      ]
     },
     "why": {
       "annotated": [
@@ -105,7 +216,33 @@
           "coderPhraseCount": 1
         }
       ],
-      "label": "why"
+      "label": "why",
+      "extracted": [
+        {
+          "parts": [
+            [
+              {
+                "nlpToken": {
+                  "characterOffsetBegin": 57,
+                  "word": "they",
+                  "lemma": "they",
+                  "characterOffsetEnd": 61,
+                  "speaker": "PER0",
+                  "ner": "O",
+                  "after": " ",
+                  "originalText": "they",
+                  "before": " ",
+                  "index": 10,
+                  "pos": "PRP"
+                }
+              },
+              "PRP"
+            ]
+          ],
+          "score": 0.5844155844155844,
+          "text": "they"
+        }
+      ]
     },
     "how": {
       "annotated": [
@@ -125,169 +262,25 @@
             [
               {
                 "nlpToken": {
-                  "characterOffsetBegin": 5787,
-                  "word": "he",
-                  "lemma": "he",
-                  "characterOffsetEnd": 5789,
-                  "speaker": "PER12",
-                  "ner": "O",
-                  "after": "",
-                  "originalText": "he",
-                  "before": " ",
-                  "index": 5,
-                  "pos": "PRP"
-                }
-              },
-              "PRP"
-            ],
-            [
-              {
-                "nlpToken": {
-                  "characterOffsetBegin": 5789,
-                  "word": "'s",
-                  "lemma": "be",
-                  "characterOffsetEnd": 5791,
-                  "speaker": "PER12",
+                  "characterOffsetBegin": 4303,
+                  "word": "the",
+                  "lemma": "the",
+                  "characterOffsetEnd": 4306,
+                  "speaker": "PER0",
                   "ner": "O",
                   "after": " ",
-                  "originalText": "'s",
-                  "before": "",
-                  "index": 6,
-                  "pos": "VBZ"
-                }
-              },
-              "VBZ"
-            ],
-            [
-              {
-                "nlpToken": {
-                  "characterOffsetBegin": 5792,
-                  "word": "probably",
-                  "lemma": "probably",
-                  "characterOffsetEnd": 5800,
-                  "speaker": "PER12",
-                  "ner": "O",
-                  "after": " ",
-                  "originalText": "probably",
+                  "originalText": "the",
                   "before": " ",
-                  "index": 7,
-                  "pos": "RB"
+                  "index": 2,
+                  "pos": "DT"
                 }
               },
-              "RB"
-            ],
-            [
-              {
-                "nlpToken": {
-                  "characterOffsetBegin": 5801,
-                  "word": "tired",
-                  "lemma": "tire",
-                  "characterOffsetEnd": 5806,
-                  "speaker": "PER12",
-                  "ner": "O",
-                  "after": "",
-                  "originalText": "tired",
-                  "before": " ",
-                  "index": 8,
-                  "pos": "VBN"
-                }
-              },
-              "VBN"
-            ],
-            [
-              {
-                "nlpToken": {
-                  "characterOffsetBegin": 5806,
-                  "word": ",",
-                  "lemma": ",",
-                  "characterOffsetEnd": 5807,
-                  "speaker": "PER12",
-                  "ner": "O",
-                  "after": " ",
-                  "originalText": ",",
-                  "before": "",
-                  "index": 9,
-                  "pos": ","
-                }
-              },
-              ","
-            ],
-            [
-              {
-                "nlpToken": {
-                  "characterOffsetBegin": 5808,
-                  "word": "as",
-                  "lemma": "as",
-                  "characterOffsetEnd": 5810,
-                  "speaker": "PER12",
-                  "ner": "O",
-                  "after": " ",
-                  "originalText": "as",
-                  "before": " ",
-                  "index": 10,
-                  "pos": "IN"
-                }
-              },
-              "IN"
-            ],
-            [
-              {
-                "nlpToken": {
-                  "characterOffsetBegin": 5811,
-                  "word": "he",
-                  "lemma": "he",
-                  "characterOffsetEnd": 5813,
-                  "speaker": "PER12",
-                  "ner": "O",
-                  "after": " ",
-                  "originalText": "he",
-                  "before": " ",
-                  "index": 11,
-                  "pos": "PRP"
-                }
-              },
-              "PRP"
-            ],
-            [
-              {
-                "nlpToken": {
-                  "characterOffsetBegin": 5814,
-                  "word": "should",
-                  "lemma": "should",
-                  "characterOffsetEnd": 5820,
-                  "speaker": "PER12",
-                  "ner": "O",
-                  "after": " ",
-                  "originalText": "should",
-                  "before": " ",
-                  "index": 12,
-                  "pos": "MD"
-                }
-              },
-              "MD"
-            ],
-            [
-              {
-                "nlpToken": {
-                  "characterOffsetBegin": 5821,
-                  "word": "be",
-                  "lemma": "be",
-                  "characterOffsetEnd": 5823,
-                  "speaker": "PER12",
-                  "ner": "O",
-                  "after": "",
-                  "originalText": "be",
-                  "before": " ",
-                  "index": 13,
-                  "pos": "VB"
-                }
-              },
-              "VB"
+              "DT"
             ]
           ],
           "score": 1.0,
-          "text": "he 's probably tired , as he should be",
-          "nlpIndexSentence": 5
+          "text": "the",
+          "nlpIndexSentence": 2
         }
       ]
     },
@@ -297,7 +290,55 @@
           "coderPhraseCount": 3
         }
       ],
-      "label": "where"
+      "label": "where",
+      "extracted": [
+        {
+          "parts": [
+            [
+              {
+                "nlpToken": {
+                  "characterOffsetBegin": 321,
+                  "word": "Chicago",
+                  "lemma": "Chicago",
+                  "characterOffsetEnd": 328,
+                  "speaker": "PER0",
+                  "ner": "LOCATION",
+                  "after": "",
+                  "originalText": "Chicago",
+                  "before": " ",
+                  "index": 21,
+                  "pos": "NNP"
+                }
+              },
+              "NNP"
+            ]
+          ],
+          "score": 0.6763663853329378,
+          "text": "Chicago",
+          "enhancement": {
+            "openstreetmap_nominatim": {
+              "osm_id": "122604",
+              "boundingbox": [
+                41.643919,
+                42.0230219,
+                -87.940101,
+                -87.5239841
+              ],
+              "licence": "Data \u00a9 OpenStreetMap contributors, ODbL 1.0. http://www.openstreetmap.org/copyright",
+              "importance": 0.30566190262222,
+              "icon": "https://nominatim.openstreetmap.org/images/mapicons/poi_place_city.p.20.png",
+              "osm_type": "relation",
+              "display_name": "Chicago, Cook County, Illinois, United States of America",
+              "lat": "41.8755546",
+              "type": "city",
+              "place_id": "178038280",
+              "lon": "-87.6244212",
+              "class": "place"
+            }
+          },
+          "nlpIndexSentence": 2
+        }
+      ]
     },
     "what": {
       "annotated": [

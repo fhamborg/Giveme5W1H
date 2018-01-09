@@ -102,6 +102,24 @@
             [
               {
                 "nlpToken": {
+                  "before": " ",
+                  "word": "`",
+                  "index": 5,
+                  "lemma": "`",
+                  "characterOffsetBegin": 123,
+                  "pos": "``",
+                  "originalText": "'",
+                  "ner": "O",
+                  "after": "",
+                  "characterOffsetEnd": 124,
+                  "speaker": "PER0"
+                }
+              },
+              "``"
+            ],
+            [
+              {
+                "nlpToken": {
                   "before": "",
                   "word": "life-threatening",
                   "index": 6,
@@ -119,8 +137,8 @@
             ]
           ],
           "score": 1.0,
-          "text": "life-threatening",
-          "nlpIndexSentence": 1
+          "text": "' life-threatening",
+          "nlpIndexSentence": 5
         }
       ]
     },
@@ -131,7 +149,142 @@
           "text": "shortly before 7 pm"
         }
       ],
-      "label": "when"
+      "label": "when",
+      "extracted": [
+        {
+          "parts": [
+            [
+              {
+                "nlpToken": {
+                  "index": 16,
+                  "pos": "IN",
+                  "originalText": "at",
+                  "ner": "TIME",
+                  "after": " ",
+                  "characterOffsetEnd": 1148,
+                  "before": " ",
+                  "word": "at",
+                  "characterOffsetBegin": 1146,
+                  "normalizedNER": "2016-11-10T06:07",
+                  "lemma": "at",
+                  "timex": {
+                    "tid": "t3",
+                    "type": "TIME",
+                    "value": "2016-11-10T06:07"
+                  },
+                  "speaker": "PER0"
+                }
+              },
+              "IN"
+            ],
+            [
+              {
+                "nlpToken": {
+                  "index": 17,
+                  "pos": "JJS",
+                  "originalText": "least",
+                  "ner": "TIME",
+                  "after": " ",
+                  "characterOffsetEnd": 1154,
+                  "before": " ",
+                  "word": "least",
+                  "characterOffsetBegin": 1149,
+                  "normalizedNER": "2016-11-10T06:07",
+                  "lemma": "least",
+                  "timex": {
+                    "tid": "t3",
+                    "type": "TIME",
+                    "value": "2016-11-10T06:07"
+                  },
+                  "speaker": "PER0"
+                }
+              },
+              "JJS"
+            ],
+            [
+              {
+                "nlpToken": {
+                  "index": 18,
+                  "pos": "DT",
+                  "originalText": "an",
+                  "ner": "TIME",
+                  "after": " ",
+                  "characterOffsetEnd": 1157,
+                  "before": " ",
+                  "word": "an",
+                  "characterOffsetBegin": 1155,
+                  "normalizedNER": "2016-11-10T06:07",
+                  "lemma": "a",
+                  "timex": {
+                    "tid": "t3",
+                    "type": "TIME",
+                    "value": "2016-11-10T06:07"
+                  },
+                  "speaker": "PER0"
+                }
+              },
+              "DT"
+            ],
+            [
+              {
+                "nlpToken": {
+                  "index": 19,
+                  "pos": "NN",
+                  "originalText": "hour",
+                  "ner": "TIME",
+                  "after": " ",
+                  "characterOffsetEnd": 1162,
+                  "before": " ",
+                  "word": "hour",
+                  "characterOffsetBegin": 1158,
+                  "normalizedNER": "2016-11-10T06:07",
+                  "lemma": "hour",
+                  "timex": {
+                    "tid": "t3",
+                    "type": "TIME",
+                    "value": "2016-11-10T06:07"
+                  },
+                  "speaker": "PER0"
+                }
+              },
+              "NN"
+            ],
+            [
+              {
+                "nlpToken": {
+                  "index": 20,
+                  "pos": "RB",
+                  "originalText": "later",
+                  "ner": "TIME",
+                  "after": "",
+                  "characterOffsetEnd": 1168,
+                  "before": " ",
+                  "word": "later",
+                  "characterOffsetBegin": 1163,
+                  "normalizedNER": "2016-11-10T06:07",
+                  "lemma": "later",
+                  "timex": {
+                    "tid": "t3",
+                    "type": "TIME",
+                    "value": "2016-11-10T06:07"
+                  },
+                  "speaker": "PER0"
+                }
+              },
+              "RB"
+            ]
+          ],
+          "score": 0.8644046847954148,
+          "text": "at least an hour later",
+          "enhancement": {
+            "timex": {
+              "start_date": "2016-11-10T06:07:00",
+              "end_date": "2016-11-10T06:07:59"
+            }
+          },
+          "nlpIndexSentence": 9
+        }
+      ]
     },
     "why": {
       "annotated": [
@@ -140,7 +293,310 @@
           "text": "shooting near demonstration"
         }
       ],
-      "label": "why"
+      "label": "why",
+      "extracted": [
+        {
+          "parts": [
+            [
+              {
+                "nlpToken": {
+                  "index": 10,
+                  "pos": "NNS",
+                  "originalText": "minutes",
+                  "ner": "DURATION",
+                  "after": " ",
+                  "characterOffsetEnd": 1646,
+                  "before": " ",
+                  "word": "minutes",
+                  "characterOffsetBegin": 1639,
+                  "normalizedNER": "PTXM",
+                  "lemma": "minute",
+                  "timex": {
+                    "tid": "t4",
+                    "type": "DURATION",
+                    "value": "PTXM"
+                  },
+                  "speaker": "PER0"
+                }
+              },
+              "NNS"
+            ],
+            [
+              {
+                "nlpToken": {
+                  "before": " ",
+                  "word": "because",
+                  "index": 11,
+                  "lemma": "because",
+                  "characterOffsetBegin": 1647,
+                  "pos": "IN",
+                  "originalText": "because",
+                  "ner": "O",
+                  "after": " ",
+                  "characterOffsetEnd": 1654,
+                  "speaker": "PER0"
+                }
+              },
+              "IN"
+            ],
+            [
+              {
+                "nlpToken": {
+                  "before": " ",
+                  "word": "they",
+                  "index": 12,
+                  "lemma": "they",
+                  "characterOffsetBegin": 1655,
+                  "pos": "PRP",
+                  "originalText": "they",
+                  "ner": "O",
+                  "after": " ",
+                  "characterOffsetEnd": 1659,
+                  "speaker": "PER0"
+                }
+              },
+              "PRP"
+            ],
+            [
+              {
+                "nlpToken": {
+                  "before": " ",
+                  "word": "were",
+                  "index": 13,
+                  "lemma": "be",
+                  "characterOffsetBegin": 1660,
+                  "pos": "VBD",
+                  "originalText": "were",
+                  "ner": "O",
+                  "after": " ",
+                  "characterOffsetEnd": 1664,
+                  "speaker": "PER0"
+                }
+              },
+              "VBD"
+            ],
+            [
+              {
+                "nlpToken": {
+                  "before": " ",
+                  "word": "in",
+                  "index": 14,
+                  "lemma": "in",
+                  "characterOffsetBegin": 1665,
+                  "pos": "IN",
+                  "originalText": "in",
+                  "ner": "O",
+                  "after": " ",
+                  "characterOffsetEnd": 1667,
+                  "speaker": "PER0"
+                }
+              },
+              "IN"
+            ],
+            [
+              {
+                "nlpToken": {
+                  "before": " ",
+                  "word": "the",
+                  "index": 15,
+                  "lemma": "the",
+                  "characterOffsetBegin": 1668,
+                  "pos": "DT",
+                  "originalText": "the",
+                  "ner": "O",
+                  "after": " ",
+                  "characterOffsetEnd": 1671,
+                  "speaker": "PER0"
+                }
+              },
+              "DT"
+            ],
+            [
+              {
+                "nlpToken": {
+                  "before": " ",
+                  "word": "area",
+                  "index": 16,
+                  "lemma": "area",
+                  "characterOffsetBegin": 1672,
+                  "pos": "NN",
+                  "originalText": "area",
+                  "ner": "O",
+                  "after": " ",
+                  "characterOffsetEnd": 1676,
+                  "speaker": "PER0"
+                }
+              },
+              "NN"
+            ],
+            [
+              {
+                "nlpToken": {
+                  "before": " ",
+                  "word": "to",
+                  "index": 17,
+                  "lemma": "to",
+                  "characterOffsetBegin": 1677,
+                  "pos": "TO",
+                  "originalText": "to",
+                  "ner": "O",
+                  "after": " ",
+                  "characterOffsetEnd": 1679,
+                  "speaker": "PER0"
+                }
+              },
+              "TO"
+            ],
+            [
+              {
+                "nlpToken": {
+                  "before": " ",
+                  "word": "monitor",
+                  "index": 18,
+                  "lemma": "monitor",
+                  "characterOffsetBegin": 1680,
+                  "pos": "VB",
+                  "originalText": "monitor",
+                  "ner": "O",
+                  "after": " ",
+                  "characterOffsetEnd": 1687,
+                  "speaker": "PER0"
+                }
+              },
+              "VB"
+            ],
+            [
+              {
+                "nlpToken": {
+                  "before": " ",
+                  "word": "the",
+                  "index": 19,
+                  "lemma": "the",
+                  "characterOffsetBegin": 1688,
+                  "pos": "DT",
+                  "originalText": "the",
+                  "ner": "O",
+                  "after": " ",
+                  "characterOffsetEnd": 1691,
+                  "speaker": "PER0"
+                }
+              },
+              "DT"
+            ],
+            [
+              {
+                "nlpToken": {
+                  "before": " ",
+                  "word": "demonstrations",
+                  "index": 20,
+                  "lemma": "demonstration",
+                  "characterOffsetBegin": 1692,
+                  "pos": "NNS",
+                  "originalText": "demonstrations",
+                  "ner": "O",
+                  "after": "",
+                  "characterOffsetEnd": 1706,
+                  "speaker": "PER0"
+                }
+              },
+              "NNS"
+            ],
+            [
+              {
+                "nlpToken": {
+                  "before": "",
+                  "word": ",",
+                  "index": 21,
+                  "lemma": ",",
+                  "characterOffsetBegin": 1706,
+                  "pos": ",",
+                  "originalText": ",",
+                  "ner": "O",
+                  "after": " ",
+                  "characterOffsetEnd": 1707,
+                  "speaker": "PER0"
+                }
+              },
+              ","
+            ],
+            [
+              {
+                "nlpToken": {
+                  "before": " ",
+                  "word": "according",
+                  "index": 22,
+                  "lemma": "accord",
+                  "characterOffsetBegin": 1708,
+                  "pos": "VBG",
+                  "originalText": "according",
+                  "ner": "O",
+                  "after": " ",
+                  "characterOffsetEnd": 1717,
+                  "speaker": "PER0"
+                }
+              },
+              "VBG"
+            ],
+            [
+              {
+                "nlpToken": {
+                  "before": " ",
+                  "word": "to",
+                  "index": 23,
+                  "lemma": "to",
+                  "characterOffsetBegin": 1718,
+                  "pos": "TO",
+                  "originalText": "to",
+                  "ner": "O",
+                  "after": " ",
+                  "characterOffsetEnd": 1720,
+                  "speaker": "PER0"
+                }
+              },
+              "TO"
+            ],
+            [
+              {
+                "nlpToken": {
+                  "before": " ",
+                  "word": "Merner",
+                  "index": 24,
+                  "lemma": "Merner",
+                  "characterOffsetBegin": 1721,
+                  "pos": "NNP",
+                  "originalText": "Merner",
+                  "ner": "PERSON",
+                  "after": "",
+                  "characterOffsetEnd": 1727,
+                  "speaker": "PER0"
+                }
+              },
+              "NNP"
+            ],
+            [
+              {
+                "nlpToken": {
+                  "before": "",
+                  "word": ".",
+                  "index": 25,
+                  "lemma": ".",
+                  "characterOffsetBegin": 1727,
+                  "pos": ".",
+                  "originalText": ".",
+                  "ner": "O",
+                  "after": " ",
+                  "characterOffsetEnd": 1728,
+                  "speaker": "PER0"
+                }
+              },
+              "."
+            ]
+          ],
+          "score": 0.5811688311688311,
+          "text": "minutes because they were in the area to monitor the demonstrations , according to Merner .",
+          "nlpIndexSentence": 12
+        }
+      ]
     },
     "who": {
       "annotated": [
@@ -202,7 +658,54 @@
           "text": "Seattle"
         }
       ],
-      "label": "where"
+      "label": "where",
+      "extracted": [
+        {
+          "parts": [
+            [
+              {
+                "nlpToken": {
+                  "before": "",
+                  "word": "Seattle",
+                  "index": 1,
+                  "lemma": "Seattle",
+                  "characterOffsetBegin": 0,
+                  "pos": "NNP",
+                  "originalText": "Seattle",
+                  "ner": "LOCATION",
+                  "after": " ",
+                  "characterOffsetEnd": 7,
+                  "speaker": "PER0"
+                }
+              },
+              "NNP"
+            ]
+          ],
+          "score": 0.6779857272123321,
+          "text": "Seattle",
+          "enhancement": {
+            "openstreetmap_nominatim": {
+              "osm_id": "237385",
+              "boundingbox": [
+                47.4810022,
+                47.7341357,
+                -122.459696,
+                -122.224433
+              ],
+              "licence": "Data \u00a9 OpenStreetMap contributors, ODbL 1.0. http://www.openstreetmap.org/copyright",
+              "importance": 0.2828859963469,
+              "icon": "https://nominatim.openstreetmap.org/images/mapicons/poi_place_city.p.20.png",
+              "osm_type": "relation",
+              "display_name": "Seattle, King County, Washington, United States of America",
+              "lat": "47.6038321",
+              "type": "city",
+              "place_id": "178311857",
+              "lon": "-122.3300624",
+              "class": "place"
+            }
+          }
+        }
+      ]
     }
   },
   "description": "Two people said to have 'life-threatening' injuries by emergency services after shooting near demonstration",

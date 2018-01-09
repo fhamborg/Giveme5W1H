@@ -77,7 +77,45 @@
           "coderPhraseCount": 2
         }
       ],
-      "label": "when"
+      "label": "when",
+      "extracted": [
+        {
+          "parts": [
+            [
+              {
+                "nlpToken": {
+                  "characterOffsetBegin": 21,
+                  "word": "Sunday",
+                  "lemma": "Sunday",
+                  "timex": {
+                    "value": "2016-11-06",
+                    "tid": "t1",
+                    "type": "DATE"
+                  },
+                  "before": " ",
+                  "characterOffsetEnd": 27,
+                  "originalText": "Sunday",
+                  "normalizedNER": "2016-11-06",
+                  "speaker": "PER0",
+                  "after": " ",
+                  "ner": "DATE",
+                  "index": 6,
+                  "pos": "NNP"
+                }
+              },
+              "NNP"
+            ]
+          ],
+          "score": 0.7533527883042784,
+          "text": "Sunday",
+          "enhancement": {
+            "timex": {
+              "start_date": "2016-11-06T00:00:00",
+              "end_date": "2016-11-06T23:59:59"
+            }
+          }
+        }
+      ]
     },
     "why": {
       "annotated": [
@@ -85,7 +123,34 @@
           "coderPhraseCount": 3
         }
       ],
-      "label": "why"
+      "label": "why",
+      "extracted": [
+        {
+          "parts": [
+            [
+              {
+                "nlpToken": {
+                  "characterOffsetBegin": 118,
+                  "word": "He",
+                  "lemma": "he",
+                  "characterOffsetEnd": 120,
+                  "speaker": "PER0",
+                  "ner": "O",
+                  "after": " ",
+                  "originalText": "He",
+                  "before": " ",
+                  "index": 1,
+                  "pos": "PRP"
+                }
+              },
+              "PRP"
+            ]
+          ],
+          "score": 0.5727813852813853,
+          "text": "He",
+          "nlpIndexSentence": 1
+        }
+      ]
     },
     "how": {
       "annotated": [
@@ -182,7 +247,73 @@
           "coderPhraseCount": 3
         }
       ],
-      "label": "where"
+      "label": "where",
+      "extracted": [
+        {
+          "parts": [
+            [
+              {
+                "nlpToken": {
+                  "characterOffsetBegin": 133,
+                  "word": "Upper",
+                  "lemma": "Upper",
+                  "characterOffsetEnd": 138,
+                  "speaker": "PER0",
+                  "ner": "LOCATION",
+                  "after": " ",
+                  "originalText": "Upper",
+                  "before": " ",
+                  "index": 5,
+                  "pos": "NNP"
+                }
+              },
+              "NNP"
+            ],
+            [
+              {
+                "nlpToken": {
+                  "characterOffsetBegin": 139,
+                  "word": "Midwest",
+                  "lemma": "Midwest",
+                  "characterOffsetEnd": 146,
+                  "speaker": "PER0",
+                  "ner": "LOCATION",
+                  "after": "",
+                  "originalText": "Midwest",
+                  "before": " ",
+                  "index": 6,
+                  "pos": "NNP"
+                }
+              },
+              "NNP"
+            ]
+          ],
+          "score": 0.6981018295575758,
+          "text": "Upper Midwest",
+          "enhancement": {
+            "openstreetmap_nominatim": {
+              "osm_id": "148911344",
+              "boundingbox": [
+                41.5998306,
+                41.6001607,
+                -93.6620975,
+                -93.6618261
+              ],
+              "licence": "Data \u00a9 OpenStreetMap contributors, ODbL 1.0. http://www.openstreetmap.org/copyright",
+              "importance": 0.201,
+              "icon": "https://nominatim.openstreetmap.org/images/mapicons/place_of_worship_unknown3.p.20.png",
+              "osm_type": "way",
+              "display_name": "Christian Church - Disciples of Christ in the Upper Midwest, 3306, University Avenue, Uptown Shopping Center, Des Moines, Polk County, Iowa, 50311, United States of America",
+              "lat": "41.59999565",
+              "type": "place_of_worship",
+              "place_id": "103164510",
+              "lon": "-93.6619618",
+              "class": "amenity"
+            }
+          },
+          "nlpIndexSentence": 1
+        }
+      ]
     },
     "what": {
       "annotated": [

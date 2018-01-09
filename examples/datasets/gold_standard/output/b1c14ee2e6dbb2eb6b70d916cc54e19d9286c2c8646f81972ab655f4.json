@@ -52,7 +52,46 @@
           "parsed": "2016-11-10"
         }
       ],
-      "label": "when"
+      "label": "when",
+      "extracted": [
+        {
+          "parts": [
+            [
+              {
+                "nlpToken": {
+                  "characterOffsetBegin": 12422,
+                  "word": "12:30",
+                  "lemma": "12:30",
+                  "timex": {
+                    "value": "2016-11-10T12:30",
+                    "tid": "t51",
+                    "type": "TIME"
+                  },
+                  "before": " ",
+                  "characterOffsetEnd": 12427,
+                  "originalText": "12:30",
+                  "normalizedNER": "2016-11-10T12:30",
+                  "speaker": "PER0",
+                  "after": "",
+                  "ner": "TIME",
+                  "index": 16,
+                  "pos": "CD"
+                }
+              },
+              "CD"
+            ]
+          ],
+          "score": 0.8190870574880176,
+          "text": "12:30",
+          "enhancement": {
+            "timex": {
+              "start_date": "2016-11-10T12:30:00",
+              "end_date": "2016-11-10T12:30:59"
+            }
+          },
+          "nlpIndexSentence": 68
+        }
+      ]
     },
     "why": {
       "annotated": [
@@ -60,7 +99,214 @@
           "coderPhraseCount": 2
         }
       ],
-      "label": "why"
+      "label": "why",
+      "extracted": [
+        {
+          "parts": [
+            [
+              {
+                "nlpToken": {
+                  "characterOffsetBegin": 8263,
+                  "word": "succeed",
+                  "lemma": "succeed",
+                  "characterOffsetEnd": 8270,
+                  "speaker": "PER0",
+                  "ner": "O",
+                  "after": " ",
+                  "originalText": "succeed",
+                  "before": " ",
+                  "index": 33,
+                  "pos": "VB"
+                }
+              },
+              "VB"
+            ],
+            [
+              {
+                "nlpToken": {
+                  "characterOffsetBegin": 8271,
+                  "word": "because",
+                  "lemma": "because",
+                  "characterOffsetEnd": 8278,
+                  "speaker": "PER0",
+                  "ner": "O",
+                  "after": " ",
+                  "originalText": "because",
+                  "before": " ",
+                  "index": 34,
+                  "pos": "IN"
+                }
+              },
+              "IN"
+            ],
+            [
+              {
+                "nlpToken": {
+                  "characterOffsetBegin": 8279,
+                  "word": "if",
+                  "lemma": "if",
+                  "characterOffsetEnd": 8281,
+                  "speaker": "PER0",
+                  "ner": "O",
+                  "after": " ",
+                  "originalText": "if",
+                  "before": " ",
+                  "index": 35,
+                  "pos": "IN"
+                }
+              },
+              "IN"
+            ],
+            [
+              {
+                "nlpToken": {
+                  "characterOffsetBegin": 8282,
+                  "word": "you",
+                  "lemma": "you",
+                  "characterOffsetEnd": 8285,
+                  "speaker": "PER0",
+                  "ner": "O",
+                  "after": " ",
+                  "originalText": "you",
+                  "before": " ",
+                  "index": 36,
+                  "pos": "PRP"
+                }
+              },
+              "PRP"
+            ],
+            [
+              {
+                "nlpToken": {
+                  "characterOffsetBegin": 8286,
+                  "word": "succeed",
+                  "lemma": "succeed",
+                  "characterOffsetEnd": 8293,
+                  "speaker": "PER0",
+                  "ner": "O",
+                  "after": " ",
+                  "originalText": "succeed",
+                  "before": " ",
+                  "index": 37,
+                  "pos": "VBP"
+                }
+              },
+              "VBP"
+            ],
+            [
+              {
+                "nlpToken": {
+                  "characterOffsetBegin": 8294,
+                  "word": "then",
+                  "lemma": "then",
+                  "characterOffsetEnd": 8298,
+                  "speaker": "PER0",
+                  "ner": "O",
+                  "after": " ",
+                  "originalText": "then",
+                  "before": " ",
+                  "index": 38,
+                  "pos": "RB"
+                }
+              },
+              "RB"
+            ],
+            [
+              {
+                "nlpToken": {
+                  "characterOffsetBegin": 8299,
+                  "word": "the",
+                  "lemma": "the",
+                  "characterOffsetEnd": 8302,
+                  "speaker": "PER0",
+                  "ner": "O",
+                  "after": " ",
+                  "originalText": "the",
+                  "before": " ",
+                  "index": 39,
+                  "pos": "DT"
+                }
+              },
+              "DT"
+            ],
+            [
+              {
+                "nlpToken": {
+                  "characterOffsetBegin": 8303,
+                  "word": "country",
+                  "lemma": "country",
+                  "characterOffsetEnd": 8310,
+                  "speaker": "PER0",
+                  "ner": "O",
+                  "after": " ",
+                  "originalText": "country",
+                  "before": " ",
+                  "index": 40,
+                  "pos": "NN"
+                }
+              },
+              "NN"
+            ],
+            [
+              {
+                "nlpToken": {
+                  "characterOffsetBegin": 8311,
+                  "word": "succeed",
+                  "lemma": "succeed",
+                  "characterOffsetEnd": 8318,
+                  "speaker": "PER0",
+                  "ner": "O",
+                  "after": "",
+                  "originalText": "succeed",
+                  "before": " ",
+                  "index": 41,
+                  "pos": "VB"
+                }
+              },
+              "VB"
+            ],
+            [
+              {
+                "nlpToken": {
+                  "characterOffsetBegin": 8318,
+                  "word": ".",
+                  "lemma": ".",
+                  "characterOffsetEnd": 8319,
+                  "speaker": "PER0",
+                  "ner": "O",
+                  "after": "",
+                  "originalText": ".",
+                  "before": "",
+                  "index": 42,
+                  "pos": "."
+                }
+              },
+              "."
+            ],
+            [
+              {
+                "nlpToken": {
+                  "characterOffsetBegin": 8319,
+                  "word": "'",
+                  "lemma": "'",
+                  "characterOffsetEnd": 8320,
+                  "speaker": "PER0",
+                  "ner": "O",
+                  "after": " ",
+                  "originalText": "'",
+                  "before": "",
+                  "index": 43,
+                  "pos": "''"
+                }
+              },
+              "''"
+            ]
+          ],
+          "score": 0.8335770190074826,
+          "text": "succeed because if you succeed then the country succeed . '",
+          "nlpIndexSentence": 45
+        }
+      ]
     },
     "how": {
       "annotated": [
@@ -75,472 +321,34 @@
             [
               {
                 "nlpToken": {
-                  "characterOffsetBegin": 24176,
-                  "word": "president-elect",
-                  "lemma": "president-elect",
-                  "characterOffsetEnd": 24191,
+                  "characterOffsetBegin": 5248,
+                  "word": "they",
+                  "lemma": "they",
+                  "characterOffsetEnd": 5252,
                   "speaker": "PER0",
                   "ner": "O",
-                  "after": "",
-                  "originalText": "president-elect",
+                  "after": " ",
+                  "originalText": "they",
                   "before": " ",
                   "index": 2,
-                  "pos": "NN"
+                  "pos": "PRP"
                 }
               },
-              "NN"
+              "PRP"
             ],
             [
               {
                 "nlpToken": {
-                  "characterOffsetBegin": 24191,
-                  "word": ",",
-                  "lemma": ",",
-                  "characterOffsetEnd": 24192,
+                  "characterOffsetBegin": 5253,
+                  "word": "did",
+                  "lemma": "do",
+                  "characterOffsetEnd": 5256,
                   "speaker": "PER0",
                   "ner": "O",
                   "after": " ",
-                  "originalText": ",",
-                  "before": "",
+                  "originalText": "did",
+                  "before": " ",
                   "index": 3,
-                  "pos": ","
-                }
-              },
-              ","
-            ],
-            [
-              {
-                "nlpToken": {
-                  "characterOffsetBegin": 24193,
-                  "word": "Trump",
-                  "lemma": "Trump",
-                  "characterOffsetEnd": 24198,
-                  "speaker": "PER0",
-                  "ner": "PERSON",
-                  "after": " ",
-                  "originalText": "Trump",
-                  "before": " ",
-                  "index": 4,
-                  "pos": "NNP"
-                }
-              },
-              "NNP"
-            ],
-            [
-              {
-                "nlpToken": {
-                  "characterOffsetBegin": 24199,
-                  "word": "is",
-                  "lemma": "be",
-                  "characterOffsetEnd": 24201,
-                  "speaker": "PER0",
-                  "ner": "O",
-                  "after": " ",
-                  "originalText": "is",
-                  "before": " ",
-                  "index": 5,
-                  "pos": "VBZ"
-                }
-              },
-              "VBZ"
-            ],
-            [
-              {
-                "nlpToken": {
-                  "characterOffsetBegin": 24202,
-                  "word": "entitled",
-                  "lemma": "entitle",
-                  "characterOffsetEnd": 24210,
-                  "speaker": "PER0",
-                  "ner": "O",
-                  "after": " ",
-                  "originalText": "entitled",
-                  "before": " ",
-                  "index": 6,
-                  "pos": "VBN"
-                }
-              },
-              "VBN"
-            ],
-            [
-              {
-                "nlpToken": {
-                  "characterOffsetBegin": 24211,
-                  "word": "to",
-                  "lemma": "to",
-                  "characterOffsetEnd": 24213,
-                  "speaker": "PER0",
-                  "ner": "O",
-                  "after": " ",
-                  "originalText": "to",
-                  "before": " ",
-                  "index": 7,
-                  "pos": "TO"
-                }
-              },
-              "TO"
-            ],
-            [
-              {
-                "nlpToken": {
-                  "characterOffsetBegin": 24214,
-                  "word": "get",
-                  "lemma": "get",
-                  "characterOffsetEnd": 24217,
-                  "speaker": "PER0",
-                  "ner": "O",
-                  "after": " ",
-                  "originalText": "get",
-                  "before": " ",
-                  "index": 8,
-                  "pos": "VB"
-                }
-              },
-              "VB"
-            ],
-            [
-              {
-                "nlpToken": {
-                  "characterOffsetBegin": 24218,
-                  "word": "the",
-                  "lemma": "the",
-                  "characterOffsetEnd": 24221,
-                  "speaker": "PER0",
-                  "ner": "O",
-                  "after": " ",
-                  "originalText": "the",
-                  "before": " ",
-                  "index": 9,
-                  "pos": "DT"
-                }
-              },
-              "DT"
-            ],
-            [
-              {
-                "nlpToken": {
-                  "characterOffsetBegin": 24222,
-                  "word": "same",
-                  "lemma": "same",
-                  "characterOffsetEnd": 24226,
-                  "speaker": "PER0",
-                  "ner": "O",
-                  "after": " ",
-                  "originalText": "same",
-                  "before": " ",
-                  "index": 10,
-                  "pos": "JJ"
-                }
-              },
-              "JJ"
-            ],
-            [
-              {
-                "nlpToken": {
-                  "characterOffsetBegin": 24227,
-                  "word": "daily",
-                  "lemma": "daily",
-                  "timex": {
-                    "value": "P1D",
-                    "tid": "t96",
-                    "type": "SET"
-                  },
-                  "before": " ",
-                  "characterOffsetEnd": 24232,
-                  "originalText": "daily",
-                  "speaker": "PER0",
-                  "after": " ",
-                  "ner": "SET",
-                  "index": 11,
-                  "pos": "JJ"
-                }
-              },
-              "JJ"
-            ],
-            [
-              {
-                "nlpToken": {
-                  "characterOffsetBegin": 24233,
-                  "word": "intelligence",
-                  "lemma": "intelligence",
-                  "characterOffsetEnd": 24245,
-                  "speaker": "PER0",
-                  "ner": "O",
-                  "after": " ",
-                  "originalText": "intelligence",
-                  "before": " ",
-                  "index": 12,
-                  "pos": "NN"
-                }
-              },
-              "NN"
-            ],
-            [
-              {
-                "nlpToken": {
-                  "characterOffsetBegin": 24246,
-                  "word": "briefing",
-                  "lemma": "briefing",
-                  "characterOffsetEnd": 24254,
-                  "speaker": "PER0",
-                  "ner": "O",
-                  "after": " ",
-                  "originalText": "briefing",
-                  "before": " ",
-                  "index": 13,
-                  "pos": "NN"
-                }
-              },
-              "NN"
-            ],
-            [
-              {
-                "nlpToken": {
-                  "characterOffsetBegin": 24255,
-                  "word": "as",
-                  "lemma": "as",
-                  "characterOffsetEnd": 24257,
-                  "speaker": "PER0",
-                  "ner": "O",
-                  "after": " ",
-                  "originalText": "as",
-                  "before": " ",
-                  "index": 14,
-                  "pos": "IN"
-                }
-              },
-              "IN"
-            ],
-            [
-              {
-                "nlpToken": {
-                  "characterOffsetBegin": 24258,
-                  "word": "Obama",
-                  "lemma": "Obama",
-                  "characterOffsetEnd": 24263,
-                  "speaker": "PER0",
-                  "ner": "PERSON",
-                  "after": " ",
-                  "originalText": "Obama",
-                  "before": " ",
-                  "index": 15,
-                  "pos": "NNP"
-                }
-              },
-              "NNP"
-            ],
-            [
-              {
-                "nlpToken": {
-                  "characterOffsetBegin": 24264,
-                  "word": "-",
-                  "lemma": "-",
-                  "characterOffsetEnd": 24265,
-                  "speaker": "PER0",
-                  "ner": "O",
-                  "after": " ",
-                  "originalText": "-",
-                  "before": " ",
-                  "index": 16,
-                  "pos": ":"
-                }
-              },
-              ":"
-            ],
-            [
-              {
-                "nlpToken": {
-                  "characterOffsetBegin": 24266,
-                  "word": "one",
-                  "lemma": "one",
-                  "before": " ",
-                  "characterOffsetEnd": 24269,
-                  "originalText": "one",
-                  "normalizedNER": "1.0",
-                  "speaker": "PER0",
-                  "after": " ",
-                  "ner": "NUMBER",
-                  "index": 17,
-                  "pos": "CD"
-                }
-              },
-              "CD"
-            ],
-            [
-              {
-                "nlpToken": {
-                  "characterOffsetBegin": 24270,
-                  "word": "that",
-                  "lemma": "that",
-                  "characterOffsetEnd": 24274,
-                  "speaker": "PER0",
-                  "ner": "O",
-                  "after": " ",
-                  "originalText": "that",
-                  "before": " ",
-                  "index": 18,
-                  "pos": "WDT"
-                }
-              },
-              "WDT"
-            ],
-            [
-              {
-                "nlpToken": {
-                  "characterOffsetBegin": 24275,
-                  "word": "includes",
-                  "lemma": "include",
-                  "characterOffsetEnd": 24283,
-                  "speaker": "PER0",
-                  "ner": "O",
-                  "after": " ",
-                  "originalText": "includes",
-                  "before": " ",
-                  "index": 19,
-                  "pos": "VBZ"
-                }
-              },
-              "VBZ"
-            ],
-            [
-              {
-                "nlpToken": {
-                  "characterOffsetBegin": 24284,
-                  "word": "information",
-                  "lemma": "information",
-                  "characterOffsetEnd": 24295,
-                  "speaker": "PER0",
-                  "ner": "O",
-                  "after": " ",
-                  "originalText": "information",
-                  "before": " ",
-                  "index": 20,
-                  "pos": "NN"
-                }
-              },
-              "NN"
-            ],
-            [
-              {
-                "nlpToken": {
-                  "characterOffsetBegin": 24296,
-                  "word": "on",
-                  "lemma": "on",
-                  "characterOffsetEnd": 24298,
-                  "speaker": "PER0",
-                  "ner": "O",
-                  "after": " ",
-                  "originalText": "on",
-                  "before": " ",
-                  "index": 21,
-                  "pos": "IN"
-                }
-              },
-              "IN"
-            ],
-            [
-              {
-                "nlpToken": {
-                  "characterOffsetBegin": 24299,
-                  "word": "US",
-                  "lemma": "US",
-                  "characterOffsetEnd": 24301,
-                  "speaker": "PER0",
-                  "ner": "LOCATION",
-                  "after": " ",
-                  "originalText": "US",
-                  "before": " ",
-                  "index": 22,
-                  "pos": "NNP"
-                }
-              },
-              "NNP"
-            ],
-            [
-              {
-                "nlpToken": {
-                  "characterOffsetBegin": 24302,
-                  "word": "covert",
-                  "lemma": "covert",
-                  "characterOffsetEnd": 24308,
-                  "speaker": "PER0",
-                  "ner": "O",
-                  "after": " ",
-                  "originalText": "covert",
-                  "before": " ",
-                  "index": 23,
-                  "pos": "JJ"
-                }
-              },
-              "JJ"
-            ],
-            [
-              {
-                "nlpToken": {
-                  "characterOffsetBegin": 24309,
-                  "word": "operations",
-                  "lemma": "operation",
-                  "characterOffsetEnd": 24319,
-                  "speaker": "PER0",
-                  "ner": "O",
-                  "after": "",
-                  "originalText": "operations",
-                  "before": " ",
-                  "index": 24,
-                  "pos": "NNS"
-                }
-              },
-              "NNS"
-            ],
-            [
-              {
-                "nlpToken": {
-                  "characterOffsetBegin": 24319,
-                  "word": ",",
-                  "lemma": ",",
-                  "characterOffsetEnd": 24320,
-                  "speaker": "PER0",
-                  "ner": "O",
-                  "after": " ",
-                  "originalText": ",",
-                  "before": "",
-                  "index": 25,
-                  "pos": ","
-                }
-              },
-              ","
-            ],
-            [
-              {
-                "nlpToken": {
-                  "characterOffsetBegin": 24321,
-                  "word": "information",
-                  "lemma": "information",
-                  "characterOffsetEnd": 24332,
-                  "speaker": "PER0",
-                  "ner": "O",
-                  "after": " ",
-                  "originalText": "information",
-                  "before": " ",
-                  "index": 26,
-                  "pos": "NN"
-                }
-              },
-              "NN"
-            ],
-            [
-              {
-                "nlpToken": {
-                  "characterOffsetBegin": 24333,
-                  "word": "gleaned",
-                  "lemma": "glean",
-                  "characterOffsetEnd": 24340,
-                  "speaker": "PER0",
-                  "ner": "O",
-                  "after": " ",
-                  "originalText": "gleaned",
-                  "before": " ",
-                  "index": 27,
                   "pos": "VBD"
                 }
               },
@@ -549,241 +357,24 @@
             [
               {
                 "nlpToken": {
-                  "characterOffsetBegin": 24341,
-                  "word": "about",
-                  "lemma": "about",
-                  "characterOffsetEnd": 24346,
+                  "characterOffsetBegin": 5257,
+                  "word": "that",
+                  "lemma": "that",
+                  "characterOffsetEnd": 5261,
                   "speaker": "PER0",
                   "ner": "O",
                   "after": " ",
-                  "originalText": "about",
+                  "originalText": "that",
                   "before": " ",
-                  "index": 28,
-                  "pos": "IN"
+                  "index": 4,
+                  "pos": "DT"
                 }
               },
-              "IN"
-            ],
-            [
-              {
-                "nlpToken": {
-                  "characterOffsetBegin": 24347,
-                  "word": "world",
-                  "lemma": "world",
-                  "characterOffsetEnd": 24352,
-                  "speaker": "PER0",
-                  "ner": "O",
-                  "after": " ",
-                  "originalText": "world",
-                  "before": " ",
-                  "index": 29,
-                  "pos": "NN"
-                }
-              },
-              "NN"
-            ],
-            [
-              {
-                "nlpToken": {
-                  "characterOffsetBegin": 24353,
-                  "word": "leaders",
-                  "lemma": "leader",
-                  "characterOffsetEnd": 24360,
-                  "speaker": "PER0",
-                  "ner": "O",
-                  "after": " ",
-                  "originalText": "leaders",
-                  "before": " ",
-                  "index": 30,
-                  "pos": "NNS"
-                }
-              },
-              "NNS"
-            ],
-            [
-              {
-                "nlpToken": {
-                  "characterOffsetBegin": 24361,
-                  "word": "and",
-                  "lemma": "and",
-                  "characterOffsetEnd": 24364,
-                  "speaker": "PER0",
-                  "ner": "O",
-                  "after": " ",
-                  "originalText": "and",
-                  "before": " ",
-                  "index": 31,
-                  "pos": "CC"
-                }
-              },
-              "CC"
-            ],
-            [
-              {
-                "nlpToken": {
-                  "characterOffsetBegin": 24365,
-                  "word": "other",
-                  "lemma": "other",
-                  "characterOffsetEnd": 24370,
-                  "speaker": "PER0",
-                  "ner": "O",
-                  "after": " ",
-                  "originalText": "other",
-                  "before": " ",
-                  "index": 32,
-                  "pos": "JJ"
-                }
-              },
-              "JJ"
-            ],
-            [
-              {
-                "nlpToken": {
-                  "characterOffsetBegin": 24371,
-                  "word": "data",
-                  "lemma": "datum",
-                  "characterOffsetEnd": 24375,
-                  "speaker": "PER0",
-                  "ner": "O",
-                  "after": " ",
-                  "originalText": "data",
-                  "before": " ",
-                  "index": 33,
-                  "pos": "NNS"
-                }
-              },
-              "NNS"
-            ],
-            [
-              {
-                "nlpToken": {
-                  "characterOffsetBegin": 24376,
-                  "word": "gathered",
-                  "lemma": "gather",
-                  "characterOffsetEnd": 24384,
-                  "speaker": "PER0",
-                  "ner": "O",
-                  "after": " ",
-                  "originalText": "gathered",
-                  "before": " ",
-                  "index": 34,
-                  "pos": "VBN"
-                }
-              },
-              "VBN"
-            ],
-            [
-              {
-                "nlpToken": {
-                  "characterOffsetBegin": 24385,
-                  "word": "by",
-                  "lemma": "by",
-                  "characterOffsetEnd": 24387,
-                  "speaker": "PER0",
-                  "ner": "O",
-                  "after": " ",
-                  "originalText": "by",
-                  "before": " ",
-                  "index": 35,
-                  "pos": "IN"
-                }
-              },
-              "IN"
-            ],
-            [
-              {
-                "nlpToken": {
-                  "characterOffsetBegin": 24388,
-                  "word": "America",
-                  "lemma": "America",
-                  "characterOffsetEnd": 24395,
-                  "speaker": "PER0",
-                  "ner": "LOCATION",
-                  "after": "",
-                  "originalText": "America",
-                  "before": " ",
-                  "index": 36,
-                  "pos": "NNP"
-                }
-              },
-              "NNP"
-            ],
-            [
-              {
-                "nlpToken": {
-                  "characterOffsetBegin": 24395,
-                  "word": "'s",
-                  "lemma": "'s",
-                  "characterOffsetEnd": 24397,
-                  "speaker": "PER0",
-                  "ner": "O",
-                  "after": " ",
-                  "originalText": "'s",
-                  "before": "",
-                  "index": 37,
-                  "pos": "POS"
-                }
-              },
-              "POS"
-            ],
-            [
-              {
-                "nlpToken": {
-                  "characterOffsetBegin": 24398,
-                  "word": "17",
-                  "lemma": "17",
-                  "before": " ",
-                  "characterOffsetEnd": 24400,
-                  "originalText": "17",
-                  "normalizedNER": "17.0",
-                  "speaker": "PER0",
-                  "after": " ",
-                  "ner": "NUMBER",
-                  "index": 38,
-                  "pos": "CD"
-                }
-              },
-              "CD"
-            ],
-            [
-              {
-                "nlpToken": {
-                  "characterOffsetBegin": 24401,
-                  "word": "intelligence",
-                  "lemma": "intelligence",
-                  "characterOffsetEnd": 24413,
-                  "speaker": "PER0",
-                  "ner": "O",
-                  "after": " ",
-                  "originalText": "intelligence",
-                  "before": " ",
-                  "index": 39,
-                  "pos": "NN"
-                }
-              },
-              "NN"
-            ],
-            [
-              {
-                "nlpToken": {
-                  "characterOffsetBegin": 24414,
-                  "word": "agencies",
-                  "lemma": "agency",
-                  "characterOffsetEnd": 24422,
-                  "speaker": "PER0",
-                  "ner": "O",
-                  "after": "",
-                  "originalText": "agencies",
-                  "before": " ",
-                  "index": 40,
-                  "pos": "NNS"
-                }
-              },
-              "NNS"
+              "DT"
             ]
           ],
           "score": 1.0,
-          "text": "president-elect , Trump is entitled to get the same daily intelligence briefing as Obama - one that includes information on US covert operations , information gleaned about world leaders and other data gathered by America 's 17 intelligence agencies",
+          "text": "they did that",
           "nlpIndexSentence": 2
         }
       ]
@@ -795,7 +386,71 @@
           "coderPhraseCount": 3
         }
       ],
-      "label": "where"
+      "label": "where",
+      "extracted": [
+        {
+          "parts": [
+            [
+              {
+                "nlpToken": {
+                  "characterOffsetBegin": 87,
+                  "word": "White",
+                  "lemma": "White",
+                  "characterOffsetEnd": 92,
+                  "speaker": "PER0",
+                  "ner": "LOCATION",
+                  "after": " ",
+                  "originalText": "White",
+                  "before": " ",
+                  "index": 14,
+                  "pos": "NNP"
+                }
+              },
+              "NNP"
+            ],
+            [
+              {
+                "nlpToken": {
+                  "characterOffsetBegin": 93,
+                  "word": "House",
+                  "lemma": "House",
+                  "characterOffsetEnd": 98,
+                  "speaker": "PER0",
+                  "ner": "LOCATION",
+                  "after": " ",
+                  "originalText": "House",
+                  "before": " ",
+                  "index": 15,
+                  "pos": "NNP"
+                }
+              },
+              "NNP"
+            ]
+          ],
+          "score": 0.6964375816737748,
+          "text": "White House",
+          "enhancement": {
+            "openstreetmap_nominatim": {
+              "osm_id": "238241022",
+              "osm_type": "way",
+              "display_name": "White House, 1600, Pennsylvania Avenue Northwest, Golden Triangle, Washington, District of Columbia, 20500, United States of America",
+              "lon": "-77.0365534886228",
+              "lat": "38.8976998",
+              "boundingbox": [
+                38.8974898,
+                38.897911,
+                -77.0368542,
+                -77.0362526
+              ],
+              "place_id": "127954863",
+              "licence": "Data \u00a9 OpenStreetMap contributors, ODbL 1.0. http://www.openstreetmap.org/copyright",
+              "type": "government",
+              "importance": 0.3519189346824,
+              "class": "office"
+            }
+          }
+        }
+      ]
     },
     "what": {
       "annotated": [

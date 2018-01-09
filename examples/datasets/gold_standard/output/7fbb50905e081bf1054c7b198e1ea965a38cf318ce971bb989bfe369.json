@@ -66,7 +66,8 @@
           "parsed": "2016-11-10"
         }
       ],
-      "label": "when"
+      "label": "when",
+      "extracted": []
     },
     "why": {
       "annotated": [
@@ -74,7 +75,34 @@
           "coderPhraseCount": 3
         }
       ],
-      "label": "why"
+      "label": "why",
+      "extracted": [
+        {
+          "parts": [
+            [
+              {
+                "nlpToken": {
+                  "characterOffsetBegin": 245,
+                  "word": "there",
+                  "lemma": "there",
+                  "characterOffsetEnd": 250,
+                  "speaker": "PER0",
+                  "ner": "O",
+                  "after": " ",
+                  "originalText": "there",
+                  "before": " ",
+                  "index": 21,
+                  "pos": "EX"
+                }
+              },
+              "EX"
+            ]
+          ],
+          "score": 0.5644712430426716,
+          "text": "there",
+          "nlpIndexSentence": 1
+        }
+      ]
     },
     "how": {
       "annotated": [
@@ -162,64 +190,10 @@
                 }
               },
               "PRP"
-            ],
-            [
-              {
-                "nlpToken": {
-                  "characterOffsetBegin": 2256,
-                  "word": "closes",
-                  "lemma": "close",
-                  "characterOffsetEnd": 2262,
-                  "speaker": "188",
-                  "ner": "O",
-                  "after": " ",
-                  "originalText": "closes",
-                  "before": " ",
-                  "index": 6,
-                  "pos": "VBZ"
-                }
-              },
-              "VBZ"
-            ],
-            [
-              {
-                "nlpToken": {
-                  "characterOffsetBegin": 2263,
-                  "word": "his",
-                  "lemma": "he",
-                  "characterOffsetEnd": 2266,
-                  "speaker": "188",
-                  "ner": "O",
-                  "after": " ",
-                  "originalText": "his",
-                  "before": " ",
-                  "index": 7,
-                  "pos": "PRP$"
-                }
-              },
-              "PRP$"
-            ],
-            [
-              {
-                "nlpToken": {
-                  "characterOffsetBegin": 2267,
-                  "word": "eyes",
-                  "lemma": "eye",
-                  "characterOffsetEnd": 2271,
-                  "speaker": "188",
-                  "ner": "O",
-                  "after": "",
-                  "originalText": "eyes",
-                  "before": " ",
-                  "index": 8,
-                  "pos": "NNS"
-                }
-              },
-              "NNS"
             ]
           ],
           "score": 1.0,
-          "text": "he says it he closes his eyes",
+          "text": "he says it he",
           "nlpIndexSentence": 2
         }
       ]
@@ -231,7 +205,71 @@
           "coderPhraseCount": 2
         }
       ],
-      "label": "where"
+      "label": "where",
+      "extracted": [
+        {
+          "parts": [
+            [
+              {
+                "nlpToken": {
+                  "characterOffsetBegin": 117,
+                  "word": "White",
+                  "lemma": "White",
+                  "characterOffsetEnd": 122,
+                  "speaker": "PER0",
+                  "ner": "LOCATION",
+                  "after": " ",
+                  "originalText": "White",
+                  "before": " ",
+                  "index": 20,
+                  "pos": "NNP"
+                }
+              },
+              "NNP"
+            ],
+            [
+              {
+                "nlpToken": {
+                  "characterOffsetBegin": 123,
+                  "word": "House",
+                  "lemma": "House",
+                  "characterOffsetEnd": 128,
+                  "speaker": "PER0",
+                  "ner": "LOCATION",
+                  "after": "",
+                  "originalText": "House",
+                  "before": " ",
+                  "index": 21,
+                  "pos": "NNP"
+                }
+              },
+              "NNP"
+            ]
+          ],
+          "score": 0.6964375816737748,
+          "text": "White House",
+          "enhancement": {
+            "openstreetmap_nominatim": {
+              "osm_id": "238241022",
+              "osm_type": "way",
+              "display_name": "White House, 1600, Pennsylvania Avenue Northwest, Golden Triangle, Washington, District of Columbia, 20500, United States of America",
+              "lon": "-77.0365534886228",
+              "lat": "38.8976998",
+              "boundingbox": [
+                38.8974898,
+                38.897911,
+                -77.0368542,
+                -77.0362526
+              ],
+              "place_id": "127954863",
+              "licence": "Data \u00a9 OpenStreetMap contributors, ODbL 1.0. http://www.openstreetmap.org/copyright",
+              "type": "government",
+              "importance": 0.3519189346824,
+              "class": "office"
+            }
+          }
+        }
+      ]
     },
     "what": {
       "annotated": [

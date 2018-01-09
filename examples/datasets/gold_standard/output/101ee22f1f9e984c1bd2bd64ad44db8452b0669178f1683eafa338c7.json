@@ -23,24 +23,79 @@
             [
               {
                 "nlpToken": {
-                  "index": 6,
-                  "word": "principal",
-                  "originalText": "principal",
-                  "lemma": "principal",
-                  "characterOffsetBegin": 31,
-                  "characterOffsetEnd": 40,
-                  "pos": "JJ",
+                  "index": 8,
+                  "word": "he",
+                  "originalText": "he",
+                  "lemma": "he",
+                  "characterOffsetBegin": 2420,
+                  "characterOffsetEnd": 2422,
+                  "pos": "PRP",
                   "ner": "O",
                   "speaker": "PER0",
                   "before": " ",
                   "after": " "
                 }
               },
-              "JJ"
+              "PRP"
+            ],
+            [
+              {
+                "nlpToken": {
+                  "index": 9,
+                  "word": "lost",
+                  "originalText": "lost",
+                  "lemma": "lose",
+                  "characterOffsetBegin": 2423,
+                  "characterOffsetEnd": 2427,
+                  "pos": "VBD",
+                  "ner": "O",
+                  "speaker": "PER0",
+                  "before": " ",
+                  "after": " "
+                }
+              },
+              "VBD"
+            ],
+            [
+              {
+                "nlpToken": {
+                  "index": 10,
+                  "word": "control",
+                  "originalText": "control",
+                  "lemma": "control",
+                  "characterOffsetBegin": 2428,
+                  "characterOffsetEnd": 2435,
+                  "pos": "NN",
+                  "ner": "O",
+                  "speaker": "PER0",
+                  "before": " ",
+                  "after": " "
+                }
+              },
+              "NN"
+            ],
+            [
+              {
+                "nlpToken": {
+                  "index": 11,
+                  "word": "of",
+                  "originalText": "of",
+                  "lemma": "of",
+                  "characterOffsetBegin": 2436,
+                  "characterOffsetEnd": 2438,
+                  "pos": "IN",
+                  "ner": "O",
+                  "speaker": "PER0",
+                  "before": " ",
+                  "after": " "
+                }
+              },
+              "IN"
             ]
           ],
           "score": 1.0,
-          "text": "principal"
+          "text": "he lost control of",
+          "nlpIndexSentence": 8
         }
       ]
     },
@@ -181,7 +236,46 @@
           "text": "Sunday"
         }
       ],
-      "label": "when"
+      "label": "when",
+      "extracted": [
+        {
+          "parts": [
+            [
+              {
+                "nlpToken": {
+                  "index": 31,
+                  "word": "Sunday",
+                  "originalText": "Sunday",
+                  "lemma": "Sunday",
+                  "characterOffsetBegin": 492,
+                  "characterOffsetEnd": 498,
+                  "pos": "NNP",
+                  "ner": "DATE",
+                  "normalizedNER": "2016-11-13",
+                  "speaker": "PER0",
+                  "before": " ",
+                  "after": "",
+                  "timex": {
+                    "tid": "t2",
+                    "type": "DATE",
+                    "value": "2016-11-13"
+                  }
+                }
+              },
+              "NNP"
+            ]
+          ],
+          "score": 0.7980639156597039,
+          "text": "Sunday",
+          "enhancement": {
+            "timex": {
+              "start_date": "2016-11-13T00:00:00",
+              "end_date": "2016-11-13T23:59:59"
+            }
+          },
+          "nlpIndexSentence": 3
+        }
+      ]
     },
     "where": {
       "annotated": [
@@ -198,7 +292,54 @@
           "text": "Interlagos"
         }
       ],
-      "label": "where"
+      "label": "where",
+      "extracted": [
+        {
+          "parts": [
+            [
+              {
+                "nlpToken": {
+                  "index": 12,
+                  "word": "Brazil",
+                  "originalText": "Brazil",
+                  "lemma": "Brazil",
+                  "characterOffsetBegin": 78,
+                  "characterOffsetEnd": 84,
+                  "pos": "NNP",
+                  "ner": "LOCATION",
+                  "speaker": "PER0",
+                  "before": " ",
+                  "after": ""
+                }
+              },
+              "NNP"
+            ]
+          ],
+          "score": 0.6699999999999999,
+          "text": "Brazil",
+          "enhancement": {
+            "openstreetmap_nominatim": {
+              "osm_id": "59470",
+              "boundingbox": [
+                -33.8689056,
+                5.2842873,
+                -73.9830625,
+                -28.6341164
+              ],
+              "licence": "Data \u00a9 OpenStreetMap contributors, ODbL 1.0. http://www.openstreetmap.org/copyright",
+              "importance": 0.21948000558855,
+              "icon": "https://nominatim.openstreetmap.org/images/mapicons/poi_boundary_administrative.p.20.png",
+              "osm_type": "relation",
+              "display_name": "Brasil",
+              "lat": "-10.3333333",
+              "type": "administrative",
+              "place_id": "179383758",
+              "lon": "-53.2",
+              "class": "boundary"
+            }
+          }
+        }
+      ]
     },
     "who": {
       "annotated": [
@@ -272,7 +413,51 @@
           "text": "produced a flourish to finish third"
         }
       ],
-      "label": "why"
+      "label": "why",
+      "extracted": [
+        {
+          "parts": [
+            [
+              {
+                "nlpToken": {
+                  "index": 1,
+                  "word": "Max",
+                  "originalText": "Max",
+                  "lemma": "Max",
+                  "characterOffsetBegin": 0,
+                  "characterOffsetEnd": 3,
+                  "pos": "NNP",
+                  "ner": "PERSON",
+                  "speaker": "PER0",
+                  "before": "",
+                  "after": " "
+                }
+              },
+              "NNP"
+            ],
+            [
+              {
+                "nlpToken": {
+                  "index": 2,
+                  "word": "Verstappen",
+                  "originalText": "Verstappen",
+                  "lemma": "Verstappen",
+                  "characterOffsetBegin": 4,
+                  "characterOffsetEnd": 14,
+                  "pos": "NNP",
+                  "ner": "PERSON",
+                  "speaker": "PER0",
+                  "before": " ",
+                  "after": " "
+                }
+              },
+              "NNP"
+            ]
+          ],
+          "score": 0.5844155844155844,
+          "text": "Max Verstappen"
+        }
+      ]
     }
   },
   "mimeType": "text/xml",

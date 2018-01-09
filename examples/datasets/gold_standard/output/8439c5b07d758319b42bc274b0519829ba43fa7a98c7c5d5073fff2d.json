@@ -23,25 +23,24 @@
             [
               {
                 "nlpToken": {
-                  "characterOffsetBegin": 529,
-                  "word": "Max",
-                  "lemma": "Max",
-                  "characterOffsetEnd": 532,
-                  "speaker": "30",
-                  "ner": "PERSON",
+                  "characterOffsetBegin": 17,
+                  "word": "he",
+                  "lemma": "he",
+                  "characterOffsetEnd": 19,
+                  "speaker": "6",
+                  "ner": "O",
                   "after": " ",
-                  "originalText": "Max",
-                  "before": "",
-                  "index": 10,
-                  "pos": "NNP"
+                  "originalText": "he",
+                  "before": " ",
+                  "index": 6,
+                  "pos": "PRP"
                 }
               },
-              "NNP"
+              "PRP"
             ]
           ],
           "score": 1.0,
-          "text": "Max",
-          "nlpIndexSentence": 6
+          "text": "he"
         }
       ]
     },
@@ -53,7 +52,8 @@
           "parsed": "2016-11-13"
         }
       ],
-      "label": "when"
+      "label": "when",
+      "extracted": []
     },
     "why": {
       "annotated": [
@@ -62,7 +62,34 @@
           "coderPhraseCount": 2
         }
       ],
-      "label": "why"
+      "label": "why",
+      "extracted": [
+        {
+          "parts": [
+            [
+              {
+                "nlpToken": {
+                  "characterOffsetBegin": 101,
+                  "word": "I",
+                  "lemma": "I",
+                  "characterOffsetEnd": 102,
+                  "speaker": "6",
+                  "ner": "O",
+                  "after": "",
+                  "originalText": "I",
+                  "before": "",
+                  "index": 2,
+                  "pos": "PRP"
+                }
+              },
+              "PRP"
+            ]
+          ],
+          "score": 0.5378787878787878,
+          "text": "I",
+          "nlpIndexSentence": 1
+        }
+      ]
     },
     "how": {
       "annotated": [
@@ -82,21 +109,150 @@
             [
               {
                 "nlpToken": {
-                  "characterOffsetBegin": 17,
-                  "word": "he",
-                  "lemma": "he",
-                  "characterOffsetEnd": 19,
+                  "characterOffsetBegin": 328,
+                  "word": "F1",
+                  "lemma": "f1",
+                  "characterOffsetEnd": 330,
+                  "speaker": "6",
+                  "ner": "O",
+                  "after": "",
+                  "originalText": "F1",
+                  "before": " ",
+                  "index": 5,
+                  "pos": "NN"
+                }
+              },
+              "NN"
+            ],
+            [
+              {
+                "nlpToken": {
+                  "characterOffsetBegin": 330,
+                  "word": ",",
+                  "lemma": ",",
+                  "characterOffsetEnd": 331,
                   "speaker": "6",
                   "ner": "O",
                   "after": " ",
-                  "originalText": "he",
-                  "before": " ",
+                  "originalText": ",",
+                  "before": "",
                   "index": 6,
-                  "pos": "PRP"
+                  "pos": ","
                 }
               },
-              "PRP"
+              ","
             ],
+            [
+              {
+                "nlpToken": {
+                  "characterOffsetBegin": 332,
+                  "word": "everyone",
+                  "lemma": "everyone",
+                  "characterOffsetEnd": 340,
+                  "speaker": "6",
+                  "ner": "O",
+                  "after": " ",
+                  "originalText": "everyone",
+                  "before": " ",
+                  "index": 7,
+                  "pos": "NN"
+                }
+              },
+              "NN"
+            ],
+            [
+              {
+                "nlpToken": {
+                  "characterOffsetBegin": 341,
+                  "word": "is",
+                  "lemma": "be",
+                  "characterOffsetEnd": 343,
+                  "speaker": "6",
+                  "ner": "O",
+                  "after": " ",
+                  "originalText": "is",
+                  "before": " ",
+                  "index": 8,
+                  "pos": "VBZ"
+                }
+              },
+              "VBZ"
+            ]
+          ],
+          "score": 1.0,
+          "text": "F1 , everyone is",
+          "nlpIndexSentence": 5
+        }
+      ]
+    },
+    "where": {
+      "annotated": [
+        {
+          "text": "Brazilian Grand Prix",
+          "coderPhraseCount": 2
+        }
+      ],
+      "label": "where",
+      "extracted": [
+        {
+          "parts": [
+            [
+              {
+                "nlpToken": {
+                  "characterOffsetBegin": 937,
+                  "word": "Brazil",
+                  "lemma": "Brazil",
+                  "characterOffsetEnd": 943,
+                  "speaker": "PER1",
+                  "ner": "LOCATION",
+                  "after": "",
+                  "originalText": "Brazil",
+                  "before": " ",
+                  "index": 25,
+                  "pos": "NNP"
+                }
+              },
+              "NNP"
+            ]
+          ],
+          "score": 0.6699999999999999,
+          "text": "Brazil",
+          "enhancement": {
+            "openstreetmap_nominatim": {
+              "osm_id": "59470",
+              "boundingbox": [
+                -33.8689056,
+                5.2842873,
+                -73.9830625,
+                -28.6341164
+              ],
+              "licence": "Data \u00a9 OpenStreetMap contributors, ODbL 1.0. http://www.openstreetmap.org/copyright",
+              "importance": 0.21948000558855,
+              "icon": "https://nominatim.openstreetmap.org/images/mapicons/poi_boundary_administrative.p.20.png",
+              "osm_type": "relation",
+              "display_name": "Brasil",
+              "lat": "-10.3333333",
+              "type": "administrative",
+              "place_id": "179383758",
+              "lon": "-53.2",
+              "class": "boundary"
+            }
+          },
+          "nlpIndexSentence": 11
+        }
+      ]
+    },
+    "what": {
+      "annotated": [
+        {
+          "text": "even stuns his dad by storming home into third place",
+          "coderPhraseCount": 3
+        }
+      ],
+      "label": "what",
+      "extracted": [
+        {
+          "parts": [
             [
               {
                 "nlpToken": {
@@ -132,363 +288,10 @@
                 }
               },
               "PRP"
-            ],
-            [
-              {
-                "nlpToken": {
-                  "characterOffsetBegin": 32,
-                  "word": ",",
-                  "lemma": ",",
-                  "characterOffsetEnd": 33,
-                  "speaker": "6",
-                  "ner": "O",
-                  "after": "",
-                  "originalText": ",",
-                  "before": "",
-                  "index": 9,
-                  "pos": ","
-                }
-              },
-              ","
-            ],
-            [
-              {
-                "nlpToken": {
-                  "characterOffsetBegin": 33,
-                  "word": "''",
-                  "lemma": "''",
-                  "characterOffsetEnd": 34,
-                  "speaker": "PER1",
-                  "ner": "O",
-                  "after": " ",
-                  "originalText": "\"",
-                  "before": "",
-                  "index": 10,
-                  "pos": "''"
-                }
-              },
-              "''"
-            ],
-            [
-              {
-                "nlpToken": {
-                  "characterOffsetBegin": 35,
-                  "word": "said",
-                  "lemma": "say",
-                  "characterOffsetEnd": 39,
-                  "speaker": "PER1",
-                  "ner": "O",
-                  "after": " ",
-                  "originalText": "said",
-                  "before": " ",
-                  "index": 11,
-                  "pos": "VBD"
-                }
-              },
-              "VBD"
-            ],
-            [
-              {
-                "nlpToken": {
-                  "characterOffsetBegin": 40,
-                  "word": "father",
-                  "lemma": "father",
-                  "characterOffsetEnd": 46,
-                  "speaker": "PER1",
-                  "ner": "O",
-                  "after": "",
-                  "originalText": "father",
-                  "before": " ",
-                  "index": 12,
-                  "pos": "NN"
-                }
-              },
-              "NN"
-            ],
-            [
-              {
-                "nlpToken": {
-                  "characterOffsetBegin": 46,
-                  "word": ",",
-                  "lemma": ",",
-                  "characterOffsetEnd": 47,
-                  "speaker": "PER1",
-                  "ner": "O",
-                  "after": " ",
-                  "originalText": ",",
-                  "before": "",
-                  "index": 13,
-                  "pos": ","
-                }
-              },
-              ","
-            ],
-            [
-              {
-                "nlpToken": {
-                  "characterOffsetBegin": 48,
-                  "word": "Jos",
-                  "lemma": "Jos",
-                  "characterOffsetEnd": 51,
-                  "speaker": "PER1",
-                  "ner": "PERSON",
-                  "after": "",
-                  "originalText": "Jos",
-                  "before": " ",
-                  "index": 14,
-                  "pos": "NNP"
-                }
-              },
-              "NNP"
-            ],
-            [
-              {
-                "nlpToken": {
-                  "characterOffsetBegin": 51,
-                  "word": ",",
-                  "lemma": ",",
-                  "characterOffsetEnd": 52,
-                  "speaker": "PER1",
-                  "ner": "O",
-                  "after": " ",
-                  "originalText": ",",
-                  "before": "",
-                  "index": 15,
-                  "pos": ","
-                }
-              },
-              ","
-            ],
-            [
-              {
-                "nlpToken": {
-                  "characterOffsetBegin": 53,
-                  "word": "who",
-                  "lemma": "who",
-                  "characterOffsetEnd": 56,
-                  "speaker": "PER1",
-                  "ner": "O",
-                  "after": " ",
-                  "originalText": "who",
-                  "before": " ",
-                  "index": 16,
-                  "pos": "WP"
-                }
-              },
-              "WP"
-            ],
-            [
-              {
-                "nlpToken": {
-                  "characterOffsetBegin": 57,
-                  "word": "competed",
-                  "lemma": "compete",
-                  "characterOffsetEnd": 65,
-                  "speaker": "PER1",
-                  "ner": "O",
-                  "after": " ",
-                  "originalText": "competed",
-                  "before": " ",
-                  "index": 17,
-                  "pos": "VBD"
-                }
-              },
-              "VBD"
-            ],
-            [
-              {
-                "nlpToken": {
-                  "characterOffsetBegin": 66,
-                  "word": "in",
-                  "lemma": "in",
-                  "characterOffsetEnd": 68,
-                  "speaker": "PER1",
-                  "ner": "O",
-                  "after": " ",
-                  "originalText": "in",
-                  "before": " ",
-                  "index": 18,
-                  "pos": "IN"
-                }
-              },
-              "IN"
-            ],
-            [
-              {
-                "nlpToken": {
-                  "characterOffsetBegin": 69,
-                  "word": "Formula",
-                  "lemma": "Formula",
-                  "characterOffsetEnd": 76,
-                  "speaker": "PER1",
-                  "ner": "O",
-                  "after": " ",
-                  "originalText": "Formula",
-                  "before": " ",
-                  "index": 19,
-                  "pos": "NNP"
-                }
-              },
-              "NNP"
-            ],
-            [
-              {
-                "nlpToken": {
-                  "characterOffsetBegin": 77,
-                  "word": "One",
-                  "lemma": "one",
-                  "before": " ",
-                  "characterOffsetEnd": 80,
-                  "originalText": "One",
-                  "normalizedNER": "1.0",
-                  "speaker": "PER1",
-                  "after": " ",
-                  "ner": "NUMBER",
-                  "index": 20,
-                  "pos": "CD"
-                }
-              },
-              "CD"
-            ],
-            [
-              {
-                "nlpToken": {
-                  "characterOffsetBegin": 81,
-                  "word": "from",
-                  "lemma": "from",
-                  "characterOffsetEnd": 85,
-                  "speaker": "PER1",
-                  "ner": "O",
-                  "after": " ",
-                  "originalText": "from",
-                  "before": " ",
-                  "index": 21,
-                  "pos": "IN"
-                }
-              },
-              "IN"
             ]
           ],
           "score": 1.0,
-          "text": "he surprised me , \" said father , Jos , who competed in Formula One from",
-          "nlpIndexSentence": 6
-        }
-      ]
-    },
-    "where": {
-      "annotated": [
-        {
-          "text": "Brazilian Grand Prix",
-          "coderPhraseCount": 2
-        }
-      ],
-      "label": "where"
-    },
-    "what": {
-      "annotated": [
-        {
-          "text": "even stuns his dad by storming home into third place",
-          "coderPhraseCount": 3
-        }
-      ],
-      "label": "what",
-      "extracted": [
-        {
-          "parts": [
-            [
-              {
-                "nlpToken": {
-                  "characterOffsetBegin": 533,
-                  "word": "was",
-                  "lemma": "be",
-                  "characterOffsetEnd": 536,
-                  "speaker": "30",
-                  "ner": "O",
-                  "after": " ",
-                  "originalText": "was",
-                  "before": " ",
-                  "index": 11,
-                  "pos": "VBD"
-                }
-              },
-              "VBD"
-            ],
-            [
-              {
-                "nlpToken": {
-                  "characterOffsetBegin": 537,
-                  "word": "outstanding",
-                  "lemma": "outstanding",
-                  "characterOffsetEnd": 548,
-                  "speaker": "30",
-                  "ner": "O",
-                  "after": " ",
-                  "originalText": "outstanding",
-                  "before": " ",
-                  "index": 12,
-                  "pos": "JJ"
-                }
-              },
-              "JJ"
-            ],
-            [
-              {
-                "nlpToken": {
-                  "characterOffsetBegin": 549,
-                  "word": "with",
-                  "lemma": "with",
-                  "characterOffsetEnd": 553,
-                  "speaker": "30",
-                  "ner": "O",
-                  "after": " ",
-                  "originalText": "with",
-                  "before": " ",
-                  "index": 13,
-                  "pos": "IN"
-                }
-              },
-              "IN"
-            ],
-            [
-              {
-                "nlpToken": {
-                  "characterOffsetBegin": 554,
-                  "word": "the",
-                  "lemma": "the",
-                  "characterOffsetEnd": 557,
-                  "speaker": "30",
-                  "ner": "O",
-                  "after": " ",
-                  "originalText": "the",
-                  "before": " ",
-                  "index": 14,
-                  "pos": "DT"
-                }
-              },
-              "DT"
-            ],
-            [
-              {
-                "nlpToken": {
-                  "characterOffsetBegin": 558,
-                  "word": "passes",
-                  "lemma": "pass",
-                  "characterOffsetEnd": 564,
-                  "speaker": "30",
-                  "ner": "O",
-                  "after": " ",
-                  "originalText": "passes",
-                  "before": " ",
-                  "index": 15,
-                  "pos": "NNS"
-                }
-              },
-              "NNS"
-            ]
-          ],
-          "score": 1.0,
-          "text": "was outstanding with the passes",
-          "nlpIndexSentence": 6
+          "text": "surprised me"
         }
       ]
     }

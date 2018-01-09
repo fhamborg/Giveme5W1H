@@ -1,10 +1,12 @@
 '''
+
 helper script to demonstrate the entire learn weights process pipeline.
 
 CLEAR /queue_caches/ and result folder before running !!!!!!!!!!
 Evaluate can`t distinguish between old and new results.
 
 '''
+
 import logging
 import queue
 import threading
@@ -12,7 +14,7 @@ import threading
 from misc.learn_weights import run_training, run_test
 from misc.learn_weights.evaluate import process_files
 from misc.learn_weights.learn import Worker
-from misc.learn_weights.run_test import load_best_weights
+from misc.learn_weights.run_test import load_best_weights, load_weights_csv
 
 
 def create_worker(q):
@@ -51,7 +53,7 @@ def load_trainer_for_question(q, questions):
 
 def load_tester_for_question(q, questions):
     for question in questions:
-        weights = load_best_weights('./result/training_final_result_' + question + '_1.json')
+        weights = load_weights_csv('./result/training_final_result_' + question + '_1_avg')
         if question == 'who' or question == 'what':
             q.put(run_test.action(lock, weights))
         elif question == 'why':
@@ -77,11 +79,11 @@ if __name__ == '__main__':
 
     # its recommended to run one by one to keep memory print low
     # questions = ['who','why', 'where', 'when', 'how']
-    #learn_questions = ['what']  # output is also  who
-    #learn_questions = ['why']
+    # learn_questions = ['what']  # output is also  who
+    # learn_questions = ['why']
     # learn_questions = ['where']
     # learn_questions = ['when']
-     #learn_questions = ['how']
+    # learn_questions = ['how']
     learn_questions = ['how','what','why']
 
 
@@ -90,7 +92,7 @@ if __name__ == '__main__':
     #
     q, lock = get_queue_wth_lock_and_worker()
 
-    load_trainer_for_question(q, learn_questions)
+    #load_trainer_for_question(q, learn_questions)
 
     # wait till all trainings are done
     q.join()
@@ -100,7 +102,7 @@ if __name__ == '__main__':
     #
 
     # evaluate results - by cecking all subfolders for processd woking parts
-    process_files('queue_caches/*_processed*/', praefix='training')
+    #process_files('queue_caches/*_processed*/', praefix='training')
 
 
 

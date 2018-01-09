@@ -30,6 +30,9 @@ csv_writer = csv.writer(open('evaluate.csv', 'w'), delimiter='\t', quotechar='"'
 csv_writer.writerow(['category', 'who', 'who2', 'what', 'what2', 'when', 'when2', 'where', 'where2', 'why', 'why2', 'how', 'how2', 'open'])
 
 for json_file in onlyfiles:
+    if not json_file.endswith('.json'):
+        continue
+
     path_cur_file = join(path_extracted_dataset, json_file)
     print(path_cur_file)
 
@@ -44,7 +47,8 @@ for json_file in onlyfiles:
     how = get_answer(article, 'how')
 
     pub_date = article['date_publish']
-    category = article['newsCluster']['Category']
+    #category = article['newsCluster']['Category']
+    category = article['category']
 
     csv_writer.writerow([category, who, '', what, '', when, '', where, '', why, '', how, '', "open " + path_cur_file])
     csv_writer.writerow(empty_line)

@@ -8,7 +8,7 @@ Extracts information required (or convenient) for the evaluation.
 """
 
 
-path_extracted_dataset = '/Users/felix/IdeaProjects/Giveme5W/examples/datasets/bbc/output'
+path_extracted_dataset = '/Users/felix/IdeaProjects/Giveme5W/examples/datasets/bpathbc/output'
 empty_line = ['', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '']
 
 onlyfiles = [f for f in listdir(path_extracted_dataset) if isfile(join(path_extracted_dataset, f))]

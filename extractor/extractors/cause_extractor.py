@@ -18,6 +18,8 @@ class CauseExtractor(AbsExtractor):
     causal_conjunctions = {'consequence': 'of', 'effect': 'of', 'result': 'of', 'upshot': 'of', 'outcome': 'of',
                            'because': '', 'due': 'to', 'stemmed': 'from'}
 
+    causal_conjunctions_inclusive = ['because', 'hence', 'thus', 'stemmed', 'due']
+
     # list of verbs for the detection of cause-effect relations within NP-VP-NP patterns
     # this list and the TODO
     causal_verbs = ['activate', 'actuate', 'arouse', 'associate', 'begin', 'bring', 'call', 'cause', 'commence',
@@ -215,7 +217,11 @@ class CauseExtractor(AbsExtractor):
             elif token in self.causal_conjunctions and ' '.join([x['nlpToken']['originalText'] for x in tokens[i:]]).lower().startswith(
                 self.causal_conjunctions[token]):
                 # Check if token is a clausal conjunction indicating causation
-                candidates.append(deepcopy([pos[i - 1:], pos[:i], 'biclausal']))
+                start = i
+                if token not in self.causal_conjunctions_inclusive:
+                    # exclude clausal conjunction besides special cases
+                    start += 1
+                candidates.append(deepcopy([pos[start:], pos[:i], 'biclausal']))
 
         # drop candidates containing other candidates
         unique_candidates = []

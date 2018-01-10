@@ -313,27 +313,87 @@ add_article(Category.science, Topic.unspecific, Event.possible_meteor_lights_up_
     'http://www.cetusnews.com/news/Possible-meteor-lights-up-night-sky-in-New-England.r1o8Lm-QG.html'
 ])
 add_article(Category.science, Topic.unspecific, Event.elon_musk_reveals_red_tesla_roadster_bound_for_mars, [
+    'https://www.usatoday.com/story/tech/nation-now/2017/12/27/spacex-red-tesla-roadster-bound-mars/983669001/',
+    'https://www.rt.com/news/411715-spacex-tesla-mars-falcon-heavy/',
+    'http://www.dailymail.co.uk/sciencetech/article-5216485/Elon-Musk-send-car-Mars.html',
+    'http://www.dailymail.co.uk/news/article-5139761/Elon-Musk-send-Tesla-Roadster-Mars.html',
+    'http://www.dailymail.co.uk/sciencetech/article-5238433/Elon-Musk-SpaceX-launch-Falcon-Heavy-rocket-month.html',
+    'http://money.cnn.com/2017/12/02/technology/elon-musk-spacex-falcon-heavy-launch/index.html',
+    'https://www.fool.com/investing/2017/12/17/elon-musk-is-sending-a-tesla-to-mars.aspx',
+    'https://www.cbsnews.com/news/elon-musk-tesla-will-launch-roadster-to-orbit-mars/'
 
 ])
-add_article(Category.science, Topic.unspecific, Event.smoke_rings_spotted_in_the_ocean_from_space, [])
+add_article(Category.science, Topic.unspecific, Event.smoke_rings_spotted_in_the_ocean_from_space, [
+    'https://news.liverpool.ac.uk/2017/12/11/smoke-rings-spotted-in-the-ocean-from-space/',
+    'https://www.ndtv.com/world-news/smoke-rings-spotted-in-the-ocean-from-space-1792708',
+    'http://www.dailymail.co.uk/sciencetech/article-5168793/The-Hyperloop-sea-Smoke-rings-spotted.html',
+    'https://tecake.in/scientists-spotted-smoke-rings-satellite-surprising',
+    'http://indianexpress.com/article/technology/science/smoke-rings-spotted-in-the-ocean-from-space-5004094/'
+])
 
 # 30.12.2017 - 31.12.
 ## world
 add_article(Category.world, Topic.unspecific,
-            Event.north_korea_received_oil_from_russia_in_violation_of_un_sanctions_report, [])
+            Event.north_korea_received_oil_from_russia_in_violation_of_un_sanctions_report, [
+            'http://www.foxnews.com/world/2017/12/30/north-korea-received-oil-from-russia-in-violation-un-sanctions-report.html',
+            'http://edition.cnn.com/2017/12/28/politics/president-donald-trump-china-north-korea-oil/index.html',
+            'http://edition.cnn.com/videos/world/2017/12/29/ship-seized-selling-oil-to-nkorea.cnn',
+            'https://www.nytimes.com/2017/12/29/world/asia/south-korea-ship-seized.html',
+            'https://www.npr.org/sections/thetwo-way/2017/12/29/574508075/south-korea-seizes-ship-suspected-of-at-sea-oil-transfer-to-benefit-north-korea',
+            'https://www.thesun.co.uk/news/5222989/china-secretly-transferring-oil-kim-jong-un-ships/',
+            'https://www.rt.com/usa/414485-caught-red-handed-china/',
+            'https://www.rt.com/newsline/414356-china-korea-sanctions-oil/',
+            'https://www.washingtonpost.com/business/china-promises-to-deal-seriously-with-sanctions-violators/2018/01/05/fa7f96ee-f1fc-11e7-95e3-eff284e71c8d_story.html?utm_term=.07edf6896eb5',
+            'https://www.washingtonpost.com/world/asia_pacific/trump-said-china-was-caught-red-handed-selling-oil-to-north-korea-beijing-denies-it-did-anything-wrong/2017/12/29/89bc3a22-ec73-11e7-891f-e7a3c60a93de_story.html?utm_term=.fb71d2e88053',
+            'http://www.chinadaily.com.cn/newsrepublic/2017-12/29/content_35412308.htm'
+
+            ])
 add_article(Category.world, Topic.unspecific,
-            Event.egypts_mohammed_morsi_sentenced_to_3_years_in_prison_for_insulting_judiciary, [])
+            Event.egypts_mohammed_morsi_sentenced_to_3_years_in_prison_for_insulting_judiciary, [
+            'https://www.cbsnews.com/news/egypts-mohammed-morsi-sentenced-to-3-years-in-prison-for-insulting-judiciary/',
+            'http://www.dpa-international.com/topic/egypts-morsi-sentenced-3-years-jail-insulting-judiciary-171230-99-450945',
+            'http://www.dailymail.co.uk/wires/afp/article-5222793/Egypts-Morsi-sentenced-three-years-prison.html'
+            ])
 add_article(Category.world, Topic.unspecific,
-            Event.berlin_sets_up_new_years_eve_safe_zone_for_women_amid_sexual_assault_concerns, [])
+            Event.berlin_sets_up_new_years_eve_safe_zone_for_women_amid_sexual_assault_concerns, [
+            'https://www.washingtonpost.com/news/worldviews/wp/2017/12/30/berlin-sets-up-new-years-eve-safe-zone-for-women-amid-sexual-assault-concerns/?utm_term=.c6b140b9b058',
+            'https://www.nytimes.com/aponline/2017/12/30/world/europe/ap-eu-germany-new-year-sexual-assaults.html',
+            'https://www.nytimes.com/2017/12/29/world/europe/germans-will-ring-in-new-year-with-extra-security-especially-for-women.html',
+            'https://www.npr.org/sections/thetwo-way/2017/12/31/574778306/germany-takes-steps-to-guard-women-against-sexual-assault-as-they-ring-in-new-ye',
+            'https://www.thesun.co.uk/news/5232365/berlin-new-year-party-safe-zones-women-sex-attacks/',
+            'http://www.dailymail.co.uk/wires/reuters/article-5221423/Berlin-New-Years-Eve-party-sets-safe-zone-women.html',
+            'https://www.rt.com/news/414587-berlin-women-safety-zone/',
+            'https://www.washingtonpost.com/world/europe/german-police-union-chief-slams-nye-safe-zone-for-women/2017/12/30/b801eb92-ed64-11e7-956e-baea358f9725_story.html?utm_term=.5d3beb67aafd'
+            ])
+
 ## business, [])
 add_article(Category.business, Topic.unspecific, Event.police_arrest_alleged_nigerian_prince_email_scammer_in_louisiana,
-            [])
+            [
+                'https://www.usatoday.com/story/news/nation-now/2017/12/30/nigerian-prince-email-scammer-louisiana/992073001/',
+                'http://www.dailymail.co.uk/news/article-5223953/Louisiana-man-67-middle-man-Nigerian-prince-scam.html',
+                'https://www.rt.com/usa/414640-nigerian-prince-arrested-louisiana/',
+                'https://www.washingtonpost.com/858b258e-edd2-11e7-956e-baea358f9725_story.html?utm_term=.de12c2f6a40e'
+            ])
 add_article(Category.business, Topic.unspecific,
             Event.digital_currency_ripple_soars_nearly_56_percent_becomes_second_largest_cryptocurrency_by_market_cap,
-            [])
-add_article(Category.business, Topic.unspecific, Event.goldman_sachs_feels_tax_bills_burn_with_5b_charge, [])
+            [
+                'https://www.cnbc.com/2017/12/29/ripple-soars-becomes-second-biggest-cryptocurrency-by-market-cap.html'
+            ])
+add_article(Category.business, Topic.unspecific, Event.goldman_sachs_feels_tax_bills_burn_with_5b_charge, [
+        'https://www.usnews.com/news/economy/articles/2017-12-29/goldman-sachs-feels-tax-bills-burn-with-5b-charge',
+        'https://www.nytimes.com/2017/12/29/business/goldman-sachs-taxes.html',
+        'https://www.bloomberg.com/news/articles/2017-12-29/goldman-sachs-takes-one-time-5-billion-hit-from-u-s-tax-bill',
+        'http://money.cnn.com/2017/12/29/news/goldman-sachs-tax/index.html',
+        'https://www.nytimes.com/2017/12/29/business/goldman-sachs-taxes.html',
+        'http://www.dailymail.co.uk/news/article-5220701/Goldman-Sachs-expects-5-billion-hit-tax-overhaul-4Q.html',
+        'https://www.washingtonpost.com/business/goldman-sachs-expects-5-billion-hit-from-tax-overhaul-in-4q/2017/12/29/f2afddb4-ec90-11e7-956e-baea358f9725_story.html?utm_term=.c0b45784b735',
+        'https://www.washingtonpost.com/business/goldman-sachs-citing-recent-tax-overhaul-in-us-expects-to-take-a-5-billion-hit-to-profits-this-quarter/2017/12/29/562ce198-ec8c-11e7-956e-baea358f9725_story.html?utm_term=.893884d04aa4'
+])
 ## technology, [])
-add_article(Category.technology, Topic.unspecific, Event.chicagos_apple_store_has_a_falling_ice_problem, [])
+add_article(Category.technology, Topic.unspecific, Event.chicagos_apple_store_has_a_falling_ice_problem, [
+        'http://fortune.com/2017/12/29/apple-store-chicago-snow-ice/',
+        'http://www.dailymail.co.uk/sciencetech/article-5233443/Apple-blames-roof-warming-software-icy-Chicago-store.html'
+])
 ## entertainment, [])
 add_article(Category.entertainment, Topic.unspecific,
             Event.tamar_braxton_slams_ex_vincent_herbert_for_having_a_baby_with_other_woman, [])

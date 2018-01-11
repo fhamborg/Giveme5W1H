@@ -271,7 +271,14 @@ class MethodExtractor(AbsExtractor):
         #    candidate.set_score(score / score_max)
 
         candidates.sort(key=lambda x: x.get_score(), reverse=True)
-        document.set_answer('how', self._fix_format(candidates))
+
+        # Format fix of parts
+        candidates_fixed = self._fix_format(candidates)
+
+        # Filter by text
+        candidates_clean = self._filter_candidate_dublicates(candidates_fixed)
+
+        document.set_answer('how', candidates_clean)
 
     def _fix_format(self, candidates):
         '''

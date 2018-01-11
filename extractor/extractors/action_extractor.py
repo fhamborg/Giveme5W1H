@@ -86,90 +86,96 @@ class ActionExtractor(AbsExtractor):
         return candidates
 
     def _evaluate_candidates(self, document):
-        """
-        Calculate a confidence score based on number of mentions, position in text and entailment of named entities
-        for extracted candidates.
+            """
+            Calculate a confidence score based on number of mentions, position in text and entailment of named entities
+            for extracted candidates.
 
-        :param document: The parsed document
-        :type document: Document
-        :param candidates: Extracted candidates to evaluate.
-        :type candidates:[([(String,String)], ([(String,String)])]
-        :return: A list of evaluated and ranked candidates
-        """
-        ranked_candidates = []
-        doc_len = document.get_len()
-        doc_ner = document.get_ner()
-        doc_coref = document.get_corefs()
+            :param document: The parsed document
+            :type document: Document
+            :param candidates: Extracted candidates to evaluate.
+            :type candidates:[([(String,String)], ([(String,String)])]
+            :return: A list of evaluated and ranked candidates
+            """
+            ranked_candidates = []
+            doc_len = document.get_len()
+            doc_ner = document.get_ner()
+            doc_coref = document.get_corefs()
 
-        if any(doc_coref.values()):
-            # get length of longest coref chain for normalization
-            max_len = len(max(doc_coref.values(), key=len))
-        else:
-            max_len = 1
-
-        for candidate in document.get_candidates(self.get_id()):
-            candidateParts = candidate.get_raw()
-            verb = candidateParts[1][0][0]['nlpToken']['originalText'].lower()
-
-            # VP beginning with say/said often contain no relevant action and are therefor skipped.
-            if verb.startswith('say') or verb.startswith('said'):
-                continue
-
-            coref_chain = doc_coref[candidateParts[2]]
-
-            # first parameter used for ranking is the number of mentions, we use the length of the coref chain
-            score = (len(coref_chain) / max_len) * self.weights[1]
-
-            representative = None
-            contains_ne = False
-            mention_type = ''
-
-            for mention in coref_chain:
-                if mention['id'] == candidateParts[3]:
-                    mention_type = mention['type']
-                    if mention['sentNum'] < doc_len:
-                        # The position (sentence number) is another important parameter for scoring.
-                        # This is inspired by the inverted pyramid.
-                        score += ((doc_len - mention['sentNum'] + 1) / doc_len) * self.weights[0]
-                if mention['isRepresentativeMention']:
-                    # The representative name for this chain has been found.
-                    tmp = document._sentences[mention['sentNum'] - 1]['tokens'][mention['headIndex'] - 1]
-                    representative = ((tmp['originalText'], tmp), tmp['pos'])
-
-                    if representative[-1][1] == 'POS':
-                        representative = representative[:-1]
-
-                if not contains_ne:
-                    # If the current mention doesn't contain a named entity, check the other members of the chain
-                    for token in doc_ner[mention['sentNum'] - 1][mention['headIndex'] - 1:mention['endIndex'] - 1]:
-                        if token[1] in ['PERSON', 'ORGANIZATION', 'LOCATION']:
-                            contains_ne = True
-                            break
-
-            if contains_ne:
-                # the last important parameter is the entailment of a named entity
-                score += self.weights[2]
-
-            if score > 0:
-                # normalize the scoring
-                score /= sum(self.weights)
-
-            if mention_type == 'PRONOMINAL':
-                # use representing mention if the agent is only a pronoun
-                rp_format_fix = [(({'nlpToken': representative[0][1]}, representative[0][1]['pos']))]
-                ranked_candidates.append((rp_format_fix, candidateParts[1], score, candidate.get_sentence_index()))
+            if any(doc_coref.values()):
+                # get length of longest coref chain for normalization
+                max_len = len(max(doc_coref.values(), key=len))
             else:
-                ranked_candidates.append((candidateParts[0], candidateParts[1], score, candidate.get_sentence_index()))
+                max_len = 1
 
-        # split results
-        who = [(c[0], c[2], c[3]) for c in ranked_candidates]
-        what = [(c[1], c[2], c[3]) for c in ranked_candidates]
+            for candidate in document.get_candidates(self.get_id()):
+                candidateParts = candidate.get_raw()
+                verb = candidateParts[1][0][0]['nlpToken']['originalText'].lower()
 
-        # Filter duplicates and transform who to object oriented list
-        o_who = self._filterAndConvertToObjectOrientedList(who)
-        o_what = self._filterAndConvertToObjectOrientedList(what)
-        document.set_answer('who', o_who)
-        document.set_answer('what', o_what)
+                # VP beginning with say/said often contain no relevant action and are therefor skipped.
+                if verb.startswith('say') or verb.startswith('said'):
+                    continue
+
+                coref_chain = doc_coref[candidateParts[2]]
+
+                # first parameter used for ranking is the number of mentions, we use the length of the coref chain
+                score = (len(coref_chain) / max_len) * self.weights[1]
+
+                representative = None
+                contains_ne = False
+                mention_type = ''
+
+                for mention in coref_chain:
+                    if mention['id'] == candidateParts[3]:
+                        mention_type = mention['type']
+                        if mention['sentNum'] < doc_len:
+                            # The position (sentence number) is another important parameter for scoring.
+                            # This is inspired by the inverted pyramid.
+                            score += ((doc_len - mention['sentNum'] + 1) / doc_len) * self.weights[0]
+                    if mention['isRepresentativeMention']:
+                        # The representative name for this chain has been found.
+                        tmp = document._sentences[mention['sentNum'] - 1]['tokens'][mention['headIndex'] - 1]
+                        representative = ((tmp['originalText'], tmp), tmp['pos'])
+
+                        if representative[-1][1] == 'POS':
+                            representative = representative[:-1]
+
+                    if not contains_ne:
+                        # If the current mention doesn't contain a named entity, check the other members of the chain
+                        for token in doc_ner[mention['sentNum'] - 1][mention['headIndex'] - 1:mention['endIndex'] - 1]:
+                            if token[1] in ['PERSON', 'ORGANIZATION', 'LOCATION']:
+                                contains_ne = True
+                                break
+
+                if contains_ne:
+                    # the last important parameter is the entailment of a named entity
+                    score += self.weights[2]
+
+                if score > 0:
+                    # normalize the scoring
+                    score /= sum(self.weights)
+
+                if mention_type == 'PRONOMINAL':
+                    # use representing mention if the agent is only a pronoun
+                    rp_format_fix = [(({'nlpToken': representative[0][1]}, representative[0][1]['pos']))]
+                    ranked_candidates.append((rp_format_fix, candidateParts[1], score, candidate.get_sentence_index()))
+                else:
+                    ranked_candidates.append((candidateParts[0], candidateParts[1], score, candidate.get_sentence_index()))
+
+            # split results
+            who = [(c[0], c[2], c[3]) for c in ranked_candidates]
+            what = [(c[1], c[2], c[3]) for c in ranked_candidates]
+
+            # Transform who to object oriented list
+            o_who = self._filterAndConvertToObjectOrientedList(who)
+            # Filter by text
+            o_who_clean = self._filter_candidate_dublicates(o_who)
+            document.set_answer('who', o_who_clean)
+
+            # Transform who to object oriented list
+            o_what = self._filterAndConvertToObjectOrientedList(what)
+            # Filter by text
+            o_what_clean = self._filter_candidate_dublicates(o_what)
+            document.set_answer('what', o_what_clean)
 
     def _filterAndConvertToObjectOrientedList(self, list):
         max = 0

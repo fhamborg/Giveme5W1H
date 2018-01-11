@@ -103,6 +103,29 @@ class AbsExtractor:
 
         return entity_list
 
+
+    def _filter_candidate_dublicates(self, candidates):
+        """
+        Candidate filter that drops duplicates based on string match.
+        The first candidate int the list is taken
+        :param candidates:
+        :return:
+        """
+        unique_map = {}
+        unique_candidates = []
+        for candidate in candidates:
+            text = candidate.get_parts_as_text()
+            text_id = ''.join(e for e in text if e.isalnum())
+            if unique_map.get(text_id):
+                # skip this one
+                continue
+            else:
+                unique_candidates.append(candidate)
+                unique_map[text_id] = True
+
+        return  unique_candidates
+
+
     def _filter_duplicates(self, candidates, exact=True):
         """
         Simple candidate filter that drops duplicates

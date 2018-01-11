@@ -290,7 +290,9 @@ class CauseExtractor(AbsExtractor):
             candidate.set_parts(candidate.get_raw())
 
         candidates.sort(key=lambda x: x.get_score(), reverse=True)
-        document.set_answer('why', candidates)
+
+        candidates_clean = self._filter_candidate_dublicates(candidates)
+        document.set_answer('why', candidates_clean)
 
     def get_hyponyms(self, synsets):
         """

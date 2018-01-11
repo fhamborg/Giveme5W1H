@@ -74,11 +74,13 @@ class EnvironmentExtractor(AbsExtractor):
 
         if self._skip_where is False:
             locations = self._evaluate_locations(document)
-            document.set_answer('where', locations)
+            locations_clean = self._filter_candidate_dublicates(locations)
+            document.set_answer('where', locations_clean)
 
         if self._skip_when is False:
             dates = self._evaluate_timex_dates(document)
-            document.set_answer('when', dates)
+            locations_dates = self._filter_candidate_dublicates(dates)
+            document.set_answer('when', locations_dates)
 
     def _extract_timex_candidates(self, tokens):
         timex_dates = {}

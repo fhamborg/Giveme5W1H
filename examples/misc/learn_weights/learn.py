@@ -6,9 +6,10 @@ from itertools import product
 from threading import Thread
 
 import dateutil.parser
+
 from dateutil.relativedelta import relativedelta as rd
 from geopy.distance import great_circle
-from nltk import word_tokenize
+from nltk import word_tokenize, metrics
 from nltk.corpus import wordnet
 
 from extractor.extractor import FiveWExtractor
@@ -17,8 +18,8 @@ from extractor.tools.file.handler import Handler
 from misc.learn_weights.metrics.normalized_google_distance import NormalizedGoogleDistance
 from misc.learn_weights.metrics.wmd import Wmd
 from tools.cache_manager import CacheManager
-
-
+import nltk
+from nltk.metrics.distance        import edit_distance
 
 class Worker(Thread):
     def __init__(self, queue):
@@ -94,6 +95,12 @@ class Learn(object):
         """
         """
         result = self._wmd.get_distance(annotation, candidate)
+        return result
+
+    def cmp_text_edit_distance(self, annotation, candidate, entire_annotation):
+        """
+        """
+        result = edit_distance(annotation, candidate)
         return result
 
     def cmp_text_word_net(self, annotation, candidate, entire_annotation):
@@ -368,7 +375,7 @@ class Learn(object):
                         question = 'how'
                         if 'how' in answers and len(answers[question]) > 0:
                             top_answer = answers[question][0].get_parts_as_text()
-                        self._cmp_helper_min(self.cmp_text_wmd, question, top_answer, annotation, used_weights, result)
+                        self._cmp_helper_min(self.cmp_text_edit_distance, question, top_answer, annotation, used_weights, result)
                     else:
                         extractor = self._extractors.get('cause')
                         if extractor:
@@ -376,7 +383,7 @@ class Learn(object):
                             if question in answers and len(answers[question]) > 0:
                                 used_weights = extractor.weights
                                 top_answer = answers[question][0].get_parts_as_text()
-                                self._cmp_helper_min(self.cmp_text_wmd, question, top_answer, annotation, used_weights,
+                                self._cmp_helper_min(self.cmp_text_edit_distance, question, top_answer, annotation, used_weights,
                                                      result)
 
                         extractor = self._extractors.get('action')
@@ -385,13 +392,13 @@ class Learn(object):
                             question = 'what'
                             if question in answers and len(answers[question]) > 0:
                                 top_answer = answers[question][0].get_parts_as_text()
-                                self._cmp_helper_min(self.cmp_text_wmd, 'what', top_answer, annotation, used_weights,
+                                self._cmp_helper_min(self.cmp_text_edit_distance, 'what', top_answer, annotation, used_weights,
                                                      result)
 
                             question = 'who'
                             if question in answers and len(answers[question]) > 0:
                                 top_answer = answers[question][0].get_parts_as_text()
-                                self._cmp_helper_min(self.cmp_text_wmd, question, top_answer, annotation, used_weights,
+                                self._cmp_helper_min(self.cmp_text_edit_distance, question, top_answer, annotation, used_weights,
                                                      result)
 
                         extractor = self._extractors.get('method')
@@ -400,7 +407,7 @@ class Learn(object):
                             question = 'how'
                             if question in answers and len(answers[question]) > 0:
                                 top_answer = answers[question][0].get_parts_as_text()
-                                self._cmp_helper_min(self.cmp_text_wmd, question, top_answer, annotation, used_weights,
+                                self._cmp_helper_min(self.cmp_text_edit_distance, question, top_answer, annotation, used_weights,
                                                      result)
 
                         extractor = self._extractors.get('environment_when')

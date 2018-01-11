@@ -27,7 +27,7 @@ class EnvironmentExtractor(AbsExtractor):
     time_norm_max = math.log(one_month_in_s * 12)  # a year
     time_norm_delta = time_norm_max - time_norm_min
 
-    # used for normalisation of area (in meters)
+    # used for normalisation of area (in square meters)
     area_norm_min = math.log(225)  # roughly one small building
     area_norm_max = math.log(
         99720000000)  # median country according to https://de.wikipedia.org/wiki/Liste_der_Staaten_der_Erde#Liste

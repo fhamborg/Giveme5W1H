@@ -8,7 +8,7 @@ Extracts information required (or convenient) for the evaluation.
 """
 
 
-path_extracted_dataset = '/Users/felix/IdeaProjects/Giveme5W/examples/datasets/bbc/output'
+path_extracted_dataset = '/Users/felix/IdeaProjects/Giveme5W/examples/datasets/bbc_fix/output'
 empty_line = ['', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '']
 
 onlyfiles = [f for f in listdir(path_extracted_dataset) if isfile(join(path_extracted_dataset, f))]
@@ -26,7 +26,7 @@ def get_answer(article, question):
         return ""
 
 
-csv_writer = csv.writer(open('evaluate.csv', 'w'), delimiter='\t', quotechar='"', quoting=csv.QUOTE_MINIMAL)
+csv_writer = csv.writer(open('evaluate_bbcfix.csv', 'w'), delimiter='\t', quotechar='"', quoting=csv.QUOTE_MINIMAL)
 csv_writer.writerow(['category', 'who', 'who2', 'what', 'what2', 'when', 'when2', 'where', 'where2', 'why', 'why2', 'how', 'how2', 'open'])
 
 for json_file in onlyfiles:

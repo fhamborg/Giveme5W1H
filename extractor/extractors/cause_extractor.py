@@ -39,7 +39,7 @@ class CauseExtractor(AbsExtractor):
     constraints_hyponyms = {'entity': None, 'phenomenon': None, 'abstraction': None, 'group': None, 'possession': None,
                             'event': None, 'act': None, 'state': None}
 
-    def __init__(self, weights: (float, float, float, float) = (.43, .34, .21, .02)):
+    def __init__(self, weights: (float, float, float, float) = (.56, .44, .27, .026)):
         """
         Load WordNet corpus.
 

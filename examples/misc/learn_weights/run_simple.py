@@ -79,11 +79,11 @@ if __name__ == '__main__':
 
     # its recommended to run one by one to keep memory print low
     # questions = ['who','why', 'where', 'when', 'how']
-    # learn_questions = ['what']  # output is also  who
-    # learn_questions = ['why']
+    learn_questions = ['what']  # output is also  who
+    learn_questions = ['why']
     # learn_questions = ['where']
     # learn_questions = ['when']
-    learn_questions = ['how']
+    # learn_questions = ['how']
     # learn_questions = ['how','what','why']
 
 

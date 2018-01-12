@@ -10,15 +10,13 @@ def weights_to_string(weights):
     scaled_weights_string = [str(x) for x in weights]
     return '_'.join(scaled_weights_string)
 
-def load_csv(path, score_label = 'score'):
+def load_csv(path, weight_count, score_label = 'score'):
     """
     score row must be labeled with score.
 
     :param path:
     :return:
     """
-
-
 
     csv_content = []
     header = True
@@ -32,6 +30,10 @@ def load_csv(path, score_label = 'score'):
                 header = False
                 score_index = row.index(score_label)
             else:
+
+                for weight_index in range(0, weight_count):
+                    row[weight_index] =  round( float(row[weight_index]), 1) # float fix
+
                 csv_content.append(row)
     csv_content.sort(key=lambda x: x[score_index])
 
@@ -46,8 +48,8 @@ def load_weights_and_merge(directory: str, type,  question: str, weight_count: i
     path_output = 'result/merges/' + question + '_' + type
 
 
-    master_csv, master_score_index = load_csv(path_master)
-    slave_csv, slave_score_index = load_csv(path_slave)
+    master_csv, master_score_index = load_csv(path_master,weight_count)
+    slave_csv, slave_score_index = load_csv(path_slave, weight_count)
 
     master_merge_csv = {}
 

@@ -397,19 +397,48 @@ add_article(Category.technology, Topic.unspecific, Event.chicagos_apple_store_ha
 ## entertainment, [])
 add_article(Category.entertainment, Topic.unspecific,
             Event.tamar_braxton_slams_ex_vincent_herbert_for_having_a_baby_with_other_woman, [])
+
 add_article(Category.entertainment, Topic.unspecific,
-            Event.asking_if_kendall_jenner_is_pregnant_is_the_wrong_response_to_her_latest_selfie, [])
+            Event.asking_if_kendall_jenner_is_pregnant_is_the_wrong_response_to_her_latest_selfie, [
+        'https://www.bustle.com/p/asking-if-kendall-jenner-is-pregnant-is-the-wrong-response-to-her-latest-selfie-7739187',
+        'https://www.msn.com/en-us/tv/celebrity/check-out-the-pic-that-has-fans-asking-if-kendall-jenner-is-pregnant/ar-BBHwtr2',
+        'http://www.mirror.co.uk/3am/celebrity-news/kendall-jenner-pregnant-too-fans-11769536',
+        'https://www.elitedaily.com/p/tweets-about-kendall-jenners-instagram-pregnancy-picture-are-completely-uncalled-for-7739109'
+            ])
 add_article(Category.entertainment, Topic.unspecific,
             Event.black_mirror_uss_callister_how_the_shatner_impression_surprise_cameo_and_flawless_production_happened,
-            [])
+            [
+                'http://www.indiewire.com/2017/12/black-mirror-uss-callister-behind-the-scenes-aaron-paul-shatner-spoilers-1201912123/',
+                'http://news.stamfordglobal.com/daily/black-mirror-uss-callister-how-the-shatner-impression-surprise-cameo-and-flawless-production-happened-indiewire'
+            ])
 ## sport, [])
+
+# not very sure what this event is....
 add_article(Category.sports, Topic.unspecific,
             Event.uscs_cotton_bowl_loss_was_a_wake_up_call_and_not_just_for_sam_darnold, [])
-add_article(Category.sports, Topic.unspecific, Event.packers_sign_center_linsley_to_contract_extension, [])
+
+
+add_article(Category.sports, Topic.unspecific, Event.packers_sign_center_linsley_to_contract_extension, [
+    'https://www.foxsports.com/wisconsin/story/green-bay-packers-corey-linsley-contract-extension-123017',
+])
+
 ## science, [])
 add_article(Category.science, Topic.unspecific,
-            Event.the_broken_berg_stunning_nasa_image_captures_newly_created_iceberg_cracking_into_20_pieces, [])
-add_article(Category.science, Topic.unspecific, Event.russian_space_experts_regain_control_of_1st_angola_satellite, [])
+            Event.the_broken_berg_stunning_nasa_image_captures_newly_created_iceberg_cracking_into_20_pieces, [
+            'http://www.ibtimes.co.uk/shattered-antarctic-iceberg-four-times-size-manhattan-captured-stunning-new-image-1653217',
+            'http://www.dailymail.co.uk/sciencetech/article-5221735/NASA-captures-newly-created-iceberg-cracking-pieces.html'
+            ])
+
+# there are actually two event bus happened on the same days about the same thing
+add_article(Category.science, Topic.unspecific, Event.russian_space_experts_regain_control_of_1st_angola_satellite, [
+    'http://abcnews.go.com/Technology/wireStory/russian-space-experts-regain-control-1st-angola-satellite-52044233',
+    'http://www.foxnews.com/world/2017/12/29/russian-space-experts-regain-control-1st-angola-satellite.html',
+    'https://timesofindia.indiatimes.com/home/science/russian-space-experts-regain-control-of-1st-angola-satellite/articleshow/62298457.cms',
+    'https://www.rt.com/newsline/414349-angolan-satellite-contact-lost/',
+    'https://www.rt.com/newsline/414511-russia-contact-angola-satellite/',
+    'https://www.rt.com/on-air/414286-angola-satellite-launch-baikonur/',
+    'https://timesofindia.indiatimes.com/home/science/russian-space-experts-regain-control-of-1st-angola-satellite/articleshow/62298457.cms'
+])
 add_article(Category.science, Topic.unspecific,
             Event.january_will_bring_two_supermoons_a_blue_moon_and_a_total_lunar_eclipse, [])
 

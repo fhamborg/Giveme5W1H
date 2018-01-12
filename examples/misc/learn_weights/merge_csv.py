@@ -95,14 +95,14 @@ if __name__ == '__main__':
             load_weights_and_merge( question=question,
                                     type=ty,
                                     directory='result/wmd/default/',
-                                    weight_count=4
+                                    weight_count=weight_count
                                     )
         weight_count = 3
         for question in ['what', 'who']:
             load_weights_and_merge(question=question,
                                    type=ty,
                                    directory='result/wmd/default/',
-                                   weight_count=4
+                                   weight_count=weight_count
                                )
 
         weight_count = 5
@@ -110,5 +110,5 @@ if __name__ == '__main__':
             load_weights_and_merge(question=question,
                                    type=ty,
                                    directory='result/wmd/wmd_when_fix_entailment/',
-                                   weight_count=4
+                                   weight_count=weight_count
                                    )

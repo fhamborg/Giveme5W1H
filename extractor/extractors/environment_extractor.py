@@ -29,8 +29,7 @@ class EnvironmentExtractor(AbsExtractor):
 
     # used for normalisation of area (in square meters)
     area_norm_min = math.log(225)  # roughly one small building
-    area_norm_max = math.log(
-        99720000000)  # median country according to https://de.wikipedia.org/wiki/Liste_der_Staaten_der_Erde#Liste
+    area_norm_max = math.log(530000000000) # mean size of all countries (CIA factbook)
     area_norm_delta = area_norm_max - area_norm_min
 
     def __init__(self, weights=((0.37, 0.3, 0.3, 0.03), (0.24, 0.16, 0, 0.4, 0.2)), phrase_range_location: int = 3,

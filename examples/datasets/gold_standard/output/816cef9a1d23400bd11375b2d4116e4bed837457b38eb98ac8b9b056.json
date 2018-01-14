@@ -12,69 +12,7 @@
           "coderPhraseCount": 2
         }
       ],
-      "label": "who",
-      "extracted": [
-        {
-          "parts": [
-            [
-              {
-                "nlpToken": {
-                  "characterOffsetBegin": 125,
-                  "word": "a",
-                  "lemma": "a",
-                  "characterOffsetEnd": 126,
-                  "speaker": "PER0",
-                  "ner": "O",
-                  "after": " ",
-                  "originalText": "a",
-                  "before": " ",
-                  "index": 20,
-                  "pos": "DT"
-                }
-              },
-              "DT"
-            ],
-            [
-              {
-                "nlpToken": {
-                  "characterOffsetBegin": 127,
-                  "word": "safety",
-                  "lemma": "safety",
-                  "characterOffsetEnd": 133,
-                  "speaker": "PER0",
-                  "ner": "O",
-                  "after": " ",
-                  "originalText": "safety",
-                  "before": " ",
-                  "index": 21,
-                  "pos": "NN"
-                }
-              },
-              "NN"
-            ],
-            [
-              {
-                "nlpToken": {
-                  "characterOffsetBegin": 134,
-                  "word": "car",
-                  "lemma": "car",
-                  "characterOffsetEnd": 137,
-                  "speaker": "PER0",
-                  "ner": "O",
-                  "after": " ",
-                  "originalText": "car",
-                  "before": " ",
-                  "index": 22,
-                  "pos": "NN"
-                }
-              },
-              "NN"
-            ]
-          ],
-          "score": 1.0,
-          "text": "a safety car"
-        }
-      ]
+      "label": "who"
     },
     "when": {
       "annotated": [
@@ -84,70 +22,7 @@
           "parsed": "2016-11-13"
         }
       ],
-      "label": "when",
-      "extracted": [
-        {
-          "parts": [
-            [
-              {
-                "nlpToken": {
-                  "characterOffsetBegin": 1195,
-                  "word": "seconds",
-                  "lemma": "seconds",
-                  "timex": {
-                    "value": "2016-11-13T00:00",
-                    "tid": "t3",
-                    "type": "TIME"
-                  },
-                  "before": " ",
-                  "characterOffsetEnd": 1202,
-                  "originalText": "seconds",
-                  "normalizedNER": "2016-11-13T00:00",
-                  "speaker": "PER0",
-                  "after": " ",
-                  "ner": "TIME",
-                  "index": 6,
-                  "pos": "NNS"
-                }
-              },
-              "NNS"
-            ],
-            [
-              {
-                "nlpToken": {
-                  "characterOffsetBegin": 1203,
-                  "word": "later",
-                  "lemma": "later",
-                  "timex": {
-                    "value": "2016-11-13T00:00",
-                    "tid": "t3",
-                    "type": "TIME"
-                  },
-                  "before": " ",
-                  "characterOffsetEnd": 1208,
-                  "originalText": "later",
-                  "normalizedNER": "2016-11-13T00:00",
-                  "speaker": "PER0",
-                  "after": "",
-                  "ner": "TIME",
-                  "index": 7,
-                  "pos": "RB"
-                }
-              },
-              "RB"
-            ]
-          ],
-          "score": 0.7975887897336864,
-          "text": "seconds later",
-          "enhancement": {
-            "timex": {
-              "start_date": "2016-11-13T00:00:00",
-              "end_date": "2016-11-13T00:00:59"
-            }
-          },
-          "nlpIndexSentence": 8
-        }
-      ]
+      "label": "when"
     },
     "why": {
       "annotated": [
@@ -156,52 +31,7 @@
           "coderPhraseCount": 3
         }
       ],
-      "label": "why",
-      "extracted": [
-        {
-          "parts": [
-            [
-              {
-                "nlpToken": {
-                  "characterOffsetBegin": 194,
-                  "word": "The",
-                  "lemma": "the",
-                  "characterOffsetEnd": 197,
-                  "speaker": "PER0",
-                  "ner": "O",
-                  "after": " ",
-                  "originalText": "The",
-                  "before": " ",
-                  "index": 1,
-                  "pos": "DT"
-                }
-              },
-              "DT"
-            ],
-            [
-              {
-                "nlpToken": {
-                  "characterOffsetBegin": 198,
-                  "word": "start",
-                  "lemma": "start",
-                  "characterOffsetEnd": 203,
-                  "speaker": "PER0",
-                  "ner": "O",
-                  "after": " ",
-                  "originalText": "start",
-                  "before": " ",
-                  "index": 2,
-                  "pos": "NN"
-                }
-              },
-              "NN"
-            ]
-          ],
-          "score": 0.5533910533910533,
-          "text": "The start",
-          "nlpIndexSentence": 1
-        }
-      ]
+      "label": "why"
     },
     "how": {
       "annotated": [
@@ -221,16 +51,16 @@
             [
               {
                 "nlpToken": {
-                  "characterOffsetBegin": 423,
-                  "word": "the",
+                  "characterOffsetBegin": 0,
+                  "word": "The",
                   "lemma": "the",
-                  "characterOffsetEnd": 426,
+                  "characterOffsetEnd": 3,
                   "speaker": "PER0",
                   "ner": "O",
                   "after": " ",
-                  "originalText": "the",
-                  "before": " ",
-                  "index": 7,
+                  "originalText": "The",
+                  "before": "",
+                  "index": 1,
                   "pos": "DT"
                 }
               },
@@ -239,35 +69,89 @@
             [
               {
                 "nlpToken": {
-                  "characterOffsetBegin": 427,
-                  "word": "opening",
-                  "lemma": "open",
-                  "characterOffsetEnd": 434,
+                  "characterOffsetBegin": 4,
+                  "word": "potentially",
+                  "lemma": "potentially",
+                  "characterOffsetEnd": 15,
                   "speaker": "PER0",
                   "ner": "O",
                   "after": " ",
-                  "originalText": "opening",
+                  "originalText": "potentially",
                   "before": " ",
-                  "index": 8,
-                  "pos": "VBG"
+                  "index": 2,
+                  "pos": "RB"
                 }
               },
-              "VBG"
+              "RB"
             ],
             [
               {
                 "nlpToken": {
-                  "characterOffsetBegin": 435,
-                  "word": "seven",
-                  "lemma": "seven",
+                  "characterOffsetBegin": 16,
+                  "word": "title-deciding",
+                  "lemma": "title-deciding",
+                  "characterOffsetEnd": 30,
+                  "speaker": "PER0",
+                  "ner": "O",
+                  "after": " ",
+                  "originalText": "title-deciding",
                   "before": " ",
-                  "characterOffsetEnd": 440,
-                  "originalText": "seven",
-                  "normalizedNER": "7.0",
+                  "index": 3,
+                  "pos": "JJ"
+                }
+              },
+              "JJ"
+            ],
+            [
+              {
+                "nlpToken": {
+                  "characterOffsetBegin": 31,
+                  "word": "Brazilian",
+                  "lemma": "brazilian",
+                  "characterOffsetEnd": 40,
+                  "speaker": "PER0",
+                  "ner": "MISC",
+                  "after": " ",
+                  "originalText": "Brazilian",
+                  "before": " ",
+                  "index": 4,
+                  "pos": "JJ"
+                }
+              },
+              "JJ"
+            ],
+            [
+              {
+                "nlpToken": {
+                  "characterOffsetBegin": 41,
+                  "word": "Formula",
+                  "lemma": "Formula",
+                  "characterOffsetEnd": 48,
+                  "speaker": "PER0",
+                  "ner": "MISC",
+                  "after": " ",
+                  "originalText": "Formula",
+                  "before": " ",
+                  "index": 5,
+                  "pos": "NNP"
+                }
+              },
+              "NNP"
+            ],
+            [
+              {
+                "nlpToken": {
+                  "characterOffsetBegin": 49,
+                  "word": "One",
+                  "lemma": "one",
+                  "before": " ",
+                  "characterOffsetEnd": 52,
+                  "originalText": "One",
+                  "normalizedNER": "1.0",
                   "speaker": "PER0",
                   "after": " ",
                   "ner": "NUMBER",
-                  "index": 9,
+                  "index": 6,
                   "pos": "CD"
                 }
               },
@@ -276,25 +160,78 @@
             [
               {
                 "nlpToken": {
-                  "characterOffsetBegin": 441,
-                  "word": "laps",
-                  "lemma": "lap",
-                  "characterOffsetEnd": 445,
+                  "characterOffsetBegin": 53,
+                  "word": "Grand",
+                  "lemma": "Grand",
+                  "characterOffsetEnd": 58,
+                  "speaker": "PER0",
+                  "ner": "MISC",
+                  "after": " ",
+                  "originalText": "Grand",
+                  "before": " ",
+                  "index": 7,
+                  "pos": "NNP"
+                }
+              },
+              "NNP"
+            ],
+            [
+              {
+                "nlpToken": {
+                  "characterOffsetBegin": 59,
+                  "word": "Prix",
+                  "lemma": "Prix",
+                  "characterOffsetEnd": 63,
+                  "speaker": "PER0",
+                  "ner": "MISC",
+                  "after": " ",
+                  "originalText": "Prix",
+                  "before": " ",
+                  "index": 8,
+                  "pos": "NNP"
+                }
+              },
+              "NNP"
+            ],
+            [
+              {
+                "nlpToken": {
+                  "characterOffsetBegin": 64,
+                  "word": "was",
+                  "lemma": "be",
+                  "characterOffsetEnd": 67,
                   "speaker": "PER0",
                   "ner": "O",
                   "after": " ",
-                  "originalText": "laps",
+                  "originalText": "was",
                   "before": " ",
-                  "index": 10,
-                  "pos": "NNS"
+                  "index": 9,
+                  "pos": "VBD"
                 }
               },
-              "NNS"
+              "VBD"
+            ],
+            [
+              {
+                "nlpToken": {
+                  "characterOffsetBegin": 68,
+                  "word": "halted",
+                  "lemma": "halt",
+                  "characterOffsetEnd": 74,
+                  "speaker": "PER0",
+                  "ner": "O",
+                  "after": " ",
+                  "originalText": "halted",
+                  "before": " ",
+                  "index": 10,
+                  "pos": "VBN"
+                }
+              },
+              "VBN"
             ]
           ],
-          "score": 1.0,
-          "text": "the opening seven laps",
-          "nlpIndexSentence": 7
+          "score": 0.7307625948930299,
+          "text": "The potentially title-deciding Brazilian Formula One Grand Prix was halted"
         }
       ]
     },
@@ -312,55 +249,7 @@
           "coderPhraseCount": 1
         }
       ],
-      "label": "where",
-      "extracted": [
-        {
-          "parts": [
-            [
-              {
-                "nlpToken": {
-                  "characterOffsetBegin": 1306,
-                  "word": "Brazil",
-                  "lemma": "Brazil",
-                  "characterOffsetEnd": 1312,
-                  "speaker": "PER0",
-                  "ner": "LOCATION",
-                  "after": "",
-                  "originalText": "Brazil",
-                  "before": " ",
-                  "index": 18,
-                  "pos": "NNP"
-                }
-              },
-              "NNP"
-            ]
-          ],
-          "score": 0.6699999999999999,
-          "text": "Brazil",
-          "enhancement": {
-            "openstreetmap_nominatim": {
-              "osm_id": "59470",
-              "boundingbox": [
-                -33.8689056,
-                5.2842873,
-                -73.9830625,
-                -28.6341164
-              ],
-              "licence": "Data \u00a9 OpenStreetMap contributors, ODbL 1.0. http://www.openstreetmap.org/copyright",
-              "importance": 0.21948000558855,
-              "icon": "https://nominatim.openstreetmap.org/images/mapicons/poi_boundary_administrative.p.20.png",
-              "osm_type": "relation",
-              "display_name": "Brasil",
-              "lat": "-10.3333333",
-              "type": "administrative",
-              "place_id": "179383758",
-              "lon": "-53.2",
-              "class": "boundary"
-            }
-          },
-          "nlpIndexSentence": 9
-        }
-      ]
+      "label": "where"
     },
     "what": {
       "annotated": [
@@ -369,105 +258,7 @@
           "coderPhraseCount": 3
         }
       ],
-      "label": "what",
-      "extracted": [
-        {
-          "parts": [
-            [
-              {
-                "nlpToken": {
-                  "characterOffsetBegin": 138,
-                  "word": "start",
-                  "lemma": "start",
-                  "characterOffsetEnd": 143,
-                  "speaker": "PER0",
-                  "ner": "O",
-                  "after": " ",
-                  "originalText": "start",
-                  "before": " ",
-                  "index": 23,
-                  "pos": "VB"
-                }
-              },
-              "VB"
-            ],
-            [
-              {
-                "nlpToken": {
-                  "characterOffsetBegin": 144,
-                  "word": "on",
-                  "lemma": "on",
-                  "characterOffsetEnd": 146,
-                  "speaker": "PER0",
-                  "ner": "O",
-                  "after": " ",
-                  "originalText": "on",
-                  "before": " ",
-                  "index": 24,
-                  "pos": "IN"
-                }
-              },
-              "IN"
-            ],
-            [
-              {
-                "nlpToken": {
-                  "characterOffsetBegin": 147,
-                  "word": "a",
-                  "lemma": "a",
-                  "characterOffsetEnd": 148,
-                  "speaker": "PER0",
-                  "ner": "O",
-                  "after": " ",
-                  "originalText": "a",
-                  "before": " ",
-                  "index": 25,
-                  "pos": "DT"
-                }
-              },
-              "DT"
-            ],
-            [
-              {
-                "nlpToken": {
-                  "characterOffsetBegin": 149,
-                  "word": "rain-drenched",
-                  "lemma": "rain-drenched",
-                  "characterOffsetEnd": 162,
-                  "speaker": "PER0",
-                  "ner": "O",
-                  "after": " ",
-                  "originalText": "rain-drenched",
-                  "before": " ",
-                  "index": 26,
-                  "pos": "JJ"
-                }
-              },
-              "JJ"
-            ],
-            [
-              {
-                "nlpToken": {
-                  "characterOffsetBegin": 163,
-                  "word": "track",
-                  "lemma": "track",
-                  "characterOffsetEnd": 168,
-                  "speaker": "PER0",
-                  "ner": "O",
-                  "after": " ",
-                  "originalText": "track",
-                  "before": " ",
-                  "index": 27,
-                  "pos": "NN"
-                }
-              },
-              "NN"
-            ]
-          ],
-          "score": 1.0,
-          "text": "start on a rain-drenched track"
-        }
-      ]
+      "label": "what"
     }
   },
   "description": "The potentially title-deciding Brazilian Formula One Grand Prix was halted after 20 of 71 scheduled laps on Sunday following a safety car start on a rain-drenched track and a series of crashes. The start was delayed by 10 minutes due to the conditions, with Mercedes's triple world champion Lewis Hamilton leading the field away from pole position in a cloud of spray behind the safety car.",

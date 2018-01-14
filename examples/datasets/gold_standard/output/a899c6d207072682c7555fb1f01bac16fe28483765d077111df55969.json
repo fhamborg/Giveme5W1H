@@ -12,51 +12,7 @@
           "coderPhraseCount": 3
         }
       ],
-      "label": "who",
-      "extracted": [
-        {
-          "parts": [
-            [
-              {
-                "nlpToken": {
-                  "characterOffsetBegin": 0,
-                  "word": "Hillary",
-                  "lemma": "Hillary",
-                  "characterOffsetEnd": 7,
-                  "speaker": "PER0",
-                  "ner": "PERSON",
-                  "after": " ",
-                  "originalText": "Hillary",
-                  "before": "",
-                  "index": 1,
-                  "pos": "NNP"
-                }
-              },
-              "NNP"
-            ],
-            [
-              {
-                "nlpToken": {
-                  "characterOffsetBegin": 8,
-                  "word": "Clinton",
-                  "lemma": "Clinton",
-                  "characterOffsetEnd": 15,
-                  "speaker": "PER0",
-                  "ner": "PERSON",
-                  "after": " ",
-                  "originalText": "Clinton",
-                  "before": " ",
-                  "index": 2,
-                  "pos": "NNP"
-                }
-              },
-              "NNP"
-            ]
-          ],
-          "score": 1.0,
-          "text": "Hillary Clinton"
-        }
-      ]
+      "label": "who"
     },
     "when": {
       "annotated": [
@@ -66,46 +22,7 @@
           "parsed": "2016-11-12"
         }
       ],
-      "label": "when",
-      "extracted": [
-        {
-          "parts": [
-            [
-              {
-                "nlpToken": {
-                  "characterOffsetBegin": 242,
-                  "word": "Saturday",
-                  "lemma": "Saturday",
-                  "timex": {
-                    "value": "2016-11-05",
-                    "tid": "t1",
-                    "type": "DATE"
-                  },
-                  "before": " ",
-                  "characterOffsetEnd": 250,
-                  "originalText": "Saturday",
-                  "normalizedNER": "2016-11-05",
-                  "speaker": "PER0",
-                  "after": "",
-                  "ner": "DATE",
-                  "index": 6,
-                  "pos": "NNP"
-                }
-              },
-              "NNP"
-            ]
-          ],
-          "score": 0.8353470239615042,
-          "text": "Saturday",
-          "enhancement": {
-            "timex": {
-              "start_date": "2016-11-05T00:00:00",
-              "end_date": "2016-11-05T23:59:59"
-            }
-          },
-          "nlpIndexSentence": 1
-        }
-      ]
+      "label": "when"
     },
     "why": {
       "annotated": [
@@ -114,51 +31,7 @@
           "coderPhraseCount": 3
         }
       ],
-      "label": "why",
-      "extracted": [
-        {
-          "parts": [
-            [
-              {
-                "nlpToken": {
-                  "characterOffsetBegin": 0,
-                  "word": "Hillary",
-                  "lemma": "Hillary",
-                  "characterOffsetEnd": 7,
-                  "speaker": "PER0",
-                  "ner": "PERSON",
-                  "after": " ",
-                  "originalText": "Hillary",
-                  "before": "",
-                  "index": 1,
-                  "pos": "NNP"
-                }
-              },
-              "NNP"
-            ],
-            [
-              {
-                "nlpToken": {
-                  "characterOffsetBegin": 8,
-                  "word": "Clinton",
-                  "lemma": "Clinton",
-                  "characterOffsetEnd": 15,
-                  "speaker": "PER0",
-                  "ner": "PERSON",
-                  "after": " ",
-                  "originalText": "Clinton",
-                  "before": " ",
-                  "index": 2,
-                  "pos": "NNP"
-                }
-              },
-              "NNP"
-            ]
-          ],
-          "score": 0.5844155844155844,
-          "text": "Hillary Clinton"
-        }
-      ]
+      "label": "why"
     },
     "how": {
       "annotated": [
@@ -174,25 +47,96 @@
             [
               {
                 "nlpToken": {
-                  "characterOffsetBegin": 1377,
-                  "word": "the",
-                  "lemma": "the",
-                  "characterOffsetEnd": 1380,
-                  "speaker": "86",
+                  "characterOffsetBegin": 193,
+                  "word": "a",
+                  "lemma": "a",
+                  "characterOffsetEnd": 194,
+                  "speaker": "PER0",
                   "ner": "O",
                   "after": " ",
-                  "originalText": "the",
+                  "originalText": "a",
                   "before": " ",
-                  "index": 3,
+                  "index": 36,
                   "pos": "DT"
                 }
               },
               "DT"
+            ],
+            [
+              {
+                "nlpToken": {
+                  "characterOffsetBegin": 195,
+                  "word": "private",
+                  "lemma": "private",
+                  "characterOffsetEnd": 202,
+                  "speaker": "PER0",
+                  "ner": "O",
+                  "after": " ",
+                  "originalText": "private",
+                  "before": " ",
+                  "index": 37,
+                  "pos": "JJ"
+                }
+              },
+              "JJ"
+            ],
+            [
+              {
+                "nlpToken": {
+                  "characterOffsetBegin": 203,
+                  "word": "email",
+                  "lemma": "email",
+                  "characterOffsetEnd": 208,
+                  "speaker": "PER0",
+                  "ner": "O",
+                  "after": " ",
+                  "originalText": "email",
+                  "before": " ",
+                  "index": 38,
+                  "pos": "NN"
+                }
+              },
+              "NN"
+            ],
+            [
+              {
+                "nlpToken": {
+                  "characterOffsetBegin": 209,
+                  "word": "server",
+                  "lemma": "server",
+                  "characterOffsetEnd": 215,
+                  "speaker": "PER0",
+                  "ner": "O",
+                  "after": "",
+                  "originalText": "server",
+                  "before": " ",
+                  "index": 39,
+                  "pos": "NN"
+                }
+              },
+              "NN"
+            ],
+            [
+              {
+                "nlpToken": {
+                  "characterOffsetBegin": 215,
+                  "word": ".",
+                  "lemma": ".",
+                  "characterOffsetEnd": 216,
+                  "speaker": "PER0",
+                  "ner": "O",
+                  "after": " ",
+                  "originalText": ".",
+                  "before": "",
+                  "index": 40,
+                  "pos": "."
+                }
+              },
+              "."
             ]
           ],
-          "score": 1.0,
-          "text": "the",
-          "nlpIndexSentence": 3
+          "score": 0.7158385093167703,
+          "text": "a private email server ."
         }
       ]
     },
@@ -202,73 +146,7 @@
           "coderPhraseCount": 3
         }
       ],
-      "label": "where",
-      "extracted": [
-        {
-          "parts": [
-            [
-              {
-                "nlpToken": {
-                  "characterOffsetBegin": 560,
-                  "word": "New",
-                  "lemma": "New",
-                  "characterOffsetEnd": 563,
-                  "speaker": "PER0",
-                  "ner": "LOCATION",
-                  "after": " ",
-                  "originalText": "New",
-                  "before": " ",
-                  "index": 22,
-                  "pos": "NNP"
-                }
-              },
-              "NNP"
-            ],
-            [
-              {
-                "nlpToken": {
-                  "characterOffsetBegin": 564,
-                  "word": "York",
-                  "lemma": "York",
-                  "characterOffsetEnd": 568,
-                  "speaker": "PER0",
-                  "ner": "LOCATION",
-                  "after": " ",
-                  "originalText": "York",
-                  "before": " ",
-                  "index": 23,
-                  "pos": "NNP"
-                }
-              },
-              "NNP"
-            ]
-          ],
-          "score": 0.6756748428946836,
-          "text": "New York",
-          "enhancement": {
-            "openstreetmap_nominatim": {
-              "osm_id": "175905",
-              "boundingbox": [
-                40.477399,
-                40.9161785,
-                -74.25909,
-                -73.7001809
-              ],
-              "licence": "Data \u00a9 OpenStreetMap contributors, ODbL 1.0. http://www.openstreetmap.org/copyright",
-              "importance": 0.39573204749775,
-              "icon": "https://nominatim.openstreetmap.org/images/mapicons/poi_place_city.p.20.png",
-              "osm_type": "relation",
-              "display_name": "NYC, New York, United States of America",
-              "lat": "40.7306458",
-              "type": "city",
-              "place_id": "178508484",
-              "lon": "-73.9866136",
-              "class": "place"
-            }
-          },
-          "nlpIndexSentence": 2
-        }
-      ]
+      "label": "where"
     },
     "what": {
       "annotated": [
@@ -281,105 +159,7 @@
           "coderPhraseCount": 2
         }
       ],
-      "label": "what",
-      "extracted": [
-        {
-          "parts": [
-            [
-              {
-                "nlpToken": {
-                  "characterOffsetBegin": 16,
-                  "word": "has",
-                  "lemma": "have",
-                  "characterOffsetEnd": 19,
-                  "speaker": "PER0",
-                  "ner": "O",
-                  "after": " ",
-                  "originalText": "has",
-                  "before": " ",
-                  "index": 3,
-                  "pos": "VBZ"
-                }
-              },
-              "VBZ"
-            ],
-            [
-              {
-                "nlpToken": {
-                  "characterOffsetBegin": 20,
-                  "word": "opened",
-                  "lemma": "open",
-                  "characterOffsetEnd": 26,
-                  "speaker": "PER0",
-                  "ner": "O",
-                  "after": " ",
-                  "originalText": "opened",
-                  "before": " ",
-                  "index": 4,
-                  "pos": "VBN"
-                }
-              },
-              "VBN"
-            ],
-            [
-              {
-                "nlpToken": {
-                  "characterOffsetBegin": 27,
-                  "word": "the",
-                  "lemma": "the",
-                  "characterOffsetEnd": 30,
-                  "speaker": "PER0",
-                  "ner": "O",
-                  "after": " ",
-                  "originalText": "the",
-                  "before": " ",
-                  "index": 5,
-                  "pos": "DT"
-                }
-              },
-              "DT"
-            ],
-            [
-              {
-                "nlpToken": {
-                  "characterOffsetBegin": 31,
-                  "word": "battle",
-                  "lemma": "battle",
-                  "characterOffsetEnd": 37,
-                  "speaker": "PER0",
-                  "ner": "O",
-                  "after": " ",
-                  "originalText": "battle",
-                  "before": " ",
-                  "index": 6,
-                  "pos": "NN"
-                }
-              },
-              "NN"
-            ],
-            [
-              {
-                "nlpToken": {
-                  "characterOffsetBegin": 38,
-                  "word": "wounds",
-                  "lemma": "wound",
-                  "characterOffsetEnd": 44,
-                  "speaker": "PER0",
-                  "ner": "O",
-                  "after": " ",
-                  "originalText": "wounds",
-                  "before": " ",
-                  "index": 7,
-                  "pos": "NNS"
-                }
-              },
-              "NNS"
-            ]
-          ],
-          "score": 1.0,
-          "text": "has opened the battle wounds"
-        }
-      ]
+      "label": "what"
     }
   },
   "description": "Hillary Clinton has opened the battle wounds incurred by her and her supporters by blaming her defeat by Donald Trump on FBI Director James Comey's decision to reopen the probe into her use of a private email server.",

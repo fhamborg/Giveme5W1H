@@ -12,51 +12,7 @@
           "coderPhraseCount": 3
         }
       ],
-      "label": "who",
-      "extracted": [
-        {
-          "parts": [
-            [
-              {
-                "nlpToken": {
-                  "characterOffsetBegin": 0,
-                  "word": "Hillary",
-                  "lemma": "Hillary",
-                  "characterOffsetEnd": 7,
-                  "speaker": "PER0",
-                  "ner": "PERSON",
-                  "after": " ",
-                  "originalText": "Hillary",
-                  "before": "",
-                  "index": 1,
-                  "pos": "NNP"
-                }
-              },
-              "NNP"
-            ],
-            [
-              {
-                "nlpToken": {
-                  "characterOffsetBegin": 8,
-                  "word": "Clinton",
-                  "lemma": "Clinton",
-                  "characterOffsetEnd": 15,
-                  "speaker": "PER0",
-                  "ner": "PERSON",
-                  "after": " ",
-                  "originalText": "Clinton",
-                  "before": " ",
-                  "index": 2,
-                  "pos": "NNP"
-                }
-              },
-              "NNP"
-            ]
-          ],
-          "score": 1.0,
-          "text": "Hillary Clinton"
-        }
-      ]
+      "label": "who"
     },
     "when": {
       "annotated": [
@@ -66,46 +22,7 @@
           "parsed": "2016-11-12"
         }
       ],
-      "label": "when",
-      "extracted": [
-        {
-          "parts": [
-            [
-              {
-                "nlpToken": {
-                  "characterOffsetBegin": 1207,
-                  "word": "Saturday",
-                  "lemma": "Saturday",
-                  "timex": {
-                    "value": "2016-11-12",
-                    "tid": "t3",
-                    "type": "DATE"
-                  },
-                  "before": " ",
-                  "characterOffsetEnd": 1215,
-                  "originalText": "Saturday",
-                  "normalizedNER": "2016-11-12",
-                  "speaker": "PER0",
-                  "after": " ",
-                  "ner": "DATE",
-                  "index": 6,
-                  "pos": "NNP"
-                }
-              },
-              "NNP"
-            ]
-          ],
-          "score": 0.7611580913345813,
-          "text": "Saturday",
-          "enhancement": {
-            "timex": {
-              "start_date": "2016-11-12T00:00:00",
-              "end_date": "2016-11-12T23:59:59"
-            }
-          },
-          "nlpIndexSentence": 6
-        }
-      ]
+      "label": "when"
     },
     "why": {
       "annotated": [
@@ -121,51 +38,7 @@
           "coderPhraseCount": 1
         }
       ],
-      "label": "why",
-      "extracted": [
-        {
-          "parts": [
-            [
-              {
-                "nlpToken": {
-                  "characterOffsetBegin": 0,
-                  "word": "Hillary",
-                  "lemma": "Hillary",
-                  "characterOffsetEnd": 7,
-                  "speaker": "PER0",
-                  "ner": "PERSON",
-                  "after": " ",
-                  "originalText": "Hillary",
-                  "before": "",
-                  "index": 1,
-                  "pos": "NNP"
-                }
-              },
-              "NNP"
-            ],
-            [
-              {
-                "nlpToken": {
-                  "characterOffsetBegin": 8,
-                  "word": "Clinton",
-                  "lemma": "Clinton",
-                  "characterOffsetEnd": 15,
-                  "speaker": "PER0",
-                  "ner": "PERSON",
-                  "after": " ",
-                  "originalText": "Clinton",
-                  "before": " ",
-                  "index": 2,
-                  "pos": "NNP"
-                }
-              },
-              "NNP"
-            ]
-          ],
-          "score": 0.5844155844155844,
-          "text": "Hillary Clinton"
-        }
-      ]
+      "label": "why"
     },
     "how": {
       "annotated": [
@@ -175,95 +48,6 @@
         }
       ],
       "label": "how",
-      "extracted": [
-        {
-          "parts": [
-            [
-              {
-                "nlpToken": {
-                  "characterOffsetBegin": 2885,
-                  "word": "we",
-                  "lemma": "we",
-                  "characterOffsetEnd": 2887,
-                  "speaker": "173",
-                  "ner": "O",
-                  "after": " ",
-                  "originalText": "we",
-                  "before": " ",
-                  "index": 5,
-                  "pos": "PRP"
-                }
-              },
-              "PRP"
-            ],
-            [
-              {
-                "nlpToken": {
-                  "characterOffsetBegin": 2888,
-                  "word": "lost",
-                  "lemma": "lose",
-                  "characterOffsetEnd": 2892,
-                  "speaker": "173",
-                  "ner": "O",
-                  "after": " ",
-                  "originalText": "lost",
-                  "before": " ",
-                  "index": 6,
-                  "pos": "VBD"
-                }
-              },
-              "VBD"
-            ],
-            [
-              {
-                "nlpToken": {
-                  "characterOffsetBegin": 2893,
-                  "word": "this",
-                  "lemma": "this",
-                  "characterOffsetEnd": 2897,
-                  "speaker": "173",
-                  "ner": "O",
-                  "after": " ",
-                  "originalText": "this",
-                  "before": " ",
-                  "index": 7,
-                  "pos": "DT"
-                }
-              },
-              "DT"
-            ],
-            [
-              {
-                "nlpToken": {
-                  "characterOffsetBegin": 2898,
-                  "word": "election",
-                  "lemma": "election",
-                  "characterOffsetEnd": 2906,
-                  "speaker": "173",
-                  "ner": "O",
-                  "after": " ",
-                  "originalText": "election",
-                  "before": " ",
-                  "index": 8,
-                  "pos": "NN"
-                }
-              },
-              "NN"
-            ]
-          ],
-          "score": 1.0,
-          "text": "we lost this election",
-          "nlpIndexSentence": 5
-        }
-      ]
-    },
-    "where": {
-      "annotated": [
-        {
-          "coderPhraseCount": 3
-        }
-      ],
-      "label": "where",
       "extracted": [
         {
           "parts": [
@@ -284,33 +68,74 @@
                 }
               },
               "NNP"
+            ],
+            [
+              {
+                "nlpToken": {
+                  "characterOffsetBegin": 131,
+                  "word": "presidential",
+                  "lemma": "presidential",
+                  "characterOffsetEnd": 143,
+                  "speaker": "PER0",
+                  "ner": "O",
+                  "after": " ",
+                  "originalText": "presidential",
+                  "before": " ",
+                  "index": 24,
+                  "pos": "JJ"
+                }
+              },
+              "JJ"
+            ],
+            [
+              {
+                "nlpToken": {
+                  "characterOffsetBegin": 144,
+                  "word": "election",
+                  "lemma": "election",
+                  "characterOffsetEnd": 152,
+                  "speaker": "PER0",
+                  "ner": "O",
+                  "after": "",
+                  "originalText": "election",
+                  "before": " ",
+                  "index": 25,
+                  "pos": "NN"
+                }
+              },
+              "NN"
+            ],
+            [
+              {
+                "nlpToken": {
+                  "characterOffsetBegin": 152,
+                  "word": ".",
+                  "lemma": ".",
+                  "characterOffsetEnd": 153,
+                  "speaker": "PER0",
+                  "ner": "O",
+                  "after": " ",
+                  "originalText": ".",
+                  "before": "",
+                  "index": 26,
+                  "pos": "."
+                }
+              },
+              "."
             ]
           ],
-          "score": 0.7,
-          "text": "US",
-          "enhancement": {
-            "openstreetmap_nominatim": {
-              "osm_id": "148838",
-              "boundingbox": [
-                -14.7608358,
-                71.6048217,
-                -180.0,
-                180.0
-              ],
-              "licence": "Data \u00a9 OpenStreetMap contributors, ODbL 1.0. http://www.openstreetmap.org/copyright",
-              "importance": 0.2361730870995,
-              "icon": "https://nominatim.openstreetmap.org/images/mapicons/poi_boundary_administrative.p.20.png",
-              "osm_type": "relation",
-              "display_name": "United States of America",
-              "lat": "39.7837304",
-              "type": "administrative",
-              "place_id": "177579678",
-              "lon": "-100.4458825",
-              "class": "boundary"
-            }
-          }
+          "score": 0.6909541640662923,
+          "text": "US presidential election ."
         }
       ]
+    },
+    "where": {
+      "annotated": [
+        {
+          "coderPhraseCount": 3
+        }
+      ],
+      "label": "where"
     },
     "what": {
       "annotated": [
@@ -319,106 +144,7 @@
           "coderPhraseCount": 3
         }
       ],
-      "label": "what",
-      "extracted": [
-        {
-          "parts": [
-            [
-              {
-                "nlpToken": {
-                  "characterOffsetBegin": 16,
-                  "word": "has",
-                  "lemma": "have",
-                  "characterOffsetEnd": 19,
-                  "speaker": "PER0",
-                  "ner": "O",
-                  "after": " ",
-                  "originalText": "has",
-                  "before": " ",
-                  "index": 3,
-                  "pos": "VBZ"
-                }
-              },
-              "VBZ"
-            ],
-            [
-              {
-                "nlpToken": {
-                  "characterOffsetBegin": 20,
-                  "word": "reportedly",
-                  "lemma": "reportedly",
-                  "characterOffsetEnd": 30,
-                  "speaker": "PER0",
-                  "ner": "O",
-                  "after": " ",
-                  "originalText": "reportedly",
-                  "before": " ",
-                  "index": 4,
-                  "pos": "RB"
-                }
-              },
-              "RB"
-            ],
-            [
-              {
-                "nlpToken": {
-                  "characterOffsetBegin": 31,
-                  "word": "blamed",
-                  "lemma": "blame",
-                  "characterOffsetEnd": 37,
-                  "speaker": "PER0",
-                  "ner": "O",
-                  "after": " ",
-                  "originalText": "blamed",
-                  "before": " ",
-                  "index": 5,
-                  "pos": "VBN"
-                }
-              },
-              "VBN"
-            ],
-            [
-              {
-                "nlpToken": {
-                  "characterOffsetBegin": 38,
-                  "word": "two",
-                  "lemma": "two",
-                  "before": " ",
-                  "characterOffsetEnd": 41,
-                  "originalText": "two",
-                  "normalizedNER": "2.0",
-                  "speaker": "PER0",
-                  "after": " ",
-                  "ner": "NUMBER",
-                  "index": 6,
-                  "pos": "CD"
-                }
-              },
-              "CD"
-            ],
-            [
-              {
-                "nlpToken": {
-                  "characterOffsetBegin": 42,
-                  "word": "letters",
-                  "lemma": "letter",
-                  "characterOffsetEnd": 49,
-                  "speaker": "PER0",
-                  "ner": "O",
-                  "after": " ",
-                  "originalText": "letters",
-                  "before": " ",
-                  "index": 7,
-                  "pos": "NNS"
-                }
-              },
-              "NNS"
-            ]
-          ],
-          "score": 1.0,
-          "text": "has reportedly blamed two letters"
-        }
-      ]
+      "label": "what"
     }
   },
   "description": "Source tells Politico that Clinton made comments during call with megadonors, as Hispanic Chamber of Commerce chief blames lack of Latino outreach",

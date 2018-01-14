@@ -15,69 +15,7 @@
           "text": "stages protest"
         }
       ],
-      "label": "what",
-      "extracted": [
-        {
-          "parts": [
-            [
-              {
-                "nlpToken": {
-                  "before": " ",
-                  "word": "beats",
-                  "index": 11,
-                  "lemma": "beat",
-                  "characterOffsetBegin": 65,
-                  "pos": "VBZ",
-                  "originalText": "beats",
-                  "ner": "O",
-                  "after": " ",
-                  "characterOffsetEnd": 70,
-                  "speaker": "PER0"
-                }
-              },
-              "VBZ"
-            ],
-            [
-              {
-                "nlpToken": {
-                  "before": " ",
-                  "word": "Hillary",
-                  "index": 12,
-                  "lemma": "Hillary",
-                  "characterOffsetBegin": 71,
-                  "pos": "NNP",
-                  "originalText": "Hillary",
-                  "ner": "PERSON",
-                  "after": " ",
-                  "characterOffsetEnd": 78,
-                  "speaker": "PER0"
-                }
-              },
-              "NNP"
-            ],
-            [
-              {
-                "nlpToken": {
-                  "before": " ",
-                  "word": "Clinton",
-                  "index": 13,
-                  "lemma": "Clinton",
-                  "characterOffsetBegin": 79,
-                  "pos": "NNP",
-                  "originalText": "Clinton",
-                  "ner": "PERSON",
-                  "after": "",
-                  "characterOffsetEnd": 86,
-                  "speaker": "PER0"
-                }
-              },
-              "NNP"
-            ]
-          ],
-          "score": 1.0,
-          "text": "beats Hillary Clinton"
-        }
-      ]
+      "label": "what"
     },
     "how": {
       "annotated": [
@@ -93,116 +31,16 @@
             [
               {
                 "nlpToken": {
-                  "before": " ",
-                  "word": "performing",
-                  "index": 3,
-                  "lemma": "perform",
-                  "characterOffsetBegin": 1088,
-                  "pos": "VBG",
-                  "originalText": "performing",
-                  "ner": "O",
-                  "after": " ",
-                  "characterOffsetEnd": 1098,
-                  "speaker": "PER0"
-                }
-              },
-              "VBG"
-            ],
-            [
-              {
-                "nlpToken": {
-                  "before": " ",
-                  "word": "with",
-                  "index": 4,
-                  "lemma": "with",
-                  "characterOffsetBegin": 1099,
-                  "pos": "IN",
-                  "originalText": "with",
-                  "ner": "O",
-                  "after": " ",
-                  "characterOffsetEnd": 1103,
-                  "speaker": "PER0"
-                }
-              },
-              "IN"
-            ],
-            [
-              {
-                "nlpToken": {
-                  "before": " ",
-                  "word": "Jon",
-                  "index": 5,
-                  "lemma": "Jon",
-                  "characterOffsetBegin": 1104,
-                  "pos": "NNP",
-                  "originalText": "Jon",
-                  "ner": "PERSON",
-                  "after": " ",
-                  "characterOffsetEnd": 1107,
-                  "speaker": "PER0"
-                }
-              },
-              "NNP"
-            ],
-            [
-              {
-                "nlpToken": {
-                  "before": " ",
-                  "word": "Bon",
-                  "index": 6,
-                  "lemma": "Bon",
-                  "characterOffsetBegin": 1108,
-                  "pos": "NNP",
-                  "originalText": "Bon",
-                  "ner": "PERSON",
-                  "after": " ",
-                  "characterOffsetEnd": 1111,
-                  "speaker": "PER0"
-                }
-              },
-              "NNP"
-            ]
-          ],
-          "score": 1.0,
-          "text": "performing with Jon Bon",
-          "nlpIndexSentence": 3
-        }
-      ]
-    },
-    "when": {
-      "annotated": [
-        {
-          "coderPhraseCount": 3,
-          "text": "Nov 9, 2016 at 1:57am"
-        }
-      ],
-      "label": "when",
-      "extracted": []
-    },
-    "why": {
-      "annotated": [
-        {
-          "coderPhraseCount": 3,
-          "text": "Donald Trump defeated Hillary Clinton"
-        }
-      ],
-      "label": "why",
-      "extracted": [
-        {
-          "parts": [
-            [
-              {
-                "nlpToken": {
-                  "before": " ",
+                  "before": "",
                   "word": "Lady",
                   "index": 1,
                   "lemma": "lady",
-                  "characterOffsetBegin": 88,
+                  "characterOffsetBegin": 0,
                   "pos": "NN",
                   "originalText": "Lady",
-                  "ner": "PERSON",
+                  "ner": "O",
                   "after": " ",
-                  "characterOffsetEnd": 92,
+                  "characterOffsetEnd": 4,
                   "speaker": "PER0"
                 }
               },
@@ -214,36 +52,126 @@
                   "before": " ",
                   "word": "Gaga",
                   "index": 2,
-                  "lemma": "Gaga",
-                  "characterOffsetBegin": 93,
-                  "pos": "NNP",
+                  "lemma": "gaga",
+                  "characterOffsetBegin": 5,
+                  "pos": "JJ",
                   "originalText": "Gaga",
-                  "ner": "PERSON",
+                  "ner": "O",
                   "after": " ",
-                  "characterOffsetEnd": 97,
+                  "characterOffsetEnd": 9,
+                  "speaker": "PER0"
+                }
+              },
+              "JJ"
+            ],
+            [
+              {
+                "nlpToken": {
+                  "before": " ",
+                  "word": "stages",
+                  "index": 3,
+                  "lemma": "stage",
+                  "characterOffsetBegin": 10,
+                  "pos": "NNS",
+                  "originalText": "stages",
+                  "ner": "O",
+                  "after": " ",
+                  "characterOffsetEnd": 16,
+                  "speaker": "PER0"
+                }
+              },
+              "NNS"
+            ],
+            [
+              {
+                "nlpToken": {
+                  "before": " ",
+                  "word": "protest",
+                  "index": 4,
+                  "lemma": "protest",
+                  "characterOffsetBegin": 17,
+                  "pos": "NN",
+                  "originalText": "protest",
+                  "ner": "O",
+                  "after": " ",
+                  "characterOffsetEnd": 24,
+                  "speaker": "PER0"
+                }
+              },
+              "NN"
+            ],
+            [
+              {
+                "nlpToken": {
+                  "before": " ",
+                  "word": "outside",
+                  "index": 5,
+                  "lemma": "outside",
+                  "characterOffsetBegin": 25,
+                  "pos": "IN",
+                  "originalText": "outside",
+                  "ner": "O",
+                  "after": " ",
+                  "characterOffsetEnd": 32,
+                  "speaker": "PER0"
+                }
+              },
+              "IN"
+            ],
+            [
+              {
+                "nlpToken": {
+                  "before": " ",
+                  "word": "Trump",
+                  "index": 6,
+                  "lemma": "Trump",
+                  "characterOffsetBegin": 33,
+                  "pos": "NNP",
+                  "originalText": "Trump",
+                  "ner": "LOCATION",
+                  "after": " ",
+                  "characterOffsetEnd": 38,
                   "speaker": "PER0"
                 }
               },
               "NNP"
-            ]
-          ],
-          "score": 0.5601355166572558,
-          "text": "Lady Gaga",
-          "nlpIndexSentence": 1
-        }
-      ]
-    },
-    "who": {
-      "annotated": [
-        {
-          "coderPhraseCount": 3,
-          "text": "Lady Gaga"
-        }
-      ],
-      "label": "who",
-      "extracted": [
-        {
-          "parts": [
+            ],
+            [
+              {
+                "nlpToken": {
+                  "before": " ",
+                  "word": "Towers",
+                  "index": 7,
+                  "lemma": "Towers",
+                  "characterOffsetBegin": 39,
+                  "pos": "NNP",
+                  "originalText": "Towers",
+                  "ner": "LOCATION",
+                  "after": " ",
+                  "characterOffsetEnd": 45,
+                  "speaker": "PER0"
+                }
+              },
+              "NNP"
+            ],
+            [
+              {
+                "nlpToken": {
+                  "before": " ",
+                  "word": "after",
+                  "index": 8,
+                  "lemma": "after",
+                  "characterOffsetBegin": 46,
+                  "pos": "IN",
+                  "originalText": "after",
+                  "ner": "O",
+                  "after": " ",
+                  "characterOffsetEnd": 51,
+                  "speaker": "PER0"
+                }
+              },
+              "IN"
+            ],
             [
               {
                 "nlpToken": {
@@ -281,10 +209,37 @@
               "NNP"
             ]
           ],
-          "score": 1.0,
-          "text": "Donald Trump"
+          "score": 0.7000630119722748,
+          "text": "Lady Gaga stages protest outside Trump Towers after Donald Trump"
         }
       ]
+    },
+    "when": {
+      "annotated": [
+        {
+          "coderPhraseCount": 3,
+          "text": "Nov 9, 2016 at 1:57am"
+        }
+      ],
+      "label": "when"
+    },
+    "why": {
+      "annotated": [
+        {
+          "coderPhraseCount": 3,
+          "text": "Donald Trump defeated Hillary Clinton"
+        }
+      ],
+      "label": "why"
+    },
+    "who": {
+      "annotated": [
+        {
+          "coderPhraseCount": 3,
+          "text": "Lady Gaga"
+        }
+      ],
+      "label": "who"
     },
     "where": {
       "annotated": [
@@ -293,73 +248,7 @@
           "text": "outside Trump Towers "
         }
       ],
-      "label": "where",
-      "extracted": [
-        {
-          "parts": [
-            [
-              {
-                "nlpToken": {
-                  "before": " ",
-                  "word": "United",
-                  "index": 20,
-                  "lemma": "United",
-                  "characterOffsetBegin": 207,
-                  "pos": "NNP",
-                  "originalText": "United",
-                  "ner": "LOCATION",
-                  "after": " ",
-                  "characterOffsetEnd": 213,
-                  "speaker": "PER0"
-                }
-              },
-              "NNP"
-            ],
-            [
-              {
-                "nlpToken": {
-                  "before": " ",
-                  "word": "States",
-                  "index": 21,
-                  "lemma": "States",
-                  "characterOffsetBegin": 214,
-                  "pos": "NNPS",
-                  "originalText": "States",
-                  "ner": "LOCATION",
-                  "after": "",
-                  "characterOffsetEnd": 220,
-                  "speaker": "PER0"
-                }
-              },
-              "NNPS"
-            ]
-          ],
-          "score": 0.7,
-          "text": "United States",
-          "enhancement": {
-            "openstreetmap_nominatim": {
-              "osm_id": "148838",
-              "boundingbox": [
-                -14.7608358,
-                71.6048217,
-                -180.0,
-                180.0
-              ],
-              "licence": "Data \u00a9 OpenStreetMap contributors, ODbL 1.0. http://www.openstreetmap.org/copyright",
-              "importance": 0.4361730870995,
-              "icon": "https://nominatim.openstreetmap.org/images/mapicons/poi_boundary_administrative.p.20.png",
-              "osm_type": "relation",
-              "display_name": "United States of America",
-              "lat": "39.7837304",
-              "type": "administrative",
-              "place_id": "177579678",
-              "lon": "-100.4458825",
-              "class": "boundary"
-            }
-          },
-          "nlpIndexSentence": 1
-        }
-      ]
+      "label": "where"
     }
   },
   "description": "Lady Gaga staged a protest outside Trump Towers after Donald Trump defeated Hillary Clinton to become President of the United States.",

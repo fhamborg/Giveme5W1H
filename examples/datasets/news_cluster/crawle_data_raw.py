@@ -397,50 +397,172 @@ add_article(Category.technology, Topic.unspecific, Event.chicagos_apple_store_ha
 ## entertainment, [])
 add_article(Category.entertainment, Topic.unspecific,
             Event.tamar_braxton_slams_ex_vincent_herbert_for_having_a_baby_with_other_woman, [])
+
 add_article(Category.entertainment, Topic.unspecific,
-            Event.asking_if_kendall_jenner_is_pregnant_is_the_wrong_response_to_her_latest_selfie, [])
+            Event.asking_if_kendall_jenner_is_pregnant_is_the_wrong_response_to_her_latest_selfie, [
+        'https://www.bustle.com/p/asking-if-kendall-jenner-is-pregnant-is-the-wrong-response-to-her-latest-selfie-7739187',
+     #   'https://www.msn.com/en-us/tv/celebrity/check-out-the-pic-that-has-fans-asking-if-kendall-jenner-is-pregnant/ar-BBHwtr2',
+        'http://www.mirror.co.uk/3am/celebrity-news/kendall-jenner-pregnant-too-fans-11769536',
+        'https://www.elitedaily.com/p/tweets-about-kendall-jenners-instagram-pregnancy-picture-are-completely-uncalled-for-7739109'
+            ])
 add_article(Category.entertainment, Topic.unspecific,
             Event.black_mirror_uss_callister_how_the_shatner_impression_surprise_cameo_and_flawless_production_happened,
-            [])
+            [
+                'http://www.indiewire.com/2017/12/black-mirror-uss-callister-behind-the-scenes-aaron-paul-shatner-spoilers-1201912123/',
+                'http://news.stamfordglobal.com/daily/black-mirror-uss-callister-how-the-shatner-impression-surprise-cameo-and-flawless-production-happened-indiewire'
+            ])
 ## sport, [])
+
+# not very sure what this event is....
 add_article(Category.sports, Topic.unspecific,
             Event.uscs_cotton_bowl_loss_was_a_wake_up_call_and_not_just_for_sam_darnold, [])
-add_article(Category.sports, Topic.unspecific, Event.packers_sign_center_linsley_to_contract_extension, [])
+
+
+add_article(Category.sports, Topic.unspecific, Event.packers_sign_center_linsley_to_contract_extension, [
+    'https://www.foxsports.com/wisconsin/story/green-bay-packers-corey-linsley-contract-extension-123017',
+])
+
 ## science, [])
 add_article(Category.science, Topic.unspecific,
-            Event.the_broken_berg_stunning_nasa_image_captures_newly_created_iceberg_cracking_into_20_pieces, [])
-add_article(Category.science, Topic.unspecific, Event.russian_space_experts_regain_control_of_1st_angola_satellite, [])
+            Event.the_broken_berg_stunning_nasa_image_captures_newly_created_iceberg_cracking_into_20_pieces, [
+            'http://www.ibtimes.co.uk/shattered-antarctic-iceberg-four-times-size-manhattan-captured-stunning-new-image-1653217',
+            'http://www.dailymail.co.uk/sciencetech/article-5221735/NASA-captures-newly-created-iceberg-cracking-pieces.html'
+            ])
+
+# there are actually two event bus happened on the same days about the same thing
+add_article(Category.science, Topic.unspecific, Event.russian_space_experts_regain_control_of_1st_angola_satellite, [
+    'http://abcnews.go.com/Technology/wireStory/russian-space-experts-regain-control-1st-angola-satellite-52044233',
+    'http://www.foxnews.com/world/2017/12/29/russian-space-experts-regain-control-1st-angola-satellite.html',
+    'https://timesofindia.indiatimes.com/home/science/russian-space-experts-regain-control-of-1st-angola-satellite/articleshow/62298457.cms',
+    'https://www.rt.com/newsline/414349-angolan-satellite-contact-lost/',
+    'https://www.rt.com/newsline/414511-russia-contact-angola-satellite/',
+    'https://www.rt.com/on-air/414286-angola-satellite-launch-baikonur/',
+    'https://timesofindia.indiatimes.com/home/science/russian-space-experts-regain-control-of-1st-angola-satellite/articleshow/62298457.cms'
+])
 add_article(Category.science, Topic.unspecific,
-            Event.january_will_bring_two_supermoons_a_blue_moon_and_a_total_lunar_eclipse, [])
+            Event.january_will_bring_two_supermoons_a_blue_moon_and_a_total_lunar_eclipse, [
+        'https://qz.com/1168320/how-to-watch-two-supermoons-a-blue-moon-and-a-total-lunar-eclipse-this-january/',
+        'https://www.thesun.co.uk/tech/5232103/blue-moon-supermoon-song-lyrics-manchester-city/',
+        'http://www.dailymail.co.uk/news/article-5227497/Cities-United-States-lit-supermoon.html',
+        'https://www.rt.com/news/414549-first-supermoon-january-2018/',
+        'https://www.washingtonpost.com/national/health-science/sky-watch-january-is-packed-with-action/2017/12/30/d9621528-ecab-11e7-b698-91d4e35920a3_story.html?utm_term=.868357587b06'
+            ])
 
 # 01.01.2018
 ## world
-add_article(Category.world, Topic.unspecific, Event.kim_jong_un_offers_rare_olive_branch_to_south_korea, [])
-add_article(Category.world, Topic.unspecific, Event.new_york_family_of_5_among_12_killed_in_costa_rica_plane_crash, [])
+add_article(Category.world, Topic.unspecific, Event.kim_jong_un_offers_rare_olive_branch_to_south_korea, [
+    'http://edition.cnn.com/2017/12/31/asia/kim-jong-un-new-year-address-nuclear/index.html',
+    'https://storia.me/en/@WeirdAndWonderful/kim-jong-un-offers-2yo7ba',
+    'https://www.nytimes.com/reuters/2017/12/31/world/asia/31reuters-northkorea-missiles-kimjongun.html',
+    'http://www.dailymail.co.uk/news/article-5230517/Trump-Kim-My-nuke-button-bigger-talks-dismissed.html',
+    'http://www.chinadaily.com.cn/2017-11/07/content_34243617.htm'
+])
+add_article(Category.world, Topic.unspecific, Event.new_york_family_of_5_among_12_killed_in_costa_rica_plane_crash, [
+    'https://www.thedenverchannel.com/news/national/new-york-family-of-5-among-12-killed-in-costa-rica-plane-crash',
+    'https://www.huffingtonpost.com/entry/costa-rica-plane-crash_us_5a49474ee4b06d1621b9a206',
+    'http://edition.cnn.com/2017/12/31/americas/costa-rica-plane-crash/index.html',
+    'http://edition.cnn.com/2018/01/01/americas/costa-rica-plane-crash-family-identified/index.html',
+    'https://www.nytimes.com/2018/01/01/world/americas/costa-rica-plane-crash.html',
+    'https://www.npr.org/templates/search/index.php?searchinput=Costa+Rica+plane+crash',
+    'http://www.dailymail.co.uk/wires/pa/article-5225115/Plane-12-believed-aboard-crashes-Costa-Rica.html',
+    'http://www.dailymail.co.uk/wires/reuters/article-5225261/At-12-die-Costa-Rica-plane-crash-government-department.html',
+    'https://www.rt.com/news/414714-costa-rica-plane-crash-guanacaste/',
+    'http://www.thehindu.com/news/international/10-americans-among-12-killed-in-costa-rica-plane-crash/article22342043.ece',
+    'http://www.thehindu.com/todays-paper/tp-international/10-americans-2-pilots-killed-in-costa-rica-air-crash/article22348898.ece',
+    'http://www.chinadaily.com.cn/kindle/2018-01/02/content_35425601.htm',
+    'https://www.washingtonpost.com/world/the_americas/10-us-citizens-2-locals-killed-in-costa-rica-plane-crash/2017/12/31/0e6191a4-ee87-11e7-95e3-eff284e71c8d_story.html?utm_term=.c55fb5b8c542',
+    'https://www.washingtonpost.com/world/the_americas/plane-with-12-believed-aboard-crashes-in-costa-rica/2017/12/31/94038cdc-ee68-11e7-95e3-eff284e71c8d_story.html?utm_term=.e52f8203b852'
+])
 add_article(Category.world, Topic.unspecific, Event.israel_indicts_palestinian_teenage_girl_who_punched_soldier_army,
-            [])
-add_article(Category.world, Topic.unspecific, Event.thousands_flee_fireworks_explosion_at_australia_beach, [])
+            [
+                'https://www.reuters.com/article/us-israel-palestinians-teen/israel-indicts-palestinian-teenage-girl-who-punched-soldier-army-idUSKBN1EQ13Y',
+                'https://www.nytimes.com/reuters/2018/01/01/world/middleeast/01reuters-israel-palestinians-teen.html',
+                'https://www.nytimes.com/aponline/2018/01/01/world/middleeast/ap-ml-israel-palestinians.html',
+                'http://www.dailymail.co.uk/wires/ap/article-5226509/Israel-indicts-teenage-Palestinian-girl-slapped-soldiers.html',
+                'http://www.dailymail.co.uk/wires/reuters/article-5226607/Israel-indicts-Palestinian-teenage-girl-punched-soldier-army.html',
+                'https://www.washingtonpost.com/national/israel-indicts-teenage-palestinian-girl-who-slapped-soldiers/2018/01/01/3e137e9e-ef0e-11e7-95e3-eff284e71c8d_story.html?utm_term=.c54d9ffdebff',
+                'https://www.washingtonpost.com/national/palestinian-girl-who-hit-soldiers-could-get-long-sentence/2018/01/03/40113f18-f0c8-11e7-95e3-eff284e71c8d_story.html?utm_term=.32cc2e08143c'
+            ])
+add_article(Category.world, Topic.unspecific, Event.thousands_flee_fireworks_explosion_at_australia_beach, [
+    'http://www.bbc.com/news/world-australia-42531996',
+    'https://www.rt.com/news/414726-australia-beach-fireworks-injured/',
+    'http://www.straitstimes.com/asia/australianz/2-injured-thousands-flee-as-fireworks-malfunction-at-australian-beach',
+    'http://www.news.com.au/national/nsw-act/news/two-injured-thousands-evacuated-following-new-years-eve-fireworks-disaster-at-terrigal-beach/news-story/3f087a3867cf26a0ca90544cb180943b',
+    'https://www.ctvnews.ca/world/thousands-flee-after-beach-fireworks-celebration-turns-to-chaos-1.3741340'
+])
 ##_business
 add_article(Category.business, Topic.unspecific,
-            Event.time_travel_hawaiian_airlines_flight_takes_off_in_2018_lands_in_2017, [])
-add_article(Category.business, Topic.unspecific, Event.how_a_small_bird_managed_to_take_over_a_delta_flight, [])
+            Event.time_travel_hawaiian_airlines_flight_takes_off_in_2018_lands_in_2017, [
+        'http://kdvr.com/2018/01/01/time-travel-hawaiian-airlines-flight-takes-off-in-2018-lands-in-2017/',
+        'http://www.popularmechanics.com/flight/airlines/a14524197/hawaiian-air-time-travel/',
+        'http://www.hawaiinewsnow.com/story/37170223/passengers-on-a-hawaiian-airlines-flight-got-to-ring-in-2018-twice',
+        'http://dfw.cbslocal.com/2018/01/02/time-travel-flight-2017-2018-auckland-hawaii/',
+        'https://www.rt.com/news/414702-hawaiian-airlines-time-travel-auckland/',
+        'https://www.npr.org/2018/01/01/574932110/hawaiian-airlines-flight-takes-off-in-2018-but-lands-in-2017'
+            ])
+add_article(Category.business, Topic.unspecific, Event.how_a_small_bird_managed_to_take_over_a_delta_flight, [
+    'https://www.washingtonpost.com/news/dr-gridlock/wp/2017/12/31/how-a-small-bird-managed-to-take-over-a-delta-flight/?utm_term=.1ab4164ae5ad',
+    'http://www.sfgate.com/news/article/A-small-bird-managed-to-take-over-a-Delta-flight-12464765.php',
+    'https://www.denverpost.com/2018/01/01/delta-flight-detroit-atlanta-taken-over-by-bird/',
+    'http://www.detroitnews.com/story/news/local/detroit-city/2017/12/30/bird-delta-flight-return-detroit/109033712/'
+])
 ##_technology
 add_article(Category.technology, Topic.unspecific,
-            Event.samsung_acknowledges_galaxy_note_8_battery_problems_says_very_few_phones_are_affected, [])
+            Event.samsung_acknowledges_galaxy_note_8_battery_problems_says_very_few_phones_are_affected, [
+        'http://bgr.com/2018/01/01/galaxy-note-8-battery-drain-issue/',
+            ])
 ## entertainment
-add_article(Category.entertainment, Topic.unspecific, Event.jessica_alba_and_cash_warren_welcome_son_hayes_alba, [])
+add_article(Category.entertainment, Topic.unspecific, Event.jessica_alba_and_cash_warren_welcome_son_hayes_alba, [
+    'http://people.com/babies/jessica-alba-cash-warren-welcome-third-child-son-hayes/',
+    'http://www.india.com/showbiz/jessica-alba-gives-birth-to-baby-boy-2823794/',
+    'https://www.thesun.co.uk/tvandshowbiz/5247896/jessica-alba-gives-birth-to-a-baby-boy-and-his-name-fits-with-her-daughters-haven-and-honor/'
+])
 add_article(Category.entertainment, Topic.unspecific, Event.sun_fun_flowers_as_129th_rose_parade_rolls_in_california,
-            [])
+            [
+                'http://usa.chinadaily.com.cn/a/201801/02/WS5a4af1f1a31008cf16da49bb.html',
+                'https://www.timesunion.com/entertainment/article/Flowers-and-sunshine-greet-thousands-for-129th-12465519.php',
+                'http://www.thedailytimes.com/entertainment/flowers-and-sunshine-greet-thousands-for-th-rose-parade/article_159d3bf1-c0e8-5914-a11b-2ea2a5804cdb.html',
+                'http://www.telegram.com/news/20180101/sun-fun-flowers-as-129th-rose-parade-rolls-in-california',
+                'http://www.thedailytimes.com/entertainment/flowers-and-sunshine-greet-thousands-for-th-rose-parade/article_159d3bf1-c0e8-5914-a11b-2ea2a5804cdb.html',
+                'http://www.telegram.com/news/20180101/sun-fun-flowers-as-129th-rose-parade-rolls-in-california'
+            ])
 ## sport
-add_article(Category.sports, Topic.unspecific, Event.chicago_bears_fire_coach_john_fox_after_5_11_season, [])
+add_article(Category.sports, Topic.unspecific, Event.chicago_bears_fire_coach_john_fox_after_5_11_season, [
+    'http://www.nfl.com/news/story/0ap3000000901544/article/chicago-bears-fire-coach-john-fox-after-511-season',
+    'https://www.foxsports.com/nfl/story/chicago-bears-fire-coach-john-fox-after-5-11-season-010118',
+    'https://www.washingtonpost.com/sports/redskins/chicago-bears-fire-coach-john-fox-after-5-11-season/2018/01/01/8846af80-ef14-11e7-95e3-eff284e71c8d_story.html?utm_term=.d264a21b24bb',
+   # 'http://www.nydailynews.com/newswires/sports/chicago-bears-fire-coach-john-fox-5-11-season-article-1.3731136'
+])
 add_article(Category.sports, Topic.unspecific,
-            Event.bruce_arians_emotional_in_announcing_retirement_from_coaching_cites_family, [])
+            Event.bruce_arians_emotional_in_announcing_retirement_from_coaching_cites_family, [
+        'http://abcnews.go.com/Sports/bruce-arians-emotional-announcing-retirement-coaching-cites-family/story?id=52085405',
+        'https://www.nytimes.com/reuters/2018/01/02/sports/football/02reuters-football-nfl-ari-palmer.html',
+        'http://www.dailymail.co.uk/sport/nfl/article-5227259/Cardinals-Arians-makes-tearful-retirement-announcement.html',
+        'https://www.washingtonpost.com/sports/redskins/cardinals-qb-carson-palmer-retires-after-15-nfl-seasons/2018/01/02/3db31b54-f020-11e7-95e3-eff284e71c8d_story.html?utm_term=.f6c7174faeaf',
+        'https://www.washingtonpost.com/sports/redskins/arians-announces-retirement-after-5-seasons-in-arizona/2018/01/01/6f32f7cc-ef20-11e7-95e3-eff284e71c8d_story.html?utm_term=.826d8ad68a7e'
+            ])
 ##_science
-add_article(Category.science, Topic.unspecific, Event.new_years_day_full_moon_are_supermoons_really_that_super, [])
-add_article(Category.science, Topic.unspecific, Event.china_promises_the_moon, [])
+add_article(Category.science, Topic.unspecific, Event.china_promises_the_moon, [
+    'https://spectrum.ieee.org/aerospace/robotic-exploration/china-promises-the-moon',
+    'https://www.theguardian.com/science/2017/dec/31/china-mission-to-far-side-of-the-moon-space-discovery',
+    'https://sciexaminer.com/news/space/china-launch-lunar-mission-far-side-moons-surface-3220.html',
+    'https://sputniknews.com/science/201712311060451579-china-change4-moon-landing/',
+    'http://www.dailymail.co.uk/sciencetech/article-5226529/China-set-2018-mission-far-moon.html'
+])
 add_article(Category.science, Topic.unspecific,
-            Event.chinas_tiangong_1_space_station_is_out_of_control_and_will_soon_fall_to_earth, [])
-add_article(Category.science, Topic.unspecific, Event.astronauts_identify_unknown_microbes_in_space_for_first_time, [])
+            Event.chinas_tiangong_1_space_station_is_out_of_control_and_will_soon_fall_to_earth, [
+        'http://www.jreasn.com/chinas-tiangong-1-space-station-is-out-of-control-and-will-soon-fall-to-earth/',
+        'https://www.theverge.com/2017/12/31/16830890/chinese-space-station-tiangong-1-debris-falling-to-earth',
+        'http://www.independent.co.uk/life-style/gadgets-and-tech/news/china-space-station-tiangong-1-out-of-control-earth-danger-agency-latest-a8148416.html',
+        'https://www.theguardian.com/science/2017/oct/13/tiangong-1-chinese-space-station-will-crash-to-earth-within-months',
+        'https://www.express.co.uk/news/science/902498/tiangong-1-when-will-chinese-space-station-crash-into-earth'
+            ])
+add_article(Category.science, Topic.unspecific, Event.astronauts_identify_unknown_microbes_in_space_for_first_time, [
+    'https://www.ndtv.com/world-news/astronauts-identify-unknown-microbes-in-space-for-first-time-1794572',
+    'http://www.insightsonindia.com/2018/01/03/insights-daily-current-affairs-03-january-2018/astronauts-identify-unknown-microbes-in-space-for-first-time/',
+    'https://www.sciencealert.com/nasa-identified-unknown-microbes-in-space-first-time-international-space-station',
+    'https://www.nasa.gov/feature/genes-in-space-3-successfully-identifies-unknown-microbes-in-space'
+])
 
 add_article(Category.world, Topic.legancy, Event.china_boy_well, [
     "http://www.bbc.com/news/world-asia-china-37906226",

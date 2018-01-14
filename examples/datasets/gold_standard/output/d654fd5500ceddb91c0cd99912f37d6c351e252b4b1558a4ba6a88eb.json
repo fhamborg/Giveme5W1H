@@ -20,33 +20,7 @@
           "coderPhraseCount": 2
         }
       ],
-      "label": "who",
-      "extracted": [
-        {
-          "parts": [
-            [
-              {
-                "nlpToken": {
-                  "characterOffsetBegin": 68,
-                  "word": "Clinton",
-                  "lemma": "Clinton",
-                  "characterOffsetEnd": 75,
-                  "speaker": "PER0",
-                  "ner": "PERSON",
-                  "after": "",
-                  "originalText": "Clinton",
-                  "before": " ",
-                  "index": 14,
-                  "pos": "NNP"
-                }
-              },
-              "NNP"
-            ]
-          ],
-          "score": 1.0,
-          "text": "Clinton"
-        }
-      ]
+      "label": "who"
     },
     "when": {
       "annotated": [
@@ -56,46 +30,7 @@
           "parsed": "2016-11-07"
         }
       ],
-      "label": "when",
-      "extracted": [
-        {
-          "parts": [
-            [
-              {
-                "nlpToken": {
-                  "characterOffsetBegin": 1571,
-                  "word": "Sunday",
-                  "lemma": "Sunday",
-                  "timex": {
-                    "value": "2016-11-06",
-                    "tid": "t8",
-                    "type": "DATE"
-                  },
-                  "before": " ",
-                  "characterOffsetEnd": 1577,
-                  "originalText": "Sunday",
-                  "normalizedNER": "2016-11-06",
-                  "speaker": "PER0",
-                  "after": "",
-                  "ner": "DATE",
-                  "index": 43,
-                  "pos": "NNP"
-                }
-              },
-              "NNP"
-            ]
-          ],
-          "score": 0.7898816463289696,
-          "text": "Sunday",
-          "enhancement": {
-            "timex": {
-              "start_date": "2016-11-06T00:00:00",
-              "end_date": "2016-11-06T23:59:59"
-            }
-          },
-          "nlpIndexSentence": 8
-        }
-      ]
+      "label": "when"
     },
     "why": {
       "annotated": [
@@ -111,33 +46,7 @@
           "coderPhraseCount": 1
         }
       ],
-      "label": "why",
-      "extracted": [
-        {
-          "parts": [
-            [
-              {
-                "nlpToken": {
-                  "characterOffsetBegin": 138,
-                  "word": "she",
-                  "lemma": "she",
-                  "characterOffsetEnd": 141,
-                  "speaker": "PER0",
-                  "ner": "O",
-                  "after": " ",
-                  "originalText": "she",
-                  "before": " ",
-                  "index": 27,
-                  "pos": "PRP"
-                }
-              },
-              "PRP"
-            ]
-          ],
-          "score": 0.5844155844155844,
-          "text": "she"
-        }
-      ]
+      "label": "why"
     },
     "how": {
       "annotated": [
@@ -157,16 +66,52 @@
             [
               {
                 "nlpToken": {
-                  "characterOffsetBegin": 2110,
-                  "word": "news",
-                  "lemma": "news",
-                  "characterOffsetEnd": 2114,
+                  "characterOffsetBegin": 28,
+                  "word": "a",
+                  "lemma": "a",
+                  "characterOffsetEnd": 29,
                   "speaker": "PER0",
                   "ner": "O",
                   "after": " ",
-                  "originalText": "news",
+                  "originalText": "a",
                   "before": " ",
-                  "index": 2,
+                  "index": 6,
+                  "pos": "DT"
+                }
+              },
+              "DT"
+            ],
+            [
+              {
+                "nlpToken": {
+                  "characterOffsetBegin": 30,
+                  "word": "new",
+                  "lemma": "new",
+                  "characterOffsetEnd": 33,
+                  "speaker": "PER0",
+                  "ner": "O",
+                  "after": " ",
+                  "originalText": "new",
+                  "before": " ",
+                  "index": 7,
+                  "pos": "JJ"
+                }
+              },
+              "JJ"
+            ],
+            [
+              {
+                "nlpToken": {
+                  "characterOffsetBegin": 34,
+                  "word": "batch",
+                  "lemma": "batch",
+                  "characterOffsetEnd": 39,
+                  "speaker": "PER0",
+                  "ner": "O",
+                  "after": " ",
+                  "originalText": "batch",
+                  "before": " ",
+                  "index": 8,
                   "pos": "NN"
                 }
               },
@@ -175,61 +120,132 @@
             [
               {
                 "nlpToken": {
-                  "characterOffsetBegin": 2115,
-                  "word": "broke",
-                  "lemma": "break",
-                  "characterOffsetEnd": 2120,
+                  "characterOffsetBegin": 40,
+                  "word": "of",
+                  "lemma": "of",
+                  "characterOffsetEnd": 42,
                   "speaker": "PER0",
                   "ner": "O",
-                  "after": "",
-                  "originalText": "broke",
+                  "after": " ",
+                  "originalText": "of",
                   "before": " ",
-                  "index": 3,
-                  "pos": "VBD"
+                  "index": 9,
+                  "pos": "IN"
                 }
               },
-              "VBD"
+              "IN"
             ],
             [
               {
                 "nlpToken": {
-                  "characterOffsetBegin": 2120,
-                  "word": ",",
-                  "lemma": ",",
-                  "characterOffsetEnd": 2121,
+                  "characterOffsetBegin": 43,
+                  "word": "emails",
+                  "lemma": "email",
+                  "characterOffsetEnd": 49,
                   "speaker": "PER0",
                   "ner": "O",
                   "after": " ",
-                  "originalText": ",",
-                  "before": "",
-                  "index": 4,
-                  "pos": ","
-                }
-              },
-              ","
-            ],
-            [
-              {
-                "nlpToken": {
-                  "characterOffsetBegin": 2122,
-                  "word": "aides",
-                  "lemma": "aide",
-                  "characterOffsetEnd": 2127,
-                  "speaker": "PER0",
-                  "ner": "O",
-                  "after": " ",
-                  "originalText": "aides",
+                  "originalText": "emails",
                   "before": " ",
-                  "index": 5,
+                  "index": 10,
                   "pos": "NNS"
                 }
               },
               "NNS"
+            ],
+            [
+              {
+                "nlpToken": {
+                  "characterOffsetBegin": 50,
+                  "word": "linked",
+                  "lemma": "link",
+                  "characterOffsetEnd": 56,
+                  "speaker": "PER0",
+                  "ner": "O",
+                  "after": " ",
+                  "originalText": "linked",
+                  "before": " ",
+                  "index": 11,
+                  "pos": "VBN"
+                }
+              },
+              "VBN"
+            ],
+            [
+              {
+                "nlpToken": {
+                  "characterOffsetBegin": 57,
+                  "word": "to",
+                  "lemma": "to",
+                  "characterOffsetEnd": 59,
+                  "speaker": "PER0",
+                  "ner": "O",
+                  "after": " ",
+                  "originalText": "to",
+                  "before": " ",
+                  "index": 12,
+                  "pos": "TO"
+                }
+              },
+              "TO"
+            ],
+            [
+              {
+                "nlpToken": {
+                  "characterOffsetBegin": 60,
+                  "word": "Hillary",
+                  "lemma": "Hillary",
+                  "characterOffsetEnd": 67,
+                  "speaker": "PER0",
+                  "ner": "PERSON",
+                  "after": " ",
+                  "originalText": "Hillary",
+                  "before": " ",
+                  "index": 13,
+                  "pos": "NNP"
+                }
+              },
+              "NNP"
+            ],
+            [
+              {
+                "nlpToken": {
+                  "characterOffsetBegin": 68,
+                  "word": "Clinton",
+                  "lemma": "Clinton",
+                  "characterOffsetEnd": 75,
+                  "speaker": "PER0",
+                  "ner": "PERSON",
+                  "after": "",
+                  "originalText": "Clinton",
+                  "before": " ",
+                  "index": 14,
+                  "pos": "NNP"
+                }
+              },
+              "NNP"
+            ],
+            [
+              {
+                "nlpToken": {
+                  "characterOffsetBegin": 75,
+                  "word": "'s",
+                  "lemma": "'s",
+                  "characterOffsetEnd": 77,
+                  "speaker": "PER0",
+                  "ner": "O",
+                  "after": " ",
+                  "originalText": "'s",
+                  "before": "",
+                  "index": 15,
+                  "pos": "POS"
+                }
+              },
+              "POS"
             ]
           ],
-          "score": 1.0,
-          "text": "news broke , aides",
-          "nlpIndexSentence": 2
+          "score": 0.6971726190476192,
+          "text": "a new batch of emails linked to Hillary Clinton 's"
         }
       ]
     },
@@ -239,72 +255,7 @@
           "coderPhraseCount": 3
         }
       ],
-      "label": "where",
-      "extracted": [
-        {
-          "parts": [
-            [
-              {
-                "nlpToken": {
-                  "characterOffsetBegin": 4620,
-                  "word": "White",
-                  "lemma": "White",
-                  "characterOffsetEnd": 4625,
-                  "speaker": "PER0",
-                  "ner": "LOCATION",
-                  "after": " ",
-                  "originalText": "White",
-                  "before": " ",
-                  "index": 6,
-                  "pos": "NNP"
-                }
-              },
-              "NNP"
-            ],
-            [
-              {
-                "nlpToken": {
-                  "characterOffsetBegin": 4626,
-                  "word": "House",
-                  "lemma": "House",
-                  "characterOffsetEnd": 4631,
-                  "speaker": "PER0",
-                  "ner": "LOCATION",
-                  "after": " ",
-                  "originalText": "House",
-                  "before": " ",
-                  "index": 7,
-                  "pos": "NNP"
-                }
-              },
-              "NNP"
-            ]
-          ],
-          "score": 0.6964375816737748,
-          "text": "White House",
-          "enhancement": {
-            "openstreetmap_nominatim": {
-              "osm_id": "238241022",
-              "osm_type": "way",
-              "display_name": "White House, 1600, Pennsylvania Avenue Northwest, Golden Triangle, Washington, District of Columbia, 20500, United States of America",
-              "lon": "-77.0365534886228",
-              "lat": "38.8976998",
-              "boundingbox": [
-                38.8974898,
-                38.897911,
-                -77.0368542,
-                -77.0362526
-              ],
-              "place_id": "127954863",
-              "licence": "Data \u00a9 OpenStreetMap contributors, ODbL 1.0. http://www.openstreetmap.org/copyright",
-              "type": "government",
-              "importance": 0.3519189346824,
-              "class": "office"
-            }
-          },
-          "nlpIndexSentence": 31
-        }
-      ]
+      "label": "where"
     },
     "what": {
       "annotated": [
@@ -313,87 +264,7 @@
           "coderPhraseCount": 3
         }
       ],
-      "label": "what",
-      "extracted": [
-        {
-          "parts": [
-            [
-              {
-                "nlpToken": {
-                  "characterOffsetBegin": 142,
-                  "word": "committed",
-                  "lemma": "commit",
-                  "characterOffsetEnd": 151,
-                  "speaker": "PER0",
-                  "ner": "O",
-                  "after": " ",
-                  "originalText": "committed",
-                  "before": " ",
-                  "index": 28,
-                  "pos": "VBD"
-                }
-              },
-              "VBD"
-            ],
-            [
-              {
-                "nlpToken": {
-                  "characterOffsetBegin": 152,
-                  "word": "no",
-                  "lemma": "no",
-                  "characterOffsetEnd": 154,
-                  "speaker": "PER0",
-                  "ner": "O",
-                  "after": " ",
-                  "originalText": "no",
-                  "before": " ",
-                  "index": 29,
-                  "pos": "DT"
-                }
-              },
-              "DT"
-            ],
-            [
-              {
-                "nlpToken": {
-                  "characterOffsetBegin": 155,
-                  "word": "criminal",
-                  "lemma": "criminal",
-                  "characterOffsetEnd": 163,
-                  "speaker": "PER0",
-                  "ner": "O",
-                  "after": " ",
-                  "originalText": "criminal",
-                  "before": " ",
-                  "index": 30,
-                  "pos": "JJ"
-                }
-              },
-              "JJ"
-            ],
-            [
-              {
-                "nlpToken": {
-                  "characterOffsetBegin": 164,
-                  "word": "wrongdoing",
-                  "lemma": "wrongdoing",
-                  "characterOffsetEnd": 174,
-                  "speaker": "PER0",
-                  "ner": "O",
-                  "after": "",
-                  "originalText": "wrongdoing",
-                  "before": " ",
-                  "index": 31,
-                  "pos": "NN"
-                }
-              },
-              "NN"
-            ]
-          ],
-          "score": 1.0,
-          "text": "committed no criminal wrongdoing"
-        }
-      ]
+      "label": "what"
     }
   },
   "description": "James Comey says batch of emails 'have not changed conclusion' but Trump doubts review, saying: 'You can't review 650,000 emails in eight days'",

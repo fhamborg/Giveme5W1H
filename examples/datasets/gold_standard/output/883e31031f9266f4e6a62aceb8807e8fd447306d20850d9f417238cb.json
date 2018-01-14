@@ -12,34 +12,7 @@
           "coderPhraseCount": 3
         }
       ],
-      "label": "who",
-      "extracted": [
-        {
-          "parts": [
-            [
-              {
-                "nlpToken": {
-                  "characterOffsetBegin": 215,
-                  "word": "she",
-                  "lemma": "she",
-                  "characterOffsetEnd": 218,
-                  "speaker": "PER0",
-                  "ner": "O",
-                  "after": " ",
-                  "originalText": "she",
-                  "before": " ",
-                  "index": 26,
-                  "pos": "PRP"
-                }
-              },
-              "PRP"
-            ]
-          ],
-          "score": 1.0,
-          "text": "she",
-          "nlpIndexSentence": 1
-        }
-      ]
+      "label": "who"
     },
     "when": {
       "annotated": [
@@ -49,46 +22,7 @@
           "parsed": "2016-11-09"
         }
       ],
-      "label": "when",
-      "extracted": [
-        {
-          "parts": [
-            [
-              {
-                "nlpToken": {
-                  "characterOffsetBegin": 255,
-                  "word": "Wednesday",
-                  "lemma": "Wednesday",
-                  "timex": {
-                    "value": "2016-11-09",
-                    "tid": "t1",
-                    "type": "DATE"
-                  },
-                  "before": " ",
-                  "characterOffsetEnd": 264,
-                  "originalText": "Wednesday",
-                  "normalizedNER": "2016-11-09",
-                  "speaker": "PER0",
-                  "after": "",
-                  "ner": "DATE",
-                  "index": 33,
-                  "pos": "NNP"
-                }
-              },
-              "NNP"
-            ]
-          ],
-          "score": 0.7994409931758166,
-          "text": "Wednesday",
-          "enhancement": {
-            "timex": {
-              "start_date": "2016-11-09T00:00:00",
-              "end_date": "2016-11-09T23:59:59"
-            }
-          },
-          "nlpIndexSentence": 1
-        }
-      ]
+      "label": "when"
     },
     "why": {
       "annotated": [
@@ -97,34 +31,7 @@
           "coderPhraseCount": 3
         }
       ],
-      "label": "why",
-      "extracted": [
-        {
-          "parts": [
-            [
-              {
-                "nlpToken": {
-                  "characterOffsetBegin": 215,
-                  "word": "she",
-                  "lemma": "she",
-                  "characterOffsetEnd": 218,
-                  "speaker": "PER0",
-                  "ner": "O",
-                  "after": " ",
-                  "originalText": "she",
-                  "before": " ",
-                  "index": 26,
-                  "pos": "PRP"
-                }
-              },
-              "PRP"
-            ]
-          ],
-          "score": 0.5693225693225693,
-          "text": "she",
-          "nlpIndexSentence": 1
-        }
-      ]
+      "label": "why"
     },
     "how": {
       "annotated": [
@@ -133,96 +40,6 @@
         }
       ],
       "label": "how",
-      "extracted": [
-        {
-          "parts": [
-            [
-              {
-                "nlpToken": {
-                  "characterOffsetBegin": 1746,
-                  "word": "the",
-                  "lemma": "the",
-                  "characterOffsetEnd": 1749,
-                  "speaker": "PER0",
-                  "ner": "O",
-                  "after": " ",
-                  "originalText": "the",
-                  "before": " ",
-                  "index": 2,
-                  "pos": "DT"
-                }
-              },
-              "DT"
-            ],
-            [
-              {
-                "nlpToken": {
-                  "characterOffsetBegin": 1750,
-                  "word": "United",
-                  "lemma": "United",
-                  "characterOffsetEnd": 1756,
-                  "speaker": "PER0",
-                  "ner": "LOCATION",
-                  "after": " ",
-                  "originalText": "United",
-                  "before": " ",
-                  "index": 3,
-                  "pos": "NNP"
-                }
-              },
-              "NNP"
-            ],
-            [
-              {
-                "nlpToken": {
-                  "characterOffsetBegin": 1757,
-                  "word": "States",
-                  "lemma": "States",
-                  "characterOffsetEnd": 1763,
-                  "speaker": "PER0",
-                  "ner": "LOCATION",
-                  "after": " ",
-                  "originalText": "States",
-                  "before": " ",
-                  "index": 4,
-                  "pos": "NNPS"
-                }
-              },
-              "NNPS"
-            ],
-            [
-              {
-                "nlpToken": {
-                  "characterOffsetBegin": 1764,
-                  "word": "vote",
-                  "lemma": "vote",
-                  "characterOffsetEnd": 1768,
-                  "speaker": "PER0",
-                  "ner": "O",
-                  "after": " ",
-                  "originalText": "vote",
-                  "before": " ",
-                  "index": 5,
-                  "pos": "VB"
-                }
-              },
-              "VB"
-            ]
-          ],
-          "score": 1.0,
-          "text": "the United States vote",
-          "nlpIndexSentence": 2
-        }
-      ]
-    },
-    "where": {
-      "annotated": [
-        {
-          "text": "Trump Tower",
-          "coderPhraseCount": 3
-        }
-      ],
-      "label": "where",
       "extracted": [
         {
           "parts": [
@@ -243,46 +60,133 @@
                 }
               },
               "NNP"
-            ]
-          ],
-          "score": 0.7,
-          "text": "US",
-          "enhancement": {
-            "openstreetmap_nominatim": {
-              "osm_id": "148838",
-              "boundingbox": [
-                -14.7608358,
-                71.6048217,
-                -180.0,
-                180.0
-              ],
-              "licence": "Data \u00a9 OpenStreetMap contributors, ODbL 1.0. http://www.openstreetmap.org/copyright",
-              "importance": 0.2361730870995,
-              "icon": "https://nominatim.openstreetmap.org/images/mapicons/poi_boundary_administrative.p.20.png",
-              "osm_type": "relation",
-              "display_name": "United States of America",
-              "lat": "39.7837304",
-              "type": "administrative",
-              "place_id": "177579678",
-              "lon": "-100.4458825",
-              "class": "boundary"
-            }
-          },
-          "nlpIndexSentence": 1
-        }
-      ]
-    },
-    "what": {
-      "annotated": [
-        {
-          "text": "protests outside Trump Tower",
-          "coderPhraseCount": 3
-        }
-      ],
-      "label": "what",
-      "extracted": [
-        {
-          "parts": [
+            ],
+            [
+              {
+                "nlpToken": {
+                  "characterOffsetBegin": 176,
+                  "word": "presidential",
+                  "lemma": "presidential",
+                  "characterOffsetEnd": 188,
+                  "speaker": "PER0",
+                  "ner": "O",
+                  "after": " ",
+                  "originalText": "presidential",
+                  "before": " ",
+                  "index": 20,
+                  "pos": "JJ"
+                }
+              },
+              "JJ"
+            ],
+            [
+              {
+                "nlpToken": {
+                  "characterOffsetBegin": 189,
+                  "word": "election",
+                  "lemma": "election",
+                  "characterOffsetEnd": 197,
+                  "speaker": "PER0",
+                  "ner": "O",
+                  "after": " ",
+                  "originalText": "election",
+                  "before": " ",
+                  "index": 21,
+                  "pos": "NN"
+                }
+              },
+              "NN"
+            ],
+            [
+              {
+                "nlpToken": {
+                  "characterOffsetBegin": 198,
+                  "word": "lying",
+                  "lemma": "lie",
+                  "characterOffsetEnd": 203,
+                  "speaker": "PER0",
+                  "ner": "O",
+                  "after": " ",
+                  "originalText": "lying",
+                  "before": " ",
+                  "index": 22,
+                  "pos": "VBG"
+                }
+              },
+              "VBG"
+            ],
+            [
+              {
+                "nlpToken": {
+                  "characterOffsetBegin": 204,
+                  "word": "down",
+                  "lemma": "down",
+                  "characterOffsetEnd": 208,
+                  "speaker": "PER0",
+                  "ner": "O",
+                  "after": " ",
+                  "originalText": "down",
+                  "before": " ",
+                  "index": 23,
+                  "pos": "IN"
+                }
+              },
+              "IN"
+            ],
+            [
+              {
+                "nlpToken": {
+                  "characterOffsetBegin": 209,
+                  "word": "-",
+                  "lemma": "-",
+                  "characterOffsetEnd": 210,
+                  "speaker": "PER0",
+                  "ner": "O",
+                  "after": " ",
+                  "originalText": "-",
+                  "before": " ",
+                  "index": 24,
+                  "pos": ":"
+                }
+              },
+              ":"
+            ],
+            [
+              {
+                "nlpToken": {
+                  "characterOffsetBegin": 211,
+                  "word": "and",
+                  "lemma": "and",
+                  "characterOffsetEnd": 214,
+                  "speaker": "PER0",
+                  "ner": "O",
+                  "after": " ",
+                  "originalText": "and",
+                  "before": " ",
+                  "index": 25,
+                  "pos": "CC"
+                }
+              },
+              "CC"
+            ],
+            [
+              {
+                "nlpToken": {
+                  "characterOffsetBegin": 215,
+                  "word": "she",
+                  "lemma": "she",
+                  "characterOffsetEnd": 218,
+                  "speaker": "PER0",
+                  "ner": "O",
+                  "after": " ",
+                  "originalText": "she",
+                  "before": " ",
+                  "index": 26,
+                  "pos": "PRP"
+                }
+              },
+              "PRP"
+            ],
             [
               {
                 "nlpToken": {
@@ -318,49 +222,31 @@
                 }
               },
               "NNP"
-            ],
-            [
-              {
-                "nlpToken": {
-                  "characterOffsetBegin": 236,
-                  "word": "Trump",
-                  "lemma": "Trump",
-                  "characterOffsetEnd": 241,
-                  "speaker": "PER0",
-                  "ner": "PERSON",
-                  "after": "",
-                  "originalText": "Trump",
-                  "before": " ",
-                  "index": 29,
-                  "pos": "NNP"
-                }
-              },
-              "NNP"
-            ],
-            [
-              {
-                "nlpToken": {
-                  "characterOffsetBegin": 241,
-                  "word": "'s",
-                  "lemma": "'s",
-                  "characterOffsetEnd": 243,
-                  "speaker": "PER0",
-                  "ner": "O",
-                  "after": " ",
-                  "originalText": "'s",
-                  "before": "",
-                  "index": 30,
-                  "pos": "POS"
-                }
-              },
-              "POS"
             ]
           ],
-          "score": 1.0,
-          "text": "protested Donald Trump 's",
+          "score": 0.6989966555183947,
+          "text": "US presidential election lying down - and she protested Donald",
           "nlpIndexSentence": 1
         }
       ]
+    },
+    "where": {
+      "annotated": [
+        {
+          "text": "Trump Tower",
+          "coderPhraseCount": 3
+        }
+      ],
+      "label": "where"
+    },
+    "what": {
+      "annotated": [
+        {
+          "text": "protests outside Trump Tower",
+          "coderPhraseCount": 3
+        }
+      ],
+      "label": "what"
     }
   },
   "description": "The Paparazzi singer was disappointed with the results of the election",

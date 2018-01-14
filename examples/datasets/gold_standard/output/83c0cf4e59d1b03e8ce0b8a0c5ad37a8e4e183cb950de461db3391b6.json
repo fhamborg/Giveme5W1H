@@ -12,51 +12,7 @@
           "coderPhraseCount": 3
         }
       ],
-      "label": "who",
-      "extracted": [
-        {
-          "parts": [
-            [
-              {
-                "nlpToken": {
-                  "characterOffsetBegin": 0,
-                  "word": "Hillary",
-                  "lemma": "Hillary",
-                  "characterOffsetEnd": 7,
-                  "speaker": "PER0",
-                  "ner": "PERSON",
-                  "after": " ",
-                  "originalText": "Hillary",
-                  "before": "",
-                  "index": 1,
-                  "pos": "NNP"
-                }
-              },
-              "NNP"
-            ],
-            [
-              {
-                "nlpToken": {
-                  "characterOffsetBegin": 8,
-                  "word": "Clinton",
-                  "lemma": "Clinton",
-                  "characterOffsetEnd": 15,
-                  "speaker": "PER0",
-                  "ner": "PERSON",
-                  "after": " ",
-                  "originalText": "Clinton",
-                  "before": " ",
-                  "index": 2,
-                  "pos": "NNP"
-                }
-              },
-              "NNP"
-            ]
-          ],
-          "score": 1.0,
-          "text": "Hillary Clinton"
-        }
-      ]
+      "label": "who"
     },
     "when": {
       "annotated": [
@@ -66,46 +22,7 @@
           "parsed": "2016-11-12"
         }
       ],
-      "label": "when",
-      "extracted": [
-        {
-          "parts": [
-            [
-              {
-                "nlpToken": {
-                  "characterOffsetBegin": 314,
-                  "word": "Tuesday",
-                  "lemma": "Tuesday",
-                  "timex": {
-                    "value": "2016-11-15",
-                    "tid": "t3",
-                    "type": "DATE"
-                  },
-                  "before": " ",
-                  "characterOffsetEnd": 321,
-                  "originalText": "Tuesday",
-                  "normalizedNER": "2016-11-15",
-                  "speaker": "PER0",
-                  "after": "",
-                  "ner": "DATE",
-                  "index": 17,
-                  "pos": "NNP"
-                }
-              },
-              "NNP"
-            ]
-          ],
-          "score": 0.7690730043536611,
-          "text": "Tuesday",
-          "enhancement": {
-            "timex": {
-              "start_date": "2016-11-15T00:00:00",
-              "end_date": "2016-11-15T23:59:59"
-            }
-          },
-          "nlpIndexSentence": 1
-        }
-      ]
+      "label": "when"
     },
     "why": {
       "annotated": [
@@ -114,51 +31,7 @@
           "coderPhraseCount": 2
         }
       ],
-      "label": "why",
-      "extracted": [
-        {
-          "parts": [
-            [
-              {
-                "nlpToken": {
-                  "characterOffsetBegin": 0,
-                  "word": "Hillary",
-                  "lemma": "Hillary",
-                  "characterOffsetEnd": 7,
-                  "speaker": "PER0",
-                  "ner": "PERSON",
-                  "after": " ",
-                  "originalText": "Hillary",
-                  "before": "",
-                  "index": 1,
-                  "pos": "NNP"
-                }
-              },
-              "NNP"
-            ],
-            [
-              {
-                "nlpToken": {
-                  "characterOffsetBegin": 8,
-                  "word": "Clinton",
-                  "lemma": "Clinton",
-                  "characterOffsetEnd": 15,
-                  "speaker": "PER0",
-                  "ner": "PERSON",
-                  "after": " ",
-                  "originalText": "Clinton",
-                  "before": " ",
-                  "index": 2,
-                  "pos": "NNP"
-                }
-              },
-              "NNP"
-            ]
-          ],
-          "score": 0.5844155844155844,
-          "text": "Hillary Clinton"
-        }
-      ]
+      "label": "why"
     },
     "how": {
       "annotated": [
@@ -178,79 +51,187 @@
             [
               {
                 "nlpToken": {
-                  "characterOffsetBegin": 1120,
-                  "word": "he",
-                  "lemma": "he",
-                  "characterOffsetEnd": 1122,
+                  "characterOffsetBegin": 236,
+                  "word": "by",
+                  "lemma": "by",
+                  "characterOffsetEnd": 238,
                   "speaker": "PER0",
                   "ner": "O",
                   "after": " ",
-                  "originalText": "he",
+                  "originalText": "by",
+                  "before": " ",
+                  "index": 4,
+                  "pos": "IN"
+                }
+              },
+              "IN"
+            ],
+            [
+              {
+                "nlpToken": {
+                  "characterOffsetBegin": 239,
+                  "word": "nearly",
+                  "lemma": "nearly",
+                  "characterOffsetEnd": 245,
+                  "speaker": "PER0",
+                  "ner": "O",
+                  "after": " ",
+                  "originalText": "nearly",
+                  "before": " ",
+                  "index": 5,
+                  "pos": "RB"
+                }
+              },
+              "RB"
+            ],
+            [
+              {
+                "nlpToken": {
+                  "characterOffsetBegin": 246,
+                  "word": "every",
+                  "lemma": "every",
+                  "characterOffsetEnd": 251,
+                  "speaker": "PER0",
+                  "ner": "O",
+                  "after": " ",
+                  "originalText": "every",
+                  "before": " ",
+                  "index": 6,
+                  "pos": "DT"
+                }
+              },
+              "DT"
+            ],
+            [
+              {
+                "nlpToken": {
+                  "characterOffsetBegin": 252,
+                  "word": "national",
+                  "lemma": "national",
+                  "characterOffsetEnd": 260,
+                  "speaker": "PER0",
+                  "ner": "O",
+                  "after": " ",
+                  "originalText": "national",
                   "before": " ",
                   "index": 7,
-                  "pos": "PRP"
+                  "pos": "JJ"
                 }
               },
-              "PRP"
+              "JJ"
             ],
             [
               {
                 "nlpToken": {
-                  "characterOffsetBegin": 1123,
-                  "word": "had",
-                  "lemma": "have",
-                  "characterOffsetEnd": 1126,
+                  "characterOffsetBegin": 261,
+                  "word": "public",
+                  "lemma": "public",
+                  "characterOffsetEnd": 267,
                   "speaker": "PER0",
                   "ner": "O",
                   "after": " ",
-                  "originalText": "had",
+                  "originalText": "public",
                   "before": " ",
                   "index": 8,
-                  "pos": "VBD"
+                  "pos": "JJ"
                 }
               },
-              "VBD"
+              "JJ"
             ],
             [
               {
                 "nlpToken": {
-                  "characterOffsetBegin": 1127,
-                  "word": "reviewed",
-                  "lemma": "review",
-                  "characterOffsetEnd": 1135,
+                  "characterOffsetBegin": 268,
+                  "word": "opinion",
+                  "lemma": "opinion",
+                  "characterOffsetEnd": 275,
                   "speaker": "PER0",
                   "ner": "O",
                   "after": " ",
-                  "originalText": "reviewed",
+                  "originalText": "opinion",
                   "before": " ",
                   "index": 9,
-                  "pos": "VBN"
+                  "pos": "NN"
                 }
               },
-              "VBN"
+              "NN"
             ],
             [
               {
                 "nlpToken": {
-                  "characterOffsetBegin": 1136,
-                  "word": "emails",
-                  "lemma": "email",
-                  "characterOffsetEnd": 1142,
+                  "characterOffsetBegin": 276,
+                  "word": "poll",
+                  "lemma": "poll",
+                  "characterOffsetEnd": 280,
                   "speaker": "PER0",
                   "ner": "O",
                   "after": " ",
-                  "originalText": "emails",
+                  "originalText": "poll",
                   "before": " ",
                   "index": 10,
-                  "pos": "NNS"
+                  "pos": "NN"
                 }
               },
-              "NNS"
+              "NN"
+            ],
+            [
+              {
+                "nlpToken": {
+                  "characterOffsetBegin": 281,
+                  "word": "as",
+                  "lemma": "as",
+                  "characterOffsetEnd": 283,
+                  "speaker": "PER0",
+                  "ner": "O",
+                  "after": " ",
+                  "originalText": "as",
+                  "before": " ",
+                  "index": 11,
+                  "pos": "IN"
+                }
+              },
+              "IN"
+            ],
+            [
+              {
+                "nlpToken": {
+                  "characterOffsetBegin": 284,
+                  "word": "the",
+                  "lemma": "the",
+                  "characterOffsetEnd": 287,
+                  "speaker": "PER0",
+                  "ner": "O",
+                  "after": " ",
+                  "originalText": "the",
+                  "before": " ",
+                  "index": 12,
+                  "pos": "DT"
+                }
+              },
+              "DT"
+            ],
+            [
+              {
+                "nlpToken": {
+                  "characterOffsetBegin": 288,
+                  "word": "heavy",
+                  "lemma": "heavy",
+                  "characterOffsetEnd": 293,
+                  "speaker": "PER0",
+                  "ner": "O",
+                  "after": " ",
+                  "originalText": "heavy",
+                  "before": " ",
+                  "index": 13,
+                  "pos": "JJ"
+                }
+              },
+              "JJ"
             ]
           ],
-          "score": 1.0,
-          "text": "he had reviewed emails",
-          "nlpIndexSentence": 7
+          "score": 0.7222222222222223,
+          "text": "by nearly every national public opinion poll as the heavy",
+          "nlpIndexSentence": 1
         }
       ]
     },
@@ -260,8 +241,7 @@
           "coderPhraseCount": 3
         }
       ],
-      "label": "where",
-      "extracted": []
+      "label": "where"
     },
     "what": {
       "annotated": [
@@ -270,105 +250,7 @@
           "coderPhraseCount": 3
         }
       ],
-      "label": "what",
-      "extracted": [
-        {
-          "parts": [
-            [
-              {
-                "nlpToken": {
-                  "characterOffsetBegin": 16,
-                  "word": "blamed",
-                  "lemma": "blame",
-                  "characterOffsetEnd": 22,
-                  "speaker": "PER0",
-                  "ner": "O",
-                  "after": " ",
-                  "originalText": "blamed",
-                  "before": " ",
-                  "index": 3,
-                  "pos": "VBD"
-                }
-              },
-              "VBD"
-            ],
-            [
-              {
-                "nlpToken": {
-                  "characterOffsetBegin": 23,
-                  "word": "FBI",
-                  "lemma": "FBI",
-                  "characterOffsetEnd": 26,
-                  "speaker": "PER0",
-                  "ner": "ORGANIZATION",
-                  "after": " ",
-                  "originalText": "FBI",
-                  "before": " ",
-                  "index": 4,
-                  "pos": "NNP"
-                }
-              },
-              "NNP"
-            ],
-            [
-              {
-                "nlpToken": {
-                  "characterOffsetBegin": 27,
-                  "word": "director",
-                  "lemma": "director",
-                  "characterOffsetEnd": 35,
-                  "speaker": "PER0",
-                  "ner": "O",
-                  "after": " ",
-                  "originalText": "director",
-                  "before": " ",
-                  "index": 5,
-                  "pos": "NN"
-                }
-              },
-              "NN"
-            ],
-            [
-              {
-                "nlpToken": {
-                  "characterOffsetBegin": 36,
-                  "word": "James",
-                  "lemma": "James",
-                  "characterOffsetEnd": 41,
-                  "speaker": "PER0",
-                  "ner": "PERSON",
-                  "after": " ",
-                  "originalText": "James",
-                  "before": " ",
-                  "index": 6,
-                  "pos": "NNP"
-                }
-              },
-              "NNP"
-            ],
-            [
-              {
-                "nlpToken": {
-                  "characterOffsetBegin": 42,
-                  "word": "Comey",
-                  "lemma": "Comey",
-                  "characterOffsetEnd": 47,
-                  "speaker": "PER0",
-                  "ner": "PERSON",
-                  "after": " ",
-                  "originalText": "Comey",
-                  "before": " ",
-                  "index": 7,
-                  "pos": "NNP"
-                }
-              },
-              "NNP"
-            ]
-          ],
-          "score": 1.0,
-          "text": "blamed FBI director James Comey"
-        }
-      ]
+      "label": "what"
     }
   },
   "description": "Hillary Clinton blamed FBI director James Comey for her stunning defeat in Tuesday's presidential election in a conference call with her top campaign funders on Saturday, according to two participants on the call.\n\n\n\nClinton was projected by nearly every national public opinion poll as the heavy favorite going into Tuesday's race. Instead, Republican Donald Trump won the election, shocking many throughout the nation and prompting widespread protests.\n\n\n\nClinton has kept a low profile since her defeat after delivering her concession speech on Wednesday morning.\n\n\n\nOn the phone call with supporters on Saturday, Clinton said her campaign and the national party had raised $900 million from more than 3 million individual donors, according to the two participants who spoke to Reuters.\n\n\n\nClinton said Comey was at fault for her loss after he decided to send a letter to Congress only days before the election announcing that he was reinstating an investigation into whether she mishandled classified information when she used a private email server while secretary of state from 2009 to 2012.\n\n\n\nComey announced a week later that he had reviewed emails and continued to believe she should not be prosecuted, but the political damage was already done.\n\n\n\nClinton told donors that Trump was able to seize on both of Comey's announcements and use them to attack her, according to two participants on the call.\n\n\n\nWhile the second letter cleared her of wrongdoing, Clinton said that reinforced to Trump's supporters that the system was rigged in her favor and motivated them to mobilize on Election Day.",

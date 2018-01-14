@@ -16,69 +16,7 @@
           "coderPhraseCount": 2
         }
       ],
-      "label": "who",
-      "extracted": [
-        {
-          "parts": [
-            [
-              {
-                "nlpToken": {
-                  "characterOffsetBegin": 14,
-                  "word": "The",
-                  "lemma": "the",
-                  "characterOffsetEnd": 17,
-                  "speaker": "PER0",
-                  "ner": "O",
-                  "after": " ",
-                  "originalText": "The",
-                  "before": " ",
-                  "index": 3,
-                  "pos": "DT"
-                }
-              },
-              "DT"
-            ],
-            [
-              {
-                "nlpToken": {
-                  "characterOffsetBegin": 18,
-                  "word": "150g",
-                  "lemma": "150g",
-                  "characterOffsetEnd": 22,
-                  "speaker": "PER0",
-                  "ner": "O",
-                  "after": " ",
-                  "originalText": "150g",
-                  "before": " ",
-                  "index": 4,
-                  "pos": "NN"
-                }
-              },
-              "NN"
-            ],
-            [
-              {
-                "nlpToken": {
-                  "characterOffsetBegin": 23,
-                  "word": "Toblerone",
-                  "lemma": "toblerone",
-                  "characterOffsetEnd": 32,
-                  "speaker": "PER0",
-                  "ner": "O",
-                  "after": " ",
-                  "originalText": "Toblerone",
-                  "before": " ",
-                  "index": 5,
-                  "pos": "NN"
-                }
-              },
-              "NN"
-            ]
-          ],
-          "score": 1.0,
-          "text": "The 150g Toblerone"
-        }
-      ]
+      "label": "who"
     },
     "when": {
       "annotated": [
@@ -87,46 +25,7 @@
           "parsed": "2016-11-08"
         }
       ],
-      "label": "when",
-      "extracted": [
-        {
-          "parts": [
-            [
-              {
-                "nlpToken": {
-                  "characterOffsetBegin": 3252,
-                  "word": "October",
-                  "lemma": "October",
-                  "timex": {
-                    "value": "2016-10",
-                    "tid": "t4",
-                    "type": "DATE"
-                  },
-                  "before": " ",
-                  "characterOffsetEnd": 3259,
-                  "originalText": "October",
-                  "normalizedNER": "2016-10",
-                  "speaker": "PER0",
-                  "after": "",
-                  "ner": "DATE",
-                  "index": 2,
-                  "pos": "NNP"
-                }
-              },
-              "NNP"
-            ]
-          ],
-          "score": 0.45206706507583383,
-          "text": "October",
-          "enhancement": {
-            "timex": {
-              "start_date": "2016-10-01T00:00:00",
-              "end_date": "2016-10-31T23:59:59"
-            }
-          },
-          "nlpIndexSentence": 26
-        }
-      ]
+      "label": "when"
     },
     "why": {
       "annotated": [
@@ -135,33 +34,7 @@
           "coderPhraseCount": 3
         }
       ],
-      "label": "why",
-      "extracted": [
-        {
-          "parts": [
-            [
-              {
-                "nlpToken": {
-                  "characterOffsetBegin": 221,
-                  "word": "they",
-                  "lemma": "they",
-                  "characterOffsetEnd": 225,
-                  "speaker": "PER0",
-                  "ner": "O",
-                  "after": " ",
-                  "originalText": "they",
-                  "before": " ",
-                  "index": 37,
-                  "pos": "PRP"
-                }
-              },
-              "PRP"
-            ]
-          ],
-          "score": 0.5844155844155844,
-          "text": "they"
-        }
-      ]
+      "label": "why"
     },
     "how": {
       "annotated": [
@@ -171,156 +44,6 @@
         }
       ],
       "label": "how",
-      "extracted": [
-        {
-          "parts": [
-            [
-              {
-                "nlpToken": {
-                  "characterOffsetBegin": 2272,
-                  "word": "``",
-                  "lemma": "``",
-                  "characterOffsetEnd": 2273,
-                  "speaker": "PER0",
-                  "ner": "O",
-                  "after": "",
-                  "originalText": "\"",
-                  "before": " ",
-                  "index": 4,
-                  "pos": "``"
-                }
-              },
-              "``"
-            ],
-            [
-              {
-                "nlpToken": {
-                  "characterOffsetBegin": 2273,
-                  "word": "like",
-                  "lemma": "like",
-                  "characterOffsetEnd": 2277,
-                  "speaker": "123",
-                  "ner": "O",
-                  "after": " ",
-                  "originalText": "like",
-                  "before": "",
-                  "index": 5,
-                  "pos": "IN"
-                }
-              },
-              "IN"
-            ],
-            [
-              {
-                "nlpToken": {
-                  "characterOffsetBegin": 2278,
-                  "word": "many",
-                  "lemma": "many",
-                  "characterOffsetEnd": 2282,
-                  "speaker": "123",
-                  "ner": "O",
-                  "after": " ",
-                  "originalText": "many",
-                  "before": " ",
-                  "index": 6,
-                  "pos": "JJ"
-                }
-              },
-              "JJ"
-            ],
-            [
-              {
-                "nlpToken": {
-                  "characterOffsetBegin": 2283,
-                  "word": "other",
-                  "lemma": "other",
-                  "characterOffsetEnd": 2288,
-                  "speaker": "123",
-                  "ner": "O",
-                  "after": " ",
-                  "originalText": "other",
-                  "before": " ",
-                  "index": 7,
-                  "pos": "JJ"
-                }
-              },
-              "JJ"
-            ]
-          ],
-          "score": 1.0,
-          "text": "\" like many other",
-          "nlpIndexSentence": 4
-        }
-      ]
-    },
-    "where": {
-      "annotated": [
-        {
-          "text": "UK",
-          "coderPhraseCount": 3
-        }
-      ],
-      "label": "where",
-      "extracted": [
-        {
-          "parts": [
-            [
-              {
-                "nlpToken": {
-                  "characterOffsetBegin": 190,
-                  "word": "UK",
-                  "lemma": "UK",
-                  "characterOffsetEnd": 192,
-                  "speaker": "PER0",
-                  "ner": "LOCATION",
-                  "after": " ",
-                  "originalText": "UK",
-                  "before": " ",
-                  "index": 30,
-                  "pos": "NNP"
-                }
-              },
-              "NNP"
-            ]
-          ],
-          "score": 0.6699999999999999,
-          "text": "UK",
-          "enhancement": {
-            "openstreetmap_nominatim": {
-              "osm_id": "62149",
-              "boundingbox": [
-                49.674,
-                61.061,
-                -14.015517,
-                2.0919117
-              ],
-              "licence": "Data \u00a9 OpenStreetMap contributors, ODbL 1.0. http://www.openstreetmap.org/copyright",
-              "importance": 0.3267301409654,
-              "icon": "https://nominatim.openstreetmap.org/images/mapicons/poi_boundary_administrative.p.20.png",
-              "osm_type": "relation",
-              "display_name": "UK",
-              "lat": "54.7023545",
-              "type": "administrative",
-              "place_id": "179731133",
-              "lon": "-3.2765753",
-              "class": "boundary"
-            }
-          }
-        }
-      ]
-    },
-    "what": {
-      "annotated": [
-        {
-          "text": "changes the look and weight of two bars ",
-          "coderPhraseCount": 3
-        },
-        {
-          "text": "change upsets fans",
-          "coderPhraseCount": 2
-        }
-      ],
-      "label": "what",
       "extracted": [
         {
           "parts": [
@@ -377,12 +100,160 @@
                 }
               },
               "NNS"
+            ],
+            [
+              {
+                "nlpToken": {
+                  "characterOffsetBegin": 54,
+                  "word": "between",
+                  "lemma": "between",
+                  "characterOffsetEnd": 61,
+                  "speaker": "PER0",
+                  "ner": "O",
+                  "after": " ",
+                  "originalText": "between",
+                  "before": " ",
+                  "index": 9,
+                  "pos": "IN"
+                }
+              },
+              "IN"
+            ],
+            [
+              {
+                "nlpToken": {
+                  "characterOffsetBegin": 62,
+                  "word": "its",
+                  "lemma": "its",
+                  "characterOffsetEnd": 65,
+                  "speaker": "PER0",
+                  "ner": "O",
+                  "after": " ",
+                  "originalText": "its",
+                  "before": " ",
+                  "index": 10,
+                  "pos": "PRP$"
+                }
+              },
+              "PRP$"
+            ],
+            [
+              {
+                "nlpToken": {
+                  "characterOffsetBegin": 66,
+                  "word": "distinctive",
+                  "lemma": "distinctive",
+                  "characterOffsetEnd": 77,
+                  "speaker": "PER0",
+                  "ner": "O",
+                  "after": " ",
+                  "originalText": "distinctive",
+                  "before": " ",
+                  "index": 11,
+                  "pos": "JJ"
+                }
+              },
+              "JJ"
+            ],
+            [
+              {
+                "nlpToken": {
+                  "characterOffsetBegin": 78,
+                  "word": "triangles",
+                  "lemma": "triangle",
+                  "characterOffsetEnd": 87,
+                  "speaker": "PER0",
+                  "ner": "O",
+                  "after": " ",
+                  "originalText": "triangles",
+                  "before": " ",
+                  "index": 12,
+                  "pos": "NNS"
+                }
+              },
+              "NNS"
+            ],
+            [
+              {
+                "nlpToken": {
+                  "characterOffsetBegin": 88,
+                  "word": "A",
+                  "lemma": "a",
+                  "characterOffsetEnd": 89,
+                  "speaker": "PER0",
+                  "ner": "O",
+                  "after": " ",
+                  "originalText": "A",
+                  "before": " ",
+                  "index": 13,
+                  "pos": "DT"
+                }
+              },
+              "DT"
+            ],
+            [
+              {
+                "nlpToken": {
+                  "characterOffsetBegin": 90,
+                  "word": "decision",
+                  "lemma": "decision",
+                  "characterOffsetEnd": 98,
+                  "speaker": "PER0",
+                  "ner": "O",
+                  "after": " ",
+                  "originalText": "decision",
+                  "before": " ",
+                  "index": 14,
+                  "pos": "NN"
+                }
+              },
+              "NN"
+            ],
+            [
+              {
+                "nlpToken": {
+                  "characterOffsetBegin": 99,
+                  "word": "to",
+                  "lemma": "to",
+                  "characterOffsetEnd": 101,
+                  "speaker": "PER0",
+                  "ner": "O",
+                  "after": " ",
+                  "originalText": "to",
+                  "before": " ",
+                  "index": 15,
+                  "pos": "TO"
+                }
+              },
+              "TO"
             ]
           ],
-          "score": 1.0,
-          "text": "features larger gaps"
+          "score": 0.6981884057971016,
+          "text": "features larger gaps between its distinctive triangles A decision to"
         }
       ]
+    },
+    "where": {
+      "annotated": [
+        {
+          "text": "UK",
+          "coderPhraseCount": 3
+        }
+      ],
+      "label": "where"
+    },
+    "what": {
+      "annotated": [
+        {
+          "text": "changes the look and weight of two bars ",
+          "coderPhraseCount": 3
+        },
+        {
+          "text": "change upsets fans",
+          "coderPhraseCount": 2
+        }
+      ],
+      "label": "what"
     }
   },
   "description": "Toblerone changes the look and weight of two bars sold in the UK in an attempt to meet rising costs.",

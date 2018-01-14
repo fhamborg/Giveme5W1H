@@ -27,25 +27,43 @@
             [
               {
                 "nlpToken": {
-                  "characterOffsetBegin": 834,
-                  "word": "Bamford",
-                  "lemma": "Bamford",
-                  "characterOffsetEnd": 841,
+                  "characterOffsetBegin": 225,
+                  "word": "the",
+                  "lemma": "the",
+                  "characterOffsetEnd": 228,
                   "speaker": "PER0",
-                  "ner": "PERSON",
+                  "ner": "O",
                   "after": " ",
-                  "originalText": "Bamford",
+                  "originalText": "the",
                   "before": " ",
-                  "index": 1,
-                  "pos": "NNP"
+                  "index": 10,
+                  "pos": "DT"
                 }
               },
-              "NNP"
+              "DT"
+            ],
+            [
+              {
+                "nlpToken": {
+                  "characterOffsetBegin": 229,
+                  "word": "tram",
+                  "lemma": "tram",
+                  "characterOffsetEnd": 233,
+                  "speaker": "PER0",
+                  "ner": "O",
+                  "after": " ",
+                  "originalText": "tram",
+                  "before": " ",
+                  "index": 11,
+                  "pos": "NN"
+                }
+              },
+              "NN"
             ]
           ],
           "score": 1.0,
-          "text": "Bamford",
-          "nlpIndexSentence": 5
+          "text": "the tram",
+          "nlpIndexSentence": 1
         }
       ]
     },
@@ -189,24 +207,6 @@
             [
               {
                 "nlpToken": {
-                  "characterOffsetBegin": 3983,
-                  "word": "further",
-                  "lemma": "further",
-                  "characterOffsetEnd": 3990,
-                  "speaker": "PER0",
-                  "ner": "O",
-                  "after": " ",
-                  "originalText": "further",
-                  "before": " ",
-                  "index": 13,
-                  "pos": "RB"
-                }
-              },
-              "RB"
-            ],
-            [
-              {
-                "nlpToken": {
                   "characterOffsetBegin": 3991,
                   "word": "because",
                   "lemma": "because",
@@ -314,7 +314,7 @@
             ]
           ],
           "score": 0.6715049656226127,
-          "text": "further because an investigation was ongoing .",
+          "text": "because an investigation was ongoing .",
           "nlpIndexSentence": 40
         }
       ]
@@ -337,79 +337,198 @@
             [
               {
                 "nlpToken": {
-                  "characterOffsetBegin": 2816,
-                  "word": "news",
-                  "lemma": "news",
-                  "characterOffsetEnd": 2820,
+                  "characterOffsetBegin": 116,
+                  "word": "too",
+                  "lemma": "too",
+                  "characterOffsetEnd": 119,
                   "speaker": "PER0",
                   "ner": "O",
                   "after": " ",
-                  "originalText": "news",
+                  "originalText": "too",
                   "before": " ",
-                  "index": 2,
-                  "pos": "NN"
+                  "index": 24,
+                  "pos": "RB"
                 }
               },
-              "NN"
+              "RB"
             ],
             [
               {
                 "nlpToken": {
-                  "characterOffsetBegin": 2821,
-                  "word": "the",
-                  "lemma": "the",
-                  "characterOffsetEnd": 2824,
-                  "speaker": "PER0",
-                  "ner": "O",
-                  "after": " ",
-                  "originalText": "the",
-                  "before": " ",
-                  "index": 3,
-                  "pos": "DT"
-                }
-              },
-              "DT"
-            ],
-            [
-              {
-                "nlpToken": {
-                  "characterOffsetBegin": 2825,
-                  "word": "crash",
-                  "lemma": "crash",
-                  "characterOffsetEnd": 2830,
-                  "speaker": "PER0",
-                  "ner": "O",
-                  "after": " ",
-                  "originalText": "crash",
-                  "before": " ",
-                  "index": 4,
-                  "pos": "NN"
-                }
-              },
-              "NN"
-            ],
-            [
-              {
-                "nlpToken": {
-                  "characterOffsetBegin": 2831,
-                  "word": "broke",
-                  "lemma": "break",
-                  "characterOffsetEnd": 2836,
+                  "characterOffsetBegin": 120,
+                  "word": "fast",
+                  "lemma": "fast",
+                  "characterOffsetEnd": 124,
                   "speaker": "PER0",
                   "ner": "O",
                   "after": "",
-                  "originalText": "broke",
+                  "originalText": "fast",
                   "before": " ",
-                  "index": 5,
+                  "index": 25,
+                  "pos": "RB"
+                }
+              },
+              "RB"
+            ],
+            [
+              {
+                "nlpToken": {
+                  "characterOffsetBegin": 124,
+                  "word": ",",
+                  "lemma": ",",
+                  "characterOffsetEnd": 125,
+                  "speaker": "PER0",
+                  "ner": "O",
+                  "after": " ",
+                  "originalText": ",",
+                  "before": "",
+                  "index": 26,
+                  "pos": ","
+                }
+              },
+              ","
+            ],
+            [
+              {
+                "nlpToken": {
+                  "characterOffsetBegin": 126,
+                  "word": "crashed",
+                  "lemma": "crash",
+                  "characterOffsetEnd": 133,
+                  "speaker": "PER0",
+                  "ner": "O",
+                  "after": " ",
+                  "originalText": "crashed",
+                  "before": " ",
+                  "index": 27,
                   "pos": "VBD"
                 }
               },
               "VBD"
+            ],
+            [
+              {
+                "nlpToken": {
+                  "characterOffsetBegin": 134,
+                  "word": "in",
+                  "lemma": "in",
+                  "characterOffsetEnd": 136,
+                  "speaker": "PER0",
+                  "ner": "O",
+                  "after": " ",
+                  "originalText": "in",
+                  "before": " ",
+                  "index": 28,
+                  "pos": "IN"
+                }
+              },
+              "IN"
+            ],
+            [
+              {
+                "nlpToken": {
+                  "characterOffsetBegin": 137,
+                  "word": "south",
+                  "lemma": "south",
+                  "characterOffsetEnd": 142,
+                  "speaker": "PER0",
+                  "ner": "O",
+                  "after": " ",
+                  "originalText": "south",
+                  "before": " ",
+                  "index": 29,
+                  "pos": "JJ"
+                }
+              },
+              "JJ"
+            ],
+            [
+              {
+                "nlpToken": {
+                  "characterOffsetBegin": 143,
+                  "word": "London",
+                  "lemma": "London",
+                  "characterOffsetEnd": 149,
+                  "speaker": "PER0",
+                  "ner": "LOCATION",
+                  "after": " ",
+                  "originalText": "London",
+                  "before": " ",
+                  "index": 30,
+                  "pos": "NNP"
+                }
+              },
+              "NNP"
+            ],
+            [
+              {
+                "nlpToken": {
+                  "characterOffsetBegin": 150,
+                  "word": "on",
+                  "lemma": "on",
+                  "characterOffsetEnd": 152,
+                  "speaker": "PER0",
+                  "ner": "O",
+                  "after": " ",
+                  "originalText": "on",
+                  "before": " ",
+                  "index": 31,
+                  "pos": "IN"
+                }
+              },
+              "IN"
+            ],
+            [
+              {
+                "nlpToken": {
+                  "characterOffsetBegin": 153,
+                  "word": "Wednesday",
+                  "lemma": "Wednesday",
+                  "timex": {
+                    "value": "2016-11-09TMO",
+                    "tid": "t1",
+                    "type": "TIME"
+                  },
+                  "before": " ",
+                  "characterOffsetEnd": 162,
+                  "originalText": "Wednesday",
+                  "normalizedNER": "2016-11-09TMO",
+                  "speaker": "PER0",
+                  "after": " ",
+                  "ner": "DATE",
+                  "index": 32,
+                  "pos": "NNP"
+                }
+              },
+              "NNP"
+            ],
+            [
+              {
+                "nlpToken": {
+                  "characterOffsetBegin": 163,
+                  "word": "morning",
+                  "lemma": "morning",
+                  "timex": {
+                    "value": "2016-11-09TMO",
+                    "tid": "t1",
+                    "type": "TIME"
+                  },
+                  "before": " ",
+                  "characterOffsetEnd": 170,
+                  "originalText": "morning",
+                  "normalizedNER": "2016-11-09TMO",
+                  "speaker": "PER0",
+                  "after": "",
+                  "ner": "TIME",
+                  "index": 33,
+                  "pos": "NN"
+                }
+              },
+              "NN"
             ]
           ],
           "score": 1.0,
-          "text": "news the crash broke",
-          "nlpIndexSentence": 2
+          "text": "too fast , crashed in south London on Wednesday morning"
         }
       ]
     },
@@ -488,16 +607,16 @@
             [
               {
                 "nlpToken": {
-                  "characterOffsetBegin": 634,
-                  "word": "was",
-                  "lemma": "be",
-                  "characterOffsetEnd": 637,
+                  "characterOffsetBegin": 234,
+                  "word": "left",
+                  "lemma": "leave",
+                  "characterOffsetEnd": 238,
                   "speaker": "PER0",
                   "ner": "O",
                   "after": " ",
-                  "originalText": "was",
+                  "originalText": "left",
                   "before": " ",
-                  "index": 9,
+                  "index": 12,
                   "pos": "VBD"
                 }
               },
@@ -506,86 +625,32 @@
             [
               {
                 "nlpToken": {
-                  "characterOffsetBegin": 638,
-                  "word": "being",
-                  "lemma": "be",
-                  "characterOffsetEnd": 643,
+                  "characterOffsetBegin": 239,
+                  "word": "the",
+                  "lemma": "the",
+                  "characterOffsetEnd": 242,
                   "speaker": "PER0",
                   "ner": "O",
                   "after": " ",
-                  "originalText": "being",
-                  "before": " ",
-                  "index": 10,
-                  "pos": "VBG"
-                }
-              },
-              "VBG"
-            ],
-            [
-              {
-                "nlpToken": {
-                  "characterOffsetBegin": 644,
-                  "word": "treated",
-                  "lemma": "treat",
-                  "characterOffsetEnd": 651,
-                  "speaker": "PER0",
-                  "ner": "O",
-                  "after": " ",
-                  "originalText": "treated",
-                  "before": " ",
-                  "index": 11,
-                  "pos": "VBN"
-                }
-              },
-              "VBN"
-            ],
-            [
-              {
-                "nlpToken": {
-                  "characterOffsetBegin": 652,
-                  "word": "for",
-                  "lemma": "for",
-                  "characterOffsetEnd": 655,
-                  "speaker": "PER0",
-                  "ner": "O",
-                  "after": " ",
-                  "originalText": "for",
-                  "before": " ",
-                  "index": 12,
-                  "pos": "IN"
-                }
-              },
-              "IN"
-            ],
-            [
-              {
-                "nlpToken": {
-                  "characterOffsetBegin": 656,
-                  "word": "broken",
-                  "lemma": "broken",
-                  "characterOffsetEnd": 662,
-                  "speaker": "PER0",
-                  "ner": "O",
-                  "after": " ",
-                  "originalText": "broken",
+                  "originalText": "the",
                   "before": " ",
                   "index": 13,
-                  "pos": "JJ"
+                  "pos": "DT"
                 }
               },
-              "JJ"
+              "DT"
             ],
             [
               {
                 "nlpToken": {
-                  "characterOffsetBegin": 663,
-                  "word": "ribs",
-                  "lemma": "rib",
-                  "characterOffsetEnd": 667,
+                  "characterOffsetBegin": 243,
+                  "word": "tracks",
+                  "lemma": "track",
+                  "characterOffsetEnd": 249,
                   "speaker": "PER0",
                   "ner": "O",
                   "after": "",
-                  "originalText": "ribs",
+                  "originalText": "tracks",
                   "before": " ",
                   "index": 14,
                   "pos": "NNS"
@@ -595,8 +660,8 @@
             ]
           ],
           "score": 1.0,
-          "text": "was being treated for broken ribs",
-          "nlpIndexSentence": 5
+          "text": "left the tracks",
+          "nlpIndexSentence": 1
         }
       ]
     }

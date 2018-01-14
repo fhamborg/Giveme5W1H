@@ -19,52 +19,7 @@
           "coderPhraseCount": 2
         }
       ],
-      "label": "who",
-      "extracted": [
-        {
-          "parts": [
-            [
-              {
-                "nlpToken": {
-                  "characterOffsetBegin": 695,
-                  "word": "Mr.",
-                  "lemma": "Mr.",
-                  "characterOffsetEnd": 698,
-                  "speaker": "PER0",
-                  "ner": "O",
-                  "after": " ",
-                  "originalText": "Mr.",
-                  "before": " ",
-                  "index": 17,
-                  "pos": "NNP"
-                }
-              },
-              "NNP"
-            ],
-            [
-              {
-                "nlpToken": {
-                  "characterOffsetBegin": 699,
-                  "word": "Trump",
-                  "lemma": "Trump",
-                  "characterOffsetEnd": 704,
-                  "speaker": "PER0",
-                  "ner": "PERSON",
-                  "after": " ",
-                  "originalText": "Trump",
-                  "before": " ",
-                  "index": 18,
-                  "pos": "NNP"
-                }
-              },
-              "NNP"
-            ]
-          ],
-          "score": 1.0,
-          "text": "Mr. Trump",
-          "nlpIndexSentence": 5
-        }
-      ]
+      "label": "who"
     },
     "when": {
       "annotated": [
@@ -77,45 +32,7 @@
           "coderPhraseCount": 2
         }
       ],
-      "label": "when",
-      "extracted": [
-        {
-          "parts": [
-            [
-              {
-                "nlpToken": {
-                  "characterOffsetBegin": 21,
-                  "word": "Sunday",
-                  "lemma": "Sunday",
-                  "timex": {
-                    "value": "2016-11-06",
-                    "tid": "t1",
-                    "type": "DATE"
-                  },
-                  "before": " ",
-                  "characterOffsetEnd": 27,
-                  "originalText": "Sunday",
-                  "normalizedNER": "2016-11-06",
-                  "speaker": "PER0",
-                  "after": " ",
-                  "ner": "DATE",
-                  "index": 6,
-                  "pos": "NNP"
-                }
-              },
-              "NNP"
-            ]
-          ],
-          "score": 0.7533527883042784,
-          "text": "Sunday",
-          "enhancement": {
-            "timex": {
-              "start_date": "2016-11-06T00:00:00",
-              "end_date": "2016-11-06T23:59:59"
-            }
-          }
-        }
-      ]
+      "label": "when"
     },
     "why": {
       "annotated": [
@@ -123,34 +40,7 @@
           "coderPhraseCount": 3
         }
       ],
-      "label": "why",
-      "extracted": [
-        {
-          "parts": [
-            [
-              {
-                "nlpToken": {
-                  "characterOffsetBegin": 118,
-                  "word": "He",
-                  "lemma": "he",
-                  "characterOffsetEnd": 120,
-                  "speaker": "PER0",
-                  "ner": "O",
-                  "after": " ",
-                  "originalText": "He",
-                  "before": " ",
-                  "index": 1,
-                  "pos": "PRP"
-                }
-              },
-              "PRP"
-            ]
-          ],
-          "score": 0.5727813852813853,
-          "text": "He",
-          "nlpIndexSentence": 1
-        }
-      ]
+      "label": "why"
     },
     "how": {
       "annotated": [
@@ -165,78 +55,186 @@
             [
               {
                 "nlpToken": {
-                  "characterOffsetBegin": 4,
-                  "word": "Donald",
-                  "lemma": "Donald",
-                  "characterOffsetEnd": 10,
-                  "speaker": "PER0",
-                  "ner": "PERSON",
-                  "after": " ",
-                  "originalText": "Donald",
-                  "before": " ",
-                  "index": 2,
-                  "pos": "NNP"
-                }
-              },
-              "NNP"
-            ],
-            [
-              {
-                "nlpToken": {
-                  "characterOffsetBegin": 11,
-                  "word": "J.",
-                  "lemma": "J.",
-                  "characterOffsetEnd": 13,
-                  "speaker": "PER0",
-                  "ner": "PERSON",
-                  "after": " ",
-                  "originalText": "J.",
-                  "before": " ",
-                  "index": 3,
-                  "pos": "NNP"
-                }
-              },
-              "NNP"
-            ],
-            [
-              {
-                "nlpToken": {
-                  "characterOffsetBegin": 14,
-                  "word": "Trump",
-                  "lemma": "Trump",
-                  "characterOffsetEnd": 19,
-                  "speaker": "PER0",
-                  "ner": "PERSON",
-                  "after": "",
-                  "originalText": "Trump",
-                  "before": " ",
-                  "index": 4,
-                  "pos": "NNP"
-                }
-              },
-              "NNP"
-            ],
-            [
-              {
-                "nlpToken": {
-                  "characterOffsetBegin": 19,
-                  "word": ",",
-                  "lemma": ",",
-                  "characterOffsetEnd": 20,
+                  "characterOffsetBegin": 247,
+                  "word": "The",
+                  "lemma": "the",
+                  "characterOffsetEnd": 250,
                   "speaker": "PER0",
                   "ner": "O",
                   "after": " ",
-                  "originalText": ",",
-                  "before": "",
-                  "index": 5,
-                  "pos": ","
+                  "originalText": "The",
+                  "before": " ",
+                  "index": 1,
+                  "pos": "DT"
                 }
               },
-              ","
+              "DT"
+            ],
+            [
+              {
+                "nlpToken": {
+                  "characterOffsetBegin": 251,
+                  "word": "final",
+                  "lemma": "final",
+                  "characterOffsetEnd": 256,
+                  "speaker": "PER0",
+                  "ner": "O",
+                  "after": " ",
+                  "originalText": "final",
+                  "before": " ",
+                  "index": 2,
+                  "pos": "JJ"
+                }
+              },
+              "JJ"
+            ],
+            [
+              {
+                "nlpToken": {
+                  "characterOffsetBegin": 257,
+                  "word": "polls",
+                  "lemma": "poll",
+                  "characterOffsetEnd": 262,
+                  "speaker": "PER0",
+                  "ner": "O",
+                  "after": " ",
+                  "originalText": "polls",
+                  "before": " ",
+                  "index": 3,
+                  "pos": "NNS"
+                }
+              },
+              "NNS"
+            ],
+            [
+              {
+                "nlpToken": {
+                  "characterOffsetBegin": 263,
+                  "word": "are",
+                  "lemma": "be",
+                  "characterOffsetEnd": 266,
+                  "speaker": "PER0",
+                  "ner": "O",
+                  "after": " ",
+                  "originalText": "are",
+                  "before": " ",
+                  "index": 4,
+                  "pos": "VBP"
+                }
+              },
+              "VBP"
+            ],
+            [
+              {
+                "nlpToken": {
+                  "characterOffsetBegin": 267,
+                  "word": "trickling",
+                  "lemma": "trickle",
+                  "characterOffsetEnd": 276,
+                  "speaker": "PER0",
+                  "ner": "O",
+                  "after": " ",
+                  "originalText": "trickling",
+                  "before": " ",
+                  "index": 5,
+                  "pos": "VBG"
+                }
+              },
+              "VBG"
+            ],
+            [
+              {
+                "nlpToken": {
+                  "characterOffsetBegin": 277,
+                  "word": "in",
+                  "lemma": "in",
+                  "characterOffsetEnd": 279,
+                  "speaker": "PER0",
+                  "ner": "O",
+                  "after": " ",
+                  "originalText": "in",
+                  "before": " ",
+                  "index": 6,
+                  "pos": "IN"
+                }
+              },
+              "IN"
+            ],
+            [
+              {
+                "nlpToken": {
+                  "characterOffsetBegin": 280,
+                  "word": "and",
+                  "lemma": "and",
+                  "characterOffsetEnd": 283,
+                  "speaker": "PER0",
+                  "ner": "O",
+                  "after": " ",
+                  "originalText": "and",
+                  "before": " ",
+                  "index": 7,
+                  "pos": "CC"
+                }
+              },
+              "CC"
+            ],
+            [
+              {
+                "nlpToken": {
+                  "characterOffsetBegin": 284,
+                  "word": "Clinton",
+                  "lemma": "Clinton",
+                  "characterOffsetEnd": 291,
+                  "speaker": "PER0",
+                  "ner": "PERSON",
+                  "after": " ",
+                  "originalText": "Clinton",
+                  "before": " ",
+                  "index": 8,
+                  "pos": "NNP"
+                }
+              },
+              "NNP"
+            ],
+            [
+              {
+                "nlpToken": {
+                  "characterOffsetBegin": 292,
+                  "word": "is",
+                  "lemma": "be",
+                  "characterOffsetEnd": 294,
+                  "speaker": "PER0",
+                  "ner": "O",
+                  "after": " ",
+                  "originalText": "is",
+                  "before": " ",
+                  "index": 9,
+                  "pos": "VBZ"
+                }
+              },
+              "VBZ"
+            ],
+            [
+              {
+                "nlpToken": {
+                  "characterOffsetBegin": 295,
+                  "word": "retaining",
+                  "lemma": "retain",
+                  "characterOffsetEnd": 304,
+                  "speaker": "PER0",
+                  "ner": "O",
+                  "after": " ",
+                  "originalText": "retaining",
+                  "before": " ",
+                  "index": 10,
+                  "pos": "VBG"
+                }
+              },
+              "VBG"
             ]
           ],
-          "score": 1.0,
-          "text": "Donald J. Trump ,",
+          "score": 0.6836503623188407,
+          "text": "The final polls are trickling in and Clinton is retaining",
           "nlpIndexSentence": 2
         }
       ]
@@ -247,73 +245,7 @@
           "coderPhraseCount": 3
         }
       ],
-      "label": "where",
-      "extracted": [
-        {
-          "parts": [
-            [
-              {
-                "nlpToken": {
-                  "characterOffsetBegin": 133,
-                  "word": "Upper",
-                  "lemma": "Upper",
-                  "characterOffsetEnd": 138,
-                  "speaker": "PER0",
-                  "ner": "LOCATION",
-                  "after": " ",
-                  "originalText": "Upper",
-                  "before": " ",
-                  "index": 5,
-                  "pos": "NNP"
-                }
-              },
-              "NNP"
-            ],
-            [
-              {
-                "nlpToken": {
-                  "characterOffsetBegin": 139,
-                  "word": "Midwest",
-                  "lemma": "Midwest",
-                  "characterOffsetEnd": 146,
-                  "speaker": "PER0",
-                  "ner": "LOCATION",
-                  "after": "",
-                  "originalText": "Midwest",
-                  "before": " ",
-                  "index": 6,
-                  "pos": "NNP"
-                }
-              },
-              "NNP"
-            ]
-          ],
-          "score": 0.6981018295575758,
-          "text": "Upper Midwest",
-          "enhancement": {
-            "openstreetmap_nominatim": {
-              "osm_id": "148911344",
-              "boundingbox": [
-                41.5998306,
-                41.6001607,
-                -93.6620975,
-                -93.6618261
-              ],
-              "licence": "Data \u00a9 OpenStreetMap contributors, ODbL 1.0. http://www.openstreetmap.org/copyright",
-              "importance": 0.201,
-              "icon": "https://nominatim.openstreetmap.org/images/mapicons/place_of_worship_unknown3.p.20.png",
-              "osm_type": "way",
-              "display_name": "Christian Church - Disciples of Christ in the Upper Midwest, 3306, University Avenue, Uptown Shopping Center, Des Moines, Polk County, Iowa, 50311, United States of America",
-              "lat": "41.59999565",
-              "type": "place_of_worship",
-              "place_id": "103164510",
-              "lon": "-93.6619618",
-              "class": "amenity"
-            }
-          },
-          "nlpIndexSentence": 1
-        }
-      ]
+      "label": "where"
     },
     "what": {
       "annotated": [
@@ -326,70 +258,7 @@
           "coderPhraseCount": 2
         }
       ],
-      "label": "what",
-      "extracted": [
-        {
-          "parts": [
-            [
-              {
-                "nlpToken": {
-                  "characterOffsetBegin": 705,
-                  "word": "holds",
-                  "lemma": "hold",
-                  "characterOffsetEnd": 710,
-                  "speaker": "PER0",
-                  "ner": "O",
-                  "after": " ",
-                  "originalText": "holds",
-                  "before": " ",
-                  "index": 19,
-                  "pos": "VBZ"
-                }
-              },
-              "VBZ"
-            ],
-            [
-              {
-                "nlpToken": {
-                  "characterOffsetBegin": 711,
-                  "word": "a",
-                  "lemma": "a",
-                  "characterOffsetEnd": 712,
-                  "speaker": "PER0",
-                  "ner": "O",
-                  "after": " ",
-                  "originalText": "a",
-                  "before": " ",
-                  "index": 20,
-                  "pos": "DT"
-                }
-              },
-              "DT"
-            ],
-            [
-              {
-                "nlpToken": {
-                  "characterOffsetBegin": 713,
-                  "word": "lead",
-                  "lemma": "lead",
-                  "characterOffsetEnd": 717,
-                  "speaker": "PER0",
-                  "ner": "O",
-                  "after": " ",
-                  "originalText": "lead",
-                  "before": " ",
-                  "index": 21,
-                  "pos": "NN"
-                }
-              },
-              "NN"
-            ]
-          ],
-          "score": 1.0,
-          "text": "holds a lead",
-          "nlpIndexSentence": 5
-        }
-      ]
+      "label": "what"
     }
   },
   "description": "The F.B.I. removed a dark cloud that has been hanging over Hillary Clinton's campaign two days before Election Day.",

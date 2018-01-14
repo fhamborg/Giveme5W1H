@@ -19,87 +19,7 @@
           "text": "tram crash"
         }
       ],
-      "label": "what",
-      "extracted": [
-        {
-          "parts": [
-            [
-              {
-                "nlpToken": {
-                  "before": " ",
-                  "word": "describes",
-                  "index": 5,
-                  "lemma": "describe",
-                  "characterOffsetBegin": 28,
-                  "pos": "VBZ",
-                  "originalText": "describes",
-                  "ner": "O",
-                  "after": " ",
-                  "characterOffsetEnd": 37,
-                  "speaker": "PER0"
-                }
-              },
-              "VBZ"
-            ],
-            [
-              {
-                "nlpToken": {
-                  "before": " ",
-                  "word": "`",
-                  "index": 6,
-                  "lemma": "`",
-                  "characterOffsetBegin": 38,
-                  "pos": "``",
-                  "originalText": "'",
-                  "ner": "O",
-                  "after": "",
-                  "characterOffsetEnd": 39,
-                  "speaker": "PER0"
-                }
-              },
-              "``"
-            ],
-            [
-              {
-                "nlpToken": {
-                  "before": "",
-                  "word": "carnage",
-                  "index": 7,
-                  "lemma": "carnage",
-                  "characterOffsetBegin": 39,
-                  "pos": "NN",
-                  "originalText": "carnage",
-                  "ner": "O",
-                  "after": "",
-                  "characterOffsetEnd": 46,
-                  "speaker": "PER0"
-                }
-              },
-              "NN"
-            ],
-            [
-              {
-                "nlpToken": {
-                  "before": "",
-                  "word": "'",
-                  "index": 8,
-                  "lemma": "'",
-                  "characterOffsetBegin": 46,
-                  "pos": "''",
-                  "originalText": "'",
-                  "ner": "O",
-                  "after": " ",
-                  "characterOffsetEnd": 47,
-                  "speaker": "PER0"
-                }
-              },
-              "''"
-            ]
-          ],
-          "score": 1.0,
-          "text": "describes ' carnage '"
-        }
-      ]
+      "label": "what"
     },
     "how": {
       "annotated": [
@@ -115,79 +35,61 @@
             [
               {
                 "nlpToken": {
-                  "before": " ",
-                  "word": "the",
                   "index": 11,
-                  "lemma": "the",
-                  "characterOffsetBegin": 126,
-                  "pos": "DT",
-                  "originalText": "the",
-                  "ner": "O",
+                  "pos": "CD",
+                  "originalText": "seven",
+                  "ner": "NUMBER",
                   "after": " ",
-                  "characterOffsetEnd": 129,
+                  "characterOffsetEnd": 64,
+                  "before": " ",
+                  "word": "seven",
+                  "characterOffsetBegin": 59,
+                  "normalizedNER": "7.0",
+                  "lemma": "seven",
                   "speaker": "PER0"
                 }
               },
-              "DT"
+              "CD"
             ],
             [
               {
                 "nlpToken": {
                   "before": " ",
-                  "word": "horror",
+                  "word": "dead",
                   "index": 12,
-                  "lemma": "horror",
-                  "characterOffsetBegin": 130,
-                  "pos": "NN",
-                  "originalText": "horror",
-                  "ner": "O",
-                  "after": " ",
-                  "characterOffsetEnd": 136,
-                  "speaker": "PER0"
-                }
-              },
-              "NN"
-            ],
-            [
-              {
-                "nlpToken": {
-                  "before": " ",
-                  "word": "crash",
-                  "index": 13,
-                  "lemma": "crash",
-                  "characterOffsetBegin": 137,
-                  "pos": "NN",
-                  "originalText": "crash",
+                  "lemma": "dead",
+                  "characterOffsetBegin": 65,
+                  "pos": "JJ",
+                  "originalText": "dead",
                   "ner": "O",
                   "after": "",
-                  "characterOffsetEnd": 142,
+                  "characterOffsetEnd": 69,
                   "speaker": "PER0"
                 }
               },
-              "NN"
+              "JJ"
             ],
             [
               {
                 "nlpToken": {
                   "before": "",
-                  "word": ",",
-                  "index": 14,
-                  "lemma": ",",
-                  "characterOffsetBegin": 142,
-                  "pos": ",",
-                  "originalText": ",",
+                  "word": ".",
+                  "index": 13,
+                  "lemma": ".",
+                  "characterOffsetBegin": 69,
+                  "pos": ".",
+                  "originalText": ".",
                   "ner": "O",
                   "after": " ",
-                  "characterOffsetEnd": 143,
+                  "characterOffsetEnd": 70,
                   "speaker": "PER0"
                 }
               },
-              ","
+              "."
             ]
           ],
-          "score": 1.0,
-          "text": "the horror crash ,",
-          "nlpIndexSentence": 11
+          "score": 0.7098861283643894,
+          "text": "seven dead ."
         }
       ]
     },
@@ -198,46 +100,7 @@
           "text": "Wednesday morning"
         }
       ],
-      "label": "when",
-      "extracted": [
-        {
-          "parts": [
-            [
-              {
-                "nlpToken": {
-                  "index": 11,
-                  "pos": "NN",
-                  "originalText": "tomorrow",
-                  "ner": "TIME",
-                  "after": " ",
-                  "characterOffsetEnd": 2139,
-                  "before": " ",
-                  "word": "tomorrow",
-                  "characterOffsetBegin": 2131,
-                  "normalizedNER": "2016-11-10T01:00",
-                  "lemma": "tomorrow",
-                  "timex": {
-                    "tid": "t8",
-                    "type": "TIME",
-                    "value": "2016-11-10T01:00"
-                  },
-                  "speaker": "PER0"
-                }
-              },
-              "NN"
-            ]
-          ],
-          "score": 0.7917726521675488,
-          "text": "tomorrow",
-          "enhancement": {
-            "timex": {
-              "start_date": "2016-11-10T01:00:00",
-              "end_date": "2016-11-10T01:00:59"
-            }
-          },
-          "nlpIndexSentence": 18
-        }
-      ]
+      "label": "when"
     },
     "why": {
       "annotated": [
@@ -253,34 +116,7 @@
           "coderPhraseCount": 1
         }
       ],
-      "label": "why",
-      "extracted": [
-        {
-          "parts": [
-            [
-              {
-                "nlpToken": {
-                  "before": " ",
-                  "word": "it",
-                  "index": 12,
-                  "lemma": "it",
-                  "characterOffsetBegin": 250,
-                  "pos": "PRP",
-                  "originalText": "it",
-                  "ner": "O",
-                  "after": " ",
-                  "characterOffsetEnd": 252,
-                  "speaker": "PER0"
-                }
-              },
-              "PRP"
-            ]
-          ],
-          "score": 0.531230674087817,
-          "text": "it",
-          "nlpIndexSentence": 2
-        }
-      ]
+      "label": "why"
     },
     "who": {
       "annotated": [
@@ -296,87 +132,7 @@
           "coderPhraseCount": 1
         }
       ],
-      "label": "who",
-      "extracted": [
-        {
-          "parts": [
-            [
-              {
-                "nlpToken": {
-                  "before": "",
-                  "word": "Croydon",
-                  "index": 1,
-                  "lemma": "Croydon",
-                  "characterOffsetBegin": 0,
-                  "pos": "NNP",
-                  "originalText": "Croydon",
-                  "ner": "LOCATION",
-                  "after": " ",
-                  "characterOffsetEnd": 7,
-                  "speaker": "PER0"
-                }
-              },
-              "NNP"
-            ],
-            [
-              {
-                "nlpToken": {
-                  "before": " ",
-                  "word": "tram",
-                  "index": 2,
-                  "lemma": "tram",
-                  "characterOffsetBegin": 8,
-                  "pos": "NN",
-                  "originalText": "tram",
-                  "ner": "O",
-                  "after": " ",
-                  "characterOffsetEnd": 12,
-                  "speaker": "PER0"
-                }
-              },
-              "NN"
-            ],
-            [
-              {
-                "nlpToken": {
-                  "before": " ",
-                  "word": "crash",
-                  "index": 3,
-                  "lemma": "crash",
-                  "characterOffsetBegin": 13,
-                  "pos": "NN",
-                  "originalText": "crash",
-                  "ner": "O",
-                  "after": " ",
-                  "characterOffsetEnd": 18,
-                  "speaker": "PER0"
-                }
-              },
-              "NN"
-            ],
-            [
-              {
-                "nlpToken": {
-                  "before": " ",
-                  "word": "survivor",
-                  "index": 4,
-                  "lemma": "survivor",
-                  "characterOffsetBegin": 19,
-                  "pos": "NN",
-                  "originalText": "survivor",
-                  "ner": "O",
-                  "after": " ",
-                  "characterOffsetEnd": 27,
-                  "speaker": "PER0"
-                }
-              },
-              "NN"
-            ]
-          ],
-          "score": 1.0,
-          "text": "Croydon tram crash survivor"
-        }
-      ]
+      "label": "who"
     },
     "where": {
       "annotated": [
@@ -389,54 +145,7 @@
           "text": "Croydon"
         }
       ],
-      "label": "where",
-      "extracted": [
-        {
-          "parts": [
-            [
-              {
-                "nlpToken": {
-                  "before": "",
-                  "word": "Croydon",
-                  "index": 1,
-                  "lemma": "Croydon",
-                  "characterOffsetBegin": 0,
-                  "pos": "NNP",
-                  "originalText": "Croydon",
-                  "ner": "LOCATION",
-                  "after": " ",
-                  "characterOffsetEnd": 7,
-                  "speaker": "PER0"
-                }
-              },
-              "NNP"
-            ]
-          ],
-          "score": 0.681465176880462,
-          "text": "Croydon",
-          "enhancement": {
-            "openstreetmap_nominatim": {
-              "osm_id": "21262496",
-              "boundingbox": [
-                51.3313049,
-                51.4113049,
-                -0.141957,
-                -0.061957
-              ],
-              "licence": "Data \u00a9 OpenStreetMap contributors, ODbL 1.0. http://www.openstreetmap.org/copyright",
-              "importance": 0.23943987893565,
-              "icon": "https://nominatim.openstreetmap.org/images/mapicons/poi_place_town.p.20.png",
-              "osm_type": "node",
-              "display_name": "Croydon, London, Greater London, England, CR0 1SZ, UK",
-              "lat": "51.3713049",
-              "type": "town",
-              "place_id": "117537",
-              "lon": "-0.101957",
-              "class": "place"
-            }
-          }
-        }
-      ]
+      "label": "where"
     }
   },
   "description": "A FATHER-of-four who survived the Croydon tram crash, which left seven dead, has described the lethal derailment like 'something out of a film' as he spoke of the \"absolute carnage\" caused when it toppled over.",

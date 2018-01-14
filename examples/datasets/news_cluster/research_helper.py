@@ -8,7 +8,7 @@ import webbrowser
 '''
 
 # Set your search term here.
-search_term = 'Chicago Apple  Falling Ice'
+search_term = 'Unknown Microbes In Space'
 search_term_plus = search_term.replace(' ', '+')
 search_term_encoded = urllib.parse.quote(search_term)
 urls = [

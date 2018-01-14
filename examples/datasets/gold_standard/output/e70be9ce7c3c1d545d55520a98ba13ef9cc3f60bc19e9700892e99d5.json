@@ -12,33 +12,7 @@
           "coderPhraseCount": 3
         }
       ],
-      "label": "who",
-      "extracted": [
-        {
-          "parts": [
-            [
-              {
-                "nlpToken": {
-                  "characterOffsetBegin": 0,
-                  "word": "Clinton",
-                  "lemma": "Clinton",
-                  "characterOffsetEnd": 7,
-                  "speaker": "PER0",
-                  "ner": "PERSON",
-                  "after": " ",
-                  "originalText": "Clinton",
-                  "before": "",
-                  "index": 1,
-                  "pos": "NNP"
-                }
-              },
-              "NNP"
-            ]
-          ],
-          "score": 1.0,
-          "text": "Clinton"
-        }
-      ]
+      "label": "who"
     },
     "when": {
       "annotated": [
@@ -48,10 +22,104 @@
           "parsed": "2016-11-12"
         }
       ],
-      "label": "when",
+      "label": "when"
+    },
+    "why": {
+      "annotated": [
+        {
+          "text": "reopening the investigation close to the election",
+          "coderPhraseCount": 3
+        }
+      ],
+      "label": "why"
+    },
+    "how": {
+      "annotated": [
+        {
+          "text": "blames",
+          "coderPhraseCount": 2
+        },
+        {
+          "text": "announced he was reopening",
+          "coderPhraseCount": 1
+        }
+      ],
+      "label": "how",
       "extracted": [
         {
           "parts": [
+            [
+              {
+                "nlpToken": {
+                  "characterOffsetBegin": 101,
+                  "word": "with",
+                  "lemma": "with",
+                  "characterOffsetEnd": 105,
+                  "speaker": "PER0",
+                  "ner": "O",
+                  "after": " ",
+                  "originalText": "with",
+                  "before": " ",
+                  "index": 5,
+                  "pos": "IN"
+                }
+              },
+              "IN"
+            ],
+            [
+              {
+                "nlpToken": {
+                  "characterOffsetBegin": 106,
+                  "word": "top",
+                  "lemma": "top",
+                  "characterOffsetEnd": 109,
+                  "speaker": "PER0",
+                  "ner": "O",
+                  "after": " ",
+                  "originalText": "top",
+                  "before": " ",
+                  "index": 6,
+                  "pos": "JJ"
+                }
+              },
+              "JJ"
+            ],
+            [
+              {
+                "nlpToken": {
+                  "characterOffsetBegin": 110,
+                  "word": "donors",
+                  "lemma": "donor",
+                  "characterOffsetEnd": 116,
+                  "speaker": "PER0",
+                  "ner": "O",
+                  "after": " ",
+                  "originalText": "donors",
+                  "before": " ",
+                  "index": 7,
+                  "pos": "NNS"
+                }
+              },
+              "NNS"
+            ],
+            [
+              {
+                "nlpToken": {
+                  "characterOffsetBegin": 117,
+                  "word": "on",
+                  "lemma": "on",
+                  "characterOffsetEnd": 119,
+                  "speaker": "PER0",
+                  "ner": "O",
+                  "after": " ",
+                  "originalText": "on",
+                  "before": " ",
+                  "index": 8,
+                  "pos": "IN"
+                }
+              },
+              "IN"
+            ],
             [
               {
                 "nlpToken": {
@@ -75,83 +143,38 @@
                 }
               },
               "NNP"
-            ]
-          ],
-          "score": 0.7925572636129203,
-          "text": "Saturday",
-          "enhancement": {
-            "timex": {
-              "start_date": "2016-11-12T00:00:00",
-              "end_date": "2016-11-12T23:59:59"
-            }
-          },
-          "nlpIndexSentence": 1
-        }
-      ]
-    },
-    "why": {
-      "annotated": [
-        {
-          "text": "reopening the investigation close to the election",
-          "coderPhraseCount": 3
-        }
-      ],
-      "label": "why",
-      "extracted": [
-        {
-          "parts": [
+            ],
             [
               {
                 "nlpToken": {
-                  "characterOffsetBegin": 0,
+                  "characterOffsetBegin": 128,
+                  "word": ",",
+                  "lemma": ",",
+                  "characterOffsetEnd": 129,
+                  "speaker": "PER0",
+                  "ner": "O",
+                  "after": " ",
+                  "originalText": ",",
+                  "before": "",
+                  "index": 10,
+                  "pos": ","
+                }
+              },
+              ","
+            ],
+            [
+              {
+                "nlpToken": {
+                  "characterOffsetBegin": 130,
                   "word": "Clinton",
                   "lemma": "Clinton",
-                  "characterOffsetEnd": 7,
+                  "characterOffsetEnd": 137,
                   "speaker": "PER0",
                   "ner": "PERSON",
                   "after": " ",
                   "originalText": "Clinton",
-                  "before": "",
-                  "index": 1,
-                  "pos": "NNP"
-                }
-              },
-              "NNP"
-            ]
-          ],
-          "score": 0.5844155844155844,
-          "text": "Clinton"
-        }
-      ]
-    },
-    "how": {
-      "annotated": [
-        {
-          "text": "blames",
-          "coderPhraseCount": 2
-        },
-        {
-          "text": "announced he was reopening",
-          "coderPhraseCount": 1
-        }
-      ],
-      "label": "how",
-      "extracted": [
-        {
-          "parts": [
-            [
-              {
-                "nlpToken": {
-                  "characterOffsetBegin": 441,
-                  "word": "Mr",
-                  "lemma": "Mr",
-                  "characterOffsetEnd": 443,
-                  "speaker": "PER0",
-                  "ner": "O",
-                  "after": " ",
-                  "originalText": "Mr",
                   "before": " ",
-                  "index": 2,
+                  "index": 11,
                   "pos": "NNP"
                 }
               },
@@ -160,34 +183,16 @@
             [
               {
                 "nlpToken": {
-                  "characterOffsetBegin": 444,
-                  "word": "Comey",
-                  "lemma": "Comey",
-                  "characterOffsetEnd": 449,
-                  "speaker": "PER0",
-                  "ner": "PERSON",
-                  "after": " ",
-                  "originalText": "Comey",
-                  "before": " ",
-                  "index": 3,
-                  "pos": "NNP"
-                }
-              },
-              "NNP"
-            ],
-            [
-              {
-                "nlpToken": {
-                  "characterOffsetBegin": 450,
-                  "word": "sent",
-                  "lemma": "send",
-                  "characterOffsetEnd": 454,
+                  "characterOffsetBegin": 138,
+                  "word": "said",
+                  "lemma": "say",
+                  "characterOffsetEnd": 142,
                   "speaker": "PER0",
                   "ner": "O",
                   "after": " ",
-                  "originalText": "sent",
+                  "originalText": "said",
                   "before": " ",
-                  "index": 4,
+                  "index": 12,
                   "pos": "VBD"
                 }
               },
@@ -196,25 +201,43 @@
             [
               {
                 "nlpToken": {
-                  "characterOffsetBegin": 455,
-                  "word": "a",
-                  "lemma": "a",
-                  "characterOffsetEnd": 456,
+                  "characterOffsetBegin": 143,
+                  "word": "Mr",
+                  "lemma": "Mr",
+                  "characterOffsetEnd": 145,
                   "speaker": "PER0",
                   "ner": "O",
                   "after": " ",
-                  "originalText": "a",
+                  "originalText": "Mr",
                   "before": " ",
-                  "index": 5,
-                  "pos": "DT"
+                  "index": 13,
+                  "pos": "NNP"
                 }
               },
-              "DT"
+              "NNP"
+            ],
+            [
+              {
+                "nlpToken": {
+                  "characterOffsetBegin": 146,
+                  "word": "Comey",
+                  "lemma": "Comey",
+                  "characterOffsetEnd": 151,
+                  "speaker": "PER0",
+                  "ner": "PERSON",
+                  "after": "",
+                  "originalText": "Comey",
+                  "before": " ",
+                  "index": 14,
+                  "pos": "NNP"
+                }
+              },
+              "NNP"
             ]
           ],
-          "score": 1.0,
-          "text": "Mr Comey sent a",
-          "nlpIndexSentence": 2
+          "score": 0.6859903381642514,
+          "text": "with top donors on Saturday , Clinton said Mr Comey",
+          "nlpIndexSentence": 1
         }
       ]
     },
@@ -224,73 +247,7 @@
           "coderPhraseCount": 2
         }
       ],
-      "label": "where",
-      "extracted": [
-        {
-          "parts": [
-            [
-              {
-                "nlpToken": {
-                  "characterOffsetBegin": 694,
-                  "word": "United",
-                  "lemma": "United",
-                  "characterOffsetEnd": 700,
-                  "speaker": "PER0",
-                  "ner": "LOCATION",
-                  "after": " ",
-                  "originalText": "United",
-                  "before": " ",
-                  "index": 24,
-                  "pos": "NNP"
-                }
-              },
-              "NNP"
-            ],
-            [
-              {
-                "nlpToken": {
-                  "characterOffsetBegin": 701,
-                  "word": "States",
-                  "lemma": "States",
-                  "characterOffsetEnd": 707,
-                  "speaker": "PER0",
-                  "ner": "LOCATION",
-                  "after": "",
-                  "originalText": "States",
-                  "before": " ",
-                  "index": 25,
-                  "pos": "NNPS"
-                }
-              },
-              "NNPS"
-            ]
-          ],
-          "score": 0.7,
-          "text": "United States",
-          "enhancement": {
-            "openstreetmap_nominatim": {
-              "osm_id": "148838",
-              "boundingbox": [
-                -14.7608358,
-                71.6048217,
-                -180.0,
-                180.0
-              ],
-              "licence": "Data \u00a9 OpenStreetMap contributors, ODbL 1.0. http://www.openstreetmap.org/copyright",
-              "importance": 0.4361730870995,
-              "icon": "https://nominatim.openstreetmap.org/images/mapicons/poi_boundary_administrative.p.20.png",
-              "osm_type": "relation",
-              "display_name": "United States of America",
-              "lat": "39.7837304",
-              "type": "administrative",
-              "place_id": "177579678",
-              "lon": "-100.4458825",
-              "class": "boundary"
-            }
-          },
-          "nlpIndexSentence": 4
-        }
-      ]
+      "label": "where"
     },
     "what": {
       "annotated": [
@@ -299,195 +256,7 @@
           "coderPhraseCount": 3
         }
       ],
-      "label": "what",
-      "extracted": [
-        {
-          "parts": [
-            [
-              {
-                "nlpToken": {
-                  "characterOffsetBegin": 8,
-                  "word": "criticised",
-                  "lemma": "criticise",
-                  "characterOffsetEnd": 18,
-                  "speaker": "PER0",
-                  "ner": "O",
-                  "after": " ",
-                  "originalText": "criticised",
-                  "before": " ",
-                  "index": 2,
-                  "pos": "VBD"
-                }
-              },
-              "VBD"
-            ],
-            [
-              {
-                "nlpToken": {
-                  "characterOffsetBegin": 19,
-                  "word": "Comey",
-                  "lemma": "Comey",
-                  "characterOffsetEnd": 24,
-                  "speaker": "PER0",
-                  "ner": "PERSON",
-                  "after": " ",
-                  "originalText": "Comey",
-                  "before": " ",
-                  "index": 3,
-                  "pos": "NNP"
-                }
-              },
-              "NNP"
-            ],
-            [
-              {
-                "nlpToken": {
-                  "characterOffsetBegin": 25,
-                  "word": "for",
-                  "lemma": "for",
-                  "characterOffsetEnd": 28,
-                  "speaker": "PER0",
-                  "ner": "O",
-                  "after": " ",
-                  "originalText": "for",
-                  "before": " ",
-                  "index": 4,
-                  "pos": "IN"
-                }
-              },
-              "IN"
-            ],
-            [
-              {
-                "nlpToken": {
-                  "characterOffsetBegin": 29,
-                  "word": "reopening",
-                  "lemma": "reopen",
-                  "characterOffsetEnd": 38,
-                  "speaker": "PER0",
-                  "ner": "O",
-                  "after": " ",
-                  "originalText": "reopening",
-                  "before": " ",
-                  "index": 5,
-                  "pos": "VBG"
-                }
-              },
-              "VBG"
-            ],
-            [
-              {
-                "nlpToken": {
-                  "characterOffsetBegin": 39,
-                  "word": "the",
-                  "lemma": "the",
-                  "characterOffsetEnd": 42,
-                  "speaker": "PER0",
-                  "ner": "O",
-                  "after": " ",
-                  "originalText": "the",
-                  "before": " ",
-                  "index": 6,
-                  "pos": "DT"
-                }
-              },
-              "DT"
-            ],
-            [
-              {
-                "nlpToken": {
-                  "characterOffsetBegin": 43,
-                  "word": "investigation",
-                  "lemma": "investigation",
-                  "characterOffsetEnd": 56,
-                  "speaker": "PER0",
-                  "ner": "O",
-                  "after": " ",
-                  "originalText": "investigation",
-                  "before": " ",
-                  "index": 7,
-                  "pos": "NN"
-                }
-              },
-              "NN"
-            ],
-            [
-              {
-                "nlpToken": {
-                  "characterOffsetBegin": 57,
-                  "word": "close",
-                  "lemma": "close",
-                  "characterOffsetEnd": 62,
-                  "speaker": "PER0",
-                  "ner": "O",
-                  "after": " ",
-                  "originalText": "close",
-                  "before": " ",
-                  "index": 8,
-                  "pos": "NN"
-                }
-              },
-              "NN"
-            ],
-            [
-              {
-                "nlpToken": {
-                  "characterOffsetBegin": 63,
-                  "word": "to",
-                  "lemma": "to",
-                  "characterOffsetEnd": 65,
-                  "speaker": "PER0",
-                  "ner": "O",
-                  "after": " ",
-                  "originalText": "to",
-                  "before": " ",
-                  "index": 9,
-                  "pos": "TO"
-                }
-              },
-              "TO"
-            ],
-            [
-              {
-                "nlpToken": {
-                  "characterOffsetBegin": 66,
-                  "word": "the",
-                  "lemma": "the",
-                  "characterOffsetEnd": 69,
-                  "speaker": "PER0",
-                  "ner": "O",
-                  "after": " ",
-                  "originalText": "the",
-                  "before": " ",
-                  "index": 10,
-                  "pos": "DT"
-                }
-              },
-              "DT"
-            ],
-            [
-              {
-                "nlpToken": {
-                  "characterOffsetBegin": 70,
-                  "word": "election",
-                  "lemma": "election",
-                  "characterOffsetEnd": 78,
-                  "speaker": "PER0",
-                  "ner": "O",
-                  "after": "",
-                  "originalText": "election",
-                  "before": " ",
-                  "index": 11,
-                  "pos": "NN"
-                }
-              },
-              "NN"
-            ]
-          ],
-          "score": 1.0,
-          "text": "criticised Comey for reopening the investigation close to the election"
-        }
-      ]
+      "label": "what"
     }
   },
   "description": "HILLARY Clinton has blamed her humiliating election defeat to Donald Trump on FBI director James Comey, who announced he was reopening the investigation into her handling of classified information days before the US went to the polls.",

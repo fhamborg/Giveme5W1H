@@ -12,34 +12,7 @@
           "coderPhraseCount": 3
         }
       ],
-      "label": "who",
-      "extracted": [
-        {
-          "parts": [
-            [
-              {
-                "nlpToken": {
-                  "characterOffsetBegin": 4077,
-                  "word": "boy",
-                  "lemma": "boy",
-                  "characterOffsetEnd": 4080,
-                  "speaker": "PER0",
-                  "ner": "O",
-                  "after": " ",
-                  "originalText": "boy",
-                  "before": " ",
-                  "index": 5,
-                  "pos": "NN"
-                }
-              },
-              "NN"
-            ]
-          ],
-          "score": 1.0,
-          "text": "boy",
-          "nlpIndexSentence": 1
-        }
-      ]
+      "label": "who"
     },
     "when": {
       "annotated": [
@@ -49,46 +22,7 @@
           "parsed": "2016-11-12"
         }
       ],
-      "label": "when",
-      "extracted": [
-        {
-          "parts": [
-            [
-              {
-                "nlpToken": {
-                  "characterOffsetBegin": 1245,
-                  "word": "5am",
-                  "lemma": "5am",
-                  "timex": {
-                    "value": "2016-11-10T05:00",
-                    "tid": "t10",
-                    "type": "TIME"
-                  },
-                  "before": " ",
-                  "characterOffsetEnd": 1248,
-                  "originalText": "5am",
-                  "normalizedNER": "2016-11-10T05:00",
-                  "speaker": "PER0",
-                  "after": " ",
-                  "ner": "TIME",
-                  "index": 7,
-                  "pos": "JJ"
-                }
-              },
-              "JJ"
-            ]
-          ],
-          "score": 0.8158514220088187,
-          "text": "5am",
-          "enhancement": {
-            "timex": {
-              "start_date": "2016-11-10T05:00:00",
-              "end_date": "2016-11-10T05:00:59"
-            }
-          },
-          "nlpIndexSentence": 6
-        }
-      ]
+      "label": "when"
     },
     "why": {
       "annotated": [
@@ -97,34 +31,7 @@
           "coderPhraseCount": 2
         }
       ],
-      "label": "why",
-      "extracted": [
-        {
-          "parts": [
-            [
-              {
-                "nlpToken": {
-                  "characterOffsetBegin": 997,
-                  "word": "he",
-                  "lemma": "he",
-                  "characterOffsetEnd": 999,
-                  "speaker": "PER0",
-                  "ner": "O",
-                  "after": " ",
-                  "originalText": "he",
-                  "before": " ",
-                  "index": 115,
-                  "pos": "PRP"
-                }
-              },
-              "PRP"
-            ]
-          ],
-          "score": 0.5046382189239332,
-          "text": "he",
-          "nlpIndexSentence": 4
-        }
-      ]
+      "label": "why"
     },
     "how": {
       "annotated": [
@@ -144,16 +51,16 @@
             [
               {
                 "nlpToken": {
-                  "characterOffsetBegin": 2949,
-                  "word": "the",
-                  "lemma": "the",
-                  "characterOffsetEnd": 2952,
+                  "characterOffsetBegin": 69,
+                  "word": "a",
+                  "lemma": "a",
+                  "characterOffsetEnd": 70,
                   "speaker": "PER0",
                   "ner": "O",
                   "after": " ",
-                  "originalText": "the",
+                  "originalText": "a",
                   "before": " ",
-                  "index": 2,
+                  "index": 16,
                   "pos": "DT"
                 }
               },
@@ -162,34 +69,70 @@
             [
               {
                 "nlpToken": {
-                  "characterOffsetBegin": 2953,
-                  "word": "family",
-                  "lemma": "family",
-                  "characterOffsetEnd": 2959,
+                  "characterOffsetBegin": 71,
+                  "word": "deep",
+                  "lemma": "deep",
+                  "characterOffsetEnd": 75,
                   "speaker": "PER0",
                   "ner": "O",
                   "after": " ",
-                  "originalText": "family",
+                  "originalText": "deep",
                   "before": " ",
-                  "index": 3,
-                  "pos": "NN"
+                  "index": 17,
+                  "pos": "RB"
                 }
               },
-              "NN"
+              "RB"
             ],
             [
               {
                 "nlpToken": {
-                  "characterOffsetBegin": 2960,
-                  "word": "alerted",
-                  "lemma": "alert",
-                  "characterOffsetEnd": 2967,
+                  "characterOffsetBegin": 76,
+                  "word": "well",
+                  "lemma": "well",
+                  "characterOffsetEnd": 80,
+                  "speaker": "PER0",
+                  "ner": "O",
+                  "after": "",
+                  "originalText": "well",
+                  "before": " ",
+                  "index": 18,
+                  "pos": "RB"
+                }
+              },
+              "RB"
+            ],
+            [
+              {
+                "nlpToken": {
+                  "characterOffsetBegin": 80,
+                  "word": ",",
+                  "lemma": ",",
+                  "characterOffsetEnd": 81,
                   "speaker": "PER0",
                   "ner": "O",
                   "after": " ",
-                  "originalText": "alerted",
+                  "originalText": ",",
+                  "before": "",
+                  "index": 19,
+                  "pos": ","
+                }
+              },
+              ","
+            ],
+            [
+              {
+                "nlpToken": {
+                  "characterOffsetBegin": 82,
+                  "word": "said",
+                  "lemma": "say",
+                  "characterOffsetEnd": 86,
+                  "speaker": "PER0",
+                  "ner": "O",
+                  "after": " ",
+                  "originalText": "said",
                   "before": " ",
-                  "index": 4,
+                  "index": 20,
                   "pos": "VBD"
                 }
               },
@@ -198,25 +141,96 @@
             [
               {
                 "nlpToken": {
-                  "characterOffsetBegin": 2968,
+                  "characterOffsetBegin": 87,
                   "word": "the",
                   "lemma": "the",
-                  "characterOffsetEnd": 2971,
+                  "characterOffsetEnd": 90,
                   "speaker": "PER0",
                   "ner": "O",
                   "after": " ",
                   "originalText": "the",
                   "before": " ",
-                  "index": 5,
+                  "index": 21,
                   "pos": "DT"
                 }
               },
               "DT"
+            ],
+            [
+              {
+                "nlpToken": {
+                  "characterOffsetBegin": 91,
+                  "word": "well",
+                  "lemma": "well",
+                  "characterOffsetEnd": 95,
+                  "speaker": "PER0",
+                  "ner": "O",
+                  "after": " ",
+                  "originalText": "well",
+                  "before": " ",
+                  "index": 22,
+                  "pos": "NN"
+                }
+              },
+              "NN"
+            ],
+            [
+              {
+                "nlpToken": {
+                  "characterOffsetBegin": 96,
+                  "word": "turned",
+                  "lemma": "turn",
+                  "characterOffsetEnd": 102,
+                  "speaker": "PER0",
+                  "ner": "O",
+                  "after": " ",
+                  "originalText": "turned",
+                  "before": " ",
+                  "index": 23,
+                  "pos": "VBD"
+                }
+              },
+              "VBD"
+            ],
+            [
+              {
+                "nlpToken": {
+                  "characterOffsetBegin": 103,
+                  "word": "out",
+                  "lemma": "out",
+                  "characterOffsetEnd": 106,
+                  "speaker": "PER0",
+                  "ner": "O",
+                  "after": " ",
+                  "originalText": "out",
+                  "before": " ",
+                  "index": 24,
+                  "pos": "RP"
+                }
+              },
+              "RP"
+            ],
+            [
+              {
+                "nlpToken": {
+                  "characterOffsetBegin": 107,
+                  "word": "to",
+                  "lemma": "to",
+                  "characterOffsetEnd": 109,
+                  "speaker": "PER0",
+                  "ner": "O",
+                  "after": " ",
+                  "originalText": "to",
+                  "before": " ",
+                  "index": 25,
+                  "pos": "TO"
+                }
+              },
+              "TO"
             ]
           ],
-          "score": 1.0,
-          "text": "the family alerted the",
-          "nlpIndexSentence": 2
+          "score": 0.7892080745341616,
+          "text": "a deep well , said the well turned out to"
         }
       ]
     },
@@ -231,55 +245,7 @@
           "coderPhraseCount": 2
         }
       ],
-      "label": "where",
-      "extracted": [
-        {
-          "parts": [
-            [
-              {
-                "nlpToken": {
-                  "characterOffsetBegin": 211,
-                  "word": "China",
-                  "lemma": "China",
-                  "characterOffsetEnd": 216,
-                  "speaker": "PER0",
-                  "ner": "LOCATION",
-                  "after": " ",
-                  "originalText": "China",
-                  "before": " ",
-                  "index": 12,
-                  "pos": "NNP"
-                }
-              },
-              "NNP"
-            ]
-          ],
-          "score": 0.6734817693436626,
-          "text": "China",
-          "enhancement": {
-            "openstreetmap_nominatim": {
-              "osm_id": "5605656",
-              "boundingbox": [
-                25.0671341,
-                25.9161824,
-                -99.4612273,
-                -98.421576
-              ],
-              "licence": "Data \u00a9 OpenStreetMap contributors, ODbL 1.0. http://www.openstreetmap.org/copyright",
-              "importance": 0.2225,
-              "icon": "https://nominatim.openstreetmap.org/images/mapicons/poi_boundary_administrative.p.20.png",
-              "osm_type": "relation",
-              "display_name": "China, Nuevo Le\u00f3n, M\u00e9xico",
-              "lat": "25.4915799",
-              "type": "administrative",
-              "place_id": "179360170",
-              "lon": "-98.9811115045569",
-              "class": "boundary"
-            }
-          },
-          "nlpIndexSentence": 1
-        }
-      ]
+      "label": "where"
     },
     "what": {
       "annotated": [
@@ -288,52 +254,7 @@
           "coderPhraseCount": 3
         }
       ],
-      "label": "what",
-      "extracted": [
-        {
-          "parts": [
-            [
-              {
-                "nlpToken": {
-                  "characterOffsetBegin": 260,
-                  "word": "claimed",
-                  "lemma": "claim",
-                  "characterOffsetEnd": 267,
-                  "speaker": "PER0",
-                  "ner": "O",
-                  "after": " ",
-                  "originalText": "claimed",
-                  "before": " ",
-                  "index": 20,
-                  "pos": "VBD"
-                }
-              },
-              "VBD"
-            ],
-            [
-              {
-                "nlpToken": {
-                  "characterOffsetBegin": 268,
-                  "word": "he",
-                  "lemma": "he",
-                  "characterOffsetEnd": 270,
-                  "speaker": "PER0",
-                  "ner": "O",
-                  "after": " ",
-                  "originalText": "he",
-                  "before": " ",
-                  "index": 21,
-                  "pos": "PRP"
-                }
-              },
-              "PRP"
-            ]
-          ],
-          "score": 1.0,
-          "text": "claimed he",
-          "nlpIndexSentence": 1
-        }
-      ]
+      "label": "what"
     }
   },
   "description": "Zhao Zicong fell down the 130ft deep well on Sunday while picking cabbages in China. A team of rescuers have been working continuously to save him. His uncle said the well turned out to be empty.",

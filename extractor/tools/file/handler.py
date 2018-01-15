@@ -140,23 +140,31 @@ class Handler(object):
                     self._writer.write_pickle_file(document.get_document_id() + '/coreNLP', document)
                     self.log.info('         \tsaved to cache')
 
-                # Enhancer
-                if self._extractor.enhancement:
-                    for enhancement in self._extractor.enhancement:
-                        enahncer_id = enhancement.get_enhancer_id()
+            # Enhancer
+            if self._extractor.enhancement:
+                for enhancement in self._extractor.enhancement:
+                    enahncer_id = enhancement.get_enhancer_id()
 
-                        path = document.get_document_id() + '/' + enahncer_id + '.pickle'
+                    # skip, if data is already present
+                    if document.get_enhancement(enahncer_id):
+                        continue
 
-                        # check if there is a cached enhancer result
-                        if path and os.path.isfile(path) and os.path.getsize(path) > 0:
-                            with open(path, 'rb') as ff:
-                                eh = pickle.load(ff)
-                            document.set_enhancement(self.get_enhancer_id(), eh)
-                        else:
-                            # check cache for each enhancer
-                            enhancement.process(document)
+                    # path to cached date
+                    path = self._writer._preprocessedPath + '/' + document.get_document_id() + '/' + enahncer_id + '.pickle'
 
-
+                    # check if there is a cached enhancer result in disc
+                    if path and os.path.isfile(path) and os.path.getsize(path) > 0:
+                        with open(path, 'rb') as ff:
+                            eh = pickle.load(ff)
+                        document.set_enhancement(enahncer_id, eh)
+                    else:
+                        # create eh data
+                        enhancement.process(document)
+                        # cache result, if any
+                        eh = document.get_enhancement(enahncer_id)
+                        if eh:
+                            with open(path, 'wb') as f:
+                                pickle.dump(eh, f, pickle.HIGHEST_PROTOCOL)
 
             else:
                 self.log.info('          \talready preprocessed')

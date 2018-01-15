@@ -20,43 +20,13 @@
   "newsCluster": {
     "CategoryId": 5,
     "Category": "sports",
-    "TopicId": 1,
-    "Topic": "unspecific",
-    "EventId": 12,
-    "Event": "f1_crash",
-    "Url": "http://www.dailymail.co.uk/sport/formulaone/article-3932890/Max-Verstappen-amazes-Red-Bull-principal-Christian-Horner-performance-Brazil-witnessed-special.html"
+    "TopicId": 2,
+    "Topic": "legancy",
+    "EventId": 60,
+    "Event": "f1_crash"
   },
   "dId": "101ee22f1f9e984c1bd2bd64ad44db8452b0669178f1683eafa338c7",
   "fiveWoneH": {
-    "how": {
-      "extracted": [
-        {
-          "parts": [
-            [
-              {
-                "nlpToken": {
-                  "index": 6,
-                  "word": "principal",
-                  "originalText": "principal",
-                  "lemma": "principal",
-                  "characterOffsetBegin": 31,
-                  "characterOffsetEnd": 40,
-                  "pos": "JJ",
-                  "ner": "O",
-                  "speaker": "PER0",
-                  "before": " ",
-                  "after": " "
-                }
-              },
-              "JJ"
-            ]
-          ],
-          "score": 1.3333333333333333,
-          "text": "principal"
-        }
-      ],
-      "label": "how"
-    },
     "where": {
       "extracted": [
         {
@@ -136,13 +106,10 @@
               "NNP"
             ]
           ],
-          "score": 1.0,
+          "score": 0.6699999999999999,
           "text": "Brazil",
           "enhancement": {
             "openstreetmap_nominatim": {
-              "place_id": "179383758",
-              "licence": "Data \u00a9 OpenStreetMap contributors, ODbL 1.0. http://www.openstreetmap.org/copyright",
-              "osm_type": "relation",
               "osm_id": "59470",
               "boundingbox": [
                 -33.8689056,
@@ -150,13 +117,16 @@
                 -73.9830625,
                 -28.6341164
               ],
-              "lat": "-10.3333333",
-              "lon": "-53.2",
-              "display_name": "Brasil",
-              "class": "boundary",
-              "type": "administrative",
+              "licence": "Data \u00a9 OpenStreetMap contributors, ODbL 1.0. http://www.openstreetmap.org/copyright",
               "importance": 0.21948000558855,
-              "icon": "https://nominatim.openstreetmap.org/images/mapicons/poi_boundary_administrative.p.20.png"
+              "icon": "https://nominatim.openstreetmap.org/images/mapicons/poi_boundary_administrative.p.20.png",
+              "osm_type": "relation",
+              "display_name": "Brasil",
+              "lat": "-10.3333333",
+              "type": "administrative",
+              "place_id": "179383758",
+              "lon": "-53.2",
+              "class": "boundary"
             }
           }
         }
@@ -170,42 +140,502 @@
             [
               {
                 "nlpToken": {
-                  "index": 38,
-                  "word": "today",
-                  "originalText": "today",
-                  "lemma": "today",
-                  "characterOffsetBegin": 1909,
-                  "characterOffsetEnd": 1914,
-                  "pos": "NN",
+                  "index": 31,
+                  "word": "Sunday",
+                  "originalText": "Sunday",
+                  "lemma": "Sunday",
+                  "characterOffsetBegin": 492,
+                  "characterOffsetEnd": 498,
+                  "pos": "NNP",
                   "ner": "DATE",
                   "normalizedNER": "2016-11-13",
                   "speaker": "PER0",
                   "before": " ",
                   "after": "",
                   "timex": {
-                    "tid": "t5",
+                    "tid": "t2",
                     "type": "DATE",
                     "value": "2016-11-13"
                   }
                 }
               },
-              "NN"
+              "NNP"
             ]
           ],
-          "score": 0.701465782116193,
-          "text": "today",
+          "score": 0.3982367551658767,
+          "text": "Sunday",
           "enhancement": {
-            "timex": [
-              {
-                "start_date": "2016-11-13T00:00:00",
-                "end_date": "2016-11-13T23:59:59"
-              }
-            ]
+            "timex": {
+              "start_date": "2016-11-13T00:00:00",
+              "end_date": "2016-11-13T23:59:59"
+            }
           },
-          "nlpIndexSentence": 9
+          "nlpIndexSentence": 3
         }
       ],
       "label": "when"
+    },
+    "how": {
+      "extracted": [
+        {
+          "parts": [
+            [
+              {
+                "nlpToken": {
+                  "index": 5,
+                  "word": "Bull",
+                  "originalText": "Bull",
+                  "lemma": "Bull",
+                  "characterOffsetBegin": 26,
+                  "characterOffsetEnd": 30,
+                  "pos": "NNP",
+                  "ner": "ORGANIZATION",
+                  "speaker": "PER0",
+                  "before": " ",
+                  "after": " "
+                },
+                "aida": [
+                  {
+                    "mention": {
+                      "allEntities": [
+                        {
+                          "kbIdentifier": "YAGO:Red_Bull_Racing",
+                          "disambiguationScore": "0.56096"
+                        }
+                      ],
+                      "offset": 22,
+                      "name": "Red Bull",
+                      "length": 8,
+                      "bestEntity": {
+                        "kbIdentifier": "YAGO:Red_Bull_Racing",
+                        "disambiguationScore": "0.56096"
+                      }
+                    },
+                    "bestEntityMetadata": {
+                      "knowledgebase": "YAGO",
+                      "depictionurl": "http://upload.wikimedia.org/wikipedia/en/1/15/Infiniti_Red_Bull_Racing.jpg",
+                      "depictionthumbnailurl": "http://upload.wikimedia.org/wikipedia/en/thumbInfiniti_Red_Bull_Racing.jpg/200px-Infiniti_Red_Bull_Racing.jpg",
+                      "importance": 0.003278257456719564,
+                      "entityId": "Red_Bull_Racing",
+                      "type": [
+                        "YAGO_yagoLegalActorGeo",
+                        "YAGO_wikicategory_Formula_One_constructors",
+                        "YAGO_wordnet_person_100007846",
+                        "YAGO_wikicategory_Formula_One_entrants",
+                        "YAGO_yagoLegalActor",
+                        "YAGO_wordnet_living_thing_100004258",
+                        "YAGO_wordnet_physical_entity_100001930",
+                        "YAGO_wordnet_causal_agent_100007347",
+                        "YAGO_wordnet_entity_100001740",
+                        "YAGO_wordnet_object_100002684",
+                        "YAGO_wordnet_contractor_109960891",
+                        "YAGO_wordnet_party_110402824",
+                        "YAGO_wordnet_builder_109878275",
+                        "YAGO_wordnet_organism_100004475",
+                        "YAGO_wikicategory_Austrian_racecar_constructors",
+                        "YAGO_wordnet_commodity_103076708",
+                        "YAGO_wordnet_whole_100003553",
+                        "YAGO_wordnet_artifact_100021939",
+                        "YAGO_wordnet_entrant_103291243"
+                      ],
+                      "readableRepr": "Red Bull Racing",
+                      "url": "http://en.wikipedia.org/wiki/Red%20Bull%20Racing"
+                    }
+                  }
+                ]
+              },
+              "NNP"
+            ],
+            [
+              {
+                "nlpToken": {
+                  "index": 6,
+                  "word": "principal",
+                  "originalText": "principal",
+                  "lemma": "principal",
+                  "characterOffsetBegin": 31,
+                  "characterOffsetEnd": 40,
+                  "pos": "JJ",
+                  "ner": "O",
+                  "speaker": "PER0",
+                  "before": " ",
+                  "after": " "
+                }
+              },
+              "JJ"
+            ],
+            [
+              {
+                "nlpToken": {
+                  "index": 7,
+                  "word": "Christian",
+                  "originalText": "Christian",
+                  "lemma": "Christian",
+                  "characterOffsetBegin": 41,
+                  "characterOffsetEnd": 50,
+                  "pos": "NNP",
+                  "ner": "PERSON",
+                  "speaker": "PER0",
+                  "before": " ",
+                  "after": " "
+                },
+                "aida": [
+                  {
+                    "mention": {
+                      "allEntities": [
+                        {
+                          "kbIdentifier": "YAGO:Christian_Horner",
+                          "disambiguationScore": "1"
+                        }
+                      ],
+                      "offset": 41,
+                      "name": "Christian Horner",
+                      "length": 16,
+                      "bestEntity": {
+                        "kbIdentifier": "YAGO:Christian_Horner",
+                        "disambiguationScore": "1"
+                      }
+                    },
+                    "bestEntityMetadata": {
+                      "knowledgebase": "YAGO",
+                      "depictionurl": "http://upload.wikimedia.org/wikipedia/commons/c/cf/Christian_Horner_at_the_British_Embassy%2C_Japan_crop.jpg",
+                      "depictionthumbnailurl": "http://upload.wikimedia.org/wikipedia/commons/thumbChristian_Horner_at_the_British_Embassy%2C_Japan_crop.jpg/200px-Christian_Horner_at_the_British_Embassy%2C_Japan_crop.jpg",
+                      "importance": 0.047294483563726855,
+                      "entityId": "Christian_Horner",
+                      "type": [
+                        "YAGO_yagoLegalActorGeo",
+                        "YAGO_wikicategory_Officers_of_the_Order_of_the_British_Empire",
+                        "YAGO_wordnet_operator_110378412",
+                        "YAGO_wordnet_driver_110034906",
+                        "YAGO_wikicategory_British_Formula_3000_Championship_drivers",
+                        "YAGO_wikicategory_International_Formula_3000_drivers",
+                        "YAGO_wordnet_person_100007846",
+                        "YAGO_wikicategory_Living_people",
+                        "YAGO_yagoLegalActor",
+                        "YAGO_wikicategory_British_Formula_Three_Championship_drivers",
+                        "YAGO_wordnet_serviceman_110582746",
+                        "YAGO_wordnet_living_thing_100004258",
+                        "YAGO_wikicategory_People_from_Royal_Leamington_Spa",
+                        "YAGO_wordnet_physical_entity_100001930",
+                        "YAGO_wordnet_causal_agent_100007347",
+                        "YAGO_wikicategory_English_motorsport_people",
+                        "YAGO_wordnet_entity_100001740",
+                        "YAGO_wordnet_object_100002684",
+                        "YAGO_wordnet_organism_100004475",
+                        "YAGO_wordnet_worker_109632518",
+                        "YAGO_wikicategory_British_Formula_Renault_2\\u002e0_drivers",
+                        "YAGO_wordnet_military_officer_110317007",
+                        "YAGO_wordnet_whole_100003553",
+                        "YAGO_wordnet_skilled_worker_110605985",
+                        "YAGO_wikicategory_Formula_One_people"
+                      ],
+                      "readableRepr": "Christian Horner",
+                      "url": "http://en.wikipedia.org/wiki/Christian%20Horner"
+                    }
+                  }
+                ]
+              },
+              "NNP"
+            ],
+            [
+              {
+                "nlpToken": {
+                  "index": 8,
+                  "word": "Horner",
+                  "originalText": "Horner",
+                  "lemma": "Horner",
+                  "characterOffsetBegin": 51,
+                  "characterOffsetEnd": 57,
+                  "pos": "NNP",
+                  "ner": "PERSON",
+                  "speaker": "PER0",
+                  "before": " ",
+                  "after": " "
+                },
+                "aida": [
+                  {
+                    "mention": {
+                      "allEntities": [
+                        {
+                          "kbIdentifier": "YAGO:Christian_Horner",
+                          "disambiguationScore": "1"
+                        }
+                      ],
+                      "offset": 41,
+                      "name": "Christian Horner",
+                      "length": 16,
+                      "bestEntity": {
+                        "kbIdentifier": "YAGO:Christian_Horner",
+                        "disambiguationScore": "1"
+                      }
+                    },
+                    "bestEntityMetadata": {
+                      "knowledgebase": "YAGO",
+                      "depictionurl": "http://upload.wikimedia.org/wikipedia/commons/c/cf/Christian_Horner_at_the_British_Embassy%2C_Japan_crop.jpg",
+                      "depictionthumbnailurl": "http://upload.wikimedia.org/wikipedia/commons/thumbChristian_Horner_at_the_British_Embassy%2C_Japan_crop.jpg/200px-Christian_Horner_at_the_British_Embassy%2C_Japan_crop.jpg",
+                      "importance": 0.047294483563726855,
+                      "entityId": "Christian_Horner",
+                      "type": [
+                        "YAGO_yagoLegalActorGeo",
+                        "YAGO_wikicategory_Officers_of_the_Order_of_the_British_Empire",
+                        "YAGO_wordnet_operator_110378412",
+                        "YAGO_wordnet_driver_110034906",
+                        "YAGO_wikicategory_British_Formula_3000_Championship_drivers",
+                        "YAGO_wikicategory_International_Formula_3000_drivers",
+                        "YAGO_wordnet_person_100007846",
+                        "YAGO_wikicategory_Living_people",
+                        "YAGO_yagoLegalActor",
+                        "YAGO_wikicategory_British_Formula_Three_Championship_drivers",
+                        "YAGO_wordnet_serviceman_110582746",
+                        "YAGO_wordnet_living_thing_100004258",
+                        "YAGO_wikicategory_People_from_Royal_Leamington_Spa",
+                        "YAGO_wordnet_physical_entity_100001930",
+                        "YAGO_wordnet_causal_agent_100007347",
+                        "YAGO_wikicategory_English_motorsport_people",
+                        "YAGO_wordnet_entity_100001740",
+                        "YAGO_wordnet_object_100002684",
+                        "YAGO_wordnet_organism_100004475",
+                        "YAGO_wordnet_worker_109632518",
+                        "YAGO_wikicategory_British_Formula_Renault_2\\u002e0_drivers",
+                        "YAGO_wordnet_military_officer_110317007",
+                        "YAGO_wordnet_whole_100003553",
+                        "YAGO_wordnet_skilled_worker_110605985",
+                        "YAGO_wikicategory_Formula_One_people"
+                      ],
+                      "readableRepr": "Christian Horner",
+                      "url": "http://en.wikipedia.org/wiki/Christian%20Horner"
+                    }
+                  }
+                ]
+              },
+              "NNP"
+            ],
+            [
+              {
+                "nlpToken": {
+                  "index": 9,
+                  "word": "with",
+                  "originalText": "with",
+                  "lemma": "with",
+                  "characterOffsetBegin": 58,
+                  "characterOffsetEnd": 62,
+                  "pos": "IN",
+                  "ner": "O",
+                  "speaker": "PER0",
+                  "before": " ",
+                  "after": " "
+                }
+              },
+              "IN"
+            ],
+            [
+              {
+                "nlpToken": {
+                  "index": 10,
+                  "word": "performance",
+                  "originalText": "performance",
+                  "lemma": "performance",
+                  "characterOffsetBegin": 63,
+                  "characterOffsetEnd": 74,
+                  "pos": "NN",
+                  "ner": "O",
+                  "speaker": "PER0",
+                  "before": " ",
+                  "after": " "
+                }
+              },
+              "NN"
+            ],
+            [
+              {
+                "nlpToken": {
+                  "index": 11,
+                  "word": "in",
+                  "originalText": "in",
+                  "lemma": "in",
+                  "characterOffsetBegin": 75,
+                  "characterOffsetEnd": 77,
+                  "pos": "IN",
+                  "ner": "O",
+                  "speaker": "PER0",
+                  "before": " ",
+                  "after": " "
+                }
+              },
+              "IN"
+            ],
+            [
+              {
+                "nlpToken": {
+                  "index": 12,
+                  "word": "Brazil",
+                  "originalText": "Brazil",
+                  "lemma": "Brazil",
+                  "characterOffsetBegin": 78,
+                  "characterOffsetEnd": 84,
+                  "pos": "NNP",
+                  "ner": "LOCATION",
+                  "speaker": "PER0",
+                  "before": " ",
+                  "after": ""
+                },
+                "aida": [
+                  {
+                    "mention": {
+                      "allEntities": [
+                        {
+                          "kbIdentifier": "YAGO:Brazil",
+                          "disambiguationScore": "0.57786"
+                        }
+                      ],
+                      "offset": 78,
+                      "name": "Brazil",
+                      "length": 6,
+                      "bestEntity": {
+                        "kbIdentifier": "YAGO:Brazil",
+                        "disambiguationScore": "0.57786"
+                      }
+                    },
+                    "bestEntityMetadata": {
+                      "knowledgebase": "YAGO",
+                      "depictionurl": "http://upload.wikimedia.org/wikipedia/en/0/05/Flag_of_Brazil.svg",
+                      "depictionthumbnailurl": "http://upload.wikimedia.org/wikipedia/en/thumbFlag_of_Brazil.svg/200px-Flag_of_Brazil.svg",
+                      "importance": 7.79940596381577e-06,
+                      "entityId": "Brazil",
+                      "type": [
+                        "YAGO_wordnet_system_108435388",
+                        "YAGO_wordnet_district_108552138",
+                        "YAGO_wikicategory_Countries_in_South_America",
+                        "YAGO_yagoPermanentlyLocatedEntity",
+                        "YAGO_yagoLegalActorGeo",
+                        "YAGO_wikicategory_Portuguese\\u002dspeaking_countries_and_territories",
+                        "YAGO_wordnet_state_108654360",
+                        "YAGO_wikicategory_Member_states_of_the_Union_of_South_American_Nations",
+                        "YAGO_wordnet_country_108544813",
+                        "YAGO_wikicategory_Member_states_of_the_United_Nations",
+                        "YAGO_wordnet_economy_108366753",
+                        "YAGO_wordnet_abstraction_100002137",
+                        "YAGO_wordnet_region_108630985",
+                        "YAGO_yagoGeoEntity",
+                        "YAGO_wikicategory_Romance_countries_and_territories",
+                        "YAGO_wikicategory_World_Trade_Organization_member_economies",
+                        "YAGO_wikicategory_Member_states_of_the_Community_of_Portuguese_Language_Countries",
+                        "YAGO_wordnet_physical_entity_100001930",
+                        "YAGO_wordnet_entity_100001740",
+                        "YAGO_wikicategory_Member_states_of_Mercosur",
+                        "YAGO_wordnet_object_100002684",
+                        "YAGO_wordnet_group_100031264",
+                        "YAGO_wikicategory_Latin_American_countries",
+                        "YAGO_wikicategory_States_and_territories_established_in_1822",
+                        "YAGO_wordnet_location_100027167",
+                        "YAGO_wordnet_administrative_district_108491826"
+                      ],
+                      "readableRepr": "Brazil",
+                      "url": "http://en.wikipedia.org/wiki/Brazil"
+                    }
+                  }
+                ]
+              },
+              "NNP"
+            ],
+            [
+              {
+                "nlpToken": {
+                  "index": 13,
+                  "word": ":",
+                  "originalText": ":",
+                  "lemma": ":",
+                  "characterOffsetBegin": 84,
+                  "characterOffsetEnd": 85,
+                  "pos": ":",
+                  "ner": "O",
+                  "speaker": "PER0",
+                  "before": "",
+                  "after": " "
+                },
+                "aida": [
+                  {
+                    "mention": {
+                      "allEntities": [
+                        {
+                          "kbIdentifier": "YAGO:Brazil",
+                          "disambiguationScore": "0.57786"
+                        }
+                      ],
+                      "offset": 78,
+                      "name": "Brazil",
+                      "length": 6,
+                      "bestEntity": {
+                        "kbIdentifier": "YAGO:Brazil",
+                        "disambiguationScore": "0.57786"
+                      }
+                    },
+                    "bestEntityMetadata": {
+                      "knowledgebase": "YAGO",
+                      "depictionurl": "http://upload.wikimedia.org/wikipedia/en/0/05/Flag_of_Brazil.svg",
+                      "depictionthumbnailurl": "http://upload.wikimedia.org/wikipedia/en/thumbFlag_of_Brazil.svg/200px-Flag_of_Brazil.svg",
+                      "importance": 7.79940596381577e-06,
+                      "entityId": "Brazil",
+                      "type": [
+                        "YAGO_wordnet_system_108435388",
+                        "YAGO_wordnet_district_108552138",
+                        "YAGO_wikicategory_Countries_in_South_America",
+                        "YAGO_yagoPermanentlyLocatedEntity",
+                        "YAGO_yagoLegalActorGeo",
+                        "YAGO_wikicategory_Portuguese\\u002dspeaking_countries_and_territories",
+                        "YAGO_wordnet_state_108654360",
+                        "YAGO_wikicategory_Member_states_of_the_Union_of_South_American_Nations",
+                        "YAGO_wordnet_country_108544813",
+                        "YAGO_wikicategory_Member_states_of_the_United_Nations",
+                        "YAGO_wordnet_economy_108366753",
+                        "YAGO_wordnet_abstraction_100002137",
+                        "YAGO_wordnet_region_108630985",
+                        "YAGO_yagoGeoEntity",
+                        "YAGO_wikicategory_Romance_countries_and_territories",
+                        "YAGO_wikicategory_World_Trade_Organization_member_economies",
+                        "YAGO_wikicategory_Member_states_of_the_Community_of_Portuguese_Language_Countries",
+                        "YAGO_wordnet_physical_entity_100001930",
+                        "YAGO_wordnet_entity_100001740",
+                        "YAGO_wikicategory_Member_states_of_Mercosur",
+                        "YAGO_wordnet_object_100002684",
+                        "YAGO_wordnet_group_100031264",
+                        "YAGO_wikicategory_Latin_American_countries",
+                        "YAGO_wikicategory_States_and_territories_established_in_1822",
+                        "YAGO_wordnet_location_100027167",
+                        "YAGO_wordnet_administrative_district_108491826"
+                      ],
+                      "readableRepr": "Brazil",
+                      "url": "http://en.wikipedia.org/wiki/Brazil"
+                    }
+                  }
+                ]
+              },
+              ":"
+            ],
+            [
+              {
+                "nlpToken": {
+                  "index": 14,
+                  "word": "`",
+                  "originalText": "'",
+                  "lemma": "`",
+                  "characterOffsetBegin": 86,
+                  "characterOffsetEnd": 87,
+                  "pos": "``",
+                  "ner": "O",
+                  "speaker": "PER0",
+                  "before": " ",
+                  "after": ""
+                }
+              },
+              "``"
+            ]
+          ],
+          "score": 1.0,
+          "text": "Bull principal Christian Horner with performance in Brazil : '"
+        }
+      ],
+      "label": "how"
     },
     "who": {
       "extracted": [
@@ -664,690 +1094,10 @@
                 ]
               },
               "NNP"
-            ],
-            [
-              {
-                "nlpToken": {
-                  "index": 3,
-                  "word": "amazes",
-                  "originalText": "amazes",
-                  "lemma": "amaze",
-                  "characterOffsetBegin": 15,
-                  "characterOffsetEnd": 21,
-                  "pos": "VBZ",
-                  "ner": "O",
-                  "speaker": "PER0",
-                  "before": " ",
-                  "after": " "
-                }
-              },
-              "VBZ"
-            ],
-            [
-              {
-                "nlpToken": {
-                  "index": 4,
-                  "word": "Red",
-                  "originalText": "Red",
-                  "lemma": "Red",
-                  "characterOffsetBegin": 22,
-                  "characterOffsetEnd": 25,
-                  "pos": "NNP",
-                  "ner": "ORGANIZATION",
-                  "speaker": "PER0",
-                  "before": " ",
-                  "after": " "
-                },
-                "aida": [
-                  {
-                    "mention": {
-                      "allEntities": [
-                        {
-                          "kbIdentifier": "YAGO:Red_Bull_Racing",
-                          "disambiguationScore": "0.56096"
-                        }
-                      ],
-                      "offset": 22,
-                      "name": "Red Bull",
-                      "length": 8,
-                      "bestEntity": {
-                        "kbIdentifier": "YAGO:Red_Bull_Racing",
-                        "disambiguationScore": "0.56096"
-                      }
-                    },
-                    "bestEntityMetadata": {
-                      "knowledgebase": "YAGO",
-                      "depictionurl": "http://upload.wikimedia.org/wikipedia/en/1/15/Infiniti_Red_Bull_Racing.jpg",
-                      "depictionthumbnailurl": "http://upload.wikimedia.org/wikipedia/en/thumbInfiniti_Red_Bull_Racing.jpg/200px-Infiniti_Red_Bull_Racing.jpg",
-                      "importance": 0.003278257456719564,
-                      "entityId": "Red_Bull_Racing",
-                      "type": [
-                        "YAGO_yagoLegalActorGeo",
-                        "YAGO_wikicategory_Formula_One_constructors",
-                        "YAGO_wordnet_person_100007846",
-                        "YAGO_wikicategory_Formula_One_entrants",
-                        "YAGO_yagoLegalActor",
-                        "YAGO_wordnet_living_thing_100004258",
-                        "YAGO_wordnet_physical_entity_100001930",
-                        "YAGO_wordnet_causal_agent_100007347",
-                        "YAGO_wordnet_entity_100001740",
-                        "YAGO_wordnet_object_100002684",
-                        "YAGO_wordnet_contractor_109960891",
-                        "YAGO_wordnet_party_110402824",
-                        "YAGO_wordnet_builder_109878275",
-                        "YAGO_wordnet_organism_100004475",
-                        "YAGO_wikicategory_Austrian_racecar_constructors",
-                        "YAGO_wordnet_commodity_103076708",
-                        "YAGO_wordnet_whole_100003553",
-                        "YAGO_wordnet_artifact_100021939",
-                        "YAGO_wordnet_entrant_103291243"
-                      ],
-                      "readableRepr": "Red Bull Racing",
-                      "url": "http://en.wikipedia.org/wiki/Red%20Bull%20Racing"
-                    }
-                  }
-                ]
-              },
-              "NNP"
-            ],
-            [
-              {
-                "nlpToken": {
-                  "index": 5,
-                  "word": "Bull",
-                  "originalText": "Bull",
-                  "lemma": "Bull",
-                  "characterOffsetBegin": 26,
-                  "characterOffsetEnd": 30,
-                  "pos": "NNP",
-                  "ner": "ORGANIZATION",
-                  "speaker": "PER0",
-                  "before": " ",
-                  "after": " "
-                },
-                "aida": [
-                  {
-                    "mention": {
-                      "allEntities": [
-                        {
-                          "kbIdentifier": "YAGO:Red_Bull_Racing",
-                          "disambiguationScore": "0.56096"
-                        }
-                      ],
-                      "offset": 22,
-                      "name": "Red Bull",
-                      "length": 8,
-                      "bestEntity": {
-                        "kbIdentifier": "YAGO:Red_Bull_Racing",
-                        "disambiguationScore": "0.56096"
-                      }
-                    },
-                    "bestEntityMetadata": {
-                      "knowledgebase": "YAGO",
-                      "depictionurl": "http://upload.wikimedia.org/wikipedia/en/1/15/Infiniti_Red_Bull_Racing.jpg",
-                      "depictionthumbnailurl": "http://upload.wikimedia.org/wikipedia/en/thumbInfiniti_Red_Bull_Racing.jpg/200px-Infiniti_Red_Bull_Racing.jpg",
-                      "importance": 0.003278257456719564,
-                      "entityId": "Red_Bull_Racing",
-                      "type": [
-                        "YAGO_yagoLegalActorGeo",
-                        "YAGO_wikicategory_Formula_One_constructors",
-                        "YAGO_wordnet_person_100007846",
-                        "YAGO_wikicategory_Formula_One_entrants",
-                        "YAGO_yagoLegalActor",
-                        "YAGO_wordnet_living_thing_100004258",
-                        "YAGO_wordnet_physical_entity_100001930",
-                        "YAGO_wordnet_causal_agent_100007347",
-                        "YAGO_wordnet_entity_100001740",
-                        "YAGO_wordnet_object_100002684",
-                        "YAGO_wordnet_contractor_109960891",
-                        "YAGO_wordnet_party_110402824",
-                        "YAGO_wordnet_builder_109878275",
-                        "YAGO_wordnet_organism_100004475",
-                        "YAGO_wikicategory_Austrian_racecar_constructors",
-                        "YAGO_wordnet_commodity_103076708",
-                        "YAGO_wordnet_whole_100003553",
-                        "YAGO_wordnet_artifact_100021939",
-                        "YAGO_wordnet_entrant_103291243"
-                      ],
-                      "readableRepr": "Red Bull Racing",
-                      "url": "http://en.wikipedia.org/wiki/Red%20Bull%20Racing"
-                    }
-                  }
-                ]
-              },
-              "NNP"
-            ],
-            [
-              {
-                "nlpToken": {
-                  "index": 6,
-                  "word": "principal",
-                  "originalText": "principal",
-                  "lemma": "principal",
-                  "characterOffsetBegin": 31,
-                  "characterOffsetEnd": 40,
-                  "pos": "JJ",
-                  "ner": "O",
-                  "speaker": "PER0",
-                  "before": " ",
-                  "after": " "
-                }
-              },
-              "JJ"
-            ],
-            [
-              {
-                "nlpToken": {
-                  "index": 7,
-                  "word": "Christian",
-                  "originalText": "Christian",
-                  "lemma": "Christian",
-                  "characterOffsetBegin": 41,
-                  "characterOffsetEnd": 50,
-                  "pos": "NNP",
-                  "ner": "PERSON",
-                  "speaker": "PER0",
-                  "before": " ",
-                  "after": " "
-                },
-                "aida": [
-                  {
-                    "mention": {
-                      "allEntities": [
-                        {
-                          "kbIdentifier": "YAGO:Christian_Horner",
-                          "disambiguationScore": "1"
-                        }
-                      ],
-                      "offset": 41,
-                      "name": "Christian Horner",
-                      "length": 16,
-                      "bestEntity": {
-                        "kbIdentifier": "YAGO:Christian_Horner",
-                        "disambiguationScore": "1"
-                      }
-                    },
-                    "bestEntityMetadata": {
-                      "knowledgebase": "YAGO",
-                      "depictionurl": "http://upload.wikimedia.org/wikipedia/commons/c/cf/Christian_Horner_at_the_British_Embassy%2C_Japan_crop.jpg",
-                      "depictionthumbnailurl": "http://upload.wikimedia.org/wikipedia/commons/thumbChristian_Horner_at_the_British_Embassy%2C_Japan_crop.jpg/200px-Christian_Horner_at_the_British_Embassy%2C_Japan_crop.jpg",
-                      "importance": 0.047294483563726855,
-                      "entityId": "Christian_Horner",
-                      "type": [
-                        "YAGO_yagoLegalActorGeo",
-                        "YAGO_wikicategory_Officers_of_the_Order_of_the_British_Empire",
-                        "YAGO_wordnet_operator_110378412",
-                        "YAGO_wordnet_driver_110034906",
-                        "YAGO_wikicategory_British_Formula_3000_Championship_drivers",
-                        "YAGO_wikicategory_International_Formula_3000_drivers",
-                        "YAGO_wordnet_person_100007846",
-                        "YAGO_wikicategory_Living_people",
-                        "YAGO_yagoLegalActor",
-                        "YAGO_wikicategory_British_Formula_Three_Championship_drivers",
-                        "YAGO_wordnet_serviceman_110582746",
-                        "YAGO_wordnet_living_thing_100004258",
-                        "YAGO_wikicategory_People_from_Royal_Leamington_Spa",
-                        "YAGO_wordnet_physical_entity_100001930",
-                        "YAGO_wordnet_causal_agent_100007347",
-                        "YAGO_wikicategory_English_motorsport_people",
-                        "YAGO_wordnet_entity_100001740",
-                        "YAGO_wordnet_object_100002684",
-                        "YAGO_wordnet_organism_100004475",
-                        "YAGO_wordnet_worker_109632518",
-                        "YAGO_wikicategory_British_Formula_Renault_2\\u002e0_drivers",
-                        "YAGO_wordnet_military_officer_110317007",
-                        "YAGO_wordnet_whole_100003553",
-                        "YAGO_wordnet_skilled_worker_110605985",
-                        "YAGO_wikicategory_Formula_One_people"
-                      ],
-                      "readableRepr": "Christian Horner",
-                      "url": "http://en.wikipedia.org/wiki/Christian%20Horner"
-                    }
-                  }
-                ]
-              },
-              "NNP"
-            ],
-            [
-              {
-                "nlpToken": {
-                  "index": 8,
-                  "word": "Horner",
-                  "originalText": "Horner",
-                  "lemma": "Horner",
-                  "characterOffsetBegin": 51,
-                  "characterOffsetEnd": 57,
-                  "pos": "NNP",
-                  "ner": "PERSON",
-                  "speaker": "PER0",
-                  "before": " ",
-                  "after": " "
-                },
-                "aida": [
-                  {
-                    "mention": {
-                      "allEntities": [
-                        {
-                          "kbIdentifier": "YAGO:Christian_Horner",
-                          "disambiguationScore": "1"
-                        }
-                      ],
-                      "offset": 41,
-                      "name": "Christian Horner",
-                      "length": 16,
-                      "bestEntity": {
-                        "kbIdentifier": "YAGO:Christian_Horner",
-                        "disambiguationScore": "1"
-                      }
-                    },
-                    "bestEntityMetadata": {
-                      "knowledgebase": "YAGO",
-                      "depictionurl": "http://upload.wikimedia.org/wikipedia/commons/c/cf/Christian_Horner_at_the_British_Embassy%2C_Japan_crop.jpg",
-                      "depictionthumbnailurl": "http://upload.wikimedia.org/wikipedia/commons/thumbChristian_Horner_at_the_British_Embassy%2C_Japan_crop.jpg/200px-Christian_Horner_at_the_British_Embassy%2C_Japan_crop.jpg",
-                      "importance": 0.047294483563726855,
-                      "entityId": "Christian_Horner",
-                      "type": [
-                        "YAGO_yagoLegalActorGeo",
-                        "YAGO_wikicategory_Officers_of_the_Order_of_the_British_Empire",
-                        "YAGO_wordnet_operator_110378412",
-                        "YAGO_wordnet_driver_110034906",
-                        "YAGO_wikicategory_British_Formula_3000_Championship_drivers",
-                        "YAGO_wikicategory_International_Formula_3000_drivers",
-                        "YAGO_wordnet_person_100007846",
-                        "YAGO_wikicategory_Living_people",
-                        "YAGO_yagoLegalActor",
-                        "YAGO_wikicategory_British_Formula_Three_Championship_drivers",
-                        "YAGO_wordnet_serviceman_110582746",
-                        "YAGO_wordnet_living_thing_100004258",
-                        "YAGO_wikicategory_People_from_Royal_Leamington_Spa",
-                        "YAGO_wordnet_physical_entity_100001930",
-                        "YAGO_wordnet_causal_agent_100007347",
-                        "YAGO_wikicategory_English_motorsport_people",
-                        "YAGO_wordnet_entity_100001740",
-                        "YAGO_wordnet_object_100002684",
-                        "YAGO_wordnet_organism_100004475",
-                        "YAGO_wordnet_worker_109632518",
-                        "YAGO_wikicategory_British_Formula_Renault_2\\u002e0_drivers",
-                        "YAGO_wordnet_military_officer_110317007",
-                        "YAGO_wordnet_whole_100003553",
-                        "YAGO_wordnet_skilled_worker_110605985",
-                        "YAGO_wikicategory_Formula_One_people"
-                      ],
-                      "readableRepr": "Christian Horner",
-                      "url": "http://en.wikipedia.org/wiki/Christian%20Horner"
-                    }
-                  }
-                ]
-              },
-              "NNP"
-            ],
-            [
-              {
-                "nlpToken": {
-                  "index": 9,
-                  "word": "with",
-                  "originalText": "with",
-                  "lemma": "with",
-                  "characterOffsetBegin": 58,
-                  "characterOffsetEnd": 62,
-                  "pos": "IN",
-                  "ner": "O",
-                  "speaker": "PER0",
-                  "before": " ",
-                  "after": " "
-                }
-              },
-              "IN"
-            ],
-            [
-              {
-                "nlpToken": {
-                  "index": 10,
-                  "word": "performance",
-                  "originalText": "performance",
-                  "lemma": "performance",
-                  "characterOffsetBegin": 63,
-                  "characterOffsetEnd": 74,
-                  "pos": "NN",
-                  "ner": "O",
-                  "speaker": "PER0",
-                  "before": " ",
-                  "after": " "
-                }
-              },
-              "NN"
-            ],
-            [
-              {
-                "nlpToken": {
-                  "index": 11,
-                  "word": "in",
-                  "originalText": "in",
-                  "lemma": "in",
-                  "characterOffsetBegin": 75,
-                  "characterOffsetEnd": 77,
-                  "pos": "IN",
-                  "ner": "O",
-                  "speaker": "PER0",
-                  "before": " ",
-                  "after": " "
-                }
-              },
-              "IN"
-            ],
-            [
-              {
-                "nlpToken": {
-                  "index": 12,
-                  "word": "Brazil",
-                  "originalText": "Brazil",
-                  "lemma": "Brazil",
-                  "characterOffsetBegin": 78,
-                  "characterOffsetEnd": 84,
-                  "pos": "NNP",
-                  "ner": "LOCATION",
-                  "speaker": "PER0",
-                  "before": " ",
-                  "after": ""
-                },
-                "aida": [
-                  {
-                    "mention": {
-                      "allEntities": [
-                        {
-                          "kbIdentifier": "YAGO:Brazil",
-                          "disambiguationScore": "0.57786"
-                        }
-                      ],
-                      "offset": 78,
-                      "name": "Brazil",
-                      "length": 6,
-                      "bestEntity": {
-                        "kbIdentifier": "YAGO:Brazil",
-                        "disambiguationScore": "0.57786"
-                      }
-                    },
-                    "bestEntityMetadata": {
-                      "knowledgebase": "YAGO",
-                      "depictionurl": "http://upload.wikimedia.org/wikipedia/en/0/05/Flag_of_Brazil.svg",
-                      "depictionthumbnailurl": "http://upload.wikimedia.org/wikipedia/en/thumbFlag_of_Brazil.svg/200px-Flag_of_Brazil.svg",
-                      "importance": 7.79940596381577e-06,
-                      "entityId": "Brazil",
-                      "type": [
-                        "YAGO_wordnet_system_108435388",
-                        "YAGO_wordnet_district_108552138",
-                        "YAGO_wikicategory_Countries_in_South_America",
-                        "YAGO_yagoPermanentlyLocatedEntity",
-                        "YAGO_yagoLegalActorGeo",
-                        "YAGO_wikicategory_Portuguese\\u002dspeaking_countries_and_territories",
-                        "YAGO_wordnet_state_108654360",
-                        "YAGO_wikicategory_Member_states_of_the_Union_of_South_American_Nations",
-                        "YAGO_wordnet_country_108544813",
-                        "YAGO_wikicategory_Member_states_of_the_United_Nations",
-                        "YAGO_wordnet_economy_108366753",
-                        "YAGO_wordnet_abstraction_100002137",
-                        "YAGO_wordnet_region_108630985",
-                        "YAGO_yagoGeoEntity",
-                        "YAGO_wikicategory_Romance_countries_and_territories",
-                        "YAGO_wikicategory_World_Trade_Organization_member_economies",
-                        "YAGO_wikicategory_Member_states_of_the_Community_of_Portuguese_Language_Countries",
-                        "YAGO_wordnet_physical_entity_100001930",
-                        "YAGO_wordnet_entity_100001740",
-                        "YAGO_wikicategory_Member_states_of_Mercosur",
-                        "YAGO_wordnet_object_100002684",
-                        "YAGO_wordnet_group_100031264",
-                        "YAGO_wikicategory_Latin_American_countries",
-                        "YAGO_wikicategory_States_and_territories_established_in_1822",
-                        "YAGO_wordnet_location_100027167",
-                        "YAGO_wordnet_administrative_district_108491826"
-                      ],
-                      "readableRepr": "Brazil",
-                      "url": "http://en.wikipedia.org/wiki/Brazil"
-                    }
-                  }
-                ]
-              },
-              "NNP"
-            ],
-            [
-              {
-                "nlpToken": {
-                  "index": 13,
-                  "word": ":",
-                  "originalText": ":",
-                  "lemma": ":",
-                  "characterOffsetBegin": 84,
-                  "characterOffsetEnd": 85,
-                  "pos": ":",
-                  "ner": "O",
-                  "speaker": "PER0",
-                  "before": "",
-                  "after": " "
-                },
-                "aida": [
-                  {
-                    "mention": {
-                      "allEntities": [
-                        {
-                          "kbIdentifier": "YAGO:Brazil",
-                          "disambiguationScore": "0.57786"
-                        }
-                      ],
-                      "offset": 78,
-                      "name": "Brazil",
-                      "length": 6,
-                      "bestEntity": {
-                        "kbIdentifier": "YAGO:Brazil",
-                        "disambiguationScore": "0.57786"
-                      }
-                    },
-                    "bestEntityMetadata": {
-                      "knowledgebase": "YAGO",
-                      "depictionurl": "http://upload.wikimedia.org/wikipedia/en/0/05/Flag_of_Brazil.svg",
-                      "depictionthumbnailurl": "http://upload.wikimedia.org/wikipedia/en/thumbFlag_of_Brazil.svg/200px-Flag_of_Brazil.svg",
-                      "importance": 7.79940596381577e-06,
-                      "entityId": "Brazil",
-                      "type": [
-                        "YAGO_wordnet_system_108435388",
-                        "YAGO_wordnet_district_108552138",
-                        "YAGO_wikicategory_Countries_in_South_America",
-                        "YAGO_yagoPermanentlyLocatedEntity",
-                        "YAGO_yagoLegalActorGeo",
-                        "YAGO_wikicategory_Portuguese\\u002dspeaking_countries_and_territories",
-                        "YAGO_wordnet_state_108654360",
-                        "YAGO_wikicategory_Member_states_of_the_Union_of_South_American_Nations",
-                        "YAGO_wordnet_country_108544813",
-                        "YAGO_wikicategory_Member_states_of_the_United_Nations",
-                        "YAGO_wordnet_economy_108366753",
-                        "YAGO_wordnet_abstraction_100002137",
-                        "YAGO_wordnet_region_108630985",
-                        "YAGO_yagoGeoEntity",
-                        "YAGO_wikicategory_Romance_countries_and_territories",
-                        "YAGO_wikicategory_World_Trade_Organization_member_economies",
-                        "YAGO_wikicategory_Member_states_of_the_Community_of_Portuguese_Language_Countries",
-                        "YAGO_wordnet_physical_entity_100001930",
-                        "YAGO_wordnet_entity_100001740",
-                        "YAGO_wikicategory_Member_states_of_Mercosur",
-                        "YAGO_wordnet_object_100002684",
-                        "YAGO_wordnet_group_100031264",
-                        "YAGO_wikicategory_Latin_American_countries",
-                        "YAGO_wikicategory_States_and_territories_established_in_1822",
-                        "YAGO_wordnet_location_100027167",
-                        "YAGO_wordnet_administrative_district_108491826"
-                      ],
-                      "readableRepr": "Brazil",
-                      "url": "http://en.wikipedia.org/wiki/Brazil"
-                    }
-                  }
-                ]
-              },
-              ":"
-            ],
-            [
-              {
-                "nlpToken": {
-                  "index": 14,
-                  "word": "`",
-                  "originalText": "'",
-                  "lemma": "`",
-                  "characterOffsetBegin": 86,
-                  "characterOffsetEnd": 87,
-                  "pos": "``",
-                  "ner": "O",
-                  "speaker": "PER0",
-                  "before": " ",
-                  "after": ""
-                }
-              },
-              "``"
-            ],
-            [
-              {
-                "nlpToken": {
-                  "index": 15,
-                  "word": "We",
-                  "originalText": "We",
-                  "lemma": "we",
-                  "characterOffsetBegin": 87,
-                  "characterOffsetEnd": 89,
-                  "pos": "PRP",
-                  "ner": "O",
-                  "speaker": "PER0",
-                  "before": "",
-                  "after": " "
-                }
-              },
-              "PRP"
-            ],
-            [
-              {
-                "nlpToken": {
-                  "index": 16,
-                  "word": "witnessed",
-                  "originalText": "witnessed",
-                  "lemma": "witness",
-                  "characterOffsetBegin": 90,
-                  "characterOffsetEnd": 99,
-                  "pos": "VBD",
-                  "ner": "O",
-                  "speaker": "PER0",
-                  "before": " ",
-                  "after": " "
-                }
-              },
-              "VBD"
-            ],
-            [
-              {
-                "nlpToken": {
-                  "index": 17,
-                  "word": "something",
-                  "originalText": "something",
-                  "lemma": "something",
-                  "characterOffsetBegin": 100,
-                  "characterOffsetEnd": 109,
-                  "pos": "NN",
-                  "ner": "O",
-                  "speaker": "PER0",
-                  "before": " ",
-                  "after": " "
-                }
-              },
-              "NN"
-            ],
-            [
-              {
-                "nlpToken": {
-                  "index": 18,
-                  "word": "very",
-                  "originalText": "very",
-                  "lemma": "very",
-                  "characterOffsetBegin": 110,
-                  "characterOffsetEnd": 114,
-                  "pos": "RB",
-                  "ner": "O",
-                  "speaker": "PER0",
-                  "before": " ",
-                  "after": ""
-                }
-              },
-              "RB"
-            ],
-            [
-              {
-                "nlpToken": {
-                  "index": 19,
-                  "word": ",",
-                  "originalText": ",",
-                  "lemma": ",",
-                  "characterOffsetBegin": 114,
-                  "characterOffsetEnd": 115,
-                  "pos": ",",
-                  "ner": "O",
-                  "speaker": "PER0",
-                  "before": "",
-                  "after": " "
-                }
-              },
-              ","
-            ],
-            [
-              {
-                "nlpToken": {
-                  "index": 20,
-                  "word": "very",
-                  "originalText": "very",
-                  "lemma": "very",
-                  "characterOffsetBegin": 116,
-                  "characterOffsetEnd": 120,
-                  "pos": "RB",
-                  "ner": "O",
-                  "speaker": "PER0",
-                  "before": " ",
-                  "after": " "
-                }
-              },
-              "RB"
-            ],
-            [
-              {
-                "nlpToken": {
-                  "index": 21,
-                  "word": "special",
-                  "originalText": "special",
-                  "lemma": "special",
-                  "characterOffsetBegin": 121,
-                  "characterOffsetEnd": 128,
-                  "pos": "JJ",
-                  "ner": "O",
-                  "speaker": "PER0",
-                  "before": " ",
-                  "after": ""
-                }
-              },
-              "JJ"
-            ],
-            [
-              {
-                "nlpToken": {
-                  "index": 22,
-                  "word": "'",
-                  "originalText": "'",
-                  "lemma": "'",
-                  "characterOffsetBegin": 128,
-                  "characterOffsetEnd": 129,
-                  "pos": "''",
-                  "ner": "O",
-                  "speaker": "PER0",
-                  "before": "",
-                  "after": ""
-                }
-              },
-              "''"
             ]
           ],
-          "score": 0.42857142857142855,
-          "text": "Max Verstappen amazes Red Bull principal Christian Horner with performance in Brazil : ' We witnessed something very , very special '"
+          "score": 0.5860000000000001,
+          "text": "Max Verstappen"
         }
       ],
       "label": "why"

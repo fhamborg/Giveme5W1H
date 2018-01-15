@@ -19,11 +19,10 @@
   "newsCluster": {
     "CategoryId": 5,
     "Category": "sports",
-    "TopicId": 1,
-    "Topic": "unspecific",
-    "EventId": 12,
-    "Event": "f1_crash",
-    "Url": "https://www.thesun.co.uk/sport/2177804/felipe-massa-retires-f1-legend-makes-a-very-emotional-farewell-after-crashing-in-his-last-home-race-in-brazil/"
+    "TopicId": 2,
+    "Topic": "legancy",
+    "EventId": 60,
+    "Event": "f1_crash"
   },
   "dId": "1667b720a919a4cd7904557320d4f7572f2c55bdfb26cd0bf7946a5a",
   "fiveWoneH": {
@@ -31,6 +30,78 @@
       "extracted": [
         {
           "parts": [
+            [
+              {
+                "nlpToken": {
+                  "index": 9,
+                  "word": "very",
+                  "originalText": "very",
+                  "lemma": "very",
+                  "characterOffsetBegin": 40,
+                  "characterOffsetEnd": 44,
+                  "pos": "RB",
+                  "ner": "O",
+                  "speaker": "PER0",
+                  "before": " ",
+                  "after": " "
+                }
+              },
+              "RB"
+            ],
+            [
+              {
+                "nlpToken": {
+                  "index": 10,
+                  "word": "emotional",
+                  "originalText": "emotional",
+                  "lemma": "emotional",
+                  "characterOffsetBegin": 45,
+                  "characterOffsetEnd": 54,
+                  "pos": "JJ",
+                  "ner": "O",
+                  "speaker": "PER0",
+                  "before": " ",
+                  "after": " "
+                }
+              },
+              "JJ"
+            ],
+            [
+              {
+                "nlpToken": {
+                  "index": 11,
+                  "word": "farewell",
+                  "originalText": "farewell",
+                  "lemma": "farewell",
+                  "characterOffsetBegin": 55,
+                  "characterOffsetEnd": 63,
+                  "pos": "NN",
+                  "ner": "O",
+                  "speaker": "PER0",
+                  "before": " ",
+                  "after": " "
+                }
+              },
+              "NN"
+            ],
+            [
+              {
+                "nlpToken": {
+                  "index": 12,
+                  "word": "after",
+                  "originalText": "after",
+                  "lemma": "after",
+                  "characterOffsetBegin": 64,
+                  "characterOffsetEnd": 69,
+                  "pos": "IN",
+                  "ner": "O",
+                  "speaker": "PER0",
+                  "before": " ",
+                  "after": " "
+                }
+              },
+              "IN"
+            ],
             [
               {
                 "nlpToken": {
@@ -48,10 +119,100 @@
                 }
               },
               "VBG"
+            ],
+            [
+              {
+                "nlpToken": {
+                  "index": 14,
+                  "word": "in",
+                  "originalText": "in",
+                  "lemma": "in",
+                  "characterOffsetBegin": 79,
+                  "characterOffsetEnd": 81,
+                  "pos": "IN",
+                  "ner": "O",
+                  "speaker": "PER0",
+                  "before": " ",
+                  "after": " "
+                }
+              },
+              "IN"
+            ],
+            [
+              {
+                "nlpToken": {
+                  "index": 15,
+                  "word": "his",
+                  "originalText": "his",
+                  "lemma": "he",
+                  "characterOffsetBegin": 82,
+                  "characterOffsetEnd": 85,
+                  "pos": "PRP$",
+                  "ner": "O",
+                  "speaker": "PER0",
+                  "before": " ",
+                  "after": " "
+                }
+              },
+              "PRP$"
+            ],
+            [
+              {
+                "nlpToken": {
+                  "index": 16,
+                  "word": "last",
+                  "originalText": "last",
+                  "lemma": "last",
+                  "characterOffsetBegin": 86,
+                  "characterOffsetEnd": 90,
+                  "pos": "JJ",
+                  "ner": "O",
+                  "speaker": "PER0",
+                  "before": " ",
+                  "after": " "
+                }
+              },
+              "JJ"
+            ],
+            [
+              {
+                "nlpToken": {
+                  "index": 17,
+                  "word": "home",
+                  "originalText": "home",
+                  "lemma": "home",
+                  "characterOffsetBegin": 91,
+                  "characterOffsetEnd": 95,
+                  "pos": "NN",
+                  "ner": "O",
+                  "speaker": "PER0",
+                  "before": " ",
+                  "after": " "
+                }
+              },
+              "NN"
+            ],
+            [
+              {
+                "nlpToken": {
+                  "index": 18,
+                  "word": "race",
+                  "originalText": "race",
+                  "lemma": "race",
+                  "characterOffsetBegin": 96,
+                  "characterOffsetEnd": 100,
+                  "pos": "NN",
+                  "ner": "O",
+                  "speaker": "PER0",
+                  "before": " ",
+                  "after": " "
+                }
+              },
+              "NN"
             ]
           ],
-          "score": 1.3333333333333333,
-          "text": "crashing"
+          "score": 1.0,
+          "text": "very emotional farewell after crashing in his last home race"
         }
       ],
       "label": "how"
@@ -135,13 +296,10 @@
               "NNP"
             ]
           ],
-          "score": 1.0000000000000002,
+          "score": 0.6699999999999999,
           "text": "Brazil",
           "enhancement": {
             "openstreetmap_nominatim": {
-              "place_id": "179383758",
-              "licence": "Data \u00a9 OpenStreetMap contributors, ODbL 1.0. http://www.openstreetmap.org/copyright",
-              "osm_type": "relation",
               "osm_id": "59470",
               "boundingbox": [
                 -33.8689056,
@@ -149,13 +307,16 @@
                 -73.9830625,
                 -28.6341164
               ],
-              "lat": "-10.3333333",
-              "lon": "-53.2",
-              "display_name": "Brasil",
-              "class": "boundary",
-              "type": "administrative",
+              "licence": "Data \u00a9 OpenStreetMap contributors, ODbL 1.0. http://www.openstreetmap.org/copyright",
               "importance": 0.21948000558855,
-              "icon": "https://nominatim.openstreetmap.org/images/mapicons/poi_boundary_administrative.p.20.png"
+              "icon": "https://nominatim.openstreetmap.org/images/mapicons/poi_boundary_administrative.p.20.png",
+              "osm_type": "relation",
+              "display_name": "Brasil",
+              "lat": "-10.3333333",
+              "type": "administrative",
+              "place_id": "179383758",
+              "lon": "-53.2",
+              "class": "boundary"
             }
           }
         }
@@ -186,7 +347,19 @@
                     "type": "DATE",
                     "value": "2016-11-13"
                   }
-                }
+                },
+                "heideltime": [
+                  {
+                    "@tid": "t2",
+                    "@type": "DATE",
+                    "@value": "XXXX-XX-XX",
+                    "#text": "this day",
+                    "characterOffset": [
+                      1545,
+                      1553
+                    ]
+                  }
+                ]
               },
               "DT"
             ],
@@ -210,20 +383,30 @@
                     "type": "DATE",
                     "value": "2016-11-13"
                   }
-                }
+                },
+                "heideltime": [
+                  {
+                    "@tid": "t2",
+                    "@type": "DATE",
+                    "@value": "XXXX-XX-XX",
+                    "#text": "this day",
+                    "characterOffset": [
+                      1545,
+                      1553
+                    ]
+                  }
+                ]
               },
               "NN"
             ]
           ],
-          "score": 0.6538685281116164,
+          "score": 0.33294308621088053,
           "text": "this day",
           "enhancement": {
-            "timex": [
-              {
-                "start_date": "2016-11-13T00:00:00",
-                "end_date": "2016-11-13T23:59:59"
-              }
-            ]
+            "timex": {
+              "start_date": "2016-11-13T00:00:00",
+              "end_date": "2016-11-13T23:59:59"
+            }
           },
           "nlpIndexSentence": 15
         }
@@ -619,390 +802,10 @@
                 ]
               },
               "NNP"
-            ],
-            [
-              {
-                "nlpToken": {
-                  "index": 3,
-                  "word": "retires",
-                  "originalText": "retires",
-                  "lemma": "retire",
-                  "characterOffsetBegin": 13,
-                  "characterOffsetEnd": 20,
-                  "pos": "VBZ",
-                  "ner": "O",
-                  "speaker": "PER0",
-                  "before": " ",
-                  "after": ""
-                }
-              },
-              "VBZ"
-            ],
-            [
-              {
-                "nlpToken": {
-                  "index": 4,
-                  "word": ":",
-                  "originalText": ":",
-                  "lemma": ":",
-                  "characterOffsetBegin": 20,
-                  "characterOffsetEnd": 21,
-                  "pos": ":",
-                  "ner": "O",
-                  "speaker": "PER0",
-                  "before": "",
-                  "after": " "
-                }
-              },
-              ":"
-            ],
-            [
-              {
-                "nlpToken": {
-                  "index": 5,
-                  "word": "F1",
-                  "originalText": "F1",
-                  "lemma": "f1",
-                  "characterOffsetBegin": 22,
-                  "characterOffsetEnd": 24,
-                  "pos": "NN",
-                  "ner": "O",
-                  "speaker": "PER0",
-                  "before": " ",
-                  "after": " "
-                }
-              },
-              "NN"
-            ],
-            [
-              {
-                "nlpToken": {
-                  "index": 6,
-                  "word": "legend",
-                  "originalText": "legend",
-                  "lemma": "legend",
-                  "characterOffsetBegin": 25,
-                  "characterOffsetEnd": 31,
-                  "pos": "NN",
-                  "ner": "O",
-                  "speaker": "PER0",
-                  "before": " ",
-                  "after": " "
-                }
-              },
-              "NN"
-            ],
-            [
-              {
-                "nlpToken": {
-                  "index": 7,
-                  "word": "makes",
-                  "originalText": "makes",
-                  "lemma": "make",
-                  "characterOffsetBegin": 32,
-                  "characterOffsetEnd": 37,
-                  "pos": "VBZ",
-                  "ner": "O",
-                  "speaker": "PER0",
-                  "before": " ",
-                  "after": " "
-                }
-              },
-              "VBZ"
-            ],
-            [
-              {
-                "nlpToken": {
-                  "index": 8,
-                  "word": "a",
-                  "originalText": "a",
-                  "lemma": "a",
-                  "characterOffsetBegin": 38,
-                  "characterOffsetEnd": 39,
-                  "pos": "DT",
-                  "ner": "O",
-                  "speaker": "PER0",
-                  "before": " ",
-                  "after": " "
-                }
-              },
-              "DT"
-            ],
-            [
-              {
-                "nlpToken": {
-                  "index": 9,
-                  "word": "very",
-                  "originalText": "very",
-                  "lemma": "very",
-                  "characterOffsetBegin": 40,
-                  "characterOffsetEnd": 44,
-                  "pos": "RB",
-                  "ner": "O",
-                  "speaker": "PER0",
-                  "before": " ",
-                  "after": " "
-                }
-              },
-              "RB"
-            ],
-            [
-              {
-                "nlpToken": {
-                  "index": 10,
-                  "word": "emotional",
-                  "originalText": "emotional",
-                  "lemma": "emotional",
-                  "characterOffsetBegin": 45,
-                  "characterOffsetEnd": 54,
-                  "pos": "JJ",
-                  "ner": "O",
-                  "speaker": "PER0",
-                  "before": " ",
-                  "after": " "
-                }
-              },
-              "JJ"
-            ],
-            [
-              {
-                "nlpToken": {
-                  "index": 11,
-                  "word": "farewell",
-                  "originalText": "farewell",
-                  "lemma": "farewell",
-                  "characterOffsetBegin": 55,
-                  "characterOffsetEnd": 63,
-                  "pos": "NN",
-                  "ner": "O",
-                  "speaker": "PER0",
-                  "before": " ",
-                  "after": " "
-                }
-              },
-              "NN"
-            ],
-            [
-              {
-                "nlpToken": {
-                  "index": 12,
-                  "word": "after",
-                  "originalText": "after",
-                  "lemma": "after",
-                  "characterOffsetBegin": 64,
-                  "characterOffsetEnd": 69,
-                  "pos": "IN",
-                  "ner": "O",
-                  "speaker": "PER0",
-                  "before": " ",
-                  "after": " "
-                }
-              },
-              "IN"
-            ],
-            [
-              {
-                "nlpToken": {
-                  "index": 13,
-                  "word": "crashing",
-                  "originalText": "crashing",
-                  "lemma": "crash",
-                  "characterOffsetBegin": 70,
-                  "characterOffsetEnd": 78,
-                  "pos": "VBG",
-                  "ner": "O",
-                  "speaker": "PER0",
-                  "before": " ",
-                  "after": " "
-                }
-              },
-              "VBG"
-            ],
-            [
-              {
-                "nlpToken": {
-                  "index": 14,
-                  "word": "in",
-                  "originalText": "in",
-                  "lemma": "in",
-                  "characterOffsetBegin": 79,
-                  "characterOffsetEnd": 81,
-                  "pos": "IN",
-                  "ner": "O",
-                  "speaker": "PER0",
-                  "before": " ",
-                  "after": " "
-                }
-              },
-              "IN"
-            ],
-            [
-              {
-                "nlpToken": {
-                  "index": 15,
-                  "word": "his",
-                  "originalText": "his",
-                  "lemma": "he",
-                  "characterOffsetBegin": 82,
-                  "characterOffsetEnd": 85,
-                  "pos": "PRP$",
-                  "ner": "O",
-                  "speaker": "PER0",
-                  "before": " ",
-                  "after": " "
-                }
-              },
-              "PRP$"
-            ],
-            [
-              {
-                "nlpToken": {
-                  "index": 16,
-                  "word": "last",
-                  "originalText": "last",
-                  "lemma": "last",
-                  "characterOffsetBegin": 86,
-                  "characterOffsetEnd": 90,
-                  "pos": "JJ",
-                  "ner": "O",
-                  "speaker": "PER0",
-                  "before": " ",
-                  "after": " "
-                }
-              },
-              "JJ"
-            ],
-            [
-              {
-                "nlpToken": {
-                  "index": 17,
-                  "word": "home",
-                  "originalText": "home",
-                  "lemma": "home",
-                  "characterOffsetBegin": 91,
-                  "characterOffsetEnd": 95,
-                  "pos": "NN",
-                  "ner": "O",
-                  "speaker": "PER0",
-                  "before": " ",
-                  "after": " "
-                }
-              },
-              "NN"
-            ],
-            [
-              {
-                "nlpToken": {
-                  "index": 18,
-                  "word": "race",
-                  "originalText": "race",
-                  "lemma": "race",
-                  "characterOffsetBegin": 96,
-                  "characterOffsetEnd": 100,
-                  "pos": "NN",
-                  "ner": "O",
-                  "speaker": "PER0",
-                  "before": " ",
-                  "after": " "
-                }
-              },
-              "NN"
-            ],
-            [
-              {
-                "nlpToken": {
-                  "index": 19,
-                  "word": "in",
-                  "originalText": "in",
-                  "lemma": "in",
-                  "characterOffsetBegin": 101,
-                  "characterOffsetEnd": 103,
-                  "pos": "IN",
-                  "ner": "O",
-                  "speaker": "PER0",
-                  "before": " ",
-                  "after": " "
-                }
-              },
-              "IN"
-            ],
-            [
-              {
-                "nlpToken": {
-                  "index": 20,
-                  "word": "Brazil",
-                  "originalText": "Brazil",
-                  "lemma": "Brazil",
-                  "characterOffsetBegin": 104,
-                  "characterOffsetEnd": 110,
-                  "pos": "NNP",
-                  "ner": "LOCATION",
-                  "speaker": "PER0",
-                  "before": " ",
-                  "after": ""
-                },
-                "aida": [
-                  {
-                    "mention": {
-                      "allEntities": [
-                        {
-                          "kbIdentifier": "YAGO:Brazil",
-                          "disambiguationScore": "0.61398"
-                        }
-                      ],
-                      "offset": 104,
-                      "name": "Brazil",
-                      "length": 6,
-                      "bestEntity": {
-                        "kbIdentifier": "YAGO:Brazil",
-                        "disambiguationScore": "0.61398"
-                      }
-                    },
-                    "bestEntityMetadata": {
-                      "knowledgebase": "YAGO",
-                      "depictionurl": "http://upload.wikimedia.org/wikipedia/en/0/05/Flag_of_Brazil.svg",
-                      "depictionthumbnailurl": "http://upload.wikimedia.org/wikipedia/en/thumbFlag_of_Brazil.svg/200px-Flag_of_Brazil.svg",
-                      "importance": 7.79940596381577e-06,
-                      "entityId": "Brazil",
-                      "type": [
-                        "YAGO_wordnet_system_108435388",
-                        "YAGO_wordnet_district_108552138",
-                        "YAGO_wikicategory_Countries_in_South_America",
-                        "YAGO_yagoPermanentlyLocatedEntity",
-                        "YAGO_yagoLegalActorGeo",
-                        "YAGO_wikicategory_Portuguese\\u002dspeaking_countries_and_territories",
-                        "YAGO_wordnet_state_108654360",
-                        "YAGO_wikicategory_Member_states_of_the_Union_of_South_American_Nations",
-                        "YAGO_wordnet_country_108544813",
-                        "YAGO_wikicategory_Member_states_of_the_United_Nations",
-                        "YAGO_wordnet_economy_108366753",
-                        "YAGO_wordnet_abstraction_100002137",
-                        "YAGO_wordnet_region_108630985",
-                        "YAGO_yagoGeoEntity",
-                        "YAGO_wikicategory_Romance_countries_and_territories",
-                        "YAGO_wikicategory_World_Trade_Organization_member_economies",
-                        "YAGO_wikicategory_Member_states_of_the_Community_of_Portuguese_Language_Countries",
-                        "YAGO_wordnet_physical_entity_100001930",
-                        "YAGO_wordnet_entity_100001740",
-                        "YAGO_wikicategory_Member_states_of_Mercosur",
-                        "YAGO_wordnet_object_100002684",
-                        "YAGO_wordnet_group_100031264",
-                        "YAGO_wikicategory_Latin_American_countries",
-                        "YAGO_wikicategory_States_and_territories_established_in_1822",
-                        "YAGO_wordnet_location_100027167",
-                        "YAGO_wordnet_administrative_district_108491826"
-                      ],
-                      "readableRepr": "Brazil",
-                      "url": "http://en.wikipedia.org/wiki/Brazil"
-                    }
-                  }
-                ]
-              },
-              "NNP"
             ]
           ],
-          "score": 0.42857142857142855,
-          "text": "Felipe Massa retires : F1 legend makes a very emotional farewell after crashing in his last home race in Brazil"
+          "score": 0.5860000000000001,
+          "text": "Felipe Massa"
         }
       ],
       "label": "why"

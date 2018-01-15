@@ -19,43 +19,13 @@
   "newsCluster": {
     "CategoryId": 5,
     "Category": "sports",
-    "TopicId": 1,
-    "Topic": "unspecific",
-    "EventId": 12,
-    "Event": "f1_crash",
-    "Url": "http://www.dailymail.co.uk/sport/sportsnews/article-3934424/Formula-One-star-Max-Verstappen-shows-nerves-steel-avoid-accident.html"
+    "TopicId": 2,
+    "Topic": "legancy",
+    "EventId": 60,
+    "Event": "f1_crash"
   },
   "dId": "1778efb0dfd0f1e933513e0f79af3c09986a40791ecd6faf2239f09c",
   "fiveWoneH": {
-    "how": {
-      "extracted": [
-        {
-          "parts": [
-            [
-              {
-                "nlpToken": {
-                  "index": 12,
-                  "word": "serious",
-                  "originalText": "serious",
-                  "lemma": "serious",
-                  "characterOffsetBegin": 63,
-                  "characterOffsetEnd": 70,
-                  "pos": "JJ",
-                  "ner": "O",
-                  "speaker": "PER0",
-                  "before": " ",
-                  "after": " "
-                }
-              },
-              "JJ"
-            ]
-          ],
-          "score": 1.289855072463768,
-          "text": "serious"
-        }
-      ],
-      "label": "how"
-    },
     "where": {
       "extracted": [
         {
@@ -135,13 +105,10 @@
               "NNP"
             ]
           ],
-          "score": 1.0,
+          "score": 0.6699999999999999,
           "text": "Brazil",
           "enhancement": {
             "openstreetmap_nominatim": {
-              "place_id": "179383758",
-              "licence": "Data \u00a9 OpenStreetMap contributors, ODbL 1.0. http://www.openstreetmap.org/copyright",
-              "osm_type": "relation",
               "osm_id": "59470",
               "boundingbox": [
                 -33.8689056,
@@ -149,13 +116,16 @@
                 -73.9830625,
                 -28.6341164
               ],
-              "lat": "-10.3333333",
-              "lon": "-53.2",
-              "display_name": "Brasil",
-              "class": "boundary",
-              "type": "administrative",
+              "licence": "Data \u00a9 OpenStreetMap contributors, ODbL 1.0. http://www.openstreetmap.org/copyright",
               "importance": 0.21948000558855,
-              "icon": "https://nominatim.openstreetmap.org/images/mapicons/poi_boundary_administrative.p.20.png"
+              "icon": "https://nominatim.openstreetmap.org/images/mapicons/poi_boundary_administrative.p.20.png",
+              "osm_type": "relation",
+              "display_name": "Brasil",
+              "lat": "-10.3333333",
+              "type": "administrative",
+              "place_id": "179383758",
+              "lon": "-53.2",
+              "class": "boundary"
             }
           },
           "nlpIndexSentence": 6
@@ -187,7 +157,19 @@
                     "type": "DATE",
                     "value": "1997-09-30"
                   }
-                }
+                },
+                "heideltime": [
+                  {
+                    "@tid": "t6",
+                    "@type": "DATE",
+                    "@value": "1997-09-30",
+                    "#text": "September 30, 1997",
+                    "characterOffset": [
+                      2718,
+                      2736
+                    ]
+                  }
+                ]
               },
               "NNP"
             ],
@@ -211,7 +193,19 @@
                     "type": "DATE",
                     "value": "1997-09-30"
                   }
-                }
+                },
+                "heideltime": [
+                  {
+                    "@tid": "t6",
+                    "@type": "DATE",
+                    "@value": "1997-09-30",
+                    "#text": "September 30, 1997",
+                    "characterOffset": [
+                      2718,
+                      2736
+                    ]
+                  }
+                ]
               },
               "CD"
             ],
@@ -235,7 +229,19 @@
                     "type": "DATE",
                     "value": "1997-09-30"
                   }
-                }
+                },
+                "heideltime": [
+                  {
+                    "@tid": "t6",
+                    "@type": "DATE",
+                    "@value": "1997-09-30",
+                    "#text": "September 30, 1997",
+                    "characterOffset": [
+                      2718,
+                      2736
+                    ]
+                  }
+                ]
               },
               ","
             ],
@@ -259,25 +265,118 @@
                     "type": "DATE",
                     "value": "1997-09-30"
                   }
-                }
+                },
+                "heideltime": [
+                  {
+                    "@tid": "t6",
+                    "@type": "DATE",
+                    "@value": "1997-09-30",
+                    "#text": "September 30, 1997",
+                    "characterOffset": [
+                      2718,
+                      2736
+                    ]
+                  }
+                ]
               },
               "CD"
             ]
           ],
-          "score": 0.7388926827009885,
+          "score": 0.4094648253413153,
           "text": "September 30 , 1997",
           "enhancement": {
-            "timex": [
-              {
-                "start_date": "1997-09-30T00:00:00",
-                "end_date": "1997-09-30T23:59:59"
-              }
-            ]
+            "timex": {
+              "start_date": "1997-09-30T00:00:00",
+              "end_date": "1997-09-30T23:59:59"
+            }
           },
           "nlpIndexSentence": 11
         }
       ],
       "label": "when"
+    },
+    "how": {
+      "extracted": [
+        {
+          "parts": [
+            [
+              {
+                "nlpToken": {
+                  "index": 11,
+                  "word": "avoid",
+                  "originalText": "avoid",
+                  "lemma": "avoid",
+                  "characterOffsetBegin": 57,
+                  "characterOffsetEnd": 62,
+                  "pos": "VB",
+                  "ner": "O",
+                  "speaker": "PER0",
+                  "before": " ",
+                  "after": " "
+                }
+              },
+              "VB"
+            ],
+            [
+              {
+                "nlpToken": {
+                  "index": 12,
+                  "word": "serious",
+                  "originalText": "serious",
+                  "lemma": "serious",
+                  "characterOffsetBegin": 63,
+                  "characterOffsetEnd": 70,
+                  "pos": "JJ",
+                  "ner": "O",
+                  "speaker": "PER0",
+                  "before": " ",
+                  "after": " "
+                }
+              },
+              "JJ"
+            ],
+            [
+              {
+                "nlpToken": {
+                  "index": 13,
+                  "word": "accident",
+                  "originalText": "accident",
+                  "lemma": "accident",
+                  "characterOffsetBegin": 71,
+                  "characterOffsetEnd": 79,
+                  "pos": "NN",
+                  "ner": "O",
+                  "speaker": "PER0",
+                  "before": " ",
+                  "after": ""
+                }
+              },
+              "NN"
+            ],
+            [
+              {
+                "nlpToken": {
+                  "index": 14,
+                  "word": ".",
+                  "originalText": ".",
+                  "lemma": ".",
+                  "characterOffsetBegin": 79,
+                  "characterOffsetEnd": 80,
+                  "pos": ".",
+                  "ner": "O",
+                  "speaker": "PER0",
+                  "before": "",
+                  "after": " "
+                }
+              },
+              "."
+            ]
+          ],
+          "score": 1.0,
+          "text": "avoid serious accident ."
+        }
+      ],
+      "label": "how"
     },
     "who": {
       "extracted": [
@@ -507,406 +606,10 @@
                 }
               },
               "PRP"
-            ],
-            [
-              {
-                "nlpToken": {
-                  "index": 15,
-                  "word": "clipped",
-                  "originalText": "clipped",
-                  "lemma": "clip",
-                  "characterOffsetBegin": 152,
-                  "characterOffsetEnd": 159,
-                  "pos": "VBD",
-                  "ner": "O",
-                  "speaker": "PER0",
-                  "before": " ",
-                  "after": " "
-                }
-              },
-              "VBD"
-            ],
-            [
-              {
-                "nlpToken": {
-                  "index": 16,
-                  "word": "the",
-                  "originalText": "the",
-                  "lemma": "the",
-                  "characterOffsetBegin": 160,
-                  "characterOffsetEnd": 163,
-                  "pos": "DT",
-                  "ner": "O",
-                  "speaker": "PER0",
-                  "before": " ",
-                  "after": " "
-                }
-              },
-              "DT"
-            ],
-            [
-              {
-                "nlpToken": {
-                  "index": 17,
-                  "word": "curb",
-                  "originalText": "curb",
-                  "lemma": "curb",
-                  "characterOffsetBegin": 164,
-                  "characterOffsetEnd": 168,
-                  "pos": "NN",
-                  "ner": "O",
-                  "speaker": "PER0",
-                  "before": " ",
-                  "after": " "
-                }
-              },
-              "NN"
-            ],
-            [
-              {
-                "nlpToken": {
-                  "index": 18,
-                  "word": "on",
-                  "originalText": "on",
-                  "lemma": "on",
-                  "characterOffsetBegin": 169,
-                  "characterOffsetEnd": 171,
-                  "pos": "IN",
-                  "ner": "O",
-                  "speaker": "PER0",
-                  "before": " ",
-                  "after": " "
-                }
-              },
-              "IN"
-            ],
-            [
-              {
-                "nlpToken": {
-                  "index": 19,
-                  "word": "the",
-                  "originalText": "the",
-                  "lemma": "the",
-                  "characterOffsetBegin": 172,
-                  "characterOffsetEnd": 175,
-                  "pos": "DT",
-                  "ner": "O",
-                  "speaker": "PER0",
-                  "before": " ",
-                  "after": " "
-                }
-              },
-              "DT"
-            ],
-            [
-              {
-                "nlpToken": {
-                  "index": 20,
-                  "word": "entrance",
-                  "originalText": "entrance",
-                  "lemma": "entrance",
-                  "characterOffsetBegin": 176,
-                  "characterOffsetEnd": 184,
-                  "pos": "NN",
-                  "ner": "O",
-                  "speaker": "PER0",
-                  "before": " ",
-                  "after": " "
-                }
-              },
-              "NN"
-            ],
-            [
-              {
-                "nlpToken": {
-                  "index": 21,
-                  "word": "to",
-                  "originalText": "to",
-                  "lemma": "to",
-                  "characterOffsetBegin": 185,
-                  "characterOffsetEnd": 187,
-                  "pos": "TO",
-                  "ner": "O",
-                  "speaker": "PER0",
-                  "before": " ",
-                  "after": " "
-                }
-              },
-              "TO"
-            ],
-            [
-              {
-                "nlpToken": {
-                  "index": 22,
-                  "word": "the",
-                  "originalText": "the",
-                  "lemma": "the",
-                  "characterOffsetBegin": 188,
-                  "characterOffsetEnd": 191,
-                  "pos": "DT",
-                  "ner": "O",
-                  "speaker": "PER0",
-                  "before": " ",
-                  "after": " "
-                }
-              },
-              "DT"
-            ],
-            [
-              {
-                "nlpToken": {
-                  "index": 23,
-                  "word": "long",
-                  "originalText": "long",
-                  "lemma": "long",
-                  "characterOffsetBegin": 192,
-                  "characterOffsetEnd": 196,
-                  "pos": "JJ",
-                  "ner": "O",
-                  "speaker": "PER0",
-                  "before": " ",
-                  "after": " "
-                }
-              },
-              "JJ"
-            ],
-            [
-              {
-                "nlpToken": {
-                  "index": 24,
-                  "word": "home",
-                  "originalText": "home",
-                  "lemma": "home",
-                  "characterOffsetBegin": 197,
-                  "characterOffsetEnd": 201,
-                  "pos": "NN",
-                  "ner": "O",
-                  "speaker": "PER0",
-                  "before": " ",
-                  "after": " "
-                }
-              },
-              "NN"
-            ],
-            [
-              {
-                "nlpToken": {
-                  "index": 25,
-                  "word": "straight",
-                  "originalText": "straight",
-                  "lemma": "straight",
-                  "characterOffsetBegin": 202,
-                  "characterOffsetEnd": 210,
-                  "pos": "RB",
-                  "ner": "O",
-                  "speaker": "PER0",
-                  "before": " ",
-                  "after": ""
-                }
-              },
-              "RB"
-            ],
-            [
-              {
-                "nlpToken": {
-                  "index": 26,
-                  "word": ",",
-                  "originalText": ",",
-                  "lemma": ",",
-                  "characterOffsetBegin": 210,
-                  "characterOffsetEnd": 211,
-                  "pos": ",",
-                  "ner": "O",
-                  "speaker": "PER0",
-                  "before": "",
-                  "after": " "
-                }
-              },
-              ","
-            ],
-            [
-              {
-                "nlpToken": {
-                  "index": 27,
-                  "word": "spinning",
-                  "originalText": "spinning",
-                  "lemma": "spin",
-                  "characterOffsetBegin": 212,
-                  "characterOffsetEnd": 220,
-                  "pos": "VBG",
-                  "ner": "O",
-                  "speaker": "PER0",
-                  "before": " ",
-                  "after": " "
-                }
-              },
-              "VBG"
-            ],
-            [
-              {
-                "nlpToken": {
-                  "index": 28,
-                  "word": "his",
-                  "originalText": "his",
-                  "lemma": "he",
-                  "characterOffsetBegin": 221,
-                  "characterOffsetEnd": 224,
-                  "pos": "PRP$",
-                  "ner": "O",
-                  "speaker": "PER0",
-                  "before": " ",
-                  "after": " "
-                }
-              },
-              "PRP$"
-            ],
-            [
-              {
-                "nlpToken": {
-                  "index": 29,
-                  "word": "car",
-                  "originalText": "car",
-                  "lemma": "car",
-                  "characterOffsetBegin": 225,
-                  "characterOffsetEnd": 228,
-                  "pos": "NN",
-                  "ner": "O",
-                  "speaker": "PER0",
-                  "before": " ",
-                  "after": " "
-                }
-              },
-              "NN"
-            ],
-            [
-              {
-                "nlpToken": {
-                  "index": 30,
-                  "word": "sideways",
-                  "originalText": "sideways",
-                  "lemma": "sideways",
-                  "characterOffsetBegin": 229,
-                  "characterOffsetEnd": 237,
-                  "pos": "RB",
-                  "ner": "O",
-                  "speaker": "PER0",
-                  "before": " ",
-                  "after": " "
-                }
-              },
-              "RB"
-            ],
-            [
-              {
-                "nlpToken": {
-                  "index": 31,
-                  "word": "and",
-                  "originalText": "and",
-                  "lemma": "and",
-                  "characterOffsetBegin": 238,
-                  "characterOffsetEnd": 241,
-                  "pos": "CC",
-                  "ner": "O",
-                  "speaker": "PER0",
-                  "before": " ",
-                  "after": " "
-                }
-              },
-              "CC"
-            ],
-            [
-              {
-                "nlpToken": {
-                  "index": 32,
-                  "word": "sliding",
-                  "originalText": "sliding",
-                  "lemma": "slide",
-                  "characterOffsetBegin": 242,
-                  "characterOffsetEnd": 249,
-                  "pos": "VBG",
-                  "ner": "O",
-                  "speaker": "PER0",
-                  "before": " ",
-                  "after": " "
-                }
-              },
-              "VBG"
-            ],
-            [
-              {
-                "nlpToken": {
-                  "index": 33,
-                  "word": "dangerously",
-                  "originalText": "dangerously",
-                  "lemma": "dangerously",
-                  "characterOffsetBegin": 250,
-                  "characterOffsetEnd": 261,
-                  "pos": "RB",
-                  "ner": "O",
-                  "speaker": "PER0",
-                  "before": " ",
-                  "after": " "
-                }
-              },
-              "RB"
-            ],
-            [
-              {
-                "nlpToken": {
-                  "index": 34,
-                  "word": "down",
-                  "originalText": "down",
-                  "lemma": "down",
-                  "characterOffsetBegin": 262,
-                  "characterOffsetEnd": 266,
-                  "pos": "IN",
-                  "ner": "O",
-                  "speaker": "PER0",
-                  "before": " ",
-                  "after": " "
-                }
-              },
-              "IN"
-            ],
-            [
-              {
-                "nlpToken": {
-                  "index": 35,
-                  "word": "the",
-                  "originalText": "the",
-                  "lemma": "the",
-                  "characterOffsetBegin": 267,
-                  "characterOffsetEnd": 270,
-                  "pos": "DT",
-                  "ner": "O",
-                  "speaker": "PER0",
-                  "before": " ",
-                  "after": " "
-                }
-              },
-              "DT"
-            ],
-            [
-              {
-                "nlpToken": {
-                  "index": 36,
-                  "word": "track",
-                  "originalText": "track",
-                  "lemma": "track",
-                  "characterOffsetBegin": 271,
-                  "characterOffsetEnd": 276,
-                  "pos": "NN",
-                  "ner": "O",
-                  "speaker": "PER0",
-                  "before": " ",
-                  "after": ""
-                }
-              },
-              "NN"
             ]
           ],
-          "score": 0.4225108225108225,
-          "text": "he clipped the curb on the entrance to the long home straight , spinning his car sideways and sliding dangerously down the track",
+          "score": 0.5690303030303031,
+          "text": "he",
           "nlpIndexSentence": 1
         }
       ],

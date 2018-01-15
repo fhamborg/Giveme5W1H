@@ -152,7 +152,7 @@ class Handler(object):
                     # path to cached date
                     path = self._writer._preprocessedPath + '/' + document.get_document_id() + '/' + enahncer_id + '.pickle'
 
-                    # check if there is a cached enhancer result in disc
+                    # check if there is a cached enhancer result on disc
                     if path and os.path.isfile(path) and os.path.getsize(path) > 0:
                         with open(path, 'rb') as ff:
                             eh = pickle.load(ff)

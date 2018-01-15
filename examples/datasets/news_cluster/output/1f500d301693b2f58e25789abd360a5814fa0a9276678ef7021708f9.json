@@ -20,12 +20,11 @@
   "url": "https://www.nytimes.com/2016/07/15/world/europe/nice-france-truck-bastille-day.html",
   "newsCluster": {
     "CategoryId": 1,
-    "Category": "global_politics",
-    "TopicId": 1,
-    "Topic": "unspecific",
-    "EventId": 5,
-    "Event": "truck_attack_in_nice",
-    "Url": "https://www.nytimes.com/2016/07/15/world/europe/nice-france-truck-bastille-day.html"
+    "Category": "world",
+    "TopicId": 2,
+    "Topic": "legancy",
+    "EventId": 53,
+    "Event": "truck_attack_in_nice"
   },
   "dId": "1f500d301693b2f58e25789abd360a5814fa0a9276678ef7021708f9",
   "fiveWoneH": {
@@ -33,6 +32,42 @@
       "extracted": [
         {
           "parts": [
+            [
+              {
+                "nlpToken": {
+                  "index": 18,
+                  "word": "the",
+                  "originalText": "the",
+                  "lemma": "the",
+                  "characterOffsetBegin": 336,
+                  "characterOffsetEnd": 339,
+                  "pos": "DT",
+                  "ner": "O",
+                  "speaker": "PER0",
+                  "before": " ",
+                  "after": " "
+                }
+              },
+              "DT"
+            ],
+            [
+              {
+                "nlpToken": {
+                  "index": 19,
+                  "word": "southern",
+                  "originalText": "southern",
+                  "lemma": "southern",
+                  "characterOffsetBegin": 340,
+                  "characterOffsetEnd": 348,
+                  "pos": "JJ",
+                  "ner": "O",
+                  "speaker": "PER0",
+                  "before": " ",
+                  "after": " "
+                }
+              },
+              "JJ"
+            ],
             [
               {
                 "nlpToken": {
@@ -108,115 +143,37 @@
                 ]
               },
               "JJ"
-            ]
-          ],
-          "score": 1.2916666666666667,
-          "text": "French",
-          "nlpIndexSentence": 4
-        }
-      ],
-      "label": "how"
-    },
-    "who": {
-      "extracted": [
-        {
-          "parts": [
-            [
-              {
-                "nlpToken": {
-                  "index": 2,
-                  "word": "France",
-                  "originalText": "France",
-                  "lemma": "France",
-                  "characterOffsetBegin": 1488,
-                  "characterOffsetEnd": 1494,
-                  "pos": "NNP",
-                  "ner": "LOCATION",
-                  "speaker": "93",
-                  "before": "",
-                  "after": " "
-                }
-              },
-              "NNP"
-            ]
-          ],
-          "score": 1.0,
-          "text": "France",
-          "nlpIndexSentence": 12
-        }
-      ],
-      "label": "who"
-    },
-    "what": {
-      "extracted": [
-        {
-          "parts": [
-            [
-              {
-                "nlpToken": {
-                  "index": 3,
-                  "word": "has",
-                  "originalText": "has",
-                  "lemma": "have",
-                  "characterOffsetBegin": 1495,
-                  "characterOffsetEnd": 1498,
-                  "pos": "VBZ",
-                  "ner": "O",
-                  "speaker": "93",
-                  "before": " ",
-                  "after": " "
-                }
-              },
-              "VBZ"
             ],
             [
               {
                 "nlpToken": {
-                  "index": 4,
-                  "word": "been",
-                  "originalText": "been",
-                  "lemma": "be",
-                  "characterOffsetBegin": 1499,
-                  "characterOffsetEnd": 1503,
-                  "pos": "VBN",
+                  "index": 21,
+                  "word": "city",
+                  "originalText": "city",
+                  "lemma": "city",
+                  "characterOffsetBegin": 356,
+                  "characterOffsetEnd": 360,
+                  "pos": "NN",
                   "ner": "O",
-                  "speaker": "93",
+                  "speaker": "PER0",
                   "before": " ",
                   "after": " "
                 }
               },
-              "VBN"
+              "NN"
             ],
             [
               {
                 "nlpToken": {
-                  "index": 5,
-                  "word": "struck",
-                  "originalText": "struck",
-                  "lemma": "strike",
-                  "characterOffsetBegin": 1504,
-                  "characterOffsetEnd": 1510,
-                  "pos": "VBN",
-                  "ner": "O",
-                  "speaker": "93",
-                  "before": " ",
-                  "after": " "
-                }
-              },
-              "VBN"
-            ],
-            [
-              {
-                "nlpToken": {
-                  "index": 6,
-                  "word": "on",
-                  "originalText": "on",
-                  "lemma": "on",
-                  "characterOffsetBegin": 1511,
-                  "characterOffsetEnd": 1513,
+                  "index": 22,
+                  "word": "of",
+                  "originalText": "of",
+                  "lemma": "of",
+                  "characterOffsetBegin": 361,
+                  "characterOffsetEnd": 363,
                   "pos": "IN",
                   "ner": "O",
-                  "speaker": "93",
+                  "speaker": "PER0",
                   "before": " ",
                   "after": " "
                 }
@@ -226,23 +183,97 @@
             [
               {
                 "nlpToken": {
-                  "index": 7,
-                  "word": "the",
-                  "originalText": "the",
-                  "lemma": "the",
-                  "characterOffsetBegin": 1514,
-                  "characterOffsetEnd": 1517,
-                  "pos": "DT",
-                  "ner": "DATE",
-                  "normalizedNER": "2016-07-14",
-                  "speaker": "93",
+                  "index": 23,
+                  "word": "Nice",
+                  "originalText": "Nice",
+                  "lemma": "Nice",
+                  "characterOffsetBegin": 364,
+                  "characterOffsetEnd": 368,
+                  "pos": "NNP",
+                  "ner": "O",
+                  "speaker": "PER0",
                   "before": " ",
-                  "after": " ",
-                  "timex": {
-                    "tid": "t7",
-                    "type": "DATE",
-                    "value": "2016-07-14"
+                  "after": " "
+                },
+                "aida": [
+                  {
+                    "mention": {
+                      "allEntities": [
+                        {
+                          "kbIdentifier": "YAGO:Nice",
+                          "disambiguationScore": "1"
+                        }
+                      ],
+                      "offset": 364,
+                      "name": "Nice",
+                      "length": 4,
+                      "bestEntity": {
+                        "kbIdentifier": "YAGO:Nice",
+                        "disambiguationScore": "1"
+                      }
+                    },
+                    "bestEntityMetadata": {
+                      "knowledgebase": "YAGO",
+                      "depictionurl": "http://upload.wikimedia.org/wikipedia/commons/8/85/Nice_Port_1.jpg",
+                      "depictionthumbnailurl": "http://upload.wikimedia.org/wikipedia/commons/thumbNice_Port_1.jpg/200px-Nice_Port_1.jpg",
+                      "importance": 0.0004114186645912819,
+                      "entityId": "Nice",
+                      "type": [
+                        "YAGO_yagoGeoEntity",
+                        "YAGO_wordnet_district_108552138",
+                        "YAGO_yagoPermanentlyLocatedEntity",
+                        "YAGO_wordnet_physical_entity_100001930",
+                        "YAGO_yagoLegalActorGeo",
+                        "YAGO_wordnet_entity_100001740",
+                        "YAGO_wordnet_object_100002684",
+                        "YAGO_wordnet_location_100027167",
+                        "YAGO_wordnet_prefecture_108626947",
+                        "YAGO_wordnet_administrative_district_108491826",
+                        "YAGO_wikicategory_Prefectures_in_France",
+                        "YAGO_wikicategory_Communes_of_Alpes\\u002dMaritimes",
+                        "YAGO_wordnet_region_108630985",
+                        "YAGO_wordnet_commune_108541609"
+                      ],
+                      "readableRepr": "Nice",
+                      "url": "http://en.wikipedia.org/wiki/Nice"
+                    }
                   }
+                ]
+              },
+              "NNP"
+            ],
+            [
+              {
+                "nlpToken": {
+                  "index": 24,
+                  "word": "when",
+                  "originalText": "when",
+                  "lemma": "when",
+                  "characterOffsetBegin": 369,
+                  "characterOffsetEnd": 373,
+                  "pos": "WRB",
+                  "ner": "O",
+                  "speaker": "PER0",
+                  "before": " ",
+                  "after": " "
+                }
+              },
+              "WRB"
+            ],
+            [
+              {
+                "nlpToken": {
+                  "index": 25,
+                  "word": "a",
+                  "originalText": "a",
+                  "lemma": "a",
+                  "characterOffsetBegin": 374,
+                  "characterOffsetEnd": 375,
+                  "pos": "DT",
+                  "ner": "O",
+                  "speaker": "PER0",
+                  "before": " ",
+                  "after": " "
                 }
               },
               "DT"
@@ -250,36 +281,48 @@
             [
               {
                 "nlpToken": {
-                  "index": 8,
-                  "word": "day",
-                  "originalText": "day",
-                  "lemma": "day",
-                  "characterOffsetBegin": 1518,
-                  "characterOffsetEnd": 1521,
-                  "pos": "NN",
-                  "ner": "DATE",
-                  "normalizedNER": "2016-07-14",
-                  "speaker": "93",
+                  "index": 26,
+                  "word": "large",
+                  "originalText": "large",
+                  "lemma": "large",
+                  "characterOffsetBegin": 376,
+                  "characterOffsetEnd": 381,
+                  "pos": "JJ",
+                  "ner": "O",
+                  "speaker": "PER0",
                   "before": " ",
-                  "after": " ",
-                  "timex": {
-                    "tid": "t7",
-                    "type": "DATE",
-                    "value": "2016-07-14"
-                  }
+                  "after": " "
+                }
+              },
+              "JJ"
+            ],
+            [
+              {
+                "nlpToken": {
+                  "index": 27,
+                  "word": "truck",
+                  "originalText": "truck",
+                  "lemma": "truck",
+                  "characterOffsetBegin": 382,
+                  "characterOffsetEnd": 387,
+                  "pos": "NN",
+                  "ner": "O",
+                  "speaker": "PER0",
+                  "before": " ",
+                  "after": " "
                 }
               },
               "NN"
             ]
           ],
           "score": 1.0,
-          "text": "has been struck on the day",
-          "nlpIndexSentence": 12
+          "text": "the southern French city of Nice when a large truck",
+          "nlpIndexSentence": 4
         }
       ],
-      "label": "what"
+      "label": "how"
     },
-    "why": {
+    "who": {
       "extracted": [
         {
           "parts": [
@@ -318,7 +361,19 @@
                 }
               },
               "NN"
-            ],
+            ]
+          ],
+          "score": 1.0,
+          "text": "The driver",
+          "nlpIndexSentence": 2
+        }
+      ],
+      "label": "who"
+    },
+    "what": {
+      "extracted": [
+        {
+          "parts": [
             [
               {
                 "nlpToken": {
@@ -446,9 +501,183 @@
               "NN"
             ]
           ],
-          "score": 0.4233766233766234,
-          "text": "The driver was shot to death by the police",
+          "score": 1.0,
+          "text": "was shot to death by the police",
           "nlpIndexSentence": 2
+        }
+      ],
+      "label": "what"
+    },
+    "why": {
+      "extracted": [
+        {
+          "parts": [
+            [
+              {
+                "nlpToken": {
+                  "index": 10,
+                  "word": "because",
+                  "originalText": "because",
+                  "lemma": "because",
+                  "characterOffsetBegin": 3404,
+                  "characterOffsetEnd": 3411,
+                  "pos": "IN",
+                  "ner": "O",
+                  "speaker": "182",
+                  "before": " ",
+                  "after": " "
+                }
+              },
+              "IN"
+            ],
+            [
+              {
+                "nlpToken": {
+                  "index": 11,
+                  "word": "I",
+                  "originalText": "I",
+                  "lemma": "I",
+                  "characterOffsetBegin": 3412,
+                  "characterOffsetEnd": 3413,
+                  "pos": "PRP",
+                  "ner": "O",
+                  "speaker": "182",
+                  "before": " ",
+                  "after": " "
+                }
+              },
+              "PRP"
+            ],
+            [
+              {
+                "nlpToken": {
+                  "index": 12,
+                  "word": "thought",
+                  "originalText": "thought",
+                  "lemma": "think",
+                  "characterOffsetBegin": 3414,
+                  "characterOffsetEnd": 3421,
+                  "pos": "VBD",
+                  "ner": "O",
+                  "speaker": "182",
+                  "before": " ",
+                  "after": " "
+                }
+              },
+              "VBD"
+            ],
+            [
+              {
+                "nlpToken": {
+                  "index": 13,
+                  "word": "it",
+                  "originalText": "it",
+                  "lemma": "it",
+                  "characterOffsetBegin": 3422,
+                  "characterOffsetEnd": 3424,
+                  "pos": "PRP",
+                  "ner": "O",
+                  "speaker": "182",
+                  "before": " ",
+                  "after": " "
+                }
+              },
+              "PRP"
+            ],
+            [
+              {
+                "nlpToken": {
+                  "index": 14,
+                  "word": "was",
+                  "originalText": "was",
+                  "lemma": "be",
+                  "characterOffsetBegin": 3425,
+                  "characterOffsetEnd": 3428,
+                  "pos": "VBD",
+                  "ner": "O",
+                  "speaker": "182",
+                  "before": " ",
+                  "after": " "
+                }
+              },
+              "VBD"
+            ],
+            [
+              {
+                "nlpToken": {
+                  "index": 15,
+                  "word": "a",
+                  "originalText": "a",
+                  "lemma": "a",
+                  "characterOffsetBegin": 3429,
+                  "characterOffsetEnd": 3430,
+                  "pos": "DT",
+                  "ner": "O",
+                  "speaker": "182",
+                  "before": " ",
+                  "after": " "
+                }
+              },
+              "DT"
+            ],
+            [
+              {
+                "nlpToken": {
+                  "index": 16,
+                  "word": "false",
+                  "originalText": "false",
+                  "lemma": "false",
+                  "characterOffsetBegin": 3431,
+                  "characterOffsetEnd": 3436,
+                  "pos": "JJ",
+                  "ner": "O",
+                  "speaker": "182",
+                  "before": " ",
+                  "after": " "
+                }
+              },
+              "JJ"
+            ],
+            [
+              {
+                "nlpToken": {
+                  "index": 17,
+                  "word": "alert",
+                  "originalText": "alert",
+                  "lemma": "alert",
+                  "characterOffsetBegin": 3437,
+                  "characterOffsetEnd": 3442,
+                  "pos": "NN",
+                  "ner": "O",
+                  "speaker": "182",
+                  "before": " ",
+                  "after": ""
+                }
+              },
+              "NN"
+            ],
+            [
+              {
+                "nlpToken": {
+                  "index": 18,
+                  "word": ".",
+                  "originalText": ".",
+                  "lemma": ".",
+                  "characterOffsetBegin": 3442,
+                  "characterOffsetEnd": 3443,
+                  "pos": ".",
+                  "ner": "O",
+                  "speaker": "182",
+                  "before": "",
+                  "after": " "
+                }
+              },
+              "."
+            ]
+          ],
+          "score": 0.8036363636363637,
+          "text": "because I thought it was a false alert .",
+          "nlpIndexSentence": 27
         }
       ],
       "label": "why"
@@ -478,7 +707,7 @@
                       "allEntities": [
                         {
                           "kbIdentifier": "YAGO:France",
-                          "disambiguationScore": "0.41839"
+                          "disambiguationScore": "0.42536"
                         }
                       ],
                       "offset": 177,
@@ -486,7 +715,7 @@
                       "length": 6,
                       "bestEntity": {
                         "kbIdentifier": "YAGO:France",
-                        "disambiguationScore": "0.41839"
+                        "disambiguationScore": "0.42536"
                       }
                     },
                     "bestEntityMetadata": {
@@ -534,13 +763,10 @@
               "NNP"
             ]
           ],
-          "score": 1.0000000000000002,
+          "score": 0.6699999999999999,
           "text": "France",
           "enhancement": {
             "openstreetmap_nominatim": {
-              "place_id": "178221547",
-              "licence": "Data \u00a9 OpenStreetMap contributors, ODbL 1.0. http://www.openstreetmap.org/copyright",
-              "osm_type": "relation",
               "osm_id": "1403916",
               "boundingbox": [
                 41.2632185,
@@ -548,13 +774,16 @@
                 -5.4534286,
                 9.8678344
               ],
-              "lat": "46.603354",
-              "lon": "1.8883335",
-              "display_name": "France m\u00e9tropolitaine, France",
-              "class": "boundary",
-              "type": "administrative",
+              "licence": "Data \u00a9 OpenStreetMap contributors, ODbL 1.0. http://www.openstreetmap.org/copyright",
               "importance": 0.35030567158717,
-              "icon": "https://nominatim.openstreetmap.org/images/mapicons/poi_boundary_administrative.p.20.png"
+              "icon": "https://nominatim.openstreetmap.org/images/mapicons/poi_boundary_administrative.p.20.png",
+              "osm_type": "relation",
+              "display_name": "France m\u00e9tropolitaine, France",
+              "lat": "46.603354",
+              "type": "administrative",
+              "place_id": "178221547",
+              "lon": "1.8883335",
+              "class": "boundary"
             }
           },
           "nlpIndexSentence": 2
@@ -569,39 +798,87 @@
             [
               {
                 "nlpToken": {
-                  "index": 6,
-                  "word": "Thursday",
-                  "originalText": "Thursday",
-                  "lemma": "Thursday",
-                  "characterOffsetBegin": 7283,
-                  "characterOffsetEnd": 7291,
-                  "pos": "NNP",
-                  "ner": "DATE",
-                  "normalizedNER": "2016-07-14",
+                  "index": 27,
+                  "word": "10:30",
+                  "originalText": "10:30",
+                  "lemma": "10:30",
+                  "characterOffsetBegin": 8736,
+                  "characterOffsetEnd": 8741,
+                  "pos": "CD",
+                  "ner": "TIME",
+                  "normalizedNER": "2016-07-13T22:30",
+                  "speaker": "PER0",
+                  "before": " ",
+                  "after": " ",
+                  "timex": {
+                    "tid": "t37",
+                    "type": "TIME",
+                    "value": "2016-07-13T22:30"
+                  }
+                },
+                "heideltime": [
+                  {
+                    "@tid": "t36",
+                    "@type": "TIME",
+                    "@value": "2016-07-14T22:30",
+                    "@mod": "APPROX",
+                    "#text": "around 10:30 p.m.",
+                    "characterOffset": [
+                      8729,
+                      8746
+                    ]
+                  }
+                ]
+              },
+              "CD"
+            ],
+            [
+              {
+                "nlpToken": {
+                  "index": 28,
+                  "word": "p.m.",
+                  "originalText": "p.m.",
+                  "lemma": "p.m.",
+                  "characterOffsetBegin": 8742,
+                  "characterOffsetEnd": 8746,
+                  "pos": "RB",
+                  "ner": "TIME",
+                  "normalizedNER": "2016-07-13T22:30",
                   "speaker": "PER0",
                   "before": " ",
                   "after": "",
                   "timex": {
-                    "tid": "t32",
-                    "type": "DATE",
-                    "value": "2016-07-14"
+                    "tid": "t37",
+                    "type": "TIME",
+                    "value": "2016-07-13T22:30"
                   }
-                }
+                },
+                "heideltime": [
+                  {
+                    "@tid": "t36",
+                    "@type": "TIME",
+                    "@value": "2016-07-14T22:30",
+                    "@mod": "APPROX",
+                    "#text": "around 10:30 p.m.",
+                    "characterOffset": [
+                      8729,
+                      8746
+                    ]
+                  }
+                ]
               },
-              "NNP"
+              "RB"
             ]
           ],
-          "score": 0.6130629568712626,
-          "text": "Thursday",
+          "score": 0.37583987198476854,
+          "text": "10:30 p.m.",
           "enhancement": {
-            "timex": [
-              {
-                "start_date": "2016-07-14T00:00:00",
-                "end_date": "2016-07-14T23:59:59"
-              }
-            ]
+            "timex": {
+              "start_date": "2016-07-13T22:30:00",
+              "end_date": "2016-07-13T22:30:59"
+            }
           },
-          "nlpIndexSentence": 62
+          "nlpIndexSentence": 72
         }
       ],
       "label": "when"

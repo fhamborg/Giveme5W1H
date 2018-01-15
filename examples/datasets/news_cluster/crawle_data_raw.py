@@ -20,8 +20,6 @@ This is a dataset aiming to represent clustered news around topics.
 Used publisher:
     see research_helper
 
-Used time horizon:
-    2016-2017
 
 Event Source
 

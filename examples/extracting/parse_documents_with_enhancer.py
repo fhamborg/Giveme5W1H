@@ -34,7 +34,7 @@ if __name__ == '__main__':
     #
     # Switch here between the predefined datasets or local for the local folder
     #
-    basePath = dataset_helper['gold_standard']
+    basePath = dataset_helper['news_cluster']
     #
     #
     #
@@ -77,7 +77,7 @@ if __name__ == '__main__':
             # .set_limit(1)
 
             # Optional: resume ability, skip input file if its already in output
-            # .skip_documents_with_output()
+            #.skip_documents_with_output()
 
             # load and saves all document runtime objects for further programming
             # .preload_and_cache_documents()

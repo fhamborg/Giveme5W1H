@@ -16,12 +16,11 @@
   "url": "http://edition.cnn.com/2016/04/04/world/panama-papers-explainer/index.html",
   "newsCluster": {
     "CategoryId": 1,
-    "Category": "global_politics",
-    "TopicId": 3,
-    "Topic": "hack",
-    "EventId": 2,
-    "Event": "panama_papers",
-    "Url": "http://edition.cnn.com/2016/04/04/world/panama-papers-explainer/index.html"
+    "Category": "world",
+    "TopicId": 2,
+    "Topic": "legancy",
+    "EventId": 50,
+    "Event": "panama_papers"
   },
   "dId": "0ac360f6fe427a902ddccaa3bec053af9ad05e1c22f9196bc064171a",
   "fiveWoneH": {
@@ -29,6 +28,24 @@
       "extracted": [
         {
           "parts": [
+            [
+              {
+                "nlpToken": {
+                  "index": 15,
+                  "word": "and",
+                  "originalText": "and",
+                  "lemma": "and",
+                  "characterOffsetBegin": 125,
+                  "characterOffsetEnd": 128,
+                  "pos": "CC",
+                  "ner": "O",
+                  "speaker": "PER0",
+                  "before": " ",
+                  "after": " "
+                }
+              },
+              "CC"
+            ],
             [
               {
                 "nlpToken": {
@@ -46,340 +63,34 @@
                 }
               },
               "JJ"
-            ]
-          ],
-          "score": 1.2345679012345678,
-          "text": "offshore",
-          "nlpIndexSentence": 1
-        }
-      ],
-      "label": "how"
-    },
-    "who": {
-      "extracted": [
-        {
-          "parts": [
+            ],
+            [
+              {
+                "nlpToken": {
+                  "index": 17,
+                  "word": "accounts",
+                  "originalText": "accounts",
+                  "lemma": "account",
+                  "characterOffsetBegin": 138,
+                  "characterOffsetEnd": 146,
+                  "pos": "NNS",
+                  "ner": "O",
+                  "speaker": "PER0",
+                  "before": " ",
+                  "after": " "
+                }
+              },
+              "NNS"
+            ],
             [
               {
                 "nlpToken": {
                   "index": 18,
-                  "word": "These",
-                  "originalText": "These",
-                  "lemma": "these",
-                  "characterOffsetBegin": 803,
-                  "characterOffsetEnd": 808,
-                  "pos": "DT",
-                  "ner": "O",
-                  "speaker": "43",
-                  "before": "",
-                  "after": " "
-                }
-              },
-              "DT"
-            ],
-            [
-              {
-                "nlpToken": {
-                  "index": 19,
-                  "word": "documents",
-                  "originalText": "documents",
-                  "lemma": "document",
-                  "characterOffsetBegin": 809,
-                  "characterOffsetEnd": 818,
-                  "pos": "NNS",
-                  "ner": "O",
-                  "speaker": "43",
-                  "before": " ",
-                  "after": ""
-                }
-              },
-              "NNS"
-            ]
-          ],
-          "score": 1.0,
-          "text": "These documents",
-          "nlpIndexSentence": 9
-        }
-      ],
-      "label": "who"
-    },
-    "what": {
-      "extracted": [
-        {
-          "parts": [
-            [
-              {
-                "nlpToken": {
-                  "index": 25,
-                  "word": "raise",
-                  "originalText": "raise",
-                  "lemma": "raise",
-                  "characterOffsetBegin": 837,
-                  "characterOffsetEnd": 842,
-                  "pos": "VB",
-                  "ner": "O",
-                  "speaker": "43",
-                  "before": " ",
-                  "after": " "
-                }
-              },
-              "VB"
-            ],
-            [
-              {
-                "nlpToken": {
-                  "index": 26,
-                  "word": "an",
-                  "originalText": "an",
-                  "lemma": "a",
-                  "characterOffsetBegin": 843,
-                  "characterOffsetEnd": 845,
-                  "pos": "DT",
-                  "ner": "O",
-                  "speaker": "43",
-                  "before": " ",
-                  "after": " "
-                }
-              },
-              "DT"
-            ],
-            [
-              {
-                "nlpToken": {
-                  "index": 27,
-                  "word": "awful",
-                  "originalText": "awful",
-                  "lemma": "awful",
-                  "characterOffsetBegin": 846,
-                  "characterOffsetEnd": 851,
-                  "pos": "JJ",
-                  "ner": "O",
-                  "speaker": "43",
-                  "before": " ",
-                  "after": " "
-                }
-              },
-              "JJ"
-            ],
-            [
-              {
-                "nlpToken": {
-                  "index": 28,
-                  "word": "lot",
-                  "originalText": "lot",
-                  "lemma": "lot",
-                  "characterOffsetBegin": 852,
-                  "characterOffsetEnd": 855,
-                  "pos": "NN",
-                  "ner": "O",
-                  "speaker": "43",
-                  "before": " ",
-                  "after": " "
-                }
-              },
-              "NN"
-            ]
-          ],
-          "score": 1.0,
-          "text": "raise an awful lot",
-          "nlpIndexSentence": 9
-        }
-      ],
-      "label": "what"
-    },
-    "why": {
-      "extracted": [
-        {
-          "parts": [
-            [
-              {
-                "nlpToken": {
-                  "index": 4,
-                  "word": "the",
-                  "originalText": "the",
-                  "lemma": "the",
-                  "characterOffsetBegin": 407,
-                  "characterOffsetEnd": 410,
-                  "pos": "DT",
-                  "ner": "O",
-                  "speaker": "PER0",
-                  "before": " ",
-                  "after": " "
-                }
-              },
-              "DT"
-            ],
-            [
-              {
-                "nlpToken": {
-                  "index": 5,
-                  "word": "firm",
-                  "originalText": "firm",
-                  "lemma": "firm",
-                  "characterOffsetBegin": 411,
-                  "characterOffsetEnd": 415,
-                  "pos": "NN",
-                  "ner": "O",
-                  "speaker": "PER0",
-                  "before": " ",
-                  "after": " "
-                }
-              },
-              "NN"
-            ],
-            [
-              {
-                "nlpToken": {
-                  "index": 6,
-                  "word": "helped",
-                  "originalText": "helped",
-                  "lemma": "help",
-                  "characterOffsetBegin": 416,
-                  "characterOffsetEnd": 422,
-                  "pos": "VBD",
-                  "ner": "O",
-                  "speaker": "PER0",
-                  "before": " ",
-                  "after": " "
-                }
-              },
-              "VBD"
-            ],
-            [
-              {
-                "nlpToken": {
-                  "index": 7,
-                  "word": "establish",
-                  "originalText": "establish",
-                  "lemma": "establish",
-                  "characterOffsetBegin": 423,
-                  "characterOffsetEnd": 432,
-                  "pos": "VB",
-                  "ner": "O",
-                  "speaker": "PER0",
-                  "before": " ",
-                  "after": " "
-                }
-              },
-              "VB"
-            ],
-            [
-              {
-                "nlpToken": {
-                  "index": 8,
-                  "word": "secret",
-                  "originalText": "secret",
-                  "lemma": "secret",
-                  "characterOffsetBegin": 433,
-                  "characterOffsetEnd": 439,
-                  "pos": "NN",
-                  "ner": "O",
-                  "speaker": "PER0",
-                  "before": " ",
-                  "after": " "
-                }
-              },
-              "NN"
-            ],
-            [
-              {
-                "nlpToken": {
-                  "index": 9,
-                  "word": "shell",
-                  "originalText": "shell",
-                  "lemma": "shell",
-                  "characterOffsetBegin": 440,
-                  "characterOffsetEnd": 445,
-                  "pos": "NN",
-                  "ner": "O",
-                  "speaker": "PER0",
-                  "before": " ",
-                  "after": " "
-                }
-              },
-              "NN"
-            ],
-            [
-              {
-                "nlpToken": {
-                  "index": 10,
-                  "word": "companies",
-                  "originalText": "companies",
-                  "lemma": "company",
-                  "characterOffsetBegin": 446,
-                  "characterOffsetEnd": 455,
-                  "pos": "NNS",
-                  "ner": "O",
-                  "speaker": "PER0",
-                  "before": " ",
-                  "after": " "
-                }
-              },
-              "NNS"
-            ],
-            [
-              {
-                "nlpToken": {
-                  "index": 11,
-                  "word": "and",
-                  "originalText": "and",
-                  "lemma": "and",
-                  "characterOffsetBegin": 456,
-                  "characterOffsetEnd": 459,
-                  "pos": "CC",
-                  "ner": "O",
-                  "speaker": "PER0",
-                  "before": " ",
-                  "after": " "
-                }
-              },
-              "CC"
-            ],
-            [
-              {
-                "nlpToken": {
-                  "index": 12,
-                  "word": "offshore",
-                  "originalText": "offshore",
-                  "lemma": "offshore",
-                  "characterOffsetBegin": 460,
-                  "characterOffsetEnd": 468,
-                  "pos": "JJ",
-                  "ner": "O",
-                  "speaker": "PER0",
-                  "before": " ",
-                  "after": " "
-                }
-              },
-              "JJ"
-            ],
-            [
-              {
-                "nlpToken": {
-                  "index": 13,
-                  "word": "accounts",
-                  "originalText": "accounts",
-                  "lemma": "account",
-                  "characterOffsetBegin": 469,
-                  "characterOffsetEnd": 477,
-                  "pos": "NNS",
-                  "ner": "O",
-                  "speaker": "PER0",
-                  "before": " ",
-                  "after": " "
-                }
-              },
-              "NNS"
-            ],
-            [
-              {
-                "nlpToken": {
-                  "index": 14,
                   "word": "for",
                   "originalText": "for",
                   "lemma": "for",
-                  "characterOffsetBegin": 478,
-                  "characterOffsetEnd": 481,
+                  "characterOffsetBegin": 147,
+                  "characterOffsetEnd": 150,
                   "pos": "IN",
                   "ner": "O",
                   "speaker": "PER0",
@@ -392,12 +103,12 @@
             [
               {
                 "nlpToken": {
-                  "index": 15,
+                  "index": 19,
                   "word": "global",
                   "originalText": "global",
                   "lemma": "global",
-                  "characterOffsetBegin": 482,
-                  "characterOffsetEnd": 488,
+                  "characterOffsetBegin": 151,
+                  "characterOffsetEnd": 157,
                   "pos": "JJ",
                   "ner": "O",
                   "speaker": "PER0",
@@ -410,12 +121,60 @@
             [
               {
                 "nlpToken": {
-                  "index": 16,
-                  "word": "power",
-                  "originalText": "power",
-                  "lemma": "power",
-                  "characterOffsetBegin": 489,
-                  "characterOffsetEnd": 494,
+                  "index": 20,
+                  "word": "leaders",
+                  "originalText": "leaders",
+                  "lemma": "leader",
+                  "characterOffsetBegin": 158,
+                  "characterOffsetEnd": 165,
+                  "pos": "NNS",
+                  "ner": "O",
+                  "speaker": "PER0",
+                  "before": " ",
+                  "after": ""
+                }
+              },
+              "NNS"
+            ],
+            [
+              {
+                "nlpToken": {
+                  "index": 21,
+                  "word": ".",
+                  "originalText": ".",
+                  "lemma": ".",
+                  "characterOffsetBegin": 165,
+                  "characterOffsetEnd": 166,
+                  "pos": ".",
+                  "ner": "O",
+                  "speaker": "PER0",
+                  "before": "",
+                  "after": " "
+                }
+              },
+              "."
+            ]
+          ],
+          "score": 1.0,
+          "text": "and offshore accounts for global leaders .",
+          "nlpIndexSentence": 1
+        }
+      ],
+      "label": "how"
+    },
+    "who": {
+      "extracted": [
+        {
+          "parts": [
+            [
+              {
+                "nlpToken": {
+                  "index": 6,
+                  "word": "law",
+                  "originalText": "law",
+                  "lemma": "law",
+                  "characterOffsetBegin": 70,
+                  "characterOffsetEnd": 73,
                   "pos": "NN",
                   "ner": "O",
                   "speaker": "PER0",
@@ -428,25 +187,549 @@
             [
               {
                 "nlpToken": {
-                  "index": 17,
-                  "word": "players",
-                  "originalText": "players",
-                  "lemma": "player",
-                  "characterOffsetBegin": 495,
-                  "characterOffsetEnd": 502,
+                  "index": 7,
+                  "word": "firm",
+                  "originalText": "firm",
+                  "lemma": "firm",
+                  "characterOffsetBegin": 74,
+                  "characterOffsetEnd": 78,
+                  "pos": "NN",
+                  "ner": "O",
+                  "speaker": "PER0",
+                  "before": " ",
+                  "after": " "
+                }
+              },
+              "NN"
+            ],
+            [
+              {
+                "nlpToken": {
+                  "index": 8,
+                  "word": "Mossack",
+                  "originalText": "Mossack",
+                  "lemma": "Mossack",
+                  "characterOffsetBegin": 79,
+                  "characterOffsetEnd": 86,
+                  "pos": "NNP",
+                  "ner": "PERSON",
+                  "speaker": "PER0",
+                  "before": " ",
+                  "after": " "
+                },
+                "aida": [
+                  {
+                    "mention": {
+                      "allEntities": [
+                        {
+                          "kbIdentifier": "YAGO:Mossack_Fonseca",
+                          "disambiguationScore": "1"
+                        }
+                      ],
+                      "offset": 79,
+                      "name": "Mossack Fonseca",
+                      "length": 15,
+                      "bestEntity": {
+                        "kbIdentifier": "YAGO:Mossack_Fonseca",
+                        "disambiguationScore": "1"
+                      }
+                    },
+                    "bestEntityMetadata": {
+                      "knowledgebase": "YAGO",
+                      "depictionurl": "http://upload.wikimedia.org/wikipedia/commons/0/05/Logo_Mossack_Fonseca.jpg",
+                      "depictionthumbnailurl": "http://upload.wikimedia.org/wikipedia/commons/thumbLogo_Mossack_Fonseca.jpg/200px-Logo_Mossack_Fonseca.jpg",
+                      "importance": 0.5667725250326112,
+                      "entityId": "Mossack_Fonseca",
+                      "type": [
+                        "YAGO_wordnet_law_firm_108064039",
+                        "YAGO_yagoPermanentlyLocatedEntity",
+                        "YAGO_yagoLegalActorGeo",
+                        "YAGO_wordnet_organization_108008335",
+                        "YAGO_wordnet_social_group_107950920",
+                        "YAGO_wikicategory_Law_firms_established_in_1977",
+                        "YAGO_wordnet_entity_100001740",
+                        "YAGO_wordnet_enterprise_108056231",
+                        "YAGO_wordnet_group_100031264",
+                        "YAGO_wordnet_firm_108059870",
+                        "YAGO_wordnet_business_108061042",
+                        "YAGO_yagoLegalActor",
+                        "YAGO_wordnet_abstraction_100002137"
+                      ],
+                      "readableRepr": "Mossack Fonseca",
+                      "url": "http://en.wikipedia.org/wiki/Mossack%20Fonseca"
+                    }
+                  }
+                ]
+              },
+              "NNP"
+            ],
+            [
+              {
+                "nlpToken": {
+                  "index": 9,
+                  "word": "Fonseca",
+                  "originalText": "Fonseca",
+                  "lemma": "Fonseca",
+                  "characterOffsetBegin": 87,
+                  "characterOffsetEnd": 94,
+                  "pos": "NNP",
+                  "ner": "PERSON",
+                  "speaker": "PER0",
+                  "before": " ",
+                  "after": " "
+                },
+                "aida": [
+                  {
+                    "mention": {
+                      "allEntities": [
+                        {
+                          "kbIdentifier": "YAGO:Mossack_Fonseca",
+                          "disambiguationScore": "1"
+                        }
+                      ],
+                      "offset": 79,
+                      "name": "Mossack Fonseca",
+                      "length": 15,
+                      "bestEntity": {
+                        "kbIdentifier": "YAGO:Mossack_Fonseca",
+                        "disambiguationScore": "1"
+                      }
+                    },
+                    "bestEntityMetadata": {
+                      "knowledgebase": "YAGO",
+                      "depictionurl": "http://upload.wikimedia.org/wikipedia/commons/0/05/Logo_Mossack_Fonseca.jpg",
+                      "depictionthumbnailurl": "http://upload.wikimedia.org/wikipedia/commons/thumbLogo_Mossack_Fonseca.jpg/200px-Logo_Mossack_Fonseca.jpg",
+                      "importance": 0.5667725250326112,
+                      "entityId": "Mossack_Fonseca",
+                      "type": [
+                        "YAGO_wordnet_law_firm_108064039",
+                        "YAGO_yagoPermanentlyLocatedEntity",
+                        "YAGO_yagoLegalActorGeo",
+                        "YAGO_wordnet_organization_108008335",
+                        "YAGO_wordnet_social_group_107950920",
+                        "YAGO_wikicategory_Law_firms_established_in_1977",
+                        "YAGO_wordnet_entity_100001740",
+                        "YAGO_wordnet_enterprise_108056231",
+                        "YAGO_wordnet_group_100031264",
+                        "YAGO_wordnet_firm_108059870",
+                        "YAGO_wordnet_business_108061042",
+                        "YAGO_yagoLegalActor",
+                        "YAGO_wordnet_abstraction_100002137"
+                      ],
+                      "readableRepr": "Mossack Fonseca",
+                      "url": "http://en.wikipedia.org/wiki/Mossack%20Fonseca"
+                    }
+                  }
+                ]
+              },
+              "NNP"
+            ]
+          ],
+          "score": 1.0,
+          "text": "law firm Mossack Fonseca",
+          "nlpIndexSentence": 1
+        }
+      ],
+      "label": "who"
+    },
+    "what": {
+      "extracted": [
+        {
+          "parts": [
+            [
+              {
+                "nlpToken": {
+                  "index": 10,
+                  "word": "helped",
+                  "originalText": "helped",
+                  "lemma": "help",
+                  "characterOffsetBegin": 95,
+                  "characterOffsetEnd": 101,
+                  "pos": "VBD",
+                  "ner": "O",
+                  "speaker": "PER0",
+                  "before": " ",
+                  "after": " "
+                }
+              },
+              "VBD"
+            ],
+            [
+              {
+                "nlpToken": {
+                  "index": 11,
+                  "word": "set",
+                  "originalText": "set",
+                  "lemma": "set",
+                  "characterOffsetBegin": 102,
+                  "characterOffsetEnd": 105,
+                  "pos": "VB",
+                  "ner": "O",
+                  "speaker": "PER0",
+                  "before": " ",
+                  "after": " "
+                }
+              },
+              "VB"
+            ],
+            [
+              {
+                "nlpToken": {
+                  "index": 12,
+                  "word": "up",
+                  "originalText": "up",
+                  "lemma": "up",
+                  "characterOffsetBegin": 106,
+                  "characterOffsetEnd": 108,
+                  "pos": "RP",
+                  "ner": "O",
+                  "speaker": "PER0",
+                  "before": " ",
+                  "after": " "
+                }
+              },
+              "RP"
+            ],
+            [
+              {
+                "nlpToken": {
+                  "index": 13,
+                  "word": "shell",
+                  "originalText": "shell",
+                  "lemma": "shell",
+                  "characterOffsetBegin": 109,
+                  "characterOffsetEnd": 114,
+                  "pos": "NN",
+                  "ner": "O",
+                  "speaker": "PER0",
+                  "before": " ",
+                  "after": " "
+                }
+              },
+              "NN"
+            ],
+            [
+              {
+                "nlpToken": {
+                  "index": 14,
+                  "word": "companies",
+                  "originalText": "companies",
+                  "lemma": "company",
+                  "characterOffsetBegin": 115,
+                  "characterOffsetEnd": 124,
                   "pos": "NNS",
                   "ner": "O",
                   "speaker": "PER0",
                   "before": " ",
-                  "after": ""
+                  "after": " "
                 }
               },
               "NNS"
             ]
           ],
-          "score": 0.39073359073359076,
-          "text": "the firm helped establish secret shell companies and offshore accounts for global power players",
-          "nlpIndexSentence": 7
+          "score": 1.0,
+          "text": "helped set up shell companies",
+          "nlpIndexSentence": 1
+        }
+      ],
+      "label": "what"
+    },
+    "why": {
+      "extracted": [
+        {
+          "parts": [
+            [
+              {
+                "nlpToken": {
+                  "index": 22,
+                  "word": "because",
+                  "originalText": "because",
+                  "lemma": "because",
+                  "characterOffsetBegin": 4370,
+                  "characterOffsetEnd": 4377,
+                  "pos": "IN",
+                  "ner": "O",
+                  "speaker": "227",
+                  "before": " ",
+                  "after": " "
+                }
+              },
+              "IN"
+            ],
+            [
+              {
+                "nlpToken": {
+                  "index": 23,
+                  "word": "of",
+                  "originalText": "of",
+                  "lemma": "of",
+                  "characterOffsetBegin": 4378,
+                  "characterOffsetEnd": 4380,
+                  "pos": "IN",
+                  "ner": "O",
+                  "speaker": "227",
+                  "before": " ",
+                  "after": " "
+                }
+              },
+              "IN"
+            ],
+            [
+              {
+                "nlpToken": {
+                  "index": 24,
+                  "word": "course",
+                  "originalText": "course",
+                  "lemma": "course",
+                  "characterOffsetBegin": 4381,
+                  "characterOffsetEnd": 4387,
+                  "pos": "NN",
+                  "ner": "O",
+                  "speaker": "227",
+                  "before": " ",
+                  "after": " "
+                }
+              },
+              "NN"
+            ],
+            [
+              {
+                "nlpToken": {
+                  "index": 25,
+                  "word": "there",
+                  "originalText": "there",
+                  "lemma": "there",
+                  "characterOffsetBegin": 4388,
+                  "characterOffsetEnd": 4393,
+                  "pos": "EX",
+                  "ner": "O",
+                  "speaker": "227",
+                  "before": " ",
+                  "after": " "
+                }
+              },
+              "EX"
+            ],
+            [
+              {
+                "nlpToken": {
+                  "index": 26,
+                  "word": "are",
+                  "originalText": "are",
+                  "lemma": "be",
+                  "characterOffsetBegin": 4394,
+                  "characterOffsetEnd": 4397,
+                  "pos": "VBP",
+                  "ner": "O",
+                  "speaker": "227",
+                  "before": " ",
+                  "after": " "
+                }
+              },
+              "VBP"
+            ],
+            [
+              {
+                "nlpToken": {
+                  "index": 27,
+                  "word": "so",
+                  "originalText": "so",
+                  "lemma": "so",
+                  "characterOffsetBegin": 4398,
+                  "characterOffsetEnd": 4400,
+                  "pos": "RB",
+                  "ner": "O",
+                  "speaker": "227",
+                  "before": " ",
+                  "after": " "
+                }
+              },
+              "RB"
+            ],
+            [
+              {
+                "nlpToken": {
+                  "index": 28,
+                  "word": "many",
+                  "originalText": "many",
+                  "lemma": "many",
+                  "characterOffsetBegin": 4401,
+                  "characterOffsetEnd": 4405,
+                  "pos": "JJ",
+                  "ner": "O",
+                  "speaker": "227",
+                  "before": " ",
+                  "after": " "
+                }
+              },
+              "JJ"
+            ],
+            [
+              {
+                "nlpToken": {
+                  "index": 29,
+                  "word": "powerful",
+                  "originalText": "powerful",
+                  "lemma": "powerful",
+                  "characterOffsetBegin": 4406,
+                  "characterOffsetEnd": 4414,
+                  "pos": "JJ",
+                  "ner": "O",
+                  "speaker": "227",
+                  "before": " ",
+                  "after": " "
+                }
+              },
+              "JJ"
+            ],
+            [
+              {
+                "nlpToken": {
+                  "index": 30,
+                  "word": "people",
+                  "originalText": "people",
+                  "lemma": "people",
+                  "characterOffsetBegin": 4415,
+                  "characterOffsetEnd": 4421,
+                  "pos": "NNS",
+                  "ner": "O",
+                  "speaker": "227",
+                  "before": " ",
+                  "after": " "
+                }
+              },
+              "NNS"
+            ],
+            [
+              {
+                "nlpToken": {
+                  "index": 31,
+                  "word": "that",
+                  "originalText": "that",
+                  "lemma": "that",
+                  "characterOffsetBegin": 4422,
+                  "characterOffsetEnd": 4426,
+                  "pos": "WDT",
+                  "ner": "O",
+                  "speaker": "227",
+                  "before": " ",
+                  "after": " "
+                }
+              },
+              "WDT"
+            ],
+            [
+              {
+                "nlpToken": {
+                  "index": 32,
+                  "word": "are",
+                  "originalText": "are",
+                  "lemma": "be",
+                  "characterOffsetBegin": 4427,
+                  "characterOffsetEnd": 4430,
+                  "pos": "VBP",
+                  "ner": "O",
+                  "speaker": "227",
+                  "before": " ",
+                  "after": " "
+                }
+              },
+              "VBP"
+            ],
+            [
+              {
+                "nlpToken": {
+                  "index": 33,
+                  "word": "being",
+                  "originalText": "being",
+                  "lemma": "be",
+                  "characterOffsetBegin": 4431,
+                  "characterOffsetEnd": 4436,
+                  "pos": "VBG",
+                  "ner": "O",
+                  "speaker": "227",
+                  "before": " ",
+                  "after": " "
+                }
+              },
+              "VBG"
+            ],
+            [
+              {
+                "nlpToken": {
+                  "index": 34,
+                  "word": "revealed",
+                  "originalText": "revealed",
+                  "lemma": "reveal",
+                  "characterOffsetBegin": 4437,
+                  "characterOffsetEnd": 4445,
+                  "pos": "VBN",
+                  "ner": "O",
+                  "speaker": "227",
+                  "before": " ",
+                  "after": " "
+                }
+              },
+              "VBN"
+            ],
+            [
+              {
+                "nlpToken": {
+                  "index": 35,
+                  "word": "here",
+                  "originalText": "here",
+                  "lemma": "here",
+                  "characterOffsetBegin": 4446,
+                  "characterOffsetEnd": 4450,
+                  "pos": "RB",
+                  "ner": "O",
+                  "speaker": "227",
+                  "before": " ",
+                  "after": ""
+                }
+              },
+              "RB"
+            ],
+            [
+              {
+                "nlpToken": {
+                  "index": 36,
+                  "word": ".",
+                  "originalText": ".",
+                  "lemma": ".",
+                  "characterOffsetBegin": 4450,
+                  "characterOffsetEnd": 4451,
+                  "pos": ".",
+                  "ner": "O",
+                  "speaker": "227",
+                  "before": "",
+                  "after": ""
+                }
+              },
+              "."
+            ],
+            [
+              {
+                "nlpToken": {
+                  "index": 37,
+                  "word": "''",
+                  "originalText": "\"",
+                  "lemma": "''",
+                  "characterOffsetBegin": 4451,
+                  "characterOffsetEnd": 4452,
+                  "pos": "''",
+                  "ner": "O",
+                  "speaker": "PER0",
+                  "before": "",
+                  "after": "\n"
+                }
+              },
+              "''"
+            ]
+          ],
+          "score": 0.5459459459459459,
+          "text": "because of course there are so many powerful people that are being revealed here . \"",
+          "nlpIndexSentence": 30
         }
       ],
       "label": "why"
@@ -526,13 +809,10 @@
               "NNP"
             ]
           ],
-          "score": 1.0,
+          "score": 0.6844548753509899,
           "text": "Panama",
           "enhancement": {
             "openstreetmap_nominatim": {
-              "place_id": "347768",
-              "licence": "Data \u00a9 OpenStreetMap contributors, ODbL 1.0. http://www.openstreetmap.org/copyright",
-              "osm_type": "node",
               "osm_id": "150953090",
               "boundingbox": [
                 35.246906,
@@ -540,13 +820,16 @@
                 -119.0767707,
                 -119.0367707
               ],
-              "lat": "35.266906",
-              "lon": "-119.0567707",
-              "display_name": "Panama, Kern County, California, 93313, United States of America",
-              "class": "place",
-              "type": "hamlet",
+              "licence": "Data \u00a9 OpenStreetMap contributors, ODbL 1.0. http://www.openstreetmap.org/copyright",
               "importance": 0.20786660103606,
-              "icon": "https://nominatim.openstreetmap.org/images/mapicons/poi_place_village.p.20.png"
+              "icon": "https://nominatim.openstreetmap.org/images/mapicons/poi_place_village.p.20.png",
+              "osm_type": "node",
+              "display_name": "Panama, Kern County, California, 93313, United States of America",
+              "lat": "35.266906",
+              "type": "hamlet",
+              "place_id": "347768",
+              "lon": "-119.0567707",
+              "class": "place"
             }
           },
           "nlpIndexSentence": 4
@@ -578,20 +861,30 @@
                     "type": "DATE",
                     "value": "2016-04-04"
                   }
-                }
+                },
+                "heideltime": [
+                  {
+                    "@tid": "t4",
+                    "@type": "DATE",
+                    "@value": "2016-04-04",
+                    "#text": "Monday",
+                    "characterOffset": [
+                      2649,
+                      2655
+                    ]
+                  }
+                ]
               },
               "NNP"
             ]
           ],
-          "score": 0.6836374274457332,
+          "score": 0.3597350956115856,
           "text": "Monday",
           "enhancement": {
-            "timex": [
-              {
-                "start_date": "2016-04-04T00:00:00",
-                "end_date": "2016-04-04T23:59:59"
-              }
-            ]
+            "timex": {
+              "start_date": "2016-04-04T00:00:00",
+              "end_date": "2016-04-04T23:59:59"
+            }
           },
           "nlpIndexSentence": 20
         }

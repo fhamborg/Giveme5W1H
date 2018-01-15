@@ -32,15 +32,16 @@ def create_sets(path, testing_size: float = 0.8):
 
 def get_data_sets():
     """
-    return dataset directories
+    returns all dataset directories
     :return:
     """
-    return glob(os.path.join('./', '*/'))
+    return glob(os.path.join('./news_cluster/', '*/'))
 
 
 if __name__ == '__main__':
 
-    for dataset in get_data_sets():
+    # for dataset in get_data_sets():
+    for dataset in ['./news_cluster/']:
         sampling = create_sets(dataset)
         with open(dataset + '/sampling.json', 'w', encoding='utf-8') as outfile:
             json_dump = json.dumps(sampling, sort_keys=False, indent=2)

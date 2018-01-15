@@ -38,7 +38,8 @@ class Reader(object):
         # path where the preprocessed file should be
         preprocessedFilePath = None
         if self._preprocessedPath is not None:
-            preprocessedFilePath = self.get_preprocessed_filepath(data['dId'])
+            preprocessedFilePath = self._preprocessedPath + '/' + data['dId'] + '/coreNLP.pickle'
+
 
         # preprocessed path and file and file is not empty
         if preprocessedFilePath and os.path.isfile(preprocessedFilePath) and os.path.getsize(preprocessedFilePath) > 0:

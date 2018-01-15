@@ -21,6 +21,7 @@ from tools.cache_manager import CacheManager
 import nltk
 from nltk.metrics.distance        import edit_distance
 
+
 class Worker(Thread):
     def __init__(self, queue):
         ''' Constructor. '''
@@ -79,7 +80,8 @@ class Learn(object):
 
         self._log = logging.getLogger('GiveMe5W')
         # self._cache_ngd = CacheManager.instance().get_cache('../examples/caches/NGD')
-        # self._ngd = NormalizedGoogleDistance()
+
+        self._ngd = NormalizedGoogleDistance()
         self._wmd = Wmd()
         self._sampling = sampling
         self._persit_steps = persit_steps
@@ -369,13 +371,14 @@ class Learn(object):
 
                     result = {}
 
+                    text_comperator = self.cmp_text_ngd
                     if self._combined_scorer:
                         # Combined scoring is happening after candidate extraction
                         used_weights = self._combined_scorer._weight
                         question = 'how'
                         if 'how' in answers and len(answers[question]) > 0:
                             top_answer = answers[question][0].get_parts_as_text()
-                        self._cmp_helper_min(self.cmp_text_edit_distance, question, top_answer, annotation, used_weights, result)
+                        self._cmp_helper_min(text_comperator, question, top_answer, annotation, used_weights, result)
                     else:
                         extractor = self._extractors.get('cause')
                         if extractor:
@@ -383,7 +386,7 @@ class Learn(object):
                             if question in answers and len(answers[question]) > 0:
                                 used_weights = extractor.weights
                                 top_answer = answers[question][0].get_parts_as_text()
-                                self._cmp_helper_min(self.cmp_text_edit_distance, question, top_answer, annotation, used_weights,
+                                self._cmp_helper_min(text_comperator, question, top_answer, annotation, used_weights,
                                                      result)
 
                         extractor = self._extractors.get('action')
@@ -392,13 +395,13 @@ class Learn(object):
                             question = 'what'
                             if question in answers and len(answers[question]) > 0:
                                 top_answer = answers[question][0].get_parts_as_text()
-                                self._cmp_helper_min(self.cmp_text_edit_distance, 'what', top_answer, annotation, used_weights,
+                                self._cmp_helper_min(text_comperator, 'what', top_answer, annotation, used_weights,
                                                      result)
 
                             question = 'who'
                             if question in answers and len(answers[question]) > 0:
                                 top_answer = answers[question][0].get_parts_as_text()
-                                self._cmp_helper_min(self.cmp_text_edit_distance, question, top_answer, annotation, used_weights,
+                                self._cmp_helper_min(text_comperator, question, top_answer, annotation, used_weights,
                                                      result)
 
                         extractor = self._extractors.get('method')
@@ -407,7 +410,7 @@ class Learn(object):
                             question = 'how'
                             if question in answers and len(answers[question]) > 0:
                                 top_answer = answers[question][0].get_parts_as_text()
-                                self._cmp_helper_min(self.cmp_text_edit_distance, question, top_answer, annotation, used_weights,
+                                self._cmp_helper_min(text_comperator, question, top_answer, annotation, used_weights,
                                                      result)
 
                         extractor = self._extractors.get('environment_when')

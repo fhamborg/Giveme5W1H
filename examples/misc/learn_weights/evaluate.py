@@ -82,9 +82,7 @@ def remove_errors(list):
             error_count = error_count + 1
         else:
             tmp.append(score)
-    # tmp = [a_max if v is -1 else v for v in list]
-    # remove other errors
-    #result = [x for x in tmp if x and x >= 0]
+
     return tmp, error_count, a_max
 
 

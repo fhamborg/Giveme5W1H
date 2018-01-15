@@ -2,6 +2,7 @@ import glob
 import json
 import logging
 import os
+import pickle
 
 from .reader import Reader
 from .writer import Writer
@@ -130,11 +131,33 @@ class Handler(object):
 
         if self._extractor:
             if not document.is_preprocessed():
-                self._extractor.preprocess(document)
+
+                # coreNLP preprocessing
+                self._extractor.preprocessor.preprocess(document)
+
                 # cache, after pre/processing.
                 if self._writer.get_preprocessed_path():
-                    self._writer.write_pickle(document)
+                    self._writer.write_pickle_file(document.get_document_id() + '/coreNLP', document)
                     self.log.info('         \tsaved to cache')
+
+                # Enhancer
+                if self._extractor.enhancement:
+                    for enhancement in self._extractor.enhancement:
+                        enahncer_id = enhancement.get_enhancer_id()
+
+                        path = document.get_document_id() + '/' + enahncer_id + '.pickle'
+
+                        # check if there is a cached enhancer result
+                        if path and os.path.isfile(path) and os.path.getsize(path) > 0:
+                            with open(path, 'rb') as ff:
+                                eh = pickle.load(ff)
+                            document.set_enhancement(self.get_enhancer_id(), eh)
+                        else:
+                            # check cache for each enhancer
+                            enhancement.process(document)
+
+
+
             else:
                 self.log.info('          \talready preprocessed')
 

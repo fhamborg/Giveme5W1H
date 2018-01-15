@@ -1,6 +1,8 @@
 import json
 import pickle
 
+import os
+
 from extractor.candidate import Candidate
 from extractor.configuration import Configuration as Config
 
@@ -23,11 +25,19 @@ class Writer:
         outfile.close()
 
     def write_pickle(self, document):
+        #deprecated
         with open(self.get_preprocessed_filepath(document.get_rawData()['dId']), 'wb') as f:
             # Pickle the 'data' document using the highest protocol available.
             pickle.dump(document, f, pickle.HIGHEST_PROTOCOL)
 
+    def write_pickle_file(self, path, file):
+        fullpath = self._preprocessedPath + '/' + path + '.pickle'
+        os.makedirs(os.path.dirname(fullpath), exist_ok=True)
+        with open(fullpath , 'wb') as f:
+            pickle.dump(file, f, pickle.HIGHEST_PROTOCOL)
+
     def get_preprocessed_filepath(self, id):
+        #deprecated
         return self._preprocessedPath + '/' + id + '.pickle'
 
     def get_preprocessed_path(self):

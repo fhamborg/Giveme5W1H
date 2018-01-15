@@ -1,9 +1,11 @@
 import logging
 import os
 
+from enhancer.aida import Aida
+from enhancer.heideltime import Heideltime
 from extractor.extractor import FiveWExtractor
 from extractor.tools.file.handler import Handler
-from extractors import action_extractor, cause_extractor
+from extractors import action_extractor, cause_extractor, environment_extractor
 from extractors import method_extractor
 
 # Add path to allow execution though console
@@ -46,13 +48,13 @@ if __name__ == '__main__':
 
     # giveme5w setup
     extractor = FiveWExtractor(extractors=[
-        #action_extractor.ActionExtractor(),
-        # environment_extractor.EnvironmentExtractor(),
-         #cause_extractor.CauseExtractor(),
+        action_extractor.ActionExtractor(),
+        environment_extractor.EnvironmentExtractor(),
+        cause_extractor.CauseExtractor(),
         method_extractor.MethodExtractor()
     ], enhancement=[
-        # Heideltime(['when']),
-        # Aida(['how', 'when', 'why', 'where', 'what', 'who'])
+         Heideltime(['when']),
+         Aida(['how', 'when', 'why', 'where', 'what', 'who'])
     ])
 
     inputPath = basePath + '/data'

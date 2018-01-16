@@ -471,6 +471,185 @@
       ],
       "label": "who"
     },
+    "where": {
+      "extracted": [
+        {
+          "parts": [
+            [
+              {
+                "nlpToken": {
+                  "index": 9,
+                  "word": "Mars",
+                  "originalText": "Mars",
+                  "lemma": "Mars",
+                  "characterOffsetBegin": 37,
+                  "characterOffsetEnd": 41,
+                  "pos": "NNP",
+                  "ner": "LOCATION",
+                  "speaker": "PER0",
+                  "before": " ",
+                  "after": " "
+                }
+              },
+              "NNP"
+            ]
+          ],
+          "score": 0.6857442219379335,
+          "text": "Mars",
+          "enhancement": {
+            "openstreetmap_nominatim": {
+              "place_id": "177894532",
+              "licence": "Data \u00a9 OpenStreetMap contributors, ODbL 1.0. http://www.openstreetmap.org/copyright",
+              "osm_type": "relation",
+              "osm_id": "391649",
+              "boundingbox": [
+                43.9912494,
+                44.0146261,
+                3.535728,
+                3.5664698
+              ],
+              "lat": "44.0009649",
+              "lon": "3.5560447",
+              "display_name": "Mars, Le Vigan, Gard, Occitanie, France m\u00e9tropolitaine, 30120, France",
+              "class": "boundary",
+              "type": "administrative",
+              "importance": 0.20582841986817,
+              "icon": "https://nominatim.openstreetmap.org/images/mapicons/poi_boundary_administrative.p.20.png"
+            }
+          }
+        }
+      ],
+      "label": "where"
+    },
+    "when": {
+      "extracted": [
+        {
+          "parts": [
+            [
+              {
+                "nlpToken": {
+                  "index": 1,
+                  "word": "Earlier",
+                  "originalText": "Earlier",
+                  "lemma": "earlier",
+                  "characterOffsetBegin": 788,
+                  "characterOffsetEnd": 795,
+                  "pos": "RBR",
+                  "ner": "DATE",
+                  "normalizedNER": "2017-W52",
+                  "speaker": "PER0",
+                  "before": "\n",
+                  "after": " ",
+                  "timex": {
+                    "tid": "t5",
+                    "type": "DATE",
+                    "value": "2017-W52"
+                  }
+                },
+                "heideltime": [
+                  {
+                    "@tid": "t6",
+                    "@type": "DATE",
+                    "@value": "2017-W52",
+                    "@mod": "START",
+                    "#text": "Earlier this week",
+                    "characterOffset": [
+                      788,
+                      805
+                    ]
+                  }
+                ]
+              },
+              "RBR"
+            ],
+            [
+              {
+                "nlpToken": {
+                  "index": 2,
+                  "word": "this",
+                  "originalText": "this",
+                  "lemma": "this",
+                  "characterOffsetBegin": 796,
+                  "characterOffsetEnd": 800,
+                  "pos": "DT",
+                  "ner": "DATE",
+                  "normalizedNER": "2017-W52",
+                  "speaker": "PER0",
+                  "before": " ",
+                  "after": " ",
+                  "timex": {
+                    "tid": "t5",
+                    "type": "DATE",
+                    "value": "2017-W52"
+                  }
+                },
+                "heideltime": [
+                  {
+                    "@tid": "t6",
+                    "@type": "DATE",
+                    "@value": "2017-W52",
+                    "@mod": "START",
+                    "#text": "Earlier this week",
+                    "characterOffset": [
+                      788,
+                      805
+                    ]
+                  }
+                ]
+              },
+              "DT"
+            ],
+            [
+              {
+                "nlpToken": {
+                  "index": 3,
+                  "word": "week",
+                  "originalText": "week",
+                  "lemma": "week",
+                  "characterOffsetBegin": 801,
+                  "characterOffsetEnd": 805,
+                  "pos": "NN",
+                  "ner": "DATE",
+                  "normalizedNER": "2017-W52",
+                  "speaker": "PER0",
+                  "before": " ",
+                  "after": " ",
+                  "timex": {
+                    "tid": "t5",
+                    "type": "DATE",
+                    "value": "2017-W52"
+                  }
+                },
+                "heideltime": [
+                  {
+                    "@tid": "t6",
+                    "@type": "DATE",
+                    "@value": "2017-W52",
+                    "@mod": "START",
+                    "#text": "Earlier this week",
+                    "characterOffset": [
+                      788,
+                      805
+                    ]
+                  }
+                ]
+              },
+              "NN"
+            ]
+          ],
+          "score": 0.6397306445258779,
+          "text": "Earlier this week",
+          "enhancement": {
+            "timex": {
+              "start_date": "2017-12-31T00:00:00",
+              "end_date": "2018-01-06T23:59:59"
+            }
+          },
+          "nlpIndexSentence": 5
+        }
+      ],
+      "label": "when"
+    },
     "what": {
       "extracted": [
         {
@@ -656,185 +835,6 @@
         }
       ],
       "label": "why"
-    },
-    "where": {
-      "extracted": [
-        {
-          "parts": [
-            [
-              {
-                "nlpToken": {
-                  "index": 9,
-                  "word": "Mars",
-                  "originalText": "Mars",
-                  "lemma": "Mars",
-                  "characterOffsetBegin": 37,
-                  "characterOffsetEnd": 41,
-                  "pos": "NNP",
-                  "ner": "LOCATION",
-                  "speaker": "PER0",
-                  "before": " ",
-                  "after": " "
-                }
-              },
-              "NNP"
-            ]
-          ],
-          "score": 0.6857442219379335,
-          "text": "Mars",
-          "enhancement": {
-            "openstreetmap_nominatim": {
-              "place_id": "177894532",
-              "licence": "Data \u00a9 OpenStreetMap contributors, ODbL 1.0. http://www.openstreetmap.org/copyright",
-              "osm_type": "relation",
-              "osm_id": "391649",
-              "boundingbox": [
-                43.9912494,
-                44.0146261,
-                3.535728,
-                3.5664698
-              ],
-              "lat": "44.0009649",
-              "lon": "3.5560447",
-              "display_name": "Mars, Le Vigan, Gard, Occitanie, France m\u00e9tropolitaine, 30120, France",
-              "class": "boundary",
-              "type": "administrative",
-              "importance": 0.20582841986817,
-              "icon": "https://nominatim.openstreetmap.org/images/mapicons/poi_boundary_administrative.p.20.png"
-            }
-          }
-        }
-      ],
-      "label": "where"
-    },
-    "when": {
-      "extracted": [
-        {
-          "parts": [
-            [
-              {
-                "nlpToken": {
-                  "index": 1,
-                  "word": "Earlier",
-                  "originalText": "Earlier",
-                  "lemma": "earlier",
-                  "characterOffsetBegin": 788,
-                  "characterOffsetEnd": 795,
-                  "pos": "RBR",
-                  "ner": "DATE",
-                  "normalizedNER": "2017-W52",
-                  "speaker": "PER0",
-                  "before": "\n",
-                  "after": " ",
-                  "timex": {
-                    "tid": "t5",
-                    "type": "DATE",
-                    "value": "2017-W52"
-                  }
-                },
-                "heideltime": [
-                  {
-                    "@tid": "t6",
-                    "@type": "DATE",
-                    "@value": "2017-W52",
-                    "@mod": "START",
-                    "#text": "Earlier this week",
-                    "characterOffset": [
-                      788,
-                      805
-                    ]
-                  }
-                ]
-              },
-              "RBR"
-            ],
-            [
-              {
-                "nlpToken": {
-                  "index": 2,
-                  "word": "this",
-                  "originalText": "this",
-                  "lemma": "this",
-                  "characterOffsetBegin": 796,
-                  "characterOffsetEnd": 800,
-                  "pos": "DT",
-                  "ner": "DATE",
-                  "normalizedNER": "2017-W52",
-                  "speaker": "PER0",
-                  "before": " ",
-                  "after": " ",
-                  "timex": {
-                    "tid": "t5",
-                    "type": "DATE",
-                    "value": "2017-W52"
-                  }
-                },
-                "heideltime": [
-                  {
-                    "@tid": "t6",
-                    "@type": "DATE",
-                    "@value": "2017-W52",
-                    "@mod": "START",
-                    "#text": "Earlier this week",
-                    "characterOffset": [
-                      788,
-                      805
-                    ]
-                  }
-                ]
-              },
-              "DT"
-            ],
-            [
-              {
-                "nlpToken": {
-                  "index": 3,
-                  "word": "week",
-                  "originalText": "week",
-                  "lemma": "week",
-                  "characterOffsetBegin": 801,
-                  "characterOffsetEnd": 805,
-                  "pos": "NN",
-                  "ner": "DATE",
-                  "normalizedNER": "2017-W52",
-                  "speaker": "PER0",
-                  "before": " ",
-                  "after": " ",
-                  "timex": {
-                    "tid": "t5",
-                    "type": "DATE",
-                    "value": "2017-W52"
-                  }
-                },
-                "heideltime": [
-                  {
-                    "@tid": "t6",
-                    "@type": "DATE",
-                    "@value": "2017-W52",
-                    "@mod": "START",
-                    "#text": "Earlier this week",
-                    "characterOffset": [
-                      788,
-                      805
-                    ]
-                  }
-                ]
-              },
-              "NN"
-            ]
-          ],
-          "score": 0.6397306445258779,
-          "text": "Earlier this week",
-          "enhancement": {
-            "timex": {
-              "start_date": "2017-12-31T00:00:00",
-              "end_date": "2018-01-06T23:59:59"
-            }
-          },
-          "nlpIndexSentence": 5
-        }
-      ],
-      "label": "when"
     }
   }
 }

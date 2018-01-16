@@ -87,7 +87,10 @@ class DistanceOfCandidate(AbsCombinedScoring):
             top_question_max = distance_matrix[question + '_max']
             max_minus_min = top_question_max - top_question_min
             for i, dist in enumerate(distance_matrix[question]):
-                norm_dist = (top_question_max - dist) / max_minus_min
+                if max_minus_min:
+                    norm_dist = (top_question_max - dist) / max_minus_min
+                else:
+                    norm_dist = (top_question_max - dist)
                 distance_matrix[question][i] = norm_dist
 
         candidate_min = float('inf')
@@ -108,7 +111,10 @@ class DistanceOfCandidate(AbsCombinedScoring):
             max_minus_min = candidate_max - candidate_min
             for d_candidate in dependant_candidates:
                 score = d_candidate.get_score()
-                norm_score = (score - candidate_min) / max_minus_min
+                if max_minus_min:
+                    norm_score = (score - candidate_min) / max_minus_min
+                else:
+                    norm_score = (score - candidate_min)
                 d_candidate.set_score(norm_score)
 
         # resort the candidates

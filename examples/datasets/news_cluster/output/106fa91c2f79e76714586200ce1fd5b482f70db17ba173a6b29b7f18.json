@@ -28,6 +28,167 @@
     "Event": "elon_musk_reveals_red_tesla_roadster_bound_for_mars"
   },
   "fiveWoneH": {
+    "where": {
+      "extracted": [
+        {
+          "parts": [
+            [
+              {
+                "nlpToken": {
+                  "index": 1,
+                  "word": "USA",
+                  "originalText": "USA",
+                  "lemma": "USA",
+                  "characterOffsetBegin": 6302,
+                  "characterOffsetEnd": 6305,
+                  "pos": "NNP",
+                  "ner": "LOCATION",
+                  "speaker": "PER0",
+                  "before": " ",
+                  "after": " "
+                },
+                "aida": [
+                  {
+                    "mention": {
+                      "allEntities": [
+                        {
+                          "kbIdentifier": "YAGO:United_States",
+                          "disambiguationScore": "0.27515"
+                        }
+                      ],
+                      "offset": 6302,
+                      "name": "USA",
+                      "length": 3,
+                      "bestEntity": {
+                        "kbIdentifier": "YAGO:United_States",
+                        "disambiguationScore": "0.27515"
+                      }
+                    },
+                    "bestEntityMetadata": {
+                      "knowledgebase": "YAGO",
+                      "depictionurl": "http://upload.wikimedia.org/wikipedia/en/a/a4/Flag_of_the_United_States.svg",
+                      "depictionthumbnailurl": "http://upload.wikimedia.org/wikipedia/en/thumbFlag_of_the_United_States.svg/200px-Flag_of_the_United_States.svg",
+                      "importance": 0.0,
+                      "entityId": "United_States",
+                      "type": [
+                        "YAGO_wordnet_system_108435388",
+                        "YAGO_yagoPermanentlyLocatedEntity",
+                        "YAGO_yagoLegalActorGeo",
+                        "YAGO_wordnet_organization_108008335",
+                        "YAGO_wordnet_state_100024720",
+                        "YAGO_wordnet_democracy_108361329",
+                        "YAGO_wordnet_union_114418395",
+                        "YAGO_wordnet_unit_108189659",
+                        "YAGO_wikicategory_Superpowers",
+                        "YAGO_wordnet_cognition_100023271",
+                        "YAGO_wordnet_coalition_114418662",
+                        "YAGO_wordnet_political_system_108367880",
+                        "YAGO_wordnet_attribute_100024264",
+                        "YAGO_wordnet_abstraction_100002137",
+                        "YAGO_wordnet_attitude_106193203",
+                        "YAGO_wordnet_alliance_114418822",
+                        "YAGO_wordnet_group_100031264",
+                        "YAGO_wordnet_psychological_feature_100023100",
+                        "YAGO_wordnet_body_107965085",
+                        "YAGO_wordnet_political_orientation_106212839",
+                        "YAGO_wordnet_democracy_106217103",
+                        "YAGO_wordnet_political_unit_108359949",
+                        "YAGO_wikicategory_Former_British_colonies",
+                        "YAGO_wordnet_economy_108366753",
+                        "YAGO_yagoLegalActor",
+                        "YAGO_wikicategory_G8_nations",
+                        "YAGO_yagoGeoEntity",
+                        "YAGO_wordnet_social_group_107950920",
+                        "YAGO_wordnet_entity_100001740",
+                        "YAGO_wordnet_colony_108374049",
+                        "YAGO_wikicategory_Liberal_democracies",
+                        "YAGO_wikicategory_G20_nations",
+                        "YAGO_wikicategory_Former_confederations",
+                        "YAGO_wordnet_state_108168978",
+                        "YAGO_wikicategory_Federal_constitutional_republics",
+                        "YAGO_wordnet_world_power_108177592",
+                        "YAGO_wikicategory_Republics",
+                        "YAGO_wordnet_orientation_106208021"
+                      ],
+                      "readableRepr": "United States",
+                      "url": "http://en.wikipedia.org/wiki/United%20States"
+                    }
+                  }
+                ]
+              },
+              "NNP"
+            ]
+          ],
+          "score": 0.7,
+          "text": "USA",
+          "enhancement": {
+            "openstreetmap_nominatim": {
+              "osm_id": "148838",
+              "importance": 0.2361730870995,
+              "licence": "Data \u00a9 OpenStreetMap contributors, ODbL 1.0. http://www.openstreetmap.org/copyright",
+              "boundingbox": [
+                -14.7608358,
+                71.6048217,
+                -180.0,
+                180.0
+              ],
+              "icon": "https://nominatim.openstreetmap.org/images/mapicons/poi_boundary_administrative.p.20.png",
+              "osm_type": "relation",
+              "display_name": "United States of America",
+              "lat": "39.7837304",
+              "type": "administrative",
+              "place_id": "177579678",
+              "lon": "-100.4458825",
+              "class": "boundary"
+            }
+          },
+          "nlpIndexSentence": 49
+        }
+      ],
+      "label": "where"
+    },
+    "when": {
+      "extracted": [
+        {
+          "parts": [
+            [
+              {
+                "nlpToken": {
+                  "index": 9,
+                  "word": "midnight",
+                  "originalText": "midnight",
+                  "lemma": "midnight",
+                  "characterOffsetBegin": 1148,
+                  "characterOffsetEnd": 1156,
+                  "pos": "NN",
+                  "ner": "TIME",
+                  "normalizedNER": "2017-12-28T00:00",
+                  "speaker": "PER0",
+                  "before": " ",
+                  "after": " ",
+                  "timex": {
+                    "tid": "t10",
+                    "type": "TIME",
+                    "value": "2017-12-28T00:00"
+                  }
+                }
+              },
+              "NN"
+            ]
+          ],
+          "score": 0.5586756964997597,
+          "text": "midnight",
+          "enhancement": {
+            "timex": {
+              "start_date": "2017-12-28T00:00:00",
+              "end_date": "2017-12-28T00:00:59"
+            }
+          },
+          "nlpIndexSentence": 12
+        }
+      ],
+      "label": "when"
+    },
     "how": {
       "extracted": [
         {
@@ -292,6 +453,260 @@
         }
       ],
       "label": "how"
+    },
+    "why": {
+      "extracted": [
+        {
+          "parts": [
+            [
+              {
+                "nlpToken": {
+                  "index": 9,
+                  "word": "Elon",
+                  "originalText": "Elon",
+                  "lemma": "Elon",
+                  "characterOffsetBegin": 209,
+                  "characterOffsetEnd": 213,
+                  "pos": "NNP",
+                  "ner": "PERSON",
+                  "speaker": "PER0",
+                  "before": " ",
+                  "after": " "
+                },
+                "aida": [
+                  {
+                    "mention": {
+                      "allEntities": [
+                        {
+                          "kbIdentifier": "YAGO:Elon_Musk",
+                          "disambiguationScore": "1"
+                        }
+                      ],
+                      "offset": 209,
+                      "name": "Elon Musk",
+                      "length": 9,
+                      "bestEntity": {
+                        "kbIdentifier": "YAGO:Elon_Musk",
+                        "disambiguationScore": "1"
+                      }
+                    },
+                    "bestEntityMetadata": {
+                      "knowledgebase": "YAGO",
+                      "depictionurl": "http://upload.wikimedia.org/wikipedia/commons/0/04/Elon_Musk_-_The_Summit_2013.jpg",
+                      "depictionthumbnailurl": "http://upload.wikimedia.org/wikipedia/commons/thumbElon_Musk_-_The_Summit_2013.jpg/200px-Elon_Musk_-_The_Summit_2013.jpg",
+                      "importance": 0.01724281528471871,
+                      "entityId": "Elon_Musk",
+                      "type": [
+                        "YAGO_wikicategory_American_energy_industry_executives",
+                        "YAGO_wikicategory_American_people_of_German_descent",
+                        "YAGO_wikicategory_American_billionaires",
+                        "YAGO_wordnet_pledger_110441694",
+                        "YAGO_wordnet_engineer_109615807",
+                        "YAGO_wordnet_advocate_109774783",
+                        "YAGO_wikicategory_American_aerospace_engineers",
+                        "YAGO_wordnet_living_thing_100004258",
+                        "YAGO_wikicategory_People_from_Pretoria",
+                        "YAGO_wikicategory_Space_advocates",
+                        "YAGO_wordnet_inventor_110214637",
+                        "YAGO_wordnet_object_100002684",
+                        "YAGO_wikicategory_Chief_technology_officers",
+                        "YAGO_wordnet_specialist_110631941",
+                        "YAGO_wordnet_administrator_109770949",
+                        "YAGO_wordnet_worker_109632518",
+                        "YAGO_wordnet_financier_110090020",
+                        "YAGO_wordnet_rich_person_110529231",
+                        "YAGO_wordnet_computer_user_109951274",
+                        "YAGO_wordnet_adult_109605289",
+                        "YAGO_wordnet_expert_109617867",
+                        "YAGO_wikicategory_American_computer_programmers",
+                        "YAGO_wordnet_emigrant_110051975",
+                        "YAGO_wikicategory_Living_people",
+                        "YAGO_wordnet_executive_110069645",
+                        "YAGO_wikicategory_Giving_Pledgers",
+                        "YAGO_wordnet_serviceman_110582746",
+                        "YAGO_wordnet_leader_109623038",
+                        "YAGO_wordnet_philanthropist_110421956",
+                        "YAGO_wikicategory_American_people_of_Canadian_descent",
+                        "YAGO_wordnet_head_110162991",
+                        "YAGO_wikicategory_People_with_acquired_Canadian_citizenship",
+                        "YAGO_wordnet_entity_100001740",
+                        "YAGO_wordnet_investor_110216106",
+                        "YAGO_wikicategory_American_inventors",
+                        "YAGO_wordnet_organism_100004475",
+                        "YAGO_wordnet_interior_designer_110210648",
+                        "YAGO_wordnet_capitalist_109609232",
+                        "YAGO_wordnet_military_officer_110317007",
+                        "YAGO_wordnet_whole_100003553",
+                        "YAGO_wordnet_traveler_109629752",
+                        "YAGO_wordnet_skilled_worker_110605985",
+                        "YAGO_yagoLegalActorGeo",
+                        "YAGO_wikicategory_PayPal_people",
+                        "YAGO_wikicategory_American_philanthropists",
+                        "YAGO_wordnet_person_100007846",
+                        "YAGO_wikicategory_South_African_people_of_Canadian_descent",
+                        "YAGO_wikicategory_Tesla_people",
+                        "YAGO_wordnet_billionaire_110529684",
+                        "YAGO_wordnet_good_person_110138767",
+                        "YAGO_wikicategory_Computer_engineers",
+                        "YAGO_wikicategory_South_African_people_of_German_descent",
+                        "YAGO_wikicategory_American_aerospace_designers",
+                        "YAGO_wikicategory_Canadian_emigrants_to_the_United_States",
+                        "YAGO_wikicategory_People_from_Bel_Air\\u002c_Los_Angeles",
+                        "YAGO_wikicategory_White_South_African_people",
+                        "YAGO_wikicategory_American_investors",
+                        "YAGO_wordnet_programmer_110481268",
+                        "YAGO_yagoLegalActor",
+                        "YAGO_wordnet_creator_109614315",
+                        "YAGO_wikicategory_South_African_emigrants_to_the_United_States",
+                        "YAGO_wikicategory_Pennsylvania_Dutch_people",
+                        "YAGO_wordnet_physical_entity_100001930",
+                        "YAGO_wordnet_causal_agent_100007347",
+                        "YAGO_wikicategory_American_nonprofit_executives",
+                        "YAGO_wikicategory_SpaceX_people",
+                        "YAGO_wordnet_migrant_110314952",
+                        "YAGO_wikicategory_American_technology_chief_executives",
+                        "YAGO_wikicategory_American_financiers",
+                        "YAGO_wordnet_benefactor_109608709",
+                        "YAGO_wordnet_donor_110025730",
+                        "YAGO_wordnet_aerospace_engineer_109776079",
+                        "YAGO_wikicategory_People_associated_with_solar_power"
+                      ],
+                      "readableRepr": "Elon Musk",
+                      "url": "http://en.wikipedia.org/wiki/Elon%20Musk"
+                    }
+                  }
+                ]
+              },
+              "NNP"
+            ],
+            [
+              {
+                "nlpToken": {
+                  "index": 10,
+                  "word": "Musk",
+                  "originalText": "Musk",
+                  "lemma": "Musk",
+                  "characterOffsetBegin": 214,
+                  "characterOffsetEnd": 218,
+                  "pos": "NNP",
+                  "ner": "PERSON",
+                  "speaker": "PER0",
+                  "before": " ",
+                  "after": " "
+                },
+                "aida": [
+                  {
+                    "mention": {
+                      "allEntities": [
+                        {
+                          "kbIdentifier": "YAGO:Elon_Musk",
+                          "disambiguationScore": "1"
+                        }
+                      ],
+                      "offset": 209,
+                      "name": "Elon Musk",
+                      "length": 9,
+                      "bestEntity": {
+                        "kbIdentifier": "YAGO:Elon_Musk",
+                        "disambiguationScore": "1"
+                      }
+                    },
+                    "bestEntityMetadata": {
+                      "knowledgebase": "YAGO",
+                      "depictionurl": "http://upload.wikimedia.org/wikipedia/commons/0/04/Elon_Musk_-_The_Summit_2013.jpg",
+                      "depictionthumbnailurl": "http://upload.wikimedia.org/wikipedia/commons/thumbElon_Musk_-_The_Summit_2013.jpg/200px-Elon_Musk_-_The_Summit_2013.jpg",
+                      "importance": 0.01724281528471871,
+                      "entityId": "Elon_Musk",
+                      "type": [
+                        "YAGO_wikicategory_American_energy_industry_executives",
+                        "YAGO_wikicategory_American_people_of_German_descent",
+                        "YAGO_wikicategory_American_billionaires",
+                        "YAGO_wordnet_pledger_110441694",
+                        "YAGO_wordnet_engineer_109615807",
+                        "YAGO_wordnet_advocate_109774783",
+                        "YAGO_wikicategory_American_aerospace_engineers",
+                        "YAGO_wordnet_living_thing_100004258",
+                        "YAGO_wikicategory_People_from_Pretoria",
+                        "YAGO_wikicategory_Space_advocates",
+                        "YAGO_wordnet_inventor_110214637",
+                        "YAGO_wordnet_object_100002684",
+                        "YAGO_wikicategory_Chief_technology_officers",
+                        "YAGO_wordnet_specialist_110631941",
+                        "YAGO_wordnet_administrator_109770949",
+                        "YAGO_wordnet_worker_109632518",
+                        "YAGO_wordnet_financier_110090020",
+                        "YAGO_wordnet_rich_person_110529231",
+                        "YAGO_wordnet_computer_user_109951274",
+                        "YAGO_wordnet_adult_109605289",
+                        "YAGO_wordnet_expert_109617867",
+                        "YAGO_wikicategory_American_computer_programmers",
+                        "YAGO_wordnet_emigrant_110051975",
+                        "YAGO_wikicategory_Living_people",
+                        "YAGO_wordnet_executive_110069645",
+                        "YAGO_wikicategory_Giving_Pledgers",
+                        "YAGO_wordnet_serviceman_110582746",
+                        "YAGO_wordnet_leader_109623038",
+                        "YAGO_wordnet_philanthropist_110421956",
+                        "YAGO_wikicategory_American_people_of_Canadian_descent",
+                        "YAGO_wordnet_head_110162991",
+                        "YAGO_wikicategory_People_with_acquired_Canadian_citizenship",
+                        "YAGO_wordnet_entity_100001740",
+                        "YAGO_wordnet_investor_110216106",
+                        "YAGO_wikicategory_American_inventors",
+                        "YAGO_wordnet_organism_100004475",
+                        "YAGO_wordnet_interior_designer_110210648",
+                        "YAGO_wordnet_capitalist_109609232",
+                        "YAGO_wordnet_military_officer_110317007",
+                        "YAGO_wordnet_whole_100003553",
+                        "YAGO_wordnet_traveler_109629752",
+                        "YAGO_wordnet_skilled_worker_110605985",
+                        "YAGO_yagoLegalActorGeo",
+                        "YAGO_wikicategory_PayPal_people",
+                        "YAGO_wikicategory_American_philanthropists",
+                        "YAGO_wordnet_person_100007846",
+                        "YAGO_wikicategory_South_African_people_of_Canadian_descent",
+                        "YAGO_wikicategory_Tesla_people",
+                        "YAGO_wordnet_billionaire_110529684",
+                        "YAGO_wordnet_good_person_110138767",
+                        "YAGO_wikicategory_Computer_engineers",
+                        "YAGO_wikicategory_South_African_people_of_German_descent",
+                        "YAGO_wikicategory_American_aerospace_designers",
+                        "YAGO_wikicategory_Canadian_emigrants_to_the_United_States",
+                        "YAGO_wikicategory_People_from_Bel_Air\\u002c_Los_Angeles",
+                        "YAGO_wikicategory_White_South_African_people",
+                        "YAGO_wikicategory_American_investors",
+                        "YAGO_wordnet_programmer_110481268",
+                        "YAGO_yagoLegalActor",
+                        "YAGO_wordnet_creator_109614315",
+                        "YAGO_wikicategory_South_African_emigrants_to_the_United_States",
+                        "YAGO_wikicategory_Pennsylvania_Dutch_people",
+                        "YAGO_wordnet_physical_entity_100001930",
+                        "YAGO_wordnet_causal_agent_100007347",
+                        "YAGO_wikicategory_American_nonprofit_executives",
+                        "YAGO_wikicategory_SpaceX_people",
+                        "YAGO_wordnet_migrant_110314952",
+                        "YAGO_wikicategory_American_technology_chief_executives",
+                        "YAGO_wikicategory_American_financiers",
+                        "YAGO_wordnet_benefactor_109608709",
+                        "YAGO_wordnet_donor_110025730",
+                        "YAGO_wordnet_aerospace_engineer_109776079",
+                        "YAGO_wikicategory_People_associated_with_solar_power"
+                      ],
+                      "readableRepr": "Elon Musk",
+                      "url": "http://en.wikipedia.org/wiki/Elon%20Musk"
+                    }
+                  }
+                ]
+              },
+              "NNP"
+            ]
+          ],
+          "score": 0.5710000000000001,
+          "text": "Elon Musk",
+          "nlpIndexSentence": 3
+        }
+      ],
+      "label": "why"
     },
     "who": {
       "extracted": [
@@ -738,421 +1153,6 @@
         }
       ],
       "label": "what"
-    },
-    "why": {
-      "extracted": [
-        {
-          "parts": [
-            [
-              {
-                "nlpToken": {
-                  "index": 9,
-                  "word": "Elon",
-                  "originalText": "Elon",
-                  "lemma": "Elon",
-                  "characterOffsetBegin": 209,
-                  "characterOffsetEnd": 213,
-                  "pos": "NNP",
-                  "ner": "PERSON",
-                  "speaker": "PER0",
-                  "before": " ",
-                  "after": " "
-                },
-                "aida": [
-                  {
-                    "mention": {
-                      "allEntities": [
-                        {
-                          "kbIdentifier": "YAGO:Elon_Musk",
-                          "disambiguationScore": "1"
-                        }
-                      ],
-                      "offset": 209,
-                      "name": "Elon Musk",
-                      "length": 9,
-                      "bestEntity": {
-                        "kbIdentifier": "YAGO:Elon_Musk",
-                        "disambiguationScore": "1"
-                      }
-                    },
-                    "bestEntityMetadata": {
-                      "knowledgebase": "YAGO",
-                      "depictionurl": "http://upload.wikimedia.org/wikipedia/commons/0/04/Elon_Musk_-_The_Summit_2013.jpg",
-                      "depictionthumbnailurl": "http://upload.wikimedia.org/wikipedia/commons/thumbElon_Musk_-_The_Summit_2013.jpg/200px-Elon_Musk_-_The_Summit_2013.jpg",
-                      "importance": 0.01724281528471871,
-                      "entityId": "Elon_Musk",
-                      "type": [
-                        "YAGO_wikicategory_American_energy_industry_executives",
-                        "YAGO_wikicategory_American_people_of_German_descent",
-                        "YAGO_wikicategory_American_billionaires",
-                        "YAGO_wordnet_pledger_110441694",
-                        "YAGO_wordnet_engineer_109615807",
-                        "YAGO_wordnet_advocate_109774783",
-                        "YAGO_wikicategory_American_aerospace_engineers",
-                        "YAGO_wordnet_living_thing_100004258",
-                        "YAGO_wikicategory_People_from_Pretoria",
-                        "YAGO_wikicategory_Space_advocates",
-                        "YAGO_wordnet_inventor_110214637",
-                        "YAGO_wordnet_object_100002684",
-                        "YAGO_wikicategory_Chief_technology_officers",
-                        "YAGO_wordnet_specialist_110631941",
-                        "YAGO_wordnet_administrator_109770949",
-                        "YAGO_wordnet_worker_109632518",
-                        "YAGO_wordnet_financier_110090020",
-                        "YAGO_wordnet_rich_person_110529231",
-                        "YAGO_wordnet_computer_user_109951274",
-                        "YAGO_wordnet_adult_109605289",
-                        "YAGO_wordnet_expert_109617867",
-                        "YAGO_wikicategory_American_computer_programmers",
-                        "YAGO_wordnet_emigrant_110051975",
-                        "YAGO_wikicategory_Living_people",
-                        "YAGO_wordnet_executive_110069645",
-                        "YAGO_wikicategory_Giving_Pledgers",
-                        "YAGO_wordnet_serviceman_110582746",
-                        "YAGO_wordnet_leader_109623038",
-                        "YAGO_wordnet_philanthropist_110421956",
-                        "YAGO_wikicategory_American_people_of_Canadian_descent",
-                        "YAGO_wordnet_head_110162991",
-                        "YAGO_wikicategory_People_with_acquired_Canadian_citizenship",
-                        "YAGO_wordnet_entity_100001740",
-                        "YAGO_wordnet_investor_110216106",
-                        "YAGO_wikicategory_American_inventors",
-                        "YAGO_wordnet_organism_100004475",
-                        "YAGO_wordnet_interior_designer_110210648",
-                        "YAGO_wordnet_capitalist_109609232",
-                        "YAGO_wordnet_military_officer_110317007",
-                        "YAGO_wordnet_whole_100003553",
-                        "YAGO_wordnet_traveler_109629752",
-                        "YAGO_wordnet_skilled_worker_110605985",
-                        "YAGO_yagoLegalActorGeo",
-                        "YAGO_wikicategory_PayPal_people",
-                        "YAGO_wikicategory_American_philanthropists",
-                        "YAGO_wordnet_person_100007846",
-                        "YAGO_wikicategory_South_African_people_of_Canadian_descent",
-                        "YAGO_wikicategory_Tesla_people",
-                        "YAGO_wordnet_billionaire_110529684",
-                        "YAGO_wordnet_good_person_110138767",
-                        "YAGO_wikicategory_Computer_engineers",
-                        "YAGO_wikicategory_South_African_people_of_German_descent",
-                        "YAGO_wikicategory_American_aerospace_designers",
-                        "YAGO_wikicategory_Canadian_emigrants_to_the_United_States",
-                        "YAGO_wikicategory_People_from_Bel_Air\\u002c_Los_Angeles",
-                        "YAGO_wikicategory_White_South_African_people",
-                        "YAGO_wikicategory_American_investors",
-                        "YAGO_wordnet_programmer_110481268",
-                        "YAGO_yagoLegalActor",
-                        "YAGO_wordnet_creator_109614315",
-                        "YAGO_wikicategory_South_African_emigrants_to_the_United_States",
-                        "YAGO_wikicategory_Pennsylvania_Dutch_people",
-                        "YAGO_wordnet_physical_entity_100001930",
-                        "YAGO_wordnet_causal_agent_100007347",
-                        "YAGO_wikicategory_American_nonprofit_executives",
-                        "YAGO_wikicategory_SpaceX_people",
-                        "YAGO_wordnet_migrant_110314952",
-                        "YAGO_wikicategory_American_technology_chief_executives",
-                        "YAGO_wikicategory_American_financiers",
-                        "YAGO_wordnet_benefactor_109608709",
-                        "YAGO_wordnet_donor_110025730",
-                        "YAGO_wordnet_aerospace_engineer_109776079",
-                        "YAGO_wikicategory_People_associated_with_solar_power"
-                      ],
-                      "readableRepr": "Elon Musk",
-                      "url": "http://en.wikipedia.org/wiki/Elon%20Musk"
-                    }
-                  }
-                ]
-              },
-              "NNP"
-            ],
-            [
-              {
-                "nlpToken": {
-                  "index": 10,
-                  "word": "Musk",
-                  "originalText": "Musk",
-                  "lemma": "Musk",
-                  "characterOffsetBegin": 214,
-                  "characterOffsetEnd": 218,
-                  "pos": "NNP",
-                  "ner": "PERSON",
-                  "speaker": "PER0",
-                  "before": " ",
-                  "after": " "
-                },
-                "aida": [
-                  {
-                    "mention": {
-                      "allEntities": [
-                        {
-                          "kbIdentifier": "YAGO:Elon_Musk",
-                          "disambiguationScore": "1"
-                        }
-                      ],
-                      "offset": 209,
-                      "name": "Elon Musk",
-                      "length": 9,
-                      "bestEntity": {
-                        "kbIdentifier": "YAGO:Elon_Musk",
-                        "disambiguationScore": "1"
-                      }
-                    },
-                    "bestEntityMetadata": {
-                      "knowledgebase": "YAGO",
-                      "depictionurl": "http://upload.wikimedia.org/wikipedia/commons/0/04/Elon_Musk_-_The_Summit_2013.jpg",
-                      "depictionthumbnailurl": "http://upload.wikimedia.org/wikipedia/commons/thumbElon_Musk_-_The_Summit_2013.jpg/200px-Elon_Musk_-_The_Summit_2013.jpg",
-                      "importance": 0.01724281528471871,
-                      "entityId": "Elon_Musk",
-                      "type": [
-                        "YAGO_wikicategory_American_energy_industry_executives",
-                        "YAGO_wikicategory_American_people_of_German_descent",
-                        "YAGO_wikicategory_American_billionaires",
-                        "YAGO_wordnet_pledger_110441694",
-                        "YAGO_wordnet_engineer_109615807",
-                        "YAGO_wordnet_advocate_109774783",
-                        "YAGO_wikicategory_American_aerospace_engineers",
-                        "YAGO_wordnet_living_thing_100004258",
-                        "YAGO_wikicategory_People_from_Pretoria",
-                        "YAGO_wikicategory_Space_advocates",
-                        "YAGO_wordnet_inventor_110214637",
-                        "YAGO_wordnet_object_100002684",
-                        "YAGO_wikicategory_Chief_technology_officers",
-                        "YAGO_wordnet_specialist_110631941",
-                        "YAGO_wordnet_administrator_109770949",
-                        "YAGO_wordnet_worker_109632518",
-                        "YAGO_wordnet_financier_110090020",
-                        "YAGO_wordnet_rich_person_110529231",
-                        "YAGO_wordnet_computer_user_109951274",
-                        "YAGO_wordnet_adult_109605289",
-                        "YAGO_wordnet_expert_109617867",
-                        "YAGO_wikicategory_American_computer_programmers",
-                        "YAGO_wordnet_emigrant_110051975",
-                        "YAGO_wikicategory_Living_people",
-                        "YAGO_wordnet_executive_110069645",
-                        "YAGO_wikicategory_Giving_Pledgers",
-                        "YAGO_wordnet_serviceman_110582746",
-                        "YAGO_wordnet_leader_109623038",
-                        "YAGO_wordnet_philanthropist_110421956",
-                        "YAGO_wikicategory_American_people_of_Canadian_descent",
-                        "YAGO_wordnet_head_110162991",
-                        "YAGO_wikicategory_People_with_acquired_Canadian_citizenship",
-                        "YAGO_wordnet_entity_100001740",
-                        "YAGO_wordnet_investor_110216106",
-                        "YAGO_wikicategory_American_inventors",
-                        "YAGO_wordnet_organism_100004475",
-                        "YAGO_wordnet_interior_designer_110210648",
-                        "YAGO_wordnet_capitalist_109609232",
-                        "YAGO_wordnet_military_officer_110317007",
-                        "YAGO_wordnet_whole_100003553",
-                        "YAGO_wordnet_traveler_109629752",
-                        "YAGO_wordnet_skilled_worker_110605985",
-                        "YAGO_yagoLegalActorGeo",
-                        "YAGO_wikicategory_PayPal_people",
-                        "YAGO_wikicategory_American_philanthropists",
-                        "YAGO_wordnet_person_100007846",
-                        "YAGO_wikicategory_South_African_people_of_Canadian_descent",
-                        "YAGO_wikicategory_Tesla_people",
-                        "YAGO_wordnet_billionaire_110529684",
-                        "YAGO_wordnet_good_person_110138767",
-                        "YAGO_wikicategory_Computer_engineers",
-                        "YAGO_wikicategory_South_African_people_of_German_descent",
-                        "YAGO_wikicategory_American_aerospace_designers",
-                        "YAGO_wikicategory_Canadian_emigrants_to_the_United_States",
-                        "YAGO_wikicategory_People_from_Bel_Air\\u002c_Los_Angeles",
-                        "YAGO_wikicategory_White_South_African_people",
-                        "YAGO_wikicategory_American_investors",
-                        "YAGO_wordnet_programmer_110481268",
-                        "YAGO_yagoLegalActor",
-                        "YAGO_wordnet_creator_109614315",
-                        "YAGO_wikicategory_South_African_emigrants_to_the_United_States",
-                        "YAGO_wikicategory_Pennsylvania_Dutch_people",
-                        "YAGO_wordnet_physical_entity_100001930",
-                        "YAGO_wordnet_causal_agent_100007347",
-                        "YAGO_wikicategory_American_nonprofit_executives",
-                        "YAGO_wikicategory_SpaceX_people",
-                        "YAGO_wordnet_migrant_110314952",
-                        "YAGO_wikicategory_American_technology_chief_executives",
-                        "YAGO_wikicategory_American_financiers",
-                        "YAGO_wordnet_benefactor_109608709",
-                        "YAGO_wordnet_donor_110025730",
-                        "YAGO_wordnet_aerospace_engineer_109776079",
-                        "YAGO_wikicategory_People_associated_with_solar_power"
-                      ],
-                      "readableRepr": "Elon Musk",
-                      "url": "http://en.wikipedia.org/wiki/Elon%20Musk"
-                    }
-                  }
-                ]
-              },
-              "NNP"
-            ]
-          ],
-          "score": 0.5710000000000001,
-          "text": "Elon Musk",
-          "nlpIndexSentence": 3
-        }
-      ],
-      "label": "why"
-    },
-    "where": {
-      "extracted": [
-        {
-          "parts": [
-            [
-              {
-                "nlpToken": {
-                  "index": 1,
-                  "word": "USA",
-                  "originalText": "USA",
-                  "lemma": "USA",
-                  "characterOffsetBegin": 6302,
-                  "characterOffsetEnd": 6305,
-                  "pos": "NNP",
-                  "ner": "LOCATION",
-                  "speaker": "PER0",
-                  "before": " ",
-                  "after": " "
-                },
-                "aida": [
-                  {
-                    "mention": {
-                      "allEntities": [
-                        {
-                          "kbIdentifier": "YAGO:United_States",
-                          "disambiguationScore": "0.27515"
-                        }
-                      ],
-                      "offset": 6302,
-                      "name": "USA",
-                      "length": 3,
-                      "bestEntity": {
-                        "kbIdentifier": "YAGO:United_States",
-                        "disambiguationScore": "0.27515"
-                      }
-                    },
-                    "bestEntityMetadata": {
-                      "knowledgebase": "YAGO",
-                      "depictionurl": "http://upload.wikimedia.org/wikipedia/en/a/a4/Flag_of_the_United_States.svg",
-                      "depictionthumbnailurl": "http://upload.wikimedia.org/wikipedia/en/thumbFlag_of_the_United_States.svg/200px-Flag_of_the_United_States.svg",
-                      "importance": 0.0,
-                      "entityId": "United_States",
-                      "type": [
-                        "YAGO_wordnet_system_108435388",
-                        "YAGO_yagoPermanentlyLocatedEntity",
-                        "YAGO_yagoLegalActorGeo",
-                        "YAGO_wordnet_organization_108008335",
-                        "YAGO_wordnet_state_100024720",
-                        "YAGO_wordnet_democracy_108361329",
-                        "YAGO_wordnet_union_114418395",
-                        "YAGO_wordnet_unit_108189659",
-                        "YAGO_wikicategory_Superpowers",
-                        "YAGO_wordnet_cognition_100023271",
-                        "YAGO_wordnet_coalition_114418662",
-                        "YAGO_wordnet_political_system_108367880",
-                        "YAGO_wordnet_attribute_100024264",
-                        "YAGO_wordnet_abstraction_100002137",
-                        "YAGO_wordnet_attitude_106193203",
-                        "YAGO_wordnet_alliance_114418822",
-                        "YAGO_wordnet_group_100031264",
-                        "YAGO_wordnet_psychological_feature_100023100",
-                        "YAGO_wordnet_body_107965085",
-                        "YAGO_wordnet_political_orientation_106212839",
-                        "YAGO_wordnet_democracy_106217103",
-                        "YAGO_wordnet_political_unit_108359949",
-                        "YAGO_wikicategory_Former_British_colonies",
-                        "YAGO_wordnet_economy_108366753",
-                        "YAGO_yagoLegalActor",
-                        "YAGO_wikicategory_G8_nations",
-                        "YAGO_yagoGeoEntity",
-                        "YAGO_wordnet_social_group_107950920",
-                        "YAGO_wordnet_entity_100001740",
-                        "YAGO_wordnet_colony_108374049",
-                        "YAGO_wikicategory_Liberal_democracies",
-                        "YAGO_wikicategory_G20_nations",
-                        "YAGO_wikicategory_Former_confederations",
-                        "YAGO_wordnet_state_108168978",
-                        "YAGO_wikicategory_Federal_constitutional_republics",
-                        "YAGO_wordnet_world_power_108177592",
-                        "YAGO_wikicategory_Republics",
-                        "YAGO_wordnet_orientation_106208021"
-                      ],
-                      "readableRepr": "United States",
-                      "url": "http://en.wikipedia.org/wiki/United%20States"
-                    }
-                  }
-                ]
-              },
-              "NNP"
-            ]
-          ],
-          "score": 0.7,
-          "text": "USA",
-          "enhancement": {
-            "openstreetmap_nominatim": {
-              "osm_id": "148838",
-              "importance": 0.2361730870995,
-              "licence": "Data \u00a9 OpenStreetMap contributors, ODbL 1.0. http://www.openstreetmap.org/copyright",
-              "boundingbox": [
-                -14.7608358,
-                71.6048217,
-                -180.0,
-                180.0
-              ],
-              "icon": "https://nominatim.openstreetmap.org/images/mapicons/poi_boundary_administrative.p.20.png",
-              "osm_type": "relation",
-              "display_name": "United States of America",
-              "lat": "39.7837304",
-              "type": "administrative",
-              "place_id": "177579678",
-              "lon": "-100.4458825",
-              "class": "boundary"
-            }
-          },
-          "nlpIndexSentence": 49
-        }
-      ],
-      "label": "where"
-    },
-    "when": {
-      "extracted": [
-        {
-          "parts": [
-            [
-              {
-                "nlpToken": {
-                  "index": 9,
-                  "word": "midnight",
-                  "originalText": "midnight",
-                  "lemma": "midnight",
-                  "characterOffsetBegin": 1148,
-                  "characterOffsetEnd": 1156,
-                  "pos": "NN",
-                  "ner": "TIME",
-                  "normalizedNER": "2017-12-28T00:00",
-                  "speaker": "PER0",
-                  "before": " ",
-                  "after": " ",
-                  "timex": {
-                    "tid": "t10",
-                    "type": "TIME",
-                    "value": "2017-12-28T00:00"
-                  }
-                }
-              },
-              "NN"
-            ]
-          ],
-          "score": 0.5720090298330931,
-          "text": "midnight",
-          "enhancement": {
-            "timex": {
-              "start_date": "2017-12-28T00:00:00",
-              "end_date": "2017-12-28T00:00:59"
-            }
-          },
-          "nlpIndexSentence": 12
-        }
-      ],
-      "label": "when"
     }
   }
 }

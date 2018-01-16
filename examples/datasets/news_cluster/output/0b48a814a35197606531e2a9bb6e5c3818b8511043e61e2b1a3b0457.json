@@ -26,6 +26,161 @@
     "Event": "china_promises_the_moon"
   },
   "fiveWoneH": {
+    "where": {
+      "extracted": [
+        {
+          "parts": [
+            [
+              {
+                "nlpToken": {
+                  "index": 1,
+                  "word": "China",
+                  "originalText": "China",
+                  "lemma": "China",
+                  "characterOffsetBegin": 0,
+                  "characterOffsetEnd": 5,
+                  "pos": "NNP",
+                  "ner": "LOCATION",
+                  "speaker": "PER0",
+                  "before": "",
+                  "after": ""
+                },
+                "aida": [
+                  {
+                    "mention": {
+                      "allEntities": [
+                        {
+                          "kbIdentifier": "YAGO:China",
+                          "disambiguationScore": "0.6172"
+                        }
+                      ],
+                      "offset": 0,
+                      "name": "China",
+                      "length": 5,
+                      "bestEntity": {
+                        "kbIdentifier": "YAGO:China",
+                        "disambiguationScore": "0.6172"
+                      }
+                    },
+                    "bestEntityMetadata": {
+                      "knowledgebase": "YAGO",
+                      "depictionurl": "http://upload.wikimedia.org/wikipedia/commons/f/fa/Flag_of_the_People%27s_Republic_of_China.svg",
+                      "depictionthumbnailurl": "http://upload.wikimedia.org/wikipedia/commons/thumbFlag_of_the_People%27s_Republic_of_China.svg/200px-Flag_of_the_People%27s_Republic_of_China.svg",
+                      "importance": 9.192157028782871e-06,
+                      "entityId": "China",
+                      "type": [
+                        "YAGO_wordnet_system_108435388",
+                        "YAGO_wordnet_district_108552138",
+                        "YAGO_wikicategory_East_Asian_countries",
+                        "YAGO_yagoPermanentlyLocatedEntity",
+                        "YAGO_yagoLegalActorGeo",
+                        "YAGO_wordnet_state_108654360",
+                        "YAGO_wordnet_country_108544813",
+                        "YAGO_wikicategory_Member_states_of_the_United_Nations",
+                        "YAGO_wordnet_economy_108366753",
+                        "YAGO_wikicategory_States_and_territories_established_in_1949",
+                        "YAGO_wikicategory_Communist_states",
+                        "YAGO_wordnet_abstraction_100002137",
+                        "YAGO_wordnet_region_108630985",
+                        "YAGO_yagoGeoEntity",
+                        "YAGO_wordnet_physical_entity_100001930",
+                        "YAGO_wikicategory_Central_Asian_countries",
+                        "YAGO_wordnet_entity_100001740",
+                        "YAGO_wikicategory_Single\\u002dparty_states",
+                        "YAGO_wordnet_object_100002684",
+                        "YAGO_wordnet_group_100031264",
+                        "YAGO_wordnet_location_100027167",
+                        "YAGO_wordnet_administrative_district_108491826",
+                        "YAGO_wikicategory_Chinese\\u002dspeaking_countries_and_territories"
+                      ],
+                      "readableRepr": "China",
+                      "url": "http://en.wikipedia.org/wiki/China"
+                    }
+                  }
+                ]
+              },
+              "NNP"
+            ]
+          ],
+          "score": 0.6755345451640522,
+          "text": "China",
+          "enhancement": {
+            "openstreetmap_nominatim": {
+              "osm_id": "5605656",
+              "boundingbox": [
+                25.0671341,
+                25.9161824,
+                -99.4612273,
+                -98.421576
+              ],
+              "licence": "Data \u00a9 OpenStreetMap contributors, ODbL 1.0. http://www.openstreetmap.org/copyright",
+              "importance": 0.2225,
+              "icon": "https://nominatim.openstreetmap.org/images/mapicons/poi_boundary_administrative.p.20.png",
+              "osm_type": "relation",
+              "display_name": "China, Nuevo Le\u00f3n, M\u00e9xico",
+              "lat": "25.4915799",
+              "type": "administrative",
+              "place_id": "179360170",
+              "lon": "-98.9811115045569",
+              "class": "boundary"
+            }
+          }
+        }
+      ],
+      "label": "where"
+    },
+    "when": {
+      "extracted": [
+        {
+          "parts": [
+            [
+              {
+                "nlpToken": {
+                  "index": 21,
+                  "word": "Jan",
+                  "originalText": "Jan",
+                  "lemma": "Jan",
+                  "characterOffsetBegin": 4397,
+                  "characterOffsetEnd": 4400,
+                  "pos": "NNP",
+                  "ner": "PERSON",
+                  "speaker": "PER0",
+                  "before": " ",
+                  "after": " ",
+                  "timex": {
+                    "tid": "t17",
+                    "type": "DATE",
+                    "value": "2018-01"
+                  }
+                },
+                "aida": [
+                  {
+                    "mention": {
+                      "allEntities": [],
+                      "offset": 4397,
+                      "name": "Jan Woerner",
+                      "length": 11
+                    },
+                    "bestEntityMetadata": null
+                  }
+                ]
+              },
+              "NNP"
+            ]
+          ],
+          "score": 0.40663437107230654,
+          "text": "Jan",
+          "enhancement": {
+            "timex": {
+              "start_date": "2018-01-01T00:00:00",
+              "end_date": "2018-01-31T23:59:59"
+            }
+          },
+          "nlpIndexSentence": 39
+        }
+      ],
+      "label": "when"
+    },
     "how": {
       "extracted": [
         {
@@ -181,6 +336,126 @@
         }
       ],
       "label": "how"
+    },
+    "why": {
+      "extracted": [
+        {
+          "parts": [
+            [
+              {
+                "nlpToken": {
+                  "index": 17,
+                  "word": "because",
+                  "originalText": "because",
+                  "lemma": "because",
+                  "characterOffsetBegin": 2000,
+                  "characterOffsetEnd": 2007,
+                  "pos": "IN",
+                  "ner": "O",
+                  "speaker": "PER0",
+                  "before": " ",
+                  "after": " "
+                }
+              },
+              "IN"
+            ],
+            [
+              {
+                "nlpToken": {
+                  "index": 18,
+                  "word": "of",
+                  "originalText": "of",
+                  "lemma": "of",
+                  "characterOffsetBegin": 2008,
+                  "characterOffsetEnd": 2010,
+                  "pos": "IN",
+                  "ner": "O",
+                  "speaker": "PER0",
+                  "before": " ",
+                  "after": " "
+                }
+              },
+              "IN"
+            ],
+            [
+              {
+                "nlpToken": {
+                  "index": 19,
+                  "word": "the",
+                  "originalText": "the",
+                  "lemma": "the",
+                  "characterOffsetBegin": 2011,
+                  "characterOffsetEnd": 2014,
+                  "pos": "DT",
+                  "ner": "O",
+                  "speaker": "PER0",
+                  "before": " ",
+                  "after": " "
+                }
+              },
+              "DT"
+            ],
+            [
+              {
+                "nlpToken": {
+                  "index": 20,
+                  "word": "communications",
+                  "originalText": "communications",
+                  "lemma": "communication",
+                  "characterOffsetBegin": 2015,
+                  "characterOffsetEnd": 2029,
+                  "pos": "NNS",
+                  "ner": "O",
+                  "speaker": "PER0",
+                  "before": " ",
+                  "after": " "
+                }
+              },
+              "NNS"
+            ],
+            [
+              {
+                "nlpToken": {
+                  "index": 21,
+                  "word": "difficulty",
+                  "originalText": "difficulty",
+                  "lemma": "difficulty",
+                  "characterOffsetBegin": 2030,
+                  "characterOffsetEnd": 2040,
+                  "pos": "NN",
+                  "ner": "O",
+                  "speaker": "PER0",
+                  "before": " ",
+                  "after": ""
+                }
+              },
+              "NN"
+            ],
+            [
+              {
+                "nlpToken": {
+                  "index": 22,
+                  "word": ".",
+                  "originalText": ".",
+                  "lemma": ".",
+                  "characterOffsetBegin": 2040,
+                  "characterOffsetEnd": 2041,
+                  "pos": ".",
+                  "ner": "O",
+                  "speaker": "PER0",
+                  "before": "",
+                  "after": " "
+                }
+              },
+              "."
+            ]
+          ],
+          "score": 0.8400000000000001,
+          "text": "because of the communications difficulty .",
+          "nlpIndexSentence": 18
+        }
+      ],
+      "label": "why"
     },
     "who": {
       "extracted": [
@@ -348,281 +623,6 @@
         }
       ],
       "label": "what"
-    },
-    "why": {
-      "extracted": [
-        {
-          "parts": [
-            [
-              {
-                "nlpToken": {
-                  "index": 17,
-                  "word": "because",
-                  "originalText": "because",
-                  "lemma": "because",
-                  "characterOffsetBegin": 2000,
-                  "characterOffsetEnd": 2007,
-                  "pos": "IN",
-                  "ner": "O",
-                  "speaker": "PER0",
-                  "before": " ",
-                  "after": " "
-                }
-              },
-              "IN"
-            ],
-            [
-              {
-                "nlpToken": {
-                  "index": 18,
-                  "word": "of",
-                  "originalText": "of",
-                  "lemma": "of",
-                  "characterOffsetBegin": 2008,
-                  "characterOffsetEnd": 2010,
-                  "pos": "IN",
-                  "ner": "O",
-                  "speaker": "PER0",
-                  "before": " ",
-                  "after": " "
-                }
-              },
-              "IN"
-            ],
-            [
-              {
-                "nlpToken": {
-                  "index": 19,
-                  "word": "the",
-                  "originalText": "the",
-                  "lemma": "the",
-                  "characterOffsetBegin": 2011,
-                  "characterOffsetEnd": 2014,
-                  "pos": "DT",
-                  "ner": "O",
-                  "speaker": "PER0",
-                  "before": " ",
-                  "after": " "
-                }
-              },
-              "DT"
-            ],
-            [
-              {
-                "nlpToken": {
-                  "index": 20,
-                  "word": "communications",
-                  "originalText": "communications",
-                  "lemma": "communication",
-                  "characterOffsetBegin": 2015,
-                  "characterOffsetEnd": 2029,
-                  "pos": "NNS",
-                  "ner": "O",
-                  "speaker": "PER0",
-                  "before": " ",
-                  "after": " "
-                }
-              },
-              "NNS"
-            ],
-            [
-              {
-                "nlpToken": {
-                  "index": 21,
-                  "word": "difficulty",
-                  "originalText": "difficulty",
-                  "lemma": "difficulty",
-                  "characterOffsetBegin": 2030,
-                  "characterOffsetEnd": 2040,
-                  "pos": "NN",
-                  "ner": "O",
-                  "speaker": "PER0",
-                  "before": " ",
-                  "after": ""
-                }
-              },
-              "NN"
-            ],
-            [
-              {
-                "nlpToken": {
-                  "index": 22,
-                  "word": ".",
-                  "originalText": ".",
-                  "lemma": ".",
-                  "characterOffsetBegin": 2040,
-                  "characterOffsetEnd": 2041,
-                  "pos": ".",
-                  "ner": "O",
-                  "speaker": "PER0",
-                  "before": "",
-                  "after": " "
-                }
-              },
-              "."
-            ]
-          ],
-          "score": 0.8400000000000001,
-          "text": "because of the communications difficulty .",
-          "nlpIndexSentence": 18
-        }
-      ],
-      "label": "why"
-    },
-    "where": {
-      "extracted": [
-        {
-          "parts": [
-            [
-              {
-                "nlpToken": {
-                  "index": 1,
-                  "word": "China",
-                  "originalText": "China",
-                  "lemma": "China",
-                  "characterOffsetBegin": 0,
-                  "characterOffsetEnd": 5,
-                  "pos": "NNP",
-                  "ner": "LOCATION",
-                  "speaker": "PER0",
-                  "before": "",
-                  "after": ""
-                },
-                "aida": [
-                  {
-                    "mention": {
-                      "allEntities": [
-                        {
-                          "kbIdentifier": "YAGO:China",
-                          "disambiguationScore": "0.6172"
-                        }
-                      ],
-                      "offset": 0,
-                      "name": "China",
-                      "length": 5,
-                      "bestEntity": {
-                        "kbIdentifier": "YAGO:China",
-                        "disambiguationScore": "0.6172"
-                      }
-                    },
-                    "bestEntityMetadata": {
-                      "knowledgebase": "YAGO",
-                      "depictionurl": "http://upload.wikimedia.org/wikipedia/commons/f/fa/Flag_of_the_People%27s_Republic_of_China.svg",
-                      "depictionthumbnailurl": "http://upload.wikimedia.org/wikipedia/commons/thumbFlag_of_the_People%27s_Republic_of_China.svg/200px-Flag_of_the_People%27s_Republic_of_China.svg",
-                      "importance": 9.192157028782871e-06,
-                      "entityId": "China",
-                      "type": [
-                        "YAGO_wordnet_system_108435388",
-                        "YAGO_wordnet_district_108552138",
-                        "YAGO_wikicategory_East_Asian_countries",
-                        "YAGO_yagoPermanentlyLocatedEntity",
-                        "YAGO_yagoLegalActorGeo",
-                        "YAGO_wordnet_state_108654360",
-                        "YAGO_wordnet_country_108544813",
-                        "YAGO_wikicategory_Member_states_of_the_United_Nations",
-                        "YAGO_wordnet_economy_108366753",
-                        "YAGO_wikicategory_States_and_territories_established_in_1949",
-                        "YAGO_wikicategory_Communist_states",
-                        "YAGO_wordnet_abstraction_100002137",
-                        "YAGO_wordnet_region_108630985",
-                        "YAGO_yagoGeoEntity",
-                        "YAGO_wordnet_physical_entity_100001930",
-                        "YAGO_wikicategory_Central_Asian_countries",
-                        "YAGO_wordnet_entity_100001740",
-                        "YAGO_wikicategory_Single\\u002dparty_states",
-                        "YAGO_wordnet_object_100002684",
-                        "YAGO_wordnet_group_100031264",
-                        "YAGO_wordnet_location_100027167",
-                        "YAGO_wordnet_administrative_district_108491826",
-                        "YAGO_wikicategory_Chinese\\u002dspeaking_countries_and_territories"
-                      ],
-                      "readableRepr": "China",
-                      "url": "http://en.wikipedia.org/wiki/China"
-                    }
-                  }
-                ]
-              },
-              "NNP"
-            ]
-          ],
-          "score": 0.6755345451640522,
-          "text": "China",
-          "enhancement": {
-            "openstreetmap_nominatim": {
-              "osm_id": "5605656",
-              "boundingbox": [
-                25.0671341,
-                25.9161824,
-                -99.4612273,
-                -98.421576
-              ],
-              "licence": "Data \u00a9 OpenStreetMap contributors, ODbL 1.0. http://www.openstreetmap.org/copyright",
-              "importance": 0.2225,
-              "icon": "https://nominatim.openstreetmap.org/images/mapicons/poi_boundary_administrative.p.20.png",
-              "osm_type": "relation",
-              "display_name": "China, Nuevo Le\u00f3n, M\u00e9xico",
-              "lat": "25.4915799",
-              "type": "administrative",
-              "place_id": "179360170",
-              "lon": "-98.9811115045569",
-              "class": "boundary"
-            }
-          }
-        }
-      ],
-      "label": "where"
-    },
-    "when": {
-      "extracted": [
-        {
-          "parts": [
-            [
-              {
-                "nlpToken": {
-                  "index": 21,
-                  "word": "Jan",
-                  "originalText": "Jan",
-                  "lemma": "Jan",
-                  "characterOffsetBegin": 4397,
-                  "characterOffsetEnd": 4400,
-                  "pos": "NNP",
-                  "ner": "PERSON",
-                  "speaker": "PER0",
-                  "before": " ",
-                  "after": " ",
-                  "timex": {
-                    "tid": "t17",
-                    "type": "DATE",
-                    "value": "2018-01"
-                  }
-                },
-                "aida": [
-                  {
-                    "mention": {
-                      "allEntities": [],
-                      "offset": 4397,
-                      "name": "Jan Woerner",
-                      "length": 11
-                    },
-                    "bestEntityMetadata": null
-                  }
-                ]
-              },
-              "NNP"
-            ]
-          ],
-          "score": 0.41076384638094854,
-          "text": "Jan",
-          "enhancement": {
-            "timex": {
-              "start_date": "2018-01-01T00:00:00",
-              "end_date": "2018-01-31T23:59:59"
-            }
-          },
-          "nlpIndexSentence": 39
-        }
-      ],
-      "label": "when"
     }
   }
 }

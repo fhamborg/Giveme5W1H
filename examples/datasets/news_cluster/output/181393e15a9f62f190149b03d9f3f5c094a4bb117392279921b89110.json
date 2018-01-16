@@ -452,6 +452,170 @@
       ],
       "label": "what"
     },
+    "where": {
+      "extracted": [
+        {
+          "parts": [
+            [
+              {
+                "nlpToken": {
+                  "index": 1,
+                  "word": "Egypt",
+                  "originalText": "Egypt",
+                  "lemma": "Egypt",
+                  "characterOffsetBegin": 0,
+                  "characterOffsetEnd": 5,
+                  "pos": "NNP",
+                  "ner": "LOCATION",
+                  "speaker": "PER0",
+                  "before": "",
+                  "after": ""
+                },
+                "aida": [
+                  {
+                    "mention": {
+                      "allEntities": [
+                        {
+                          "kbIdentifier": "YAGO:Egypt",
+                          "disambiguationScore": "0.46002"
+                        }
+                      ],
+                      "offset": 0,
+                      "name": "Egypt",
+                      "length": 5,
+                      "bestEntity": {
+                        "kbIdentifier": "YAGO:Egypt",
+                        "disambiguationScore": "0.46002"
+                      }
+                    },
+                    "bestEntityMetadata": {
+                      "knowledgebase": "YAGO",
+                      "depictionurl": "http://upload.wikimedia.org/wikipedia/commons/f/fe/Flag_of_Egypt.svg",
+                      "depictionthumbnailurl": "http://upload.wikimedia.org/wikipedia/commons/thumbFlag_of_Egypt.svg/200px-Flag_of_Egypt.svg",
+                      "importance": 2.9526322577302558e-05,
+                      "entityId": "Egypt",
+                      "type": [
+                        "YAGO_wordnet_system_108435388",
+                        "YAGO_wordnet_district_108552138",
+                        "YAGO_wikicategory_Member_states_of_the_Organisation_of_Islamic_Cooperation",
+                        "YAGO_yagoPermanentlyLocatedEntity",
+                        "YAGO_wikicategory_Middle_Eastern_countries",
+                        "YAGO_yagoLegalActorGeo",
+                        "YAGO_wikicategory_African_Union_member_economies",
+                        "YAGO_wikicategory_North_African_countries",
+                        "YAGO_wordnet_state_108654360",
+                        "YAGO_wikicategory_States_and_territories_established_in_1922",
+                        "YAGO_wordnet_country_108544813",
+                        "YAGO_wikicategory_Member_states_of_the_United_Nations",
+                        "YAGO_wordnet_economy_108366753",
+                        "YAGO_wikicategory_Developing_8_Countries_member_states",
+                        "YAGO_wikicategory_Arabic\\u002dspeaking_countries_and_territories",
+                        "YAGO_wikicategory_Countries_in_Africa",
+                        "YAGO_wordnet_abstraction_100002137",
+                        "YAGO_wordnet_region_108630985",
+                        "YAGO_yagoGeoEntity",
+                        "YAGO_wikicategory_World_Trade_Organization_member_economies",
+                        "YAGO_wordnet_physical_entity_100001930",
+                        "YAGO_wordnet_entity_100001740",
+                        "YAGO_wikicategory_Member_states_of_the_Arab_League",
+                        "YAGO_wordnet_object_100002684",
+                        "YAGO_wikicategory_Member_states_of_the_African_Union",
+                        "YAGO_wordnet_group_100031264",
+                        "YAGO_wikicategory_Member_states_of_La_Francophonie",
+                        "YAGO_wordnet_location_100027167",
+                        "YAGO_wordnet_administrative_district_108491826",
+                        "YAGO_wikicategory_Member_states_of_the_Union_for_the_Mediterranean"
+                      ],
+                      "readableRepr": "Egypt",
+                      "url": "http://en.wikipedia.org/wiki/Egypt"
+                    }
+                  }
+                ]
+              },
+              "NNP"
+            ]
+          ],
+          "score": 0.6699999999999999,
+          "text": "Egypt",
+          "enhancement": {
+            "openstreetmap_nominatim": {
+              "osm_id": "1473947",
+              "boundingbox": [
+                21.9999975,
+                31.8330854,
+                24.706389,
+                37.1153517
+              ],
+              "licence": "Data \u00a9 OpenStreetMap contributors, ODbL 1.0. http://www.openstreetmap.org/copyright",
+              "importance": 0.20152555272688,
+              "icon": "https://nominatim.openstreetmap.org/images/mapicons/poi_boundary_administrative.p.20.png",
+              "osm_type": "relation",
+              "display_name": "\u0645\u0635\u0631",
+              "lat": "26.2540493",
+              "type": "administrative",
+              "place_id": "178257151",
+              "lon": "29.2675469",
+              "class": "boundary"
+            }
+          }
+        }
+      ],
+      "label": "where"
+    },
+    "when": {
+      "extracted": [
+        {
+          "parts": [
+            [
+              {
+                "nlpToken": {
+                  "index": 6,
+                  "word": "Saturday",
+                  "originalText": "Saturday",
+                  "lemma": "Saturday",
+                  "characterOffsetBegin": 287,
+                  "characterOffsetEnd": 295,
+                  "pos": "NNP",
+                  "ner": "DATE",
+                  "normalizedNER": "2017-12-30",
+                  "speaker": "PER0",
+                  "before": " ",
+                  "after": " ",
+                  "timex": {
+                    "tid": "t2",
+                    "type": "DATE",
+                    "value": "2017-12-30"
+                  }
+                },
+                "heideltime": [
+                  {
+                    "@tid": "t3",
+                    "@type": "DATE",
+                    "@value": "2017-12-30",
+                    "#text": "Saturday",
+                    "characterOffset": [
+                      287,
+                      295
+                    ]
+                  }
+                ]
+              },
+              "NNP"
+            ]
+          ],
+          "score": 0.6529329946070724,
+          "text": "Saturday",
+          "enhancement": {
+            "timex": {
+              "start_date": "2017-12-30T00:00:00",
+              "end_date": "2017-12-30T23:59:59"
+            }
+          },
+          "nlpIndexSentence": 2
+        }
+      ],
+      "label": "when"
+    },
     "how": {
       "extracted": [
         {
@@ -895,170 +1059,6 @@
         }
       ],
       "label": "why"
-    },
-    "where": {
-      "extracted": [
-        {
-          "parts": [
-            [
-              {
-                "nlpToken": {
-                  "index": 1,
-                  "word": "Egypt",
-                  "originalText": "Egypt",
-                  "lemma": "Egypt",
-                  "characterOffsetBegin": 0,
-                  "characterOffsetEnd": 5,
-                  "pos": "NNP",
-                  "ner": "LOCATION",
-                  "speaker": "PER0",
-                  "before": "",
-                  "after": ""
-                },
-                "aida": [
-                  {
-                    "mention": {
-                      "allEntities": [
-                        {
-                          "kbIdentifier": "YAGO:Egypt",
-                          "disambiguationScore": "0.46002"
-                        }
-                      ],
-                      "offset": 0,
-                      "name": "Egypt",
-                      "length": 5,
-                      "bestEntity": {
-                        "kbIdentifier": "YAGO:Egypt",
-                        "disambiguationScore": "0.46002"
-                      }
-                    },
-                    "bestEntityMetadata": {
-                      "knowledgebase": "YAGO",
-                      "depictionurl": "http://upload.wikimedia.org/wikipedia/commons/f/fe/Flag_of_Egypt.svg",
-                      "depictionthumbnailurl": "http://upload.wikimedia.org/wikipedia/commons/thumbFlag_of_Egypt.svg/200px-Flag_of_Egypt.svg",
-                      "importance": 2.9526322577302558e-05,
-                      "entityId": "Egypt",
-                      "type": [
-                        "YAGO_wordnet_system_108435388",
-                        "YAGO_wordnet_district_108552138",
-                        "YAGO_wikicategory_Member_states_of_the_Organisation_of_Islamic_Cooperation",
-                        "YAGO_yagoPermanentlyLocatedEntity",
-                        "YAGO_wikicategory_Middle_Eastern_countries",
-                        "YAGO_yagoLegalActorGeo",
-                        "YAGO_wikicategory_African_Union_member_economies",
-                        "YAGO_wikicategory_North_African_countries",
-                        "YAGO_wordnet_state_108654360",
-                        "YAGO_wikicategory_States_and_territories_established_in_1922",
-                        "YAGO_wordnet_country_108544813",
-                        "YAGO_wikicategory_Member_states_of_the_United_Nations",
-                        "YAGO_wordnet_economy_108366753",
-                        "YAGO_wikicategory_Developing_8_Countries_member_states",
-                        "YAGO_wikicategory_Arabic\\u002dspeaking_countries_and_territories",
-                        "YAGO_wikicategory_Countries_in_Africa",
-                        "YAGO_wordnet_abstraction_100002137",
-                        "YAGO_wordnet_region_108630985",
-                        "YAGO_yagoGeoEntity",
-                        "YAGO_wikicategory_World_Trade_Organization_member_economies",
-                        "YAGO_wordnet_physical_entity_100001930",
-                        "YAGO_wordnet_entity_100001740",
-                        "YAGO_wikicategory_Member_states_of_the_Arab_League",
-                        "YAGO_wordnet_object_100002684",
-                        "YAGO_wikicategory_Member_states_of_the_African_Union",
-                        "YAGO_wordnet_group_100031264",
-                        "YAGO_wikicategory_Member_states_of_La_Francophonie",
-                        "YAGO_wordnet_location_100027167",
-                        "YAGO_wordnet_administrative_district_108491826",
-                        "YAGO_wikicategory_Member_states_of_the_Union_for_the_Mediterranean"
-                      ],
-                      "readableRepr": "Egypt",
-                      "url": "http://en.wikipedia.org/wiki/Egypt"
-                    }
-                  }
-                ]
-              },
-              "NNP"
-            ]
-          ],
-          "score": 0.6699999999999999,
-          "text": "Egypt",
-          "enhancement": {
-            "openstreetmap_nominatim": {
-              "osm_id": "1473947",
-              "boundingbox": [
-                21.9999975,
-                31.8330854,
-                24.706389,
-                37.1153517
-              ],
-              "licence": "Data \u00a9 OpenStreetMap contributors, ODbL 1.0. http://www.openstreetmap.org/copyright",
-              "importance": 0.20152555272688,
-              "icon": "https://nominatim.openstreetmap.org/images/mapicons/poi_boundary_administrative.p.20.png",
-              "osm_type": "relation",
-              "display_name": "\u0645\u0635\u0631",
-              "lat": "26.2540493",
-              "type": "administrative",
-              "place_id": "178257151",
-              "lon": "29.2675469",
-              "class": "boundary"
-            }
-          }
-        }
-      ],
-      "label": "where"
-    },
-    "when": {
-      "extracted": [
-        {
-          "parts": [
-            [
-              {
-                "nlpToken": {
-                  "index": 6,
-                  "word": "Saturday",
-                  "originalText": "Saturday",
-                  "lemma": "Saturday",
-                  "characterOffsetBegin": 287,
-                  "characterOffsetEnd": 295,
-                  "pos": "NNP",
-                  "ner": "DATE",
-                  "normalizedNER": "2017-12-30",
-                  "speaker": "PER0",
-                  "before": " ",
-                  "after": " ",
-                  "timex": {
-                    "tid": "t2",
-                    "type": "DATE",
-                    "value": "2017-12-30"
-                  }
-                },
-                "heideltime": [
-                  {
-                    "@tid": "t3",
-                    "@type": "DATE",
-                    "@value": "2017-12-30",
-                    "#text": "Saturday",
-                    "characterOffset": [
-                      287,
-                      295
-                    ]
-                  }
-                ]
-              },
-              "NNP"
-            ]
-          ],
-          "score": 0.6529329946070724,
-          "text": "Saturday",
-          "enhancement": {
-            "timex": {
-              "start_date": "2017-12-30T00:00:00",
-              "end_date": "2017-12-30T23:59:59"
-            }
-          },
-          "nlpIndexSentence": 2
-        }
-      ],
-      "label": "when"
     }
   }
 }

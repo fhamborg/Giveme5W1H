@@ -24,6 +24,163 @@
   },
   "dId": "0ac360f6fe427a902ddccaa3bec053af9ad05e1c22f9196bc064171a",
   "fiveWoneH": {
+    "where": {
+      "extracted": [
+        {
+          "parts": [
+            [
+              {
+                "nlpToken": {
+                  "index": 4,
+                  "word": "Panama",
+                  "originalText": "Panama",
+                  "lemma": "Panama",
+                  "characterOffsetBegin": 208,
+                  "characterOffsetEnd": 214,
+                  "pos": "NNP",
+                  "ner": "LOCATION",
+                  "speaker": "PER0",
+                  "before": " ",
+                  "after": " "
+                },
+                "aida": [
+                  {
+                    "mention": {
+                      "allEntities": [
+                        {
+                          "kbIdentifier": "YAGO:Panama",
+                          "disambiguationScore": "0.23678"
+                        }
+                      ],
+                      "offset": 208,
+                      "name": "Panama",
+                      "length": 6,
+                      "bestEntity": {
+                        "kbIdentifier": "YAGO:Panama",
+                        "disambiguationScore": "0.23678"
+                      }
+                    },
+                    "bestEntityMetadata": {
+                      "knowledgebase": "YAGO",
+                      "depictionurl": "http://upload.wikimedia.org/wikipedia/commons/a/ab/Flag_of_Panama.svg",
+                      "depictionthumbnailurl": "http://upload.wikimedia.org/wikipedia/commons/thumbFlag_of_Panama.svg/200px-Flag_of_Panama.svg",
+                      "importance": 9.108591964884846e-05,
+                      "entityId": "Panama",
+                      "type": [
+                        "YAGO_wordnet_system_108435388",
+                        "YAGO_wordnet_district_108552138",
+                        "YAGO_yagoPermanentlyLocatedEntity",
+                        "YAGO_yagoLegalActorGeo",
+                        "YAGO_wordnet_state_108654360",
+                        "YAGO_wikicategory_Spanish\\u002dspeaking_countries_and_territories",
+                        "YAGO_wordnet_country_108544813",
+                        "YAGO_wikicategory_Member_states_of_the_United_Nations",
+                        "YAGO_wordnet_economy_108366753",
+                        "YAGO_wikicategory_States_and_territories_established_in_1903",
+                        "YAGO_wordnet_abstraction_100002137",
+                        "YAGO_wordnet_region_108630985",
+                        "YAGO_yagoGeoEntity",
+                        "YAGO_wikicategory_World_Trade_Organization_member_economies",
+                        "YAGO_wordnet_physical_entity_100001930",
+                        "YAGO_wikicategory_Countries_in_the_Caribbean",
+                        "YAGO_wordnet_entity_100001740",
+                        "YAGO_wordnet_object_100002684",
+                        "YAGO_wordnet_group_100031264",
+                        "YAGO_wordnet_location_100027167",
+                        "YAGO_wordnet_administrative_district_108491826",
+                        "YAGO_wikicategory_Countries_in_Central_America"
+                      ],
+                      "readableRepr": "Panama",
+                      "url": "http://en.wikipedia.org/wiki/Panama"
+                    }
+                  }
+                ]
+              },
+              "NNP"
+            ]
+          ],
+          "score": 0.6844548753509899,
+          "text": "Panama",
+          "enhancement": {
+            "openstreetmap_nominatim": {
+              "osm_id": "150953090",
+              "boundingbox": [
+                35.246906,
+                35.286906,
+                -119.0767707,
+                -119.0367707
+              ],
+              "licence": "Data \u00a9 OpenStreetMap contributors, ODbL 1.0. http://www.openstreetmap.org/copyright",
+              "importance": 0.20786660103606,
+              "icon": "https://nominatim.openstreetmap.org/images/mapicons/poi_place_village.p.20.png",
+              "osm_type": "node",
+              "display_name": "Panama, Kern County, California, 93313, United States of America",
+              "lat": "35.266906",
+              "type": "hamlet",
+              "place_id": "347768",
+              "lon": "-119.0567707",
+              "class": "place"
+            }
+          },
+          "nlpIndexSentence": 4
+        }
+      ],
+      "label": "where"
+    },
+    "when": {
+      "extracted": [
+        {
+          "parts": [
+            [
+              {
+                "nlpToken": {
+                  "index": 2,
+                  "word": "Monday",
+                  "originalText": "Monday",
+                  "lemma": "Monday",
+                  "characterOffsetBegin": 2649,
+                  "characterOffsetEnd": 2655,
+                  "pos": "NNP",
+                  "ner": "DATE",
+                  "normalizedNER": "2016-04-04",
+                  "speaker": "PER0",
+                  "before": " ",
+                  "after": "",
+                  "timex": {
+                    "tid": "t4",
+                    "type": "DATE",
+                    "value": "2016-04-04"
+                  }
+                },
+                "heideltime": [
+                  {
+                    "@tid": "t4",
+                    "@type": "DATE",
+                    "@value": "2016-04-04",
+                    "#text": "Monday",
+                    "characterOffset": [
+                      2649,
+                      2655
+                    ]
+                  }
+                ]
+              },
+              "NNP"
+            ]
+          ],
+          "score": 0.3597350956115856,
+          "text": "Monday",
+          "enhancement": {
+            "timex": {
+              "start_date": "2016-04-04T00:00:00",
+              "end_date": "2016-04-04T23:59:59"
+            }
+          },
+          "nlpIndexSentence": 20
+        }
+      ],
+      "label": "when"
+    },
     "how": {
       "extracted": [
         {
@@ -161,278 +318,6 @@
         }
       ],
       "label": "how"
-    },
-    "who": {
-      "extracted": [
-        {
-          "parts": [
-            [
-              {
-                "nlpToken": {
-                  "index": 6,
-                  "word": "law",
-                  "originalText": "law",
-                  "lemma": "law",
-                  "characterOffsetBegin": 70,
-                  "characterOffsetEnd": 73,
-                  "pos": "NN",
-                  "ner": "O",
-                  "speaker": "PER0",
-                  "before": " ",
-                  "after": " "
-                }
-              },
-              "NN"
-            ],
-            [
-              {
-                "nlpToken": {
-                  "index": 7,
-                  "word": "firm",
-                  "originalText": "firm",
-                  "lemma": "firm",
-                  "characterOffsetBegin": 74,
-                  "characterOffsetEnd": 78,
-                  "pos": "NN",
-                  "ner": "O",
-                  "speaker": "PER0",
-                  "before": " ",
-                  "after": " "
-                }
-              },
-              "NN"
-            ],
-            [
-              {
-                "nlpToken": {
-                  "index": 8,
-                  "word": "Mossack",
-                  "originalText": "Mossack",
-                  "lemma": "Mossack",
-                  "characterOffsetBegin": 79,
-                  "characterOffsetEnd": 86,
-                  "pos": "NNP",
-                  "ner": "PERSON",
-                  "speaker": "PER0",
-                  "before": " ",
-                  "after": " "
-                },
-                "aida": [
-                  {
-                    "mention": {
-                      "allEntities": [
-                        {
-                          "kbIdentifier": "YAGO:Mossack_Fonseca",
-                          "disambiguationScore": "1"
-                        }
-                      ],
-                      "offset": 79,
-                      "name": "Mossack Fonseca",
-                      "length": 15,
-                      "bestEntity": {
-                        "kbIdentifier": "YAGO:Mossack_Fonseca",
-                        "disambiguationScore": "1"
-                      }
-                    },
-                    "bestEntityMetadata": {
-                      "knowledgebase": "YAGO",
-                      "depictionurl": "http://upload.wikimedia.org/wikipedia/commons/0/05/Logo_Mossack_Fonseca.jpg",
-                      "depictionthumbnailurl": "http://upload.wikimedia.org/wikipedia/commons/thumbLogo_Mossack_Fonseca.jpg/200px-Logo_Mossack_Fonseca.jpg",
-                      "importance": 0.5667725250326112,
-                      "entityId": "Mossack_Fonseca",
-                      "type": [
-                        "YAGO_wordnet_law_firm_108064039",
-                        "YAGO_yagoPermanentlyLocatedEntity",
-                        "YAGO_yagoLegalActorGeo",
-                        "YAGO_wordnet_organization_108008335",
-                        "YAGO_wordnet_social_group_107950920",
-                        "YAGO_wikicategory_Law_firms_established_in_1977",
-                        "YAGO_wordnet_entity_100001740",
-                        "YAGO_wordnet_enterprise_108056231",
-                        "YAGO_wordnet_group_100031264",
-                        "YAGO_wordnet_firm_108059870",
-                        "YAGO_wordnet_business_108061042",
-                        "YAGO_yagoLegalActor",
-                        "YAGO_wordnet_abstraction_100002137"
-                      ],
-                      "readableRepr": "Mossack Fonseca",
-                      "url": "http://en.wikipedia.org/wiki/Mossack%20Fonseca"
-                    }
-                  }
-                ]
-              },
-              "NNP"
-            ],
-            [
-              {
-                "nlpToken": {
-                  "index": 9,
-                  "word": "Fonseca",
-                  "originalText": "Fonseca",
-                  "lemma": "Fonseca",
-                  "characterOffsetBegin": 87,
-                  "characterOffsetEnd": 94,
-                  "pos": "NNP",
-                  "ner": "PERSON",
-                  "speaker": "PER0",
-                  "before": " ",
-                  "after": " "
-                },
-                "aida": [
-                  {
-                    "mention": {
-                      "allEntities": [
-                        {
-                          "kbIdentifier": "YAGO:Mossack_Fonseca",
-                          "disambiguationScore": "1"
-                        }
-                      ],
-                      "offset": 79,
-                      "name": "Mossack Fonseca",
-                      "length": 15,
-                      "bestEntity": {
-                        "kbIdentifier": "YAGO:Mossack_Fonseca",
-                        "disambiguationScore": "1"
-                      }
-                    },
-                    "bestEntityMetadata": {
-                      "knowledgebase": "YAGO",
-                      "depictionurl": "http://upload.wikimedia.org/wikipedia/commons/0/05/Logo_Mossack_Fonseca.jpg",
-                      "depictionthumbnailurl": "http://upload.wikimedia.org/wikipedia/commons/thumbLogo_Mossack_Fonseca.jpg/200px-Logo_Mossack_Fonseca.jpg",
-                      "importance": 0.5667725250326112,
-                      "entityId": "Mossack_Fonseca",
-                      "type": [
-                        "YAGO_wordnet_law_firm_108064039",
-                        "YAGO_yagoPermanentlyLocatedEntity",
-                        "YAGO_yagoLegalActorGeo",
-                        "YAGO_wordnet_organization_108008335",
-                        "YAGO_wordnet_social_group_107950920",
-                        "YAGO_wikicategory_Law_firms_established_in_1977",
-                        "YAGO_wordnet_entity_100001740",
-                        "YAGO_wordnet_enterprise_108056231",
-                        "YAGO_wordnet_group_100031264",
-                        "YAGO_wordnet_firm_108059870",
-                        "YAGO_wordnet_business_108061042",
-                        "YAGO_yagoLegalActor",
-                        "YAGO_wordnet_abstraction_100002137"
-                      ],
-                      "readableRepr": "Mossack Fonseca",
-                      "url": "http://en.wikipedia.org/wiki/Mossack%20Fonseca"
-                    }
-                  }
-                ]
-              },
-              "NNP"
-            ]
-          ],
-          "score": 1.0,
-          "text": "law firm Mossack Fonseca",
-          "nlpIndexSentence": 1
-        }
-      ],
-      "label": "who"
-    },
-    "what": {
-      "extracted": [
-        {
-          "parts": [
-            [
-              {
-                "nlpToken": {
-                  "index": 10,
-                  "word": "helped",
-                  "originalText": "helped",
-                  "lemma": "help",
-                  "characterOffsetBegin": 95,
-                  "characterOffsetEnd": 101,
-                  "pos": "VBD",
-                  "ner": "O",
-                  "speaker": "PER0",
-                  "before": " ",
-                  "after": " "
-                }
-              },
-              "VBD"
-            ],
-            [
-              {
-                "nlpToken": {
-                  "index": 11,
-                  "word": "set",
-                  "originalText": "set",
-                  "lemma": "set",
-                  "characterOffsetBegin": 102,
-                  "characterOffsetEnd": 105,
-                  "pos": "VB",
-                  "ner": "O",
-                  "speaker": "PER0",
-                  "before": " ",
-                  "after": " "
-                }
-              },
-              "VB"
-            ],
-            [
-              {
-                "nlpToken": {
-                  "index": 12,
-                  "word": "up",
-                  "originalText": "up",
-                  "lemma": "up",
-                  "characterOffsetBegin": 106,
-                  "characterOffsetEnd": 108,
-                  "pos": "RP",
-                  "ner": "O",
-                  "speaker": "PER0",
-                  "before": " ",
-                  "after": " "
-                }
-              },
-              "RP"
-            ],
-            [
-              {
-                "nlpToken": {
-                  "index": 13,
-                  "word": "shell",
-                  "originalText": "shell",
-                  "lemma": "shell",
-                  "characterOffsetBegin": 109,
-                  "characterOffsetEnd": 114,
-                  "pos": "NN",
-                  "ner": "O",
-                  "speaker": "PER0",
-                  "before": " ",
-                  "after": " "
-                }
-              },
-              "NN"
-            ],
-            [
-              {
-                "nlpToken": {
-                  "index": 14,
-                  "word": "companies",
-                  "originalText": "companies",
-                  "lemma": "company",
-                  "characterOffsetBegin": 115,
-                  "characterOffsetEnd": 124,
-                  "pos": "NNS",
-                  "ner": "O",
-                  "speaker": "PER0",
-                  "before": " ",
-                  "after": " "
-                }
-              },
-              "NNS"
-            ]
-          ],
-          "score": 1.0,
-          "text": "helped set up shell companies",
-          "nlpIndexSentence": 1
-        }
-      ],
-      "label": "what"
     },
     "why": {
       "extracted": [
@@ -734,21 +619,57 @@
       ],
       "label": "why"
     },
-    "where": {
+    "who": {
       "extracted": [
         {
           "parts": [
             [
               {
                 "nlpToken": {
-                  "index": 4,
-                  "word": "Panama",
-                  "originalText": "Panama",
-                  "lemma": "Panama",
-                  "characterOffsetBegin": 208,
-                  "characterOffsetEnd": 214,
+                  "index": 6,
+                  "word": "law",
+                  "originalText": "law",
+                  "lemma": "law",
+                  "characterOffsetBegin": 70,
+                  "characterOffsetEnd": 73,
+                  "pos": "NN",
+                  "ner": "O",
+                  "speaker": "PER0",
+                  "before": " ",
+                  "after": " "
+                }
+              },
+              "NN"
+            ],
+            [
+              {
+                "nlpToken": {
+                  "index": 7,
+                  "word": "firm",
+                  "originalText": "firm",
+                  "lemma": "firm",
+                  "characterOffsetBegin": 74,
+                  "characterOffsetEnd": 78,
+                  "pos": "NN",
+                  "ner": "O",
+                  "speaker": "PER0",
+                  "before": " ",
+                  "after": " "
+                }
+              },
+              "NN"
+            ],
+            [
+              {
+                "nlpToken": {
+                  "index": 8,
+                  "word": "Mossack",
+                  "originalText": "Mossack",
+                  "lemma": "Mossack",
+                  "characterOffsetBegin": 79,
+                  "characterOffsetEnd": 86,
                   "pos": "NNP",
-                  "ner": "LOCATION",
+                  "ner": "PERSON",
                   "speaker": "PER0",
                   "before": " ",
                   "after": " "
@@ -758,50 +679,102 @@
                     "mention": {
                       "allEntities": [
                         {
-                          "kbIdentifier": "YAGO:Panama",
-                          "disambiguationScore": "0.23678"
+                          "kbIdentifier": "YAGO:Mossack_Fonseca",
+                          "disambiguationScore": "1"
                         }
                       ],
-                      "offset": 208,
-                      "name": "Panama",
-                      "length": 6,
+                      "offset": 79,
+                      "name": "Mossack Fonseca",
+                      "length": 15,
                       "bestEntity": {
-                        "kbIdentifier": "YAGO:Panama",
-                        "disambiguationScore": "0.23678"
+                        "kbIdentifier": "YAGO:Mossack_Fonseca",
+                        "disambiguationScore": "1"
                       }
                     },
                     "bestEntityMetadata": {
                       "knowledgebase": "YAGO",
-                      "depictionurl": "http://upload.wikimedia.org/wikipedia/commons/a/ab/Flag_of_Panama.svg",
-                      "depictionthumbnailurl": "http://upload.wikimedia.org/wikipedia/commons/thumbFlag_of_Panama.svg/200px-Flag_of_Panama.svg",
-                      "importance": 9.108591964884846e-05,
-                      "entityId": "Panama",
+                      "depictionurl": "http://upload.wikimedia.org/wikipedia/commons/0/05/Logo_Mossack_Fonseca.jpg",
+                      "depictionthumbnailurl": "http://upload.wikimedia.org/wikipedia/commons/thumbLogo_Mossack_Fonseca.jpg/200px-Logo_Mossack_Fonseca.jpg",
+                      "importance": 0.5667725250326112,
+                      "entityId": "Mossack_Fonseca",
                       "type": [
-                        "YAGO_wordnet_system_108435388",
-                        "YAGO_wordnet_district_108552138",
+                        "YAGO_wordnet_law_firm_108064039",
                         "YAGO_yagoPermanentlyLocatedEntity",
                         "YAGO_yagoLegalActorGeo",
-                        "YAGO_wordnet_state_108654360",
-                        "YAGO_wikicategory_Spanish\\u002dspeaking_countries_and_territories",
-                        "YAGO_wordnet_country_108544813",
-                        "YAGO_wikicategory_Member_states_of_the_United_Nations",
-                        "YAGO_wordnet_economy_108366753",
-                        "YAGO_wikicategory_States_and_territories_established_in_1903",
-                        "YAGO_wordnet_abstraction_100002137",
-                        "YAGO_wordnet_region_108630985",
-                        "YAGO_yagoGeoEntity",
-                        "YAGO_wikicategory_World_Trade_Organization_member_economies",
-                        "YAGO_wordnet_physical_entity_100001930",
-                        "YAGO_wikicategory_Countries_in_the_Caribbean",
+                        "YAGO_wordnet_organization_108008335",
+                        "YAGO_wordnet_social_group_107950920",
+                        "YAGO_wikicategory_Law_firms_established_in_1977",
                         "YAGO_wordnet_entity_100001740",
-                        "YAGO_wordnet_object_100002684",
+                        "YAGO_wordnet_enterprise_108056231",
                         "YAGO_wordnet_group_100031264",
-                        "YAGO_wordnet_location_100027167",
-                        "YAGO_wordnet_administrative_district_108491826",
-                        "YAGO_wikicategory_Countries_in_Central_America"
+                        "YAGO_wordnet_firm_108059870",
+                        "YAGO_wordnet_business_108061042",
+                        "YAGO_yagoLegalActor",
+                        "YAGO_wordnet_abstraction_100002137"
                       ],
-                      "readableRepr": "Panama",
-                      "url": "http://en.wikipedia.org/wiki/Panama"
+                      "readableRepr": "Mossack Fonseca",
+                      "url": "http://en.wikipedia.org/wiki/Mossack%20Fonseca"
+                    }
+                  }
+                ]
+              },
+              "NNP"
+            ],
+            [
+              {
+                "nlpToken": {
+                  "index": 9,
+                  "word": "Fonseca",
+                  "originalText": "Fonseca",
+                  "lemma": "Fonseca",
+                  "characterOffsetBegin": 87,
+                  "characterOffsetEnd": 94,
+                  "pos": "NNP",
+                  "ner": "PERSON",
+                  "speaker": "PER0",
+                  "before": " ",
+                  "after": " "
+                },
+                "aida": [
+                  {
+                    "mention": {
+                      "allEntities": [
+                        {
+                          "kbIdentifier": "YAGO:Mossack_Fonseca",
+                          "disambiguationScore": "1"
+                        }
+                      ],
+                      "offset": 79,
+                      "name": "Mossack Fonseca",
+                      "length": 15,
+                      "bestEntity": {
+                        "kbIdentifier": "YAGO:Mossack_Fonseca",
+                        "disambiguationScore": "1"
+                      }
+                    },
+                    "bestEntityMetadata": {
+                      "knowledgebase": "YAGO",
+                      "depictionurl": "http://upload.wikimedia.org/wikipedia/commons/0/05/Logo_Mossack_Fonseca.jpg",
+                      "depictionthumbnailurl": "http://upload.wikimedia.org/wikipedia/commons/thumbLogo_Mossack_Fonseca.jpg/200px-Logo_Mossack_Fonseca.jpg",
+                      "importance": 0.5667725250326112,
+                      "entityId": "Mossack_Fonseca",
+                      "type": [
+                        "YAGO_wordnet_law_firm_108064039",
+                        "YAGO_yagoPermanentlyLocatedEntity",
+                        "YAGO_yagoLegalActorGeo",
+                        "YAGO_wordnet_organization_108008335",
+                        "YAGO_wordnet_social_group_107950920",
+                        "YAGO_wikicategory_Law_firms_established_in_1977",
+                        "YAGO_wordnet_entity_100001740",
+                        "YAGO_wordnet_enterprise_108056231",
+                        "YAGO_wordnet_group_100031264",
+                        "YAGO_wordnet_firm_108059870",
+                        "YAGO_wordnet_business_108061042",
+                        "YAGO_yagoLegalActor",
+                        "YAGO_wordnet_abstraction_100002137"
+                      ],
+                      "readableRepr": "Mossack Fonseca",
+                      "url": "http://en.wikipedia.org/wiki/Mossack%20Fonseca"
                     }
                   }
                 ]
@@ -809,87 +782,114 @@
               "NNP"
             ]
           ],
-          "score": 0.6844548753509899,
-          "text": "Panama",
-          "enhancement": {
-            "openstreetmap_nominatim": {
-              "osm_id": "150953090",
-              "boundingbox": [
-                35.246906,
-                35.286906,
-                -119.0767707,
-                -119.0367707
-              ],
-              "licence": "Data \u00a9 OpenStreetMap contributors, ODbL 1.0. http://www.openstreetmap.org/copyright",
-              "importance": 0.20786660103606,
-              "icon": "https://nominatim.openstreetmap.org/images/mapicons/poi_place_village.p.20.png",
-              "osm_type": "node",
-              "display_name": "Panama, Kern County, California, 93313, United States of America",
-              "lat": "35.266906",
-              "type": "hamlet",
-              "place_id": "347768",
-              "lon": "-119.0567707",
-              "class": "place"
-            }
-          },
-          "nlpIndexSentence": 4
+          "score": 1.0,
+          "text": "law firm Mossack Fonseca",
+          "nlpIndexSentence": 1
         }
       ],
-      "label": "where"
+      "label": "who"
     },
-    "when": {
+    "what": {
       "extracted": [
         {
           "parts": [
             [
               {
                 "nlpToken": {
-                  "index": 2,
-                  "word": "Monday",
-                  "originalText": "Monday",
-                  "lemma": "Monday",
-                  "characterOffsetBegin": 2649,
-                  "characterOffsetEnd": 2655,
-                  "pos": "NNP",
-                  "ner": "DATE",
-                  "normalizedNER": "2016-04-04",
+                  "index": 10,
+                  "word": "helped",
+                  "originalText": "helped",
+                  "lemma": "help",
+                  "characterOffsetBegin": 95,
+                  "characterOffsetEnd": 101,
+                  "pos": "VBD",
+                  "ner": "O",
                   "speaker": "PER0",
                   "before": " ",
-                  "after": "",
-                  "timex": {
-                    "tid": "t4",
-                    "type": "DATE",
-                    "value": "2016-04-04"
-                  }
-                },
-                "heideltime": [
-                  {
-                    "@tid": "t4",
-                    "@type": "DATE",
-                    "@value": "2016-04-04",
-                    "#text": "Monday",
-                    "characterOffset": [
-                      2649,
-                      2655
-                    ]
-                  }
-                ]
+                  "after": " "
+                }
               },
-              "NNP"
+              "VBD"
+            ],
+            [
+              {
+                "nlpToken": {
+                  "index": 11,
+                  "word": "set",
+                  "originalText": "set",
+                  "lemma": "set",
+                  "characterOffsetBegin": 102,
+                  "characterOffsetEnd": 105,
+                  "pos": "VB",
+                  "ner": "O",
+                  "speaker": "PER0",
+                  "before": " ",
+                  "after": " "
+                }
+              },
+              "VB"
+            ],
+            [
+              {
+                "nlpToken": {
+                  "index": 12,
+                  "word": "up",
+                  "originalText": "up",
+                  "lemma": "up",
+                  "characterOffsetBegin": 106,
+                  "characterOffsetEnd": 108,
+                  "pos": "RP",
+                  "ner": "O",
+                  "speaker": "PER0",
+                  "before": " ",
+                  "after": " "
+                }
+              },
+              "RP"
+            ],
+            [
+              {
+                "nlpToken": {
+                  "index": 13,
+                  "word": "shell",
+                  "originalText": "shell",
+                  "lemma": "shell",
+                  "characterOffsetBegin": 109,
+                  "characterOffsetEnd": 114,
+                  "pos": "NN",
+                  "ner": "O",
+                  "speaker": "PER0",
+                  "before": " ",
+                  "after": " "
+                }
+              },
+              "NN"
+            ],
+            [
+              {
+                "nlpToken": {
+                  "index": 14,
+                  "word": "companies",
+                  "originalText": "companies",
+                  "lemma": "company",
+                  "characterOffsetBegin": 115,
+                  "characterOffsetEnd": 124,
+                  "pos": "NNS",
+                  "ner": "O",
+                  "speaker": "PER0",
+                  "before": " ",
+                  "after": " "
+                }
+              },
+              "NNS"
             ]
           ],
-          "score": 0.3597350956115856,
-          "text": "Monday",
-          "enhancement": {
-            "timex": {
-              "start_date": "2016-04-04T00:00:00",
-              "end_date": "2016-04-04T23:59:59"
-            }
-          },
-          "nlpIndexSentence": 20
+          "score": 1.0,
+          "text": "helped set up shell companies",
+          "nlpIndexSentence": 1
         }
       ],
-      "label": "when"
+      "label": "what"
     }
   }
 }

@@ -637,6 +637,75 @@
       ],
       "label": "how"
     },
+    "why": {
+      "extracted": [
+        {
+          "parts": [
+            [
+              {
+                "nlpToken": {
+                  "index": 1,
+                  "word": "Max",
+                  "originalText": "Max",
+                  "lemma": "Max",
+                  "characterOffsetBegin": 0,
+                  "characterOffsetEnd": 3,
+                  "pos": "NNP",
+                  "ner": "PERSON",
+                  "speaker": "PER0",
+                  "before": "",
+                  "after": " "
+                },
+                "aida": [
+                  {
+                    "mention": {
+                      "allEntities": [],
+                      "offset": 0,
+                      "name": "Max Verstappen",
+                      "length": 14
+                    },
+                    "bestEntityMetadata": null
+                  }
+                ]
+              },
+              "NNP"
+            ],
+            [
+              {
+                "nlpToken": {
+                  "index": 2,
+                  "word": "Verstappen",
+                  "originalText": "Verstappen",
+                  "lemma": "Verstappen",
+                  "characterOffsetBegin": 4,
+                  "characterOffsetEnd": 14,
+                  "pos": "NNP",
+                  "ner": "PERSON",
+                  "speaker": "PER0",
+                  "before": " ",
+                  "after": " "
+                },
+                "aida": [
+                  {
+                    "mention": {
+                      "allEntities": [],
+                      "offset": 0,
+                      "name": "Max Verstappen",
+                      "length": 14
+                    },
+                    "bestEntityMetadata": null
+                  }
+                ]
+              },
+              "NNP"
+            ]
+          ],
+          "score": 0.5860000000000001,
+          "text": "Max Verstappen"
+        }
+      ],
+      "label": "why"
+    },
     "who": {
       "extracted": [
         {
@@ -1032,75 +1101,6 @@
         }
       ],
       "label": "what"
-    },
-    "why": {
-      "extracted": [
-        {
-          "parts": [
-            [
-              {
-                "nlpToken": {
-                  "index": 1,
-                  "word": "Max",
-                  "originalText": "Max",
-                  "lemma": "Max",
-                  "characterOffsetBegin": 0,
-                  "characterOffsetEnd": 3,
-                  "pos": "NNP",
-                  "ner": "PERSON",
-                  "speaker": "PER0",
-                  "before": "",
-                  "after": " "
-                },
-                "aida": [
-                  {
-                    "mention": {
-                      "allEntities": [],
-                      "offset": 0,
-                      "name": "Max Verstappen",
-                      "length": 14
-                    },
-                    "bestEntityMetadata": null
-                  }
-                ]
-              },
-              "NNP"
-            ],
-            [
-              {
-                "nlpToken": {
-                  "index": 2,
-                  "word": "Verstappen",
-                  "originalText": "Verstappen",
-                  "lemma": "Verstappen",
-                  "characterOffsetBegin": 4,
-                  "characterOffsetEnd": 14,
-                  "pos": "NNP",
-                  "ner": "PERSON",
-                  "speaker": "PER0",
-                  "before": " ",
-                  "after": " "
-                },
-                "aida": [
-                  {
-                    "mention": {
-                      "allEntities": [],
-                      "offset": 0,
-                      "name": "Max Verstappen",
-                      "length": 14
-                    },
-                    "bestEntityMetadata": null
-                  }
-                ]
-              },
-              "NNP"
-            ]
-          ],
-          "score": 0.5860000000000001,
-          "text": "Max Verstappen"
-        }
-      ],
-      "label": "why"
     }
   }
 }

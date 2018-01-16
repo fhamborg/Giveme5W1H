@@ -136,8 +136,13 @@ class ActionExtractor(AbsExtractor):
                         tmp = document._sentences[mention['sentNum'] - 1]['tokens'][mention['headIndex'] - 1]
                         representative = ((tmp['originalText'], tmp), tmp['pos'])
 
-                        if representative[-1][1] == 'POS':
-                            representative = representative[:-1]
+
+                        try:
+                            # these dose`t work, if some special characters are present
+                            if representative[-1][1] == 'POS':
+                                representative = representative[:-1]
+                        except IndexError:
+                            pass
 
                     if not contains_ne:
                         # If the current mention doesn't contain a named entity, check the other members of the chain

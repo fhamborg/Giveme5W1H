@@ -73,6 +73,10 @@ class Preprocessor:
                 }
             }
 
+            if self._document:
+                self._document.set_error_flag('core_nlp')
+
+
         else:
             result = {
                 'nlpToken': self._tokens[self._token_index]
@@ -111,6 +115,7 @@ class Preprocessor:
             print(annotation)
         else:
             document.set_sentences(annotation['sentences'], [], [])
+            self._document = document
 
             tree = []
             for sentence in annotation['sentences']:

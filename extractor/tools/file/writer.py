@@ -58,14 +58,18 @@ class Writer:
         :return: None
         """
 
-        # reuse the input json as template for the output json
+        # Reuse the input json as template for the output json
         output = document.get_rawData()
 
         if output is None:
             output = {}
 
-        # check if there isn`t already a fiveWoneH literal
+        # Check if there isn`t already a fiveWoneH literal
         five_w_one_h_literal = output.setdefault('fiveWoneH', {})
+
+        # Save
+        if document.get_error_flags():
+            five_w_one_h_literal.setdefault('process_errors', document.get_error_flags())
 
         # Extract answers
         answers = document.get_answers()

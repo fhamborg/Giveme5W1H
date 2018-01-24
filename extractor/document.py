@@ -47,6 +47,8 @@ class Document(object):
         self._processed = None
         self._enhancement = {}
 
+        self._error_flag = {}
+
     def is_preprocessed(self, preprocessed=None):
         if preprocessed is True or preprocessed is False:
             self._preprocessed = preprocessed
@@ -216,3 +218,20 @@ class Document(object):
 
     def reset_enhancements(self):
         self._enhancement = {}
+
+    def set_error_flag(self, identifier):
+        """
+        helper to flag any processable step with error flag
+        :param identifier:
+        :return:
+        """
+        self._error_flag.setdefault(identifier, True)
+
+    def get_error_flags(self):
+        """
+        helper to flag any processable step with error flag
+        :param identifier:
+        :return:
+        """
+        return self._error_flag
+

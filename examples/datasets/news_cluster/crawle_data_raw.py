@@ -39,16 +39,12 @@ def write_json(path, filename, object):
         data_file.write(json.dumps(object, sort_keys=False, indent=2))
         data_file.close()
 
-
 def file_exist_has_content(path, filename):
     _path = path + '/' + filename
     if os.path.exists(_path):
         if os.stat(_path).st_size != 0:
             return True
     return False
-
-
-
 
 def check_image(article):
     file_exist_has_content
@@ -772,10 +768,8 @@ if __name__ == '__main__':
         print(url)
 
         if not file_exist_has_content('data_raw', dId + '.json'):
-            # this is an object
             try:
                 article = NewsPlease.from_url(url)
-
 
                 # this is an dict
                 article_dict = article.get_dict()
@@ -806,14 +800,6 @@ if __name__ == '__main__':
             with open(path, encoding='utf-8', mode='w') as data_file:
                 data_file.write(json.dumps(data, sort_keys=False, indent=2))
 
-
-
-    # crawle images, if any
-
-
-
-
-
     # preprocess into data
     for f in glob.glob('data/*'):
         os.remove(f)
@@ -838,3 +824,6 @@ if __name__ == '__main__':
                 outfile.close()
             except json.decoder.JSONDecodeError:
                 print('skipped:' + filepath)
+
+
+

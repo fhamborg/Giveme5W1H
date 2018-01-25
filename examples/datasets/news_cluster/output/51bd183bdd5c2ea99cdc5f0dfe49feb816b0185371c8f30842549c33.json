@@ -19,15 +19,16 @@
   "url": "https://www.theguardian.com/world/2016/nov/10/taliban-attack-german-consulate-mazar-i-sharif-afghanistan-nato-airstrikes-kunduz",
   "newsCluster": {
     "CategoryId": 1,
-    "Category": "global_politics",
-    "TopicId": 1,
-    "Topic": "unspecific",
-    "EventId": 10,
-    "Event": "Benghazi_US_consulate_attack",
-    "Url": "https://www.theguardian.com/world/2016/nov/10/taliban-attack-german-consulate-mazar-i-sharif-afghanistan-nato-airstrikes-kunduz"
+    "Category": "world",
+    "TopicId": 2,
+    "Topic": "legancy",
+    "EventId": 58,
+    "Event": "Benghazi_US_consulate_attack"
   },
   "dId": "51bd183bdd5c2ea99cdc5f0dfe49feb816b0185371c8f30842549c33",
-  "fiveWoneH": {
+  "fiveWoneH": {},
+  "fiveWoneH_Metadata": {
+    "process_errors": {},
     "how": {
       "extracted": [
         {
@@ -35,15 +36,212 @@
             [
               {
                 "nlpToken": {
-                  "index": 32,
+                  "index": 1,
+                  "word": "At",
+                  "originalText": "At",
+                  "lemma": "at",
+                  "characterOffsetBegin": 0,
+                  "characterOffsetEnd": 2,
+                  "pos": "IN",
+                  "ner": "O",
+                  "speaker": "PER0",
+                  "before": "",
+                  "after": " "
+                }
+              },
+              "IN"
+            ],
+            [
+              {
+                "nlpToken": {
+                  "index": 2,
+                  "word": "least",
+                  "originalText": "least",
+                  "lemma": "least",
+                  "characterOffsetBegin": 3,
+                  "characterOffsetEnd": 8,
+                  "pos": "JJS",
+                  "ner": "O",
+                  "speaker": "PER0",
+                  "before": " ",
+                  "after": " "
+                }
+              },
+              "JJS"
+            ],
+            [
+              {
+                "nlpToken": {
+                  "index": 3,
+                  "word": "four",
+                  "originalText": "four",
+                  "lemma": "four",
+                  "characterOffsetBegin": 9,
+                  "characterOffsetEnd": 13,
+                  "pos": "CD",
+                  "ner": "NUMBER",
+                  "normalizedNER": ">=4.0",
+                  "speaker": "PER0",
+                  "before": " ",
+                  "after": " "
+                }
+              },
+              "CD"
+            ],
+            [
+              {
+                "nlpToken": {
+                  "index": 4,
+                  "word": "killed",
+                  "originalText": "killed",
+                  "lemma": "kill",
+                  "characterOffsetBegin": 14,
+                  "characterOffsetEnd": 20,
+                  "pos": "VBN",
+                  "ner": "O",
+                  "speaker": "PER0",
+                  "before": " ",
+                  "after": " "
+                }
+              },
+              "VBN"
+            ],
+            [
+              {
+                "nlpToken": {
+                  "index": 5,
+                  "word": "in",
+                  "originalText": "in",
+                  "lemma": "in",
+                  "characterOffsetBegin": 21,
+                  "characterOffsetEnd": 23,
+                  "pos": "IN",
+                  "ner": "O",
+                  "speaker": "PER0",
+                  "before": " ",
+                  "after": " "
+                }
+              },
+              "IN"
+            ],
+            [
+              {
+                "nlpToken": {
+                  "index": 6,
+                  "word": "Taliban",
+                  "originalText": "Taliban",
+                  "lemma": "Taliban",
+                  "characterOffsetBegin": 24,
+                  "characterOffsetEnd": 31,
+                  "pos": "NNP",
+                  "ner": "ORGANIZATION",
+                  "speaker": "PER0",
+                  "before": " ",
+                  "after": " "
+                },
+                "aida": [
+                  {
+                    "mention": {
+                      "allEntities": [
+                        {
+                          "kbIdentifier": "YAGO:Taliban",
+                          "disambiguationScore": "0.20301"
+                        }
+                      ],
+                      "offset": 24,
+                      "name": "Taliban",
+                      "length": 7,
+                      "bestEntity": {
+                        "kbIdentifier": "YAGO:Taliban",
+                        "disambiguationScore": "0.20301"
+                      }
+                    },
+                    "bestEntityMetadata": {
+                      "knowledgebase": "YAGO",
+                      "depictionurl": "http://upload.wikimedia.org/wikipedia/commons/2/24/Flag_of_Taliban.svg",
+                      "depictionthumbnailurl": "http://upload.wikimedia.org/wikipedia/commons/thumbFlag_of_Taliban.svg/200px-Flag_of_Taliban.svg",
+                      "importance": 0.0005253457017055909,
+                      "entityId": "Taliban",
+                      "type": [
+                        "YAGO_yagoPermanentlyLocatedEntity",
+                        "YAGO_wordnet_event_100029378",
+                        "YAGO_yagoLegalActorGeo",
+                        "YAGO_wordnet_organization_108008335",
+                        "YAGO_wordnet_speech_act_107160883",
+                        "YAGO_wikicategory_Rebel_groups_in_Afghanistan",
+                        "YAGO_wordnet_disagreement_107180787",
+                        "YAGO_wordnet_controversy_107183151",
+                        "YAGO_wordnet_dispute_107181935",
+                        "YAGO_yagoLegalActor",
+                        "YAGO_wikicategory_Jihadist_organizations",
+                        "YAGO_wordnet_abstraction_100002137",
+                        "YAGO_wordnet_act_100030358",
+                        "YAGO_wordnet_social_group_107950920",
+                        "YAGO_wordnet_entity_100001740",
+                        "YAGO_wikicategory_Islam\\u002drelated_controversies",
+                        "YAGO_wordnet_party_108256968",
+                        "YAGO_wordnet_group_100031264",
+                        "YAGO_wordnet_psychological_feature_100023100",
+                        "YAGO_wikicategory_Islamist_groups",
+                        "YAGO_wikicategory_Rebel_groups_in_Pakistan",
+                        "YAGO_wikicategory_Political_parties_in_Afghanistan"
+                      ],
+                      "readableRepr": "Taliban",
+                      "url": "http://en.wikipedia.org/wiki/Taliban"
+                    }
+                  }
+                ]
+              },
+              "NNP"
+            ],
+            [
+              {
+                "nlpToken": {
+                  "index": 7,
+                  "word": "raid",
+                  "originalText": "raid",
+                  "lemma": "raid",
+                  "characterOffsetBegin": 32,
+                  "characterOffsetEnd": 36,
+                  "pos": "NN",
+                  "ner": "O",
+                  "speaker": "PER0",
+                  "before": " ",
+                  "after": " "
+                }
+              },
+              "NN"
+            ],
+            [
+              {
+                "nlpToken": {
+                  "index": 8,
+                  "word": "on",
+                  "originalText": "on",
+                  "lemma": "on",
+                  "characterOffsetBegin": 37,
+                  "characterOffsetEnd": 39,
+                  "pos": "IN",
+                  "ner": "O",
+                  "speaker": "PER0",
+                  "before": " ",
+                  "after": " "
+                }
+              },
+              "IN"
+            ],
+            [
+              {
+                "nlpToken": {
+                  "index": 9,
                   "word": "German",
                   "originalText": "German",
                   "lemma": "german",
-                  "characterOffsetBegin": 1182,
-                  "characterOffsetEnd": 1188,
+                  "characterOffsetBegin": 40,
+                  "characterOffsetEnd": 46,
                   "pos": "JJ",
                   "ner": "MISC",
-                  "speaker": "69",
+                  "speaker": "PER0",
                   "before": " ",
                   "after": " "
                 },
@@ -56,7 +254,7 @@
                           "disambiguationScore": "0.17666"
                         }
                       ],
-                      "offset": 1182,
+                      "offset": 40,
                       "name": "German",
                       "length": 6,
                       "bestEntity": {
@@ -105,46 +303,16 @@
                 ]
               },
               "JJ"
-            ]
-          ],
-          "score": 1.15527950310559,
-          "text": "German",
-          "nlpIndexSentence": 6
-        }
-      ],
-      "label": "how"
-    },
-    "who": {
-      "extracted": [
-        {
-          "parts": [
-            [
-              {
-                "nlpToken": {
-                  "index": 1,
-                  "word": "The",
-                  "originalText": "The",
-                  "lemma": "the",
-                  "characterOffsetBegin": 1409,
-                  "characterOffsetEnd": 1412,
-                  "pos": "DT",
-                  "ner": "O",
-                  "speaker": "PER0",
-                  "before": "\n",
-                  "after": " "
-                }
-              },
-              "DT"
             ],
             [
               {
                 "nlpToken": {
-                  "index": 2,
-                  "word": "attack",
-                  "originalText": "attack",
-                  "lemma": "attack",
-                  "characterOffsetBegin": 1413,
-                  "characterOffsetEnd": 1419,
+                  "index": 10,
+                  "word": "consulate",
+                  "originalText": "consulate",
+                  "lemma": "consulate",
+                  "characterOffsetBegin": 47,
+                  "characterOffsetEnd": 56,
                   "pos": "NN",
                   "ner": "O",
                   "speaker": "PER0",
@@ -156,8 +324,55 @@
             ]
           ],
           "score": 1.0,
-          "text": "The attack",
-          "nlpIndexSentence": 8
+          "text": "At least four killed in Taliban raid on German consulate"
+        }
+      ],
+      "label": "how"
+    },
+    "who": {
+      "extracted": [
+        {
+          "parts": [
+            [
+              {
+                "nlpToken": {
+                  "index": 5,
+                  "word": "the",
+                  "originalText": "the",
+                  "lemma": "the",
+                  "characterOffsetBegin": 585,
+                  "characterOffsetEnd": 588,
+                  "pos": "DT",
+                  "ner": "O",
+                  "speaker": "PER0",
+                  "before": " ",
+                  "after": " "
+                }
+              },
+              "DT"
+            ],
+            [
+              {
+                "nlpToken": {
+                  "index": 6,
+                  "word": "explosion",
+                  "originalText": "explosion",
+                  "lemma": "explosion",
+                  "characterOffsetBegin": 589,
+                  "characterOffsetEnd": 598,
+                  "pos": "NN",
+                  "ner": "O",
+                  "speaker": "PER0",
+                  "before": " ",
+                  "after": " "
+                }
+              },
+              "NN"
+            ]
+          ],
+          "score": 1.0,
+          "text": "the explosion",
+          "nlpIndexSentence": 3
         }
       ],
       "label": "who"
@@ -169,12 +384,12 @@
             [
               {
                 "nlpToken": {
-                  "index": 3,
-                  "word": "highlighted",
-                  "originalText": "highlighted",
-                  "lemma": "highlight",
-                  "characterOffsetBegin": 1420,
-                  "characterOffsetEnd": 1431,
+                  "index": 10,
+                  "word": "had",
+                  "originalText": "had",
+                  "lemma": "have",
+                  "characterOffsetBegin": 616,
+                  "characterOffsetEnd": 619,
                   "pos": "VBD",
                   "ner": "O",
                   "speaker": "PER0",
@@ -187,132 +402,12 @@
             [
               {
                 "nlpToken": {
-                  "index": 4,
-                  "word": "the",
-                  "originalText": "the",
-                  "lemma": "the",
-                  "characterOffsetBegin": 1432,
-                  "characterOffsetEnd": 1435,
-                  "pos": "DT",
-                  "ner": "O",
-                  "speaker": "PER0",
-                  "before": " ",
-                  "after": " "
-                }
-              },
-              "DT"
-            ],
-            [
-              {
-                "nlpToken": {
-                  "index": 5,
-                  "word": "security",
-                  "originalText": "security",
-                  "lemma": "security",
-                  "characterOffsetBegin": 1436,
-                  "characterOffsetEnd": 1444,
-                  "pos": "NN",
-                  "ner": "O",
-                  "speaker": "PER0",
-                  "before": " ",
-                  "after": " "
-                }
-              },
-              "NN"
-            ],
-            [
-              {
-                "nlpToken": {
-                  "index": 6,
-                  "word": "problems",
-                  "originalText": "problems",
-                  "lemma": "problem",
-                  "characterOffsetBegin": 1445,
-                  "characterOffsetEnd": 1453,
-                  "pos": "NNS",
-                  "ner": "O",
-                  "speaker": "PER0",
-                  "before": " ",
-                  "after": " "
-                }
-              },
-              "NNS"
-            ]
-          ],
-          "score": 1.0,
-          "text": "highlighted the security problems",
-          "nlpIndexSentence": 8
-        }
-      ],
-      "label": "what"
-    },
-    "why": {
-      "extracted": [
-        {
-          "parts": [
-            [
-              {
-                "nlpToken": {
-                  "index": 1,
-                  "word": "Militants",
-                  "originalText": "Militants",
-                  "lemma": "Militants",
-                  "characterOffsetBegin": 73,
-                  "characterOffsetEnd": 82,
-                  "pos": "NNPS",
-                  "ner": "O",
-                  "speaker": "PER0",
-                  "before": " ",
-                  "after": " "
-                }
-              },
-              "NNPS"
-            ],
-            [
-              {
-                "nlpToken": {
-                  "index": 2,
-                  "word": "ram",
-                  "originalText": "ram",
-                  "lemma": "ram",
-                  "characterOffsetBegin": 83,
-                  "characterOffsetEnd": 86,
-                  "pos": "NN",
-                  "ner": "O",
-                  "speaker": "PER0",
-                  "before": " ",
-                  "after": " "
-                }
-              },
-              "NN"
-            ],
-            [
-              {
-                "nlpToken": {
-                  "index": 3,
-                  "word": "car",
-                  "originalText": "car",
-                  "lemma": "car",
-                  "characterOffsetBegin": 87,
-                  "characterOffsetEnd": 90,
-                  "pos": "NN",
-                  "ner": "O",
-                  "speaker": "PER0",
-                  "before": " ",
-                  "after": " "
-                }
-              },
-              "NN"
-            ],
-            [
-              {
-                "nlpToken": {
-                  "index": 4,
-                  "word": "packed",
-                  "originalText": "packed",
-                  "lemma": "pack",
-                  "characterOffsetBegin": 91,
-                  "characterOffsetEnd": 97,
+                  "index": 11,
+                  "word": "caused",
+                  "originalText": "caused",
+                  "lemma": "cause",
+                  "characterOffsetBegin": 620,
+                  "characterOffsetEnd": 626,
                   "pos": "VBN",
                   "ner": "O",
                   "speaker": "PER0",
@@ -325,229 +420,30 @@
             [
               {
                 "nlpToken": {
-                  "index": 5,
-                  "word": "with",
-                  "originalText": "with",
-                  "lemma": "with",
-                  "characterOffsetBegin": 98,
-                  "characterOffsetEnd": 102,
-                  "pos": "IN",
-                  "ner": "O",
-                  "speaker": "PER0",
-                  "before": " ",
-                  "after": " "
-                }
-              },
-              "IN"
-            ],
-            [
-              {
-                "nlpToken": {
-                  "index": 6,
-                  "word": "explosives",
-                  "originalText": "explosives",
-                  "lemma": "explosive",
-                  "characterOffsetBegin": 103,
-                  "characterOffsetEnd": 113,
-                  "pos": "NNS",
-                  "ner": "O",
-                  "speaker": "PER0",
-                  "before": " ",
-                  "after": " "
-                }
-              },
-              "NNS"
-            ],
-            [
-              {
-                "nlpToken": {
-                  "index": 7,
-                  "word": "into",
-                  "originalText": "into",
-                  "lemma": "into",
-                  "characterOffsetBegin": 114,
-                  "characterOffsetEnd": 118,
-                  "pos": "IN",
-                  "ner": "O",
-                  "speaker": "PER0",
-                  "before": " ",
-                  "after": " "
-                }
-              },
-              "IN"
-            ],
-            [
-              {
-                "nlpToken": {
-                  "index": 8,
-                  "word": "wall",
-                  "originalText": "wall",
-                  "lemma": "wall",
-                  "characterOffsetBegin": 119,
-                  "characterOffsetEnd": 123,
-                  "pos": "NN",
-                  "ner": "O",
-                  "speaker": "PER0",
-                  "before": " ",
-                  "after": " "
-                }
-              },
-              "NN"
-            ],
-            [
-              {
-                "nlpToken": {
-                  "index": 9,
-                  "word": "of",
-                  "originalText": "of",
-                  "lemma": "of",
-                  "characterOffsetBegin": 124,
-                  "characterOffsetEnd": 126,
-                  "pos": "IN",
-                  "ner": "O",
-                  "speaker": "PER0",
-                  "before": " ",
-                  "after": " "
-                }
-              },
-              "IN"
-            ],
-            [
-              {
-                "nlpToken": {
-                  "index": 10,
-                  "word": "consulate",
-                  "originalText": "consulate",
-                  "lemma": "consulate",
-                  "characterOffsetBegin": 127,
-                  "characterOffsetEnd": 136,
-                  "pos": "NN",
-                  "ner": "O",
-                  "speaker": "PER0",
-                  "before": " ",
-                  "after": " "
-                }
-              },
-              "NN"
-            ],
-            [
-              {
-                "nlpToken": {
-                  "index": 11,
-                  "word": "in",
-                  "originalText": "in",
-                  "lemma": "in",
-                  "characterOffsetBegin": 137,
-                  "characterOffsetEnd": 139,
-                  "pos": "IN",
-                  "ner": "O",
-                  "speaker": "PER0",
-                  "before": " ",
-                  "after": " "
-                }
-              },
-              "IN"
-            ],
-            [
-              {
-                "nlpToken": {
                   "index": 12,
-                  "word": "Mazar-i-Sharif",
-                  "originalText": "Mazar-i-Sharif",
-                  "lemma": "Mazar-i-Sharif",
-                  "characterOffsetBegin": 140,
-                  "characterOffsetEnd": 154,
-                  "pos": "NNP",
-                  "ner": "LOCATION",
+                  "word": "massive",
+                  "originalText": "massive",
+                  "lemma": "massive",
+                  "characterOffsetBegin": 627,
+                  "characterOffsetEnd": 634,
+                  "pos": "JJ",
+                  "ner": "O",
                   "speaker": "PER0",
                   "before": " ",
                   "after": " "
-                },
-                "aida": [
-                  {
-                    "mention": {
-                      "allEntities": [
-                        {
-                          "kbIdentifier": "YAGO:Mazar\\u002di\\u002dSharif",
-                          "disambiguationScore": "0.97004"
-                        }
-                      ],
-                      "offset": 140,
-                      "name": "Mazar-i-Sharif",
-                      "length": 14,
-                      "bestEntity": {
-                        "kbIdentifier": "YAGO:Mazar\\u002di\\u002dSharif",
-                        "disambiguationScore": "0.97004"
-                      }
-                    },
-                    "bestEntityMetadata": {
-                      "knowledgebase": "YAGO",
-                      "depictionurl": "http://upload.wikimedia.org/wikipedia/commons/d/dd/Mi-17_helicopter_flies_over_the_northern_Afghan_city.jpg",
-                      "depictionthumbnailurl": "http://upload.wikimedia.org/wikipedia/commons/thumbMi-17_helicopter_flies_over_the_northern_Afghan_city.jpg/200px-Mi-17_helicopter_flies_over_the_northern_Afghan_city.jpg",
-                      "importance": 0.01576649915585358,
-                      "entityId": "Mazar\\u002di\\u002dSharif",
-                      "type": [
-                        "YAGO_wordnet_district_108552138",
-                        "YAGO_yagoPermanentlyLocatedEntity",
-                        "YAGO_wikicategory_Provincial_capitals_in_Afghanistan",
-                        "YAGO_yagoLegalActorGeo",
-                        "YAGO_wordnet_capital_108518505",
-                        "YAGO_wordnet_urban_area_108675967",
-                        "YAGO_wikicategory_Populated_places_in_Balkh_Province",
-                        "YAGO_wordnet_municipality_108626283",
-                        "YAGO_wordnet_center_108523483",
-                        "YAGO_wordnet_seat_108647945",
-                        "YAGO_wordnet_region_108630985",
-                        "YAGO_yagoGeoEntity",
-                        "YAGO_wordnet_physical_entity_100001930",
-                        "YAGO_wordnet_site_108651247",
-                        "YAGO_wikicategory_Cities_in_Afghanistan",
-                        "YAGO_wordnet_entity_100001740",
-                        "YAGO_wordnet_object_100002684",
-                        "YAGO_wordnet_area_108497294",
-                        "YAGO_wordnet_city_108524735",
-                        "YAGO_wordnet_provincial_capital_108695198",
-                        "YAGO_wordnet_tract_108673395",
-                        "YAGO_wordnet_geographical_area_108574314",
-                        "YAGO_wordnet_location_100027167",
-                        "YAGO_wordnet_administrative_district_108491826",
-                        "YAGO_wikicategory_Cities_in_Central_Asia"
-                      ],
-                      "readableRepr": "Mazar-i-Sharif",
-                      "url": "http://en.wikipedia.org/wiki/Mazar-i-Sharif"
-                    }
-                  }
-                ]
+                }
               },
-              "NNP"
+              "JJ"
             ],
             [
               {
                 "nlpToken": {
                   "index": 13,
-                  "word": "in",
-                  "originalText": "in",
-                  "lemma": "in",
-                  "characterOffsetBegin": 155,
-                  "characterOffsetEnd": 157,
-                  "pos": "IN",
-                  "ner": "O",
-                  "speaker": "PER0",
-                  "before": " ",
-                  "after": " "
-                }
-              },
-              "IN"
-            ],
-            [
-              {
-                "nlpToken": {
-                  "index": 14,
-                  "word": "retaliation",
-                  "originalText": "retaliation",
-                  "lemma": "retaliation",
-                  "characterOffsetBegin": 158,
-                  "characterOffsetEnd": 169,
+                  "word": "damage",
+                  "originalText": "damage",
+                  "lemma": "damage",
+                  "characterOffsetBegin": 635,
+                  "characterOffsetEnd": 641,
                   "pos": "NN",
                   "ner": "O",
                   "speaker": "PER0",
@@ -556,240 +452,14 @@
                 }
               },
               "NN"
-            ],
-            [
-              {
-                "nlpToken": {
-                  "index": 15,
-                  "word": "for",
-                  "originalText": "for",
-                  "lemma": "for",
-                  "characterOffsetBegin": 170,
-                  "characterOffsetEnd": 173,
-                  "pos": "IN",
-                  "ner": "O",
-                  "speaker": "PER0",
-                  "before": " ",
-                  "after": " "
-                }
-              },
-              "IN"
-            ],
-            [
-              {
-                "nlpToken": {
-                  "index": 16,
-                  "word": "Nato",
-                  "originalText": "Nato",
-                  "lemma": "Nato",
-                  "characterOffsetBegin": 174,
-                  "characterOffsetEnd": 178,
-                  "pos": "NNP",
-                  "ner": "ORGANIZATION",
-                  "speaker": "PER0",
-                  "before": " ",
-                  "after": " "
-                },
-                "aida": [
-                  {
-                    "mention": {
-                      "allEntities": [
-                        {
-                          "kbIdentifier": "YAGO:NATO",
-                          "disambiguationScore": "0.94388"
-                        }
-                      ],
-                      "offset": 174,
-                      "name": "Nato",
-                      "length": 4,
-                      "bestEntity": {
-                        "kbIdentifier": "YAGO:NATO",
-                        "disambiguationScore": "0.94388"
-                      }
-                    },
-                    "bestEntityMetadata": {
-                      "knowledgebase": "YAGO",
-                      "depictionurl": "http://upload.wikimedia.org/wikipedia/commons/3/37/Flag_of_NATO.svg",
-                      "depictionthumbnailurl": "http://upload.wikimedia.org/wikipedia/commons/thumbFlag_of_NATO.svg/200px-Flag_of_NATO.svg",
-                      "importance": 0.00013704670479276282,
-                      "entityId": "NATO",
-                      "type": [
-                        "YAGO_wordnet_communication_100033020",
-                        "YAGO_yagoPermanentlyLocatedEntity",
-                        "YAGO_yagoLegalActorGeo",
-                        "YAGO_wordnet_organization_108008335",
-                        "YAGO_wordnet_state_100024720",
-                        "YAGO_wordnet_union_114418395",
-                        "YAGO_wordnet_relation_100031921",
-                        "YAGO_wikicategory_Military_alliances_involving_Portugal",
-                        "YAGO_wikicategory_Cold_War_treaties",
-                        "YAGO_wikicategory_Military_alliances_involving_Italy",
-                        "YAGO_wordnet_administration_108164585",
-                        "YAGO_wordnet_coalition_114418662",
-                        "YAGO_wikicategory_20th\\u002dcentury_military_alliances",
-                        "YAGO_wordnet_attribute_100024264",
-                        "YAGO_wordnet_abstraction_100002137",
-                        "YAGO_wordnet_written_agreement_106771653",
-                        "YAGO_wikicategory_Military_alliances_involving_Poland",
-                        "YAGO_wordnet_treaty_106773434",
-                        "YAGO_wikicategory_Military_alliances_involving_Latvia",
-                        "YAGO_wordnet_document_106470073",
-                        "YAGO_wikicategory_Organizations_established_in_1949",
-                        "YAGO_wordnet_alliance_114418822",
-                        "YAGO_wikicategory_Military_alliances_involving_France",
-                        "YAGO_wikicategory_Military_alliances_involving_Hungary",
-                        "YAGO_wikicategory_Multiregional_international_organizations",
-                        "YAGO_wordnet_group_100031264",
-                        "YAGO_wordnet_world_organization_108294696",
-                        "YAGO_wikicategory_Military_alliances_involving_Lithuania",
-                        "YAGO_wikicategory_Military_alliances_involving_Bulgaria",
-                        "YAGO_wordnet_alliance_108293982",
-                        "YAGO_wordnet_body_107965085",
-                        "YAGO_wikicategory_Military_alliances_involving_the_United_Kingdom",
-                        "YAGO_wikicategory_Military_alliances_involving_Greece",
-                        "YAGO_wikicategory_Foreign_relations_of_the_Soviet_Union",
-                        "YAGO_wordnet_legal_document_106479665",
-                        "YAGO_wikicategory_Organisations_based_in_Brussels",
-                        "YAGO_wikicategory_Military_alliances_involving_Belgium",
-                        "YAGO_wikicategory_Military_alliances_involving_Spain",
-                        "YAGO_wordnet_written_communication_106349220",
-                        "YAGO_yagoLegalActor",
-                        "YAGO_wordnet_message_106598915",
-                        "YAGO_wikicategory_International_military_organizations",
-                        "YAGO_yagoGeoEntity",
-                        "YAGO_wikicategory_Military_alliances_involving_Turkey",
-                        "YAGO_wikicategory_Cold_War_organizations",
-                        "YAGO_wikicategory_Military_alliances_involving_Romania",
-                        "YAGO_wordnet_social_group_107950920",
-                        "YAGO_wikicategory_Military_alliances_involving_the_Netherlands",
-                        "YAGO_wordnet_entity_100001740",
-                        "YAGO_wikicategory_21st\\u002dcentury_military_alliances",
-                        "YAGO_wikicategory_Military_alliances_involving_Luxembourg",
-                        "YAGO_wordnet_statement_106722453",
-                        "YAGO_wordnet_agreement_106770275",
-                        "YAGO_wikicategory_Military_alliances_involving_the_United_States",
-                        "YAGO_wikicategory_Military_alliances_involving_Estonia",
-                        "YAGO_wordnet_writing_106362953",
-                        "YAGO_wikicategory_Military_alliances_involving_Canada"
-                      ],
-                      "readableRepr": "NATO",
-                      "url": "http://en.wikipedia.org/wiki/NATO"
-                    }
-                  }
-                ]
-              },
-              "NNP"
-            ],
-            [
-              {
-                "nlpToken": {
-                  "index": 17,
-                  "word": "airstrikes",
-                  "originalText": "airstrikes",
-                  "lemma": "airstrike",
-                  "characterOffsetBegin": 179,
-                  "characterOffsetEnd": 189,
-                  "pos": "NNS",
-                  "ner": "O",
-                  "speaker": "PER0",
-                  "before": " ",
-                  "after": " "
-                }
-              },
-              "NNS"
-            ],
-            [
-              {
-                "nlpToken": {
-                  "index": 18,
-                  "word": "on",
-                  "originalText": "on",
-                  "lemma": "on",
-                  "characterOffsetBegin": 190,
-                  "characterOffsetEnd": 192,
-                  "pos": "IN",
-                  "ner": "O",
-                  "speaker": "PER0",
-                  "before": " ",
-                  "after": " "
-                }
-              },
-              "IN"
-            ],
-            [
-              {
-                "nlpToken": {
-                  "index": 19,
-                  "word": "Kunduz",
-                  "originalText": "Kunduz",
-                  "lemma": "Kunduz",
-                  "characterOffsetBegin": 193,
-                  "characterOffsetEnd": 199,
-                  "pos": "NNP",
-                  "ner": "LOCATION",
-                  "speaker": "PER0",
-                  "before": " ",
-                  "after": ""
-                },
-                "aida": [
-                  {
-                    "mention": {
-                      "allEntities": [
-                        {
-                          "kbIdentifier": "YAGO:Kunduz",
-                          "disambiguationScore": "0.43095"
-                        }
-                      ],
-                      "offset": 193,
-                      "name": "Kunduz",
-                      "length": 6,
-                      "bestEntity": {
-                        "kbIdentifier": "YAGO:Kunduz",
-                        "disambiguationScore": "0.43095"
-                      }
-                    },
-                    "bestEntityMetadata": {
-                      "knowledgebase": "YAGO",
-                      "depictionurl": "http://upload.wikimedia.org/wikipedia/commons/5/57/Afghan_Business_School_Kunduz.jpg",
-                      "depictionthumbnailurl": "http://upload.wikimedia.org/wikipedia/commons/thumbAfghan_Business_School_Kunduz.jpg/200px-Afghan_Business_School_Kunduz.jpg",
-                      "importance": 0.013643110882204736,
-                      "entityId": "Kunduz",
-                      "type": [
-                        "YAGO_wordnet_district_108552138",
-                        "YAGO_yagoPermanentlyLocatedEntity",
-                        "YAGO_yagoLegalActorGeo",
-                        "YAGO_wordnet_urban_area_108675967",
-                        "YAGO_wikicategory_Populated_places_in_Kunduz_Province",
-                        "YAGO_wordnet_municipality_108626283",
-                        "YAGO_wordnet_region_108630985",
-                        "YAGO_yagoGeoEntity",
-                        "YAGO_wordnet_physical_entity_100001930",
-                        "YAGO_wordnet_site_108651247",
-                        "YAGO_wikicategory_Cities_in_Afghanistan",
-                        "YAGO_wordnet_entity_100001740",
-                        "YAGO_wordnet_object_100002684",
-                        "YAGO_wordnet_city_108524735",
-                        "YAGO_wordnet_tract_108673395",
-                        "YAGO_wordnet_geographical_area_108574314",
-                        "YAGO_wordnet_location_100027167",
-                        "YAGO_wordnet_administrative_district_108491826",
-                        "YAGO_wikicategory_Cities_in_Central_Asia"
-                      ],
-                      "readableRepr": "Kunduz",
-                      "url": "http://en.wikipedia.org/wiki/Kunduz"
-                    }
-                  }
-                ]
-              },
-              "NNP"
             ]
           ],
-          "score": 0.4198757763975155,
-          "text": "Militants ram car packed with explosives into wall of consulate in Mazar-i-Sharif in retaliation for Nato airstrikes on Kunduz",
-          "nlpIndexSentence": 1
+          "score": 1.0,
+          "text": "had caused massive damage",
+          "nlpIndexSentence": 3
         }
       ],
-      "label": "why"
+      "label": "what"
     },
     "where": {
       "extracted": [
@@ -869,13 +539,10 @@
               "NNP"
             ]
           ],
-          "score": 1.0000000000000002,
+          "score": 0.6832449835346397,
           "text": "Mazar-i-Sharif",
           "enhancement": {
             "openstreetmap_nominatim": {
-              "place_id": "179561037",
-              "licence": "Data \u00a9 OpenStreetMap contributors, ODbL 1.0. http://www.openstreetmap.org/copyright",
-              "osm_type": "relation",
               "osm_id": "6572774",
               "boundingbox": [
                 36.6828226,
@@ -883,13 +550,16 @@
                 67.082892,
                 67.153133
               ],
-              "lat": "36.708556",
-              "lon": "67.1193562447236",
-              "display_name": "\u0645\u0632\u0627\u0631 \u0634\u0631\u06cc\u0641, \u0628\u0644\u062e, \u0627\u0641\u063a\u0627\u0646\u0633\u062a\u0627\u0646",
-              "class": "boundary",
-              "type": "administrative",
+              "licence": "Data \u00a9 OpenStreetMap contributors, ODbL 1.0. http://www.openstreetmap.org/copyright",
               "importance": 0.11265216828756,
-              "icon": "https://nominatim.openstreetmap.org/images/mapicons/poi_boundary_administrative.p.20.png"
+              "icon": "https://nominatim.openstreetmap.org/images/mapicons/poi_boundary_administrative.p.20.png",
+              "osm_type": "relation",
+              "display_name": "\u0645\u0632\u0627\u0631 \u0634\u0631\u06cc\u0641, \u0628\u0644\u062e, \u0627\u0641\u063a\u0627\u0646\u0633\u062a\u0627\u0646",
+              "lat": "36.708556",
+              "type": "administrative",
+              "place_id": "179561037",
+              "lon": "67.1193562447236",
+              "class": "boundary"
             }
           },
           "nlpIndexSentence": 1
@@ -926,20 +596,84 @@
               "NN"
             ]
           ],
-          "score": 0.6710145570555232,
+          "score": 0.45416849987861385,
           "text": "midnight",
           "enhancement": {
-            "timex": [
-              {
-                "start_date": "2016-11-11T00:00:00",
-                "end_date": "2016-11-11T00:00:59"
-              }
-            ]
+            "timex": {
+              "start_date": "2016-11-11T00:00:00",
+              "end_date": "2016-11-11T00:00:59"
+            }
           },
           "nlpIndexSentence": 14
         }
       ],
       "label": "when"
+    },
+    "why": {
+      "extracted": [
+        {
+          "parts": [
+            [
+              {
+                "nlpToken": {
+                  "index": 1,
+                  "word": "Militants",
+                  "originalText": "Militants",
+                  "lemma": "Militants",
+                  "characterOffsetBegin": 73,
+                  "characterOffsetEnd": 82,
+                  "pos": "NNPS",
+                  "ner": "O",
+                  "speaker": "PER0",
+                  "before": " ",
+                  "after": " "
+                }
+              },
+              "NNPS"
+            ],
+            [
+              {
+                "nlpToken": {
+                  "index": 2,
+                  "word": "ram",
+                  "originalText": "ram",
+                  "lemma": "ram",
+                  "characterOffsetBegin": 83,
+                  "characterOffsetEnd": 86,
+                  "pos": "NN",
+                  "ner": "O",
+                  "speaker": "PER0",
+                  "before": " ",
+                  "after": " "
+                }
+              },
+              "NN"
+            ],
+            [
+              {
+                "nlpToken": {
+                  "index": 3,
+                  "word": "car",
+                  "originalText": "car",
+                  "lemma": "car",
+                  "characterOffsetBegin": 87,
+                  "characterOffsetEnd": 90,
+                  "pos": "NN",
+                  "ner": "O",
+                  "speaker": "PER0",
+                  "before": " ",
+                  "after": " "
+                }
+              },
+              "NN"
+            ]
+          ],
+          "score": 0.5616521739130436,
+          "text": "Militants ram car",
+          "nlpIndexSentence": 1
+        }
+      ],
+      "label": "why"
     }
   }
 }

@@ -23,386 +23,9 @@
     "EventId": 44,
     "Event": "bruce_arians_emotional_in_announcing_retirement_from_coaching_cites_family"
   },
-  "fiveWoneH": {
-    "where": {
-      "extracted": [
-        {
-          "parts": [
-            [
-              {
-                "nlpToken": {
-                  "index": 12,
-                  "word": "Cincinnati",
-                  "originalText": "Cincinnati",
-                  "lemma": "Cincinnati",
-                  "characterOffsetBegin": 1062,
-                  "characterOffsetEnd": 1072,
-                  "pos": "NNP",
-                  "ner": "LOCATION",
-                  "speaker": "PER0",
-                  "before": " ",
-                  "after": " "
-                },
-                "aida": [
-                  {
-                    "mention": {
-                      "allEntities": [
-                        {
-                          "kbIdentifier": "YAGO:Cincinnati_Bengals",
-                          "disambiguationScore": "0.13701"
-                        }
-                      ],
-                      "offset": 1062,
-                      "name": "Cincinnati",
-                      "length": 10,
-                      "bestEntity": {
-                        "kbIdentifier": "YAGO:Cincinnati_Bengals",
-                        "disambiguationScore": "0.13701"
-                      }
-                    },
-                    "bestEntityMetadata": {
-                      "knowledgebase": "YAGO",
-                      "depictionurl": "http://upload.wikimedia.org/wikipedia/commons/f/fa/Cincinnati_Bengals.svg",
-                      "depictionthumbnailurl": "http://upload.wikimedia.org/wikipedia/commons/thumbCincinnati_Bengals.svg/200px-Cincinnati_Bengals.svg",
-                      "importance": 0.00036322947774342014,
-                      "entityId": "Cincinnati_Bengals",
-                      "type": [
-                        "YAGO_yagoPermanentlyLocatedEntity",
-                        "YAGO_wikicategory_National_Football_League_teams",
-                        "YAGO_yagoLegalActorGeo",
-                        "YAGO_wordnet_organization_108008335",
-                        "YAGO_wikicategory_Sports_clubs_established_in_1968",
-                        "YAGO_wordnet_social_group_107950920",
-                        "YAGO_wikicategory_American_Football_League_teams",
-                        "YAGO_wordnet_entity_100001740",
-                        "YAGO_wordnet_unit_108189659",
-                        "YAGO_wordnet_group_100031264",
-                        "YAGO_wordnet_association_108049401",
-                        "YAGO_wordnet_team_108208560",
-                        "YAGO_yagoLegalActor",
-                        "YAGO_wordnet_club_108227214",
-                        "YAGO_wordnet_abstraction_100002137"
-                      ],
-                      "readableRepr": "Cincinnati Bengals",
-                      "url": "http://en.wikipedia.org/wiki/Cincinnati%20Bengals"
-                    }
-                  }
-                ]
-              },
-              "NNP"
-            ]
-          ],
-          "score": 0.6795318649632383,
-          "text": "Cincinnati",
-          "enhancement": {
-            "openstreetmap_nominatim": {
-              "osm_id": "183453",
-              "boundingbox": [
-                39.0520565,
-                39.2210368,
-                -84.71239,
-                -84.3687784
-              ],
-              "licence": "Data \u00a9 OpenStreetMap contributors, ODbL 1.0. http://www.openstreetmap.org/copyright",
-              "importance": 0.26888931171914,
-              "icon": "https://nominatim.openstreetmap.org/images/mapicons/poi_place_city.p.20.png",
-              "osm_type": "relation",
-              "display_name": "Cincinnati, Hamilton County, Ohio, United States of America",
-              "lat": "39.1014537",
-              "type": "city",
-              "place_id": "217656751",
-              "lon": "-84.5124602",
-              "class": "place"
-            }
-          },
-          "nlpIndexSentence": 10
-        }
-      ],
-      "label": "where"
-    },
-    "when": {
-      "extracted": [
-        {
-          "parts": [
-            [
-              {
-                "nlpToken": {
-                  "index": 33,
-                  "word": "this",
-                  "originalText": "this",
-                  "lemma": "this",
-                  "characterOffsetBegin": 240,
-                  "characterOffsetEnd": 244,
-                  "pos": "DT",
-                  "ner": "DATE",
-                  "normalizedNER": "2018-W01",
-                  "speaker": "PER0",
-                  "before": " ",
-                  "after": " ",
-                  "timex": {
-                    "tid": "t2",
-                    "type": "DATE",
-                    "value": "2018-W01"
-                  }
-                },
-                "heideltime": [
-                  {
-                    "@tid": "t1",
-                    "@type": "DATE",
-                    "@value": "2018-W01",
-                    "#text": "this week",
-                    "characterOffset": [
-                      240,
-                      249
-                    ]
-                  }
-                ]
-              },
-              "DT"
-            ],
-            [
-              {
-                "nlpToken": {
-                  "index": 34,
-                  "word": "week",
-                  "originalText": "week",
-                  "lemma": "week",
-                  "characterOffsetBegin": 245,
-                  "characterOffsetEnd": 249,
-                  "pos": "NN",
-                  "ner": "DATE",
-                  "normalizedNER": "2018-W01",
-                  "speaker": "PER0",
-                  "before": " ",
-                  "after": "",
-                  "timex": {
-                    "tid": "t2",
-                    "type": "DATE",
-                    "value": "2018-W01"
-                  }
-                },
-                "heideltime": [
-                  {
-                    "@tid": "t1",
-                    "@type": "DATE",
-                    "@value": "2018-W01",
-                    "#text": "this week",
-                    "characterOffset": [
-                      240,
-                      249
-                    ]
-                  }
-                ]
-              },
-              "NN"
-            ]
-          ],
-          "score": 0.680125425670659,
-          "text": "this week",
-          "enhancement": {
-            "timex": {
-              "start_date": "2018-01-07T00:00:00",
-              "end_date": "2018-01-13T23:59:59"
-            }
-          },
-          "nlpIndexSentence": 1
-        }
-      ],
-      "label": "when"
-    },
-    "how": {
-      "extracted": [
-        {
-          "parts": [
-            [
-              {
-                "nlpToken": {
-                  "index": 22,
-                  "word": "two",
-                  "originalText": "two",
-                  "lemma": "two",
-                  "characterOffsetBegin": 180,
-                  "characterOffsetEnd": 183,
-                  "pos": "CD",
-                  "ner": "NUMBER",
-                  "normalizedNER": "2.0",
-                  "speaker": "PER0",
-                  "before": " ",
-                  "after": " "
-                }
-              },
-              "CD"
-            ],
-            [
-              {
-                "nlpToken": {
-                  "index": 23,
-                  "word": "big",
-                  "originalText": "big",
-                  "lemma": "big",
-                  "characterOffsetBegin": 184,
-                  "characterOffsetEnd": 187,
-                  "pos": "JJ",
-                  "ner": "O",
-                  "speaker": "PER0",
-                  "before": " ",
-                  "after": " "
-                }
-              },
-              "JJ"
-            ],
-            [
-              {
-                "nlpToken": {
-                  "index": 24,
-                  "word": "voids",
-                  "originalText": "voids",
-                  "lemma": "void",
-                  "characterOffsetBegin": 188,
-                  "characterOffsetEnd": 193,
-                  "pos": "NNS",
-                  "ner": "O",
-                  "speaker": "PER0",
-                  "before": " ",
-                  "after": " "
-                }
-              },
-              "NNS"
-            ],
-            [
-              {
-                "nlpToken": {
-                  "index": 25,
-                  "word": "after",
-                  "originalText": "after",
-                  "lemma": "after",
-                  "characterOffsetBegin": 194,
-                  "characterOffsetEnd": 199,
-                  "pos": "IN",
-                  "ner": "O",
-                  "speaker": "PER0",
-                  "before": " ",
-                  "after": " "
-                }
-              },
-              "IN"
-            ],
-            [
-              {
-                "nlpToken": {
-                  "index": 26,
-                  "word": "their",
-                  "originalText": "their",
-                  "lemma": "they",
-                  "characterOffsetBegin": 200,
-                  "characterOffsetEnd": 205,
-                  "pos": "PRP$",
-                  "ner": "O",
-                  "speaker": "PER0",
-                  "before": " ",
-                  "after": " "
-                }
-              },
-              "PRP$"
-            ],
-            [
-              {
-                "nlpToken": {
-                  "index": 27,
-                  "word": "head",
-                  "originalText": "head",
-                  "lemma": "head",
-                  "characterOffsetBegin": 206,
-                  "characterOffsetEnd": 210,
-                  "pos": "NN",
-                  "ner": "O",
-                  "speaker": "PER0",
-                  "before": " ",
-                  "after": " "
-                }
-              },
-              "NN"
-            ],
-            [
-              {
-                "nlpToken": {
-                  "index": 28,
-                  "word": "coach",
-                  "originalText": "coach",
-                  "lemma": "coach",
-                  "characterOffsetBegin": 211,
-                  "characterOffsetEnd": 216,
-                  "pos": "NN",
-                  "ner": "O",
-                  "speaker": "PER0",
-                  "before": " ",
-                  "after": " "
-                }
-              },
-              "NN"
-            ],
-            [
-              {
-                "nlpToken": {
-                  "index": 29,
-                  "word": "made",
-                  "originalText": "made",
-                  "lemma": "make",
-                  "characterOffsetBegin": 217,
-                  "characterOffsetEnd": 221,
-                  "pos": "VBD",
-                  "ner": "O",
-                  "speaker": "PER0",
-                  "before": " ",
-                  "after": " "
-                }
-              },
-              "VBD"
-            ],
-            [
-              {
-                "nlpToken": {
-                  "index": 30,
-                  "word": "the",
-                  "originalText": "the",
-                  "lemma": "the",
-                  "characterOffsetBegin": 222,
-                  "characterOffsetEnd": 225,
-                  "pos": "DT",
-                  "ner": "O",
-                  "speaker": "PER0",
-                  "before": " ",
-                  "after": " "
-                }
-              },
-              "DT"
-            ],
-            [
-              {
-                "nlpToken": {
-                  "index": 31,
-                  "word": "same",
-                  "originalText": "same",
-                  "lemma": "same",
-                  "characterOffsetBegin": 226,
-                  "characterOffsetEnd": 230,
-                  "pos": "JJ",
-                  "ner": "O",
-                  "speaker": "PER0",
-                  "before": " ",
-                  "after": " "
-                }
-              },
-              "JJ"
-            ]
-          ],
-          "score": 1.0,
-          "text": "two big voids after their head coach made the same",
-          "nlpIndexSentence": 1
-        }
-      ],
-      "label": "how"
-    },
+  "fiveWoneH": {},
+  "fiveWoneH_Metadata": {
+    "process_errors": {},
     "who": {
       "extracted": [
         {
@@ -788,6 +411,385 @@
         }
       ],
       "label": "what"
+    },
+    "where": {
+      "extracted": [
+        {
+          "parts": [
+            [
+              {
+                "nlpToken": {
+                  "index": 12,
+                  "word": "Cincinnati",
+                  "originalText": "Cincinnati",
+                  "lemma": "Cincinnati",
+                  "characterOffsetBegin": 1062,
+                  "characterOffsetEnd": 1072,
+                  "pos": "NNP",
+                  "ner": "LOCATION",
+                  "speaker": "PER0",
+                  "before": " ",
+                  "after": " "
+                },
+                "aida": [
+                  {
+                    "mention": {
+                      "allEntities": [
+                        {
+                          "kbIdentifier": "YAGO:Cincinnati_Bengals",
+                          "disambiguationScore": "0.13701"
+                        }
+                      ],
+                      "offset": 1062,
+                      "name": "Cincinnati",
+                      "length": 10,
+                      "bestEntity": {
+                        "kbIdentifier": "YAGO:Cincinnati_Bengals",
+                        "disambiguationScore": "0.13701"
+                      }
+                    },
+                    "bestEntityMetadata": {
+                      "knowledgebase": "YAGO",
+                      "depictionurl": "http://upload.wikimedia.org/wikipedia/commons/f/fa/Cincinnati_Bengals.svg",
+                      "depictionthumbnailurl": "http://upload.wikimedia.org/wikipedia/commons/thumbCincinnati_Bengals.svg/200px-Cincinnati_Bengals.svg",
+                      "importance": 0.00036322947774342014,
+                      "entityId": "Cincinnati_Bengals",
+                      "type": [
+                        "YAGO_yagoPermanentlyLocatedEntity",
+                        "YAGO_wikicategory_National_Football_League_teams",
+                        "YAGO_yagoLegalActorGeo",
+                        "YAGO_wordnet_organization_108008335",
+                        "YAGO_wikicategory_Sports_clubs_established_in_1968",
+                        "YAGO_wordnet_social_group_107950920",
+                        "YAGO_wikicategory_American_Football_League_teams",
+                        "YAGO_wordnet_entity_100001740",
+                        "YAGO_wordnet_unit_108189659",
+                        "YAGO_wordnet_group_100031264",
+                        "YAGO_wordnet_association_108049401",
+                        "YAGO_wordnet_team_108208560",
+                        "YAGO_yagoLegalActor",
+                        "YAGO_wordnet_club_108227214",
+                        "YAGO_wordnet_abstraction_100002137"
+                      ],
+                      "readableRepr": "Cincinnati Bengals",
+                      "url": "http://en.wikipedia.org/wiki/Cincinnati%20Bengals"
+                    }
+                  }
+                ]
+              },
+              "NNP"
+            ]
+          ],
+          "score": 0.6795318649632383,
+          "text": "Cincinnati",
+          "enhancement": {
+            "openstreetmap_nominatim": {
+              "osm_id": "183453",
+              "boundingbox": [
+                39.0520565,
+                39.2210368,
+                -84.71239,
+                -84.3687784
+              ],
+              "licence": "Data \u00a9 OpenStreetMap contributors, ODbL 1.0. http://www.openstreetmap.org/copyright",
+              "importance": 0.26888931171914,
+              "icon": "https://nominatim.openstreetmap.org/images/mapicons/poi_place_city.p.20.png",
+              "osm_type": "relation",
+              "display_name": "Cincinnati, Hamilton County, Ohio, United States of America",
+              "lat": "39.1014537",
+              "type": "city",
+              "place_id": "217656751",
+              "lon": "-84.5124602",
+              "class": "place"
+            }
+          },
+          "nlpIndexSentence": 10
+        }
+      ],
+      "label": "where"
+    },
+    "when": {
+      "extracted": [
+        {
+          "parts": [
+            [
+              {
+                "nlpToken": {
+                  "index": 33,
+                  "word": "this",
+                  "originalText": "this",
+                  "lemma": "this",
+                  "characterOffsetBegin": 240,
+                  "characterOffsetEnd": 244,
+                  "pos": "DT",
+                  "ner": "DATE",
+                  "normalizedNER": "2018-W01",
+                  "speaker": "PER0",
+                  "before": " ",
+                  "after": " ",
+                  "timex": {
+                    "tid": "t2",
+                    "type": "DATE",
+                    "value": "2018-W01"
+                  }
+                },
+                "heideltime": [
+                  {
+                    "@tid": "t1",
+                    "@type": "DATE",
+                    "@value": "2018-W01",
+                    "#text": "this week",
+                    "characterOffset": [
+                      240,
+                      249
+                    ]
+                  }
+                ]
+              },
+              "DT"
+            ],
+            [
+              {
+                "nlpToken": {
+                  "index": 34,
+                  "word": "week",
+                  "originalText": "week",
+                  "lemma": "week",
+                  "characterOffsetBegin": 245,
+                  "characterOffsetEnd": 249,
+                  "pos": "NN",
+                  "ner": "DATE",
+                  "normalizedNER": "2018-W01",
+                  "speaker": "PER0",
+                  "before": " ",
+                  "after": "",
+                  "timex": {
+                    "tid": "t2",
+                    "type": "DATE",
+                    "value": "2018-W01"
+                  }
+                },
+                "heideltime": [
+                  {
+                    "@tid": "t1",
+                    "@type": "DATE",
+                    "@value": "2018-W01",
+                    "#text": "this week",
+                    "characterOffset": [
+                      240,
+                      249
+                    ]
+                  }
+                ]
+              },
+              "NN"
+            ]
+          ],
+          "score": 0.560125425670659,
+          "text": "this week",
+          "enhancement": {
+            "timex": {
+              "start_date": "2018-01-07T00:00:00",
+              "end_date": "2018-01-13T23:59:59"
+            }
+          },
+          "nlpIndexSentence": 1
+        }
+      ],
+      "label": "when"
+    },
+    "how": {
+      "extracted": [
+        {
+          "parts": [
+            [
+              {
+                "nlpToken": {
+                  "index": 22,
+                  "word": "two",
+                  "originalText": "two",
+                  "lemma": "two",
+                  "characterOffsetBegin": 180,
+                  "characterOffsetEnd": 183,
+                  "pos": "CD",
+                  "ner": "NUMBER",
+                  "normalizedNER": "2.0",
+                  "speaker": "PER0",
+                  "before": " ",
+                  "after": " "
+                }
+              },
+              "CD"
+            ],
+            [
+              {
+                "nlpToken": {
+                  "index": 23,
+                  "word": "big",
+                  "originalText": "big",
+                  "lemma": "big",
+                  "characterOffsetBegin": 184,
+                  "characterOffsetEnd": 187,
+                  "pos": "JJ",
+                  "ner": "O",
+                  "speaker": "PER0",
+                  "before": " ",
+                  "after": " "
+                }
+              },
+              "JJ"
+            ],
+            [
+              {
+                "nlpToken": {
+                  "index": 24,
+                  "word": "voids",
+                  "originalText": "voids",
+                  "lemma": "void",
+                  "characterOffsetBegin": 188,
+                  "characterOffsetEnd": 193,
+                  "pos": "NNS",
+                  "ner": "O",
+                  "speaker": "PER0",
+                  "before": " ",
+                  "after": " "
+                }
+              },
+              "NNS"
+            ],
+            [
+              {
+                "nlpToken": {
+                  "index": 25,
+                  "word": "after",
+                  "originalText": "after",
+                  "lemma": "after",
+                  "characterOffsetBegin": 194,
+                  "characterOffsetEnd": 199,
+                  "pos": "IN",
+                  "ner": "O",
+                  "speaker": "PER0",
+                  "before": " ",
+                  "after": " "
+                }
+              },
+              "IN"
+            ],
+            [
+              {
+                "nlpToken": {
+                  "index": 26,
+                  "word": "their",
+                  "originalText": "their",
+                  "lemma": "they",
+                  "characterOffsetBegin": 200,
+                  "characterOffsetEnd": 205,
+                  "pos": "PRP$",
+                  "ner": "O",
+                  "speaker": "PER0",
+                  "before": " ",
+                  "after": " "
+                }
+              },
+              "PRP$"
+            ],
+            [
+              {
+                "nlpToken": {
+                  "index": 27,
+                  "word": "head",
+                  "originalText": "head",
+                  "lemma": "head",
+                  "characterOffsetBegin": 206,
+                  "characterOffsetEnd": 210,
+                  "pos": "NN",
+                  "ner": "O",
+                  "speaker": "PER0",
+                  "before": " ",
+                  "after": " "
+                }
+              },
+              "NN"
+            ],
+            [
+              {
+                "nlpToken": {
+                  "index": 28,
+                  "word": "coach",
+                  "originalText": "coach",
+                  "lemma": "coach",
+                  "characterOffsetBegin": 211,
+                  "characterOffsetEnd": 216,
+                  "pos": "NN",
+                  "ner": "O",
+                  "speaker": "PER0",
+                  "before": " ",
+                  "after": " "
+                }
+              },
+              "NN"
+            ],
+            [
+              {
+                "nlpToken": {
+                  "index": 29,
+                  "word": "made",
+                  "originalText": "made",
+                  "lemma": "make",
+                  "characterOffsetBegin": 217,
+                  "characterOffsetEnd": 221,
+                  "pos": "VBD",
+                  "ner": "O",
+                  "speaker": "PER0",
+                  "before": " ",
+                  "after": " "
+                }
+              },
+              "VBD"
+            ],
+            [
+              {
+                "nlpToken": {
+                  "index": 30,
+                  "word": "the",
+                  "originalText": "the",
+                  "lemma": "the",
+                  "characterOffsetBegin": 222,
+                  "characterOffsetEnd": 225,
+                  "pos": "DT",
+                  "ner": "O",
+                  "speaker": "PER0",
+                  "before": " ",
+                  "after": " "
+                }
+              },
+              "DT"
+            ],
+            [
+              {
+                "nlpToken": {
+                  "index": 31,
+                  "word": "same",
+                  "originalText": "same",
+                  "lemma": "same",
+                  "characterOffsetBegin": 226,
+                  "characterOffsetEnd": 230,
+                  "pos": "JJ",
+                  "ner": "O",
+                  "speaker": "PER0",
+                  "before": " ",
+                  "after": " "
+                }
+              },
+              "JJ"
+            ]
+          ],
+          "score": 1.0,
+          "text": "two big voids after their head coach made the same",
+          "nlpIndexSentence": 1
+        }
+      ],
+      "label": "how"
     },
     "why": {
       "extracted": [

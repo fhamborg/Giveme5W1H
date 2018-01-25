@@ -23,7 +23,9 @@
     "EventId": 9,
     "Event": "alleged_galaxy_s9_components_smile_for_the_camera_theres_a_spot_for_a_headphone_jack"
   },
-  "fiveWoneH": {
+  "fiveWoneH": {},
+  "fiveWoneH_Metadata": {
+    "process_errors": {},
     "where": {
       "extracted": [],
       "label": "where"
@@ -418,6 +420,35 @@
       ],
       "label": "how"
     },
+    "why": {
+      "extracted": [
+        {
+          "parts": [
+            [
+              {
+                "nlpToken": {
+                  "index": 10,
+                  "word": "there",
+                  "originalText": "there",
+                  "lemma": "there",
+                  "characterOffsetBegin": 51,
+                  "characterOffsetEnd": 56,
+                  "pos": "EX",
+                  "ner": "O",
+                  "speaker": "PER0",
+                  "before": " ",
+                  "after": ""
+                }
+              },
+              "EX"
+            ]
+          ],
+          "score": 0.5860000000000001,
+          "text": "there"
+        }
+      ],
+      "label": "why"
+    },
     "who": {
       "extracted": [
         {
@@ -657,35 +688,6 @@
         }
       ],
       "label": "what"
-    },
-    "why": {
-      "extracted": [
-        {
-          "parts": [
-            [
-              {
-                "nlpToken": {
-                  "index": 10,
-                  "word": "there",
-                  "originalText": "there",
-                  "lemma": "there",
-                  "characterOffsetBegin": 51,
-                  "characterOffsetEnd": 56,
-                  "pos": "EX",
-                  "ner": "O",
-                  "speaker": "PER0",
-                  "before": " ",
-                  "after": ""
-                }
-              },
-              "EX"
-            ]
-          ],
-          "score": 0.5860000000000001,
-          "text": "there"
-        }
-      ],
-      "label": "why"
     }
   }
 }

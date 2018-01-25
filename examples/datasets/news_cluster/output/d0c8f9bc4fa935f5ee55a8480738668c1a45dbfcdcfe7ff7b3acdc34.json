@@ -23,7 +23,9 @@
     "Event": "nyc_subway_work_trains_collide_in_tunnel_1_worker_injured"
   },
   "dId": "d0c8f9bc4fa935f5ee55a8480738668c1a45dbfcdcfe7ff7b3acdc34",
-  "fiveWoneH": {
+  "fiveWoneH": {},
+  "fiveWoneH_Metadata": {
+    "process_errors": {},
     "who": {
       "extracted": [],
       "label": "who"
@@ -31,6 +33,36 @@
     "what": {
       "extracted": [],
       "label": "what"
+    },
+    "why": {
+      "extracted": [
+        {
+          "parts": [
+            [
+              {
+                "nlpToken": {
+                  "index": 7,
+                  "word": "Authorities",
+                  "originalText": "Authorities",
+                  "lemma": "authority",
+                  "characterOffsetBegin": 76,
+                  "characterOffsetEnd": 87,
+                  "pos": "NNS",
+                  "ner": "O",
+                  "speaker": "PER0",
+                  "before": " ",
+                  "after": " "
+                }
+              },
+              "NNS"
+            ]
+          ],
+          "score": 0.49266666666666675,
+          "text": "Authorities",
+          "nlpIndexSentence": 1
+        }
+      ],
+      "label": "why"
     },
     "how": {
       "extracted": [
@@ -291,36 +323,6 @@
       ],
       "label": "how"
     },
-    "why": {
-      "extracted": [
-        {
-          "parts": [
-            [
-              {
-                "nlpToken": {
-                  "index": 7,
-                  "word": "Authorities",
-                  "originalText": "Authorities",
-                  "lemma": "authority",
-                  "characterOffsetBegin": 76,
-                  "characterOffsetEnd": 87,
-                  "pos": "NNS",
-                  "ner": "O",
-                  "speaker": "PER0",
-                  "before": " ",
-                  "after": " "
-                }
-              },
-              "NNS"
-            ]
-          ],
-          "score": 0.49266666666666675,
-          "text": "Authorities",
-          "nlpIndexSentence": 1
-        }
-      ],
-      "label": "why"
-    },
     "where": {
       "extracted": [
         {
@@ -519,7 +521,7 @@
               "NN"
             ]
           ],
-          "score": 0.42486281916847585,
+          "score": 0.30486281916847585,
           "text": "today",
           "enhancement": {
             "timex": {

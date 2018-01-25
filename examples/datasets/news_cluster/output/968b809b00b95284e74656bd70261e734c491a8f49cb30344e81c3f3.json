@@ -20,45 +20,16 @@
   "url": "http://edition.cnn.com/2016/07/14/world/nice-attack-witness-accounts/index.html",
   "newsCluster": {
     "CategoryId": 1,
-    "Category": "global_politics",
-    "TopicId": 1,
-    "Topic": "unspecific",
-    "EventId": 5,
-    "Event": "truck_attack_in_nice",
-    "Url": "http://edition.cnn.com/2016/07/14/world/nice-attack-witness-accounts/index.html"
+    "Category": "world",
+    "TopicId": 2,
+    "Topic": "legancy",
+    "EventId": 53,
+    "Event": "truck_attack_in_nice"
   },
   "dId": "968b809b00b95284e74656bd70261e734c491a8f49cb30344e81c3f3",
-  "fiveWoneH": {
-    "how": {
-      "extracted": [
-        {
-          "parts": [
-            [
-              {
-                "nlpToken": {
-                  "index": 19,
-                  "word": "Harrowing",
-                  "originalText": "Harrowing",
-                  "lemma": "harrowing",
-                  "characterOffsetBegin": 5358,
-                  "characterOffsetEnd": 5367,
-                  "pos": "JJ",
-                  "ner": "O",
-                  "speaker": "PER0",
-                  "before": " ",
-                  "after": " "
-                }
-              },
-              "JJ"
-            ]
-          ],
-          "score": 1.2541666666666667,
-          "text": "Harrowing",
-          "nlpIndexSentence": 48
-        }
-      ],
-      "label": "how"
-    },
+  "fiveWoneH": {},
+  "fiveWoneH_Metadata": {
+    "process_errors": {},
     "where": {
       "extracted": [
         {
@@ -66,12 +37,48 @@
             [
               {
                 "nlpToken": {
-                  "index": 48,
+                  "index": 5,
+                  "word": "Nice",
+                  "originalText": "Nice",
+                  "lemma": "Nice",
+                  "characterOffsetBegin": 72,
+                  "characterOffsetEnd": 76,
+                  "pos": "NNP",
+                  "ner": "LOCATION",
+                  "speaker": "PER0",
+                  "before": " ",
+                  "after": ""
+                }
+              },
+              "NNP"
+            ],
+            [
+              {
+                "nlpToken": {
+                  "index": 6,
+                  "word": ",",
+                  "originalText": ",",
+                  "lemma": ",",
+                  "characterOffsetBegin": 76,
+                  "characterOffsetEnd": 77,
+                  "pos": ",",
+                  "ner": "O",
+                  "speaker": "PER0",
+                  "before": "",
+                  "after": " "
+                }
+              },
+              ","
+            ],
+            [
+              {
+                "nlpToken": {
+                  "index": 7,
                   "word": "France",
                   "originalText": "France",
                   "lemma": "France",
-                  "characterOffsetBegin": 645,
-                  "characterOffsetEnd": 651,
+                  "characterOffsetBegin": 78,
+                  "characterOffsetEnd": 84,
                   "pos": "NNP",
                   "ner": "LOCATION",
                   "speaker": "PER0",
@@ -87,7 +94,7 @@
                           "disambiguationScore": "0.39755"
                         }
                       ],
-                      "offset": 645,
+                      "offset": 78,
                       "name": "France",
                       "length": 6,
                       "bestEntity": {
@@ -140,30 +147,30 @@
               "NNP"
             ]
           ],
-          "score": 1.0,
-          "text": "France",
+          "score": 0.6813898572687458,
+          "text": "Nice , France",
           "enhancement": {
             "openstreetmap_nominatim": {
-              "place_id": "178221547",
-              "licence": "Data \u00a9 OpenStreetMap contributors, ODbL 1.0. http://www.openstreetmap.org/copyright",
-              "osm_type": "relation",
-              "osm_id": "1403916",
+              "osm_id": "170100",
               "boundingbox": [
-                41.2632185,
-                51.268318,
-                -5.4534286,
-                9.8678344
+                43.6454189,
+                43.7607635,
+                7.1819535,
+                7.323912
               ],
-              "lat": "46.603354",
-              "lon": "1.8883335",
-              "display_name": "France m\u00e9tropolitaine, France",
-              "class": "boundary",
-              "type": "administrative",
-              "importance": 0.35030567158717,
-              "icon": "https://nominatim.openstreetmap.org/images/mapicons/poi_boundary_administrative.p.20.png"
+              "licence": "Data \u00a9 OpenStreetMap contributors, ODbL 1.0. http://www.openstreetmap.org/copyright",
+              "importance": 0.38998902723108,
+              "icon": "https://nominatim.openstreetmap.org/images/mapicons/poi_place_city.p.20.png",
+              "osm_type": "relation",
+              "display_name": "Nice, Alpes-Maritimes, Provence-Alpes-C\u00f4te d'Azur, France m\u00e9tropolitaine, France",
+              "lat": "43.7009358",
+              "type": "city",
+              "place_id": "177719123",
+              "lon": "7.2683912",
+              "class": "place"
             }
           },
-          "nlpIndexSentence": 5
+          "nlpIndexSentence": 1
         }
       ],
       "label": "where"
@@ -175,259 +182,54 @@
             [
               {
                 "nlpToken": {
-                  "index": 50,
-                  "word": "early",
-                  "originalText": "early",
-                  "lemma": "early",
-                  "characterOffsetBegin": 6604,
-                  "characterOffsetEnd": 6609,
-                  "pos": "JJ",
-                  "ner": "DATE",
-                  "normalizedNER": "2016-07-15",
-                  "speaker": "PER0",
-                  "before": " ",
-                  "after": " ",
-                  "timex": {
-                    "tid": "t20",
-                    "type": "DATE",
-                    "value": "2016-07-15"
-                  }
-                }
-              },
-              "JJ"
-            ],
-            [
-              {
-                "nlpToken": {
-                  "index": 51,
-                  "word": "Friday",
-                  "originalText": "Friday",
-                  "lemma": "Friday",
-                  "characterOffsetBegin": 6610,
-                  "characterOffsetEnd": 6616,
-                  "pos": "NNP",
-                  "ner": "DATE",
-                  "normalizedNER": "2016-07-15",
-                  "speaker": "PER0",
+                  "index": 27,
+                  "word": "midnight",
+                  "originalText": "midnight",
+                  "lemma": "midnight",
+                  "characterOffsetBegin": 2337,
+                  "characterOffsetEnd": 2345,
+                  "pos": "NN",
+                  "ner": "TIME",
+                  "normalizedNER": "2016-07-14T00:00",
+                  "speaker": "PER8",
                   "before": " ",
                   "after": "",
                   "timex": {
-                    "tid": "t20",
-                    "type": "DATE",
-                    "value": "2016-07-15"
+                    "tid": "t12",
+                    "type": "TIME",
+                    "value": "2016-07-14T00:00"
                   }
-                }
-              },
-              "NNP"
-            ]
-          ],
-          "score": 0.6579835917918976,
-          "text": "early Friday",
-          "enhancement": {
-            "timex": [
-              {
-                "start_date": "2016-07-15T00:00:00",
-                "end_date": "2016-07-15T23:59:59"
-              }
-            ]
-          },
-          "nlpIndexSentence": 54
-        }
-      ],
-      "label": "when"
-    },
-    "who": {
-      "extracted": [
-        {
-          "parts": [
-            [
-              {
-                "nlpToken": {
-                  "index": 8,
-                  "word": "Molina",
-                  "originalText": "Molina",
-                  "lemma": "Molina",
-                  "characterOffsetBegin": 3433,
-                  "characterOffsetEnd": 3439,
-                  "pos": "NNP",
-                  "ner": "PERSON",
-                  "speaker": "PER0",
-                  "before": " ",
-                  "after": " "
-                },
-                "aida": [
-                  {
-                    "mention": {
-                      "allEntities": [],
-                      "offset": 3423,
-                      "name": "Dominique Molina",
-                      "length": 16
-                    },
-                    "bestEntityMetadata": null
-                  }
-                ]
-              },
-              "NNP"
-            ]
-          ],
-          "score": 1.0,
-          "text": "Molina",
-          "nlpIndexSentence": 29
-        }
-      ],
-      "label": "who"
-    },
-    "what": {
-      "extracted": [
-        {
-          "parts": [
-            [
-              {
-                "nlpToken": {
-                  "index": 13,
-                  "word": "saw",
-                  "originalText": "saw",
-                  "lemma": "see",
-                  "characterOffsetBegin": 3461,
-                  "characterOffsetEnd": 3464,
-                  "pos": "VBD",
-                  "ner": "O",
-                  "speaker": "PER0",
-                  "before": " ",
-                  "after": " "
-                }
-              },
-              "VBD"
-            ],
-            [
-              {
-                "nlpToken": {
-                  "index": 14,
-                  "word": "the",
-                  "originalText": "the",
-                  "lemma": "the",
-                  "characterOffsetBegin": 3465,
-                  "characterOffsetEnd": 3468,
-                  "pos": "DT",
-                  "ner": "O",
-                  "speaker": "PER0",
-                  "before": " ",
-                  "after": " "
-                }
-              },
-              "DT"
-            ],
-            [
-              {
-                "nlpToken": {
-                  "index": 15,
-                  "word": "scene",
-                  "originalText": "scene",
-                  "lemma": "scene",
-                  "characterOffsetBegin": 3469,
-                  "characterOffsetEnd": 3474,
-                  "pos": "NN",
-                  "ner": "O",
-                  "speaker": "PER0",
-                  "before": " ",
-                  "after": " "
                 }
               },
               "NN"
             ]
           ],
-          "score": 1.0,
-          "text": "saw the scene",
-          "nlpIndexSentence": 29
+          "score": 0.44558878973368626,
+          "text": "midnight",
+          "enhancement": {
+            "timex": {
+              "start_date": "2016-07-14T00:00:00",
+              "end_date": "2016-07-14T00:00:59"
+            }
+          },
+          "nlpIndexSentence": 22
         }
       ],
-      "label": "what"
+      "label": "when"
     },
-    "why": {
+    "how": {
       "extracted": [
         {
           "parts": [
             [
               {
                 "nlpToken": {
-                  "index": 7,
-                  "word": "We",
-                  "originalText": "We",
-                  "lemma": "we",
-                  "characterOffsetBegin": 23,
-                  "characterOffsetEnd": 25,
-                  "pos": "PRP",
-                  "ner": "O",
-                  "speaker": "PER0",
-                  "before": "",
-                  "after": " "
-                }
-              },
-              "PRP"
-            ],
-            [
-              {
-                "nlpToken": {
-                  "index": 8,
-                  "word": "had",
-                  "originalText": "had",
-                  "lemma": "have",
-                  "characterOffsetBegin": 26,
-                  "characterOffsetEnd": 29,
-                  "pos": "VBD",
-                  "ner": "O",
-                  "speaker": "PER0",
-                  "before": " ",
-                  "after": " "
-                }
-              },
-              "VBD"
-            ],
-            [
-              {
-                "nlpToken": {
-                  "index": 9,
-                  "word": "to",
-                  "originalText": "to",
-                  "lemma": "to",
-                  "characterOffsetBegin": 30,
-                  "characterOffsetEnd": 32,
-                  "pos": "TO",
-                  "ner": "O",
-                  "speaker": "PER0",
-                  "before": " ",
-                  "after": " "
-                }
-              },
-              "TO"
-            ],
-            [
-              {
-                "nlpToken": {
-                  "index": 10,
-                  "word": "run",
-                  "originalText": "run",
-                  "lemma": "run",
-                  "characterOffsetBegin": 33,
-                  "characterOffsetEnd": 36,
-                  "pos": "VB",
-                  "ner": "O",
-                  "speaker": "PER0",
-                  "before": " ",
-                  "after": " "
-                }
-              },
-              "VB"
-            ],
-            [
-              {
-                "nlpToken": {
                   "index": 11,
-                  "word": "for",
-                  "originalText": "for",
-                  "lemma": "for",
-                  "characterOffsetBegin": 37,
-                  "characterOffsetEnd": 40,
+                  "word": "in",
+                  "originalText": "in",
+                  "lemma": "in",
+                  "characterOffsetBegin": 362,
+                  "characterOffsetEnd": 364,
                   "pos": "IN",
                   "ner": "O",
                   "speaker": "PER0",
@@ -441,29 +243,65 @@
               {
                 "nlpToken": {
                   "index": 12,
-                  "word": "our",
-                  "originalText": "our",
-                  "lemma": "we",
-                  "characterOffsetBegin": 41,
-                  "characterOffsetEnd": 44,
-                  "pos": "PRP$",
+                  "word": "nearby",
+                  "originalText": "nearby",
+                  "lemma": "nearby",
+                  "characterOffsetBegin": 365,
+                  "characterOffsetEnd": 371,
+                  "pos": "JJ",
                   "ner": "O",
                   "speaker": "PER0",
                   "before": " ",
                   "after": " "
                 }
               },
-              "PRP$"
+              "JJ"
             ],
             [
               {
                 "nlpToken": {
                   "index": 13,
-                  "word": "lives",
-                  "originalText": "lives",
-                  "lemma": "life",
-                  "characterOffsetBegin": 45,
-                  "characterOffsetEnd": 50,
+                  "word": "restaurants",
+                  "originalText": "restaurants",
+                  "lemma": "restaurant",
+                  "characterOffsetBegin": 372,
+                  "characterOffsetEnd": 383,
+                  "pos": "NNS",
+                  "ner": "O",
+                  "speaker": "PER0",
+                  "before": " ",
+                  "after": " "
+                }
+              },
+              "NNS"
+            ],
+            [
+              {
+                "nlpToken": {
+                  "index": 14,
+                  "word": "and",
+                  "originalText": "and",
+                  "lemma": "and",
+                  "characterOffsetBegin": 384,
+                  "characterOffsetEnd": 387,
+                  "pos": "CC",
+                  "ner": "O",
+                  "speaker": "PER0",
+                  "before": " ",
+                  "after": " "
+                }
+              },
+              "CC"
+            ],
+            [
+              {
+                "nlpToken": {
+                  "index": 15,
+                  "word": "hotels",
+                  "originalText": "hotels",
+                  "lemma": "hotel",
+                  "characterOffsetBegin": 388,
+                  "characterOffsetEnd": 394,
                   "pos": "NNS",
                   "ner": "O",
                   "speaker": "PER0",
@@ -476,24 +314,583 @@
             [
               {
                 "nlpToken": {
-                  "index": 14,
-                  "word": "'",
-                  "originalText": "'",
-                  "lemma": "'",
-                  "characterOffsetBegin": 50,
-                  "characterOffsetEnd": 51,
-                  "pos": "POS",
+                  "index": 16,
+                  "word": ".",
+                  "originalText": ".",
+                  "lemma": ".",
+                  "characterOffsetBegin": 394,
+                  "characterOffsetEnd": 395,
+                  "pos": ".",
                   "ner": "O",
+                  "speaker": "PER0",
+                  "before": "",
+                  "after": " "
+                }
+              },
+              "."
+            ]
+          ],
+          "score": 1.0,
+          "text": "in nearby restaurants and hotels .",
+          "nlpIndexSentence": 4
+        }
+      ],
+      "label": "how"
+    },
+    "who": {
+      "extracted": [
+        {
+          "parts": [
+            [
+              {
+                "nlpToken": {
+                  "index": 1,
+                  "word": "-LRB-",
+                  "originalText": "(",
+                  "lemma": "-lrb-",
+                  "characterOffsetBegin": 159,
+                  "characterOffsetEnd": 160,
+                  "pos": "-LRB-",
+                  "ner": "O",
+                  "speaker": "PER0",
+                  "before": " ",
+                  "after": ""
+                }
+              },
+              "-LRB-"
+            ],
+            [
+              {
+                "nlpToken": {
+                  "index": 2,
+                  "word": "CNN",
+                  "originalText": "CNN",
+                  "lemma": "CNN",
+                  "characterOffsetBegin": 160,
+                  "characterOffsetEnd": 163,
+                  "pos": "NNP",
+                  "ner": "ORGANIZATION",
                   "speaker": "PER0",
                   "before": "",
                   "after": ""
                 }
               },
-              "POS"
+              "NNP"
+            ],
+            [
+              {
+                "nlpToken": {
+                  "index": 3,
+                  "word": "-RRB-",
+                  "originalText": ")",
+                  "lemma": "-rrb-",
+                  "characterOffsetBegin": 163,
+                  "characterOffsetEnd": 164,
+                  "pos": "-RRB-",
+                  "ner": "O",
+                  "speaker": "PER0",
+                  "before": "",
+                  "after": " "
+                }
+              },
+              "-RRB-"
+            ],
+            [
+              {
+                "nlpToken": {
+                  "index": 4,
+                  "word": "Chaos",
+                  "originalText": "Chaos",
+                  "lemma": "chaos",
+                  "characterOffsetBegin": 165,
+                  "characterOffsetEnd": 170,
+                  "pos": "NN",
+                  "ner": "O",
+                  "speaker": "PER0",
+                  "before": " ",
+                  "after": " "
+                }
+              },
+              "NN"
             ]
           ],
-          "score": 0.42857142857142855,
-          "text": "We had to run for our lives '"
+          "score": 1.0,
+          "text": "( CNN ) Chaos",
+          "nlpIndexSentence": 3
+        }
+      ],
+      "label": "who"
+    },
+    "what": {
+      "extracted": [
+        {
+          "parts": [
+            [
+              {
+                "nlpToken": {
+                  "index": 5,
+                  "word": "broke",
+                  "originalText": "broke",
+                  "lemma": "break",
+                  "characterOffsetBegin": 171,
+                  "characterOffsetEnd": 176,
+                  "pos": "VBD",
+                  "ner": "O",
+                  "speaker": "PER0",
+                  "before": " ",
+                  "after": " "
+                }
+              },
+              "VBD"
+            ],
+            [
+              {
+                "nlpToken": {
+                  "index": 6,
+                  "word": "out",
+                  "originalText": "out",
+                  "lemma": "out",
+                  "characterOffsetBegin": 177,
+                  "characterOffsetEnd": 180,
+                  "pos": "RP",
+                  "ner": "O",
+                  "speaker": "PER0",
+                  "before": " ",
+                  "after": " "
+                }
+              },
+              "RP"
+            ],
+            [
+              {
+                "nlpToken": {
+                  "index": 7,
+                  "word": "in",
+                  "originalText": "in",
+                  "lemma": "in",
+                  "characterOffsetBegin": 181,
+                  "characterOffsetEnd": 183,
+                  "pos": "IN",
+                  "ner": "O",
+                  "speaker": "PER0",
+                  "before": " ",
+                  "after": " "
+                }
+              },
+              "IN"
+            ],
+            [
+              {
+                "nlpToken": {
+                  "index": 8,
+                  "word": "Nice",
+                  "originalText": "Nice",
+                  "lemma": "Nice",
+                  "characterOffsetBegin": 184,
+                  "characterOffsetEnd": 188,
+                  "pos": "NNP",
+                  "ner": "LOCATION",
+                  "speaker": "PER0",
+                  "before": " ",
+                  "after": ""
+                }
+              },
+              "NNP"
+            ],
+            [
+              {
+                "nlpToken": {
+                  "index": 12,
+                  "word": "after",
+                  "originalText": "after",
+                  "lemma": "after",
+                  "characterOffsetBegin": 198,
+                  "characterOffsetEnd": 203,
+                  "pos": "IN",
+                  "ner": "O",
+                  "speaker": "PER0",
+                  "before": " ",
+                  "after": " "
+                }
+              },
+              "IN"
+            ],
+            [
+              {
+                "nlpToken": {
+                  "index": 13,
+                  "word": "a",
+                  "originalText": "a",
+                  "lemma": "a",
+                  "characterOffsetBegin": 204,
+                  "characterOffsetEnd": 205,
+                  "pos": "DT",
+                  "ner": "O",
+                  "speaker": "PER0",
+                  "before": " ",
+                  "after": " "
+                }
+              },
+              "DT"
+            ],
+            [
+              {
+                "nlpToken": {
+                  "index": 14,
+                  "word": "truck",
+                  "originalText": "truck",
+                  "lemma": "truck",
+                  "characterOffsetBegin": 206,
+                  "characterOffsetEnd": 211,
+                  "pos": "NN",
+                  "ner": "O",
+                  "speaker": "PER0",
+                  "before": " ",
+                  "after": " "
+                }
+              },
+              "NN"
+            ]
+          ],
+          "score": 1.0,
+          "text": "broke out in Nice after a truck",
+          "nlpIndexSentence": 3
+        }
+      ],
+      "label": "what"
+    },
+    "why": {
+      "extracted": [
+        {
+          "parts": [
+            [
+              {
+                "nlpToken": {
+                  "index": 5,
+                  "word": "because",
+                  "originalText": "because",
+                  "lemma": "because",
+                  "characterOffsetBegin": 4484,
+                  "characterOffsetEnd": 4491,
+                  "pos": "IN",
+                  "ner": "O",
+                  "speaker": "272",
+                  "before": " ",
+                  "after": " "
+                }
+              },
+              "IN"
+            ],
+            [
+              {
+                "nlpToken": {
+                  "index": 6,
+                  "word": "there",
+                  "originalText": "there",
+                  "lemma": "there",
+                  "characterOffsetBegin": 4492,
+                  "characterOffsetEnd": 4497,
+                  "pos": "EX",
+                  "ner": "O",
+                  "speaker": "272",
+                  "before": " ",
+                  "after": " "
+                }
+              },
+              "EX"
+            ],
+            [
+              {
+                "nlpToken": {
+                  "index": 7,
+                  "word": "were",
+                  "originalText": "were",
+                  "lemma": "be",
+                  "characterOffsetBegin": 4498,
+                  "characterOffsetEnd": 4502,
+                  "pos": "VBD",
+                  "ner": "O",
+                  "speaker": "272",
+                  "before": " ",
+                  "after": " "
+                }
+              },
+              "VBD"
+            ],
+            [
+              {
+                "nlpToken": {
+                  "index": 8,
+                  "word": "families",
+                  "originalText": "families",
+                  "lemma": "family",
+                  "characterOffsetBegin": 4503,
+                  "characterOffsetEnd": 4511,
+                  "pos": "NNS",
+                  "ner": "O",
+                  "speaker": "272",
+                  "before": " ",
+                  "after": " "
+                }
+              },
+              "NNS"
+            ],
+            [
+              {
+                "nlpToken": {
+                  "index": 9,
+                  "word": "just",
+                  "originalText": "just",
+                  "lemma": "just",
+                  "characterOffsetBegin": 4512,
+                  "characterOffsetEnd": 4516,
+                  "pos": "RB",
+                  "ner": "O",
+                  "speaker": "272",
+                  "before": " ",
+                  "after": " "
+                }
+              },
+              "RB"
+            ],
+            [
+              {
+                "nlpToken": {
+                  "index": 10,
+                  "word": "laying",
+                  "originalText": "laying",
+                  "lemma": "lay",
+                  "characterOffsetBegin": 4517,
+                  "characterOffsetEnd": 4523,
+                  "pos": "VBG",
+                  "ner": "O",
+                  "speaker": "272",
+                  "before": " ",
+                  "after": " "
+                }
+              },
+              "VBG"
+            ],
+            [
+              {
+                "nlpToken": {
+                  "index": 11,
+                  "word": "down",
+                  "originalText": "down",
+                  "lemma": "down",
+                  "characterOffsetBegin": 4524,
+                  "characterOffsetEnd": 4528,
+                  "pos": "RB",
+                  "ner": "O",
+                  "speaker": "272",
+                  "before": " ",
+                  "after": ""
+                }
+              },
+              "RB"
+            ],
+            [
+              {
+                "nlpToken": {
+                  "index": 12,
+                  "word": ",",
+                  "originalText": ",",
+                  "lemma": ",",
+                  "characterOffsetBegin": 4528,
+                  "characterOffsetEnd": 4529,
+                  "pos": ",",
+                  "ner": "O",
+                  "speaker": "272",
+                  "before": "",
+                  "after": " "
+                }
+              },
+              ","
+            ],
+            [
+              {
+                "nlpToken": {
+                  "index": 13,
+                  "word": "crying",
+                  "originalText": "crying",
+                  "lemma": "cry",
+                  "characterOffsetBegin": 4530,
+                  "characterOffsetEnd": 4536,
+                  "pos": "VBG",
+                  "ner": "O",
+                  "speaker": "272",
+                  "before": " ",
+                  "after": " "
+                }
+              },
+              "VBG"
+            ],
+            [
+              {
+                "nlpToken": {
+                  "index": 14,
+                  "word": "next",
+                  "originalText": "next",
+                  "lemma": "next",
+                  "characterOffsetBegin": 4537,
+                  "characterOffsetEnd": 4541,
+                  "pos": "JJ",
+                  "ner": "O",
+                  "speaker": "272",
+                  "before": " ",
+                  "after": " "
+                }
+              },
+              "JJ"
+            ],
+            [
+              {
+                "nlpToken": {
+                  "index": 15,
+                  "word": "to",
+                  "originalText": "to",
+                  "lemma": "to",
+                  "characterOffsetBegin": 4542,
+                  "characterOffsetEnd": 4544,
+                  "pos": "TO",
+                  "ner": "O",
+                  "speaker": "272",
+                  "before": " ",
+                  "after": " "
+                }
+              },
+              "TO"
+            ],
+            [
+              {
+                "nlpToken": {
+                  "index": 16,
+                  "word": "these",
+                  "originalText": "these",
+                  "lemma": "these",
+                  "characterOffsetBegin": 4545,
+                  "characterOffsetEnd": 4550,
+                  "pos": "DT",
+                  "ner": "O",
+                  "speaker": "272",
+                  "before": " ",
+                  "after": " "
+                }
+              },
+              "DT"
+            ],
+            [
+              {
+                "nlpToken": {
+                  "index": 17,
+                  "word": "bodies",
+                  "originalText": "bodies",
+                  "lemma": "body",
+                  "characterOffsetBegin": 4551,
+                  "characterOffsetEnd": 4557,
+                  "pos": "NNS",
+                  "ner": "O",
+                  "speaker": "272",
+                  "before": " ",
+                  "after": ""
+                }
+              },
+              "NNS"
+            ],
+            [
+              {
+                "nlpToken": {
+                  "index": 18,
+                  "word": ",",
+                  "originalText": ",",
+                  "lemma": ",",
+                  "characterOffsetBegin": 4557,
+                  "characterOffsetEnd": 4558,
+                  "pos": ",",
+                  "ner": "O",
+                  "speaker": "272",
+                  "before": "",
+                  "after": ""
+                }
+              },
+              ","
+            ],
+            [
+              {
+                "nlpToken": {
+                  "index": 19,
+                  "word": "''",
+                  "originalText": "\"",
+                  "lemma": "''",
+                  "characterOffsetBegin": 4558,
+                  "characterOffsetEnd": 4559,
+                  "pos": "''",
+                  "ner": "O",
+                  "speaker": "PER0",
+                  "before": "",
+                  "after": " "
+                }
+              },
+              "''"
+            ],
+            [
+              {
+                "nlpToken": {
+                  "index": 20,
+                  "word": "he",
+                  "originalText": "he",
+                  "lemma": "he",
+                  "characterOffsetBegin": 4560,
+                  "characterOffsetEnd": 4562,
+                  "pos": "PRP",
+                  "ner": "O",
+                  "speaker": "PER0",
+                  "before": " ",
+                  "after": " "
+                }
+              },
+              "PRP"
+            ],
+            [
+              {
+                "nlpToken": {
+                  "index": 21,
+                  "word": "said",
+                  "originalText": "said",
+                  "lemma": "say",
+                  "characterOffsetBegin": 4563,
+                  "characterOffsetEnd": 4567,
+                  "pos": "VBD",
+                  "ner": "O",
+                  "speaker": "PER0",
+                  "before": " ",
+                  "after": ""
+                }
+              },
+              "VBD"
+            ],
+            [
+              {
+                "nlpToken": {
+                  "index": 22,
+                  "word": ".",
+                  "originalText": ".",
+                  "lemma": ".",
+                  "characterOffsetBegin": 4567,
+                  "characterOffsetEnd": 4568,
+                  "pos": ".",
+                  "ner": "O",
+                  "speaker": "PER0",
+                  "before": "",
+                  "after": "\n"
+                }
+              },
+              "."
+            ]
+          ],
+          "score": 0.7963636363636364,
+          "text": "because there were families just laying down , crying next to these bodies , \" he said .",
+          "nlpIndexSentence": 40
         }
       ],
       "label": "why"

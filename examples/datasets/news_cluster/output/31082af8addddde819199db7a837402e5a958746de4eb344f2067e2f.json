@@ -26,7 +26,9 @@
     "EventId": 35,
     "Event": "new_york_family_of_5_among_12_killed_in_costa_rica_plane_crash"
   },
-  "fiveWoneH": {
+  "fiveWoneH": {},
+  "fiveWoneH_Metadata": {
+    "process_errors": {},
     "how": {
       "extracted": [
         {
@@ -34,32 +36,33 @@
             [
               {
                 "nlpToken": {
-                  "index": 16,
-                  "word": "a",
-                  "originalText": "a",
-                  "lemma": "a",
-                  "characterOffsetBegin": 255,
-                  "characterOffsetEnd": 256,
-                  "pos": "DT",
-                  "ner": "O",
+                  "index": 1,
+                  "word": "2",
+                  "originalText": "2",
+                  "lemma": "2",
+                  "characterOffsetBegin": 0,
+                  "characterOffsetEnd": 1,
+                  "pos": "CD",
+                  "ner": "NUMBER",
+                  "normalizedNER": "2.0",
                   "speaker": "PER0",
-                  "before": " ",
+                  "before": "",
                   "after": " "
                 }
               },
-              "DT"
+              "CD"
             ],
             [
               {
                 "nlpToken": {
-                  "index": 17,
-                  "word": "Conservative",
-                  "originalText": "Conservative",
-                  "lemma": "conservative",
-                  "characterOffsetBegin": 257,
-                  "characterOffsetEnd": 269,
+                  "index": 2,
+                  "word": "American",
+                  "originalText": "American",
+                  "lemma": "american",
+                  "characterOffsetBegin": 2,
+                  "characterOffsetEnd": 10,
                   "pos": "JJ",
-                  "ner": "MISC",
+                  "ner": "O",
                   "speaker": "PER0",
                   "before": " ",
                   "after": " "
@@ -67,38 +70,12 @@
                 "aida": [
                   {
                     "mention": {
-                      "allEntities": [
-                        {
-                          "kbIdentifier": "YAGO:Conservative_Judaism",
-                          "disambiguationScore": "1"
-                        }
-                      ],
-                      "offset": 257,
-                      "name": "Conservative Jewish",
-                      "length": 19,
-                      "bestEntity": {
-                        "kbIdentifier": "YAGO:Conservative_Judaism",
-                        "disambiguationScore": "1"
-                      }
+                      "allEntities": [],
+                      "offset": 2,
+                      "name": "American Families Are Mourned After Plane Crash",
+                      "length": 47
                     },
-                    "bestEntityMetadata": {
-                      "knowledgebase": "YAGO",
-                      "depictionurl": "http://upload.wikimedia.org/wikipedia/commons/1/1f/Sabato_morais.jpg",
-                      "depictionthumbnailurl": "http://upload.wikimedia.org/wikipedia/commons/thumbSabato_morais.jpg/200px-Sabato_morais.jpg",
-                      "importance": 0.0023122453180583822,
-                      "entityId": "Conservative_Judaism",
-                      "type": [
-                        "YAGO_wordnet_movement_108464601",
-                        "YAGO_wordnet_religious_movement_108473787",
-                        "YAGO_wordnet_social_group_107950920",
-                        "YAGO_wordnet_entity_100001740",
-                        "YAGO_wordnet_abstraction_100002137",
-                        "YAGO_wordnet_group_100031264",
-                        "YAGO_wikicategory_Jewish_religious_movements"
-                      ],
-                      "readableRepr": "Conservative Judaism",
-                      "url": "http://en.wikipedia.org/wiki/Conservative%20Judaism"
-                    }
+                    "bestEntityMetadata": null
                   }
                 ]
               },
@@ -107,14 +84,14 @@
             [
               {
                 "nlpToken": {
-                  "index": 18,
-                  "word": "Jewish",
-                  "originalText": "Jewish",
-                  "lemma": "jewish",
-                  "characterOffsetBegin": 270,
-                  "characterOffsetEnd": 276,
-                  "pos": "JJ",
-                  "ner": "MISC",
+                  "index": 3,
+                  "word": "Families",
+                  "originalText": "Families",
+                  "lemma": "family",
+                  "characterOffsetBegin": 11,
+                  "characterOffsetEnd": 19,
+                  "pos": "NNS",
+                  "ner": "O",
                   "speaker": "PER0",
                   "before": " ",
                   "after": " "
@@ -122,124 +99,171 @@
                 "aida": [
                   {
                     "mention": {
-                      "allEntities": [
-                        {
-                          "kbIdentifier": "YAGO:Conservative_Judaism",
-                          "disambiguationScore": "1"
-                        }
-                      ],
-                      "offset": 257,
-                      "name": "Conservative Jewish",
-                      "length": 19,
-                      "bestEntity": {
-                        "kbIdentifier": "YAGO:Conservative_Judaism",
-                        "disambiguationScore": "1"
-                      }
+                      "allEntities": [],
+                      "offset": 2,
+                      "name": "American Families Are Mourned After Plane Crash",
+                      "length": 47
                     },
-                    "bestEntityMetadata": {
-                      "knowledgebase": "YAGO",
-                      "depictionurl": "http://upload.wikimedia.org/wikipedia/commons/1/1f/Sabato_morais.jpg",
-                      "depictionthumbnailurl": "http://upload.wikimedia.org/wikipedia/commons/thumbSabato_morais.jpg/200px-Sabato_morais.jpg",
-                      "importance": 0.0023122453180583822,
-                      "entityId": "Conservative_Judaism",
-                      "type": [
-                        "YAGO_wordnet_movement_108464601",
-                        "YAGO_wordnet_religious_movement_108473787",
-                        "YAGO_wordnet_social_group_107950920",
-                        "YAGO_wordnet_entity_100001740",
-                        "YAGO_wordnet_abstraction_100002137",
-                        "YAGO_wordnet_group_100031264",
-                        "YAGO_wikicategory_Jewish_religious_movements"
-                      ],
-                      "readableRepr": "Conservative Judaism",
-                      "url": "http://en.wikipedia.org/wiki/Conservative%20Judaism"
-                    }
+                    "bestEntityMetadata": null
                   }
                 ]
               },
-              "JJ"
+              "NNS"
             ],
             [
               {
                 "nlpToken": {
-                  "index": 19,
-                  "word": "organization",
-                  "originalText": "organization",
-                  "lemma": "organization",
-                  "characterOffsetBegin": 277,
-                  "characterOffsetEnd": 289,
-                  "pos": "NN",
+                  "index": 4,
+                  "word": "Are",
+                  "originalText": "Are",
+                  "lemma": "be",
+                  "characterOffsetBegin": 20,
+                  "characterOffsetEnd": 23,
+                  "pos": "VBP",
                   "ner": "O",
                   "speaker": "PER0",
                   "before": " ",
                   "after": " "
-                }
+                },
+                "aida": [
+                  {
+                    "mention": {
+                      "allEntities": [],
+                      "offset": 2,
+                      "name": "American Families Are Mourned After Plane Crash",
+                      "length": 47
+                    },
+                    "bestEntityMetadata": null
+                  }
+                ]
               },
-              "NN"
+              "VBP"
             ],
             [
               {
                 "nlpToken": {
-                  "index": 20,
-                  "word": "that",
-                  "originalText": "that",
-                  "lemma": "that",
-                  "characterOffsetBegin": 290,
-                  "characterOffsetEnd": 294,
-                  "pos": "WDT",
+                  "index": 5,
+                  "word": "Mourned",
+                  "originalText": "Mourned",
+                  "lemma": "Mourned",
+                  "characterOffsetBegin": 24,
+                  "characterOffsetEnd": 31,
+                  "pos": "NNP",
                   "ner": "O",
                   "speaker": "PER0",
                   "before": " ",
                   "after": " "
-                }
+                },
+                "aida": [
+                  {
+                    "mention": {
+                      "allEntities": [],
+                      "offset": 2,
+                      "name": "American Families Are Mourned After Plane Crash",
+                      "length": 47
+                    },
+                    "bestEntityMetadata": null
+                  }
+                ]
               },
-              "WDT"
+              "NNP"
             ],
             [
               {
                 "nlpToken": {
-                  "index": 21,
-                  "word": "promotes",
-                  "originalText": "promotes",
-                  "lemma": "promote",
-                  "characterOffsetBegin": 295,
-                  "characterOffsetEnd": 303,
-                  "pos": "VBZ",
+                  "index": 6,
+                  "word": "After",
+                  "originalText": "After",
+                  "lemma": "after",
+                  "characterOffsetBegin": 32,
+                  "characterOffsetEnd": 37,
+                  "pos": "IN",
                   "ner": "O",
                   "speaker": "PER0",
                   "before": " ",
                   "after": " "
-                }
+                },
+                "aida": [
+                  {
+                    "mention": {
+                      "allEntities": [],
+                      "offset": 2,
+                      "name": "American Families Are Mourned After Plane Crash",
+                      "length": 47
+                    },
+                    "bestEntityMetadata": null
+                  }
+                ]
               },
-              "VBZ"
+              "IN"
             ],
             [
               {
                 "nlpToken": {
-                  "index": 22,
-                  "word": "engagement",
-                  "originalText": "engagement",
-                  "lemma": "engagement",
-                  "characterOffsetBegin": 304,
-                  "characterOffsetEnd": 314,
-                  "pos": "NN",
+                  "index": 7,
+                  "word": "Plane",
+                  "originalText": "Plane",
+                  "lemma": "Plane",
+                  "characterOffsetBegin": 38,
+                  "characterOffsetEnd": 43,
+                  "pos": "NNP",
                   "ner": "O",
                   "speaker": "PER0",
                   "before": " ",
                   "after": " "
-                }
+                },
+                "aida": [
+                  {
+                    "mention": {
+                      "allEntities": [],
+                      "offset": 2,
+                      "name": "American Families Are Mourned After Plane Crash",
+                      "length": 47
+                    },
+                    "bestEntityMetadata": null
+                  }
+                ]
               },
-              "NN"
+              "NNP"
             ],
             [
               {
                 "nlpToken": {
-                  "index": 23,
-                  "word": "with",
-                  "originalText": "with",
-                  "lemma": "with",
-                  "characterOffsetBegin": 315,
-                  "characterOffsetEnd": 319,
+                  "index": 8,
+                  "word": "Crash",
+                  "originalText": "Crash",
+                  "lemma": "Crash",
+                  "characterOffsetBegin": 44,
+                  "characterOffsetEnd": 49,
+                  "pos": "NNP",
+                  "ner": "O",
+                  "speaker": "PER0",
+                  "before": " ",
+                  "after": " "
+                },
+                "aida": [
+                  {
+                    "mention": {
+                      "allEntities": [],
+                      "offset": 2,
+                      "name": "American Families Are Mourned After Plane Crash",
+                      "length": 47
+                    },
+                    "bestEntityMetadata": null
+                  }
+                ]
+              },
+              "NNP"
+            ],
+            [
+              {
+                "nlpToken": {
+                  "index": 9,
+                  "word": "in",
+                  "originalText": "in",
+                  "lemma": "in",
+                  "characterOffsetBegin": 50,
+                  "characterOffsetEnd": 52,
                   "pos": "IN",
                   "ner": "O",
                   "speaker": "PER0",
@@ -252,86 +276,16 @@
             [
               {
                 "nlpToken": {
-                  "index": 24,
-                  "word": "Israel",
-                  "originalText": "Israel",
-                  "lemma": "Israel",
-                  "characterOffsetBegin": 320,
-                  "characterOffsetEnd": 326,
+                  "index": 10,
+                  "word": "Costa",
+                  "originalText": "Costa",
+                  "lemma": "Costa",
+                  "characterOffsetBegin": 53,
+                  "characterOffsetEnd": 58,
                   "pos": "NNP",
                   "ner": "LOCATION",
                   "speaker": "PER0",
                   "before": " ",
-                  "after": ""
-                },
-                "aida": [
-                  {
-                    "mention": {
-                      "allEntities": [
-                        {
-                          "kbIdentifier": "YAGO:Israel",
-                          "disambiguationScore": "0.20332"
-                        }
-                      ],
-                      "offset": 320,
-                      "name": "Israel",
-                      "length": 6,
-                      "bestEntity": {
-                        "kbIdentifier": "YAGO:Israel",
-                        "disambiguationScore": "0.20332"
-                      }
-                    },
-                    "bestEntityMetadata": {
-                      "knowledgebase": "YAGO",
-                      "depictionurl": "http://upload.wikimedia.org/wikipedia/commons/d/d4/Flag_of_Israel.svg",
-                      "depictionthumbnailurl": "http://upload.wikimedia.org/wikipedia/commons/thumbFlag_of_Israel.svg/200px-Flag_of_Israel.svg",
-                      "importance": 2.0612715761513107e-05,
-                      "entityId": "Israel",
-                      "type": [
-                        "YAGO_wordnet_system_108435388",
-                        "YAGO_wordnet_district_108552138",
-                        "YAGO_yagoPermanentlyLocatedEntity",
-                        "YAGO_wikicategory_Middle_Eastern_countries",
-                        "YAGO_yagoLegalActorGeo",
-                        "YAGO_wordnet_state_108654360",
-                        "YAGO_wordnet_country_108544813",
-                        "YAGO_wikicategory_Member_states_of_the_United_Nations",
-                        "YAGO_wordnet_economy_108366753",
-                        "YAGO_wikicategory_States_and_territories_established_in_1948",
-                        "YAGO_wikicategory_Arabic\\u002dspeaking_countries_and_territories",
-                        "YAGO_wordnet_abstraction_100002137",
-                        "YAGO_wordnet_region_108630985",
-                        "YAGO_yagoGeoEntity",
-                        "YAGO_wikicategory_World_Trade_Organization_member_economies",
-                        "YAGO_wordnet_physical_entity_100001930",
-                        "YAGO_wordnet_entity_100001740",
-                        "YAGO_wordnet_object_100002684",
-                        "YAGO_wordnet_group_100031264",
-                        "YAGO_wordnet_location_100027167",
-                        "YAGO_wordnet_administrative_district_108491826",
-                        "YAGO_wikicategory_Member_states_of_the_Union_for_the_Mediterranean"
-                      ],
-                      "readableRepr": "Israel",
-                      "url": "http://en.wikipedia.org/wiki/Israel"
-                    }
-                  }
-                ]
-              },
-              "NNP"
-            ],
-            [
-              {
-                "nlpToken": {
-                  "index": 25,
-                  "word": ",",
-                  "originalText": ",",
-                  "lemma": ",",
-                  "characterOffsetBegin": 326,
-                  "characterOffsetEnd": 327,
-                  "pos": ",",
-                  "ner": "O",
-                  "speaker": "PER0",
-                  "before": "",
                   "after": " "
                 },
                 "aida": [
@@ -339,60 +293,58 @@
                     "mention": {
                       "allEntities": [
                         {
-                          "kbIdentifier": "YAGO:Israel",
-                          "disambiguationScore": "0.20332"
+                          "kbIdentifier": "YAGO:Costa_Rica",
+                          "disambiguationScore": "1"
                         }
                       ],
-                      "offset": 320,
-                      "name": "Israel",
-                      "length": 6,
+                      "offset": 53,
+                      "name": "Costa Rica",
+                      "length": 10,
                       "bestEntity": {
-                        "kbIdentifier": "YAGO:Israel",
-                        "disambiguationScore": "0.20332"
+                        "kbIdentifier": "YAGO:Costa_Rica",
+                        "disambiguationScore": "1"
                       }
                     },
                     "bestEntityMetadata": {
                       "knowledgebase": "YAGO",
-                      "depictionurl": "http://upload.wikimedia.org/wikipedia/commons/d/d4/Flag_of_Israel.svg",
-                      "depictionthumbnailurl": "http://upload.wikimedia.org/wikipedia/commons/thumbFlag_of_Israel.svg/200px-Flag_of_Israel.svg",
-                      "importance": 2.0612715761513107e-05,
-                      "entityId": "Israel",
+                      "depictionurl": "http://upload.wikimedia.org/wikipedia/commons/f/f2/Flag_of_Costa_Rica.svg",
+                      "depictionthumbnailurl": "http://upload.wikimedia.org/wikipedia/commons/thumbFlag_of_Costa_Rica.svg/200px-Flag_of_Costa_Rica.svg",
+                      "importance": 0.00010696328178947341,
+                      "entityId": "Costa_Rica",
                       "type": [
                         "YAGO_wordnet_system_108435388",
                         "YAGO_wordnet_district_108552138",
                         "YAGO_yagoPermanentlyLocatedEntity",
-                        "YAGO_wikicategory_Middle_Eastern_countries",
                         "YAGO_yagoLegalActorGeo",
                         "YAGO_wordnet_state_108654360",
+                        "YAGO_wikicategory_Spanish\\u002dspeaking_countries_and_territories",
                         "YAGO_wordnet_country_108544813",
                         "YAGO_wikicategory_Member_states_of_the_United_Nations",
                         "YAGO_wordnet_economy_108366753",
-                        "YAGO_wikicategory_States_and_territories_established_in_1948",
-                        "YAGO_wikicategory_Arabic\\u002dspeaking_countries_and_territories",
                         "YAGO_wordnet_abstraction_100002137",
                         "YAGO_wordnet_region_108630985",
                         "YAGO_yagoGeoEntity",
-                        "YAGO_wikicategory_World_Trade_Organization_member_economies",
                         "YAGO_wordnet_physical_entity_100001930",
+                        "YAGO_wikicategory_Countries_in_the_Caribbean",
                         "YAGO_wordnet_entity_100001740",
                         "YAGO_wordnet_object_100002684",
+                        "YAGO_wikicategory_States_and_territories_established_in_1821",
                         "YAGO_wordnet_group_100031264",
                         "YAGO_wordnet_location_100027167",
                         "YAGO_wordnet_administrative_district_108491826",
-                        "YAGO_wikicategory_Member_states_of_the_Union_for_the_Mediterranean"
+                        "YAGO_wikicategory_Countries_in_Central_America"
                       ],
-                      "readableRepr": "Israel",
-                      "url": "http://en.wikipedia.org/wiki/Israel"
+                      "readableRepr": "Costa Rica",
+                      "url": "http://en.wikipedia.org/wiki/Costa%20Rica"
                     }
                   }
                 ]
               },
-              ","
+              "NNP"
             ]
           ],
           "score": 1.0,
-          "text": "a Conservative Jewish organization that promotes engagement with Israel ,",
-          "nlpIndexSentence": 3
+          "text": "2 American Families Are Mourned After Plane Crash in Costa"
         }
       ],
       "label": "how"
@@ -582,180 +534,6 @@
       ],
       "label": "what"
     },
-    "why": {
-      "extracted": [
-        {
-          "parts": [
-            [
-              {
-                "nlpToken": {
-                  "index": 41,
-                  "word": "because",
-                  "originalText": "because",
-                  "lemma": "because",
-                  "characterOffsetBegin": 3248,
-                  "characterOffsetEnd": 3255,
-                  "pos": "IN",
-                  "ner": "O",
-                  "speaker": "PER0",
-                  "before": " ",
-                  "after": " "
-                }
-              },
-              "IN"
-            ],
-            [
-              {
-                "nlpToken": {
-                  "index": 42,
-                  "word": "she",
-                  "originalText": "she",
-                  "lemma": "she",
-                  "characterOffsetBegin": 3256,
-                  "characterOffsetEnd": 3259,
-                  "pos": "PRP",
-                  "ner": "O",
-                  "speaker": "PER0",
-                  "before": " ",
-                  "after": " "
-                }
-              },
-              "PRP"
-            ],
-            [
-              {
-                "nlpToken": {
-                  "index": 43,
-                  "word": "had",
-                  "originalText": "had",
-                  "lemma": "have",
-                  "characterOffsetBegin": 3260,
-                  "characterOffsetEnd": 3263,
-                  "pos": "VBD",
-                  "ner": "O",
-                  "speaker": "PER0",
-                  "before": " ",
-                  "after": " "
-                }
-              },
-              "VBD"
-            ],
-            [
-              {
-                "nlpToken": {
-                  "index": 44,
-                  "word": "a",
-                  "originalText": "a",
-                  "lemma": "a",
-                  "characterOffsetBegin": 3264,
-                  "characterOffsetEnd": 3265,
-                  "pos": "DT",
-                  "ner": "O",
-                  "speaker": "PER0",
-                  "before": " ",
-                  "after": " "
-                }
-              },
-              "DT"
-            ],
-            [
-              {
-                "nlpToken": {
-                  "index": 45,
-                  "word": "background",
-                  "originalText": "background",
-                  "lemma": "background",
-                  "characterOffsetBegin": 3266,
-                  "characterOffsetEnd": 3276,
-                  "pos": "NN",
-                  "ner": "O",
-                  "speaker": "PER0",
-                  "before": " ",
-                  "after": " "
-                }
-              },
-              "NN"
-            ],
-            [
-              {
-                "nlpToken": {
-                  "index": 46,
-                  "word": "in",
-                  "originalText": "in",
-                  "lemma": "in",
-                  "characterOffsetBegin": 3277,
-                  "characterOffsetEnd": 3279,
-                  "pos": "IN",
-                  "ner": "O",
-                  "speaker": "PER0",
-                  "before": " ",
-                  "after": " "
-                }
-              },
-              "IN"
-            ],
-            [
-              {
-                "nlpToken": {
-                  "index": 47,
-                  "word": "social",
-                  "originalText": "social",
-                  "lemma": "social",
-                  "characterOffsetBegin": 3280,
-                  "characterOffsetEnd": 3286,
-                  "pos": "JJ",
-                  "ner": "O",
-                  "speaker": "PER0",
-                  "before": " ",
-                  "after": " "
-                }
-              },
-              "JJ"
-            ],
-            [
-              {
-                "nlpToken": {
-                  "index": 48,
-                  "word": "work",
-                  "originalText": "work",
-                  "lemma": "work",
-                  "characterOffsetBegin": 3287,
-                  "characterOffsetEnd": 3291,
-                  "pos": "NN",
-                  "ner": "O",
-                  "speaker": "PER0",
-                  "before": " ",
-                  "after": ""
-                }
-              },
-              "NN"
-            ],
-            [
-              {
-                "nlpToken": {
-                  "index": 49,
-                  "word": ".",
-                  "originalText": ".",
-                  "lemma": ".",
-                  "characterOffsetBegin": 3291,
-                  "characterOffsetEnd": 3292,
-                  "pos": ".",
-                  "ner": "O",
-                  "speaker": "PER0",
-                  "before": "",
-                  "after": "\n"
-                }
-              },
-              "."
-            ]
-          ],
-          "score": 0.779672131147541,
-          "text": "because she had a background in social work .",
-          "nlpIndexSentence": 24
-        }
-      ],
-      "label": "why"
-    },
     "where": {
       "extracted": [
         {
@@ -942,7 +720,7 @@
                   "pos": "DT",
                   "ner": "DATE",
                   "normalizedNER": "2018-01-01",
-                  "speaker": "185",
+                  "speaker": "184",
                   "before": " ",
                   "after": " ",
                   "timex": {
@@ -966,7 +744,7 @@
                   "pos": "NN",
                   "ner": "DATE",
                   "normalizedNER": "2018-01-01",
-                  "speaker": "185",
+                  "speaker": "184",
                   "before": " ",
                   "after": "",
                   "timex": {
@@ -979,7 +757,7 @@
               "NN"
             ]
           ],
-          "score": 0.5089628495267029,
+          "score": 0.40229618286003627,
           "text": "the day",
           "enhancement": {
             "timex": {
@@ -991,6 +769,180 @@
         }
       ],
       "label": "when"
+    },
+    "why": {
+      "extracted": [
+        {
+          "parts": [
+            [
+              {
+                "nlpToken": {
+                  "index": 41,
+                  "word": "because",
+                  "originalText": "because",
+                  "lemma": "because",
+                  "characterOffsetBegin": 3248,
+                  "characterOffsetEnd": 3255,
+                  "pos": "IN",
+                  "ner": "O",
+                  "speaker": "PER0",
+                  "before": " ",
+                  "after": " "
+                }
+              },
+              "IN"
+            ],
+            [
+              {
+                "nlpToken": {
+                  "index": 42,
+                  "word": "she",
+                  "originalText": "she",
+                  "lemma": "she",
+                  "characterOffsetBegin": 3256,
+                  "characterOffsetEnd": 3259,
+                  "pos": "PRP",
+                  "ner": "O",
+                  "speaker": "PER0",
+                  "before": " ",
+                  "after": " "
+                }
+              },
+              "PRP"
+            ],
+            [
+              {
+                "nlpToken": {
+                  "index": 43,
+                  "word": "had",
+                  "originalText": "had",
+                  "lemma": "have",
+                  "characterOffsetBegin": 3260,
+                  "characterOffsetEnd": 3263,
+                  "pos": "VBD",
+                  "ner": "O",
+                  "speaker": "PER0",
+                  "before": " ",
+                  "after": " "
+                }
+              },
+              "VBD"
+            ],
+            [
+              {
+                "nlpToken": {
+                  "index": 44,
+                  "word": "a",
+                  "originalText": "a",
+                  "lemma": "a",
+                  "characterOffsetBegin": 3264,
+                  "characterOffsetEnd": 3265,
+                  "pos": "DT",
+                  "ner": "O",
+                  "speaker": "PER0",
+                  "before": " ",
+                  "after": " "
+                }
+              },
+              "DT"
+            ],
+            [
+              {
+                "nlpToken": {
+                  "index": 45,
+                  "word": "background",
+                  "originalText": "background",
+                  "lemma": "background",
+                  "characterOffsetBegin": 3266,
+                  "characterOffsetEnd": 3276,
+                  "pos": "NN",
+                  "ner": "O",
+                  "speaker": "PER0",
+                  "before": " ",
+                  "after": " "
+                }
+              },
+              "NN"
+            ],
+            [
+              {
+                "nlpToken": {
+                  "index": 46,
+                  "word": "in",
+                  "originalText": "in",
+                  "lemma": "in",
+                  "characterOffsetBegin": 3277,
+                  "characterOffsetEnd": 3279,
+                  "pos": "IN",
+                  "ner": "O",
+                  "speaker": "PER0",
+                  "before": " ",
+                  "after": " "
+                }
+              },
+              "IN"
+            ],
+            [
+              {
+                "nlpToken": {
+                  "index": 47,
+                  "word": "social",
+                  "originalText": "social",
+                  "lemma": "social",
+                  "characterOffsetBegin": 3280,
+                  "characterOffsetEnd": 3286,
+                  "pos": "JJ",
+                  "ner": "O",
+                  "speaker": "PER0",
+                  "before": " ",
+                  "after": " "
+                }
+              },
+              "JJ"
+            ],
+            [
+              {
+                "nlpToken": {
+                  "index": 48,
+                  "word": "work",
+                  "originalText": "work",
+                  "lemma": "work",
+                  "characterOffsetBegin": 3287,
+                  "characterOffsetEnd": 3291,
+                  "pos": "NN",
+                  "ner": "O",
+                  "speaker": "PER0",
+                  "before": " ",
+                  "after": ""
+                }
+              },
+              "NN"
+            ],
+            [
+              {
+                "nlpToken": {
+                  "index": 49,
+                  "word": ".",
+                  "originalText": ".",
+                  "lemma": ".",
+                  "characterOffsetBegin": 3291,
+                  "characterOffsetEnd": 3292,
+                  "pos": ".",
+                  "ner": "O",
+                  "speaker": "PER0",
+                  "before": "",
+                  "after": "\n"
+                }
+              },
+              "."
+            ]
+          ],
+          "score": 0.779672131147541,
+          "text": "because she had a background in social work .",
+          "nlpIndexSentence": 24
+        }
+      ],
+      "label": "why"
     }
   }
 }

@@ -25,7 +25,9 @@
     "EventId": 18,
     "Event": "elon_musk_reveals_red_tesla_roadster_bound_for_mars"
   },
-  "fiveWoneH": {
+  "fiveWoneH": {},
+  "fiveWoneH_Metadata": {
+    "process_errors": {},
     "how": {
       "extracted": [
         {
@@ -609,36 +611,6 @@
       ],
       "label": "what"
     },
-    "why": {
-      "extracted": [
-        {
-          "parts": [
-            [
-              {
-                "nlpToken": {
-                  "index": 31,
-                  "word": "Musk",
-                  "originalText": "Musk",
-                  "lemma": "Musk",
-                  "characterOffsetBegin": 497,
-                  "characterOffsetEnd": 501,
-                  "pos": "NNP",
-                  "ner": "PERSON",
-                  "speaker": "PER0",
-                  "before": " ",
-                  "after": " "
-                }
-              },
-              "NNP"
-            ]
-          ],
-          "score": 0.4580000000000001,
-          "text": "Musk",
-          "nlpIndexSentence": 8
-        }
-      ],
-      "label": "why"
-    },
     "where": {
       "extracted": [
         {
@@ -781,7 +753,7 @@
               "NN"
             ]
           ],
-          "score": 0.4843486567865923,
+          "score": 0.591015323453259,
           "text": "next month",
           "enhancement": {
             "timex": {
@@ -793,6 +765,36 @@
         }
       ],
       "label": "when"
+    },
+    "why": {
+      "extracted": [
+        {
+          "parts": [
+            [
+              {
+                "nlpToken": {
+                  "index": 31,
+                  "word": "Musk",
+                  "originalText": "Musk",
+                  "lemma": "Musk",
+                  "characterOffsetBegin": 497,
+                  "characterOffsetEnd": 501,
+                  "pos": "NNP",
+                  "ner": "O",
+                  "speaker": "PER0",
+                  "before": " ",
+                  "after": " "
+                }
+              },
+              "NNP"
+            ]
+          ],
+          "score": 0.4580000000000001,
+          "text": "Musk",
+          "nlpIndexSentence": 8
+        }
+      ],
+      "label": "why"
     }
   }
 }

@@ -23,7 +23,75 @@
     "EventId": 37,
     "Event": "thousands_flee_fireworks_explosion_at_australia_beach"
   },
-  "fiveWoneH": {
+  "fiveWoneH": {},
+  "fiveWoneH_Metadata": {
+    "process_errors": {},
+    "how": {
+      "extracted": [
+        {
+          "parts": [
+            [
+              {
+                "nlpToken": {
+                  "index": 14,
+                  "word": "at",
+                  "originalText": "at",
+                  "lemma": "at",
+                  "characterOffsetBegin": 131,
+                  "characterOffsetEnd": 133,
+                  "pos": "IN",
+                  "ner": "O",
+                  "speaker": "PER0",
+                  "before": " ",
+                  "after": " "
+                }
+              },
+              "IN"
+            ],
+            [
+              {
+                "nlpToken": {
+                  "index": 15,
+                  "word": "random",
+                  "originalText": "random",
+                  "lemma": "random",
+                  "characterOffsetBegin": 134,
+                  "characterOffsetEnd": 140,
+                  "pos": "JJ",
+                  "ner": "O",
+                  "speaker": "PER0",
+                  "before": " ",
+                  "after": ""
+                }
+              },
+              "JJ"
+            ],
+            [
+              {
+                "nlpToken": {
+                  "index": 16,
+                  "word": ".",
+                  "originalText": ".",
+                  "lemma": ".",
+                  "characterOffsetBegin": 140,
+                  "characterOffsetEnd": 141,
+                  "pos": ".",
+                  "ner": "O",
+                  "speaker": "PER0",
+                  "before": "",
+                  "after": ""
+                }
+              },
+              "."
+            ]
+          ],
+          "score": 1.0,
+          "text": "at random .",
+          "nlpIndexSentence": 1
+        }
+      ],
+      "label": "how"
+    },
     "who": {
       "extracted": [
         {
@@ -156,120 +224,6 @@
         }
       ],
       "label": "what"
-    },
-    "how": {
-      "extracted": [
-        {
-          "parts": [
-            [
-              {
-                "nlpToken": {
-                  "index": 14,
-                  "word": "at",
-                  "originalText": "at",
-                  "lemma": "at",
-                  "characterOffsetBegin": 131,
-                  "characterOffsetEnd": 133,
-                  "pos": "IN",
-                  "ner": "O",
-                  "speaker": "PER0",
-                  "before": " ",
-                  "after": " "
-                }
-              },
-              "IN"
-            ],
-            [
-              {
-                "nlpToken": {
-                  "index": 15,
-                  "word": "random",
-                  "originalText": "random",
-                  "lemma": "random",
-                  "characterOffsetBegin": 134,
-                  "characterOffsetEnd": 140,
-                  "pos": "JJ",
-                  "ner": "O",
-                  "speaker": "PER0",
-                  "before": " ",
-                  "after": ""
-                }
-              },
-              "JJ"
-            ],
-            [
-              {
-                "nlpToken": {
-                  "index": 16,
-                  "word": ".",
-                  "originalText": ".",
-                  "lemma": ".",
-                  "characterOffsetBegin": 140,
-                  "characterOffsetEnd": 141,
-                  "pos": ".",
-                  "ner": "O",
-                  "speaker": "PER0",
-                  "before": "",
-                  "after": ""
-                }
-              },
-              "."
-            ]
-          ],
-          "score": 1.0,
-          "text": "at random .",
-          "nlpIndexSentence": 1
-        }
-      ],
-      "label": "how"
-    },
-    "why": {
-      "extracted": [
-        {
-          "parts": [
-            [
-              {
-                "nlpToken": {
-                  "index": 1,
-                  "word": "Media",
-                  "originalText": "Media",
-                  "lemma": "Media",
-                  "characterOffsetBegin": 143,
-                  "characterOffsetEnd": 148,
-                  "pos": "NNP",
-                  "ner": "O",
-                  "speaker": "PER0",
-                  "before": " ",
-                  "after": " "
-                }
-              },
-              "NNP"
-            ],
-            [
-              {
-                "nlpToken": {
-                  "index": 2,
-                  "word": "playback",
-                  "originalText": "playback",
-                  "lemma": "playback",
-                  "characterOffsetBegin": 149,
-                  "characterOffsetEnd": 157,
-                  "pos": "NN",
-                  "ner": "O",
-                  "speaker": "PER0",
-                  "before": " ",
-                  "after": " "
-                }
-              },
-              "NN"
-            ]
-          ],
-          "score": 0.4926666666666667,
-          "text": "Media playback",
-          "nlpIndexSentence": 3
-        }
-      ],
-      "label": "why"
     },
     "where": {
       "extracted": [
@@ -607,7 +561,7 @@
               "CD"
             ]
           ],
-          "score": 0.6939867835608469,
+          "score": 0.5873201168941802,
           "text": "21:00",
           "enhancement": {
             "timex": {
@@ -619,6 +573,54 @@
         }
       ],
       "label": "when"
+    },
+    "why": {
+      "extracted": [
+        {
+          "parts": [
+            [
+              {
+                "nlpToken": {
+                  "index": 1,
+                  "word": "Media",
+                  "originalText": "Media",
+                  "lemma": "Media",
+                  "characterOffsetBegin": 143,
+                  "characterOffsetEnd": 148,
+                  "pos": "NNP",
+                  "ner": "O",
+                  "speaker": "PER0",
+                  "before": " ",
+                  "after": " "
+                }
+              },
+              "NNP"
+            ],
+            [
+              {
+                "nlpToken": {
+                  "index": 2,
+                  "word": "playback",
+                  "originalText": "playback",
+                  "lemma": "playback",
+                  "characterOffsetBegin": 149,
+                  "characterOffsetEnd": 157,
+                  "pos": "NN",
+                  "ner": "O",
+                  "speaker": "PER0",
+                  "before": " ",
+                  "after": " "
+                }
+              },
+              "NN"
+            ]
+          ],
+          "score": 0.4926666666666667,
+          "text": "Media playback",
+          "nlpIndexSentence": 3
+        }
+      ],
+      "label": "why"
     }
   }
 }

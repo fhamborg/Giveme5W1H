@@ -23,7 +23,9 @@
     "EventId": 21,
     "Event": "berlin_sets_up_new_years_eve_safe_zone_for_women_amid_sexual_assault_concerns"
   },
-  "fiveWoneH": {
+  "fiveWoneH": {},
+  "fiveWoneH_Metadata": {
+    "process_errors": {},
     "who": {
       "extracted": [
         {
@@ -452,6 +454,228 @@
       ],
       "label": "what"
     },
+    "where": {
+      "extracted": [
+        {
+          "parts": [
+            [
+              {
+                "nlpToken": {
+                  "index": 1,
+                  "word": "Berlin",
+                  "originalText": "Berlin",
+                  "lemma": "Berlin",
+                  "characterOffsetBegin": 0,
+                  "characterOffsetEnd": 6,
+                  "pos": "NNP",
+                  "ner": "LOCATION",
+                  "speaker": "PER0",
+                  "before": "",
+                  "after": " "
+                },
+                "aida": [
+                  {
+                    "mention": {
+                      "allEntities": [
+                        {
+                          "kbIdentifier": "YAGO:Berlin",
+                          "disambiguationScore": "0.66993"
+                        }
+                      ],
+                      "offset": 0,
+                      "name": "Berlin",
+                      "length": 6,
+                      "bestEntity": {
+                        "kbIdentifier": "YAGO:Berlin",
+                        "disambiguationScore": "0.66993"
+                      }
+                    },
+                    "bestEntityMetadata": {
+                      "knowledgebase": "YAGO",
+                      "depictionurl": "http://upload.wikimedia.org/wikipedia/commons/b/b4/Alte_Nationalgalerie_abends_%28Zuschnitt%29.jpg",
+                      "depictionthumbnailurl": "http://upload.wikimedia.org/wikipedia/commons/thumbAlte_Nationalgalerie_abends_%28Zuschnitt%29.jpg/200px-Alte_Nationalgalerie_abends_%28Zuschnitt%29.jpg",
+                      "importance": 2.256256725246705e-05,
+                      "entityId": "Berlin",
+                      "type": [
+                        "YAGO_wordnet_district_108552138",
+                        "YAGO_yagoPermanentlyLocatedEntity",
+                        "YAGO_yagoLegalActorGeo",
+                        "YAGO_wordnet_capital_108518505",
+                        "YAGO_wordnet_urban_area_108675967",
+                        "YAGO_wordnet_state_108654360",
+                        "YAGO_wordnet_municipality_108626283",
+                        "YAGO_wordnet_state_capital_108695539",
+                        "YAGO_wikicategory_locations",
+                        "YAGO_wordnet_center_108523483",
+                        "YAGO_wikicategory_Populated_places_established_in_the_13th_century",
+                        "YAGO_wordnet_seat_108647945",
+                        "YAGO_wordnet_region_108630985",
+                        "YAGO_yagoGeoEntity",
+                        "YAGO_wordnet_physical_entity_100001930",
+                        "YAGO_wikicategory_German_state_capitals",
+                        "YAGO_wordnet_site_108651247",
+                        "YAGO_wikicategory_Capitals_in_Europe",
+                        "YAGO_wordnet_entity_100001740",
+                        "YAGO_wordnet_object_100002684",
+                        "YAGO_wordnet_area_108497294",
+                        "YAGO_wordnet_city_108524735",
+                        "YAGO_wikicategory_States_and_territories_established_in_1237",
+                        "YAGO_wordnet_tract_108673395",
+                        "YAGO_wikicategory_States_of_Germany",
+                        "YAGO_wordnet_geographical_area_108574314",
+                        "YAGO_wordnet_location_100027167",
+                        "YAGO_wordnet_administrative_district_108491826"
+                      ],
+                      "readableRepr": "Berlin",
+                      "url": "http://en.wikipedia.org/wiki/Berlin"
+                    }
+                  }
+                ]
+              },
+              "NNP"
+            ]
+          ],
+          "score": 0.6790771306833233,
+          "text": "Berlin",
+          "enhancement": {
+            "openstreetmap_nominatim": {
+              "osm_id": "240109189",
+              "boundingbox": [
+                52.3570365,
+                52.6770365,
+                13.2288599,
+                13.5488599
+              ],
+              "licence": "Data \u00a9 OpenStreetMap contributors, ODbL 1.0. http://www.openstreetmap.org/copyright",
+              "importance": 0.31553744940772,
+              "icon": "https://nominatim.openstreetmap.org/images/mapicons/poi_place_city.p.20.png",
+              "osm_type": "node",
+              "display_name": "Berlin, 10117, Deutschland",
+              "lat": "52.5170365",
+              "type": "city",
+              "place_id": "601546",
+              "lon": "13.3888599",
+              "class": "place"
+            }
+          }
+        }
+      ],
+      "label": "where"
+    },
+    "when": {
+      "extracted": [
+        {
+          "parts": [
+            [
+              {
+                "nlpToken": {
+                  "index": 2,
+                  "word": "New",
+                  "originalText": "New",
+                  "lemma": "New",
+                  "characterOffsetBegin": 526,
+                  "characterOffsetEnd": 529,
+                  "pos": "NNP",
+                  "ner": "DATE",
+                  "normalizedNER": "2017-12-31",
+                  "speaker": "PER0",
+                  "before": " ",
+                  "after": " ",
+                  "timex": {
+                    "tid": "t6",
+                    "type": "DATE",
+                    "value": "2017-12-31"
+                  }
+                }
+              },
+              "NNP"
+            ],
+            [
+              {
+                "nlpToken": {
+                  "index": 3,
+                  "word": "Year",
+                  "originalText": "Year",
+                  "lemma": "Year",
+                  "characterOffsetBegin": 530,
+                  "characterOffsetEnd": 534,
+                  "pos": "NNP",
+                  "ner": "DATE",
+                  "normalizedNER": "2017-12-31",
+                  "speaker": "PER0",
+                  "before": " ",
+                  "after": "",
+                  "timex": {
+                    "tid": "t6",
+                    "type": "DATE",
+                    "value": "2017-12-31"
+                  }
+                }
+              },
+              "NNP"
+            ],
+            [
+              {
+                "nlpToken": {
+                  "index": 4,
+                  "word": "'s",
+                  "originalText": "\u2019s",
+                  "lemma": "'s",
+                  "characterOffsetBegin": 534,
+                  "characterOffsetEnd": 536,
+                  "pos": "POS",
+                  "ner": "DATE",
+                  "normalizedNER": "2017-12-31",
+                  "speaker": "PER0",
+                  "before": "",
+                  "after": " ",
+                  "timex": {
+                    "tid": "t6",
+                    "type": "DATE",
+                    "value": "2017-12-31"
+                  }
+                }
+              },
+              "POS"
+            ],
+            [
+              {
+                "nlpToken": {
+                  "index": 5,
+                  "word": "Eve",
+                  "originalText": "Eve",
+                  "lemma": "Eve",
+                  "characterOffsetBegin": 537,
+                  "characterOffsetEnd": 540,
+                  "pos": "NNP",
+                  "ner": "DATE",
+                  "normalizedNER": "2017-12-31",
+                  "speaker": "PER0",
+                  "before": " ",
+                  "after": " ",
+                  "timex": {
+                    "tid": "t6",
+                    "type": "DATE",
+                    "value": "2017-12-31"
+                  }
+                }
+              },
+              "NNP"
+            ]
+          ],
+          "score": 0.51018689324255,
+          "text": "New Year \u2019s Eve",
+          "enhancement": {
+            "timex": {
+              "start_date": "2017-12-31T00:00:00",
+              "end_date": "2017-12-31T23:59:59"
+            }
+          },
+          "nlpIndexSentence": 4
+        }
+      ],
+      "label": "when"
+    },
     "how": {
       "extracted": [
         {
@@ -703,228 +927,6 @@
         }
       ],
       "label": "why"
-    },
-    "where": {
-      "extracted": [
-        {
-          "parts": [
-            [
-              {
-                "nlpToken": {
-                  "index": 1,
-                  "word": "Berlin",
-                  "originalText": "Berlin",
-                  "lemma": "Berlin",
-                  "characterOffsetBegin": 0,
-                  "characterOffsetEnd": 6,
-                  "pos": "NNP",
-                  "ner": "LOCATION",
-                  "speaker": "PER0",
-                  "before": "",
-                  "after": " "
-                },
-                "aida": [
-                  {
-                    "mention": {
-                      "allEntities": [
-                        {
-                          "kbIdentifier": "YAGO:Berlin",
-                          "disambiguationScore": "0.66993"
-                        }
-                      ],
-                      "offset": 0,
-                      "name": "Berlin",
-                      "length": 6,
-                      "bestEntity": {
-                        "kbIdentifier": "YAGO:Berlin",
-                        "disambiguationScore": "0.66993"
-                      }
-                    },
-                    "bestEntityMetadata": {
-                      "knowledgebase": "YAGO",
-                      "depictionurl": "http://upload.wikimedia.org/wikipedia/commons/b/b4/Alte_Nationalgalerie_abends_%28Zuschnitt%29.jpg",
-                      "depictionthumbnailurl": "http://upload.wikimedia.org/wikipedia/commons/thumbAlte_Nationalgalerie_abends_%28Zuschnitt%29.jpg/200px-Alte_Nationalgalerie_abends_%28Zuschnitt%29.jpg",
-                      "importance": 2.256256725246705e-05,
-                      "entityId": "Berlin",
-                      "type": [
-                        "YAGO_wordnet_district_108552138",
-                        "YAGO_yagoPermanentlyLocatedEntity",
-                        "YAGO_yagoLegalActorGeo",
-                        "YAGO_wordnet_capital_108518505",
-                        "YAGO_wordnet_urban_area_108675967",
-                        "YAGO_wordnet_state_108654360",
-                        "YAGO_wordnet_municipality_108626283",
-                        "YAGO_wordnet_state_capital_108695539",
-                        "YAGO_wikicategory_locations",
-                        "YAGO_wordnet_center_108523483",
-                        "YAGO_wikicategory_Populated_places_established_in_the_13th_century",
-                        "YAGO_wordnet_seat_108647945",
-                        "YAGO_wordnet_region_108630985",
-                        "YAGO_yagoGeoEntity",
-                        "YAGO_wordnet_physical_entity_100001930",
-                        "YAGO_wikicategory_German_state_capitals",
-                        "YAGO_wordnet_site_108651247",
-                        "YAGO_wikicategory_Capitals_in_Europe",
-                        "YAGO_wordnet_entity_100001740",
-                        "YAGO_wordnet_object_100002684",
-                        "YAGO_wordnet_area_108497294",
-                        "YAGO_wordnet_city_108524735",
-                        "YAGO_wikicategory_States_and_territories_established_in_1237",
-                        "YAGO_wordnet_tract_108673395",
-                        "YAGO_wikicategory_States_of_Germany",
-                        "YAGO_wordnet_geographical_area_108574314",
-                        "YAGO_wordnet_location_100027167",
-                        "YAGO_wordnet_administrative_district_108491826"
-                      ],
-                      "readableRepr": "Berlin",
-                      "url": "http://en.wikipedia.org/wiki/Berlin"
-                    }
-                  }
-                ]
-              },
-              "NNP"
-            ]
-          ],
-          "score": 0.6790771306833233,
-          "text": "Berlin",
-          "enhancement": {
-            "openstreetmap_nominatim": {
-              "osm_id": "240109189",
-              "boundingbox": [
-                52.3570365,
-                52.6770365,
-                13.2288599,
-                13.5488599
-              ],
-              "licence": "Data \u00a9 OpenStreetMap contributors, ODbL 1.0. http://www.openstreetmap.org/copyright",
-              "importance": 0.31553744940772,
-              "icon": "https://nominatim.openstreetmap.org/images/mapicons/poi_place_city.p.20.png",
-              "osm_type": "node",
-              "display_name": "Berlin, 10117, Deutschland",
-              "lat": "52.5170365",
-              "type": "city",
-              "place_id": "601546",
-              "lon": "13.3888599",
-              "class": "place"
-            }
-          }
-        }
-      ],
-      "label": "where"
-    },
-    "when": {
-      "extracted": [
-        {
-          "parts": [
-            [
-              {
-                "nlpToken": {
-                  "index": 2,
-                  "word": "New",
-                  "originalText": "New",
-                  "lemma": "New",
-                  "characterOffsetBegin": 526,
-                  "characterOffsetEnd": 529,
-                  "pos": "NNP",
-                  "ner": "DATE",
-                  "normalizedNER": "2017-12-31",
-                  "speaker": "PER0",
-                  "before": " ",
-                  "after": " ",
-                  "timex": {
-                    "tid": "t6",
-                    "type": "DATE",
-                    "value": "2017-12-31"
-                  }
-                }
-              },
-              "NNP"
-            ],
-            [
-              {
-                "nlpToken": {
-                  "index": 3,
-                  "word": "Year",
-                  "originalText": "Year",
-                  "lemma": "Year",
-                  "characterOffsetBegin": 530,
-                  "characterOffsetEnd": 534,
-                  "pos": "NNP",
-                  "ner": "DATE",
-                  "normalizedNER": "2017-12-31",
-                  "speaker": "PER0",
-                  "before": " ",
-                  "after": "",
-                  "timex": {
-                    "tid": "t6",
-                    "type": "DATE",
-                    "value": "2017-12-31"
-                  }
-                }
-              },
-              "NNP"
-            ],
-            [
-              {
-                "nlpToken": {
-                  "index": 4,
-                  "word": "'s",
-                  "originalText": "\u2019s",
-                  "lemma": "'s",
-                  "characterOffsetBegin": 534,
-                  "characterOffsetEnd": 536,
-                  "pos": "POS",
-                  "ner": "DATE",
-                  "normalizedNER": "2017-12-31",
-                  "speaker": "PER0",
-                  "before": "",
-                  "after": " ",
-                  "timex": {
-                    "tid": "t6",
-                    "type": "DATE",
-                    "value": "2017-12-31"
-                  }
-                }
-              },
-              "POS"
-            ],
-            [
-              {
-                "nlpToken": {
-                  "index": 5,
-                  "word": "Eve",
-                  "originalText": "Eve",
-                  "lemma": "Eve",
-                  "characterOffsetBegin": 537,
-                  "characterOffsetEnd": 540,
-                  "pos": "NNP",
-                  "ner": "DATE",
-                  "normalizedNER": "2017-12-31",
-                  "speaker": "PER0",
-                  "before": " ",
-                  "after": " ",
-                  "timex": {
-                    "tid": "t6",
-                    "type": "DATE",
-                    "value": "2017-12-31"
-                  }
-                }
-              },
-              "NNP"
-            ]
-          ],
-          "score": 0.63018689324255,
-          "text": "New Year \u2019s Eve",
-          "enhancement": {
-            "timex": {
-              "start_date": "2017-12-31T00:00:00",
-              "end_date": "2017-12-31T23:59:59"
-            }
-          },
-          "nlpIndexSentence": 4
-        }
-      ],
-      "label": "when"
     }
   }
 }

@@ -23,7 +23,9 @@
     "Event": "harambe"
   },
   "dId": "1d6a1d7d6226cd0a40900eeb65e69ae27e2226450fd6037c47f35405",
-  "fiveWoneH": {
+  "fiveWoneH": {},
+  "fiveWoneH_Metadata": {
+    "process_errors": {},
     "how": {
       "extracted": [
         {
@@ -238,6 +240,176 @@
       ],
       "label": "how"
     },
+    "who": {
+      "extracted": [
+        {
+          "parts": [
+            [
+              {
+                "nlpToken": {
+                  "index": 1,
+                  "word": "Cincinnati",
+                  "originalText": "Cincinnati",
+                  "lemma": "Cincinnati",
+                  "characterOffsetBegin": 0,
+                  "characterOffsetEnd": 10,
+                  "pos": "NNP",
+                  "ner": "ORGANIZATION",
+                  "speaker": "PER0",
+                  "before": "",
+                  "after": " "
+                },
+                "aida": [
+                  {
+                    "mention": {
+                      "allEntities": [],
+                      "offset": 0,
+                      "name": "Cincinnati Zoo",
+                      "length": 14
+                    },
+                    "bestEntityMetadata": null
+                  }
+                ]
+              },
+              "NNP"
+            ],
+            [
+              {
+                "nlpToken": {
+                  "index": 2,
+                  "word": "Zoo",
+                  "originalText": "Zoo",
+                  "lemma": "Zoo",
+                  "characterOffsetBegin": 11,
+                  "characterOffsetEnd": 14,
+                  "pos": "NNP",
+                  "ner": "ORGANIZATION",
+                  "speaker": "PER0",
+                  "before": " ",
+                  "after": " "
+                },
+                "aida": [
+                  {
+                    "mention": {
+                      "allEntities": [],
+                      "offset": 0,
+                      "name": "Cincinnati Zoo",
+                      "length": 14
+                    },
+                    "bestEntityMetadata": null
+                  }
+                ]
+              },
+              "NNP"
+            ],
+            [
+              {
+                "nlpToken": {
+                  "index": 3,
+                  "word": "gorilla",
+                  "originalText": "gorilla",
+                  "lemma": "gorilla",
+                  "characterOffsetBegin": 15,
+                  "characterOffsetEnd": 22,
+                  "pos": "NN",
+                  "ner": "O",
+                  "speaker": "PER0",
+                  "before": " ",
+                  "after": " "
+                }
+              },
+              "NN"
+            ]
+          ],
+          "score": 1.0,
+          "text": "Cincinnati Zoo gorilla"
+        }
+      ],
+      "label": "who"
+    },
+    "what": {
+      "extracted": [
+        {
+          "parts": [
+            [
+              {
+                "nlpToken": {
+                  "index": 4,
+                  "word": "killed",
+                  "originalText": "killed",
+                  "lemma": "kill",
+                  "characterOffsetBegin": 23,
+                  "characterOffsetEnd": 29,
+                  "pos": "VBN",
+                  "ner": "O",
+                  "speaker": "PER0",
+                  "before": " ",
+                  "after": " "
+                }
+              },
+              "VBN"
+            ],
+            [
+              {
+                "nlpToken": {
+                  "index": 5,
+                  "word": "after",
+                  "originalText": "after",
+                  "lemma": "after",
+                  "characterOffsetBegin": 30,
+                  "characterOffsetEnd": 35,
+                  "pos": "IN",
+                  "ner": "O",
+                  "speaker": "PER0",
+                  "before": " ",
+                  "after": " "
+                }
+              },
+              "IN"
+            ],
+            [
+              {
+                "nlpToken": {
+                  "index": 6,
+                  "word": "4yo",
+                  "originalText": "4yo",
+                  "lemma": "4yo",
+                  "characterOffsetBegin": 36,
+                  "characterOffsetEnd": 39,
+                  "pos": "JJ",
+                  "ner": "O",
+                  "speaker": "PER0",
+                  "before": " ",
+                  "after": " "
+                }
+              },
+              "JJ"
+            ],
+            [
+              {
+                "nlpToken": {
+                  "index": 7,
+                  "word": "kid",
+                  "originalText": "kid",
+                  "lemma": "kid",
+                  "characterOffsetBegin": 40,
+                  "characterOffsetEnd": 43,
+                  "pos": "NN",
+                  "ner": "O",
+                  "speaker": "PER0",
+                  "before": " ",
+                  "after": " "
+                }
+              },
+              "NN"
+            ]
+          ],
+          "score": 1.0,
+          "text": "killed after 4yo kid"
+        }
+      ],
+      "label": "what"
+    },
     "where": {
       "extracted": [
         {
@@ -442,176 +614,6 @@
         }
       ],
       "label": "when"
-    },
-    "who": {
-      "extracted": [
-        {
-          "parts": [
-            [
-              {
-                "nlpToken": {
-                  "index": 1,
-                  "word": "Cincinnati",
-                  "originalText": "Cincinnati",
-                  "lemma": "Cincinnati",
-                  "characterOffsetBegin": 0,
-                  "characterOffsetEnd": 10,
-                  "pos": "NNP",
-                  "ner": "ORGANIZATION",
-                  "speaker": "PER0",
-                  "before": "",
-                  "after": " "
-                },
-                "aida": [
-                  {
-                    "mention": {
-                      "allEntities": [],
-                      "offset": 0,
-                      "name": "Cincinnati Zoo",
-                      "length": 14
-                    },
-                    "bestEntityMetadata": null
-                  }
-                ]
-              },
-              "NNP"
-            ],
-            [
-              {
-                "nlpToken": {
-                  "index": 2,
-                  "word": "Zoo",
-                  "originalText": "Zoo",
-                  "lemma": "Zoo",
-                  "characterOffsetBegin": 11,
-                  "characterOffsetEnd": 14,
-                  "pos": "NNP",
-                  "ner": "ORGANIZATION",
-                  "speaker": "PER0",
-                  "before": " ",
-                  "after": " "
-                },
-                "aida": [
-                  {
-                    "mention": {
-                      "allEntities": [],
-                      "offset": 0,
-                      "name": "Cincinnati Zoo",
-                      "length": 14
-                    },
-                    "bestEntityMetadata": null
-                  }
-                ]
-              },
-              "NNP"
-            ],
-            [
-              {
-                "nlpToken": {
-                  "index": 3,
-                  "word": "gorilla",
-                  "originalText": "gorilla",
-                  "lemma": "gorilla",
-                  "characterOffsetBegin": 15,
-                  "characterOffsetEnd": 22,
-                  "pos": "NN",
-                  "ner": "O",
-                  "speaker": "PER0",
-                  "before": " ",
-                  "after": " "
-                }
-              },
-              "NN"
-            ]
-          ],
-          "score": 1.0,
-          "text": "Cincinnati Zoo gorilla"
-        }
-      ],
-      "label": "who"
-    },
-    "what": {
-      "extracted": [
-        {
-          "parts": [
-            [
-              {
-                "nlpToken": {
-                  "index": 4,
-                  "word": "killed",
-                  "originalText": "killed",
-                  "lemma": "kill",
-                  "characterOffsetBegin": 23,
-                  "characterOffsetEnd": 29,
-                  "pos": "VBN",
-                  "ner": "O",
-                  "speaker": "PER0",
-                  "before": " ",
-                  "after": " "
-                }
-              },
-              "VBN"
-            ],
-            [
-              {
-                "nlpToken": {
-                  "index": 5,
-                  "word": "after",
-                  "originalText": "after",
-                  "lemma": "after",
-                  "characterOffsetBegin": 30,
-                  "characterOffsetEnd": 35,
-                  "pos": "IN",
-                  "ner": "O",
-                  "speaker": "PER0",
-                  "before": " ",
-                  "after": " "
-                }
-              },
-              "IN"
-            ],
-            [
-              {
-                "nlpToken": {
-                  "index": 6,
-                  "word": "4yo",
-                  "originalText": "4yo",
-                  "lemma": "4yo",
-                  "characterOffsetBegin": 36,
-                  "characterOffsetEnd": 39,
-                  "pos": "JJ",
-                  "ner": "O",
-                  "speaker": "PER0",
-                  "before": " ",
-                  "after": " "
-                }
-              },
-              "JJ"
-            ],
-            [
-              {
-                "nlpToken": {
-                  "index": 7,
-                  "word": "kid",
-                  "originalText": "kid",
-                  "lemma": "kid",
-                  "characterOffsetBegin": 40,
-                  "characterOffsetEnd": 43,
-                  "pos": "NN",
-                  "ner": "O",
-                  "speaker": "PER0",
-                  "before": " ",
-                  "after": " "
-                }
-              },
-              "NN"
-            ]
-          ],
-          "score": 1.0,
-          "text": "killed after 4yo kid"
-        }
-      ],
-      "label": "what"
     },
     "why": {
       "extracted": [

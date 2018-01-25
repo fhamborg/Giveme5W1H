@@ -23,7 +23,9 @@
     "EventId": 35,
     "Event": "new_york_family_of_5_among_12_killed_in_costa_rica_plane_crash"
   },
-  "fiveWoneH": {
+  "fiveWoneH": {},
+  "fiveWoneH_Metadata": {
+    "process_errors": {},
     "who": {
       "extracted": [
         {
@@ -81,6 +83,179 @@
         }
       ],
       "label": "what"
+    },
+    "where": {
+      "extracted": [
+        {
+          "parts": [
+            [
+              {
+                "nlpToken": {
+                  "index": 12,
+                  "word": "U.S.",
+                  "originalText": "U.S.",
+                  "lemma": "U.S.",
+                  "characterOffsetBegin": 72,
+                  "characterOffsetEnd": 76,
+                  "pos": "NNP",
+                  "ner": "LOCATION",
+                  "speaker": "PER0",
+                  "before": " ",
+                  "after": " "
+                },
+                "aida": [
+                  {
+                    "mention": {
+                      "allEntities": [
+                        {
+                          "kbIdentifier": "YAGO:United_States",
+                          "disambiguationScore": "0.18555"
+                        }
+                      ],
+                      "offset": 72,
+                      "name": "U.S.",
+                      "length": 4,
+                      "bestEntity": {
+                        "kbIdentifier": "YAGO:United_States",
+                        "disambiguationScore": "0.18555"
+                      }
+                    },
+                    "bestEntityMetadata": {
+                      "knowledgebase": "YAGO",
+                      "depictionurl": "http://upload.wikimedia.org/wikipedia/en/a/a4/Flag_of_the_United_States.svg",
+                      "depictionthumbnailurl": "http://upload.wikimedia.org/wikipedia/en/thumbFlag_of_the_United_States.svg/200px-Flag_of_the_United_States.svg",
+                      "importance": 0.0,
+                      "entityId": "United_States",
+                      "type": [
+                        "YAGO_wordnet_system_108435388",
+                        "YAGO_yagoPermanentlyLocatedEntity",
+                        "YAGO_yagoLegalActorGeo",
+                        "YAGO_wordnet_organization_108008335",
+                        "YAGO_wordnet_state_100024720",
+                        "YAGO_wordnet_democracy_108361329",
+                        "YAGO_wordnet_union_114418395",
+                        "YAGO_wordnet_unit_108189659",
+                        "YAGO_wikicategory_Superpowers",
+                        "YAGO_wordnet_cognition_100023271",
+                        "YAGO_wordnet_coalition_114418662",
+                        "YAGO_wordnet_political_system_108367880",
+                        "YAGO_wordnet_attribute_100024264",
+                        "YAGO_wordnet_abstraction_100002137",
+                        "YAGO_wordnet_attitude_106193203",
+                        "YAGO_wordnet_alliance_114418822",
+                        "YAGO_wordnet_group_100031264",
+                        "YAGO_wordnet_psychological_feature_100023100",
+                        "YAGO_wordnet_body_107965085",
+                        "YAGO_wordnet_political_orientation_106212839",
+                        "YAGO_wordnet_democracy_106217103",
+                        "YAGO_wordnet_political_unit_108359949",
+                        "YAGO_wikicategory_Former_British_colonies",
+                        "YAGO_wordnet_economy_108366753",
+                        "YAGO_yagoLegalActor",
+                        "YAGO_wikicategory_G8_nations",
+                        "YAGO_yagoGeoEntity",
+                        "YAGO_wordnet_social_group_107950920",
+                        "YAGO_wordnet_entity_100001740",
+                        "YAGO_wordnet_colony_108374049",
+                        "YAGO_wikicategory_Liberal_democracies",
+                        "YAGO_wikicategory_G20_nations",
+                        "YAGO_wikicategory_Former_confederations",
+                        "YAGO_wordnet_state_108168978",
+                        "YAGO_wikicategory_Federal_constitutional_republics",
+                        "YAGO_wordnet_world_power_108177592",
+                        "YAGO_wikicategory_Republics",
+                        "YAGO_wordnet_orientation_106208021"
+                      ],
+                      "readableRepr": "United States",
+                      "url": "http://en.wikipedia.org/wiki/United%20States"
+                    }
+                  }
+                ]
+              },
+              "NNP"
+            ]
+          ],
+          "score": 0.7,
+          "text": "U.S.",
+          "enhancement": {
+            "openstreetmap_nominatim": {
+              "osm_id": "276671197",
+              "boundingbox": [
+                45.1895505,
+                45.1896185,
+                -88.7322087,
+                -88.7321082
+              ],
+              "licence": "Data \u00a9 OpenStreetMap contributors, ODbL 1.0. http://www.openstreetmap.org/copyright",
+              "importance": 0.201,
+              "icon": "https://nominatim.openstreetmap.org/images/mapicons/transport_fuel.p.20.png",
+              "osm_type": "way",
+              "display_name": "U.S., State Highway 55, Sunny Waters, Lily, Town of Langlade, Langlade County, Wisconsin, 54462, United States of America",
+              "lat": "45.1895845",
+              "type": "fuel",
+              "place_id": "136017889",
+              "lon": "-88.73215845",
+              "class": "amenity"
+            }
+          },
+          "nlpIndexSentence": 2
+        }
+      ],
+      "label": "where"
+    },
+    "when": {
+      "extracted": [
+        {
+          "parts": [
+            [
+              {
+                "nlpToken": {
+                  "index": 4,
+                  "word": "today",
+                  "originalText": "today",
+                  "lemma": "today",
+                  "characterOffsetBegin": 253,
+                  "characterOffsetEnd": 258,
+                  "pos": "NN",
+                  "ner": "DATE",
+                  "normalizedNER": "2017-12-31",
+                  "speaker": "PER0",
+                  "before": " ",
+                  "after": " ",
+                  "timex": {
+                    "tid": "t4",
+                    "type": "DATE",
+                    "value": "2017-12-31"
+                  }
+                },
+                "heideltime": [
+                  {
+                    "@tid": "t3",
+                    "@type": "DATE",
+                    "@value": "2017-12-31",
+                    "#text": "today",
+                    "characterOffset": [
+                      253,
+                      258
+                    ]
+                  }
+                ]
+              },
+              "NN"
+            ]
+          ],
+          "score": 0.3867675810732378,
+          "text": "today",
+          "enhancement": {
+            "timex": {
+              "start_date": "2017-12-31T00:00:00",
+              "end_date": "2017-12-31T23:59:59"
+            }
+          },
+          "nlpIndexSentence": 5
+        }
+      ],
+      "label": "when"
     },
     "how": {
       "extracted": [
@@ -395,179 +570,6 @@
         }
       ],
       "label": "why"
-    },
-    "where": {
-      "extracted": [
-        {
-          "parts": [
-            [
-              {
-                "nlpToken": {
-                  "index": 12,
-                  "word": "U.S.",
-                  "originalText": "U.S.",
-                  "lemma": "U.S.",
-                  "characterOffsetBegin": 72,
-                  "characterOffsetEnd": 76,
-                  "pos": "NNP",
-                  "ner": "LOCATION",
-                  "speaker": "PER0",
-                  "before": " ",
-                  "after": " "
-                },
-                "aida": [
-                  {
-                    "mention": {
-                      "allEntities": [
-                        {
-                          "kbIdentifier": "YAGO:United_States",
-                          "disambiguationScore": "0.18555"
-                        }
-                      ],
-                      "offset": 72,
-                      "name": "U.S.",
-                      "length": 4,
-                      "bestEntity": {
-                        "kbIdentifier": "YAGO:United_States",
-                        "disambiguationScore": "0.18555"
-                      }
-                    },
-                    "bestEntityMetadata": {
-                      "knowledgebase": "YAGO",
-                      "depictionurl": "http://upload.wikimedia.org/wikipedia/en/a/a4/Flag_of_the_United_States.svg",
-                      "depictionthumbnailurl": "http://upload.wikimedia.org/wikipedia/en/thumbFlag_of_the_United_States.svg/200px-Flag_of_the_United_States.svg",
-                      "importance": 0.0,
-                      "entityId": "United_States",
-                      "type": [
-                        "YAGO_wordnet_system_108435388",
-                        "YAGO_yagoPermanentlyLocatedEntity",
-                        "YAGO_yagoLegalActorGeo",
-                        "YAGO_wordnet_organization_108008335",
-                        "YAGO_wordnet_state_100024720",
-                        "YAGO_wordnet_democracy_108361329",
-                        "YAGO_wordnet_union_114418395",
-                        "YAGO_wordnet_unit_108189659",
-                        "YAGO_wikicategory_Superpowers",
-                        "YAGO_wordnet_cognition_100023271",
-                        "YAGO_wordnet_coalition_114418662",
-                        "YAGO_wordnet_political_system_108367880",
-                        "YAGO_wordnet_attribute_100024264",
-                        "YAGO_wordnet_abstraction_100002137",
-                        "YAGO_wordnet_attitude_106193203",
-                        "YAGO_wordnet_alliance_114418822",
-                        "YAGO_wordnet_group_100031264",
-                        "YAGO_wordnet_psychological_feature_100023100",
-                        "YAGO_wordnet_body_107965085",
-                        "YAGO_wordnet_political_orientation_106212839",
-                        "YAGO_wordnet_democracy_106217103",
-                        "YAGO_wordnet_political_unit_108359949",
-                        "YAGO_wikicategory_Former_British_colonies",
-                        "YAGO_wordnet_economy_108366753",
-                        "YAGO_yagoLegalActor",
-                        "YAGO_wikicategory_G8_nations",
-                        "YAGO_yagoGeoEntity",
-                        "YAGO_wordnet_social_group_107950920",
-                        "YAGO_wordnet_entity_100001740",
-                        "YAGO_wordnet_colony_108374049",
-                        "YAGO_wikicategory_Liberal_democracies",
-                        "YAGO_wikicategory_G20_nations",
-                        "YAGO_wikicategory_Former_confederations",
-                        "YAGO_wordnet_state_108168978",
-                        "YAGO_wikicategory_Federal_constitutional_republics",
-                        "YAGO_wordnet_world_power_108177592",
-                        "YAGO_wikicategory_Republics",
-                        "YAGO_wordnet_orientation_106208021"
-                      ],
-                      "readableRepr": "United States",
-                      "url": "http://en.wikipedia.org/wiki/United%20States"
-                    }
-                  }
-                ]
-              },
-              "NNP"
-            ]
-          ],
-          "score": 0.7,
-          "text": "U.S.",
-          "enhancement": {
-            "openstreetmap_nominatim": {
-              "osm_id": "276671197",
-              "boundingbox": [
-                45.1895505,
-                45.1896185,
-                -88.7322087,
-                -88.7321082
-              ],
-              "licence": "Data \u00a9 OpenStreetMap contributors, ODbL 1.0. http://www.openstreetmap.org/copyright",
-              "importance": 0.201,
-              "icon": "https://nominatim.openstreetmap.org/images/mapicons/transport_fuel.p.20.png",
-              "osm_type": "way",
-              "display_name": "U.S., State Highway 55, Sunny Waters, Lily, Town of Langlade, Langlade County, Wisconsin, 54462, United States of America",
-              "lat": "45.1895845",
-              "type": "fuel",
-              "place_id": "136017889",
-              "lon": "-88.73215845",
-              "class": "amenity"
-            }
-          },
-          "nlpIndexSentence": 2
-        }
-      ],
-      "label": "where"
-    },
-    "when": {
-      "extracted": [
-        {
-          "parts": [
-            [
-              {
-                "nlpToken": {
-                  "index": 4,
-                  "word": "today",
-                  "originalText": "today",
-                  "lemma": "today",
-                  "characterOffsetBegin": 253,
-                  "characterOffsetEnd": 258,
-                  "pos": "NN",
-                  "ner": "DATE",
-                  "normalizedNER": "2017-12-31",
-                  "speaker": "PER0",
-                  "before": " ",
-                  "after": " ",
-                  "timex": {
-                    "tid": "t4",
-                    "type": "DATE",
-                    "value": "2017-12-31"
-                  }
-                },
-                "heideltime": [
-                  {
-                    "@tid": "t3",
-                    "@type": "DATE",
-                    "@value": "2017-12-31",
-                    "#text": "today",
-                    "characterOffset": [
-                      253,
-                      258
-                    ]
-                  }
-                ]
-              },
-              "NN"
-            ]
-          ],
-          "score": 0.5067675810732378,
-          "text": "today",
-          "enhancement": {
-            "timex": {
-              "start_date": "2017-12-31T00:00:00",
-              "end_date": "2017-12-31T23:59:59"
-            }
-          },
-          "nlpIndexSentence": 5
-        }
-      ],
-      "label": "when"
     }
   }
 }

@@ -23,7 +23,9 @@
     "EventId": 14,
     "Event": "american_airlines_apologizes_after_g_league_players_accused_of_stealing_blankets_thrown_off_flight"
   },
-  "fiveWoneH": {
+  "fiveWoneH": {},
+  "fiveWoneH_Metadata": {
+    "process_errors": {},
     "how": {
       "extracted": [
         {
@@ -215,6 +217,148 @@
         }
       ],
       "label": "how"
+    },
+    "where": {
+      "extracted": [
+        {
+          "parts": [
+            [
+              {
+                "nlpToken": {
+                  "index": 23,
+                  "word": "Dallas",
+                  "originalText": "Dallas",
+                  "lemma": "Dallas",
+                  "characterOffsetBegin": 187,
+                  "characterOffsetEnd": 193,
+                  "pos": "NNP",
+                  "ner": "LOCATION",
+                  "speaker": "PER0",
+                  "before": " ",
+                  "after": " "
+                },
+                "aida": [
+                  {
+                    "mention": {
+                      "allEntities": [
+                        {
+                          "kbIdentifier": "YAGO:Dallas\\u002fFort_Worth_International_Airport",
+                          "disambiguationScore": "0.09169"
+                        }
+                      ],
+                      "offset": 187,
+                      "name": "Dallas",
+                      "length": 6,
+                      "bestEntity": {
+                        "kbIdentifier": "YAGO:Dallas\\u002fFort_Worth_International_Airport",
+                        "disambiguationScore": "0.09169"
+                      }
+                    },
+                    "bestEntityMetadata": {
+                      "knowledgebase": "YAGO",
+                      "depictionurl": "http://upload.wikimedia.org/wikipedia/commons/0/0a/Dallas_-_Fort_Worth_International_Airport.jpg",
+                      "depictionthumbnailurl": "http://upload.wikimedia.org/wikipedia/commons/thumbDallas_-_Fort_Worth_International_Airport.jpg/200px-Dallas_-_Fort_Worth_International_Airport.jpg",
+                      "importance": 0.003919480047030418,
+                      "entityId": "Dallas\\u002fFort_Worth_International_Airport",
+                      "type": [
+                        "YAGO_yagoPermanentlyLocatedEntity",
+                        "YAGO_yagoLegalActorGeo",
+                        "YAGO_wikicategory_Airports_established_in_1953",
+                        "YAGO_wordnet_airfield_102687992",
+                        "YAGO_wordnet_facility_103315023",
+                        "YAGO_wordnet_airport_102692232",
+                        "YAGO_wordnet_region_108630985",
+                        "YAGO_yagoGeoEntity",
+                        "YAGO_wordnet_physical_entity_100001930",
+                        "YAGO_wordnet_entity_100001740",
+                        "YAGO_wordnet_object_100002684",
+                        "YAGO_wordnet_tract_108673395",
+                        "YAGO_wikicategory_Airports_in_Texas",
+                        "YAGO_wordnet_geographical_area_108574314",
+                        "YAGO_wordnet_location_100027167",
+                        "YAGO_wordnet_whole_100003553",
+                        "YAGO_wordnet_artifact_100021939",
+                        "YAGO_wikicategory_Airports_in_the_Dallas\\u2013Fort_Worth_metroplex",
+                        "YAGO_wordnet_park_108615149"
+                      ],
+                      "readableRepr": "Dallas/Fort Worth International Airport",
+                      "url": "http://en.wikipedia.org/wiki/Dallas/Dallas%2FFort%20Worth%20International%20Airport"
+                    }
+                  }
+                ]
+              },
+              "NNP"
+            ]
+          ],
+          "score": 0.6775639365421855,
+          "text": "Dallas",
+          "enhancement": {
+            "openstreetmap_nominatim": {
+              "osm_id": "6571629",
+              "boundingbox": [
+                32.613216,
+                33.0239366,
+                -97.000482,
+                -96.4636317
+              ],
+              "licence": "Data \u00a9 OpenStreetMap contributors, ODbL 1.0. http://www.openstreetmap.org/copyright",
+              "importance": 0.27754544610423,
+              "icon": "https://nominatim.openstreetmap.org/images/mapicons/poi_place_city.p.20.png",
+              "osm_type": "relation",
+              "display_name": "Dallas, Dallas County, Texas, United States of America",
+              "lat": "32.7762719",
+              "type": "city",
+              "place_id": "179920199",
+              "lon": "-96.7968559",
+              "class": "place"
+            }
+          },
+          "nlpIndexSentence": 1
+        }
+      ],
+      "label": "where"
+    },
+    "when": {
+      "extracted": [
+        {
+          "parts": [
+            [
+              {
+                "nlpToken": {
+                  "index": 1,
+                  "word": "Sunday",
+                  "originalText": "Sunday",
+                  "lemma": "Sunday",
+                  "characterOffsetBegin": 1855,
+                  "characterOffsetEnd": 1861,
+                  "pos": "NNP",
+                  "ner": "DATE",
+                  "normalizedNER": "2017-12-24",
+                  "speaker": "PER0",
+                  "before": "\n",
+                  "after": "",
+                  "timex": {
+                    "tid": "t6",
+                    "type": "DATE",
+                    "value": "2017-12-24"
+                  }
+                }
+              },
+              "NNP"
+            ]
+          ],
+          "score": 0.34946482534131534,
+          "text": "Sunday",
+          "enhancement": {
+            "timex": {
+              "start_date": "2017-12-24T00:00:00",
+              "end_date": "2017-12-24T23:59:59"
+            }
+          },
+          "nlpIndexSentence": 14
+        }
+      ],
+      "label": "when"
     },
     "who": {
       "extracted": [
@@ -568,160 +712,6 @@
         }
       ],
       "label": "why"
-    },
-    "where": {
-      "extracted": [
-        {
-          "parts": [
-            [
-              {
-                "nlpToken": {
-                  "index": 23,
-                  "word": "Dallas",
-                  "originalText": "Dallas",
-                  "lemma": "Dallas",
-                  "characterOffsetBegin": 187,
-                  "characterOffsetEnd": 193,
-                  "pos": "NNP",
-                  "ner": "LOCATION",
-                  "speaker": "PER0",
-                  "before": " ",
-                  "after": " "
-                },
-                "aida": [
-                  {
-                    "mention": {
-                      "allEntities": [
-                        {
-                          "kbIdentifier": "YAGO:Dallas\\u002fFort_Worth_International_Airport",
-                          "disambiguationScore": "0.09169"
-                        }
-                      ],
-                      "offset": 187,
-                      "name": "Dallas",
-                      "length": 6,
-                      "bestEntity": {
-                        "kbIdentifier": "YAGO:Dallas\\u002fFort_Worth_International_Airport",
-                        "disambiguationScore": "0.09169"
-                      }
-                    },
-                    "bestEntityMetadata": {
-                      "knowledgebase": "YAGO",
-                      "depictionurl": "http://upload.wikimedia.org/wikipedia/commons/0/0a/Dallas_-_Fort_Worth_International_Airport.jpg",
-                      "depictionthumbnailurl": "http://upload.wikimedia.org/wikipedia/commons/thumbDallas_-_Fort_Worth_International_Airport.jpg/200px-Dallas_-_Fort_Worth_International_Airport.jpg",
-                      "importance": 0.003919480047030418,
-                      "entityId": "Dallas\\u002fFort_Worth_International_Airport",
-                      "type": [
-                        "YAGO_yagoPermanentlyLocatedEntity",
-                        "YAGO_yagoLegalActorGeo",
-                        "YAGO_wikicategory_Airports_established_in_1953",
-                        "YAGO_wordnet_airfield_102687992",
-                        "YAGO_wordnet_facility_103315023",
-                        "YAGO_wordnet_airport_102692232",
-                        "YAGO_wordnet_region_108630985",
-                        "YAGO_yagoGeoEntity",
-                        "YAGO_wordnet_physical_entity_100001930",
-                        "YAGO_wordnet_entity_100001740",
-                        "YAGO_wordnet_object_100002684",
-                        "YAGO_wordnet_tract_108673395",
-                        "YAGO_wikicategory_Airports_in_Texas",
-                        "YAGO_wordnet_geographical_area_108574314",
-                        "YAGO_wordnet_location_100027167",
-                        "YAGO_wordnet_whole_100003553",
-                        "YAGO_wordnet_artifact_100021939",
-                        "YAGO_wikicategory_Airports_in_the_Dallas\\u2013Fort_Worth_metroplex",
-                        "YAGO_wordnet_park_108615149"
-                      ],
-                      "readableRepr": "Dallas/Fort Worth International Airport",
-                      "url": "http://en.wikipedia.org/wiki/Dallas%2FFort%20Worth%20International%20Airport"
-                    }
-                  }
-                ]
-              },
-              "NNP"
-            ]
-          ],
-          "score": 0.6775639365421855,
-          "text": "Dallas",
-          "enhancement": {
-            "openstreetmap_nominatim": {
-              "osm_id": "6571629",
-              "boundingbox": [
-                32.613216,
-                33.0239366,
-                -97.000482,
-                -96.4636317
-              ],
-              "licence": "Data \u00a9 OpenStreetMap contributors, ODbL 1.0. http://www.openstreetmap.org/copyright",
-              "importance": 0.27754544610423,
-              "icon": "https://nominatim.openstreetmap.org/images/mapicons/poi_place_city.p.20.png",
-              "osm_type": "relation",
-              "display_name": "Dallas, Dallas County, Texas, United States of America",
-              "lat": "32.7762719",
-              "type": "city",
-              "place_id": "179920199",
-              "lon": "-96.7968559",
-              "class": "place"
-            }
-          },
-          "nlpIndexSentence": 1
-        }
-      ],
-      "label": "where"
-    },
-    "when": {
-      "extracted": [
-        {
-          "parts": [
-            [
-              {
-                "nlpToken": {
-                  "index": 6,
-                  "word": "Tuesday",
-                  "originalText": "Tuesday",
-                  "lemma": "Tuesday",
-                  "characterOffsetBegin": 653,
-                  "characterOffsetEnd": 660,
-                  "pos": "NNP",
-                  "ner": "DATE",
-                  "normalizedNER": "2017-12-26",
-                  "speaker": "PER0",
-                  "before": " ",
-                  "after": " ",
-                  "timex": {
-                    "tid": "t1",
-                    "type": "DATE",
-                    "value": "2017-12-26"
-                  }
-                },
-                "heideltime": [
-                  {
-                    "@tid": "t1",
-                    "@type": "DATE",
-                    "@value": "2017-12-26",
-                    "#text": "Tuesday",
-                    "characterOffset": [
-                      653,
-                      660
-                    ]
-                  }
-                ]
-              },
-              "NNP"
-            ]
-          ],
-          "score": 0.4648628191684758,
-          "text": "Tuesday",
-          "enhancement": {
-            "timex": {
-              "start_date": "2017-12-26T00:00:00",
-              "end_date": "2017-12-26T23:59:59"
-            }
-          },
-          "nlpIndexSentence": 4
-        }
-      ],
-      "label": "when"
     }
   }
 }

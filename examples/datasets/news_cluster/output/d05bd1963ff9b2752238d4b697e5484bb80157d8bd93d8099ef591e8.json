@@ -25,7 +25,9 @@
     "EventId": 31,
     "Event": "the_broken_berg_stunning_nasa_image_captures_newly_created_iceberg_cracking_into_20_pieces"
   },
-  "fiveWoneH": {
+  "fiveWoneH": {},
+  "fiveWoneH_Metadata": {
+    "process_errors": {},
     "how": {
       "extracted": [
         {
@@ -374,35 +376,6 @@
       ],
       "label": "what"
     },
-    "why": {
-      "extracted": [
-        {
-          "parts": [
-            [
-              {
-                "nlpToken": {
-                  "index": 5,
-                  "word": "iceberg",
-                  "originalText": "iceberg",
-                  "lemma": "iceberg",
-                  "characterOffsetBegin": 28,
-                  "characterOffsetEnd": 35,
-                  "pos": "NN",
-                  "ner": "O",
-                  "speaker": "PER0",
-                  "before": " ",
-                  "after": " "
-                }
-              },
-              "NN"
-            ]
-          ],
-          "score": 0.5860000000000001,
-          "text": "iceberg"
-        }
-      ],
-      "label": "why"
-    },
     "where": {
       "extracted": [
         {
@@ -630,32 +603,61 @@
                   "characterOffsetEnd": 1305,
                   "pos": "NN",
                   "ner": "TIME",
-                  "normalizedNER": "2017-12-30T00:00",
+                  "normalizedNER": "2017-12-29T00:00",
                   "speaker": "PER0",
                   "before": " ",
                   "after": " ",
                   "timex": {
                     "tid": "t10",
                     "type": "TIME",
-                    "value": "2017-12-30T00:00"
+                    "value": "2017-12-29T00:00"
                   }
                 }
               },
               "NN"
             ]
           ],
-          "score": 0.7095293761534394,
+          "score": 0.5761960428201061,
           "text": "midnight",
           "enhancement": {
             "timex": {
-              "start_date": "2017-12-30T00:00:00",
-              "end_date": "2017-12-30T00:00:59"
+              "start_date": "2017-12-29T00:00:00",
+              "end_date": "2017-12-29T00:00:59"
             }
           },
           "nlpIndexSentence": 11
         }
       ],
       "label": "when"
+    },
+    "why": {
+      "extracted": [
+        {
+          "parts": [
+            [
+              {
+                "nlpToken": {
+                  "index": 5,
+                  "word": "iceberg",
+                  "originalText": "iceberg",
+                  "lemma": "iceberg",
+                  "characterOffsetBegin": 28,
+                  "characterOffsetEnd": 35,
+                  "pos": "NN",
+                  "ner": "O",
+                  "speaker": "PER0",
+                  "before": " ",
+                  "after": " "
+                }
+              },
+              "NN"
+            ]
+          ],
+          "score": 0.5860000000000001,
+          "text": "iceberg"
+        }
+      ],
+      "label": "why"
     }
   }
 }

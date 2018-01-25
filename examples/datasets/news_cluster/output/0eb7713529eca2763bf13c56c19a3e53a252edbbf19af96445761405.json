@@ -23,60 +23,16 @@
     "EventId": 43,
     "Event": "chicago_bears_fire_coach_john_fox_after_5_11_season"
   },
-  "fiveWoneH": {
-    "where": {
-      "extracted": [
-        {
-          "parts": [
-            [
-              {
-                "nlpToken": {
-                  "index": 1,
-                  "word": "Chicago",
-                  "originalText": "Chicago",
-                  "lemma": "Chicago",
-                  "characterOffsetBegin": 0,
-                  "characterOffsetEnd": 7,
-                  "pos": "NNP",
-                  "ner": "LOCATION",
-                  "speaker": "PER0",
-                  "before": "",
-                  "after": " "
-                }
-              },
-              "NNP"
-            ]
-          ],
-          "score": 0.6781958630747101,
-          "text": "Chicago",
-          "enhancement": {
-            "openstreetmap_nominatim": {
-              "osm_id": "122604",
-              "boundingbox": [
-                41.643919,
-                42.0230219,
-                -87.940101,
-                -87.5239841
-              ],
-              "licence": "Data \u00a9 OpenStreetMap contributors, ODbL 1.0. http://www.openstreetmap.org/copyright",
-              "importance": 0.30566190262222,
-              "icon": "https://nominatim.openstreetmap.org/images/mapicons/poi_place_city.p.20.png",
-              "osm_type": "relation",
-              "display_name": "Chicago, Cook County, Illinois, United States of America",
-              "lat": "41.8755546",
-              "type": "city",
-              "place_id": "178038280",
-              "lon": "-87.6244212",
-              "class": "place"
-            }
-          }
-        }
-      ],
-      "label": "where"
-    },
-    "when": {
+  "fiveWoneH": {},
+  "fiveWoneH_Metadata": {
+    "process_errors": {},
+    "who": {
       "extracted": [],
-      "label": "when"
+      "label": "who"
+    },
+    "what": {
+      "extracted": [],
+      "label": "what"
     },
     "why": {
       "extracted": [],
@@ -131,13 +87,59 @@
       ],
       "label": "how"
     },
-    "who": {
-      "extracted": [],
-      "label": "who"
+    "where": {
+      "extracted": [
+        {
+          "parts": [
+            [
+              {
+                "nlpToken": {
+                  "index": 1,
+                  "word": "Chicago",
+                  "originalText": "Chicago",
+                  "lemma": "Chicago",
+                  "characterOffsetBegin": 0,
+                  "characterOffsetEnd": 7,
+                  "pos": "NNP",
+                  "ner": "LOCATION",
+                  "speaker": "PER0",
+                  "before": "",
+                  "after": " "
+                }
+              },
+              "NNP"
+            ]
+          ],
+          "score": 0.6781958630747101,
+          "text": "Chicago",
+          "enhancement": {
+            "openstreetmap_nominatim": {
+              "osm_id": "122604",
+              "boundingbox": [
+                41.643919,
+                42.0230219,
+                -87.940101,
+                -87.5239841
+              ],
+              "licence": "Data \u00a9 OpenStreetMap contributors, ODbL 1.0. http://www.openstreetmap.org/copyright",
+              "importance": 0.30566190262222,
+              "icon": "https://nominatim.openstreetmap.org/images/mapicons/poi_place_city.p.20.png",
+              "osm_type": "relation",
+              "display_name": "Chicago, Cook County, Illinois, United States of America",
+              "lat": "41.8755546",
+              "type": "city",
+              "place_id": "178038280",
+              "lon": "-87.6244212",
+              "class": "place"
+            }
+          }
+        }
+      ],
+      "label": "where"
     },
-    "what": {
+    "when": {
       "extracted": [],
-      "label": "what"
+      "label": "when"
     }
   }
 }

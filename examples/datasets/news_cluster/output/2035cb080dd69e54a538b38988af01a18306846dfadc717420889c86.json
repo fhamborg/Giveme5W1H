@@ -23,7 +23,9 @@
     "EventId": 19,
     "Event": "north_korea_received_oil_from_russia_in_violation_of_un_sanctions_report"
   },
-  "fiveWoneH": {
+  "fiveWoneH": {},
+  "fiveWoneH_Metadata": {
+    "process_errors": {},
     "how": {
       "extracted": [
         {
@@ -519,6 +521,36 @@
       ],
       "label": "what"
     },
+    "why": {
+      "extracted": [
+        {
+          "parts": [
+            [
+              {
+                "nlpToken": {
+                  "index": 5,
+                  "word": "they",
+                  "originalText": "they",
+                  "lemma": "they",
+                  "characterOffsetBegin": 432,
+                  "characterOffsetEnd": 436,
+                  "pos": "PRP",
+                  "ner": "O",
+                  "speaker": "PER0",
+                  "before": " ",
+                  "after": " "
+                }
+              },
+              "PRP"
+            ]
+          ],
+          "score": 0.49266666666666675,
+          "text": "they",
+          "nlpIndexSentence": 4
+        }
+      ],
+      "label": "why"
+    },
     "where": {
       "extracted": [
         {
@@ -731,7 +763,7 @@
               "NNP"
             ]
           ],
-          "score": 0.70818689324255,
+          "score": 0.5881868932425499,
           "text": "Friday",
           "enhancement": {
             "timex": {
@@ -743,36 +775,6 @@
         }
       ],
       "label": "when"
-    },
-    "why": {
-      "extracted": [
-        {
-          "parts": [
-            [
-              {
-                "nlpToken": {
-                  "index": 5,
-                  "word": "they",
-                  "originalText": "they",
-                  "lemma": "they",
-                  "characterOffsetBegin": 432,
-                  "characterOffsetEnd": 436,
-                  "pos": "PRP",
-                  "ner": "O",
-                  "speaker": "PER0",
-                  "before": " ",
-                  "after": " "
-                }
-              },
-              "PRP"
-            ]
-          ],
-          "score": 0.49266666666666675,
-          "text": "they",
-          "nlpIndexSentence": 4
-        }
-      ],
-      "label": "why"
     }
   }
 }

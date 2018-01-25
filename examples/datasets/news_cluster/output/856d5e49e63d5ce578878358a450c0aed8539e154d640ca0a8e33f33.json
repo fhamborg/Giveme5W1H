@@ -16,15 +16,16 @@
   "url": "https://www.rt.com/usa/405409-isis-responsibility-vegas-shooting/",
   "newsCluster": {
     "CategoryId": 1,
-    "Category": "global_politics",
-    "TopicId": 1,
-    "Topic": "unspecific",
-    "EventId": 1,
-    "Event": "las_vegas_shooting",
-    "Url": "https://www.rt.com/usa/405409-isis-responsibility-vegas-shooting/"
+    "Category": "world",
+    "TopicId": 2,
+    "Topic": "legancy",
+    "EventId": 49,
+    "Event": "las_vegas_shooting"
   },
   "dId": "856d5e49e63d5ce578878358a450c0aed8539e154d640ca0a8e33f33",
-  "fiveWoneH": {
+  "fiveWoneH": {},
+  "fiveWoneH_Metadata": {
+    "process_errors": {},
     "how": {
       "extracted": [
         {
@@ -32,12 +33,30 @@
             [
               {
                 "nlpToken": {
-                  "index": 11,
+                  "index": 15,
+                  "word": "to",
+                  "originalText": "to",
+                  "lemma": "to",
+                  "characterOffsetBegin": 66,
+                  "characterOffsetEnd": 68,
+                  "pos": "TO",
+                  "ner": "O",
+                  "speaker": "PER0",
+                  "before": " ",
+                  "after": " "
+                }
+              },
+              "TO"
+            ],
+            [
+              {
+                "nlpToken": {
+                  "index": 16,
                   "word": "terrorist",
                   "originalText": "terrorist",
                   "lemma": "terrorist",
-                  "characterOffsetBegin": 575,
-                  "characterOffsetEnd": 584,
+                  "characterOffsetBegin": 69,
+                  "characterOffsetEnd": 78,
                   "pos": "JJ",
                   "ner": "O",
                   "speaker": "PER0",
@@ -46,11 +65,46 @@
                 }
               },
               "JJ"
+            ],
+            [
+              {
+                "nlpToken": {
+                  "index": 17,
+                  "word": "group",
+                  "originalText": "group",
+                  "lemma": "group",
+                  "characterOffsetBegin": 79,
+                  "characterOffsetEnd": 84,
+                  "pos": "NN",
+                  "ner": "O",
+                  "speaker": "PER0",
+                  "before": " ",
+                  "after": ""
+                }
+              },
+              "NN"
+            ],
+            [
+              {
+                "nlpToken": {
+                  "index": 18,
+                  "word": ".",
+                  "originalText": ".",
+                  "lemma": ".",
+                  "characterOffsetBegin": 84,
+                  "characterOffsetEnd": 85,
+                  "pos": ".",
+                  "ner": "O",
+                  "speaker": "PER0",
+                  "before": "",
+                  "after": " "
+                }
+              },
+              "."
             ]
           ],
-          "score": 1.1277777777777778,
-          "text": "terrorist",
-          "nlpIndexSentence": 5
+          "score": 1.0,
+          "text": "to terrorist group ."
         }
       ],
       "label": "how"
@@ -62,157 +116,15 @@
             [
               {
                 "nlpToken": {
-                  "index": 2,
-                  "word": "The",
-                  "originalText": "The",
-                  "lemma": "the",
-                  "characterOffsetBegin": 757,
-                  "characterOffsetEnd": 760,
-                  "pos": "DT",
-                  "ner": "O",
-                  "speaker": "54",
-                  "before": "",
-                  "after": " "
-                }
-              },
-              "DT"
-            ],
-            [
-              {
-                "nlpToken": {
-                  "index": 3,
-                  "word": "Las",
-                  "originalText": "Las",
-                  "lemma": "Las",
-                  "characterOffsetBegin": 761,
-                  "characterOffsetEnd": 764,
-                  "pos": "NNP",
-                  "ner": "LOCATION",
-                  "speaker": "54",
-                  "before": " ",
-                  "after": " "
-                },
-                "aida": [
-                  {
-                    "mention": {
-                      "allEntities": [
-                        {
-                          "kbIdentifier": "YAGO:Las_Vegas_Valley",
-                          "disambiguationScore": "0.19848"
-                        }
-                      ],
-                      "offset": 761,
-                      "name": "Las Vegas",
-                      "length": 9,
-                      "bestEntity": {
-                        "kbIdentifier": "YAGO:Las_Vegas_Valley",
-                        "disambiguationScore": "0.19848"
-                      }
-                    },
-                    "bestEntityMetadata": {
-                      "knowledgebase": "YAGO",
-                      "depictionurl": "http://upload.wikimedia.org/wikipedia/en/a/a4/LasVegasBeautifulMontage.jpg",
-                      "depictionthumbnailurl": "http://upload.wikimedia.org/wikipedia/en/thumbLasVegasBeautifulMontage.jpg/200px-LasVegasBeautifulMontage.jpg",
-                      "importance": 0.00017297968226891405,
-                      "entityId": "Las_Vegas_Valley",
-                      "type": [
-                        "YAGO_yagoGeoEntity",
-                        "YAGO_wordnet_district_108552138",
-                        "YAGO_yagoPermanentlyLocatedEntity",
-                        "YAGO_wordnet_physical_entity_100001930",
-                        "YAGO_wikicategory_Regions_of_Nevada",
-                        "YAGO_yagoLegalActorGeo",
-                        "YAGO_wikicategory_Metropolitan_areas_of_Nevada",
-                        "YAGO_wordnet_entity_100001740",
-                        "YAGO_wordnet_object_100002684",
-                        "YAGO_wordnet_area_108497294",
-                        "YAGO_wordnet_location_100027167",
-                        "YAGO_wordnet_administrative_district_108491826",
-                        "YAGO_wordnet_region_108630985",
-                        "YAGO_wordnet_region_108630039"
-                      ],
-                      "readableRepr": "Las Vegas Valley",
-                      "url": "http://en.wikipedia.org/wiki/Las%20Vegas%20Valley"
-                    }
-                  }
-                ]
-              },
-              "NNP"
-            ],
-            [
-              {
-                "nlpToken": {
-                  "index": 4,
-                  "word": "Vegas",
-                  "originalText": "Vegas",
-                  "lemma": "Vegas",
-                  "characterOffsetBegin": 765,
-                  "characterOffsetEnd": 770,
-                  "pos": "NNP",
-                  "ner": "LOCATION",
-                  "speaker": "54",
-                  "before": " ",
-                  "after": " "
-                },
-                "aida": [
-                  {
-                    "mention": {
-                      "allEntities": [
-                        {
-                          "kbIdentifier": "YAGO:Las_Vegas_Valley",
-                          "disambiguationScore": "0.19848"
-                        }
-                      ],
-                      "offset": 761,
-                      "name": "Las Vegas",
-                      "length": 9,
-                      "bestEntity": {
-                        "kbIdentifier": "YAGO:Las_Vegas_Valley",
-                        "disambiguationScore": "0.19848"
-                      }
-                    },
-                    "bestEntityMetadata": {
-                      "knowledgebase": "YAGO",
-                      "depictionurl": "http://upload.wikimedia.org/wikipedia/en/a/a4/LasVegasBeautifulMontage.jpg",
-                      "depictionthumbnailurl": "http://upload.wikimedia.org/wikipedia/en/thumbLasVegasBeautifulMontage.jpg/200px-LasVegasBeautifulMontage.jpg",
-                      "importance": 0.00017297968226891405,
-                      "entityId": "Las_Vegas_Valley",
-                      "type": [
-                        "YAGO_yagoGeoEntity",
-                        "YAGO_wordnet_district_108552138",
-                        "YAGO_yagoPermanentlyLocatedEntity",
-                        "YAGO_wordnet_physical_entity_100001930",
-                        "YAGO_wikicategory_Regions_of_Nevada",
-                        "YAGO_yagoLegalActorGeo",
-                        "YAGO_wikicategory_Metropolitan_areas_of_Nevada",
-                        "YAGO_wordnet_entity_100001740",
-                        "YAGO_wordnet_object_100002684",
-                        "YAGO_wordnet_area_108497294",
-                        "YAGO_wordnet_location_100027167",
-                        "YAGO_wordnet_administrative_district_108491826",
-                        "YAGO_wordnet_region_108630985",
-                        "YAGO_wordnet_region_108630039"
-                      ],
-                      "readableRepr": "Las Vegas Valley",
-                      "url": "http://en.wikipedia.org/wiki/Las%20Vegas%20Valley"
-                    }
-                  }
-                ]
-              },
-              "NNP"
-            ],
-            [
-              {
-                "nlpToken": {
-                  "index": 5,
-                  "word": "attack",
-                  "originalText": "attack",
-                  "lemma": "attack",
-                  "characterOffsetBegin": 771,
-                  "characterOffsetEnd": 777,
+                  "index": 9,
+                  "word": "gunman",
+                  "originalText": "gunman",
+                  "lemma": "gunman",
+                  "characterOffsetBegin": 39,
+                  "characterOffsetEnd": 45,
                   "pos": "NN",
                   "ner": "O",
-                  "speaker": "54",
+                  "speaker": "PER0",
                   "before": " ",
                   "after": " "
                 }
@@ -221,8 +133,7 @@
             ]
           ],
           "score": 1.0,
-          "text": "The Las Vegas attack",
-          "nlpIndexSentence": 7
+          "text": "gunman"
         }
       ],
       "label": "who"
@@ -234,15 +145,15 @@
             [
               {
                 "nlpToken": {
-                  "index": 6,
-                  "word": "was",
-                  "originalText": "was",
-                  "lemma": "be",
-                  "characterOffsetBegin": 778,
-                  "characterOffsetEnd": 781,
+                  "index": 10,
+                  "word": "had",
+                  "originalText": "had",
+                  "lemma": "have",
+                  "characterOffsetBegin": 46,
+                  "characterOffsetEnd": 49,
                   "pos": "VBD",
                   "ner": "O",
-                  "speaker": "54",
+                  "speaker": "PER0",
                   "before": " ",
                   "after": " "
                 }
@@ -252,70 +163,34 @@
             [
               {
                 "nlpToken": {
-                  "index": 7,
-                  "word": "carried",
-                  "originalText": "carried",
-                  "lemma": "carry",
-                  "characterOffsetBegin": 782,
-                  "characterOffsetEnd": 789,
-                  "pos": "VBN",
+                  "index": 11,
+                  "word": "`",
+                  "originalText": "\u2018",
+                  "lemma": "`",
+                  "characterOffsetBegin": 50,
+                  "characterOffsetEnd": 51,
+                  "pos": "``",
                   "ner": "O",
-                  "speaker": "54",
+                  "speaker": "PER0",
                   "before": " ",
-                  "after": " "
+                  "after": ""
                 }
               },
-              "VBN"
+              "``"
             ],
             [
               {
                 "nlpToken": {
-                  "index": 8,
-                  "word": "out",
-                  "originalText": "out",
-                  "lemma": "out",
-                  "characterOffsetBegin": 790,
-                  "characterOffsetEnd": 793,
-                  "pos": "RP",
-                  "ner": "O",
-                  "speaker": "54",
-                  "before": " ",
-                  "after": " "
-                }
-              },
-              "RP"
-            ],
-            [
-              {
-                "nlpToken": {
-                  "index": 9,
-                  "word": "by",
-                  "originalText": "by",
-                  "lemma": "by",
-                  "characterOffsetBegin": 794,
-                  "characterOffsetEnd": 796,
-                  "pos": "IN",
-                  "ner": "O",
-                  "speaker": "54",
-                  "before": " ",
-                  "after": " "
-                }
-              },
-              "IN"
-            ],
-            [
-              {
-                "nlpToken": {
-                  "index": 10,
-                  "word": "a",
-                  "originalText": "a",
-                  "lemma": "a",
-                  "characterOffsetBegin": 797,
-                  "characterOffsetEnd": 798,
+                  "index": 12,
+                  "word": "no",
+                  "originalText": "no",
+                  "lemma": "no",
+                  "characterOffsetBegin": 51,
+                  "characterOffsetEnd": 53,
                   "pos": "DT",
                   "ner": "O",
-                  "speaker": "54",
-                  "before": " ",
+                  "speaker": "PER0",
+                  "before": "",
                   "after": " "
                 }
               },
@@ -324,25 +199,42 @@
             [
               {
                 "nlpToken": {
-                  "index": 11,
-                  "word": "soldier",
-                  "originalText": "soldier",
-                  "lemma": "soldier",
-                  "characterOffsetBegin": 799,
-                  "characterOffsetEnd": 806,
+                  "index": 13,
+                  "word": "connection",
+                  "originalText": "connection",
+                  "lemma": "connection",
+                  "characterOffsetBegin": 54,
+                  "characterOffsetEnd": 64,
                   "pos": "NN",
                   "ner": "O",
-                  "speaker": "54",
+                  "speaker": "PER0",
                   "before": " ",
-                  "after": " "
+                  "after": ""
                 }
               },
               "NN"
+            ],
+            [
+              {
+                "nlpToken": {
+                  "index": 14,
+                  "word": "'",
+                  "originalText": "\u2019",
+                  "lemma": "'",
+                  "characterOffsetBegin": 64,
+                  "characterOffsetEnd": 65,
+                  "pos": "''",
+                  "ner": "O",
+                  "speaker": "PER0",
+                  "before": "",
+                  "after": " "
+                }
+              },
+              "''"
             ]
           ],
           "score": 1.0,
-          "text": "was carried out by a soldier",
-          "nlpIndexSentence": 7
+          "text": "had \u2018 no connection \u2019"
         }
       ],
       "label": "what"
@@ -476,13 +368,10 @@
               "NNP"
             ]
           ],
-          "score": 1.0,
+          "score": 0.6786863784034787,
           "text": "Las Vegas",
           "enhancement": {
             "openstreetmap_nominatim": {
-              "place_id": "172842",
-              "licence": "Data \u00a9 OpenStreetMap contributors, ODbL 1.0. http://www.openstreetmap.org/copyright",
-              "osm_type": "node",
               "osm_id": "31551114",
               "boundingbox": [
                 36.0062859,
@@ -490,13 +379,16 @@
                 -115.309225,
                 -114.989225
               ],
-              "lat": "36.1662859",
-              "lon": "-115.149225",
-              "display_name": "Las Vegas, Clark County, Nevada, 89101, United States of America",
-              "class": "place",
-              "type": "city",
+              "licence": "Data \u00a9 OpenStreetMap contributors, ODbL 1.0. http://www.openstreetmap.org/copyright",
               "importance": 0.35716180413836,
-              "icon": "https://nominatim.openstreetmap.org/images/mapicons/poi_place_city.p.20.png"
+              "icon": "https://nominatim.openstreetmap.org/images/mapicons/poi_place_city.p.20.png",
+              "osm_type": "node",
+              "display_name": "Las Vegas, Clark County, Nevada, 89101, United States of America",
+              "lat": "36.1662859",
+              "type": "city",
+              "place_id": "172842",
+              "lon": "-115.149225",
+              "class": "place"
             }
           }
         }
@@ -528,154 +420,10 @@
                 }
               },
               "NN"
-            ],
-            [
-              {
-                "nlpToken": {
-                  "index": 10,
-                  "word": "had",
-                  "originalText": "had",
-                  "lemma": "have",
-                  "characterOffsetBegin": 46,
-                  "characterOffsetEnd": 49,
-                  "pos": "VBD",
-                  "ner": "O",
-                  "speaker": "PER0",
-                  "before": " ",
-                  "after": " "
-                }
-              },
-              "VBD"
-            ],
-            [
-              {
-                "nlpToken": {
-                  "index": 11,
-                  "word": "`",
-                  "originalText": "\u2018",
-                  "lemma": "`",
-                  "characterOffsetBegin": 50,
-                  "characterOffsetEnd": 51,
-                  "pos": "``",
-                  "ner": "O",
-                  "speaker": "PER0",
-                  "before": " ",
-                  "after": ""
-                }
-              },
-              "``"
-            ],
-            [
-              {
-                "nlpToken": {
-                  "index": 12,
-                  "word": "no",
-                  "originalText": "no",
-                  "lemma": "no",
-                  "characterOffsetBegin": 51,
-                  "characterOffsetEnd": 53,
-                  "pos": "DT",
-                  "ner": "O",
-                  "speaker": "PER0",
-                  "before": "",
-                  "after": " "
-                }
-              },
-              "DT"
-            ],
-            [
-              {
-                "nlpToken": {
-                  "index": 13,
-                  "word": "connection",
-                  "originalText": "connection",
-                  "lemma": "connection",
-                  "characterOffsetBegin": 54,
-                  "characterOffsetEnd": 64,
-                  "pos": "NN",
-                  "ner": "O",
-                  "speaker": "PER0",
-                  "before": " ",
-                  "after": ""
-                }
-              },
-              "NN"
-            ],
-            [
-              {
-                "nlpToken": {
-                  "index": 14,
-                  "word": "'",
-                  "originalText": "\u2019",
-                  "lemma": "'",
-                  "characterOffsetBegin": 64,
-                  "characterOffsetEnd": 65,
-                  "pos": "''",
-                  "ner": "O",
-                  "speaker": "PER0",
-                  "before": "",
-                  "after": " "
-                }
-              },
-              "''"
-            ],
-            [
-              {
-                "nlpToken": {
-                  "index": 15,
-                  "word": "to",
-                  "originalText": "to",
-                  "lemma": "to",
-                  "characterOffsetBegin": 66,
-                  "characterOffsetEnd": 68,
-                  "pos": "TO",
-                  "ner": "O",
-                  "speaker": "PER0",
-                  "before": " ",
-                  "after": " "
-                }
-              },
-              "TO"
-            ],
-            [
-              {
-                "nlpToken": {
-                  "index": 16,
-                  "word": "terrorist",
-                  "originalText": "terrorist",
-                  "lemma": "terrorist",
-                  "characterOffsetBegin": 69,
-                  "characterOffsetEnd": 78,
-                  "pos": "JJ",
-                  "ner": "O",
-                  "speaker": "PER0",
-                  "before": " ",
-                  "after": " "
-                }
-              },
-              "JJ"
-            ],
-            [
-              {
-                "nlpToken": {
-                  "index": 17,
-                  "word": "group",
-                  "originalText": "group",
-                  "lemma": "group",
-                  "characterOffsetBegin": 79,
-                  "characterOffsetEnd": 84,
-                  "pos": "NN",
-                  "ner": "O",
-                  "speaker": "PER0",
-                  "before": " ",
-                  "after": ""
-                }
-              },
-              "NN"
             ]
           ],
-          "score": 0.42857142857142855,
-          "text": "gunman had \u2018 no connection \u2019 to terrorist group"
+          "score": 0.5860000000000001,
+          "text": "gunman"
         }
       ],
       "label": "why"

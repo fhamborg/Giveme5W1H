@@ -25,7 +25,9 @@
     "EventId": 19,
     "Event": "north_korea_received_oil_from_russia_in_violation_of_un_sanctions_report"
   },
-  "fiveWoneH": {
+  "fiveWoneH": {},
+  "fiveWoneH_Metadata": {
+    "process_errors": {},
     "how": {
       "extracted": [
         {
@@ -723,49 +725,61 @@
             [
               {
                 "nlpToken": {
-                  "index": 27,
-                  "word": "Tuesday",
-                  "originalText": "Tuesday",
-                  "lemma": "Tuesday",
-                  "characterOffsetBegin": 1033,
-                  "characterOffsetEnd": 1040,
+                  "index": 30,
+                  "word": "Oct.",
+                  "originalText": "Oct.",
+                  "lemma": "Oct.",
+                  "characterOffsetBegin": 1898,
+                  "characterOffsetEnd": 1902,
                   "pos": "NNP",
                   "ner": "DATE",
-                  "normalizedNER": "2017-12-26",
+                  "normalizedNER": "2017-10-19",
                   "speaker": "PER0",
                   "before": " ",
                   "after": " ",
                   "timex": {
-                    "tid": "t5",
+                    "tid": "t8",
                     "type": "DATE",
-                    "value": "2017-12-26"
+                    "value": "2017-10-19"
                   }
-                },
-                "heideltime": [
-                  {
-                    "@tid": "t5",
-                    "@type": "DATE",
-                    "@value": "2017-12-26",
-                    "#text": "Tuesday",
-                    "characterOffset": [
-                      1033,
-                      1040
-                    ]
-                  }
-                ]
+                }
               },
               "NNP"
+            ],
+            [
+              {
+                "nlpToken": {
+                  "index": 31,
+                  "word": "19",
+                  "originalText": "19",
+                  "lemma": "19",
+                  "characterOffsetBegin": 1903,
+                  "characterOffsetEnd": 1905,
+                  "pos": "CD",
+                  "ner": "DATE",
+                  "normalizedNER": "2017-10-19",
+                  "speaker": "PER0",
+                  "before": " ",
+                  "after": "",
+                  "timex": {
+                    "tid": "t8",
+                    "type": "DATE",
+                    "value": "2017-10-19"
+                  }
+                }
+              },
+              "CD"
             ]
           ],
-          "score": 0.4689207901829686,
-          "text": "Tuesday",
+          "score": 0.37468221664566315,
+          "text": "Oct. 19",
           "enhancement": {
             "timex": {
-              "start_date": "2017-12-26T00:00:00",
-              "end_date": "2017-12-26T23:59:59"
+              "start_date": "2017-10-19T00:00:00",
+              "end_date": "2017-10-19T23:59:59"
             }
           },
-          "nlpIndexSentence": 6
+          "nlpIndexSentence": 11
         }
       ],
       "label": "when"

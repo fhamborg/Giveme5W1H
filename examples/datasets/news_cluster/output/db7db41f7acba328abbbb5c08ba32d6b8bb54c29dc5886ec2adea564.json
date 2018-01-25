@@ -25,7 +25,9 @@
     "EventId": 17,
     "Event": "smoke_rings_spotted_in_the_ocean_from_space"
   },
-  "fiveWoneH": {
+  "fiveWoneH": {},
+  "fiveWoneH_Metadata": {
+    "process_errors": {},
     "how": {
       "extracted": [
         {
@@ -595,7 +597,7 @@
                   "characterOffsetBegin": 12,
                   "characterOffsetEnd": 21,
                   "pos": "NNP",
-                  "ner": "PERSON",
+                  "ner": "O",
                   "speaker": "PER0",
                   "before": " ",
                   "after": " "
@@ -674,6 +676,36 @@
         }
       ],
       "label": "what"
+    },
+    "why": {
+      "extracted": [
+        {
+          "parts": [
+            [
+              {
+                "nlpToken": {
+                  "index": 9,
+                  "word": "it",
+                  "originalText": "it",
+                  "lemma": "it",
+                  "characterOffsetBegin": 82,
+                  "characterOffsetEnd": 84,
+                  "pos": "PRP",
+                  "ner": "O",
+                  "speaker": "PER0",
+                  "before": " \u00a0",
+                  "after": " "
+                }
+              },
+              "PRP"
+            ]
+          ],
+          "score": 0.5486666666666667,
+          "text": "it",
+          "nlpIndexSentence": 1
+        }
+      ],
+      "label": "why"
     },
     "where": {
       "extracted": [
@@ -822,36 +854,6 @@
     "when": {
       "extracted": [],
       "label": "when"
-    },
-    "why": {
-      "extracted": [
-        {
-          "parts": [
-            [
-              {
-                "nlpToken": {
-                  "index": 9,
-                  "word": "it",
-                  "originalText": "it",
-                  "lemma": "it",
-                  "characterOffsetBegin": 82,
-                  "characterOffsetEnd": 84,
-                  "pos": "PRP",
-                  "ner": "O",
-                  "speaker": "PER0",
-                  "before": " \u00a0",
-                  "after": " "
-                }
-              },
-              "PRP"
-            ]
-          ],
-          "score": 0.5486666666666667,
-          "text": "it",
-          "nlpIndexSentence": 1
-        }
-      ],
-      "label": "why"
     }
   }
 }

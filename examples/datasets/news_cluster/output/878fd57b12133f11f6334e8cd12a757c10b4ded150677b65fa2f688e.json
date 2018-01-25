@@ -26,7 +26,9 @@
     "EventId": 25,
     "Event": "chicagos_apple_store_has_a_falling_ice_problem"
   },
-  "fiveWoneH": {
+  "fiveWoneH": {},
+  "fiveWoneH_Metadata": {
+    "process_errors": {},
     "how": {
       "extracted": [
         {
@@ -305,6 +307,118 @@
       ],
       "label": "how"
     },
+    "who": {
+      "extracted": [
+        {
+          "parts": [
+            [
+              {
+                "nlpToken": {
+                  "index": 1,
+                  "word": "Apple",
+                  "originalText": "Apple",
+                  "lemma": "Apple",
+                  "characterOffsetBegin": 0,
+                  "characterOffsetEnd": 5,
+                  "pos": "NNP",
+                  "ner": "O",
+                  "speaker": "PER0",
+                  "before": "",
+                  "after": " "
+                }
+              },
+              "NNP"
+            ]
+          ],
+          "score": 1.0,
+          "text": "Apple"
+        }
+      ],
+      "label": "who"
+    },
+    "what": {
+      "extracted": [
+        {
+          "parts": [
+            [
+              {
+                "nlpToken": {
+                  "index": 2,
+                  "word": "blames",
+                  "originalText": "blames",
+                  "lemma": "blame",
+                  "characterOffsetBegin": 6,
+                  "characterOffsetEnd": 12,
+                  "pos": "VBZ",
+                  "ner": "O",
+                  "speaker": "PER0",
+                  "before": " ",
+                  "after": " "
+                }
+              },
+              "VBZ"
+            ],
+            [
+              {
+                "nlpToken": {
+                  "index": 3,
+                  "word": "roof",
+                  "originalText": "roof",
+                  "lemma": "roof",
+                  "characterOffsetBegin": 13,
+                  "characterOffsetEnd": 17,
+                  "pos": "NN",
+                  "ner": "O",
+                  "speaker": "PER0",
+                  "before": " ",
+                  "after": " "
+                }
+              },
+              "NN"
+            ],
+            [
+              {
+                "nlpToken": {
+                  "index": 4,
+                  "word": "warming",
+                  "originalText": "warming",
+                  "lemma": "warming",
+                  "characterOffsetBegin": 18,
+                  "characterOffsetEnd": 25,
+                  "pos": "NN",
+                  "ner": "O",
+                  "speaker": "PER0",
+                  "before": " ",
+                  "after": " "
+                }
+              },
+              "NN"
+            ],
+            [
+              {
+                "nlpToken": {
+                  "index": 5,
+                  "word": "software",
+                  "originalText": "software",
+                  "lemma": "software",
+                  "characterOffsetBegin": 26,
+                  "characterOffsetEnd": 34,
+                  "pos": "NN",
+                  "ner": "O",
+                  "speaker": "PER0",
+                  "before": " ",
+                  "after": " "
+                }
+              },
+              "NN"
+            ]
+          ],
+          "score": 1.0,
+          "text": "blames roof warming software"
+        }
+      ],
+      "label": "what"
+    },
     "where": {
       "extracted": [
         {
@@ -420,164 +534,164 @@
             [
               {
                 "nlpToken": {
-                  "index": 10,
-                  "word": "today",
-                  "originalText": "today",
-                  "lemma": "today",
-                  "characterOffsetBegin": 2258,
-                  "characterOffsetEnd": 2263,
-                  "pos": "NN",
+                  "index": 11,
+                  "word": "the",
+                  "originalText": "the",
+                  "lemma": "the",
+                  "characterOffsetBegin": 1755,
+                  "characterOffsetEnd": 1758,
+                  "pos": "DT",
                   "ner": "DATE",
-                  "normalizedNER": "2018-01-03",
+                  "normalizedNER": "2018-01",
                   "speaker": "PER0",
                   "before": " ",
-                  "after": "",
+                  "after": " ",
                   "timex": {
-                    "tid": "t7",
+                    "tid": "t4",
                     "type": "DATE",
-                    "value": "2018-01-03"
+                    "value": "2018-01"
                   }
                 },
                 "heideltime": [
                   {
-                    "@tid": "t11",
+                    "@tid": "t8",
                     "@type": "DATE",
-                    "@value": "2018-01-03",
-                    "#text": "today",
+                    "@value": "2018-01",
+                    "@mod": "END",
+                    "#text": "the end of Jan",
                     "characterOffset": [
-                      2258,
-                      2263
+                      1755,
+                      1769
+                    ]
+                  }
+                ]
+              },
+              "DT"
+            ],
+            [
+              {
+                "nlpToken": {
+                  "index": 12,
+                  "word": "end",
+                  "originalText": "end",
+                  "lemma": "end",
+                  "characterOffsetBegin": 1759,
+                  "characterOffsetEnd": 1762,
+                  "pos": "NN",
+                  "ner": "DATE",
+                  "normalizedNER": "2018-01",
+                  "speaker": "PER0",
+                  "before": " ",
+                  "after": " ",
+                  "timex": {
+                    "tid": "t4",
+                    "type": "DATE",
+                    "value": "2018-01"
+                  }
+                },
+                "heideltime": [
+                  {
+                    "@tid": "t8",
+                    "@type": "DATE",
+                    "@value": "2018-01",
+                    "@mod": "END",
+                    "#text": "the end of Jan",
+                    "characterOffset": [
+                      1755,
+                      1769
                     ]
                   }
                 ]
               },
               "NN"
-            ]
-          ],
-          "score": 0.6045026827162342,
-          "text": "today",
-          "enhancement": {
-            "timex": {
-              "start_date": "2018-01-03T00:00:00",
-              "end_date": "2018-01-03T23:59:59"
-            }
-          },
-          "nlpIndexSentence": 18
-        }
-      ],
-      "label": "when"
-    },
-    "who": {
-      "extracted": [
-        {
-          "parts": [
+            ],
             [
               {
                 "nlpToken": {
-                  "index": 1,
-                  "word": "Apple",
-                  "originalText": "Apple",
-                  "lemma": "Apple",
-                  "characterOffsetBegin": 0,
-                  "characterOffsetEnd": 5,
-                  "pos": "NNP",
-                  "ner": "O",
+                  "index": 13,
+                  "word": "of",
+                  "originalText": "of",
+                  "lemma": "of",
+                  "characterOffsetBegin": 1763,
+                  "characterOffsetEnd": 1765,
+                  "pos": "IN",
+                  "ner": "DATE",
+                  "normalizedNER": "2018-01",
                   "speaker": "PER0",
-                  "before": "",
-                  "after": " "
-                }
+                  "before": " ",
+                  "after": " ",
+                  "timex": {
+                    "tid": "t4",
+                    "type": "DATE",
+                    "value": "2018-01"
+                  }
+                },
+                "heideltime": [
+                  {
+                    "@tid": "t8",
+                    "@type": "DATE",
+                    "@value": "2018-01",
+                    "@mod": "END",
+                    "#text": "the end of Jan",
+                    "characterOffset": [
+                      1755,
+                      1769
+                    ]
+                  }
+                ]
+              },
+              "IN"
+            ],
+            [
+              {
+                "nlpToken": {
+                  "index": 14,
+                  "word": "Jan",
+                  "originalText": "Jan",
+                  "lemma": "Jan",
+                  "characterOffsetBegin": 1766,
+                  "characterOffsetEnd": 1769,
+                  "pos": "NNP",
+                  "ner": "DATE",
+                  "normalizedNER": "2018-01",
+                  "speaker": "PER0",
+                  "before": " ",
+                  "after": "",
+                  "timex": {
+                    "tid": "t4",
+                    "type": "DATE",
+                    "value": "2018-01"
+                  }
+                },
+                "heideltime": [
+                  {
+                    "@tid": "t8",
+                    "@type": "DATE",
+                    "@value": "2018-01",
+                    "@mod": "END",
+                    "#text": "the end of Jan",
+                    "characterOffset": [
+                      1755,
+                      1769
+                    ]
+                  }
+                ]
               },
               "NNP"
             ]
           ],
-          "score": 1.0,
-          "text": "Apple"
+          "score": 0.5931097957450997,
+          "text": "the end of Jan",
+          "enhancement": {
+            "timex": {
+              "start_date": "2018-01-01T00:00:00",
+              "end_date": "2018-01-31T23:59:59"
+            }
+          },
+          "nlpIndexSentence": 13
         }
       ],
-      "label": "who"
-    },
-    "what": {
-      "extracted": [
-        {
-          "parts": [
-            [
-              {
-                "nlpToken": {
-                  "index": 2,
-                  "word": "blames",
-                  "originalText": "blames",
-                  "lemma": "blame",
-                  "characterOffsetBegin": 6,
-                  "characterOffsetEnd": 12,
-                  "pos": "VBZ",
-                  "ner": "O",
-                  "speaker": "PER0",
-                  "before": " ",
-                  "after": " "
-                }
-              },
-              "VBZ"
-            ],
-            [
-              {
-                "nlpToken": {
-                  "index": 3,
-                  "word": "roof",
-                  "originalText": "roof",
-                  "lemma": "roof",
-                  "characterOffsetBegin": 13,
-                  "characterOffsetEnd": 17,
-                  "pos": "NN",
-                  "ner": "O",
-                  "speaker": "PER0",
-                  "before": " ",
-                  "after": " "
-                }
-              },
-              "NN"
-            ],
-            [
-              {
-                "nlpToken": {
-                  "index": 4,
-                  "word": "warming",
-                  "originalText": "warming",
-                  "lemma": "warming",
-                  "characterOffsetBegin": 18,
-                  "characterOffsetEnd": 25,
-                  "pos": "NN",
-                  "ner": "O",
-                  "speaker": "PER0",
-                  "before": " ",
-                  "after": " "
-                }
-              },
-              "NN"
-            ],
-            [
-              {
-                "nlpToken": {
-                  "index": 5,
-                  "word": "software",
-                  "originalText": "software",
-                  "lemma": "software",
-                  "characterOffsetBegin": 26,
-                  "characterOffsetEnd": 34,
-                  "pos": "NN",
-                  "ner": "O",
-                  "speaker": "PER0",
-                  "before": " ",
-                  "after": " "
-                }
-              },
-              "NN"
-            ]
-          ],
-          "score": 1.0,
-          "text": "blames roof warming software"
-        }
-      ],
-      "label": "what"
+      "label": "when"
     },
     "why": {
       "extracted": [

@@ -25,7 +25,9 @@
     "EventId": 36,
     "Event": "israel_indicts_palestinian_teenage_girl_who_punched_soldier_army"
   },
-  "fiveWoneH": {
+  "fiveWoneH": {},
+  "fiveWoneH_Metadata": {
+    "process_errors": {},
     "who": {
       "extracted": [
         {
@@ -106,6 +108,89 @@
         }
       ],
       "label": "who"
+    },
+    "what": {
+      "extracted": [
+        {
+          "parts": [
+            [
+              {
+                "nlpToken": {
+                  "index": 2,
+                  "word": "Indicts",
+                  "originalText": "Indicts",
+                  "lemma": "indict",
+                  "characterOffsetBegin": 7,
+                  "characterOffsetEnd": 14,
+                  "pos": "VBZ",
+                  "ner": "O",
+                  "speaker": "PER0",
+                  "before": " ",
+                  "after": " "
+                }
+              },
+              "VBZ"
+            ],
+            [
+              {
+                "nlpToken": {
+                  "index": 3,
+                  "word": "Teenage",
+                  "originalText": "Teenage",
+                  "lemma": "teenage",
+                  "characterOffsetBegin": 15,
+                  "characterOffsetEnd": 22,
+                  "pos": "JJ",
+                  "ner": "O",
+                  "speaker": "PER0",
+                  "before": " ",
+                  "after": " "
+                }
+              },
+              "JJ"
+            ],
+            [
+              {
+                "nlpToken": {
+                  "index": 4,
+                  "word": "Palestinian",
+                  "originalText": "Palestinian",
+                  "lemma": "palestinian",
+                  "characterOffsetBegin": 23,
+                  "characterOffsetEnd": 34,
+                  "pos": "JJ",
+                  "ner": "O",
+                  "speaker": "PER0",
+                  "before": " ",
+                  "after": " "
+                }
+              },
+              "JJ"
+            ],
+            [
+              {
+                "nlpToken": {
+                  "index": 5,
+                  "word": "Girl",
+                  "originalText": "Girl",
+                  "lemma": "Girl",
+                  "characterOffsetBegin": 35,
+                  "characterOffsetEnd": 39,
+                  "pos": "NNP",
+                  "ner": "O",
+                  "speaker": "PER0",
+                  "before": " ",
+                  "after": " "
+                }
+              },
+              "NNP"
+            ]
+          ],
+          "score": 1.0,
+          "text": "Indicts Teenage Palestinian Girl"
+        }
+      ],
+      "label": "what"
     },
     "how": {
       "extracted": [
@@ -545,7 +630,7 @@
               "NNP"
             ]
           ],
-          "score": 0.5781868932425499,
+          "score": 0.45818689324254996,
           "text": "Monday",
           "enhancement": {
             "timex": {
@@ -557,89 +642,6 @@
         }
       ],
       "label": "when"
-    },
-    "what": {
-      "extracted": [
-        {
-          "parts": [
-            [
-              {
-                "nlpToken": {
-                  "index": 2,
-                  "word": "Indicts",
-                  "originalText": "Indicts",
-                  "lemma": "indict",
-                  "characterOffsetBegin": 7,
-                  "characterOffsetEnd": 14,
-                  "pos": "VBZ",
-                  "ner": "O",
-                  "speaker": "PER0",
-                  "before": " ",
-                  "after": " "
-                }
-              },
-              "VBZ"
-            ],
-            [
-              {
-                "nlpToken": {
-                  "index": 3,
-                  "word": "Teenage",
-                  "originalText": "Teenage",
-                  "lemma": "teenage",
-                  "characterOffsetBegin": 15,
-                  "characterOffsetEnd": 22,
-                  "pos": "JJ",
-                  "ner": "O",
-                  "speaker": "PER0",
-                  "before": " ",
-                  "after": " "
-                }
-              },
-              "JJ"
-            ],
-            [
-              {
-                "nlpToken": {
-                  "index": 4,
-                  "word": "Palestinian",
-                  "originalText": "Palestinian",
-                  "lemma": "palestinian",
-                  "characterOffsetBegin": 23,
-                  "characterOffsetEnd": 34,
-                  "pos": "JJ",
-                  "ner": "O",
-                  "speaker": "PER0",
-                  "before": " ",
-                  "after": " "
-                }
-              },
-              "JJ"
-            ],
-            [
-              {
-                "nlpToken": {
-                  "index": 5,
-                  "word": "Girl",
-                  "originalText": "Girl",
-                  "lemma": "Girl",
-                  "characterOffsetBegin": 35,
-                  "characterOffsetEnd": 39,
-                  "pos": "NNP",
-                  "ner": "O",
-                  "speaker": "PER0",
-                  "before": " ",
-                  "after": " "
-                }
-              },
-              "NNP"
-            ]
-          ],
-          "score": 1.0,
-          "text": "Indicts Teenage Palestinian Girl"
-        }
-      ],
-      "label": "what"
     },
     "why": {
       "extracted": [

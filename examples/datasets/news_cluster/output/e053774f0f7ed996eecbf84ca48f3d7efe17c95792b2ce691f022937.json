@@ -25,7 +25,113 @@
     "EventId": 15,
     "Event": "how_astros_first_base_coach_rich_dauer_escaped_near_death_after_world_series_parade"
   },
-  "fiveWoneH": {
+  "fiveWoneH": {},
+  "fiveWoneH_Metadata": {
+    "process_errors": {},
+    "where": {
+      "extracted": [
+        {
+          "parts": [
+            [
+              {
+                "nlpToken": {
+                  "index": 18,
+                  "word": "Houston",
+                  "originalText": "Houston",
+                  "lemma": "Houston",
+                  "characterOffsetBegin": 791,
+                  "characterOffsetEnd": 798,
+                  "pos": "NNP",
+                  "ner": "LOCATION",
+                  "speaker": "PER0",
+                  "before": " ",
+                  "after": " "
+                },
+                "aida": [
+                  {
+                    "mention": {
+                      "allEntities": [],
+                      "offset": 791,
+                      "name": "Houston Methodist",
+                      "length": 17
+                    },
+                    "bestEntityMetadata": null
+                  }
+                ]
+              },
+              "NNP"
+            ]
+          ],
+          "score": 0.6785860377856354,
+          "text": "Houston",
+          "enhancement": {
+            "openstreetmap_nominatim": {
+              "place_id": "146048",
+              "licence": "Data \u00a9 OpenStreetMap contributors, ODbL 1.0. http://www.openstreetmap.org/copyright",
+              "osm_type": "node",
+              "osm_id": "27526178",
+              "boundingbox": [
+                29.5989382,
+                29.9189382,
+                -95.5276974,
+                -95.2076974
+              ],
+              "lat": "29.7589382",
+              "lon": "-95.3676974",
+              "display_name": "Houston, Harris County, Texas, 77002, United States of America",
+              "class": "place",
+              "type": "city",
+              "importance": 0.2827224626984,
+              "icon": "https://nominatim.openstreetmap.org/images/mapicons/poi_place_city.p.20.png"
+            }
+          },
+          "nlpIndexSentence": 7
+        }
+      ],
+      "label": "where"
+    },
+    "when": {
+      "extracted": [
+        {
+          "parts": [
+            [
+              {
+                "nlpToken": {
+                  "index": 15,
+                  "word": "today",
+                  "originalText": "today",
+                  "lemma": "today",
+                  "characterOffsetBegin": 2264,
+                  "characterOffsetEnd": 2269,
+                  "pos": "NN",
+                  "ner": "DATE",
+                  "normalizedNER": "2017-12-27",
+                  "speaker": "PER0",
+                  "before": " ",
+                  "after": "\n",
+                  "timex": {
+                    "tid": "t5",
+                    "type": "DATE",
+                    "value": "2017-12-27"
+                  }
+                }
+              },
+              "NN"
+            ]
+          ],
+          "score": 0.38099185142654035,
+          "text": "today",
+          "enhancement": {
+            "timex": {
+              "start_date": "2017-12-27T00:00:00",
+              "end_date": "2017-12-27T23:59:59"
+            }
+          },
+          "nlpIndexSentence": 16
+        }
+      ],
+      "label": "when"
+    },
     "how": {
       "extracted": [
         {
@@ -202,110 +308,6 @@
         }
       ],
       "label": "how"
-    },
-    "where": {
-      "extracted": [
-        {
-          "parts": [
-            [
-              {
-                "nlpToken": {
-                  "index": 18,
-                  "word": "Houston",
-                  "originalText": "Houston",
-                  "lemma": "Houston",
-                  "characterOffsetBegin": 791,
-                  "characterOffsetEnd": 798,
-                  "pos": "NNP",
-                  "ner": "LOCATION",
-                  "speaker": "PER0",
-                  "before": " ",
-                  "after": " "
-                },
-                "aida": [
-                  {
-                    "mention": {
-                      "allEntities": [],
-                      "offset": 791,
-                      "name": "Houston Methodist",
-                      "length": 17
-                    },
-                    "bestEntityMetadata": null
-                  }
-                ]
-              },
-              "NNP"
-            ]
-          ],
-          "score": 0.6785860377856354,
-          "text": "Houston",
-          "enhancement": {
-            "openstreetmap_nominatim": {
-              "place_id": "146048",
-              "licence": "Data \u00a9 OpenStreetMap contributors, ODbL 1.0. http://www.openstreetmap.org/copyright",
-              "osm_type": "node",
-              "osm_id": "27526178",
-              "boundingbox": [
-                29.5989382,
-                29.9189382,
-                -95.5276974,
-                -95.2076974
-              ],
-              "lat": "29.7589382",
-              "lon": "-95.3676974",
-              "display_name": "Houston, Harris County, Texas, 77002, United States of America",
-              "class": "place",
-              "type": "city",
-              "importance": 0.2827224626984,
-              "icon": "https://nominatim.openstreetmap.org/images/mapicons/poi_place_city.p.20.png"
-            }
-          },
-          "nlpIndexSentence": 7
-        }
-      ],
-      "label": "where"
-    },
-    "when": {
-      "extracted": [
-        {
-          "parts": [
-            [
-              {
-                "nlpToken": {
-                  "index": 15,
-                  "word": "today",
-                  "originalText": "today",
-                  "lemma": "today",
-                  "characterOffsetBegin": 2264,
-                  "characterOffsetEnd": 2269,
-                  "pos": "NN",
-                  "ner": "DATE",
-                  "normalizedNER": "2017-12-27",
-                  "speaker": "PER0",
-                  "before": " ",
-                  "after": "\n",
-                  "timex": {
-                    "tid": "t5",
-                    "type": "DATE",
-                    "value": "2017-12-27"
-                  }
-                }
-              },
-              "NN"
-            ]
-          ],
-          "score": 0.5009918514265405,
-          "text": "today",
-          "enhancement": {
-            "timex": {
-              "start_date": "2017-12-27T00:00:00",
-              "end_date": "2017-12-27T23:59:59"
-            }
-          },
-          "nlpIndexSentence": 16
-        }
-      ],
-      "label": "when"
     },
     "who": {
       "extracted": [

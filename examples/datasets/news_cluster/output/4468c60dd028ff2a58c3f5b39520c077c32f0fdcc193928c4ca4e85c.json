@@ -26,7 +26,9 @@
     "EventId": 36,
     "Event": "israel_indicts_palestinian_teenage_girl_who_punched_soldier_army"
   },
-  "fiveWoneH": {
+  "fiveWoneH": {},
+  "fiveWoneH_Metadata": {
+    "process_errors": {},
     "how": {
       "extracted": [
         {
@@ -263,6 +265,162 @@
       ],
       "label": "how"
     },
+    "where": {
+      "extracted": [
+        {
+          "parts": [
+            [
+              {
+                "nlpToken": {
+                  "index": 1,
+                  "word": "Israel",
+                  "originalText": "Israel",
+                  "lemma": "Israel",
+                  "characterOffsetBegin": 0,
+                  "characterOffsetEnd": 6,
+                  "pos": "NNP",
+                  "ner": "LOCATION",
+                  "speaker": "PER0",
+                  "before": "",
+                  "after": " "
+                },
+                "aida": [
+                  {
+                    "mention": {
+                      "allEntities": [
+                        {
+                          "kbIdentifier": "YAGO:Israel",
+                          "disambiguationScore": "1"
+                        }
+                      ],
+                      "offset": 0,
+                      "name": "Israel",
+                      "length": 6,
+                      "bestEntity": {
+                        "kbIdentifier": "YAGO:Israel",
+                        "disambiguationScore": "1"
+                      }
+                    },
+                    "bestEntityMetadata": {
+                      "knowledgebase": "YAGO",
+                      "depictionurl": "http://upload.wikimedia.org/wikipedia/commons/d/d4/Flag_of_Israel.svg",
+                      "depictionthumbnailurl": "http://upload.wikimedia.org/wikipedia/commons/thumbFlag_of_Israel.svg/200px-Flag_of_Israel.svg",
+                      "importance": 2.0612715761513107e-05,
+                      "entityId": "Israel",
+                      "type": [
+                        "YAGO_wordnet_system_108435388",
+                        "YAGO_wordnet_district_108552138",
+                        "YAGO_yagoPermanentlyLocatedEntity",
+                        "YAGO_wikicategory_Middle_Eastern_countries",
+                        "YAGO_yagoLegalActorGeo",
+                        "YAGO_wordnet_state_108654360",
+                        "YAGO_wordnet_country_108544813",
+                        "YAGO_wikicategory_Member_states_of_the_United_Nations",
+                        "YAGO_wordnet_economy_108366753",
+                        "YAGO_wikicategory_States_and_territories_established_in_1948",
+                        "YAGO_wikicategory_Arabic\\u002dspeaking_countries_and_territories",
+                        "YAGO_wordnet_abstraction_100002137",
+                        "YAGO_wordnet_region_108630985",
+                        "YAGO_yagoGeoEntity",
+                        "YAGO_wikicategory_World_Trade_Organization_member_economies",
+                        "YAGO_wordnet_physical_entity_100001930",
+                        "YAGO_wordnet_entity_100001740",
+                        "YAGO_wordnet_object_100002684",
+                        "YAGO_wordnet_group_100031264",
+                        "YAGO_wordnet_location_100027167",
+                        "YAGO_wordnet_administrative_district_108491826",
+                        "YAGO_wikicategory_Member_states_of_the_Union_for_the_Mediterranean"
+                      ],
+                      "readableRepr": "Israel",
+                      "url": "http://en.wikipedia.org/wiki/Israel"
+                    }
+                  }
+                ]
+              },
+              "NNP"
+            ]
+          ],
+          "score": 0.6728532368995207,
+          "text": "Israel",
+          "enhancement": {
+            "openstreetmap_nominatim": {
+              "osm_id": "1473946",
+              "boundingbox": [
+                29.4533796,
+                33.3356317,
+                34.2674994,
+                35.8950234
+              ],
+              "licence": "Data \u00a9 OpenStreetMap contributors, ODbL 1.0. http://www.openstreetmap.org/copyright",
+              "importance": 0.20527062201139,
+              "icon": "https://nominatim.openstreetmap.org/images/mapicons/poi_boundary_administrative.p.20.png",
+              "osm_type": "relation",
+              "display_name": "\u05de\u05d3\u05d9\u05e0\u05ea \u05d9\u05e9\u05e8\u05d0\u05dc",
+              "lat": "30.8760272",
+              "type": "administrative",
+              "place_id": "178251849",
+              "lon": "35.0015196",
+              "class": "boundary"
+            }
+          }
+        }
+      ],
+      "label": "where"
+    },
+    "when": {
+      "extracted": [
+        {
+          "parts": [
+            [
+              {
+                "nlpToken": {
+                  "index": 17,
+                  "word": "Monday",
+                  "originalText": "Monday",
+                  "lemma": "Monday",
+                  "characterOffsetBegin": 406,
+                  "characterOffsetEnd": 412,
+                  "pos": "NNP",
+                  "ner": "DATE",
+                  "normalizedNER": "2018-01-01",
+                  "speaker": "PER0",
+                  "before": " ",
+                  "after": " ",
+                  "timex": {
+                    "tid": "t5",
+                    "type": "DATE",
+                    "value": "2018-01-01"
+                  }
+                },
+                "heideltime": [
+                  {
+                    "@tid": "t7",
+                    "@type": "DATE",
+                    "@value": "2018-01-01",
+                    "#text": "Monday",
+                    "characterOffset": [
+                      406,
+                      412
+                    ]
+                  }
+                ]
+              },
+              "NNP"
+            ]
+          ],
+          "score": 0.5002158787497963,
+          "text": "Monday",
+          "enhancement": {
+            "timex": {
+              "start_date": "2018-01-01T00:00:00",
+              "end_date": "2018-01-01T23:59:59"
+            }
+          },
+          "nlpIndexSentence": 3
+        }
+      ],
+      "label": "when"
+    },
     "who": {
       "extracted": [
         {
@@ -487,7 +645,7 @@
                   "characterOffsetEnd": 2405,
                   "pos": "IN",
                   "ner": "O",
-                  "speaker": "136",
+                  "speaker": "135",
                   "before": " ",
                   "after": " "
                 }
@@ -505,7 +663,7 @@
                   "characterOffsetEnd": 2410,
                   "pos": "PRP",
                   "ner": "O",
-                  "speaker": "136",
+                  "speaker": "135",
                   "before": " ",
                   "after": " "
                 }
@@ -523,7 +681,7 @@
                   "characterOffsetEnd": 2413,
                   "pos": "VBP",
                   "ner": "O",
-                  "speaker": "136",
+                  "speaker": "135",
                   "before": " ",
                   "after": ""
                 }
@@ -541,7 +699,7 @@
                   "characterOffsetEnd": 2416,
                   "pos": "RB",
                   "ner": "O",
-                  "speaker": "136",
+                  "speaker": "135",
                   "before": "",
                   "after": " "
                 }
@@ -559,7 +717,7 @@
                   "characterOffsetEnd": 2421,
                   "pos": "VB",
                   "ner": "O",
-                  "speaker": "136",
+                  "speaker": "135",
                   "before": " ",
                   "after": " "
                 }
@@ -577,7 +735,7 @@
                   "characterOffsetEnd": 2425,
                   "pos": "DT",
                   "ner": "O",
-                  "speaker": "136",
+                  "speaker": "135",
                   "before": " ",
                   "after": " "
                 }
@@ -595,7 +753,7 @@
                   "characterOffsetEnd": 2431,
                   "pos": "NN",
                   "ner": "O",
-                  "speaker": "136",
+                  "speaker": "135",
                   "before": " ",
                   "after": " "
                 }
@@ -613,7 +771,7 @@
                   "characterOffsetEnd": 2434,
                   "pos": "IN",
                   "ner": "O",
-                  "speaker": "136",
+                  "speaker": "135",
                   "before": " ",
                   "after": " "
                 }
@@ -631,7 +789,7 @@
                   "characterOffsetEnd": 2445,
                   "pos": "NN",
                   "ner": "O",
-                  "speaker": "136",
+                  "speaker": "135",
                   "before": " ",
                   "after": " "
                 }
@@ -649,7 +807,7 @@
                   "characterOffsetEnd": 2453,
                   "pos": "IN",
                   "ner": "O",
-                  "speaker": "136",
+                  "speaker": "135",
                   "before": " ",
                   "after": " "
                 }
@@ -667,7 +825,7 @@
                   "characterOffsetEnd": 2460,
                   "pos": "NN",
                   "ner": "O",
-                  "speaker": "136",
+                  "speaker": "135",
                   "before": " ",
                   "after": ""
                 }
@@ -685,7 +843,7 @@
                   "characterOffsetEnd": 2461,
                   "pos": ",",
                   "ner": "O",
-                  "speaker": "136",
+                  "speaker": "135",
                   "before": "",
                   "after": ""
                 }
@@ -1285,162 +1443,6 @@
         }
       ],
       "label": "why"
-    },
-    "where": {
-      "extracted": [
-        {
-          "parts": [
-            [
-              {
-                "nlpToken": {
-                  "index": 1,
-                  "word": "Israel",
-                  "originalText": "Israel",
-                  "lemma": "Israel",
-                  "characterOffsetBegin": 0,
-                  "characterOffsetEnd": 6,
-                  "pos": "NNP",
-                  "ner": "LOCATION",
-                  "speaker": "PER0",
-                  "before": "",
-                  "after": " "
-                },
-                "aida": [
-                  {
-                    "mention": {
-                      "allEntities": [
-                        {
-                          "kbIdentifier": "YAGO:Israel",
-                          "disambiguationScore": "1"
-                        }
-                      ],
-                      "offset": 0,
-                      "name": "Israel",
-                      "length": 6,
-                      "bestEntity": {
-                        "kbIdentifier": "YAGO:Israel",
-                        "disambiguationScore": "1"
-                      }
-                    },
-                    "bestEntityMetadata": {
-                      "knowledgebase": "YAGO",
-                      "depictionurl": "http://upload.wikimedia.org/wikipedia/commons/d/d4/Flag_of_Israel.svg",
-                      "depictionthumbnailurl": "http://upload.wikimedia.org/wikipedia/commons/thumbFlag_of_Israel.svg/200px-Flag_of_Israel.svg",
-                      "importance": 2.0612715761513107e-05,
-                      "entityId": "Israel",
-                      "type": [
-                        "YAGO_wordnet_system_108435388",
-                        "YAGO_wordnet_district_108552138",
-                        "YAGO_yagoPermanentlyLocatedEntity",
-                        "YAGO_wikicategory_Middle_Eastern_countries",
-                        "YAGO_yagoLegalActorGeo",
-                        "YAGO_wordnet_state_108654360",
-                        "YAGO_wordnet_country_108544813",
-                        "YAGO_wikicategory_Member_states_of_the_United_Nations",
-                        "YAGO_wordnet_economy_108366753",
-                        "YAGO_wikicategory_States_and_territories_established_in_1948",
-                        "YAGO_wikicategory_Arabic\\u002dspeaking_countries_and_territories",
-                        "YAGO_wordnet_abstraction_100002137",
-                        "YAGO_wordnet_region_108630985",
-                        "YAGO_yagoGeoEntity",
-                        "YAGO_wikicategory_World_Trade_Organization_member_economies",
-                        "YAGO_wordnet_physical_entity_100001930",
-                        "YAGO_wordnet_entity_100001740",
-                        "YAGO_wordnet_object_100002684",
-                        "YAGO_wordnet_group_100031264",
-                        "YAGO_wordnet_location_100027167",
-                        "YAGO_wordnet_administrative_district_108491826",
-                        "YAGO_wikicategory_Member_states_of_the_Union_for_the_Mediterranean"
-                      ],
-                      "readableRepr": "Israel",
-                      "url": "http://en.wikipedia.org/wiki/Israel"
-                    }
-                  }
-                ]
-              },
-              "NNP"
-            ]
-          ],
-          "score": 0.6728532368995207,
-          "text": "Israel",
-          "enhancement": {
-            "openstreetmap_nominatim": {
-              "osm_id": "1473946",
-              "boundingbox": [
-                29.4533796,
-                33.3356317,
-                34.2674994,
-                35.8950234
-              ],
-              "licence": "Data \u00a9 OpenStreetMap contributors, ODbL 1.0. http://www.openstreetmap.org/copyright",
-              "importance": 0.20527062201139,
-              "icon": "https://nominatim.openstreetmap.org/images/mapicons/poi_boundary_administrative.p.20.png",
-              "osm_type": "relation",
-              "display_name": "\u05de\u05d3\u05d9\u05e0\u05ea \u05d9\u05e9\u05e8\u05d0\u05dc",
-              "lat": "30.8760272",
-              "type": "administrative",
-              "place_id": "178251849",
-              "lon": "35.0015196",
-              "class": "boundary"
-            }
-          }
-        }
-      ],
-      "label": "where"
-    },
-    "when": {
-      "extracted": [
-        {
-          "parts": [
-            [
-              {
-                "nlpToken": {
-                  "index": 17,
-                  "word": "Monday",
-                  "originalText": "Monday",
-                  "lemma": "Monday",
-                  "characterOffsetBegin": 406,
-                  "characterOffsetEnd": 412,
-                  "pos": "NNP",
-                  "ner": "DATE",
-                  "normalizedNER": "2018-01-01",
-                  "speaker": "PER0",
-                  "before": " ",
-                  "after": " ",
-                  "timex": {
-                    "tid": "t5",
-                    "type": "DATE",
-                    "value": "2018-01-01"
-                  }
-                },
-                "heideltime": [
-                  {
-                    "@tid": "t7",
-                    "@type": "DATE",
-                    "@value": "2018-01-01",
-                    "#text": "Monday",
-                    "characterOffset": [
-                      406,
-                      412
-                    ]
-                  }
-                ]
-              },
-              "NNP"
-            ]
-          ],
-          "score": 0.6068825454164629,
-          "text": "Monday",
-          "enhancement": {
-            "timex": {
-              "start_date": "2018-01-01T00:00:00",
-              "end_date": "2018-01-01T23:59:59"
-            }
-          },
-          "nlpIndexSentence": 3
-        }
-      ],
-      "label": "when"
     }
   }
 }

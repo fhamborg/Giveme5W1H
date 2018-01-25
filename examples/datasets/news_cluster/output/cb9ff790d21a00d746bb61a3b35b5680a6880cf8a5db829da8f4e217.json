@@ -25,7 +25,9 @@
     "EventId": 31,
     "Event": "the_broken_berg_stunning_nasa_image_captures_newly_created_iceberg_cracking_into_20_pieces"
   },
-  "fiveWoneH": {
+  "fiveWoneH": {},
+  "fiveWoneH_Metadata": {
+    "process_errors": {},
     "who": {
       "extracted": [
         {
@@ -404,36 +406,6 @@
       ],
       "label": "how"
     },
-    "why": {
-      "extracted": [
-        {
-          "parts": [
-            [
-              {
-                "nlpToken": {
-                  "index": 7,
-                  "word": "B-44",
-                  "originalText": "B-44",
-                  "lemma": "b-44",
-                  "characterOffsetBegin": 639,
-                  "characterOffsetEnd": 643,
-                  "pos": "NN",
-                  "ner": "O",
-                  "speaker": "PER0",
-                  "before": " ",
-                  "after": " "
-                }
-              },
-              "NN"
-            ]
-          ],
-          "score": 0.34600000000000003,
-          "text": "B-44",
-          "nlpIndexSentence": 6
-        }
-      ],
-      "label": "why"
-    },
     "where": {
       "extracted": [
         {
@@ -569,7 +541,7 @@
               "NN"
             ]
           ],
-          "score": 0.6385198523439155,
+          "score": 0.5185198523439156,
           "text": "midnight",
           "enhancement": {
             "timex": {
@@ -581,6 +553,36 @@
         }
       ],
       "label": "when"
+    },
+    "why": {
+      "extracted": [
+        {
+          "parts": [
+            [
+              {
+                "nlpToken": {
+                  "index": 7,
+                  "word": "B-44",
+                  "originalText": "B-44",
+                  "lemma": "b-44",
+                  "characterOffsetBegin": 639,
+                  "characterOffsetEnd": 643,
+                  "pos": "NN",
+                  "ner": "O",
+                  "speaker": "PER0",
+                  "before": " ",
+                  "after": " "
+                }
+              },
+              "NN"
+            ]
+          ],
+          "score": 0.34600000000000003,
+          "text": "B-44",
+          "nlpIndexSentence": 6
+        }
+      ],
+      "label": "why"
     }
   }
 }

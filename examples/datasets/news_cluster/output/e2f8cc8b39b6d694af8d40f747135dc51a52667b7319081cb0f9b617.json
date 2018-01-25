@@ -23,7 +23,9 @@
     "EventId": 18,
     "Event": "elon_musk_reveals_red_tesla_roadster_bound_for_mars"
   },
-  "fiveWoneH": {
+  "fiveWoneH": {},
+  "fiveWoneH_Metadata": {
+    "process_errors": {},
     "who": {
       "extracted": [
         {
@@ -382,7 +384,7 @@
                   "characterOffsetBegin": 111,
                   "characterOffsetEnd": 116,
                   "pos": "NNP",
-                  "ner": "LOCATION",
+                  "ner": "ORGANIZATION",
                   "speaker": "PER0",
                   "before": " ",
                   "after": " "
@@ -455,7 +457,7 @@
                   "characterOffsetBegin": 117,
                   "characterOffsetEnd": 125,
                   "pos": "NNP",
-                  "ner": "LOCATION",
+                  "ner": "ORGANIZATION",
                   "speaker": "PER0",
                   "before": " ",
                   "after": " "
@@ -751,20 +753,20 @@
             [
               {
                 "nlpToken": {
-                  "index": 43,
+                  "index": 15,
                   "word": "midnight",
                   "originalText": "midnight",
                   "lemma": "midnight",
-                  "characterOffsetBegin": 619,
-                  "characterOffsetEnd": 627,
+                  "characterOffsetBegin": 1096,
+                  "characterOffsetEnd": 1104,
                   "pos": "NN",
                   "ner": "TIME",
                   "normalizedNER": "2018-01-11T00:00",
-                  "speaker": "36",
-                  "before": "",
+                  "speaker": "PER0",
+                  "before": " ",
                   "after": " ",
                   "timex": {
-                    "tid": "t4",
+                    "tid": "t9",
                     "type": "TIME",
                     "value": "2018-01-11T00:00"
                   }
@@ -773,7 +775,7 @@
               "NN"
             ]
           ],
-          "score": 0.7931973098766363,
+          "score": 0.650741169525759,
           "text": "midnight",
           "enhancement": {
             "timex": {
@@ -781,7 +783,7 @@
               "end_date": "2018-01-11T00:00:59"
             }
           },
-          "nlpIndexSentence": 6
+          "nlpIndexSentence": 12
         }
       ],
       "label": "when"

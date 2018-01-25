@@ -25,7 +25,9 @@
     "EventId": 41,
     "Event": "jessica_alba_and_cash_warren_welcome_son_hayes_alba"
   },
-  "fiveWoneH": {
+  "fiveWoneH": {},
+  "fiveWoneH_Metadata": {
+    "process_errors": {},
     "how": {
       "extracted": [
         {
@@ -229,6 +231,146 @@
         }
       ],
       "label": "how"
+    },
+    "where": {
+      "extracted": [
+        {
+          "parts": [
+            [
+              {
+                "nlpToken": {
+                  "index": 13,
+                  "word": "Eve",
+                  "originalText": "Eve",
+                  "lemma": "Eve",
+                  "characterOffsetBegin": 336,
+                  "characterOffsetEnd": 339,
+                  "pos": "NNP",
+                  "ner": "LOCATION",
+                  "speaker": "PER0",
+                  "before": " ",
+                  "after": "\n",
+                  "timex": {
+                    "tid": "t3",
+                    "type": "DATE",
+                    "value": "2017-12-31"
+                  }
+                }
+              },
+              "NNP"
+            ],
+            [
+              {
+                "nlpToken": {
+                  "index": 14,
+                  "word": "Alba",
+                  "originalText": "Alba",
+                  "lemma": "Alba",
+                  "characterOffsetBegin": 340,
+                  "characterOffsetEnd": 344,
+                  "pos": "NNP",
+                  "ner": "LOCATION",
+                  "speaker": "PER0",
+                  "before": "\n",
+                  "after": " "
+                }
+              },
+              "NNP"
+            ]
+          ],
+          "score": 0.7,
+          "text": "Eve Alba",
+          "enhancement": {
+            "openstreetmap_nominatim": {
+              "place_id": "22275687",
+              "licence": "Data \u00a9 OpenStreetMap contributors, ODbL 1.0. http://www.openstreetmap.org/copyright",
+              "osm_type": "node",
+              "osm_id": "2195181674",
+              "boundingbox": [
+                55.7760752,
+                55.7761752,
+                -2.5349791,
+                -2.5348791
+              ],
+              "lat": "55.7761252",
+              "lon": "-2.5349291",
+              "display_name": "Eve Law, Scottish Borders, Scotland, TD11 3PG, UK",
+              "class": "natural",
+              "type": "peak",
+              "importance": 0.175,
+              "icon": "https://nominatim.openstreetmap.org/images/mapicons/poi_peak.p.20.png"
+            }
+          },
+          "nlpIndexSentence": 4
+        }
+      ],
+      "label": "where"
+    },
+    "when": {
+      "extracted": [
+        {
+          "parts": [
+            [
+              {
+                "nlpToken": {
+                  "index": 8,
+                  "word": "New",
+                  "originalText": "New",
+                  "lemma": "New",
+                  "characterOffsetBegin": 458,
+                  "characterOffsetEnd": 461,
+                  "pos": "NNP",
+                  "ner": "DATE",
+                  "normalizedNER": "2018-01-01",
+                  "speaker": "21",
+                  "before": " ",
+                  "after": " ",
+                  "timex": {
+                    "tid": "t5",
+                    "type": "DATE",
+                    "value": "2018-01-01"
+                  }
+                }
+              },
+              "NNP"
+            ],
+            [
+              {
+                "nlpToken": {
+                  "index": 9,
+                  "word": "Year",
+                  "originalText": "Year",
+                  "lemma": "Year",
+                  "characterOffsetBegin": 462,
+                  "characterOffsetEnd": 466,
+                  "pos": "NNP",
+                  "ner": "DATE",
+                  "normalizedNER": "2018-01-01",
+                  "speaker": "21",
+                  "before": " ",
+                  "after": "",
+                  "timex": {
+                    "tid": "t5",
+                    "type": "DATE",
+                    "value": "2018-01-01"
+                  }
+                }
+              },
+              "NNP"
+            ]
+          ],
+          "score": 0.5048535599092167,
+          "text": "New Year",
+          "enhancement": {
+            "timex": {
+              "start_date": "2018-01-01T00:00:00",
+              "end_date": "2018-01-01T23:59:59"
+            }
+          },
+          "nlpIndexSentence": 5
+        }
+      ],
+      "label": "when"
     },
     "who": {
       "extracted": [
@@ -846,146 +988,6 @@
         }
       ],
       "label": "why"
-    },
-    "where": {
-      "extracted": [
-        {
-          "parts": [
-            [
-              {
-                "nlpToken": {
-                  "index": 13,
-                  "word": "Eve",
-                  "originalText": "Eve",
-                  "lemma": "Eve",
-                  "characterOffsetBegin": 336,
-                  "characterOffsetEnd": 339,
-                  "pos": "NNP",
-                  "ner": "LOCATION",
-                  "speaker": "PER0",
-                  "before": " ",
-                  "after": "\n",
-                  "timex": {
-                    "tid": "t3",
-                    "type": "DATE",
-                    "value": "2017-12-31"
-                  }
-                }
-              },
-              "NNP"
-            ],
-            [
-              {
-                "nlpToken": {
-                  "index": 14,
-                  "word": "Alba",
-                  "originalText": "Alba",
-                  "lemma": "Alba",
-                  "characterOffsetBegin": 340,
-                  "characterOffsetEnd": 344,
-                  "pos": "NNP",
-                  "ner": "LOCATION",
-                  "speaker": "PER0",
-                  "before": "\n",
-                  "after": " "
-                }
-              },
-              "NNP"
-            ]
-          ],
-          "score": 0.7,
-          "text": "Eve Alba",
-          "enhancement": {
-            "openstreetmap_nominatim": {
-              "place_id": "22275687",
-              "licence": "Data \u00a9 OpenStreetMap contributors, ODbL 1.0. http://www.openstreetmap.org/copyright",
-              "osm_type": "node",
-              "osm_id": "2195181674",
-              "boundingbox": [
-                55.7760752,
-                55.7761752,
-                -2.5349791,
-                -2.5348791
-              ],
-              "lat": "55.7761252",
-              "lon": "-2.5349291",
-              "display_name": "Eve Law, Scottish Borders, Scotland, TD11 3PG, UK",
-              "class": "natural",
-              "type": "peak",
-              "importance": 0.175,
-              "icon": "https://nominatim.openstreetmap.org/images/mapicons/poi_peak.p.20.png"
-            }
-          },
-          "nlpIndexSentence": 4
-        }
-      ],
-      "label": "where"
-    },
-    "when": {
-      "extracted": [
-        {
-          "parts": [
-            [
-              {
-                "nlpToken": {
-                  "index": 8,
-                  "word": "New",
-                  "originalText": "New",
-                  "lemma": "New",
-                  "characterOffsetBegin": 458,
-                  "characterOffsetEnd": 461,
-                  "pos": "NNP",
-                  "ner": "DATE",
-                  "normalizedNER": "2018-01-01",
-                  "speaker": "21",
-                  "before": " ",
-                  "after": " ",
-                  "timex": {
-                    "tid": "t5",
-                    "type": "DATE",
-                    "value": "2018-01-01"
-                  }
-                }
-              },
-              "NNP"
-            ],
-            [
-              {
-                "nlpToken": {
-                  "index": 9,
-                  "word": "Year",
-                  "originalText": "Year",
-                  "lemma": "Year",
-                  "characterOffsetBegin": 462,
-                  "characterOffsetEnd": 466,
-                  "pos": "NNP",
-                  "ner": "DATE",
-                  "normalizedNER": "2018-01-01",
-                  "speaker": "21",
-                  "before": " ",
-                  "after": "",
-                  "timex": {
-                    "tid": "t5",
-                    "type": "DATE",
-                    "value": "2018-01-01"
-                  }
-                }
-              },
-              "NNP"
-            ]
-          ],
-          "score": 0.6248535599092166,
-          "text": "New Year",
-          "enhancement": {
-            "timex": {
-              "start_date": "2018-01-01T00:00:00",
-              "end_date": "2018-01-01T23:59:59"
-            }
-          },
-          "nlpIndexSentence": 5
-        }
-      ],
-      "label": "when"
     }
   }
 }

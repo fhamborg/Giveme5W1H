@@ -25,7 +25,9 @@
     "EventId": 18,
     "Event": "elon_musk_reveals_red_tesla_roadster_bound_for_mars"
   },
-  "fiveWoneH": {
+  "fiveWoneH": {},
+  "fiveWoneH_Metadata": {
+    "process_errors": {},
     "who": {
       "extracted": [
         {
@@ -362,137 +364,6 @@
       ],
       "label": "what"
     },
-    "where": {
-      "extracted": [
-        {
-          "parts": [
-            [
-              {
-                "nlpToken": {
-                  "index": 13,
-                  "word": "Mars",
-                  "originalText": "Mars",
-                  "lemma": "Mars",
-                  "characterOffsetBegin": 62,
-                  "characterOffsetEnd": 66,
-                  "pos": "NNP",
-                  "ner": "LOCATION",
-                  "speaker": "PER0",
-                  "before": " ",
-                  "after": ""
-                },
-                "aida": [
-                  {
-                    "mention": {
-                      "allEntities": [
-                        {
-                          "kbIdentifier": "YAGO:Mars",
-                          "disambiguationScore": "0.30794"
-                        }
-                      ],
-                      "offset": 62,
-                      "name": "Mars",
-                      "length": 4,
-                      "bestEntity": {
-                        "kbIdentifier": "YAGO:Mars",
-                        "disambiguationScore": "0.30794"
-                      }
-                    },
-                    "bestEntityMetadata": {
-                      "knowledgebase": "YAGO",
-                      "depictionurl": "http://upload.wikimedia.org/wikipedia/commons/e/e4/Water_ice_clouds_hanging_above_Tharsis_PIA02653_black_background.jpg",
-                      "depictionthumbnailurl": "http://upload.wikimedia.org/wikipedia/commons/thumbWater_ice_clouds_hanging_above_Tharsis_PIA02653_black_background.jpg/200px-Water_ice_clouds_hanging_above_Tharsis_PIA02653_black_background.jpg",
-                      "importance": 0.00038523494456990036,
-                      "entityId": "Mars",
-                      "type": [
-                        "YAGO_wordnet_physical_entity_100001930",
-                        "YAGO_wordnet_terrestrial_planet_109456369",
-                        "YAGO_wordnet_entity_100001740",
-                        "YAGO_wordnet_object_100002684",
-                        "YAGO_wordnet_natural_object_100019128",
-                        "YAGO_wikicategory_Terrestrial_planets",
-                        "YAGO_wordnet_whole_100003553",
-                        "YAGO_wordnet_planet_109394007",
-                        "YAGO_wordnet_celestial_body_109239740"
-                      ],
-                      "readableRepr": "Mars",
-                      "url": "http://en.wikipedia.org/wiki/Mars"
-                    }
-                  }
-                ]
-              },
-              "NNP"
-            ]
-          ],
-          "score": 0.6857442219379336,
-          "text": "Mars",
-          "enhancement": {
-            "openstreetmap_nominatim": {
-              "place_id": "177894532",
-              "licence": "Data \u00a9 OpenStreetMap contributors, ODbL 1.0. http://www.openstreetmap.org/copyright",
-              "osm_type": "relation",
-              "osm_id": "391649",
-              "boundingbox": [
-                43.9912494,
-                44.0146261,
-                3.535728,
-                3.5664698
-              ],
-              "lat": "44.0009649",
-              "lon": "3.5560447",
-              "display_name": "Mars, Le Vigan, Gard, Occitanie, France m\u00e9tropolitaine, 30120, France",
-              "class": "boundary",
-              "type": "administrative",
-              "importance": 0.20582841986817,
-              "icon": "https://nominatim.openstreetmap.org/images/mapicons/poi_boundary_administrative.p.20.png"
-            }
-          }
-        }
-      ],
-      "label": "where"
-    },
-    "when": {
-      "extracted": [
-        {
-          "parts": [
-            [
-              {
-                "nlpToken": {
-                  "index": 18,
-                  "word": "midnight",
-                  "originalText": "midnight",
-                  "lemma": "midnight",
-                  "characterOffsetBegin": 211,
-                  "characterOffsetEnd": 219,
-                  "pos": "NN",
-                  "ner": "TIME",
-                  "normalizedNER": "2017-12-23T00:00",
-                  "speaker": "PER1",
-                  "before": "",
-                  "after": " ",
-                  "timex": {
-                    "tid": "t3",
-                    "type": "TIME",
-                    "value": "2017-12-23T00:00"
-                  }
-                }
-              },
-              "NN"
-            ]
-          ],
-          "score": 0.5453596791837425,
-          "text": "midnight",
-          "enhancement": {
-            "timex": {
-              "start_date": "2017-12-23T00:00:00",
-              "end_date": "2017-12-23T00:00:59"
-            }
-          },
-          "nlpIndexSentence": 2
-        }
-      ],
-      "label": "when"
-    },
     "how": {
       "extracted": [
         {
@@ -733,6 +604,185 @@
         }
       ],
       "label": "why"
+    },
+    "where": {
+      "extracted": [
+        {
+          "parts": [
+            [
+              {
+                "nlpToken": {
+                  "index": 13,
+                  "word": "Mars",
+                  "originalText": "Mars",
+                  "lemma": "Mars",
+                  "characterOffsetBegin": 62,
+                  "characterOffsetEnd": 66,
+                  "pos": "NNP",
+                  "ner": "LOCATION",
+                  "speaker": "PER0",
+                  "before": " ",
+                  "after": ""
+                },
+                "aida": [
+                  {
+                    "mention": {
+                      "allEntities": [
+                        {
+                          "kbIdentifier": "YAGO:Mars",
+                          "disambiguationScore": "0.30794"
+                        }
+                      ],
+                      "offset": 62,
+                      "name": "Mars",
+                      "length": 4,
+                      "bestEntity": {
+                        "kbIdentifier": "YAGO:Mars",
+                        "disambiguationScore": "0.30794"
+                      }
+                    },
+                    "bestEntityMetadata": {
+                      "knowledgebase": "YAGO",
+                      "depictionurl": "http://upload.wikimedia.org/wikipedia/commons/e/e4/Water_ice_clouds_hanging_above_Tharsis_PIA02653_black_background.jpg",
+                      "depictionthumbnailurl": "http://upload.wikimedia.org/wikipedia/commons/thumbWater_ice_clouds_hanging_above_Tharsis_PIA02653_black_background.jpg/200px-Water_ice_clouds_hanging_above_Tharsis_PIA02653_black_background.jpg",
+                      "importance": 0.00038523494456990036,
+                      "entityId": "Mars",
+                      "type": [
+                        "YAGO_wordnet_physical_entity_100001930",
+                        "YAGO_wordnet_terrestrial_planet_109456369",
+                        "YAGO_wordnet_entity_100001740",
+                        "YAGO_wordnet_object_100002684",
+                        "YAGO_wordnet_natural_object_100019128",
+                        "YAGO_wikicategory_Terrestrial_planets",
+                        "YAGO_wordnet_whole_100003553",
+                        "YAGO_wordnet_planet_109394007",
+                        "YAGO_wordnet_celestial_body_109239740"
+                      ],
+                      "readableRepr": "Mars",
+                      "url": "http://en.wikipedia.org/wiki/Mars"
+                    }
+                  }
+                ]
+              },
+              "NNP"
+            ]
+          ],
+          "score": 0.6857442219379336,
+          "text": "Mars",
+          "enhancement": {
+            "openstreetmap_nominatim": {
+              "place_id": "177894532",
+              "licence": "Data \u00a9 OpenStreetMap contributors, ODbL 1.0. http://www.openstreetmap.org/copyright",
+              "osm_type": "relation",
+              "osm_id": "391649",
+              "boundingbox": [
+                43.9912494,
+                44.0146261,
+                3.535728,
+                3.5664698
+              ],
+              "lat": "44.0009649",
+              "lon": "3.5560447",
+              "display_name": "Mars, Le Vigan, Gard, Occitanie, France m\u00e9tropolitaine, 30120, France",
+              "class": "boundary",
+              "type": "administrative",
+              "importance": 0.20582841986817,
+              "icon": "https://nominatim.openstreetmap.org/images/mapicons/poi_boundary_administrative.p.20.png"
+            }
+          }
+        }
+      ],
+      "label": "where"
+    },
+    "when": {
+      "extracted": [
+        {
+          "parts": [
+            [
+              {
+                "nlpToken": {
+                  "index": 10,
+                  "word": "next",
+                  "originalText": "next",
+                  "lemma": "next",
+                  "characterOffsetBegin": 116,
+                  "characterOffsetEnd": 120,
+                  "pos": "JJ",
+                  "ner": "DATE",
+                  "normalizedNER": "2018-01",
+                  "speaker": "PER0",
+                  "before": " ",
+                  "after": " ",
+                  "timex": {
+                    "tid": "t1",
+                    "type": "DATE",
+                    "value": "2018-01"
+                  }
+                },
+                "heideltime": [
+                  {
+                    "@tid": "t1",
+                    "@type": "DATE",
+                    "@value": "2018-01",
+                    "#text": "next month",
+                    "characterOffset": [
+                      116,
+                      126
+                    ]
+                  }
+                ]
+              },
+              "JJ"
+            ],
+            [
+              {
+                "nlpToken": {
+                  "index": 11,
+                  "word": "month",
+                  "originalText": "month",
+                  "lemma": "month",
+                  "characterOffsetBegin": 121,
+                  "characterOffsetEnd": 126,
+                  "pos": "NN",
+                  "ner": "DATE",
+                  "normalizedNER": "2018-01",
+                  "speaker": "PER0",
+                  "before": " ",
+                  "after": "",
+                  "timex": {
+                    "tid": "t1",
+                    "type": "DATE",
+                    "value": "2018-01"
+                  }
+                },
+                "heideltime": [
+                  {
+                    "@tid": "t1",
+                    "@type": "DATE",
+                    "@value": "2018-01",
+                    "#text": "next month",
+                    "characterOffset": [
+                      116,
+                      126
+                    ]
+                  }
+                ]
+              },
+              "NN"
+            ]
+          ],
+          "score": 0.6133876178255534,
+          "text": "next month",
+          "enhancement": {
+            "timex": {
+              "start_date": "2018-01-01T00:00:00",
+              "end_date": "2018-01-31T23:59:59"
+            }
+          },
+          "nlpIndexSentence": 1
+        }
+      ],
+      "label": "when"
     }
   }
 }

@@ -20,14 +20,15 @@
   "newsCluster": {
     "CategoryId": 5,
     "Category": "sports",
-    "TopicId": 1,
-    "Topic": "unspecific",
-    "EventId": 13,
-    "Event": "cubs_win_championship",
-    "Url": "http://www.independent.co.uk/sport/us-sport/major-league-baseball/chicago-cubs-fans-celebrate-world-series-title-a7394736.html"
+    "TopicId": 2,
+    "Topic": "legancy",
+    "EventId": 61,
+    "Event": "cubs_win_championship"
   },
   "dId": "d0a9c4846b02c1bdf2cf6091f52061669dc04593e21aa02398f875bb",
-  "fiveWoneH": {
+  "fiveWoneH": {},
+  "fiveWoneH_Metadata": {
+    "process_errors": {},
     "how": {
       "extracted": [
         {
@@ -35,43 +36,105 @@
             [
               {
                 "nlpToken": {
-                  "index": 12,
-                  "word": "celebrate",
-                  "originalText": "celebrate",
-                  "lemma": "celebrate",
-                  "characterOffsetBegin": 53,
-                  "characterOffsetEnd": 62,
-                  "pos": "VB",
+                  "index": 19,
+                  "word": "their",
+                  "originalText": "their",
+                  "lemma": "they",
+                  "characterOffsetBegin": 205,
+                  "characterOffsetEnd": 210,
+                  "pos": "PRP$",
                   "ner": "O",
                   "speaker": "PER0",
                   "before": " ",
                   "after": " "
                 }
               },
-              "VB"
-            ]
-          ],
-          "score": 1.3333333333333333,
-          "text": "celebrate"
-        }
-      ],
-      "label": "how"
-    },
-    "where": {
-      "extracted": [
-        {
-          "parts": [
+              "PRP$"
+            ],
             [
               {
                 "nlpToken": {
-                  "index": 13,
-                  "word": "Chicago",
-                  "originalText": "Chicago",
-                  "lemma": "Chicago",
-                  "characterOffsetBegin": 749,
-                  "characterOffsetEnd": 756,
+                  "index": 20,
+                  "word": "beloved",
+                  "originalText": "beloved",
+                  "lemma": "beloved",
+                  "characterOffsetBegin": 211,
+                  "characterOffsetEnd": 218,
+                  "pos": "JJ",
+                  "ner": "O",
+                  "speaker": "PER0",
+                  "before": " ",
+                  "after": " "
+                }
+              },
+              "JJ"
+            ],
+            [
+              {
+                "nlpToken": {
+                  "index": 21,
+                  "word": "team",
+                  "originalText": "team",
+                  "lemma": "team",
+                  "characterOffsetBegin": 219,
+                  "characterOffsetEnd": 223,
+                  "pos": "NN",
+                  "ner": "O",
+                  "speaker": "PER0",
+                  "before": " ",
+                  "after": ""
+                }
+              },
+              "NN"
+            ],
+            [
+              {
+                "nlpToken": {
+                  "index": 22,
+                  "word": "'s",
+                  "originalText": "'s",
+                  "lemma": "'s",
+                  "characterOffsetBegin": 223,
+                  "characterOffsetEnd": 225,
+                  "pos": "POS",
+                  "ner": "O",
+                  "speaker": "PER0",
+                  "before": "",
+                  "after": " "
+                }
+              },
+              "POS"
+            ],
+            [
+              {
+                "nlpToken": {
+                  "index": 23,
+                  "word": "first",
+                  "originalText": "first",
+                  "lemma": "first",
+                  "characterOffsetBegin": 226,
+                  "characterOffsetEnd": 231,
+                  "pos": "JJ",
+                  "ner": "ORDINAL",
+                  "normalizedNER": "1.0",
+                  "speaker": "PER0",
+                  "before": " ",
+                  "after": " "
+                }
+              },
+              "JJ"
+            ],
+            [
+              {
+                "nlpToken": {
+                  "index": 24,
+                  "word": "World",
+                  "originalText": "World",
+                  "lemma": "World",
+                  "characterOffsetBegin": 232,
+                  "characterOffsetEnd": 237,
                   "pos": "NNP",
-                  "ner": "LOCATION",
+                  "ner": "MISC",
                   "speaker": "PER0",
                   "before": " ",
                   "after": " "
@@ -81,94 +144,221 @@
                     "mention": {
                       "allEntities": [
                         {
-                          "kbIdentifier": "YAGO:Chicago",
-                          "disambiguationScore": "0.09843"
+                          "kbIdentifier": "YAGO:Major_League_Baseball_on_CBS",
+                          "disambiguationScore": "0.09596"
                         }
                       ],
-                      "offset": 749,
-                      "name": "Chicago",
-                      "length": 7,
+                      "offset": 232,
+                      "name": "World Series",
+                      "length": 12,
                       "bestEntity": {
-                        "kbIdentifier": "YAGO:Chicago",
-                        "disambiguationScore": "0.09843"
+                        "kbIdentifier": "YAGO:Major_League_Baseball_on_CBS",
+                        "disambiguationScore": "0.09596"
                       }
                     },
                     "bestEntityMetadata": {
                       "knowledgebase": "YAGO",
-                      "depictionurl": "http://upload.wikimedia.org/wikipedia/commons/3/38/Chicago_montage1.jpg",
-                      "depictionthumbnailurl": "http://upload.wikimedia.org/wikipedia/commons/thumbChicago_montage1.jpg/200px-Chicago_montage1.jpg",
-                      "importance": 1.8941414483552586e-05,
-                      "entityId": "Chicago",
+                      "depictionurl": "http://upload.wikimedia.org/wikipedia/en/b/b0/Major_League_Baseball_on_CBS_Sports_media_pin.jpg",
+                      "depictionthumbnailurl": "http://upload.wikimedia.org/wikipedia/en/thumbMajor_League_Baseball_on_CBS_Sports_media_pin.jpg/200px-Major_League_Baseball_on_CBS_Sports_media_pin.jpg",
+                      "importance": 0.041947990775531144,
+                      "entityId": "Major_League_Baseball_on_CBS",
                       "type": [
-                        "YAGO_wordnet_district_108552138",
                         "YAGO_yagoPermanentlyLocatedEntity",
+                        "YAGO_wikicategory_1993_American_television_series_endings",
+                        "YAGO_wordnet_event_100029378",
                         "YAGO_yagoLegalActorGeo",
-                        "YAGO_wikicategory_Cities_in_DuPage_County\\u002c_Illinois",
-                        "YAGO_wordnet_urban_area_108675967",
-                        "YAGO_wikicategory_Populated_places_established_in_1833",
-                        "YAGO_wikicategory_Cities_in_Cook_County\\u002c_Illinois",
-                        "YAGO_wordnet_municipality_108626283",
-                        "YAGO_wikicategory_locations",
-                        "YAGO_wordnet_center_108523483",
-                        "YAGO_wikicategory_Cities_in_Illinois",
-                        "YAGO_wordnet_seat_108647945",
-                        "YAGO_wordnet_region_108630985",
-                        "YAGO_yagoGeoEntity",
-                        "YAGO_wordnet_physical_entity_100001930",
-                        "YAGO_wordnet_site_108651247",
+                        "YAGO_wordnet_organization_108008335",
+                        "YAGO_wordnet_language_unit_106284225",
+                        "YAGO_wordnet_relation_100031921",
+                        "YAGO_wordnet_ending_106308765",
+                        "YAGO_wikicategory_1990_American_television_series_debuts",
+                        "YAGO_wordnet_introduction_100238022",
+                        "YAGO_wordnet_diversion_100426928",
+                        "YAGO_wordnet_beginning_100235435",
+                        "YAGO_wikicategory_New_York_Yankees_broadcasters",
+                        "YAGO_wordnet_change_100191142",
+                        "YAGO_wordnet_sport_100523513",
+                        "YAGO_wordnet_abstraction_100002137",
+                        "YAGO_wordnet_activity_100407535",
+                        "YAGO_wordnet_action_100037396",
+                        "YAGO_wordnet_part_113809207",
+                        "YAGO_wordnet_show_100520257",
+                        "YAGO_wordnet_group_100031264",
+                        "YAGO_wordnet_psychological_feature_100023100",
+                        "YAGO_wikicategory_CBS_network_shows",
+                        "YAGO_wordnet_change_of_state_100199130",
+                        "YAGO_wikicategory_1955_American_television_series_debuts",
+                        "YAGO_wikicategory_1965_American_television_series_endings",
+                        "YAGO_yagoLegalActor",
+                        "YAGO_wordnet_company_108058098",
+                        "YAGO_wordnet_act_100030358",
+                        "YAGO_wordnet_social_group_107950920",
+                        "YAGO_wordnet_institution_108053576",
                         "YAGO_wordnet_entity_100001740",
-                        "YAGO_wordnet_object_100002684",
-                        "YAGO_wordnet_area_108497294",
-                        "YAGO_wordnet_city_108524735",
-                        "YAGO_wordnet_county_seat_108547143",
-                        "YAGO_wordnet_tract_108673395",
-                        "YAGO_wordnet_geographical_area_108574314",
-                        "YAGO_wikicategory_Inland_port_cities_and_towns_of_the_United_States",
-                        "YAGO_wikicategory_County_seats_in_Illinois",
-                        "YAGO_wikicategory_Populated_places_on_the_Great_Lakes",
-                        "YAGO_wordnet_location_100027167",
-                        "YAGO_wordnet_administrative_district_108491826"
+                        "YAGO_wordnet_entertainment_100429048",
+                        "YAGO_wordnet_morpheme_106306233",
+                        "YAGO_wordnet_broadcasting_company_108002015",
+                        "YAGO_wikicategory_CBS_Sports"
                       ],
-                      "readableRepr": "Chicago",
-                      "url": "http://en.wikipedia.org/wiki/Chicago"
+                      "readableRepr": "Major League Baseball on CBS",
+                      "url": "http://en.wikipedia.org/wiki/Major%20League%20Baseball%20on%20CBS"
                     }
                   }
                 ]
               },
               "NNP"
+            ],
+            [
+              {
+                "nlpToken": {
+                  "index": 25,
+                  "word": "Series",
+                  "originalText": "Series",
+                  "lemma": "Series",
+                  "characterOffsetBegin": 238,
+                  "characterOffsetEnd": 244,
+                  "pos": "NNP",
+                  "ner": "MISC",
+                  "speaker": "PER0",
+                  "before": " ",
+                  "after": " "
+                },
+                "aida": [
+                  {
+                    "mention": {
+                      "allEntities": [
+                        {
+                          "kbIdentifier": "YAGO:Major_League_Baseball_on_CBS",
+                          "disambiguationScore": "0.09596"
+                        }
+                      ],
+                      "offset": 232,
+                      "name": "World Series",
+                      "length": 12,
+                      "bestEntity": {
+                        "kbIdentifier": "YAGO:Major_League_Baseball_on_CBS",
+                        "disambiguationScore": "0.09596"
+                      }
+                    },
+                    "bestEntityMetadata": {
+                      "knowledgebase": "YAGO",
+                      "depictionurl": "http://upload.wikimedia.org/wikipedia/en/b/b0/Major_League_Baseball_on_CBS_Sports_media_pin.jpg",
+                      "depictionthumbnailurl": "http://upload.wikimedia.org/wikipedia/en/thumbMajor_League_Baseball_on_CBS_Sports_media_pin.jpg/200px-Major_League_Baseball_on_CBS_Sports_media_pin.jpg",
+                      "importance": 0.041947990775531144,
+                      "entityId": "Major_League_Baseball_on_CBS",
+                      "type": [
+                        "YAGO_yagoPermanentlyLocatedEntity",
+                        "YAGO_wikicategory_1993_American_television_series_endings",
+                        "YAGO_wordnet_event_100029378",
+                        "YAGO_yagoLegalActorGeo",
+                        "YAGO_wordnet_organization_108008335",
+                        "YAGO_wordnet_language_unit_106284225",
+                        "YAGO_wordnet_relation_100031921",
+                        "YAGO_wordnet_ending_106308765",
+                        "YAGO_wikicategory_1990_American_television_series_debuts",
+                        "YAGO_wordnet_introduction_100238022",
+                        "YAGO_wordnet_diversion_100426928",
+                        "YAGO_wordnet_beginning_100235435",
+                        "YAGO_wikicategory_New_York_Yankees_broadcasters",
+                        "YAGO_wordnet_change_100191142",
+                        "YAGO_wordnet_sport_100523513",
+                        "YAGO_wordnet_abstraction_100002137",
+                        "YAGO_wordnet_activity_100407535",
+                        "YAGO_wordnet_action_100037396",
+                        "YAGO_wordnet_part_113809207",
+                        "YAGO_wordnet_show_100520257",
+                        "YAGO_wordnet_group_100031264",
+                        "YAGO_wordnet_psychological_feature_100023100",
+                        "YAGO_wikicategory_CBS_network_shows",
+                        "YAGO_wordnet_change_of_state_100199130",
+                        "YAGO_wikicategory_1955_American_television_series_debuts",
+                        "YAGO_wikicategory_1965_American_television_series_endings",
+                        "YAGO_yagoLegalActor",
+                        "YAGO_wordnet_company_108058098",
+                        "YAGO_wordnet_act_100030358",
+                        "YAGO_wordnet_social_group_107950920",
+                        "YAGO_wordnet_institution_108053576",
+                        "YAGO_wordnet_entity_100001740",
+                        "YAGO_wordnet_entertainment_100429048",
+                        "YAGO_wordnet_morpheme_106306233",
+                        "YAGO_wordnet_broadcasting_company_108002015",
+                        "YAGO_wikicategory_CBS_Sports"
+                      ],
+                      "readableRepr": "Major League Baseball on CBS",
+                      "url": "http://en.wikipedia.org/wiki/Major%20League%20Baseball%20on%20CBS"
+                    }
+                  }
+                ]
+              },
+              "NNP"
+            ],
+            [
+              {
+                "nlpToken": {
+                  "index": 26,
+                  "word": "triumph",
+                  "originalText": "triumph",
+                  "lemma": "triumph",
+                  "characterOffsetBegin": 245,
+                  "characterOffsetEnd": 252,
+                  "pos": "NN",
+                  "ner": "O",
+                  "speaker": "PER0",
+                  "before": " ",
+                  "after": " "
+                }
+              },
+              "NN"
+            ],
+            [
+              {
+                "nlpToken": {
+                  "index": 27,
+                  "word": "in",
+                  "originalText": "in",
+                  "lemma": "in",
+                  "characterOffsetBegin": 253,
+                  "characterOffsetEnd": 255,
+                  "pos": "IN",
+                  "ner": "O",
+                  "speaker": "PER0",
+                  "before": " ",
+                  "after": " "
+                }
+              },
+              "IN"
+            ],
+            [
+              {
+                "nlpToken": {
+                  "index": 28,
+                  "word": "108",
+                  "originalText": "108",
+                  "lemma": "108",
+                  "characterOffsetBegin": 256,
+                  "characterOffsetEnd": 259,
+                  "pos": "CD",
+                  "ner": "DATE",
+                  "normalizedNER": "2016-11-02-WXX-3 INTERSECT P108Y",
+                  "speaker": "PER0",
+                  "before": " ",
+                  "after": " ",
+                  "timex": {
+                    "tid": "t3",
+                    "type": "DATE",
+                    "altValue": "2016-11-02-WXX-3 INTERSECT P108Y"
+                  }
+                }
+              },
+              "CD"
             ]
           ],
           "score": 1.0,
-          "text": "Chicago",
-          "enhancement": {
-            "openstreetmap_nominatim": {
-              "place_id": "178038280",
-              "licence": "Data \u00a9 OpenStreetMap contributors, ODbL 1.0. http://www.openstreetmap.org/copyright",
-              "osm_type": "relation",
-              "osm_id": "122604",
-              "boundingbox": [
-                41.643919,
-                42.0230219,
-                -87.940101,
-                -87.5239841
-              ],
-              "lat": "41.8755546",
-              "lon": "-87.6244212",
-              "display_name": "Chicago, Cook County, Illinois, United States of America",
-              "class": "place",
-              "type": "city",
-              "importance": 0.30566190262222,
-              "icon": "https://nominatim.openstreetmap.org/images/mapicons/poi_place_city.p.20.png"
-            }
-          },
-          "nlpIndexSentence": 5
+          "text": "their beloved team 's first World Series triumph in 108",
+          "nlpIndexSentence": 1
         }
       ],
-      "label": "where"
-    },
-    "when": {
-      "extracted": [],
-      "label": "when"
+      "label": "how"
     },
     "who": {
       "extracted": [
@@ -475,6 +665,119 @@
       ],
       "label": "what"
     },
+    "where": {
+      "extracted": [
+        {
+          "parts": [
+            [
+              {
+                "nlpToken": {
+                  "index": 13,
+                  "word": "Chicago",
+                  "originalText": "Chicago",
+                  "lemma": "Chicago",
+                  "characterOffsetBegin": 749,
+                  "characterOffsetEnd": 756,
+                  "pos": "NNP",
+                  "ner": "LOCATION",
+                  "speaker": "PER0",
+                  "before": " ",
+                  "after": " "
+                },
+                "aida": [
+                  {
+                    "mention": {
+                      "allEntities": [
+                        {
+                          "kbIdentifier": "YAGO:Chicago",
+                          "disambiguationScore": "0.09843"
+                        }
+                      ],
+                      "offset": 749,
+                      "name": "Chicago",
+                      "length": 7,
+                      "bestEntity": {
+                        "kbIdentifier": "YAGO:Chicago",
+                        "disambiguationScore": "0.09843"
+                      }
+                    },
+                    "bestEntityMetadata": {
+                      "knowledgebase": "YAGO",
+                      "depictionurl": "http://upload.wikimedia.org/wikipedia/commons/3/38/Chicago_montage1.jpg",
+                      "depictionthumbnailurl": "http://upload.wikimedia.org/wikipedia/commons/thumbChicago_montage1.jpg/200px-Chicago_montage1.jpg",
+                      "importance": 1.8941414483552586e-05,
+                      "entityId": "Chicago",
+                      "type": [
+                        "YAGO_wordnet_district_108552138",
+                        "YAGO_yagoPermanentlyLocatedEntity",
+                        "YAGO_yagoLegalActorGeo",
+                        "YAGO_wikicategory_Cities_in_DuPage_County\\u002c_Illinois",
+                        "YAGO_wordnet_urban_area_108675967",
+                        "YAGO_wikicategory_Populated_places_established_in_1833",
+                        "YAGO_wikicategory_Cities_in_Cook_County\\u002c_Illinois",
+                        "YAGO_wordnet_municipality_108626283",
+                        "YAGO_wikicategory_locations",
+                        "YAGO_wordnet_center_108523483",
+                        "YAGO_wikicategory_Cities_in_Illinois",
+                        "YAGO_wordnet_seat_108647945",
+                        "YAGO_wordnet_region_108630985",
+                        "YAGO_yagoGeoEntity",
+                        "YAGO_wordnet_physical_entity_100001930",
+                        "YAGO_wordnet_site_108651247",
+                        "YAGO_wordnet_entity_100001740",
+                        "YAGO_wordnet_object_100002684",
+                        "YAGO_wordnet_area_108497294",
+                        "YAGO_wordnet_city_108524735",
+                        "YAGO_wordnet_county_seat_108547143",
+                        "YAGO_wordnet_tract_108673395",
+                        "YAGO_wordnet_geographical_area_108574314",
+                        "YAGO_wikicategory_Inland_port_cities_and_towns_of_the_United_States",
+                        "YAGO_wikicategory_County_seats_in_Illinois",
+                        "YAGO_wikicategory_Populated_places_on_the_Great_Lakes",
+                        "YAGO_wordnet_location_100027167",
+                        "YAGO_wordnet_administrative_district_108491826"
+                      ],
+                      "readableRepr": "Chicago",
+                      "url": "http://en.wikipedia.org/wiki/Chicago"
+                    }
+                  }
+                ]
+              },
+              "NNP"
+            ]
+          ],
+          "score": 0.6781958630747101,
+          "text": "Chicago",
+          "enhancement": {
+            "openstreetmap_nominatim": {
+              "osm_id": "122604",
+              "boundingbox": [
+                41.643919,
+                42.0230219,
+                -87.940101,
+                -87.5239841
+              ],
+              "licence": "Data \u00a9 OpenStreetMap contributors, ODbL 1.0. http://www.openstreetmap.org/copyright",
+              "importance": 0.30566190262222,
+              "icon": "https://nominatim.openstreetmap.org/images/mapicons/poi_place_city.p.20.png",
+              "osm_type": "relation",
+              "display_name": "Chicago, Cook County, Illinois, United States of America",
+              "lat": "41.8755546",
+              "type": "city",
+              "place_id": "178038280",
+              "lon": "-87.6244212",
+              "class": "place"
+            }
+          },
+          "nlpIndexSentence": 5
+        }
+      ],
+      "label": "where"
+    },
+    "when": {
+      "extracted": [],
+      "label": "when"
+    },
     "why": {
       "extracted": [
         {
@@ -482,49 +785,102 @@
             [
               {
                 "nlpToken": {
-                  "index": 19,
-                  "word": "Cubs",
-                  "originalText": "Cubs",
-                  "lemma": "Cubs",
-                  "characterOffsetBegin": 780,
-                  "characterOffsetEnd": 784,
-                  "pos": "NNP",
-                  "ner": "ORGANIZATION",
+                  "index": 16,
+                  "word": "because",
+                  "originalText": "because",
+                  "lemma": "because",
+                  "characterOffsetBegin": 2639,
+                  "characterOffsetEnd": 2646,
+                  "pos": "IN",
+                  "ner": "O",
                   "speaker": "PER0",
                   "before": " ",
                   "after": " "
                 }
               },
-              "NNP"
+              "IN"
+            ],
+            [
+              {
+                "nlpToken": {
+                  "index": 17,
+                  "word": "the",
+                  "originalText": "the",
+                  "lemma": "the",
+                  "characterOffsetBegin": 2647,
+                  "characterOffsetEnd": 2650,
+                  "pos": "DT",
+                  "ner": "O",
+                  "speaker": "PER0",
+                  "before": " ",
+                  "after": " "
+                }
+              },
+              "DT"
+            ],
+            [
+              {
+                "nlpToken": {
+                  "index": 18,
+                  "word": "smell",
+                  "originalText": "smell",
+                  "lemma": "smell",
+                  "characterOffsetBegin": 2651,
+                  "characterOffsetEnd": 2656,
+                  "pos": "NN",
+                  "ner": "O",
+                  "speaker": "PER0",
+                  "before": " ",
+                  "after": " "
+                }
+              },
+              "NN"
+            ],
+            [
+              {
+                "nlpToken": {
+                  "index": 19,
+                  "word": "of",
+                  "originalText": "of",
+                  "lemma": "of",
+                  "characterOffsetBegin": 2657,
+                  "characterOffsetEnd": 2659,
+                  "pos": "IN",
+                  "ner": "O",
+                  "speaker": "PER0",
+                  "before": " ",
+                  "after": " "
+                }
+              },
+              "IN"
             ],
             [
               {
                 "nlpToken": {
                   "index": 20,
-                  "word": "third",
-                  "originalText": "third",
-                  "lemma": "third",
-                  "characterOffsetBegin": 785,
-                  "characterOffsetEnd": 790,
-                  "pos": "JJ",
-                  "ner": "ORDINAL",
-                  "normalizedNER": "3.0",
+                  "word": "his",
+                  "originalText": "his",
+                  "lemma": "he",
+                  "characterOffsetBegin": 2660,
+                  "characterOffsetEnd": 2663,
+                  "pos": "PRP$",
+                  "ner": "O",
                   "speaker": "PER0",
                   "before": " ",
                   "after": " "
                 }
               },
-              "JJ"
+              "PRP$"
             ],
             [
               {
                 "nlpToken": {
                   "index": 21,
-                  "word": "baseman",
-                  "originalText": "baseman",
-                  "lemma": "baseman",
-                  "characterOffsetBegin": 791,
-                  "characterOffsetEnd": 798,
+                  "word": "pet",
+                  "originalText": "pet",
+                  "lemma": "pet",
+                  "characterOffsetBegin": 2664,
+                  "characterOffsetEnd": 2667,
                   "pos": "NN",
                   "ner": "O",
                   "speaker": "PER0",
@@ -538,187 +894,11 @@
               {
                 "nlpToken": {
                   "index": 22,
-                  "word": "Kris",
-                  "originalText": "Kris",
-                  "lemma": "Kris",
-                  "characterOffsetBegin": 799,
-                  "characterOffsetEnd": 803,
-                  "pos": "NNP",
-                  "ner": "PERSON",
-                  "speaker": "PER0",
-                  "before": " ",
-                  "after": " "
-                },
-                "aida": [
-                  {
-                    "mention": {
-                      "allEntities": [
-                        {
-                          "kbIdentifier": "YAGO:Kris_Bryant",
-                          "disambiguationScore": "1"
-                        }
-                      ],
-                      "offset": 799,
-                      "name": "Kris Bryant",
-                      "length": 11,
-                      "bestEntity": {
-                        "kbIdentifier": "YAGO:Kris_Bryant",
-                        "disambiguationScore": "1"
-                      }
-                    },
-                    "bestEntityMetadata": {
-                      "knowledgebase": "YAGO",
-                      "depictionurl": null,
-                      "depictionthumbnailurl": null,
-                      "importance": 0.2454729323008777,
-                      "entityId": "Kris_Bryant",
-                      "type": [
-                        "YAGO_wordnet_player_110439851",
-                        "YAGO_yagoLegalActorGeo",
-                        "YAGO_wordnet_athlete_109820263",
-                        "YAGO_wikicategory_Arizona_League_Cubs_players",
-                        "YAGO_wikicategory_Daytona_Cubs_players",
-                        "YAGO_wikicategory_San_Diego_Toreros_baseball_players",
-                        "YAGO_wordnet_person_100007846",
-                        "YAGO_wikicategory_Living_people",
-                        "YAGO_wikicategory_Baseball_players_from_Nevada",
-                        "YAGO_wikicategory_People_from_the_Las_Vegas_Valley",
-                        "YAGO_yagoLegalActor",
-                        "YAGO_wordnet_contestant_109613191",
-                        "YAGO_wikicategory_Boise_Hawks_players",
-                        "YAGO_wordnet_living_thing_100004258",
-                        "YAGO_wordnet_physical_entity_100001930",
-                        "YAGO_wordnet_causal_agent_100007347",
-                        "YAGO_wordnet_entity_100001740",
-                        "YAGO_wikicategory_All\\u002dAmerican_college_baseball_players",
-                        "YAGO_wordnet_object_100002684",
-                        "YAGO_wordnet_organism_100004475",
-                        "YAGO_wordnet_whole_100003553",
-                        "YAGO_wordnet_ballplayer_109835506"
-                      ],
-                      "readableRepr": "Kris Bryant",
-                      "url": "http://en.wikipedia.org/wiki/Kris%20Bryant"
-                    }
-                  }
-                ]
-              },
-              "NNP"
-            ],
-            [
-              {
-                "nlpToken": {
-                  "index": 23,
-                  "word": "Bryant",
-                  "originalText": "Bryant",
-                  "lemma": "Bryant",
-                  "characterOffsetBegin": 804,
-                  "characterOffsetEnd": 810,
-                  "pos": "NNP",
-                  "ner": "PERSON",
-                  "speaker": "PER0",
-                  "before": " ",
-                  "after": " "
-                },
-                "aida": [
-                  {
-                    "mention": {
-                      "allEntities": [
-                        {
-                          "kbIdentifier": "YAGO:Kris_Bryant",
-                          "disambiguationScore": "1"
-                        }
-                      ],
-                      "offset": 799,
-                      "name": "Kris Bryant",
-                      "length": 11,
-                      "bestEntity": {
-                        "kbIdentifier": "YAGO:Kris_Bryant",
-                        "disambiguationScore": "1"
-                      }
-                    },
-                    "bestEntityMetadata": {
-                      "knowledgebase": "YAGO",
-                      "depictionurl": null,
-                      "depictionthumbnailurl": null,
-                      "importance": 0.2454729323008777,
-                      "entityId": "Kris_Bryant",
-                      "type": [
-                        "YAGO_wordnet_player_110439851",
-                        "YAGO_yagoLegalActorGeo",
-                        "YAGO_wordnet_athlete_109820263",
-                        "YAGO_wikicategory_Arizona_League_Cubs_players",
-                        "YAGO_wikicategory_Daytona_Cubs_players",
-                        "YAGO_wikicategory_San_Diego_Toreros_baseball_players",
-                        "YAGO_wordnet_person_100007846",
-                        "YAGO_wikicategory_Living_people",
-                        "YAGO_wikicategory_Baseball_players_from_Nevada",
-                        "YAGO_wikicategory_People_from_the_Las_Vegas_Valley",
-                        "YAGO_yagoLegalActor",
-                        "YAGO_wordnet_contestant_109613191",
-                        "YAGO_wikicategory_Boise_Hawks_players",
-                        "YAGO_wordnet_living_thing_100004258",
-                        "YAGO_wordnet_physical_entity_100001930",
-                        "YAGO_wordnet_causal_agent_100007347",
-                        "YAGO_wordnet_entity_100001740",
-                        "YAGO_wikicategory_All\\u002dAmerican_college_baseball_players",
-                        "YAGO_wordnet_object_100002684",
-                        "YAGO_wordnet_organism_100004475",
-                        "YAGO_wordnet_whole_100003553",
-                        "YAGO_wordnet_ballplayer_109835506"
-                      ],
-                      "readableRepr": "Kris Bryant",
-                      "url": "http://en.wikipedia.org/wiki/Kris%20Bryant"
-                    }
-                  }
-                ]
-              },
-              "NNP"
-            ],
-            [
-              {
-                "nlpToken": {
-                  "index": 24,
-                  "word": "fielded",
-                  "originalText": "fielded",
-                  "lemma": "field",
-                  "characterOffsetBegin": 811,
-                  "characterOffsetEnd": 818,
-                  "pos": "VBD",
-                  "ner": "O",
-                  "speaker": "PER0",
-                  "before": " ",
-                  "after": " "
-                }
-              },
-              "VBD"
-            ],
-            [
-              {
-                "nlpToken": {
-                  "index": 25,
-                  "word": "a",
-                  "originalText": "a",
-                  "lemma": "a",
-                  "characterOffsetBegin": 819,
-                  "characterOffsetEnd": 820,
-                  "pos": "DT",
-                  "ner": "O",
-                  "speaker": "PER0",
-                  "before": " ",
-                  "after": " "
-                }
-              },
-              "DT"
-            ],
-            [
-              {
-                "nlpToken": {
-                  "index": 26,
-                  "word": "grounder",
-                  "originalText": "grounder",
-                  "lemma": "grounder",
-                  "characterOffsetBegin": 821,
-                  "characterOffsetEnd": 829,
+                  "word": "goat",
+                  "originalText": "goat",
+                  "lemma": "goat",
+                  "characterOffsetBegin": 2668,
+                  "characterOffsetEnd": 2672,
                   "pos": "NN",
                   "ner": "O",
                   "speaker": "PER0",
@@ -731,48 +911,12 @@
             [
               {
                 "nlpToken": {
-                  "index": 27,
-                  "word": "that",
-                  "originalText": "that",
-                  "lemma": "that",
-                  "characterOffsetBegin": 830,
-                  "characterOffsetEnd": 834,
-                  "pos": "IN",
-                  "ner": "O",
-                  "speaker": "PER0",
-                  "before": " ",
-                  "after": " "
-                }
-              },
-              "IN"
-            ],
-            [
-              {
-                "nlpToken": {
-                  "index": 28,
-                  "word": "he",
-                  "originalText": "he",
-                  "lemma": "he",
-                  "characterOffsetBegin": 835,
-                  "characterOffsetEnd": 837,
-                  "pos": "PRP",
-                  "ner": "O",
-                  "speaker": "PER0",
-                  "before": " ",
-                  "after": " "
-                }
-              },
-              "PRP"
-            ],
-            [
-              {
-                "nlpToken": {
-                  "index": 29,
-                  "word": "fired",
-                  "originalText": "fired",
-                  "lemma": "fire",
-                  "characterOffsetBegin": 838,
-                  "characterOffsetEnd": 843,
+                  "index": 23,
+                  "word": "was",
+                  "originalText": "was",
+                  "lemma": "be",
+                  "characterOffsetBegin": 2673,
+                  "characterOffsetEnd": 2676,
                   "pos": "VBD",
                   "ner": "O",
                   "speaker": "PER0",
@@ -785,85 +929,12 @@
             [
               {
                 "nlpToken": {
-                  "index": 30,
-                  "word": "to",
-                  "originalText": "to",
-                  "lemma": "to",
-                  "characterOffsetBegin": 844,
-                  "characterOffsetEnd": 846,
-                  "pos": "TO",
-                  "ner": "O",
-                  "speaker": "PER0",
-                  "before": " ",
-                  "after": " "
-                }
-              },
-              "TO"
-            ],
-            [
-              {
-                "nlpToken": {
-                  "index": 31,
-                  "word": "first",
-                  "originalText": "first",
-                  "lemma": "first",
-                  "characterOffsetBegin": 847,
-                  "characterOffsetEnd": 852,
-                  "pos": "RB",
-                  "ner": "ORDINAL",
-                  "normalizedNER": "1.0",
-                  "speaker": "PER0",
-                  "before": " ",
-                  "after": " "
-                }
-              },
-              "RB"
-            ],
-            [
-              {
-                "nlpToken": {
-                  "index": 32,
-                  "word": "for",
-                  "originalText": "for",
-                  "lemma": "for",
-                  "characterOffsetBegin": 853,
-                  "characterOffsetEnd": 856,
-                  "pos": "IN",
-                  "ner": "O",
-                  "speaker": "PER0",
-                  "before": " ",
-                  "after": " "
-                }
-              },
-              "IN"
-            ],
-            [
-              {
-                "nlpToken": {
-                  "index": 33,
-                  "word": "the",
-                  "originalText": "the",
-                  "lemma": "the",
-                  "characterOffsetBegin": 857,
-                  "characterOffsetEnd": 860,
-                  "pos": "DT",
-                  "ner": "O",
-                  "speaker": "PER0",
-                  "before": " ",
-                  "after": " "
-                }
-              },
-              "DT"
-            ],
-            [
-              {
-                "nlpToken": {
-                  "index": 34,
-                  "word": "final",
-                  "originalText": "final",
-                  "lemma": "final",
-                  "characterOffsetBegin": 861,
-                  "characterOffsetEnd": 866,
+                  "index": 24,
+                  "word": "disturbing",
+                  "originalText": "disturbing",
+                  "lemma": "disturbing",
+                  "characterOffsetBegin": 2677,
+                  "characterOffsetEnd": 2687,
                   "pos": "JJ",
                   "ner": "O",
                   "speaker": "PER0",
@@ -876,25 +947,61 @@
             [
               {
                 "nlpToken": {
-                  "index": 35,
-                  "word": "out",
-                  "originalText": "out",
-                  "lemma": "out",
-                  "characterOffsetBegin": 867,
-                  "characterOffsetEnd": 870,
-                  "pos": "RP",
+                  "index": 25,
+                  "word": "other",
+                  "originalText": "other",
+                  "lemma": "other",
+                  "characterOffsetBegin": 2688,
+                  "characterOffsetEnd": 2693,
+                  "pos": "JJ",
+                  "ner": "O",
+                  "speaker": "PER0",
+                  "before": " ",
+                  "after": " "
+                }
+              },
+              "JJ"
+            ],
+            [
+              {
+                "nlpToken": {
+                  "index": 26,
+                  "word": "patrons",
+                  "originalText": "patrons",
+                  "lemma": "patron",
+                  "characterOffsetBegin": 2694,
+                  "characterOffsetEnd": 2701,
+                  "pos": "NNS",
                   "ner": "O",
                   "speaker": "PER0",
                   "before": " ",
                   "after": ""
                 }
               },
-              "RP"
+              "NNS"
+            ],
+            [
+              {
+                "nlpToken": {
+                  "index": 27,
+                  "word": ".",
+                  "originalText": ".",
+                  "lemma": ".",
+                  "characterOffsetBegin": 2701,
+                  "characterOffsetEnd": 2702,
+                  "pos": ".",
+                  "ner": "O",
+                  "speaker": "PER0",
+                  "before": "",
+                  "after": " "
+                }
+              },
+              "."
             ]
           ],
-          "score": 0.4015444015444015,
-          "text": "Cubs third baseman Kris Bryant fielded a grounder that he fired to first for the final out",
-          "nlpIndexSentence": 5
+          "score": 0.6064864864864865,
+          "text": "because the smell of his pet goat was disturbing other patrons .",
+          "nlpIndexSentence": 26
         }
       ],
       "label": "why"

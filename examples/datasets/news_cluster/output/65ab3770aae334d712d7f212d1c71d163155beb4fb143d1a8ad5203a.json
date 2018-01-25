@@ -23,7 +23,127 @@
     "EventId": 33,
     "Event": "january_will_bring_two_supermoons_a_blue_moon_and_a_total_lunar_eclipse"
   },
-  "fiveWoneH": {
+  "fiveWoneH": {},
+  "fiveWoneH_Metadata": {
+    "process_errors": {},
+    "who": {
+      "extracted": [
+        {
+          "parts": [
+            [
+              {
+                "nlpToken": {
+                  "index": 4,
+                  "word": "January",
+                  "originalText": "January",
+                  "lemma": "January",
+                  "characterOffsetBegin": 11,
+                  "characterOffsetEnd": 18,
+                  "pos": "NNP",
+                  "ner": "DATE",
+                  "normalizedNER": "2018-01",
+                  "speaker": "PER0",
+                  "before": " ",
+                  "after": " ",
+                  "timex": {
+                    "tid": "t1",
+                    "type": "DATE",
+                    "value": "2018-01"
+                  }
+                }
+              },
+              "NNP"
+            ]
+          ],
+          "score": 1.0,
+          "text": "January"
+        }
+      ],
+      "label": "who"
+    },
+    "what": {
+      "extracted": [
+        {
+          "parts": [
+            [
+              {
+                "nlpToken": {
+                  "index": 5,
+                  "word": "is",
+                  "originalText": "is",
+                  "lemma": "be",
+                  "characterOffsetBegin": 19,
+                  "characterOffsetEnd": 21,
+                  "pos": "VBZ",
+                  "ner": "O",
+                  "speaker": "PER0",
+                  "before": " ",
+                  "after": " "
+                }
+              },
+              "VBZ"
+            ],
+            [
+              {
+                "nlpToken": {
+                  "index": 6,
+                  "word": "packed",
+                  "originalText": "packed",
+                  "lemma": "pack",
+                  "characterOffsetBegin": 22,
+                  "characterOffsetEnd": 28,
+                  "pos": "VBN",
+                  "ner": "O",
+                  "speaker": "PER0",
+                  "before": " ",
+                  "after": " "
+                }
+              },
+              "VBN"
+            ],
+            [
+              {
+                "nlpToken": {
+                  "index": 7,
+                  "word": "with",
+                  "originalText": "with",
+                  "lemma": "with",
+                  "characterOffsetBegin": 29,
+                  "characterOffsetEnd": 33,
+                  "pos": "IN",
+                  "ner": "O",
+                  "speaker": "PER0",
+                  "before": " ",
+                  "after": " "
+                }
+              },
+              "IN"
+            ],
+            [
+              {
+                "nlpToken": {
+                  "index": 8,
+                  "word": "action",
+                  "originalText": "action",
+                  "lemma": "action",
+                  "characterOffsetBegin": 34,
+                  "characterOffsetEnd": 40,
+                  "pos": "NN",
+                  "ner": "O",
+                  "speaker": "PER0",
+                  "before": " ",
+                  "after": ""
+                }
+              },
+              "NN"
+            ]
+          ],
+          "score": 1.0,
+          "text": "is packed with action"
+        }
+      ],
+      "label": "what"
+    },
     "how": {
       "extracted": [
         {
@@ -228,95 +348,221 @@
       ],
       "label": "how"
     },
-    "who": {
+    "where": {
       "extracted": [
         {
           "parts": [
             [
               {
                 "nlpToken": {
-                  "index": 4,
-                  "word": "January",
-                  "originalText": "January",
-                  "lemma": "January",
-                  "characterOffsetBegin": 11,
-                  "characterOffsetEnd": 18,
+                  "index": 22,
+                  "word": "Washington",
+                  "originalText": "Washington",
+                  "lemma": "Washington",
+                  "characterOffsetBegin": 1084,
+                  "characterOffsetEnd": 1094,
                   "pos": "NNP",
-                  "ner": "DATE",
-                  "normalizedNER": "2018-01",
+                  "ner": "LOCATION",
                   "speaker": "PER0",
-                  "before": " ",
-                  "after": " ",
-                  "timex": {
-                    "tid": "t1",
-                    "type": "DATE",
-                    "value": "2018-01"
+                  "before": "",
+                  "after": " "
+                },
+                "aida": [
+                  {
+                    "mention": {
+                      "allEntities": [
+                        {
+                          "kbIdentifier": "YAGO:United_States",
+                          "disambiguationScore": "0.31885"
+                        }
+                      ],
+                      "offset": 1084,
+                      "name": "Washington",
+                      "length": 10,
+                      "bestEntity": {
+                        "kbIdentifier": "YAGO:United_States",
+                        "disambiguationScore": "0.31885"
+                      }
+                    },
+                    "bestEntityMetadata": {
+                      "knowledgebase": "YAGO",
+                      "depictionurl": "http://upload.wikimedia.org/wikipedia/en/a/a4/Flag_of_the_United_States.svg",
+                      "depictionthumbnailurl": "http://upload.wikimedia.org/wikipedia/en/thumbFlag_of_the_United_States.svg/200px-Flag_of_the_United_States.svg",
+                      "importance": 0.0,
+                      "entityId": "United_States",
+                      "type": [
+                        "YAGO_wordnet_system_108435388",
+                        "YAGO_yagoPermanentlyLocatedEntity",
+                        "YAGO_yagoLegalActorGeo",
+                        "YAGO_wordnet_organization_108008335",
+                        "YAGO_wordnet_state_100024720",
+                        "YAGO_wordnet_democracy_108361329",
+                        "YAGO_wordnet_union_114418395",
+                        "YAGO_wordnet_unit_108189659",
+                        "YAGO_wikicategory_Superpowers",
+                        "YAGO_wordnet_cognition_100023271",
+                        "YAGO_wordnet_coalition_114418662",
+                        "YAGO_wordnet_political_system_108367880",
+                        "YAGO_wordnet_attribute_100024264",
+                        "YAGO_wordnet_abstraction_100002137",
+                        "YAGO_wordnet_attitude_106193203",
+                        "YAGO_wordnet_alliance_114418822",
+                        "YAGO_wordnet_group_100031264",
+                        "YAGO_wordnet_psychological_feature_100023100",
+                        "YAGO_wordnet_body_107965085",
+                        "YAGO_wordnet_political_orientation_106212839",
+                        "YAGO_wordnet_democracy_106217103",
+                        "YAGO_wordnet_political_unit_108359949",
+                        "YAGO_wikicategory_Former_British_colonies",
+                        "YAGO_wordnet_economy_108366753",
+                        "YAGO_yagoLegalActor",
+                        "YAGO_wikicategory_G8_nations",
+                        "YAGO_yagoGeoEntity",
+                        "YAGO_wordnet_social_group_107950920",
+                        "YAGO_wordnet_entity_100001740",
+                        "YAGO_wordnet_colony_108374049",
+                        "YAGO_wikicategory_Liberal_democracies",
+                        "YAGO_wikicategory_G20_nations",
+                        "YAGO_wikicategory_Former_confederations",
+                        "YAGO_wordnet_state_108168978",
+                        "YAGO_wikicategory_Federal_constitutional_republics",
+                        "YAGO_wordnet_world_power_108177592",
+                        "YAGO_wikicategory_Republics",
+                        "YAGO_wordnet_orientation_106208021"
+                      ],
+                      "readableRepr": "United States",
+                      "url": "http://en.wikipedia.org/wiki/United%20States"
+                    }
                   }
-                }
+                ]
               },
               "NNP"
             ]
           ],
-          "score": 1.0,
-          "text": "January"
+          "score": 0.6799453472023458,
+          "text": "Washington",
+          "enhancement": {
+            "openstreetmap_nominatim": {
+              "osm_id": "5396194",
+              "boundingbox": [
+                38.7916303,
+                38.9958524,
+                -77.1197663,
+                -76.909366
+              ],
+              "licence": "Data \u00a9 OpenStreetMap contributors, ODbL 1.0. http://www.openstreetmap.org/copyright",
+              "importance": 0.28916419549407,
+              "icon": "https://nominatim.openstreetmap.org/images/mapicons/poi_place_city.p.20.png",
+              "osm_type": "relation",
+              "display_name": "Washington, District of Columbia, United States of America",
+              "lat": "38.8949549",
+              "type": "city",
+              "place_id": "179324266",
+              "lon": "-77.0366456",
+              "class": "place"
+            }
+          },
+          "nlpIndexSentence": 11
         }
       ],
-      "label": "who"
+      "label": "where"
     },
-    "what": {
+    "when": {
       "extracted": [
         {
           "parts": [
             [
               {
                 "nlpToken": {
-                  "index": 5,
-                  "word": "is",
-                  "originalText": "is",
-                  "lemma": "be",
-                  "characterOffsetBegin": 19,
-                  "characterOffsetEnd": 21,
-                  "pos": "VBZ",
-                  "ner": "O",
+                  "index": 13,
+                  "word": "Jan.",
+                  "originalText": "Jan.",
+                  "lemma": "Jan.",
+                  "characterOffsetBegin": 689,
+                  "characterOffsetEnd": 693,
+                  "pos": "NNP",
+                  "ner": "DATE",
+                  "normalizedNER": "2018-01-31T08:27",
                   "speaker": "PER0",
                   "before": " ",
-                  "after": " "
-                }
+                  "after": " ",
+                  "timex": {
+                    "tid": "t10",
+                    "type": "TIME",
+                    "value": "2018-01-31T08:27"
+                  }
+                },
+                "heideltime": [
+                  {
+                    "@tid": "t7",
+                    "@type": "DATE",
+                    "@value": "2017-01-31",
+                    "#text": "Jan. 31",
+                    "characterOffset": [
+                      689,
+                      696
+                    ]
+                  }
+                ]
               },
-              "VBZ"
+              "NNP"
             ],
             [
               {
                 "nlpToken": {
-                  "index": 6,
-                  "word": "packed",
-                  "originalText": "packed",
-                  "lemma": "pack",
-                  "characterOffsetBegin": 22,
-                  "characterOffsetEnd": 28,
-                  "pos": "VBN",
-                  "ner": "O",
+                  "index": 14,
+                  "word": "31",
+                  "originalText": "31",
+                  "lemma": "31",
+                  "characterOffsetBegin": 694,
+                  "characterOffsetEnd": 696,
+                  "pos": "CD",
+                  "ner": "DATE",
+                  "normalizedNER": "2018-01-31T08:27",
                   "speaker": "PER0",
                   "before": " ",
-                  "after": " "
-                }
+                  "after": " ",
+                  "timex": {
+                    "tid": "t10",
+                    "type": "TIME",
+                    "value": "2018-01-31T08:27"
+                  }
+                },
+                "heideltime": [
+                  {
+                    "@tid": "t7",
+                    "@type": "DATE",
+                    "@value": "2017-01-31",
+                    "#text": "Jan. 31",
+                    "characterOffset": [
+                      689,
+                      696
+                    ]
+                  }
+                ]
               },
-              "VBN"
+              "CD"
             ],
             [
               {
                 "nlpToken": {
-                  "index": 7,
-                  "word": "with",
-                  "originalText": "with",
-                  "lemma": "with",
-                  "characterOffsetBegin": 29,
-                  "characterOffsetEnd": 33,
+                  "index": 15,
+                  "word": "at",
+                  "originalText": "at",
+                  "lemma": "at",
+                  "characterOffsetBegin": 697,
+                  "characterOffsetEnd": 699,
                   "pos": "IN",
-                  "ner": "O",
+                  "ner": "TIME",
+                  "normalizedNER": "2018-01-31T08:27",
                   "speaker": "PER0",
                   "before": " ",
-                  "after": " "
+                  "after": " ",
+                  "timex": {
+                    "tid": "t10",
+                    "type": "TIME",
+                    "value": "2018-01-31T08:27"
+                  }
                 }
               },
               "IN"
@@ -324,27 +570,88 @@
             [
               {
                 "nlpToken": {
-                  "index": 8,
-                  "word": "action",
-                  "originalText": "action",
-                  "lemma": "action",
-                  "characterOffsetBegin": 34,
-                  "characterOffsetEnd": 40,
-                  "pos": "NN",
-                  "ner": "O",
+                  "index": 16,
+                  "word": "8:27",
+                  "originalText": "8:27",
+                  "lemma": "8:27",
+                  "characterOffsetBegin": 700,
+                  "characterOffsetEnd": 704,
+                  "pos": "CD",
+                  "ner": "TIME",
+                  "normalizedNER": "2018-01-31T08:27",
                   "speaker": "PER0",
                   "before": " ",
-                  "after": ""
-                }
+                  "after": " ",
+                  "timex": {
+                    "tid": "t10",
+                    "type": "TIME",
+                    "value": "2018-01-31T08:27"
+                  }
+                },
+                "heideltime": [
+                  {
+                    "@tid": "t8",
+                    "@type": "TIME",
+                    "@value": "2017-01-31T08:27",
+                    "#text": "8:27 a.m.",
+                    "characterOffset": [
+                      700,
+                      709
+                    ]
+                  }
+                ]
+              },
+              "CD"
+            ],
+            [
+              {
+                "nlpToken": {
+                  "index": 17,
+                  "word": "a.m.",
+                  "originalText": "a.m",
+                  "lemma": "a.m.",
+                  "characterOffsetBegin": 705,
+                  "characterOffsetEnd": 708,
+                  "pos": "NN",
+                  "ner": "TIME",
+                  "normalizedNER": "2018-01-31T08:27",
+                  "speaker": "PER0",
+                  "before": " ",
+                  "after": "",
+                  "timex": {
+                    "tid": "t10",
+                    "type": "TIME",
+                    "value": "2018-01-31T08:27"
+                  }
+                },
+                "heideltime": [
+                  {
+                    "@tid": "t8",
+                    "@type": "TIME",
+                    "@value": "2017-01-31T08:27",
+                    "#text": "8:27 a.m.",
+                    "characterOffset": [
+                      700,
+                      709
+                    ]
+                  }
+                ]
               },
               "NN"
             ]
           ],
-          "score": 1.0,
-          "text": "is packed with action"
+          "score": 0.746829530474427,
+          "text": "Jan. 31 at 8:27 a.m",
+          "enhancement": {
+            "timex": {
+              "start_date": "2018-01-31T08:27:00",
+              "end_date": "2018-01-31T08:27:59"
+            }
+          },
+          "nlpIndexSentence": 7
         }
       ],
-      "label": "what"
+      "label": "when"
     },
     "why": {
       "extracted": [
@@ -825,215 +1132,6 @@
         }
       ],
       "label": "why"
-    },
-    "where": {
-      "extracted": [
-        {
-          "parts": [
-            [
-              {
-                "nlpToken": {
-                  "index": 22,
-                  "word": "Washington",
-                  "originalText": "Washington",
-                  "lemma": "Washington",
-                  "characterOffsetBegin": 1084,
-                  "characterOffsetEnd": 1094,
-                  "pos": "NNP",
-                  "ner": "LOCATION",
-                  "speaker": "PER0",
-                  "before": "",
-                  "after": " "
-                },
-                "aida": [
-                  {
-                    "mention": {
-                      "allEntities": [
-                        {
-                          "kbIdentifier": "YAGO:United_States",
-                          "disambiguationScore": "0.31885"
-                        }
-                      ],
-                      "offset": 1084,
-                      "name": "Washington",
-                      "length": 10,
-                      "bestEntity": {
-                        "kbIdentifier": "YAGO:United_States",
-                        "disambiguationScore": "0.31885"
-                      }
-                    },
-                    "bestEntityMetadata": {
-                      "knowledgebase": "YAGO",
-                      "depictionurl": "http://upload.wikimedia.org/wikipedia/en/a/a4/Flag_of_the_United_States.svg",
-                      "depictionthumbnailurl": "http://upload.wikimedia.org/wikipedia/en/thumbFlag_of_the_United_States.svg/200px-Flag_of_the_United_States.svg",
-                      "importance": 0.0,
-                      "entityId": "United_States",
-                      "type": [
-                        "YAGO_wordnet_system_108435388",
-                        "YAGO_yagoPermanentlyLocatedEntity",
-                        "YAGO_yagoLegalActorGeo",
-                        "YAGO_wordnet_organization_108008335",
-                        "YAGO_wordnet_state_100024720",
-                        "YAGO_wordnet_democracy_108361329",
-                        "YAGO_wordnet_union_114418395",
-                        "YAGO_wordnet_unit_108189659",
-                        "YAGO_wikicategory_Superpowers",
-                        "YAGO_wordnet_cognition_100023271",
-                        "YAGO_wordnet_coalition_114418662",
-                        "YAGO_wordnet_political_system_108367880",
-                        "YAGO_wordnet_attribute_100024264",
-                        "YAGO_wordnet_abstraction_100002137",
-                        "YAGO_wordnet_attitude_106193203",
-                        "YAGO_wordnet_alliance_114418822",
-                        "YAGO_wordnet_group_100031264",
-                        "YAGO_wordnet_psychological_feature_100023100",
-                        "YAGO_wordnet_body_107965085",
-                        "YAGO_wordnet_political_orientation_106212839",
-                        "YAGO_wordnet_democracy_106217103",
-                        "YAGO_wordnet_political_unit_108359949",
-                        "YAGO_wikicategory_Former_British_colonies",
-                        "YAGO_wordnet_economy_108366753",
-                        "YAGO_yagoLegalActor",
-                        "YAGO_wikicategory_G8_nations",
-                        "YAGO_yagoGeoEntity",
-                        "YAGO_wordnet_social_group_107950920",
-                        "YAGO_wordnet_entity_100001740",
-                        "YAGO_wordnet_colony_108374049",
-                        "YAGO_wikicategory_Liberal_democracies",
-                        "YAGO_wikicategory_G20_nations",
-                        "YAGO_wikicategory_Former_confederations",
-                        "YAGO_wordnet_state_108168978",
-                        "YAGO_wikicategory_Federal_constitutional_republics",
-                        "YAGO_wordnet_world_power_108177592",
-                        "YAGO_wikicategory_Republics",
-                        "YAGO_wordnet_orientation_106208021"
-                      ],
-                      "readableRepr": "United States",
-                      "url": "http://en.wikipedia.org/wiki/United%20States"
-                    }
-                  }
-                ]
-              },
-              "NNP"
-            ]
-          ],
-          "score": 0.6799453472023458,
-          "text": "Washington",
-          "enhancement": {
-            "openstreetmap_nominatim": {
-              "osm_id": "5396194",
-              "boundingbox": [
-                38.7916303,
-                38.9958524,
-                -77.1197663,
-                -76.909366
-              ],
-              "licence": "Data \u00a9 OpenStreetMap contributors, ODbL 1.0. http://www.openstreetmap.org/copyright",
-              "importance": 0.28916419549407,
-              "icon": "https://nominatim.openstreetmap.org/images/mapicons/poi_place_city.p.20.png",
-              "osm_type": "relation",
-              "display_name": "Washington, District of Columbia, United States of America",
-              "lat": "38.8949549",
-              "type": "city",
-              "place_id": "179324266",
-              "lon": "-77.0366456",
-              "class": "place"
-            }
-          },
-          "nlpIndexSentence": 11
-        }
-      ],
-      "label": "where"
-    },
-    "when": {
-      "extracted": [
-        {
-          "parts": [
-            [
-              {
-                "nlpToken": {
-                  "index": 36,
-                  "word": "Jan.",
-                  "originalText": "Jan.",
-                  "lemma": "Jan.",
-                  "characterOffsetBegin": 1873,
-                  "characterOffsetEnd": 1877,
-                  "pos": "NNP",
-                  "ner": "DATE",
-                  "normalizedNER": "2018-01-13",
-                  "speaker": "PER0",
-                  "before": " ",
-                  "after": " ",
-                  "timex": {
-                    "tid": "t26",
-                    "type": "DATE",
-                    "value": "2018-01-13"
-                  }
-                },
-                "heideltime": [
-                  {
-                    "@tid": "t19",
-                    "@type": "DATE",
-                    "@value": "2017-01-13",
-                    "#text": "Jan. 13",
-                    "characterOffset": [
-                      1873,
-                      1880
-                    ]
-                  }
-                ]
-              },
-              "NNP"
-            ],
-            [
-              {
-                "nlpToken": {
-                  "index": 37,
-                  "word": "13",
-                  "originalText": "13",
-                  "lemma": "13",
-                  "characterOffsetBegin": 1878,
-                  "characterOffsetEnd": 1880,
-                  "pos": "CD",
-                  "ner": "DATE",
-                  "normalizedNER": "2018-01-13",
-                  "speaker": "PER0",
-                  "before": " ",
-                  "after": "",
-                  "timex": {
-                    "tid": "t26",
-                    "type": "DATE",
-                    "value": "2018-01-13"
-                  }
-                },
-                "heideltime": [
-                  {
-                    "@tid": "t19",
-                    "@type": "DATE",
-                    "@value": "2017-01-13",
-                    "#text": "Jan. 13",
-                    "characterOffset": [
-                      1873,
-                      1880
-                    ]
-                  }
-                ]
-              },
-              "CD"
-            ]
-          ],
-          "score": 0.6275612318668886,
-          "text": "Jan. 13",
-          "enhancement": {
-            "timex": {
-              "start_date": "2018-01-13T00:00:00",
-              "end_date": "2018-01-13T23:59:59"
-            }
-          },
-          "nlpIndexSentence": 17
-        }
-      ],
-      "label": "when"
     }
   }
 }

@@ -28,7 +28,9 @@
     "EventId": 47,
     "Event": "chinas_tiangong_1_space_station_is_out_of_control_and_will_soon_fall_to_earth"
   },
-  "fiveWoneH": {
+  "fiveWoneH": {},
+  "fiveWoneH_Metadata": {
+    "process_errors": {},
     "how": {
       "extracted": [
         {
@@ -650,90 +652,6 @@
       ],
       "label": "what"
     },
-    "why": {
-      "extracted": [
-        {
-          "parts": [
-            [
-              {
-                "nlpToken": {
-                  "index": 1,
-                  "word": "The",
-                  "originalText": "The",
-                  "lemma": "the",
-                  "characterOffsetBegin": 249,
-                  "characterOffsetEnd": 252,
-                  "pos": "DT",
-                  "ner": "O",
-                  "speaker": "PER0",
-                  "before": " ",
-                  "after": " "
-                }
-              },
-              "DT"
-            ],
-            [
-              {
-                "nlpToken": {
-                  "index": 2,
-                  "word": "massive",
-                  "originalText": "massive",
-                  "lemma": "massive",
-                  "characterOffsetBegin": 253,
-                  "characterOffsetEnd": 260,
-                  "pos": "JJ",
-                  "ner": "O",
-                  "speaker": "PER0",
-                  "before": " ",
-                  "after": " "
-                }
-              },
-              "JJ"
-            ],
-            [
-              {
-                "nlpToken": {
-                  "index": 3,
-                  "word": "space",
-                  "originalText": "space",
-                  "lemma": "space",
-                  "characterOffsetBegin": 261,
-                  "characterOffsetEnd": 266,
-                  "pos": "NN",
-                  "ner": "O",
-                  "speaker": "PER0",
-                  "before": " ",
-                  "after": " "
-                }
-              },
-              "NN"
-            ],
-            [
-              {
-                "nlpToken": {
-                  "index": 4,
-                  "word": "satiation",
-                  "originalText": "satiation",
-                  "lemma": "satiation",
-                  "characterOffsetBegin": 267,
-                  "characterOffsetEnd": 276,
-                  "pos": "NN",
-                  "ner": "O",
-                  "speaker": "PER0",
-                  "before": " ",
-                  "after": " "
-                }
-              },
-              "NN"
-            ]
-          ],
-          "score": 0.4693333333333334,
-          "text": "The massive space satiation",
-          "nlpIndexSentence": 5
-        }
-      ],
-      "label": "why"
-    },
     "where": {
       "extracted": [
         {
@@ -879,6 +797,90 @@
         }
       ],
       "label": "when"
+    },
+    "why": {
+      "extracted": [
+        {
+          "parts": [
+            [
+              {
+                "nlpToken": {
+                  "index": 1,
+                  "word": "The",
+                  "originalText": "The",
+                  "lemma": "the",
+                  "characterOffsetBegin": 249,
+                  "characterOffsetEnd": 252,
+                  "pos": "DT",
+                  "ner": "O",
+                  "speaker": "PER0",
+                  "before": " ",
+                  "after": " "
+                }
+              },
+              "DT"
+            ],
+            [
+              {
+                "nlpToken": {
+                  "index": 2,
+                  "word": "massive",
+                  "originalText": "massive",
+                  "lemma": "massive",
+                  "characterOffsetBegin": 253,
+                  "characterOffsetEnd": 260,
+                  "pos": "JJ",
+                  "ner": "O",
+                  "speaker": "PER0",
+                  "before": " ",
+                  "after": " "
+                }
+              },
+              "JJ"
+            ],
+            [
+              {
+                "nlpToken": {
+                  "index": 3,
+                  "word": "space",
+                  "originalText": "space",
+                  "lemma": "space",
+                  "characterOffsetBegin": 261,
+                  "characterOffsetEnd": 266,
+                  "pos": "NN",
+                  "ner": "O",
+                  "speaker": "PER0",
+                  "before": " ",
+                  "after": " "
+                }
+              },
+              "NN"
+            ],
+            [
+              {
+                "nlpToken": {
+                  "index": 4,
+                  "word": "satiation",
+                  "originalText": "satiation",
+                  "lemma": "satiation",
+                  "characterOffsetBegin": 267,
+                  "characterOffsetEnd": 276,
+                  "pos": "NN",
+                  "ner": "O",
+                  "speaker": "PER0",
+                  "before": " ",
+                  "after": " "
+                }
+              },
+              "NN"
+            ]
+          ],
+          "score": 0.4693333333333334,
+          "text": "The massive space satiation",
+          "nlpIndexSentence": 5
+        }
+      ],
+      "label": "why"
     }
   }
 }

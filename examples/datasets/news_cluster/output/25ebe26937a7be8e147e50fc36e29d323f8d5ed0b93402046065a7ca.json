@@ -30,96 +30,9 @@
     "EventId": 18,
     "Event": "elon_musk_reveals_red_tesla_roadster_bound_for_mars"
   },
-  "fiveWoneH": {
-    "where": {
-      "extracted": [
-        {
-          "parts": [
-            [
-              {
-                "nlpToken": {
-                  "index": 8,
-                  "word": "Mars",
-                  "originalText": "Mars",
-                  "lemma": "Mars",
-                  "characterOffsetBegin": 32,
-                  "characterOffsetEnd": 36,
-                  "pos": "NNP",
-                  "ner": "LOCATION",
-                  "speaker": "PER0",
-                  "before": " ",
-                  "after": ""
-                },
-                "aida": [
-                  {
-                    "mention": {
-                      "allEntities": [
-                        {
-                          "kbIdentifier": "YAGO:Mars",
-                          "disambiguationScore": "0.31422"
-                        }
-                      ],
-                      "offset": 32,
-                      "name": "Mars",
-                      "length": 4,
-                      "bestEntity": {
-                        "kbIdentifier": "YAGO:Mars",
-                        "disambiguationScore": "0.31422"
-                      }
-                    },
-                    "bestEntityMetadata": {
-                      "knowledgebase": "YAGO",
-                      "depictionurl": "http://upload.wikimedia.org/wikipedia/commons/e/e4/Water_ice_clouds_hanging_above_Tharsis_PIA02653_black_background.jpg",
-                      "depictionthumbnailurl": "http://upload.wikimedia.org/wikipedia/commons/thumbWater_ice_clouds_hanging_above_Tharsis_PIA02653_black_background.jpg/200px-Water_ice_clouds_hanging_above_Tharsis_PIA02653_black_background.jpg",
-                      "importance": 0.00038523494456990036,
-                      "entityId": "Mars",
-                      "type": [
-                        "YAGO_wordnet_physical_entity_100001930",
-                        "YAGO_wordnet_terrestrial_planet_109456369",
-                        "YAGO_wordnet_entity_100001740",
-                        "YAGO_wordnet_object_100002684",
-                        "YAGO_wordnet_natural_object_100019128",
-                        "YAGO_wikicategory_Terrestrial_planets",
-                        "YAGO_wordnet_whole_100003553",
-                        "YAGO_wordnet_planet_109394007",
-                        "YAGO_wordnet_celestial_body_109239740"
-                      ],
-                      "readableRepr": "Mars",
-                      "url": "http://en.wikipedia.org/wiki/Mars"
-                    }
-                  }
-                ]
-              },
-              "NNP"
-            ]
-          ],
-          "score": 0.6857442219379335,
-          "text": "Mars",
-          "enhancement": {
-            "openstreetmap_nominatim": {
-              "place_id": "177894532",
-              "licence": "Data \u00a9 OpenStreetMap contributors, ODbL 1.0. http://www.openstreetmap.org/copyright",
-              "osm_type": "relation",
-              "osm_id": "391649",
-              "boundingbox": [
-                43.9912494,
-                44.0146261,
-                3.535728,
-                3.5664698
-              ],
-              "lat": "44.0009649",
-              "lon": "3.5560447",
-              "display_name": "Mars, Le Vigan, Gard, Occitanie, France m\u00e9tropolitaine, 30120, France",
-              "class": "boundary",
-              "type": "administrative",
-              "importance": 0.20582841986817,
-              "icon": "https://nominatim.openstreetmap.org/images/mapicons/poi_boundary_administrative.p.20.png"
-            }
-          }
-        }
-      ],
-      "label": "where"
-    },
+  "fiveWoneH": {},
+  "fiveWoneH_Metadata": {
+    "process_errors": {},
     "how": {
       "extracted": [
         {
@@ -330,7 +243,7 @@
       ],
       "label": "how"
     },
-    "when": {
+    "who": {
       "extracted": [
         {
           "parts": [
@@ -338,107 +251,224 @@
               {
                 "nlpToken": {
                   "index": 1,
-                  "word": "Earlier",
-                  "originalText": "Earlier",
-                  "lemma": "earlier",
-                  "characterOffsetBegin": 162,
-                  "characterOffsetEnd": 169,
-                  "pos": "RBR",
-                  "ner": "DATE",
-                  "normalizedNER": "2017-12",
+                  "word": "Elon",
+                  "originalText": "Elon",
+                  "lemma": "Elon",
+                  "characterOffsetBegin": 0,
+                  "characterOffsetEnd": 4,
+                  "pos": "NNP",
+                  "ner": "O",
                   "speaker": "PER0",
-                  "before": "\n",
-                  "after": " ",
-                  "timex": {
-                    "tid": "t1",
-                    "type": "DATE",
-                    "value": "2017-12"
-                  }
-                },
-                "heideltime": [
-                  {
-                    "@tid": "t2",
-                    "@type": "DATE",
-                    "@value": "2017-12",
-                    "@mod": "START",
-                    "#text": "Earlier this month",
-                    "characterOffset": [
-                      162,
-                      180
-                    ]
-                  }
-                ]
+                  "before": "",
+                  "after": " "
+                }
               },
-              "RBR"
+              "NNP"
             ],
             [
               {
                 "nlpToken": {
                   "index": 2,
-                  "word": "this",
-                  "originalText": "this",
-                  "lemma": "this",
-                  "characterOffsetBegin": 170,
-                  "characterOffsetEnd": 174,
-                  "pos": "DT",
+                  "word": "Musk",
+                  "originalText": "Musk",
+                  "lemma": "Musk",
+                  "characterOffsetBegin": 5,
+                  "characterOffsetEnd": 9,
+                  "pos": "NNP",
+                  "ner": "O",
+                  "speaker": "PER0",
+                  "before": " ",
+                  "after": " "
+                }
+              },
+              "NNP"
+            ]
+          ],
+          "score": 1.0,
+          "text": "Elon Musk"
+        }
+      ],
+      "label": "who"
+    },
+    "where": {
+      "extracted": [
+        {
+          "parts": [
+            [
+              {
+                "nlpToken": {
+                  "index": 8,
+                  "word": "Mars",
+                  "originalText": "Mars",
+                  "lemma": "Mars",
+                  "characterOffsetBegin": 32,
+                  "characterOffsetEnd": 36,
+                  "pos": "NNP",
+                  "ner": "LOCATION",
+                  "speaker": "PER0",
+                  "before": " ",
+                  "after": ""
+                },
+                "aida": [
+                  {
+                    "mention": {
+                      "allEntities": [
+                        {
+                          "kbIdentifier": "YAGO:Mars",
+                          "disambiguationScore": "0.31422"
+                        }
+                      ],
+                      "offset": 32,
+                      "name": "Mars",
+                      "length": 4,
+                      "bestEntity": {
+                        "kbIdentifier": "YAGO:Mars",
+                        "disambiguationScore": "0.31422"
+                      }
+                    },
+                    "bestEntityMetadata": {
+                      "knowledgebase": "YAGO",
+                      "depictionurl": "http://upload.wikimedia.org/wikipedia/commons/e/e4/Water_ice_clouds_hanging_above_Tharsis_PIA02653_black_background.jpg",
+                      "depictionthumbnailurl": "http://upload.wikimedia.org/wikipedia/commons/thumbWater_ice_clouds_hanging_above_Tharsis_PIA02653_black_background.jpg/200px-Water_ice_clouds_hanging_above_Tharsis_PIA02653_black_background.jpg",
+                      "importance": 0.00038523494456990036,
+                      "entityId": "Mars",
+                      "type": [
+                        "YAGO_wordnet_physical_entity_100001930",
+                        "YAGO_wordnet_terrestrial_planet_109456369",
+                        "YAGO_wordnet_entity_100001740",
+                        "YAGO_wordnet_object_100002684",
+                        "YAGO_wordnet_natural_object_100019128",
+                        "YAGO_wikicategory_Terrestrial_planets",
+                        "YAGO_wordnet_whole_100003553",
+                        "YAGO_wordnet_planet_109394007",
+                        "YAGO_wordnet_celestial_body_109239740"
+                      ],
+                      "readableRepr": "Mars",
+                      "url": "http://en.wikipedia.org/wiki/Mars"
+                    }
+                  }
+                ]
+              },
+              "NNP"
+            ]
+          ],
+          "score": 0.6857442219379335,
+          "text": "Mars",
+          "enhancement": {
+            "openstreetmap_nominatim": {
+              "place_id": "177894532",
+              "licence": "Data \u00a9 OpenStreetMap contributors, ODbL 1.0. http://www.openstreetmap.org/copyright",
+              "osm_type": "relation",
+              "osm_id": "391649",
+              "boundingbox": [
+                43.9912494,
+                44.0146261,
+                3.535728,
+                3.5664698
+              ],
+              "lat": "44.0009649",
+              "lon": "3.5560447",
+              "display_name": "Mars, Le Vigan, Gard, Occitanie, France m\u00e9tropolitaine, 30120, France",
+              "class": "boundary",
+              "type": "administrative",
+              "importance": 0.20582841986817,
+              "icon": "https://nominatim.openstreetmap.org/images/mapicons/poi_boundary_administrative.p.20.png"
+            }
+          }
+        }
+      ],
+      "label": "where"
+    },
+    "when": {
+      "extracted": [
+        {
+          "parts": [
+            [
+              {
+                "nlpToken": {
+                  "index": 11,
+                  "word": "next",
+                  "originalText": "next",
+                  "lemma": "next",
+                  "characterOffsetBegin": 925,
+                  "characterOffsetEnd": 929,
+                  "pos": "JJ",
                   "ner": "DATE",
-                  "normalizedNER": "2017-12",
+                  "normalizedNER": "2018-01",
                   "speaker": "PER0",
                   "before": " ",
                   "after": " ",
                   "timex": {
-                    "tid": "t1",
+                    "tid": "t4",
                     "type": "DATE",
-                    "value": "2017-12"
+                    "value": "2018-01"
                   }
                 },
                 "heideltime": [
                   {
-                    "@tid": "t2",
+                    "@tid": "t8",
                     "@type": "DATE",
-                    "@value": "2017-12",
-                    "@mod": "START",
-                    "#text": "Earlier this month",
+                    "@value": "2018-01",
+                    "#text": "next month",
                     "characterOffset": [
-                      162,
-                      180
+                      925,
+                      935
+                    ]
+                  },
+                  {
+                    "@tid": "t9",
+                    "@type": "DATE",
+                    "@value": "2018-01",
+                    "#text": "next month",
+                    "characterOffset": [
+                      925,
+                      935
                     ]
                   }
                 ]
               },
-              "DT"
+              "JJ"
             ],
             [
               {
                 "nlpToken": {
-                  "index": 3,
+                  "index": 12,
                   "word": "month",
                   "originalText": "month",
                   "lemma": "month",
-                  "characterOffsetBegin": 175,
-                  "characterOffsetEnd": 180,
+                  "characterOffsetBegin": 930,
+                  "characterOffsetEnd": 935,
                   "pos": "NN",
                   "ner": "DATE",
-                  "normalizedNER": "2017-12",
+                  "normalizedNER": "2018-01",
                   "speaker": "PER0",
                   "before": " ",
                   "after": "",
                   "timex": {
-                    "tid": "t1",
+                    "tid": "t4",
                     "type": "DATE",
-                    "value": "2017-12"
+                    "value": "2018-01"
                   }
                 },
                 "heideltime": [
                   {
-                    "@tid": "t2",
+                    "@tid": "t8",
                     "@type": "DATE",
-                    "@value": "2017-12",
-                    "@mod": "START",
-                    "#text": "Earlier this month",
+                    "@value": "2018-01",
+                    "#text": "next month",
                     "characterOffset": [
-                      162,
-                      180
+                      925,
+                      935
+                    ]
+                  },
+                  {
+                    "@tid": "t9",
+                    "@type": "DATE",
+                    "@value": "2018-01",
+                    "#text": "next month",
+                    "characterOffset": [
+                      925,
+                      935
                     ]
                   }
                 ]
@@ -446,18 +476,101 @@
               "NN"
             ]
           ],
-          "score": 0.48705441887700346,
-          "text": "Earlier this month",
+          "score": 0.5776619399946124,
+          "text": "next month",
           "enhancement": {
             "timex": {
-              "start_date": "2017-12-01T00:00:00",
-              "end_date": "2017-12-31T23:59:59"
+              "start_date": "2018-01-01T00:00:00",
+              "end_date": "2018-01-31T23:59:59"
             }
           },
-          "nlpIndexSentence": 3
+          "nlpIndexSentence": 7
         }
       ],
       "label": "when"
+    },
+    "what": {
+      "extracted": [
+        {
+          "parts": [
+            [
+              {
+                "nlpToken": {
+                  "index": 3,
+                  "word": "Is",
+                  "originalText": "Is",
+                  "lemma": "be",
+                  "characterOffsetBegin": 10,
+                  "characterOffsetEnd": 12,
+                  "pos": "VBZ",
+                  "ner": "O",
+                  "speaker": "PER0",
+                  "before": " ",
+                  "after": " "
+                }
+              },
+              "VBZ"
+            ],
+            [
+              {
+                "nlpToken": {
+                  "index": 4,
+                  "word": "Sending",
+                  "originalText": "Sending",
+                  "lemma": "send",
+                  "characterOffsetBegin": 13,
+                  "characterOffsetEnd": 20,
+                  "pos": "VBG",
+                  "ner": "O",
+                  "speaker": "PER0",
+                  "before": " ",
+                  "after": " "
+                }
+              },
+              "VBG"
+            ],
+            [
+              {
+                "nlpToken": {
+                  "index": 5,
+                  "word": "a",
+                  "originalText": "a",
+                  "lemma": "a",
+                  "characterOffsetBegin": 21,
+                  "characterOffsetEnd": 22,
+                  "pos": "DT",
+                  "ner": "O",
+                  "speaker": "PER0",
+                  "before": " ",
+                  "after": " "
+                }
+              },
+              "DT"
+            ],
+            [
+              {
+                "nlpToken": {
+                  "index": 6,
+                  "word": "Tesla",
+                  "originalText": "Tesla",
+                  "lemma": "Tesla",
+                  "characterOffsetBegin": 23,
+                  "characterOffsetEnd": 28,
+                  "pos": "NNP",
+                  "ner": "O",
+                  "speaker": "PER0",
+                  "before": " ",
+                  "after": " "
+                }
+              },
+              "NNP"
+            ]
+          ],
+          "score": 1.0,
+          "text": "Is Sending a Tesla"
+        }
+      ],
+      "label": "what"
     },
     "why": {
       "extracted": [
@@ -1517,136 +1630,6 @@
         }
       ],
       "label": "why"
-    },
-    "who": {
-      "extracted": [
-        {
-          "parts": [
-            [
-              {
-                "nlpToken": {
-                  "index": 1,
-                  "word": "Elon",
-                  "originalText": "Elon",
-                  "lemma": "Elon",
-                  "characterOffsetBegin": 0,
-                  "characterOffsetEnd": 4,
-                  "pos": "NNP",
-                  "ner": "O",
-                  "speaker": "PER0",
-                  "before": "",
-                  "after": " "
-                }
-              },
-              "NNP"
-            ],
-            [
-              {
-                "nlpToken": {
-                  "index": 2,
-                  "word": "Musk",
-                  "originalText": "Musk",
-                  "lemma": "Musk",
-                  "characterOffsetBegin": 5,
-                  "characterOffsetEnd": 9,
-                  "pos": "NNP",
-                  "ner": "O",
-                  "speaker": "PER0",
-                  "before": " ",
-                  "after": " "
-                }
-              },
-              "NNP"
-            ]
-          ],
-          "score": 1.0,
-          "text": "Elon Musk"
-        }
-      ],
-      "label": "who"
-    },
-    "what": {
-      "extracted": [
-        {
-          "parts": [
-            [
-              {
-                "nlpToken": {
-                  "index": 3,
-                  "word": "Is",
-                  "originalText": "Is",
-                  "lemma": "be",
-                  "characterOffsetBegin": 10,
-                  "characterOffsetEnd": 12,
-                  "pos": "VBZ",
-                  "ner": "O",
-                  "speaker": "PER0",
-                  "before": " ",
-                  "after": " "
-                }
-              },
-              "VBZ"
-            ],
-            [
-              {
-                "nlpToken": {
-                  "index": 4,
-                  "word": "Sending",
-                  "originalText": "Sending",
-                  "lemma": "send",
-                  "characterOffsetBegin": 13,
-                  "characterOffsetEnd": 20,
-                  "pos": "VBG",
-                  "ner": "O",
-                  "speaker": "PER0",
-                  "before": " ",
-                  "after": " "
-                }
-              },
-              "VBG"
-            ],
-            [
-              {
-                "nlpToken": {
-                  "index": 5,
-                  "word": "a",
-                  "originalText": "a",
-                  "lemma": "a",
-                  "characterOffsetBegin": 21,
-                  "characterOffsetEnd": 22,
-                  "pos": "DT",
-                  "ner": "O",
-                  "speaker": "PER0",
-                  "before": " ",
-                  "after": " "
-                }
-              },
-              "DT"
-            ],
-            [
-              {
-                "nlpToken": {
-                  "index": 6,
-                  "word": "Tesla",
-                  "originalText": "Tesla",
-                  "lemma": "Tesla",
-                  "characterOffsetBegin": 23,
-                  "characterOffsetEnd": 28,
-                  "pos": "NNP",
-                  "ner": "O",
-                  "speaker": "PER0",
-                  "before": " ",
-                  "after": " "
-                }
-              },
-              "NNP"
-            ]
-          ],
-          "score": 1.0,
-          "text": "Is Sending a Tesla"
-        }
-      ],
-      "label": "what"
     }
   }
 }

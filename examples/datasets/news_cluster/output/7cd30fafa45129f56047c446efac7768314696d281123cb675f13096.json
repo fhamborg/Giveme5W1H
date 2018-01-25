@@ -25,7 +25,157 @@
     "Event": "nyc_subway_work_trains_collide_in_tunnel_1_worker_injured"
   },
   "dId": "7cd30fafa45129f56047c446efac7768314696d281123cb675f13096",
-  "fiveWoneH": {
+  "fiveWoneH": {},
+  "fiveWoneH_Metadata": {
+    "process_errors": {},
+    "who": {
+      "extracted": [
+        {
+          "parts": [
+            [
+              {
+                "nlpToken": {
+                  "index": 1,
+                  "word": "NYC",
+                  "originalText": "NYC",
+                  "lemma": "NYC",
+                  "characterOffsetBegin": 0,
+                  "characterOffsetEnd": 3,
+                  "pos": "NNP",
+                  "ner": "O",
+                  "speaker": "PER0",
+                  "before": "",
+                  "after": " "
+                }
+              },
+              "NNP"
+            ],
+            [
+              {
+                "nlpToken": {
+                  "index": 2,
+                  "word": "subway",
+                  "originalText": "subway",
+                  "lemma": "subway",
+                  "characterOffsetBegin": 4,
+                  "characterOffsetEnd": 10,
+                  "pos": "NN",
+                  "ner": "O",
+                  "speaker": "PER0",
+                  "before": " ",
+                  "after": " "
+                }
+              },
+              "NN"
+            ],
+            [
+              {
+                "nlpToken": {
+                  "index": 3,
+                  "word": "work",
+                  "originalText": "work",
+                  "lemma": "work",
+                  "characterOffsetBegin": 11,
+                  "characterOffsetEnd": 15,
+                  "pos": "NN",
+                  "ner": "O",
+                  "speaker": "PER0",
+                  "before": " ",
+                  "after": " "
+                }
+              },
+              "NN"
+            ],
+            [
+              {
+                "nlpToken": {
+                  "index": 4,
+                  "word": "trains",
+                  "originalText": "trains",
+                  "lemma": "train",
+                  "characterOffsetBegin": 16,
+                  "characterOffsetEnd": 22,
+                  "pos": "NNS",
+                  "ner": "O",
+                  "speaker": "PER0",
+                  "before": " ",
+                  "after": " "
+                }
+              },
+              "NNS"
+            ]
+          ],
+          "score": 1.0,
+          "text": "NYC subway work trains"
+        }
+      ],
+      "label": "who"
+    },
+    "what": {
+      "extracted": [
+        {
+          "parts": [
+            [
+              {
+                "nlpToken": {
+                  "index": 5,
+                  "word": "collide",
+                  "originalText": "collide",
+                  "lemma": "collide",
+                  "characterOffsetBegin": 23,
+                  "characterOffsetEnd": 30,
+                  "pos": "VBP",
+                  "ner": "O",
+                  "speaker": "PER0",
+                  "before": " ",
+                  "after": " "
+                }
+              },
+              "VBP"
+            ],
+            [
+              {
+                "nlpToken": {
+                  "index": 6,
+                  "word": "in",
+                  "originalText": "in",
+                  "lemma": "in",
+                  "characterOffsetBegin": 31,
+                  "characterOffsetEnd": 33,
+                  "pos": "IN",
+                  "ner": "O",
+                  "speaker": "PER0",
+                  "before": " ",
+                  "after": " "
+                }
+              },
+              "IN"
+            ],
+            [
+              {
+                "nlpToken": {
+                  "index": 7,
+                  "word": "tunnel",
+                  "originalText": "tunnel",
+                  "lemma": "tunnel",
+                  "characterOffsetBegin": 34,
+                  "characterOffsetEnd": 40,
+                  "pos": "NN",
+                  "ner": "O",
+                  "speaker": "PER0",
+                  "before": " ",
+                  "after": ""
+                }
+              },
+              "NN"
+            ]
+          ],
+          "score": 1.0,
+          "text": "collide in tunnel"
+        }
+      ],
+      "label": "what"
+    },
     "how": {
       "extracted": [
         {
@@ -374,7 +524,7 @@
               "NN"
             ]
           ],
-          "score": 0.5318664131904765,
+          "score": 0.420255456400353,
           "text": "5:10 a.m.",
           "enhancement": {
             "timex": {
@@ -416,154 +566,6 @@
         }
       ],
       "label": "why"
-    },
-    "who": {
-      "extracted": [
-        {
-          "parts": [
-            [
-              {
-                "nlpToken": {
-                  "index": 1,
-                  "word": "NYC",
-                  "originalText": "NYC",
-                  "lemma": "NYC",
-                  "characterOffsetBegin": 0,
-                  "characterOffsetEnd": 3,
-                  "pos": "NNP",
-                  "ner": "O",
-                  "speaker": "PER0",
-                  "before": "",
-                  "after": " "
-                }
-              },
-              "NNP"
-            ],
-            [
-              {
-                "nlpToken": {
-                  "index": 2,
-                  "word": "subway",
-                  "originalText": "subway",
-                  "lemma": "subway",
-                  "characterOffsetBegin": 4,
-                  "characterOffsetEnd": 10,
-                  "pos": "NN",
-                  "ner": "O",
-                  "speaker": "PER0",
-                  "before": " ",
-                  "after": " "
-                }
-              },
-              "NN"
-            ],
-            [
-              {
-                "nlpToken": {
-                  "index": 3,
-                  "word": "work",
-                  "originalText": "work",
-                  "lemma": "work",
-                  "characterOffsetBegin": 11,
-                  "characterOffsetEnd": 15,
-                  "pos": "NN",
-                  "ner": "O",
-                  "speaker": "PER0",
-                  "before": " ",
-                  "after": " "
-                }
-              },
-              "NN"
-            ],
-            [
-              {
-                "nlpToken": {
-                  "index": 4,
-                  "word": "trains",
-                  "originalText": "trains",
-                  "lemma": "train",
-                  "characterOffsetBegin": 16,
-                  "characterOffsetEnd": 22,
-                  "pos": "NNS",
-                  "ner": "O",
-                  "speaker": "PER0",
-                  "before": " ",
-                  "after": " "
-                }
-              },
-              "NNS"
-            ]
-          ],
-          "score": 1.0,
-          "text": "NYC subway work trains"
-        }
-      ],
-      "label": "who"
-    },
-    "what": {
-      "extracted": [
-        {
-          "parts": [
-            [
-              {
-                "nlpToken": {
-                  "index": 5,
-                  "word": "collide",
-                  "originalText": "collide",
-                  "lemma": "collide",
-                  "characterOffsetBegin": 23,
-                  "characterOffsetEnd": 30,
-                  "pos": "VBP",
-                  "ner": "O",
-                  "speaker": "PER0",
-                  "before": " ",
-                  "after": " "
-                }
-              },
-              "VBP"
-            ],
-            [
-              {
-                "nlpToken": {
-                  "index": 6,
-                  "word": "in",
-                  "originalText": "in",
-                  "lemma": "in",
-                  "characterOffsetBegin": 31,
-                  "characterOffsetEnd": 33,
-                  "pos": "IN",
-                  "ner": "O",
-                  "speaker": "PER0",
-                  "before": " ",
-                  "after": " "
-                }
-              },
-              "IN"
-            ],
-            [
-              {
-                "nlpToken": {
-                  "index": 7,
-                  "word": "tunnel",
-                  "originalText": "tunnel",
-                  "lemma": "tunnel",
-                  "characterOffsetBegin": 34,
-                  "characterOffsetEnd": 40,
-                  "pos": "NN",
-                  "ner": "O",
-                  "speaker": "PER0",
-                  "before": " ",
-                  "after": ""
-                }
-              },
-              "NN"
-            ]
-          ],
-          "score": 1.0,
-          "text": "collide in tunnel"
-        }
-      ],
-      "label": "what"
     }
   }
 }

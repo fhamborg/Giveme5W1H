@@ -19,61 +19,16 @@
   "newsCluster": {
     "CategoryId": 5,
     "Category": "sports",
-    "TopicId": 1,
-    "Topic": "unspecific",
-    "EventId": 13,
-    "Event": "cubs_win_championship",
-    "Url": "https://www.theguardian.com/sport/2016/nov/03/world-series-game-7-chicago-cubs-cleveland-indians-mlb"
+    "TopicId": 2,
+    "Topic": "legancy",
+    "EventId": 61,
+    "Event": "cubs_win_championship"
   },
   "dId": "580907b65c143b41a4f467c5836a9500b96e423a02f9698b7b1c68c4",
-  "fiveWoneH": {
-    "how": {
-      "extracted": [
-        {
-          "parts": [
-            [
-              {
-                "nlpToken": {
-                  "index": 7,
-                  "word": "win",
-                  "originalText": "win",
-                  "lemma": "win",
-                  "characterOffsetBegin": 41,
-                  "characterOffsetEnd": 44,
-                  "pos": "VB",
-                  "ner": "O",
-                  "speaker": "PER0",
-                  "before": " ",
-                  "after": " "
-                }
-              },
-              "VB"
-            ],
-            [
-              {
-                "nlpToken": {
-                  "index": 8,
-                  "word": "first",
-                  "originalText": "first",
-                  "lemma": "first",
-                  "characterOffsetBegin": 45,
-                  "characterOffsetEnd": 50,
-                  "pos": "JJ",
-                  "ner": "ORDINAL",
-                  "normalizedNER": "1.0",
-                  "speaker": "PER0",
-                  "before": " ",
-                  "after": " "
-                }
-              },
-              "JJ"
-            ]
-          ],
-          "score": 1.3333333333333333,
-          "text": "win first"
-        }
-      ],
-      "label": "how"
+  "fiveWoneH": {},
+  "fiveWoneH_Metadata": {
+    "process_errors": {
+      "core_nlp": true
     },
     "where": {
       "extracted": [
@@ -150,13 +105,10 @@
               "NNP"
             ]
           ],
-          "score": 1.0,
+          "score": 0.6792417386543864,
           "text": "Cleveland",
           "enhancement": {
             "openstreetmap_nominatim": {
-              "place_id": "177736691",
-              "licence": "Data \u00a9 OpenStreetMap contributors, ODbL 1.0. http://www.openstreetmap.org/copyright",
-              "osm_type": "relation",
               "osm_id": "182130",
               "boundingbox": [
                 41.390628,
@@ -164,13 +116,16 @@
                 -81.8790937,
                 -81.532744
               ],
-              "lat": "41.5051613",
-              "lon": "-81.6934446",
-              "display_name": "Cleveland, Cuyahoga County, Ohio, United States of America",
-              "class": "place",
-              "type": "city",
+              "licence": "Data \u00a9 OpenStreetMap contributors, ODbL 1.0. http://www.openstreetmap.org/copyright",
               "importance": 0.2721855967315,
-              "icon": "https://nominatim.openstreetmap.org/images/mapicons/poi_place_city.p.20.png"
+              "icon": "https://nominatim.openstreetmap.org/images/mapicons/poi_place_city.p.20.png",
+              "osm_type": "relation",
+              "display_name": "Cleveland, Cuyahoga County, Ohio, United States of America",
+              "lat": "41.5051613",
+              "type": "city",
+              "place_id": "177736691",
+              "lon": "-81.6934446",
+              "class": "place"
             }
           },
           "nlpIndexSentence": 10
@@ -185,66 +140,346 @@
             [
               {
                 "nlpToken": {
-                  "index": 9,
-                  "word": "the",
-                  "originalText": "the",
-                  "lemma": "the",
-                  "characterOffsetBegin": 2070,
-                  "characterOffsetEnd": 2073,
-                  "pos": "DT",
-                  "ner": "DATE",
-                  "normalizedNER": "2016-11-03",
-                  "speaker": "112",
+                  "index": 10,
+                  "word": "2.15",
+                  "originalText": "2.15",
+                  "lemma": "2.15",
+                  "characterOffsetBegin": 6228,
+                  "characterOffsetEnd": 6232,
+                  "pos": "CD",
+                  "ner": "TIME",
+                  "normalizedNER": "2016-11-02T15:00",
+                  "speaker": "PER0",
                   "before": " ",
-                  "after": " ",
+                  "after": "",
                   "timex": {
-                    "tid": "t9",
-                    "type": "DATE",
-                    "value": "2016-11-03"
+                    "tid": "t23",
+                    "type": "TIME",
+                    "value": "2016-11-02T15:00"
                   }
                 }
               },
-              "DT"
+              "CD"
             ],
             [
               {
                 "nlpToken": {
-                  "index": 10,
-                  "word": "day",
-                  "originalText": "day",
-                  "lemma": "day",
-                  "characterOffsetBegin": 2074,
-                  "characterOffsetEnd": 2077,
-                  "pos": "NN",
-                  "ner": "DATE",
-                  "normalizedNER": "2016-11-03",
-                  "speaker": "112",
-                  "before": " ",
-                  "after": "",
+                  "index": 11,
+                  "word": "am",
+                  "originalText": "am",
+                  "lemma": "be",
+                  "characterOffsetBegin": 6232,
+                  "characterOffsetEnd": 6234,
+                  "pos": "VBP",
+                  "ner": "TIME",
+                  "normalizedNER": "2016-11-02T15:00",
+                  "speaker": "PER0",
+                  "before": "",
+                  "after": " ",
                   "timex": {
-                    "tid": "t9",
-                    "type": "DATE",
-                    "value": "2016-11-03"
+                    "tid": "t23",
+                    "type": "TIME",
+                    "value": "2016-11-02T15:00"
                   }
                 }
               },
-              "NN"
+              "VBP"
             ]
           ],
-          "score": 0.6454144218314233,
-          "text": "the day",
+          "score": 0.37416849987861384,
+          "text": "2.15 am",
           "enhancement": {
-            "timex": [
-              {
-                "start_date": "2016-11-03T00:00:00",
-                "end_date": "2016-11-03T23:59:59"
-              }
-            ]
+            "timex": {
+              "start_date": "2016-11-02T15:00:00",
+              "end_date": "2016-11-02T15:00:59"
+            }
           },
-          "nlpIndexSentence": 17
+          "nlpIndexSentence": 65
         }
       ],
       "label": "when"
+    },
+    "how": {
+      "extracted": [
+        {
+          "parts": [
+            [
+              {
+                "nlpToken": {
+                  "index": 39,
+                  "word": "their",
+                  "originalText": "their",
+                  "lemma": "they",
+                  "characterOffsetBegin": 1000,
+                  "characterOffsetEnd": 1005,
+                  "pos": "PRP$",
+                  "ner": "O",
+                  "speaker": "PER0",
+                  "before": " ",
+                  "after": " "
+                }
+              },
+              "PRP$"
+            ],
+            [
+              {
+                "nlpToken": {
+                  "index": 40,
+                  "word": "last",
+                  "originalText": "last",
+                  "lemma": "last",
+                  "characterOffsetBegin": 1006,
+                  "characterOffsetEnd": 1010,
+                  "pos": "JJ",
+                  "ner": "O",
+                  "speaker": "PER0",
+                  "before": " ",
+                  "after": " "
+                }
+              },
+              "JJ"
+            ],
+            [
+              {
+                "nlpToken": {
+                  "index": 41,
+                  "word": "World",
+                  "originalText": "World",
+                  "lemma": "World",
+                  "characterOffsetBegin": 1011,
+                  "characterOffsetEnd": 1016,
+                  "pos": "NNP",
+                  "ner": "MISC",
+                  "speaker": "PER0",
+                  "before": " ",
+                  "after": " "
+                },
+                "aida": [
+                  {
+                    "mention": {
+                      "allEntities": [
+                        {
+                          "kbIdentifier": "YAGO:Little_League_World_Series",
+                          "disambiguationScore": "0.10056"
+                        }
+                      ],
+                      "offset": 1011,
+                      "name": "World Series",
+                      "length": 12,
+                      "bestEntity": {
+                        "kbIdentifier": "YAGO:Little_League_World_Series",
+                        "disambiguationScore": "0.10056"
+                      }
+                    },
+                    "bestEntityMetadata": {
+                      "knowledgebase": "YAGO",
+                      "depictionurl": "http://upload.wikimedia.org/wikipedia/commons/7/79/Little_League_World_Series_Welcome_Sign_crop.JPG",
+                      "depictionthumbnailurl": "http://upload.wikimedia.org/wikipedia/commons/thumbLittle_League_World_Series_Welcome_Sign_crop.JPG/200px-Little_League_World_Series_Welcome_Sign_crop.JPG",
+                      "importance": 0.010353154316539449,
+                      "entityId": "Little_League_World_Series",
+                      "type": [
+                        "YAGO_yagoPermanentlyLocatedEntity",
+                        "YAGO_wordnet_event_100029378",
+                        "YAGO_wordnet_entity_100001740",
+                        "YAGO_wordnet_psychological_feature_100023100",
+                        "YAGO_wordnet_show_106619065",
+                        "YAGO_wordnet_contest_107456188",
+                        "YAGO_wordnet_playoff_107465290",
+                        "YAGO_wordnet_social_event_107288639",
+                        "YAGO_wordnet_attraction_106615561",
+                        "YAGO_wikicategory_Baseball_playoffs_and_champions",
+                        "YAGO_wordnet_abstraction_100002137",
+                        "YAGO_wikicategory_Visitor_attractions_in_Lycoming_County\\u002c_Pennsylvania"
+                      ],
+                      "readableRepr": "Little League World Series",
+                      "url": "http://en.wikipedia.org/wiki/Little%20League%20World%20Series"
+                    }
+                  }
+                ]
+              },
+              "NNP"
+            ],
+            [
+              {
+                "nlpToken": {
+                  "index": 42,
+                  "word": "Series",
+                  "originalText": "Series",
+                  "lemma": "Series",
+                  "characterOffsetBegin": 1017,
+                  "characterOffsetEnd": 1023,
+                  "pos": "NNP",
+                  "ner": "MISC",
+                  "speaker": "PER0",
+                  "before": " ",
+                  "after": " "
+                },
+                "aida": [
+                  {
+                    "mention": {
+                      "allEntities": [
+                        {
+                          "kbIdentifier": "YAGO:Little_League_World_Series",
+                          "disambiguationScore": "0.10056"
+                        }
+                      ],
+                      "offset": 1011,
+                      "name": "World Series",
+                      "length": 12,
+                      "bestEntity": {
+                        "kbIdentifier": "YAGO:Little_League_World_Series",
+                        "disambiguationScore": "0.10056"
+                      }
+                    },
+                    "bestEntityMetadata": {
+                      "knowledgebase": "YAGO",
+                      "depictionurl": "http://upload.wikimedia.org/wikipedia/commons/7/79/Little_League_World_Series_Welcome_Sign_crop.JPG",
+                      "depictionthumbnailurl": "http://upload.wikimedia.org/wikipedia/commons/thumbLittle_League_World_Series_Welcome_Sign_crop.JPG/200px-Little_League_World_Series_Welcome_Sign_crop.JPG",
+                      "importance": 0.010353154316539449,
+                      "entityId": "Little_League_World_Series",
+                      "type": [
+                        "YAGO_yagoPermanentlyLocatedEntity",
+                        "YAGO_wordnet_event_100029378",
+                        "YAGO_wordnet_entity_100001740",
+                        "YAGO_wordnet_psychological_feature_100023100",
+                        "YAGO_wordnet_show_106619065",
+                        "YAGO_wordnet_contest_107456188",
+                        "YAGO_wordnet_playoff_107465290",
+                        "YAGO_wordnet_social_event_107288639",
+                        "YAGO_wordnet_attraction_106615561",
+                        "YAGO_wikicategory_Baseball_playoffs_and_champions",
+                        "YAGO_wordnet_abstraction_100002137",
+                        "YAGO_wikicategory_Visitor_attractions_in_Lycoming_County\\u002c_Pennsylvania"
+                      ],
+                      "readableRepr": "Little League World Series",
+                      "url": "http://en.wikipedia.org/wiki/Little%20League%20World%20Series"
+                    }
+                  }
+                ]
+              },
+              "NNP"
+            ],
+            [
+              {
+                "nlpToken": {
+                  "index": 43,
+                  "word": "title",
+                  "originalText": "title",
+                  "lemma": "title",
+                  "characterOffsetBegin": 1024,
+                  "characterOffsetEnd": 1029,
+                  "pos": "NN",
+                  "ner": "O",
+                  "speaker": "PER0",
+                  "before": " ",
+                  "after": " "
+                }
+              },
+              "NN"
+            ],
+            [
+              {
+                "nlpToken": {
+                  "index": 44,
+                  "word": "was",
+                  "originalText": "was",
+                  "lemma": "be",
+                  "characterOffsetBegin": 1030,
+                  "characterOffsetEnd": 1033,
+                  "pos": "VBD",
+                  "ner": "O",
+                  "speaker": "PER0",
+                  "before": " ",
+                  "after": " "
+                }
+              },
+              "VBD"
+            ],
+            [
+              {
+                "nlpToken": {
+                  "index": 45,
+                  "word": "back",
+                  "originalText": "back",
+                  "lemma": "back",
+                  "characterOffsetBegin": 1034,
+                  "characterOffsetEnd": 1038,
+                  "pos": "RB",
+                  "ner": "O",
+                  "speaker": "PER0",
+                  "before": " ",
+                  "after": " "
+                }
+              },
+              "RB"
+            ],
+            [
+              {
+                "nlpToken": {
+                  "index": 46,
+                  "word": "in",
+                  "originalText": "in",
+                  "lemma": "in",
+                  "characterOffsetBegin": 1039,
+                  "characterOffsetEnd": 1041,
+                  "pos": "IN",
+                  "ner": "O",
+                  "speaker": "PER0",
+                  "before": " ",
+                  "after": " "
+                }
+              },
+              "IN"
+            ],
+            [
+              {
+                "nlpToken": {
+                  "index": 47,
+                  "word": "1948",
+                  "originalText": "1948",
+                  "lemma": "1948",
+                  "characterOffsetBegin": 1042,
+                  "characterOffsetEnd": 1046,
+                  "pos": "CD",
+                  "ner": "DATE",
+                  "normalizedNER": "1948",
+                  "speaker": "PER0",
+                  "before": " ",
+                  "after": "",
+                  "timex": {
+                    "tid": "t5",
+                    "type": "DATE",
+                    "value": "1948"
+                  }
+                }
+              },
+              "CD"
+            ],
+            [
+              {
+                "nlpToken": {
+                  "index": 48,
+                  "word": ".",
+                  "originalText": ".",
+                  "lemma": ".",
+                  "characterOffsetBegin": 1046,
+                  "characterOffsetEnd": 1047,
+                  "pos": ".",
+                  "ner": "O",
+                  "speaker": "PER0",
+                  "before": "",
+                  "after": " "
+                }
+              },
+              "."
+            ]
+          ],
+          "score": 1.0,
+          "text": "their last World Series title was back in 1948 .",
+          "nlpIndexSentence": 8
+        }
+      ],
+      "label": "how"
     },
     "who": {
       "extracted": [
@@ -585,82 +820,10 @@
                 }
               },
               "PRP"
-            ],
-            [
-              {
-                "nlpToken": {
-                  "index": 6,
-                  "word": "was",
-                  "originalText": "was",
-                  "lemma": "be",
-                  "characterOffsetBegin": 298,
-                  "characterOffsetEnd": 301,
-                  "pos": "VBD",
-                  "ner": "O",
-                  "speaker": "PER0",
-                  "before": " ",
-                  "after": " "
-                }
-              },
-              "VBD"
-            ],
-            [
-              {
-                "nlpToken": {
-                  "index": 7,
-                  "word": "an",
-                  "originalText": "an",
-                  "lemma": "a",
-                  "characterOffsetBegin": 302,
-                  "characterOffsetEnd": 304,
-                  "pos": "DT",
-                  "ner": "O",
-                  "speaker": "PER0",
-                  "before": " ",
-                  "after": " "
-                }
-              },
-              "DT"
-            ],
-            [
-              {
-                "nlpToken": {
-                  "index": 8,
-                  "word": "anticlimactic",
-                  "originalText": "anticlimactic",
-                  "lemma": "anticlimactic",
-                  "characterOffsetBegin": 305,
-                  "characterOffsetEnd": 318,
-                  "pos": "JJ",
-                  "ner": "O",
-                  "speaker": "PER0",
-                  "before": " ",
-                  "after": " "
-                }
-              },
-              "JJ"
-            ],
-            [
-              {
-                "nlpToken": {
-                  "index": 9,
-                  "word": "ending",
-                  "originalText": "ending",
-                  "lemma": "ending",
-                  "characterOffsetBegin": 319,
-                  "characterOffsetEnd": 325,
-                  "pos": "NN",
-                  "ner": "O",
-                  "speaker": "PER0",
-                  "before": " ",
-                  "after": ""
-                }
-              },
-              "NN"
             ]
           ],
-          "score": 0.41697722567287787,
-          "text": "it was an anticlimactic ending",
+          "score": 0.5535362318840581,
+          "text": "it",
           "nlpIndexSentence": 4
         }
       ],

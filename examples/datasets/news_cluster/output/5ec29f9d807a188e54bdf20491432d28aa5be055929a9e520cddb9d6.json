@@ -23,7 +23,9 @@
     "EventId": 35,
     "Event": "new_york_family_of_5_among_12_killed_in_costa_rica_plane_crash"
   },
-  "fiveWoneH": {
+  "fiveWoneH": {},
+  "fiveWoneH_Metadata": {
+    "process_errors": {},
     "who": {
       "extracted": [
         {
@@ -551,140 +553,6 @@
       ],
       "label": "how"
     },
-    "why": {
-      "extracted": [
-        {
-          "parts": [
-            [
-              {
-                "nlpToken": {
-                  "index": 1,
-                  "word": "10",
-                  "originalText": "10",
-                  "lemma": "10",
-                  "characterOffsetBegin": 0,
-                  "characterOffsetEnd": 2,
-                  "pos": "CD",
-                  "ner": "NUMBER",
-                  "normalizedNER": "10.0",
-                  "speaker": "PER0",
-                  "before": "",
-                  "after": " "
-                }
-              },
-              "CD"
-            ],
-            [
-              {
-                "nlpToken": {
-                  "index": 2,
-                  "word": "American",
-                  "originalText": "American",
-                  "lemma": "american",
-                  "characterOffsetBegin": 3,
-                  "characterOffsetEnd": 11,
-                  "pos": "JJ",
-                  "ner": "MISC",
-                  "speaker": "PER0",
-                  "before": " ",
-                  "after": " "
-                },
-                "aida": [
-                  {
-                    "mention": {
-                      "allEntities": [
-                        {
-                          "kbIdentifier": "YAGO:United_States",
-                          "disambiguationScore": "0.42251"
-                        }
-                      ],
-                      "offset": 3,
-                      "name": "American",
-                      "length": 8,
-                      "bestEntity": {
-                        "kbIdentifier": "YAGO:United_States",
-                        "disambiguationScore": "0.42251"
-                      }
-                    },
-                    "bestEntityMetadata": {
-                      "knowledgebase": "YAGO",
-                      "depictionurl": "http://upload.wikimedia.org/wikipedia/en/a/a4/Flag_of_the_United_States.svg",
-                      "depictionthumbnailurl": "http://upload.wikimedia.org/wikipedia/en/thumbFlag_of_the_United_States.svg/200px-Flag_of_the_United_States.svg",
-                      "importance": 0.0,
-                      "entityId": "United_States",
-                      "type": [
-                        "YAGO_wordnet_system_108435388",
-                        "YAGO_yagoPermanentlyLocatedEntity",
-                        "YAGO_yagoLegalActorGeo",
-                        "YAGO_wordnet_organization_108008335",
-                        "YAGO_wordnet_state_100024720",
-                        "YAGO_wordnet_democracy_108361329",
-                        "YAGO_wordnet_union_114418395",
-                        "YAGO_wordnet_unit_108189659",
-                        "YAGO_wikicategory_Superpowers",
-                        "YAGO_wordnet_cognition_100023271",
-                        "YAGO_wordnet_coalition_114418662",
-                        "YAGO_wordnet_political_system_108367880",
-                        "YAGO_wordnet_attribute_100024264",
-                        "YAGO_wordnet_abstraction_100002137",
-                        "YAGO_wordnet_attitude_106193203",
-                        "YAGO_wordnet_alliance_114418822",
-                        "YAGO_wordnet_group_100031264",
-                        "YAGO_wordnet_psychological_feature_100023100",
-                        "YAGO_wordnet_body_107965085",
-                        "YAGO_wordnet_political_orientation_106212839",
-                        "YAGO_wordnet_democracy_106217103",
-                        "YAGO_wordnet_political_unit_108359949",
-                        "YAGO_wikicategory_Former_British_colonies",
-                        "YAGO_wordnet_economy_108366753",
-                        "YAGO_yagoLegalActor",
-                        "YAGO_wikicategory_G8_nations",
-                        "YAGO_yagoGeoEntity",
-                        "YAGO_wordnet_social_group_107950920",
-                        "YAGO_wordnet_entity_100001740",
-                        "YAGO_wordnet_colony_108374049",
-                        "YAGO_wikicategory_Liberal_democracies",
-                        "YAGO_wikicategory_G20_nations",
-                        "YAGO_wikicategory_Former_confederations",
-                        "YAGO_wordnet_state_108168978",
-                        "YAGO_wikicategory_Federal_constitutional_republics",
-                        "YAGO_wordnet_world_power_108177592",
-                        "YAGO_wikicategory_Republics",
-                        "YAGO_wordnet_orientation_106208021"
-                      ],
-                      "readableRepr": "United States",
-                      "url": "http://en.wikipedia.org/wiki/United%20States"
-                    }
-                  }
-                ]
-              },
-              "JJ"
-            ],
-            [
-              {
-                "nlpToken": {
-                  "index": 3,
-                  "word": "tourists",
-                  "originalText": "tourists",
-                  "lemma": "tourist",
-                  "characterOffsetBegin": 12,
-                  "characterOffsetEnd": 20,
-                  "pos": "NNS",
-                  "ner": "O",
-                  "speaker": "PER0",
-                  "before": " ",
-                  "after": " "
-                }
-              },
-              "NNS"
-            ]
-          ],
-          "score": 0.5860000000000001,
-          "text": "10 American tourists"
-        }
-      ],
-      "label": "why"
-    },
     "where": {
       "extracted": [
         {
@@ -932,7 +800,7 @@
               "NN"
             ]
           ],
-          "score": 0.8057738205978837,
+          "score": 0.6991071539312173,
           "text": "12:13 pm",
           "enhancement": {
             "timex": {
@@ -944,6 +812,140 @@
         }
       ],
       "label": "when"
+    },
+    "why": {
+      "extracted": [
+        {
+          "parts": [
+            [
+              {
+                "nlpToken": {
+                  "index": 1,
+                  "word": "10",
+                  "originalText": "10",
+                  "lemma": "10",
+                  "characterOffsetBegin": 0,
+                  "characterOffsetEnd": 2,
+                  "pos": "CD",
+                  "ner": "NUMBER",
+                  "normalizedNER": "10.0",
+                  "speaker": "PER0",
+                  "before": "",
+                  "after": " "
+                }
+              },
+              "CD"
+            ],
+            [
+              {
+                "nlpToken": {
+                  "index": 2,
+                  "word": "American",
+                  "originalText": "American",
+                  "lemma": "american",
+                  "characterOffsetBegin": 3,
+                  "characterOffsetEnd": 11,
+                  "pos": "JJ",
+                  "ner": "MISC",
+                  "speaker": "PER0",
+                  "before": " ",
+                  "after": " "
+                },
+                "aida": [
+                  {
+                    "mention": {
+                      "allEntities": [
+                        {
+                          "kbIdentifier": "YAGO:United_States",
+                          "disambiguationScore": "0.42251"
+                        }
+                      ],
+                      "offset": 3,
+                      "name": "American",
+                      "length": 8,
+                      "bestEntity": {
+                        "kbIdentifier": "YAGO:United_States",
+                        "disambiguationScore": "0.42251"
+                      }
+                    },
+                    "bestEntityMetadata": {
+                      "knowledgebase": "YAGO",
+                      "depictionurl": "http://upload.wikimedia.org/wikipedia/en/a/a4/Flag_of_the_United_States.svg",
+                      "depictionthumbnailurl": "http://upload.wikimedia.org/wikipedia/en/thumbFlag_of_the_United_States.svg/200px-Flag_of_the_United_States.svg",
+                      "importance": 0.0,
+                      "entityId": "United_States",
+                      "type": [
+                        "YAGO_wordnet_system_108435388",
+                        "YAGO_yagoPermanentlyLocatedEntity",
+                        "YAGO_yagoLegalActorGeo",
+                        "YAGO_wordnet_organization_108008335",
+                        "YAGO_wordnet_state_100024720",
+                        "YAGO_wordnet_democracy_108361329",
+                        "YAGO_wordnet_union_114418395",
+                        "YAGO_wordnet_unit_108189659",
+                        "YAGO_wikicategory_Superpowers",
+                        "YAGO_wordnet_cognition_100023271",
+                        "YAGO_wordnet_coalition_114418662",
+                        "YAGO_wordnet_political_system_108367880",
+                        "YAGO_wordnet_attribute_100024264",
+                        "YAGO_wordnet_abstraction_100002137",
+                        "YAGO_wordnet_attitude_106193203",
+                        "YAGO_wordnet_alliance_114418822",
+                        "YAGO_wordnet_group_100031264",
+                        "YAGO_wordnet_psychological_feature_100023100",
+                        "YAGO_wordnet_body_107965085",
+                        "YAGO_wordnet_political_orientation_106212839",
+                        "YAGO_wordnet_democracy_106217103",
+                        "YAGO_wordnet_political_unit_108359949",
+                        "YAGO_wikicategory_Former_British_colonies",
+                        "YAGO_wordnet_economy_108366753",
+                        "YAGO_yagoLegalActor",
+                        "YAGO_wikicategory_G8_nations",
+                        "YAGO_yagoGeoEntity",
+                        "YAGO_wordnet_social_group_107950920",
+                        "YAGO_wordnet_entity_100001740",
+                        "YAGO_wordnet_colony_108374049",
+                        "YAGO_wikicategory_Liberal_democracies",
+                        "YAGO_wikicategory_G20_nations",
+                        "YAGO_wikicategory_Former_confederations",
+                        "YAGO_wordnet_state_108168978",
+                        "YAGO_wikicategory_Federal_constitutional_republics",
+                        "YAGO_wordnet_world_power_108177592",
+                        "YAGO_wikicategory_Republics",
+                        "YAGO_wordnet_orientation_106208021"
+                      ],
+                      "readableRepr": "United States",
+                      "url": "http://en.wikipedia.org/wiki/United%20States"
+                    }
+                  }
+                ]
+              },
+              "JJ"
+            ],
+            [
+              {
+                "nlpToken": {
+                  "index": 3,
+                  "word": "tourists",
+                  "originalText": "tourists",
+                  "lemma": "tourist",
+                  "characterOffsetBegin": 12,
+                  "characterOffsetEnd": 20,
+                  "pos": "NNS",
+                  "ner": "O",
+                  "speaker": "PER0",
+                  "before": " ",
+                  "after": " "
+                }
+              },
+              "NNS"
+            ]
+          ],
+          "score": 0.5860000000000001,
+          "text": "10 American tourists"
+        }
+      ],
+      "label": "why"
     }
   }
 }

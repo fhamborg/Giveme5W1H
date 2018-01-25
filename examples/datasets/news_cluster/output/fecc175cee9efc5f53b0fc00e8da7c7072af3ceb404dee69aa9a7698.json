@@ -28,7 +28,9 @@
     "EventId": 23,
     "Event": "digital_currency_ripple_soars_nearly_56_percent_becomes_second_largest_cryptocurrency_by_market_cap"
   },
-  "fiveWoneH": {
+  "fiveWoneH": {},
+  "fiveWoneH_Metadata": {
+    "process_errors": {},
     "who": {
       "extracted": [
         {
@@ -86,6 +88,10 @@
         }
       ],
       "label": "what"
+    },
+    "where": {
+      "extracted": [],
+      "label": "where"
     },
     "how": {
       "extracted": [
@@ -282,40 +288,6 @@
       ],
       "label": "how"
     },
-    "why": {
-      "extracted": [
-        {
-          "parts": [
-            [
-              {
-                "nlpToken": {
-                  "index": 5,
-                  "word": "ripple",
-                  "originalText": "ripple",
-                  "lemma": "ripple",
-                  "characterOffsetBegin": 455,
-                  "characterOffsetEnd": 461,
-                  "pos": "NN",
-                  "ner": "O",
-                  "speaker": "PER0",
-                  "before": " ",
-                  "after": " "
-                }
-              },
-              "NN"
-            ]
-          ],
-          "score": 0.48860869565217396,
-          "text": "ripple",
-          "nlpIndexSentence": 4
-        }
-      ],
-      "label": "why"
-    },
-    "where": {
-      "extracted": [],
-      "label": "where"
-    },
     "when": {
       "extracted": [
         {
@@ -345,7 +317,7 @@
               "CD"
             ]
           ],
-          "score": 0.6540620653643895,
+          "score": 0.5340620653643895,
           "text": "00:40",
           "enhancement": {
             "timex": {
@@ -357,6 +329,36 @@
         }
       ],
       "label": "when"
+    },
+    "why": {
+      "extracted": [
+        {
+          "parts": [
+            [
+              {
+                "nlpToken": {
+                  "index": 5,
+                  "word": "ripple",
+                  "originalText": "ripple",
+                  "lemma": "ripple",
+                  "characterOffsetBegin": 455,
+                  "characterOffsetEnd": 461,
+                  "pos": "NN",
+                  "ner": "O",
+                  "speaker": "PER0",
+                  "before": " ",
+                  "after": " "
+                }
+              },
+              "NN"
+            ]
+          ],
+          "score": 0.48860869565217396,
+          "text": "ripple",
+          "nlpIndexSentence": 4
+        }
+      ],
+      "label": "why"
     }
   }
 }

@@ -16,19 +16,164 @@
   "url": "https://www.washingtonpost.com/news/post-nation/wp/2016/05/29/it-could-have-been-very-bad-gorilla-killed-after-boy-falls-into-cincinnati-zoo-exhibit/?tid=a_inl",
   "newsCluster": {
     "CategoryId": 1,
-    "Category": "global_politics",
-    "TopicId": 1,
-    "Topic": "unspecific",
-    "EventId": 4,
-    "Event": "harambe",
-    "Url": "https://www.washingtonpost.com/news/post-nation/wp/2016/05/29/it-could-have-been-very-bad-gorilla-killed-after-boy-falls-into-cincinnati-zoo-exhibit/?tid=a_inl"
+    "Category": "world",
+    "TopicId": 2,
+    "Topic": "legancy",
+    "EventId": 52,
+    "Event": "harambe"
   },
   "dId": "87176868fabe9f788d545b3645454a2ae24bacab24f4ec78b0df926c",
-  "fiveWoneH": {
+  "fiveWoneH": {},
+  "fiveWoneH_Metadata": {
+    "process_errors": {},
     "how": {
       "extracted": [
         {
           "parts": [
+            [
+              {
+                "nlpToken": {
+                  "index": 6,
+                  "word": "very",
+                  "originalText": "very",
+                  "lemma": "very",
+                  "characterOffsetBegin": 20,
+                  "characterOffsetEnd": 24,
+                  "pos": "RB",
+                  "ner": "O",
+                  "speaker": "PER0",
+                  "before": " ",
+                  "after": " "
+                }
+              },
+              "RB"
+            ],
+            [
+              {
+                "nlpToken": {
+                  "index": 7,
+                  "word": "bad",
+                  "originalText": "bad",
+                  "lemma": "bad",
+                  "characterOffsetBegin": 25,
+                  "characterOffsetEnd": 28,
+                  "pos": "JJ",
+                  "ner": "O",
+                  "speaker": "PER0",
+                  "before": " ",
+                  "after": ""
+                }
+              },
+              "JJ"
+            ],
+            [
+              {
+                "nlpToken": {
+                  "index": 8,
+                  "word": "'",
+                  "originalText": "\u2019",
+                  "lemma": "'",
+                  "characterOffsetBegin": 28,
+                  "characterOffsetEnd": 29,
+                  "pos": "''",
+                  "ner": "O",
+                  "speaker": "PER0",
+                  "before": "",
+                  "after": ""
+                }
+              },
+              "''"
+            ],
+            [
+              {
+                "nlpToken": {
+                  "index": 9,
+                  "word": ":",
+                  "originalText": ":",
+                  "lemma": ":",
+                  "characterOffsetBegin": 29,
+                  "characterOffsetEnd": 30,
+                  "pos": ":",
+                  "ner": "O",
+                  "speaker": "PER0",
+                  "before": "",
+                  "after": " "
+                }
+              },
+              ":"
+            ],
+            [
+              {
+                "nlpToken": {
+                  "index": 10,
+                  "word": "Gorilla",
+                  "originalText": "Gorilla",
+                  "lemma": "Gorilla",
+                  "characterOffsetBegin": 31,
+                  "characterOffsetEnd": 38,
+                  "pos": "NNP",
+                  "ner": "O",
+                  "speaker": "PER0",
+                  "before": " ",
+                  "after": " "
+                }
+              },
+              "NNP"
+            ],
+            [
+              {
+                "nlpToken": {
+                  "index": 11,
+                  "word": "killed",
+                  "originalText": "killed",
+                  "lemma": "kill",
+                  "characterOffsetBegin": 39,
+                  "characterOffsetEnd": 45,
+                  "pos": "VBD",
+                  "ner": "O",
+                  "speaker": "PER0",
+                  "before": " ",
+                  "after": " "
+                }
+              },
+              "VBD"
+            ],
+            [
+              {
+                "nlpToken": {
+                  "index": 12,
+                  "word": "after",
+                  "originalText": "after",
+                  "lemma": "after",
+                  "characterOffsetBegin": 46,
+                  "characterOffsetEnd": 51,
+                  "pos": "IN",
+                  "ner": "O",
+                  "speaker": "PER0",
+                  "before": " ",
+                  "after": " "
+                }
+              },
+              "IN"
+            ],
+            [
+              {
+                "nlpToken": {
+                  "index": 13,
+                  "word": "boy",
+                  "originalText": "boy",
+                  "lemma": "boy",
+                  "characterOffsetBegin": 52,
+                  "characterOffsetEnd": 55,
+                  "pos": "NN",
+                  "ner": "O",
+                  "speaker": "PER0",
+                  "before": " ",
+                  "after": " "
+                }
+              },
+              "NN"
+            ],
             [
               {
                 "nlpToken": {
@@ -46,10 +191,28 @@
                 }
               },
               "VBZ"
+            ],
+            [
+              {
+                "nlpToken": {
+                  "index": 15,
+                  "word": "into",
+                  "originalText": "into",
+                  "lemma": "into",
+                  "characterOffsetBegin": 62,
+                  "characterOffsetEnd": 66,
+                  "pos": "IN",
+                  "ner": "O",
+                  "speaker": "PER0",
+                  "before": " ",
+                  "after": " "
+                }
+              },
+              "IN"
             ]
           ],
-          "score": 1.3037037037037038,
-          "text": "falls"
+          "score": 1.0,
+          "text": "very bad \u2019 : Gorilla killed after boy falls into"
         }
       ],
       "label": "how"
@@ -175,13 +338,10 @@
               "NN"
             ]
           ],
-          "score": 1.0000000000000002,
+          "score": 0.6882095525018255,
           "text": "Botanical Garden",
           "enhancement": {
             "openstreetmap_nominatim": {
-              "place_id": "9213378",
-              "licence": "Data \u00a9 OpenStreetMap contributors, ODbL 1.0. http://www.openstreetmap.org/copyright",
-              "osm_type": "node",
               "osm_id": "915595446",
               "boundingbox": [
                 28.5589141,
@@ -189,13 +349,16 @@
                 77.3293502,
                 77.3393502
               ],
-              "lat": "28.5639141",
-              "lon": "77.3343502",
-              "display_name": "Botanical Garden, Dadri Road, Noida, Ghaziabad, Uttar Pradesh, 201301, India",
-              "class": "railway",
-              "type": "station",
+              "licence": "Data \u00a9 OpenStreetMap contributors, ODbL 1.0. http://www.openstreetmap.org/copyright",
               "importance": 0.28385974542422,
-              "icon": "https://nominatim.openstreetmap.org/images/mapicons/transport_train_station2.p.20.png"
+              "icon": "https://nominatim.openstreetmap.org/images/mapicons/transport_train_station2.p.20.png",
+              "osm_type": "node",
+              "display_name": "Botanical Garden, Dadri Road, Noida, Ghaziabad, Uttar Pradesh, 201301, India",
+              "lat": "28.5639141",
+              "type": "station",
+              "place_id": "9213378",
+              "lon": "77.3343502",
+              "class": "railway"
             }
           },
           "nlpIndexSentence": 1
@@ -227,20 +390,30 @@
                     "type": "DATE",
                     "value": "2016-05-28"
                   }
-                }
+                },
+                "heideltime": [
+                  {
+                    "@tid": "t1",
+                    "@type": "DATE",
+                    "@value": "2016-05-28",
+                    "#text": "Saturday",
+                    "characterOffset": [
+                      171,
+                      179
+                    ]
+                  }
+                ]
               },
               "NNP"
             ]
           ],
-          "score": 0.822448238256544,
+          "score": 0.48466482534131533,
           "text": "Saturday",
           "enhancement": {
-            "timex": [
-              {
-                "start_date": "2016-05-28T00:00:00",
-                "end_date": "2016-05-28T23:59:59"
-              }
-            ]
+            "timex": {
+              "start_date": "2016-05-28T00:00:00",
+              "end_date": "2016-05-28T23:59:59"
+            }
           },
           "nlpIndexSentence": 1
         }
@@ -248,228 +421,6 @@
       "label": "when"
     },
     "who": {
-      "extracted": [
-        {
-          "parts": [
-            [
-              {
-                "nlpToken": {
-                  "index": 42,
-                  "word": "zoo",
-                  "originalText": "zoo",
-                  "lemma": "zoo",
-                  "characterOffsetBegin": 649,
-                  "characterOffsetEnd": 652,
-                  "pos": "NN",
-                  "ner": "O",
-                  "speaker": "PER0",
-                  "before": " ",
-                  "after": " "
-                }
-              },
-              "NN"
-            ],
-            [
-              {
-                "nlpToken": {
-                  "index": 43,
-                  "word": "director",
-                  "originalText": "director",
-                  "lemma": "director",
-                  "characterOffsetBegin": 653,
-                  "characterOffsetEnd": 661,
-                  "pos": "NN",
-                  "ner": "O",
-                  "speaker": "PER0",
-                  "before": " ",
-                  "after": " "
-                }
-              },
-              "NN"
-            ],
-            [
-              {
-                "nlpToken": {
-                  "index": 44,
-                  "word": "Thane",
-                  "originalText": "Thane",
-                  "lemma": "Thane",
-                  "characterOffsetBegin": 662,
-                  "characterOffsetEnd": 667,
-                  "pos": "NNP",
-                  "ner": "PERSON",
-                  "speaker": "PER0",
-                  "before": " ",
-                  "after": " "
-                },
-                "aida": [
-                  {
-                    "mention": {
-                      "allEntities": [
-                        {
-                          "kbIdentifier": "YAGO:Thane_Maynard",
-                          "disambiguationScore": "1"
-                        }
-                      ],
-                      "offset": 662,
-                      "name": "Thane Maynard",
-                      "length": 13,
-                      "bestEntity": {
-                        "kbIdentifier": "YAGO:Thane_Maynard",
-                        "disambiguationScore": "1"
-                      }
-                    },
-                    "bestEntityMetadata": {
-                      "knowledgebase": "YAGO",
-                      "depictionurl": null,
-                      "depictionthumbnailurl": null,
-                      "importance": 0.661997979396755,
-                      "entityId": "Thane_Maynard",
-                      "type": [
-                        "YAGO_wordnet_physical_entity_100001930",
-                        "YAGO_yagoLegalActorGeo",
-                        "YAGO_wordnet_causal_agent_100007347",
-                        "YAGO_wordnet_biologist_109855630",
-                        "YAGO_wordnet_entity_100001740",
-                        "YAGO_wordnet_object_100002684",
-                        "YAGO_wordnet_organism_100004475",
-                        "YAGO_wordnet_person_100007846",
-                        "YAGO_wikicategory_Living_people",
-                        "YAGO_wikicategory_American_zoologists",
-                        "YAGO_wordnet_zoologist_110806222",
-                        "YAGO_wordnet_whole_100003553",
-                        "YAGO_yagoLegalActor",
-                        "YAGO_wordnet_scientist_110560637",
-                        "YAGO_wordnet_living_thing_100004258"
-                      ],
-                      "readableRepr": "Thane Maynard",
-                      "url": "http://en.wikipedia.org/wiki/Thane%20Maynard"
-                    }
-                  }
-                ]
-              },
-              "NNP"
-            ],
-            [
-              {
-                "nlpToken": {
-                  "index": 45,
-                  "word": "Maynard",
-                  "originalText": "Maynard",
-                  "lemma": "Maynard",
-                  "characterOffsetBegin": 668,
-                  "characterOffsetEnd": 675,
-                  "pos": "NNP",
-                  "ner": "PERSON",
-                  "speaker": "PER0",
-                  "before": " ",
-                  "after": " "
-                },
-                "aida": [
-                  {
-                    "mention": {
-                      "allEntities": [
-                        {
-                          "kbIdentifier": "YAGO:Thane_Maynard",
-                          "disambiguationScore": "1"
-                        }
-                      ],
-                      "offset": 662,
-                      "name": "Thane Maynard",
-                      "length": 13,
-                      "bestEntity": {
-                        "kbIdentifier": "YAGO:Thane_Maynard",
-                        "disambiguationScore": "1"
-                      }
-                    },
-                    "bestEntityMetadata": {
-                      "knowledgebase": "YAGO",
-                      "depictionurl": null,
-                      "depictionthumbnailurl": null,
-                      "importance": 0.661997979396755,
-                      "entityId": "Thane_Maynard",
-                      "type": [
-                        "YAGO_wordnet_physical_entity_100001930",
-                        "YAGO_yagoLegalActorGeo",
-                        "YAGO_wordnet_causal_agent_100007347",
-                        "YAGO_wordnet_biologist_109855630",
-                        "YAGO_wordnet_entity_100001740",
-                        "YAGO_wordnet_object_100002684",
-                        "YAGO_wordnet_organism_100004475",
-                        "YAGO_wordnet_person_100007846",
-                        "YAGO_wikicategory_Living_people",
-                        "YAGO_wikicategory_American_zoologists",
-                        "YAGO_wordnet_zoologist_110806222",
-                        "YAGO_wordnet_whole_100003553",
-                        "YAGO_yagoLegalActor",
-                        "YAGO_wordnet_scientist_110560637",
-                        "YAGO_wordnet_living_thing_100004258"
-                      ],
-                      "readableRepr": "Thane Maynard",
-                      "url": "http://en.wikipedia.org/wiki/Thane%20Maynard"
-                    }
-                  }
-                ]
-              },
-              "NNP"
-            ]
-          ],
-          "score": 1.0,
-          "text": "zoo director Thane Maynard",
-          "nlpIndexSentence": 4
-        }
-      ],
-      "label": "who"
-    },
-    "what": {
-      "extracted": [
-        {
-          "parts": [
-            [
-              {
-                "nlpToken": {
-                  "index": 46,
-                  "word": "told",
-                  "originalText": "told",
-                  "lemma": "tell",
-                  "characterOffsetBegin": 676,
-                  "characterOffsetEnd": 680,
-                  "pos": "VBD",
-                  "ner": "O",
-                  "speaker": "PER0",
-                  "before": " ",
-                  "after": " "
-                }
-              },
-              "VBD"
-            ],
-            [
-              {
-                "nlpToken": {
-                  "index": 47,
-                  "word": "reporters",
-                  "originalText": "reporters",
-                  "lemma": "reporter",
-                  "characterOffsetBegin": 681,
-                  "characterOffsetEnd": 690,
-                  "pos": "NNS",
-                  "ner": "O",
-                  "speaker": "PER0",
-                  "before": " ",
-                  "after": ""
-                }
-              },
-              "NNS"
-            ]
-          ],
-          "score": 1.0,
-          "text": "told reporters",
-          "nlpIndexSentence": 4
-        }
-      ],
-      "label": "what"
-    },
-    "why": {
       "extracted": [
         {
           "parts": [
@@ -490,7 +441,18 @@
                 }
               },
               "NN"
-            ],
+            ]
+          ],
+          "score": 1.0,
+          "text": "boy"
+        }
+      ],
+      "label": "who"
+    },
+    "what": {
+      "extracted": [
+        {
+          "parts": [
             [
               {
                 "nlpToken": {
@@ -638,8 +600,447 @@
               "NN"
             ]
           ],
-          "score": 0.42857142857142855,
-          "text": "boy falls into Cincinnati zoo exhibit"
+          "score": 1.0,
+          "text": "falls into Cincinnati zoo exhibit"
+        }
+      ],
+      "label": "what"
+    },
+    "why": {
+      "extracted": [
+        {
+          "parts": [
+            [
+              {
+                "nlpToken": {
+                  "index": 13,
+                  "word": "because",
+                  "originalText": "because",
+                  "lemma": "because",
+                  "characterOffsetBegin": 1809,
+                  "characterOffsetEnd": 1816,
+                  "pos": "IN",
+                  "ner": "O",
+                  "speaker": "PER0",
+                  "before": " ",
+                  "after": " "
+                }
+              },
+              "IN"
+            ],
+            [
+              {
+                "nlpToken": {
+                  "index": 14,
+                  "word": "in",
+                  "originalText": "in",
+                  "lemma": "in",
+                  "characterOffsetBegin": 1817,
+                  "characterOffsetEnd": 1819,
+                  "pos": "IN",
+                  "ner": "O",
+                  "speaker": "PER0",
+                  "before": " ",
+                  "after": " "
+                }
+              },
+              "IN"
+            ],
+            [
+              {
+                "nlpToken": {
+                  "index": 15,
+                  "word": "``",
+                  "originalText": "\u201c",
+                  "lemma": "``",
+                  "characterOffsetBegin": 1820,
+                  "characterOffsetEnd": 1821,
+                  "pos": "``",
+                  "ner": "O",
+                  "speaker": "PER0",
+                  "before": " ",
+                  "after": ""
+                }
+              },
+              "``"
+            ],
+            [
+              {
+                "nlpToken": {
+                  "index": 16,
+                  "word": "agitated",
+                  "originalText": "agitated",
+                  "lemma": "agitate",
+                  "characterOffsetBegin": 1821,
+                  "characterOffsetEnd": 1829,
+                  "pos": "VBN",
+                  "ner": "O",
+                  "speaker": "98",
+                  "before": "",
+                  "after": ""
+                }
+              },
+              "VBN"
+            ],
+            [
+              {
+                "nlpToken": {
+                  "index": 17,
+                  "word": "''",
+                  "originalText": "\u201d",
+                  "lemma": "''",
+                  "characterOffsetBegin": 1829,
+                  "characterOffsetEnd": 1830,
+                  "pos": "''",
+                  "ner": "O",
+                  "speaker": "PER0",
+                  "before": "",
+                  "after": " "
+                }
+              },
+              "''"
+            ],
+            [
+              {
+                "nlpToken": {
+                  "index": 18,
+                  "word": "situations",
+                  "originalText": "situations",
+                  "lemma": "situation",
+                  "characterOffsetBegin": 1831,
+                  "characterOffsetEnd": 1841,
+                  "pos": "NNS",
+                  "ner": "O",
+                  "speaker": "PER0",
+                  "before": " ",
+                  "after": ""
+                }
+              },
+              "NNS"
+            ],
+            [
+              {
+                "nlpToken": {
+                  "index": 19,
+                  "word": ",",
+                  "originalText": ",",
+                  "lemma": ",",
+                  "characterOffsetBegin": 1841,
+                  "characterOffsetEnd": 1842,
+                  "pos": ",",
+                  "ner": "O",
+                  "speaker": "PER0",
+                  "before": "",
+                  "after": " "
+                }
+              },
+              ","
+            ],
+            [
+              {
+                "nlpToken": {
+                  "index": 20,
+                  "word": "it",
+                  "originalText": "it",
+                  "lemma": "it",
+                  "characterOffsetBegin": 1843,
+                  "characterOffsetEnd": 1845,
+                  "pos": "PRP",
+                  "ner": "O",
+                  "speaker": "PER0",
+                  "before": " ",
+                  "after": " "
+                }
+              },
+              "PRP"
+            ],
+            [
+              {
+                "nlpToken": {
+                  "index": 21,
+                  "word": "can",
+                  "originalText": "can",
+                  "lemma": "can",
+                  "characterOffsetBegin": 1846,
+                  "characterOffsetEnd": 1849,
+                  "pos": "MD",
+                  "ner": "O",
+                  "speaker": "PER0",
+                  "before": " ",
+                  "after": " "
+                }
+              },
+              "MD"
+            ],
+            [
+              {
+                "nlpToken": {
+                  "index": 22,
+                  "word": "take",
+                  "originalText": "take",
+                  "lemma": "take",
+                  "characterOffsetBegin": 1850,
+                  "characterOffsetEnd": 1854,
+                  "pos": "VB",
+                  "ner": "O",
+                  "speaker": "PER0",
+                  "before": " ",
+                  "after": " "
+                }
+              },
+              "VB"
+            ],
+            [
+              {
+                "nlpToken": {
+                  "index": 23,
+                  "word": "time",
+                  "originalText": "time",
+                  "lemma": "time",
+                  "characterOffsetBegin": 1855,
+                  "characterOffsetEnd": 1859,
+                  "pos": "NN",
+                  "ner": "O",
+                  "speaker": "PER0",
+                  "before": " ",
+                  "after": " "
+                }
+              },
+              "NN"
+            ],
+            [
+              {
+                "nlpToken": {
+                  "index": 24,
+                  "word": "for",
+                  "originalText": "for",
+                  "lemma": "for",
+                  "characterOffsetBegin": 1860,
+                  "characterOffsetEnd": 1863,
+                  "pos": "IN",
+                  "ner": "O",
+                  "speaker": "PER0",
+                  "before": " ",
+                  "after": " "
+                }
+              },
+              "IN"
+            ],
+            [
+              {
+                "nlpToken": {
+                  "index": 25,
+                  "word": "the",
+                  "originalText": "the",
+                  "lemma": "the",
+                  "characterOffsetBegin": 1864,
+                  "characterOffsetEnd": 1867,
+                  "pos": "DT",
+                  "ner": "O",
+                  "speaker": "PER0",
+                  "before": " ",
+                  "after": " "
+                }
+              },
+              "DT"
+            ],
+            [
+              {
+                "nlpToken": {
+                  "index": 26,
+                  "word": "drugs",
+                  "originalText": "drugs",
+                  "lemma": "drug",
+                  "characterOffsetBegin": 1868,
+                  "characterOffsetEnd": 1873,
+                  "pos": "NNS",
+                  "ner": "O",
+                  "speaker": "PER0",
+                  "before": " ",
+                  "after": " "
+                }
+              },
+              "NNS"
+            ],
+            [
+              {
+                "nlpToken": {
+                  "index": 27,
+                  "word": "to",
+                  "originalText": "to",
+                  "lemma": "to",
+                  "characterOffsetBegin": 1874,
+                  "characterOffsetEnd": 1876,
+                  "pos": "TO",
+                  "ner": "O",
+                  "speaker": "PER0",
+                  "before": " ",
+                  "after": " "
+                }
+              },
+              "TO"
+            ],
+            [
+              {
+                "nlpToken": {
+                  "index": 28,
+                  "word": "take",
+                  "originalText": "take",
+                  "lemma": "take",
+                  "characterOffsetBegin": 1877,
+                  "characterOffsetEnd": 1881,
+                  "pos": "VB",
+                  "ner": "O",
+                  "speaker": "PER0",
+                  "before": " ",
+                  "after": " "
+                }
+              },
+              "VB"
+            ],
+            [
+              {
+                "nlpToken": {
+                  "index": 29,
+                  "word": "effect",
+                  "originalText": "effect",
+                  "lemma": "effect",
+                  "characterOffsetBegin": 1882,
+                  "characterOffsetEnd": 1888,
+                  "pos": "NN",
+                  "ner": "O",
+                  "speaker": "PER0",
+                  "before": " ",
+                  "after": ""
+                }
+              },
+              "NN"
+            ],
+            [
+              {
+                "nlpToken": {
+                  "index": 30,
+                  "word": ",",
+                  "originalText": ",",
+                  "lemma": ",",
+                  "characterOffsetBegin": 1888,
+                  "characterOffsetEnd": 1889,
+                  "pos": ",",
+                  "ner": "O",
+                  "speaker": "PER0",
+                  "before": "",
+                  "after": " "
+                }
+              },
+              ","
+            ],
+            [
+              {
+                "nlpToken": {
+                  "index": 31,
+                  "word": "Maynard",
+                  "originalText": "Maynard",
+                  "lemma": "Maynard",
+                  "characterOffsetBegin": 1890,
+                  "characterOffsetEnd": 1897,
+                  "pos": "NNP",
+                  "ner": "PERSON",
+                  "speaker": "PER0",
+                  "before": " ",
+                  "after": " "
+                },
+                "aida": [
+                  {
+                    "mention": {
+                      "allEntities": [
+                        {
+                          "kbIdentifier": "YAGO:Maynard\\u002c_Massachusetts",
+                          "disambiguationScore": "0.11111"
+                        }
+                      ],
+                      "offset": 1890,
+                      "name": "Maynard",
+                      "length": 7,
+                      "bestEntity": {
+                        "kbIdentifier": "YAGO:Maynard\\u002c_Massachusetts",
+                        "disambiguationScore": "0.11111"
+                      }
+                    },
+                    "bestEntityMetadata": {
+                      "knowledgebase": "YAGO",
+                      "depictionurl": "http://upload.wikimedia.org/wikipedia/commons/3/3f/Maynard_MA_Main_and_Nason.jpg",
+                      "depictionthumbnailurl": "http://upload.wikimedia.org/wikipedia/commons/thumbMaynard_MA_Main_and_Nason.jpg/200px-Maynard_MA_Main_and_Nason.jpg",
+                      "importance": 0.03186503016559532,
+                      "entityId": "Maynard\\u002c_Massachusetts",
+                      "type": [
+                        "YAGO_wordnet_district_108552138",
+                        "YAGO_yagoPermanentlyLocatedEntity",
+                        "YAGO_yagoLegalActorGeo",
+                        "YAGO_wikicategory_Towns_in_Massachusetts",
+                        "YAGO_wordnet_urban_area_108675967",
+                        "YAGO_wikicategory_Towns_in_Middlesex_County\\u002c_Massachusetts",
+                        "YAGO_wordnet_municipality_108626283",
+                        "YAGO_wikicategory_Early_American_industrial_centers",
+                        "YAGO_wordnet_center_108523483",
+                        "YAGO_wordnet_region_108630985",
+                        "YAGO_yagoGeoEntity",
+                        "YAGO_wordnet_physical_entity_100001930",
+                        "YAGO_wordnet_entity_100001740",
+                        "YAGO_wordnet_object_100002684",
+                        "YAGO_wordnet_area_108497294",
+                        "YAGO_wordnet_geographical_area_108574314",
+                        "YAGO_wordnet_location_100027167",
+                        "YAGO_wordnet_administrative_district_108491826",
+                        "YAGO_wordnet_town_108665504"
+                      ],
+                      "readableRepr": "Maynard, Massachusetts",
+                      "url": "http://en.wikipedia.org/wiki/Maynard%2C%20Massachusetts"
+                    }
+                  }
+                ]
+              },
+              "NNP"
+            ],
+            [
+              {
+                "nlpToken": {
+                  "index": 32,
+                  "word": "said",
+                  "originalText": "said",
+                  "lemma": "say",
+                  "characterOffsetBegin": 1898,
+                  "characterOffsetEnd": 1902,
+                  "pos": "VBD",
+                  "ner": "O",
+                  "speaker": "PER0",
+                  "before": " ",
+                  "after": ""
+                }
+              },
+              "VBD"
+            ],
+            [
+              {
+                "nlpToken": {
+                  "index": 33,
+                  "word": ".",
+                  "originalText": ".",
+                  "lemma": ".",
+                  "characterOffsetBegin": 1902,
+                  "characterOffsetEnd": 1903,
+                  "pos": ".",
+                  "ner": "O",
+                  "speaker": "PER0",
+                  "before": "",
+                  "after": " "
+                }
+              },
+              "."
+            ]
+          ],
+          "score": 0.8096,
+          "text": "because in \u201c agitated \u201d situations , it can take time for the drugs to take effect , Maynard said .",
+          "nlpIndexSentence": 17
         }
       ],
       "label": "why"

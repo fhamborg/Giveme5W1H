@@ -16,19 +16,38 @@
   "url": "http://africa.chinadaily.com.cn/world/2017-05/09/content_29261603.htm",
   "newsCluster": {
     "CategoryId": 1,
-    "Category": "global_politics",
-    "TopicId": 1,
-    "Topic": "unspecific",
-    "EventId": 3,
-    "Event": "boko_haram_21_schoolgirls_freed",
-    "Url": "http://africa.chinadaily.com.cn/world/2017-05/09/content_29261603.htm"
+    "Category": "world",
+    "TopicId": 2,
+    "Topic": "legancy",
+    "EventId": 51,
+    "Event": "boko_haram_21_schoolgirls_freed"
   },
   "dId": "a386e5ed27e0877454b373d63dc29d8c2836321db3545f352c1f549a",
-  "fiveWoneH": {
+  "fiveWoneH": {},
+  "fiveWoneH_Metadata": {
+    "process_errors": {},
     "how": {
       "extracted": [
         {
           "parts": [
+            [
+              {
+                "nlpToken": {
+                  "index": 4,
+                  "word": "of",
+                  "originalText": "of",
+                  "lemma": "of",
+                  "characterOffsetBegin": 20,
+                  "characterOffsetEnd": 22,
+                  "pos": "IN",
+                  "ner": "O",
+                  "speaker": "PER0",
+                  "before": " ",
+                  "after": " "
+                }
+              },
+              "IN"
+            ],
             [
               {
                 "nlpToken": {
@@ -102,10 +121,238 @@
                 ]
               },
               "JJ"
+            ],
+            [
+              {
+                "nlpToken": {
+                  "index": 6,
+                  "word": "girls",
+                  "originalText": "girls",
+                  "lemma": "girl",
+                  "characterOffsetBegin": 32,
+                  "characterOffsetEnd": 37,
+                  "pos": "NNS",
+                  "ner": "O",
+                  "speaker": "PER0",
+                  "before": " ",
+                  "after": " "
+                }
+              },
+              "NNS"
+            ],
+            [
+              {
+                "nlpToken": {
+                  "index": 7,
+                  "word": "by",
+                  "originalText": "by",
+                  "lemma": "by",
+                  "characterOffsetBegin": 38,
+                  "characterOffsetEnd": 40,
+                  "pos": "IN",
+                  "ner": "O",
+                  "speaker": "PER0",
+                  "before": " ",
+                  "after": " "
+                }
+              },
+              "IN"
+            ],
+            [
+              {
+                "nlpToken": {
+                  "index": 8,
+                  "word": "Boko",
+                  "originalText": "Boko",
+                  "lemma": "Boko",
+                  "characterOffsetBegin": 41,
+                  "characterOffsetEnd": 45,
+                  "pos": "NNP",
+                  "ner": "PERSON",
+                  "speaker": "PER0",
+                  "before": " ",
+                  "after": " "
+                },
+                "aida": [
+                  {
+                    "mention": {
+                      "allEntities": [
+                        {
+                          "kbIdentifier": "YAGO:Boko_Haram",
+                          "disambiguationScore": "1"
+                        }
+                      ],
+                      "offset": 41,
+                      "name": "Boko Haram",
+                      "length": 10,
+                      "bestEntity": {
+                        "kbIdentifier": "YAGO:Boko_Haram",
+                        "disambiguationScore": "1"
+                      }
+                    },
+                    "bestEntityMetadata": {
+                      "knowledgebase": "YAGO",
+                      "depictionurl": "http://upload.wikimedia.org/wikipedia/commons/1/1d/Logo_of_Boko_Haram.svg",
+                      "depictionthumbnailurl": "http://upload.wikimedia.org/wikipedia/commons/thumbLogo_of_Boko_Haram.svg/200px-Logo_of_Boko_Haram.svg",
+                      "importance": 0.02576060224784451,
+                      "entityId": "Boko_Haram",
+                      "type": [
+                        "YAGO_wordnet_movement_108464601",
+                        "YAGO_yagoPermanentlyLocatedEntity",
+                        "YAGO_wikicategory_Rebel_groups_in_Nigeria",
+                        "YAGO_yagoLegalActorGeo",
+                        "YAGO_wordnet_organization_108008335",
+                        "YAGO_wordnet_social_group_107950920",
+                        "YAGO_wordnet_political_movement_108472335",
+                        "YAGO_wordnet_terrorist_organization_108392137",
+                        "YAGO_wordnet_entity_100001740",
+                        "YAGO_wikicategory_United_Kingdom_Home_Office_designated_terrorist_groups",
+                        "YAGO_wordnet_group_100031264",
+                        "YAGO_wikicategory_Islamist_groups",
+                        "YAGO_yagoLegalActor",
+                        "YAGO_wikicategory_Religious_organizations_established_in_2002",
+                        "YAGO_wikicategory_Jihadist_organizations",
+                        "YAGO_wordnet_abstraction_100002137"
+                      ],
+                      "readableRepr": "Boko Haram",
+                      "url": "http://en.wikipedia.org/wiki/Boko%20Haram"
+                    }
+                  }
+                ]
+              },
+              "NNP"
+            ],
+            [
+              {
+                "nlpToken": {
+                  "index": 9,
+                  "word": "Haram",
+                  "originalText": "Haram",
+                  "lemma": "Haram",
+                  "characterOffsetBegin": 46,
+                  "characterOffsetEnd": 51,
+                  "pos": "NNP",
+                  "ner": "PERSON",
+                  "speaker": "PER0",
+                  "before": " ",
+                  "after": ""
+                },
+                "aida": [
+                  {
+                    "mention": {
+                      "allEntities": [
+                        {
+                          "kbIdentifier": "YAGO:Boko_Haram",
+                          "disambiguationScore": "1"
+                        }
+                      ],
+                      "offset": 41,
+                      "name": "Boko Haram",
+                      "length": 10,
+                      "bestEntity": {
+                        "kbIdentifier": "YAGO:Boko_Haram",
+                        "disambiguationScore": "1"
+                      }
+                    },
+                    "bestEntityMetadata": {
+                      "knowledgebase": "YAGO",
+                      "depictionurl": "http://upload.wikimedia.org/wikipedia/commons/1/1d/Logo_of_Boko_Haram.svg",
+                      "depictionthumbnailurl": "http://upload.wikimedia.org/wikipedia/commons/thumbLogo_of_Boko_Haram.svg/200px-Logo_of_Boko_Haram.svg",
+                      "importance": 0.02576060224784451,
+                      "entityId": "Boko_Haram",
+                      "type": [
+                        "YAGO_wordnet_movement_108464601",
+                        "YAGO_yagoPermanentlyLocatedEntity",
+                        "YAGO_wikicategory_Rebel_groups_in_Nigeria",
+                        "YAGO_yagoLegalActorGeo",
+                        "YAGO_wordnet_organization_108008335",
+                        "YAGO_wordnet_social_group_107950920",
+                        "YAGO_wordnet_political_movement_108472335",
+                        "YAGO_wordnet_terrorist_organization_108392137",
+                        "YAGO_wordnet_entity_100001740",
+                        "YAGO_wikicategory_United_Kingdom_Home_Office_designated_terrorist_groups",
+                        "YAGO_wordnet_group_100031264",
+                        "YAGO_wikicategory_Islamist_groups",
+                        "YAGO_yagoLegalActor",
+                        "YAGO_wikicategory_Religious_organizations_established_in_2002",
+                        "YAGO_wikicategory_Jihadist_organizations",
+                        "YAGO_wordnet_abstraction_100002137"
+                      ],
+                      "readableRepr": "Boko Haram",
+                      "url": "http://en.wikipedia.org/wiki/Boko%20Haram"
+                    }
+                  }
+                ]
+              },
+              "NNP"
+            ],
+            [
+              {
+                "nlpToken": {
+                  "index": 10,
+                  "word": ".",
+                  "originalText": ".",
+                  "lemma": ".",
+                  "characterOffsetBegin": 51,
+                  "characterOffsetEnd": 52,
+                  "pos": ".",
+                  "ner": "O",
+                  "speaker": "PER0",
+                  "before": "",
+                  "after": " "
+                },
+                "aida": [
+                  {
+                    "mention": {
+                      "allEntities": [
+                        {
+                          "kbIdentifier": "YAGO:Boko_Haram",
+                          "disambiguationScore": "1"
+                        }
+                      ],
+                      "offset": 41,
+                      "name": "Boko Haram",
+                      "length": 10,
+                      "bestEntity": {
+                        "kbIdentifier": "YAGO:Boko_Haram",
+                        "disambiguationScore": "1"
+                      }
+                    },
+                    "bestEntityMetadata": {
+                      "knowledgebase": "YAGO",
+                      "depictionurl": "http://upload.wikimedia.org/wikipedia/commons/1/1d/Logo_of_Boko_Haram.svg",
+                      "depictionthumbnailurl": "http://upload.wikimedia.org/wikipedia/commons/thumbLogo_of_Boko_Haram.svg/200px-Logo_of_Boko_Haram.svg",
+                      "importance": 0.02576060224784451,
+                      "entityId": "Boko_Haram",
+                      "type": [
+                        "YAGO_wordnet_movement_108464601",
+                        "YAGO_yagoPermanentlyLocatedEntity",
+                        "YAGO_wikicategory_Rebel_groups_in_Nigeria",
+                        "YAGO_yagoLegalActorGeo",
+                        "YAGO_wordnet_organization_108008335",
+                        "YAGO_wordnet_social_group_107950920",
+                        "YAGO_wordnet_political_movement_108472335",
+                        "YAGO_wordnet_terrorist_organization_108392137",
+                        "YAGO_wordnet_entity_100001740",
+                        "YAGO_wikicategory_United_Kingdom_Home_Office_designated_terrorist_groups",
+                        "YAGO_wordnet_group_100031264",
+                        "YAGO_wikicategory_Islamist_groups",
+                        "YAGO_yagoLegalActor",
+                        "YAGO_wikicategory_Religious_organizations_established_in_2002",
+                        "YAGO_wikicategory_Jihadist_organizations",
+                        "YAGO_wordnet_abstraction_100002137"
+                      ],
+                      "readableRepr": "Boko Haram",
+                      "url": "http://en.wikipedia.org/wiki/Boko%20Haram"
+                    }
+                  }
+                ]
+              },
+              "."
             ]
           ],
-          "score": 1.3333333333333333,
-          "text": "Nigerian"
+          "score": 1.0,
+          "text": "of Nigerian girls by Boko Haram ."
         }
       ],
       "label": "how"
@@ -398,312 +645,10 @@
                 }
               },
               "NN"
-            ],
-            [
-              {
-                "nlpToken": {
-                  "index": 4,
-                  "word": "freed",
-                  "originalText": "freed",
-                  "lemma": "free",
-                  "characterOffsetBegin": 608,
-                  "characterOffsetEnd": 613,
-                  "pos": "VBN",
-                  "ner": "O",
-                  "speaker": "PER0",
-                  "before": " ",
-                  "after": " "
-                }
-              },
-              "VBN"
-            ],
-            [
-              {
-                "nlpToken": {
-                  "index": 5,
-                  "word": "the",
-                  "originalText": "the",
-                  "lemma": "the",
-                  "characterOffsetBegin": 614,
-                  "characterOffsetEnd": 617,
-                  "pos": "DT",
-                  "ner": "O",
-                  "speaker": "PER0",
-                  "before": " ",
-                  "after": " "
-                }
-              },
-              "DT"
-            ],
-            [
-              {
-                "nlpToken": {
-                  "index": 6,
-                  "word": "girls",
-                  "originalText": "girls",
-                  "lemma": "girl",
-                  "characterOffsetBegin": 618,
-                  "characterOffsetEnd": 623,
-                  "pos": "NNS",
-                  "ner": "O",
-                  "speaker": "PER0",
-                  "before": " ",
-                  "after": " "
-                }
-              },
-              "NNS"
-            ],
-            [
-              {
-                "nlpToken": {
-                  "index": 7,
-                  "word": "on",
-                  "originalText": "on",
-                  "lemma": "on",
-                  "characterOffsetBegin": 624,
-                  "characterOffsetEnd": 626,
-                  "pos": "IN",
-                  "ner": "O",
-                  "speaker": "PER0",
-                  "before": " ",
-                  "after": " "
-                }
-              },
-              "IN"
-            ],
-            [
-              {
-                "nlpToken": {
-                  "index": 8,
-                  "word": "late",
-                  "originalText": "late",
-                  "lemma": "late",
-                  "characterOffsetBegin": 627,
-                  "characterOffsetEnd": 631,
-                  "pos": "JJ",
-                  "ner": "DATE",
-                  "normalizedNER": "2017-05-06",
-                  "speaker": "PER0",
-                  "before": " ",
-                  "after": " ",
-                  "timex": {
-                    "tid": "t6",
-                    "type": "DATE",
-                    "value": "2017-05-06"
-                  }
-                }
-              },
-              "JJ"
-            ],
-            [
-              {
-                "nlpToken": {
-                  "index": 9,
-                  "word": "Saturday",
-                  "originalText": "Saturday",
-                  "lemma": "Saturday",
-                  "characterOffsetBegin": 632,
-                  "characterOffsetEnd": 640,
-                  "pos": "NNP",
-                  "ner": "DATE",
-                  "normalizedNER": "2017-05-06",
-                  "speaker": "PER0",
-                  "before": " ",
-                  "after": " ",
-                  "timex": {
-                    "tid": "t6",
-                    "type": "DATE",
-                    "value": "2017-05-06"
-                  }
-                }
-              },
-              "NNP"
-            ],
-            [
-              {
-                "nlpToken": {
-                  "index": 10,
-                  "word": "in",
-                  "originalText": "in",
-                  "lemma": "in",
-                  "characterOffsetBegin": 641,
-                  "characterOffsetEnd": 643,
-                  "pos": "IN",
-                  "ner": "O",
-                  "speaker": "PER0",
-                  "before": " ",
-                  "after": " "
-                }
-              },
-              "IN"
-            ],
-            [
-              {
-                "nlpToken": {
-                  "index": 11,
-                  "word": "exchange",
-                  "originalText": "exchange",
-                  "lemma": "exchange",
-                  "characterOffsetBegin": 644,
-                  "characterOffsetEnd": 652,
-                  "pos": "NN",
-                  "ner": "O",
-                  "speaker": "PER0",
-                  "before": " ",
-                  "after": " "
-                }
-              },
-              "NN"
-            ],
-            [
-              {
-                "nlpToken": {
-                  "index": 12,
-                  "word": "for",
-                  "originalText": "for",
-                  "lemma": "for",
-                  "characterOffsetBegin": 653,
-                  "characterOffsetEnd": 656,
-                  "pos": "IN",
-                  "ner": "O",
-                  "speaker": "PER0",
-                  "before": " ",
-                  "after": " "
-                }
-              },
-              "IN"
-            ],
-            [
-              {
-                "nlpToken": {
-                  "index": 13,
-                  "word": "Boko",
-                  "originalText": "Boko",
-                  "lemma": "Boko",
-                  "characterOffsetBegin": 657,
-                  "characterOffsetEnd": 661,
-                  "pos": "NNP",
-                  "ner": "PERSON",
-                  "speaker": "PER0",
-                  "before": " ",
-                  "after": " "
-                },
-                "aida": [
-                  {
-                    "mention": {
-                      "allEntities": [
-                        {
-                          "kbIdentifier": "YAGO:Boko_Haram",
-                          "disambiguationScore": "1"
-                        }
-                      ],
-                      "offset": 657,
-                      "name": "Boko Haram",
-                      "length": 10,
-                      "bestEntity": {
-                        "kbIdentifier": "YAGO:Boko_Haram",
-                        "disambiguationScore": "1"
-                      }
-                    },
-                    "bestEntityMetadata": {
-                      "knowledgebase": "YAGO",
-                      "depictionurl": "http://upload.wikimedia.org/wikipedia/commons/1/1d/Logo_of_Boko_Haram.svg",
-                      "depictionthumbnailurl": "http://upload.wikimedia.org/wikipedia/commons/thumbLogo_of_Boko_Haram.svg/200px-Logo_of_Boko_Haram.svg",
-                      "importance": 0.02576060224784451,
-                      "entityId": "Boko_Haram",
-                      "type": [
-                        "YAGO_wordnet_movement_108464601",
-                        "YAGO_yagoPermanentlyLocatedEntity",
-                        "YAGO_wikicategory_Rebel_groups_in_Nigeria",
-                        "YAGO_yagoLegalActorGeo",
-                        "YAGO_wordnet_organization_108008335",
-                        "YAGO_wordnet_social_group_107950920",
-                        "YAGO_wordnet_political_movement_108472335",
-                        "YAGO_wordnet_terrorist_organization_108392137",
-                        "YAGO_wordnet_entity_100001740",
-                        "YAGO_wikicategory_United_Kingdom_Home_Office_designated_terrorist_groups",
-                        "YAGO_wordnet_group_100031264",
-                        "YAGO_wikicategory_Islamist_groups",
-                        "YAGO_yagoLegalActor",
-                        "YAGO_wikicategory_Religious_organizations_established_in_2002",
-                        "YAGO_wikicategory_Jihadist_organizations",
-                        "YAGO_wordnet_abstraction_100002137"
-                      ],
-                      "readableRepr": "Boko Haram",
-                      "url": "http://en.wikipedia.org/wiki/Boko%20Haram"
-                    }
-                  }
-                ]
-              },
-              "NNP"
-            ],
-            [
-              {
-                "nlpToken": {
-                  "index": 14,
-                  "word": "Haram",
-                  "originalText": "Haram",
-                  "lemma": "Haram",
-                  "characterOffsetBegin": 662,
-                  "characterOffsetEnd": 667,
-                  "pos": "NNP",
-                  "ner": "PERSON",
-                  "speaker": "PER0",
-                  "before": " ",
-                  "after": " "
-                },
-                "aida": [
-                  {
-                    "mention": {
-                      "allEntities": [
-                        {
-                          "kbIdentifier": "YAGO:Boko_Haram",
-                          "disambiguationScore": "1"
-                        }
-                      ],
-                      "offset": 657,
-                      "name": "Boko Haram",
-                      "length": 10,
-                      "bestEntity": {
-                        "kbIdentifier": "YAGO:Boko_Haram",
-                        "disambiguationScore": "1"
-                      }
-                    },
-                    "bestEntityMetadata": {
-                      "knowledgebase": "YAGO",
-                      "depictionurl": "http://upload.wikimedia.org/wikipedia/commons/1/1d/Logo_of_Boko_Haram.svg",
-                      "depictionthumbnailurl": "http://upload.wikimedia.org/wikipedia/commons/thumbLogo_of_Boko_Haram.svg/200px-Logo_of_Boko_Haram.svg",
-                      "importance": 0.02576060224784451,
-                      "entityId": "Boko_Haram",
-                      "type": [
-                        "YAGO_wordnet_movement_108464601",
-                        "YAGO_yagoPermanentlyLocatedEntity",
-                        "YAGO_wikicategory_Rebel_groups_in_Nigeria",
-                        "YAGO_yagoLegalActorGeo",
-                        "YAGO_wordnet_organization_108008335",
-                        "YAGO_wordnet_social_group_107950920",
-                        "YAGO_wordnet_political_movement_108472335",
-                        "YAGO_wordnet_terrorist_organization_108392137",
-                        "YAGO_wordnet_entity_100001740",
-                        "YAGO_wikicategory_United_Kingdom_Home_Office_designated_terrorist_groups",
-                        "YAGO_wordnet_group_100031264",
-                        "YAGO_wikicategory_Islamist_groups",
-                        "YAGO_yagoLegalActor",
-                        "YAGO_wikicategory_Religious_organizations_established_in_2002",
-                        "YAGO_wikicategory_Jihadist_organizations",
-                        "YAGO_wordnet_abstraction_100002137"
-                      ],
-                      "readableRepr": "Boko Haram",
-                      "url": "http://en.wikipedia.org/wiki/Boko%20Haram"
-                    }
-                  }
-                ]
-              },
-              "NNP"
             ]
           ],
-          "score": 0.34523809523809523,
-          "text": "The extremist group freed the girls on late Saturday in exchange for Boko Haram",
+          "score": 0.35266666666666674,
+          "text": "The extremist group",
           "nlpIndexSentence": 5
         }
       ],
@@ -788,13 +733,10 @@
               "NNP"
             ]
           ],
-          "score": 1.0,
+          "score": 0.6699999999999999,
           "text": "Nigeria",
           "enhancement": {
             "openstreetmap_nominatim": {
-              "place_id": "179250241",
-              "licence": "Data \u00a9 OpenStreetMap contributors, ODbL 1.0. http://www.openstreetmap.org/copyright",
-              "osm_type": "relation",
               "osm_id": "192787",
               "boundingbox": [
                 4.0690959,
@@ -802,13 +744,16 @@
                 2.676932,
                 14.678014
               ],
-              "lat": "9.6000359",
-              "lon": "7.9999721",
-              "display_name": "Nigeria",
-              "class": "boundary",
-              "type": "administrative",
+              "licence": "Data \u00a9 OpenStreetMap contributors, ODbL 1.0. http://www.openstreetmap.org/copyright",
               "importance": 0.29815056934711,
-              "icon": "https://nominatim.openstreetmap.org/images/mapicons/poi_boundary_administrative.p.20.png"
+              "icon": "https://nominatim.openstreetmap.org/images/mapicons/poi_boundary_administrative.p.20.png",
+              "osm_type": "relation",
+              "display_name": "Nigeria",
+              "lat": "9.6000359",
+              "type": "administrative",
+              "place_id": "179250241",
+              "lon": "7.9999721",
+              "class": "boundary"
             }
           },
           "nlpIndexSentence": 3
@@ -840,20 +785,30 @@
                     "type": "DATE",
                     "value": "2017-05-08"
                   }
-                }
+                },
+                "heideltime": [
+                  {
+                    "@tid": "t8",
+                    "@type": "DATE",
+                    "@value": "2017-05-08",
+                    "#text": "Monday",
+                    "characterOffset": [
+                      580,
+                      586
+                    ]
+                  }
+                ]
               },
               "NNP"
             ]
           ],
-          "score": 0.7388926827009885,
+          "score": 0.40946482534131534,
           "text": "Monday",
           "enhancement": {
-            "timex": [
-              {
-                "start_date": "2017-05-08T00:00:00",
-                "end_date": "2017-05-08T23:59:59"
-              }
-            ]
+            "timex": {
+              "start_date": "2017-05-08T00:00:00",
+              "end_date": "2017-05-08T23:59:59"
+            }
           },
           "nlpIndexSentence": 4
         }

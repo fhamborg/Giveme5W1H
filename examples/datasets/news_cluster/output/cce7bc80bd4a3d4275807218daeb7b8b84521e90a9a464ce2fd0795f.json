@@ -23,7 +23,9 @@
     "Event": "woman_gets_284_billion_electric_bil"
   },
   "dId": "cce7bc80bd4a3d4275807218daeb7b8b84521e90a9a464ce2fd0795f",
-  "fiveWoneH": {
+  "fiveWoneH": {},
+  "fiveWoneH_Metadata": {
+    "process_errors": {},
     "who": {
       "extracted": [
         {
@@ -793,201 +795,6 @@
       ],
       "label": "how"
     },
-    "why": {
-      "extracted": [
-        {
-          "parts": [
-            [
-              {
-                "nlpToken": {
-                  "index": 11,
-                  "word": "because",
-                  "originalText": "because",
-                  "lemma": "because",
-                  "characterOffsetBegin": 695,
-                  "characterOffsetEnd": 702,
-                  "pos": "IN",
-                  "ner": "O",
-                  "speaker": "PER0",
-                  "before": " ",
-                  "after": " "
-                }
-              },
-              "IN"
-            ],
-            [
-              {
-                "nlpToken": {
-                  "index": 12,
-                  "word": "her",
-                  "originalText": "her",
-                  "lemma": "she",
-                  "characterOffsetBegin": 703,
-                  "characterOffsetEnd": 706,
-                  "pos": "PRP$",
-                  "ner": "O",
-                  "speaker": "PER0",
-                  "before": " ",
-                  "after": " "
-                }
-              },
-              "PRP$"
-            ],
-            [
-              {
-                "nlpToken": {
-                  "index": 13,
-                  "word": "bill",
-                  "originalText": "bill",
-                  "lemma": "bill",
-                  "characterOffsetBegin": 707,
-                  "characterOffsetEnd": 711,
-                  "pos": "NN",
-                  "ner": "O",
-                  "speaker": "PER0",
-                  "before": " ",
-                  "after": " "
-                }
-              },
-              "NN"
-            ],
-            [
-              {
-                "nlpToken": {
-                  "index": 14,
-                  "word": "was",
-                  "originalText": "was",
-                  "lemma": "be",
-                  "characterOffsetBegin": 712,
-                  "characterOffsetEnd": 715,
-                  "pos": "VBD",
-                  "ner": "O",
-                  "speaker": "PER0",
-                  "before": " ",
-                  "after": " "
-                }
-              },
-              "VBD"
-            ],
-            [
-              {
-                "nlpToken": {
-                  "index": 15,
-                  "word": "more",
-                  "originalText": "more",
-                  "lemma": "more",
-                  "characterOffsetBegin": 716,
-                  "characterOffsetEnd": 720,
-                  "pos": "JJR",
-                  "ner": "O",
-                  "speaker": "PER0",
-                  "before": " ",
-                  "after": " "
-                }
-              },
-              "JJR"
-            ],
-            [
-              {
-                "nlpToken": {
-                  "index": 16,
-                  "word": "than",
-                  "originalText": "than",
-                  "lemma": "than",
-                  "characterOffsetBegin": 721,
-                  "characterOffsetEnd": 725,
-                  "pos": "IN",
-                  "ner": "O",
-                  "speaker": "PER0",
-                  "before": " ",
-                  "after": " "
-                }
-              },
-              "IN"
-            ],
-            [
-              {
-                "nlpToken": {
-                  "index": 17,
-                  "word": "$",
-                  "originalText": "$",
-                  "lemma": "$",
-                  "characterOffsetBegin": 726,
-                  "characterOffsetEnd": 727,
-                  "pos": "$",
-                  "ner": "MONEY",
-                  "normalizedNER": ">$2.84E11",
-                  "speaker": "PER0",
-                  "before": " ",
-                  "after": ""
-                }
-              },
-              "$"
-            ],
-            [
-              {
-                "nlpToken": {
-                  "index": 18,
-                  "word": "284",
-                  "originalText": "284",
-                  "lemma": "284",
-                  "characterOffsetBegin": 727,
-                  "characterOffsetEnd": 730,
-                  "pos": "CD",
-                  "ner": "MONEY",
-                  "normalizedNER": ">$2.84E11",
-                  "speaker": "PER0",
-                  "before": "",
-                  "after": " "
-                }
-              },
-              "CD"
-            ],
-            [
-              {
-                "nlpToken": {
-                  "index": 19,
-                  "word": "billion",
-                  "originalText": "billion",
-                  "lemma": "billion",
-                  "characterOffsetBegin": 731,
-                  "characterOffsetEnd": 738,
-                  "pos": "CD",
-                  "ner": "MONEY",
-                  "normalizedNER": ">$2.84E11",
-                  "speaker": "PER0",
-                  "before": " ",
-                  "after": ""
-                }
-              },
-              "CD"
-            ],
-            [
-              {
-                "nlpToken": {
-                  "index": 20,
-                  "word": ".",
-                  "originalText": ".",
-                  "lemma": ".",
-                  "characterOffsetBegin": 738,
-                  "characterOffsetEnd": 739,
-                  "pos": ".",
-                  "ner": "O",
-                  "speaker": "PER0",
-                  "before": "",
-                  "after": " "
-                }
-              },
-              "."
-            ]
-          ],
-          "score": 0.72,
-          "text": "because her bill was more than $ 284 billion .",
-          "nlpIndexSentence": 10
-        }
-      ],
-      "label": "why"
-    },
     "where": {
       "extracted": [
         {
@@ -1299,7 +1106,7 @@
               "NNP"
             ]
           ],
-          "score": 0.4781961525018092,
+          "score": 0.36946482534131536,
           "text": "Christmas",
           "enhancement": {
             "timex": {
@@ -1311,6 +1118,201 @@
         }
       ],
       "label": "when"
+    },
+    "why": {
+      "extracted": [
+        {
+          "parts": [
+            [
+              {
+                "nlpToken": {
+                  "index": 11,
+                  "word": "because",
+                  "originalText": "because",
+                  "lemma": "because",
+                  "characterOffsetBegin": 695,
+                  "characterOffsetEnd": 702,
+                  "pos": "IN",
+                  "ner": "O",
+                  "speaker": "PER0",
+                  "before": " ",
+                  "after": " "
+                }
+              },
+              "IN"
+            ],
+            [
+              {
+                "nlpToken": {
+                  "index": 12,
+                  "word": "her",
+                  "originalText": "her",
+                  "lemma": "she",
+                  "characterOffsetBegin": 703,
+                  "characterOffsetEnd": 706,
+                  "pos": "PRP$",
+                  "ner": "O",
+                  "speaker": "PER0",
+                  "before": " ",
+                  "after": " "
+                }
+              },
+              "PRP$"
+            ],
+            [
+              {
+                "nlpToken": {
+                  "index": 13,
+                  "word": "bill",
+                  "originalText": "bill",
+                  "lemma": "bill",
+                  "characterOffsetBegin": 707,
+                  "characterOffsetEnd": 711,
+                  "pos": "NN",
+                  "ner": "O",
+                  "speaker": "PER0",
+                  "before": " ",
+                  "after": " "
+                }
+              },
+              "NN"
+            ],
+            [
+              {
+                "nlpToken": {
+                  "index": 14,
+                  "word": "was",
+                  "originalText": "was",
+                  "lemma": "be",
+                  "characterOffsetBegin": 712,
+                  "characterOffsetEnd": 715,
+                  "pos": "VBD",
+                  "ner": "O",
+                  "speaker": "PER0",
+                  "before": " ",
+                  "after": " "
+                }
+              },
+              "VBD"
+            ],
+            [
+              {
+                "nlpToken": {
+                  "index": 15,
+                  "word": "more",
+                  "originalText": "more",
+                  "lemma": "more",
+                  "characterOffsetBegin": 716,
+                  "characterOffsetEnd": 720,
+                  "pos": "JJR",
+                  "ner": "O",
+                  "speaker": "PER0",
+                  "before": " ",
+                  "after": " "
+                }
+              },
+              "JJR"
+            ],
+            [
+              {
+                "nlpToken": {
+                  "index": 16,
+                  "word": "than",
+                  "originalText": "than",
+                  "lemma": "than",
+                  "characterOffsetBegin": 721,
+                  "characterOffsetEnd": 725,
+                  "pos": "IN",
+                  "ner": "O",
+                  "speaker": "PER0",
+                  "before": " ",
+                  "after": " "
+                }
+              },
+              "IN"
+            ],
+            [
+              {
+                "nlpToken": {
+                  "index": 17,
+                  "word": "$",
+                  "originalText": "$",
+                  "lemma": "$",
+                  "characterOffsetBegin": 726,
+                  "characterOffsetEnd": 727,
+                  "pos": "$",
+                  "ner": "MONEY",
+                  "normalizedNER": ">$2.84E11",
+                  "speaker": "PER0",
+                  "before": " ",
+                  "after": ""
+                }
+              },
+              "$"
+            ],
+            [
+              {
+                "nlpToken": {
+                  "index": 18,
+                  "word": "284",
+                  "originalText": "284",
+                  "lemma": "284",
+                  "characterOffsetBegin": 727,
+                  "characterOffsetEnd": 730,
+                  "pos": "CD",
+                  "ner": "MONEY",
+                  "normalizedNER": ">$2.84E11",
+                  "speaker": "PER0",
+                  "before": "",
+                  "after": " "
+                }
+              },
+              "CD"
+            ],
+            [
+              {
+                "nlpToken": {
+                  "index": 19,
+                  "word": "billion",
+                  "originalText": "billion",
+                  "lemma": "billion",
+                  "characterOffsetBegin": 731,
+                  "characterOffsetEnd": 738,
+                  "pos": "CD",
+                  "ner": "MONEY",
+                  "normalizedNER": ">$2.84E11",
+                  "speaker": "PER0",
+                  "before": " ",
+                  "after": ""
+                }
+              },
+              "CD"
+            ],
+            [
+              {
+                "nlpToken": {
+                  "index": 20,
+                  "word": ".",
+                  "originalText": ".",
+                  "lemma": ".",
+                  "characterOffsetBegin": 738,
+                  "characterOffsetEnd": 739,
+                  "pos": ".",
+                  "ner": "O",
+                  "speaker": "PER0",
+                  "before": "",
+                  "after": " "
+                }
+              },
+              "."
+            ]
+          ],
+          "score": 0.72,
+          "text": "because her bill was more than $ 284 billion .",
+          "nlpIndexSentence": 10
+        }
+      ],
+      "label": "why"
     }
   }
 }

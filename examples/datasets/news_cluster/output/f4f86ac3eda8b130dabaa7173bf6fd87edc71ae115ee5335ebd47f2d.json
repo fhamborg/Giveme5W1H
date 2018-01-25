@@ -20,45 +20,15 @@
   "newsCluster": {
     "CategoryId": 5,
     "Category": "sports",
-    "TopicId": 1,
-    "Topic": "unspecific",
-    "EventId": 13,
-    "Event": "cubs_win_championship",
-    "Url": "http://www.usatoday.com/story/sports/ftw/2016/11/03/sports-world-reacts-to-the-chicago-cubs-winning-their-first-world-series-since-1908/93225730/"
+    "TopicId": 2,
+    "Topic": "legancy",
+    "EventId": 61,
+    "Event": "cubs_win_championship"
   },
   "dId": "f4f86ac3eda8b130dabaa7173bf6fd87edc71ae115ee5335ebd47f2d",
-  "fiveWoneH": {
-    "how": {
-      "extracted": [
-        {
-          "parts": [
-            [
-              {
-                "nlpToken": {
-                  "index": 13,
-                  "word": "first",
-                  "originalText": "first",
-                  "lemma": "first",
-                  "characterOffsetBegin": 1390,
-                  "characterOffsetEnd": 1395,
-                  "pos": "JJ",
-                  "ner": "ORDINAL",
-                  "normalizedNER": "1.0",
-                  "speaker": "PER0",
-                  "before": " ",
-                  "after": " "
-                }
-              },
-              "JJ"
-            ]
-          ],
-          "score": 1.071656050955414,
-          "text": "first",
-          "nlpIndexSentence": 21
-        }
-      ],
-      "label": "how"
-    },
+  "fiveWoneH": {},
+  "fiveWoneH_Metadata": {
+    "process_errors": {},
     "who": {
       "extracted": [
         {
@@ -66,317 +36,42 @@
             [
               {
                 "nlpToken": {
+                  "index": 1,
+                  "word": "Sports",
+                  "originalText": "Sports",
+                  "lemma": "Sports",
+                  "characterOffsetBegin": 0,
+                  "characterOffsetEnd": 6,
+                  "pos": "NNP",
+                  "ner": "O",
+                  "speaker": "PER0",
+                  "before": "",
+                  "after": " "
+                }
+              },
+              "NNP"
+            ],
+            [
+              {
+                "nlpToken": {
                   "index": 2,
-                  "word": "Brett",
-                  "originalText": "Brett",
-                  "lemma": "Brett",
-                  "characterOffsetBegin": 1145,
-                  "characterOffsetEnd": 1150,
-                  "pos": "NNP",
-                  "ner": "PERSON",
-                  "speaker": "PER0",
-                  "before": " ",
-                  "after": " "
-                },
-                "aida": [
-                  {
-                    "mention": {
-                      "allEntities": [
-                        {
-                          "kbIdentifier": "YAGO:Brett_Anderson_\\u0028baseball\\u0029",
-                          "disambiguationScore": "1"
-                        }
-                      ],
-                      "offset": 1145,
-                      "name": "Brett Anderson",
-                      "length": 14,
-                      "bestEntity": {
-                        "kbIdentifier": "YAGO:Brett_Anderson_\\u0028baseball\\u0029",
-                        "disambiguationScore": "1"
-                      }
-                    },
-                    "bestEntityMetadata": {
-                      "knowledgebase": "YAGO",
-                      "depictionurl": "http://upload.wikimedia.org/wikipedia/en/f/f0/BrettAnderson_warmup.jpg",
-                      "depictionthumbnailurl": "http://upload.wikimedia.org/wikipedia/en/thumbBrettAnderson_warmup.jpg/200px-BrettAnderson_warmup.jpg",
-                      "importance": 0.029901529714204695,
-                      "entityId": "Brett_Anderson_\\u0028baseball\\u0029",
-                      "type": [
-                        "YAGO_wordnet_player_110439851",
-                        "YAGO_wordnet_medalist_110305062",
-                        "YAGO_yagoLegalActorGeo",
-                        "YAGO_wordnet_athlete_109820263",
-                        "YAGO_wordnet_winner_110782940",
-                        "YAGO_wordnet_person_100007846",
-                        "YAGO_wikicategory_Living_people",
-                        "YAGO_wikicategory_Sacramento_River_Cats_players",
-                        "YAGO_wikicategory_South_Bend_Silver_Hawks_players",
-                        "YAGO_wikicategory_Visalia_Oaks_players",
-                        "YAGO_wikicategory_Olympic_baseball_players_of_the_United_States",
-                        "YAGO_wikicategory_People_from_Stillwater\\u002c_Oklahoma",
-                        "YAGO_yagoLegalActor",
-                        "YAGO_wordnet_contestant_109613191",
-                        "YAGO_wordnet_living_thing_100004258",
-                        "YAGO_wikicategory_Stockton_Ports_players",
-                        "YAGO_wordnet_physical_entity_100001930",
-                        "YAGO_wordnet_causal_agent_100007347",
-                        "YAGO_wikicategory_Arizona_League_Athletics_players",
-                        "YAGO_wikicategory_Baseball_players_at_the_2008_Summer_Olympics",
-                        "YAGO_wordnet_entity_100001740",
-                        "YAGO_wordnet_object_100002684",
-                        "YAGO_wordnet_organism_100004475",
-                        "YAGO_wikicategory_All\\u002dStar_Futures_Game_players",
-                        "YAGO_wikicategory_Oakland_Athletics_players",
-                        "YAGO_wordnet_whole_100003553",
-                        "YAGO_wikicategory_People_from_Midland\\u002c_Texas",
-                        "YAGO_wordnet_ballplayer_109835506",
-                        "YAGO_wikicategory_Olympic_bronze_medalists_for_the_United_States",
-                        "YAGO_wikicategory_Olympic_medalists_in_baseball",
-                        "YAGO_wikicategory_Midland_RockHounds_players",
-                        "YAGO_wikicategory_Medalists_at_the_2008_Summer_Olympics"
-                      ],
-                      "readableRepr": "Brett Anderson (baseball)",
-                      "url": "http://en.wikipedia.org/wiki/Brett%20Anderson%20%28baseball%29"
-                    }
-                  }
-                ]
-              },
-              "NNP"
-            ],
-            [
-              {
-                "nlpToken": {
-                  "index": 3,
-                  "word": "Anderson",
-                  "originalText": "Anderson",
-                  "lemma": "Anderson",
-                  "characterOffsetBegin": 1151,
-                  "characterOffsetEnd": 1159,
-                  "pos": "NNP",
-                  "ner": "PERSON",
-                  "speaker": "PER0",
-                  "before": " ",
-                  "after": " "
-                },
-                "aida": [
-                  {
-                    "mention": {
-                      "allEntities": [
-                        {
-                          "kbIdentifier": "YAGO:Brett_Anderson_\\u0028baseball\\u0029",
-                          "disambiguationScore": "1"
-                        }
-                      ],
-                      "offset": 1145,
-                      "name": "Brett Anderson",
-                      "length": 14,
-                      "bestEntity": {
-                        "kbIdentifier": "YAGO:Brett_Anderson_\\u0028baseball\\u0029",
-                        "disambiguationScore": "1"
-                      }
-                    },
-                    "bestEntityMetadata": {
-                      "knowledgebase": "YAGO",
-                      "depictionurl": "http://upload.wikimedia.org/wikipedia/en/f/f0/BrettAnderson_warmup.jpg",
-                      "depictionthumbnailurl": "http://upload.wikimedia.org/wikipedia/en/thumbBrettAnderson_warmup.jpg/200px-BrettAnderson_warmup.jpg",
-                      "importance": 0.029901529714204695,
-                      "entityId": "Brett_Anderson_\\u0028baseball\\u0029",
-                      "type": [
-                        "YAGO_wordnet_player_110439851",
-                        "YAGO_wordnet_medalist_110305062",
-                        "YAGO_yagoLegalActorGeo",
-                        "YAGO_wordnet_athlete_109820263",
-                        "YAGO_wordnet_winner_110782940",
-                        "YAGO_wordnet_person_100007846",
-                        "YAGO_wikicategory_Living_people",
-                        "YAGO_wikicategory_Sacramento_River_Cats_players",
-                        "YAGO_wikicategory_South_Bend_Silver_Hawks_players",
-                        "YAGO_wikicategory_Visalia_Oaks_players",
-                        "YAGO_wikicategory_Olympic_baseball_players_of_the_United_States",
-                        "YAGO_wikicategory_People_from_Stillwater\\u002c_Oklahoma",
-                        "YAGO_yagoLegalActor",
-                        "YAGO_wordnet_contestant_109613191",
-                        "YAGO_wordnet_living_thing_100004258",
-                        "YAGO_wikicategory_Stockton_Ports_players",
-                        "YAGO_wordnet_physical_entity_100001930",
-                        "YAGO_wordnet_causal_agent_100007347",
-                        "YAGO_wikicategory_Arizona_League_Athletics_players",
-                        "YAGO_wikicategory_Baseball_players_at_the_2008_Summer_Olympics",
-                        "YAGO_wordnet_entity_100001740",
-                        "YAGO_wordnet_object_100002684",
-                        "YAGO_wordnet_organism_100004475",
-                        "YAGO_wikicategory_All\\u002dStar_Futures_Game_players",
-                        "YAGO_wikicategory_Oakland_Athletics_players",
-                        "YAGO_wordnet_whole_100003553",
-                        "YAGO_wikicategory_People_from_Midland\\u002c_Texas",
-                        "YAGO_wordnet_ballplayer_109835506",
-                        "YAGO_wikicategory_Olympic_bronze_medalists_for_the_United_States",
-                        "YAGO_wikicategory_Olympic_medalists_in_baseball",
-                        "YAGO_wikicategory_Midland_RockHounds_players",
-                        "YAGO_wikicategory_Medalists_at_the_2008_Summer_Olympics"
-                      ],
-                      "readableRepr": "Brett Anderson (baseball)",
-                      "url": "http://en.wikipedia.org/wiki/Brett%20Anderson%20%28baseball%29"
-                    }
-                  }
-                ]
-              },
-              "NNP"
-            ],
-            [
-              {
-                "nlpToken": {
-                  "index": 4,
-                  "word": "-LRB-",
-                  "originalText": "(",
-                  "lemma": "-lrb-",
-                  "characterOffsetBegin": 1160,
-                  "characterOffsetEnd": 1161,
-                  "pos": "-LRB-",
+                  "word": "world",
+                  "originalText": "world",
+                  "lemma": "world",
+                  "characterOffsetBegin": 7,
+                  "characterOffsetEnd": 12,
+                  "pos": "NN",
                   "ner": "O",
                   "speaker": "PER0",
                   "before": " ",
-                  "after": ""
-                }
-              },
-              "-LRB-"
-            ],
-            [
-              {
-                "nlpToken": {
-                  "index": 5,
-                  "word": "@BrettAnderson35",
-                  "originalText": "@BrettAnderson35",
-                  "lemma": "@BrettAnderson35",
-                  "characterOffsetBegin": 1161,
-                  "characterOffsetEnd": 1177,
-                  "pos": "NNP",
-                  "ner": "O",
-                  "speaker": "PER0",
-                  "before": "",
-                  "after": ""
-                }
-              },
-              "NNP"
-            ],
-            [
-              {
-                "nlpToken": {
-                  "index": 6,
-                  "word": "-RRB-",
-                  "originalText": ")",
-                  "lemma": "-rrb-",
-                  "characterOffsetBegin": 1177,
-                  "characterOffsetEnd": 1178,
-                  "pos": "-RRB-",
-                  "ner": "O",
-                  "speaker": "PER0",
-                  "before": "",
                   "after": " "
                 }
               },
-              "-RRB-"
-            ],
-            [
-              {
-                "nlpToken": {
-                  "index": 7,
-                  "word": "November",
-                  "originalText": "November",
-                  "lemma": "November",
-                  "characterOffsetBegin": 1179,
-                  "characterOffsetEnd": 1187,
-                  "pos": "NNP",
-                  "ner": "DATE",
-                  "normalizedNER": "2016-11-03",
-                  "speaker": "PER0",
-                  "before": " ",
-                  "after": " ",
-                  "timex": {
-                    "tid": "t15",
-                    "type": "DATE",
-                    "value": "2016-11-03"
-                  }
-                }
-              },
-              "NNP"
-            ],
-            [
-              {
-                "nlpToken": {
-                  "index": 8,
-                  "word": "3",
-                  "originalText": "3",
-                  "lemma": "3",
-                  "characterOffsetBegin": 1188,
-                  "characterOffsetEnd": 1189,
-                  "pos": "CD",
-                  "ner": "DATE",
-                  "normalizedNER": "2016-11-03",
-                  "speaker": "PER0",
-                  "before": " ",
-                  "after": "",
-                  "timex": {
-                    "tid": "t15",
-                    "type": "DATE",
-                    "value": "2016-11-03"
-                  }
-                }
-              },
-              "CD"
-            ],
-            [
-              {
-                "nlpToken": {
-                  "index": 9,
-                  "word": ",",
-                  "originalText": ",",
-                  "lemma": ",",
-                  "characterOffsetBegin": 1189,
-                  "characterOffsetEnd": 1190,
-                  "pos": ",",
-                  "ner": "DATE",
-                  "normalizedNER": "2016-11-03",
-                  "speaker": "PER0",
-                  "before": "",
-                  "after": " ",
-                  "timex": {
-                    "tid": "t15",
-                    "type": "DATE",
-                    "value": "2016-11-03"
-                  }
-                }
-              },
-              ","
-            ],
-            [
-              {
-                "nlpToken": {
-                  "index": 10,
-                  "word": "2016",
-                  "originalText": "2016",
-                  "lemma": "2016",
-                  "characterOffsetBegin": 1191,
-                  "characterOffsetEnd": 1195,
-                  "pos": "CD",
-                  "ner": "DATE",
-                  "normalizedNER": "2016-11-03",
-                  "speaker": "PER0",
-                  "before": " ",
-                  "after": "\n",
-                  "timex": {
-                    "tid": "t15",
-                    "type": "DATE",
-                    "value": "2016-11-03"
-                  }
-                }
-              },
-              "CD"
+              "NN"
             ]
           ],
           "score": 1.0,
-          "text": "Brett Anderson ( @BrettAnderson35 ) November 3 , 2016",
-          "nlpIndexSentence": 17
+          "text": "Sports world"
         }
       ],
       "label": "who"
@@ -388,46 +83,583 @@
             [
               {
                 "nlpToken": {
-                  "index": 11,
-                  "word": "Knew",
-                  "originalText": "Knew",
-                  "lemma": "know",
-                  "characterOffsetBegin": 1196,
-                  "characterOffsetEnd": 1200,
-                  "pos": "VBD",
-                  "ner": "O",
-                  "speaker": "PER0",
-                  "before": "\n",
-                  "after": " "
-                }
-              },
-              "VBD"
-            ],
-            [
-              {
-                "nlpToken": {
-                  "index": 12,
-                  "word": "it",
-                  "originalText": "it",
-                  "lemma": "it",
-                  "characterOffsetBegin": 1201,
-                  "characterOffsetEnd": 1203,
-                  "pos": "PRP",
+                  "index": 3,
+                  "word": "reacts",
+                  "originalText": "reacts",
+                  "lemma": "react",
+                  "characterOffsetBegin": 13,
+                  "characterOffsetEnd": 19,
+                  "pos": "VBZ",
                   "ner": "O",
                   "speaker": "PER0",
                   "before": " ",
                   "after": " "
                 }
               },
-              "PRP"
+              "VBZ"
+            ],
+            [
+              {
+                "nlpToken": {
+                  "index": 4,
+                  "word": "to",
+                  "originalText": "to",
+                  "lemma": "to",
+                  "characterOffsetBegin": 20,
+                  "characterOffsetEnd": 22,
+                  "pos": "TO",
+                  "ner": "O",
+                  "speaker": "PER0",
+                  "before": " ",
+                  "after": " "
+                }
+              },
+              "TO"
+            ],
+            [
+              {
+                "nlpToken": {
+                  "index": 5,
+                  "word": "the",
+                  "originalText": "the",
+                  "lemma": "the",
+                  "characterOffsetBegin": 23,
+                  "characterOffsetEnd": 26,
+                  "pos": "DT",
+                  "ner": "O",
+                  "speaker": "PER0",
+                  "before": " ",
+                  "after": " "
+                }
+              },
+              "DT"
+            ],
+            [
+              {
+                "nlpToken": {
+                  "index": 6,
+                  "word": "Cubs",
+                  "originalText": "Cubs",
+                  "lemma": "Cubs",
+                  "characterOffsetBegin": 27,
+                  "characterOffsetEnd": 31,
+                  "pos": "NNP",
+                  "ner": "ORGANIZATION",
+                  "speaker": "PER0",
+                  "before": " ",
+                  "after": ""
+                },
+                "aida": [
+                  {
+                    "mention": {
+                      "allEntities": [],
+                      "offset": 27,
+                      "name": "Cubs' World Series",
+                      "length": 18
+                    },
+                    "bestEntityMetadata": null
+                  }
+                ]
+              },
+              "NNP"
+            ],
+            [
+              {
+                "nlpToken": {
+                  "index": 7,
+                  "word": "'",
+                  "originalText": "'",
+                  "lemma": "'",
+                  "characterOffsetBegin": 31,
+                  "characterOffsetEnd": 32,
+                  "pos": "POS",
+                  "ner": "O",
+                  "speaker": "PER0",
+                  "before": "",
+                  "after": " "
+                },
+                "aida": [
+                  {
+                    "mention": {
+                      "allEntities": [],
+                      "offset": 27,
+                      "name": "Cubs' World Series",
+                      "length": 18
+                    },
+                    "bestEntityMetadata": null
+                  }
+                ]
+              },
+              "POS"
+            ],
+            [
+              {
+                "nlpToken": {
+                  "index": 10,
+                  "word": "win",
+                  "originalText": "win",
+                  "lemma": "win",
+                  "characterOffsetBegin": 46,
+                  "characterOffsetEnd": 49,
+                  "pos": "VB",
+                  "ner": "O",
+                  "speaker": "PER0",
+                  "before": " ",
+                  "after": ""
+                }
+              },
+              "VB"
             ]
           ],
           "score": 1.0,
-          "text": "Knew it",
-          "nlpIndexSentence": 17
+          "text": "reacts to the Cubs ' win"
         }
       ],
       "label": "what"
+    },
+    "how": {
+      "extracted": [
+        {
+          "parts": [
+            [
+              {
+                "nlpToken": {
+                  "index": 1,
+                  "word": "So",
+                  "originalText": "So",
+                  "lemma": "so",
+                  "characterOffsetBegin": 51,
+                  "characterOffsetEnd": 53,
+                  "pos": "RB",
+                  "ner": "O",
+                  "speaker": "PER0",
+                  "before": " ",
+                  "after": " "
+                }
+              },
+              "RB"
+            ],
+            [
+              {
+                "nlpToken": {
+                  "index": 2,
+                  "word": "much",
+                  "originalText": "much",
+                  "lemma": "much",
+                  "characterOffsetBegin": 54,
+                  "characterOffsetEnd": 58,
+                  "pos": "JJ",
+                  "ner": "O",
+                  "speaker": "PER0",
+                  "before": " ",
+                  "after": " "
+                }
+              },
+              "JJ"
+            ],
+            [
+              {
+                "nlpToken": {
+                  "index": 3,
+                  "word": "shock",
+                  "originalText": "shock",
+                  "lemma": "shock",
+                  "characterOffsetBegin": 59,
+                  "characterOffsetEnd": 64,
+                  "pos": "NN",
+                  "ner": "O",
+                  "speaker": "PER0",
+                  "before": " ",
+                  "after": ""
+                }
+              },
+              "NN"
+            ],
+            [
+              {
+                "nlpToken": {
+                  "index": 4,
+                  "word": ".",
+                  "originalText": ".",
+                  "lemma": ".",
+                  "characterOffsetBegin": 64,
+                  "characterOffsetEnd": 65,
+                  "pos": ".",
+                  "ner": "O",
+                  "speaker": "PER0",
+                  "before": "",
+                  "after": " "
+                }
+              },
+              "."
+            ]
+          ],
+          "score": 1.0,
+          "text": "So much shock .",
+          "nlpIndexSentence": 1
+        }
+      ],
+      "label": "how"
+    },
+    "where": {
+      "extracted": [
+        {
+          "parts": [
+            [
+              {
+                "nlpToken": {
+                  "index": 10,
+                  "word": "Chicago",
+                  "originalText": "Chicago",
+                  "lemma": "Chicago",
+                  "characterOffsetBegin": 263,
+                  "characterOffsetEnd": 270,
+                  "pos": "NNP",
+                  "ner": "LOCATION",
+                  "speaker": "PER0",
+                  "before": " ",
+                  "after": " "
+                },
+                "aida": [
+                  {
+                    "mention": {
+                      "allEntities": [
+                        {
+                          "kbIdentifier": "YAGO:Chicago_Cubs",
+                          "disambiguationScore": "0.38492"
+                        }
+                      ],
+                      "offset": 263,
+                      "name": "Chicago Cubs",
+                      "length": 12,
+                      "bestEntity": {
+                        "kbIdentifier": "YAGO:Chicago_Cubs",
+                        "disambiguationScore": "0.38492"
+                      }
+                    },
+                    "bestEntityMetadata": {
+                      "knowledgebase": "YAGO",
+                      "depictionurl": "http://upload.wikimedia.org/wikipedia/commons/e/ed/Chicago_Cubs_Logo.svg",
+                      "depictionthumbnailurl": "http://upload.wikimedia.org/wikipedia/commons/thumbChicago_Cubs_Logo.svg/200px-Chicago_Cubs_Logo.svg",
+                      "importance": 0.00015264551672039436,
+                      "entityId": "Chicago_Cubs",
+                      "type": [
+                        "YAGO_wikicategory_Professional_baseball_teams_in_Illinois",
+                        "YAGO_yagoPermanentlyLocatedEntity",
+                        "YAGO_yagoLegalActorGeo",
+                        "YAGO_wordnet_organization_108008335",
+                        "YAGO_wikicategory_Major_League_Baseball_teams",
+                        "YAGO_wordnet_subsidiary_company_108003935",
+                        "YAGO_wordnet_unit_108189659",
+                        "YAGO_wordnet_team_108208560",
+                        "YAGO_wikicategory_Sports_clubs_established_in_1870",
+                        "YAGO_yagoLegalActor",
+                        "YAGO_wordnet_club_108227214",
+                        "YAGO_wordnet_abstraction_100002137",
+                        "YAGO_wordnet_company_108058098",
+                        "YAGO_wikicategory_Tribune_Company_subsidiaries",
+                        "YAGO_wordnet_social_group_107950920",
+                        "YAGO_wordnet_institution_108053576",
+                        "YAGO_wordnet_entity_100001740",
+                        "YAGO_wikicategory_Baseball_teams_in_Chicago\\u002c_Illinois",
+                        "YAGO_wordnet_group_100031264",
+                        "YAGO_wordnet_association_108049401",
+                        "YAGO_wordnet_baseball_team_108079319"
+                      ],
+                      "readableRepr": "Chicago Cubs",
+                      "url": "http://en.wikipedia.org/wiki/Chicago%20Cubs"
+                    }
+                  }
+                ]
+              },
+              "NNP"
+            ]
+          ],
+          "score": 0.6781958630747101,
+          "text": "Chicago",
+          "enhancement": {
+            "openstreetmap_nominatim": {
+              "osm_id": "122604",
+              "boundingbox": [
+                41.643919,
+                42.0230219,
+                -87.940101,
+                -87.5239841
+              ],
+              "licence": "Data \u00a9 OpenStreetMap contributors, ODbL 1.0. http://www.openstreetmap.org/copyright",
+              "importance": 0.30566190262222,
+              "icon": "https://nominatim.openstreetmap.org/images/mapicons/poi_place_city.p.20.png",
+              "osm_type": "relation",
+              "display_name": "Chicago, Cook County, Illinois, United States of America",
+              "lat": "41.8755546",
+              "type": "city",
+              "place_id": "178038280",
+              "lon": "-87.6244212",
+              "class": "place"
+            }
+          },
+          "nlpIndexSentence": 5
+        }
+      ],
+      "label": "where"
+    },
+    "when": {
+      "extracted": [
+        {
+          "parts": [
+            [
+              {
+                "nlpToken": {
+                  "index": 8,
+                  "word": "November",
+                  "originalText": "November",
+                  "lemma": "November",
+                  "characterOffsetBegin": 732,
+                  "characterOffsetEnd": 740,
+                  "pos": "NNP",
+                  "ner": "DATE",
+                  "normalizedNER": "2016-11-03T00:47",
+                  "speaker": "PER0",
+                  "before": " ",
+                  "after": " ",
+                  "timex": {
+                    "tid": "t7",
+                    "type": "TIME",
+                    "value": "2016-11-03T00:47"
+                  }
+                }
+              },
+              "NNP"
+            ],
+            [
+              {
+                "nlpToken": {
+                  "index": 9,
+                  "word": "3",
+                  "originalText": "3",
+                  "lemma": "3",
+                  "characterOffsetBegin": 741,
+                  "characterOffsetEnd": 742,
+                  "pos": "CD",
+                  "ner": "DATE",
+                  "normalizedNER": "2016-11-03T00:47",
+                  "speaker": "PER0",
+                  "before": " ",
+                  "after": "",
+                  "timex": {
+                    "tid": "t7",
+                    "type": "TIME",
+                    "value": "2016-11-03T00:47"
+                  }
+                }
+              },
+              "CD"
+            ],
+            [
+              {
+                "nlpToken": {
+                  "index": 10,
+                  "word": ",",
+                  "originalText": ",",
+                  "lemma": ",",
+                  "characterOffsetBegin": 742,
+                  "characterOffsetEnd": 743,
+                  "pos": ",",
+                  "ner": "DATE",
+                  "normalizedNER": "2016-11-03T00:47",
+                  "speaker": "PER0",
+                  "before": "",
+                  "after": " ",
+                  "timex": {
+                    "tid": "t7",
+                    "type": "TIME",
+                    "value": "2016-11-03T00:47"
+                  }
+                }
+              },
+              ","
+            ],
+            [
+              {
+                "nlpToken": {
+                  "index": 11,
+                  "word": "2016",
+                  "originalText": "2016",
+                  "lemma": "2016",
+                  "characterOffsetBegin": 744,
+                  "characterOffsetEnd": 748,
+                  "pos": "CD",
+                  "ner": "DATE",
+                  "normalizedNER": "2016-11-03T00:47",
+                  "speaker": "PER0",
+                  "before": " ",
+                  "after": "\n",
+                  "timex": {
+                    "tid": "t7",
+                    "type": "TIME",
+                    "value": "2016-11-03T00:47"
+                  }
+                }
+              },
+              "CD"
+            ],
+            [
+              {
+                "nlpToken": {
+                  "index": 12,
+                  "word": "12:47",
+                  "originalText": "12:47",
+                  "lemma": "12:47",
+                  "characterOffsetBegin": 749,
+                  "characterOffsetEnd": 754,
+                  "pos": "CD",
+                  "ner": "TIME",
+                  "normalizedNER": "2016-11-03T00:47",
+                  "speaker": "PER0",
+                  "before": "\n",
+                  "after": " ",
+                  "timex": {
+                    "tid": "t7",
+                    "type": "TIME",
+                    "value": "2016-11-03T00:47"
+                  }
+                }
+              },
+              "CD"
+            ],
+            [
+              {
+                "nlpToken": {
+                  "index": 13,
+                  "word": "a.m.",
+                  "originalText": "a.m.",
+                  "lemma": "a.m.",
+                  "characterOffsetBegin": 755,
+                  "characterOffsetEnd": 759,
+                  "pos": "NN",
+                  "ner": "TIME",
+                  "normalizedNER": "2016-11-03T00:47",
+                  "speaker": "PER0",
+                  "before": " ",
+                  "after": " ",
+                  "timex": {
+                    "tid": "t7",
+                    "type": "TIME",
+                    "value": "2016-11-03T00:47"
+                  }
+                }
+              },
+              "NN"
+            ],
+            [
+              {
+                "nlpToken": {
+                  "index": 14,
+                  "word": "Nov.",
+                  "originalText": "Nov.",
+                  "lemma": "Nov.",
+                  "characterOffsetBegin": 760,
+                  "characterOffsetEnd": 764,
+                  "pos": "NNP",
+                  "ner": "DATE",
+                  "normalizedNER": "2016-11-03T00:47",
+                  "speaker": "PER0",
+                  "before": " ",
+                  "after": " ",
+                  "timex": {
+                    "tid": "t7",
+                    "type": "TIME",
+                    "value": "2016-11-03T00:47"
+                  }
+                }
+              },
+              "NNP"
+            ],
+            [
+              {
+                "nlpToken": {
+                  "index": 15,
+                  "word": "3",
+                  "originalText": "3",
+                  "lemma": "3",
+                  "characterOffsetBegin": 765,
+                  "characterOffsetEnd": 766,
+                  "pos": "CD",
+                  "ner": "DATE",
+                  "normalizedNER": "2016-11-03T00:47",
+                  "speaker": "PER0",
+                  "before": " ",
+                  "after": "",
+                  "timex": {
+                    "tid": "t7",
+                    "type": "TIME",
+                    "value": "2016-11-03T00:47"
+                  }
+                }
+              },
+              "CD"
+            ],
+            [
+              {
+                "nlpToken": {
+                  "index": 16,
+                  "word": ",",
+                  "originalText": ",",
+                  "lemma": ",",
+                  "characterOffsetBegin": 766,
+                  "characterOffsetEnd": 767,
+                  "pos": ",",
+                  "ner": "DATE",
+                  "normalizedNER": "2016-11-03T00:47",
+                  "speaker": "PER0",
+                  "before": "",
+                  "after": " ",
+                  "timex": {
+                    "tid": "t7",
+                    "type": "TIME",
+                    "value": "2016-11-03T00:47"
+                  }
+                }
+              },
+              ","
+            ],
+            [
+              {
+                "nlpToken": {
+                  "index": 17,
+                  "word": "2016",
+                  "originalText": "2016",
+                  "lemma": "2016",
+                  "characterOffsetBegin": 768,
+                  "characterOffsetEnd": 772,
+                  "pos": "CD",
+                  "ner": "DATE",
+                  "normalizedNER": "2016-11-03T00:47",
+                  "speaker": "PER0",
+                  "before": " ",
+                  "after": "",
+                  "timex": {
+                    "tid": "t7",
+                    "type": "TIME",
+                    "value": "2016-11-03T00:47"
+                  }
+                }
+              },
+              "CD"
+            ]
+          ],
+          "score": 0.3755186142950898,
+          "text": "November 3 , 2016 12:47 a.m. Nov. 3 , 2016",
+          "enhancement": {
+            "timex": {
+              "start_date": "2016-11-03T00:47:00",
+              "end_date": "2016-11-03T00:47:59"
+            }
+          },
+          "nlpIndexSentence": 12
+        }
+      ],
+      "label": "when"
     },
     "why": {
       "extracted": [
@@ -588,883 +820,14 @@
                 }
               },
               "NNS"
-            ],
-            [
-              {
-                "nlpToken": {
-                  "index": 4,
-                  "word": "celebrate",
-                  "originalText": "celebrate",
-                  "lemma": "celebrate",
-                  "characterOffsetBegin": 101,
-                  "characterOffsetEnd": 110,
-                  "pos": "VB",
-                  "ner": "O",
-                  "speaker": "PER0",
-                  "before": " ",
-                  "after": " "
-                }
-              },
-              "VB"
-            ],
-            [
-              {
-                "nlpToken": {
-                  "index": 5,
-                  "word": "on",
-                  "originalText": "on",
-                  "lemma": "on",
-                  "characterOffsetBegin": 111,
-                  "characterOffsetEnd": 113,
-                  "pos": "IN",
-                  "ner": "O",
-                  "speaker": "PER0",
-                  "before": " ",
-                  "after": " "
-                }
-              },
-              "IN"
-            ],
-            [
-              {
-                "nlpToken": {
-                  "index": 6,
-                  "word": "the",
-                  "originalText": "the",
-                  "lemma": "the",
-                  "characterOffsetBegin": 114,
-                  "characterOffsetEnd": 117,
-                  "pos": "DT",
-                  "ner": "O",
-                  "speaker": "PER0",
-                  "before": " ",
-                  "after": " "
-                }
-              },
-              "DT"
-            ],
-            [
-              {
-                "nlpToken": {
-                  "index": 7,
-                  "word": "field",
-                  "originalText": "field",
-                  "lemma": "field",
-                  "characterOffsetBegin": 118,
-                  "characterOffsetEnd": 123,
-                  "pos": "NN",
-                  "ner": "O",
-                  "speaker": "PER0",
-                  "before": " ",
-                  "after": " "
-                }
-              },
-              "NN"
-            ],
-            [
-              {
-                "nlpToken": {
-                  "index": 8,
-                  "word": "after",
-                  "originalText": "after",
-                  "lemma": "after",
-                  "characterOffsetBegin": 124,
-                  "characterOffsetEnd": 129,
-                  "pos": "IN",
-                  "ner": "O",
-                  "speaker": "PER0",
-                  "before": " ",
-                  "after": " "
-                }
-              },
-              "IN"
-            ],
-            [
-              {
-                "nlpToken": {
-                  "index": 9,
-                  "word": "defeating",
-                  "originalText": "defeating",
-                  "lemma": "defeat",
-                  "characterOffsetBegin": 130,
-                  "characterOffsetEnd": 139,
-                  "pos": "VBG",
-                  "ner": "O",
-                  "speaker": "PER0",
-                  "before": " ",
-                  "after": " "
-                }
-              },
-              "VBG"
-            ],
-            [
-              {
-                "nlpToken": {
-                  "index": 10,
-                  "word": "the",
-                  "originalText": "the",
-                  "lemma": "the",
-                  "characterOffsetBegin": 140,
-                  "characterOffsetEnd": 143,
-                  "pos": "DT",
-                  "ner": "O",
-                  "speaker": "PER0",
-                  "before": " ",
-                  "after": " "
-                }
-              },
-              "DT"
-            ],
-            [
-              {
-                "nlpToken": {
-                  "index": 11,
-                  "word": "Cleveland",
-                  "originalText": "Cleveland",
-                  "lemma": "Cleveland",
-                  "characterOffsetBegin": 144,
-                  "characterOffsetEnd": 153,
-                  "pos": "NNP",
-                  "ner": "ORGANIZATION",
-                  "speaker": "PER0",
-                  "before": " ",
-                  "after": " "
-                },
-                "aida": [
-                  {
-                    "mention": {
-                      "allEntities": [
-                        {
-                          "kbIdentifier": "YAGO:Cleveland_Indians",
-                          "disambiguationScore": "1"
-                        }
-                      ],
-                      "offset": 144,
-                      "name": "Cleveland Indians",
-                      "length": 17,
-                      "bestEntity": {
-                        "kbIdentifier": "YAGO:Cleveland_Indians",
-                        "disambiguationScore": "1"
-                      }
-                    },
-                    "bestEntityMetadata": {
-                      "knowledgebase": "YAGO",
-                      "depictionurl": "http://upload.wikimedia.org/wikipedia/en/e/e1/ALC-Uniform-CLE.png",
-                      "depictionthumbnailurl": "http://upload.wikimedia.org/wikipedia/en/thumbALC-Uniform-CLE.png/200px-ALC-Uniform-CLE.png",
-                      "importance": 0.00017966488738075615,
-                      "entityId": "Cleveland_Indians",
-                      "type": [
-                        "YAGO_yagoPermanentlyLocatedEntity",
-                        "YAGO_wordnet_event_100029378",
-                        "YAGO_yagoLegalActorGeo",
-                        "YAGO_wordnet_organization_108008335",
-                        "YAGO_wikicategory_Major_League_Baseball_teams",
-                        "YAGO_wordnet_unit_108189659",
-                        "YAGO_wordnet_diversion_100426928",
-                        "YAGO_wikicategory_Sports_clubs_established_in_1894",
-                        "YAGO_wordnet_sport_100523513",
-                        "YAGO_wordnet_team_108208560",
-                        "YAGO_yagoLegalActor",
-                        "YAGO_wordnet_club_108227214",
-                        "YAGO_wordnet_abstraction_100002137",
-                        "YAGO_wordnet_act_100030358",
-                        "YAGO_wordnet_activity_100407535",
-                        "YAGO_wordnet_social_group_107950920",
-                        "YAGO_wordnet_entity_100001740",
-                        "YAGO_wikicategory_Sports_in_Cleveland\\u002c_Ohio",
-                        "YAGO_wordnet_group_100031264",
-                        "YAGO_wordnet_association_108049401",
-                        "YAGO_wordnet_psychological_feature_100023100",
-                        "YAGO_wordnet_baseball_team_108079319"
-                      ],
-                      "readableRepr": "Cleveland Indians",
-                      "url": "http://en.wikipedia.org/wiki/Cleveland%20Indians"
-                    }
-                  }
-                ]
-              },
-              "NNP"
-            ],
-            [
-              {
-                "nlpToken": {
-                  "index": 12,
-                  "word": "Indians",
-                  "originalText": "Indians",
-                  "lemma": "Indians",
-                  "characterOffsetBegin": 154,
-                  "characterOffsetEnd": 161,
-                  "pos": "NNPS",
-                  "ner": "ORGANIZATION",
-                  "speaker": "PER0",
-                  "before": " ",
-                  "after": " "
-                },
-                "aida": [
-                  {
-                    "mention": {
-                      "allEntities": [
-                        {
-                          "kbIdentifier": "YAGO:Cleveland_Indians",
-                          "disambiguationScore": "1"
-                        }
-                      ],
-                      "offset": 144,
-                      "name": "Cleveland Indians",
-                      "length": 17,
-                      "bestEntity": {
-                        "kbIdentifier": "YAGO:Cleveland_Indians",
-                        "disambiguationScore": "1"
-                      }
-                    },
-                    "bestEntityMetadata": {
-                      "knowledgebase": "YAGO",
-                      "depictionurl": "http://upload.wikimedia.org/wikipedia/en/e/e1/ALC-Uniform-CLE.png",
-                      "depictionthumbnailurl": "http://upload.wikimedia.org/wikipedia/en/thumbALC-Uniform-CLE.png/200px-ALC-Uniform-CLE.png",
-                      "importance": 0.00017966488738075615,
-                      "entityId": "Cleveland_Indians",
-                      "type": [
-                        "YAGO_yagoPermanentlyLocatedEntity",
-                        "YAGO_wordnet_event_100029378",
-                        "YAGO_yagoLegalActorGeo",
-                        "YAGO_wordnet_organization_108008335",
-                        "YAGO_wikicategory_Major_League_Baseball_teams",
-                        "YAGO_wordnet_unit_108189659",
-                        "YAGO_wordnet_diversion_100426928",
-                        "YAGO_wikicategory_Sports_clubs_established_in_1894",
-                        "YAGO_wordnet_sport_100523513",
-                        "YAGO_wordnet_team_108208560",
-                        "YAGO_yagoLegalActor",
-                        "YAGO_wordnet_club_108227214",
-                        "YAGO_wordnet_abstraction_100002137",
-                        "YAGO_wordnet_act_100030358",
-                        "YAGO_wordnet_activity_100407535",
-                        "YAGO_wordnet_social_group_107950920",
-                        "YAGO_wordnet_entity_100001740",
-                        "YAGO_wikicategory_Sports_in_Cleveland\\u002c_Ohio",
-                        "YAGO_wordnet_group_100031264",
-                        "YAGO_wordnet_association_108049401",
-                        "YAGO_wordnet_psychological_feature_100023100",
-                        "YAGO_wordnet_baseball_team_108079319"
-                      ],
-                      "readableRepr": "Cleveland Indians",
-                      "url": "http://en.wikipedia.org/wiki/Cleveland%20Indians"
-                    }
-                  }
-                ]
-              },
-              "NNPS"
-            ],
-            [
-              {
-                "nlpToken": {
-                  "index": 13,
-                  "word": "in",
-                  "originalText": "in",
-                  "lemma": "in",
-                  "characterOffsetBegin": 162,
-                  "characterOffsetEnd": 164,
-                  "pos": "IN",
-                  "ner": "O",
-                  "speaker": "PER0",
-                  "before": " ",
-                  "after": " "
-                }
-              },
-              "IN"
-            ],
-            [
-              {
-                "nlpToken": {
-                  "index": 14,
-                  "word": "game",
-                  "originalText": "game",
-                  "lemma": "game",
-                  "characterOffsetBegin": 165,
-                  "characterOffsetEnd": 169,
-                  "pos": "NN",
-                  "ner": "O",
-                  "speaker": "PER0",
-                  "before": " ",
-                  "after": " "
-                }
-              },
-              "NN"
-            ],
-            [
-              {
-                "nlpToken": {
-                  "index": 15,
-                  "word": "seven",
-                  "originalText": "seven",
-                  "lemma": "seven",
-                  "characterOffsetBegin": 170,
-                  "characterOffsetEnd": 175,
-                  "pos": "CD",
-                  "ner": "NUMBER",
-                  "normalizedNER": "7.0",
-                  "speaker": "PER0",
-                  "before": " ",
-                  "after": " "
-                }
-              },
-              "CD"
-            ],
-            [
-              {
-                "nlpToken": {
-                  "index": 16,
-                  "word": "of",
-                  "originalText": "of",
-                  "lemma": "of",
-                  "characterOffsetBegin": 176,
-                  "characterOffsetEnd": 178,
-                  "pos": "IN",
-                  "ner": "O",
-                  "speaker": "PER0",
-                  "before": " ",
-                  "after": " "
-                }
-              },
-              "IN"
-            ],
-            [
-              {
-                "nlpToken": {
-                  "index": 17,
-                  "word": "the",
-                  "originalText": "the",
-                  "lemma": "the",
-                  "characterOffsetBegin": 179,
-                  "characterOffsetEnd": 182,
-                  "pos": "DT",
-                  "ner": "O",
-                  "speaker": "PER0",
-                  "before": " ",
-                  "after": " "
-                }
-              },
-              "DT"
-            ],
-            [
-              {
-                "nlpToken": {
-                  "index": 18,
-                  "word": "2016",
-                  "originalText": "2016",
-                  "lemma": "2016",
-                  "characterOffsetBegin": 183,
-                  "characterOffsetEnd": 187,
-                  "pos": "CD",
-                  "ner": "DATE",
-                  "normalizedNER": "2016",
-                  "speaker": "PER0",
-                  "before": " ",
-                  "after": " ",
-                  "timex": {
-                    "tid": "t1",
-                    "type": "DATE",
-                    "value": "2016"
-                  }
-                }
-              },
-              "CD"
-            ],
-            [
-              {
-                "nlpToken": {
-                  "index": 19,
-                  "word": "World",
-                  "originalText": "World",
-                  "lemma": "World",
-                  "characterOffsetBegin": 188,
-                  "characterOffsetEnd": 193,
-                  "pos": "NNP",
-                  "ner": "MISC",
-                  "speaker": "PER0",
-                  "before": " ",
-                  "after": " "
-                },
-                "aida": [
-                  {
-                    "mention": {
-                      "allEntities": [
-                        {
-                          "kbIdentifier": "YAGO:2008_World_Series",
-                          "disambiguationScore": "0.07572"
-                        }
-                      ],
-                      "offset": 188,
-                      "name": "World Series",
-                      "length": 12,
-                      "bestEntity": {
-                        "kbIdentifier": "YAGO:2008_World_Series",
-                        "disambiguationScore": "0.07572"
-                      }
-                    },
-                    "bestEntityMetadata": {
-                      "knowledgebase": "YAGO",
-                      "depictionurl": "http://upload.wikimedia.org/wikipedia/en/9/91/2008_World_Series.svg",
-                      "depictionthumbnailurl": "http://upload.wikimedia.org/wikipedia/en/thumb2008_World_Series.svg/200px-2008_World_Series.svg",
-                      "importance": 0.012280443240240923,
-                      "entityId": "2008_World_Series",
-                      "type": [
-                        "YAGO_wordnet_act_100030358",
-                        "YAGO_yagoPermanentlyLocatedEntity",
-                        "YAGO_wordnet_event_100029378",
-                        "YAGO_wordnet_activity_100407535",
-                        "YAGO_wordnet_entity_100001740",
-                        "YAGO_wordnet_diversion_100426928",
-                        "YAGO_wordnet_psychological_feature_100023100",
-                        "YAGO_wordnet_sport_100523513",
-                        "YAGO_wikicategory_Sports_in_St\\u002e_Petersburg\\u002c_Florida",
-                        "YAGO_wordnet_abstraction_100002137"
-                      ],
-                      "readableRepr": "2008 World Series",
-                      "url": "http://en.wikipedia.org/wiki/2008%20World%20Series"
-                    }
-                  }
-                ]
-              },
-              "NNP"
-            ],
-            [
-              {
-                "nlpToken": {
-                  "index": 20,
-                  "word": "Series",
-                  "originalText": "Series",
-                  "lemma": "Series",
-                  "characterOffsetBegin": 194,
-                  "characterOffsetEnd": 200,
-                  "pos": "NNP",
-                  "ner": "MISC",
-                  "speaker": "PER0",
-                  "before": " ",
-                  "after": " "
-                },
-                "aida": [
-                  {
-                    "mention": {
-                      "allEntities": [
-                        {
-                          "kbIdentifier": "YAGO:2008_World_Series",
-                          "disambiguationScore": "0.07572"
-                        }
-                      ],
-                      "offset": 188,
-                      "name": "World Series",
-                      "length": 12,
-                      "bestEntity": {
-                        "kbIdentifier": "YAGO:2008_World_Series",
-                        "disambiguationScore": "0.07572"
-                      }
-                    },
-                    "bestEntityMetadata": {
-                      "knowledgebase": "YAGO",
-                      "depictionurl": "http://upload.wikimedia.org/wikipedia/en/9/91/2008_World_Series.svg",
-                      "depictionthumbnailurl": "http://upload.wikimedia.org/wikipedia/en/thumb2008_World_Series.svg/200px-2008_World_Series.svg",
-                      "importance": 0.012280443240240923,
-                      "entityId": "2008_World_Series",
-                      "type": [
-                        "YAGO_wordnet_act_100030358",
-                        "YAGO_yagoPermanentlyLocatedEntity",
-                        "YAGO_wordnet_event_100029378",
-                        "YAGO_wordnet_activity_100407535",
-                        "YAGO_wordnet_entity_100001740",
-                        "YAGO_wordnet_diversion_100426928",
-                        "YAGO_wordnet_psychological_feature_100023100",
-                        "YAGO_wordnet_sport_100523513",
-                        "YAGO_wikicategory_Sports_in_St\\u002e_Petersburg\\u002c_Florida",
-                        "YAGO_wordnet_abstraction_100002137"
-                      ],
-                      "readableRepr": "2008 World Series",
-                      "url": "http://en.wikipedia.org/wiki/2008%20World%20Series"
-                    }
-                  }
-                ]
-              },
-              "NNP"
-            ],
-            [
-              {
-                "nlpToken": {
-                  "index": 21,
-                  "word": "at",
-                  "originalText": "at",
-                  "lemma": "at",
-                  "characterOffsetBegin": 201,
-                  "characterOffsetEnd": 203,
-                  "pos": "IN",
-                  "ner": "O",
-                  "speaker": "PER0",
-                  "before": " ",
-                  "after": " "
-                }
-              },
-              "IN"
-            ],
-            [
-              {
-                "nlpToken": {
-                  "index": 22,
-                  "word": "Progressive",
-                  "originalText": "Progressive",
-                  "lemma": "Progressive",
-                  "characterOffsetBegin": 204,
-                  "characterOffsetEnd": 215,
-                  "pos": "NNP",
-                  "ner": "LOCATION",
-                  "speaker": "PER0",
-                  "before": " ",
-                  "after": " "
-                },
-                "aida": [
-                  {
-                    "mention": {
-                      "allEntities": [
-                        {
-                          "kbIdentifier": "YAGO:Progressive_Field",
-                          "disambiguationScore": "1"
-                        }
-                      ],
-                      "offset": 204,
-                      "name": "Progressive Field",
-                      "length": 17,
-                      "bestEntity": {
-                        "kbIdentifier": "YAGO:Progressive_Field",
-                        "disambiguationScore": "1"
-                      }
-                    },
-                    "bestEntityMetadata": {
-                      "knowledgebase": "YAGO",
-                      "depictionurl": "http://upload.wikimedia.org/wikipedia/en/1/17/Progressive_Field_logo_2012.gif",
-                      "depictionthumbnailurl": "http://upload.wikimedia.org/wikipedia/en/thumbProgressive_Field_logo_2012.gif/200px-Progressive_Field_logo_2012.gif",
-                      "importance": 0.015352573539345356,
-                      "entityId": "Progressive_Field",
-                      "type": [
-                        "YAGO_yagoPermanentlyLocatedEntity",
-                        "YAGO_yagoLegalActorGeo",
-                        "YAGO_wikicategory_Baseball_venues_in_Ohio",
-                        "YAGO_wikicategory_Sports_venues_in_Cleveland\\u002c_Ohio",
-                        "YAGO_wikicategory_Cleveland_Indians_stadiums",
-                        "YAGO_wordnet_structure_104341686",
-                        "YAGO_wordnet_region_108630985",
-                        "YAGO_wikicategory_Major_League_Baseball_venues",
-                        "YAGO_yagoGeoEntity",
-                        "YAGO_wordnet_physical_entity_100001930",
-                        "YAGO_wordnet_entity_100001740",
-                        "YAGO_wordnet_object_100002684",
-                        "YAGO_wordnet_area_108497294",
-                        "YAGO_wordnet_scene_108645963",
-                        "YAGO_wikicategory_Event_venues_established_in_1994",
-                        "YAGO_wordnet_location_100027167",
-                        "YAGO_wordnet_whole_100003553",
-                        "YAGO_wordnet_artifact_100021939",
-                        "YAGO_wordnet_stadium_104295881",
-                        "YAGO_wordnet_venue_108677628"
-                      ],
-                      "readableRepr": "Progressive Field",
-                      "url": "http://en.wikipedia.org/wiki/Progressive%20Field"
-                    }
-                  }
-                ]
-              },
-              "NNP"
-            ],
-            [
-              {
-                "nlpToken": {
-                  "index": 23,
-                  "word": "Field",
-                  "originalText": "Field",
-                  "lemma": "Field",
-                  "characterOffsetBegin": 216,
-                  "characterOffsetEnd": 221,
-                  "pos": "NNP",
-                  "ner": "LOCATION",
-                  "speaker": "PER0",
-                  "before": " ",
-                  "after": ""
-                },
-                "aida": [
-                  {
-                    "mention": {
-                      "allEntities": [
-                        {
-                          "kbIdentifier": "YAGO:Progressive_Field",
-                          "disambiguationScore": "1"
-                        }
-                      ],
-                      "offset": 204,
-                      "name": "Progressive Field",
-                      "length": 17,
-                      "bestEntity": {
-                        "kbIdentifier": "YAGO:Progressive_Field",
-                        "disambiguationScore": "1"
-                      }
-                    },
-                    "bestEntityMetadata": {
-                      "knowledgebase": "YAGO",
-                      "depictionurl": "http://upload.wikimedia.org/wikipedia/en/1/17/Progressive_Field_logo_2012.gif",
-                      "depictionthumbnailurl": "http://upload.wikimedia.org/wikipedia/en/thumbProgressive_Field_logo_2012.gif/200px-Progressive_Field_logo_2012.gif",
-                      "importance": 0.015352573539345356,
-                      "entityId": "Progressive_Field",
-                      "type": [
-                        "YAGO_yagoPermanentlyLocatedEntity",
-                        "YAGO_yagoLegalActorGeo",
-                        "YAGO_wikicategory_Baseball_venues_in_Ohio",
-                        "YAGO_wikicategory_Sports_venues_in_Cleveland\\u002c_Ohio",
-                        "YAGO_wikicategory_Cleveland_Indians_stadiums",
-                        "YAGO_wordnet_structure_104341686",
-                        "YAGO_wordnet_region_108630985",
-                        "YAGO_wikicategory_Major_League_Baseball_venues",
-                        "YAGO_yagoGeoEntity",
-                        "YAGO_wordnet_physical_entity_100001930",
-                        "YAGO_wordnet_entity_100001740",
-                        "YAGO_wordnet_object_100002684",
-                        "YAGO_wordnet_area_108497294",
-                        "YAGO_wordnet_scene_108645963",
-                        "YAGO_wikicategory_Event_venues_established_in_1994",
-                        "YAGO_wordnet_location_100027167",
-                        "YAGO_wordnet_whole_100003553",
-                        "YAGO_wordnet_artifact_100021939",
-                        "YAGO_wordnet_stadium_104295881",
-                        "YAGO_wordnet_venue_108677628"
-                      ],
-                      "readableRepr": "Progressive Field",
-                      "url": "http://en.wikipedia.org/wiki/Progressive%20Field"
-                    }
-                  }
-                ]
-              },
-              "NNP"
             ]
           ],
-          "score": 0.4035714285714286,
-          "text": "Chicago Cubs players celebrate on the field after defeating the Cleveland Indians in game seven of the 2016 World Series at Progressive Field",
+          "score": 0.516,
+          "text": "Chicago Cubs players",
           "nlpIndexSentence": 4
         }
       ],
       "label": "why"
-    },
-    "where": {
-      "extracted": [
-        {
-          "parts": [
-            [
-              {
-                "nlpToken": {
-                  "index": 10,
-                  "word": "Chicago",
-                  "originalText": "Chicago",
-                  "lemma": "Chicago",
-                  "characterOffsetBegin": 263,
-                  "characterOffsetEnd": 270,
-                  "pos": "NNP",
-                  "ner": "LOCATION",
-                  "speaker": "PER0",
-                  "before": " ",
-                  "after": " "
-                },
-                "aida": [
-                  {
-                    "mention": {
-                      "allEntities": [
-                        {
-                          "kbIdentifier": "YAGO:Chicago_Cubs",
-                          "disambiguationScore": "0.38492"
-                        }
-                      ],
-                      "offset": 263,
-                      "name": "Chicago Cubs",
-                      "length": 12,
-                      "bestEntity": {
-                        "kbIdentifier": "YAGO:Chicago_Cubs",
-                        "disambiguationScore": "0.38492"
-                      }
-                    },
-                    "bestEntityMetadata": {
-                      "knowledgebase": "YAGO",
-                      "depictionurl": "http://upload.wikimedia.org/wikipedia/commons/e/ed/Chicago_Cubs_Logo.svg",
-                      "depictionthumbnailurl": "http://upload.wikimedia.org/wikipedia/commons/thumbChicago_Cubs_Logo.svg/200px-Chicago_Cubs_Logo.svg",
-                      "importance": 0.00015264551672039436,
-                      "entityId": "Chicago_Cubs",
-                      "type": [
-                        "YAGO_wikicategory_Professional_baseball_teams_in_Illinois",
-                        "YAGO_yagoPermanentlyLocatedEntity",
-                        "YAGO_yagoLegalActorGeo",
-                        "YAGO_wordnet_organization_108008335",
-                        "YAGO_wikicategory_Major_League_Baseball_teams",
-                        "YAGO_wordnet_subsidiary_company_108003935",
-                        "YAGO_wordnet_unit_108189659",
-                        "YAGO_wordnet_team_108208560",
-                        "YAGO_wikicategory_Sports_clubs_established_in_1870",
-                        "YAGO_yagoLegalActor",
-                        "YAGO_wordnet_club_108227214",
-                        "YAGO_wordnet_abstraction_100002137",
-                        "YAGO_wordnet_company_108058098",
-                        "YAGO_wikicategory_Tribune_Company_subsidiaries",
-                        "YAGO_wordnet_social_group_107950920",
-                        "YAGO_wordnet_institution_108053576",
-                        "YAGO_wordnet_entity_100001740",
-                        "YAGO_wikicategory_Baseball_teams_in_Chicago\\u002c_Illinois",
-                        "YAGO_wordnet_group_100031264",
-                        "YAGO_wordnet_association_108049401",
-                        "YAGO_wordnet_baseball_team_108079319"
-                      ],
-                      "readableRepr": "Chicago Cubs",
-                      "url": "http://en.wikipedia.org/wiki/Chicago%20Cubs"
-                    }
-                  }
-                ]
-              },
-              "NNP"
-            ]
-          ],
-          "score": 1.0,
-          "text": "Chicago",
-          "enhancement": {
-            "openstreetmap_nominatim": {
-              "place_id": "178038280",
-              "licence": "Data \u00a9 OpenStreetMap contributors, ODbL 1.0. http://www.openstreetmap.org/copyright",
-              "osm_type": "relation",
-              "osm_id": "122604",
-              "boundingbox": [
-                41.643919,
-                42.0230219,
-                -87.940101,
-                -87.5239841
-              ],
-              "lat": "41.8755546",
-              "lon": "-87.6244212",
-              "display_name": "Chicago, Cook County, Illinois, United States of America",
-              "class": "place",
-              "type": "city",
-              "importance": 0.30566190262222,
-              "icon": "https://nominatim.openstreetmap.org/images/mapicons/poi_place_city.p.20.png"
-            }
-          },
-          "nlpIndexSentence": 5
-        }
-      ],
-      "label": "where"
-    },
-    "when": {
-      "extracted": [
-        {
-          "parts": [
-            [
-              {
-                "nlpToken": {
-                  "index": 7,
-                  "word": "November",
-                  "originalText": "November",
-                  "lemma": "November",
-                  "characterOffsetBegin": 2885,
-                  "characterOffsetEnd": 2893,
-                  "pos": "NNP",
-                  "ner": "DATE",
-                  "normalizedNER": "2016-11-03",
-                  "speaker": "PER0",
-                  "before": " ",
-                  "after": " ",
-                  "timex": {
-                    "tid": "t31",
-                    "type": "DATE",
-                    "value": "2016-11-03"
-                  }
-                }
-              },
-              "NNP"
-            ],
-            [
-              {
-                "nlpToken": {
-                  "index": 8,
-                  "word": "3",
-                  "originalText": "3",
-                  "lemma": "3",
-                  "characterOffsetBegin": 2894,
-                  "characterOffsetEnd": 2895,
-                  "pos": "CD",
-                  "ner": "DATE",
-                  "normalizedNER": "2016-11-03",
-                  "speaker": "PER0",
-                  "before": " ",
-                  "after": "",
-                  "timex": {
-                    "tid": "t31",
-                    "type": "DATE",
-                    "value": "2016-11-03"
-                  }
-                }
-              },
-              "CD"
-            ],
-            [
-              {
-                "nlpToken": {
-                  "index": 9,
-                  "word": ",",
-                  "originalText": ",",
-                  "lemma": ",",
-                  "characterOffsetBegin": 2895,
-                  "characterOffsetEnd": 2896,
-                  "pos": ",",
-                  "ner": "DATE",
-                  "normalizedNER": "2016-11-03",
-                  "speaker": "PER0",
-                  "before": "",
-                  "after": " ",
-                  "timex": {
-                    "tid": "t31",
-                    "type": "DATE",
-                    "value": "2016-11-03"
-                  }
-                }
-              },
-              ","
-            ],
-            [
-              {
-                "nlpToken": {
-                  "index": 10,
-                  "word": "2016",
-                  "originalText": "2016",
-                  "lemma": "2016",
-                  "characterOffsetBegin": 2897,
-                  "characterOffsetEnd": 2901,
-                  "pos": "CD",
-                  "ner": "DATE",
-                  "normalizedNER": "2016-11-03",
-                  "speaker": "PER0",
-                  "before": " ",
-                  "after": "\n",
-                  "timex": {
-                    "tid": "t31",
-                    "type": "DATE",
-                    "value": "2016-11-03"
-                  }
-                }
-              },
-              "CD"
-            ]
-          ],
-          "score": 0.5694482382565441,
-          "text": "November 3 , 2016",
-          "enhancement": {
-            "timex": [
-              {
-                "start_date": "2016-11-03T00:00:00",
-                "end_date": "2016-11-03T23:59:59"
-              }
-            ]
-          },
-          "nlpIndexSentence": 31
-        }
-      ],
-      "label": "when"
     }
   }
 }

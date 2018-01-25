@@ -16,15 +16,16 @@
   "url": "http://www.chinadaily.com.cn/cndy/2016-04/05/content_24280080.htm",
   "newsCluster": {
     "CategoryId": 1,
-    "Category": "global_politics",
-    "TopicId": 3,
-    "Topic": "hack",
-    "EventId": 2,
-    "Event": "panama_papers",
-    "Url": "http://www.chinadaily.com.cn/cndy/2016-04/05/content_24280080.htm"
+    "Category": "world",
+    "TopicId": 2,
+    "Topic": "legancy",
+    "EventId": 50,
+    "Event": "panama_papers"
   },
   "dId": "a6d0f1348f76517d14c2d14a5ef1b8cc85b6248a0c80d86f587f5187",
-  "fiveWoneH": {
+  "fiveWoneH": {},
+  "fiveWoneH_Metadata": {
+    "process_errors": {},
     "who": {
       "extracted": [
         {
@@ -438,35 +439,6 @@
       ],
       "label": "what"
     },
-    "how": {
-      "extracted": [
-        {
-          "parts": [
-            [
-              {
-                "nlpToken": {
-                  "index": 4,
-                  "word": "offshore",
-                  "originalText": "offshore",
-                  "lemma": "offshore",
-                  "characterOffsetBegin": 18,
-                  "characterOffsetEnd": 26,
-                  "pos": "JJ",
-                  "ner": "O",
-                  "speaker": "PER0",
-                  "before": " ",
-                  "after": " "
-                }
-              },
-              "JJ"
-            ]
-          ],
-          "score": 1.25,
-          "text": "offshore"
-        }
-      ],
-      "label": "how"
-    },
     "where": {
       "extracted": [],
       "label": "where"
@@ -500,20 +472,101 @@
               "NNP"
             ]
           ],
-          "score": 0.6944482382565441,
+          "score": 0.36946482534131536,
           "text": "Sunday",
           "enhancement": {
-            "timex": [
-              {
-                "start_date": "2016-04-03T00:00:00",
-                "end_date": "2016-04-03T23:59:59"
-              }
-            ]
+            "timex": {
+              "start_date": "2016-04-03T00:00:00",
+              "end_date": "2016-04-03T23:59:59"
+            }
           },
           "nlpIndexSentence": 3
         }
       ],
       "label": "when"
+    },
+    "how": {
+      "extracted": [
+        {
+          "parts": [
+            [
+              {
+                "nlpToken": {
+                  "index": 3,
+                  "word": "show",
+                  "originalText": "show",
+                  "lemma": "show",
+                  "characterOffsetBegin": 13,
+                  "characterOffsetEnd": 17,
+                  "pos": "VBP",
+                  "ner": "O",
+                  "speaker": "PER0",
+                  "before": " ",
+                  "after": " "
+                }
+              },
+              "VBP"
+            ],
+            [
+              {
+                "nlpToken": {
+                  "index": 4,
+                  "word": "offshore",
+                  "originalText": "offshore",
+                  "lemma": "offshore",
+                  "characterOffsetBegin": 18,
+                  "characterOffsetEnd": 26,
+                  "pos": "JJ",
+                  "ner": "O",
+                  "speaker": "PER0",
+                  "before": " ",
+                  "after": " "
+                }
+              },
+              "JJ"
+            ],
+            [
+              {
+                "nlpToken": {
+                  "index": 5,
+                  "word": "dealings",
+                  "originalText": "dealings",
+                  "lemma": "dealings",
+                  "characterOffsetBegin": 27,
+                  "characterOffsetEnd": 35,
+                  "pos": "NNS",
+                  "ner": "O",
+                  "speaker": "PER0",
+                  "before": " ",
+                  "after": ""
+                }
+              },
+              "NNS"
+            ],
+            [
+              {
+                "nlpToken": {
+                  "index": 6,
+                  "word": ".",
+                  "originalText": ".",
+                  "lemma": ".",
+                  "characterOffsetBegin": 35,
+                  "characterOffsetEnd": 36,
+                  "pos": ".",
+                  "ner": "O",
+                  "speaker": "PER0",
+                  "before": "",
+                  "after": " "
+                }
+              },
+              "."
+            ]
+          ],
+          "score": 1.0,
+          "text": "show offshore dealings ."
+        }
+      ],
+      "label": "how"
     },
     "why": {
       "extracted": [
@@ -1089,286 +1142,10 @@
                 ]
               },
               "NNP"
-            ],
-            [
-              {
-                "nlpToken": {
-                  "index": 15,
-                  "word": "were",
-                  "originalText": "were",
-                  "lemma": "be",
-                  "characterOffsetBegin": 136,
-                  "characterOffsetEnd": 140,
-                  "pos": "VBD",
-                  "ner": "O",
-                  "speaker": "PER0",
-                  "before": " ",
-                  "after": " "
-                }
-              },
-              "VBD"
-            ],
-            [
-              {
-                "nlpToken": {
-                  "index": 16,
-                  "word": "among",
-                  "originalText": "among",
-                  "lemma": "among",
-                  "characterOffsetBegin": 141,
-                  "characterOffsetEnd": 146,
-                  "pos": "IN",
-                  "ner": "O",
-                  "speaker": "PER0",
-                  "before": " ",
-                  "after": " "
-                }
-              },
-              "IN"
-            ],
-            [
-              {
-                "nlpToken": {
-                  "index": 17,
-                  "word": "the",
-                  "originalText": "the",
-                  "lemma": "the",
-                  "characterOffsetBegin": 147,
-                  "characterOffsetEnd": 150,
-                  "pos": "DT",
-                  "ner": "O",
-                  "speaker": "PER0",
-                  "before": " ",
-                  "after": " "
-                }
-              },
-              "DT"
-            ],
-            [
-              {
-                "nlpToken": {
-                  "index": 18,
-                  "word": "names",
-                  "originalText": "names",
-                  "lemma": "name",
-                  "characterOffsetBegin": 151,
-                  "characterOffsetEnd": 156,
-                  "pos": "NNS",
-                  "ner": "O",
-                  "speaker": "PER0",
-                  "before": " ",
-                  "after": " "
-                }
-              },
-              "NNS"
-            ],
-            [
-              {
-                "nlpToken": {
-                  "index": 19,
-                  "word": "found",
-                  "originalText": "found",
-                  "lemma": "find",
-                  "characterOffsetBegin": 157,
-                  "characterOffsetEnd": 162,
-                  "pos": "VBN",
-                  "ner": "O",
-                  "speaker": "PER0",
-                  "before": " ",
-                  "after": " "
-                }
-              },
-              "VBN"
-            ],
-            [
-              {
-                "nlpToken": {
-                  "index": 20,
-                  "word": "on",
-                  "originalText": "on",
-                  "lemma": "on",
-                  "characterOffsetBegin": 163,
-                  "characterOffsetEnd": 165,
-                  "pos": "IN",
-                  "ner": "O",
-                  "speaker": "PER0",
-                  "before": " ",
-                  "after": " "
-                }
-              },
-              "IN"
-            ],
-            [
-              {
-                "nlpToken": {
-                  "index": 21,
-                  "word": "Sunday",
-                  "originalText": "Sunday",
-                  "lemma": "Sunday",
-                  "characterOffsetBegin": 166,
-                  "characterOffsetEnd": 172,
-                  "pos": "NNP",
-                  "ner": "DATE",
-                  "normalizedNER": "2016-04-03",
-                  "speaker": "PER0",
-                  "before": " ",
-                  "after": " ",
-                  "timex": {
-                    "tid": "t1",
-                    "type": "DATE",
-                    "value": "2016-04-03"
-                  }
-                }
-              },
-              "NNP"
-            ],
-            [
-              {
-                "nlpToken": {
-                  "index": 22,
-                  "word": "in",
-                  "originalText": "in",
-                  "lemma": "in",
-                  "characterOffsetBegin": 173,
-                  "characterOffsetEnd": 175,
-                  "pos": "IN",
-                  "ner": "O",
-                  "speaker": "PER0",
-                  "before": " ",
-                  "after": " "
-                }
-              },
-              "IN"
-            ],
-            [
-              {
-                "nlpToken": {
-                  "index": 23,
-                  "word": "leaked",
-                  "originalText": "leaked",
-                  "lemma": "leak",
-                  "characterOffsetBegin": 176,
-                  "characterOffsetEnd": 182,
-                  "pos": "VBN",
-                  "ner": "O",
-                  "speaker": "PER0",
-                  "before": " ",
-                  "after": " "
-                }
-              },
-              "VBN"
-            ],
-            [
-              {
-                "nlpToken": {
-                  "index": 24,
-                  "word": "documents",
-                  "originalText": "documents",
-                  "lemma": "document",
-                  "characterOffsetBegin": 183,
-                  "characterOffsetEnd": 192,
-                  "pos": "NNS",
-                  "ner": "O",
-                  "speaker": "PER0",
-                  "before": " ",
-                  "after": " "
-                }
-              },
-              "NNS"
-            ],
-            [
-              {
-                "nlpToken": {
-                  "index": 25,
-                  "word": "that",
-                  "originalText": "that",
-                  "lemma": "that",
-                  "characterOffsetBegin": 193,
-                  "characterOffsetEnd": 197,
-                  "pos": "IN",
-                  "ner": "O",
-                  "speaker": "PER0",
-                  "before": " ",
-                  "after": " "
-                }
-              },
-              "IN"
-            ],
-            [
-              {
-                "nlpToken": {
-                  "index": 26,
-                  "word": "reveal",
-                  "originalText": "reveal",
-                  "lemma": "reveal",
-                  "characterOffsetBegin": 198,
-                  "characterOffsetEnd": 204,
-                  "pos": "VBP",
-                  "ner": "O",
-                  "speaker": "PER0",
-                  "before": " ",
-                  "after": " "
-                }
-              },
-              "VBP"
-            ],
-            [
-              {
-                "nlpToken": {
-                  "index": 27,
-                  "word": "offshore",
-                  "originalText": "offshore",
-                  "lemma": "offshore",
-                  "characterOffsetBegin": 205,
-                  "characterOffsetEnd": 213,
-                  "pos": "JJ",
-                  "ner": "O",
-                  "speaker": "PER0",
-                  "before": " ",
-                  "after": " "
-                }
-              },
-              "JJ"
-            ],
-            [
-              {
-                "nlpToken": {
-                  "index": 28,
-                  "word": "financial",
-                  "originalText": "financial",
-                  "lemma": "financial",
-                  "characterOffsetBegin": 214,
-                  "characterOffsetEnd": 223,
-                  "pos": "JJ",
-                  "ner": "O",
-                  "speaker": "PER0",
-                  "before": " ",
-                  "after": " "
-                }
-              },
-              "JJ"
-            ],
-            [
-              {
-                "nlpToken": {
-                  "index": 29,
-                  "word": "dealings",
-                  "originalText": "dealings",
-                  "lemma": "dealings",
-                  "characterOffsetBegin": 224,
-                  "characterOffsetEnd": 232,
-                  "pos": "NNS",
-                  "ner": "O",
-                  "speaker": "PER0",
-                  "before": " ",
-                  "after": ""
-                }
-              },
-              "NNS"
             ]
           ],
-          "score": 0.3952380952380952,
-          "text": "UEFA chief Michel Platini and Barcelona superstar Lionel Messi were among the names found on Sunday in leaked documents that reveal offshore financial dealings",
+          "score": 0.49266666666666675,
+          "text": "UEFA chief Michel Platini and Barcelona superstar Lionel Messi",
           "nlpIndexSentence": 1
         }
       ],

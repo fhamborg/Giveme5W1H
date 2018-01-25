@@ -47,7 +47,7 @@ class Document(object):
         self._processed = None
         self._enhancement = {}
 
-        self._error_flag = {}
+        self._error_flags = {}
 
     def is_preprocessed(self, preprocessed=None):
         if preprocessed is True or preprocessed is False:
@@ -225,7 +225,7 @@ class Document(object):
         :param identifier:
         :return:
         """
-        self._error_flag.setdefault(identifier, True)
+        self._error_flags.setdefault(identifier, True)
 
     def get_error_flags(self):
         """
@@ -233,5 +233,5 @@ class Document(object):
         :param identifier:
         :return:
         """
-        return self._error_flag
+        return self._error_flags
 

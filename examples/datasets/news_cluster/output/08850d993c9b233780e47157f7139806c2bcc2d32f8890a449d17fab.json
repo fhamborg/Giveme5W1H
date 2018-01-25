@@ -26,7 +26,93 @@
     "Event": "las_vegas_shooting"
   },
   "dId": "08850d993c9b233780e47157f7139806c2bcc2d32f8890a449d17fab",
-  "fiveWoneH": {
+  "fiveWoneH": {},
+  "fiveWoneH_Metadata": {
+    "process_errors": {},
+    "how": {
+      "extracted": [
+        {
+          "parts": [
+            [
+              {
+                "nlpToken": {
+                  "index": 30,
+                  "word": "no",
+                  "originalText": "no",
+                  "lemma": "no",
+                  "characterOffsetBegin": 225,
+                  "characterOffsetEnd": 227,
+                  "pos": "DT",
+                  "ner": "O",
+                  "speaker": "PER0",
+                  "before": " ",
+                  "after": " "
+                }
+              },
+              "DT"
+            ],
+            [
+              {
+                "nlpToken": {
+                  "index": 31,
+                  "word": "criminal",
+                  "originalText": "criminal",
+                  "lemma": "criminal",
+                  "characterOffsetBegin": 228,
+                  "characterOffsetEnd": 236,
+                  "pos": "JJ",
+                  "ner": "O",
+                  "speaker": "PER0",
+                  "before": " ",
+                  "after": " "
+                }
+              },
+              "JJ"
+            ],
+            [
+              {
+                "nlpToken": {
+                  "index": 32,
+                  "word": "record",
+                  "originalText": "record",
+                  "lemma": "record",
+                  "characterOffsetBegin": 237,
+                  "characterOffsetEnd": 243,
+                  "pos": "NN",
+                  "ner": "O",
+                  "speaker": "PER0",
+                  "before": " ",
+                  "after": ""
+                }
+              },
+              "NN"
+            ],
+            [
+              {
+                "nlpToken": {
+                  "index": 33,
+                  "word": ".",
+                  "originalText": ".",
+                  "lemma": ".",
+                  "characterOffsetBegin": 243,
+                  "characterOffsetEnd": 244,
+                  "pos": ".",
+                  "ner": "O",
+                  "speaker": "PER0",
+                  "before": "",
+                  "after": ""
+                }
+              },
+              "."
+            ]
+          ],
+          "score": 1.0,
+          "text": "no criminal record .",
+          "nlpIndexSentence": 1
+        }
+      ],
+      "label": "how"
+    },
     "where": {
       "extracted": [
         {
@@ -225,120 +311,6 @@
         }
       ],
       "label": "when"
-    },
-    "how": {
-      "extracted": [
-        {
-          "parts": [
-            [
-              {
-                "nlpToken": {
-                  "index": 30,
-                  "word": "no",
-                  "originalText": "no",
-                  "lemma": "no",
-                  "characterOffsetBegin": 225,
-                  "characterOffsetEnd": 227,
-                  "pos": "DT",
-                  "ner": "O",
-                  "speaker": "PER0",
-                  "before": " ",
-                  "after": " "
-                }
-              },
-              "DT"
-            ],
-            [
-              {
-                "nlpToken": {
-                  "index": 31,
-                  "word": "criminal",
-                  "originalText": "criminal",
-                  "lemma": "criminal",
-                  "characterOffsetBegin": 228,
-                  "characterOffsetEnd": 236,
-                  "pos": "JJ",
-                  "ner": "O",
-                  "speaker": "PER0",
-                  "before": " ",
-                  "after": " "
-                }
-              },
-              "JJ"
-            ],
-            [
-              {
-                "nlpToken": {
-                  "index": 32,
-                  "word": "record",
-                  "originalText": "record",
-                  "lemma": "record",
-                  "characterOffsetBegin": 237,
-                  "characterOffsetEnd": 243,
-                  "pos": "NN",
-                  "ner": "O",
-                  "speaker": "PER0",
-                  "before": " ",
-                  "after": ""
-                }
-              },
-              "NN"
-            ],
-            [
-              {
-                "nlpToken": {
-                  "index": 33,
-                  "word": ".",
-                  "originalText": ".",
-                  "lemma": ".",
-                  "characterOffsetBegin": 243,
-                  "characterOffsetEnd": 244,
-                  "pos": ".",
-                  "ner": "O",
-                  "speaker": "PER0",
-                  "before": "",
-                  "after": ""
-                }
-              },
-              "."
-            ]
-          ],
-          "score": 1.0,
-          "text": "no criminal record .",
-          "nlpIndexSentence": 1
-        }
-      ],
-      "label": "how"
-    },
-    "why": {
-      "extracted": [
-        {
-          "parts": [
-            [
-              {
-                "nlpToken": {
-                  "index": 2,
-                  "word": "He",
-                  "originalText": "He",
-                  "lemma": "he",
-                  "characterOffsetBegin": 252,
-                  "characterOffsetEnd": 254,
-                  "pos": "PRP",
-                  "ner": "O",
-                  "speaker": "PER0",
-                  "before": "\n",
-                  "after": " "
-                }
-              },
-              "PRP"
-            ]
-          ],
-          "score": 0.5685000000000001,
-          "text": "He",
-          "nlpIndexSentence": 3
-        }
-      ],
-      "label": "why"
     },
     "who": {
       "extracted": [
@@ -618,6 +590,36 @@
         }
       ],
       "label": "what"
+    },
+    "why": {
+      "extracted": [
+        {
+          "parts": [
+            [
+              {
+                "nlpToken": {
+                  "index": 2,
+                  "word": "He",
+                  "originalText": "He",
+                  "lemma": "he",
+                  "characterOffsetBegin": 252,
+                  "characterOffsetEnd": 254,
+                  "pos": "PRP",
+                  "ner": "O",
+                  "speaker": "PER0",
+                  "before": "\n",
+                  "after": " "
+                }
+              },
+              "PRP"
+            ]
+          ],
+          "score": 0.5685000000000001,
+          "text": "He",
+          "nlpIndexSentence": 3
+        }
+      ],
+      "label": "why"
     }
   }
 }

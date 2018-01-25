@@ -20,15 +20,18 @@
   "url": "https://www.thesun.co.uk/news/4348423/north-korea-missile-launch-japan-latest-russia-evacauation-kim-jong-un/",
   "newsCluster": {
     "CategoryId": 1,
-    "Category": "global_politics",
+    "Category": "world",
     "TopicId": 2,
-    "Topic": "north_korea",
-    "EventId": 7,
-    "Event": "north_Korea_hokkaido_missile",
-    "Url": "https://www.thesun.co.uk/news/4348423/north-korea-missile-launch-japan-latest-russia-evacauation-kim-jong-un/"
+    "Topic": "legancy",
+    "EventId": 55,
+    "Event": "north_Korea_hokkaido_missile"
   },
   "dId": "af997466c1ced309896da42a06a3c3f90a012b355d7e3db86f9fee07",
-  "fiveWoneH": {
+  "fiveWoneH": {},
+  "fiveWoneH_Metadata": {
+    "process_errors": {
+      "core_nlp": true
+    },
     "how": {
       "extracted": [
         {
@@ -36,25 +39,339 @@
             [
               {
                 "nlpToken": {
-                  "index": 19,
-                  "word": "launched",
-                  "originalText": "launched",
-                  "lemma": "launch",
-                  "characterOffsetBegin": 1889,
-                  "characterOffsetEnd": 1897,
-                  "pos": "VBD",
+                  "index": 9,
+                  "word": "the",
+                  "originalText": "the",
+                  "lemma": "the",
+                  "characterOffsetBegin": 230,
+                  "characterOffsetEnd": 233,
+                  "pos": "DT",
                   "ner": "O",
                   "speaker": "PER0",
                   "before": " ",
                   "after": " "
                 }
               },
-              "VBD"
+              "DT"
+            ],
+            [
+              {
+                "nlpToken": {
+                  "index": 10,
+                  "word": "North",
+                  "originalText": "North",
+                  "lemma": "north",
+                  "characterOffsetBegin": 234,
+                  "characterOffsetEnd": 239,
+                  "pos": "JJ",
+                  "ner": "MISC",
+                  "speaker": "PER0",
+                  "before": " ",
+                  "after": " "
+                },
+                "aida": [
+                  {
+                    "mention": {
+                      "allEntities": [
+                        {
+                          "kbIdentifier": "YAGO:North_Korea",
+                          "disambiguationScore": "0.56189"
+                        }
+                      ],
+                      "offset": 234,
+                      "name": "North Korean",
+                      "length": 12,
+                      "bestEntity": {
+                        "kbIdentifier": "YAGO:North_Korea",
+                        "disambiguationScore": "0.56189"
+                      }
+                    },
+                    "bestEntityMetadata": {
+                      "knowledgebase": "YAGO",
+                      "depictionurl": "http://upload.wikimedia.org/wikipedia/commons/5/51/Flag_of_North_Korea.svg",
+                      "depictionthumbnailurl": "http://upload.wikimedia.org/wikipedia/commons/thumbFlag_of_North_Korea.svg/200px-Flag_of_North_Korea.svg",
+                      "importance": 0.0001805005380197364,
+                      "entityId": "North_Korea",
+                      "type": [
+                        "YAGO_wordnet_system_108435388",
+                        "YAGO_wordnet_district_108552138",
+                        "YAGO_wikicategory_East_Asian_countries",
+                        "YAGO_yagoPermanentlyLocatedEntity",
+                        "YAGO_yagoLegalActorGeo",
+                        "YAGO_wordnet_state_108654360",
+                        "YAGO_wordnet_country_108544813",
+                        "YAGO_wikicategory_Member_states_of_the_United_Nations",
+                        "YAGO_wordnet_economy_108366753",
+                        "YAGO_wikicategory_States_and_territories_established_in_1948",
+                        "YAGO_wordnet_abstraction_100002137",
+                        "YAGO_wordnet_region_108630985",
+                        "YAGO_wikicategory_Northeast_Asian_countries",
+                        "YAGO_yagoGeoEntity",
+                        "YAGO_wordnet_physical_entity_100001930",
+                        "YAGO_wordnet_entity_100001740",
+                        "YAGO_wikicategory_Single\\u002dparty_states",
+                        "YAGO_wordnet_object_100002684",
+                        "YAGO_wordnet_group_100031264",
+                        "YAGO_wordnet_location_100027167",
+                        "YAGO_wordnet_administrative_district_108491826"
+                      ],
+                      "readableRepr": "North Korea",
+                      "url": "http://en.wikipedia.org/wiki/North%20Korea"
+                    }
+                  }
+                ]
+              },
+              "JJ"
+            ],
+            [
+              {
+                "nlpToken": {
+                  "index": 11,
+                  "word": "Korean",
+                  "originalText": "Korean",
+                  "lemma": "korean",
+                  "characterOffsetBegin": 240,
+                  "characterOffsetEnd": 246,
+                  "pos": "JJ",
+                  "ner": "MISC",
+                  "speaker": "PER0",
+                  "before": " ",
+                  "after": " "
+                },
+                "aida": [
+                  {
+                    "mention": {
+                      "allEntities": [
+                        {
+                          "kbIdentifier": "YAGO:North_Korea",
+                          "disambiguationScore": "0.56189"
+                        }
+                      ],
+                      "offset": 234,
+                      "name": "North Korean",
+                      "length": 12,
+                      "bestEntity": {
+                        "kbIdentifier": "YAGO:North_Korea",
+                        "disambiguationScore": "0.56189"
+                      }
+                    },
+                    "bestEntityMetadata": {
+                      "knowledgebase": "YAGO",
+                      "depictionurl": "http://upload.wikimedia.org/wikipedia/commons/5/51/Flag_of_North_Korea.svg",
+                      "depictionthumbnailurl": "http://upload.wikimedia.org/wikipedia/commons/thumbFlag_of_North_Korea.svg/200px-Flag_of_North_Korea.svg",
+                      "importance": 0.0001805005380197364,
+                      "entityId": "North_Korea",
+                      "type": [
+                        "YAGO_wordnet_system_108435388",
+                        "YAGO_wordnet_district_108552138",
+                        "YAGO_wikicategory_East_Asian_countries",
+                        "YAGO_yagoPermanentlyLocatedEntity",
+                        "YAGO_yagoLegalActorGeo",
+                        "YAGO_wordnet_state_108654360",
+                        "YAGO_wordnet_country_108544813",
+                        "YAGO_wikicategory_Member_states_of_the_United_Nations",
+                        "YAGO_wordnet_economy_108366753",
+                        "YAGO_wikicategory_States_and_territories_established_in_1948",
+                        "YAGO_wordnet_abstraction_100002137",
+                        "YAGO_wordnet_region_108630985",
+                        "YAGO_wikicategory_Northeast_Asian_countries",
+                        "YAGO_yagoGeoEntity",
+                        "YAGO_wordnet_physical_entity_100001930",
+                        "YAGO_wordnet_entity_100001740",
+                        "YAGO_wikicategory_Single\\u002dparty_states",
+                        "YAGO_wordnet_object_100002684",
+                        "YAGO_wordnet_group_100031264",
+                        "YAGO_wordnet_location_100027167",
+                        "YAGO_wordnet_administrative_district_108491826"
+                      ],
+                      "readableRepr": "North Korea",
+                      "url": "http://en.wikipedia.org/wiki/North%20Korea"
+                    }
+                  }
+                ]
+              },
+              "JJ"
+            ],
+            [
+              {
+                "nlpToken": {
+                  "index": 12,
+                  "word": "border",
+                  "originalText": "border",
+                  "lemma": "border",
+                  "characterOffsetBegin": 247,
+                  "characterOffsetEnd": 253,
+                  "pos": "NN",
+                  "ner": "O",
+                  "speaker": "PER0",
+                  "before": " ",
+                  "after": " "
+                }
+              },
+              "NN"
+            ],
+            [
+              {
+                "nlpToken": {
+                  "index": 13,
+                  "word": "as",
+                  "originalText": "as",
+                  "lemma": "as",
+                  "characterOffsetBegin": 254,
+                  "characterOffsetEnd": 256,
+                  "pos": "IN",
+                  "ner": "O",
+                  "speaker": "PER0",
+                  "before": " ",
+                  "after": " "
+                }
+              },
+              "IN"
+            ],
+            [
+              {
+                "nlpToken": {
+                  "index": 14,
+                  "word": "war",
+                  "originalText": "war",
+                  "lemma": "war",
+                  "characterOffsetBegin": 257,
+                  "characterOffsetEnd": 260,
+                  "pos": "NN",
+                  "ner": "O",
+                  "speaker": "PER0",
+                  "before": " ",
+                  "after": " "
+                }
+              },
+              "NN"
+            ],
+            [
+              {
+                "nlpToken": {
+                  "index": 15,
+                  "word": "between",
+                  "originalText": "between",
+                  "lemma": "between",
+                  "characterOffsetBegin": 261,
+                  "characterOffsetEnd": 268,
+                  "pos": "IN",
+                  "ner": "O",
+                  "speaker": "PER0",
+                  "before": " ",
+                  "after": " "
+                }
+              },
+              "IN"
+            ],
+            [
+              {
+                "nlpToken": {
+                  "index": 16,
+                  "word": "Pyongyang",
+                  "originalText": "Pyongyang",
+                  "lemma": "Pyongyang",
+                  "characterOffsetBegin": 269,
+                  "characterOffsetEnd": 278,
+                  "pos": "NNP",
+                  "ner": "LOCATION",
+                  "speaker": "PER0",
+                  "before": " ",
+                  "after": " "
+                },
+                "aida": [
+                  {
+                    "mention": {
+                      "allEntities": [
+                        {
+                          "kbIdentifier": "YAGO:Pyongyang",
+                          "disambiguationScore": "0.91928"
+                        }
+                      ],
+                      "offset": 269,
+                      "name": "Pyongyang",
+                      "length": 9,
+                      "bestEntity": {
+                        "kbIdentifier": "YAGO:Pyongyang",
+                        "disambiguationScore": "0.91928"
+                      }
+                    },
+                    "bestEntityMetadata": {
+                      "knowledgebase": "YAGO",
+                      "depictionurl": "http://upload.wikimedia.org/wikipedia/commons/b/b1/Pyongyang_montage.png",
+                      "depictionthumbnailurl": "http://upload.wikimedia.org/wikipedia/commons/thumbPyongyang_montage.png/200px-Pyongyang_montage.png",
+                      "importance": 0.0011264570613453919,
+                      "entityId": "Pyongyang",
+                      "type": [
+                        "YAGO_wordnet_district_108552138",
+                        "YAGO_yagoPermanentlyLocatedEntity",
+                        "YAGO_yagoLegalActorGeo",
+                        "YAGO_wordnet_capital_108518505",
+                        "YAGO_wordnet_urban_area_108675967",
+                        "YAGO_wikicategory_Capitals_in_Asia",
+                        "YAGO_wordnet_municipality_108626283",
+                        "YAGO_wordnet_center_108523483",
+                        "YAGO_wordnet_seat_108647945",
+                        "YAGO_wordnet_region_108630985",
+                        "YAGO_yagoGeoEntity",
+                        "YAGO_wordnet_physical_entity_100001930",
+                        "YAGO_wikicategory_Directly_Governed_Cities_and_Special_Administrative_Regions_of_North_Korea",
+                        "YAGO_wordnet_entity_100001740",
+                        "YAGO_wordnet_object_100002684",
+                        "YAGO_wordnet_area_108497294",
+                        "YAGO_wordnet_city_108524735",
+                        "YAGO_wordnet_geographical_area_108574314",
+                        "YAGO_wordnet_location_100027167",
+                        "YAGO_wordnet_administrative_district_108491826"
+                      ],
+                      "readableRepr": "Pyongyang",
+                      "url": "http://en.wikipedia.org/wiki/Pyongyang"
+                    }
+                  }
+                ]
+              },
+              "NNP"
+            ],
+            [
+              {
+                "nlpToken": {
+                  "index": 17,
+                  "word": "and",
+                  "originalText": "and",
+                  "lemma": "and",
+                  "characterOffsetBegin": 279,
+                  "characterOffsetEnd": 282,
+                  "pos": "CC",
+                  "ner": "O",
+                  "speaker": "PER0",
+                  "before": " ",
+                  "after": " "
+                }
+              },
+              "CC"
+            ],
+            [
+              {
+                "nlpToken": {
+                  "index": 18,
+                  "word": "the",
+                  "originalText": "the",
+                  "lemma": "the",
+                  "characterOffsetBegin": 283,
+                  "characterOffsetEnd": 286,
+                  "pos": "DT",
+                  "ner": "O",
+                  "speaker": "PER0",
+                  "before": " ",
+                  "after": " "
+                }
+              },
+              "DT"
             ]
           ],
-          "score": 1.2931726907630523,
-          "text": "launched",
-          "nlpIndexSentence": 10
+          "score": 1.0,
+          "text": "the North Korean border as war between Pyongyang and the",
+          "nlpIndexSentence": 2
         }
       ],
       "label": "how"
@@ -492,314 +809,10 @@
                 }
               },
               "NNS"
-            ],
-            [
-              {
-                "nlpToken": {
-                  "index": 4,
-                  "word": "continued",
-                  "originalText": "continued",
-                  "lemma": "continue",
-                  "characterOffsetBegin": 104,
-                  "characterOffsetEnd": 113,
-                  "pos": "VBD",
-                  "ner": "O",
-                  "speaker": "PER0",
-                  "before": " ",
-                  "after": " "
-                }
-              },
-              "VBD"
-            ],
-            [
-              {
-                "nlpToken": {
-                  "index": 5,
-                  "word": "today",
-                  "originalText": "today",
-                  "lemma": "today",
-                  "characterOffsetBegin": 114,
-                  "characterOffsetEnd": 119,
-                  "pos": "NN",
-                  "ner": "DATE",
-                  "normalizedNER": "2017-08-29",
-                  "speaker": "PER0",
-                  "before": " ",
-                  "after": " ",
-                  "timex": {
-                    "tid": "t1",
-                    "type": "DATE",
-                    "value": "2017-08-29"
-                  }
-                }
-              },
-              "NN"
-            ],
-            [
-              {
-                "nlpToken": {
-                  "index": 6,
-                  "word": "as",
-                  "originalText": "as",
-                  "lemma": "as",
-                  "characterOffsetBegin": 120,
-                  "characterOffsetEnd": 122,
-                  "pos": "IN",
-                  "ner": "O",
-                  "speaker": "PER0",
-                  "before": " ",
-                  "after": " "
-                }
-              },
-              "IN"
-            ],
-            [
-              {
-                "nlpToken": {
-                  "index": 7,
-                  "word": "tensions",
-                  "originalText": "tensions",
-                  "lemma": "tension",
-                  "characterOffsetBegin": 123,
-                  "characterOffsetEnd": 131,
-                  "pos": "NNS",
-                  "ner": "O",
-                  "speaker": "PER0",
-                  "before": " ",
-                  "after": " "
-                }
-              },
-              "NNS"
-            ],
-            [
-              {
-                "nlpToken": {
-                  "index": 8,
-                  "word": "between",
-                  "originalText": "between",
-                  "lemma": "between",
-                  "characterOffsetBegin": 132,
-                  "characterOffsetEnd": 139,
-                  "pos": "IN",
-                  "ner": "O",
-                  "speaker": "PER0",
-                  "before": " ",
-                  "after": " "
-                }
-              },
-              "IN"
-            ],
-            [
-              {
-                "nlpToken": {
-                  "index": 9,
-                  "word": "Washington",
-                  "originalText": "Washington",
-                  "lemma": "Washington",
-                  "characterOffsetBegin": 140,
-                  "characterOffsetEnd": 150,
-                  "pos": "NNP",
-                  "ner": "LOCATION",
-                  "speaker": "PER0",
-                  "before": " ",
-                  "after": " "
-                },
-                "aida": [
-                  {
-                    "mention": {
-                      "allEntities": [
-                        {
-                          "kbIdentifier": "YAGO:United_States",
-                          "disambiguationScore": "0.4803"
-                        }
-                      ],
-                      "offset": 140,
-                      "name": "Washington",
-                      "length": 10,
-                      "bestEntity": {
-                        "kbIdentifier": "YAGO:United_States",
-                        "disambiguationScore": "0.4803"
-                      }
-                    },
-                    "bestEntityMetadata": {
-                      "knowledgebase": "YAGO",
-                      "depictionurl": "http://upload.wikimedia.org/wikipedia/en/a/a4/Flag_of_the_United_States.svg",
-                      "depictionthumbnailurl": "http://upload.wikimedia.org/wikipedia/en/thumbFlag_of_the_United_States.svg/200px-Flag_of_the_United_States.svg",
-                      "importance": 0.0,
-                      "entityId": "United_States",
-                      "type": [
-                        "YAGO_wordnet_system_108435388",
-                        "YAGO_yagoPermanentlyLocatedEntity",
-                        "YAGO_yagoLegalActorGeo",
-                        "YAGO_wordnet_organization_108008335",
-                        "YAGO_wordnet_state_100024720",
-                        "YAGO_wordnet_democracy_108361329",
-                        "YAGO_wordnet_union_114418395",
-                        "YAGO_wordnet_unit_108189659",
-                        "YAGO_wikicategory_Superpowers",
-                        "YAGO_wordnet_cognition_100023271",
-                        "YAGO_wordnet_coalition_114418662",
-                        "YAGO_wordnet_political_system_108367880",
-                        "YAGO_wordnet_attribute_100024264",
-                        "YAGO_wordnet_abstraction_100002137",
-                        "YAGO_wordnet_attitude_106193203",
-                        "YAGO_wordnet_alliance_114418822",
-                        "YAGO_wordnet_group_100031264",
-                        "YAGO_wordnet_psychological_feature_100023100",
-                        "YAGO_wordnet_body_107965085",
-                        "YAGO_wordnet_political_orientation_106212839",
-                        "YAGO_wordnet_democracy_106217103",
-                        "YAGO_wordnet_political_unit_108359949",
-                        "YAGO_wikicategory_Former_British_colonies",
-                        "YAGO_wordnet_economy_108366753",
-                        "YAGO_yagoLegalActor",
-                        "YAGO_wikicategory_G8_nations",
-                        "YAGO_yagoGeoEntity",
-                        "YAGO_wordnet_social_group_107950920",
-                        "YAGO_wordnet_entity_100001740",
-                        "YAGO_wordnet_colony_108374049",
-                        "YAGO_wikicategory_Liberal_democracies",
-                        "YAGO_wikicategory_G20_nations",
-                        "YAGO_wikicategory_Former_confederations",
-                        "YAGO_wordnet_state_108168978",
-                        "YAGO_wikicategory_Federal_constitutional_republics",
-                        "YAGO_wordnet_world_power_108177592",
-                        "YAGO_wikicategory_Republics",
-                        "YAGO_wordnet_orientation_106208021"
-                      ],
-                      "readableRepr": "United States",
-                      "url": "http://en.wikipedia.org/wiki/United%20States"
-                    }
-                  }
-                ]
-              },
-              "NNP"
-            ],
-            [
-              {
-                "nlpToken": {
-                  "index": 10,
-                  "word": "and",
-                  "originalText": "and",
-                  "lemma": "and",
-                  "characterOffsetBegin": 151,
-                  "characterOffsetEnd": 154,
-                  "pos": "CC",
-                  "ner": "O",
-                  "speaker": "PER0",
-                  "before": " ",
-                  "after": " "
-                }
-              },
-              "CC"
-            ],
-            [
-              {
-                "nlpToken": {
-                  "index": 11,
-                  "word": "Pyongyang",
-                  "originalText": "Pyongyang",
-                  "lemma": "Pyongyang",
-                  "characterOffsetBegin": 155,
-                  "characterOffsetEnd": 164,
-                  "pos": "NNP",
-                  "ner": "LOCATION",
-                  "speaker": "PER0",
-                  "before": " ",
-                  "after": " "
-                },
-                "aida": [
-                  {
-                    "mention": {
-                      "allEntities": [
-                        {
-                          "kbIdentifier": "YAGO:Pyongyang",
-                          "disambiguationScore": "0.91928"
-                        }
-                      ],
-                      "offset": 155,
-                      "name": "Pyongyang",
-                      "length": 9,
-                      "bestEntity": {
-                        "kbIdentifier": "YAGO:Pyongyang",
-                        "disambiguationScore": "0.91928"
-                      }
-                    },
-                    "bestEntityMetadata": {
-                      "knowledgebase": "YAGO",
-                      "depictionurl": "http://upload.wikimedia.org/wikipedia/commons/b/b1/Pyongyang_montage.png",
-                      "depictionthumbnailurl": "http://upload.wikimedia.org/wikipedia/commons/thumbPyongyang_montage.png/200px-Pyongyang_montage.png",
-                      "importance": 0.0011264570613453919,
-                      "entityId": "Pyongyang",
-                      "type": [
-                        "YAGO_wordnet_district_108552138",
-                        "YAGO_yagoPermanentlyLocatedEntity",
-                        "YAGO_yagoLegalActorGeo",
-                        "YAGO_wordnet_capital_108518505",
-                        "YAGO_wordnet_urban_area_108675967",
-                        "YAGO_wikicategory_Capitals_in_Asia",
-                        "YAGO_wordnet_municipality_108626283",
-                        "YAGO_wordnet_center_108523483",
-                        "YAGO_wordnet_seat_108647945",
-                        "YAGO_wordnet_region_108630985",
-                        "YAGO_yagoGeoEntity",
-                        "YAGO_wordnet_physical_entity_100001930",
-                        "YAGO_wikicategory_Directly_Governed_Cities_and_Special_Administrative_Regions_of_North_Korea",
-                        "YAGO_wordnet_entity_100001740",
-                        "YAGO_wordnet_object_100002684",
-                        "YAGO_wordnet_area_108497294",
-                        "YAGO_wordnet_city_108524735",
-                        "YAGO_wordnet_geographical_area_108574314",
-                        "YAGO_wordnet_location_100027167",
-                        "YAGO_wordnet_administrative_district_108491826"
-                      ],
-                      "readableRepr": "Pyongyang",
-                      "url": "http://en.wikipedia.org/wiki/Pyongyang"
-                    }
-                  }
-                ]
-              },
-              "NNP"
-            ],
-            [
-              {
-                "nlpToken": {
-                  "index": 12,
-                  "word": "ratchet",
-                  "originalText": "ratchet",
-                  "lemma": "ratchet",
-                  "characterOffsetBegin": 165,
-                  "characterOffsetEnd": 172,
-                  "pos": "VB",
-                  "ner": "O",
-                  "speaker": "PER0",
-                  "before": " ",
-                  "after": " "
-                }
-              },
-              "VB"
-            ],
-            [
-              {
-                "nlpToken": {
-                  "index": 13,
-                  "word": "up",
-                  "originalText": "up",
-                  "lemma": "up",
-                  "characterOffsetBegin": 173,
-                  "characterOffsetEnd": 175,
-                  "pos": "RP",
-                  "ner": "O",
-                  "speaker": "PER0",
-                  "before": " ",
-                  "after": ""
-                }
-              },
-              "RP"
             ]
           ],
-          "score": 0.4261904761904762,
-          "text": "War of words continued today as tensions between Washington and Pyongyang ratchet up",
+          "score": 0.5793333333333334,
+          "text": "War of words",
           "nlpIndexSentence": 1
         }
       ],
@@ -948,13 +961,10 @@
               "NNP"
             ]
           ],
-          "score": 1.0,
+          "score": 0.6705369529877755,
           "text": "North Korea",
           "enhancement": {
             "openstreetmap_nominatim": {
-              "place_id": "177647595",
-              "licence": "Data \u00a9 OpenStreetMap contributors, ODbL 1.0. http://www.openstreetmap.org/copyright",
-              "osm_type": "relation",
               "osm_id": "192734",
               "boundingbox": [
                 37.6279512,
@@ -962,13 +972,16 @@
                 124.0913902,
                 130.924647
               ],
-              "lat": "40.3736611",
-              "lon": "127.0870417",
-              "display_name": "\uc870\uc120\ubbfc\uc8fc\uc8fc\uc758\uc778\ubbfc\uacf5\ud654\uad6d",
-              "class": "boundary",
-              "type": "administrative",
+              "licence": "Data \u00a9 OpenStreetMap contributors, ODbL 1.0. http://www.openstreetmap.org/copyright",
               "importance": 0.17189971919422,
-              "icon": "https://nominatim.openstreetmap.org/images/mapicons/poi_boundary_administrative.p.20.png"
+              "icon": "https://nominatim.openstreetmap.org/images/mapicons/poi_boundary_administrative.p.20.png",
+              "osm_type": "relation",
+              "display_name": "\uc870\uc120\ubbfc\uc8fc\uc8fc\uc758\uc778\ubbfc\uacf5\ud654\uad6d",
+              "lat": "40.3736611",
+              "type": "administrative",
+              "place_id": "177647595",
+              "lon": "127.0870417",
+              "class": "boundary"
             }
           }
         }
@@ -982,39 +995,61 @@
             [
               {
                 "nlpToken": {
-                  "index": 23,
+                  "index": 6,
                   "word": "6am",
                   "originalText": "6am",
                   "lemma": "6am",
-                  "characterOffsetBegin": 13138,
-                  "characterOffsetEnd": 13141,
-                  "pos": "JJ",
+                  "characterOffsetBegin": 5481,
+                  "characterOffsetEnd": 5484,
+                  "pos": "CD",
                   "ner": "TIME",
                   "normalizedNER": "2017-08-29T06:00",
                   "speaker": "PER0",
                   "before": " ",
                   "after": " ",
                   "timex": {
-                    "tid": "t28",
+                    "tid": "t12",
                     "type": "TIME",
                     "value": "2017-08-29T06:00"
                   }
                 }
               },
-              "JJ"
+              "CD"
+            ],
+            [
+              {
+                "nlpToken": {
+                  "index": 7,
+                  "word": "before",
+                  "originalText": "before",
+                  "lemma": "before",
+                  "characterOffsetBegin": 5485,
+                  "characterOffsetEnd": 5491,
+                  "pos": "IN",
+                  "ner": "TIME",
+                  "normalizedNER": "2017-08-29T06:00",
+                  "speaker": "PER0",
+                  "before": " ",
+                  "after": " ",
+                  "timex": {
+                    "tid": "t12",
+                    "type": "TIME",
+                    "value": "2017-08-29T06:00"
+                  }
+                }
+              },
+              "IN"
             ]
           ],
-          "score": 0.605079429381265,
-          "text": "6am",
+          "score": 0.4570173611622577,
+          "text": "6am before",
           "enhancement": {
-            "timex": [
-              {
-                "start_date": "2017-08-29T06:00:00",
-                "end_date": "2017-08-29T06:00:59"
-              }
-            ]
+            "timex": {
+              "start_date": "2017-08-29T06:00:00",
+              "end_date": "2017-08-29T06:00:59"
+            }
           },
-          "nlpIndexSentence": 67
+          "nlpIndexSentence": 24
         }
       ],
       "label": "when"

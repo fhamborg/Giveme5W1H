@@ -25,7 +25,9 @@
     "EventId": 38,
     "Event": "time_travel_hawaiian_airlines_flight_takes_off_in_2018_lands_in_2017"
   },
-  "fiveWoneH": {
+  "fiveWoneH": {},
+  "fiveWoneH_Metadata": {
+    "process_errors": {},
     "who": {
       "extracted": [
         {
@@ -397,36 +399,6 @@
         }
       ],
       "label": "how"
-    },
-    "why": {
-      "extracted": [
-        {
-          "parts": [
-            [
-              {
-                "nlpToken": {
-                  "index": 2,
-                  "word": "you",
-                  "originalText": "you",
-                  "lemma": "you",
-                  "characterOffsetBegin": 65,
-                  "characterOffsetEnd": 68,
-                  "pos": "PRP",
-                  "ner": "O",
-                  "speaker": "PER0",
-                  "before": " ",
-                  "after": " "
-                }
-              },
-              "PRP"
-            ]
-          ],
-          "score": 0.542923076923077,
-          "text": "you",
-          "nlpIndexSentence": 1
-        }
-      ],
-      "label": "why"
     },
     "where": {
       "extracted": [
@@ -928,7 +900,7 @@
               "CD"
             ]
           ],
-          "score": 0.6272332223072856,
+          "score": 0.5205665556406189,
           "text": "9:45 am on December 31st , 2017",
           "enhancement": {
             "timex": {
@@ -940,6 +912,36 @@
         }
       ],
       "label": "when"
+    },
+    "why": {
+      "extracted": [
+        {
+          "parts": [
+            [
+              {
+                "nlpToken": {
+                  "index": 2,
+                  "word": "you",
+                  "originalText": "you",
+                  "lemma": "you",
+                  "characterOffsetBegin": 65,
+                  "characterOffsetEnd": 68,
+                  "pos": "PRP",
+                  "ner": "O",
+                  "speaker": "PER0",
+                  "before": " ",
+                  "after": " "
+                }
+              },
+              "PRP"
+            ]
+          ],
+          "score": 0.542923076923077,
+          "text": "you",
+          "nlpIndexSentence": 1
+        }
+      ],
+      "label": "why"
     }
   }
 }

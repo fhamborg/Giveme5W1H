@@ -19,45 +19,16 @@
   "url": "https://www.nytimes.com/2017/09/27/your-money/equifax-credit-freeze-lock-apology.html",
   "newsCluster": {
     "CategoryId": 3,
-    "Category": "science_tech",
-    "TopicId": 3,
-    "Topic": "hack",
-    "EventId": 9,
-    "Event": "hack_equifax_breach",
-    "Url": "https://www.nytimes.com/2017/09/27/your-money/equifax-credit-freeze-lock-apology.html"
+    "Category": "technology",
+    "TopicId": 2,
+    "Topic": "legancy",
+    "EventId": 57,
+    "Event": "hack_equifax_breach"
   },
   "dId": "de37fd40e39a33921bf182eeec592794f4289680e25a6ec47fb9e6fe",
-  "fiveWoneH": {
-    "how": {
-      "extracted": [
-        {
-          "parts": [
-            [
-              {
-                "nlpToken": {
-                  "index": 2,
-                  "word": "interim",
-                  "originalText": "interim",
-                  "lemma": "interim",
-                  "characterOffsetBegin": 51,
-                  "characterOffsetEnd": 58,
-                  "pos": "JJ",
-                  "ner": "O",
-                  "speaker": "PER0",
-                  "before": " ",
-                  "after": " "
-                }
-              },
-              "JJ"
-            ]
-          ],
-          "score": 1.3333333333333333,
-          "text": "interim",
-          "nlpIndexSentence": 1
-        }
-      ],
-      "label": "how"
-    },
+  "fiveWoneH": {},
+  "fiveWoneH_Metadata": {
+    "process_errors": {},
     "where": {
       "extracted": [],
       "label": "where"
@@ -86,7 +57,19 @@
                     "type": "DATE",
                     "value": "2018-01-31"
                   }
-                }
+                },
+                "heideltime": [
+                  {
+                    "@tid": "t7",
+                    "@type": "DATE",
+                    "@value": "2018-01-31",
+                    "#text": "Jan. 31",
+                    "characterOffset": [
+                      1287,
+                      1294
+                    ]
+                  }
+                ]
               },
               "NNP"
             ],
@@ -110,25 +93,227 @@
                     "type": "DATE",
                     "value": "2018-01-31"
                   }
-                }
+                },
+                "heideltime": [
+                  {
+                    "@tid": "t7",
+                    "@type": "DATE",
+                    "@value": "2018-01-31",
+                    "#text": "Jan. 31",
+                    "characterOffset": [
+                      1287,
+                      1294
+                    ]
+                  }
+                ]
               },
               "CD"
             ]
           ],
-          "score": 0.6648186086269144,
+          "score": 0.6740666771931673,
           "text": "Jan. 31",
           "enhancement": {
-            "timex": [
-              {
-                "start_date": "2018-01-31T00:00:00",
-                "end_date": "2018-01-31T23:59:59"
-              }
-            ]
+            "timex": {
+              "start_date": "2018-01-31T00:00:00",
+              "end_date": "2018-01-31T23:59:59"
+            }
           },
           "nlpIndexSentence": 11
         }
       ],
       "label": "when"
+    },
+    "how": {
+      "extracted": [
+        {
+          "parts": [
+            [
+              {
+                "nlpToken": {
+                  "index": 1,
+                  "word": "The",
+                  "originalText": "The",
+                  "lemma": "the",
+                  "characterOffsetBegin": 47,
+                  "characterOffsetEnd": 50,
+                  "pos": "DT",
+                  "ner": "O",
+                  "speaker": "PER0",
+                  "before": " ",
+                  "after": " "
+                }
+              },
+              "DT"
+            ],
+            [
+              {
+                "nlpToken": {
+                  "index": 2,
+                  "word": "interim",
+                  "originalText": "interim",
+                  "lemma": "interim",
+                  "characterOffsetBegin": 51,
+                  "characterOffsetEnd": 58,
+                  "pos": "JJ",
+                  "ner": "O",
+                  "speaker": "PER0",
+                  "before": " ",
+                  "after": " "
+                }
+              },
+              "JJ"
+            ],
+            [
+              {
+                "nlpToken": {
+                  "index": 3,
+                  "word": "chief",
+                  "originalText": "chief",
+                  "lemma": "chief",
+                  "characterOffsetBegin": 59,
+                  "characterOffsetEnd": 64,
+                  "pos": "NN",
+                  "ner": "O",
+                  "speaker": "PER0",
+                  "before": " ",
+                  "after": " "
+                }
+              },
+              "NN"
+            ],
+            [
+              {
+                "nlpToken": {
+                  "index": 4,
+                  "word": "executive",
+                  "originalText": "executive",
+                  "lemma": "executive",
+                  "characterOffsetBegin": 65,
+                  "characterOffsetEnd": 74,
+                  "pos": "NN",
+                  "ner": "O",
+                  "speaker": "PER0",
+                  "before": " ",
+                  "after": " "
+                }
+              },
+              "NN"
+            ],
+            [
+              {
+                "nlpToken": {
+                  "index": 5,
+                  "word": "apologized",
+                  "originalText": "apologized",
+                  "lemma": "apologize",
+                  "characterOffsetBegin": 75,
+                  "characterOffsetEnd": 85,
+                  "pos": "VBD",
+                  "ner": "O",
+                  "speaker": "PER0",
+                  "before": " ",
+                  "after": " "
+                }
+              },
+              "VBD"
+            ],
+            [
+              {
+                "nlpToken": {
+                  "index": 6,
+                  "word": "to",
+                  "originalText": "to",
+                  "lemma": "to",
+                  "characterOffsetBegin": 86,
+                  "characterOffsetEnd": 88,
+                  "pos": "TO",
+                  "ner": "O",
+                  "speaker": "PER0",
+                  "before": " ",
+                  "after": " "
+                }
+              },
+              "TO"
+            ],
+            [
+              {
+                "nlpToken": {
+                  "index": 7,
+                  "word": "victims",
+                  "originalText": "victims",
+                  "lemma": "victim",
+                  "characterOffsetBegin": 89,
+                  "characterOffsetEnd": 96,
+                  "pos": "NNS",
+                  "ner": "O",
+                  "speaker": "PER0",
+                  "before": " ",
+                  "after": " "
+                }
+              },
+              "NNS"
+            ],
+            [
+              {
+                "nlpToken": {
+                  "index": 8,
+                  "word": "of",
+                  "originalText": "of",
+                  "lemma": "of",
+                  "characterOffsetBegin": 97,
+                  "characterOffsetEnd": 99,
+                  "pos": "IN",
+                  "ner": "O",
+                  "speaker": "PER0",
+                  "before": " ",
+                  "after": " "
+                }
+              },
+              "IN"
+            ],
+            [
+              {
+                "nlpToken": {
+                  "index": 9,
+                  "word": "the",
+                  "originalText": "the",
+                  "lemma": "the",
+                  "characterOffsetBegin": 100,
+                  "characterOffsetEnd": 103,
+                  "pos": "DT",
+                  "ner": "O",
+                  "speaker": "PER0",
+                  "before": " ",
+                  "after": " "
+                }
+              },
+              "DT"
+            ],
+            [
+              {
+                "nlpToken": {
+                  "index": 10,
+                  "word": "company",
+                  "originalText": "company",
+                  "lemma": "company",
+                  "characterOffsetBegin": 104,
+                  "characterOffsetEnd": 111,
+                  "pos": "NN",
+                  "ner": "O",
+                  "speaker": "PER0",
+                  "before": " ",
+                  "after": ""
+                }
+              },
+              "NN"
+            ]
+          ],
+          "score": 1.0,
+          "text": "The interim chief executive apologized to victims of the company",
+          "nlpIndexSentence": 1
+        }
+      ],
+      "label": "how"
     },
     "who": {
       "extracted": [
@@ -344,370 +529,10 @@
                 }
               },
               "NN"
-            ],
-            [
-              {
-                "nlpToken": {
-                  "index": 5,
-                  "word": "apologized",
-                  "originalText": "apologized",
-                  "lemma": "apologize",
-                  "characterOffsetBegin": 75,
-                  "characterOffsetEnd": 85,
-                  "pos": "VBD",
-                  "ner": "O",
-                  "speaker": "PER0",
-                  "before": " ",
-                  "after": " "
-                }
-              },
-              "VBD"
-            ],
-            [
-              {
-                "nlpToken": {
-                  "index": 6,
-                  "word": "to",
-                  "originalText": "to",
-                  "lemma": "to",
-                  "characterOffsetBegin": 86,
-                  "characterOffsetEnd": 88,
-                  "pos": "TO",
-                  "ner": "O",
-                  "speaker": "PER0",
-                  "before": " ",
-                  "after": " "
-                }
-              },
-              "TO"
-            ],
-            [
-              {
-                "nlpToken": {
-                  "index": 7,
-                  "word": "victims",
-                  "originalText": "victims",
-                  "lemma": "victim",
-                  "characterOffsetBegin": 89,
-                  "characterOffsetEnd": 96,
-                  "pos": "NNS",
-                  "ner": "O",
-                  "speaker": "PER0",
-                  "before": " ",
-                  "after": " "
-                }
-              },
-              "NNS"
-            ],
-            [
-              {
-                "nlpToken": {
-                  "index": 8,
-                  "word": "of",
-                  "originalText": "of",
-                  "lemma": "of",
-                  "characterOffsetBegin": 97,
-                  "characterOffsetEnd": 99,
-                  "pos": "IN",
-                  "ner": "O",
-                  "speaker": "PER0",
-                  "before": " ",
-                  "after": " "
-                }
-              },
-              "IN"
-            ],
-            [
-              {
-                "nlpToken": {
-                  "index": 9,
-                  "word": "the",
-                  "originalText": "the",
-                  "lemma": "the",
-                  "characterOffsetBegin": 100,
-                  "characterOffsetEnd": 103,
-                  "pos": "DT",
-                  "ner": "O",
-                  "speaker": "PER0",
-                  "before": " ",
-                  "after": " "
-                }
-              },
-              "DT"
-            ],
-            [
-              {
-                "nlpToken": {
-                  "index": 10,
-                  "word": "company",
-                  "originalText": "company",
-                  "lemma": "company",
-                  "characterOffsetBegin": 104,
-                  "characterOffsetEnd": 111,
-                  "pos": "NN",
-                  "ner": "O",
-                  "speaker": "PER0",
-                  "before": " ",
-                  "after": ""
-                }
-              },
-              "NN"
-            ],
-            [
-              {
-                "nlpToken": {
-                  "index": 11,
-                  "word": "'s",
-                  "originalText": "\u2019s",
-                  "lemma": "'s",
-                  "characterOffsetBegin": 111,
-                  "characterOffsetEnd": 113,
-                  "pos": "POS",
-                  "ner": "O",
-                  "speaker": "PER0",
-                  "before": "",
-                  "after": " "
-                }
-              },
-              "POS"
-            ],
-            [
-              {
-                "nlpToken": {
-                  "index": 12,
-                  "word": "data",
-                  "originalText": "data",
-                  "lemma": "datum",
-                  "characterOffsetBegin": 114,
-                  "characterOffsetEnd": 118,
-                  "pos": "NNS",
-                  "ner": "O",
-                  "speaker": "PER0",
-                  "before": " ",
-                  "after": " "
-                }
-              },
-              "NNS"
-            ],
-            [
-              {
-                "nlpToken": {
-                  "index": 13,
-                  "word": "breach",
-                  "originalText": "breach",
-                  "lemma": "breach",
-                  "characterOffsetBegin": 119,
-                  "characterOffsetEnd": 125,
-                  "pos": "NN",
-                  "ner": "O",
-                  "speaker": "PER0",
-                  "before": " ",
-                  "after": " "
-                }
-              },
-              "NN"
-            ],
-            [
-              {
-                "nlpToken": {
-                  "index": 14,
-                  "word": "and",
-                  "originalText": "and",
-                  "lemma": "and",
-                  "characterOffsetBegin": 126,
-                  "characterOffsetEnd": 129,
-                  "pos": "CC",
-                  "ner": "O",
-                  "speaker": "PER0",
-                  "before": " ",
-                  "after": " "
-                }
-              },
-              "CC"
-            ],
-            [
-              {
-                "nlpToken": {
-                  "index": 15,
-                  "word": "offered",
-                  "originalText": "offered",
-                  "lemma": "offer",
-                  "characterOffsetBegin": 130,
-                  "characterOffsetEnd": 137,
-                  "pos": "VBD",
-                  "ner": "O",
-                  "speaker": "PER0",
-                  "before": " ",
-                  "after": " "
-                }
-              },
-              "VBD"
-            ],
-            [
-              {
-                "nlpToken": {
-                  "index": 16,
-                  "word": "a",
-                  "originalText": "a",
-                  "lemma": "a",
-                  "characterOffsetBegin": 138,
-                  "characterOffsetEnd": 139,
-                  "pos": "DT",
-                  "ner": "O",
-                  "speaker": "PER0",
-                  "before": " ",
-                  "after": " "
-                }
-              },
-              "DT"
-            ],
-            [
-              {
-                "nlpToken": {
-                  "index": 17,
-                  "word": "credit",
-                  "originalText": "credit",
-                  "lemma": "credit",
-                  "characterOffsetBegin": 140,
-                  "characterOffsetEnd": 146,
-                  "pos": "NN",
-                  "ner": "O",
-                  "speaker": "PER0",
-                  "before": " ",
-                  "after": " "
-                }
-              },
-              "NN"
-            ],
-            [
-              {
-                "nlpToken": {
-                  "index": 18,
-                  "word": "lock",
-                  "originalText": "lock",
-                  "lemma": "lock",
-                  "characterOffsetBegin": 147,
-                  "characterOffsetEnd": 151,
-                  "pos": "NN",
-                  "ner": "O",
-                  "speaker": "PER0",
-                  "before": " ",
-                  "after": " "
-                }
-              },
-              "NN"
-            ],
-            [
-              {
-                "nlpToken": {
-                  "index": 19,
-                  "word": "instead",
-                  "originalText": "instead",
-                  "lemma": "instead",
-                  "characterOffsetBegin": 152,
-                  "characterOffsetEnd": 159,
-                  "pos": "RB",
-                  "ner": "O",
-                  "speaker": "PER0",
-                  "before": " ",
-                  "after": " "
-                }
-              },
-              "RB"
-            ],
-            [
-              {
-                "nlpToken": {
-                  "index": 20,
-                  "word": "of",
-                  "originalText": "of",
-                  "lemma": "of",
-                  "characterOffsetBegin": 160,
-                  "characterOffsetEnd": 162,
-                  "pos": "IN",
-                  "ner": "O",
-                  "speaker": "PER0",
-                  "before": " ",
-                  "after": " "
-                }
-              },
-              "IN"
-            ],
-            [
-              {
-                "nlpToken": {
-                  "index": 21,
-                  "word": "an",
-                  "originalText": "an",
-                  "lemma": "a",
-                  "characterOffsetBegin": 163,
-                  "characterOffsetEnd": 165,
-                  "pos": "DT",
-                  "ner": "O",
-                  "speaker": "PER0",
-                  "before": " ",
-                  "after": " "
-                }
-              },
-              "DT"
-            ],
-            [
-              {
-                "nlpToken": {
-                  "index": 22,
-                  "word": "old-fashioned",
-                  "originalText": "old-fashioned",
-                  "lemma": "old-fashioned",
-                  "characterOffsetBegin": 166,
-                  "characterOffsetEnd": 179,
-                  "pos": "JJ",
-                  "ner": "O",
-                  "speaker": "PER0",
-                  "before": " ",
-                  "after": " "
-                }
-              },
-              "JJ"
-            ],
-            [
-              {
-                "nlpToken": {
-                  "index": 23,
-                  "word": "credit",
-                  "originalText": "credit",
-                  "lemma": "credit",
-                  "characterOffsetBegin": 180,
-                  "characterOffsetEnd": 186,
-                  "pos": "NN",
-                  "ner": "O",
-                  "speaker": "PER0",
-                  "before": " ",
-                  "after": " "
-                }
-              },
-              "NN"
-            ],
-            [
-              {
-                "nlpToken": {
-                  "index": 24,
-                  "word": "freeze",
-                  "originalText": "freeze",
-                  "lemma": "freeze",
-                  "characterOffsetBegin": 187,
-                  "characterOffsetEnd": 193,
-                  "pos": "NN",
-                  "ner": "O",
-                  "speaker": "PER0",
-                  "before": " ",
-                  "after": ""
-                }
-              },
-              "NN"
             ]
           ],
-          "score": 0.4174603174603174,
-          "text": "The interim chief executive apologized to victims of the company \u2019s data breach and offered a credit lock instead of an old-fashioned credit freeze",
+          "score": 0.554888888888889,
+          "text": "The interim chief executive",
           "nlpIndexSentence": 1
         }
       ],

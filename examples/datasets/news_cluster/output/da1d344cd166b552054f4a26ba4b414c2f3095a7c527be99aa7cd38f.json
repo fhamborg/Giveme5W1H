@@ -16,19 +16,38 @@
   "url": "https://www.rt.com/op-edge/338388-putin-western-media-leaks/",
   "newsCluster": {
     "CategoryId": 1,
-    "Category": "global_politics",
-    "TopicId": 3,
-    "Topic": "hack",
-    "EventId": 2,
-    "Event": "panama_papers",
-    "Url": "https://www.rt.com/op-edge/338388-putin-western-media-leaks/"
+    "Category": "world",
+    "TopicId": 2,
+    "Topic": "legancy",
+    "EventId": 50,
+    "Event": "panama_papers"
   },
   "dId": "da1d344cd166b552054f4a26ba4b414c2f3095a7c527be99aa7cd38f",
-  "fiveWoneH": {
+  "fiveWoneH": {},
+  "fiveWoneH_Metadata": {
+    "process_errors": {},
     "how": {
       "extracted": [
         {
           "parts": [
+            [
+              {
+                "nlpToken": {
+                  "index": 5,
+                  "word": "about",
+                  "originalText": "about",
+                  "lemma": "about",
+                  "characterOffsetBegin": 25,
+                  "characterOffsetEnd": 30,
+                  "pos": "IN",
+                  "ner": "O",
+                  "speaker": "PER0",
+                  "before": " ",
+                  "after": " "
+                }
+              },
+              "IN"
+            ],
             [
               {
                 "nlpToken": {
@@ -133,252 +152,16 @@
                 ]
               },
               "JJ"
-            ]
-          ],
-          "score": 1.2222222222222223,
-          "text": "Western"
-        }
-      ],
-      "label": "how"
-    },
-    "who": {
-      "extracted": [
-        {
-          "parts": [
-            [
-              {
-                "nlpToken": {
-                  "index": 32,
-                  "word": "Putin",
-                  "originalText": "Putin",
-                  "lemma": "Putin",
-                  "characterOffsetBegin": 3601,
-                  "characterOffsetEnd": 3606,
-                  "pos": "NNP",
-                  "ner": "PERSON",
-                  "speaker": "PER7",
-                  "before": "",
-                  "after": ""
-                }
-              },
-              "NNP"
-            ]
-          ],
-          "score": 1.0,
-          "text": "Putin",
-          "nlpIndexSentence": 11
-        }
-      ],
-      "label": "who"
-    },
-    "what": {
-      "extracted": [
-        {
-          "parts": [
-            [
-              {
-                "nlpToken": {
-                  "index": 42,
-                  "word": "appear",
-                  "originalText": "appear",
-                  "lemma": "appear",
-                  "characterOffsetBegin": 2060,
-                  "characterOffsetEnd": 2066,
-                  "pos": "VBP",
-                  "ner": "O",
-                  "speaker": "112",
-                  "before": " ",
-                  "after": " "
-                }
-              },
-              "VBP"
-            ],
-            [
-              {
-                "nlpToken": {
-                  "index": 43,
-                  "word": "his",
-                  "originalText": "his",
-                  "lemma": "he",
-                  "characterOffsetBegin": 2067,
-                  "characterOffsetEnd": 2070,
-                  "pos": "PRP$",
-                  "ner": "O",
-                  "speaker": "112",
-                  "before": " ",
-                  "after": " "
-                }
-              },
-              "PRP$"
-            ],
-            [
-              {
-                "nlpToken": {
-                  "index": 44,
-                  "word": "to",
-                  "originalText": "to",
-                  "lemma": "to",
-                  "characterOffsetBegin": 2071,
-                  "characterOffsetEnd": 2073,
-                  "pos": "TO",
-                  "ner": "O",
-                  "speaker": "112",
-                  "before": " ",
-                  "after": " "
-                }
-              },
-              "TO"
-            ],
-            [
-              {
-                "nlpToken": {
-                  "index": 45,
-                  "word": "spend",
-                  "originalText": "spend",
-                  "lemma": "spend",
-                  "characterOffsetBegin": 2074,
-                  "characterOffsetEnd": 2079,
-                  "pos": "VB",
-                  "ner": "O",
-                  "speaker": "112",
-                  "before": " ",
-                  "after": ""
-                }
-              },
-              "VB"
-            ]
-          ],
-          "score": 1.0,
-          "text": "appear his to spend",
-          "nlpIndexSentence": 11
-        }
-      ],
-      "label": "what"
-    },
-    "why": {
-      "extracted": [
-        {
-          "parts": [
-            [
-              {
-                "nlpToken": {
-                  "index": 5,
-                  "word": "Moscow",
-                  "originalText": "Moscow",
-                  "lemma": "Moscow",
-                  "characterOffsetBegin": 739,
-                  "characterOffsetEnd": 745,
-                  "pos": "NNP",
-                  "ner": "LOCATION",
-                  "speaker": "PER0",
-                  "before": " ",
-                  "after": " "
-                },
-                "aida": [
-                  {
-                    "mention": {
-                      "allEntities": [
-                        {
-                          "kbIdentifier": "YAGO:Russia",
-                          "disambiguationScore": "0.37996"
-                        }
-                      ],
-                      "offset": 739,
-                      "name": "Moscow",
-                      "length": 6,
-                      "bestEntity": {
-                        "kbIdentifier": "YAGO:Russia",
-                        "disambiguationScore": "0.37996"
-                      }
-                    },
-                    "bestEntityMetadata": {
-                      "knowledgebase": "YAGO",
-                      "depictionurl": "http://upload.wikimedia.org/wikipedia/en/f/f3/Flag_of_Russia.svg",
-                      "depictionthumbnailurl": "http://upload.wikimedia.org/wikipedia/en/thumbFlag_of_Russia.svg/200px-Flag_of_Russia.svg",
-                      "importance": 5.571004259868407e-06,
-                      "entityId": "Russia",
-                      "type": [
-                        "YAGO_wordnet_system_108435388",
-                        "YAGO_wordnet_district_108552138",
-                        "YAGO_yagoPermanentlyLocatedEntity",
-                        "YAGO_yagoLegalActorGeo",
-                        "YAGO_wordnet_state_108654360",
-                        "YAGO_wikicategory_Member_states_of_the_Commonwealth_of_Independent_States",
-                        "YAGO_wikicategory_North_Asian_countries",
-                        "YAGO_wikicategory_States_and_territories_established_in_862",
-                        "YAGO_wikicategory_Russian\\u002dspeaking_countries_and_territories",
-                        "YAGO_wordnet_country_108544813",
-                        "YAGO_wikicategory_Member_states_of_the_United_Nations",
-                        "YAGO_wordnet_economy_108366753",
-                        "YAGO_wordnet_abstraction_100002137",
-                        "YAGO_wordnet_region_108630985",
-                        "YAGO_wikicategory_Northeast_Asian_countries",
-                        "YAGO_yagoGeoEntity",
-                        "YAGO_wikicategory_World_Trade_Organization_member_economies",
-                        "YAGO_wordnet_physical_entity_100001930",
-                        "YAGO_wikicategory_Central_Asian_countries",
-                        "YAGO_wikicategory_Slavic_countries_and_territories",
-                        "YAGO_wordnet_entity_100001740",
-                        "YAGO_wikicategory_Federal_countries",
-                        "YAGO_wordnet_object_100002684",
-                        "YAGO_wordnet_group_100031264",
-                        "YAGO_wordnet_location_100027167",
-                        "YAGO_wordnet_administrative_district_108491826",
-                        "YAGO_wikicategory_Countries_in_Europe"
-                      ],
-                      "readableRepr": "Russia",
-                      "url": "http://en.wikipedia.org/wiki/Russia"
-                    }
-                  }
-                ]
-              },
-              "NNP"
-            ],
-            [
-              {
-                "nlpToken": {
-                  "index": 6,
-                  "word": "sounded",
-                  "originalText": "sounded",
-                  "lemma": "sound",
-                  "characterOffsetBegin": 746,
-                  "characterOffsetEnd": 753,
-                  "pos": "VBD",
-                  "ner": "O",
-                  "speaker": "PER0",
-                  "before": " ",
-                  "after": " "
-                }
-              },
-              "VBD"
             ],
             [
               {
                 "nlpToken": {
                   "index": 7,
-                  "word": "the",
-                  "originalText": "the",
-                  "lemma": "the",
-                  "characterOffsetBegin": 754,
-                  "characterOffsetEnd": 757,
-                  "pos": "DT",
-                  "ner": "O",
-                  "speaker": "PER0",
-                  "before": " ",
-                  "after": " "
-                }
-              },
-              "DT"
-            ],
-            [
-              {
-                "nlpToken": {
-                  "index": 8,
-                  "word": "alarm",
-                  "originalText": "alarm",
-                  "lemma": "alarm",
-                  "characterOffsetBegin": 758,
-                  "characterOffsetEnd": 763,
+                  "word": "journalism",
+                  "originalText": "journalism",
+                  "lemma": "journalism",
+                  "characterOffsetBegin": 39,
+                  "characterOffsetEnd": 49,
                   "pos": "NN",
                   "ner": "O",
                   "speaker": "PER0",
@@ -391,12 +174,12 @@
             [
               {
                 "nlpToken": {
-                  "index": 9,
-                  "word": "that",
-                  "originalText": "that",
-                  "lemma": "that",
-                  "characterOffsetBegin": 764,
-                  "characterOffsetEnd": 768,
+                  "index": 8,
+                  "word": "than",
+                  "originalText": "than",
+                  "lemma": "than",
+                  "characterOffsetBegin": 50,
+                  "characterOffsetEnd": 54,
                   "pos": "IN",
                   "ner": "O",
                   "speaker": "PER0",
@@ -409,31 +192,480 @@
             [
               {
                 "nlpToken": {
+                  "index": 9,
+                  "word": "Vladimir",
+                  "originalText": "Vladimir",
+                  "lemma": "Vladimir",
+                  "characterOffsetBegin": 55,
+                  "characterOffsetEnd": 63,
+                  "pos": "NNP",
+                  "ner": "PERSON",
+                  "speaker": "PER0",
+                  "before": " ",
+                  "after": " "
+                },
+                "aida": [
+                  {
+                    "mention": {
+                      "allEntities": [
+                        {
+                          "kbIdentifier": "YAGO:Vladimir_Putin",
+                          "disambiguationScore": "1"
+                        }
+                      ],
+                      "offset": 55,
+                      "name": "Vladimir Putin",
+                      "length": 14,
+                      "bestEntity": {
+                        "kbIdentifier": "YAGO:Vladimir_Putin",
+                        "disambiguationScore": "1"
+                      }
+                    },
+                    "bestEntityMetadata": {
+                      "knowledgebase": "YAGO",
+                      "depictionurl": "http://upload.wikimedia.org/wikipedia/commons/4/45/Vladimir_Putin_-_2006.jpg",
+                      "depictionthumbnailurl": "http://upload.wikimedia.org/wikipedia/commons/thumbVladimir_Putin_-_2006.jpg/200px-Vladimir_Putin_-_2006.jpg",
+                      "importance": 0.0006089107656036169,
+                      "entityId": "Vladimir_Putin",
+                      "type": [
+                        "YAGO_wikicategory_Prime_Ministers_of_the_Russian_Federation",
+                        "YAGO_wordnet_owner_110389398",
+                        "YAGO_yagoLegalActorGeo",
+                        "YAGO_wikicategory_Independent_politicians",
+                        "YAGO_wikicategory_People_of_the_Chechen_wars",
+                        "YAGO_wordnet_person_100007846",
+                        "YAGO_wikicategory_Saint_Petersburg_State_University_alumni",
+                        "YAGO_wordnet_practitioner_110462860",
+                        "YAGO_wordnet_official_110372373",
+                        "YAGO_wikicategory_KGB_officers",
+                        "YAGO_wikicategory_People_of_the_Russia\\u2013Georgia_war",
+                        "YAGO_wordnet_living_thing_100004258",
+                        "YAGO_wikicategory_Presidents_of_Russia",
+                        "YAGO_wordnet_head_of_state_110164747",
+                        "YAGO_wikicategory_Acting_Presidents_of_Russia",
+                        "YAGO_wordnet_director_110014939",
+                        "YAGO_wordnet_object_100002684",
+                        "YAGO_wikicategory_FSB_officers",
+                        "YAGO_wordnet_administrator_109770949",
+                        "YAGO_wordnet_worker_109632518",
+                        "YAGO_wordnet_president_110467179",
+                        "YAGO_wordnet_representative_110522035",
+                        "YAGO_wikicategory_Directors_of_the_Federal_Security_Service",
+                        "YAGO_wikicategory_Our_Home_\\u2013_Russia_politicians",
+                        "YAGO_wordnet_adult_109605289",
+                        "YAGO_wordnet_intellectual_109621545",
+                        "YAGO_wordnet_negotiator_110351874",
+                        "YAGO_wordnet_spiritual_leader_109505153",
+                        "YAGO_wikicategory_Living_people",
+                        "YAGO_wikicategory_Russian_sambo_practitioners",
+                        "YAGO_yagoLegalActor",
+                        "YAGO_wordnet_serviceman_110582746",
+                        "YAGO_wordnet_professional_110480253",
+                        "YAGO_wordnet_leader_109623038",
+                        "YAGO_wordnet_scholar_110557854",
+                        "YAGO_wordnet_physical_entity_100001930",
+                        "YAGO_wordnet_head_110162991",
+                        "YAGO_wordnet_causal_agent_100007347",
+                        "YAGO_wordnet_alumnus_109786338",
+                        "YAGO_wordnet_curate_109983572",
+                        "YAGO_wordnet_entity_100001740",
+                        "YAGO_wordnet_holder_110180178",
+                        "YAGO_wikicategory_Kyokushin_kaikan_practitioners",
+                        "YAGO_wordnet_organism_100004475",
+                        "YAGO_wordnet_communicator_109610660",
+                        "YAGO_wordnet_officeholder_110371450",
+                        "YAGO_wikicategory_People_from_Saint_Petersburg",
+                        "YAGO_wordnet_military_officer_110317007",
+                        "YAGO_wordnet_politician_110451263",
+                        "YAGO_wordnet_whole_100003553",
+                        "YAGO_wordnet_clergyman_109927451",
+                        "YAGO_wikicategory_United_Russia_politicians",
+                        "YAGO_wordnet_skilled_worker_110605985"
+                      ],
+                      "readableRepr": "Vladimir Putin",
+                      "url": "http://en.wikipedia.org/wiki/Vladimir%20Putin"
+                    }
+                  }
+                ]
+              },
+              "NNP"
+            ],
+            [
+              {
+                "nlpToken": {
                   "index": 10,
-                  "word": "the",
-                  "originalText": "the",
-                  "lemma": "the",
-                  "characterOffsetBegin": 769,
-                  "characterOffsetEnd": 772,
-                  "pos": "DT",
+                  "word": "Putin",
+                  "originalText": "Putin",
+                  "lemma": "Putin",
+                  "characterOffsetBegin": 64,
+                  "characterOffsetEnd": 69,
+                  "pos": "NNP",
+                  "ner": "PERSON",
+                  "speaker": "PER0",
+                  "before": " ",
+                  "after": ""
+                },
+                "aida": [
+                  {
+                    "mention": {
+                      "allEntities": [
+                        {
+                          "kbIdentifier": "YAGO:Vladimir_Putin",
+                          "disambiguationScore": "1"
+                        }
+                      ],
+                      "offset": 55,
+                      "name": "Vladimir Putin",
+                      "length": 14,
+                      "bestEntity": {
+                        "kbIdentifier": "YAGO:Vladimir_Putin",
+                        "disambiguationScore": "1"
+                      }
+                    },
+                    "bestEntityMetadata": {
+                      "knowledgebase": "YAGO",
+                      "depictionurl": "http://upload.wikimedia.org/wikipedia/commons/4/45/Vladimir_Putin_-_2006.jpg",
+                      "depictionthumbnailurl": "http://upload.wikimedia.org/wikipedia/commons/thumbVladimir_Putin_-_2006.jpg/200px-Vladimir_Putin_-_2006.jpg",
+                      "importance": 0.0006089107656036169,
+                      "entityId": "Vladimir_Putin",
+                      "type": [
+                        "YAGO_wikicategory_Prime_Ministers_of_the_Russian_Federation",
+                        "YAGO_wordnet_owner_110389398",
+                        "YAGO_yagoLegalActorGeo",
+                        "YAGO_wikicategory_Independent_politicians",
+                        "YAGO_wikicategory_People_of_the_Chechen_wars",
+                        "YAGO_wordnet_person_100007846",
+                        "YAGO_wikicategory_Saint_Petersburg_State_University_alumni",
+                        "YAGO_wordnet_practitioner_110462860",
+                        "YAGO_wordnet_official_110372373",
+                        "YAGO_wikicategory_KGB_officers",
+                        "YAGO_wikicategory_People_of_the_Russia\\u2013Georgia_war",
+                        "YAGO_wordnet_living_thing_100004258",
+                        "YAGO_wikicategory_Presidents_of_Russia",
+                        "YAGO_wordnet_head_of_state_110164747",
+                        "YAGO_wikicategory_Acting_Presidents_of_Russia",
+                        "YAGO_wordnet_director_110014939",
+                        "YAGO_wordnet_object_100002684",
+                        "YAGO_wikicategory_FSB_officers",
+                        "YAGO_wordnet_administrator_109770949",
+                        "YAGO_wordnet_worker_109632518",
+                        "YAGO_wordnet_president_110467179",
+                        "YAGO_wordnet_representative_110522035",
+                        "YAGO_wikicategory_Directors_of_the_Federal_Security_Service",
+                        "YAGO_wikicategory_Our_Home_\\u2013_Russia_politicians",
+                        "YAGO_wordnet_adult_109605289",
+                        "YAGO_wordnet_intellectual_109621545",
+                        "YAGO_wordnet_negotiator_110351874",
+                        "YAGO_wordnet_spiritual_leader_109505153",
+                        "YAGO_wikicategory_Living_people",
+                        "YAGO_wikicategory_Russian_sambo_practitioners",
+                        "YAGO_yagoLegalActor",
+                        "YAGO_wordnet_serviceman_110582746",
+                        "YAGO_wordnet_professional_110480253",
+                        "YAGO_wordnet_leader_109623038",
+                        "YAGO_wordnet_scholar_110557854",
+                        "YAGO_wordnet_physical_entity_100001930",
+                        "YAGO_wordnet_head_110162991",
+                        "YAGO_wordnet_causal_agent_100007347",
+                        "YAGO_wordnet_alumnus_109786338",
+                        "YAGO_wordnet_curate_109983572",
+                        "YAGO_wordnet_entity_100001740",
+                        "YAGO_wordnet_holder_110180178",
+                        "YAGO_wikicategory_Kyokushin_kaikan_practitioners",
+                        "YAGO_wordnet_organism_100004475",
+                        "YAGO_wordnet_communicator_109610660",
+                        "YAGO_wordnet_officeholder_110371450",
+                        "YAGO_wikicategory_People_from_Saint_Petersburg",
+                        "YAGO_wordnet_military_officer_110317007",
+                        "YAGO_wordnet_politician_110451263",
+                        "YAGO_wordnet_whole_100003553",
+                        "YAGO_wordnet_clergyman_109927451",
+                        "YAGO_wikicategory_United_Russia_politicians",
+                        "YAGO_wordnet_skilled_worker_110605985"
+                      ],
+                      "readableRepr": "Vladimir Putin",
+                      "url": "http://en.wikipedia.org/wiki/Vladimir%20Putin"
+                    }
+                  }
+                ]
+              },
+              "NNP"
+            ],
+            [
+              {
+                "nlpToken": {
+                  "index": 11,
+                  "word": ".",
+                  "originalText": ".",
+                  "lemma": ".",
+                  "characterOffsetBegin": 69,
+                  "characterOffsetEnd": 70,
+                  "pos": ".",
+                  "ner": "O",
+                  "speaker": "PER0",
+                  "before": "",
+                  "after": " "
+                },
+                "aida": [
+                  {
+                    "mention": {
+                      "allEntities": [
+                        {
+                          "kbIdentifier": "YAGO:Vladimir_Putin",
+                          "disambiguationScore": "1"
+                        }
+                      ],
+                      "offset": 55,
+                      "name": "Vladimir Putin",
+                      "length": 14,
+                      "bestEntity": {
+                        "kbIdentifier": "YAGO:Vladimir_Putin",
+                        "disambiguationScore": "1"
+                      }
+                    },
+                    "bestEntityMetadata": {
+                      "knowledgebase": "YAGO",
+                      "depictionurl": "http://upload.wikimedia.org/wikipedia/commons/4/45/Vladimir_Putin_-_2006.jpg",
+                      "depictionthumbnailurl": "http://upload.wikimedia.org/wikipedia/commons/thumbVladimir_Putin_-_2006.jpg/200px-Vladimir_Putin_-_2006.jpg",
+                      "importance": 0.0006089107656036169,
+                      "entityId": "Vladimir_Putin",
+                      "type": [
+                        "YAGO_wikicategory_Prime_Ministers_of_the_Russian_Federation",
+                        "YAGO_wordnet_owner_110389398",
+                        "YAGO_yagoLegalActorGeo",
+                        "YAGO_wikicategory_Independent_politicians",
+                        "YAGO_wikicategory_People_of_the_Chechen_wars",
+                        "YAGO_wordnet_person_100007846",
+                        "YAGO_wikicategory_Saint_Petersburg_State_University_alumni",
+                        "YAGO_wordnet_practitioner_110462860",
+                        "YAGO_wordnet_official_110372373",
+                        "YAGO_wikicategory_KGB_officers",
+                        "YAGO_wikicategory_People_of_the_Russia\\u2013Georgia_war",
+                        "YAGO_wordnet_living_thing_100004258",
+                        "YAGO_wikicategory_Presidents_of_Russia",
+                        "YAGO_wordnet_head_of_state_110164747",
+                        "YAGO_wikicategory_Acting_Presidents_of_Russia",
+                        "YAGO_wordnet_director_110014939",
+                        "YAGO_wordnet_object_100002684",
+                        "YAGO_wikicategory_FSB_officers",
+                        "YAGO_wordnet_administrator_109770949",
+                        "YAGO_wordnet_worker_109632518",
+                        "YAGO_wordnet_president_110467179",
+                        "YAGO_wordnet_representative_110522035",
+                        "YAGO_wikicategory_Directors_of_the_Federal_Security_Service",
+                        "YAGO_wikicategory_Our_Home_\\u2013_Russia_politicians",
+                        "YAGO_wordnet_adult_109605289",
+                        "YAGO_wordnet_intellectual_109621545",
+                        "YAGO_wordnet_negotiator_110351874",
+                        "YAGO_wordnet_spiritual_leader_109505153",
+                        "YAGO_wikicategory_Living_people",
+                        "YAGO_wikicategory_Russian_sambo_practitioners",
+                        "YAGO_yagoLegalActor",
+                        "YAGO_wordnet_serviceman_110582746",
+                        "YAGO_wordnet_professional_110480253",
+                        "YAGO_wordnet_leader_109623038",
+                        "YAGO_wordnet_scholar_110557854",
+                        "YAGO_wordnet_physical_entity_100001930",
+                        "YAGO_wordnet_head_110162991",
+                        "YAGO_wordnet_causal_agent_100007347",
+                        "YAGO_wordnet_alumnus_109786338",
+                        "YAGO_wordnet_curate_109983572",
+                        "YAGO_wordnet_entity_100001740",
+                        "YAGO_wordnet_holder_110180178",
+                        "YAGO_wikicategory_Kyokushin_kaikan_practitioners",
+                        "YAGO_wordnet_organism_100004475",
+                        "YAGO_wordnet_communicator_109610660",
+                        "YAGO_wordnet_officeholder_110371450",
+                        "YAGO_wikicategory_People_from_Saint_Petersburg",
+                        "YAGO_wordnet_military_officer_110317007",
+                        "YAGO_wordnet_politician_110451263",
+                        "YAGO_wordnet_whole_100003553",
+                        "YAGO_wordnet_clergyman_109927451",
+                        "YAGO_wikicategory_United_Russia_politicians",
+                        "YAGO_wordnet_skilled_worker_110605985"
+                      ],
+                      "readableRepr": "Vladimir Putin",
+                      "url": "http://en.wikipedia.org/wiki/Vladimir%20Putin"
+                    }
+                  }
+                ]
+              },
+              "."
+            ]
+          ],
+          "score": 1.0,
+          "text": "about Western journalism than Vladimir Putin ."
+        }
+      ],
+      "label": "how"
+    },
+    "who": {
+      "extracted": [
+        {
+          "parts": [
+            [
+              {
+                "nlpToken": {
+                  "index": 1,
+                  "word": "Panama",
+                  "originalText": "Panama",
+                  "lemma": "Panama",
+                  "characterOffsetBegin": 0,
+                  "characterOffsetEnd": 6,
+                  "pos": "NNP",
+                  "ner": "LOCATION",
+                  "speaker": "PER0",
+                  "before": "",
+                  "after": " "
+                },
+                "aida": [
+                  {
+                    "mention": {
+                      "allEntities": [
+                        {
+                          "kbIdentifier": "YAGO:Panama",
+                          "disambiguationScore": "0.57445"
+                        }
+                      ],
+                      "offset": 0,
+                      "name": "Panama",
+                      "length": 6,
+                      "bestEntity": {
+                        "kbIdentifier": "YAGO:Panama",
+                        "disambiguationScore": "0.57445"
+                      }
+                    },
+                    "bestEntityMetadata": {
+                      "knowledgebase": "YAGO",
+                      "depictionurl": "http://upload.wikimedia.org/wikipedia/commons/a/ab/Flag_of_Panama.svg",
+                      "depictionthumbnailurl": "http://upload.wikimedia.org/wikipedia/commons/thumbFlag_of_Panama.svg/200px-Flag_of_Panama.svg",
+                      "importance": 9.108591964884846e-05,
+                      "entityId": "Panama",
+                      "type": [
+                        "YAGO_wordnet_system_108435388",
+                        "YAGO_wordnet_district_108552138",
+                        "YAGO_yagoPermanentlyLocatedEntity",
+                        "YAGO_yagoLegalActorGeo",
+                        "YAGO_wordnet_state_108654360",
+                        "YAGO_wikicategory_Spanish\\u002dspeaking_countries_and_territories",
+                        "YAGO_wordnet_country_108544813",
+                        "YAGO_wikicategory_Member_states_of_the_United_Nations",
+                        "YAGO_wordnet_economy_108366753",
+                        "YAGO_wikicategory_States_and_territories_established_in_1903",
+                        "YAGO_wordnet_abstraction_100002137",
+                        "YAGO_wordnet_region_108630985",
+                        "YAGO_yagoGeoEntity",
+                        "YAGO_wikicategory_World_Trade_Organization_member_economies",
+                        "YAGO_wordnet_physical_entity_100001930",
+                        "YAGO_wikicategory_Countries_in_the_Caribbean",
+                        "YAGO_wordnet_entity_100001740",
+                        "YAGO_wordnet_object_100002684",
+                        "YAGO_wordnet_group_100031264",
+                        "YAGO_wordnet_location_100027167",
+                        "YAGO_wordnet_administrative_district_108491826",
+                        "YAGO_wikicategory_Countries_in_Central_America"
+                      ],
+                      "readableRepr": "Panama",
+                      "url": "http://en.wikipedia.org/wiki/Panama"
+                    }
+                  }
+                ]
+              },
+              "NNP"
+            ],
+            [
+              {
+                "nlpToken": {
+                  "index": 2,
+                  "word": "leak",
+                  "originalText": "leak",
+                  "lemma": "leak",
+                  "characterOffsetBegin": 7,
+                  "characterOffsetEnd": 11,
+                  "pos": "NN",
                   "ner": "O",
                   "speaker": "PER0",
                   "before": " ",
                   "after": " "
                 }
               },
-              "DT"
+              "NN"
+            ]
+          ],
+          "score": 1.0,
+          "text": "Panama leak"
+        }
+      ],
+      "label": "who"
+    },
+    "what": {
+      "extracted": [
+        {
+          "parts": [
+            [
+              {
+                "nlpToken": {
+                  "index": 3,
+                  "word": "reveals",
+                  "originalText": "reveals",
+                  "lemma": "reveal",
+                  "characterOffsetBegin": 12,
+                  "characterOffsetEnd": 19,
+                  "pos": "VBZ",
+                  "ner": "O",
+                  "speaker": "PER0",
+                  "before": " ",
+                  "after": " "
+                }
+              },
+              "VBZ"
             ],
             [
               {
                 "nlpToken": {
-                  "index": 11,
-                  "word": "West",
-                  "originalText": "West",
-                  "lemma": "West",
-                  "characterOffsetBegin": 773,
-                  "characterOffsetEnd": 777,
-                  "pos": "NNP",
+                  "index": 4,
+                  "word": "more",
+                  "originalText": "more",
+                  "lemma": "more",
+                  "characterOffsetBegin": 20,
+                  "characterOffsetEnd": 24,
+                  "pos": "RBR",
+                  "ner": "O",
+                  "speaker": "PER0",
+                  "before": " ",
+                  "after": " "
+                }
+              },
+              "RBR"
+            ],
+            [
+              {
+                "nlpToken": {
+                  "index": 5,
+                  "word": "about",
+                  "originalText": "about",
+                  "lemma": "about",
+                  "characterOffsetBegin": 25,
+                  "characterOffsetEnd": 30,
+                  "pos": "IN",
+                  "ner": "O",
+                  "speaker": "PER0",
+                  "before": " ",
+                  "after": " "
+                }
+              },
+              "IN"
+            ],
+            [
+              {
+                "nlpToken": {
+                  "index": 6,
+                  "word": "Western",
+                  "originalText": "Western",
+                  "lemma": "western",
+                  "characterOffsetBegin": 31,
+                  "characterOffsetEnd": 38,
+                  "pos": "JJ",
                   "ner": "MISC",
                   "speaker": "PER0",
                   "before": " ",
@@ -445,15 +677,15 @@
                       "allEntities": [
                         {
                           "kbIdentifier": "YAGO:NATO",
-                          "disambiguationScore": "0.19768"
+                          "disambiguationScore": "0.1804"
                         }
                       ],
-                      "offset": 773,
-                      "name": "West",
-                      "length": 4,
+                      "offset": 31,
+                      "name": "Western",
+                      "length": 7,
                       "bestEntity": {
                         "kbIdentifier": "YAGO:NATO",
-                        "disambiguationScore": "0.19768"
+                        "disambiguationScore": "0.1804"
                       }
                     },
                     "bestEntityMetadata": {
@@ -527,197 +759,64 @@
                   }
                 ]
               },
-              "NNP"
+              "JJ"
             ],
             [
               {
                 "nlpToken": {
-                  "index": 12,
-                  "word": "was",
-                  "originalText": "was",
-                  "lemma": "be",
-                  "characterOffsetBegin": 778,
-                  "characterOffsetEnd": 781,
-                  "pos": "VBD",
-                  "ner": "O",
-                  "speaker": "PER0",
-                  "before": " ",
-                  "after": " "
-                }
-              },
-              "VBD"
-            ],
-            [
-              {
-                "nlpToken": {
-                  "index": 13,
-                  "word": "preparing",
-                  "originalText": "preparing",
-                  "lemma": "prepare",
-                  "characterOffsetBegin": 782,
-                  "characterOffsetEnd": 791,
-                  "pos": "VBG",
-                  "ner": "O",
-                  "speaker": "PER0",
-                  "before": " ",
-                  "after": " "
-                }
-              },
-              "VBG"
-            ],
-            [
-              {
-                "nlpToken": {
-                  "index": 14,
-                  "word": "to",
-                  "originalText": "to",
-                  "lemma": "to",
-                  "characterOffsetBegin": 792,
-                  "characterOffsetEnd": 794,
-                  "pos": "TO",
-                  "ner": "O",
-                  "speaker": "PER0",
-                  "before": " ",
-                  "after": " "
-                }
-              },
-              "TO"
-            ],
-            [
-              {
-                "nlpToken": {
-                  "index": 15,
-                  "word": "launch",
-                  "originalText": "launch",
-                  "lemma": "launch",
-                  "characterOffsetBegin": 795,
-                  "characterOffsetEnd": 801,
-                  "pos": "VB",
-                  "ner": "O",
-                  "speaker": "PER0",
-                  "before": " ",
-                  "after": " "
-                }
-              },
-              "VB"
-            ],
-            [
-              {
-                "nlpToken": {
-                  "index": 16,
-                  "word": "yet",
-                  "originalText": "yet",
-                  "lemma": "yet",
-                  "characterOffsetBegin": 802,
-                  "characterOffsetEnd": 805,
-                  "pos": "RB",
-                  "ner": "O",
-                  "speaker": "PER0",
-                  "before": " ",
-                  "after": " "
-                }
-              },
-              "RB"
-            ],
-            [
-              {
-                "nlpToken": {
-                  "index": 17,
-                  "word": "another",
-                  "originalText": "another",
-                  "lemma": "another",
-                  "characterOffsetBegin": 806,
-                  "characterOffsetEnd": 813,
-                  "pos": "DT",
-                  "ner": "O",
-                  "speaker": "PER0",
-                  "before": " ",
-                  "after": " "
-                }
-              },
-              "DT"
-            ],
-            [
-              {
-                "nlpToken": {
-                  "index": 18,
-                  "word": "``",
-                  "originalText": "\u201c",
-                  "lemma": "``",
-                  "characterOffsetBegin": 814,
-                  "characterOffsetEnd": 815,
-                  "pos": "``",
-                  "ner": "O",
-                  "speaker": "PER0",
-                  "before": " ",
-                  "after": ""
-                }
-              },
-              "``"
-            ],
-            [
-              {
-                "nlpToken": {
-                  "index": 19,
-                  "word": "information",
-                  "originalText": "information",
-                  "lemma": "information",
-                  "characterOffsetBegin": 815,
-                  "characterOffsetEnd": 826,
+                  "index": 7,
+                  "word": "journalism",
+                  "originalText": "journalism",
+                  "lemma": "journalism",
+                  "characterOffsetBegin": 39,
+                  "characterOffsetEnd": 49,
                   "pos": "NN",
                   "ner": "O",
-                  "speaker": "Read",
-                  "before": "",
+                  "speaker": "PER0",
+                  "before": " ",
                   "after": " "
                 }
               },
               "NN"
-            ],
+            ]
+          ],
+          "score": 1.0,
+          "text": "reveals more about Western journalism"
+        }
+      ],
+      "label": "what"
+    },
+    "why": {
+      "extracted": [
+        {
+          "parts": [
             [
               {
                 "nlpToken": {
-                  "index": 20,
-                  "word": "attack",
-                  "originalText": "attack",
-                  "lemma": "attack",
-                  "characterOffsetBegin": 827,
-                  "characterOffsetEnd": 833,
-                  "pos": "NN",
-                  "ner": "O",
-                  "speaker": "Read",
-                  "before": " ",
-                  "after": ""
-                }
-              },
-              "NN"
-            ],
-            [
-              {
-                "nlpToken": {
-                  "index": 21,
-                  "word": "''",
-                  "originalText": "\u201d",
-                  "lemma": "''",
-                  "characterOffsetBegin": 833,
-                  "characterOffsetEnd": 834,
-                  "pos": "''",
+                  "index": 1,
+                  "word": "Because",
+                  "originalText": "Because",
+                  "lemma": "because",
+                  "characterOffsetBegin": 1819,
+                  "characterOffsetEnd": 1826,
+                  "pos": "IN",
                   "ner": "O",
                   "speaker": "PER0",
-                  "before": "",
+                  "before": "\n",
                   "after": " "
                 }
               },
-              "''"
+              "IN"
             ],
             [
               {
                 "nlpToken": {
-                  "index": 22,
-                  "word": "against",
-                  "originalText": "against",
-                  "lemma": "against",
-                  "characterOffsetBegin": 835,
-                  "characterOffsetEnd": 842,
+                  "index": 2,
+                  "word": "of",
+                  "originalText": "of",
+                  "lemma": "of",
+                  "characterOffsetBegin": 1827,
+                  "characterOffsetEnd": 1829,
                   "pos": "IN",
                   "ner": "O",
                   "speaker": "PER0",
@@ -730,25 +829,1034 @@
             [
               {
                 "nlpToken": {
-                  "index": 23,
-                  "word": "Russia",
-                  "originalText": "Russia",
-                  "lemma": "Russia",
-                  "characterOffsetBegin": 843,
-                  "characterOffsetEnd": 849,
-                  "pos": "NNP",
-                  "ner": "LOCATION",
+                  "index": 3,
+                  "word": "this",
+                  "originalText": "this",
+                  "lemma": "this",
+                  "characterOffsetBegin": 1830,
+                  "characterOffsetEnd": 1834,
+                  "pos": "DT",
+                  "ner": "O",
+                  "speaker": "PER0",
+                  "before": " ",
+                  "after": " "
+                }
+              },
+              "DT"
+            ],
+            [
+              {
+                "nlpToken": {
+                  "index": 4,
+                  "word": "inconvenient",
+                  "originalText": "inconvenient",
+                  "lemma": "inconvenient",
+                  "characterOffsetBegin": 1835,
+                  "characterOffsetEnd": 1847,
+                  "pos": "JJ",
+                  "ner": "O",
+                  "speaker": "PER0",
+                  "before": " ",
+                  "after": " "
+                }
+              },
+              "JJ"
+            ],
+            [
+              {
+                "nlpToken": {
+                  "index": 5,
+                  "word": "truth",
+                  "originalText": "truth",
+                  "lemma": "truth",
+                  "characterOffsetBegin": 1848,
+                  "characterOffsetEnd": 1853,
+                  "pos": "NN",
+                  "ner": "O",
                   "speaker": "PER0",
                   "before": " ",
                   "after": ""
                 }
               },
+              "NN"
+            ],
+            [
+              {
+                "nlpToken": {
+                  "index": 6,
+                  "word": ",",
+                  "originalText": ",",
+                  "lemma": ",",
+                  "characterOffsetBegin": 1853,
+                  "characterOffsetEnd": 1854,
+                  "pos": ",",
+                  "ner": "O",
+                  "speaker": "PER0",
+                  "before": "",
+                  "after": " "
+                }
+              },
+              ","
+            ],
+            [
+              {
+                "nlpToken": {
+                  "index": 7,
+                  "word": "Harding",
+                  "originalText": "Harding",
+                  "lemma": "Harding",
+                  "characterOffsetBegin": 1855,
+                  "characterOffsetEnd": 1862,
+                  "pos": "NNP",
+                  "ner": "PERSON",
+                  "speaker": "PER0",
+                  "before": " ",
+                  "after": " "
+                },
+                "aida": [
+                  {
+                    "mention": {
+                      "allEntities": [
+                        {
+                          "kbIdentifier": "YAGO:Luke_Harding",
+                          "disambiguationScore": "0.32235"
+                        }
+                      ],
+                      "offset": 1855,
+                      "name": "Harding",
+                      "length": 7,
+                      "bestEntity": {
+                        "kbIdentifier": "YAGO:Luke_Harding",
+                        "disambiguationScore": "0.32235"
+                      }
+                    },
+                    "bestEntityMetadata": {
+                      "knowledgebase": "YAGO",
+                      "depictionurl": null,
+                      "depictionthumbnailurl": null,
+                      "importance": 0.12204510452178917,
+                      "entityId": "Luke_Harding",
+                      "type": [
+                        "YAGO_wordnet_intellectual_109621545",
+                        "YAGO_yagoLegalActorGeo",
+                        "YAGO_wikicategory_People_educated_at_Atlantic_College",
+                        "YAGO_wordnet_journalist_110224578",
+                        "YAGO_wordnet_person_100007846",
+                        "YAGO_wikicategory_Living_people",
+                        "YAGO_yagoLegalActor",
+                        "YAGO_wordnet_living_thing_100004258",
+                        "YAGO_wordnet_scholar_110557854",
+                        "YAGO_wordnet_physical_entity_100001930",
+                        "YAGO_wikicategory_Alumni_of_University_College\\u002c_Oxford",
+                        "YAGO_wordnet_causal_agent_100007347",
+                        "YAGO_wordnet_alumnus_109786338",
+                        "YAGO_wordnet_entity_100001740",
+                        "YAGO_wordnet_object_100002684",
+                        "YAGO_wikicategory_The_Guardian_journalists",
+                        "YAGO_wordnet_organism_100004475",
+                        "YAGO_wordnet_communicator_109610660",
+                        "YAGO_wikicategory_British_journalists",
+                        "YAGO_wordnet_writer_110794014",
+                        "YAGO_wordnet_whole_100003553"
+                      ],
+                      "readableRepr": "Luke Harding",
+                      "url": "http://en.wikipedia.org/wiki/Luke%20Harding"
+                    }
+                  }
+                ]
+              },
               "NNP"
+            ],
+            [
+              {
+                "nlpToken": {
+                  "index": 8,
+                  "word": "is",
+                  "originalText": "is",
+                  "lemma": "be",
+                  "characterOffsetBegin": 1863,
+                  "characterOffsetEnd": 1865,
+                  "pos": "VBZ",
+                  "ner": "O",
+                  "speaker": "PER0",
+                  "before": " ",
+                  "after": " "
+                }
+              },
+              "VBZ"
+            ],
+            [
+              {
+                "nlpToken": {
+                  "index": 9,
+                  "word": "forced",
+                  "originalText": "forced",
+                  "lemma": "force",
+                  "characterOffsetBegin": 1866,
+                  "characterOffsetEnd": 1872,
+                  "pos": "VBN",
+                  "ner": "O",
+                  "speaker": "PER0",
+                  "before": " ",
+                  "after": " "
+                }
+              },
+              "VBN"
+            ],
+            [
+              {
+                "nlpToken": {
+                  "index": 10,
+                  "word": "into",
+                  "originalText": "into",
+                  "lemma": "into",
+                  "characterOffsetBegin": 1873,
+                  "characterOffsetEnd": 1877,
+                  "pos": "IN",
+                  "ner": "O",
+                  "speaker": "PER0",
+                  "before": " ",
+                  "after": " "
+                }
+              },
+              "IN"
+            ],
+            [
+              {
+                "nlpToken": {
+                  "index": 11,
+                  "word": "a",
+                  "originalText": "a",
+                  "lemma": "a",
+                  "characterOffsetBegin": 1878,
+                  "characterOffsetEnd": 1879,
+                  "pos": "DT",
+                  "ner": "O",
+                  "speaker": "PER0",
+                  "before": " ",
+                  "after": " "
+                }
+              },
+              "DT"
+            ],
+            [
+              {
+                "nlpToken": {
+                  "index": 12,
+                  "word": "corner",
+                  "originalText": "corner",
+                  "lemma": "corner",
+                  "characterOffsetBegin": 1880,
+                  "characterOffsetEnd": 1886,
+                  "pos": "NN",
+                  "ner": "O",
+                  "speaker": "PER0",
+                  "before": " ",
+                  "after": " "
+                }
+              },
+              "NN"
+            ],
+            [
+              {
+                "nlpToken": {
+                  "index": 13,
+                  "word": "with",
+                  "originalText": "with",
+                  "lemma": "with",
+                  "characterOffsetBegin": 1887,
+                  "characterOffsetEnd": 1891,
+                  "pos": "IN",
+                  "ner": "O",
+                  "speaker": "PER0",
+                  "before": " ",
+                  "after": " "
+                }
+              },
+              "IN"
+            ],
+            [
+              {
+                "nlpToken": {
+                  "index": 14,
+                  "word": "only",
+                  "originalText": "only",
+                  "lemma": "only",
+                  "characterOffsetBegin": 1892,
+                  "characterOffsetEnd": 1896,
+                  "pos": "JJ",
+                  "ner": "O",
+                  "speaker": "PER0",
+                  "before": " ",
+                  "after": " "
+                }
+              },
+              "JJ"
+            ],
+            [
+              {
+                "nlpToken": {
+                  "index": 15,
+                  "word": "inconclusive",
+                  "originalText": "inconclusive",
+                  "lemma": "inconclusive",
+                  "characterOffsetBegin": 1897,
+                  "characterOffsetEnd": 1909,
+                  "pos": "JJ",
+                  "ner": "O",
+                  "speaker": "PER0",
+                  "before": " ",
+                  "after": " "
+                }
+              },
+              "JJ"
+            ],
+            [
+              {
+                "nlpToken": {
+                  "index": 16,
+                  "word": "verbs",
+                  "originalText": "verbs",
+                  "lemma": "verb",
+                  "characterOffsetBegin": 1910,
+                  "characterOffsetEnd": 1915,
+                  "pos": "NNS",
+                  "ner": "O",
+                  "speaker": "PER0",
+                  "before": " ",
+                  "after": " "
+                }
+              },
+              "NNS"
+            ],
+            [
+              {
+                "nlpToken": {
+                  "index": 17,
+                  "word": "when",
+                  "originalText": "when",
+                  "lemma": "when",
+                  "characterOffsetBegin": 1916,
+                  "characterOffsetEnd": 1920,
+                  "pos": "WRB",
+                  "ner": "O",
+                  "speaker": "PER0",
+                  "before": " ",
+                  "after": " "
+                }
+              },
+              "WRB"
+            ],
+            [
+              {
+                "nlpToken": {
+                  "index": 18,
+                  "word": "the",
+                  "originalText": "the",
+                  "lemma": "the",
+                  "characterOffsetBegin": 1921,
+                  "characterOffsetEnd": 1924,
+                  "pos": "DT",
+                  "ner": "O",
+                  "speaker": "PER0",
+                  "before": " ",
+                  "after": " "
+                }
+              },
+              "DT"
+            ],
+            [
+              {
+                "nlpToken": {
+                  "index": 19,
+                  "word": "moment",
+                  "originalText": "moment",
+                  "lemma": "moment",
+                  "characterOffsetBegin": 1925,
+                  "characterOffsetEnd": 1931,
+                  "pos": "NN",
+                  "ner": "O",
+                  "speaker": "PER0",
+                  "before": " ",
+                  "after": " "
+                }
+              },
+              "NN"
+            ],
+            [
+              {
+                "nlpToken": {
+                  "index": 20,
+                  "word": "requires",
+                  "originalText": "requires",
+                  "lemma": "require",
+                  "characterOffsetBegin": 1932,
+                  "characterOffsetEnd": 1940,
+                  "pos": "VBZ",
+                  "ner": "O",
+                  "speaker": "PER0",
+                  "before": " ",
+                  "after": " "
+                }
+              },
+              "VBZ"
+            ],
+            [
+              {
+                "nlpToken": {
+                  "index": 21,
+                  "word": "some",
+                  "originalText": "some",
+                  "lemma": "some",
+                  "characterOffsetBegin": 1941,
+                  "characterOffsetEnd": 1945,
+                  "pos": "DT",
+                  "ner": "O",
+                  "speaker": "PER0",
+                  "before": " ",
+                  "after": " "
+                }
+              },
+              "DT"
+            ],
+            [
+              {
+                "nlpToken": {
+                  "index": 22,
+                  "word": "rock-solid",
+                  "originalText": "rock-solid",
+                  "lemma": "rock-solid",
+                  "characterOffsetBegin": 1946,
+                  "characterOffsetEnd": 1956,
+                  "pos": "JJ",
+                  "ner": "O",
+                  "speaker": "PER0",
+                  "before": " ",
+                  "after": " "
+                }
+              },
+              "JJ"
+            ],
+            [
+              {
+                "nlpToken": {
+                  "index": 23,
+                  "word": "certainty",
+                  "originalText": "certainty",
+                  "lemma": "certainty",
+                  "characterOffsetBegin": 1957,
+                  "characterOffsetEnd": 1966,
+                  "pos": "NN",
+                  "ner": "O",
+                  "speaker": "PER0",
+                  "before": " ",
+                  "after": ""
+                }
+              },
+              "NN"
+            ],
+            [
+              {
+                "nlpToken": {
+                  "index": 24,
+                  "word": ":",
+                  "originalText": ":",
+                  "lemma": ":",
+                  "characterOffsetBegin": 1966,
+                  "characterOffsetEnd": 1967,
+                  "pos": ":",
+                  "ner": "O",
+                  "speaker": "PER0",
+                  "before": "",
+                  "after": " "
+                }
+              },
+              ":"
+            ],
+            [
+              {
+                "nlpToken": {
+                  "index": 25,
+                  "word": "``",
+                  "originalText": "\u201c",
+                  "lemma": "``",
+                  "characterOffsetBegin": 1968,
+                  "characterOffsetEnd": 1969,
+                  "pos": "``",
+                  "ner": "O",
+                  "speaker": "PER0",
+                  "before": " ",
+                  "after": ""
+                }
+              },
+              "``"
+            ],
+            [
+              {
+                "nlpToken": {
+                  "index": 26,
+                  "word": "The",
+                  "originalText": "The",
+                  "lemma": "the",
+                  "characterOffsetBegin": 1969,
+                  "characterOffsetEnd": 1972,
+                  "pos": "DT",
+                  "ner": "O",
+                  "speaker": "112",
+                  "before": "",
+                  "after": " "
+                }
+              },
+              "DT"
+            ],
+            [
+              {
+                "nlpToken": {
+                  "index": 27,
+                  "word": "documents",
+                  "originalText": "documents",
+                  "lemma": "document",
+                  "characterOffsetBegin": 1973,
+                  "characterOffsetEnd": 1982,
+                  "pos": "NNS",
+                  "ner": "O",
+                  "speaker": "112",
+                  "before": " ",
+                  "after": " "
+                }
+              },
+              "NNS"
+            ],
+            [
+              {
+                "nlpToken": {
+                  "index": 28,
+                  "word": "suggest",
+                  "originalText": "suggest",
+                  "lemma": "suggest",
+                  "characterOffsetBegin": 1983,
+                  "characterOffsetEnd": 1990,
+                  "pos": "VBP",
+                  "ner": "O",
+                  "speaker": "112",
+                  "before": " ",
+                  "after": " "
+                }
+              },
+              "VBP"
+            ],
+            [
+              {
+                "nlpToken": {
+                  "index": 29,
+                  "word": "Putin",
+                  "originalText": "Putin",
+                  "lemma": "Putin",
+                  "characterOffsetBegin": 1991,
+                  "characterOffsetEnd": 1996,
+                  "pos": "NNP",
+                  "ner": "PERSON",
+                  "speaker": "112",
+                  "before": " ",
+                  "after": ""
+                },
+                "aida": [
+                  {
+                    "mention": {
+                      "allEntities": [
+                        {
+                          "kbIdentifier": "YAGO:Vladimir_Putin",
+                          "disambiguationScore": "0.99828"
+                        }
+                      ],
+                      "offset": 1991,
+                      "name": "Putin",
+                      "length": 5,
+                      "bestEntity": {
+                        "kbIdentifier": "YAGO:Vladimir_Putin",
+                        "disambiguationScore": "0.99828"
+                      }
+                    },
+                    "bestEntityMetadata": {
+                      "knowledgebase": "YAGO",
+                      "depictionurl": "http://upload.wikimedia.org/wikipedia/commons/4/45/Vladimir_Putin_-_2006.jpg",
+                      "depictionthumbnailurl": "http://upload.wikimedia.org/wikipedia/commons/thumbVladimir_Putin_-_2006.jpg/200px-Vladimir_Putin_-_2006.jpg",
+                      "importance": 0.0006089107656036169,
+                      "entityId": "Vladimir_Putin",
+                      "type": [
+                        "YAGO_wikicategory_Prime_Ministers_of_the_Russian_Federation",
+                        "YAGO_wordnet_owner_110389398",
+                        "YAGO_yagoLegalActorGeo",
+                        "YAGO_wikicategory_Independent_politicians",
+                        "YAGO_wikicategory_People_of_the_Chechen_wars",
+                        "YAGO_wordnet_person_100007846",
+                        "YAGO_wikicategory_Saint_Petersburg_State_University_alumni",
+                        "YAGO_wordnet_practitioner_110462860",
+                        "YAGO_wordnet_official_110372373",
+                        "YAGO_wikicategory_KGB_officers",
+                        "YAGO_wikicategory_People_of_the_Russia\\u2013Georgia_war",
+                        "YAGO_wordnet_living_thing_100004258",
+                        "YAGO_wikicategory_Presidents_of_Russia",
+                        "YAGO_wordnet_head_of_state_110164747",
+                        "YAGO_wikicategory_Acting_Presidents_of_Russia",
+                        "YAGO_wordnet_director_110014939",
+                        "YAGO_wordnet_object_100002684",
+                        "YAGO_wikicategory_FSB_officers",
+                        "YAGO_wordnet_administrator_109770949",
+                        "YAGO_wordnet_worker_109632518",
+                        "YAGO_wordnet_president_110467179",
+                        "YAGO_wordnet_representative_110522035",
+                        "YAGO_wikicategory_Directors_of_the_Federal_Security_Service",
+                        "YAGO_wikicategory_Our_Home_\\u2013_Russia_politicians",
+                        "YAGO_wordnet_adult_109605289",
+                        "YAGO_wordnet_intellectual_109621545",
+                        "YAGO_wordnet_negotiator_110351874",
+                        "YAGO_wordnet_spiritual_leader_109505153",
+                        "YAGO_wikicategory_Living_people",
+                        "YAGO_wikicategory_Russian_sambo_practitioners",
+                        "YAGO_yagoLegalActor",
+                        "YAGO_wordnet_serviceman_110582746",
+                        "YAGO_wordnet_professional_110480253",
+                        "YAGO_wordnet_leader_109623038",
+                        "YAGO_wordnet_scholar_110557854",
+                        "YAGO_wordnet_physical_entity_100001930",
+                        "YAGO_wordnet_head_110162991",
+                        "YAGO_wordnet_causal_agent_100007347",
+                        "YAGO_wordnet_alumnus_109786338",
+                        "YAGO_wordnet_curate_109983572",
+                        "YAGO_wordnet_entity_100001740",
+                        "YAGO_wordnet_holder_110180178",
+                        "YAGO_wikicategory_Kyokushin_kaikan_practitioners",
+                        "YAGO_wordnet_organism_100004475",
+                        "YAGO_wordnet_communicator_109610660",
+                        "YAGO_wordnet_officeholder_110371450",
+                        "YAGO_wikicategory_People_from_Saint_Petersburg",
+                        "YAGO_wordnet_military_officer_110317007",
+                        "YAGO_wordnet_politician_110451263",
+                        "YAGO_wordnet_whole_100003553",
+                        "YAGO_wordnet_clergyman_109927451",
+                        "YAGO_wikicategory_United_Russia_politicians",
+                        "YAGO_wordnet_skilled_worker_110605985"
+                      ],
+                      "readableRepr": "Vladimir Putin",
+                      "url": "http://en.wikipedia.org/wiki/Vladimir%20Putin"
+                    }
+                  }
+                ]
+              },
+              "NNP"
+            ],
+            [
+              {
+                "nlpToken": {
+                  "index": 30,
+                  "word": "'s",
+                  "originalText": "\u2019s",
+                  "lemma": "'s",
+                  "characterOffsetBegin": 1996,
+                  "characterOffsetEnd": 1998,
+                  "pos": "POS",
+                  "ner": "O",
+                  "speaker": "112",
+                  "before": "",
+                  "after": " "
+                },
+                "aida": [
+                  {
+                    "mention": {
+                      "allEntities": [
+                        {
+                          "kbIdentifier": "YAGO:Vladimir_Putin",
+                          "disambiguationScore": "0.99828"
+                        }
+                      ],
+                      "offset": 1991,
+                      "name": "Putin",
+                      "length": 5,
+                      "bestEntity": {
+                        "kbIdentifier": "YAGO:Vladimir_Putin",
+                        "disambiguationScore": "0.99828"
+                      }
+                    },
+                    "bestEntityMetadata": {
+                      "knowledgebase": "YAGO",
+                      "depictionurl": "http://upload.wikimedia.org/wikipedia/commons/4/45/Vladimir_Putin_-_2006.jpg",
+                      "depictionthumbnailurl": "http://upload.wikimedia.org/wikipedia/commons/thumbVladimir_Putin_-_2006.jpg/200px-Vladimir_Putin_-_2006.jpg",
+                      "importance": 0.0006089107656036169,
+                      "entityId": "Vladimir_Putin",
+                      "type": [
+                        "YAGO_wikicategory_Prime_Ministers_of_the_Russian_Federation",
+                        "YAGO_wordnet_owner_110389398",
+                        "YAGO_yagoLegalActorGeo",
+                        "YAGO_wikicategory_Independent_politicians",
+                        "YAGO_wikicategory_People_of_the_Chechen_wars",
+                        "YAGO_wordnet_person_100007846",
+                        "YAGO_wikicategory_Saint_Petersburg_State_University_alumni",
+                        "YAGO_wordnet_practitioner_110462860",
+                        "YAGO_wordnet_official_110372373",
+                        "YAGO_wikicategory_KGB_officers",
+                        "YAGO_wikicategory_People_of_the_Russia\\u2013Georgia_war",
+                        "YAGO_wordnet_living_thing_100004258",
+                        "YAGO_wikicategory_Presidents_of_Russia",
+                        "YAGO_wordnet_head_of_state_110164747",
+                        "YAGO_wikicategory_Acting_Presidents_of_Russia",
+                        "YAGO_wordnet_director_110014939",
+                        "YAGO_wordnet_object_100002684",
+                        "YAGO_wikicategory_FSB_officers",
+                        "YAGO_wordnet_administrator_109770949",
+                        "YAGO_wordnet_worker_109632518",
+                        "YAGO_wordnet_president_110467179",
+                        "YAGO_wordnet_representative_110522035",
+                        "YAGO_wikicategory_Directors_of_the_Federal_Security_Service",
+                        "YAGO_wikicategory_Our_Home_\\u2013_Russia_politicians",
+                        "YAGO_wordnet_adult_109605289",
+                        "YAGO_wordnet_intellectual_109621545",
+                        "YAGO_wordnet_negotiator_110351874",
+                        "YAGO_wordnet_spiritual_leader_109505153",
+                        "YAGO_wikicategory_Living_people",
+                        "YAGO_wikicategory_Russian_sambo_practitioners",
+                        "YAGO_yagoLegalActor",
+                        "YAGO_wordnet_serviceman_110582746",
+                        "YAGO_wordnet_professional_110480253",
+                        "YAGO_wordnet_leader_109623038",
+                        "YAGO_wordnet_scholar_110557854",
+                        "YAGO_wordnet_physical_entity_100001930",
+                        "YAGO_wordnet_head_110162991",
+                        "YAGO_wordnet_causal_agent_100007347",
+                        "YAGO_wordnet_alumnus_109786338",
+                        "YAGO_wordnet_curate_109983572",
+                        "YAGO_wordnet_entity_100001740",
+                        "YAGO_wordnet_holder_110180178",
+                        "YAGO_wikicategory_Kyokushin_kaikan_practitioners",
+                        "YAGO_wordnet_organism_100004475",
+                        "YAGO_wordnet_communicator_109610660",
+                        "YAGO_wordnet_officeholder_110371450",
+                        "YAGO_wikicategory_People_from_Saint_Petersburg",
+                        "YAGO_wordnet_military_officer_110317007",
+                        "YAGO_wordnet_politician_110451263",
+                        "YAGO_wordnet_whole_100003553",
+                        "YAGO_wordnet_clergyman_109927451",
+                        "YAGO_wikicategory_United_Russia_politicians",
+                        "YAGO_wordnet_skilled_worker_110605985"
+                      ],
+                      "readableRepr": "Vladimir Putin",
+                      "url": "http://en.wikipedia.org/wiki/Vladimir%20Putin"
+                    }
+                  }
+                ]
+              },
+              "POS"
+            ],
+            [
+              {
+                "nlpToken": {
+                  "index": 31,
+                  "word": "family",
+                  "originalText": "family",
+                  "lemma": "family",
+                  "characterOffsetBegin": 1999,
+                  "characterOffsetEnd": 2005,
+                  "pos": "NN",
+                  "ner": "O",
+                  "speaker": "112",
+                  "before": " ",
+                  "after": " "
+                }
+              },
+              "NN"
+            ],
+            [
+              {
+                "nlpToken": {
+                  "index": 32,
+                  "word": "has",
+                  "originalText": "has",
+                  "lemma": "have",
+                  "characterOffsetBegin": 2006,
+                  "characterOffsetEnd": 2009,
+                  "pos": "VBZ",
+                  "ner": "O",
+                  "speaker": "112",
+                  "before": " ",
+                  "after": " "
+                }
+              },
+              "VBZ"
+            ],
+            [
+              {
+                "nlpToken": {
+                  "index": 33,
+                  "word": "benefited",
+                  "originalText": "benefited",
+                  "lemma": "benefit",
+                  "characterOffsetBegin": 2010,
+                  "characterOffsetEnd": 2019,
+                  "pos": "VBN",
+                  "ner": "O",
+                  "speaker": "112",
+                  "before": " ",
+                  "after": " "
+                }
+              },
+              "VBN"
+            ],
+            [
+              {
+                "nlpToken": {
+                  "index": 34,
+                  "word": "from",
+                  "originalText": "from",
+                  "lemma": "from",
+                  "characterOffsetBegin": 2020,
+                  "characterOffsetEnd": 2024,
+                  "pos": "IN",
+                  "ner": "O",
+                  "speaker": "112",
+                  "before": " ",
+                  "after": " "
+                }
+              },
+              "IN"
+            ],
+            [
+              {
+                "nlpToken": {
+                  "index": 35,
+                  "word": "this",
+                  "originalText": "this",
+                  "lemma": "this",
+                  "characterOffsetBegin": 2025,
+                  "characterOffsetEnd": 2029,
+                  "pos": "DT",
+                  "ner": "O",
+                  "speaker": "112",
+                  "before": " ",
+                  "after": " "
+                }
+              },
+              "DT"
+            ],
+            [
+              {
+                "nlpToken": {
+                  "index": 36,
+                  "word": "money",
+                  "originalText": "money",
+                  "lemma": "money",
+                  "characterOffsetBegin": 2030,
+                  "characterOffsetEnd": 2035,
+                  "pos": "NN",
+                  "ner": "O",
+                  "speaker": "112",
+                  "before": " ",
+                  "after": " "
+                }
+              },
+              "NN"
+            ],
+            [
+              {
+                "nlpToken": {
+                  "index": 37,
+                  "word": "--",
+                  "originalText": "\u2013",
+                  "lemma": "--",
+                  "characterOffsetBegin": 2036,
+                  "characterOffsetEnd": 2037,
+                  "pos": ":",
+                  "ner": "O",
+                  "speaker": "112",
+                  "before": " ",
+                  "after": " "
+                }
+              },
+              ":"
+            ],
+            [
+              {
+                "nlpToken": {
+                  "index": 38,
+                  "word": "his",
+                  "originalText": "his",
+                  "lemma": "he",
+                  "characterOffsetBegin": 2038,
+                  "characterOffsetEnd": 2041,
+                  "pos": "PRP$",
+                  "ner": "O",
+                  "speaker": "112",
+                  "before": " ",
+                  "after": " "
+                }
+              },
+              "PRP$"
+            ],
+            [
+              {
+                "nlpToken": {
+                  "index": 39,
+                  "word": "friends",
+                  "originalText": "friends",
+                  "lemma": "friend",
+                  "characterOffsetBegin": 2042,
+                  "characterOffsetEnd": 2049,
+                  "pos": "NNS",
+                  "ner": "O",
+                  "speaker": "112",
+                  "before": " ",
+                  "after": ""
+                }
+              },
+              "NNS"
+            ],
+            [
+              {
+                "nlpToken": {
+                  "index": 40,
+                  "word": "'",
+                  "originalText": "\u2019",
+                  "lemma": "'",
+                  "characterOffsetBegin": 2049,
+                  "characterOffsetEnd": 2050,
+                  "pos": "POS",
+                  "ner": "O",
+                  "speaker": "112",
+                  "before": "",
+                  "after": " "
+                }
+              },
+              "POS"
+            ],
+            [
+              {
+                "nlpToken": {
+                  "index": 41,
+                  "word": "fortunes",
+                  "originalText": "fortunes",
+                  "lemma": "fortune",
+                  "characterOffsetBegin": 2051,
+                  "characterOffsetEnd": 2059,
+                  "pos": "NNS",
+                  "ner": "O",
+                  "speaker": "112",
+                  "before": " ",
+                  "after": " "
+                }
+              },
+              "NNS"
+            ],
+            [
+              {
+                "nlpToken": {
+                  "index": 42,
+                  "word": "appear",
+                  "originalText": "appear",
+                  "lemma": "appear",
+                  "characterOffsetBegin": 2060,
+                  "characterOffsetEnd": 2066,
+                  "pos": "VBP",
+                  "ner": "O",
+                  "speaker": "112",
+                  "before": " ",
+                  "after": " "
+                }
+              },
+              "VBP"
+            ],
+            [
+              {
+                "nlpToken": {
+                  "index": 43,
+                  "word": "his",
+                  "originalText": "his",
+                  "lemma": "he",
+                  "characterOffsetBegin": 2067,
+                  "characterOffsetEnd": 2070,
+                  "pos": "PRP$",
+                  "ner": "O",
+                  "speaker": "112",
+                  "before": " ",
+                  "after": " "
+                }
+              },
+              "PRP$"
+            ],
+            [
+              {
+                "nlpToken": {
+                  "index": 44,
+                  "word": "to",
+                  "originalText": "to",
+                  "lemma": "to",
+                  "characterOffsetBegin": 2071,
+                  "characterOffsetEnd": 2073,
+                  "pos": "TO",
+                  "ner": "O",
+                  "speaker": "112",
+                  "before": " ",
+                  "after": " "
+                }
+              },
+              "TO"
+            ],
+            [
+              {
+                "nlpToken": {
+                  "index": 45,
+                  "word": "spend",
+                  "originalText": "spend",
+                  "lemma": "spend",
+                  "characterOffsetBegin": 2074,
+                  "characterOffsetEnd": 2079,
+                  "pos": "VB",
+                  "ner": "O",
+                  "speaker": "112",
+                  "before": " ",
+                  "after": ""
+                }
+              },
+              "VB"
+            ],
+            [
+              {
+                "nlpToken": {
+                  "index": 46,
+                  "word": ".",
+                  "originalText": ".",
+                  "lemma": ".",
+                  "characterOffsetBegin": 2079,
+                  "characterOffsetEnd": 2080,
+                  "pos": ".",
+                  "ner": "O",
+                  "speaker": "112",
+                  "before": "",
+                  "after": ""
+                }
+              },
+              "."
+            ],
+            [
+              {
+                "nlpToken": {
+                  "index": 47,
+                  "word": "''",
+                  "originalText": "\u201d",
+                  "lemma": "''",
+                  "characterOffsetBegin": 2080,
+                  "characterOffsetEnd": 2081,
+                  "pos": "''",
+                  "ner": "O",
+                  "speaker": "PER0",
+                  "before": "",
+                  "after": "\n"
+                }
+              },
+              "''"
             ]
           ],
-          "score": 0.40190476190476193,
-          "text": "Moscow sounded the alarm that the West was preparing to launch yet another \u201c information attack \u201d against Russia",
-          "nlpIndexSentence": 6
+          "score": 0.8631111111111112,
+          "text": "Because of this inconvenient truth , Harding is forced into a corner with only inconclusive verbs when the moment requires some rock-solid certainty : \u201c The documents suggest Putin \u2019s family has benefited from this money \u2013 his friends \u2019 fortunes appear his to spend . \u201d",
+          "nlpIndexSentence": 11
         }
       ],
       "label": "why"
@@ -776,13 +1884,10 @@
               "NNP"
             ]
           ],
-          "score": 1.0,
+          "score": 0.7,
           "text": "Russia",
           "enhancement": {
             "openstreetmap_nominatim": {
-              "place_id": "178981085",
-              "licence": "Data \u00a9 OpenStreetMap contributors, ODbL 1.0. http://www.openstreetmap.org/copyright",
-              "osm_type": "relation",
               "osm_id": "60189",
               "boundingbox": [
                 41.1858711,
@@ -790,13 +1895,16 @@
                 -180.0,
                 180.0
               ],
-              "lat": "64.6863136",
-              "lon": "97.7453061",
-              "display_name": "\u0420\u0424",
-              "class": "boundary",
-              "type": "administrative",
+              "licence": "Data \u00a9 OpenStreetMap contributors, ODbL 1.0. http://www.openstreetmap.org/copyright",
               "importance": 0.22506692421924,
-              "icon": "https://nominatim.openstreetmap.org/images/mapicons/poi_boundary_administrative.p.20.png"
+              "icon": "https://nominatim.openstreetmap.org/images/mapicons/poi_boundary_administrative.p.20.png",
+              "osm_type": "relation",
+              "display_name": "\u0420\u0424",
+              "lat": "64.6863136",
+              "type": "administrative",
+              "place_id": "178981085",
+              "lon": "97.7453061",
+              "class": "boundary"
             }
           },
           "nlpIndexSentence": 6
@@ -811,39 +1919,37 @@
             [
               {
                 "nlpToken": {
-                  "index": 22,
-                  "word": "today",
-                  "originalText": "today",
-                  "lemma": "today",
-                  "characterOffsetBegin": 5605,
-                  "characterOffsetEnd": 5610,
+                  "index": 9,
+                  "word": "Midnight",
+                  "originalText": "Midnight",
+                  "lemma": "midnight",
+                  "characterOffsetBegin": 399,
+                  "characterOffsetEnd": 407,
                   "pos": "NN",
-                  "ner": "DATE",
-                  "normalizedNER": "2017-11-30",
-                  "speaker": "280",
-                  "before": " ",
-                  "after": "",
+                  "ner": "TIME",
+                  "normalizedNER": "2017-11-30T00:00",
+                  "speaker": "PER0",
+                  "before": "",
+                  "after": " ",
                   "timex": {
-                    "tid": "t19",
-                    "type": "DATE",
-                    "value": "2017-11-30"
+                    "tid": "t3",
+                    "type": "TIME",
+                    "value": "2017-11-30T00:00"
                   }
                 }
               },
               "NN"
             ]
           ],
-          "score": 0.7516048097586016,
-          "text": "today",
+          "score": 0.49892212306701966,
+          "text": "Midnight",
           "enhancement": {
-            "timex": [
-              {
-                "start_date": "2017-11-30T00:00:00",
-                "end_date": "2017-11-30T23:59:59"
-              }
-            ]
+            "timex": {
+              "start_date": "2017-11-30T00:00:00",
+              "end_date": "2017-11-30T00:00:59"
+            }
           },
-          "nlpIndexSentence": 28
+          "nlpIndexSentence": 4
         }
       ],
       "label": "when"

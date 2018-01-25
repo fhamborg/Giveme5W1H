@@ -25,7 +25,9 @@
     "Event": "israel_approves_transfer_of_11_million_in_funding_for_west_bank_settlements"
   },
   "dId": "35d763403c74114d72f2b100e9af43112f2f118a0b56240ff008a316",
-  "fiveWoneH": {
+  "fiveWoneH": {},
+  "fiveWoneH_Metadata": {
+    "process_errors": {},
     "who": {
       "extracted": [
         {
@@ -540,87 +542,6 @@
       ],
       "label": "how"
     },
-    "why": {
-      "extracted": [
-        {
-          "parts": [
-            [
-              {
-                "nlpToken": {
-                  "index": 1,
-                  "word": "Israel",
-                  "originalText": "Israel",
-                  "lemma": "Israel",
-                  "characterOffsetBegin": 0,
-                  "characterOffsetEnd": 6,
-                  "pos": "NNP",
-                  "ner": "LOCATION",
-                  "speaker": "PER0",
-                  "before": "",
-                  "after": " "
-                },
-                "aida": [
-                  {
-                    "mention": {
-                      "allEntities": [
-                        {
-                          "kbIdentifier": "YAGO:Israel",
-                          "disambiguationScore": "0.30954"
-                        }
-                      ],
-                      "offset": 0,
-                      "name": "Israel",
-                      "length": 6,
-                      "bestEntity": {
-                        "kbIdentifier": "YAGO:Israel",
-                        "disambiguationScore": "0.30954"
-                      }
-                    },
-                    "bestEntityMetadata": {
-                      "knowledgebase": "YAGO",
-                      "depictionurl": "http://upload.wikimedia.org/wikipedia/commons/d/d4/Flag_of_Israel.svg",
-                      "depictionthumbnailurl": "http://upload.wikimedia.org/wikipedia/commons/thumbFlag_of_Israel.svg/200px-Flag_of_Israel.svg",
-                      "importance": 2.0612715761513107e-05,
-                      "entityId": "Israel",
-                      "type": [
-                        "YAGO_wordnet_system_108435388",
-                        "YAGO_wordnet_district_108552138",
-                        "YAGO_yagoPermanentlyLocatedEntity",
-                        "YAGO_wikicategory_Middle_Eastern_countries",
-                        "YAGO_yagoLegalActorGeo",
-                        "YAGO_wordnet_state_108654360",
-                        "YAGO_wordnet_country_108544813",
-                        "YAGO_wikicategory_Member_states_of_the_United_Nations",
-                        "YAGO_wordnet_economy_108366753",
-                        "YAGO_wikicategory_States_and_territories_established_in_1948",
-                        "YAGO_wikicategory_Arabic\\u002dspeaking_countries_and_territories",
-                        "YAGO_wordnet_abstraction_100002137",
-                        "YAGO_wordnet_region_108630985",
-                        "YAGO_yagoGeoEntity",
-                        "YAGO_wikicategory_World_Trade_Organization_member_economies",
-                        "YAGO_wordnet_physical_entity_100001930",
-                        "YAGO_wordnet_entity_100001740",
-                        "YAGO_wordnet_object_100002684",
-                        "YAGO_wordnet_group_100031264",
-                        "YAGO_wordnet_location_100027167",
-                        "YAGO_wordnet_administrative_district_108491826",
-                        "YAGO_wikicategory_Member_states_of_the_Union_for_the_Mediterranean"
-                      ],
-                      "readableRepr": "Israel",
-                      "url": "http://en.wikipedia.org/wiki/Israel"
-                    }
-                  }
-                ]
-              },
-              "NNP"
-            ]
-          ],
-          "score": 0.5860000000000001,
-          "text": "Israel"
-        }
-      ],
-      "label": "why"
-    },
     "where": {
       "extracted": [
         {
@@ -820,7 +741,7 @@
               "NNP"
             ]
           ],
-          "score": 0.49152948583514255,
+          "score": 0.38486281916847587,
           "text": "Tuesday",
           "enhancement": {
             "timex": {
@@ -832,6 +753,87 @@
         }
       ],
       "label": "when"
+    },
+    "why": {
+      "extracted": [
+        {
+          "parts": [
+            [
+              {
+                "nlpToken": {
+                  "index": 1,
+                  "word": "Israel",
+                  "originalText": "Israel",
+                  "lemma": "Israel",
+                  "characterOffsetBegin": 0,
+                  "characterOffsetEnd": 6,
+                  "pos": "NNP",
+                  "ner": "LOCATION",
+                  "speaker": "PER0",
+                  "before": "",
+                  "after": " "
+                },
+                "aida": [
+                  {
+                    "mention": {
+                      "allEntities": [
+                        {
+                          "kbIdentifier": "YAGO:Israel",
+                          "disambiguationScore": "0.30954"
+                        }
+                      ],
+                      "offset": 0,
+                      "name": "Israel",
+                      "length": 6,
+                      "bestEntity": {
+                        "kbIdentifier": "YAGO:Israel",
+                        "disambiguationScore": "0.30954"
+                      }
+                    },
+                    "bestEntityMetadata": {
+                      "knowledgebase": "YAGO",
+                      "depictionurl": "http://upload.wikimedia.org/wikipedia/commons/d/d4/Flag_of_Israel.svg",
+                      "depictionthumbnailurl": "http://upload.wikimedia.org/wikipedia/commons/thumbFlag_of_Israel.svg/200px-Flag_of_Israel.svg",
+                      "importance": 2.0612715761513107e-05,
+                      "entityId": "Israel",
+                      "type": [
+                        "YAGO_wordnet_system_108435388",
+                        "YAGO_wordnet_district_108552138",
+                        "YAGO_yagoPermanentlyLocatedEntity",
+                        "YAGO_wikicategory_Middle_Eastern_countries",
+                        "YAGO_yagoLegalActorGeo",
+                        "YAGO_wordnet_state_108654360",
+                        "YAGO_wordnet_country_108544813",
+                        "YAGO_wikicategory_Member_states_of_the_United_Nations",
+                        "YAGO_wordnet_economy_108366753",
+                        "YAGO_wikicategory_States_and_territories_established_in_1948",
+                        "YAGO_wikicategory_Arabic\\u002dspeaking_countries_and_territories",
+                        "YAGO_wordnet_abstraction_100002137",
+                        "YAGO_wordnet_region_108630985",
+                        "YAGO_yagoGeoEntity",
+                        "YAGO_wikicategory_World_Trade_Organization_member_economies",
+                        "YAGO_wordnet_physical_entity_100001930",
+                        "YAGO_wordnet_entity_100001740",
+                        "YAGO_wordnet_object_100002684",
+                        "YAGO_wordnet_group_100031264",
+                        "YAGO_wordnet_location_100027167",
+                        "YAGO_wordnet_administrative_district_108491826",
+                        "YAGO_wikicategory_Member_states_of_the_Union_for_the_Mediterranean"
+                      ],
+                      "readableRepr": "Israel",
+                      "url": "http://en.wikipedia.org/wiki/Israel"
+                    }
+                  }
+                ]
+              },
+              "NNP"
+            ]
+          ],
+          "score": 0.5860000000000001,
+          "text": "Israel"
+        }
+      ],
+      "label": "why"
     }
   }
 }

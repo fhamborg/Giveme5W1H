@@ -19,14 +19,15 @@
   "newsCluster": {
     "CategoryId": 5,
     "Category": "sports",
-    "TopicId": 1,
-    "Topic": "unspecific",
-    "EventId": 13,
-    "Event": "cubs_win_championship",
-    "Url": "http://www.independent.co.uk/sport/us-sport/major-league-baseball/world-series-chicago-cubs-cleveland-indians-108-year-title-drought-a7394706.html"
+    "TopicId": 2,
+    "Topic": "legancy",
+    "EventId": 61,
+    "Event": "cubs_win_championship"
   },
   "dId": "cbc0951362802c54af346588618433c6b8ca6ab4de32df89ff3675e0",
-  "fiveWoneH": {
+  "fiveWoneH": {},
+  "fiveWoneH_Metadata": {
+    "process_errors": {},
     "where": {
       "extracted": [
         {
@@ -34,66 +35,67 @@
             [
               {
                 "nlpToken": {
-                  "index": 12,
-                  "word": "Chicago",
-                  "originalText": "Chicago",
-                  "lemma": "Chicago",
-                  "characterOffsetBegin": 1155,
-                  "characterOffsetEnd": 1162,
+                  "index": 1,
+                  "word": "Cleveland",
+                  "originalText": "Cleveland",
+                  "lemma": "Cleveland",
+                  "characterOffsetBegin": 960,
+                  "characterOffsetEnd": 969,
                   "pos": "NNP",
                   "ner": "LOCATION",
                   "speaker": "PER0",
-                  "before": " ",
-                  "after": ""
+                  "before": "\n",
+                  "after": " "
                 },
                 "aida": [
                   {
                     "mention": {
                       "allEntities": [
                         {
-                          "kbIdentifier": "YAGO:Chicago_Cubs",
-                          "disambiguationScore": "0.29557"
+                          "kbIdentifier": "YAGO:Cleveland_Indians",
+                          "disambiguationScore": "0.25108"
                         }
                       ],
-                      "offset": 1155,
-                      "name": "Chicago",
-                      "length": 7,
+                      "offset": 960,
+                      "name": "Cleveland",
+                      "length": 9,
                       "bestEntity": {
-                        "kbIdentifier": "YAGO:Chicago_Cubs",
-                        "disambiguationScore": "0.29557"
+                        "kbIdentifier": "YAGO:Cleveland_Indians",
+                        "disambiguationScore": "0.25108"
                       }
                     },
                     "bestEntityMetadata": {
                       "knowledgebase": "YAGO",
-                      "depictionurl": "http://upload.wikimedia.org/wikipedia/commons/e/ed/Chicago_Cubs_Logo.svg",
-                      "depictionthumbnailurl": "http://upload.wikimedia.org/wikipedia/commons/thumbChicago_Cubs_Logo.svg/200px-Chicago_Cubs_Logo.svg",
-                      "importance": 0.00015264551672039436,
-                      "entityId": "Chicago_Cubs",
+                      "depictionurl": "http://upload.wikimedia.org/wikipedia/en/e/e1/ALC-Uniform-CLE.png",
+                      "depictionthumbnailurl": "http://upload.wikimedia.org/wikipedia/en/thumbALC-Uniform-CLE.png/200px-ALC-Uniform-CLE.png",
+                      "importance": 0.00017966488738075615,
+                      "entityId": "Cleveland_Indians",
                       "type": [
-                        "YAGO_wikicategory_Professional_baseball_teams_in_Illinois",
                         "YAGO_yagoPermanentlyLocatedEntity",
+                        "YAGO_wordnet_event_100029378",
                         "YAGO_yagoLegalActorGeo",
                         "YAGO_wordnet_organization_108008335",
                         "YAGO_wikicategory_Major_League_Baseball_teams",
-                        "YAGO_wordnet_subsidiary_company_108003935",
                         "YAGO_wordnet_unit_108189659",
+                        "YAGO_wordnet_diversion_100426928",
+                        "YAGO_wikicategory_Sports_clubs_established_in_1894",
+                        "YAGO_wordnet_sport_100523513",
                         "YAGO_wordnet_team_108208560",
-                        "YAGO_wikicategory_Sports_clubs_established_in_1870",
                         "YAGO_yagoLegalActor",
                         "YAGO_wordnet_club_108227214",
                         "YAGO_wordnet_abstraction_100002137",
-                        "YAGO_wordnet_company_108058098",
-                        "YAGO_wikicategory_Tribune_Company_subsidiaries",
+                        "YAGO_wordnet_act_100030358",
+                        "YAGO_wordnet_activity_100407535",
                         "YAGO_wordnet_social_group_107950920",
-                        "YAGO_wordnet_institution_108053576",
                         "YAGO_wordnet_entity_100001740",
-                        "YAGO_wikicategory_Baseball_teams_in_Chicago\\u002c_Illinois",
+                        "YAGO_wikicategory_Sports_in_Cleveland\\u002c_Ohio",
                         "YAGO_wordnet_group_100031264",
                         "YAGO_wordnet_association_108049401",
+                        "YAGO_wordnet_psychological_feature_100023100",
                         "YAGO_wordnet_baseball_team_108079319"
                       ],
-                      "readableRepr": "Chicago Cubs",
-                      "url": "http://en.wikipedia.org/wiki/Chicago%20Cubs"
+                      "readableRepr": "Cleveland Indians",
+                      "url": "http://en.wikipedia.org/wiki/Cleveland%20Indians"
                     }
                   }
                 ]
@@ -101,30 +103,30 @@
               "NNP"
             ]
           ],
-          "score": 1.0000000000000002,
-          "text": "Chicago",
+          "score": 0.6792417386543864,
+          "text": "Cleveland",
           "enhancement": {
             "openstreetmap_nominatim": {
-              "place_id": "178038280",
-              "licence": "Data \u00a9 OpenStreetMap contributors, ODbL 1.0. http://www.openstreetmap.org/copyright",
-              "osm_type": "relation",
-              "osm_id": "122604",
+              "osm_id": "182130",
               "boundingbox": [
-                41.643919,
-                42.0230219,
-                -87.940101,
-                -87.5239841
+                41.390628,
+                41.604436,
+                -81.8790937,
+                -81.532744
               ],
-              "lat": "41.8755546",
-              "lon": "-87.6244212",
-              "display_name": "Chicago, Cook County, Illinois, United States of America",
-              "class": "place",
+              "licence": "Data \u00a9 OpenStreetMap contributors, ODbL 1.0. http://www.openstreetmap.org/copyright",
+              "importance": 0.2721855967315,
+              "icon": "https://nominatim.openstreetmap.org/images/mapicons/poi_place_city.p.20.png",
+              "osm_type": "relation",
+              "display_name": "Cleveland, Cuyahoga County, Ohio, United States of America",
+              "lat": "41.5051613",
               "type": "city",
-              "importance": 0.30566190262222,
-              "icon": "https://nominatim.openstreetmap.org/images/mapicons/poi_place_city.p.20.png"
+              "place_id": "177736691",
+              "lon": "-81.6934446",
+              "class": "place"
             }
           },
-          "nlpIndexSentence": 7
+          "nlpIndexSentence": 6
         }
       ],
       "label": "where"
@@ -140,26 +142,188 @@
             [
               {
                 "nlpToken": {
-                  "index": 11,
-                  "word": "first",
-                  "originalText": "first",
-                  "lemma": "first",
-                  "characterOffsetBegin": 158,
-                  "characterOffsetEnd": 163,
+                  "index": 17,
+                  "word": "a",
+                  "originalText": "a",
+                  "lemma": "a",
+                  "characterOffsetBegin": 358,
+                  "characterOffsetEnd": 359,
+                  "pos": "DT",
+                  "ner": "O",
+                  "speaker": "PER0",
+                  "before": " ",
+                  "after": " "
+                }
+              },
+              "DT"
+            ],
+            [
+              {
+                "nlpToken": {
+                  "index": 18,
+                  "word": "6-3",
+                  "originalText": "6-3",
+                  "lemma": "6-3",
+                  "characterOffsetBegin": 360,
+                  "characterOffsetEnd": 363,
                   "pos": "JJ",
-                  "ner": "ORDINAL",
-                  "normalizedNER": "1.0",
+                  "ner": "O",
                   "speaker": "PER0",
                   "before": " ",
                   "after": " "
                 }
               },
               "JJ"
+            ],
+            [
+              {
+                "nlpToken": {
+                  "index": 19,
+                  "word": "lead",
+                  "originalText": "lead",
+                  "lemma": "lead",
+                  "characterOffsetBegin": 364,
+                  "characterOffsetEnd": 368,
+                  "pos": "NN",
+                  "ner": "O",
+                  "speaker": "PER0",
+                  "before": " ",
+                  "after": " "
+                }
+              },
+              "NN"
+            ],
+            [
+              {
+                "nlpToken": {
+                  "index": 20,
+                  "word": "evaporate",
+                  "originalText": "evaporate",
+                  "lemma": "evaporate",
+                  "characterOffsetBegin": 369,
+                  "characterOffsetEnd": 378,
+                  "pos": "VB",
+                  "ner": "O",
+                  "speaker": "PER0",
+                  "before": " ",
+                  "after": " "
+                }
+              },
+              "VB"
+            ],
+            [
+              {
+                "nlpToken": {
+                  "index": 21,
+                  "word": "in",
+                  "originalText": "in",
+                  "lemma": "in",
+                  "characterOffsetBegin": 379,
+                  "characterOffsetEnd": 381,
+                  "pos": "IN",
+                  "ner": "O",
+                  "speaker": "PER0",
+                  "before": " ",
+                  "after": " "
+                }
+              },
+              "IN"
+            ],
+            [
+              {
+                "nlpToken": {
+                  "index": 22,
+                  "word": "the",
+                  "originalText": "the",
+                  "lemma": "the",
+                  "characterOffsetBegin": 382,
+                  "characterOffsetEnd": 385,
+                  "pos": "DT",
+                  "ner": "O",
+                  "speaker": "PER0",
+                  "before": " ",
+                  "after": " "
+                }
+              },
+              "DT"
+            ],
+            [
+              {
+                "nlpToken": {
+                  "index": 23,
+                  "word": "eighth",
+                  "originalText": "eighth",
+                  "lemma": "eighth",
+                  "characterOffsetBegin": 386,
+                  "characterOffsetEnd": 392,
+                  "pos": "JJ",
+                  "ner": "ORDINAL",
+                  "normalizedNER": "8.0",
+                  "speaker": "PER0",
+                  "before": " ",
+                  "after": " "
+                }
+              },
+              "JJ"
+            ],
+            [
+              {
+                "nlpToken": {
+                  "index": 24,
+                  "word": "inning",
+                  "originalText": "inning",
+                  "lemma": "inning",
+                  "characterOffsetBegin": 393,
+                  "characterOffsetEnd": 399,
+                  "pos": "NN",
+                  "ner": "O",
+                  "speaker": "PER0",
+                  "before": " ",
+                  "after": " "
+                }
+              },
+              "NN"
+            ],
+            [
+              {
+                "nlpToken": {
+                  "index": 25,
+                  "word": "but",
+                  "originalText": "but",
+                  "lemma": "but",
+                  "characterOffsetBegin": 400,
+                  "characterOffsetEnd": 403,
+                  "pos": "CC",
+                  "ner": "O",
+                  "speaker": "PER0",
+                  "before": " ",
+                  "after": ""
+                }
+              },
+              "CC"
+            ],
+            [
+              {
+                "nlpToken": {
+                  "index": 26,
+                  "word": ",",
+                  "originalText": ",",
+                  "lemma": ",",
+                  "characterOffsetBegin": 403,
+                  "characterOffsetEnd": 404,
+                  "pos": ",",
+                  "ner": "O",
+                  "speaker": "PER0",
+                  "before": "",
+                  "after": " "
+                }
+              },
+              ","
             ]
           ],
-          "score": 1.3333333333333333,
-          "text": "first",
-          "nlpIndexSentence": 1
+          "score": 1.0,
+          "text": "a 6-3 lead evaporate in the eighth inning but ,",
+          "nlpIndexSentence": 2
         }
       ],
       "label": "how"
@@ -549,227 +713,10 @@
                 ]
               },
               "NNP"
-            ],
-            [
-              {
-                "nlpToken": {
-                  "index": 38,
-                  "word": "gained",
-                  "originalText": "gained",
-                  "lemma": "gain",
-                  "characterOffsetBegin": 469,
-                  "characterOffsetEnd": 475,
-                  "pos": "VBD",
-                  "ner": "O",
-                  "speaker": "PER0",
-                  "before": " ",
-                  "after": " "
-                }
-              },
-              "VBD"
-            ],
-            [
-              {
-                "nlpToken": {
-                  "index": 39,
-                  "word": "the",
-                  "originalText": "the",
-                  "lemma": "the",
-                  "characterOffsetBegin": 476,
-                  "characterOffsetEnd": 479,
-                  "pos": "DT",
-                  "ner": "O",
-                  "speaker": "PER0",
-                  "before": " ",
-                  "after": " "
-                }
-              },
-              "DT"
-            ],
-            [
-              {
-                "nlpToken": {
-                  "index": 40,
-                  "word": "final",
-                  "originalText": "final",
-                  "lemma": "final",
-                  "characterOffsetBegin": 480,
-                  "characterOffsetEnd": 485,
-                  "pos": "JJ",
-                  "ner": "O",
-                  "speaker": "PER0",
-                  "before": " ",
-                  "after": " "
-                }
-              },
-              "JJ"
-            ],
-            [
-              {
-                "nlpToken": {
-                  "index": 41,
-                  "word": "out",
-                  "originalText": "out",
-                  "lemma": "out",
-                  "characterOffsetBegin": 486,
-                  "characterOffsetEnd": 489,
-                  "pos": "RP",
-                  "ner": "O",
-                  "speaker": "PER0",
-                  "before": " ",
-                  "after": " "
-                }
-              },
-              "RP"
-            ],
-            [
-              {
-                "nlpToken": {
-                  "index": 42,
-                  "word": "in",
-                  "originalText": "in",
-                  "lemma": "in",
-                  "characterOffsetBegin": 490,
-                  "characterOffsetEnd": 492,
-                  "pos": "IN",
-                  "ner": "O",
-                  "speaker": "PER0",
-                  "before": " ",
-                  "after": " "
-                }
-              },
-              "IN"
-            ],
-            [
-              {
-                "nlpToken": {
-                  "index": 43,
-                  "word": "the",
-                  "originalText": "the",
-                  "lemma": "the",
-                  "characterOffsetBegin": 493,
-                  "characterOffsetEnd": 496,
-                  "pos": "DT",
-                  "ner": "O",
-                  "speaker": "PER0",
-                  "before": " ",
-                  "after": " "
-                }
-              },
-              "DT"
-            ],
-            [
-              {
-                "nlpToken": {
-                  "index": 44,
-                  "word": "10th",
-                  "originalText": "10th",
-                  "lemma": "10th",
-                  "characterOffsetBegin": 497,
-                  "characterOffsetEnd": 501,
-                  "pos": "JJ",
-                  "ner": "ORDINAL",
-                  "normalizedNER": "10.0",
-                  "speaker": "PER0",
-                  "before": " ",
-                  "after": " "
-                }
-              },
-              "JJ"
-            ],
-            [
-              {
-                "nlpToken": {
-                  "index": 45,
-                  "word": "to",
-                  "originalText": "to",
-                  "lemma": "to",
-                  "characterOffsetBegin": 502,
-                  "characterOffsetEnd": 504,
-                  "pos": "TO",
-                  "ner": "O",
-                  "speaker": "PER0",
-                  "before": " ",
-                  "after": " "
-                }
-              },
-              "TO"
-            ],
-            [
-              {
-                "nlpToken": {
-                  "index": 46,
-                  "word": "secure",
-                  "originalText": "secure",
-                  "lemma": "secure",
-                  "characterOffsetBegin": 505,
-                  "characterOffsetEnd": 511,
-                  "pos": "VB",
-                  "ner": "O",
-                  "speaker": "PER0",
-                  "before": " ",
-                  "after": " "
-                }
-              },
-              "VB"
-            ],
-            [
-              {
-                "nlpToken": {
-                  "index": 47,
-                  "word": "an",
-                  "originalText": "an",
-                  "lemma": "a",
-                  "characterOffsetBegin": 512,
-                  "characterOffsetEnd": 514,
-                  "pos": "DT",
-                  "ner": "O",
-                  "speaker": "PER0",
-                  "before": " ",
-                  "after": " "
-                }
-              },
-              "DT"
-            ],
-            [
-              {
-                "nlpToken": {
-                  "index": 48,
-                  "word": "8-7",
-                  "originalText": "8-7",
-                  "lemma": "8-7",
-                  "characterOffsetBegin": 515,
-                  "characterOffsetEnd": 518,
-                  "pos": "JJ",
-                  "ner": "O",
-                  "speaker": "PER0",
-                  "before": " ",
-                  "after": " "
-                }
-              },
-              "JJ"
-            ],
-            [
-              {
-                "nlpToken": {
-                  "index": 49,
-                  "word": "victory",
-                  "originalText": "victory",
-                  "lemma": "victory",
-                  "characterOffsetBegin": 519,
-                  "characterOffsetEnd": 526,
-                  "pos": "NN",
-                  "ner": "O",
-                  "speaker": "PER0",
-                  "before": " ",
-                  "after": ""
-                }
-              },
-              "NN"
             ]
           ],
-          "score": 0.41566820276497696,
-          "text": "Mike Montgomery gained the final out in the 10th to secure an 8-7 victory",
+          "score": 0.5498709677419356,
+          "text": "Mike Montgomery",
           "nlpIndexSentence": 2
         }
       ],

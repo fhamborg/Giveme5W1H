@@ -67,9 +67,10 @@ class Writer:
         # Check if there isn`t already a fiveWoneH literal
         five_w_one_h_literal = output.setdefault('fiveWoneH', {})
 
-        # Save
-        if document.get_error_flags():
-            five_w_one_h_literal.setdefault('process_errors', document.get_error_flags())
+        # Save error flags(not under fiveWoneH, would break further code which expects there only questions)
+        five_w_one_h_literal = output.setdefault('fiveWoneH_Metadata', {
+            'process_errors': document.get_error_flags()
+        })
 
         # Extract answers
         answers = document.get_answers()

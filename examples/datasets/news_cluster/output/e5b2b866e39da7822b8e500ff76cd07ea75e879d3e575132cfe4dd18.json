@@ -23,7 +23,9 @@
     "EventId": 48,
     "Event": "astronauts_identify_unknown_microbes_in_space_for_first_time"
   },
-  "fiveWoneH": {
+  "fiveWoneH": {},
+  "fiveWoneH_Metadata": {
+    "process_errors": {},
     "who": {
       "extracted": [
         {
@@ -1087,35 +1089,6 @@
       ],
       "label": "how"
     },
-    "why": {
-      "extracted": [
-        {
-          "parts": [
-            [
-              {
-                "nlpToken": {
-                  "index": 1,
-                  "word": "Astronauts",
-                  "originalText": "Astronauts",
-                  "lemma": "astronaut",
-                  "characterOffsetBegin": 0,
-                  "characterOffsetEnd": 10,
-                  "pos": "NNS",
-                  "ner": "O",
-                  "speaker": "PER0",
-                  "before": "",
-                  "after": " "
-                }
-              },
-              "NNS"
-            ]
-          ],
-          "score": 0.5860000000000001,
-          "text": "Astronauts"
-        }
-      ],
-      "label": "why"
-    },
     "where": {
       "extracted": [
         {
@@ -1297,6 +1270,35 @@
         }
       ],
       "label": "when"
+    },
+    "why": {
+      "extracted": [
+        {
+          "parts": [
+            [
+              {
+                "nlpToken": {
+                  "index": 1,
+                  "word": "Astronauts",
+                  "originalText": "Astronauts",
+                  "lemma": "astronaut",
+                  "characterOffsetBegin": 0,
+                  "characterOffsetEnd": 10,
+                  "pos": "NNS",
+                  "ner": "O",
+                  "speaker": "PER0",
+                  "before": "",
+                  "after": " "
+                }
+              },
+              "NNS"
+            ]
+          ],
+          "score": 0.5860000000000001,
+          "text": "Astronauts"
+        }
+      ],
+      "label": "why"
     }
   }
 }

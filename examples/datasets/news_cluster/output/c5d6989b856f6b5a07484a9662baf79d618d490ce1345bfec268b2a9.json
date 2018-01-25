@@ -25,7 +25,9 @@
     "EventId": 38,
     "Event": "time_travel_hawaiian_airlines_flight_takes_off_in_2018_lands_in_2017"
   },
-  "fiveWoneH": {
+  "fiveWoneH": {},
+  "fiveWoneH_Metadata": {
+    "process_errors": {},
     "who": {
       "extracted": [
         {
@@ -366,6 +368,36 @@
       ],
       "label": "what"
     },
+    "why": {
+      "extracted": [
+        {
+          "parts": [
+            [
+              {
+                "nlpToken": {
+                  "index": 1,
+                  "word": "Passengers",
+                  "originalText": "Passengers",
+                  "lemma": "passenger",
+                  "characterOffsetBegin": 102,
+                  "characterOffsetEnd": 112,
+                  "pos": "NNS",
+                  "ner": "O",
+                  "speaker": "PER0",
+                  "before": " ",
+                  "after": " "
+                }
+              },
+              "NNS"
+            ]
+          ],
+          "score": 0.49266666666666675,
+          "text": "Passengers",
+          "nlpIndexSentence": 2
+        }
+      ],
+      "label": "why"
+    },
     "how": {
       "extracted": [
         {
@@ -437,36 +469,6 @@
         }
       ],
       "label": "how"
-    },
-    "why": {
-      "extracted": [
-        {
-          "parts": [
-            [
-              {
-                "nlpToken": {
-                  "index": 1,
-                  "word": "Passengers",
-                  "originalText": "Passengers",
-                  "lemma": "passenger",
-                  "characterOffsetBegin": 102,
-                  "characterOffsetEnd": 112,
-                  "pos": "NNS",
-                  "ner": "O",
-                  "speaker": "PER0",
-                  "before": " ",
-                  "after": " "
-                }
-              },
-              "NNS"
-            ]
-          ],
-          "score": 0.49266666666666675,
-          "text": "Passengers",
-          "nlpIndexSentence": 2
-        }
-      ],
-      "label": "why"
     },
     "where": {
       "extracted": [
@@ -824,7 +826,7 @@
               "NNP"
             ]
           ],
-          "score": 0.621347894671958,
+          "score": 0.5013478946719578,
           "text": "10:15 a.m. on New Year 's Eve",
           "enhancement": {
             "timex": {

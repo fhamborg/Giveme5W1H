@@ -25,7 +25,9 @@
     "EventId": 10,
     "Event": "chrissy_teigen_live_tweets_nightmare_flight_after_bizarre_passenger_mishap"
   },
-  "fiveWoneH": {
+  "fiveWoneH": {},
+  "fiveWoneH_Metadata": {
+    "process_errors": {},
     "how": {
       "extracted": [
         {
@@ -607,53 +609,6 @@
       ],
       "label": "what"
     },
-    "why": {
-      "extracted": [
-        {
-          "parts": [
-            [
-              {
-                "nlpToken": {
-                  "index": 4,
-                  "word": "a",
-                  "originalText": "a",
-                  "lemma": "a",
-                  "characterOffsetBegin": 17,
-                  "characterOffsetEnd": 18,
-                  "pos": "DT",
-                  "ner": "O",
-                  "speaker": "PER0",
-                  "before": " ",
-                  "after": " "
-                }
-              },
-              "DT"
-            ],
-            [
-              {
-                "nlpToken": {
-                  "index": 5,
-                  "word": "passenger",
-                  "originalText": "passenger",
-                  "lemma": "passenger",
-                  "characterOffsetBegin": 19,
-                  "characterOffsetEnd": 28,
-                  "pos": "NN",
-                  "ner": "O",
-                  "speaker": "PER0",
-                  "before": " ",
-                  "after": " "
-                }
-              },
-              "NN"
-            ]
-          ],
-          "score": 0.5860000000000001,
-          "text": "a passenger"
-        }
-      ],
-      "label": "why"
-    },
     "where": {
       "extracted": [
         {
@@ -912,7 +867,7 @@
               "CD"
             ]
           ],
-          "score": 0.4930318332529829,
+          "score": 0.3863651665863162,
           "text": "December 27 , 2017",
           "enhancement": {
             "timex": {
@@ -924,6 +879,53 @@
         }
       ],
       "label": "when"
+    },
+    "why": {
+      "extracted": [
+        {
+          "parts": [
+            [
+              {
+                "nlpToken": {
+                  "index": 4,
+                  "word": "a",
+                  "originalText": "a",
+                  "lemma": "a",
+                  "characterOffsetBegin": 17,
+                  "characterOffsetEnd": 18,
+                  "pos": "DT",
+                  "ner": "O",
+                  "speaker": "PER0",
+                  "before": " ",
+                  "after": " "
+                }
+              },
+              "DT"
+            ],
+            [
+              {
+                "nlpToken": {
+                  "index": 5,
+                  "word": "passenger",
+                  "originalText": "passenger",
+                  "lemma": "passenger",
+                  "characterOffsetBegin": 19,
+                  "characterOffsetEnd": 28,
+                  "pos": "NN",
+                  "ner": "O",
+                  "speaker": "PER0",
+                  "before": " ",
+                  "after": " "
+                }
+              },
+              "NN"
+            ]
+          ],
+          "score": 0.5860000000000001,
+          "text": "a passenger"
+        }
+      ],
+      "label": "why"
     }
   }
 }

@@ -25,7 +25,9 @@
     "EventId": 24,
     "Event": "goldman_sachs_feels_tax_bills_burn_with_5b_charge"
   },
-  "fiveWoneH": {
+  "fiveWoneH": {},
+  "fiveWoneH_Metadata": {
+    "process_errors": {},
     "where": {
       "extracted": [
         {
@@ -238,85 +240,49 @@
             [
               {
                 "nlpToken": {
-                  "index": 35,
-                  "word": "Jan.",
-                  "originalText": "Jan.",
-                  "lemma": "Jan.",
-                  "characterOffsetBegin": 680,
-                  "characterOffsetEnd": 684,
+                  "index": 13,
+                  "word": "January",
+                  "originalText": "January",
+                  "lemma": "January",
+                  "characterOffsetBegin": 1009,
+                  "characterOffsetEnd": 1016,
                   "pos": "NNP",
                   "ner": "DATE",
-                  "normalizedNER": "2018-01-01",
+                  "normalizedNER": "2018-01",
                   "speaker": "PER0",
                   "before": " ",
-                  "after": " ",
+                  "after": "",
                   "timex": {
-                    "tid": "t3",
+                    "tid": "t6",
                     "type": "DATE",
-                    "value": "2018-01-01"
+                    "value": "2018-01"
                   }
                 },
                 "heideltime": [
                   {
-                    "@tid": "t3",
+                    "@tid": "t6",
                     "@type": "DATE",
-                    "@value": "2018-01-01",
-                    "#text": "Jan. 1",
+                    "@value": "2018-01",
+                    "#text": "January",
                     "characterOffset": [
-                      680,
-                      686
+                      1009,
+                      1016
                     ]
                   }
                 ]
               },
               "NNP"
-            ],
-            [
-              {
-                "nlpToken": {
-                  "index": 36,
-                  "word": "1",
-                  "originalText": "1",
-                  "lemma": "1",
-                  "characterOffsetBegin": 685,
-                  "characterOffsetEnd": 686,
-                  "pos": "CD",
-                  "ner": "DATE",
-                  "normalizedNER": "2018-01-01",
-                  "speaker": "PER0",
-                  "before": " ",
-                  "after": "",
-                  "timex": {
-                    "tid": "t3",
-                    "type": "DATE",
-                    "value": "2018-01-01"
-                  }
-                },
-                "heideltime": [
-                  {
-                    "@tid": "t3",
-                    "@type": "DATE",
-                    "@value": "2018-01-01",
-                    "#text": "Jan. 1",
-                    "characterOffset": [
-                      680,
-                      686
-                    ]
-                  }
-                ]
-              },
-              "CD"
             ]
           ],
-          "score": 0.5528628191684759,
-          "text": "Jan. 1",
+          "score": 0.5738724663104019,
+          "text": "January",
           "enhancement": {
             "timex": {
               "start_date": "2018-01-01T00:00:00",
-              "end_date": "2018-01-01T23:59:59"
+              "end_date": "2018-01-31T23:59:59"
             }
           },
-          "nlpIndexSentence": 4
+          "nlpIndexSentence": 6
         }
       ],
       "label": "when"

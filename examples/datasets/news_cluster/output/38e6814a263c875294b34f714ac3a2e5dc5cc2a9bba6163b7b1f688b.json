@@ -15,16 +15,17 @@
   "title_rss": null,
   "url": "http://www.bbc.com/news/world-asia-china-37946716",
   "newsCluster": {
-    "CategoryId": 5,
-    "Category": "sports",
-    "TopicId": 1,
-    "Topic": "unspecific",
-    "EventId": 14,
-    "Event": "china_boy_well",
-    "Url": "http://www.bbc.com/news/world-asia-china-37946716"
+    "CategoryId": 1,
+    "Category": "world",
+    "TopicId": 2,
+    "Topic": "legancy",
+    "EventId": 62,
+    "Event": "china_boy_well"
   },
   "dId": "38e6814a263c875294b34f714ac3a2e5dc5cc2a9bba6163b7b1f688b",
-  "fiveWoneH": {
+  "fiveWoneH": {},
+  "fiveWoneH_Metadata": {
+    "process_errors": {},
     "who": {
       "extracted": [
         {
@@ -411,13 +412,10 @@
               "NN"
             ]
           ],
-          "score": 1.0,
+          "score": 0.670089062507287,
           "text": "Hebei province",
           "enhancement": {
             "openstreetmap_nominatim": {
-              "place_id": "178007307",
-              "licence": "Data \u00a9 OpenStreetMap contributors, ODbL 1.0. http://www.openstreetmap.org/copyright",
-              "osm_type": "relation",
               "osm_id": "912998",
               "boundingbox": [
                 36.0462227,
@@ -425,13 +423,16 @@
                 113.4602737,
                 121.0248711
               ],
-              "lat": "39.0000001",
-              "lon": "116",
-              "display_name": "\u6cb3\u5317\u7701, \u4e2d\u56fd",
-              "class": "boundary",
-              "type": "administrative",
+              "licence": "Data \u00a9 OpenStreetMap contributors, ODbL 1.0. http://www.openstreetmap.org/copyright",
               "importance": 0.16311000924312,
-              "icon": "https://nominatim.openstreetmap.org/images/mapicons/poi_boundary_administrative.p.20.png"
+              "icon": "https://nominatim.openstreetmap.org/images/mapicons/poi_boundary_administrative.p.20.png",
+              "osm_type": "relation",
+              "display_name": "\u6cb3\u5317\u7701, \u4e2d\u56fd",
+              "lat": "39.0000001",
+              "type": "administrative",
+              "place_id": "178007307",
+              "lon": "116",
+              "class": "boundary"
             }
           },
           "nlpIndexSentence": 4
@@ -463,20 +464,30 @@
                     "type": "DATE",
                     "value": "2016-11-06"
                   }
-                }
+                },
+                "heideltime": [
+                  {
+                    "@tid": "t6",
+                    "@type": "DATE",
+                    "@value": "2016-11-06",
+                    "#text": "Sunday",
+                    "characterOffset": [
+                      475,
+                      481
+                    ]
+                  }
+                ]
               },
               "NNP"
             ]
           ],
-          "score": 0.7308118746201804,
+          "score": 0.4021920980685881,
           "text": "Sunday",
           "enhancement": {
-            "timex": [
-              {
-                "start_date": "2016-11-06T00:00:00",
-                "end_date": "2016-11-06T23:59:59"
-              }
-            ]
+            "timex": {
+              "start_date": "2016-11-06T00:00:00",
+              "end_date": "2016-11-06T23:59:59"
+            }
           },
           "nlpIndexSentence": 4
         }
@@ -484,88 +495,6 @@
       "label": "when"
     },
     "how": {
-      "extracted": [
-        {
-          "parts": [
-            [
-              {
-                "nlpToken": {
-                  "index": 1,
-                  "word": "Chinese",
-                  "originalText": "Chinese",
-                  "lemma": "chinese",
-                  "characterOffsetBegin": 0,
-                  "characterOffsetEnd": 7,
-                  "pos": "JJ",
-                  "ner": "MISC",
-                  "speaker": "PER0",
-                  "before": "",
-                  "after": " "
-                },
-                "aida": [
-                  {
-                    "mention": {
-                      "allEntities": [
-                        {
-                          "kbIdentifier": "YAGO:China",
-                          "disambiguationScore": "0.18721"
-                        }
-                      ],
-                      "offset": 0,
-                      "name": "Chinese",
-                      "length": 7,
-                      "bestEntity": {
-                        "kbIdentifier": "YAGO:China",
-                        "disambiguationScore": "0.18721"
-                      }
-                    },
-                    "bestEntityMetadata": {
-                      "knowledgebase": "YAGO",
-                      "depictionurl": "http://upload.wikimedia.org/wikipedia/commons/f/fa/Flag_of_the_People%27s_Republic_of_China.svg",
-                      "depictionthumbnailurl": "http://upload.wikimedia.org/wikipedia/commons/thumbFlag_of_the_People%27s_Republic_of_China.svg/200px-Flag_of_the_People%27s_Republic_of_China.svg",
-                      "importance": 9.192157028782871e-06,
-                      "entityId": "China",
-                      "type": [
-                        "YAGO_wordnet_system_108435388",
-                        "YAGO_wordnet_district_108552138",
-                        "YAGO_wikicategory_East_Asian_countries",
-                        "YAGO_yagoPermanentlyLocatedEntity",
-                        "YAGO_yagoLegalActorGeo",
-                        "YAGO_wordnet_state_108654360",
-                        "YAGO_wordnet_country_108544813",
-                        "YAGO_wikicategory_Member_states_of_the_United_Nations",
-                        "YAGO_wordnet_economy_108366753",
-                        "YAGO_wikicategory_States_and_territories_established_in_1949",
-                        "YAGO_wikicategory_Communist_states",
-                        "YAGO_wordnet_abstraction_100002137",
-                        "YAGO_wordnet_region_108630985",
-                        "YAGO_yagoGeoEntity",
-                        "YAGO_wordnet_physical_entity_100001930",
-                        "YAGO_wikicategory_Central_Asian_countries",
-                        "YAGO_wordnet_entity_100001740",
-                        "YAGO_wikicategory_Single\\u002dparty_states",
-                        "YAGO_wordnet_object_100002684",
-                        "YAGO_wordnet_group_100031264",
-                        "YAGO_wordnet_location_100027167",
-                        "YAGO_wordnet_administrative_district_108491826",
-                        "YAGO_wikicategory_Chinese\\u002dspeaking_countries_and_territories"
-                      ],
-                      "readableRepr": "China",
-                      "url": "http://en.wikipedia.org/wiki/China"
-                    }
-                  }
-                ]
-              },
-              "JJ"
-            ]
-          ],
-          "score": 1.3333333333333333,
-          "text": "Chinese"
-        }
-      ],
-      "label": "how"
-    },
-    "why": {
       "extracted": [
         {
           "parts": [
@@ -809,8 +738,108 @@
               "NN"
             ]
           ],
-          "score": 0.42857142857142855,
+          "score": 1.0,
           "text": "Chinese boy found dead in well after huge four-day search"
+        }
+      ],
+      "label": "how"
+    },
+    "why": {
+      "extracted": [
+        {
+          "parts": [
+            [
+              {
+                "nlpToken": {
+                  "index": 1,
+                  "word": "Chinese",
+                  "originalText": "Chinese",
+                  "lemma": "chinese",
+                  "characterOffsetBegin": 0,
+                  "characterOffsetEnd": 7,
+                  "pos": "JJ",
+                  "ner": "MISC",
+                  "speaker": "PER0",
+                  "before": "",
+                  "after": " "
+                },
+                "aida": [
+                  {
+                    "mention": {
+                      "allEntities": [
+                        {
+                          "kbIdentifier": "YAGO:China",
+                          "disambiguationScore": "0.18721"
+                        }
+                      ],
+                      "offset": 0,
+                      "name": "Chinese",
+                      "length": 7,
+                      "bestEntity": {
+                        "kbIdentifier": "YAGO:China",
+                        "disambiguationScore": "0.18721"
+                      }
+                    },
+                    "bestEntityMetadata": {
+                      "knowledgebase": "YAGO",
+                      "depictionurl": "http://upload.wikimedia.org/wikipedia/commons/f/fa/Flag_of_the_People%27s_Republic_of_China.svg",
+                      "depictionthumbnailurl": "http://upload.wikimedia.org/wikipedia/commons/thumbFlag_of_the_People%27s_Republic_of_China.svg/200px-Flag_of_the_People%27s_Republic_of_China.svg",
+                      "importance": 9.192157028782871e-06,
+                      "entityId": "China",
+                      "type": [
+                        "YAGO_wordnet_system_108435388",
+                        "YAGO_wordnet_district_108552138",
+                        "YAGO_wikicategory_East_Asian_countries",
+                        "YAGO_yagoPermanentlyLocatedEntity",
+                        "YAGO_yagoLegalActorGeo",
+                        "YAGO_wordnet_state_108654360",
+                        "YAGO_wordnet_country_108544813",
+                        "YAGO_wikicategory_Member_states_of_the_United_Nations",
+                        "YAGO_wordnet_economy_108366753",
+                        "YAGO_wikicategory_States_and_territories_established_in_1949",
+                        "YAGO_wikicategory_Communist_states",
+                        "YAGO_wordnet_abstraction_100002137",
+                        "YAGO_wordnet_region_108630985",
+                        "YAGO_yagoGeoEntity",
+                        "YAGO_wordnet_physical_entity_100001930",
+                        "YAGO_wikicategory_Central_Asian_countries",
+                        "YAGO_wordnet_entity_100001740",
+                        "YAGO_wikicategory_Single\\u002dparty_states",
+                        "YAGO_wordnet_object_100002684",
+                        "YAGO_wordnet_group_100031264",
+                        "YAGO_wordnet_location_100027167",
+                        "YAGO_wordnet_administrative_district_108491826",
+                        "YAGO_wikicategory_Chinese\\u002dspeaking_countries_and_territories"
+                      ],
+                      "readableRepr": "China",
+                      "url": "http://en.wikipedia.org/wiki/China"
+                    }
+                  }
+                ]
+              },
+              "JJ"
+            ],
+            [
+              {
+                "nlpToken": {
+                  "index": 2,
+                  "word": "boy",
+                  "originalText": "boy",
+                  "lemma": "boy",
+                  "characterOffsetBegin": 8,
+                  "characterOffsetEnd": 11,
+                  "pos": "NN",
+                  "ner": "O",
+                  "speaker": "PER0",
+                  "before": " ",
+                  "after": " "
+                }
+              },
+              "NN"
+            ]
+          ],
+          "score": 0.5860000000000001,
+          "text": "Chinese boy"
         }
       ],
       "label": "why"

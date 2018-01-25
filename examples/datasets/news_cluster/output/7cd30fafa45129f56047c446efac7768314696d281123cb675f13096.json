@@ -25,9 +25,7 @@
     "Event": "nyc_subway_work_trains_collide_in_tunnel_1_worker_injured"
   },
   "dId": "7cd30fafa45129f56047c446efac7768314696d281123cb675f13096",
-  "fiveWoneH": {},
-  "fiveWoneH_Metadata": {
-    "process_errors": {},
+  "fiveWoneH": {
     "who": {
       "extracted": [
         {
@@ -259,6 +257,36 @@
         }
       ],
       "label": "how"
+    },
+    "why": {
+      "extracted": [
+        {
+          "parts": [
+            [
+              {
+                "nlpToken": {
+                  "index": 1,
+                  "word": "Authorities",
+                  "originalText": "Authorities",
+                  "lemma": "authority",
+                  "characterOffsetBegin": 120,
+                  "characterOffsetEnd": 131,
+                  "pos": "NNS",
+                  "ner": "O",
+                  "speaker": "PER0",
+                  "before": " ",
+                  "after": " "
+                }
+              },
+              "NNS"
+            ]
+          ],
+          "score": 0.44600000000000006,
+          "text": "Authorities",
+          "nlpIndexSentence": 2
+        }
+      ],
+      "label": "why"
     },
     "where": {
       "extracted": [
@@ -536,36 +564,9 @@
         }
       ],
       "label": "when"
-    },
-    "why": {
-      "extracted": [
-        {
-          "parts": [
-            [
-              {
-                "nlpToken": {
-                  "index": 1,
-                  "word": "Authorities",
-                  "originalText": "Authorities",
-                  "lemma": "authority",
-                  "characterOffsetBegin": 120,
-                  "characterOffsetEnd": 131,
-                  "pos": "NNS",
-                  "ner": "O",
-                  "speaker": "PER0",
-                  "before": " ",
-                  "after": " "
-                }
-              },
-              "NNS"
-            ]
-          ],
-          "score": 0.44600000000000006,
-          "text": "Authorities",
-          "nlpIndexSentence": 2
-        }
-      ],
-      "label": "why"
     }
+  },
+  "fiveWoneH_Metadata": {
+    "process_errors": {}
   }
 }

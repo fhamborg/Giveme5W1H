@@ -23,9 +23,148 @@
     "Event": "panama_papers"
   },
   "dId": "22f6f31eea834365c060e2bff61c7ad4dcb2ff569cca2bffbb3cb537",
-  "fiveWoneH": {},
-  "fiveWoneH_Metadata": {
-    "process_errors": {},
+  "fiveWoneH": {
+    "who": {
+      "extracted": [
+        {
+          "parts": [
+            [
+              {
+                "nlpToken": {
+                  "index": 1,
+                  "word": "China",
+                  "originalText": "China",
+                  "lemma": "China",
+                  "characterOffsetBegin": 0,
+                  "characterOffsetEnd": 5,
+                  "pos": "NNP",
+                  "ner": "LOCATION",
+                  "speaker": "PER0",
+                  "before": "",
+                  "after": " "
+                },
+                "aida": [
+                  {
+                    "mention": {
+                      "allEntities": [],
+                      "offset": 0,
+                      "name": "China",
+                      "length": 5
+                    },
+                    "bestEntityMetadata": null
+                  }
+                ]
+              },
+              "NNP"
+            ]
+          ],
+          "score": 1.0,
+          "text": "China"
+        }
+      ],
+      "label": "who"
+    },
+    "what": {
+      "extracted": [
+        {
+          "parts": [
+            [
+              {
+                "nlpToken": {
+                  "index": 2,
+                  "word": "warns",
+                  "originalText": "warns",
+                  "lemma": "warn",
+                  "characterOffsetBegin": 6,
+                  "characterOffsetEnd": 11,
+                  "pos": "VBZ",
+                  "ner": "O",
+                  "speaker": "PER0",
+                  "before": " ",
+                  "after": " "
+                }
+              },
+              "VBZ"
+            ],
+            [
+              {
+                "nlpToken": {
+                  "index": 3,
+                  "word": "`",
+                  "originalText": "'",
+                  "lemma": "`",
+                  "characterOffsetBegin": 12,
+                  "characterOffsetEnd": 13,
+                  "pos": "``",
+                  "ner": "O",
+                  "speaker": "PER0",
+                  "before": " ",
+                  "after": ""
+                }
+              },
+              "``"
+            ],
+            [
+              {
+                "nlpToken": {
+                  "index": 4,
+                  "word": "powerful",
+                  "originalText": "powerful",
+                  "lemma": "powerful",
+                  "characterOffsetBegin": 13,
+                  "characterOffsetEnd": 21,
+                  "pos": "JJ",
+                  "ner": "O",
+                  "speaker": "PER0",
+                  "before": "",
+                  "after": " "
+                }
+              },
+              "JJ"
+            ],
+            [
+              {
+                "nlpToken": {
+                  "index": 5,
+                  "word": "forces",
+                  "originalText": "forces",
+                  "lemma": "force",
+                  "characterOffsetBegin": 22,
+                  "characterOffsetEnd": 28,
+                  "pos": "NNS",
+                  "ner": "O",
+                  "speaker": "PER0",
+                  "before": " ",
+                  "after": ""
+                }
+              },
+              "NNS"
+            ],
+            [
+              {
+                "nlpToken": {
+                  "index": 6,
+                  "word": "'",
+                  "originalText": "'",
+                  "lemma": "'",
+                  "characterOffsetBegin": 28,
+                  "characterOffsetEnd": 29,
+                  "pos": "POS",
+                  "ner": "O",
+                  "speaker": "PER0",
+                  "before": "",
+                  "after": " "
+                }
+              },
+              "POS"
+            ]
+          ],
+          "score": 1.0,
+          "text": "warns ' powerful forces '"
+        }
+      ],
+      "label": "what"
+    },
     "how": {
       "extracted": [
         {
@@ -235,147 +374,6 @@
       ],
       "label": "how"
     },
-    "who": {
-      "extracted": [
-        {
-          "parts": [
-            [
-              {
-                "nlpToken": {
-                  "index": 1,
-                  "word": "China",
-                  "originalText": "China",
-                  "lemma": "China",
-                  "characterOffsetBegin": 0,
-                  "characterOffsetEnd": 5,
-                  "pos": "NNP",
-                  "ner": "LOCATION",
-                  "speaker": "PER0",
-                  "before": "",
-                  "after": " "
-                },
-                "aida": [
-                  {
-                    "mention": {
-                      "allEntities": [],
-                      "offset": 0,
-                      "name": "China",
-                      "length": 5
-                    },
-                    "bestEntityMetadata": null
-                  }
-                ]
-              },
-              "NNP"
-            ]
-          ],
-          "score": 1.0,
-          "text": "China"
-        }
-      ],
-      "label": "who"
-    },
-    "what": {
-      "extracted": [
-        {
-          "parts": [
-            [
-              {
-                "nlpToken": {
-                  "index": 2,
-                  "word": "warns",
-                  "originalText": "warns",
-                  "lemma": "warn",
-                  "characterOffsetBegin": 6,
-                  "characterOffsetEnd": 11,
-                  "pos": "VBZ",
-                  "ner": "O",
-                  "speaker": "PER0",
-                  "before": " ",
-                  "after": " "
-                }
-              },
-              "VBZ"
-            ],
-            [
-              {
-                "nlpToken": {
-                  "index": 3,
-                  "word": "`",
-                  "originalText": "'",
-                  "lemma": "`",
-                  "characterOffsetBegin": 12,
-                  "characterOffsetEnd": 13,
-                  "pos": "``",
-                  "ner": "O",
-                  "speaker": "PER0",
-                  "before": " ",
-                  "after": ""
-                }
-              },
-              "``"
-            ],
-            [
-              {
-                "nlpToken": {
-                  "index": 4,
-                  "word": "powerful",
-                  "originalText": "powerful",
-                  "lemma": "powerful",
-                  "characterOffsetBegin": 13,
-                  "characterOffsetEnd": 21,
-                  "pos": "JJ",
-                  "ner": "O",
-                  "speaker": "PER0",
-                  "before": "",
-                  "after": " "
-                }
-              },
-              "JJ"
-            ],
-            [
-              {
-                "nlpToken": {
-                  "index": 5,
-                  "word": "forces",
-                  "originalText": "forces",
-                  "lemma": "force",
-                  "characterOffsetBegin": 22,
-                  "characterOffsetEnd": 28,
-                  "pos": "NNS",
-                  "ner": "O",
-                  "speaker": "PER0",
-                  "before": " ",
-                  "after": ""
-                }
-              },
-              "NNS"
-            ],
-            [
-              {
-                "nlpToken": {
-                  "index": 6,
-                  "word": "'",
-                  "originalText": "'",
-                  "lemma": "'",
-                  "characterOffsetBegin": 28,
-                  "characterOffsetEnd": 29,
-                  "pos": "POS",
-                  "ner": "O",
-                  "speaker": "PER0",
-                  "before": "",
-                  "after": " "
-                }
-              },
-              "POS"
-            ]
-          ],
-          "score": 1.0,
-          "text": "warns ' powerful forces '"
-        }
-      ],
-      "label": "what"
-    },
     "where": {
       "extracted": [
         {
@@ -531,5 +529,8 @@
       ],
       "label": "why"
     }
+  },
+  "fiveWoneH_Metadata": {
+    "process_errors": {}
   }
 }

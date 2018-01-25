@@ -26,9 +26,7 @@
     "Event": "hack_equifax_breach"
   },
   "dId": "2d3569028c4a8fb8bbe3a570e4263026e72f28eb1da6562d2ce8aa02",
-  "fiveWoneH": {},
-  "fiveWoneH_Metadata": {
-    "process_errors": {},
+  "fiveWoneH": {
     "where": {
       "extracted": [
         {
@@ -219,37 +217,61 @@
             [
               {
                 "nlpToken": {
-                  "index": 12,
-                  "word": "December",
-                  "originalText": "December",
-                  "lemma": "December",
-                  "characterOffsetBegin": 3806,
-                  "characterOffsetEnd": 3814,
-                  "pos": "NNP",
+                  "index": 17,
+                  "word": "may",
+                  "originalText": "may",
+                  "lemma": "may",
+                  "characterOffsetBegin": 1640,
+                  "characterOffsetEnd": 1643,
+                  "pos": "MD",
                   "ner": "DATE",
-                  "normalizedNER": "2017-12",
+                  "normalizedNER": "2018-05",
                   "speaker": "PER0",
                   "before": " ",
                   "after": " ",
                   "timex": {
-                    "tid": "t7",
+                    "tid": "t2",
                     "type": "DATE",
-                    "value": "2017-12"
+                    "value": "2018-05"
                   }
                 }
               },
-              "NNP"
+              "MD"
+            ],
+            [
+              {
+                "nlpToken": {
+                  "index": 18,
+                  "word": "end",
+                  "originalText": "end",
+                  "lemma": "end",
+                  "characterOffsetBegin": 1644,
+                  "characterOffsetEnd": 1647,
+                  "pos": "VB",
+                  "ner": "DATE",
+                  "normalizedNER": "2018-05",
+                  "speaker": "PER0",
+                  "before": " ",
+                  "after": " ",
+                  "timex": {
+                    "tid": "t2",
+                    "type": "DATE",
+                    "value": "2018-05"
+                  }
+                }
+              },
+              "VB"
             ]
           ],
-          "score": 0.3700017872980561,
-          "text": "December",
+          "score": 0.3626037934708956,
+          "text": "may end",
           "enhancement": {
             "timex": {
-              "start_date": "2017-12-01T00:00:00",
-              "end_date": "2017-12-31T23:59:59"
+              "start_date": "2018-05-01T00:00:00",
+              "end_date": "2018-05-31T23:59:59"
             }
           },
-          "nlpIndexSentence": 28
+          "nlpIndexSentence": 14
         }
       ],
       "label": "when"
@@ -1615,5 +1637,8 @@
       ],
       "label": "why"
     }
+  },
+  "fiveWoneH_Metadata": {
+    "process_errors": {}
   }
 }

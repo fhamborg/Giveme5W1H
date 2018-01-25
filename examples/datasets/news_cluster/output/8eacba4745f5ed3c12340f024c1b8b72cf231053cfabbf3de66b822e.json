@@ -23,9 +23,7 @@
     "EventId": 22,
     "Event": "police_arrest_alleged_nigerian_prince_email_scammer_in_louisiana"
   },
-  "fiveWoneH": {},
-  "fiveWoneH_Metadata": {
-    "process_errors": {},
+  "fiveWoneH": {
     "who": {
       "extracted": [
         {
@@ -511,36 +509,6 @@
       ],
       "label": "how"
     },
-    "why": {
-      "extracted": [
-        {
-          "parts": [
-            [
-              {
-                "nlpToken": {
-                  "index": 1,
-                  "word": "He",
-                  "originalText": "He",
-                  "lemma": "he",
-                  "characterOffsetBegin": 487,
-                  "characterOffsetEnd": 489,
-                  "pos": "PRP",
-                  "ner": "O",
-                  "speaker": "PER0",
-                  "before": " ",
-                  "after": " "
-                }
-              },
-              "PRP"
-            ]
-          ],
-          "score": 0.38600000000000007,
-          "text": "He",
-          "nlpIndexSentence": 5
-        }
-      ],
-      "label": "why"
-    },
     "where": {
       "extracted": [
         {
@@ -728,6 +696,39 @@
         }
       ],
       "label": "when"
+    },
+    "why": {
+      "extracted": [
+        {
+          "parts": [
+            [
+              {
+                "nlpToken": {
+                  "index": 1,
+                  "word": "He",
+                  "originalText": "He",
+                  "lemma": "he",
+                  "characterOffsetBegin": 487,
+                  "characterOffsetEnd": 489,
+                  "pos": "PRP",
+                  "ner": "O",
+                  "speaker": "PER0",
+                  "before": " ",
+                  "after": " "
+                }
+              },
+              "PRP"
+            ]
+          ],
+          "score": 0.38600000000000007,
+          "text": "He",
+          "nlpIndexSentence": 5
+        }
+      ],
+      "label": "why"
     }
+  },
+  "fiveWoneH_Metadata": {
+    "process_errors": {}
   }
 }

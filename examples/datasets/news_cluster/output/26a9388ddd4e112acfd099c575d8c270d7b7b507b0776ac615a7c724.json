@@ -26,9 +26,7 @@
     "Event": "harambe"
   },
   "dId": "26a9388ddd4e112acfd099c575d8c270d7b7b507b0776ac615a7c724",
-  "fiveWoneH": {},
-  "fiveWoneH_Metadata": {
-    "process_errors": {},
+  "fiveWoneH": {
     "how": {
       "extracted": [
         {
@@ -226,6 +224,159 @@
         }
       ],
       "label": "how"
+    },
+    "where": {
+      "extracted": [
+        {
+          "parts": [
+            [
+              {
+                "nlpToken": {
+                  "index": 1,
+                  "word": "Cincinnati",
+                  "originalText": "Cincinnati",
+                  "lemma": "Cincinnati",
+                  "characterOffsetBegin": 0,
+                  "characterOffsetEnd": 10,
+                  "pos": "NNP",
+                  "ner": "LOCATION",
+                  "speaker": "PER0",
+                  "before": "",
+                  "after": " "
+                },
+                "aida": [
+                  {
+                    "mention": {
+                      "allEntities": [],
+                      "offset": 0,
+                      "name": "Cincinnati Zoo",
+                      "length": 14
+                    },
+                    "bestEntityMetadata": null
+                  }
+                ]
+              },
+              "NNP"
+            ]
+          ],
+          "score": 0.6795318649632381,
+          "text": "Cincinnati",
+          "enhancement": {
+            "openstreetmap_nominatim": {
+              "osm_id": "183453",
+              "boundingbox": [
+                39.0520565,
+                39.2210368,
+                -84.71239,
+                -84.3687784
+              ],
+              "licence": "Data \u00a9 OpenStreetMap contributors, ODbL 1.0. http://www.openstreetmap.org/copyright",
+              "importance": 0.26888931171914,
+              "icon": "https://nominatim.openstreetmap.org/images/mapicons/poi_place_city.p.20.png",
+              "osm_type": "relation",
+              "display_name": "Cincinnati, Hamilton County, Ohio, United States of America",
+              "lat": "39.1014537",
+              "type": "city",
+              "place_id": "217656751",
+              "lon": "-84.5124602",
+              "class": "place"
+            }
+          }
+        }
+      ],
+      "label": "where"
+    },
+    "when": {
+      "extracted": [
+        {
+          "parts": [
+            [
+              {
+                "nlpToken": {
+                  "index": 23,
+                  "word": "4pm",
+                  "originalText": "4pm",
+                  "lemma": "4pm",
+                  "characterOffsetBegin": 2348,
+                  "characterOffsetEnd": 2351,
+                  "pos": "NN",
+                  "ner": "TIME",
+                  "normalizedNER": "2016-05-28T16:00",
+                  "speaker": "PER0",
+                  "before": " ",
+                  "after": "",
+                  "timex": {
+                    "tid": "t11",
+                    "type": "TIME",
+                    "value": "2016-05-28T16:00"
+                  }
+                },
+                "heideltime": [
+                  {
+                    "@tid": "t18",
+                    "@type": "TIME",
+                    "@value": "2016-05-28T16:00",
+                    "@mod": "APPROX",
+                    "#text": "around 4pm.",
+                    "characterOffset": [
+                      2341,
+                      2352
+                    ]
+                  }
+                ]
+              },
+              "NN"
+            ],
+            [
+              {
+                "nlpToken": {
+                  "index": 24,
+                  "word": ".",
+                  "originalText": ".",
+                  "lemma": ".",
+                  "characterOffsetBegin": 2351,
+                  "characterOffsetEnd": 2352,
+                  "pos": ".",
+                  "ner": "TIME",
+                  "normalizedNER": "2016-05-28T16:00",
+                  "speaker": "PER0",
+                  "before": "",
+                  "after": "\n",
+                  "timex": {
+                    "tid": "t11",
+                    "type": "TIME",
+                    "value": "2016-05-28T16:00"
+                  }
+                },
+                "heideltime": [
+                  {
+                    "@tid": "t18",
+                    "@type": "TIME",
+                    "@value": "2016-05-28T16:00",
+                    "@mod": "APPROX",
+                    "#text": "around 4pm.",
+                    "characterOffset": [
+                      2341,
+                      2352
+                    ]
+                  }
+                ]
+              },
+              "."
+            ]
+          ],
+          "score": 0.4385350262928261,
+          "text": "4pm .",
+          "enhancement": {
+            "timex": {
+              "start_date": "2016-05-28T16:00:00",
+              "end_date": "2016-05-28T16:00:59"
+            }
+          },
+          "nlpIndexSentence": 14
+        }
+      ],
+      "label": "when"
     },
     "who": {
       "extracted": [
@@ -682,159 +833,9 @@
         }
       ],
       "label": "why"
-    },
-    "where": {
-      "extracted": [
-        {
-          "parts": [
-            [
-              {
-                "nlpToken": {
-                  "index": 1,
-                  "word": "Cincinnati",
-                  "originalText": "Cincinnati",
-                  "lemma": "Cincinnati",
-                  "characterOffsetBegin": 0,
-                  "characterOffsetEnd": 10,
-                  "pos": "NNP",
-                  "ner": "LOCATION",
-                  "speaker": "PER0",
-                  "before": "",
-                  "after": " "
-                },
-                "aida": [
-                  {
-                    "mention": {
-                      "allEntities": [],
-                      "offset": 0,
-                      "name": "Cincinnati Zoo",
-                      "length": 14
-                    },
-                    "bestEntityMetadata": null
-                  }
-                ]
-              },
-              "NNP"
-            ]
-          ],
-          "score": 0.6795318649632381,
-          "text": "Cincinnati",
-          "enhancement": {
-            "openstreetmap_nominatim": {
-              "osm_id": "183453",
-              "boundingbox": [
-                39.0520565,
-                39.2210368,
-                -84.71239,
-                -84.3687784
-              ],
-              "licence": "Data \u00a9 OpenStreetMap contributors, ODbL 1.0. http://www.openstreetmap.org/copyright",
-              "importance": 0.26888931171914,
-              "icon": "https://nominatim.openstreetmap.org/images/mapicons/poi_place_city.p.20.png",
-              "osm_type": "relation",
-              "display_name": "Cincinnati, Hamilton County, Ohio, United States of America",
-              "lat": "39.1014537",
-              "type": "city",
-              "place_id": "217656751",
-              "lon": "-84.5124602",
-              "class": "place"
-            }
-          }
-        }
-      ],
-      "label": "where"
-    },
-    "when": {
-      "extracted": [
-        {
-          "parts": [
-            [
-              {
-                "nlpToken": {
-                  "index": 23,
-                  "word": "4pm",
-                  "originalText": "4pm",
-                  "lemma": "4pm",
-                  "characterOffsetBegin": 2348,
-                  "characterOffsetEnd": 2351,
-                  "pos": "NN",
-                  "ner": "TIME",
-                  "normalizedNER": "2016-05-28T16:00",
-                  "speaker": "PER0",
-                  "before": " ",
-                  "after": "",
-                  "timex": {
-                    "tid": "t11",
-                    "type": "TIME",
-                    "value": "2016-05-28T16:00"
-                  }
-                },
-                "heideltime": [
-                  {
-                    "@tid": "t18",
-                    "@type": "TIME",
-                    "@value": "2016-05-28T16:00",
-                    "@mod": "APPROX",
-                    "#text": "around 4pm.",
-                    "characterOffset": [
-                      2341,
-                      2352
-                    ]
-                  }
-                ]
-              },
-              "NN"
-            ],
-            [
-              {
-                "nlpToken": {
-                  "index": 24,
-                  "word": ".",
-                  "originalText": ".",
-                  "lemma": ".",
-                  "characterOffsetBegin": 2351,
-                  "characterOffsetEnd": 2352,
-                  "pos": ".",
-                  "ner": "TIME",
-                  "normalizedNER": "2016-05-28T16:00",
-                  "speaker": "PER0",
-                  "before": "",
-                  "after": "\n",
-                  "timex": {
-                    "tid": "t11",
-                    "type": "TIME",
-                    "value": "2016-05-28T16:00"
-                  }
-                },
-                "heideltime": [
-                  {
-                    "@tid": "t18",
-                    "@type": "TIME",
-                    "@value": "2016-05-28T16:00",
-                    "@mod": "APPROX",
-                    "#text": "around 4pm.",
-                    "characterOffset": [
-                      2341,
-                      2352
-                    ]
-                  }
-                ]
-              },
-              "."
-            ]
-          ],
-          "score": 0.4385350262928261,
-          "text": "4pm .",
-          "enhancement": {
-            "timex": {
-              "start_date": "2016-05-28T16:00:00",
-              "end_date": "2016-05-28T16:00:59"
-            }
-          },
-          "nlpIndexSentence": 14
-        }
-      ],
-      "label": "when"
     }
+  },
+  "fiveWoneH_Metadata": {
+    "process_errors": {}
   }
 }

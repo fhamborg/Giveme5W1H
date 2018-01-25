@@ -23,9 +23,7 @@
     "EventId": 42,
     "Event": "sun_fun_flowers_as_129th_rose_parade_rolls_in_california"
   },
-  "fiveWoneH": {},
-  "fiveWoneH_Metadata": {
-    "process_errors": {},
+  "fiveWoneH": {
     "who": {
       "extracted": [],
       "label": "who"
@@ -33,6 +31,155 @@
     "what": {
       "extracted": [],
       "label": "what"
+    },
+    "why": {
+      "extracted": [
+        {
+          "parts": [
+            [
+              {
+                "nlpToken": {
+                  "index": 3,
+                  "word": "this",
+                  "originalText": "this",
+                  "lemma": "this",
+                  "characterOffsetBegin": 243,
+                  "characterOffsetEnd": 247,
+                  "pos": "DT",
+                  "ner": "O",
+                  "speaker": "PER0",
+                  "before": " ",
+                  "after": " "
+                }
+              },
+              "DT"
+            ],
+            [
+              {
+                "nlpToken": {
+                  "index": 4,
+                  "word": "zipcode",
+                  "originalText": "zipcode",
+                  "lemma": "zipcode",
+                  "characterOffsetBegin": 248,
+                  "characterOffsetEnd": 255,
+                  "pos": "NN",
+                  "ner": "O",
+                  "speaker": "PER0",
+                  "before": " ",
+                  "after": " "
+                }
+              },
+              "NN"
+            ]
+          ],
+          "score": 0.36200000000000004,
+          "text": "this zipcode",
+          "nlpIndexSentence": 2
+        }
+      ],
+      "label": "why"
+    },
+    "how": {
+      "extracted": [
+        {
+          "parts": [
+            [
+              {
+                "nlpToken": {
+                  "index": 8,
+                  "word": "for",
+                  "originalText": "for",
+                  "lemma": "for",
+                  "characterOffsetBegin": 38,
+                  "characterOffsetEnd": 41,
+                  "pos": "IN",
+                  "ner": "O",
+                  "speaker": "PER0",
+                  "before": " ",
+                  "after": " "
+                }
+              },
+              "IN"
+            ],
+            [
+              {
+                "nlpToken": {
+                  "index": 9,
+                  "word": "129th",
+                  "originalText": "129th",
+                  "lemma": "129th",
+                  "characterOffsetBegin": 42,
+                  "characterOffsetEnd": 47,
+                  "pos": "JJ",
+                  "ner": "O",
+                  "speaker": "PER0",
+                  "before": " ",
+                  "after": " "
+                }
+              },
+              "JJ"
+            ],
+            [
+              {
+                "nlpToken": {
+                  "index": 10,
+                  "word": "Rose",
+                  "originalText": "Rose",
+                  "lemma": "Rose",
+                  "characterOffsetBegin": 48,
+                  "characterOffsetEnd": 52,
+                  "pos": "NNP",
+                  "ner": "O",
+                  "speaker": "PER0",
+                  "before": " ",
+                  "after": " "
+                }
+              },
+              "NNP"
+            ],
+            [
+              {
+                "nlpToken": {
+                  "index": 11,
+                  "word": "Parade",
+                  "originalText": "Parade",
+                  "lemma": "Parade",
+                  "characterOffsetBegin": 53,
+                  "characterOffsetEnd": 59,
+                  "pos": "NNP",
+                  "ner": "O",
+                  "speaker": "PER0",
+                  "before": " ",
+                  "after": ""
+                }
+              },
+              "NNP"
+            ],
+            [
+              {
+                "nlpToken": {
+                  "index": 12,
+                  "word": ".",
+                  "originalText": ".",
+                  "lemma": ".",
+                  "characterOffsetBegin": 59,
+                  "characterOffsetEnd": 60,
+                  "pos": ".",
+                  "ner": "O",
+                  "speaker": "PER0",
+                  "before": "",
+                  "after": " "
+                }
+              },
+              "."
+            ]
+          ],
+          "score": 0.8259083728278042,
+          "text": "for 129th Rose Parade ."
+        }
+      ],
+      "label": "how"
     },
     "where": {
       "extracted": [
@@ -276,155 +423,9 @@
     "when": {
       "extracted": [],
       "label": "when"
-    },
-    "why": {
-      "extracted": [
-        {
-          "parts": [
-            [
-              {
-                "nlpToken": {
-                  "index": 3,
-                  "word": "this",
-                  "originalText": "this",
-                  "lemma": "this",
-                  "characterOffsetBegin": 243,
-                  "characterOffsetEnd": 247,
-                  "pos": "DT",
-                  "ner": "O",
-                  "speaker": "PER0",
-                  "before": " ",
-                  "after": " "
-                }
-              },
-              "DT"
-            ],
-            [
-              {
-                "nlpToken": {
-                  "index": 4,
-                  "word": "zipcode",
-                  "originalText": "zipcode",
-                  "lemma": "zipcode",
-                  "characterOffsetBegin": 248,
-                  "characterOffsetEnd": 255,
-                  "pos": "NN",
-                  "ner": "O",
-                  "speaker": "PER0",
-                  "before": " ",
-                  "after": " "
-                }
-              },
-              "NN"
-            ]
-          ],
-          "score": 0.36200000000000004,
-          "text": "this zipcode",
-          "nlpIndexSentence": 2
-        }
-      ],
-      "label": "why"
-    },
-    "how": {
-      "extracted": [
-        {
-          "parts": [
-            [
-              {
-                "nlpToken": {
-                  "index": 8,
-                  "word": "for",
-                  "originalText": "for",
-                  "lemma": "for",
-                  "characterOffsetBegin": 38,
-                  "characterOffsetEnd": 41,
-                  "pos": "IN",
-                  "ner": "O",
-                  "speaker": "PER0",
-                  "before": " ",
-                  "after": " "
-                }
-              },
-              "IN"
-            ],
-            [
-              {
-                "nlpToken": {
-                  "index": 9,
-                  "word": "129th",
-                  "originalText": "129th",
-                  "lemma": "129th",
-                  "characterOffsetBegin": 42,
-                  "characterOffsetEnd": 47,
-                  "pos": "JJ",
-                  "ner": "O",
-                  "speaker": "PER0",
-                  "before": " ",
-                  "after": " "
-                }
-              },
-              "JJ"
-            ],
-            [
-              {
-                "nlpToken": {
-                  "index": 10,
-                  "word": "Rose",
-                  "originalText": "Rose",
-                  "lemma": "Rose",
-                  "characterOffsetBegin": 48,
-                  "characterOffsetEnd": 52,
-                  "pos": "NNP",
-                  "ner": "O",
-                  "speaker": "PER0",
-                  "before": " ",
-                  "after": " "
-                }
-              },
-              "NNP"
-            ],
-            [
-              {
-                "nlpToken": {
-                  "index": 11,
-                  "word": "Parade",
-                  "originalText": "Parade",
-                  "lemma": "Parade",
-                  "characterOffsetBegin": 53,
-                  "characterOffsetEnd": 59,
-                  "pos": "NNP",
-                  "ner": "O",
-                  "speaker": "PER0",
-                  "before": " ",
-                  "after": ""
-                }
-              },
-              "NNP"
-            ],
-            [
-              {
-                "nlpToken": {
-                  "index": 12,
-                  "word": ".",
-                  "originalText": ".",
-                  "lemma": ".",
-                  "characterOffsetBegin": 59,
-                  "characterOffsetEnd": 60,
-                  "pos": ".",
-                  "ner": "O",
-                  "speaker": "PER0",
-                  "before": "",
-                  "after": " "
-                }
-              },
-              "."
-            ]
-          ],
-          "score": 0.8259083728278042,
-          "text": "for 129th Rose Parade ."
-        }
-      ],
-      "label": "how"
     }
+  },
+  "fiveWoneH_Metadata": {
+    "process_errors": {}
   }
 }

@@ -23,9 +23,7 @@
     "EventId": 17,
     "Event": "smoke_rings_spotted_in_the_ocean_from_space"
   },
-  "fiveWoneH": {},
-  "fiveWoneH_Metadata": {
-    "process_errors": {},
+  "fiveWoneH": {
     "how": {
       "extracted": [
         {
@@ -512,36 +510,6 @@
       ],
       "label": "what"
     },
-    "why": {
-      "extracted": [
-        {
-          "parts": [
-            [
-              {
-                "nlpToken": {
-                  "index": 1,
-                  "word": "Scientists",
-                  "originalText": "Scientists",
-                  "lemma": "scientist",
-                  "characterOffsetBegin": 47,
-                  "characterOffsetEnd": 57,
-                  "pos": "NNS",
-                  "ner": "O",
-                  "speaker": "PER0",
-                  "before": " ",
-                  "after": " "
-                }
-              },
-              "NNS"
-            ]
-          ],
-          "score": 0.5237777777777778,
-          "text": "Scientists",
-          "nlpIndexSentence": 1
-        }
-      ],
-      "label": "why"
-    },
     "where": {
       "extracted": [
         {
@@ -689,6 +657,39 @@
     "when": {
       "extracted": [],
       "label": "when"
+    },
+    "why": {
+      "extracted": [
+        {
+          "parts": [
+            [
+              {
+                "nlpToken": {
+                  "index": 1,
+                  "word": "Scientists",
+                  "originalText": "Scientists",
+                  "lemma": "scientist",
+                  "characterOffsetBegin": 47,
+                  "characterOffsetEnd": 57,
+                  "pos": "NNS",
+                  "ner": "O",
+                  "speaker": "PER0",
+                  "before": " ",
+                  "after": " "
+                }
+              },
+              "NNS"
+            ]
+          ],
+          "score": 0.5237777777777778,
+          "text": "Scientists",
+          "nlpIndexSentence": 1
+        }
+      ],
+      "label": "why"
     }
+  },
+  "fiveWoneH_Metadata": {
+    "process_errors": {}
   }
 }

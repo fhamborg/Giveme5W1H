@@ -26,9 +26,132 @@
     "Event": "hack_equifax_breach"
   },
   "dId": "fc06f28047b37cf15d3d59468c3433d66644102d50e45b2a0d0da474",
-  "fiveWoneH": {},
-  "fiveWoneH_Metadata": {
-    "process_errors": {},
+  "fiveWoneH": {
+    "who": {
+      "extracted": [
+        {
+          "parts": [
+            [
+              {
+                "nlpToken": {
+                  "index": 2,
+                  "word": "Apologizes",
+                  "originalText": "Apologizes",
+                  "lemma": "Apologizes",
+                  "characterOffsetBegin": 8,
+                  "characterOffsetEnd": 18,
+                  "pos": "NNPS",
+                  "ner": "ORGANIZATION",
+                  "speaker": "PER0",
+                  "before": " ",
+                  "after": " "
+                },
+                "aida": [
+                  {
+                    "mention": {
+                      "allEntities": [],
+                      "offset": 0,
+                      "name": "Equifax Apologizes for Security Breach",
+                      "length": 38
+                    },
+                    "bestEntityMetadata": null
+                  }
+                ]
+              },
+              "NNPS"
+            ]
+          ],
+          "score": 1.0,
+          "text": "Apologizes",
+          "nlpIndexSentence": 1
+        }
+      ],
+      "label": "who"
+    },
+    "what": {
+      "extracted": [
+        {
+          "parts": [
+            [
+              {
+                "nlpToken": {
+                  "index": 10,
+                  "word": "disclosed",
+                  "originalText": "disclosed",
+                  "lemma": "disclose",
+                  "characterOffsetBegin": 121,
+                  "characterOffsetEnd": 130,
+                  "pos": "VBD",
+                  "ner": "O",
+                  "speaker": "PER0",
+                  "before": " ",
+                  "after": " "
+                }
+              },
+              "VBD"
+            ],
+            [
+              {
+                "nlpToken": {
+                  "index": 11,
+                  "word": "a",
+                  "originalText": "a",
+                  "lemma": "a",
+                  "characterOffsetBegin": 131,
+                  "characterOffsetEnd": 132,
+                  "pos": "DT",
+                  "ner": "O",
+                  "speaker": "PER0",
+                  "before": " ",
+                  "after": " "
+                }
+              },
+              "DT"
+            ],
+            [
+              {
+                "nlpToken": {
+                  "index": 12,
+                  "word": "massive",
+                  "originalText": "massive",
+                  "lemma": "massive",
+                  "characterOffsetBegin": 133,
+                  "characterOffsetEnd": 140,
+                  "pos": "JJ",
+                  "ner": "O",
+                  "speaker": "PER0",
+                  "before": " ",
+                  "after": " "
+                }
+              },
+              "JJ"
+            ],
+            [
+              {
+                "nlpToken": {
+                  "index": 13,
+                  "word": "breach",
+                  "originalText": "breach",
+                  "lemma": "breach",
+                  "characterOffsetBegin": 141,
+                  "characterOffsetEnd": 147,
+                  "pos": "NN",
+                  "ner": "O",
+                  "speaker": "PER0",
+                  "before": " ",
+                  "after": " "
+                }
+              },
+              "NN"
+            ]
+          ],
+          "score": 1.0,
+          "text": "disclosed a massive breach",
+          "nlpIndexSentence": 1
+        }
+      ],
+      "label": "what"
+    },
     "where": {
       "extracted": [],
       "label": "where"
@@ -295,131 +418,6 @@
       ],
       "label": "how"
     },
-    "who": {
-      "extracted": [
-        {
-          "parts": [
-            [
-              {
-                "nlpToken": {
-                  "index": 2,
-                  "word": "Apologizes",
-                  "originalText": "Apologizes",
-                  "lemma": "Apologizes",
-                  "characterOffsetBegin": 8,
-                  "characterOffsetEnd": 18,
-                  "pos": "NNPS",
-                  "ner": "ORGANIZATION",
-                  "speaker": "PER0",
-                  "before": " ",
-                  "after": " "
-                },
-                "aida": [
-                  {
-                    "mention": {
-                      "allEntities": [],
-                      "offset": 0,
-                      "name": "Equifax Apologizes for Security Breach",
-                      "length": 38
-                    },
-                    "bestEntityMetadata": null
-                  }
-                ]
-              },
-              "NNPS"
-            ]
-          ],
-          "score": 1.0,
-          "text": "Apologizes",
-          "nlpIndexSentence": 1
-        }
-      ],
-      "label": "who"
-    },
-    "what": {
-      "extracted": [
-        {
-          "parts": [
-            [
-              {
-                "nlpToken": {
-                  "index": 10,
-                  "word": "disclosed",
-                  "originalText": "disclosed",
-                  "lemma": "disclose",
-                  "characterOffsetBegin": 121,
-                  "characterOffsetEnd": 130,
-                  "pos": "VBD",
-                  "ner": "O",
-                  "speaker": "PER0",
-                  "before": " ",
-                  "after": " "
-                }
-              },
-              "VBD"
-            ],
-            [
-              {
-                "nlpToken": {
-                  "index": 11,
-                  "word": "a",
-                  "originalText": "a",
-                  "lemma": "a",
-                  "characterOffsetBegin": 131,
-                  "characterOffsetEnd": 132,
-                  "pos": "DT",
-                  "ner": "O",
-                  "speaker": "PER0",
-                  "before": " ",
-                  "after": " "
-                }
-              },
-              "DT"
-            ],
-            [
-              {
-                "nlpToken": {
-                  "index": 12,
-                  "word": "massive",
-                  "originalText": "massive",
-                  "lemma": "massive",
-                  "characterOffsetBegin": 133,
-                  "characterOffsetEnd": 140,
-                  "pos": "JJ",
-                  "ner": "O",
-                  "speaker": "PER0",
-                  "before": " ",
-                  "after": " "
-                }
-              },
-              "JJ"
-            ],
-            [
-              {
-                "nlpToken": {
-                  "index": 13,
-                  "word": "breach",
-                  "originalText": "breach",
-                  "lemma": "breach",
-                  "characterOffsetBegin": 141,
-                  "characterOffsetEnd": 147,
-                  "pos": "NN",
-                  "ner": "O",
-                  "speaker": "PER0",
-                  "before": " ",
-                  "after": " "
-                }
-              },
-              "NN"
-            ]
-          ],
-          "score": 1.0,
-          "text": "disclosed a massive breach",
-          "nlpIndexSentence": 1
-        }
-      ],
-      "label": "what"
-    },
     "why": {
       "extracted": [
         {
@@ -450,5 +448,8 @@
       ],
       "label": "why"
     }
+  },
+  "fiveWoneH_Metadata": {
+    "process_errors": {}
   }
 }

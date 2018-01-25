@@ -68,7 +68,7 @@ class Writer:
         five_w_one_h_literal = output.setdefault('fiveWoneH', {})
 
         # Save error flags(not under fiveWoneH, would break further code which expects there only questions)
-        five_w_one_h_literal = output.setdefault('fiveWoneH_Metadata', {
+        output.setdefault('fiveWoneH_Metadata', {
             'process_errors': document.get_error_flags()
         })
 

@@ -26,9 +26,7 @@
     "Event": "f1_crash"
   },
   "dId": "8439c5b07d758319b42bc274b0519829ba43fa7a98c7c5d5073fff2d",
-  "fiveWoneH": {},
-  "fiveWoneH_Metadata": {
-    "process_errors": {},
+  "fiveWoneH": {
     "who": {
       "extracted": [
         {
@@ -97,6 +95,71 @@
         }
       ],
       "label": "who"
+    },
+    "what": {
+      "extracted": [
+        {
+          "parts": [
+            [
+              {
+                "nlpToken": {
+                  "index": 4,
+                  "word": "stuns",
+                  "originalText": "stuns",
+                  "lemma": "stun",
+                  "characterOffsetBegin": 20,
+                  "characterOffsetEnd": 25,
+                  "pos": "VBZ",
+                  "ner": "O",
+                  "speaker": "PER0",
+                  "before": " ",
+                  "after": " "
+                }
+              },
+              "VBZ"
+            ],
+            [
+              {
+                "nlpToken": {
+                  "index": 5,
+                  "word": "his",
+                  "originalText": "his",
+                  "lemma": "he",
+                  "characterOffsetBegin": 26,
+                  "characterOffsetEnd": 29,
+                  "pos": "PRP$",
+                  "ner": "O",
+                  "speaker": "PER0",
+                  "before": " ",
+                  "after": " "
+                }
+              },
+              "PRP$"
+            ],
+            [
+              {
+                "nlpToken": {
+                  "index": 6,
+                  "word": "dad",
+                  "originalText": "dad",
+                  "lemma": "dad",
+                  "characterOffsetBegin": 30,
+                  "characterOffsetEnd": 33,
+                  "pos": "NN",
+                  "ner": "O",
+                  "speaker": "PER0",
+                  "before": " ",
+                  "after": " "
+                }
+              },
+              "NN"
+            ]
+          ],
+          "score": 1.0,
+          "text": "stuns his dad"
+        }
+      ],
+      "label": "what"
     },
     "how": {
       "extracted": [
@@ -301,71 +364,6 @@
       ],
       "label": "how"
     },
-    "what": {
-      "extracted": [
-        {
-          "parts": [
-            [
-              {
-                "nlpToken": {
-                  "index": 4,
-                  "word": "stuns",
-                  "originalText": "stuns",
-                  "lemma": "stun",
-                  "characterOffsetBegin": 20,
-                  "characterOffsetEnd": 25,
-                  "pos": "VBZ",
-                  "ner": "O",
-                  "speaker": "PER0",
-                  "before": " ",
-                  "after": " "
-                }
-              },
-              "VBZ"
-            ],
-            [
-              {
-                "nlpToken": {
-                  "index": 5,
-                  "word": "his",
-                  "originalText": "his",
-                  "lemma": "he",
-                  "characterOffsetBegin": 26,
-                  "characterOffsetEnd": 29,
-                  "pos": "PRP$",
-                  "ner": "O",
-                  "speaker": "PER0",
-                  "before": " ",
-                  "after": " "
-                }
-              },
-              "PRP$"
-            ],
-            [
-              {
-                "nlpToken": {
-                  "index": 6,
-                  "word": "dad",
-                  "originalText": "dad",
-                  "lemma": "dad",
-                  "characterOffsetBegin": 30,
-                  "characterOffsetEnd": 33,
-                  "pos": "NN",
-                  "ner": "O",
-                  "speaker": "PER0",
-                  "before": " ",
-                  "after": " "
-                }
-              },
-              "NN"
-            ]
-          ],
-          "score": 1.0,
-          "text": "stuns his dad"
-        }
-      ],
-      "label": "what"
-    },
     "where": {
       "extracted": [
         {
@@ -546,5 +544,8 @@
       ],
       "label": "why"
     }
+  },
+  "fiveWoneH_Metadata": {
+    "process_errors": {}
   }
 }

@@ -25,9 +25,7 @@
     "Event": "NewYearsEveSexualAssaultsGermany"
   },
   "dId": "38d0e444ccfeab58ce2f6b8b89eec7adbf4a671d9c593aa46799c496",
-  "fiveWoneH": {},
-  "fiveWoneH_Metadata": {
-    "process_errors": {},
+  "fiveWoneH": {
     "how": {
       "extracted": [
         {
@@ -152,6 +150,170 @@
         }
       ],
       "label": "how"
+    },
+    "where": {
+      "extracted": [
+        {
+          "parts": [
+            [
+              {
+                "nlpToken": {
+                  "index": 1,
+                  "word": "Cologne",
+                  "originalText": "Cologne",
+                  "lemma": "Cologne",
+                  "characterOffsetBegin": 0,
+                  "characterOffsetEnd": 7,
+                  "pos": "NNP",
+                  "ner": "LOCATION",
+                  "speaker": "PER0",
+                  "before": "",
+                  "after": " "
+                }
+              },
+              "NNP"
+            ]
+          ],
+          "score": 0.6838540912821293,
+          "text": "Cologne",
+          "enhancement": {
+            "openstreetmap_nominatim": {
+              "osm_id": "45353",
+              "boundingbox": [
+                45.5592138,
+                45.5964912,
+                9.8911246,
+                9.9682564
+              ],
+              "licence": "Data \u00a9 OpenStreetMap contributors, ODbL 1.0. http://www.openstreetmap.org/copyright",
+              "importance": 0.22528846456831,
+              "icon": "https://nominatim.openstreetmap.org/images/mapicons/poi_boundary_administrative.p.20.png",
+              "osm_type": "relation",
+              "display_name": "Cologne, BS, LOM, 25033, Italia",
+              "lat": "45.5815203",
+              "type": "administrative",
+              "place_id": "177406920",
+              "lon": "9.9411725",
+              "class": "boundary"
+            }
+          }
+        }
+      ],
+      "label": "where"
+    },
+    "when": {
+      "extracted": [
+        {
+          "parts": [
+            [
+              {
+                "nlpToken": {
+                  "index": 29,
+                  "word": "New",
+                  "originalText": "New",
+                  "lemma": "New",
+                  "characterOffsetBegin": 957,
+                  "characterOffsetEnd": 960,
+                  "pos": "NNP",
+                  "ner": "DATE",
+                  "normalizedNER": "2015-12-31",
+                  "speaker": "PER0",
+                  "before": " ",
+                  "after": " ",
+                  "timex": {
+                    "tid": "t4",
+                    "type": "DATE",
+                    "value": "2015-12-31"
+                  }
+                }
+              },
+              "NNP"
+            ],
+            [
+              {
+                "nlpToken": {
+                  "index": 30,
+                  "word": "Year",
+                  "originalText": "Year",
+                  "lemma": "Year",
+                  "characterOffsetBegin": 961,
+                  "characterOffsetEnd": 965,
+                  "pos": "NNP",
+                  "ner": "DATE",
+                  "normalizedNER": "2015-12-31",
+                  "speaker": "PER0",
+                  "before": " ",
+                  "after": "",
+                  "timex": {
+                    "tid": "t4",
+                    "type": "DATE",
+                    "value": "2015-12-31"
+                  }
+                }
+              },
+              "NNP"
+            ],
+            [
+              {
+                "nlpToken": {
+                  "index": 31,
+                  "word": "'s",
+                  "originalText": "'s",
+                  "lemma": "'s",
+                  "characterOffsetBegin": 965,
+                  "characterOffsetEnd": 967,
+                  "pos": "POS",
+                  "ner": "DATE",
+                  "normalizedNER": "2015-12-31",
+                  "speaker": "PER0",
+                  "before": "",
+                  "after": " ",
+                  "timex": {
+                    "tid": "t4",
+                    "type": "DATE",
+                    "value": "2015-12-31"
+                  }
+                }
+              },
+              "POS"
+            ],
+            [
+              {
+                "nlpToken": {
+                  "index": 32,
+                  "word": "Eve",
+                  "originalText": "Eve",
+                  "lemma": "Eve",
+                  "characterOffsetBegin": 968,
+                  "characterOffsetEnd": 971,
+                  "pos": "NNP",
+                  "ner": "DATE",
+                  "normalizedNER": "2015-12-31",
+                  "speaker": "PER0",
+                  "before": " ",
+                  "after": " ",
+                  "timex": {
+                    "tid": "t4",
+                    "type": "DATE",
+                    "value": "2015-12-31"
+                  }
+                }
+              },
+              "NNP"
+            ]
+          ],
+          "score": 0.40946482534131534,
+          "text": "New Year 's Eve",
+          "enhancement": {
+            "timex": {
+              "start_date": "2015-12-31T00:00:00",
+              "end_date": "2015-12-31T23:59:59"
+            }
+          },
+          "nlpIndexSentence": 6
+        }
+      ],
+      "label": "when"
     },
     "who": {
       "extracted": [
@@ -330,170 +492,9 @@
         }
       ],
       "label": "why"
-    },
-    "where": {
-      "extracted": [
-        {
-          "parts": [
-            [
-              {
-                "nlpToken": {
-                  "index": 1,
-                  "word": "Cologne",
-                  "originalText": "Cologne",
-                  "lemma": "Cologne",
-                  "characterOffsetBegin": 0,
-                  "characterOffsetEnd": 7,
-                  "pos": "NNP",
-                  "ner": "LOCATION",
-                  "speaker": "PER0",
-                  "before": "",
-                  "after": " "
-                }
-              },
-              "NNP"
-            ]
-          ],
-          "score": 0.6838540912821293,
-          "text": "Cologne",
-          "enhancement": {
-            "openstreetmap_nominatim": {
-              "osm_id": "45353",
-              "boundingbox": [
-                45.5592138,
-                45.5964912,
-                9.8911246,
-                9.9682564
-              ],
-              "licence": "Data \u00a9 OpenStreetMap contributors, ODbL 1.0. http://www.openstreetmap.org/copyright",
-              "importance": 0.22528846456831,
-              "icon": "https://nominatim.openstreetmap.org/images/mapicons/poi_boundary_administrative.p.20.png",
-              "osm_type": "relation",
-              "display_name": "Cologne, BS, LOM, 25033, Italia",
-              "lat": "45.5815203",
-              "type": "administrative",
-              "place_id": "177406920",
-              "lon": "9.9411725",
-              "class": "boundary"
-            }
-          }
-        }
-      ],
-      "label": "where"
-    },
-    "when": {
-      "extracted": [
-        {
-          "parts": [
-            [
-              {
-                "nlpToken": {
-                  "index": 29,
-                  "word": "New",
-                  "originalText": "New",
-                  "lemma": "New",
-                  "characterOffsetBegin": 957,
-                  "characterOffsetEnd": 960,
-                  "pos": "NNP",
-                  "ner": "DATE",
-                  "normalizedNER": "2015-12-31",
-                  "speaker": "PER0",
-                  "before": " ",
-                  "after": " ",
-                  "timex": {
-                    "tid": "t4",
-                    "type": "DATE",
-                    "value": "2015-12-31"
-                  }
-                }
-              },
-              "NNP"
-            ],
-            [
-              {
-                "nlpToken": {
-                  "index": 30,
-                  "word": "Year",
-                  "originalText": "Year",
-                  "lemma": "Year",
-                  "characterOffsetBegin": 961,
-                  "characterOffsetEnd": 965,
-                  "pos": "NNP",
-                  "ner": "DATE",
-                  "normalizedNER": "2015-12-31",
-                  "speaker": "PER0",
-                  "before": " ",
-                  "after": "",
-                  "timex": {
-                    "tid": "t4",
-                    "type": "DATE",
-                    "value": "2015-12-31"
-                  }
-                }
-              },
-              "NNP"
-            ],
-            [
-              {
-                "nlpToken": {
-                  "index": 31,
-                  "word": "'s",
-                  "originalText": "'s",
-                  "lemma": "'s",
-                  "characterOffsetBegin": 965,
-                  "characterOffsetEnd": 967,
-                  "pos": "POS",
-                  "ner": "DATE",
-                  "normalizedNER": "2015-12-31",
-                  "speaker": "PER0",
-                  "before": "",
-                  "after": " ",
-                  "timex": {
-                    "tid": "t4",
-                    "type": "DATE",
-                    "value": "2015-12-31"
-                  }
-                }
-              },
-              "POS"
-            ],
-            [
-              {
-                "nlpToken": {
-                  "index": 32,
-                  "word": "Eve",
-                  "originalText": "Eve",
-                  "lemma": "Eve",
-                  "characterOffsetBegin": 968,
-                  "characterOffsetEnd": 971,
-                  "pos": "NNP",
-                  "ner": "DATE",
-                  "normalizedNER": "2015-12-31",
-                  "speaker": "PER0",
-                  "before": " ",
-                  "after": " ",
-                  "timex": {
-                    "tid": "t4",
-                    "type": "DATE",
-                    "value": "2015-12-31"
-                  }
-                }
-              },
-              "NNP"
-            ]
-          ],
-          "score": 0.40946482534131534,
-          "text": "New Year 's Eve",
-          "enhancement": {
-            "timex": {
-              "start_date": "2015-12-31T00:00:00",
-              "end_date": "2015-12-31T23:59:59"
-            }
-          },
-          "nlpIndexSentence": 6
-        }
-      ],
-      "label": "when"
     }
+  },
+  "fiveWoneH_Metadata": {
+    "process_errors": {}
   }
 }

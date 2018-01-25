@@ -30,9 +30,7 @@
     "EventId": 18,
     "Event": "elon_musk_reveals_red_tesla_roadster_bound_for_mars"
   },
-  "fiveWoneH": {},
-  "fiveWoneH_Metadata": {
-    "process_errors": {},
+  "fiveWoneH": {
     "how": {
       "extracted": [
         {
@@ -243,53 +241,6 @@
       ],
       "label": "how"
     },
-    "who": {
-      "extracted": [
-        {
-          "parts": [
-            [
-              {
-                "nlpToken": {
-                  "index": 1,
-                  "word": "Elon",
-                  "originalText": "Elon",
-                  "lemma": "Elon",
-                  "characterOffsetBegin": 0,
-                  "characterOffsetEnd": 4,
-                  "pos": "NNP",
-                  "ner": "O",
-                  "speaker": "PER0",
-                  "before": "",
-                  "after": " "
-                }
-              },
-              "NNP"
-            ],
-            [
-              {
-                "nlpToken": {
-                  "index": 2,
-                  "word": "Musk",
-                  "originalText": "Musk",
-                  "lemma": "Musk",
-                  "characterOffsetBegin": 5,
-                  "characterOffsetEnd": 9,
-                  "pos": "NNP",
-                  "ner": "O",
-                  "speaker": "PER0",
-                  "before": " ",
-                  "after": " "
-                }
-              },
-              "NNP"
-            ]
-          ],
-          "score": 1.0,
-          "text": "Elon Musk"
-        }
-      ],
-      "label": "who"
-    },
     "where": {
       "extracted": [
         {
@@ -476,7 +427,7 @@
               "NN"
             ]
           ],
-          "score": 0.5776619399946124,
+          "score": 0.5909952733279457,
           "text": "next month",
           "enhancement": {
             "timex": {
@@ -488,6 +439,53 @@
         }
       ],
       "label": "when"
+    },
+    "who": {
+      "extracted": [
+        {
+          "parts": [
+            [
+              {
+                "nlpToken": {
+                  "index": 1,
+                  "word": "Elon",
+                  "originalText": "Elon",
+                  "lemma": "Elon",
+                  "characterOffsetBegin": 0,
+                  "characterOffsetEnd": 4,
+                  "pos": "NNP",
+                  "ner": "O",
+                  "speaker": "PER0",
+                  "before": "",
+                  "after": " "
+                }
+              },
+              "NNP"
+            ],
+            [
+              {
+                "nlpToken": {
+                  "index": 2,
+                  "word": "Musk",
+                  "originalText": "Musk",
+                  "lemma": "Musk",
+                  "characterOffsetBegin": 5,
+                  "characterOffsetEnd": 9,
+                  "pos": "NNP",
+                  "ner": "O",
+                  "speaker": "PER0",
+                  "before": " ",
+                  "after": " "
+                }
+              },
+              "NNP"
+            ]
+          ],
+          "score": 1.0,
+          "text": "Elon Musk"
+        }
+      ],
+      "label": "who"
     },
     "what": {
       "extracted": [
@@ -1631,5 +1629,8 @@
       ],
       "label": "why"
     }
+  },
+  "fiveWoneH_Metadata": {
+    "process_errors": {}
   }
 }

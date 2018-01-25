@@ -25,9 +25,7 @@
     "Event": "Benghazi_US_consulate_attack"
   },
   "dId": "4b279c9487149d19adddf07664cfcf8e0b498bd277c225a57d6ca5f3",
-  "fiveWoneH": {},
-  "fiveWoneH_Metadata": {
-    "process_errors": {},
+  "fiveWoneH": {
     "who": {
       "extracted": [
         {
@@ -590,206 +588,71 @@
       ],
       "label": "what"
     },
-    "where": {
+    "why": {
       "extracted": [
         {
           "parts": [
             [
               {
                 "nlpToken": {
-                  "index": 8,
-                  "word": "Afghanistan",
-                  "originalText": "Afghanistan",
-                  "lemma": "Afghanistan",
-                  "characterOffsetBegin": 50,
-                  "characterOffsetEnd": 61,
-                  "pos": "NNP",
-                  "ner": "LOCATION",
+                  "index": 1,
+                  "word": "Explosion",
+                  "originalText": "Explosion",
+                  "lemma": "explosion",
+                  "characterOffsetBegin": 183,
+                  "characterOffsetEnd": 192,
+                  "pos": "NN",
+                  "ner": "O",
                   "speaker": "PER0",
                   "before": " ",
-                  "after": ""
-                },
-                "aida": [
-                  {
-                    "mention": {
-                      "allEntities": [
-                        {
-                          "kbIdentifier": "YAGO:Afghanistan",
-                          "disambiguationScore": "0.57749"
-                        }
-                      ],
-                      "offset": 50,
-                      "name": "Afghanistan",
-                      "length": 11,
-                      "bestEntity": {
-                        "kbIdentifier": "YAGO:Afghanistan",
-                        "disambiguationScore": "0.57749"
-                      }
-                    },
-                    "bestEntityMetadata": {
-                      "knowledgebase": "YAGO",
-                      "depictionurl": "http://upload.wikimedia.org/wikipedia/commons/9/9a/Flag_of_Afghanistan.svg",
-                      "depictionthumbnailurl": "http://upload.wikimedia.org/wikipedia/commons/thumbFlag_of_Afghanistan.svg/200px-Flag_of_Afghanistan.svg",
-                      "importance": 5.2367440042763026e-05,
-                      "entityId": "Afghanistan",
-                      "type": [
-                        "YAGO_wordnet_system_108435388",
-                        "YAGO_wordnet_district_108552138",
-                        "YAGO_wikicategory_Member_states_of_the_Organisation_of_Islamic_Cooperation",
-                        "YAGO_yagoPermanentlyLocatedEntity",
-                        "YAGO_yagoLegalActorGeo",
-                        "YAGO_wordnet_state_108654360",
-                        "YAGO_wordnet_country_108544813",
-                        "YAGO_wikicategory_States_and_territories_established_in_1747",
-                        "YAGO_wikicategory_Member_states_of_the_United_Nations",
-                        "YAGO_wordnet_economy_108366753",
-                        "YAGO_wikicategory_Persian\\u002dspeaking_countries_and_territories",
-                        "YAGO_wikicategory_Territories_under_military_occupation",
-                        "YAGO_wordnet_abstraction_100002137",
-                        "YAGO_wordnet_region_108630985",
-                        "YAGO_wikicategory_Landlocked_countries",
-                        "YAGO_wikicategory_States_and_territories_established_in_1709",
-                        "YAGO_yagoGeoEntity",
-                        "YAGO_wordnet_physical_entity_100001930",
-                        "YAGO_wikicategory_Central_Asian_countries",
-                        "YAGO_wikicategory_Least_developed_countries",
-                        "YAGO_wikicategory_South_Asian_countries",
-                        "YAGO_wordnet_entity_100001740",
-                        "YAGO_wordnet_object_100002684",
-                        "YAGO_wordnet_group_100031264",
-                        "YAGO_wikicategory_Member_states_of_the_South_Asian_Association_for_Regional_Cooperation",
-                        "YAGO_wikicategory_Pashto\\u002dspeaking_countries_and_territories",
-                        "YAGO_wordnet_location_100027167",
-                        "YAGO_wordnet_administrative_district_108491826",
-                        "YAGO_wikicategory_Islamic_states"
-                      ],
-                      "readableRepr": "Afghanistan",
-                      "url": "http://en.wikipedia.org/wiki/Afghanistan"
-                    }
-                  }
-                ]
+                  "after": " "
+                }
               },
-              "NNP"
-            ]
-          ],
-          "score": 0.6699999999999999,
-          "text": "Afghanistan",
-          "enhancement": {
-            "openstreetmap_nominatim": {
-              "osm_id": "303427",
-              "boundingbox": [
-                29.3772,
-                38.4910682,
-                60.5176034,
-                74.889862
-              ],
-              "licence": "Data \u00a9 OpenStreetMap contributors, ODbL 1.0. http://www.openstreetmap.org/copyright",
-              "importance": 0.18835296801136,
-              "icon": "https://nominatim.openstreetmap.org/images/mapicons/poi_boundary_administrative.p.20.png",
-              "osm_type": "relation",
-              "display_name": "\u0627\u0641\u063a\u0627\u0646\u0633\u062a\u0627\u0646",
-              "lat": "33.7680065",
-              "type": "administrative",
-              "place_id": "179284910",
-              "lon": "66.2385139",
-              "class": "boundary"
-            }
-          }
-        }
-      ],
-      "label": "where"
-    },
-    "when": {
-      "extracted": [
-        {
-          "parts": [
-            [
-              {
-                "nlpToken": {
-                  "index": 6,
-                  "word": "11:30",
-                  "originalText": "11:30",
-                  "lemma": "11:30",
-                  "characterOffsetBegin": 585,
-                  "characterOffsetEnd": 590,
-                  "pos": "CD",
-                  "ner": "TIME",
-                  "normalizedNER": "2016-11-09T23:30",
-                  "speaker": "PER0",
-                  "before": " ",
-                  "after": "",
-                  "timex": {
-                    "tid": "t1",
-                    "type": "TIME",
-                    "value": "2016-11-09T23:30"
-                  }
-                },
-                "heideltime": [
-                  {
-                    "@tid": "t1",
-                    "@type": "TIME",
-                    "@value": "XXXX-XX-XXT23:30",
-                    "@mod": "APPROX",
-                    "#text": "around 11:30pm",
-                    "characterOffset": [
-                      578,
-                      592
-                    ]
-                  }
-                ]
-              },
-              "CD"
+              "NN"
             ],
             [
               {
                 "nlpToken": {
-                  "index": 7,
-                  "word": "pm",
-                  "originalText": "pm",
-                  "lemma": "pm",
-                  "characterOffsetBegin": 590,
-                  "characterOffsetEnd": 592,
-                  "pos": "NN",
-                  "ner": "TIME",
-                  "normalizedNER": "2016-11-09T23:30",
+                  "index": 2,
+                  "word": "and",
+                  "originalText": "and",
+                  "lemma": "and",
+                  "characterOffsetBegin": 193,
+                  "characterOffsetEnd": 196,
+                  "pos": "CC",
+                  "ner": "O",
                   "speaker": "PER0",
-                  "before": "",
-                  "after": " ",
-                  "timex": {
-                    "tid": "t1",
-                    "type": "TIME",
-                    "value": "2016-11-09T23:30"
-                  }
-                },
-                "heideltime": [
-                  {
-                    "@tid": "t1",
-                    "@type": "TIME",
-                    "@value": "XXXX-XX-XXT23:30",
-                    "@mod": "APPROX",
-                    "#text": "around 11:30pm",
-                    "characterOffset": [
-                      578,
-                      592
-                    ]
-                  }
-                ]
+                  "before": " ",
+                  "after": " "
+                }
+              },
+              "CC"
+            ],
+            [
+              {
+                "nlpToken": {
+                  "index": 3,
+                  "word": "gunfire",
+                  "originalText": "gunfire",
+                  "lemma": "gunfire",
+                  "characterOffsetBegin": 197,
+                  "characterOffsetEnd": 204,
+                  "pos": "NN",
+                  "ner": "O",
+                  "speaker": "PER0",
+                  "before": " ",
+                  "after": " "
+                }
               },
               "NN"
             ]
           ],
-          "score": 0.39454117068606726,
-          "text": "11:30 pm",
-          "enhancement": {
-            "timex": {
-              "start_date": "2016-11-09T23:30:00",
-              "end_date": "2016-11-09T23:30:59"
-            }
-          },
-          "nlpIndexSentence": 6
+          "score": 0.34600000000000003,
+          "text": "Explosion and gunfire",
+          "nlpIndexSentence": 3
         }
       ],
-      "label": "when"
+      "label": "why"
     },
     "how": {
       "extracted": [
@@ -1145,71 +1008,209 @@
       ],
       "label": "how"
     },
-    "why": {
+    "where": {
       "extracted": [
         {
           "parts": [
             [
               {
                 "nlpToken": {
-                  "index": 1,
-                  "word": "Explosion",
-                  "originalText": "Explosion",
-                  "lemma": "explosion",
-                  "characterOffsetBegin": 183,
-                  "characterOffsetEnd": 192,
-                  "pos": "NN",
-                  "ner": "O",
+                  "index": 8,
+                  "word": "Afghanistan",
+                  "originalText": "Afghanistan",
+                  "lemma": "Afghanistan",
+                  "characterOffsetBegin": 50,
+                  "characterOffsetEnd": 61,
+                  "pos": "NNP",
+                  "ner": "LOCATION",
                   "speaker": "PER0",
                   "before": " ",
-                  "after": " "
-                }
+                  "after": ""
+                },
+                "aida": [
+                  {
+                    "mention": {
+                      "allEntities": [
+                        {
+                          "kbIdentifier": "YAGO:Afghanistan",
+                          "disambiguationScore": "0.57749"
+                        }
+                      ],
+                      "offset": 50,
+                      "name": "Afghanistan",
+                      "length": 11,
+                      "bestEntity": {
+                        "kbIdentifier": "YAGO:Afghanistan",
+                        "disambiguationScore": "0.57749"
+                      }
+                    },
+                    "bestEntityMetadata": {
+                      "knowledgebase": "YAGO",
+                      "depictionurl": "http://upload.wikimedia.org/wikipedia/commons/9/9a/Flag_of_Afghanistan.svg",
+                      "depictionthumbnailurl": "http://upload.wikimedia.org/wikipedia/commons/thumbFlag_of_Afghanistan.svg/200px-Flag_of_Afghanistan.svg",
+                      "importance": 5.2367440042763026e-05,
+                      "entityId": "Afghanistan",
+                      "type": [
+                        "YAGO_wordnet_system_108435388",
+                        "YAGO_wordnet_district_108552138",
+                        "YAGO_wikicategory_Member_states_of_the_Organisation_of_Islamic_Cooperation",
+                        "YAGO_yagoPermanentlyLocatedEntity",
+                        "YAGO_yagoLegalActorGeo",
+                        "YAGO_wordnet_state_108654360",
+                        "YAGO_wordnet_country_108544813",
+                        "YAGO_wikicategory_States_and_territories_established_in_1747",
+                        "YAGO_wikicategory_Member_states_of_the_United_Nations",
+                        "YAGO_wordnet_economy_108366753",
+                        "YAGO_wikicategory_Persian\\u002dspeaking_countries_and_territories",
+                        "YAGO_wikicategory_Territories_under_military_occupation",
+                        "YAGO_wordnet_abstraction_100002137",
+                        "YAGO_wordnet_region_108630985",
+                        "YAGO_wikicategory_Landlocked_countries",
+                        "YAGO_wikicategory_States_and_territories_established_in_1709",
+                        "YAGO_yagoGeoEntity",
+                        "YAGO_wordnet_physical_entity_100001930",
+                        "YAGO_wikicategory_Central_Asian_countries",
+                        "YAGO_wikicategory_Least_developed_countries",
+                        "YAGO_wikicategory_South_Asian_countries",
+                        "YAGO_wordnet_entity_100001740",
+                        "YAGO_wordnet_object_100002684",
+                        "YAGO_wordnet_group_100031264",
+                        "YAGO_wikicategory_Member_states_of_the_South_Asian_Association_for_Regional_Cooperation",
+                        "YAGO_wikicategory_Pashto\\u002dspeaking_countries_and_territories",
+                        "YAGO_wordnet_location_100027167",
+                        "YAGO_wordnet_administrative_district_108491826",
+                        "YAGO_wikicategory_Islamic_states"
+                      ],
+                      "readableRepr": "Afghanistan",
+                      "url": "http://en.wikipedia.org/wiki/Afghanistan"
+                    }
+                  }
+                ]
               },
-              "NN"
+              "NNP"
+            ]
+          ],
+          "score": 0.6699999999999999,
+          "text": "Afghanistan",
+          "enhancement": {
+            "openstreetmap_nominatim": {
+              "osm_id": "303427",
+              "boundingbox": [
+                29.3772,
+                38.4910682,
+                60.5176034,
+                74.889862
+              ],
+              "licence": "Data \u00a9 OpenStreetMap contributors, ODbL 1.0. http://www.openstreetmap.org/copyright",
+              "importance": 0.18835296801136,
+              "icon": "https://nominatim.openstreetmap.org/images/mapicons/poi_boundary_administrative.p.20.png",
+              "osm_type": "relation",
+              "display_name": "\u0627\u0641\u063a\u0627\u0646\u0633\u062a\u0627\u0646",
+              "lat": "33.7680065",
+              "type": "administrative",
+              "place_id": "179284910",
+              "lon": "66.2385139",
+              "class": "boundary"
+            }
+          }
+        }
+      ],
+      "label": "where"
+    },
+    "when": {
+      "extracted": [
+        {
+          "parts": [
+            [
+              {
+                "nlpToken": {
+                  "index": 6,
+                  "word": "11:30",
+                  "originalText": "11:30",
+                  "lemma": "11:30",
+                  "characterOffsetBegin": 585,
+                  "characterOffsetEnd": 590,
+                  "pos": "CD",
+                  "ner": "TIME",
+                  "normalizedNER": "2016-11-09T23:30",
+                  "speaker": "PER0",
+                  "before": " ",
+                  "after": "",
+                  "timex": {
+                    "tid": "t1",
+                    "type": "TIME",
+                    "value": "2016-11-09T23:30"
+                  }
+                },
+                "heideltime": [
+                  {
+                    "@tid": "t1",
+                    "@type": "TIME",
+                    "@value": "XXXX-XX-XXT23:30",
+                    "@mod": "APPROX",
+                    "#text": "around 11:30pm",
+                    "characterOffset": [
+                      578,
+                      592
+                    ]
+                  }
+                ]
+              },
+              "CD"
             ],
             [
               {
                 "nlpToken": {
-                  "index": 2,
-                  "word": "and",
-                  "originalText": "and",
-                  "lemma": "and",
-                  "characterOffsetBegin": 193,
-                  "characterOffsetEnd": 196,
-                  "pos": "CC",
-                  "ner": "O",
-                  "speaker": "PER0",
-                  "before": " ",
-                  "after": " "
-                }
-              },
-              "CC"
-            ],
-            [
-              {
-                "nlpToken": {
-                  "index": 3,
-                  "word": "gunfire",
-                  "originalText": "gunfire",
-                  "lemma": "gunfire",
-                  "characterOffsetBegin": 197,
-                  "characterOffsetEnd": 204,
+                  "index": 7,
+                  "word": "pm",
+                  "originalText": "pm",
+                  "lemma": "pm",
+                  "characterOffsetBegin": 590,
+                  "characterOffsetEnd": 592,
                   "pos": "NN",
-                  "ner": "O",
+                  "ner": "TIME",
+                  "normalizedNER": "2016-11-09T23:30",
                   "speaker": "PER0",
-                  "before": " ",
-                  "after": " "
-                }
+                  "before": "",
+                  "after": " ",
+                  "timex": {
+                    "tid": "t1",
+                    "type": "TIME",
+                    "value": "2016-11-09T23:30"
+                  }
+                },
+                "heideltime": [
+                  {
+                    "@tid": "t1",
+                    "@type": "TIME",
+                    "@value": "XXXX-XX-XXT23:30",
+                    "@mod": "APPROX",
+                    "#text": "around 11:30pm",
+                    "characterOffset": [
+                      578,
+                      592
+                    ]
+                  }
+                ]
               },
               "NN"
             ]
           ],
-          "score": 0.34600000000000003,
-          "text": "Explosion and gunfire",
-          "nlpIndexSentence": 3
+          "score": 0.39454117068606726,
+          "text": "11:30 pm",
+          "enhancement": {
+            "timex": {
+              "start_date": "2016-11-09T23:30:00",
+              "end_date": "2016-11-09T23:30:59"
+            }
+          },
+          "nlpIndexSentence": 6
         }
       ],
-      "label": "why"
+      "label": "when"
     }
+  },
+  "fiveWoneH_Metadata": {
+    "process_errors": {}
   }
 }

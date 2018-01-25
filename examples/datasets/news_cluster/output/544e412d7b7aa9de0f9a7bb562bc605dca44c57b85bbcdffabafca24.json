@@ -25,9 +25,7 @@
     "EventId": 47,
     "Event": "chinas_tiangong_1_space_station_is_out_of_control_and_will_soon_fall_to_earth"
   },
-  "fiveWoneH": {},
-  "fiveWoneH_Metadata": {
-    "process_errors": {},
+  "fiveWoneH": {
     "how": {
       "extracted": [
         {
@@ -272,152 +270,6 @@
         }
       ],
       "label": "how"
-    },
-    "where": {
-      "extracted": [
-        {
-          "parts": [
-            [
-              {
-                "nlpToken": {
-                  "index": 13,
-                  "word": "Earth",
-                  "originalText": "Earth",
-                  "lemma": "Earth",
-                  "characterOffsetBegin": 59,
-                  "characterOffsetEnd": 64,
-                  "pos": "NNP",
-                  "ner": "LOCATION",
-                  "speaker": "PER0",
-                  "before": " ",
-                  "after": ""
-                },
-                "aida": [
-                  {
-                    "mention": {
-                      "allEntities": [
-                        {
-                          "kbIdentifier": "YAGO:Earth",
-                          "disambiguationScore": "0.90291"
-                        }
-                      ],
-                      "offset": 59,
-                      "name": "Earth",
-                      "length": 5,
-                      "bestEntity": {
-                        "kbIdentifier": "YAGO:Earth",
-                        "disambiguationScore": "0.90291"
-                      }
-                    },
-                    "bestEntityMetadata": {
-                      "knowledgebase": "YAGO",
-                      "depictionurl": "http://upload.wikimedia.org/wikipedia/commons/6/6f/Earth_Eastern_Hemisphere.jpg",
-                      "depictionthumbnailurl": "http://upload.wikimedia.org/wikipedia/commons/thumbEarth_Eastern_Hemisphere.jpg/200px-Earth_Eastern_Hemisphere.jpg",
-                      "importance": 0.00013314700181085492,
-                      "entityId": "Earth",
-                      "type": [
-                        "YAGO_yagoGeoEntity",
-                        "YAGO_yagoPermanentlyLocatedEntity",
-                        "YAGO_wordnet_physical_entity_100001930",
-                        "YAGO_wordnet_terrestrial_planet_109456369",
-                        "YAGO_wordnet_entity_100001740",
-                        "YAGO_wordnet_object_100002684",
-                        "YAGO_wordnet_natural_object_100019128",
-                        "YAGO_wikicategory_Habitable_zone_planets",
-                        "YAGO_wikicategory_Terrestrial_planets",
-                        "YAGO_wordnet_whole_100003553",
-                        "YAGO_wordnet_planet_109394007",
-                        "YAGO_wordnet_celestial_body_109239740"
-                      ],
-                      "readableRepr": "Earth",
-                      "url": "http://en.wikipedia.org/wiki/Earth"
-                    }
-                  }
-                ]
-              },
-              "NNP"
-            ]
-          ],
-          "score": 0.6854605228209462,
-          "text": "Earth",
-          "enhancement": {
-            "openstreetmap_nominatim": {
-              "place_id": "179960560",
-              "licence": "Data \u00a9 OpenStreetMap contributors, ODbL 1.0. http://www.openstreetmap.org/copyright",
-              "osm_type": "relation",
-              "osm_id": "6595891",
-              "boundingbox": [
-                34.225743,
-                34.247504,
-                -102.419777,
-                -102.384546
-              ],
-              "lat": "34.2331373",
-              "lon": "-102.4107493",
-              "display_name": "Earth, Lamb County, Texas, 79031, United States of America",
-              "class": "place",
-              "type": "city",
-              "importance": 0.17059591634558,
-              "icon": "https://nominatim.openstreetmap.org/images/mapicons/poi_place_city.p.20.png"
-            }
-          }
-        }
-      ],
-      "label": "where"
-    },
-    "when": {
-      "extracted": [
-        {
-          "parts": [
-            [
-              {
-                "nlpToken": {
-                  "index": 42,
-                  "word": "Friday",
-                  "originalText": "Friday",
-                  "lemma": "Friday",
-                  "characterOffsetBegin": 2251,
-                  "characterOffsetEnd": 2257,
-                  "pos": "NNP",
-                  "ner": "DATE",
-                  "normalizedNER": "2016-09-16",
-                  "speaker": "PER0",
-                  "before": " ",
-                  "after": " ",
-                  "timex": {
-                    "tid": "t8",
-                    "type": "DATE",
-                    "value": "2016-09-16"
-                  }
-                },
-                "heideltime": [
-                  {
-                    "@tid": "t12",
-                    "@type": "DATE",
-                    "@value": "2015-11-27",
-                    "#text": "Black Friday",
-                    "characterOffset": [
-                      2245,
-                      2257
-                    ]
-                  }
-                ]
-              },
-              "NNP"
-            ]
-          ],
-          "score": 0.40946482534131534,
-          "text": "Friday",
-          "enhancement": {
-            "timex": {
-              "start_date": "2016-09-16T00:00:00",
-              "end_date": "2016-09-16T23:59:59"
-            }
-          },
-          "nlpIndexSentence": 12
-        }
-      ],
-      "label": "when"
     },
     "who": {
       "extracted": [
@@ -709,6 +561,152 @@
       ],
       "label": "what"
     },
+    "where": {
+      "extracted": [
+        {
+          "parts": [
+            [
+              {
+                "nlpToken": {
+                  "index": 13,
+                  "word": "Earth",
+                  "originalText": "Earth",
+                  "lemma": "Earth",
+                  "characterOffsetBegin": 59,
+                  "characterOffsetEnd": 64,
+                  "pos": "NNP",
+                  "ner": "LOCATION",
+                  "speaker": "PER0",
+                  "before": " ",
+                  "after": ""
+                },
+                "aida": [
+                  {
+                    "mention": {
+                      "allEntities": [
+                        {
+                          "kbIdentifier": "YAGO:Earth",
+                          "disambiguationScore": "0.90291"
+                        }
+                      ],
+                      "offset": 59,
+                      "name": "Earth",
+                      "length": 5,
+                      "bestEntity": {
+                        "kbIdentifier": "YAGO:Earth",
+                        "disambiguationScore": "0.90291"
+                      }
+                    },
+                    "bestEntityMetadata": {
+                      "knowledgebase": "YAGO",
+                      "depictionurl": "http://upload.wikimedia.org/wikipedia/commons/6/6f/Earth_Eastern_Hemisphere.jpg",
+                      "depictionthumbnailurl": "http://upload.wikimedia.org/wikipedia/commons/thumbEarth_Eastern_Hemisphere.jpg/200px-Earth_Eastern_Hemisphere.jpg",
+                      "importance": 0.00013314700181085492,
+                      "entityId": "Earth",
+                      "type": [
+                        "YAGO_yagoGeoEntity",
+                        "YAGO_yagoPermanentlyLocatedEntity",
+                        "YAGO_wordnet_physical_entity_100001930",
+                        "YAGO_wordnet_terrestrial_planet_109456369",
+                        "YAGO_wordnet_entity_100001740",
+                        "YAGO_wordnet_object_100002684",
+                        "YAGO_wordnet_natural_object_100019128",
+                        "YAGO_wikicategory_Habitable_zone_planets",
+                        "YAGO_wikicategory_Terrestrial_planets",
+                        "YAGO_wordnet_whole_100003553",
+                        "YAGO_wordnet_planet_109394007",
+                        "YAGO_wordnet_celestial_body_109239740"
+                      ],
+                      "readableRepr": "Earth",
+                      "url": "http://en.wikipedia.org/wiki/Earth"
+                    }
+                  }
+                ]
+              },
+              "NNP"
+            ]
+          ],
+          "score": 0.6854605228209462,
+          "text": "Earth",
+          "enhancement": {
+            "openstreetmap_nominatim": {
+              "place_id": "179960560",
+              "licence": "Data \u00a9 OpenStreetMap contributors, ODbL 1.0. http://www.openstreetmap.org/copyright",
+              "osm_type": "relation",
+              "osm_id": "6595891",
+              "boundingbox": [
+                34.225743,
+                34.247504,
+                -102.419777,
+                -102.384546
+              ],
+              "lat": "34.2331373",
+              "lon": "-102.4107493",
+              "display_name": "Earth, Lamb County, Texas, 79031, United States of America",
+              "class": "place",
+              "type": "city",
+              "importance": 0.17059591634558,
+              "icon": "https://nominatim.openstreetmap.org/images/mapicons/poi_place_city.p.20.png"
+            }
+          }
+        }
+      ],
+      "label": "where"
+    },
+    "when": {
+      "extracted": [
+        {
+          "parts": [
+            [
+              {
+                "nlpToken": {
+                  "index": 42,
+                  "word": "Friday",
+                  "originalText": "Friday",
+                  "lemma": "Friday",
+                  "characterOffsetBegin": 2251,
+                  "characterOffsetEnd": 2257,
+                  "pos": "NNP",
+                  "ner": "DATE",
+                  "normalizedNER": "2016-09-16",
+                  "speaker": "PER0",
+                  "before": " ",
+                  "after": " ",
+                  "timex": {
+                    "tid": "t8",
+                    "type": "DATE",
+                    "value": "2016-09-16"
+                  }
+                },
+                "heideltime": [
+                  {
+                    "@tid": "t12",
+                    "@type": "DATE",
+                    "@value": "2015-11-27",
+                    "#text": "Black Friday",
+                    "characterOffset": [
+                      2245,
+                      2257
+                    ]
+                  }
+                ]
+              },
+              "NNP"
+            ]
+          ],
+          "score": 0.40946482534131534,
+          "text": "Friday",
+          "enhancement": {
+            "timex": {
+              "start_date": "2016-09-16T00:00:00",
+              "end_date": "2016-09-16T23:59:59"
+            }
+          },
+          "nlpIndexSentence": 12
+        }
+      ],
+      "label": "when"
+    },
     "why": {
       "extracted": [
         {
@@ -757,5 +755,8 @@
       ],
       "label": "why"
     }
+  },
+  "fiveWoneH_Metadata": {
+    "process_errors": {}
   }
 }

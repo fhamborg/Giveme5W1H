@@ -23,9 +23,97 @@
     "EventId": 48,
     "Event": "astronauts_identify_unknown_microbes_in_space_for_first_time"
   },
-  "fiveWoneH": {},
-  "fiveWoneH_Metadata": {
-    "process_errors": {},
+  "fiveWoneH": {
+    "who": {
+      "extracted": [
+        {
+          "parts": [
+            [
+              {
+                "nlpToken": {
+                  "index": 62,
+                  "word": "Whitson",
+                  "originalText": "Whitson",
+                  "lemma": "Whitson",
+                  "characterOffsetBegin": 1146,
+                  "characterOffsetEnd": 1153,
+                  "pos": "NNP",
+                  "ner": "PERSON",
+                  "speaker": "PER0",
+                  "before": " ",
+                  "after": " "
+                },
+                "aida": [
+                  {
+                    "mention": {
+                      "allEntities": [
+                        {
+                          "kbIdentifier": "YAGO:Peggy_Whitson",
+                          "disambiguationScore": "1"
+                        }
+                      ],
+                      "offset": 1140,
+                      "name": "Peggy Whitson",
+                      "length": 13,
+                      "bestEntity": {
+                        "kbIdentifier": "YAGO:Peggy_Whitson",
+                        "disambiguationScore": "1"
+                      }
+                    },
+                    "bestEntityMetadata": {
+                      "knowledgebase": "YAGO",
+                      "depictionurl": "http://upload.wikimedia.org/wikipedia/commons/2/2f/Peggy_Whitson.jpg",
+                      "depictionthumbnailurl": "http://upload.wikimedia.org/wikipedia/commons/thumbPeggy_Whitson.jpg/200px-Peggy_Whitson.jpg",
+                      "importance": 0.05141284846283458,
+                      "entityId": "Peggy_Whitson",
+                      "type": [
+                        "YAGO_wordnet_intellectual_109621545",
+                        "YAGO_yagoLegalActorGeo",
+                        "YAGO_wordnet_skin\\u002ddiver_110607291",
+                        "YAGO_wordnet_astronaut_109818022",
+                        "YAGO_wordnet_person_100007846",
+                        "YAGO_wikicategory_Living_people",
+                        "YAGO_wikicategory_Aquanauts",
+                        "YAGO_wikicategory_Rice_University_alumni",
+                        "YAGO_yagoLegalActor",
+                        "YAGO_wordnet_serviceman_110582746",
+                        "YAGO_wordnet_living_thing_100004258",
+                        "YAGO_wordnet_scholar_110557854",
+                        "YAGO_wikicategory_Commanders_of_the_International_Space_Station",
+                        "YAGO_wordnet_physical_entity_100001930",
+                        "YAGO_wordnet_causal_agent_100007347",
+                        "YAGO_wordnet_alumnus_109786338",
+                        "YAGO_wikicategory_People_from_Ringgold_County\\u002c_Iowa",
+                        "YAGO_wordnet_entity_100001740",
+                        "YAGO_wordnet_object_100002684",
+                        "YAGO_wikicategory_Female_astronauts",
+                        "YAGO_wordnet_organism_100004475",
+                        "YAGO_wordnet_worker_109632518",
+                        "YAGO_wikicategory_American_astronauts",
+                        "YAGO_wikicategory_Iowa_Wesleyan_College_alumni",
+                        "YAGO_wordnet_military_officer_110317007",
+                        "YAGO_wordnet_whole_100003553",
+                        "YAGO_wordnet_swimmer_110683126",
+                        "YAGO_wordnet_traveler_109629752",
+                        "YAGO_wordnet_commanding_officer_109941964",
+                        "YAGO_wordnet_skilled_worker_110605985"
+                      ],
+                      "readableRepr": "Peggy Whitson",
+                      "url": "http://en.wikipedia.org/wiki/Peggy%20Whitson"
+                    }
+                  }
+                ]
+              },
+              "NNP"
+            ]
+          ],
+          "score": 1.0,
+          "text": "Whitson",
+          "nlpIndexSentence": 4
+        }
+      ],
+      "label": "who"
+    },
     "how": {
       "extracted": [
         {
@@ -200,6 +288,36 @@
       ],
       "label": "how"
     },
+    "what": {
+      "extracted": [
+        {
+          "parts": [
+            [
+              {
+                "nlpToken": {
+                  "index": 85,
+                  "word": "watching",
+                  "originalText": "watching",
+                  "lemma": "watch",
+                  "characterOffsetBegin": 1304,
+                  "characterOffsetEnd": 1312,
+                  "pos": "VBG",
+                  "ner": "O",
+                  "speaker": "PER0",
+                  "before": " ",
+                  "after": " "
+                }
+              },
+              "VBG"
+            ]
+          ],
+          "score": 1.0,
+          "text": "watching",
+          "nlpIndexSentence": 4
+        }
+      ],
+      "label": "what"
+    },
     "where": {
       "extracted": [
         {
@@ -297,126 +415,6 @@
       "extracted": [],
       "label": "when"
     },
-    "who": {
-      "extracted": [
-        {
-          "parts": [
-            [
-              {
-                "nlpToken": {
-                  "index": 62,
-                  "word": "Whitson",
-                  "originalText": "Whitson",
-                  "lemma": "Whitson",
-                  "characterOffsetBegin": 1146,
-                  "characterOffsetEnd": 1153,
-                  "pos": "NNP",
-                  "ner": "PERSON",
-                  "speaker": "PER0",
-                  "before": " ",
-                  "after": " "
-                },
-                "aida": [
-                  {
-                    "mention": {
-                      "allEntities": [
-                        {
-                          "kbIdentifier": "YAGO:Peggy_Whitson",
-                          "disambiguationScore": "1"
-                        }
-                      ],
-                      "offset": 1140,
-                      "name": "Peggy Whitson",
-                      "length": 13,
-                      "bestEntity": {
-                        "kbIdentifier": "YAGO:Peggy_Whitson",
-                        "disambiguationScore": "1"
-                      }
-                    },
-                    "bestEntityMetadata": {
-                      "knowledgebase": "YAGO",
-                      "depictionurl": "http://upload.wikimedia.org/wikipedia/commons/2/2f/Peggy_Whitson.jpg",
-                      "depictionthumbnailurl": "http://upload.wikimedia.org/wikipedia/commons/thumbPeggy_Whitson.jpg/200px-Peggy_Whitson.jpg",
-                      "importance": 0.05141284846283458,
-                      "entityId": "Peggy_Whitson",
-                      "type": [
-                        "YAGO_wordnet_intellectual_109621545",
-                        "YAGO_yagoLegalActorGeo",
-                        "YAGO_wordnet_skin\\u002ddiver_110607291",
-                        "YAGO_wordnet_astronaut_109818022",
-                        "YAGO_wordnet_person_100007846",
-                        "YAGO_wikicategory_Living_people",
-                        "YAGO_wikicategory_Aquanauts",
-                        "YAGO_wikicategory_Rice_University_alumni",
-                        "YAGO_yagoLegalActor",
-                        "YAGO_wordnet_serviceman_110582746",
-                        "YAGO_wordnet_living_thing_100004258",
-                        "YAGO_wordnet_scholar_110557854",
-                        "YAGO_wikicategory_Commanders_of_the_International_Space_Station",
-                        "YAGO_wordnet_physical_entity_100001930",
-                        "YAGO_wordnet_causal_agent_100007347",
-                        "YAGO_wordnet_alumnus_109786338",
-                        "YAGO_wikicategory_People_from_Ringgold_County\\u002c_Iowa",
-                        "YAGO_wordnet_entity_100001740",
-                        "YAGO_wordnet_object_100002684",
-                        "YAGO_wikicategory_Female_astronauts",
-                        "YAGO_wordnet_organism_100004475",
-                        "YAGO_wordnet_worker_109632518",
-                        "YAGO_wikicategory_American_astronauts",
-                        "YAGO_wikicategory_Iowa_Wesleyan_College_alumni",
-                        "YAGO_wordnet_military_officer_110317007",
-                        "YAGO_wordnet_whole_100003553",
-                        "YAGO_wordnet_swimmer_110683126",
-                        "YAGO_wordnet_traveler_109629752",
-                        "YAGO_wordnet_commanding_officer_109941964",
-                        "YAGO_wordnet_skilled_worker_110605985"
-                      ],
-                      "readableRepr": "Peggy Whitson",
-                      "url": "http://en.wikipedia.org/wiki/Peggy%20Whitson"
-                    }
-                  }
-                ]
-              },
-              "NNP"
-            ]
-          ],
-          "score": 1.0,
-          "text": "Whitson",
-          "nlpIndexSentence": 4
-        }
-      ],
-      "label": "who"
-    },
-    "what": {
-      "extracted": [
-        {
-          "parts": [
-            [
-              {
-                "nlpToken": {
-                  "index": 85,
-                  "word": "watching",
-                  "originalText": "watching",
-                  "lemma": "watch",
-                  "characterOffsetBegin": 1304,
-                  "characterOffsetEnd": 1312,
-                  "pos": "VBG",
-                  "ner": "O",
-                  "speaker": "PER0",
-                  "before": " ",
-                  "after": " "
-                }
-              },
-              "VBG"
-            ]
-          ],
-          "score": 1.0,
-          "text": "watching",
-          "nlpIndexSentence": 4
-        }
-      ],
-      "label": "what"
-    },
     "why": {
       "extracted": [
         {
@@ -446,5 +444,8 @@
       ],
       "label": "why"
     }
+  },
+  "fiveWoneH_Metadata": {
+    "process_errors": {}
   }
 }

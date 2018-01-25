@@ -26,9 +26,7 @@
     "EventId": 35,
     "Event": "new_york_family_of_5_among_12_killed_in_costa_rica_plane_crash"
   },
-  "fiveWoneH": {},
-  "fiveWoneH_Metadata": {
-    "process_errors": {},
+  "fiveWoneH": {
     "who": {
       "extracted": [
         {
@@ -660,6 +658,36 @@
       ],
       "label": "how"
     },
+    "why": {
+      "extracted": [
+        {
+          "parts": [
+            [
+              {
+                "nlpToken": {
+                  "index": 1,
+                  "word": "Story",
+                  "originalText": "Story",
+                  "lemma": "Story",
+                  "characterOffsetBegin": 161,
+                  "characterOffsetEnd": 166,
+                  "pos": "NNP",
+                  "ner": "O",
+                  "speaker": "PER0",
+                  "before": " ",
+                  "after": " "
+                }
+              },
+              "NNP"
+            ]
+          ],
+          "score": 0.4332727272727273,
+          "text": "Story",
+          "nlpIndexSentence": 3
+        }
+      ],
+      "label": "why"
+    },
     "where": {
       "extracted": [
         {
@@ -808,7 +836,7 @@
               "NNP"
             ]
           ],
-          "score": 0.5060749403805971,
+          "score": 0.4927416070472637,
           "text": "Sunday",
           "enhancement": {
             "timex": {
@@ -820,36 +848,9 @@
         }
       ],
       "label": "when"
-    },
-    "why": {
-      "extracted": [
-        {
-          "parts": [
-            [
-              {
-                "nlpToken": {
-                  "index": 1,
-                  "word": "Story",
-                  "originalText": "Story",
-                  "lemma": "Story",
-                  "characterOffsetBegin": 161,
-                  "characterOffsetEnd": 166,
-                  "pos": "NNP",
-                  "ner": "O",
-                  "speaker": "PER0",
-                  "before": " ",
-                  "after": " "
-                }
-              },
-              "NNP"
-            ]
-          ],
-          "score": 0.4332727272727273,
-          "text": "Story",
-          "nlpIndexSentence": 3
-        }
-      ],
-      "label": "why"
     }
+  },
+  "fiveWoneH_Metadata": {
+    "process_errors": {}
   }
 }

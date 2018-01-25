@@ -28,10 +28,169 @@
     "Event": "truck_attack_in_nice"
   },
   "dId": "73434a97d102acbcbeaf1144d6e6462db5c6f62c9cebea7f43a5dc34",
-  "fiveWoneH": {},
-  "fiveWoneH_Metadata": {
-    "process_errors": {
-      "core_nlp": true
+  "fiveWoneH": {
+    "where": {
+      "extracted": [
+        {
+          "parts": [
+            [
+              {
+                "nlpToken": {
+                  "index": 22,
+                  "word": "France",
+                  "originalText": "France",
+                  "lemma": "France",
+                  "characterOffsetBegin": 187,
+                  "characterOffsetEnd": 193,
+                  "pos": "NNP",
+                  "ner": "LOCATION",
+                  "speaker": "PER0",
+                  "before": " ",
+                  "after": ""
+                },
+                "aida": [
+                  {
+                    "mention": {
+                      "allEntities": [
+                        {
+                          "kbIdentifier": "YAGO:France",
+                          "disambiguationScore": "0.31975"
+                        }
+                      ],
+                      "offset": 187,
+                      "name": "France",
+                      "length": 6,
+                      "bestEntity": {
+                        "kbIdentifier": "YAGO:France",
+                        "disambiguationScore": "0.31975"
+                      }
+                    },
+                    "bestEntityMetadata": {
+                      "knowledgebase": "YAGO",
+                      "depictionurl": "http://upload.wikimedia.org/wikipedia/en/c/c3/Flag_of_France.svg",
+                      "depictionthumbnailurl": "http://upload.wikimedia.org/wikipedia/en/thumbFlag_of_France.svg/200px-Flag_of_France.svg",
+                      "importance": 2.7855021299342035e-07,
+                      "entityId": "France",
+                      "type": [
+                        "YAGO_wordnet_system_108435388",
+                        "YAGO_wordnet_district_108552138",
+                        "YAGO_yagoPermanentlyLocatedEntity",
+                        "YAGO_yagoLegalActorGeo",
+                        "YAGO_wordnet_state_108654360",
+                        "YAGO_wikicategory_French\\u002dspeaking_countries_and_territories",
+                        "YAGO_wikicategory_Member_states_of_the_Council_of_Europe",
+                        "YAGO_wordnet_country_108544813",
+                        "YAGO_wikicategory_Member_states_of_the_United_Nations",
+                        "YAGO_wordnet_economy_108366753",
+                        "YAGO_wordnet_abstraction_100002137",
+                        "YAGO_wordnet_region_108630985",
+                        "YAGO_yagoGeoEntity",
+                        "YAGO_wikicategory_Romance_countries_and_territories",
+                        "YAGO_wikicategory_World_Trade_Organization_member_economies",
+                        "YAGO_wordnet_physical_entity_100001930",
+                        "YAGO_wikicategory_Alpine_countries",
+                        "YAGO_wordnet_entity_100001740",
+                        "YAGO_wikicategory_Member_states_of_NATO",
+                        "YAGO_wordnet_object_100002684",
+                        "YAGO_wordnet_group_100031264",
+                        "YAGO_wikicategory_Member_states_of_La_Francophonie",
+                        "YAGO_wordnet_location_100027167",
+                        "YAGO_wordnet_administrative_district_108491826",
+                        "YAGO_wikicategory_Countries_in_Europe",
+                        "YAGO_wikicategory_Member_states_of_the_European_Union",
+                        "YAGO_wikicategory_European_Union_member_economies",
+                        "YAGO_wikicategory_Member_states_of_the_Union_for_the_Mediterranean"
+                      ],
+                      "readableRepr": "France",
+                      "url": "http://en.wikipedia.org/wiki/France"
+                    }
+                  }
+                ]
+              },
+              "NNP"
+            ]
+          ],
+          "score": 0.6699999999999999,
+          "text": "France",
+          "enhancement": {
+            "openstreetmap_nominatim": {
+              "osm_id": "1403916",
+              "boundingbox": [
+                41.2632185,
+                51.268318,
+                -5.4534286,
+                9.8678344
+              ],
+              "licence": "Data \u00a9 OpenStreetMap contributors, ODbL 1.0. http://www.openstreetmap.org/copyright",
+              "importance": 0.35030567158717,
+              "icon": "https://nominatim.openstreetmap.org/images/mapicons/poi_boundary_administrative.p.20.png",
+              "osm_type": "relation",
+              "display_name": "France m\u00e9tropolitaine, France",
+              "lat": "46.603354",
+              "type": "administrative",
+              "place_id": "178221547",
+              "lon": "1.8883335",
+              "class": "boundary"
+            }
+          },
+          "nlpIndexSentence": 1
+        }
+      ],
+      "label": "where"
+    },
+    "when": {
+      "extracted": [
+        {
+          "parts": [
+            [
+              {
+                "nlpToken": {
+                  "index": 8,
+                  "word": "4am",
+                  "originalText": "4am",
+                  "lemma": "4am",
+                  "characterOffsetBegin": 8904,
+                  "characterOffsetEnd": 8907,
+                  "pos": "NN",
+                  "ner": "TIME",
+                  "normalizedNER": "2016-07-14T04:00",
+                  "speaker": "PER0",
+                  "before": " ",
+                  "after": " ",
+                  "timex": {
+                    "tid": "t29",
+                    "type": "TIME",
+                    "value": "2016-07-14T04:00"
+                  }
+                },
+                "heideltime": [
+                  {
+                    "@tid": "t29",
+                    "@type": "TIME",
+                    "@value": "2016-07-14T04:00",
+                    "#text": "4am",
+                    "characterOffset": [
+                      8904,
+                      8907
+                    ]
+                  }
+                ]
+              },
+              "NN"
+            ]
+          ],
+          "score": 0.4716840278289244,
+          "text": "4am",
+          "enhancement": {
+            "timex": {
+              "start_date": "2016-07-14T04:00:00",
+              "end_date": "2016-07-14T04:00:59"
+            }
+          },
+          "nlpIndexSentence": 46
+        }
+      ],
+      "label": "when"
     },
     "how": {
       "extracted": [
@@ -671,169 +830,11 @@
         }
       ],
       "label": "why"
-    },
-    "where": {
-      "extracted": [
-        {
-          "parts": [
-            [
-              {
-                "nlpToken": {
-                  "index": 22,
-                  "word": "France",
-                  "originalText": "France",
-                  "lemma": "France",
-                  "characterOffsetBegin": 187,
-                  "characterOffsetEnd": 193,
-                  "pos": "NNP",
-                  "ner": "LOCATION",
-                  "speaker": "PER0",
-                  "before": " ",
-                  "after": ""
-                },
-                "aida": [
-                  {
-                    "mention": {
-                      "allEntities": [
-                        {
-                          "kbIdentifier": "YAGO:France",
-                          "disambiguationScore": "0.31975"
-                        }
-                      ],
-                      "offset": 187,
-                      "name": "France",
-                      "length": 6,
-                      "bestEntity": {
-                        "kbIdentifier": "YAGO:France",
-                        "disambiguationScore": "0.31975"
-                      }
-                    },
-                    "bestEntityMetadata": {
-                      "knowledgebase": "YAGO",
-                      "depictionurl": "http://upload.wikimedia.org/wikipedia/en/c/c3/Flag_of_France.svg",
-                      "depictionthumbnailurl": "http://upload.wikimedia.org/wikipedia/en/thumbFlag_of_France.svg/200px-Flag_of_France.svg",
-                      "importance": 2.7855021299342035e-07,
-                      "entityId": "France",
-                      "type": [
-                        "YAGO_wordnet_system_108435388",
-                        "YAGO_wordnet_district_108552138",
-                        "YAGO_yagoPermanentlyLocatedEntity",
-                        "YAGO_yagoLegalActorGeo",
-                        "YAGO_wordnet_state_108654360",
-                        "YAGO_wikicategory_French\\u002dspeaking_countries_and_territories",
-                        "YAGO_wikicategory_Member_states_of_the_Council_of_Europe",
-                        "YAGO_wordnet_country_108544813",
-                        "YAGO_wikicategory_Member_states_of_the_United_Nations",
-                        "YAGO_wordnet_economy_108366753",
-                        "YAGO_wordnet_abstraction_100002137",
-                        "YAGO_wordnet_region_108630985",
-                        "YAGO_yagoGeoEntity",
-                        "YAGO_wikicategory_Romance_countries_and_territories",
-                        "YAGO_wikicategory_World_Trade_Organization_member_economies",
-                        "YAGO_wordnet_physical_entity_100001930",
-                        "YAGO_wikicategory_Alpine_countries",
-                        "YAGO_wordnet_entity_100001740",
-                        "YAGO_wikicategory_Member_states_of_NATO",
-                        "YAGO_wordnet_object_100002684",
-                        "YAGO_wordnet_group_100031264",
-                        "YAGO_wikicategory_Member_states_of_La_Francophonie",
-                        "YAGO_wordnet_location_100027167",
-                        "YAGO_wordnet_administrative_district_108491826",
-                        "YAGO_wikicategory_Countries_in_Europe",
-                        "YAGO_wikicategory_Member_states_of_the_European_Union",
-                        "YAGO_wikicategory_European_Union_member_economies",
-                        "YAGO_wikicategory_Member_states_of_the_Union_for_the_Mediterranean"
-                      ],
-                      "readableRepr": "France",
-                      "url": "http://en.wikipedia.org/wiki/France"
-                    }
-                  }
-                ]
-              },
-              "NNP"
-            ]
-          ],
-          "score": 0.6699999999999999,
-          "text": "France",
-          "enhancement": {
-            "openstreetmap_nominatim": {
-              "osm_id": "1403916",
-              "boundingbox": [
-                41.2632185,
-                51.268318,
-                -5.4534286,
-                9.8678344
-              ],
-              "licence": "Data \u00a9 OpenStreetMap contributors, ODbL 1.0. http://www.openstreetmap.org/copyright",
-              "importance": 0.35030567158717,
-              "icon": "https://nominatim.openstreetmap.org/images/mapicons/poi_boundary_administrative.p.20.png",
-              "osm_type": "relation",
-              "display_name": "France m\u00e9tropolitaine, France",
-              "lat": "46.603354",
-              "type": "administrative",
-              "place_id": "178221547",
-              "lon": "1.8883335",
-              "class": "boundary"
-            }
-          },
-          "nlpIndexSentence": 1
-        }
-      ],
-      "label": "where"
-    },
-    "when": {
-      "extracted": [
-        {
-          "parts": [
-            [
-              {
-                "nlpToken": {
-                  "index": 8,
-                  "word": "4am",
-                  "originalText": "4am",
-                  "lemma": "4am",
-                  "characterOffsetBegin": 8904,
-                  "characterOffsetEnd": 8907,
-                  "pos": "NN",
-                  "ner": "TIME",
-                  "normalizedNER": "2016-07-14T04:00",
-                  "speaker": "PER0",
-                  "before": " ",
-                  "after": " ",
-                  "timex": {
-                    "tid": "t29",
-                    "type": "TIME",
-                    "value": "2016-07-14T04:00"
-                  }
-                },
-                "heideltime": [
-                  {
-                    "@tid": "t29",
-                    "@type": "TIME",
-                    "@value": "2016-07-14T04:00",
-                    "#text": "4am",
-                    "characterOffset": [
-                      8904,
-                      8907
-                    ]
-                  }
-                ]
-              },
-              "NN"
-            ]
-          ],
-          "score": 0.4716840278289244,
-          "text": "4am",
-          "enhancement": {
-            "timex": {
-              "start_date": "2016-07-14T04:00:00",
-              "end_date": "2016-07-14T04:00:59"
-            }
-          },
-          "nlpIndexSentence": 46
-        }
-      ],
-      "label": "when"
+    }
+  },
+  "fiveWoneH_Metadata": {
+    "process_errors": {
+      "core_nlp": true
     }
   }
 }

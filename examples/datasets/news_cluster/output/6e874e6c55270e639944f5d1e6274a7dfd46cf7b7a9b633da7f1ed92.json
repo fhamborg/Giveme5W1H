@@ -25,9 +25,65 @@
     "Event": "erie_smashes_snowfall_record_with_flakes_still_falling"
   },
   "dId": "6e874e6c55270e639944f5d1e6274a7dfd46cf7b7a9b633da7f1ed92",
-  "fiveWoneH": {},
-  "fiveWoneH_Metadata": {
-    "process_errors": {},
+  "fiveWoneH": {
+    "who": {
+      "extracted": [
+        {
+          "parts": [
+            [
+              {
+                "nlpToken": {
+                  "index": 1,
+                  "word": "Erie",
+                  "originalText": "Erie",
+                  "lemma": "Erie",
+                  "characterOffsetBegin": 0,
+                  "characterOffsetEnd": 4,
+                  "pos": "NNP",
+                  "ner": "PERSON",
+                  "speaker": "PER0",
+                  "before": "",
+                  "after": " "
+                }
+              },
+              "NNP"
+            ]
+          ],
+          "score": 1.0,
+          "text": "Erie"
+        }
+      ],
+      "label": "who"
+    },
+    "what": {
+      "extracted": [
+        {
+          "parts": [
+            [
+              {
+                "nlpToken": {
+                  "index": 8,
+                  "word": "falling",
+                  "originalText": "falling",
+                  "lemma": "fall",
+                  "characterOffsetBegin": 47,
+                  "characterOffsetEnd": 54,
+                  "pos": "VBG",
+                  "ner": "O",
+                  "speaker": "PER0",
+                  "before": " ",
+                  "after": ""
+                }
+              },
+              "VBG"
+            ]
+          ],
+          "score": 1.0,
+          "text": "falling"
+        }
+      ],
+      "label": "what"
+    },
     "how": {
       "extracted": [
         {
@@ -110,64 +166,6 @@
         }
       ],
       "label": "how"
-    },
-    "who": {
-      "extracted": [
-        {
-          "parts": [
-            [
-              {
-                "nlpToken": {
-                  "index": 1,
-                  "word": "Erie",
-                  "originalText": "Erie",
-                  "lemma": "Erie",
-                  "characterOffsetBegin": 0,
-                  "characterOffsetEnd": 4,
-                  "pos": "NNP",
-                  "ner": "PERSON",
-                  "speaker": "PER0",
-                  "before": "",
-                  "after": " "
-                }
-              },
-              "NNP"
-            ]
-          ],
-          "score": 1.0,
-          "text": "Erie"
-        }
-      ],
-      "label": "who"
-    },
-    "what": {
-      "extracted": [
-        {
-          "parts": [
-            [
-              {
-                "nlpToken": {
-                  "index": 8,
-                  "word": "falling",
-                  "originalText": "falling",
-                  "lemma": "fall",
-                  "characterOffsetBegin": 47,
-                  "characterOffsetEnd": 54,
-                  "pos": "VBG",
-                  "ner": "O",
-                  "speaker": "PER0",
-                  "before": " ",
-                  "after": ""
-                }
-              },
-              "VBG"
-            ]
-          ],
-          "score": 1.0,
-          "text": "falling"
-        }
-      ],
-      "label": "what"
     },
     "why": {
       "extracted": [
@@ -516,5 +514,8 @@
       ],
       "label": "when"
     }
+  },
+  "fiveWoneH_Metadata": {
+    "process_errors": {}
   }
 }

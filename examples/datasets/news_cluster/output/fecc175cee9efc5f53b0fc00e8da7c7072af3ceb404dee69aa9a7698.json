@@ -28,9 +28,53 @@
     "EventId": 23,
     "Event": "digital_currency_ripple_soars_nearly_56_percent_becomes_second_largest_cryptocurrency_by_market_cap"
   },
-  "fiveWoneH": {},
-  "fiveWoneH_Metadata": {
-    "process_errors": {},
+  "fiveWoneH": {
+    "where": {
+      "extracted": [],
+      "label": "where"
+    },
+    "when": {
+      "extracted": [
+        {
+          "parts": [
+            [
+              {
+                "nlpToken": {
+                  "index": 19,
+                  "word": "00:40",
+                  "originalText": "00:40",
+                  "lemma": "00:40",
+                  "characterOffsetBegin": 283,
+                  "characterOffsetEnd": 288,
+                  "pos": "CD",
+                  "ner": "TIME",
+                  "normalizedNER": "2017-12-29T00:40",
+                  "speaker": "PER0",
+                  "before": " ",
+                  "after": "\n",
+                  "timex": {
+                    "tid": "t3",
+                    "type": "TIME",
+                    "value": "2017-12-29T00:40"
+                  }
+                }
+              },
+              "CD"
+            ]
+          ],
+          "score": 0.5340620653643895,
+          "text": "00:40",
+          "enhancement": {
+            "timex": {
+              "start_date": "2017-12-29T00:40:00",
+              "end_date": "2017-12-29T00:40:59"
+            }
+          },
+          "nlpIndexSentence": 3
+        }
+      ],
+      "label": "when"
+    },
     "who": {
       "extracted": [
         {
@@ -88,10 +132,6 @@
         }
       ],
       "label": "what"
-    },
-    "where": {
-      "extracted": [],
-      "label": "where"
     },
     "how": {
       "extracted": [
@@ -288,48 +328,6 @@
       ],
       "label": "how"
     },
-    "when": {
-      "extracted": [
-        {
-          "parts": [
-            [
-              {
-                "nlpToken": {
-                  "index": 19,
-                  "word": "00:40",
-                  "originalText": "00:40",
-                  "lemma": "00:40",
-                  "characterOffsetBegin": 283,
-                  "characterOffsetEnd": 288,
-                  "pos": "CD",
-                  "ner": "TIME",
-                  "normalizedNER": "2017-12-29T00:40",
-                  "speaker": "PER0",
-                  "before": " ",
-                  "after": "\n",
-                  "timex": {
-                    "tid": "t3",
-                    "type": "TIME",
-                    "value": "2017-12-29T00:40"
-                  }
-                }
-              },
-              "CD"
-            ]
-          ],
-          "score": 0.5340620653643895,
-          "text": "00:40",
-          "enhancement": {
-            "timex": {
-              "start_date": "2017-12-29T00:40:00",
-              "end_date": "2017-12-29T00:40:59"
-            }
-          },
-          "nlpIndexSentence": 3
-        }
-      ],
-      "label": "when"
-    },
     "why": {
       "extracted": [
         {
@@ -360,5 +358,8 @@
       ],
       "label": "why"
     }
+  },
+  "fiveWoneH_Metadata": {
+    "process_errors": {}
   }
 }

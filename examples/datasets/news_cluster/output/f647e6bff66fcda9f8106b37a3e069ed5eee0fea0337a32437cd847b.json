@@ -23,9 +23,7 @@
     "Event": "boko_haram_21_schoolgirls_freed"
   },
   "dId": "f647e6bff66fcda9f8106b37a3e069ed5eee0fea0337a32437cd847b",
-  "fiveWoneH": {},
-  "fiveWoneH_Metadata": {
-    "process_errors": {},
+  "fiveWoneH": {
     "how": {
       "extracted": [
         {
@@ -295,6 +293,122 @@
         }
       ],
       "label": "how"
+    },
+    "where": {
+      "extracted": [
+        {
+          "parts": [
+            [
+              {
+                "nlpToken": {
+                  "index": 7,
+                  "word": "Kumshe",
+                  "originalText": "Kumshe",
+                  "lemma": "Kumshe",
+                  "characterOffsetBegin": 2388,
+                  "characterOffsetEnd": 2394,
+                  "pos": "NNP",
+                  "ner": "LOCATION",
+                  "speaker": "145",
+                  "before": " ",
+                  "after": ""
+                },
+                "aida": [
+                  {
+                    "mention": {
+                      "allEntities": [],
+                      "offset": 2388,
+                      "name": "Kumshe",
+                      "length": 6
+                    },
+                    "bestEntityMetadata": null
+                  }
+                ]
+              },
+              "NNP"
+            ]
+          ],
+          "score": 0.6819886296019365,
+          "text": "Kumshe",
+          "enhancement": {
+            "openstreetmap_nominatim": {
+              "osm_id": "3721370",
+              "boundingbox": [
+                11.4474512,
+                11.5343479,
+                13.6499056,
+                13.7403366
+              ],
+              "licence": "Data \u00a9 OpenStreetMap contributors, ODbL 1.0. http://www.openstreetmap.org/copyright",
+              "importance": 0.1975,
+              "icon": "https://nominatim.openstreetmap.org/images/mapicons/poi_boundary_administrative.p.20.png",
+              "osm_type": "relation",
+              "display_name": "Kumshe, Bama, Borno, Nigeria",
+              "lat": "11.4910361",
+              "type": "administrative",
+              "place_id": "179853293",
+              "lon": "13.6864746820984",
+              "class": "boundary"
+            }
+          },
+          "nlpIndexSentence": 17
+        }
+      ],
+      "label": "where"
+    },
+    "when": {
+      "extracted": [
+        {
+          "parts": [
+            [
+              {
+                "nlpToken": {
+                  "index": 44,
+                  "word": "Thursday",
+                  "originalText": "Thursday",
+                  "lemma": "Thursday",
+                  "characterOffsetBegin": 453,
+                  "characterOffsetEnd": 461,
+                  "pos": "NNP",
+                  "ner": "DATE",
+                  "normalizedNER": "2016-10-13",
+                  "speaker": "PER0",
+                  "before": " ",
+                  "after": "",
+                  "timex": {
+                    "tid": "t3",
+                    "type": "DATE",
+                    "value": "2016-10-13"
+                  }
+                },
+                "heideltime": [
+                  {
+                    "@tid": "t4",
+                    "@type": "DATE",
+                    "@value": "2016-10-13",
+                    "#text": "Thursday",
+                    "characterOffset": [
+                      453,
+                      461
+                    ]
+                  }
+                ]
+              },
+              "NNP"
+            ]
+          ],
+          "score": 0.3557505396270296,
+          "text": "Thursday",
+          "enhancement": {
+            "timex": {
+              "start_date": "2016-10-13T00:00:00",
+              "end_date": "2016-10-13T23:59:59"
+            }
+          },
+          "nlpIndexSentence": 2
+        }
+      ],
+      "label": "when"
     },
     "who": {
       "extracted": [
@@ -704,122 +818,9 @@
         }
       ],
       "label": "why"
-    },
-    "where": {
-      "extracted": [
-        {
-          "parts": [
-            [
-              {
-                "nlpToken": {
-                  "index": 7,
-                  "word": "Kumshe",
-                  "originalText": "Kumshe",
-                  "lemma": "Kumshe",
-                  "characterOffsetBegin": 2388,
-                  "characterOffsetEnd": 2394,
-                  "pos": "NNP",
-                  "ner": "LOCATION",
-                  "speaker": "145",
-                  "before": " ",
-                  "after": ""
-                },
-                "aida": [
-                  {
-                    "mention": {
-                      "allEntities": [],
-                      "offset": 2388,
-                      "name": "Kumshe",
-                      "length": 6
-                    },
-                    "bestEntityMetadata": null
-                  }
-                ]
-              },
-              "NNP"
-            ]
-          ],
-          "score": 0.6819886296019365,
-          "text": "Kumshe",
-          "enhancement": {
-            "openstreetmap_nominatim": {
-              "osm_id": "3721370",
-              "boundingbox": [
-                11.4474512,
-                11.5343479,
-                13.6499056,
-                13.7403366
-              ],
-              "licence": "Data \u00a9 OpenStreetMap contributors, ODbL 1.0. http://www.openstreetmap.org/copyright",
-              "importance": 0.1975,
-              "icon": "https://nominatim.openstreetmap.org/images/mapicons/poi_boundary_administrative.p.20.png",
-              "osm_type": "relation",
-              "display_name": "Kumshe, Bama, Borno, Nigeria",
-              "lat": "11.4910361",
-              "type": "administrative",
-              "place_id": "179853293",
-              "lon": "13.6864746820984",
-              "class": "boundary"
-            }
-          },
-          "nlpIndexSentence": 17
-        }
-      ],
-      "label": "where"
-    },
-    "when": {
-      "extracted": [
-        {
-          "parts": [
-            [
-              {
-                "nlpToken": {
-                  "index": 44,
-                  "word": "Thursday",
-                  "originalText": "Thursday",
-                  "lemma": "Thursday",
-                  "characterOffsetBegin": 453,
-                  "characterOffsetEnd": 461,
-                  "pos": "NNP",
-                  "ner": "DATE",
-                  "normalizedNER": "2016-10-13",
-                  "speaker": "PER0",
-                  "before": " ",
-                  "after": "",
-                  "timex": {
-                    "tid": "t3",
-                    "type": "DATE",
-                    "value": "2016-10-13"
-                  }
-                },
-                "heideltime": [
-                  {
-                    "@tid": "t4",
-                    "@type": "DATE",
-                    "@value": "2016-10-13",
-                    "#text": "Thursday",
-                    "characterOffset": [
-                      453,
-                      461
-                    ]
-                  }
-                ]
-              },
-              "NNP"
-            ]
-          ],
-          "score": 0.3557505396270296,
-          "text": "Thursday",
-          "enhancement": {
-            "timex": {
-              "start_date": "2016-10-13T00:00:00",
-              "end_date": "2016-10-13T23:59:59"
-            }
-          },
-          "nlpIndexSentence": 2
-        }
-      ],
-      "label": "when"
     }
+  },
+  "fiveWoneH_Metadata": {
+    "process_errors": {}
   }
 }

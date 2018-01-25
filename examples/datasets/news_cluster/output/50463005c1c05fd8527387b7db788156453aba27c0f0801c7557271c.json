@@ -25,11 +25,7 @@
     "Event": "boko_haram_21_schoolgirls_freed"
   },
   "dId": "50463005c1c05fd8527387b7db788156453aba27c0f0801c7557271c",
-  "fiveWoneH": {},
-  "fiveWoneH_Metadata": {
-    "process_errors": {
-      "core_nlp": true
-    },
+  "fiveWoneH": {
     "how": {
       "extracted": [
         {
@@ -511,6 +507,167 @@
       ],
       "label": "what"
     },
+    "where": {
+      "extracted": [
+        {
+          "parts": [
+            [
+              {
+                "nlpToken": {
+                  "index": 19,
+                  "word": "Nigeria",
+                  "originalText": "Nigeria",
+                  "lemma": "Nigeria",
+                  "characterOffsetBegin": 310,
+                  "characterOffsetEnd": 317,
+                  "pos": "NNP",
+                  "ner": "LOCATION",
+                  "speaker": "PER0",
+                  "before": " ",
+                  "after": ""
+                },
+                "aida": [
+                  {
+                    "mention": {
+                      "allEntities": [
+                        {
+                          "kbIdentifier": "YAGO:Nigeria",
+                          "disambiguationScore": "1"
+                        }
+                      ],
+                      "offset": 310,
+                      "name": "Nigeria",
+                      "length": 7,
+                      "bestEntity": {
+                        "kbIdentifier": "YAGO:Nigeria",
+                        "disambiguationScore": "1"
+                      }
+                    },
+                    "bestEntityMetadata": {
+                      "knowledgebase": "YAGO",
+                      "depictionurl": "http://upload.wikimedia.org/wikipedia/commons/7/79/Flag_of_Nigeria.svg",
+                      "depictionthumbnailurl": "http://upload.wikimedia.org/wikipedia/commons/thumbFlag_of_Nigeria.svg/200px-Flag_of_Nigeria.svg",
+                      "importance": 4.2061082162006476e-05,
+                      "entityId": "Nigeria",
+                      "type": [
+                        "YAGO_wordnet_system_108435388",
+                        "YAGO_wordnet_district_108552138",
+                        "YAGO_wikicategory_Member_states_of_the_Organisation_of_Islamic_Cooperation",
+                        "YAGO_yagoPermanentlyLocatedEntity",
+                        "YAGO_yagoLegalActorGeo",
+                        "YAGO_wordnet_state_108654360",
+                        "YAGO_wikicategory_West_African_countries",
+                        "YAGO_wikicategory_Member_states_of_OPEC",
+                        "YAGO_wordnet_country_108544813",
+                        "YAGO_wikicategory_Member_states_of_the_United_Nations",
+                        "YAGO_wordnet_economy_108366753",
+                        "YAGO_wikicategory_Developing_8_Countries_member_states",
+                        "YAGO_wikicategory_Countries_in_Africa",
+                        "YAGO_wordnet_abstraction_100002137",
+                        "YAGO_wordnet_region_108630985",
+                        "YAGO_wikicategory_English\\u002dspeaking_countries_and_territories",
+                        "YAGO_yagoGeoEntity",
+                        "YAGO_wordnet_physical_entity_100001930",
+                        "YAGO_wikicategory_States_and_territories_established_in_1960",
+                        "YAGO_wordnet_entity_100001740",
+                        "YAGO_wordnet_object_100002684",
+                        "YAGO_wikicategory_Member_states_of_the_African_Union",
+                        "YAGO_wordnet_group_100031264",
+                        "YAGO_wordnet_location_100027167",
+                        "YAGO_wordnet_administrative_district_108491826",
+                        "YAGO_wikicategory_Member_states_of_the_Commonwealth_of_Nations"
+                      ],
+                      "readableRepr": "Nigeria",
+                      "url": "http://en.wikipedia.org/wiki/Nigeria"
+                    }
+                  }
+                ]
+              },
+              "NNP"
+            ]
+          ],
+          "score": 0.6699999999999999,
+          "text": "Nigeria",
+          "enhancement": {
+            "openstreetmap_nominatim": {
+              "osm_id": "192787",
+              "boundingbox": [
+                4.0690959,
+                13.885645,
+                2.676932,
+                14.678014
+              ],
+              "licence": "Data \u00a9 OpenStreetMap contributors, ODbL 1.0. http://www.openstreetmap.org/copyright",
+              "importance": 0.29815056934711,
+              "icon": "https://nominatim.openstreetmap.org/images/mapicons/poi_boundary_administrative.p.20.png",
+              "osm_type": "relation",
+              "display_name": "Nigeria",
+              "lat": "9.6000359",
+              "type": "administrative",
+              "place_id": "179250241",
+              "lon": "7.9999721",
+              "class": "boundary"
+            }
+          },
+          "nlpIndexSentence": 2
+        }
+      ],
+      "label": "where"
+    },
+    "when": {
+      "extracted": [
+        {
+          "parts": [
+            [
+              {
+                "nlpToken": {
+                  "index": 5,
+                  "word": "today",
+                  "originalText": "today",
+                  "lemma": "today",
+                  "characterOffsetBegin": 1035,
+                  "characterOffsetEnd": 1040,
+                  "pos": "NN",
+                  "ner": "DATE",
+                  "normalizedNER": "2016-10-13",
+                  "speaker": "PER0",
+                  "before": " ",
+                  "after": " ",
+                  "timex": {
+                    "tid": "t6",
+                    "type": "DATE",
+                    "value": "2016-10-13"
+                  }
+                },
+                "heideltime": [
+                  {
+                    "@tid": "t8",
+                    "@type": "DATE",
+                    "@value": "2016-10-13",
+                    "#text": "today",
+                    "characterOffset": [
+                      1035,
+                      1040
+                    ]
+                  }
+                ]
+              },
+              "NN"
+            ]
+          ],
+          "score": 0.43408020995669994,
+          "text": "today",
+          "enhancement": {
+            "timex": {
+              "start_date": "2016-10-13T00:00:00",
+              "end_date": "2016-10-13T23:59:59"
+            }
+          },
+          "nlpIndexSentence": 6
+        }
+      ],
+      "label": "when"
+    },
     "why": {
       "extracted": [
         {
@@ -756,167 +913,11 @@
         }
       ],
       "label": "why"
-    },
-    "where": {
-      "extracted": [
-        {
-          "parts": [
-            [
-              {
-                "nlpToken": {
-                  "index": 19,
-                  "word": "Nigeria",
-                  "originalText": "Nigeria",
-                  "lemma": "Nigeria",
-                  "characterOffsetBegin": 310,
-                  "characterOffsetEnd": 317,
-                  "pos": "NNP",
-                  "ner": "LOCATION",
-                  "speaker": "PER0",
-                  "before": " ",
-                  "after": ""
-                },
-                "aida": [
-                  {
-                    "mention": {
-                      "allEntities": [
-                        {
-                          "kbIdentifier": "YAGO:Nigeria",
-                          "disambiguationScore": "1"
-                        }
-                      ],
-                      "offset": 310,
-                      "name": "Nigeria",
-                      "length": 7,
-                      "bestEntity": {
-                        "kbIdentifier": "YAGO:Nigeria",
-                        "disambiguationScore": "1"
-                      }
-                    },
-                    "bestEntityMetadata": {
-                      "knowledgebase": "YAGO",
-                      "depictionurl": "http://upload.wikimedia.org/wikipedia/commons/7/79/Flag_of_Nigeria.svg",
-                      "depictionthumbnailurl": "http://upload.wikimedia.org/wikipedia/commons/thumbFlag_of_Nigeria.svg/200px-Flag_of_Nigeria.svg",
-                      "importance": 4.2061082162006476e-05,
-                      "entityId": "Nigeria",
-                      "type": [
-                        "YAGO_wordnet_system_108435388",
-                        "YAGO_wordnet_district_108552138",
-                        "YAGO_wikicategory_Member_states_of_the_Organisation_of_Islamic_Cooperation",
-                        "YAGO_yagoPermanentlyLocatedEntity",
-                        "YAGO_yagoLegalActorGeo",
-                        "YAGO_wordnet_state_108654360",
-                        "YAGO_wikicategory_West_African_countries",
-                        "YAGO_wikicategory_Member_states_of_OPEC",
-                        "YAGO_wordnet_country_108544813",
-                        "YAGO_wikicategory_Member_states_of_the_United_Nations",
-                        "YAGO_wordnet_economy_108366753",
-                        "YAGO_wikicategory_Developing_8_Countries_member_states",
-                        "YAGO_wikicategory_Countries_in_Africa",
-                        "YAGO_wordnet_abstraction_100002137",
-                        "YAGO_wordnet_region_108630985",
-                        "YAGO_wikicategory_English\\u002dspeaking_countries_and_territories",
-                        "YAGO_yagoGeoEntity",
-                        "YAGO_wordnet_physical_entity_100001930",
-                        "YAGO_wikicategory_States_and_territories_established_in_1960",
-                        "YAGO_wordnet_entity_100001740",
-                        "YAGO_wordnet_object_100002684",
-                        "YAGO_wikicategory_Member_states_of_the_African_Union",
-                        "YAGO_wordnet_group_100031264",
-                        "YAGO_wordnet_location_100027167",
-                        "YAGO_wordnet_administrative_district_108491826",
-                        "YAGO_wikicategory_Member_states_of_the_Commonwealth_of_Nations"
-                      ],
-                      "readableRepr": "Nigeria",
-                      "url": "http://en.wikipedia.org/wiki/Nigeria"
-                    }
-                  }
-                ]
-              },
-              "NNP"
-            ]
-          ],
-          "score": 0.6699999999999999,
-          "text": "Nigeria",
-          "enhancement": {
-            "openstreetmap_nominatim": {
-              "osm_id": "192787",
-              "boundingbox": [
-                4.0690959,
-                13.885645,
-                2.676932,
-                14.678014
-              ],
-              "licence": "Data \u00a9 OpenStreetMap contributors, ODbL 1.0. http://www.openstreetmap.org/copyright",
-              "importance": 0.29815056934711,
-              "icon": "https://nominatim.openstreetmap.org/images/mapicons/poi_boundary_administrative.p.20.png",
-              "osm_type": "relation",
-              "display_name": "Nigeria",
-              "lat": "9.6000359",
-              "type": "administrative",
-              "place_id": "179250241",
-              "lon": "7.9999721",
-              "class": "boundary"
-            }
-          },
-          "nlpIndexSentence": 2
-        }
-      ],
-      "label": "where"
-    },
-    "when": {
-      "extracted": [
-        {
-          "parts": [
-            [
-              {
-                "nlpToken": {
-                  "index": 5,
-                  "word": "today",
-                  "originalText": "today",
-                  "lemma": "today",
-                  "characterOffsetBegin": 1035,
-                  "characterOffsetEnd": 1040,
-                  "pos": "NN",
-                  "ner": "DATE",
-                  "normalizedNER": "2016-10-13",
-                  "speaker": "PER0",
-                  "before": " ",
-                  "after": " ",
-                  "timex": {
-                    "tid": "t6",
-                    "type": "DATE",
-                    "value": "2016-10-13"
-                  }
-                },
-                "heideltime": [
-                  {
-                    "@tid": "t8",
-                    "@type": "DATE",
-                    "@value": "2016-10-13",
-                    "#text": "today",
-                    "characterOffset": [
-                      1035,
-                      1040
-                    ]
-                  }
-                ]
-              },
-              "NN"
-            ]
-          ],
-          "score": 0.43408020995669994,
-          "text": "today",
-          "enhancement": {
-            "timex": {
-              "start_date": "2016-10-13T00:00:00",
-              "end_date": "2016-10-13T23:59:59"
-            }
-          },
-          "nlpIndexSentence": 6
-        }
-      ],
-      "label": "when"
+    }
+  },
+  "fiveWoneH_Metadata": {
+    "process_errors": {
+      "core_nlp": true
     }
   }
 }

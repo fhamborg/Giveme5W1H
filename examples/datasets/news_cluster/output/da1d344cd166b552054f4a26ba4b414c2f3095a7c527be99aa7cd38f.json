@@ -23,9 +23,7 @@
     "Event": "panama_papers"
   },
   "dId": "da1d344cd166b552054f4a26ba4b414c2f3095a7c527be99aa7cd38f",
-  "fiveWoneH": {},
-  "fiveWoneH_Metadata": {
-    "process_errors": {},
+  "fiveWoneH": {
     "how": {
       "extracted": [
         {
@@ -498,6 +496,99 @@
         }
       ],
       "label": "how"
+    },
+    "where": {
+      "extracted": [
+        {
+          "parts": [
+            [
+              {
+                "nlpToken": {
+                  "index": 23,
+                  "word": "Russia",
+                  "originalText": "Russia",
+                  "lemma": "Russia",
+                  "characterOffsetBegin": 843,
+                  "characterOffsetEnd": 849,
+                  "pos": "NNP",
+                  "ner": "LOCATION",
+                  "speaker": "PER0",
+                  "before": " ",
+                  "after": ""
+                }
+              },
+              "NNP"
+            ]
+          ],
+          "score": 0.7,
+          "text": "Russia",
+          "enhancement": {
+            "openstreetmap_nominatim": {
+              "osm_id": "60189",
+              "boundingbox": [
+                41.1858711,
+                82.0586232,
+                -180.0,
+                180.0
+              ],
+              "licence": "Data \u00a9 OpenStreetMap contributors, ODbL 1.0. http://www.openstreetmap.org/copyright",
+              "importance": 0.22506692421924,
+              "icon": "https://nominatim.openstreetmap.org/images/mapicons/poi_boundary_administrative.p.20.png",
+              "osm_type": "relation",
+              "display_name": "\u0420\u0424",
+              "lat": "64.6863136",
+              "type": "administrative",
+              "place_id": "178981085",
+              "lon": "97.7453061",
+              "class": "boundary"
+            }
+          },
+          "nlpIndexSentence": 6
+        }
+      ],
+      "label": "where"
+    },
+    "when": {
+      "extracted": [
+        {
+          "parts": [
+            [
+              {
+                "nlpToken": {
+                  "index": 9,
+                  "word": "Midnight",
+                  "originalText": "Midnight",
+                  "lemma": "midnight",
+                  "characterOffsetBegin": 399,
+                  "characterOffsetEnd": 407,
+                  "pos": "NN",
+                  "ner": "TIME",
+                  "normalizedNER": "2017-11-30T00:00",
+                  "speaker": "PER0",
+                  "before": "",
+                  "after": " ",
+                  "timex": {
+                    "tid": "t3",
+                    "type": "TIME",
+                    "value": "2017-11-30T00:00"
+                  }
+                }
+              },
+              "NN"
+            ]
+          ],
+          "score": 0.49892212306701966,
+          "text": "Midnight",
+          "enhancement": {
+            "timex": {
+              "start_date": "2017-11-30T00:00:00",
+              "end_date": "2017-11-30T00:00:59"
+            }
+          },
+          "nlpIndexSentence": 4
+        }
+      ],
+      "label": "when"
     },
     "who": {
       "extracted": [
@@ -1860,99 +1951,9 @@
         }
       ],
       "label": "why"
-    },
-    "where": {
-      "extracted": [
-        {
-          "parts": [
-            [
-              {
-                "nlpToken": {
-                  "index": 23,
-                  "word": "Russia",
-                  "originalText": "Russia",
-                  "lemma": "Russia",
-                  "characterOffsetBegin": 843,
-                  "characterOffsetEnd": 849,
-                  "pos": "NNP",
-                  "ner": "LOCATION",
-                  "speaker": "PER0",
-                  "before": " ",
-                  "after": ""
-                }
-              },
-              "NNP"
-            ]
-          ],
-          "score": 0.7,
-          "text": "Russia",
-          "enhancement": {
-            "openstreetmap_nominatim": {
-              "osm_id": "60189",
-              "boundingbox": [
-                41.1858711,
-                82.0586232,
-                -180.0,
-                180.0
-              ],
-              "licence": "Data \u00a9 OpenStreetMap contributors, ODbL 1.0. http://www.openstreetmap.org/copyright",
-              "importance": 0.22506692421924,
-              "icon": "https://nominatim.openstreetmap.org/images/mapicons/poi_boundary_administrative.p.20.png",
-              "osm_type": "relation",
-              "display_name": "\u0420\u0424",
-              "lat": "64.6863136",
-              "type": "administrative",
-              "place_id": "178981085",
-              "lon": "97.7453061",
-              "class": "boundary"
-            }
-          },
-          "nlpIndexSentence": 6
-        }
-      ],
-      "label": "where"
-    },
-    "when": {
-      "extracted": [
-        {
-          "parts": [
-            [
-              {
-                "nlpToken": {
-                  "index": 9,
-                  "word": "Midnight",
-                  "originalText": "Midnight",
-                  "lemma": "midnight",
-                  "characterOffsetBegin": 399,
-                  "characterOffsetEnd": 407,
-                  "pos": "NN",
-                  "ner": "TIME",
-                  "normalizedNER": "2017-11-30T00:00",
-                  "speaker": "PER0",
-                  "before": "",
-                  "after": " ",
-                  "timex": {
-                    "tid": "t3",
-                    "type": "TIME",
-                    "value": "2017-11-30T00:00"
-                  }
-                }
-              },
-              "NN"
-            ]
-          ],
-          "score": 0.49892212306701966,
-          "text": "Midnight",
-          "enhancement": {
-            "timex": {
-              "start_date": "2017-11-30T00:00:00",
-              "end_date": "2017-11-30T00:00:59"
-            }
-          },
-          "nlpIndexSentence": 4
-        }
-      ],
-      "label": "when"
     }
+  },
+  "fiveWoneH_Metadata": {
+    "process_errors": {}
   }
 }

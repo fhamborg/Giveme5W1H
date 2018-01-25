@@ -23,9 +23,7 @@
     "EventId": 44,
     "Event": "bruce_arians_emotional_in_announcing_retirement_from_coaching_cites_family"
   },
-  "fiveWoneH": {},
-  "fiveWoneH_Metadata": {
-    "process_errors": {},
+  "fiveWoneH": {
     "how": {
       "extracted": [
         {
@@ -218,154 +216,6 @@
         }
       ],
       "label": "how"
-    },
-    "where": {
-      "extracted": [
-        {
-          "parts": [
-            [
-              {
-                "nlpToken": {
-                  "index": 8,
-                  "word": "Arizona",
-                  "originalText": "Arizona",
-                  "lemma": "Arizona",
-                  "characterOffsetBegin": 47,
-                  "characterOffsetEnd": 54,
-                  "pos": "NNP",
-                  "ner": "LOCATION",
-                  "speaker": "PER0",
-                  "before": " ",
-                  "after": ""
-                },
-                "aida": [
-                  {
-                    "mention": {
-                      "allEntities": [
-                        {
-                          "kbIdentifier": "YAGO:Arizona",
-                          "disambiguationScore": "1"
-                        }
-                      ],
-                      "offset": 47,
-                      "name": "Arizona",
-                      "length": 7,
-                      "bestEntity": {
-                        "kbIdentifier": "YAGO:Arizona",
-                        "disambiguationScore": "1"
-                      }
-                    },
-                    "bestEntityMetadata": {
-                      "knowledgebase": "YAGO",
-                      "depictionurl": "http://upload.wikimedia.org/wikipedia/commons/9/9d/Flag_of_Arizona.svg",
-                      "depictionthumbnailurl": "http://upload.wikimedia.org/wikipedia/commons/thumbFlag_of_Arizona.svg/200px-Flag_of_Arizona.svg",
-                      "importance": 5.9331195367598535e-05,
-                      "entityId": "Arizona",
-                      "type": [
-                        "YAGO_yagoGeoEntity",
-                        "YAGO_wordnet_district_108552138",
-                        "YAGO_yagoPermanentlyLocatedEntity",
-                        "YAGO_wordnet_physical_entity_100001930",
-                        "YAGO_yagoLegalActorGeo",
-                        "YAGO_wordnet_entity_100001740",
-                        "YAGO_wordnet_object_100002684",
-                        "YAGO_wordnet_state_108654360",
-                        "YAGO_wikicategory_Western_United_States",
-                        "YAGO_wikicategory_States_and_territories_established_in_1912",
-                        "YAGO_wordnet_location_100027167",
-                        "YAGO_wordnet_administrative_district_108491826",
-                        "YAGO_wordnet_region_108630985",
-                        "YAGO_wikicategory_States_of_the_United_States"
-                      ],
-                      "readableRepr": "Arizona",
-                      "url": "http://en.wikipedia.org/wiki/Arizona"
-                    }
-                  }
-                ]
-              },
-              "NNP"
-            ]
-          ],
-          "score": 0.6705928744576889,
-          "text": "Arizona",
-          "enhancement": {
-            "openstreetmap_nominatim": {
-              "osm_id": "162018",
-              "boundingbox": [
-                31.3322135,
-                37.00426,
-                -114.8183584,
-                -109.0452015
-              ],
-              "licence": "Data \u00a9 OpenStreetMap contributors, ODbL 1.0. http://www.openstreetmap.org/copyright",
-              "importance": 0.2923054527456,
-              "icon": "https://nominatim.openstreetmap.org/images/mapicons/poi_boundary_administrative.p.20.png",
-              "osm_type": "relation",
-              "display_name": "Arizona, United States of America",
-              "lat": "34.395342",
-              "type": "administrative",
-              "place_id": "178888790",
-              "lon": "-111.7632755",
-              "class": "boundary"
-            }
-          }
-        }
-      ],
-      "label": "where"
-    },
-    "when": {
-      "extracted": [
-        {
-          "parts": [
-            [
-              {
-                "nlpToken": {
-                  "index": 29,
-                  "word": "Monday",
-                  "originalText": "Monday",
-                  "lemma": "Monday",
-                  "characterOffsetBegin": 2433,
-                  "characterOffsetEnd": 2439,
-                  "pos": "NNP",
-                  "ner": "DATE",
-                  "normalizedNER": "2018-01-01",
-                  "speaker": "PER0",
-                  "before": " ",
-                  "after": "",
-                  "timex": {
-                    "tid": "t9",
-                    "type": "DATE",
-                    "value": "2018-01-01"
-                  }
-                },
-                "heideltime": [
-                  {
-                    "@tid": "t17",
-                    "@type": "DATE",
-                    "@value": "2018-01-01",
-                    "#text": "Monday",
-                    "characterOffset": [
-                      2433,
-                      2439
-                    ]
-                  }
-                ]
-              },
-              "NNP"
-            ]
-          ],
-          "score": 0.486282131337788,
-          "text": "Monday",
-          "enhancement": {
-            "timex": {
-              "start_date": "2018-01-01T00:00:00",
-              "end_date": "2018-01-01T23:59:59"
-            }
-          },
-          "nlpIndexSentence": 23
-        }
-      ],
-      "label": "when"
     },
     "who": {
       "extracted": [
@@ -779,6 +629,157 @@
         }
       ],
       "label": "why"
+    },
+    "where": {
+      "extracted": [
+        {
+          "parts": [
+            [
+              {
+                "nlpToken": {
+                  "index": 8,
+                  "word": "Arizona",
+                  "originalText": "Arizona",
+                  "lemma": "Arizona",
+                  "characterOffsetBegin": 47,
+                  "characterOffsetEnd": 54,
+                  "pos": "NNP",
+                  "ner": "LOCATION",
+                  "speaker": "PER0",
+                  "before": " ",
+                  "after": ""
+                },
+                "aida": [
+                  {
+                    "mention": {
+                      "allEntities": [
+                        {
+                          "kbIdentifier": "YAGO:Arizona",
+                          "disambiguationScore": "1"
+                        }
+                      ],
+                      "offset": 47,
+                      "name": "Arizona",
+                      "length": 7,
+                      "bestEntity": {
+                        "kbIdentifier": "YAGO:Arizona",
+                        "disambiguationScore": "1"
+                      }
+                    },
+                    "bestEntityMetadata": {
+                      "knowledgebase": "YAGO",
+                      "depictionurl": "http://upload.wikimedia.org/wikipedia/commons/9/9d/Flag_of_Arizona.svg",
+                      "depictionthumbnailurl": "http://upload.wikimedia.org/wikipedia/commons/thumbFlag_of_Arizona.svg/200px-Flag_of_Arizona.svg",
+                      "importance": 5.9331195367598535e-05,
+                      "entityId": "Arizona",
+                      "type": [
+                        "YAGO_yagoGeoEntity",
+                        "YAGO_wordnet_district_108552138",
+                        "YAGO_yagoPermanentlyLocatedEntity",
+                        "YAGO_wordnet_physical_entity_100001930",
+                        "YAGO_yagoLegalActorGeo",
+                        "YAGO_wordnet_entity_100001740",
+                        "YAGO_wordnet_object_100002684",
+                        "YAGO_wordnet_state_108654360",
+                        "YAGO_wikicategory_Western_United_States",
+                        "YAGO_wikicategory_States_and_territories_established_in_1912",
+                        "YAGO_wordnet_location_100027167",
+                        "YAGO_wordnet_administrative_district_108491826",
+                        "YAGO_wordnet_region_108630985",
+                        "YAGO_wikicategory_States_of_the_United_States"
+                      ],
+                      "readableRepr": "Arizona",
+                      "url": "http://en.wikipedia.org/wiki/Arizona"
+                    }
+                  }
+                ]
+              },
+              "NNP"
+            ]
+          ],
+          "score": 0.6705928744576889,
+          "text": "Arizona",
+          "enhancement": {
+            "openstreetmap_nominatim": {
+              "osm_id": "162018",
+              "boundingbox": [
+                31.3322135,
+                37.00426,
+                -114.8183584,
+                -109.0452015
+              ],
+              "licence": "Data \u00a9 OpenStreetMap contributors, ODbL 1.0. http://www.openstreetmap.org/copyright",
+              "importance": 0.2923054527456,
+              "icon": "https://nominatim.openstreetmap.org/images/mapicons/poi_boundary_administrative.p.20.png",
+              "osm_type": "relation",
+              "display_name": "Arizona, United States of America",
+              "lat": "34.395342",
+              "type": "administrative",
+              "place_id": "178888790",
+              "lon": "-111.7632755",
+              "class": "boundary"
+            }
+          }
+        }
+      ],
+      "label": "where"
+    },
+    "when": {
+      "extracted": [
+        {
+          "parts": [
+            [
+              {
+                "nlpToken": {
+                  "index": 29,
+                  "word": "Monday",
+                  "originalText": "Monday",
+                  "lemma": "Monday",
+                  "characterOffsetBegin": 2433,
+                  "characterOffsetEnd": 2439,
+                  "pos": "NNP",
+                  "ner": "DATE",
+                  "normalizedNER": "2018-01-01",
+                  "speaker": "PER0",
+                  "before": " ",
+                  "after": "",
+                  "timex": {
+                    "tid": "t9",
+                    "type": "DATE",
+                    "value": "2018-01-01"
+                  }
+                },
+                "heideltime": [
+                  {
+                    "@tid": "t17",
+                    "@type": "DATE",
+                    "@value": "2018-01-01",
+                    "#text": "Monday",
+                    "characterOffset": [
+                      2433,
+                      2439
+                    ]
+                  }
+                ]
+              },
+              "NNP"
+            ]
+          ],
+          "score": 0.4729487980044547,
+          "text": "Monday",
+          "enhancement": {
+            "timex": {
+              "start_date": "2018-01-01T00:00:00",
+              "end_date": "2018-01-01T23:59:59"
+            }
+          },
+          "nlpIndexSentence": 23
+        }
+      ],
+      "label": "when"
     }
+  },
+  "fiveWoneH_Metadata": {
+    "process_errors": {}
   }
 }

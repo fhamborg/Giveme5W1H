@@ -25,9 +25,7 @@
     "EventId": 47,
     "Event": "chinas_tiangong_1_space_station_is_out_of_control_and_will_soon_fall_to_earth"
   },
-  "fiveWoneH": {},
-  "fiveWoneH_Metadata": {
-    "process_errors": {},
+  "fiveWoneH": {
     "how": {
       "extracted": [
         {
@@ -587,36 +585,6 @@
       ],
       "label": "what"
     },
-    "why": {
-      "extracted": [
-        {
-          "parts": [
-            [
-              {
-                "nlpToken": {
-                  "index": 1,
-                  "word": "Pieces",
-                  "originalText": "Pieces",
-                  "lemma": "Pieces",
-                  "characterOffsetBegin": 69,
-                  "characterOffsetEnd": 75,
-                  "pos": "NNP",
-                  "ner": "O",
-                  "speaker": "PER0",
-                  "before": " ",
-                  "after": " "
-                }
-              },
-              "NNP"
-            ]
-          ],
-          "score": 0.5605454545454547,
-          "text": "Pieces",
-          "nlpIndexSentence": 1
-        }
-      ],
-      "label": "why"
-    },
     "where": {
       "extracted": [
         {
@@ -774,6 +742,39 @@
         }
       ],
       "label": "when"
+    },
+    "why": {
+      "extracted": [
+        {
+          "parts": [
+            [
+              {
+                "nlpToken": {
+                  "index": 1,
+                  "word": "Pieces",
+                  "originalText": "Pieces",
+                  "lemma": "Pieces",
+                  "characterOffsetBegin": 69,
+                  "characterOffsetEnd": 75,
+                  "pos": "NNP",
+                  "ner": "O",
+                  "speaker": "PER0",
+                  "before": " ",
+                  "after": " "
+                }
+              },
+              "NNP"
+            ]
+          ],
+          "score": 0.5605454545454547,
+          "text": "Pieces",
+          "nlpIndexSentence": 1
+        }
+      ],
+      "label": "why"
     }
+  },
+  "fiveWoneH_Metadata": {
+    "process_errors": {}
   }
 }

@@ -23,9 +23,7 @@
     "EventId": 21,
     "Event": "berlin_sets_up_new_years_eve_safe_zone_for_women_amid_sexual_assault_concerns"
   },
-  "fiveWoneH": {},
-  "fiveWoneH_Metadata": {
-    "process_errors": {},
+  "fiveWoneH": {
     "how": {
       "extracted": [
         {
@@ -545,6 +543,218 @@
         }
       ],
       "label": "what"
+    },
+    "where": {
+      "extracted": [
+        {
+          "parts": [
+            [
+              {
+                "nlpToken": {
+                  "index": 1,
+                  "word": "Berlin",
+                  "originalText": "Berlin",
+                  "lemma": "Berlin",
+                  "characterOffsetBegin": 0,
+                  "characterOffsetEnd": 6,
+                  "pos": "NNP",
+                  "ner": "LOCATION",
+                  "speaker": "PER0",
+                  "before": "",
+                  "after": " "
+                }
+              },
+              "NNP"
+            ]
+          ],
+          "score": 0.6790771306833233,
+          "text": "Berlin",
+          "enhancement": {
+            "openstreetmap_nominatim": {
+              "osm_id": "240109189",
+              "boundingbox": [
+                52.3570365,
+                52.6770365,
+                13.2288599,
+                13.5488599
+              ],
+              "licence": "Data \u00a9 OpenStreetMap contributors, ODbL 1.0. http://www.openstreetmap.org/copyright",
+              "importance": 0.31553744940772,
+              "icon": "https://nominatim.openstreetmap.org/images/mapicons/poi_place_city.p.20.png",
+              "osm_type": "node",
+              "display_name": "Berlin, 10117, Deutschland",
+              "lat": "52.5170365",
+              "type": "city",
+              "place_id": "601546",
+              "lon": "13.3888599",
+              "class": "place"
+            }
+          }
+        }
+      ],
+      "label": "where"
+    },
+    "when": {
+      "extracted": [
+        {
+          "parts": [
+            [
+              {
+                "nlpToken": {
+                  "index": 22,
+                  "word": "New",
+                  "originalText": "New",
+                  "lemma": "New",
+                  "characterOffsetBegin": 564,
+                  "characterOffsetEnd": 567,
+                  "pos": "NNP",
+                  "ner": "DATE",
+                  "normalizedNER": "2017-12-31",
+                  "speaker": "PER0",
+                  "before": " ",
+                  "after": " ",
+                  "timex": {
+                    "tid": "t7",
+                    "type": "DATE",
+                    "value": "2017-12-31"
+                  }
+                },
+                "heideltime": [
+                  {
+                    "@tid": "t6",
+                    "@type": "DATE",
+                    "@value": "2017-12-31",
+                    "#text": "New Year's Eve",
+                    "characterOffset": [
+                      564,
+                      578
+                    ]
+                  }
+                ]
+              },
+              "NNP"
+            ],
+            [
+              {
+                "nlpToken": {
+                  "index": 23,
+                  "word": "Year",
+                  "originalText": "Year",
+                  "lemma": "Year",
+                  "characterOffsetBegin": 568,
+                  "characterOffsetEnd": 572,
+                  "pos": "NNP",
+                  "ner": "DATE",
+                  "normalizedNER": "2017-12-31",
+                  "speaker": "PER0",
+                  "before": " ",
+                  "after": "",
+                  "timex": {
+                    "tid": "t7",
+                    "type": "DATE",
+                    "value": "2017-12-31"
+                  }
+                },
+                "heideltime": [
+                  {
+                    "@tid": "t6",
+                    "@type": "DATE",
+                    "@value": "2017-12-31",
+                    "#text": "New Year's Eve",
+                    "characterOffset": [
+                      564,
+                      578
+                    ]
+                  }
+                ]
+              },
+              "NNP"
+            ],
+            [
+              {
+                "nlpToken": {
+                  "index": 24,
+                  "word": "'s",
+                  "originalText": "'s",
+                  "lemma": "'s",
+                  "characterOffsetBegin": 572,
+                  "characterOffsetEnd": 574,
+                  "pos": "POS",
+                  "ner": "DATE",
+                  "normalizedNER": "2017-12-31",
+                  "speaker": "PER0",
+                  "before": "",
+                  "after": " ",
+                  "timex": {
+                    "tid": "t7",
+                    "type": "DATE",
+                    "value": "2017-12-31"
+                  }
+                },
+                "heideltime": [
+                  {
+                    "@tid": "t6",
+                    "@type": "DATE",
+                    "@value": "2017-12-31",
+                    "#text": "New Year's Eve",
+                    "characterOffset": [
+                      564,
+                      578
+                    ]
+                  }
+                ]
+              },
+              "POS"
+            ],
+            [
+              {
+                "nlpToken": {
+                  "index": 25,
+                  "word": "Eve",
+                  "originalText": "Eve",
+                  "lemma": "Eve",
+                  "characterOffsetBegin": 575,
+                  "characterOffsetEnd": 578,
+                  "pos": "NNP",
+                  "ner": "DATE",
+                  "normalizedNER": "2017-12-31",
+                  "speaker": "PER0",
+                  "before": " ",
+                  "after": " ",
+                  "timex": {
+                    "tid": "t7",
+                    "type": "DATE",
+                    "value": "2017-12-31"
+                  }
+                },
+                "heideltime": [
+                  {
+                    "@tid": "t6",
+                    "@type": "DATE",
+                    "@value": "2017-12-31",
+                    "#text": "New Year's Eve",
+                    "characterOffset": [
+                      564,
+                      578
+                    ]
+                  }
+                ]
+              },
+              "NNP"
+            ]
+          ],
+          "score": 0.5158432113253386,
+          "text": "New Year 's Eve",
+          "enhancement": {
+            "timex": {
+              "start_date": "2017-12-31T00:00:00",
+              "end_date": "2017-12-31T23:59:59"
+            }
+          },
+          "nlpIndexSentence": 3
+        }
+      ],
+      "label": "when"
     },
     "why": {
       "extracted": [
@@ -1398,218 +1608,9 @@
         }
       ],
       "label": "why"
-    },
-    "where": {
-      "extracted": [
-        {
-          "parts": [
-            [
-              {
-                "nlpToken": {
-                  "index": 1,
-                  "word": "Berlin",
-                  "originalText": "Berlin",
-                  "lemma": "Berlin",
-                  "characterOffsetBegin": 0,
-                  "characterOffsetEnd": 6,
-                  "pos": "NNP",
-                  "ner": "LOCATION",
-                  "speaker": "PER0",
-                  "before": "",
-                  "after": " "
-                }
-              },
-              "NNP"
-            ]
-          ],
-          "score": 0.6790771306833233,
-          "text": "Berlin",
-          "enhancement": {
-            "openstreetmap_nominatim": {
-              "osm_id": "240109189",
-              "boundingbox": [
-                52.3570365,
-                52.6770365,
-                13.2288599,
-                13.5488599
-              ],
-              "licence": "Data \u00a9 OpenStreetMap contributors, ODbL 1.0. http://www.openstreetmap.org/copyright",
-              "importance": 0.31553744940772,
-              "icon": "https://nominatim.openstreetmap.org/images/mapicons/poi_place_city.p.20.png",
-              "osm_type": "node",
-              "display_name": "Berlin, 10117, Deutschland",
-              "lat": "52.5170365",
-              "type": "city",
-              "place_id": "601546",
-              "lon": "13.3888599",
-              "class": "place"
-            }
-          }
-        }
-      ],
-      "label": "where"
-    },
-    "when": {
-      "extracted": [
-        {
-          "parts": [
-            [
-              {
-                "nlpToken": {
-                  "index": 22,
-                  "word": "New",
-                  "originalText": "New",
-                  "lemma": "New",
-                  "characterOffsetBegin": 564,
-                  "characterOffsetEnd": 567,
-                  "pos": "NNP",
-                  "ner": "DATE",
-                  "normalizedNER": "2017-12-31",
-                  "speaker": "PER0",
-                  "before": " ",
-                  "after": " ",
-                  "timex": {
-                    "tid": "t7",
-                    "type": "DATE",
-                    "value": "2017-12-31"
-                  }
-                },
-                "heideltime": [
-                  {
-                    "@tid": "t6",
-                    "@type": "DATE",
-                    "@value": "2017-12-31",
-                    "#text": "New Year's Eve",
-                    "characterOffset": [
-                      564,
-                      578
-                    ]
-                  }
-                ]
-              },
-              "NNP"
-            ],
-            [
-              {
-                "nlpToken": {
-                  "index": 23,
-                  "word": "Year",
-                  "originalText": "Year",
-                  "lemma": "Year",
-                  "characterOffsetBegin": 568,
-                  "characterOffsetEnd": 572,
-                  "pos": "NNP",
-                  "ner": "DATE",
-                  "normalizedNER": "2017-12-31",
-                  "speaker": "PER0",
-                  "before": " ",
-                  "after": "",
-                  "timex": {
-                    "tid": "t7",
-                    "type": "DATE",
-                    "value": "2017-12-31"
-                  }
-                },
-                "heideltime": [
-                  {
-                    "@tid": "t6",
-                    "@type": "DATE",
-                    "@value": "2017-12-31",
-                    "#text": "New Year's Eve",
-                    "characterOffset": [
-                      564,
-                      578
-                    ]
-                  }
-                ]
-              },
-              "NNP"
-            ],
-            [
-              {
-                "nlpToken": {
-                  "index": 24,
-                  "word": "'s",
-                  "originalText": "'s",
-                  "lemma": "'s",
-                  "characterOffsetBegin": 572,
-                  "characterOffsetEnd": 574,
-                  "pos": "POS",
-                  "ner": "DATE",
-                  "normalizedNER": "2017-12-31",
-                  "speaker": "PER0",
-                  "before": "",
-                  "after": " ",
-                  "timex": {
-                    "tid": "t7",
-                    "type": "DATE",
-                    "value": "2017-12-31"
-                  }
-                },
-                "heideltime": [
-                  {
-                    "@tid": "t6",
-                    "@type": "DATE",
-                    "@value": "2017-12-31",
-                    "#text": "New Year's Eve",
-                    "characterOffset": [
-                      564,
-                      578
-                    ]
-                  }
-                ]
-              },
-              "POS"
-            ],
-            [
-              {
-                "nlpToken": {
-                  "index": 25,
-                  "word": "Eve",
-                  "originalText": "Eve",
-                  "lemma": "Eve",
-                  "characterOffsetBegin": 575,
-                  "characterOffsetEnd": 578,
-                  "pos": "NNP",
-                  "ner": "DATE",
-                  "normalizedNER": "2017-12-31",
-                  "speaker": "PER0",
-                  "before": " ",
-                  "after": " ",
-                  "timex": {
-                    "tid": "t7",
-                    "type": "DATE",
-                    "value": "2017-12-31"
-                  }
-                },
-                "heideltime": [
-                  {
-                    "@tid": "t6",
-                    "@type": "DATE",
-                    "@value": "2017-12-31",
-                    "#text": "New Year's Eve",
-                    "characterOffset": [
-                      564,
-                      578
-                    ]
-                  }
-                ]
-              },
-              "NNP"
-            ]
-          ],
-          "score": 0.5158432113253386,
-          "text": "New Year 's Eve",
-          "enhancement": {
-            "timex": {
-              "start_date": "2017-12-31T00:00:00",
-              "end_date": "2017-12-31T23:59:59"
-            }
-          },
-          "nlpIndexSentence": 3
-        }
-      ],
-      "label": "when"
     }
+  },
+  "fiveWoneH_Metadata": {
+    "process_errors": {}
   }
 }

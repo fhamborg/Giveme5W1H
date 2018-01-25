@@ -25,9 +25,7 @@
     "Event": "hack_equifax_breach"
   },
   "dId": "425999fe2123c75070bde0486c260d2b4926764bb9744761a4617253",
-  "fiveWoneH": {},
-  "fiveWoneH_Metadata": {
-    "process_errors": {},
+  "fiveWoneH": {
     "where": {
       "extracted": [],
       "label": "where"
@@ -85,140 +83,6 @@
         }
       ],
       "label": "when"
-    },
-    "who": {
-      "extracted": [
-        {
-          "parts": [
-            [
-              {
-                "nlpToken": {
-                  "index": 2,
-                  "word": "company",
-                  "originalText": "company",
-                  "lemma": "company",
-                  "characterOffsetBegin": 67,
-                  "characterOffsetEnd": 74,
-                  "pos": "NN",
-                  "ner": "O",
-                  "speaker": "PER0",
-                  "before": " ",
-                  "after": " "
-                }
-              },
-              "NN"
-            ]
-          ],
-          "score": 1.0,
-          "text": "company",
-          "nlpIndexSentence": 1
-        }
-      ],
-      "label": "who"
-    },
-    "what": {
-      "extracted": [
-        {
-          "parts": [
-            [
-              {
-                "nlpToken": {
-                  "index": 6,
-                  "word": "believed",
-                  "originalText": "believed",
-                  "lemma": "believe",
-                  "characterOffsetBegin": 88,
-                  "characterOffsetEnd": 96,
-                  "pos": "VBD",
-                  "ner": "O",
-                  "speaker": "PER0",
-                  "before": " ",
-                  "after": " "
-                }
-              },
-              "VBD"
-            ],
-            [
-              {
-                "nlpToken": {
-                  "index": 7,
-                  "word": "up",
-                  "originalText": "up",
-                  "lemma": "up",
-                  "characterOffsetBegin": 97,
-                  "characterOffsetEnd": 99,
-                  "pos": "RP",
-                  "ner": "O",
-                  "speaker": "PER0",
-                  "before": " ",
-                  "after": " "
-                }
-              },
-              "RP"
-            ],
-            [
-              {
-                "nlpToken": {
-                  "index": 8,
-                  "word": "to",
-                  "originalText": "to",
-                  "lemma": "to",
-                  "characterOffsetBegin": 100,
-                  "characterOffsetEnd": 102,
-                  "pos": "TO",
-                  "ner": "O",
-                  "speaker": "PER0",
-                  "before": " ",
-                  "after": " "
-                }
-              },
-              "TO"
-            ],
-            [
-              {
-                "nlpToken": {
-                  "index": 9,
-                  "word": "145.5",
-                  "originalText": "145.5",
-                  "lemma": "145.5",
-                  "characterOffsetBegin": 103,
-                  "characterOffsetEnd": 108,
-                  "pos": "CD",
-                  "ner": "NUMBER",
-                  "normalizedNER": "<=1.455E8",
-                  "speaker": "PER0",
-                  "before": " ",
-                  "after": " "
-                }
-              },
-              "CD"
-            ],
-            [
-              {
-                "nlpToken": {
-                  "index": 10,
-                  "word": "million",
-                  "originalText": "million",
-                  "lemma": "million",
-                  "characterOffsetBegin": 109,
-                  "characterOffsetEnd": 116,
-                  "pos": "CD",
-                  "ner": "NUMBER",
-                  "normalizedNER": "<=1.455E8",
-                  "speaker": "PER0",
-                  "before": " ",
-                  "after": " "
-                }
-              },
-              "CD"
-            ]
-          ],
-          "score": 1.0,
-          "text": "believed up to 145.5 million",
-          "nlpIndexSentence": 1
-        }
-      ],
-      "label": "what"
     },
     "how": {
       "extracted": [
@@ -412,6 +276,140 @@
       ],
       "label": "how"
     },
+    "who": {
+      "extracted": [
+        {
+          "parts": [
+            [
+              {
+                "nlpToken": {
+                  "index": 2,
+                  "word": "company",
+                  "originalText": "company",
+                  "lemma": "company",
+                  "characterOffsetBegin": 67,
+                  "characterOffsetEnd": 74,
+                  "pos": "NN",
+                  "ner": "O",
+                  "speaker": "PER0",
+                  "before": " ",
+                  "after": " "
+                }
+              },
+              "NN"
+            ]
+          ],
+          "score": 1.0,
+          "text": "company",
+          "nlpIndexSentence": 1
+        }
+      ],
+      "label": "who"
+    },
+    "what": {
+      "extracted": [
+        {
+          "parts": [
+            [
+              {
+                "nlpToken": {
+                  "index": 6,
+                  "word": "believed",
+                  "originalText": "believed",
+                  "lemma": "believe",
+                  "characterOffsetBegin": 88,
+                  "characterOffsetEnd": 96,
+                  "pos": "VBD",
+                  "ner": "O",
+                  "speaker": "PER0",
+                  "before": " ",
+                  "after": " "
+                }
+              },
+              "VBD"
+            ],
+            [
+              {
+                "nlpToken": {
+                  "index": 7,
+                  "word": "up",
+                  "originalText": "up",
+                  "lemma": "up",
+                  "characterOffsetBegin": 97,
+                  "characterOffsetEnd": 99,
+                  "pos": "RP",
+                  "ner": "O",
+                  "speaker": "PER0",
+                  "before": " ",
+                  "after": " "
+                }
+              },
+              "RP"
+            ],
+            [
+              {
+                "nlpToken": {
+                  "index": 8,
+                  "word": "to",
+                  "originalText": "to",
+                  "lemma": "to",
+                  "characterOffsetBegin": 100,
+                  "characterOffsetEnd": 102,
+                  "pos": "TO",
+                  "ner": "O",
+                  "speaker": "PER0",
+                  "before": " ",
+                  "after": " "
+                }
+              },
+              "TO"
+            ],
+            [
+              {
+                "nlpToken": {
+                  "index": 9,
+                  "word": "145.5",
+                  "originalText": "145.5",
+                  "lemma": "145.5",
+                  "characterOffsetBegin": 103,
+                  "characterOffsetEnd": 108,
+                  "pos": "CD",
+                  "ner": "NUMBER",
+                  "normalizedNER": "<=1.455E8",
+                  "speaker": "PER0",
+                  "before": " ",
+                  "after": " "
+                }
+              },
+              "CD"
+            ],
+            [
+              {
+                "nlpToken": {
+                  "index": 10,
+                  "word": "million",
+                  "originalText": "million",
+                  "lemma": "million",
+                  "characterOffsetBegin": 109,
+                  "characterOffsetEnd": 116,
+                  "pos": "CD",
+                  "ner": "NUMBER",
+                  "normalizedNER": "<=1.455E8",
+                  "speaker": "PER0",
+                  "before": " ",
+                  "after": " "
+                }
+              },
+              "CD"
+            ]
+          ],
+          "score": 1.0,
+          "text": "believed up to 145.5 million",
+          "nlpIndexSentence": 1
+        }
+      ],
+      "label": "what"
+    },
     "why": {
       "extracted": [
         {
@@ -442,5 +440,8 @@
       ],
       "label": "why"
     }
+  },
+  "fiveWoneH_Metadata": {
+    "process_errors": {}
   }
 }

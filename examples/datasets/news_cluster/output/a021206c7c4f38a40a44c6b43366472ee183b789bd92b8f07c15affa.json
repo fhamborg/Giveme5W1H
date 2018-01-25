@@ -25,9 +25,7 @@
     "Event": "tourist_boat_hits_bridge_in_germany"
   },
   "dId": "a021206c7c4f38a40a44c6b43366472ee183b789bd92b8f07c15affa",
-  "fiveWoneH": {},
-  "fiveWoneH_Metadata": {
-    "process_errors": {},
+  "fiveWoneH": {
     "who": {
       "extracted": [
         {
@@ -139,6 +137,53 @@
         }
       ],
       "label": "what"
+    },
+    "why": {
+      "extracted": [
+        {
+          "parts": [
+            [
+              {
+                "nlpToken": {
+                  "index": 1,
+                  "word": "Tourist",
+                  "originalText": "Tourist",
+                  "lemma": "Tourist",
+                  "characterOffsetBegin": 0,
+                  "characterOffsetEnd": 7,
+                  "pos": "NNP",
+                  "ner": "O",
+                  "speaker": "PER0",
+                  "before": "",
+                  "after": " "
+                }
+              },
+              "NNP"
+            ],
+            [
+              {
+                "nlpToken": {
+                  "index": 2,
+                  "word": "ship",
+                  "originalText": "ship",
+                  "lemma": "ship",
+                  "characterOffsetBegin": 8,
+                  "characterOffsetEnd": 12,
+                  "pos": "NN",
+                  "ner": "O",
+                  "speaker": "PER0",
+                  "before": " ",
+                  "after": " "
+                }
+              },
+              "NN"
+            ]
+          ],
+          "score": 0.5860000000000001,
+          "text": "Tourist ship"
+        }
+      ],
+      "label": "why"
     },
     "how": {
       "extracted": [
@@ -336,53 +381,6 @@
       ],
       "label": "how"
     },
-    "why": {
-      "extracted": [
-        {
-          "parts": [
-            [
-              {
-                "nlpToken": {
-                  "index": 1,
-                  "word": "Tourist",
-                  "originalText": "Tourist",
-                  "lemma": "Tourist",
-                  "characterOffsetBegin": 0,
-                  "characterOffsetEnd": 7,
-                  "pos": "NNP",
-                  "ner": "O",
-                  "speaker": "PER0",
-                  "before": "",
-                  "after": " "
-                }
-              },
-              "NNP"
-            ],
-            [
-              {
-                "nlpToken": {
-                  "index": 2,
-                  "word": "ship",
-                  "originalText": "ship",
-                  "lemma": "ship",
-                  "characterOffsetBegin": 8,
-                  "characterOffsetEnd": 12,
-                  "pos": "NN",
-                  "ner": "O",
-                  "speaker": "PER0",
-                  "before": " ",
-                  "after": " "
-                }
-              },
-              "NN"
-            ]
-          ],
-          "score": 0.5860000000000001,
-          "text": "Tourist ship"
-        }
-      ],
-      "label": "why"
-    },
     "where": {
       "extracted": [
         {
@@ -493,5 +491,8 @@
       "extracted": [],
       "label": "when"
     }
+  },
+  "fiveWoneH_Metadata": {
+    "process_errors": {}
   }
 }

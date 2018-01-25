@@ -26,9 +26,229 @@
     "EventId": 35,
     "Event": "new_york_family_of_5_among_12_killed_in_costa_rica_plane_crash"
   },
-  "fiveWoneH": {},
-  "fiveWoneH_Metadata": {
-    "process_errors": {},
+  "fiveWoneH": {
+    "who": {
+      "extracted": [
+        {
+          "parts": [
+            [
+              {
+                "nlpToken": {
+                  "index": 1,
+                  "word": "A",
+                  "originalText": "A",
+                  "lemma": "a",
+                  "characterOffsetBegin": 64,
+                  "characterOffsetEnd": 65,
+                  "pos": "DT",
+                  "ner": "O",
+                  "speaker": "PER0",
+                  "before": " ",
+                  "after": " "
+                }
+              },
+              "DT"
+            ],
+            [
+              {
+                "nlpToken": {
+                  "index": 2,
+                  "word": "family",
+                  "originalText": "family",
+                  "lemma": "family",
+                  "characterOffsetBegin": 66,
+                  "characterOffsetEnd": 72,
+                  "pos": "NN",
+                  "ner": "O",
+                  "speaker": "PER0",
+                  "before": " ",
+                  "after": " "
+                }
+              },
+              "NN"
+            ],
+            [
+              {
+                "nlpToken": {
+                  "index": 3,
+                  "word": "of",
+                  "originalText": "of",
+                  "lemma": "of",
+                  "characterOffsetBegin": 73,
+                  "characterOffsetEnd": 75,
+                  "pos": "IN",
+                  "ner": "O",
+                  "speaker": "PER0",
+                  "before": " ",
+                  "after": " "
+                }
+              },
+              "IN"
+            ],
+            [
+              {
+                "nlpToken": {
+                  "index": 4,
+                  "word": "4",
+                  "originalText": "4",
+                  "lemma": "4",
+                  "characterOffsetBegin": 76,
+                  "characterOffsetEnd": 77,
+                  "pos": "CD",
+                  "ner": "NUMBER",
+                  "normalizedNER": "4.0",
+                  "speaker": "PER0",
+                  "before": " ",
+                  "after": " "
+                }
+              },
+              "CD"
+            ],
+            [
+              {
+                "nlpToken": {
+                  "index": 5,
+                  "word": "from",
+                  "originalText": "from",
+                  "lemma": "from",
+                  "characterOffsetBegin": 78,
+                  "characterOffsetEnd": 82,
+                  "pos": "IN",
+                  "ner": "O",
+                  "speaker": "PER0",
+                  "before": " ",
+                  "after": " "
+                }
+              },
+              "IN"
+            ],
+            [
+              {
+                "nlpToken": {
+                  "index": 6,
+                  "word": "Florida",
+                  "originalText": "Florida",
+                  "lemma": "Florida",
+                  "characterOffsetBegin": 83,
+                  "characterOffsetEnd": 90,
+                  "pos": "NNP",
+                  "ner": "LOCATION",
+                  "speaker": "PER0",
+                  "before": " ",
+                  "after": " "
+                },
+                "aida": [
+                  {
+                    "mention": {
+                      "allEntities": [
+                        {
+                          "kbIdentifier": "YAGO:Florida",
+                          "disambiguationScore": "1"
+                        }
+                      ],
+                      "offset": 83,
+                      "name": "Florida",
+                      "length": 7,
+                      "bestEntity": {
+                        "kbIdentifier": "YAGO:Florida",
+                        "disambiguationScore": "1"
+                      }
+                    },
+                    "bestEntityMetadata": {
+                      "knowledgebase": "YAGO",
+                      "depictionurl": "http://upload.wikimedia.org/wikipedia/commons/f/f7/Flag_of_Florida.svg",
+                      "depictionthumbnailurl": "http://upload.wikimedia.org/wikipedia/commons/thumbFlag_of_Florida.svg/200px-Flag_of_Florida.svg",
+                      "importance": 1.9777065122532845e-05,
+                      "entityId": "Florida",
+                      "type": [
+                        "YAGO_wordnet_district_108552138",
+                        "YAGO_yagoPermanentlyLocatedEntity",
+                        "YAGO_yagoLegalActorGeo",
+                        "YAGO_wikicategory_States_of_the_Confederate_States_of_America",
+                        "YAGO_wikicategory_Peninsulas_of_the_United_States",
+                        "YAGO_wordnet_state_108654360",
+                        "YAGO_wikicategory_States_and_territories_established_in_1845",
+                        "YAGO_wordnet_region_108630985",
+                        "YAGO_yagoGeoEntity",
+                        "YAGO_wordnet_physical_entity_100001930",
+                        "YAGO_wordnet_entity_100001740",
+                        "YAGO_wordnet_object_100002684",
+                        "YAGO_wordnet_land_109334396",
+                        "YAGO_wordnet_location_100027167",
+                        "YAGO_wordnet_administrative_district_108491826",
+                        "YAGO_wordnet_peninsula_109388848",
+                        "YAGO_wikicategory_States_of_the_United_States"
+                      ],
+                      "readableRepr": "Florida",
+                      "url": "http://en.wikipedia.org/wiki/Florida"
+                    }
+                  }
+                ]
+              },
+              "NNP"
+            ]
+          ],
+          "score": 1.0,
+          "text": "A family of 4 from Florida",
+          "nlpIndexSentence": 1
+        }
+      ],
+      "label": "who"
+    },
+    "what": {
+      "extracted": [
+        {
+          "parts": [
+            [
+              {
+                "nlpToken": {
+                  "index": 8,
+                  "word": "perished",
+                  "originalText": "perished",
+                  "lemma": "perish",
+                  "characterOffsetBegin": 96,
+                  "characterOffsetEnd": 104,
+                  "pos": "VBD",
+                  "ner": "O",
+                  "speaker": "PER0",
+                  "before": " ",
+                  "after": " "
+                }
+              },
+              "VBD"
+            ],
+            [
+              {
+                "nlpToken": {
+                  "index": 9,
+                  "word": "Sunday",
+                  "originalText": "Sunday",
+                  "lemma": "Sunday",
+                  "characterOffsetBegin": 105,
+                  "characterOffsetEnd": 111,
+                  "pos": "NNP",
+                  "ner": "DATE",
+                  "normalizedNER": "2017-12-31",
+                  "speaker": "PER0",
+                  "before": " ",
+                  "after": " ",
+                  "timex": {
+                    "tid": "t1",
+                    "type": "DATE",
+                    "value": "2017-12-31"
+                  }
+                }
+              },
+              "NNP"
+            ]
+          ],
+          "score": 1.0,
+          "text": "perished Sunday",
+          "nlpIndexSentence": 1
+        }
+      ],
+      "label": "what"
+    },
     "how": {
       "extracted": [
         {
@@ -363,228 +583,6 @@
         }
       ],
       "label": "how"
-    },
-    "who": {
-      "extracted": [
-        {
-          "parts": [
-            [
-              {
-                "nlpToken": {
-                  "index": 1,
-                  "word": "A",
-                  "originalText": "A",
-                  "lemma": "a",
-                  "characterOffsetBegin": 64,
-                  "characterOffsetEnd": 65,
-                  "pos": "DT",
-                  "ner": "O",
-                  "speaker": "PER0",
-                  "before": " ",
-                  "after": " "
-                }
-              },
-              "DT"
-            ],
-            [
-              {
-                "nlpToken": {
-                  "index": 2,
-                  "word": "family",
-                  "originalText": "family",
-                  "lemma": "family",
-                  "characterOffsetBegin": 66,
-                  "characterOffsetEnd": 72,
-                  "pos": "NN",
-                  "ner": "O",
-                  "speaker": "PER0",
-                  "before": " ",
-                  "after": " "
-                }
-              },
-              "NN"
-            ],
-            [
-              {
-                "nlpToken": {
-                  "index": 3,
-                  "word": "of",
-                  "originalText": "of",
-                  "lemma": "of",
-                  "characterOffsetBegin": 73,
-                  "characterOffsetEnd": 75,
-                  "pos": "IN",
-                  "ner": "O",
-                  "speaker": "PER0",
-                  "before": " ",
-                  "after": " "
-                }
-              },
-              "IN"
-            ],
-            [
-              {
-                "nlpToken": {
-                  "index": 4,
-                  "word": "4",
-                  "originalText": "4",
-                  "lemma": "4",
-                  "characterOffsetBegin": 76,
-                  "characterOffsetEnd": 77,
-                  "pos": "CD",
-                  "ner": "NUMBER",
-                  "normalizedNER": "4.0",
-                  "speaker": "PER0",
-                  "before": " ",
-                  "after": " "
-                }
-              },
-              "CD"
-            ],
-            [
-              {
-                "nlpToken": {
-                  "index": 5,
-                  "word": "from",
-                  "originalText": "from",
-                  "lemma": "from",
-                  "characterOffsetBegin": 78,
-                  "characterOffsetEnd": 82,
-                  "pos": "IN",
-                  "ner": "O",
-                  "speaker": "PER0",
-                  "before": " ",
-                  "after": " "
-                }
-              },
-              "IN"
-            ],
-            [
-              {
-                "nlpToken": {
-                  "index": 6,
-                  "word": "Florida",
-                  "originalText": "Florida",
-                  "lemma": "Florida",
-                  "characterOffsetBegin": 83,
-                  "characterOffsetEnd": 90,
-                  "pos": "NNP",
-                  "ner": "LOCATION",
-                  "speaker": "PER0",
-                  "before": " ",
-                  "after": " "
-                },
-                "aida": [
-                  {
-                    "mention": {
-                      "allEntities": [
-                        {
-                          "kbIdentifier": "YAGO:Florida",
-                          "disambiguationScore": "1"
-                        }
-                      ],
-                      "offset": 83,
-                      "name": "Florida",
-                      "length": 7,
-                      "bestEntity": {
-                        "kbIdentifier": "YAGO:Florida",
-                        "disambiguationScore": "1"
-                      }
-                    },
-                    "bestEntityMetadata": {
-                      "knowledgebase": "YAGO",
-                      "depictionurl": "http://upload.wikimedia.org/wikipedia/commons/f/f7/Flag_of_Florida.svg",
-                      "depictionthumbnailurl": "http://upload.wikimedia.org/wikipedia/commons/thumbFlag_of_Florida.svg/200px-Flag_of_Florida.svg",
-                      "importance": 1.9777065122532845e-05,
-                      "entityId": "Florida",
-                      "type": [
-                        "YAGO_wordnet_district_108552138",
-                        "YAGO_yagoPermanentlyLocatedEntity",
-                        "YAGO_yagoLegalActorGeo",
-                        "YAGO_wikicategory_States_of_the_Confederate_States_of_America",
-                        "YAGO_wikicategory_Peninsulas_of_the_United_States",
-                        "YAGO_wordnet_state_108654360",
-                        "YAGO_wikicategory_States_and_territories_established_in_1845",
-                        "YAGO_wordnet_region_108630985",
-                        "YAGO_yagoGeoEntity",
-                        "YAGO_wordnet_physical_entity_100001930",
-                        "YAGO_wordnet_entity_100001740",
-                        "YAGO_wordnet_object_100002684",
-                        "YAGO_wordnet_land_109334396",
-                        "YAGO_wordnet_location_100027167",
-                        "YAGO_wordnet_administrative_district_108491826",
-                        "YAGO_wordnet_peninsula_109388848",
-                        "YAGO_wikicategory_States_of_the_United_States"
-                      ],
-                      "readableRepr": "Florida",
-                      "url": "http://en.wikipedia.org/wiki/Florida"
-                    }
-                  }
-                ]
-              },
-              "NNP"
-            ]
-          ],
-          "score": 1.0,
-          "text": "A family of 4 from Florida",
-          "nlpIndexSentence": 1
-        }
-      ],
-      "label": "who"
-    },
-    "what": {
-      "extracted": [
-        {
-          "parts": [
-            [
-              {
-                "nlpToken": {
-                  "index": 8,
-                  "word": "perished",
-                  "originalText": "perished",
-                  "lemma": "perish",
-                  "characterOffsetBegin": 96,
-                  "characterOffsetEnd": 104,
-                  "pos": "VBD",
-                  "ner": "O",
-                  "speaker": "PER0",
-                  "before": " ",
-                  "after": " "
-                }
-              },
-              "VBD"
-            ],
-            [
-              {
-                "nlpToken": {
-                  "index": 9,
-                  "word": "Sunday",
-                  "originalText": "Sunday",
-                  "lemma": "Sunday",
-                  "characterOffsetBegin": 105,
-                  "characterOffsetEnd": 111,
-                  "pos": "NNP",
-                  "ner": "DATE",
-                  "normalizedNER": "2017-12-31",
-                  "speaker": "PER0",
-                  "before": " ",
-                  "after": " ",
-                  "timex": {
-                    "tid": "t1",
-                    "type": "DATE",
-                    "value": "2017-12-31"
-                  }
-                }
-              },
-              "NNP"
-            ]
-          ],
-          "score": 1.0,
-          "text": "perished Sunday",
-          "nlpIndexSentence": 1
-        }
-      ],
-      "label": "what"
     },
     "why": {
       "extracted": [
@@ -950,7 +948,7 @@
               "NN"
             ]
           ],
-          "score": 0.5625592612109107,
+          "score": 0.5492259278775773,
           "text": "noon",
           "enhancement": {
             "timex": {
@@ -963,5 +961,8 @@
       ],
       "label": "when"
     }
+  },
+  "fiveWoneH_Metadata": {
+    "process_errors": {}
   }
 }

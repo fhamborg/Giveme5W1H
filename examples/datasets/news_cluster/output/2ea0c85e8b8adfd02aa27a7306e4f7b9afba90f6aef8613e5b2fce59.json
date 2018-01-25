@@ -23,13 +23,206 @@
     "EventId": 32,
     "Event": "russian_space_experts_regain_control_of_1st_angola_satellite"
   },
-  "fiveWoneH": {},
-  "fiveWoneH_Metadata": {
-    "process_errors": {},
-    "where": {
+  "fiveWoneH": {
+    "who": {
       "extracted": [
         {
           "parts": [
+            [
+              {
+                "nlpToken": {
+                  "index": 1,
+                  "word": "Russian",
+                  "originalText": "Russian",
+                  "lemma": "russian",
+                  "characterOffsetBegin": 0,
+                  "characterOffsetEnd": 7,
+                  "pos": "JJ",
+                  "ner": "MISC",
+                  "speaker": "PER0",
+                  "before": "",
+                  "after": " "
+                },
+                "aida": [
+                  {
+                    "mention": {
+                      "allEntities": [
+                        {
+                          "kbIdentifier": "YAGO:Russia",
+                          "disambiguationScore": "0.31939"
+                        }
+                      ],
+                      "offset": 0,
+                      "name": "Russian",
+                      "length": 7,
+                      "bestEntity": {
+                        "kbIdentifier": "YAGO:Russia",
+                        "disambiguationScore": "0.31939"
+                      }
+                    },
+                    "bestEntityMetadata": {
+                      "knowledgebase": "YAGO",
+                      "depictionurl": "http://upload.wikimedia.org/wikipedia/en/f/f3/Flag_of_Russia.svg",
+                      "depictionthumbnailurl": "http://upload.wikimedia.org/wikipedia/en/thumbFlag_of_Russia.svg/200px-Flag_of_Russia.svg",
+                      "importance": 5.571004259868407e-06,
+                      "entityId": "Russia",
+                      "type": [
+                        "YAGO_wordnet_system_108435388",
+                        "YAGO_wordnet_district_108552138",
+                        "YAGO_yagoPermanentlyLocatedEntity",
+                        "YAGO_yagoLegalActorGeo",
+                        "YAGO_wordnet_state_108654360",
+                        "YAGO_wikicategory_Member_states_of_the_Commonwealth_of_Independent_States",
+                        "YAGO_wikicategory_North_Asian_countries",
+                        "YAGO_wikicategory_States_and_territories_established_in_862",
+                        "YAGO_wikicategory_Russian\\u002dspeaking_countries_and_territories",
+                        "YAGO_wordnet_country_108544813",
+                        "YAGO_wikicategory_Member_states_of_the_United_Nations",
+                        "YAGO_wordnet_economy_108366753",
+                        "YAGO_wordnet_abstraction_100002137",
+                        "YAGO_wordnet_region_108630985",
+                        "YAGO_wikicategory_Northeast_Asian_countries",
+                        "YAGO_yagoGeoEntity",
+                        "YAGO_wikicategory_World_Trade_Organization_member_economies",
+                        "YAGO_wordnet_physical_entity_100001930",
+                        "YAGO_wikicategory_Central_Asian_countries",
+                        "YAGO_wikicategory_Slavic_countries_and_territories",
+                        "YAGO_wordnet_entity_100001740",
+                        "YAGO_wikicategory_Federal_countries",
+                        "YAGO_wordnet_object_100002684",
+                        "YAGO_wordnet_group_100031264",
+                        "YAGO_wordnet_location_100027167",
+                        "YAGO_wordnet_administrative_district_108491826",
+                        "YAGO_wikicategory_Countries_in_Europe"
+                      ],
+                      "readableRepr": "Russia",
+                      "url": "http://en.wikipedia.org/wiki/Russia"
+                    }
+                  }
+                ]
+              },
+              "JJ"
+            ],
+            [
+              {
+                "nlpToken": {
+                  "index": 2,
+                  "word": "space",
+                  "originalText": "space",
+                  "lemma": "space",
+                  "characterOffsetBegin": 8,
+                  "characterOffsetEnd": 13,
+                  "pos": "NN",
+                  "ner": "O",
+                  "speaker": "PER0",
+                  "before": " ",
+                  "after": " "
+                }
+              },
+              "NN"
+            ],
+            [
+              {
+                "nlpToken": {
+                  "index": 3,
+                  "word": "experts",
+                  "originalText": "experts",
+                  "lemma": "expert",
+                  "characterOffsetBegin": 14,
+                  "characterOffsetEnd": 21,
+                  "pos": "NNS",
+                  "ner": "O",
+                  "speaker": "PER0",
+                  "before": " ",
+                  "after": " "
+                }
+              },
+              "NNS"
+            ]
+          ],
+          "score": 1.0,
+          "text": "Russian space experts"
+        }
+      ],
+      "label": "who"
+    },
+    "what": {
+      "extracted": [
+        {
+          "parts": [
+            [
+              {
+                "nlpToken": {
+                  "index": 4,
+                  "word": "regain",
+                  "originalText": "regain",
+                  "lemma": "regain",
+                  "characterOffsetBegin": 22,
+                  "characterOffsetEnd": 28,
+                  "pos": "VBP",
+                  "ner": "O",
+                  "speaker": "PER0",
+                  "before": " ",
+                  "after": " "
+                }
+              },
+              "VBP"
+            ],
+            [
+              {
+                "nlpToken": {
+                  "index": 5,
+                  "word": "control",
+                  "originalText": "control",
+                  "lemma": "control",
+                  "characterOffsetBegin": 29,
+                  "characterOffsetEnd": 36,
+                  "pos": "NN",
+                  "ner": "O",
+                  "speaker": "PER0",
+                  "before": " ",
+                  "after": " "
+                }
+              },
+              "NN"
+            ],
+            [
+              {
+                "nlpToken": {
+                  "index": 6,
+                  "word": "of",
+                  "originalText": "of",
+                  "lemma": "of",
+                  "characterOffsetBegin": 37,
+                  "characterOffsetEnd": 39,
+                  "pos": "IN",
+                  "ner": "O",
+                  "speaker": "PER0",
+                  "before": " ",
+                  "after": " "
+                }
+              },
+              "IN"
+            ],
+            [
+              {
+                "nlpToken": {
+                  "index": 7,
+                  "word": "1st",
+                  "originalText": "1st",
+                  "lemma": "1st",
+                  "characterOffsetBegin": 40,
+                  "characterOffsetEnd": 43,
+                  "pos": "JJ",
+                  "ner": "ORDINAL",
+                  "normalizedNER": "1.0",
+                  "speaker": "PER0",
+                  "before": " ",
+                  "after": " "
+                }
+              },
+              "JJ"
+            ],
             [
               {
                 "nlpToken": {
@@ -105,196 +298,31 @@
                 ]
               },
               "NNP"
-            ]
-          ],
-          "score": 0.6699999999999999,
-          "text": "Angola",
-          "enhancement": {
-            "openstreetmap_nominatim": {
-              "place_id": "178561916",
-              "licence": "Data \u00a9 OpenStreetMap contributors, ODbL 1.0. http://www.openstreetmap.org/copyright",
-              "osm_type": "relation",
-              "osm_id": "195267",
-              "boundingbox": [
-                -18.038945,
-                -4.3880634,
-                11.4609793,
-                24.0878856
-              ],
-              "lat": "-11.8775768",
-              "lon": "17.5691241",
-              "display_name": "Angola",
-              "class": "boundary",
-              "type": "administrative",
-              "importance": 0.29067457730118,
-              "icon": "https://nominatim.openstreetmap.org/images/mapicons/poi_boundary_administrative.p.20.png"
-            }
-          }
-        }
-      ],
-      "label": "where"
-    },
-    "when": {
-      "extracted": [
-        {
-          "parts": [
-            [
-              {
-                "nlpToken": {
-                  "index": 18,
-                  "word": "earlier",
-                  "originalText": "earlier",
-                  "lemma": "earlier",
-                  "characterOffsetBegin": 162,
-                  "characterOffsetEnd": 169,
-                  "pos": "RBR",
-                  "ner": "DATE",
-                  "normalizedNER": "2017-W52",
-                  "speaker": "PER0",
-                  "before": " ",
-                  "after": " ",
-                  "timex": {
-                    "tid": "t1",
-                    "type": "DATE",
-                    "value": "2017-W52"
-                  }
-                },
-                "heideltime": [
-                  {
-                    "@tid": "t2",
-                    "@type": "DATE",
-                    "@value": "2017-W52",
-                    "@mod": "START",
-                    "#text": "earlier this week",
-                    "characterOffset": [
-                      162,
-                      179
-                    ]
-                  },
-                  {
-                    "@tid": "t4",
-                    "@type": "DATE",
-                    "@value": "2017-W52",
-                    "@mod": "START",
-                    "#text": "earlier this week",
-                    "characterOffset": [
-                      162,
-                      179
-                    ]
-                  }
-                ]
-              },
-              "RBR"
             ],
             [
               {
                 "nlpToken": {
-                  "index": 19,
-                  "word": "this",
-                  "originalText": "this",
-                  "lemma": "this",
-                  "characterOffsetBegin": 170,
-                  "characterOffsetEnd": 174,
-                  "pos": "DT",
-                  "ner": "DATE",
-                  "normalizedNER": "2017-W52",
-                  "speaker": "PER0",
-                  "before": " ",
-                  "after": " ",
-                  "timex": {
-                    "tid": "t1",
-                    "type": "DATE",
-                    "value": "2017-W52"
-                  }
-                },
-                "heideltime": [
-                  {
-                    "@tid": "t2",
-                    "@type": "DATE",
-                    "@value": "2017-W52",
-                    "@mod": "START",
-                    "#text": "earlier this week",
-                    "characterOffset": [
-                      162,
-                      179
-                    ]
-                  },
-                  {
-                    "@tid": "t4",
-                    "@type": "DATE",
-                    "@value": "2017-W52",
-                    "@mod": "START",
-                    "#text": "earlier this week",
-                    "characterOffset": [
-                      162,
-                      179
-                    ]
-                  }
-                ]
-              },
-              "DT"
-            ],
-            [
-              {
-                "nlpToken": {
-                  "index": 20,
-                  "word": "week",
-                  "originalText": "week",
-                  "lemma": "week",
-                  "characterOffsetBegin": 175,
-                  "characterOffsetEnd": 179,
+                  "index": 9,
+                  "word": "satellite",
+                  "originalText": "satellite",
+                  "lemma": "satellite",
+                  "characterOffsetBegin": 51,
+                  "characterOffsetEnd": 60,
                   "pos": "NN",
-                  "ner": "DATE",
-                  "normalizedNER": "2017-W52",
+                  "ner": "O",
                   "speaker": "PER0",
                   "before": " ",
-                  "after": "",
-                  "timex": {
-                    "tid": "t1",
-                    "type": "DATE",
-                    "value": "2017-W52"
-                  }
-                },
-                "heideltime": [
-                  {
-                    "@tid": "t2",
-                    "@type": "DATE",
-                    "@value": "2017-W52",
-                    "@mod": "START",
-                    "#text": "earlier this week",
-                    "characterOffset": [
-                      162,
-                      179
-                    ]
-                  },
-                  {
-                    "@tid": "t4",
-                    "@type": "DATE",
-                    "@value": "2017-W52",
-                    "@mod": "START",
-                    "#text": "earlier this week",
-                    "characterOffset": [
-                      162,
-                      179
-                    ]
-                  }
-                ]
+                  "after": ""
+                }
               },
               "NN"
             ]
           ],
-          "score": 0.47195286674810016,
-          "text": "earlier this week",
-          "enhancement": {
-            "timex": {
-              "start_date": "2017-12-31T00:00:00",
-              "end_date": "2018-01-06T23:59:59"
-            }
-          },
-          "nlpIndexSentence": 1
+          "score": 1.0,
+          "text": "regain control of 1st Angola satellite"
         }
       ],
-      "label": "when"
+      "label": "what"
     },
     "how": {
       "extracted": [
@@ -603,205 +631,40 @@
       ],
       "label": "how"
     },
-    "who": {
+    "why": {
       "extracted": [
         {
           "parts": [
-            [
-              {
-                "nlpToken": {
-                  "index": 1,
-                  "word": "Russian",
-                  "originalText": "Russian",
-                  "lemma": "russian",
-                  "characterOffsetBegin": 0,
-                  "characterOffsetEnd": 7,
-                  "pos": "JJ",
-                  "ner": "MISC",
-                  "speaker": "PER0",
-                  "before": "",
-                  "after": " "
-                },
-                "aida": [
-                  {
-                    "mention": {
-                      "allEntities": [
-                        {
-                          "kbIdentifier": "YAGO:Russia",
-                          "disambiguationScore": "0.31939"
-                        }
-                      ],
-                      "offset": 0,
-                      "name": "Russian",
-                      "length": 7,
-                      "bestEntity": {
-                        "kbIdentifier": "YAGO:Russia",
-                        "disambiguationScore": "0.31939"
-                      }
-                    },
-                    "bestEntityMetadata": {
-                      "knowledgebase": "YAGO",
-                      "depictionurl": "http://upload.wikimedia.org/wikipedia/en/f/f3/Flag_of_Russia.svg",
-                      "depictionthumbnailurl": "http://upload.wikimedia.org/wikipedia/en/thumbFlag_of_Russia.svg/200px-Flag_of_Russia.svg",
-                      "importance": 5.571004259868407e-06,
-                      "entityId": "Russia",
-                      "type": [
-                        "YAGO_wordnet_system_108435388",
-                        "YAGO_wordnet_district_108552138",
-                        "YAGO_yagoPermanentlyLocatedEntity",
-                        "YAGO_yagoLegalActorGeo",
-                        "YAGO_wordnet_state_108654360",
-                        "YAGO_wikicategory_Member_states_of_the_Commonwealth_of_Independent_States",
-                        "YAGO_wikicategory_North_Asian_countries",
-                        "YAGO_wikicategory_States_and_territories_established_in_862",
-                        "YAGO_wikicategory_Russian\\u002dspeaking_countries_and_territories",
-                        "YAGO_wordnet_country_108544813",
-                        "YAGO_wikicategory_Member_states_of_the_United_Nations",
-                        "YAGO_wordnet_economy_108366753",
-                        "YAGO_wordnet_abstraction_100002137",
-                        "YAGO_wordnet_region_108630985",
-                        "YAGO_wikicategory_Northeast_Asian_countries",
-                        "YAGO_yagoGeoEntity",
-                        "YAGO_wikicategory_World_Trade_Organization_member_economies",
-                        "YAGO_wordnet_physical_entity_100001930",
-                        "YAGO_wikicategory_Central_Asian_countries",
-                        "YAGO_wikicategory_Slavic_countries_and_territories",
-                        "YAGO_wordnet_entity_100001740",
-                        "YAGO_wikicategory_Federal_countries",
-                        "YAGO_wordnet_object_100002684",
-                        "YAGO_wordnet_group_100031264",
-                        "YAGO_wordnet_location_100027167",
-                        "YAGO_wordnet_administrative_district_108491826",
-                        "YAGO_wikicategory_Countries_in_Europe"
-                      ],
-                      "readableRepr": "Russia",
-                      "url": "http://en.wikipedia.org/wiki/Russia"
-                    }
-                  }
-                ]
-              },
-              "JJ"
-            ],
-            [
-              {
-                "nlpToken": {
-                  "index": 2,
-                  "word": "space",
-                  "originalText": "space",
-                  "lemma": "space",
-                  "characterOffsetBegin": 8,
-                  "characterOffsetEnd": 13,
-                  "pos": "NN",
-                  "ner": "O",
-                  "speaker": "PER0",
-                  "before": " ",
-                  "after": " "
-                }
-              },
-              "NN"
-            ],
-            [
-              {
-                "nlpToken": {
-                  "index": 3,
-                  "word": "experts",
-                  "originalText": "experts",
-                  "lemma": "expert",
-                  "characterOffsetBegin": 14,
-                  "characterOffsetEnd": 21,
-                  "pos": "NNS",
-                  "ner": "O",
-                  "speaker": "PER0",
-                  "before": " ",
-                  "after": " "
-                }
-              },
-              "NNS"
-            ]
-          ],
-          "score": 1.0,
-          "text": "Russian space experts"
-        }
-      ],
-      "label": "who"
-    },
-    "what": {
-      "extracted": [
-        {
-          "parts": [
-            [
-              {
-                "nlpToken": {
-                  "index": 4,
-                  "word": "regain",
-                  "originalText": "regain",
-                  "lemma": "regain",
-                  "characterOffsetBegin": 22,
-                  "characterOffsetEnd": 28,
-                  "pos": "VBP",
-                  "ner": "O",
-                  "speaker": "PER0",
-                  "before": " ",
-                  "after": " "
-                }
-              },
-              "VBP"
-            ],
-            [
-              {
-                "nlpToken": {
-                  "index": 5,
-                  "word": "control",
-                  "originalText": "control",
-                  "lemma": "control",
-                  "characterOffsetBegin": 29,
-                  "characterOffsetEnd": 36,
-                  "pos": "NN",
-                  "ner": "O",
-                  "speaker": "PER0",
-                  "before": " ",
-                  "after": " "
-                }
-              },
-              "NN"
-            ],
             [
               {
                 "nlpToken": {
                   "index": 6,
-                  "word": "of",
-                  "originalText": "of",
-                  "lemma": "of",
-                  "characterOffsetBegin": 37,
-                  "characterOffsetEnd": 39,
-                  "pos": "IN",
+                  "word": "they",
+                  "originalText": "they",
+                  "lemma": "they",
+                  "characterOffsetBegin": 89,
+                  "characterOffsetEnd": 93,
+                  "pos": "PRP",
                   "ner": "O",
                   "speaker": "PER0",
                   "before": " ",
                   "after": " "
                 }
               },
-              "IN"
-            ],
-            [
-              {
-                "nlpToken": {
-                  "index": 7,
-                  "word": "1st",
-                  "originalText": "1st",
-                  "lemma": "1st",
-                  "characterOffsetBegin": 40,
-                  "characterOffsetEnd": 43,
-                  "pos": "JJ",
-                  "ner": "ORDINAL",
-                  "normalizedNER": "1.0",
-                  "speaker": "PER0",
-                  "before": " ",
-                  "after": " "
-                }
-              },
-              "JJ"
-            ],
+              "PRP"
+            ]
+          ],
+          "score": 0.516,
+          "text": "they",
+          "nlpIndexSentence": 1
+        }
+      ],
+      "label": "why"
+    },
+    "where": {
+      "extracted": [
+        {
+          "parts": [
             [
               {
                 "nlpToken": {
@@ -877,61 +740,199 @@
                 ]
               },
               "NNP"
-            ],
-            [
-              {
-                "nlpToken": {
-                  "index": 9,
-                  "word": "satellite",
-                  "originalText": "satellite",
-                  "lemma": "satellite",
-                  "characterOffsetBegin": 51,
-                  "characterOffsetEnd": 60,
-                  "pos": "NN",
-                  "ner": "O",
-                  "speaker": "PER0",
-                  "before": " ",
-                  "after": ""
-                }
-              },
-              "NN"
             ]
           ],
-          "score": 1.0,
-          "text": "regain control of 1st Angola satellite"
+          "score": 0.6699999999999999,
+          "text": "Angola",
+          "enhancement": {
+            "openstreetmap_nominatim": {
+              "place_id": "178561916",
+              "licence": "Data \u00a9 OpenStreetMap contributors, ODbL 1.0. http://www.openstreetmap.org/copyright",
+              "osm_type": "relation",
+              "osm_id": "195267",
+              "boundingbox": [
+                -18.038945,
+                -4.3880634,
+                11.4609793,
+                24.0878856
+              ],
+              "lat": "-11.8775768",
+              "lon": "17.5691241",
+              "display_name": "Angola",
+              "class": "boundary",
+              "type": "administrative",
+              "importance": 0.29067457730118,
+              "icon": "https://nominatim.openstreetmap.org/images/mapicons/poi_boundary_administrative.p.20.png"
+            }
+          }
         }
       ],
-      "label": "what"
+      "label": "where"
     },
-    "why": {
+    "when": {
       "extracted": [
         {
           "parts": [
             [
               {
                 "nlpToken": {
-                  "index": 6,
-                  "word": "they",
-                  "originalText": "they",
-                  "lemma": "they",
-                  "characterOffsetBegin": 89,
-                  "characterOffsetEnd": 93,
-                  "pos": "PRP",
-                  "ner": "O",
+                  "index": 18,
+                  "word": "earlier",
+                  "originalText": "earlier",
+                  "lemma": "earlier",
+                  "characterOffsetBegin": 162,
+                  "characterOffsetEnd": 169,
+                  "pos": "RBR",
+                  "ner": "DATE",
+                  "normalizedNER": "2017-W52",
                   "speaker": "PER0",
                   "before": " ",
-                  "after": " "
-                }
+                  "after": " ",
+                  "timex": {
+                    "tid": "t1",
+                    "type": "DATE",
+                    "value": "2017-W52"
+                  }
+                },
+                "heideltime": [
+                  {
+                    "@tid": "t2",
+                    "@type": "DATE",
+                    "@value": "2017-W52",
+                    "@mod": "START",
+                    "#text": "earlier this week",
+                    "characterOffset": [
+                      162,
+                      179
+                    ]
+                  },
+                  {
+                    "@tid": "t4",
+                    "@type": "DATE",
+                    "@value": "2017-W52",
+                    "@mod": "START",
+                    "#text": "earlier this week",
+                    "characterOffset": [
+                      162,
+                      179
+                    ]
+                  }
+                ]
               },
-              "PRP"
+              "RBR"
+            ],
+            [
+              {
+                "nlpToken": {
+                  "index": 19,
+                  "word": "this",
+                  "originalText": "this",
+                  "lemma": "this",
+                  "characterOffsetBegin": 170,
+                  "characterOffsetEnd": 174,
+                  "pos": "DT",
+                  "ner": "DATE",
+                  "normalizedNER": "2017-W52",
+                  "speaker": "PER0",
+                  "before": " ",
+                  "after": " ",
+                  "timex": {
+                    "tid": "t1",
+                    "type": "DATE",
+                    "value": "2017-W52"
+                  }
+                },
+                "heideltime": [
+                  {
+                    "@tid": "t2",
+                    "@type": "DATE",
+                    "@value": "2017-W52",
+                    "@mod": "START",
+                    "#text": "earlier this week",
+                    "characterOffset": [
+                      162,
+                      179
+                    ]
+                  },
+                  {
+                    "@tid": "t4",
+                    "@type": "DATE",
+                    "@value": "2017-W52",
+                    "@mod": "START",
+                    "#text": "earlier this week",
+                    "characterOffset": [
+                      162,
+                      179
+                    ]
+                  }
+                ]
+              },
+              "DT"
+            ],
+            [
+              {
+                "nlpToken": {
+                  "index": 20,
+                  "word": "week",
+                  "originalText": "week",
+                  "lemma": "week",
+                  "characterOffsetBegin": 175,
+                  "characterOffsetEnd": 179,
+                  "pos": "NN",
+                  "ner": "DATE",
+                  "normalizedNER": "2017-W52",
+                  "speaker": "PER0",
+                  "before": " ",
+                  "after": "",
+                  "timex": {
+                    "tid": "t1",
+                    "type": "DATE",
+                    "value": "2017-W52"
+                  }
+                },
+                "heideltime": [
+                  {
+                    "@tid": "t2",
+                    "@type": "DATE",
+                    "@value": "2017-W52",
+                    "@mod": "START",
+                    "#text": "earlier this week",
+                    "characterOffset": [
+                      162,
+                      179
+                    ]
+                  },
+                  {
+                    "@tid": "t4",
+                    "@type": "DATE",
+                    "@value": "2017-W52",
+                    "@mod": "START",
+                    "#text": "earlier this week",
+                    "characterOffset": [
+                      162,
+                      179
+                    ]
+                  }
+                ]
+              },
+              "NN"
             ]
           ],
-          "score": 0.516,
-          "text": "they",
+          "score": 0.45861953341476686,
+          "text": "earlier this week",
+          "enhancement": {
+            "timex": {
+              "start_date": "2017-12-31T00:00:00",
+              "end_date": "2018-01-06T23:59:59"
+            }
+          },
           "nlpIndexSentence": 1
         }
       ],
-      "label": "why"
+      "label": "when"
     }
+  },
+  "fiveWoneH_Metadata": {
+    "process_errors": {}
   }
 }

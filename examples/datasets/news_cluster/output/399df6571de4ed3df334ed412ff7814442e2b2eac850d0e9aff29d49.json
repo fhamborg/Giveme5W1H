@@ -23,9 +23,56 @@
     "EventId": 37,
     "Event": "thousands_flee_fireworks_explosion_at_australia_beach"
   },
-  "fiveWoneH": {},
-  "fiveWoneH_Metadata": {
-    "process_errors": {},
+  "fiveWoneH": {
+    "who": {
+      "extracted": [
+        {
+          "parts": [
+            [
+              {
+                "nlpToken": {
+                  "index": 1,
+                  "word": "Two",
+                  "originalText": "Two",
+                  "lemma": "two",
+                  "characterOffsetBegin": 55,
+                  "characterOffsetEnd": 58,
+                  "pos": "CD",
+                  "ner": "NUMBER",
+                  "normalizedNER": "2.0",
+                  "speaker": "PER0",
+                  "before": " ",
+                  "after": " "
+                }
+              },
+              "CD"
+            ],
+            [
+              {
+                "nlpToken": {
+                  "index": 2,
+                  "word": "people",
+                  "originalText": "people",
+                  "lemma": "people",
+                  "characterOffsetBegin": 59,
+                  "characterOffsetEnd": 65,
+                  "pos": "NNS",
+                  "ner": "O",
+                  "speaker": "PER0",
+                  "before": " ",
+                  "after": " "
+                }
+              },
+              "NNS"
+            ]
+          ],
+          "score": 1.0,
+          "text": "Two people",
+          "nlpIndexSentence": 1
+        }
+      ],
+      "label": "who"
+    },
     "how": {
       "extracted": [
         {
@@ -91,55 +138,6 @@
         }
       ],
       "label": "how"
-    },
-    "who": {
-      "extracted": [
-        {
-          "parts": [
-            [
-              {
-                "nlpToken": {
-                  "index": 1,
-                  "word": "Two",
-                  "originalText": "Two",
-                  "lemma": "two",
-                  "characterOffsetBegin": 55,
-                  "characterOffsetEnd": 58,
-                  "pos": "CD",
-                  "ner": "NUMBER",
-                  "normalizedNER": "2.0",
-                  "speaker": "PER0",
-                  "before": " ",
-                  "after": " "
-                }
-              },
-              "CD"
-            ],
-            [
-              {
-                "nlpToken": {
-                  "index": 2,
-                  "word": "people",
-                  "originalText": "people",
-                  "lemma": "people",
-                  "characterOffsetBegin": 59,
-                  "characterOffsetEnd": 65,
-                  "pos": "NNS",
-                  "ner": "O",
-                  "speaker": "PER0",
-                  "before": " ",
-                  "after": " "
-                }
-              },
-              "NNS"
-            ]
-          ],
-          "score": 1.0,
-          "text": "Two people",
-          "nlpIndexSentence": 1
-        }
-      ],
-      "label": "who"
     },
     "what": {
       "extracted": [
@@ -561,7 +559,7 @@
               "CD"
             ]
           ],
-          "score": 0.5873201168941802,
+          "score": 0.5739867835608468,
           "text": "21:00",
           "enhancement": {
             "timex": {
@@ -622,5 +620,8 @@
       ],
       "label": "why"
     }
+  },
+  "fiveWoneH_Metadata": {
+    "process_errors": {}
   }
 }

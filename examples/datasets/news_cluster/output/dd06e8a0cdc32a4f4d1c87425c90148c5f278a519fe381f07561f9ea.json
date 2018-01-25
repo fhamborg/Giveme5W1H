@@ -25,9 +25,7 @@
     "Event": "harambe"
   },
   "dId": "dd06e8a0cdc32a4f4d1c87425c90148c5f278a519fe381f07561f9ea",
-  "fiveWoneH": {},
-  "fiveWoneH_Metadata": {
-    "process_errors": {},
+  "fiveWoneH": {
     "how": {
       "extracted": [
         {
@@ -259,122 +257,6 @@
       ],
       "label": "how"
     },
-    "where": {
-      "extracted": [
-        {
-          "parts": [
-            [
-              {
-                "nlpToken": {
-                  "index": 7,
-                  "word": "Cincinnati",
-                  "originalText": "Cincinnati",
-                  "lemma": "Cincinnati",
-                  "characterOffsetBegin": 267,
-                  "characterOffsetEnd": 277,
-                  "pos": "NNP",
-                  "ner": "LOCATION",
-                  "speaker": "PER0",
-                  "before": " ",
-                  "after": " "
-                },
-                "aida": [
-                  {
-                    "mention": {
-                      "allEntities": [],
-                      "offset": 267,
-                      "name": "Cincinnati Zoo",
-                      "length": 14
-                    },
-                    "bestEntityMetadata": null
-                  }
-                ]
-              },
-              "NNP"
-            ]
-          ],
-          "score": 0.6795318649632381,
-          "text": "Cincinnati",
-          "enhancement": {
-            "openstreetmap_nominatim": {
-              "osm_id": "183453",
-              "boundingbox": [
-                39.0520565,
-                39.2210368,
-                -84.71239,
-                -84.3687784
-              ],
-              "licence": "Data \u00a9 OpenStreetMap contributors, ODbL 1.0. http://www.openstreetmap.org/copyright",
-              "importance": 0.26888931171914,
-              "icon": "https://nominatim.openstreetmap.org/images/mapicons/poi_place_city.p.20.png",
-              "osm_type": "relation",
-              "display_name": "Cincinnati, Hamilton County, Ohio, United States of America",
-              "lat": "39.1014537",
-              "type": "city",
-              "place_id": "217656751",
-              "lon": "-84.5124602",
-              "class": "place"
-            }
-          },
-          "nlpIndexSentence": 4
-        }
-      ],
-      "label": "where"
-    },
-    "when": {
-      "extracted": [
-        {
-          "parts": [
-            [
-              {
-                "nlpToken": {
-                  "index": 21,
-                  "word": "Saturday",
-                  "originalText": "Saturday",
-                  "lemma": "Saturday",
-                  "characterOffsetBegin": 353,
-                  "characterOffsetEnd": 361,
-                  "pos": "NNP",
-                  "ner": "DATE",
-                  "normalizedNER": "2016-05-28",
-                  "speaker": "PER0",
-                  "before": " ",
-                  "after": " ",
-                  "timex": {
-                    "tid": "t4",
-                    "type": "DATE",
-                    "value": "2016-05-28"
-                  }
-                },
-                "heideltime": [
-                  {
-                    "@tid": "t3",
-                    "@type": "DATE",
-                    "@value": "2016-05-28",
-                    "#text": "Saturday",
-                    "characterOffset": [
-                      353,
-                      361
-                    ]
-                  }
-                ]
-              },
-              "NNP"
-            ]
-          ],
-          "score": 0.33636137706545327,
-          "text": "Saturday",
-          "enhancement": {
-            "timex": {
-              "start_date": "2016-05-28T00:00:00",
-              "end_date": "2016-05-28T23:59:59"
-            }
-          },
-          "nlpIndexSentence": 4
-        }
-      ],
-      "label": "when"
-    },
     "who": {
       "extracted": [
         {
@@ -507,6 +389,122 @@
       ],
       "label": "what"
     },
+    "where": {
+      "extracted": [
+        {
+          "parts": [
+            [
+              {
+                "nlpToken": {
+                  "index": 7,
+                  "word": "Cincinnati",
+                  "originalText": "Cincinnati",
+                  "lemma": "Cincinnati",
+                  "characterOffsetBegin": 267,
+                  "characterOffsetEnd": 277,
+                  "pos": "NNP",
+                  "ner": "LOCATION",
+                  "speaker": "PER0",
+                  "before": " ",
+                  "after": " "
+                },
+                "aida": [
+                  {
+                    "mention": {
+                      "allEntities": [],
+                      "offset": 267,
+                      "name": "Cincinnati Zoo",
+                      "length": 14
+                    },
+                    "bestEntityMetadata": null
+                  }
+                ]
+              },
+              "NNP"
+            ]
+          ],
+          "score": 0.6795318649632381,
+          "text": "Cincinnati",
+          "enhancement": {
+            "openstreetmap_nominatim": {
+              "osm_id": "183453",
+              "boundingbox": [
+                39.0520565,
+                39.2210368,
+                -84.71239,
+                -84.3687784
+              ],
+              "licence": "Data \u00a9 OpenStreetMap contributors, ODbL 1.0. http://www.openstreetmap.org/copyright",
+              "importance": 0.26888931171914,
+              "icon": "https://nominatim.openstreetmap.org/images/mapicons/poi_place_city.p.20.png",
+              "osm_type": "relation",
+              "display_name": "Cincinnati, Hamilton County, Ohio, United States of America",
+              "lat": "39.1014537",
+              "type": "city",
+              "place_id": "217656751",
+              "lon": "-84.5124602",
+              "class": "place"
+            }
+          },
+          "nlpIndexSentence": 4
+        }
+      ],
+      "label": "where"
+    },
+    "when": {
+      "extracted": [
+        {
+          "parts": [
+            [
+              {
+                "nlpToken": {
+                  "index": 21,
+                  "word": "Saturday",
+                  "originalText": "Saturday",
+                  "lemma": "Saturday",
+                  "characterOffsetBegin": 353,
+                  "characterOffsetEnd": 361,
+                  "pos": "NNP",
+                  "ner": "DATE",
+                  "normalizedNER": "2016-05-28",
+                  "speaker": "PER0",
+                  "before": " ",
+                  "after": " ",
+                  "timex": {
+                    "tid": "t4",
+                    "type": "DATE",
+                    "value": "2016-05-28"
+                  }
+                },
+                "heideltime": [
+                  {
+                    "@tid": "t3",
+                    "@type": "DATE",
+                    "@value": "2016-05-28",
+                    "#text": "Saturday",
+                    "characterOffset": [
+                      353,
+                      361
+                    ]
+                  }
+                ]
+              },
+              "NNP"
+            ]
+          ],
+          "score": 0.33636137706545327,
+          "text": "Saturday",
+          "enhancement": {
+            "timex": {
+              "start_date": "2016-05-28T00:00:00",
+              "end_date": "2016-05-28T23:59:59"
+            }
+          },
+          "nlpIndexSentence": 4
+        }
+      ],
+      "label": "when"
+    },
     "why": {
       "extracted": [
         {
@@ -561,5 +559,8 @@
       ],
       "label": "why"
     }
+  },
+  "fiveWoneH_Metadata": {
+    "process_errors": {}
   }
 }

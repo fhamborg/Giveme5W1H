@@ -23,93 +23,7 @@
     "Event": "nyc_subway_work_trains_collide_in_tunnel_1_worker_injured"
   },
   "dId": "2216ac1653dbe4e74e65fb459401445f7b44202fec43b08c4a47af82",
-  "fiveWoneH": {},
-  "fiveWoneH_Metadata": {
-    "process_errors": {},
-    "how": {
-      "extracted": [
-        {
-          "parts": [
-            [
-              {
-                "nlpToken": {
-                  "index": 10,
-                  "word": "for",
-                  "originalText": "for",
-                  "lemma": "for",
-                  "characterOffsetBegin": 442,
-                  "characterOffsetEnd": 445,
-                  "pos": "IN",
-                  "ner": "O",
-                  "speaker": "PER0",
-                  "before": " ",
-                  "after": " "
-                }
-              },
-              "IN"
-            ],
-            [
-              {
-                "nlpToken": {
-                  "index": 11,
-                  "word": "non-life-threatening",
-                  "originalText": "non-life-threatening",
-                  "lemma": "non-life-threatening",
-                  "characterOffsetBegin": 446,
-                  "characterOffsetEnd": 466,
-                  "pos": "JJ",
-                  "ner": "O",
-                  "speaker": "PER0",
-                  "before": " ",
-                  "after": " "
-                }
-              },
-              "JJ"
-            ],
-            [
-              {
-                "nlpToken": {
-                  "index": 12,
-                  "word": "injuries",
-                  "originalText": "injuries",
-                  "lemma": "injury",
-                  "characterOffsetBegin": 467,
-                  "characterOffsetEnd": 475,
-                  "pos": "NNS",
-                  "ner": "O",
-                  "speaker": "PER0",
-                  "before": " ",
-                  "after": ""
-                }
-              },
-              "NNS"
-            ],
-            [
-              {
-                "nlpToken": {
-                  "index": 13,
-                  "word": ".",
-                  "originalText": ".",
-                  "lemma": ".",
-                  "characterOffsetBegin": 475,
-                  "characterOffsetEnd": 476,
-                  "pos": ".",
-                  "ner": "O",
-                  "speaker": "PER0",
-                  "before": "",
-                  "after": "\n"
-                }
-              },
-              "."
-            ]
-          ],
-          "score": 1.0,
-          "text": "for non-life-threatening injuries .",
-          "nlpIndexSentence": 5
-        }
-      ],
-      "label": "how"
-    },
+  "fiveWoneH": {
     "who": {
       "extracted": [
         {
@@ -531,35 +445,89 @@
       ],
       "label": "what"
     },
-    "why": {
+    "how": {
       "extracted": [
         {
           "parts": [
             [
               {
                 "nlpToken": {
-                  "index": 1,
-                  "word": "Authorities",
-                  "originalText": "Authorities",
-                  "lemma": "authority",
-                  "characterOffsetBegin": 60,
-                  "characterOffsetEnd": 71,
-                  "pos": "NNS",
+                  "index": 10,
+                  "word": "for",
+                  "originalText": "for",
+                  "lemma": "for",
+                  "characterOffsetBegin": 442,
+                  "characterOffsetEnd": 445,
+                  "pos": "IN",
                   "ner": "O",
                   "speaker": "PER0",
                   "before": " ",
                   "after": " "
                 }
               },
+              "IN"
+            ],
+            [
+              {
+                "nlpToken": {
+                  "index": 11,
+                  "word": "non-life-threatening",
+                  "originalText": "non-life-threatening",
+                  "lemma": "non-life-threatening",
+                  "characterOffsetBegin": 446,
+                  "characterOffsetEnd": 466,
+                  "pos": "JJ",
+                  "ner": "O",
+                  "speaker": "PER0",
+                  "before": " ",
+                  "after": " "
+                }
+              },
+              "JJ"
+            ],
+            [
+              {
+                "nlpToken": {
+                  "index": 12,
+                  "word": "injuries",
+                  "originalText": "injuries",
+                  "lemma": "injury",
+                  "characterOffsetBegin": 467,
+                  "characterOffsetEnd": 475,
+                  "pos": "NNS",
+                  "ner": "O",
+                  "speaker": "PER0",
+                  "before": " ",
+                  "after": ""
+                }
+              },
               "NNS"
+            ],
+            [
+              {
+                "nlpToken": {
+                  "index": 13,
+                  "word": ".",
+                  "originalText": ".",
+                  "lemma": ".",
+                  "characterOffsetBegin": 475,
+                  "characterOffsetEnd": 476,
+                  "pos": ".",
+                  "ner": "O",
+                  "speaker": "PER0",
+                  "before": "",
+                  "after": "\n"
+                }
+              },
+              "."
             ]
           ],
-          "score": 0.5393333333333333,
-          "text": "Authorities",
-          "nlpIndexSentence": 1
+          "score": 1.0,
+          "text": "for non-life-threatening injuries .",
+          "nlpIndexSentence": 5
         }
       ],
-      "label": "why"
+      "label": "how"
     },
     "where": {
       "extracted": [
@@ -907,7 +875,7 @@
               "NN"
             ]
           ],
-          "score": 0.46519974652380974,
+          "score": 0.460255456400353,
           "text": "5:10 a.m.",
           "enhancement": {
             "timex": {
@@ -919,6 +887,39 @@
         }
       ],
       "label": "when"
+    },
+    "why": {
+      "extracted": [
+        {
+          "parts": [
+            [
+              {
+                "nlpToken": {
+                  "index": 1,
+                  "word": "Authorities",
+                  "originalText": "Authorities",
+                  "lemma": "authority",
+                  "characterOffsetBegin": 60,
+                  "characterOffsetEnd": 71,
+                  "pos": "NNS",
+                  "ner": "O",
+                  "speaker": "PER0",
+                  "before": " ",
+                  "after": " "
+                }
+              },
+              "NNS"
+            ]
+          ],
+          "score": 0.5393333333333333,
+          "text": "Authorities",
+          "nlpIndexSentence": 1
+        }
+      ],
+      "label": "why"
     }
+  },
+  "fiveWoneH_Metadata": {
+    "process_errors": {}
   }
 }

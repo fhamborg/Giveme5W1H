@@ -26,9 +26,91 @@
     "Event": "nyc_subway_work_trains_collide_in_tunnel_1_worker_injured"
   },
   "dId": "e5b73024b43cab7dc2ea4f72b04bf98842e3958b97afe44402935312",
-  "fiveWoneH": {},
-  "fiveWoneH_Metadata": {
-    "process_errors": {},
+  "fiveWoneH": {
+    "how": {
+      "extracted": [
+        {
+          "parts": [
+            [
+              {
+                "nlpToken": {
+                  "index": 14,
+                  "word": "for",
+                  "originalText": "for",
+                  "lemma": "for",
+                  "characterOffsetBegin": 195,
+                  "characterOffsetEnd": 198,
+                  "pos": "IN",
+                  "ner": "O",
+                  "speaker": "PER0",
+                  "before": " ",
+                  "after": " "
+                }
+              },
+              "IN"
+            ],
+            [
+              {
+                "nlpToken": {
+                  "index": 15,
+                  "word": "non-life-threatening",
+                  "originalText": "non-life-threatening",
+                  "lemma": "non-life-threatening",
+                  "characterOffsetBegin": 199,
+                  "characterOffsetEnd": 219,
+                  "pos": "JJ",
+                  "ner": "O",
+                  "speaker": "PER0",
+                  "before": " ",
+                  "after": " "
+                }
+              },
+              "JJ"
+            ],
+            [
+              {
+                "nlpToken": {
+                  "index": 16,
+                  "word": "injuries",
+                  "originalText": "injuries",
+                  "lemma": "injury",
+                  "characterOffsetBegin": 220,
+                  "characterOffsetEnd": 228,
+                  "pos": "NNS",
+                  "ner": "O",
+                  "speaker": "PER0",
+                  "before": " ",
+                  "after": ""
+                }
+              },
+              "NNS"
+            ],
+            [
+              {
+                "nlpToken": {
+                  "index": 17,
+                  "word": ".",
+                  "originalText": ".",
+                  "lemma": ".",
+                  "characterOffsetBegin": 228,
+                  "characterOffsetEnd": 229,
+                  "pos": ".",
+                  "ner": "O",
+                  "speaker": "PER0",
+                  "before": "",
+                  "after": ""
+                }
+              },
+              "."
+            ]
+          ],
+          "score": 1.0,
+          "text": "for non-life-threatening injuries .",
+          "nlpIndexSentence": 2
+        }
+      ],
+      "label": "how"
+    },
     "who": {
       "extracted": [
         {
@@ -124,89 +206,54 @@
       ],
       "label": "what"
     },
-    "how": {
+    "why": {
       "extracted": [
         {
           "parts": [
             [
               {
                 "nlpToken": {
-                  "index": 14,
-                  "word": "for",
-                  "originalText": "for",
-                  "lemma": "for",
-                  "characterOffsetBegin": 195,
-                  "characterOffsetEnd": 198,
-                  "pos": "IN",
+                  "index": 9,
+                  "word": "one",
+                  "originalText": "one",
+                  "lemma": "one",
+                  "characterOffsetBegin": 167,
+                  "characterOffsetEnd": 170,
+                  "pos": "CD",
+                  "ner": "NUMBER",
+                  "normalizedNER": "1.0",
+                  "speaker": "PER0",
+                  "before": " ",
+                  "after": " "
+                }
+              },
+              "CD"
+            ],
+            [
+              {
+                "nlpToken": {
+                  "index": 10,
+                  "word": "worker",
+                  "originalText": "worker",
+                  "lemma": "worker",
+                  "characterOffsetBegin": 171,
+                  "characterOffsetEnd": 177,
+                  "pos": "NN",
                   "ner": "O",
                   "speaker": "PER0",
                   "before": " ",
                   "after": " "
                 }
               },
-              "IN"
-            ],
-            [
-              {
-                "nlpToken": {
-                  "index": 15,
-                  "word": "non-life-threatening",
-                  "originalText": "non-life-threatening",
-                  "lemma": "non-life-threatening",
-                  "characterOffsetBegin": 199,
-                  "characterOffsetEnd": 219,
-                  "pos": "JJ",
-                  "ner": "O",
-                  "speaker": "PER0",
-                  "before": " ",
-                  "after": " "
-                }
-              },
-              "JJ"
-            ],
-            [
-              {
-                "nlpToken": {
-                  "index": 16,
-                  "word": "injuries",
-                  "originalText": "injuries",
-                  "lemma": "injury",
-                  "characterOffsetBegin": 220,
-                  "characterOffsetEnd": 228,
-                  "pos": "NNS",
-                  "ner": "O",
-                  "speaker": "PER0",
-                  "before": " ",
-                  "after": ""
-                }
-              },
-              "NNS"
-            ],
-            [
-              {
-                "nlpToken": {
-                  "index": 17,
-                  "word": ".",
-                  "originalText": ".",
-                  "lemma": ".",
-                  "characterOffsetBegin": 228,
-                  "characterOffsetEnd": 229,
-                  "pos": ".",
-                  "ner": "O",
-                  "speaker": "PER0",
-                  "before": "",
-                  "after": ""
-                }
-              },
-              "."
+              "NN"
             ]
           ],
-          "score": 1.0,
-          "text": "for non-life-threatening injuries .",
+          "score": 0.4998461538461539,
+          "text": "one worker",
           "nlpIndexSentence": 2
         }
       ],
-      "label": "how"
+      "label": "why"
     },
     "where": {
       "extracted": [
@@ -564,55 +611,9 @@
         }
       ],
       "label": "when"
-    },
-    "why": {
-      "extracted": [
-        {
-          "parts": [
-            [
-              {
-                "nlpToken": {
-                  "index": 9,
-                  "word": "one",
-                  "originalText": "one",
-                  "lemma": "one",
-                  "characterOffsetBegin": 167,
-                  "characterOffsetEnd": 170,
-                  "pos": "CD",
-                  "ner": "NUMBER",
-                  "normalizedNER": "1.0",
-                  "speaker": "PER0",
-                  "before": " ",
-                  "after": " "
-                }
-              },
-              "CD"
-            ],
-            [
-              {
-                "nlpToken": {
-                  "index": 10,
-                  "word": "worker",
-                  "originalText": "worker",
-                  "lemma": "worker",
-                  "characterOffsetBegin": 171,
-                  "characterOffsetEnd": 177,
-                  "pos": "NN",
-                  "ner": "O",
-                  "speaker": "PER0",
-                  "before": " ",
-                  "after": " "
-                }
-              },
-              "NN"
-            ]
-          ],
-          "score": 0.4998461538461539,
-          "text": "one worker",
-          "nlpIndexSentence": 2
-        }
-      ],
-      "label": "why"
     }
+  },
+  "fiveWoneH_Metadata": {
+    "process_errors": {}
   }
 }

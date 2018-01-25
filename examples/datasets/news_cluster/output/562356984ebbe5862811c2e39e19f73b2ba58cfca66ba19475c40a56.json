@@ -25,165 +25,7 @@
     "Event": "f1_crash"
   },
   "dId": "562356984ebbe5862811c2e39e19f73b2ba58cfca66ba19475c40a56",
-  "fiveWoneH": {},
-  "fiveWoneH_Metadata": {
-    "process_errors": {},
-    "where": {
-      "extracted": [
-        {
-          "parts": [
-            [
-              {
-                "nlpToken": {
-                  "index": 17,
-                  "word": "Interlagos",
-                  "originalText": "Interlagos",
-                  "lemma": "Interlagos",
-                  "characterOffsetBegin": 980,
-                  "characterOffsetEnd": 990,
-                  "pos": "NNP",
-                  "ner": "LOCATION",
-                  "speaker": "PER0",
-                  "before": " ",
-                  "after": " "
-                },
-                "aida": [
-                  {
-                    "mention": {
-                      "allEntities": [
-                        {
-                          "kbIdentifier": "YAGO:2006_Brazilian_Grand_Prix",
-                          "disambiguationScore": "0.08693"
-                        }
-                      ],
-                      "offset": 980,
-                      "name": "Interlagos",
-                      "length": 10,
-                      "bestEntity": {
-                        "kbIdentifier": "YAGO:2006_Brazilian_Grand_Prix",
-                        "disambiguationScore": "0.08693"
-                      }
-                    },
-                    "bestEntityMetadata": {
-                      "knowledgebase": "YAGO",
-                      "depictionurl": "http://upload.wikimedia.org/wikipedia/commons/c/cf/Aut%C3%B3dromo_Jos%C3%A9_Carlos_Pace_%28AKA_Interlagos%29_track_map.svg",
-                      "depictionthumbnailurl": "http://upload.wikimedia.org/wikipedia/commons/thumbAut%C3%B3dromo_Jos%C3%A9_Carlos_Pace_%28AKA_Interlagos%29_track_map.svg/200px-Aut%C3%B3dromo_Jos%C3%A9_Carlos_Pace_%28AKA_Interlagos%29_track_map.svg",
-                      "importance": 0.025292916440228557,
-                      "entityId": "2006_Brazilian_Grand_Prix",
-                      "type": [
-                        "YAGO_yagoPermanentlyLocatedEntity",
-                        "YAGO_wordnet_event_100029378",
-                        "YAGO_wordnet_race_107472657",
-                        "YAGO_wordnet_entity_100001740",
-                        "YAGO_wordnet_psychological_feature_100023100",
-                        "YAGO_wordnet_contest_107456188",
-                        "YAGO_wordnet_social_event_107288639",
-                        "YAGO_wordnet_abstraction_100002137",
-                        "YAGO_wikicategory_2006_Formula_One_races"
-                      ],
-                      "readableRepr": "2006 Brazilian Grand Prix",
-                      "url": "http://en.wikipedia.org/wiki/2006%20Brazilian%20Grand%20Prix"
-                    }
-                  }
-                ]
-              },
-              "NNP"
-            ]
-          ],
-          "score": 0.6842959492473162,
-          "text": "Interlagos",
-          "enhancement": {
-            "openstreetmap_nominatim": {
-              "osm_id": "205197916",
-              "boundingbox": [
-                -23.7211674,
-                -23.6811674,
-                -46.7282912,
-                -46.6882912
-              ],
-              "licence": "Data \u00a9 OpenStreetMap contributors, ODbL 1.0. http://www.openstreetmap.org/copyright",
-              "importance": 0.18245308668878,
-              "icon": "https://nominatim.openstreetmap.org/images/mapicons/poi_place_village.p.20.png",
-              "osm_type": "node",
-              "display_name": "Interlagos, Socorro, SP, Microrregi\u00e3o de S\u00e3o Paulo, RMSP, Mesorregi\u00e3o Metropolitana de S\u00e3o Paulo, SP, Regi\u00e3o Sudeste, 04783 020, Brasil",
-              "lat": "-23.7011674",
-              "type": "suburb",
-              "place_id": "548530",
-              "lon": "-46.7082912",
-              "class": "place"
-            }
-          },
-          "nlpIndexSentence": 5
-        }
-      ],
-      "label": "where"
-    },
-    "when": {
-      "extracted": [
-        {
-          "parts": [
-            [
-              {
-                "nlpToken": {
-                  "index": 35,
-                  "word": "this",
-                  "originalText": "this",
-                  "lemma": "this",
-                  "characterOffsetBegin": 878,
-                  "characterOffsetEnd": 882,
-                  "pos": "DT",
-                  "ner": "DATE",
-                  "normalizedNER": "2016-11-13",
-                  "speaker": "PER0",
-                  "before": " ",
-                  "after": " ",
-                  "timex": {
-                    "tid": "t2",
-                    "type": "DATE",
-                    "value": "2016-11-13"
-                  }
-                }
-              },
-              "DT"
-            ],
-            [
-              {
-                "nlpToken": {
-                  "index": 36,
-                  "word": "day",
-                  "originalText": "day",
-                  "lemma": "day",
-                  "characterOffsetBegin": 883,
-                  "characterOffsetEnd": 886,
-                  "pos": "NN",
-                  "ner": "DATE",
-                  "normalizedNER": "2016-11-13",
-                  "speaker": "PER0",
-                  "before": " ",
-                  "after": "",
-                  "timex": {
-                    "tid": "t2",
-                    "type": "DATE",
-                    "value": "2016-11-13"
-                  }
-                }
-              },
-              "NN"
-            ]
-          ],
-          "score": 0.3904172062936963,
-          "text": "this day",
-          "enhancement": {
-            "timex": {
-              "start_date": "2016-11-13T00:00:00",
-              "end_date": "2016-11-13T23:59:59"
-            }
-          },
-          "nlpIndexSentence": 4
-        }
-      ],
-      "label": "when"
-    },
+  "fiveWoneH": {
     "how": {
       "extracted": [
         {
@@ -396,6 +238,162 @@
         }
       ],
       "label": "how"
+    },
+    "where": {
+      "extracted": [
+        {
+          "parts": [
+            [
+              {
+                "nlpToken": {
+                  "index": 17,
+                  "word": "Interlagos",
+                  "originalText": "Interlagos",
+                  "lemma": "Interlagos",
+                  "characterOffsetBegin": 980,
+                  "characterOffsetEnd": 990,
+                  "pos": "NNP",
+                  "ner": "LOCATION",
+                  "speaker": "PER0",
+                  "before": " ",
+                  "after": " "
+                },
+                "aida": [
+                  {
+                    "mention": {
+                      "allEntities": [
+                        {
+                          "kbIdentifier": "YAGO:2006_Brazilian_Grand_Prix",
+                          "disambiguationScore": "0.08693"
+                        }
+                      ],
+                      "offset": 980,
+                      "name": "Interlagos",
+                      "length": 10,
+                      "bestEntity": {
+                        "kbIdentifier": "YAGO:2006_Brazilian_Grand_Prix",
+                        "disambiguationScore": "0.08693"
+                      }
+                    },
+                    "bestEntityMetadata": {
+                      "knowledgebase": "YAGO",
+                      "depictionurl": "http://upload.wikimedia.org/wikipedia/commons/c/cf/Aut%C3%B3dromo_Jos%C3%A9_Carlos_Pace_%28AKA_Interlagos%29_track_map.svg",
+                      "depictionthumbnailurl": "http://upload.wikimedia.org/wikipedia/commons/thumbAut%C3%B3dromo_Jos%C3%A9_Carlos_Pace_%28AKA_Interlagos%29_track_map.svg/200px-Aut%C3%B3dromo_Jos%C3%A9_Carlos_Pace_%28AKA_Interlagos%29_track_map.svg",
+                      "importance": 0.025292916440228557,
+                      "entityId": "2006_Brazilian_Grand_Prix",
+                      "type": [
+                        "YAGO_yagoPermanentlyLocatedEntity",
+                        "YAGO_wordnet_event_100029378",
+                        "YAGO_wordnet_race_107472657",
+                        "YAGO_wordnet_entity_100001740",
+                        "YAGO_wordnet_psychological_feature_100023100",
+                        "YAGO_wordnet_contest_107456188",
+                        "YAGO_wordnet_social_event_107288639",
+                        "YAGO_wordnet_abstraction_100002137",
+                        "YAGO_wikicategory_2006_Formula_One_races"
+                      ],
+                      "readableRepr": "2006 Brazilian Grand Prix",
+                      "url": "http://en.wikipedia.org/wiki/2006%20Brazilian%20Grand%20Prix"
+                    }
+                  }
+                ]
+              },
+              "NNP"
+            ]
+          ],
+          "score": 0.6842959492473162,
+          "text": "Interlagos",
+          "enhancement": {
+            "openstreetmap_nominatim": {
+              "osm_id": "205197916",
+              "boundingbox": [
+                -23.7211674,
+                -23.6811674,
+                -46.7282912,
+                -46.6882912
+              ],
+              "licence": "Data \u00a9 OpenStreetMap contributors, ODbL 1.0. http://www.openstreetmap.org/copyright",
+              "importance": 0.18245308668878,
+              "icon": "https://nominatim.openstreetmap.org/images/mapicons/poi_place_village.p.20.png",
+              "osm_type": "node",
+              "display_name": "Interlagos, Socorro, SP, Microrregi\u00e3o de S\u00e3o Paulo, RMSP, Mesorregi\u00e3o Metropolitana de S\u00e3o Paulo, SP, Regi\u00e3o Sudeste, 04783 020, Brasil",
+              "lat": "-23.7011674",
+              "type": "suburb",
+              "place_id": "548530",
+              "lon": "-46.7082912",
+              "class": "place"
+            }
+          },
+          "nlpIndexSentence": 5
+        }
+      ],
+      "label": "where"
+    },
+    "when": {
+      "extracted": [
+        {
+          "parts": [
+            [
+              {
+                "nlpToken": {
+                  "index": 35,
+                  "word": "this",
+                  "originalText": "this",
+                  "lemma": "this",
+                  "characterOffsetBegin": 878,
+                  "characterOffsetEnd": 882,
+                  "pos": "DT",
+                  "ner": "DATE",
+                  "normalizedNER": "2016-11-13",
+                  "speaker": "PER0",
+                  "before": " ",
+                  "after": " ",
+                  "timex": {
+                    "tid": "t2",
+                    "type": "DATE",
+                    "value": "2016-11-13"
+                  }
+                }
+              },
+              "DT"
+            ],
+            [
+              {
+                "nlpToken": {
+                  "index": 36,
+                  "word": "day",
+                  "originalText": "day",
+                  "lemma": "day",
+                  "characterOffsetBegin": 883,
+                  "characterOffsetEnd": 886,
+                  "pos": "NN",
+                  "ner": "DATE",
+                  "normalizedNER": "2016-11-13",
+                  "speaker": "PER0",
+                  "before": " ",
+                  "after": "",
+                  "timex": {
+                    "tid": "t2",
+                    "type": "DATE",
+                    "value": "2016-11-13"
+                  }
+                }
+              },
+              "NN"
+            ]
+          ],
+          "score": 0.3904172062936963,
+          "text": "this day",
+          "enhancement": {
+            "timex": {
+              "start_date": "2016-11-13T00:00:00",
+              "end_date": "2016-11-13T23:59:59"
+            }
+          },
+          "nlpIndexSentence": 4
+        }
+      ],
+      "label": "when"
     },
     "who": {
       "extracted": [
@@ -831,5 +829,8 @@
       ],
       "label": "why"
     }
+  },
+  "fiveWoneH_Metadata": {
+    "process_errors": {}
   }
 }

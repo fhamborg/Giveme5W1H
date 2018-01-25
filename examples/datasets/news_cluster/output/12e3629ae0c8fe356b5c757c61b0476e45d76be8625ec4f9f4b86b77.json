@@ -25,9 +25,7 @@
     "EventId": 18,
     "Event": "elon_musk_reveals_red_tesla_roadster_bound_for_mars"
   },
-  "fiveWoneH": {},
-  "fiveWoneH_Metadata": {
-    "process_errors": {},
+  "fiveWoneH": {
     "how": {
       "extracted": [
         {
@@ -219,146 +217,6 @@
         }
       ],
       "label": "how"
-    },
-    "where": {
-      "extracted": [
-        {
-          "parts": [
-            [
-              {
-                "nlpToken": {
-                  "index": 9,
-                  "word": "Mars",
-                  "originalText": "Mars",
-                  "lemma": "Mars",
-                  "characterOffsetBegin": 37,
-                  "characterOffsetEnd": 41,
-                  "pos": "NNP",
-                  "ner": "LOCATION",
-                  "speaker": "PER0",
-                  "before": " ",
-                  "after": " "
-                }
-              },
-              "NNP"
-            ]
-          ],
-          "score": 0.6857442219379335,
-          "text": "Mars",
-          "enhancement": {
-            "openstreetmap_nominatim": {
-              "place_id": "177894532",
-              "licence": "Data \u00a9 OpenStreetMap contributors, ODbL 1.0. http://www.openstreetmap.org/copyright",
-              "osm_type": "relation",
-              "osm_id": "391649",
-              "boundingbox": [
-                43.9912494,
-                44.0146261,
-                3.535728,
-                3.5664698
-              ],
-              "lat": "44.0009649",
-              "lon": "3.5560447",
-              "display_name": "Mars, Le Vigan, Gard, Occitanie, France m\u00e9tropolitaine, 30120, France",
-              "class": "boundary",
-              "type": "administrative",
-              "importance": 0.20582841986817,
-              "icon": "https://nominatim.openstreetmap.org/images/mapicons/poi_boundary_administrative.p.20.png"
-            }
-          }
-        }
-      ],
-      "label": "where"
-    },
-    "when": {
-      "extracted": [
-        {
-          "parts": [
-            [
-              {
-                "nlpToken": {
-                  "index": 8,
-                  "word": "next",
-                  "originalText": "next",
-                  "lemma": "next",
-                  "characterOffsetBegin": 103,
-                  "characterOffsetEnd": 107,
-                  "pos": "JJ",
-                  "ner": "DATE",
-                  "normalizedNER": "2018-01",
-                  "speaker": "PER0",
-                  "before": " ",
-                  "after": " ",
-                  "timex": {
-                    "tid": "t1",
-                    "type": "DATE",
-                    "value": "2018-01"
-                  }
-                },
-                "heideltime": [
-                  {
-                    "@tid": "t1",
-                    "@type": "DATE",
-                    "@value": "2018-01",
-                    "#text": "next month",
-                    "characterOffset": [
-                      103,
-                      113
-                    ]
-                  }
-                ]
-              },
-              "JJ"
-            ],
-            [
-              {
-                "nlpToken": {
-                  "index": 9,
-                  "word": "month",
-                  "originalText": "month",
-                  "lemma": "month",
-                  "characterOffsetBegin": 108,
-                  "characterOffsetEnd": 113,
-                  "pos": "NN",
-                  "ner": "DATE",
-                  "normalizedNER": "2018-01",
-                  "speaker": "PER0",
-                  "before": " ",
-                  "after": "",
-                  "timex": {
-                    "tid": "t1",
-                    "type": "DATE",
-                    "value": "2018-01"
-                  }
-                },
-                "heideltime": [
-                  {
-                    "@tid": "t1",
-                    "@type": "DATE",
-                    "@value": "2018-01",
-                    "#text": "next month",
-                    "characterOffset": [
-                      103,
-                      113
-                    ]
-                  }
-                ]
-              },
-              "NN"
-            ]
-          ],
-          "score": 0.6574280218659574,
-          "text": "next month",
-          "enhancement": {
-            "timex": {
-              "start_date": "2018-01-01T00:00:00",
-              "end_date": "2018-01-31T23:59:59"
-            }
-          },
-          "nlpIndexSentence": 1
-        }
-      ],
-      "label": "when"
     },
     "who": {
       "extracted": [
@@ -769,6 +627,146 @@
       ],
       "label": "what"
     },
+    "where": {
+      "extracted": [
+        {
+          "parts": [
+            [
+              {
+                "nlpToken": {
+                  "index": 9,
+                  "word": "Mars",
+                  "originalText": "Mars",
+                  "lemma": "Mars",
+                  "characterOffsetBegin": 37,
+                  "characterOffsetEnd": 41,
+                  "pos": "NNP",
+                  "ner": "LOCATION",
+                  "speaker": "PER0",
+                  "before": " ",
+                  "after": " "
+                }
+              },
+              "NNP"
+            ]
+          ],
+          "score": 0.6857442219379335,
+          "text": "Mars",
+          "enhancement": {
+            "openstreetmap_nominatim": {
+              "place_id": "177894532",
+              "licence": "Data \u00a9 OpenStreetMap contributors, ODbL 1.0. http://www.openstreetmap.org/copyright",
+              "osm_type": "relation",
+              "osm_id": "391649",
+              "boundingbox": [
+                43.9912494,
+                44.0146261,
+                3.535728,
+                3.5664698
+              ],
+              "lat": "44.0009649",
+              "lon": "3.5560447",
+              "display_name": "Mars, Le Vigan, Gard, Occitanie, France m\u00e9tropolitaine, 30120, France",
+              "class": "boundary",
+              "type": "administrative",
+              "importance": 0.20582841986817,
+              "icon": "https://nominatim.openstreetmap.org/images/mapicons/poi_boundary_administrative.p.20.png"
+            }
+          }
+        }
+      ],
+      "label": "where"
+    },
+    "when": {
+      "extracted": [
+        {
+          "parts": [
+            [
+              {
+                "nlpToken": {
+                  "index": 8,
+                  "word": "next",
+                  "originalText": "next",
+                  "lemma": "next",
+                  "characterOffsetBegin": 103,
+                  "characterOffsetEnd": 107,
+                  "pos": "JJ",
+                  "ner": "DATE",
+                  "normalizedNER": "2018-01",
+                  "speaker": "PER0",
+                  "before": " ",
+                  "after": " ",
+                  "timex": {
+                    "tid": "t1",
+                    "type": "DATE",
+                    "value": "2018-01"
+                  }
+                },
+                "heideltime": [
+                  {
+                    "@tid": "t1",
+                    "@type": "DATE",
+                    "@value": "2018-01",
+                    "#text": "next month",
+                    "characterOffset": [
+                      103,
+                      113
+                    ]
+                  }
+                ]
+              },
+              "JJ"
+            ],
+            [
+              {
+                "nlpToken": {
+                  "index": 9,
+                  "word": "month",
+                  "originalText": "month",
+                  "lemma": "month",
+                  "characterOffsetBegin": 108,
+                  "characterOffsetEnd": 113,
+                  "pos": "NN",
+                  "ner": "DATE",
+                  "normalizedNER": "2018-01",
+                  "speaker": "PER0",
+                  "before": " ",
+                  "after": "",
+                  "timex": {
+                    "tid": "t1",
+                    "type": "DATE",
+                    "value": "2018-01"
+                  }
+                },
+                "heideltime": [
+                  {
+                    "@tid": "t1",
+                    "@type": "DATE",
+                    "@value": "2018-01",
+                    "#text": "next month",
+                    "characterOffset": [
+                      103,
+                      113
+                    ]
+                  }
+                ]
+              },
+              "NN"
+            ]
+          ],
+          "score": 0.6707613551992907,
+          "text": "next month",
+          "enhancement": {
+            "timex": {
+              "start_date": "2018-01-01T00:00:00",
+              "end_date": "2018-01-31T23:59:59"
+            }
+          },
+          "nlpIndexSentence": 1
+        }
+      ],
+      "label": "when"
+    },
     "why": {
       "extracted": [
         {
@@ -799,5 +797,8 @@
       ],
       "label": "why"
     }
+  },
+  "fiveWoneH_Metadata": {
+    "process_errors": {}
   }
 }

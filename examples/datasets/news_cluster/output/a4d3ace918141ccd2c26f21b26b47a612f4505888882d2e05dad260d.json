@@ -25,9 +25,91 @@
     "Event": "harambe"
   },
   "dId": "a4d3ace918141ccd2c26f21b26b47a612f4505888882d2e05dad260d",
-  "fiveWoneH": {},
-  "fiveWoneH_Metadata": {
-    "process_errors": {},
+  "fiveWoneH": {
+    "how": {
+      "extracted": [
+        {
+          "parts": [
+            [
+              {
+                "nlpToken": {
+                  "index": 6,
+                  "word": "are",
+                  "originalText": "are",
+                  "lemma": "be",
+                  "characterOffsetBegin": 188,
+                  "characterOffsetEnd": 191,
+                  "pos": "VBP",
+                  "ner": "O",
+                  "speaker": "PER0",
+                  "before": " ",
+                  "after": " "
+                }
+              },
+              "VBP"
+            ],
+            [
+              {
+                "nlpToken": {
+                  "index": 7,
+                  "word": "still",
+                  "originalText": "still",
+                  "lemma": "still",
+                  "characterOffsetBegin": 192,
+                  "characterOffsetEnd": 197,
+                  "pos": "RB",
+                  "ner": "O",
+                  "speaker": "PER0",
+                  "before": " ",
+                  "after": " "
+                }
+              },
+              "RB"
+            ],
+            [
+              {
+                "nlpToken": {
+                  "index": 8,
+                  "word": "necessary",
+                  "originalText": "necessary",
+                  "lemma": "necessary",
+                  "characterOffsetBegin": 198,
+                  "characterOffsetEnd": 207,
+                  "pos": "JJ",
+                  "ner": "O",
+                  "speaker": "PER0",
+                  "before": " ",
+                  "after": ""
+                }
+              },
+              "JJ"
+            ],
+            [
+              {
+                "nlpToken": {
+                  "index": 9,
+                  "word": ".",
+                  "originalText": ".",
+                  "lemma": ".",
+                  "characterOffsetBegin": 207,
+                  "characterOffsetEnd": 208,
+                  "pos": ".",
+                  "ner": "O",
+                  "speaker": "PER0",
+                  "before": "",
+                  "after": ""
+                }
+              },
+              "."
+            ]
+          ],
+          "score": 1.0,
+          "text": "are still necessary .",
+          "nlpIndexSentence": 3
+        }
+      ],
+      "label": "how"
+    },
     "where": {
       "extracted": [
         {
@@ -231,90 +313,6 @@
         }
       ],
       "label": "when"
-    },
-    "how": {
-      "extracted": [
-        {
-          "parts": [
-            [
-              {
-                "nlpToken": {
-                  "index": 6,
-                  "word": "are",
-                  "originalText": "are",
-                  "lemma": "be",
-                  "characterOffsetBegin": 188,
-                  "characterOffsetEnd": 191,
-                  "pos": "VBP",
-                  "ner": "O",
-                  "speaker": "PER0",
-                  "before": " ",
-                  "after": " "
-                }
-              },
-              "VBP"
-            ],
-            [
-              {
-                "nlpToken": {
-                  "index": 7,
-                  "word": "still",
-                  "originalText": "still",
-                  "lemma": "still",
-                  "characterOffsetBegin": 192,
-                  "characterOffsetEnd": 197,
-                  "pos": "RB",
-                  "ner": "O",
-                  "speaker": "PER0",
-                  "before": " ",
-                  "after": " "
-                }
-              },
-              "RB"
-            ],
-            [
-              {
-                "nlpToken": {
-                  "index": 8,
-                  "word": "necessary",
-                  "originalText": "necessary",
-                  "lemma": "necessary",
-                  "characterOffsetBegin": 198,
-                  "characterOffsetEnd": 207,
-                  "pos": "JJ",
-                  "ner": "O",
-                  "speaker": "PER0",
-                  "before": " ",
-                  "after": ""
-                }
-              },
-              "JJ"
-            ],
-            [
-              {
-                "nlpToken": {
-                  "index": 9,
-                  "word": ".",
-                  "originalText": ".",
-                  "lemma": ".",
-                  "characterOffsetBegin": 207,
-                  "characterOffsetEnd": 208,
-                  "pos": ".",
-                  "ner": "O",
-                  "speaker": "PER0",
-                  "before": "",
-                  "after": ""
-                }
-              },
-              "."
-            ]
-          ],
-          "score": 1.0,
-          "text": "are still necessary .",
-          "nlpIndexSentence": 3
-        }
-      ],
-      "label": "how"
     },
     "who": {
       "extracted": [
@@ -1174,5 +1172,8 @@
       ],
       "label": "why"
     }
+  },
+  "fiveWoneH_Metadata": {
+    "process_errors": {}
   }
 }

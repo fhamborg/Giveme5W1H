@@ -23,10 +23,159 @@
     "Event": "harambe"
   },
   "dId": "a84cfd5b897f965ae9d3373a2c9482caec42f998b87a575763e61670",
-  "fiveWoneH": {},
-  "fiveWoneH_Metadata": {
-    "process_errors": {
-      "core_nlp": true
+  "fiveWoneH": {
+    "where": {
+      "extracted": [
+        {
+          "parts": [
+            [
+              {
+                "nlpToken": {
+                  "index": 8,
+                  "word": "Harambe",
+                  "originalText": "Harambe",
+                  "lemma": "Harambe",
+                  "characterOffsetBegin": 1680,
+                  "characterOffsetEnd": 1687,
+                  "pos": "NNP",
+                  "ner": "LOCATION",
+                  "speaker": "PER0",
+                  "before": " ",
+                  "after": ""
+                },
+                "aida": [
+                  {
+                    "mention": {
+                      "allEntities": [],
+                      "offset": 1680,
+                      "name": "Harambe",
+                      "length": 7
+                    },
+                    "bestEntityMetadata": null
+                  }
+                ]
+              },
+              "NNP"
+            ]
+          ],
+          "score": 0.7,
+          "text": "Harambe",
+          "enhancement": {
+            "openstreetmap_nominatim": {
+              "osm_id": "4496477666",
+              "osm_type": "node",
+              "display_name": "Harambe, Pinal County, Arizona, United States of America",
+              "lon": "-110.5394801",
+              "lat": "32.6155925",
+              "boundingbox": [
+                32.6155425,
+                32.6156425,
+                -110.5395301,
+                -110.5394301
+              ],
+              "place_id": "56816334",
+              "licence": "Data \u00a9 OpenStreetMap contributors, ODbL 1.0. http://www.openstreetmap.org/copyright",
+              "type": "neighbourhood",
+              "importance": 0.16,
+              "class": "place"
+            }
+          },
+          "nlpIndexSentence": 12
+        }
+      ],
+      "label": "where"
+    },
+    "when": {
+      "extracted": [
+        {
+          "parts": [
+            [
+              {
+                "nlpToken": {
+                  "index": 54,
+                  "word": "Earlier",
+                  "originalText": "Earlier",
+                  "lemma": "earlier",
+                  "characterOffsetBegin": 721,
+                  "characterOffsetEnd": 728,
+                  "pos": "RBR",
+                  "ner": "DATE",
+                  "normalizedNER": "2016-06-01",
+                  "speaker": "PER0",
+                  "before": "\n",
+                  "after": " ",
+                  "timex": {
+                    "tid": "t2",
+                    "type": "DATE",
+                    "value": "2016-06-01"
+                  }
+                },
+                "heideltime": [
+                  {
+                    "@tid": "t4",
+                    "@type": "DATE",
+                    "@value": "2016-06-01",
+                    "@mod": "START",
+                    "#text": "Earlier today",
+                    "characterOffset": [
+                      721,
+                      734
+                    ]
+                  }
+                ]
+              },
+              "RBR"
+            ],
+            [
+              {
+                "nlpToken": {
+                  "index": 55,
+                  "word": "today",
+                  "originalText": "today",
+                  "lemma": "today",
+                  "characterOffsetBegin": 729,
+                  "characterOffsetEnd": 734,
+                  "pos": "NN",
+                  "ner": "DATE",
+                  "normalizedNER": "2016-06-01",
+                  "speaker": "PER0",
+                  "before": " ",
+                  "after": " ",
+                  "timex": {
+                    "tid": "t2",
+                    "type": "DATE",
+                    "value": "2016-06-01"
+                  }
+                },
+                "heideltime": [
+                  {
+                    "@tid": "t4",
+                    "@type": "DATE",
+                    "@value": "2016-06-01",
+                    "@mod": "START",
+                    "#text": "Earlier today",
+                    "characterOffset": [
+                      721,
+                      734
+                    ]
+                  }
+                ]
+              },
+              "NN"
+            ]
+          ],
+          "score": 0.3386076824841725,
+          "text": "Earlier today",
+          "enhancement": {
+            "timex": {
+              "start_date": "2016-06-01T00:00:00",
+              "end_date": "2016-06-01T23:59:59"
+            }
+          },
+          "nlpIndexSentence": 4
+        }
+      ],
+      "label": "when"
     },
     "how": {
       "extracted": [
@@ -584,159 +733,11 @@
         }
       ],
       "label": "why"
-    },
-    "where": {
-      "extracted": [
-        {
-          "parts": [
-            [
-              {
-                "nlpToken": {
-                  "index": 8,
-                  "word": "Harambe",
-                  "originalText": "Harambe",
-                  "lemma": "Harambe",
-                  "characterOffsetBegin": 1680,
-                  "characterOffsetEnd": 1687,
-                  "pos": "NNP",
-                  "ner": "LOCATION",
-                  "speaker": "PER0",
-                  "before": " ",
-                  "after": ""
-                },
-                "aida": [
-                  {
-                    "mention": {
-                      "allEntities": [],
-                      "offset": 1680,
-                      "name": "Harambe",
-                      "length": 7
-                    },
-                    "bestEntityMetadata": null
-                  }
-                ]
-              },
-              "NNP"
-            ]
-          ],
-          "score": 0.7,
-          "text": "Harambe",
-          "enhancement": {
-            "openstreetmap_nominatim": {
-              "osm_id": "4496477666",
-              "osm_type": "node",
-              "display_name": "Harambe, Pinal County, Arizona, United States of America",
-              "lon": "-110.5394801",
-              "lat": "32.6155925",
-              "boundingbox": [
-                32.6155425,
-                32.6156425,
-                -110.5395301,
-                -110.5394301
-              ],
-              "place_id": "56816334",
-              "licence": "Data \u00a9 OpenStreetMap contributors, ODbL 1.0. http://www.openstreetmap.org/copyright",
-              "type": "neighbourhood",
-              "importance": 0.16,
-              "class": "place"
-            }
-          },
-          "nlpIndexSentence": 12
-        }
-      ],
-      "label": "where"
-    },
-    "when": {
-      "extracted": [
-        {
-          "parts": [
-            [
-              {
-                "nlpToken": {
-                  "index": 54,
-                  "word": "Earlier",
-                  "originalText": "Earlier",
-                  "lemma": "earlier",
-                  "characterOffsetBegin": 721,
-                  "characterOffsetEnd": 728,
-                  "pos": "RBR",
-                  "ner": "DATE",
-                  "normalizedNER": "2016-06-01",
-                  "speaker": "PER0",
-                  "before": "\n",
-                  "after": " ",
-                  "timex": {
-                    "tid": "t2",
-                    "type": "DATE",
-                    "value": "2016-06-01"
-                  }
-                },
-                "heideltime": [
-                  {
-                    "@tid": "t4",
-                    "@type": "DATE",
-                    "@value": "2016-06-01",
-                    "@mod": "START",
-                    "#text": "Earlier today",
-                    "characterOffset": [
-                      721,
-                      734
-                    ]
-                  }
-                ]
-              },
-              "RBR"
-            ],
-            [
-              {
-                "nlpToken": {
-                  "index": 55,
-                  "word": "today",
-                  "originalText": "today",
-                  "lemma": "today",
-                  "characterOffsetBegin": 729,
-                  "characterOffsetEnd": 734,
-                  "pos": "NN",
-                  "ner": "DATE",
-                  "normalizedNER": "2016-06-01",
-                  "speaker": "PER0",
-                  "before": " ",
-                  "after": " ",
-                  "timex": {
-                    "tid": "t2",
-                    "type": "DATE",
-                    "value": "2016-06-01"
-                  }
-                },
-                "heideltime": [
-                  {
-                    "@tid": "t4",
-                    "@type": "DATE",
-                    "@value": "2016-06-01",
-                    "@mod": "START",
-                    "#text": "Earlier today",
-                    "characterOffset": [
-                      721,
-                      734
-                    ]
-                  }
-                ]
-              },
-              "NN"
-            ]
-          ],
-          "score": 0.3386076824841725,
-          "text": "Earlier today",
-          "enhancement": {
-            "timex": {
-              "start_date": "2016-06-01T00:00:00",
-              "end_date": "2016-06-01T23:59:59"
-            }
-          },
-          "nlpIndexSentence": 4
-        }
-      ],
-      "label": "when"
+    }
+  },
+  "fiveWoneH_Metadata": {
+    "process_errors": {
+      "core_nlp": true
     }
   }
 }

@@ -26,9 +26,7 @@
     "EventId": 39,
     "Event": "how_a_small_bird_managed_to_take_over_a_delta_flight"
   },
-  "fiveWoneH": {},
-  "fiveWoneH_Metadata": {
-    "process_errors": {},
+  "fiveWoneH": {
     "who": {
       "extracted": [
         {
@@ -374,35 +372,6 @@
       ],
       "label": "how"
     },
-    "why": {
-      "extracted": [
-        {
-          "parts": [
-            [
-              {
-                "nlpToken": {
-                  "index": 1,
-                  "word": "Bird",
-                  "originalText": "Bird",
-                  "lemma": "bird",
-                  "characterOffsetBegin": 0,
-                  "characterOffsetEnd": 4,
-                  "pos": "NN",
-                  "ner": "O",
-                  "speaker": "PER0",
-                  "before": "",
-                  "after": " "
-                }
-              },
-              "NN"
-            ]
-          ],
-          "score": 0.5860000000000001,
-          "text": "Bird"
-        }
-      ],
-      "label": "why"
-    },
     "where": {
       "extracted": [
         {
@@ -566,6 +535,38 @@
         }
       ],
       "label": "when"
+    },
+    "why": {
+      "extracted": [
+        {
+          "parts": [
+            [
+              {
+                "nlpToken": {
+                  "index": 1,
+                  "word": "Bird",
+                  "originalText": "Bird",
+                  "lemma": "bird",
+                  "characterOffsetBegin": 0,
+                  "characterOffsetEnd": 4,
+                  "pos": "NN",
+                  "ner": "O",
+                  "speaker": "PER0",
+                  "before": "",
+                  "after": " "
+                }
+              },
+              "NN"
+            ]
+          ],
+          "score": 0.5860000000000001,
+          "text": "Bird"
+        }
+      ],
+      "label": "why"
     }
+  },
+  "fiveWoneH_Metadata": {
+    "process_errors": {}
   }
 }

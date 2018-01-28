@@ -205,6 +205,14 @@ class Document(object):
     def set_annotations(self, annotations):
         self._annotations = annotations
 
+    def get_enhancements(self):
+        """
+        all additional information create by enhancements
+        :param key:
+        :return:
+        """
+        return self._enhancement
+
     def get_enhancement(self, key):
         """
         additional information create by enhancements

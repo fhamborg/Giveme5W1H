@@ -760,6 +760,92 @@
               "class": "boundary"
             }
           }
+        },
+        {
+          "parts": [
+            [
+              {
+                "nlpToken": {
+                  "index": 1,
+                  "word": "NEW",
+                  "originalText": "NEW",
+                  "lemma": "NEW",
+                  "characterOffsetBegin": 215,
+                  "characterOffsetEnd": 218,
+                  "pos": "NNP",
+                  "ner": "LOCATION",
+                  "speaker": "PER0",
+                  "before": " ",
+                  "after": " "
+                },
+                "aida": [
+                  {
+                    "mention": {
+                      "allEntities": [],
+                      "offset": 215,
+                      "name": "NEW YORK",
+                      "length": 8
+                    },
+                    "bestEntityMetadata": null
+                  }
+                ]
+              },
+              "NNP"
+            ],
+            [
+              {
+                "nlpToken": {
+                  "index": 2,
+                  "word": "YORK",
+                  "originalText": "YORK",
+                  "lemma": "YORK",
+                  "characterOffsetBegin": 219,
+                  "characterOffsetEnd": 223,
+                  "pos": "NNP",
+                  "ner": "LOCATION",
+                  "speaker": "PER0",
+                  "before": " ",
+                  "after": " "
+                },
+                "aida": [
+                  {
+                    "mention": {
+                      "allEntities": [],
+                      "offset": 215,
+                      "name": "NEW YORK",
+                      "length": 8
+                    },
+                    "bestEntityMetadata": null
+                  }
+                ]
+              },
+              "NNP"
+            ]
+          ],
+          "score": 0.4775578529257862,
+          "text": "NEW YORK",
+          "enhancement": {
+            "openstreetmap_nominatim": {
+              "place_id": "178508484",
+              "licence": "Data \u00a9 OpenStreetMap contributors, ODbL 1.0. http://www.openstreetmap.org/copyright",
+              "osm_type": "relation",
+              "osm_id": "175905",
+              "boundingbox": [
+                40.477399,
+                40.9161785,
+                -74.25909,
+                -73.7001809
+              ],
+              "lat": "40.7306458",
+              "lon": "-73.9866136",
+              "display_name": "NYC, New York, United States of America",
+              "class": "place",
+              "type": "city",
+              "importance": 0.39573204749775,
+              "icon": "https://nominatim.openstreetmap.org/images/mapicons/poi_place_city.p.20.png"
+            }
+          },
+          "nlpIndexSentence": 3
         }
       ],
       "label": "where"
@@ -771,5 +857,3967 @@
   },
   "fiveWoneH_Metadata": {
     "process_errors": {}
+  },
+  "fiveWoneH_enhancer": {
+    "process_errors": {
+      "coreNLP": {
+        "docDate": "2017-12-29T00:00:00",
+        "sentences": [
+          {
+            "index": 0,
+            "parse": "(ROOT\n  (S\n    (NP (NNP Goldman) (NNP Sachs))\n    (, ,)\n    (S\n      (VP (VBG citing)\n        (NP\n          (NP (JJ recent) (NN tax) (NN overhaul))\n          (PP (IN in)\n            (NP (NNP US))))))\n    (, ,)\n    (VP (VBZ expects)\n      (S\n        (VP (TO to)\n          (VP (VB take)\n            (NP\n              (NP (DT a)\n                (QP ($ $) (CD 5) (CD billion)))\n              (VP (VBN hit)\n                (PP (TO to)\n                  (NP (NNS profits)))))\n            (NP (DT this) (NN quarter))))))\n    (. .)))",
+            "basicDependencies": [
+              {
+                "dep": "ROOT",
+                "governor": 0,
+                "governorGloss": "ROOT",
+                "dependent": 11,
+                "dependentGloss": "expects"
+              },
+              {
+                "dep": "compound",
+                "governor": 2,
+                "governorGloss": "Sachs",
+                "dependent": 1,
+                "dependentGloss": "Goldman"
+              },
+              {
+                "dep": "nsubj",
+                "governor": 11,
+                "governorGloss": "expects",
+                "dependent": 2,
+                "dependentGloss": "Sachs"
+              },
+              {
+                "dep": "punct",
+                "governor": 11,
+                "governorGloss": "expects",
+                "dependent": 3,
+                "dependentGloss": ","
+              },
+              {
+                "dep": "advcl",
+                "governor": 11,
+                "governorGloss": "expects",
+                "dependent": 4,
+                "dependentGloss": "citing"
+              },
+              {
+                "dep": "amod",
+                "governor": 7,
+                "governorGloss": "overhaul",
+                "dependent": 5,
+                "dependentGloss": "recent"
+              },
+              {
+                "dep": "compound",
+                "governor": 7,
+                "governorGloss": "overhaul",
+                "dependent": 6,
+                "dependentGloss": "tax"
+              },
+              {
+                "dep": "dobj",
+                "governor": 4,
+                "governorGloss": "citing",
+                "dependent": 7,
+                "dependentGloss": "overhaul"
+              },
+              {
+                "dep": "case",
+                "governor": 9,
+                "governorGloss": "US",
+                "dependent": 8,
+                "dependentGloss": "in"
+              },
+              {
+                "dep": "nmod",
+                "governor": 7,
+                "governorGloss": "overhaul",
+                "dependent": 9,
+                "dependentGloss": "US"
+              },
+              {
+                "dep": "punct",
+                "governor": 11,
+                "governorGloss": "expects",
+                "dependent": 10,
+                "dependentGloss": ","
+              },
+              {
+                "dep": "mark",
+                "governor": 13,
+                "governorGloss": "take",
+                "dependent": 12,
+                "dependentGloss": "to"
+              },
+              {
+                "dep": "xcomp",
+                "governor": 11,
+                "governorGloss": "expects",
+                "dependent": 13,
+                "dependentGloss": "take"
+              },
+              {
+                "dep": "dobj",
+                "governor": 13,
+                "governorGloss": "take",
+                "dependent": 14,
+                "dependentGloss": "a"
+              },
+              {
+                "dep": "dep",
+                "governor": 14,
+                "governorGloss": "a",
+                "dependent": 15,
+                "dependentGloss": "$"
+              },
+              {
+                "dep": "compound",
+                "governor": 17,
+                "governorGloss": "billion",
+                "dependent": 16,
+                "dependentGloss": "5"
+              },
+              {
+                "dep": "nummod",
+                "governor": 15,
+                "governorGloss": "$",
+                "dependent": 17,
+                "dependentGloss": "billion"
+              },
+              {
+                "dep": "acl",
+                "governor": 15,
+                "governorGloss": "$",
+                "dependent": 18,
+                "dependentGloss": "hit"
+              },
+              {
+                "dep": "case",
+                "governor": 20,
+                "governorGloss": "profits",
+                "dependent": 19,
+                "dependentGloss": "to"
+              },
+              {
+                "dep": "nmod",
+                "governor": 18,
+                "governorGloss": "hit",
+                "dependent": 20,
+                "dependentGloss": "profits"
+              },
+              {
+                "dep": "det",
+                "governor": 22,
+                "governorGloss": "quarter",
+                "dependent": 21,
+                "dependentGloss": "this"
+              },
+              {
+                "dep": "nmod:tmod",
+                "governor": 18,
+                "governorGloss": "hit",
+                "dependent": 22,
+                "dependentGloss": "quarter"
+              },
+              {
+                "dep": "punct",
+                "governor": 11,
+                "governorGloss": "expects",
+                "dependent": 23,
+                "dependentGloss": "."
+              }
+            ],
+            "enhancedDependencies": [
+              {
+                "dep": "ROOT",
+                "governor": 0,
+                "governorGloss": "ROOT",
+                "dependent": 11,
+                "dependentGloss": "expects"
+              },
+              {
+                "dep": "compound",
+                "governor": 2,
+                "governorGloss": "Sachs",
+                "dependent": 1,
+                "dependentGloss": "Goldman"
+              },
+              {
+                "dep": "nsubj",
+                "governor": 11,
+                "governorGloss": "expects",
+                "dependent": 2,
+                "dependentGloss": "Sachs"
+              },
+              {
+                "dep": "nsubj:xsubj",
+                "governor": 13,
+                "governorGloss": "take",
+                "dependent": 2,
+                "dependentGloss": "Sachs"
+              },
+              {
+                "dep": "punct",
+                "governor": 11,
+                "governorGloss": "expects",
+                "dependent": 3,
+                "dependentGloss": ","
+              },
+              {
+                "dep": "advcl",
+                "governor": 11,
+                "governorGloss": "expects",
+                "dependent": 4,
+                "dependentGloss": "citing"
+              },
+              {
+                "dep": "amod",
+                "governor": 7,
+                "governorGloss": "overhaul",
+                "dependent": 5,
+                "dependentGloss": "recent"
+              },
+              {
+                "dep": "compound",
+                "governor": 7,
+                "governorGloss": "overhaul",
+                "dependent": 6,
+                "dependentGloss": "tax"
+              },
+              {
+                "dep": "dobj",
+                "governor": 4,
+                "governorGloss": "citing",
+                "dependent": 7,
+                "dependentGloss": "overhaul"
+              },
+              {
+                "dep": "case",
+                "governor": 9,
+                "governorGloss": "US",
+                "dependent": 8,
+                "dependentGloss": "in"
+              },
+              {
+                "dep": "nmod:in",
+                "governor": 7,
+                "governorGloss": "overhaul",
+                "dependent": 9,
+                "dependentGloss": "US"
+              },
+              {
+                "dep": "punct",
+                "governor": 11,
+                "governorGloss": "expects",
+                "dependent": 10,
+                "dependentGloss": ","
+              },
+              {
+                "dep": "mark",
+                "governor": 13,
+                "governorGloss": "take",
+                "dependent": 12,
+                "dependentGloss": "to"
+              },
+              {
+                "dep": "xcomp",
+                "governor": 11,
+                "governorGloss": "expects",
+                "dependent": 13,
+                "dependentGloss": "take"
+              },
+              {
+                "dep": "dobj",
+                "governor": 13,
+                "governorGloss": "take",
+                "dependent": 14,
+                "dependentGloss": "a"
+              },
+              {
+                "dep": "dep",
+                "governor": 14,
+                "governorGloss": "a",
+                "dependent": 15,
+                "dependentGloss": "$"
+              },
+              {
+                "dep": "compound",
+                "governor": 17,
+                "governorGloss": "billion",
+                "dependent": 16,
+                "dependentGloss": "5"
+              },
+              {
+                "dep": "nummod",
+                "governor": 15,
+                "governorGloss": "$",
+                "dependent": 17,
+                "dependentGloss": "billion"
+              },
+              {
+                "dep": "acl",
+                "governor": 15,
+                "governorGloss": "$",
+                "dependent": 18,
+                "dependentGloss": "hit"
+              },
+              {
+                "dep": "case",
+                "governor": 20,
+                "governorGloss": "profits",
+                "dependent": 19,
+                "dependentGloss": "to"
+              },
+              {
+                "dep": "nmod:to",
+                "governor": 18,
+                "governorGloss": "hit",
+                "dependent": 20,
+                "dependentGloss": "profits"
+              },
+              {
+                "dep": "det",
+                "governor": 22,
+                "governorGloss": "quarter",
+                "dependent": 21,
+                "dependentGloss": "this"
+              },
+              {
+                "dep": "nmod:tmod",
+                "governor": 18,
+                "governorGloss": "hit",
+                "dependent": 22,
+                "dependentGloss": "quarter"
+              },
+              {
+                "dep": "punct",
+                "governor": 11,
+                "governorGloss": "expects",
+                "dependent": 23,
+                "dependentGloss": "."
+              }
+            ],
+            "enhancedPlusPlusDependencies": [
+              {
+                "dep": "ROOT",
+                "governor": 0,
+                "governorGloss": "ROOT",
+                "dependent": 11,
+                "dependentGloss": "expects"
+              },
+              {
+                "dep": "compound",
+                "governor": 2,
+                "governorGloss": "Sachs",
+                "dependent": 1,
+                "dependentGloss": "Goldman"
+              },
+              {
+                "dep": "nsubj",
+                "governor": 11,
+                "governorGloss": "expects",
+                "dependent": 2,
+                "dependentGloss": "Sachs"
+              },
+              {
+                "dep": "nsubj:xsubj",
+                "governor": 13,
+                "governorGloss": "take",
+                "dependent": 2,
+                "dependentGloss": "Sachs"
+              },
+              {
+                "dep": "punct",
+                "governor": 11,
+                "governorGloss": "expects",
+                "dependent": 3,
+                "dependentGloss": ","
+              },
+              {
+                "dep": "advcl",
+                "governor": 11,
+                "governorGloss": "expects",
+                "dependent": 4,
+                "dependentGloss": "citing"
+              },
+              {
+                "dep": "amod",
+                "governor": 7,
+                "governorGloss": "overhaul",
+                "dependent": 5,
+                "dependentGloss": "recent"
+              },
+              {
+                "dep": "compound",
+                "governor": 7,
+                "governorGloss": "overhaul",
+                "dependent": 6,
+                "dependentGloss": "tax"
+              },
+              {
+                "dep": "dobj",
+                "governor": 4,
+                "governorGloss": "citing",
+                "dependent": 7,
+                "dependentGloss": "overhaul"
+              },
+              {
+                "dep": "case",
+                "governor": 9,
+                "governorGloss": "US",
+                "dependent": 8,
+                "dependentGloss": "in"
+              },
+              {
+                "dep": "nmod:in",
+                "governor": 7,
+                "governorGloss": "overhaul",
+                "dependent": 9,
+                "dependentGloss": "US"
+              },
+              {
+                "dep": "punct",
+                "governor": 11,
+                "governorGloss": "expects",
+                "dependent": 10,
+                "dependentGloss": ","
+              },
+              {
+                "dep": "mark",
+                "governor": 13,
+                "governorGloss": "take",
+                "dependent": 12,
+                "dependentGloss": "to"
+              },
+              {
+                "dep": "xcomp",
+                "governor": 11,
+                "governorGloss": "expects",
+                "dependent": 13,
+                "dependentGloss": "take"
+              },
+              {
+                "dep": "dobj",
+                "governor": 13,
+                "governorGloss": "take",
+                "dependent": 14,
+                "dependentGloss": "a"
+              },
+              {
+                "dep": "dep",
+                "governor": 14,
+                "governorGloss": "a",
+                "dependent": 15,
+                "dependentGloss": "$"
+              },
+              {
+                "dep": "compound",
+                "governor": 17,
+                "governorGloss": "billion",
+                "dependent": 16,
+                "dependentGloss": "5"
+              },
+              {
+                "dep": "nummod",
+                "governor": 15,
+                "governorGloss": "$",
+                "dependent": 17,
+                "dependentGloss": "billion"
+              },
+              {
+                "dep": "acl",
+                "governor": 15,
+                "governorGloss": "$",
+                "dependent": 18,
+                "dependentGloss": "hit"
+              },
+              {
+                "dep": "case",
+                "governor": 20,
+                "governorGloss": "profits",
+                "dependent": 19,
+                "dependentGloss": "to"
+              },
+              {
+                "dep": "nmod:to",
+                "governor": 18,
+                "governorGloss": "hit",
+                "dependent": 20,
+                "dependentGloss": "profits"
+              },
+              {
+                "dep": "det",
+                "governor": 22,
+                "governorGloss": "quarter",
+                "dependent": 21,
+                "dependentGloss": "this"
+              },
+              {
+                "dep": "nmod:tmod",
+                "governor": 18,
+                "governorGloss": "hit",
+                "dependent": 22,
+                "dependentGloss": "quarter"
+              },
+              {
+                "dep": "punct",
+                "governor": 11,
+                "governorGloss": "expects",
+                "dependent": 23,
+                "dependentGloss": "."
+              }
+            ],
+            "tokens": [
+              {
+                "index": 1,
+                "word": "Goldman",
+                "originalText": "Goldman",
+                "lemma": "Goldman",
+                "characterOffsetBegin": 0,
+                "characterOffsetEnd": 7,
+                "pos": "NNP",
+                "ner": "ORGANIZATION",
+                "speaker": "PER0",
+                "before": "",
+                "after": " "
+              },
+              {
+                "index": 2,
+                "word": "Sachs",
+                "originalText": "Sachs",
+                "lemma": "Sachs",
+                "characterOffsetBegin": 8,
+                "characterOffsetEnd": 13,
+                "pos": "NNP",
+                "ner": "ORGANIZATION",
+                "speaker": "PER0",
+                "before": " ",
+                "after": ""
+              },
+              {
+                "index": 3,
+                "word": ",",
+                "originalText": ",",
+                "lemma": ",",
+                "characterOffsetBegin": 13,
+                "characterOffsetEnd": 14,
+                "pos": ",",
+                "ner": "O",
+                "speaker": "PER0",
+                "before": "",
+                "after": " "
+              },
+              {
+                "index": 4,
+                "word": "citing",
+                "originalText": "citing",
+                "lemma": "cite",
+                "characterOffsetBegin": 15,
+                "characterOffsetEnd": 21,
+                "pos": "VBG",
+                "ner": "O",
+                "speaker": "PER0",
+                "before": " ",
+                "after": " "
+              },
+              {
+                "index": 5,
+                "word": "recent",
+                "originalText": "recent",
+                "lemma": "recent",
+                "characterOffsetBegin": 22,
+                "characterOffsetEnd": 28,
+                "pos": "JJ",
+                "ner": "O",
+                "speaker": "PER0",
+                "before": " ",
+                "after": " "
+              },
+              {
+                "index": 6,
+                "word": "tax",
+                "originalText": "tax",
+                "lemma": "tax",
+                "characterOffsetBegin": 29,
+                "characterOffsetEnd": 32,
+                "pos": "NN",
+                "ner": "O",
+                "speaker": "PER0",
+                "before": " ",
+                "after": " "
+              },
+              {
+                "index": 7,
+                "word": "overhaul",
+                "originalText": "overhaul",
+                "lemma": "overhaul",
+                "characterOffsetBegin": 33,
+                "characterOffsetEnd": 41,
+                "pos": "NN",
+                "ner": "O",
+                "speaker": "PER0",
+                "before": " ",
+                "after": " "
+              },
+              {
+                "index": 8,
+                "word": "in",
+                "originalText": "in",
+                "lemma": "in",
+                "characterOffsetBegin": 42,
+                "characterOffsetEnd": 44,
+                "pos": "IN",
+                "ner": "O",
+                "speaker": "PER0",
+                "before": " ",
+                "after": " "
+              },
+              {
+                "index": 9,
+                "word": "US",
+                "originalText": "US",
+                "lemma": "US",
+                "characterOffsetBegin": 45,
+                "characterOffsetEnd": 47,
+                "pos": "NNP",
+                "ner": "LOCATION",
+                "speaker": "PER0",
+                "before": " ",
+                "after": ""
+              },
+              {
+                "index": 10,
+                "word": ",",
+                "originalText": ",",
+                "lemma": ",",
+                "characterOffsetBegin": 47,
+                "characterOffsetEnd": 48,
+                "pos": ",",
+                "ner": "O",
+                "speaker": "PER0",
+                "before": "",
+                "after": " "
+              },
+              {
+                "index": 11,
+                "word": "expects",
+                "originalText": "expects",
+                "lemma": "expect",
+                "characterOffsetBegin": 49,
+                "characterOffsetEnd": 56,
+                "pos": "VBZ",
+                "ner": "O",
+                "speaker": "PER0",
+                "before": " ",
+                "after": " "
+              },
+              {
+                "index": 12,
+                "word": "to",
+                "originalText": "to",
+                "lemma": "to",
+                "characterOffsetBegin": 57,
+                "characterOffsetEnd": 59,
+                "pos": "TO",
+                "ner": "O",
+                "speaker": "PER0",
+                "before": " ",
+                "after": " "
+              },
+              {
+                "index": 13,
+                "word": "take",
+                "originalText": "take",
+                "lemma": "take",
+                "characterOffsetBegin": 60,
+                "characterOffsetEnd": 64,
+                "pos": "VB",
+                "ner": "O",
+                "speaker": "PER0",
+                "before": " ",
+                "after": " "
+              },
+              {
+                "index": 14,
+                "word": "a",
+                "originalText": "a",
+                "lemma": "a",
+                "characterOffsetBegin": 65,
+                "characterOffsetEnd": 66,
+                "pos": "DT",
+                "ner": "O",
+                "speaker": "PER0",
+                "before": " ",
+                "after": " "
+              },
+              {
+                "index": 15,
+                "word": "$",
+                "originalText": "$",
+                "lemma": "$",
+                "characterOffsetBegin": 67,
+                "characterOffsetEnd": 68,
+                "pos": "$",
+                "ner": "MONEY",
+                "normalizedNER": "$5.0E9",
+                "speaker": "PER0",
+                "before": " ",
+                "after": ""
+              },
+              {
+                "index": 16,
+                "word": "5",
+                "originalText": "5",
+                "lemma": "5",
+                "characterOffsetBegin": 68,
+                "characterOffsetEnd": 69,
+                "pos": "CD",
+                "ner": "MONEY",
+                "normalizedNER": "$5.0E9",
+                "speaker": "PER0",
+                "before": "",
+                "after": " "
+              },
+              {
+                "index": 17,
+                "word": "billion",
+                "originalText": "billion",
+                "lemma": "billion",
+                "characterOffsetBegin": 70,
+                "characterOffsetEnd": 77,
+                "pos": "CD",
+                "ner": "MONEY",
+                "normalizedNER": "$5.0E9",
+                "speaker": "PER0",
+                "before": " ",
+                "after": " "
+              },
+              {
+                "index": 18,
+                "word": "hit",
+                "originalText": "hit",
+                "lemma": "hit",
+                "characterOffsetBegin": 78,
+                "characterOffsetEnd": 81,
+                "pos": "VBN",
+                "ner": "O",
+                "speaker": "PER0",
+                "before": " ",
+                "after": " "
+              },
+              {
+                "index": 19,
+                "word": "to",
+                "originalText": "to",
+                "lemma": "to",
+                "characterOffsetBegin": 82,
+                "characterOffsetEnd": 84,
+                "pos": "TO",
+                "ner": "O",
+                "speaker": "PER0",
+                "before": " ",
+                "after": " "
+              },
+              {
+                "index": 20,
+                "word": "profits",
+                "originalText": "profits",
+                "lemma": "profit",
+                "characterOffsetBegin": 85,
+                "characterOffsetEnd": 92,
+                "pos": "NNS",
+                "ner": "O",
+                "speaker": "PER0",
+                "before": " ",
+                "after": " "
+              },
+              {
+                "index": 21,
+                "word": "this",
+                "originalText": "this",
+                "lemma": "this",
+                "characterOffsetBegin": 93,
+                "characterOffsetEnd": 97,
+                "pos": "DT",
+                "ner": "DATE",
+                "normalizedNER": "2017-Q4",
+                "speaker": "PER0",
+                "before": " ",
+                "after": " ",
+                "timex": {
+                  "tid": "t1",
+                  "type": "DATE",
+                  "value": "2017-Q4"
+                }
+              },
+              {
+                "index": 22,
+                "word": "quarter",
+                "originalText": "quarter",
+                "lemma": "quarter",
+                "characterOffsetBegin": 98,
+                "characterOffsetEnd": 105,
+                "pos": "NN",
+                "ner": "DATE",
+                "normalizedNER": "2017-Q4",
+                "speaker": "PER0",
+                "before": " ",
+                "after": "",
+                "timex": {
+                  "tid": "t1",
+                  "type": "DATE",
+                  "value": "2017-Q4"
+                }
+              },
+              {
+                "index": 23,
+                "word": ".",
+                "originalText": ".",
+                "lemma": ".",
+                "characterOffsetBegin": 105,
+                "characterOffsetEnd": 106,
+                "pos": ".",
+                "ner": "O",
+                "speaker": "PER0",
+                "before": "",
+                "after": " "
+              }
+            ]
+          },
+          {
+            "index": 1,
+            "parse": "(ROOT\n  (S\n    (NP (NNP Goldman) (NNP Sachs))\n    (, ,)\n    (S\n      (VP (VBG citing)\n        (NP\n          (NP (JJ recent) (NN tax) (NN overhaul))\n          (PP (IN in)\n            (NP (NNP US))))))\n    (, ,)\n    (VP (VBZ expects)\n      (S\n        (VP (TO to)\n          (VP (VB take)\n            (NP\n              (NP (DT a)\n                (QP ($ $) (CD 5) (CD billion)))\n              (VP (VBN hit)\n                (PP (TO to)\n                  (NP (NNS profits)))))\n            (NP (DT this) (NN quarter))))))\n    (. .)))",
+            "basicDependencies": [
+              {
+                "dep": "ROOT",
+                "governor": 0,
+                "governorGloss": "ROOT",
+                "dependent": 11,
+                "dependentGloss": "expects"
+              },
+              {
+                "dep": "compound",
+                "governor": 2,
+                "governorGloss": "Sachs",
+                "dependent": 1,
+                "dependentGloss": "Goldman"
+              },
+              {
+                "dep": "nsubj",
+                "governor": 11,
+                "governorGloss": "expects",
+                "dependent": 2,
+                "dependentGloss": "Sachs"
+              },
+              {
+                "dep": "punct",
+                "governor": 11,
+                "governorGloss": "expects",
+                "dependent": 3,
+                "dependentGloss": ","
+              },
+              {
+                "dep": "advcl",
+                "governor": 11,
+                "governorGloss": "expects",
+                "dependent": 4,
+                "dependentGloss": "citing"
+              },
+              {
+                "dep": "amod",
+                "governor": 7,
+                "governorGloss": "overhaul",
+                "dependent": 5,
+                "dependentGloss": "recent"
+              },
+              {
+                "dep": "compound",
+                "governor": 7,
+                "governorGloss": "overhaul",
+                "dependent": 6,
+                "dependentGloss": "tax"
+              },
+              {
+                "dep": "dobj",
+                "governor": 4,
+                "governorGloss": "citing",
+                "dependent": 7,
+                "dependentGloss": "overhaul"
+              },
+              {
+                "dep": "case",
+                "governor": 9,
+                "governorGloss": "US",
+                "dependent": 8,
+                "dependentGloss": "in"
+              },
+              {
+                "dep": "nmod",
+                "governor": 7,
+                "governorGloss": "overhaul",
+                "dependent": 9,
+                "dependentGloss": "US"
+              },
+              {
+                "dep": "punct",
+                "governor": 11,
+                "governorGloss": "expects",
+                "dependent": 10,
+                "dependentGloss": ","
+              },
+              {
+                "dep": "mark",
+                "governor": 13,
+                "governorGloss": "take",
+                "dependent": 12,
+                "dependentGloss": "to"
+              },
+              {
+                "dep": "xcomp",
+                "governor": 11,
+                "governorGloss": "expects",
+                "dependent": 13,
+                "dependentGloss": "take"
+              },
+              {
+                "dep": "dobj",
+                "governor": 13,
+                "governorGloss": "take",
+                "dependent": 14,
+                "dependentGloss": "a"
+              },
+              {
+                "dep": "dep",
+                "governor": 14,
+                "governorGloss": "a",
+                "dependent": 15,
+                "dependentGloss": "$"
+              },
+              {
+                "dep": "compound",
+                "governor": 17,
+                "governorGloss": "billion",
+                "dependent": 16,
+                "dependentGloss": "5"
+              },
+              {
+                "dep": "nummod",
+                "governor": 15,
+                "governorGloss": "$",
+                "dependent": 17,
+                "dependentGloss": "billion"
+              },
+              {
+                "dep": "acl",
+                "governor": 15,
+                "governorGloss": "$",
+                "dependent": 18,
+                "dependentGloss": "hit"
+              },
+              {
+                "dep": "case",
+                "governor": 20,
+                "governorGloss": "profits",
+                "dependent": 19,
+                "dependentGloss": "to"
+              },
+              {
+                "dep": "nmod",
+                "governor": 18,
+                "governorGloss": "hit",
+                "dependent": 20,
+                "dependentGloss": "profits"
+              },
+              {
+                "dep": "det",
+                "governor": 22,
+                "governorGloss": "quarter",
+                "dependent": 21,
+                "dependentGloss": "this"
+              },
+              {
+                "dep": "nmod:tmod",
+                "governor": 18,
+                "governorGloss": "hit",
+                "dependent": 22,
+                "dependentGloss": "quarter"
+              },
+              {
+                "dep": "punct",
+                "governor": 11,
+                "governorGloss": "expects",
+                "dependent": 23,
+                "dependentGloss": "."
+              }
+            ],
+            "enhancedDependencies": [
+              {
+                "dep": "ROOT",
+                "governor": 0,
+                "governorGloss": "ROOT",
+                "dependent": 11,
+                "dependentGloss": "expects"
+              },
+              {
+                "dep": "compound",
+                "governor": 2,
+                "governorGloss": "Sachs",
+                "dependent": 1,
+                "dependentGloss": "Goldman"
+              },
+              {
+                "dep": "nsubj",
+                "governor": 11,
+                "governorGloss": "expects",
+                "dependent": 2,
+                "dependentGloss": "Sachs"
+              },
+              {
+                "dep": "nsubj:xsubj",
+                "governor": 13,
+                "governorGloss": "take",
+                "dependent": 2,
+                "dependentGloss": "Sachs"
+              },
+              {
+                "dep": "punct",
+                "governor": 11,
+                "governorGloss": "expects",
+                "dependent": 3,
+                "dependentGloss": ","
+              },
+              {
+                "dep": "advcl",
+                "governor": 11,
+                "governorGloss": "expects",
+                "dependent": 4,
+                "dependentGloss": "citing"
+              },
+              {
+                "dep": "amod",
+                "governor": 7,
+                "governorGloss": "overhaul",
+                "dependent": 5,
+                "dependentGloss": "recent"
+              },
+              {
+                "dep": "compound",
+                "governor": 7,
+                "governorGloss": "overhaul",
+                "dependent": 6,
+                "dependentGloss": "tax"
+              },
+              {
+                "dep": "dobj",
+                "governor": 4,
+                "governorGloss": "citing",
+                "dependent": 7,
+                "dependentGloss": "overhaul"
+              },
+              {
+                "dep": "case",
+                "governor": 9,
+                "governorGloss": "US",
+                "dependent": 8,
+                "dependentGloss": "in"
+              },
+              {
+                "dep": "nmod:in",
+                "governor": 7,
+                "governorGloss": "overhaul",
+                "dependent": 9,
+                "dependentGloss": "US"
+              },
+              {
+                "dep": "punct",
+                "governor": 11,
+                "governorGloss": "expects",
+                "dependent": 10,
+                "dependentGloss": ","
+              },
+              {
+                "dep": "mark",
+                "governor": 13,
+                "governorGloss": "take",
+                "dependent": 12,
+                "dependentGloss": "to"
+              },
+              {
+                "dep": "xcomp",
+                "governor": 11,
+                "governorGloss": "expects",
+                "dependent": 13,
+                "dependentGloss": "take"
+              },
+              {
+                "dep": "dobj",
+                "governor": 13,
+                "governorGloss": "take",
+                "dependent": 14,
+                "dependentGloss": "a"
+              },
+              {
+                "dep": "dep",
+                "governor": 14,
+                "governorGloss": "a",
+                "dependent": 15,
+                "dependentGloss": "$"
+              },
+              {
+                "dep": "compound",
+                "governor": 17,
+                "governorGloss": "billion",
+                "dependent": 16,
+                "dependentGloss": "5"
+              },
+              {
+                "dep": "nummod",
+                "governor": 15,
+                "governorGloss": "$",
+                "dependent": 17,
+                "dependentGloss": "billion"
+              },
+              {
+                "dep": "acl",
+                "governor": 15,
+                "governorGloss": "$",
+                "dependent": 18,
+                "dependentGloss": "hit"
+              },
+              {
+                "dep": "case",
+                "governor": 20,
+                "governorGloss": "profits",
+                "dependent": 19,
+                "dependentGloss": "to"
+              },
+              {
+                "dep": "nmod:to",
+                "governor": 18,
+                "governorGloss": "hit",
+                "dependent": 20,
+                "dependentGloss": "profits"
+              },
+              {
+                "dep": "det",
+                "governor": 22,
+                "governorGloss": "quarter",
+                "dependent": 21,
+                "dependentGloss": "this"
+              },
+              {
+                "dep": "nmod:tmod",
+                "governor": 18,
+                "governorGloss": "hit",
+                "dependent": 22,
+                "dependentGloss": "quarter"
+              },
+              {
+                "dep": "punct",
+                "governor": 11,
+                "governorGloss": "expects",
+                "dependent": 23,
+                "dependentGloss": "."
+              }
+            ],
+            "enhancedPlusPlusDependencies": [
+              {
+                "dep": "ROOT",
+                "governor": 0,
+                "governorGloss": "ROOT",
+                "dependent": 11,
+                "dependentGloss": "expects"
+              },
+              {
+                "dep": "compound",
+                "governor": 2,
+                "governorGloss": "Sachs",
+                "dependent": 1,
+                "dependentGloss": "Goldman"
+              },
+              {
+                "dep": "nsubj",
+                "governor": 11,
+                "governorGloss": "expects",
+                "dependent": 2,
+                "dependentGloss": "Sachs"
+              },
+              {
+                "dep": "nsubj:xsubj",
+                "governor": 13,
+                "governorGloss": "take",
+                "dependent": 2,
+                "dependentGloss": "Sachs"
+              },
+              {
+                "dep": "punct",
+                "governor": 11,
+                "governorGloss": "expects",
+                "dependent": 3,
+                "dependentGloss": ","
+              },
+              {
+                "dep": "advcl",
+                "governor": 11,
+                "governorGloss": "expects",
+                "dependent": 4,
+                "dependentGloss": "citing"
+              },
+              {
+                "dep": "amod",
+                "governor": 7,
+                "governorGloss": "overhaul",
+                "dependent": 5,
+                "dependentGloss": "recent"
+              },
+              {
+                "dep": "compound",
+                "governor": 7,
+                "governorGloss": "overhaul",
+                "dependent": 6,
+                "dependentGloss": "tax"
+              },
+              {
+                "dep": "dobj",
+                "governor": 4,
+                "governorGloss": "citing",
+                "dependent": 7,
+                "dependentGloss": "overhaul"
+              },
+              {
+                "dep": "case",
+                "governor": 9,
+                "governorGloss": "US",
+                "dependent": 8,
+                "dependentGloss": "in"
+              },
+              {
+                "dep": "nmod:in",
+                "governor": 7,
+                "governorGloss": "overhaul",
+                "dependent": 9,
+                "dependentGloss": "US"
+              },
+              {
+                "dep": "punct",
+                "governor": 11,
+                "governorGloss": "expects",
+                "dependent": 10,
+                "dependentGloss": ","
+              },
+              {
+                "dep": "mark",
+                "governor": 13,
+                "governorGloss": "take",
+                "dependent": 12,
+                "dependentGloss": "to"
+              },
+              {
+                "dep": "xcomp",
+                "governor": 11,
+                "governorGloss": "expects",
+                "dependent": 13,
+                "dependentGloss": "take"
+              },
+              {
+                "dep": "dobj",
+                "governor": 13,
+                "governorGloss": "take",
+                "dependent": 14,
+                "dependentGloss": "a"
+              },
+              {
+                "dep": "dep",
+                "governor": 14,
+                "governorGloss": "a",
+                "dependent": 15,
+                "dependentGloss": "$"
+              },
+              {
+                "dep": "compound",
+                "governor": 17,
+                "governorGloss": "billion",
+                "dependent": 16,
+                "dependentGloss": "5"
+              },
+              {
+                "dep": "nummod",
+                "governor": 15,
+                "governorGloss": "$",
+                "dependent": 17,
+                "dependentGloss": "billion"
+              },
+              {
+                "dep": "acl",
+                "governor": 15,
+                "governorGloss": "$",
+                "dependent": 18,
+                "dependentGloss": "hit"
+              },
+              {
+                "dep": "case",
+                "governor": 20,
+                "governorGloss": "profits",
+                "dependent": 19,
+                "dependentGloss": "to"
+              },
+              {
+                "dep": "nmod:to",
+                "governor": 18,
+                "governorGloss": "hit",
+                "dependent": 20,
+                "dependentGloss": "profits"
+              },
+              {
+                "dep": "det",
+                "governor": 22,
+                "governorGloss": "quarter",
+                "dependent": 21,
+                "dependentGloss": "this"
+              },
+              {
+                "dep": "nmod:tmod",
+                "governor": 18,
+                "governorGloss": "hit",
+                "dependent": 22,
+                "dependentGloss": "quarter"
+              },
+              {
+                "dep": "punct",
+                "governor": 11,
+                "governorGloss": "expects",
+                "dependent": 23,
+                "dependentGloss": "."
+              }
+            ],
+            "tokens": [
+              {
+                "index": 1,
+                "word": "Goldman",
+                "originalText": "Goldman",
+                "lemma": "Goldman",
+                "characterOffsetBegin": 107,
+                "characterOffsetEnd": 114,
+                "pos": "NNP",
+                "ner": "ORGANIZATION",
+                "speaker": "PER0",
+                "before": " ",
+                "after": " "
+              },
+              {
+                "index": 2,
+                "word": "Sachs",
+                "originalText": "Sachs",
+                "lemma": "Sachs",
+                "characterOffsetBegin": 115,
+                "characterOffsetEnd": 120,
+                "pos": "NNP",
+                "ner": "ORGANIZATION",
+                "speaker": "PER0",
+                "before": " ",
+                "after": ""
+              },
+              {
+                "index": 3,
+                "word": ",",
+                "originalText": ",",
+                "lemma": ",",
+                "characterOffsetBegin": 120,
+                "characterOffsetEnd": 121,
+                "pos": ",",
+                "ner": "O",
+                "speaker": "PER0",
+                "before": "",
+                "after": " "
+              },
+              {
+                "index": 4,
+                "word": "citing",
+                "originalText": "citing",
+                "lemma": "cite",
+                "characterOffsetBegin": 122,
+                "characterOffsetEnd": 128,
+                "pos": "VBG",
+                "ner": "O",
+                "speaker": "PER0",
+                "before": " ",
+                "after": " "
+              },
+              {
+                "index": 5,
+                "word": "recent",
+                "originalText": "recent",
+                "lemma": "recent",
+                "characterOffsetBegin": 129,
+                "characterOffsetEnd": 135,
+                "pos": "JJ",
+                "ner": "O",
+                "speaker": "PER0",
+                "before": " ",
+                "after": " "
+              },
+              {
+                "index": 6,
+                "word": "tax",
+                "originalText": "tax",
+                "lemma": "tax",
+                "characterOffsetBegin": 136,
+                "characterOffsetEnd": 139,
+                "pos": "NN",
+                "ner": "O",
+                "speaker": "PER0",
+                "before": " ",
+                "after": " "
+              },
+              {
+                "index": 7,
+                "word": "overhaul",
+                "originalText": "overhaul",
+                "lemma": "overhaul",
+                "characterOffsetBegin": 140,
+                "characterOffsetEnd": 148,
+                "pos": "NN",
+                "ner": "O",
+                "speaker": "PER0",
+                "before": " ",
+                "after": " "
+              },
+              {
+                "index": 8,
+                "word": "in",
+                "originalText": "in",
+                "lemma": "in",
+                "characterOffsetBegin": 149,
+                "characterOffsetEnd": 151,
+                "pos": "IN",
+                "ner": "O",
+                "speaker": "PER0",
+                "before": " ",
+                "after": " "
+              },
+              {
+                "index": 9,
+                "word": "US",
+                "originalText": "US",
+                "lemma": "US",
+                "characterOffsetBegin": 152,
+                "characterOffsetEnd": 154,
+                "pos": "NNP",
+                "ner": "LOCATION",
+                "speaker": "PER0",
+                "before": " ",
+                "after": ""
+              },
+              {
+                "index": 10,
+                "word": ",",
+                "originalText": ",",
+                "lemma": ",",
+                "characterOffsetBegin": 154,
+                "characterOffsetEnd": 155,
+                "pos": ",",
+                "ner": "O",
+                "speaker": "PER0",
+                "before": "",
+                "after": " "
+              },
+              {
+                "index": 11,
+                "word": "expects",
+                "originalText": "expects",
+                "lemma": "expect",
+                "characterOffsetBegin": 156,
+                "characterOffsetEnd": 163,
+                "pos": "VBZ",
+                "ner": "O",
+                "speaker": "PER0",
+                "before": " ",
+                "after": " "
+              },
+              {
+                "index": 12,
+                "word": "to",
+                "originalText": "to",
+                "lemma": "to",
+                "characterOffsetBegin": 164,
+                "characterOffsetEnd": 166,
+                "pos": "TO",
+                "ner": "O",
+                "speaker": "PER0",
+                "before": " ",
+                "after": " "
+              },
+              {
+                "index": 13,
+                "word": "take",
+                "originalText": "take",
+                "lemma": "take",
+                "characterOffsetBegin": 167,
+                "characterOffsetEnd": 171,
+                "pos": "VB",
+                "ner": "O",
+                "speaker": "PER0",
+                "before": " ",
+                "after": " "
+              },
+              {
+                "index": 14,
+                "word": "a",
+                "originalText": "a",
+                "lemma": "a",
+                "characterOffsetBegin": 172,
+                "characterOffsetEnd": 173,
+                "pos": "DT",
+                "ner": "O",
+                "speaker": "PER0",
+                "before": " ",
+                "after": " "
+              },
+              {
+                "index": 15,
+                "word": "$",
+                "originalText": "$",
+                "lemma": "$",
+                "characterOffsetBegin": 174,
+                "characterOffsetEnd": 175,
+                "pos": "$",
+                "ner": "MONEY",
+                "normalizedNER": "$5.0E9",
+                "speaker": "PER0",
+                "before": " ",
+                "after": ""
+              },
+              {
+                "index": 16,
+                "word": "5",
+                "originalText": "5",
+                "lemma": "5",
+                "characterOffsetBegin": 175,
+                "characterOffsetEnd": 176,
+                "pos": "CD",
+                "ner": "MONEY",
+                "normalizedNER": "$5.0E9",
+                "speaker": "PER0",
+                "before": "",
+                "after": " "
+              },
+              {
+                "index": 17,
+                "word": "billion",
+                "originalText": "billion",
+                "lemma": "billion",
+                "characterOffsetBegin": 177,
+                "characterOffsetEnd": 184,
+                "pos": "CD",
+                "ner": "MONEY",
+                "normalizedNER": "$5.0E9",
+                "speaker": "PER0",
+                "before": " ",
+                "after": " "
+              },
+              {
+                "index": 18,
+                "word": "hit",
+                "originalText": "hit",
+                "lemma": "hit",
+                "characterOffsetBegin": 185,
+                "characterOffsetEnd": 188,
+                "pos": "VBN",
+                "ner": "O",
+                "speaker": "PER0",
+                "before": " ",
+                "after": " "
+              },
+              {
+                "index": 19,
+                "word": "to",
+                "originalText": "to",
+                "lemma": "to",
+                "characterOffsetBegin": 189,
+                "characterOffsetEnd": 191,
+                "pos": "TO",
+                "ner": "O",
+                "speaker": "PER0",
+                "before": " ",
+                "after": " "
+              },
+              {
+                "index": 20,
+                "word": "profits",
+                "originalText": "profits",
+                "lemma": "profit",
+                "characterOffsetBegin": 192,
+                "characterOffsetEnd": 199,
+                "pos": "NNS",
+                "ner": "O",
+                "speaker": "PER0",
+                "before": " ",
+                "after": " "
+              },
+              {
+                "index": 21,
+                "word": "this",
+                "originalText": "this",
+                "lemma": "this",
+                "characterOffsetBegin": 200,
+                "characterOffsetEnd": 204,
+                "pos": "DT",
+                "ner": "DATE",
+                "normalizedNER": "2017-Q4",
+                "speaker": "PER0",
+                "before": " ",
+                "after": " ",
+                "timex": {
+                  "tid": "t2",
+                  "type": "DATE",
+                  "value": "2017-Q4"
+                }
+              },
+              {
+                "index": 22,
+                "word": "quarter",
+                "originalText": "quarter",
+                "lemma": "quarter",
+                "characterOffsetBegin": 205,
+                "characterOffsetEnd": 212,
+                "pos": "NN",
+                "ner": "DATE",
+                "normalizedNER": "2017-Q4",
+                "speaker": "PER0",
+                "before": " ",
+                "after": "",
+                "timex": {
+                  "tid": "t2",
+                  "type": "DATE",
+                  "value": "2017-Q4"
+                }
+              },
+              {
+                "index": 23,
+                "word": ".",
+                "originalText": ".",
+                "lemma": ".",
+                "characterOffsetBegin": 212,
+                "characterOffsetEnd": 213,
+                "pos": ".",
+                "ner": "O",
+                "speaker": "PER0",
+                "before": "",
+                "after": ""
+              }
+            ]
+          },
+          {
+            "index": 2,
+            "parse": "(ROOT (. .))",
+            "basicDependencies": [
+              {
+                "dep": "ROOT",
+                "governor": 0,
+                "governorGloss": "ROOT",
+                "dependent": 1,
+                "dependentGloss": "."
+              }
+            ],
+            "enhancedDependencies": [
+              {
+                "dep": "ROOT",
+                "governor": 0,
+                "governorGloss": "ROOT",
+                "dependent": 1,
+                "dependentGloss": "."
+              }
+            ],
+            "enhancedPlusPlusDependencies": [
+              {
+                "dep": "ROOT",
+                "governor": 0,
+                "governorGloss": "ROOT",
+                "dependent": 1,
+                "dependentGloss": "."
+              }
+            ],
+            "tokens": [
+              {
+                "index": 1,
+                "word": ".",
+                "originalText": ".",
+                "lemma": ".",
+                "characterOffsetBegin": 213,
+                "characterOffsetEnd": 214,
+                "pos": ".",
+                "ner": "O",
+                "speaker": "PER0",
+                "before": "",
+                "after": " "
+              }
+            ]
+          },
+          {
+            "index": 3,
+            "parse": "(ROOT\n  (S\n    (NP (NNP NEW) (NNP YORK))\n    (: --)\n    (NP (NNP Goldman) (NNP Sachs))\n    (, ,)\n    (S\n      (VP (VBG citing)\n        (NP\n          (NP (JJ recent) (NN tax) (NN overhaul))\n          (PP (IN in)\n            (NP (NNP US))))))\n    (, ,)\n    (VP (VBZ expects)\n      (S\n        (VP (TO to)\n          (VP (VB take)\n            (NP\n              (NP (DT a)\n                (QP ($ $) (CD 5) (CD billion)))\n              (VP (VBN hit)\n                (PP (TO to)\n                  (NP (NNS profits)))))\n            (NP (DT this) (NN quarter))))))\n    (. .)))",
+            "basicDependencies": [
+              {
+                "dep": "ROOT",
+                "governor": 0,
+                "governorGloss": "ROOT",
+                "dependent": 14,
+                "dependentGloss": "expects"
+              },
+              {
+                "dep": "compound",
+                "governor": 2,
+                "governorGloss": "YORK",
+                "dependent": 1,
+                "dependentGloss": "NEW"
+              },
+              {
+                "dep": "nsubj",
+                "governor": 14,
+                "governorGloss": "expects",
+                "dependent": 2,
+                "dependentGloss": "YORK"
+              },
+              {
+                "dep": "punct",
+                "governor": 2,
+                "governorGloss": "YORK",
+                "dependent": 3,
+                "dependentGloss": "--"
+              },
+              {
+                "dep": "compound",
+                "governor": 5,
+                "governorGloss": "Sachs",
+                "dependent": 4,
+                "dependentGloss": "Goldman"
+              },
+              {
+                "dep": "dep",
+                "governor": 2,
+                "governorGloss": "YORK",
+                "dependent": 5,
+                "dependentGloss": "Sachs"
+              },
+              {
+                "dep": "punct",
+                "governor": 2,
+                "governorGloss": "YORK",
+                "dependent": 6,
+                "dependentGloss": ","
+              },
+              {
+                "dep": "acl",
+                "governor": 2,
+                "governorGloss": "YORK",
+                "dependent": 7,
+                "dependentGloss": "citing"
+              },
+              {
+                "dep": "amod",
+                "governor": 10,
+                "governorGloss": "overhaul",
+                "dependent": 8,
+                "dependentGloss": "recent"
+              },
+              {
+                "dep": "compound",
+                "governor": 10,
+                "governorGloss": "overhaul",
+                "dependent": 9,
+                "dependentGloss": "tax"
+              },
+              {
+                "dep": "dobj",
+                "governor": 7,
+                "governorGloss": "citing",
+                "dependent": 10,
+                "dependentGloss": "overhaul"
+              },
+              {
+                "dep": "case",
+                "governor": 12,
+                "governorGloss": "US",
+                "dependent": 11,
+                "dependentGloss": "in"
+              },
+              {
+                "dep": "nmod",
+                "governor": 10,
+                "governorGloss": "overhaul",
+                "dependent": 12,
+                "dependentGloss": "US"
+              },
+              {
+                "dep": "punct",
+                "governor": 2,
+                "governorGloss": "YORK",
+                "dependent": 13,
+                "dependentGloss": ","
+              },
+              {
+                "dep": "mark",
+                "governor": 16,
+                "governorGloss": "take",
+                "dependent": 15,
+                "dependentGloss": "to"
+              },
+              {
+                "dep": "xcomp",
+                "governor": 14,
+                "governorGloss": "expects",
+                "dependent": 16,
+                "dependentGloss": "take"
+              },
+              {
+                "dep": "dobj",
+                "governor": 16,
+                "governorGloss": "take",
+                "dependent": 17,
+                "dependentGloss": "a"
+              },
+              {
+                "dep": "dep",
+                "governor": 17,
+                "governorGloss": "a",
+                "dependent": 18,
+                "dependentGloss": "$"
+              },
+              {
+                "dep": "compound",
+                "governor": 20,
+                "governorGloss": "billion",
+                "dependent": 19,
+                "dependentGloss": "5"
+              },
+              {
+                "dep": "nummod",
+                "governor": 18,
+                "governorGloss": "$",
+                "dependent": 20,
+                "dependentGloss": "billion"
+              },
+              {
+                "dep": "acl",
+                "governor": 18,
+                "governorGloss": "$",
+                "dependent": 21,
+                "dependentGloss": "hit"
+              },
+              {
+                "dep": "case",
+                "governor": 23,
+                "governorGloss": "profits",
+                "dependent": 22,
+                "dependentGloss": "to"
+              },
+              {
+                "dep": "nmod",
+                "governor": 21,
+                "governorGloss": "hit",
+                "dependent": 23,
+                "dependentGloss": "profits"
+              },
+              {
+                "dep": "det",
+                "governor": 25,
+                "governorGloss": "quarter",
+                "dependent": 24,
+                "dependentGloss": "this"
+              },
+              {
+                "dep": "nmod:tmod",
+                "governor": 21,
+                "governorGloss": "hit",
+                "dependent": 25,
+                "dependentGloss": "quarter"
+              },
+              {
+                "dep": "punct",
+                "governor": 14,
+                "governorGloss": "expects",
+                "dependent": 26,
+                "dependentGloss": "."
+              }
+            ],
+            "enhancedDependencies": [
+              {
+                "dep": "ROOT",
+                "governor": 0,
+                "governorGloss": "ROOT",
+                "dependent": 14,
+                "dependentGloss": "expects"
+              },
+              {
+                "dep": "compound",
+                "governor": 2,
+                "governorGloss": "YORK",
+                "dependent": 1,
+                "dependentGloss": "NEW"
+              },
+              {
+                "dep": "nsubj",
+                "governor": 14,
+                "governorGloss": "expects",
+                "dependent": 2,
+                "dependentGloss": "YORK"
+              },
+              {
+                "dep": "nsubj:xsubj",
+                "governor": 16,
+                "governorGloss": "take",
+                "dependent": 2,
+                "dependentGloss": "YORK"
+              },
+              {
+                "dep": "punct",
+                "governor": 2,
+                "governorGloss": "YORK",
+                "dependent": 3,
+                "dependentGloss": "--"
+              },
+              {
+                "dep": "compound",
+                "governor": 5,
+                "governorGloss": "Sachs",
+                "dependent": 4,
+                "dependentGloss": "Goldman"
+              },
+              {
+                "dep": "dep",
+                "governor": 2,
+                "governorGloss": "YORK",
+                "dependent": 5,
+                "dependentGloss": "Sachs"
+              },
+              {
+                "dep": "punct",
+                "governor": 2,
+                "governorGloss": "YORK",
+                "dependent": 6,
+                "dependentGloss": ","
+              },
+              {
+                "dep": "acl",
+                "governor": 2,
+                "governorGloss": "YORK",
+                "dependent": 7,
+                "dependentGloss": "citing"
+              },
+              {
+                "dep": "amod",
+                "governor": 10,
+                "governorGloss": "overhaul",
+                "dependent": 8,
+                "dependentGloss": "recent"
+              },
+              {
+                "dep": "compound",
+                "governor": 10,
+                "governorGloss": "overhaul",
+                "dependent": 9,
+                "dependentGloss": "tax"
+              },
+              {
+                "dep": "dobj",
+                "governor": 7,
+                "governorGloss": "citing",
+                "dependent": 10,
+                "dependentGloss": "overhaul"
+              },
+              {
+                "dep": "case",
+                "governor": 12,
+                "governorGloss": "US",
+                "dependent": 11,
+                "dependentGloss": "in"
+              },
+              {
+                "dep": "nmod:in",
+                "governor": 10,
+                "governorGloss": "overhaul",
+                "dependent": 12,
+                "dependentGloss": "US"
+              },
+              {
+                "dep": "punct",
+                "governor": 2,
+                "governorGloss": "YORK",
+                "dependent": 13,
+                "dependentGloss": ","
+              },
+              {
+                "dep": "mark",
+                "governor": 16,
+                "governorGloss": "take",
+                "dependent": 15,
+                "dependentGloss": "to"
+              },
+              {
+                "dep": "xcomp",
+                "governor": 14,
+                "governorGloss": "expects",
+                "dependent": 16,
+                "dependentGloss": "take"
+              },
+              {
+                "dep": "dobj",
+                "governor": 16,
+                "governorGloss": "take",
+                "dependent": 17,
+                "dependentGloss": "a"
+              },
+              {
+                "dep": "dep",
+                "governor": 17,
+                "governorGloss": "a",
+                "dependent": 18,
+                "dependentGloss": "$"
+              },
+              {
+                "dep": "compound",
+                "governor": 20,
+                "governorGloss": "billion",
+                "dependent": 19,
+                "dependentGloss": "5"
+              },
+              {
+                "dep": "nummod",
+                "governor": 18,
+                "governorGloss": "$",
+                "dependent": 20,
+                "dependentGloss": "billion"
+              },
+              {
+                "dep": "acl",
+                "governor": 18,
+                "governorGloss": "$",
+                "dependent": 21,
+                "dependentGloss": "hit"
+              },
+              {
+                "dep": "case",
+                "governor": 23,
+                "governorGloss": "profits",
+                "dependent": 22,
+                "dependentGloss": "to"
+              },
+              {
+                "dep": "nmod:to",
+                "governor": 21,
+                "governorGloss": "hit",
+                "dependent": 23,
+                "dependentGloss": "profits"
+              },
+              {
+                "dep": "det",
+                "governor": 25,
+                "governorGloss": "quarter",
+                "dependent": 24,
+                "dependentGloss": "this"
+              },
+              {
+                "dep": "nmod:tmod",
+                "governor": 21,
+                "governorGloss": "hit",
+                "dependent": 25,
+                "dependentGloss": "quarter"
+              },
+              {
+                "dep": "punct",
+                "governor": 14,
+                "governorGloss": "expects",
+                "dependent": 26,
+                "dependentGloss": "."
+              }
+            ],
+            "enhancedPlusPlusDependencies": [
+              {
+                "dep": "ROOT",
+                "governor": 0,
+                "governorGloss": "ROOT",
+                "dependent": 14,
+                "dependentGloss": "expects"
+              },
+              {
+                "dep": "compound",
+                "governor": 2,
+                "governorGloss": "YORK",
+                "dependent": 1,
+                "dependentGloss": "NEW"
+              },
+              {
+                "dep": "nsubj",
+                "governor": 14,
+                "governorGloss": "expects",
+                "dependent": 2,
+                "dependentGloss": "YORK"
+              },
+              {
+                "dep": "nsubj:xsubj",
+                "governor": 16,
+                "governorGloss": "take",
+                "dependent": 2,
+                "dependentGloss": "YORK"
+              },
+              {
+                "dep": "punct",
+                "governor": 2,
+                "governorGloss": "YORK",
+                "dependent": 3,
+                "dependentGloss": "--"
+              },
+              {
+                "dep": "compound",
+                "governor": 5,
+                "governorGloss": "Sachs",
+                "dependent": 4,
+                "dependentGloss": "Goldman"
+              },
+              {
+                "dep": "dep",
+                "governor": 2,
+                "governorGloss": "YORK",
+                "dependent": 5,
+                "dependentGloss": "Sachs"
+              },
+              {
+                "dep": "punct",
+                "governor": 2,
+                "governorGloss": "YORK",
+                "dependent": 6,
+                "dependentGloss": ","
+              },
+              {
+                "dep": "acl",
+                "governor": 2,
+                "governorGloss": "YORK",
+                "dependent": 7,
+                "dependentGloss": "citing"
+              },
+              {
+                "dep": "amod",
+                "governor": 10,
+                "governorGloss": "overhaul",
+                "dependent": 8,
+                "dependentGloss": "recent"
+              },
+              {
+                "dep": "compound",
+                "governor": 10,
+                "governorGloss": "overhaul",
+                "dependent": 9,
+                "dependentGloss": "tax"
+              },
+              {
+                "dep": "dobj",
+                "governor": 7,
+                "governorGloss": "citing",
+                "dependent": 10,
+                "dependentGloss": "overhaul"
+              },
+              {
+                "dep": "case",
+                "governor": 12,
+                "governorGloss": "US",
+                "dependent": 11,
+                "dependentGloss": "in"
+              },
+              {
+                "dep": "nmod:in",
+                "governor": 10,
+                "governorGloss": "overhaul",
+                "dependent": 12,
+                "dependentGloss": "US"
+              },
+              {
+                "dep": "punct",
+                "governor": 2,
+                "governorGloss": "YORK",
+                "dependent": 13,
+                "dependentGloss": ","
+              },
+              {
+                "dep": "mark",
+                "governor": 16,
+                "governorGloss": "take",
+                "dependent": 15,
+                "dependentGloss": "to"
+              },
+              {
+                "dep": "xcomp",
+                "governor": 14,
+                "governorGloss": "expects",
+                "dependent": 16,
+                "dependentGloss": "take"
+              },
+              {
+                "dep": "dobj",
+                "governor": 16,
+                "governorGloss": "take",
+                "dependent": 17,
+                "dependentGloss": "a"
+              },
+              {
+                "dep": "dep",
+                "governor": 17,
+                "governorGloss": "a",
+                "dependent": 18,
+                "dependentGloss": "$"
+              },
+              {
+                "dep": "compound",
+                "governor": 20,
+                "governorGloss": "billion",
+                "dependent": 19,
+                "dependentGloss": "5"
+              },
+              {
+                "dep": "nummod",
+                "governor": 18,
+                "governorGloss": "$",
+                "dependent": 20,
+                "dependentGloss": "billion"
+              },
+              {
+                "dep": "acl",
+                "governor": 18,
+                "governorGloss": "$",
+                "dependent": 21,
+                "dependentGloss": "hit"
+              },
+              {
+                "dep": "case",
+                "governor": 23,
+                "governorGloss": "profits",
+                "dependent": 22,
+                "dependentGloss": "to"
+              },
+              {
+                "dep": "nmod:to",
+                "governor": 21,
+                "governorGloss": "hit",
+                "dependent": 23,
+                "dependentGloss": "profits"
+              },
+              {
+                "dep": "det",
+                "governor": 25,
+                "governorGloss": "quarter",
+                "dependent": 24,
+                "dependentGloss": "this"
+              },
+              {
+                "dep": "nmod:tmod",
+                "governor": 21,
+                "governorGloss": "hit",
+                "dependent": 25,
+                "dependentGloss": "quarter"
+              },
+              {
+                "dep": "punct",
+                "governor": 14,
+                "governorGloss": "expects",
+                "dependent": 26,
+                "dependentGloss": "."
+              }
+            ],
+            "tokens": [
+              {
+                "index": 1,
+                "word": "NEW",
+                "originalText": "NEW",
+                "lemma": "NEW",
+                "characterOffsetBegin": 215,
+                "characterOffsetEnd": 218,
+                "pos": "NNP",
+                "ner": "LOCATION",
+                "speaker": "PER0",
+                "before": " ",
+                "after": " "
+              },
+              {
+                "index": 2,
+                "word": "YORK",
+                "originalText": "YORK",
+                "lemma": "YORK",
+                "characterOffsetBegin": 219,
+                "characterOffsetEnd": 223,
+                "pos": "NNP",
+                "ner": "LOCATION",
+                "speaker": "PER0",
+                "before": " ",
+                "after": " "
+              },
+              {
+                "index": 3,
+                "word": "--",
+                "originalText": "\u2014",
+                "lemma": "--",
+                "characterOffsetBegin": 224,
+                "characterOffsetEnd": 225,
+                "pos": ":",
+                "ner": "O",
+                "speaker": "PER0",
+                "before": " ",
+                "after": " "
+              },
+              {
+                "index": 4,
+                "word": "Goldman",
+                "originalText": "Goldman",
+                "lemma": "Goldman",
+                "characterOffsetBegin": 226,
+                "characterOffsetEnd": 233,
+                "pos": "NNP",
+                "ner": "ORGANIZATION",
+                "speaker": "PER0",
+                "before": " ",
+                "after": " "
+              },
+              {
+                "index": 5,
+                "word": "Sachs",
+                "originalText": "Sachs",
+                "lemma": "Sachs",
+                "characterOffsetBegin": 234,
+                "characterOffsetEnd": 239,
+                "pos": "NNP",
+                "ner": "ORGANIZATION",
+                "speaker": "PER0",
+                "before": " ",
+                "after": ""
+              },
+              {
+                "index": 6,
+                "word": ",",
+                "originalText": ",",
+                "lemma": ",",
+                "characterOffsetBegin": 239,
+                "characterOffsetEnd": 240,
+                "pos": ",",
+                "ner": "O",
+                "speaker": "PER0",
+                "before": "",
+                "after": " "
+              },
+              {
+                "index": 7,
+                "word": "citing",
+                "originalText": "citing",
+                "lemma": "cite",
+                "characterOffsetBegin": 241,
+                "characterOffsetEnd": 247,
+                "pos": "VBG",
+                "ner": "O",
+                "speaker": "PER0",
+                "before": " ",
+                "after": " "
+              },
+              {
+                "index": 8,
+                "word": "recent",
+                "originalText": "recent",
+                "lemma": "recent",
+                "characterOffsetBegin": 248,
+                "characterOffsetEnd": 254,
+                "pos": "JJ",
+                "ner": "O",
+                "speaker": "PER0",
+                "before": " ",
+                "after": " "
+              },
+              {
+                "index": 9,
+                "word": "tax",
+                "originalText": "tax",
+                "lemma": "tax",
+                "characterOffsetBegin": 255,
+                "characterOffsetEnd": 258,
+                "pos": "NN",
+                "ner": "O",
+                "speaker": "PER0",
+                "before": " ",
+                "after": " "
+              },
+              {
+                "index": 10,
+                "word": "overhaul",
+                "originalText": "overhaul",
+                "lemma": "overhaul",
+                "characterOffsetBegin": 259,
+                "characterOffsetEnd": 267,
+                "pos": "NN",
+                "ner": "O",
+                "speaker": "PER0",
+                "before": " ",
+                "after": " "
+              },
+              {
+                "index": 11,
+                "word": "in",
+                "originalText": "in",
+                "lemma": "in",
+                "characterOffsetBegin": 268,
+                "characterOffsetEnd": 270,
+                "pos": "IN",
+                "ner": "O",
+                "speaker": "PER0",
+                "before": " ",
+                "after": " "
+              },
+              {
+                "index": 12,
+                "word": "US",
+                "originalText": "US",
+                "lemma": "US",
+                "characterOffsetBegin": 271,
+                "characterOffsetEnd": 273,
+                "pos": "NNP",
+                "ner": "LOCATION",
+                "speaker": "PER0",
+                "before": " ",
+                "after": ""
+              },
+              {
+                "index": 13,
+                "word": ",",
+                "originalText": ",",
+                "lemma": ",",
+                "characterOffsetBegin": 273,
+                "characterOffsetEnd": 274,
+                "pos": ",",
+                "ner": "O",
+                "speaker": "PER0",
+                "before": "",
+                "after": " "
+              },
+              {
+                "index": 14,
+                "word": "expects",
+                "originalText": "expects",
+                "lemma": "expect",
+                "characterOffsetBegin": 275,
+                "characterOffsetEnd": 282,
+                "pos": "VBZ",
+                "ner": "O",
+                "speaker": "PER0",
+                "before": " ",
+                "after": " "
+              },
+              {
+                "index": 15,
+                "word": "to",
+                "originalText": "to",
+                "lemma": "to",
+                "characterOffsetBegin": 283,
+                "characterOffsetEnd": 285,
+                "pos": "TO",
+                "ner": "O",
+                "speaker": "PER0",
+                "before": " ",
+                "after": " "
+              },
+              {
+                "index": 16,
+                "word": "take",
+                "originalText": "take",
+                "lemma": "take",
+                "characterOffsetBegin": 286,
+                "characterOffsetEnd": 290,
+                "pos": "VB",
+                "ner": "O",
+                "speaker": "PER0",
+                "before": " ",
+                "after": " "
+              },
+              {
+                "index": 17,
+                "word": "a",
+                "originalText": "a",
+                "lemma": "a",
+                "characterOffsetBegin": 291,
+                "characterOffsetEnd": 292,
+                "pos": "DT",
+                "ner": "O",
+                "speaker": "PER0",
+                "before": " ",
+                "after": " "
+              },
+              {
+                "index": 18,
+                "word": "$",
+                "originalText": "$",
+                "lemma": "$",
+                "characterOffsetBegin": 293,
+                "characterOffsetEnd": 294,
+                "pos": "$",
+                "ner": "MONEY",
+                "normalizedNER": "$5.0E9",
+                "speaker": "PER0",
+                "before": " ",
+                "after": ""
+              },
+              {
+                "index": 19,
+                "word": "5",
+                "originalText": "5",
+                "lemma": "5",
+                "characterOffsetBegin": 294,
+                "characterOffsetEnd": 295,
+                "pos": "CD",
+                "ner": "MONEY",
+                "normalizedNER": "$5.0E9",
+                "speaker": "PER0",
+                "before": "",
+                "after": " "
+              },
+              {
+                "index": 20,
+                "word": "billion",
+                "originalText": "billion",
+                "lemma": "billion",
+                "characterOffsetBegin": 296,
+                "characterOffsetEnd": 303,
+                "pos": "CD",
+                "ner": "MONEY",
+                "normalizedNER": "$5.0E9",
+                "speaker": "PER0",
+                "before": " ",
+                "after": " "
+              },
+              {
+                "index": 21,
+                "word": "hit",
+                "originalText": "hit",
+                "lemma": "hit",
+                "characterOffsetBegin": 304,
+                "characterOffsetEnd": 307,
+                "pos": "VBN",
+                "ner": "O",
+                "speaker": "PER0",
+                "before": " ",
+                "after": " "
+              },
+              {
+                "index": 22,
+                "word": "to",
+                "originalText": "to",
+                "lemma": "to",
+                "characterOffsetBegin": 308,
+                "characterOffsetEnd": 310,
+                "pos": "TO",
+                "ner": "O",
+                "speaker": "PER0",
+                "before": " ",
+                "after": " "
+              },
+              {
+                "index": 23,
+                "word": "profits",
+                "originalText": "profits",
+                "lemma": "profit",
+                "characterOffsetBegin": 311,
+                "characterOffsetEnd": 318,
+                "pos": "NNS",
+                "ner": "O",
+                "speaker": "PER0",
+                "before": " ",
+                "after": " "
+              },
+              {
+                "index": 24,
+                "word": "this",
+                "originalText": "this",
+                "lemma": "this",
+                "characterOffsetBegin": 319,
+                "characterOffsetEnd": 323,
+                "pos": "DT",
+                "ner": "DATE",
+                "normalizedNER": "2017-Q4",
+                "speaker": "PER0",
+                "before": " ",
+                "after": " ",
+                "timex": {
+                  "tid": "t3",
+                  "type": "DATE",
+                  "value": "2017-Q4"
+                }
+              },
+              {
+                "index": 25,
+                "word": "quarter",
+                "originalText": "quarter",
+                "lemma": "quarter",
+                "characterOffsetBegin": 324,
+                "characterOffsetEnd": 331,
+                "pos": "NN",
+                "ner": "DATE",
+                "normalizedNER": "2017-Q4",
+                "speaker": "PER0",
+                "before": " ",
+                "after": "",
+                "timex": {
+                  "tid": "t3",
+                  "type": "DATE",
+                  "value": "2017-Q4"
+                }
+              },
+              {
+                "index": 26,
+                "word": ".",
+                "originalText": ".",
+                "lemma": ".",
+                "characterOffsetBegin": 331,
+                "characterOffsetEnd": 332,
+                "pos": ".",
+                "ner": "O",
+                "speaker": "PER0",
+                "before": "",
+                "after": "\n"
+              }
+            ]
+          },
+          {
+            "index": 4,
+            "parse": "(ROOT\n  (NP\n    (NP (NN Copyright) (CD 2017))\n    (NP (DT The) (NNP Associated) (NNP Press))\n    (. .)))",
+            "basicDependencies": [
+              {
+                "dep": "ROOT",
+                "governor": 0,
+                "governorGloss": "ROOT",
+                "dependent": 5,
+                "dependentGloss": "Press"
+              },
+              {
+                "dep": "compound",
+                "governor": 5,
+                "governorGloss": "Press",
+                "dependent": 1,
+                "dependentGloss": "Copyright"
+              },
+              {
+                "dep": "nummod",
+                "governor": 5,
+                "governorGloss": "Press",
+                "dependent": 2,
+                "dependentGloss": "2017"
+              },
+              {
+                "dep": "det",
+                "governor": 5,
+                "governorGloss": "Press",
+                "dependent": 3,
+                "dependentGloss": "The"
+              },
+              {
+                "dep": "compound",
+                "governor": 5,
+                "governorGloss": "Press",
+                "dependent": 4,
+                "dependentGloss": "Associated"
+              },
+              {
+                "dep": "punct",
+                "governor": 5,
+                "governorGloss": "Press",
+                "dependent": 6,
+                "dependentGloss": "."
+              }
+            ],
+            "enhancedDependencies": [
+              {
+                "dep": "ROOT",
+                "governor": 0,
+                "governorGloss": "ROOT",
+                "dependent": 5,
+                "dependentGloss": "Press"
+              },
+              {
+                "dep": "compound",
+                "governor": 5,
+                "governorGloss": "Press",
+                "dependent": 1,
+                "dependentGloss": "Copyright"
+              },
+              {
+                "dep": "nummod",
+                "governor": 5,
+                "governorGloss": "Press",
+                "dependent": 2,
+                "dependentGloss": "2017"
+              },
+              {
+                "dep": "det",
+                "governor": 5,
+                "governorGloss": "Press",
+                "dependent": 3,
+                "dependentGloss": "The"
+              },
+              {
+                "dep": "compound",
+                "governor": 5,
+                "governorGloss": "Press",
+                "dependent": 4,
+                "dependentGloss": "Associated"
+              },
+              {
+                "dep": "punct",
+                "governor": 5,
+                "governorGloss": "Press",
+                "dependent": 6,
+                "dependentGloss": "."
+              }
+            ],
+            "enhancedPlusPlusDependencies": [
+              {
+                "dep": "ROOT",
+                "governor": 0,
+                "governorGloss": "ROOT",
+                "dependent": 5,
+                "dependentGloss": "Press"
+              },
+              {
+                "dep": "compound",
+                "governor": 5,
+                "governorGloss": "Press",
+                "dependent": 1,
+                "dependentGloss": "Copyright"
+              },
+              {
+                "dep": "nummod",
+                "governor": 5,
+                "governorGloss": "Press",
+                "dependent": 2,
+                "dependentGloss": "2017"
+              },
+              {
+                "dep": "det",
+                "governor": 5,
+                "governorGloss": "Press",
+                "dependent": 3,
+                "dependentGloss": "The"
+              },
+              {
+                "dep": "compound",
+                "governor": 5,
+                "governorGloss": "Press",
+                "dependent": 4,
+                "dependentGloss": "Associated"
+              },
+              {
+                "dep": "punct",
+                "governor": 5,
+                "governorGloss": "Press",
+                "dependent": 6,
+                "dependentGloss": "."
+              }
+            ],
+            "tokens": [
+              {
+                "index": 1,
+                "word": "Copyright",
+                "originalText": "Copyright",
+                "lemma": "copyright",
+                "characterOffsetBegin": 333,
+                "characterOffsetEnd": 342,
+                "pos": "NN",
+                "ner": "O",
+                "speaker": "PER0",
+                "before": "\n",
+                "after": " "
+              },
+              {
+                "index": 2,
+                "word": "2017",
+                "originalText": "2017",
+                "lemma": "2017",
+                "characterOffsetBegin": 343,
+                "characterOffsetEnd": 347,
+                "pos": "CD",
+                "ner": "DATE",
+                "normalizedNER": "2017",
+                "speaker": "PER0",
+                "before": " ",
+                "after": " ",
+                "timex": {
+                  "tid": "t4",
+                  "type": "DATE",
+                  "value": "2017"
+                }
+              },
+              {
+                "index": 3,
+                "word": "The",
+                "originalText": "The",
+                "lemma": "the",
+                "characterOffsetBegin": 348,
+                "characterOffsetEnd": 351,
+                "pos": "DT",
+                "ner": "O",
+                "speaker": "PER0",
+                "before": " ",
+                "after": " "
+              },
+              {
+                "index": 4,
+                "word": "Associated",
+                "originalText": "Associated",
+                "lemma": "Associated",
+                "characterOffsetBegin": 352,
+                "characterOffsetEnd": 362,
+                "pos": "NNP",
+                "ner": "ORGANIZATION",
+                "speaker": "PER0",
+                "before": " ",
+                "after": " "
+              },
+              {
+                "index": 5,
+                "word": "Press",
+                "originalText": "Press",
+                "lemma": "Press",
+                "characterOffsetBegin": 363,
+                "characterOffsetEnd": 368,
+                "pos": "NNP",
+                "ner": "ORGANIZATION",
+                "speaker": "PER0",
+                "before": " ",
+                "after": ""
+              },
+              {
+                "index": 6,
+                "word": ".",
+                "originalText": ".",
+                "lemma": ".",
+                "characterOffsetBegin": 368,
+                "characterOffsetEnd": 369,
+                "pos": ".",
+                "ner": "O",
+                "speaker": "PER0",
+                "before": "",
+                "after": " "
+              }
+            ]
+          },
+          {
+            "index": 5,
+            "parse": "(ROOT\n  (S\n    (NP (DT All) (NNS rights))\n    (VP (VBN reserved))\n    (. .)))",
+            "basicDependencies": [
+              {
+                "dep": "ROOT",
+                "governor": 0,
+                "governorGloss": "ROOT",
+                "dependent": 3,
+                "dependentGloss": "reserved"
+              },
+              {
+                "dep": "det",
+                "governor": 2,
+                "governorGloss": "rights",
+                "dependent": 1,
+                "dependentGloss": "All"
+              },
+              {
+                "dep": "nsubj",
+                "governor": 3,
+                "governorGloss": "reserved",
+                "dependent": 2,
+                "dependentGloss": "rights"
+              },
+              {
+                "dep": "punct",
+                "governor": 3,
+                "governorGloss": "reserved",
+                "dependent": 4,
+                "dependentGloss": "."
+              }
+            ],
+            "enhancedDependencies": [
+              {
+                "dep": "ROOT",
+                "governor": 0,
+                "governorGloss": "ROOT",
+                "dependent": 3,
+                "dependentGloss": "reserved"
+              },
+              {
+                "dep": "det",
+                "governor": 2,
+                "governorGloss": "rights",
+                "dependent": 1,
+                "dependentGloss": "All"
+              },
+              {
+                "dep": "nsubj",
+                "governor": 3,
+                "governorGloss": "reserved",
+                "dependent": 2,
+                "dependentGloss": "rights"
+              },
+              {
+                "dep": "punct",
+                "governor": 3,
+                "governorGloss": "reserved",
+                "dependent": 4,
+                "dependentGloss": "."
+              }
+            ],
+            "enhancedPlusPlusDependencies": [
+              {
+                "dep": "ROOT",
+                "governor": 0,
+                "governorGloss": "ROOT",
+                "dependent": 3,
+                "dependentGloss": "reserved"
+              },
+              {
+                "dep": "det",
+                "governor": 2,
+                "governorGloss": "rights",
+                "dependent": 1,
+                "dependentGloss": "All"
+              },
+              {
+                "dep": "nsubj",
+                "governor": 3,
+                "governorGloss": "reserved",
+                "dependent": 2,
+                "dependentGloss": "rights"
+              },
+              {
+                "dep": "punct",
+                "governor": 3,
+                "governorGloss": "reserved",
+                "dependent": 4,
+                "dependentGloss": "."
+              }
+            ],
+            "tokens": [
+              {
+                "index": 1,
+                "word": "All",
+                "originalText": "All",
+                "lemma": "all",
+                "characterOffsetBegin": 370,
+                "characterOffsetEnd": 373,
+                "pos": "DT",
+                "ner": "O",
+                "speaker": "PER0",
+                "before": " ",
+                "after": " "
+              },
+              {
+                "index": 2,
+                "word": "rights",
+                "originalText": "rights",
+                "lemma": "rights",
+                "characterOffsetBegin": 374,
+                "characterOffsetEnd": 380,
+                "pos": "NNS",
+                "ner": "O",
+                "speaker": "PER0",
+                "before": " ",
+                "after": " "
+              },
+              {
+                "index": 3,
+                "word": "reserved",
+                "originalText": "reserved",
+                "lemma": "reserve",
+                "characterOffsetBegin": 381,
+                "characterOffsetEnd": 389,
+                "pos": "VBN",
+                "ner": "O",
+                "speaker": "PER0",
+                "before": " ",
+                "after": ""
+              },
+              {
+                "index": 4,
+                "word": ".",
+                "originalText": ".",
+                "lemma": ".",
+                "characterOffsetBegin": 389,
+                "characterOffsetEnd": 390,
+                "pos": ".",
+                "ner": "O",
+                "speaker": "PER0",
+                "before": "",
+                "after": " "
+              }
+            ]
+          },
+          {
+            "index": 6,
+            "parse": "(ROOT\n  (S\n    (NP (DT This) (NN material))\n    (VP (MD may) (RB not)\n      (VP (VB be)\n        (VP (VBN published) (, ,)\n          (NP\n            (NP (NN broadcast))\n            (, ,)\n            (VP (VBN rewritten)\n              (CC or)\n              (VP (VBN redistributed)))))))\n    (. .)))",
+            "basicDependencies": [
+              {
+                "dep": "ROOT",
+                "governor": 0,
+                "governorGloss": "ROOT",
+                "dependent": 6,
+                "dependentGloss": "published"
+              },
+              {
+                "dep": "det",
+                "governor": 2,
+                "governorGloss": "material",
+                "dependent": 1,
+                "dependentGloss": "This"
+              },
+              {
+                "dep": "nsubjpass",
+                "governor": 6,
+                "governorGloss": "published",
+                "dependent": 2,
+                "dependentGloss": "material"
+              },
+              {
+                "dep": "aux",
+                "governor": 6,
+                "governorGloss": "published",
+                "dependent": 3,
+                "dependentGloss": "may"
+              },
+              {
+                "dep": "neg",
+                "governor": 6,
+                "governorGloss": "published",
+                "dependent": 4,
+                "dependentGloss": "not"
+              },
+              {
+                "dep": "auxpass",
+                "governor": 6,
+                "governorGloss": "published",
+                "dependent": 5,
+                "dependentGloss": "be"
+              },
+              {
+                "dep": "punct",
+                "governor": 6,
+                "governorGloss": "published",
+                "dependent": 7,
+                "dependentGloss": ","
+              },
+              {
+                "dep": "dep",
+                "governor": 6,
+                "governorGloss": "published",
+                "dependent": 8,
+                "dependentGloss": "broadcast"
+              },
+              {
+                "dep": "punct",
+                "governor": 8,
+                "governorGloss": "broadcast",
+                "dependent": 9,
+                "dependentGloss": ","
+              },
+              {
+                "dep": "conj",
+                "governor": 8,
+                "governorGloss": "broadcast",
+                "dependent": 10,
+                "dependentGloss": "rewritten"
+              },
+              {
+                "dep": "cc",
+                "governor": 8,
+                "governorGloss": "broadcast",
+                "dependent": 11,
+                "dependentGloss": "or"
+              },
+              {
+                "dep": "conj",
+                "governor": 8,
+                "governorGloss": "broadcast",
+                "dependent": 12,
+                "dependentGloss": "redistributed"
+              },
+              {
+                "dep": "punct",
+                "governor": 6,
+                "governorGloss": "published",
+                "dependent": 13,
+                "dependentGloss": "."
+              }
+            ],
+            "enhancedDependencies": [
+              {
+                "dep": "ROOT",
+                "governor": 0,
+                "governorGloss": "ROOT",
+                "dependent": 6,
+                "dependentGloss": "published"
+              },
+              {
+                "dep": "det",
+                "governor": 2,
+                "governorGloss": "material",
+                "dependent": 1,
+                "dependentGloss": "This"
+              },
+              {
+                "dep": "nsubjpass",
+                "governor": 6,
+                "governorGloss": "published",
+                "dependent": 2,
+                "dependentGloss": "material"
+              },
+              {
+                "dep": "aux",
+                "governor": 6,
+                "governorGloss": "published",
+                "dependent": 3,
+                "dependentGloss": "may"
+              },
+              {
+                "dep": "neg",
+                "governor": 6,
+                "governorGloss": "published",
+                "dependent": 4,
+                "dependentGloss": "not"
+              },
+              {
+                "dep": "auxpass",
+                "governor": 6,
+                "governorGloss": "published",
+                "dependent": 5,
+                "dependentGloss": "be"
+              },
+              {
+                "dep": "punct",
+                "governor": 6,
+                "governorGloss": "published",
+                "dependent": 7,
+                "dependentGloss": ","
+              },
+              {
+                "dep": "dep",
+                "governor": 6,
+                "governorGloss": "published",
+                "dependent": 8,
+                "dependentGloss": "broadcast"
+              },
+              {
+                "dep": "punct",
+                "governor": 8,
+                "governorGloss": "broadcast",
+                "dependent": 9,
+                "dependentGloss": ","
+              },
+              {
+                "dep": "dep",
+                "governor": 6,
+                "governorGloss": "published",
+                "dependent": 10,
+                "dependentGloss": "rewritten"
+              },
+              {
+                "dep": "conj:or",
+                "governor": 8,
+                "governorGloss": "broadcast",
+                "dependent": 10,
+                "dependentGloss": "rewritten"
+              },
+              {
+                "dep": "cc",
+                "governor": 8,
+                "governorGloss": "broadcast",
+                "dependent": 11,
+                "dependentGloss": "or"
+              },
+              {
+                "dep": "dep",
+                "governor": 6,
+                "governorGloss": "published",
+                "dependent": 12,
+                "dependentGloss": "redistributed"
+              },
+              {
+                "dep": "conj:or",
+                "governor": 8,
+                "governorGloss": "broadcast",
+                "dependent": 12,
+                "dependentGloss": "redistributed"
+              },
+              {
+                "dep": "punct",
+                "governor": 6,
+                "governorGloss": "published",
+                "dependent": 13,
+                "dependentGloss": "."
+              }
+            ],
+            "enhancedPlusPlusDependencies": [
+              {
+                "dep": "ROOT",
+                "governor": 0,
+                "governorGloss": "ROOT",
+                "dependent": 6,
+                "dependentGloss": "published"
+              },
+              {
+                "dep": "det",
+                "governor": 2,
+                "governorGloss": "material",
+                "dependent": 1,
+                "dependentGloss": "This"
+              },
+              {
+                "dep": "nsubjpass",
+                "governor": 6,
+                "governorGloss": "published",
+                "dependent": 2,
+                "dependentGloss": "material"
+              },
+              {
+                "dep": "aux",
+                "governor": 6,
+                "governorGloss": "published",
+                "dependent": 3,
+                "dependentGloss": "may"
+              },
+              {
+                "dep": "neg",
+                "governor": 6,
+                "governorGloss": "published",
+                "dependent": 4,
+                "dependentGloss": "not"
+              },
+              {
+                "dep": "auxpass",
+                "governor": 6,
+                "governorGloss": "published",
+                "dependent": 5,
+                "dependentGloss": "be"
+              },
+              {
+                "dep": "punct",
+                "governor": 6,
+                "governorGloss": "published",
+                "dependent": 7,
+                "dependentGloss": ","
+              },
+              {
+                "dep": "dep",
+                "governor": 6,
+                "governorGloss": "published",
+                "dependent": 8,
+                "dependentGloss": "broadcast"
+              },
+              {
+                "dep": "punct",
+                "governor": 8,
+                "governorGloss": "broadcast",
+                "dependent": 9,
+                "dependentGloss": ","
+              },
+              {
+                "dep": "dep",
+                "governor": 6,
+                "governorGloss": "published",
+                "dependent": 10,
+                "dependentGloss": "rewritten"
+              },
+              {
+                "dep": "conj:or",
+                "governor": 8,
+                "governorGloss": "broadcast",
+                "dependent": 10,
+                "dependentGloss": "rewritten"
+              },
+              {
+                "dep": "cc",
+                "governor": 8,
+                "governorGloss": "broadcast",
+                "dependent": 11,
+                "dependentGloss": "or"
+              },
+              {
+                "dep": "dep",
+                "governor": 6,
+                "governorGloss": "published",
+                "dependent": 12,
+                "dependentGloss": "redistributed"
+              },
+              {
+                "dep": "conj:or",
+                "governor": 8,
+                "governorGloss": "broadcast",
+                "dependent": 12,
+                "dependentGloss": "redistributed"
+              },
+              {
+                "dep": "punct",
+                "governor": 6,
+                "governorGloss": "published",
+                "dependent": 13,
+                "dependentGloss": "."
+              }
+            ],
+            "tokens": [
+              {
+                "index": 1,
+                "word": "This",
+                "originalText": "This",
+                "lemma": "this",
+                "characterOffsetBegin": 391,
+                "characterOffsetEnd": 395,
+                "pos": "DT",
+                "ner": "O",
+                "speaker": "PER0",
+                "before": " ",
+                "after": " "
+              },
+              {
+                "index": 2,
+                "word": "material",
+                "originalText": "material",
+                "lemma": "material",
+                "characterOffsetBegin": 396,
+                "characterOffsetEnd": 404,
+                "pos": "NN",
+                "ner": "O",
+                "speaker": "PER0",
+                "before": " ",
+                "after": " "
+              },
+              {
+                "index": 3,
+                "word": "may",
+                "originalText": "may",
+                "lemma": "may",
+                "characterOffsetBegin": 405,
+                "characterOffsetEnd": 408,
+                "pos": "MD",
+                "ner": "O",
+                "speaker": "PER0",
+                "before": " ",
+                "after": " "
+              },
+              {
+                "index": 4,
+                "word": "not",
+                "originalText": "not",
+                "lemma": "not",
+                "characterOffsetBegin": 409,
+                "characterOffsetEnd": 412,
+                "pos": "RB",
+                "ner": "O",
+                "speaker": "PER0",
+                "before": " ",
+                "after": " "
+              },
+              {
+                "index": 5,
+                "word": "be",
+                "originalText": "be",
+                "lemma": "be",
+                "characterOffsetBegin": 413,
+                "characterOffsetEnd": 415,
+                "pos": "VB",
+                "ner": "O",
+                "speaker": "PER0",
+                "before": " ",
+                "after": " "
+              },
+              {
+                "index": 6,
+                "word": "published",
+                "originalText": "published",
+                "lemma": "publish",
+                "characterOffsetBegin": 416,
+                "characterOffsetEnd": 425,
+                "pos": "VBN",
+                "ner": "O",
+                "speaker": "PER0",
+                "before": " ",
+                "after": ""
+              },
+              {
+                "index": 7,
+                "word": ",",
+                "originalText": ",",
+                "lemma": ",",
+                "characterOffsetBegin": 425,
+                "characterOffsetEnd": 426,
+                "pos": ",",
+                "ner": "O",
+                "speaker": "PER0",
+                "before": "",
+                "after": " "
+              },
+              {
+                "index": 8,
+                "word": "broadcast",
+                "originalText": "broadcast",
+                "lemma": "broadcast",
+                "characterOffsetBegin": 427,
+                "characterOffsetEnd": 436,
+                "pos": "NN",
+                "ner": "O",
+                "speaker": "PER0",
+                "before": " ",
+                "after": ""
+              },
+              {
+                "index": 9,
+                "word": ",",
+                "originalText": ",",
+                "lemma": ",",
+                "characterOffsetBegin": 436,
+                "characterOffsetEnd": 437,
+                "pos": ",",
+                "ner": "O",
+                "speaker": "PER0",
+                "before": "",
+                "after": " "
+              },
+              {
+                "index": 10,
+                "word": "rewritten",
+                "originalText": "rewritten",
+                "lemma": "rewrite",
+                "characterOffsetBegin": 438,
+                "characterOffsetEnd": 447,
+                "pos": "VBN",
+                "ner": "O",
+                "speaker": "PER0",
+                "before": " ",
+                "after": " "
+              },
+              {
+                "index": 11,
+                "word": "or",
+                "originalText": "or",
+                "lemma": "or",
+                "characterOffsetBegin": 448,
+                "characterOffsetEnd": 450,
+                "pos": "CC",
+                "ner": "O",
+                "speaker": "PER0",
+                "before": " ",
+                "after": " "
+              },
+              {
+                "index": 12,
+                "word": "redistributed",
+                "originalText": "redistributed",
+                "lemma": "redistribute",
+                "characterOffsetBegin": 451,
+                "characterOffsetEnd": 464,
+                "pos": "VBN",
+                "ner": "O",
+                "speaker": "PER0",
+                "before": " ",
+                "after": ""
+              },
+              {
+                "index": 13,
+                "word": ".",
+                "originalText": ".",
+                "lemma": ".",
+                "characterOffsetBegin": 464,
+                "characterOffsetEnd": 465,
+                "pos": ".",
+                "ner": "O",
+                "speaker": "PER0",
+                "before": "",
+                "after": ""
+              }
+            ]
+          }
+        ],
+        "corefs": {
+          "18": [
+            {
+              "id": 3,
+              "text": "this quarter",
+              "type": "PROPER",
+              "number": "SINGULAR",
+              "gender": "NEUTRAL",
+              "animacy": "INANIMATE",
+              "startIndex": 21,
+              "endIndex": 23,
+              "headIndex": 22,
+              "sentNum": 1,
+              "position": [
+                1,
+                4
+              ],
+              "isRepresentativeMention": true
+            },
+            {
+              "id": 10,
+              "text": "this quarter",
+              "type": "PROPER",
+              "number": "SINGULAR",
+              "gender": "NEUTRAL",
+              "animacy": "INANIMATE",
+              "startIndex": 21,
+              "endIndex": 23,
+              "headIndex": 22,
+              "sentNum": 2,
+              "position": [
+                2,
+                4
+              ],
+              "isRepresentativeMention": false
+            },
+            {
+              "id": 18,
+              "text": "this quarter",
+              "type": "PROPER",
+              "number": "SINGULAR",
+              "gender": "NEUTRAL",
+              "animacy": "INANIMATE",
+              "startIndex": 24,
+              "endIndex": 26,
+              "headIndex": 25,
+              "sentNum": 4,
+              "position": [
+                4,
+                5
+              ],
+              "isRepresentativeMention": false
+            }
+          ],
+          "15": [
+            {
+              "id": 0,
+              "text": "Goldman Sachs",
+              "type": "PROPER",
+              "number": "UNKNOWN",
+              "gender": "MALE",
+              "animacy": "INANIMATE",
+              "startIndex": 1,
+              "endIndex": 3,
+              "headIndex": 2,
+              "sentNum": 1,
+              "position": [
+                1,
+                1
+              ],
+              "isRepresentativeMention": true
+            },
+            {
+              "id": 7,
+              "text": "Goldman Sachs",
+              "type": "PROPER",
+              "number": "UNKNOWN",
+              "gender": "MALE",
+              "animacy": "INANIMATE",
+              "startIndex": 1,
+              "endIndex": 3,
+              "headIndex": 2,
+              "sentNum": 2,
+              "position": [
+                2,
+                1
+              ],
+              "isRepresentativeMention": false
+            },
+            {
+              "id": 15,
+              "text": "Goldman Sachs",
+              "type": "PROPER",
+              "number": "UNKNOWN",
+              "gender": "MALE",
+              "animacy": "INANIMATE",
+              "startIndex": 4,
+              "endIndex": 6,
+              "headIndex": 5,
+              "sentNum": 4,
+              "position": [
+                4,
+                2
+              ],
+              "isRepresentativeMention": false
+            }
+          ]
+        }
+      },
+      "heideltime": [
+        {
+          "@tid": "t2",
+          "@type": "DATE",
+          "@value": "PAST_REF",
+          "#text": "recent",
+          "characterOffset": [
+            22,
+            28
+          ]
+        },
+        {
+          "@tid": "t1",
+          "@type": "DATE",
+          "@value": "2017-Q4",
+          "#text": "this quarter",
+          "characterOffset": [
+            93,
+            105
+          ]
+        },
+        {
+          "@tid": "t4",
+          "@type": "DATE",
+          "@value": "PAST_REF",
+          "#text": "recent",
+          "characterOffset": [
+            129,
+            135
+          ]
+        },
+        {
+          "@tid": "t3",
+          "@type": "DATE",
+          "@value": "2017-Q4",
+          "#text": "this quarter",
+          "characterOffset": [
+            200,
+            212
+          ]
+        },
+        {
+          "@tid": "t6",
+          "@type": "DATE",
+          "@value": "PAST_REF",
+          "#text": "recent",
+          "characterOffset": [
+            248,
+            254
+          ]
+        },
+        {
+          "@tid": "t5",
+          "@type": "DATE",
+          "@value": "2017-Q4",
+          "#text": "this quarter",
+          "characterOffset": [
+            319,
+            331
+          ]
+        },
+        {
+          "@tid": "t7",
+          "@type": "DATE",
+          "@value": "2017",
+          "#text": "2017",
+          "characterOffset": [
+            343,
+            347
+          ]
+        }
+      ],
+      "aida": {
+        "originalFileName": null,
+        "originalText": "Goldman Sachs, citing recent tax overhaul in US, expects to take a $5 billion hit to profits this quarter. Goldman Sachs, citing recent tax overhaul in US, expects to take a $5 billion hit to profits this quarter.. NEW YORK \u2014 Goldman Sachs, citing recent tax overhaul in US, expects to take a $5 billion hit to profits this quarter.\nCopyright 2017 The Associated Press. All rights reserved. This material may not be published, broadcast, rewritten or redistributed.",
+        "overallTime": "8672",
+        "allEntities": [
+          "YAGO:United_States",
+          "YAGO:Associated_Press",
+          "YAGO:Goldman_Sachs"
+        ],
+        "entityMetadata": {
+          "AIDA:--OOKBE--": {},
+          "YAGO:United_States": {
+            "knowledgebase": "YAGO",
+            "depictionurl": "http://upload.wikimedia.org/wikipedia/en/a/a4/Flag_of_the_United_States.svg",
+            "depictionthumbnailurl": "http://upload.wikimedia.org/wikipedia/en/thumbFlag_of_the_United_States.svg/200px-Flag_of_the_United_States.svg",
+            "importance": 0.0,
+            "entityId": "United_States",
+            "type": [
+              "YAGO_wordnet_system_108435388",
+              "YAGO_yagoPermanentlyLocatedEntity",
+              "YAGO_yagoLegalActorGeo",
+              "YAGO_wordnet_organization_108008335",
+              "YAGO_wordnet_state_100024720",
+              "YAGO_wordnet_democracy_108361329",
+              "YAGO_wordnet_union_114418395",
+              "YAGO_wordnet_unit_108189659",
+              "YAGO_wikicategory_Superpowers",
+              "YAGO_wordnet_cognition_100023271",
+              "YAGO_wordnet_coalition_114418662",
+              "YAGO_wordnet_political_system_108367880",
+              "YAGO_wordnet_attribute_100024264",
+              "YAGO_wordnet_abstraction_100002137",
+              "YAGO_wordnet_attitude_106193203",
+              "YAGO_wordnet_alliance_114418822",
+              "YAGO_wordnet_group_100031264",
+              "YAGO_wordnet_psychological_feature_100023100",
+              "YAGO_wordnet_body_107965085",
+              "YAGO_wordnet_political_orientation_106212839",
+              "YAGO_wordnet_democracy_106217103",
+              "YAGO_wordnet_political_unit_108359949",
+              "YAGO_wikicategory_Former_British_colonies",
+              "YAGO_wordnet_economy_108366753",
+              "YAGO_yagoLegalActor",
+              "YAGO_wikicategory_G8_nations",
+              "YAGO_yagoGeoEntity",
+              "YAGO_wordnet_social_group_107950920",
+              "YAGO_wordnet_entity_100001740",
+              "YAGO_wordnet_colony_108374049",
+              "YAGO_wikicategory_Liberal_democracies",
+              "YAGO_wikicategory_G20_nations",
+              "YAGO_wikicategory_Former_confederations",
+              "YAGO_wordnet_state_108168978",
+              "YAGO_wikicategory_Federal_constitutional_republics",
+              "YAGO_wordnet_world_power_108177592",
+              "YAGO_wikicategory_Republics",
+              "YAGO_wordnet_orientation_106208021"
+            ],
+            "readableRepr": "United States",
+            "url": "http://en.wikipedia.org/wiki/United%20States"
+          },
+          "YAGO:Associated_Press": {
+            "knowledgebase": "YAGO",
+            "depictionurl": "http://upload.wikimedia.org/wikipedia/commons/0/0c/Associated_Press_logo_2012.svg",
+            "depictionthumbnailurl": "http://upload.wikimedia.org/wikipedia/commons/thumbAssociated_Press_logo_2012.svg/200px-Associated_Press_logo_2012.svg",
+            "importance": 7.298015580427613e-05,
+            "entityId": "Associated_Press",
+            "type": [
+              "YAGO_yagoPermanentlyLocatedEntity",
+              "YAGO_yagoLegalActorGeo",
+              "YAGO_wordnet_organization_108008335",
+              "YAGO_wordnet_commercial_enterprise_108065093",
+              "YAGO_wordnet_cooperative_101100877",
+              "YAGO_wordnet_news_agency_108355075",
+              "YAGO_yagoLegalActor",
+              "YAGO_wordnet_abstraction_100002137",
+              "YAGO_wordnet_social_group_107950920",
+              "YAGO_wikicategory_Consumers\\u0027_cooperatives",
+              "YAGO_wordnet_entity_100001740",
+              "YAGO_wordnet_enterprise_108056231",
+              "YAGO_wordnet_group_100031264",
+              "YAGO_wordnet_business_108061042",
+              "YAGO_wikicategory_Cooperatives_in_the_United_States",
+              "YAGO_wordnet_agency_108057206",
+              "YAGO_wikicategory_Non\\u002dprofit_organizations_based_in_New_York_City",
+              "YAGO_wikicategory_News_agencies_based_in_the_United_States"
+            ],
+            "readableRepr": "Associated Press",
+            "url": "http://en.wikipedia.org/wiki/Associated%20Press"
+          },
+          "YAGO:Goldman_Sachs": {
+            "knowledgebase": "YAGO",
+            "depictionurl": "http://upload.wikimedia.org/wikipedia/commons/6/61/Goldman_Sachs.svg",
+            "depictionthumbnailurl": "http://upload.wikimedia.org/wikipedia/commons/thumbGoldman_Sachs.svg/200px-Goldman_Sachs.svg",
+            "importance": 0.0009621124356792739,
+            "entityId": "Goldman_Sachs",
+            "type": [
+              "YAGO_wikicategory_Companies_listed_on_the_New_York_Stock_Exchange",
+              "YAGO_yagoPermanentlyLocatedEntity",
+              "YAGO_wikicategory_Global_systemically_important_banks",
+              "YAGO_wikicategory_Multinational_companies_based_in_New_York_City",
+              "YAGO_yagoLegalActorGeo",
+              "YAGO_wordnet_organization_108008335",
+              "YAGO_wikicategory_Investment_banks_in_the_United_States",
+              "YAGO_wikicategory_Companies_in_the_Dow_Jones_Industrial_Average",
+              "YAGO_wikicategory_Financial_services_companies_based_in_New_York_City",
+              "YAGO_wikicategory_Banks_based_in_New_York_City",
+              "YAGO_wordnet_financial_institution_108054721",
+              "YAGO_yagoLegalActor",
+              "YAGO_wordnet_abstraction_100002137",
+              "YAGO_wordnet_company_108058098",
+              "YAGO_wordnet_social_group_107950920",
+              "YAGO_wordnet_institution_108053576",
+              "YAGO_wordnet_entity_100001740",
+              "YAGO_wikicategory_Publicly_traded_companies_based_in_New_York_City",
+              "YAGO_wordnet_group_100031264",
+              "YAGO_wordnet_depository_financial_institution_108420278",
+              "YAGO_wikicategory_Banks_established_in_1869",
+              "YAGO_wikicategory_Companies_based_in_Manhattan"
+            ],
+            "readableRepr": "Goldman Sachs",
+            "url": "http://en.wikipedia.org/wiki/Goldman%20Sachs"
+          }
+        },
+        "annotatedText": "[[YAGO:Goldman_Sachs|Goldman Sachs]], citing recent tax overhaul in [[YAGO:United_States|US]], expects to take a $5 billion hit to profits this quarter. [[YAGO:Goldman_Sachs|Goldman Sachs]], citing recent tax overhaul in [[YAGO:United_States|US]], expects to take a $5 billion hit to profits this quarter.. [[AIDA:--OOKBE--|NEW YORK]] \u2014 [[YAGO:Goldman_Sachs|Goldman Sachs]], citing recent tax overhaul in [[YAGO:United_States|US]], expects to take a $5 billion hit to profits this quarter.\nCopyright 2017 The [[YAGO:Associated_Press|Associated Press]]. All rights reserved. This material may not be published, broadcast, rewritten or redistributed.",
+        "docID": "564137953_1516120095297",
+        "mentions": [
+          {
+            "allEntities": [
+              {
+                "kbIdentifier": "YAGO:Goldman_Sachs",
+                "disambiguationScore": "1"
+              }
+            ],
+            "offset": 0,
+            "name": "Goldman Sachs",
+            "length": 13,
+            "bestEntity": {
+              "kbIdentifier": "YAGO:Goldman_Sachs",
+              "disambiguationScore": "1"
+            }
+          },
+          {
+            "allEntities": [
+              {
+                "kbIdentifier": "YAGO:United_States",
+                "disambiguationScore": "1"
+              }
+            ],
+            "offset": 45,
+            "name": "US",
+            "length": 2,
+            "bestEntity": {
+              "kbIdentifier": "YAGO:United_States",
+              "disambiguationScore": "1"
+            }
+          },
+          {
+            "allEntities": [
+              {
+                "kbIdentifier": "YAGO:Goldman_Sachs",
+                "disambiguationScore": "1"
+              }
+            ],
+            "offset": 107,
+            "name": "Goldman Sachs",
+            "length": 13,
+            "bestEntity": {
+              "kbIdentifier": "YAGO:Goldman_Sachs",
+              "disambiguationScore": "1"
+            }
+          },
+          {
+            "allEntities": [
+              {
+                "kbIdentifier": "YAGO:United_States",
+                "disambiguationScore": "1"
+              }
+            ],
+            "offset": 152,
+            "name": "US",
+            "length": 2,
+            "bestEntity": {
+              "kbIdentifier": "YAGO:United_States",
+              "disambiguationScore": "1"
+            }
+          },
+          {
+            "allEntities": [],
+            "offset": 215,
+            "name": "NEW YORK",
+            "length": 8
+          },
+          {
+            "allEntities": [
+              {
+                "kbIdentifier": "YAGO:Goldman_Sachs",
+                "disambiguationScore": "1"
+              }
+            ],
+            "offset": 226,
+            "name": "Goldman Sachs",
+            "length": 13,
+            "bestEntity": {
+              "kbIdentifier": "YAGO:Goldman_Sachs",
+              "disambiguationScore": "1"
+            }
+          },
+          {
+            "allEntities": [
+              {
+                "kbIdentifier": "YAGO:United_States",
+                "disambiguationScore": "1"
+              }
+            ],
+            "offset": 271,
+            "name": "US",
+            "length": 2,
+            "bestEntity": {
+              "kbIdentifier": "YAGO:United_States",
+              "disambiguationScore": "1"
+            }
+          },
+          {
+            "allEntities": [
+              {
+                "kbIdentifier": "YAGO:Associated_Press",
+                "disambiguationScore": "0.99365"
+              }
+            ],
+            "offset": 352,
+            "name": "Associated Press",
+            "length": 16,
+            "bestEntity": {
+              "kbIdentifier": "YAGO:Associated_Press",
+              "disambiguationScore": "0.99365"
+            }
+          }
+        ],
+        "formatVersion": "2.3",
+        "allTypes": [
+          "YAGO_wordnet_enterprise_108056231",
+          "YAGO_wordnet_alliance_114418822",
+          "YAGO_wordnet_commercial_enterprise_108065093",
+          "YAGO_wordnet_psychological_feature_100023100",
+          "YAGO_wikicategory_News_agencies_based_in_the_United_States",
+          "YAGO_wordnet_institution_108053576",
+          "YAGO_wordnet_political_system_108367880",
+          "YAGO_wikicategory_Former_British_colonies",
+          "YAGO_wordnet_entity_100001740",
+          "YAGO_wikicategory_G20_nations",
+          "YAGO_wordnet_coalition_114418662",
+          "YAGO_wordnet_union_114418395",
+          "YAGO_wordnet_orientation_106208021",
+          "YAGO_wordnet_business_108061042",
+          "YAGO_wordnet_body_107965085",
+          "YAGO_wordnet_system_108435388",
+          "YAGO_wikicategory_Global_systemically_important_banks",
+          "YAGO_wordnet_financial_institution_108054721",
+          "YAGO_wikicategory_Superpowers",
+          "YAGO_yagoPermanentlyLocatedEntity",
+          "YAGO_wordnet_social_group_107950920",
+          "YAGO_wikicategory_Former_confederations",
+          "YAGO_wikicategory_Banks_established_in_1869",
+          "YAGO_wordnet_economy_108366753",
+          "YAGO_wordnet_company_108058098",
+          "YAGO_wordnet_group_100031264",
+          "YAGO_wordnet_agency_108057206",
+          "YAGO_wikicategory_Multinational_companies_based_in_New_York_City",
+          "YAGO_wordnet_colony_108374049",
+          "YAGO_wordnet_world_power_108177592",
+          "YAGO_wordnet_organization_108008335",
+          "YAGO_wikicategory_Consumers\\u0027_cooperatives",
+          "YAGO_yagoLegalActorGeo",
+          "YAGO_wikicategory_Liberal_democracies",
+          "YAGO_wikicategory_Companies_in_the_Dow_Jones_Industrial_Average",
+          "YAGO_wordnet_abstraction_100002137",
+          "YAGO_wikicategory_Non\\u002dprofit_organizations_based_in_New_York_City",
+          "YAGO_wordnet_state_108168978",
+          "YAGO_wikicategory_Financial_services_companies_based_in_New_York_City",
+          "YAGO_wordnet_news_agency_108355075",
+          "YAGO_wordnet_cognition_100023271",
+          "YAGO_wordnet_political_unit_108359949",
+          "YAGO_yagoLegalActor",
+          "YAGO_wordnet_cooperative_101100877",
+          "YAGO_wordnet_attribute_100024264",
+          "YAGO_wordnet_unit_108189659",
+          "YAGO_wikicategory_Companies_listed_on_the_New_York_Stock_Exchange",
+          "YAGO_wordnet_state_100024720",
+          "YAGO_yagoGeoEntity",
+          "YAGO_wikicategory_Investment_banks_in_the_United_States",
+          "YAGO_wordnet_democracy_108361329",
+          "YAGO_wordnet_political_orientation_106212839",
+          "YAGO_wikicategory_Republics",
+          "YAGO_wordnet_democracy_106217103",
+          "YAGO_wikicategory_Banks_based_in_New_York_City",
+          "YAGO_wordnet_depository_financial_institution_108420278",
+          "YAGO_wikicategory_Publicly_traded_companies_based_in_New_York_City",
+          "YAGO_wikicategory_Companies_based_in_Manhattan",
+          "YAGO_wikicategory_G8_nations",
+          "YAGO_wikicategory_Federal_constitutional_republics",
+          "YAGO_wordnet_attitude_106193203",
+          "YAGO_wikicategory_Cooperatives_in_the_United_States"
+        ]
+      }
+    }
   }
 }

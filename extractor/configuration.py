@@ -12,8 +12,9 @@ class Configuration:
             "score": True  # determined by Giveme5W: calculated score for this candidate
         },
         "label": True,  # This repeating information is useful for template engines
-        "onlyTopCandidate": True,  # Return only the  Candidate with the best score per question
-        "Giveme5W-runtime-resources": './runtime-resources/'  # Runtime directory
+        "onlyTopCandidate": False,  # Return only the  Candidate with the best score per question
+        "Giveme5W-runtime-resources": './runtime-resources/',  # Runtime directory
+        "fiveWoneH_enhancer_full": True # include the entire enhancer data
     }
 
     @classmethod

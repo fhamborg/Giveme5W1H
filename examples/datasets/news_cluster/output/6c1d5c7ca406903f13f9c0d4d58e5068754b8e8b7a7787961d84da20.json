@@ -49,6 +49,101 @@
           ],
           "score": 1.0,
           "text": "NPR"
+        },
+        {
+          "parts": [
+            [
+              {
+                "nlpToken": {
+                  "index": 7,
+                  "word": "ESPN",
+                  "originalText": "ESPN",
+                  "lemma": "ESPN",
+                  "characterOffsetBegin": 268,
+                  "characterOffsetEnd": 272,
+                  "pos": "NNP",
+                  "ner": "ORGANIZATION",
+                  "speaker": "PER0",
+                  "before": " ",
+                  "after": " "
+                },
+                "aida": [
+                  {
+                    "mention": {
+                      "allEntities": [
+                        {
+                          "kbIdentifier": "YAGO:ESPN",
+                          "disambiguationScore": "0.1413"
+                        }
+                      ],
+                      "offset": 268,
+                      "name": "ESPN",
+                      "length": 4,
+                      "bestEntity": {
+                        "kbIdentifier": "YAGO:ESPN",
+                        "disambiguationScore": "0.1413"
+                      }
+                    },
+                    "bestEntityMetadata": {
+                      "knowledgebase": "YAGO",
+                      "depictionurl": "http://upload.wikimedia.org/wikipedia/commons/f/f0/ESPN+.png",
+                      "depictionthumbnailurl": "http://upload.wikimedia.org/wikipedia/commons/thumbESPN+.png/200px-ESPN+.png",
+                      "importance": 9.192157028782872e-05,
+                      "entityId": "ESPN",
+                      "type": [
+                        "YAGO_wordnet_system_108435388",
+                        "YAGO_yagoPermanentlyLocatedEntity",
+                        "YAGO_yagoLegalActorGeo",
+                        "YAGO_wordnet_organization_108008335",
+                        "YAGO_wordnet_social_group_107950920",
+                        "YAGO_wordnet_institution_108053576",
+                        "YAGO_wordnet_entity_100001740",
+                        "YAGO_wordnet_subsidiary_company_108003935",
+                        "YAGO_wordnet_group_100031264",
+                        "YAGO_wikicategory_Walt_Disney_Company_subsidiaries",
+                        "YAGO_wordnet_network_108434259",
+                        "YAGO_yagoLegalActor",
+                        "YAGO_wordnet_abstraction_100002137",
+                        "YAGO_wordnet_company_108058098",
+                        "YAGO_wikicategory_Sports_television_networks_in_the_United_States"
+                      ],
+                      "readableRepr": "ESPN",
+                      "url": "http://en.wikipedia.org/wiki/ESPN"
+                    }
+                  }
+                ]
+              },
+              "NNP"
+            ]
+          ],
+          "score": 0.3254761904761905,
+          "text": "ESPN",
+          "nlpIndexSentence": 5
+        },
+        {
+          "parts": [
+            [
+              {
+                "nlpToken": {
+                  "index": 2,
+                  "word": "we",
+                  "originalText": "we",
+                  "lemma": "we",
+                  "characterOffsetBegin": 246,
+                  "characterOffsetEnd": 248,
+                  "pos": "PRP",
+                  "ner": "O",
+                  "speaker": "PER0",
+                  "before": " ",
+                  "after": " "
+                }
+              },
+              "PRP"
+            ]
+          ],
+          "score": 0.32047619047619047,
+          "text": "we",
+          "nlpIndexSentence": 5
         }
       ],
       "label": "who"
@@ -78,182 +173,275 @@
           ],
           "score": 1.0,
           "text": "Search"
-        }
-      ],
-      "label": "what"
-    },
-    "where": {
-      "extracted": [
+        },
         {
           "parts": [
+            [
+              {
+                "nlpToken": {
+                  "index": 8,
+                  "word": "plans",
+                  "originalText": "plans",
+                  "lemma": "plan",
+                  "characterOffsetBegin": 273,
+                  "characterOffsetEnd": 278,
+                  "pos": "VBZ",
+                  "ner": "O",
+                  "speaker": "PER0",
+                  "before": " ",
+                  "after": " "
+                }
+              },
+              "VBZ"
+            ],
+            [
+              {
+                "nlpToken": {
+                  "index": 9,
+                  "word": "to",
+                  "originalText": "to",
+                  "lemma": "to",
+                  "characterOffsetBegin": 279,
+                  "characterOffsetEnd": 281,
+                  "pos": "TO",
+                  "ner": "O",
+                  "speaker": "PER0",
+                  "before": " ",
+                  "after": " "
+                }
+              },
+              "TO"
+            ],
+            [
+              {
+                "nlpToken": {
+                  "index": 10,
+                  "word": "bid",
+                  "originalText": "bid",
+                  "lemma": "bid",
+                  "characterOffsetBegin": 282,
+                  "characterOffsetEnd": 285,
+                  "pos": "VB",
+                  "ner": "O",
+                  "speaker": "PER0",
+                  "before": " ",
+                  "after": " "
+                }
+              },
+              "VB"
+            ],
+            [
+              {
+                "nlpToken": {
+                  "index": 11,
+                  "word": "for",
+                  "originalText": "for",
+                  "lemma": "for",
+                  "characterOffsetBegin": 286,
+                  "characterOffsetEnd": 289,
+                  "pos": "IN",
+                  "ner": "O",
+                  "speaker": "PER0",
+                  "before": " ",
+                  "after": " "
+                }
+              },
+              "IN"
+            ],
             [
               {
                 "nlpToken": {
                   "index": 12,
-                  "word": "U.S.",
-                  "originalText": "U.S.",
-                  "lemma": "U.S.",
-                  "characterOffsetBegin": 72,
-                  "characterOffsetEnd": 76,
-                  "pos": "NNP",
-                  "ner": "LOCATION",
+                  "word": "...",
+                  "originalText": "...",
+                  "lemma": "...",
+                  "characterOffsetBegin": 290,
+                  "characterOffsetEnd": 293,
+                  "pos": ":",
+                  "ner": "O",
                   "speaker": "PER0",
                   "before": " ",
                   "after": " "
-                },
-                "aida": [
-                  {
-                    "mention": {
-                      "allEntities": [
-                        {
-                          "kbIdentifier": "YAGO:United_States",
-                          "disambiguationScore": "0.18555"
-                        }
-                      ],
-                      "offset": 72,
-                      "name": "U.S.",
-                      "length": 4,
-                      "bestEntity": {
-                        "kbIdentifier": "YAGO:United_States",
-                        "disambiguationScore": "0.18555"
-                      }
-                    },
-                    "bestEntityMetadata": {
-                      "knowledgebase": "YAGO",
-                      "depictionurl": "http://upload.wikimedia.org/wikipedia/en/a/a4/Flag_of_the_United_States.svg",
-                      "depictionthumbnailurl": "http://upload.wikimedia.org/wikipedia/en/thumbFlag_of_the_United_States.svg/200px-Flag_of_the_United_States.svg",
-                      "importance": 0.0,
-                      "entityId": "United_States",
-                      "type": [
-                        "YAGO_wordnet_system_108435388",
-                        "YAGO_yagoPermanentlyLocatedEntity",
-                        "YAGO_yagoLegalActorGeo",
-                        "YAGO_wordnet_organization_108008335",
-                        "YAGO_wordnet_state_100024720",
-                        "YAGO_wordnet_democracy_108361329",
-                        "YAGO_wordnet_union_114418395",
-                        "YAGO_wordnet_unit_108189659",
-                        "YAGO_wikicategory_Superpowers",
-                        "YAGO_wordnet_cognition_100023271",
-                        "YAGO_wordnet_coalition_114418662",
-                        "YAGO_wordnet_political_system_108367880",
-                        "YAGO_wordnet_attribute_100024264",
-                        "YAGO_wordnet_abstraction_100002137",
-                        "YAGO_wordnet_attitude_106193203",
-                        "YAGO_wordnet_alliance_114418822",
-                        "YAGO_wordnet_group_100031264",
-                        "YAGO_wordnet_psychological_feature_100023100",
-                        "YAGO_wordnet_body_107965085",
-                        "YAGO_wordnet_political_orientation_106212839",
-                        "YAGO_wordnet_democracy_106217103",
-                        "YAGO_wordnet_political_unit_108359949",
-                        "YAGO_wikicategory_Former_British_colonies",
-                        "YAGO_wordnet_economy_108366753",
-                        "YAGO_yagoLegalActor",
-                        "YAGO_wikicategory_G8_nations",
-                        "YAGO_yagoGeoEntity",
-                        "YAGO_wordnet_social_group_107950920",
-                        "YAGO_wordnet_entity_100001740",
-                        "YAGO_wordnet_colony_108374049",
-                        "YAGO_wikicategory_Liberal_democracies",
-                        "YAGO_wikicategory_G20_nations",
-                        "YAGO_wikicategory_Former_confederations",
-                        "YAGO_wordnet_state_108168978",
-                        "YAGO_wikicategory_Federal_constitutional_republics",
-                        "YAGO_wordnet_world_power_108177592",
-                        "YAGO_wikicategory_Republics",
-                        "YAGO_wordnet_orientation_106208021"
-                      ],
-                      "readableRepr": "United States",
-                      "url": "http://en.wikipedia.org/wiki/United%20States"
-                    }
-                  }
-                ]
+                }
               },
-              "NNP"
+              ":"
+            ],
+            [
+              {
+                "nlpToken": {
+                  "index": 13,
+                  "word": "or",
+                  "originalText": "or",
+                  "lemma": "or",
+                  "characterOffsetBegin": 294,
+                  "characterOffsetEnd": 296,
+                  "pos": "CC",
+                  "ner": "O",
+                  "speaker": "PER0",
+                  "before": " ",
+                  "after": " "
+                }
+              },
+              "CC"
+            ],
+            [
+              {
+                "nlpToken": {
+                  "index": 14,
+                  "word": "even",
+                  "originalText": "even",
+                  "lemma": "even",
+                  "characterOffsetBegin": 297,
+                  "characterOffsetEnd": 301,
+                  "pos": "RB",
+                  "ner": "O",
+                  "speaker": "PER0",
+                  "before": " ",
+                  "after": " "
+                }
+              },
+              "RB"
+            ],
+            [
+              {
+                "nlpToken": {
+                  "index": 15,
+                  "word": "when",
+                  "originalText": "when",
+                  "lemma": "when",
+                  "characterOffsetBegin": 302,
+                  "characterOffsetEnd": 306,
+                  "pos": "WRB",
+                  "ner": "O",
+                  "speaker": "PER0",
+                  "before": " ",
+                  "after": " "
+                }
+              },
+              "WRB"
+            ],
+            [
+              {
+                "nlpToken": {
+                  "index": 16,
+                  "word": "we",
+                  "originalText": "we",
+                  "lemma": "we",
+                  "characterOffsetBegin": 307,
+                  "characterOffsetEnd": 309,
+                  "pos": "PRP",
+                  "ner": "O",
+                  "speaker": "PER0",
+                  "before": " ",
+                  "after": " "
+                }
+              },
+              "PRP"
             ]
           ],
-          "score": 0.7,
-          "text": "U.S.",
-          "enhancement": {
-            "openstreetmap_nominatim": {
-              "osm_id": "276671197",
-              "boundingbox": [
-                45.1895505,
-                45.1896185,
-                -88.7322087,
-                -88.7321082
-              ],
-              "licence": "Data \u00a9 OpenStreetMap contributors, ODbL 1.0. http://www.openstreetmap.org/copyright",
-              "importance": 0.201,
-              "icon": "https://nominatim.openstreetmap.org/images/mapicons/transport_fuel.p.20.png",
-              "osm_type": "way",
-              "display_name": "U.S., State Highway 55, Sunny Waters, Lily, Town of Langlade, Langlade County, Wisconsin, 54462, United States of America",
-              "lat": "45.1895845",
-              "type": "fuel",
-              "place_id": "136017889",
-              "lon": "-88.73215845",
-              "class": "amenity"
-            }
-          },
-          "nlpIndexSentence": 2
-        }
-      ],
-      "label": "where"
-    },
-    "when": {
-      "extracted": [
+          "score": 0.3254761904761905,
+          "text": "plans to bid for ... or even when we",
+          "nlpIndexSentence": 5
+        },
         {
           "parts": [
             [
               {
                 "nlpToken": {
-                  "index": 4,
-                  "word": "today",
-                  "originalText": "today",
-                  "lemma": "today",
-                  "characterOffsetBegin": 253,
-                  "characterOffsetEnd": 258,
-                  "pos": "NN",
-                  "ner": "DATE",
-                  "normalizedNER": "2017-12-31",
+                  "index": 17,
+                  "word": "might",
+                  "originalText": "might",
+                  "lemma": "might",
+                  "characterOffsetBegin": 310,
+                  "characterOffsetEnd": 315,
+                  "pos": "MD",
+                  "ner": "O",
                   "speaker": "PER0",
                   "before": " ",
-                  "after": " ",
-                  "timex": {
-                    "tid": "t4",
-                    "type": "DATE",
-                    "value": "2017-12-31"
-                  }
-                },
-                "heideltime": [
-                  {
-                    "@tid": "t3",
-                    "@type": "DATE",
-                    "@value": "2017-12-31",
-                    "#text": "today",
-                    "characterOffset": [
-                      253,
-                      258
-                    ]
-                  }
-                ]
+                  "after": " "
+                }
+              },
+              "MD"
+            ],
+            [
+              {
+                "nlpToken": {
+                  "index": 18,
+                  "word": "be",
+                  "originalText": "be",
+                  "lemma": "be",
+                  "characterOffsetBegin": 316,
+                  "characterOffsetEnd": 318,
+                  "pos": "VB",
+                  "ner": "O",
+                  "speaker": "PER0",
+                  "before": " ",
+                  "after": " "
+                }
+              },
+              "VB"
+            ],
+            [
+              {
+                "nlpToken": {
+                  "index": 19,
+                  "word": "risking",
+                  "originalText": "risking",
+                  "lemma": "risk",
+                  "characterOffsetBegin": 319,
+                  "characterOffsetEnd": 326,
+                  "pos": "VBG",
+                  "ner": "O",
+                  "speaker": "PER0",
+                  "before": " ",
+                  "after": "\n"
+                }
+              },
+              "VBG"
+            ],
+            [
+              {
+                "nlpToken": {
+                  "index": 20,
+                  "word": "a",
+                  "originalText": "a",
+                  "lemma": "a",
+                  "characterOffsetBegin": 327,
+                  "characterOffsetEnd": 328,
+                  "pos": "DT",
+                  "ner": "O",
+                  "speaker": "PER0",
+                  "before": "\n",
+                  "after": " "
+                }
+              },
+              "DT"
+            ],
+            [
+              {
+                "nlpToken": {
+                  "index": 21,
+                  "word": "crash",
+                  "originalText": "crash",
+                  "lemma": "crash",
+                  "characterOffsetBegin": 329,
+                  "characterOffsetEnd": 334,
+                  "pos": "NN",
+                  "ner": "O",
+                  "speaker": "PER0",
+                  "before": " ",
+                  "after": ""
+                }
               },
               "NN"
             ]
           ],
-          "score": 0.3867675810732378,
-          "text": "today",
-          "enhancement": {
-            "timex": {
-              "start_date": "2017-12-31T00:00:00",
-              "end_date": "2017-12-31T23:59:59"
-            }
-          },
+          "score": 0.32047619047619047,
+          "text": "might be risking a crash",
           "nlpIndexSentence": 5
         }
       ],
-      "label": "when"
+      "label": "what"
     },
     "how": {
       "extracted": [
@@ -517,6 +705,917 @@
           "score": 1.0,
           "text": "its final days , the U.S. women 's and men",
           "nlpIndexSentence": 2
+        },
+        {
+          "parts": [
+            [
+              {
+                "nlpToken": {
+                  "index": 1,
+                  "word": "Also",
+                  "originalText": "Also",
+                  "lemma": "also",
+                  "characterOffsetBegin": 123,
+                  "characterOffsetEnd": 127,
+                  "pos": "RB",
+                  "ner": "O",
+                  "speaker": "PER0",
+                  "before": " ",
+                  "after": ""
+                }
+              },
+              "RB"
+            ],
+            [
+              {
+                "nlpToken": {
+                  "index": 2,
+                  "word": ",",
+                  "originalText": ",",
+                  "lemma": ",",
+                  "characterOffsetBegin": 127,
+                  "characterOffsetEnd": 128,
+                  "pos": ",",
+                  "ner": "O",
+                  "speaker": "PER0",
+                  "before": "",
+                  "after": " "
+                }
+              },
+              ","
+            ],
+            [
+              {
+                "nlpToken": {
+                  "index": 3,
+                  "word": "no",
+                  "originalText": "no",
+                  "lemma": "no",
+                  "characterOffsetBegin": 129,
+                  "characterOffsetEnd": 131,
+                  "pos": "DT",
+                  "ner": "O",
+                  "speaker": "PER0",
+                  "before": " ",
+                  "after": " "
+                }
+              },
+              "DT"
+            ],
+            [
+              {
+                "nlpToken": {
+                  "index": 4,
+                  "word": "athletes",
+                  "originalText": "athletes",
+                  "lemma": "athlete",
+                  "characterOffsetBegin": 132,
+                  "characterOffsetEnd": 140,
+                  "pos": "NNS",
+                  "ner": "O",
+                  "speaker": "PER0",
+                  "before": " ",
+                  "after": " "
+                }
+              },
+              "NNS"
+            ],
+            [
+              {
+                "nlpToken": {
+                  "index": 5,
+                  "word": "have",
+                  "originalText": "have",
+                  "lemma": "have",
+                  "characterOffsetBegin": 141,
+                  "characterOffsetEnd": 145,
+                  "pos": "VBP",
+                  "ner": "O",
+                  "speaker": "PER0",
+                  "before": " ",
+                  "after": " "
+                }
+              },
+              "VBP"
+            ],
+            [
+              {
+                "nlpToken": {
+                  "index": 6,
+                  "word": "tested",
+                  "originalText": "tested",
+                  "lemma": "test",
+                  "characterOffsetBegin": 146,
+                  "characterOffsetEnd": 152,
+                  "pos": "VBN",
+                  "ner": "O",
+                  "speaker": "PER0",
+                  "before": " ",
+                  "after": " "
+                }
+              },
+              "VBN"
+            ],
+            [
+              {
+                "nlpToken": {
+                  "index": 7,
+                  "word": "positive",
+                  "originalText": "positive",
+                  "lemma": "positive",
+                  "characterOffsetBegin": 153,
+                  "characterOffsetEnd": 161,
+                  "pos": "JJ",
+                  "ner": "O",
+                  "speaker": "PER0",
+                  "before": " ",
+                  "after": " "
+                }
+              },
+              "JJ"
+            ],
+            [
+              {
+                "nlpToken": {
+                  "index": 8,
+                  "word": "for",
+                  "originalText": "for",
+                  "lemma": "for",
+                  "characterOffsetBegin": 162,
+                  "characterOffsetEnd": 165,
+                  "pos": "IN",
+                  "ner": "O",
+                  "speaker": "PER0",
+                  "before": " ",
+                  "after": " "
+                }
+              },
+              "IN"
+            ],
+            [
+              {
+                "nlpToken": {
+                  "index": 9,
+                  "word": "performance",
+                  "originalText": "performance",
+                  "lemma": "performance",
+                  "characterOffsetBegin": 166,
+                  "characterOffsetEnd": 177,
+                  "pos": "NN",
+                  "ner": "O",
+                  "speaker": "PER0",
+                  "before": " ",
+                  "after": " "
+                }
+              },
+              "NN"
+            ],
+            [
+              {
+                "nlpToken": {
+                  "index": 10,
+                  "word": "enhancing",
+                  "originalText": "enhancing",
+                  "lemma": "enhance",
+                  "characterOffsetBegin": 178,
+                  "characterOffsetEnd": 187,
+                  "pos": "VBG",
+                  "ner": "O",
+                  "speaker": "PER0",
+                  "before": " ",
+                  "after": " "
+                }
+              },
+              "VBG"
+            ]
+          ],
+          "score": 0.9297988596769086,
+          "text": "Also , no athletes have tested positive for performance enhancing",
+          "nlpIndexSentence": 3
+        },
+        {
+          "parts": [
+            [
+              {
+                "nlpToken": {
+                  "index": 6,
+                  "word": "tested",
+                  "originalText": "tested",
+                  "lemma": "test",
+                  "characterOffsetBegin": 146,
+                  "characterOffsetEnd": 152,
+                  "pos": "VBN",
+                  "ner": "O",
+                  "speaker": "PER0",
+                  "before": " ",
+                  "after": " "
+                }
+              },
+              "VBN"
+            ],
+            [
+              {
+                "nlpToken": {
+                  "index": 7,
+                  "word": "positive",
+                  "originalText": "positive",
+                  "lemma": "positive",
+                  "characterOffsetBegin": 153,
+                  "characterOffsetEnd": 161,
+                  "pos": "JJ",
+                  "ner": "O",
+                  "speaker": "PER0",
+                  "before": " ",
+                  "after": " "
+                }
+              },
+              "JJ"
+            ],
+            [
+              {
+                "nlpToken": {
+                  "index": 8,
+                  "word": "for",
+                  "originalText": "for",
+                  "lemma": "for",
+                  "characterOffsetBegin": 162,
+                  "characterOffsetEnd": 165,
+                  "pos": "IN",
+                  "ner": "O",
+                  "speaker": "PER0",
+                  "before": " ",
+                  "after": " "
+                }
+              },
+              "IN"
+            ],
+            [
+              {
+                "nlpToken": {
+                  "index": 9,
+                  "word": "performance",
+                  "originalText": "performance",
+                  "lemma": "performance",
+                  "characterOffsetBegin": 166,
+                  "characterOffsetEnd": 177,
+                  "pos": "NN",
+                  "ner": "O",
+                  "speaker": "PER0",
+                  "before": " ",
+                  "after": " "
+                }
+              },
+              "NN"
+            ],
+            [
+              {
+                "nlpToken": {
+                  "index": 10,
+                  "word": "enhancing",
+                  "originalText": "enhancing",
+                  "lemma": "enhance",
+                  "characterOffsetBegin": 178,
+                  "characterOffsetEnd": 187,
+                  "pos": "VBG",
+                  "ner": "O",
+                  "speaker": "PER0",
+                  "before": " ",
+                  "after": " "
+                }
+              },
+              "VBG"
+            ],
+            [
+              {
+                "nlpToken": {
+                  "index": 11,
+                  "word": "drugs",
+                  "originalText": "drugs",
+                  "lemma": "drug",
+                  "characterOffsetBegin": 188,
+                  "characterOffsetEnd": 193,
+                  "pos": "NNS",
+                  "ner": "O",
+                  "speaker": "PER0",
+                  "before": " ",
+                  "after": ""
+                }
+              },
+              "NNS"
+            ],
+            [
+              {
+                "nlpToken": {
+                  "index": 12,
+                  "word": ".",
+                  "originalText": ".",
+                  "lemma": ".",
+                  "characterOffsetBegin": 193,
+                  "characterOffsetEnd": 194,
+                  "pos": ".",
+                  "ner": "O",
+                  "speaker": "PER0",
+                  "before": "",
+                  "after": " "
+                }
+              },
+              "."
+            ]
+          ],
+          "score": 0.9297988596769086,
+          "text": "tested positive for performance enhancing drugs .",
+          "nlpIndexSentence": 3
+        },
+        {
+          "parts": [
+            [
+              {
+                "nlpToken": {
+                  "index": 13,
+                  "word": "or",
+                  "originalText": "or",
+                  "lemma": "or",
+                  "characterOffsetBegin": 294,
+                  "characterOffsetEnd": 296,
+                  "pos": "CC",
+                  "ner": "O",
+                  "speaker": "PER0",
+                  "before": " ",
+                  "after": " "
+                }
+              },
+              "CC"
+            ],
+            [
+              {
+                "nlpToken": {
+                  "index": 14,
+                  "word": "even",
+                  "originalText": "even",
+                  "lemma": "even",
+                  "characterOffsetBegin": 297,
+                  "characterOffsetEnd": 301,
+                  "pos": "RB",
+                  "ner": "O",
+                  "speaker": "PER0",
+                  "before": " ",
+                  "after": " "
+                }
+              },
+              "RB"
+            ],
+            [
+              {
+                "nlpToken": {
+                  "index": 15,
+                  "word": "when",
+                  "originalText": "when",
+                  "lemma": "when",
+                  "characterOffsetBegin": 302,
+                  "characterOffsetEnd": 306,
+                  "pos": "WRB",
+                  "ner": "O",
+                  "speaker": "PER0",
+                  "before": " ",
+                  "after": " "
+                }
+              },
+              "WRB"
+            ],
+            [
+              {
+                "nlpToken": {
+                  "index": 16,
+                  "word": "we",
+                  "originalText": "we",
+                  "lemma": "we",
+                  "characterOffsetBegin": 307,
+                  "characterOffsetEnd": 309,
+                  "pos": "PRP",
+                  "ner": "O",
+                  "speaker": "PER0",
+                  "before": " ",
+                  "after": " "
+                }
+              },
+              "PRP"
+            ],
+            [
+              {
+                "nlpToken": {
+                  "index": 17,
+                  "word": "might",
+                  "originalText": "might",
+                  "lemma": "might",
+                  "characterOffsetBegin": 310,
+                  "characterOffsetEnd": 315,
+                  "pos": "MD",
+                  "ner": "O",
+                  "speaker": "PER0",
+                  "before": " ",
+                  "after": " "
+                }
+              },
+              "MD"
+            ],
+            [
+              {
+                "nlpToken": {
+                  "index": 18,
+                  "word": "be",
+                  "originalText": "be",
+                  "lemma": "be",
+                  "characterOffsetBegin": 316,
+                  "characterOffsetEnd": 318,
+                  "pos": "VB",
+                  "ner": "O",
+                  "speaker": "PER0",
+                  "before": " ",
+                  "after": " "
+                }
+              },
+              "VB"
+            ],
+            [
+              {
+                "nlpToken": {
+                  "index": 19,
+                  "word": "risking",
+                  "originalText": "risking",
+                  "lemma": "risk",
+                  "characterOffsetBegin": 319,
+                  "characterOffsetEnd": 326,
+                  "pos": "VBG",
+                  "ner": "O",
+                  "speaker": "PER0",
+                  "before": " ",
+                  "after": "\n"
+                }
+              },
+              "VBG"
+            ],
+            [
+              {
+                "nlpToken": {
+                  "index": 20,
+                  "word": "a",
+                  "originalText": "a",
+                  "lemma": "a",
+                  "characterOffsetBegin": 327,
+                  "characterOffsetEnd": 328,
+                  "pos": "DT",
+                  "ner": "O",
+                  "speaker": "PER0",
+                  "before": "\n",
+                  "after": " "
+                }
+              },
+              "DT"
+            ],
+            [
+              {
+                "nlpToken": {
+                  "index": 21,
+                  "word": "crash",
+                  "originalText": "crash",
+                  "lemma": "crash",
+                  "characterOffsetBegin": 329,
+                  "characterOffsetEnd": 334,
+                  "pos": "NN",
+                  "ner": "O",
+                  "speaker": "PER0",
+                  "before": " ",
+                  "after": ""
+                }
+              },
+              "NN"
+            ],
+            [
+              {
+                "nlpToken": {
+                  "index": 22,
+                  "word": ".",
+                  "originalText": ".",
+                  "lemma": ".",
+                  "characterOffsetBegin": 334,
+                  "characterOffsetEnd": 335,
+                  "pos": ".",
+                  "ner": "O",
+                  "speaker": "PER0",
+                  "before": "",
+                  "after": " "
+                }
+              },
+              "."
+            ]
+          ],
+          "score": 0.7893965790307255,
+          "text": "or even when we might be risking a crash .",
+          "nlpIndexSentence": 5
+        },
+        {
+          "parts": [
+            [
+              {
+                "nlpToken": {
+                  "index": 4,
+                  "word": "but",
+                  "originalText": "but",
+                  "lemma": "but",
+                  "characterOffsetBegin": 346,
+                  "characterOffsetEnd": 349,
+                  "pos": "CC",
+                  "ner": "O",
+                  "speaker": "PER0",
+                  "before": " ",
+                  "after": " "
+                }
+              },
+              "CC"
+            ],
+            [
+              {
+                "nlpToken": {
+                  "index": 5,
+                  "word": "maybe",
+                  "originalText": "maybe",
+                  "lemma": "maybe",
+                  "characterOffsetBegin": 350,
+                  "characterOffsetEnd": 355,
+                  "pos": "RB",
+                  "ner": "O",
+                  "speaker": "PER0",
+                  "before": " ",
+                  "after": " "
+                }
+              },
+              "RB"
+            ],
+            [
+              {
+                "nlpToken": {
+                  "index": 6,
+                  "word": "their",
+                  "originalText": "their",
+                  "lemma": "they",
+                  "characterOffsetBegin": 356,
+                  "characterOffsetEnd": 361,
+                  "pos": "PRP$",
+                  "ner": "O",
+                  "speaker": "PER0",
+                  "before": " ",
+                  "after": " "
+                }
+              },
+              "PRP$"
+            ],
+            [
+              {
+                "nlpToken": {
+                  "index": 7,
+                  "word": "citizenship",
+                  "originalText": "citizenship",
+                  "lemma": "citizenship",
+                  "characterOffsetBegin": 362,
+                  "characterOffsetEnd": 373,
+                  "pos": "NN",
+                  "ner": "O",
+                  "speaker": "PER0",
+                  "before": " ",
+                  "after": " "
+                }
+              },
+              "NN"
+            ],
+            [
+              {
+                "nlpToken": {
+                  "index": 8,
+                  "word": "in",
+                  "originalText": "in",
+                  "lemma": "in",
+                  "characterOffsetBegin": 374,
+                  "characterOffsetEnd": 376,
+                  "pos": "IN",
+                  "ner": "O",
+                  "speaker": "PER0",
+                  "before": " ",
+                  "after": " "
+                }
+              },
+              "IN"
+            ],
+            [
+              {
+                "nlpToken": {
+                  "index": 9,
+                  "word": "Costa",
+                  "originalText": "Costa",
+                  "lemma": "Costa",
+                  "characterOffsetBegin": 377,
+                  "characterOffsetEnd": 382,
+                  "pos": "NNP",
+                  "ner": "LOCATION",
+                  "speaker": "PER0",
+                  "before": " ",
+                  "after": " "
+                },
+                "aida": [
+                  {
+                    "mention": {
+                      "allEntities": [
+                        {
+                          "kbIdentifier": "YAGO:Costa_Rica",
+                          "disambiguationScore": "0.36995"
+                        }
+                      ],
+                      "offset": 377,
+                      "name": "Costa Rica",
+                      "length": 10,
+                      "bestEntity": {
+                        "kbIdentifier": "YAGO:Costa_Rica",
+                        "disambiguationScore": "0.36995"
+                      }
+                    },
+                    "bestEntityMetadata": {
+                      "knowledgebase": "YAGO",
+                      "depictionurl": "http://upload.wikimedia.org/wikipedia/commons/f/f2/Flag_of_Costa_Rica.svg",
+                      "depictionthumbnailurl": "http://upload.wikimedia.org/wikipedia/commons/thumbFlag_of_Costa_Rica.svg/200px-Flag_of_Costa_Rica.svg",
+                      "importance": 0.00010696328178947341,
+                      "entityId": "Costa_Rica",
+                      "type": [
+                        "YAGO_wordnet_system_108435388",
+                        "YAGO_wordnet_district_108552138",
+                        "YAGO_yagoPermanentlyLocatedEntity",
+                        "YAGO_yagoLegalActorGeo",
+                        "YAGO_wordnet_state_108654360",
+                        "YAGO_wikicategory_Spanish\\u002dspeaking_countries_and_territories",
+                        "YAGO_wordnet_country_108544813",
+                        "YAGO_wikicategory_Member_states_of_the_United_Nations",
+                        "YAGO_wordnet_economy_108366753",
+                        "YAGO_wordnet_abstraction_100002137",
+                        "YAGO_wordnet_region_108630985",
+                        "YAGO_yagoGeoEntity",
+                        "YAGO_wordnet_physical_entity_100001930",
+                        "YAGO_wikicategory_Countries_in_the_Caribbean",
+                        "YAGO_wordnet_entity_100001740",
+                        "YAGO_wordnet_object_100002684",
+                        "YAGO_wikicategory_States_and_territories_established_in_1821",
+                        "YAGO_wordnet_group_100031264",
+                        "YAGO_wordnet_location_100027167",
+                        "YAGO_wordnet_administrative_district_108491826",
+                        "YAGO_wikicategory_Countries_in_Central_America"
+                      ],
+                      "readableRepr": "Costa Rica",
+                      "url": "http://en.wikipedia.org/wiki/Costa%20Rica"
+                    }
+                  }
+                ]
+              },
+              "NNP"
+            ],
+            [
+              {
+                "nlpToken": {
+                  "index": 10,
+                  "word": "Rica",
+                  "originalText": "Rica",
+                  "lemma": "Rica",
+                  "characterOffsetBegin": 383,
+                  "characterOffsetEnd": 387,
+                  "pos": "NNP",
+                  "ner": "LOCATION",
+                  "speaker": "PER0",
+                  "before": " ",
+                  "after": " "
+                },
+                "aida": [
+                  {
+                    "mention": {
+                      "allEntities": [
+                        {
+                          "kbIdentifier": "YAGO:Costa_Rica",
+                          "disambiguationScore": "0.36995"
+                        }
+                      ],
+                      "offset": 377,
+                      "name": "Costa Rica",
+                      "length": 10,
+                      "bestEntity": {
+                        "kbIdentifier": "YAGO:Costa_Rica",
+                        "disambiguationScore": "0.36995"
+                      }
+                    },
+                    "bestEntityMetadata": {
+                      "knowledgebase": "YAGO",
+                      "depictionurl": "http://upload.wikimedia.org/wikipedia/commons/f/f2/Flag_of_Costa_Rica.svg",
+                      "depictionthumbnailurl": "http://upload.wikimedia.org/wikipedia/commons/thumbFlag_of_Costa_Rica.svg/200px-Flag_of_Costa_Rica.svg",
+                      "importance": 0.00010696328178947341,
+                      "entityId": "Costa_Rica",
+                      "type": [
+                        "YAGO_wordnet_system_108435388",
+                        "YAGO_wordnet_district_108552138",
+                        "YAGO_yagoPermanentlyLocatedEntity",
+                        "YAGO_yagoLegalActorGeo",
+                        "YAGO_wordnet_state_108654360",
+                        "YAGO_wikicategory_Spanish\\u002dspeaking_countries_and_territories",
+                        "YAGO_wordnet_country_108544813",
+                        "YAGO_wikicategory_Member_states_of_the_United_Nations",
+                        "YAGO_wordnet_economy_108366753",
+                        "YAGO_wordnet_abstraction_100002137",
+                        "YAGO_wordnet_region_108630985",
+                        "YAGO_yagoGeoEntity",
+                        "YAGO_wordnet_physical_entity_100001930",
+                        "YAGO_wikicategory_Countries_in_the_Caribbean",
+                        "YAGO_wordnet_entity_100001740",
+                        "YAGO_wordnet_object_100002684",
+                        "YAGO_wikicategory_States_and_territories_established_in_1821",
+                        "YAGO_wordnet_group_100031264",
+                        "YAGO_wordnet_location_100027167",
+                        "YAGO_wordnet_administrative_district_108491826",
+                        "YAGO_wikicategory_Countries_in_Central_America"
+                      ],
+                      "readableRepr": "Costa Rica",
+                      "url": "http://en.wikipedia.org/wiki/Costa%20Rica"
+                    }
+                  }
+                ]
+              },
+              "NNP"
+            ],
+            [
+              {
+                "nlpToken": {
+                  "index": 11,
+                  "word": "or",
+                  "originalText": "or",
+                  "lemma": "or",
+                  "characterOffsetBegin": 388,
+                  "characterOffsetEnd": 390,
+                  "pos": "CC",
+                  "ner": "O",
+                  "speaker": "PER0",
+                  "before": " ",
+                  "after": " "
+                }
+              },
+              "CC"
+            ],
+            [
+              {
+                "nlpToken": {
+                  "index": 12,
+                  "word": "Jamaica",
+                  "originalText": "Jamaica",
+                  "lemma": "Jamaica",
+                  "characterOffsetBegin": 391,
+                  "characterOffsetEnd": 398,
+                  "pos": "NNP",
+                  "ner": "LOCATION",
+                  "speaker": "PER0",
+                  "before": " ",
+                  "after": " "
+                },
+                "aida": [
+                  {
+                    "mention": {
+                      "allEntities": [
+                        {
+                          "kbIdentifier": "YAGO:Jamaica",
+                          "disambiguationScore": "0.18058"
+                        }
+                      ],
+                      "offset": 391,
+                      "name": "Jamaica",
+                      "length": 7,
+                      "bestEntity": {
+                        "kbIdentifier": "YAGO:Jamaica",
+                        "disambiguationScore": "0.18058"
+                      }
+                    },
+                    "bestEntityMetadata": {
+                      "knowledgebase": "YAGO",
+                      "depictionurl": "http://upload.wikimedia.org/wikipedia/commons/0/0a/Flag_of_Jamaica.svg",
+                      "depictionthumbnailurl": "http://upload.wikimedia.org/wikipedia/commons/thumbFlag_of_Jamaica.svg/200px-Flag_of_Jamaica.svg",
+                      "importance": 8.105811198108533e-05,
+                      "entityId": "Jamaica",
+                      "type": [
+                        "YAGO_wordnet_system_108435388",
+                        "YAGO_wordnet_district_108552138",
+                        "YAGO_yagoPermanentlyLocatedEntity",
+                        "YAGO_yagoLegalActorGeo",
+                        "YAGO_wordnet_state_108654360",
+                        "YAGO_wordnet_country_108544813",
+                        "YAGO_wikicategory_Member_states_of_the_United_Nations",
+                        "YAGO_wordnet_economy_108366753",
+                        "YAGO_wordnet_abstraction_100002137",
+                        "YAGO_wordnet_region_108630985",
+                        "YAGO_wikicategory_English\\u002dspeaking_countries_and_territories",
+                        "YAGO_yagoGeoEntity",
+                        "YAGO_wikicategory_World_Trade_Organization_member_economies",
+                        "YAGO_wordnet_physical_entity_100001930",
+                        "YAGO_wikicategory_Countries_in_the_Caribbean",
+                        "YAGO_wordnet_entity_100001740",
+                        "YAGO_wikicategory_States_and_territories_established_in_1962",
+                        "YAGO_wordnet_object_100002684",
+                        "YAGO_wordnet_group_100031264",
+                        "YAGO_wikicategory_Island_countries",
+                        "YAGO_wikicategory_Member_states_of_the_Caribbean_Community",
+                        "YAGO_wordnet_location_100027167",
+                        "YAGO_wordnet_administrative_district_108491826",
+                        "YAGO_wikicategory_Member_states_of_the_Commonwealth_of_Nations"
+                      ],
+                      "readableRepr": "Jamaica",
+                      "url": "http://en.wikipedia.org/wiki/Jamaica"
+                    }
+                  }
+                ]
+              },
+              "NNP"
+            ],
+            [
+              {
+                "nlpToken": {
+                  "index": 13,
+                  "word": "...",
+                  "originalText": "...",
+                  "lemma": "...",
+                  "characterOffsetBegin": 399,
+                  "characterOffsetEnd": 402,
+                  "pos": ":",
+                  "ner": "O",
+                  "speaker": "PER0",
+                  "before": " ",
+                  "after": ""
+                }
+              },
+              ":"
+            ]
+          ],
+          "score": 0.7191954387076338,
+          "text": "but maybe their citizenship in Costa Rica or Jamaica ...",
+          "nlpIndexSentence": 6
+        },
+        {
+          "parts": [
+            [
+              {
+                "nlpToken": {
+                  "index": 9,
+                  "word": "performance",
+                  "originalText": "performance",
+                  "lemma": "performance",
+                  "characterOffsetBegin": 166,
+                  "characterOffsetEnd": 177,
+                  "pos": "NN",
+                  "ner": "O",
+                  "speaker": "PER0",
+                  "before": " ",
+                  "after": " "
+                }
+              },
+              "NN"
+            ],
+            [
+              {
+                "nlpToken": {
+                  "index": 10,
+                  "word": "enhancing",
+                  "originalText": "enhancing",
+                  "lemma": "enhance",
+                  "characterOffsetBegin": 178,
+                  "characterOffsetEnd": 187,
+                  "pos": "VBG",
+                  "ner": "O",
+                  "speaker": "PER0",
+                  "before": " ",
+                  "after": " "
+                }
+              },
+              "VBG"
+            ],
+            [
+              {
+                "nlpToken": {
+                  "index": 11,
+                  "word": "drugs",
+                  "originalText": "drugs",
+                  "lemma": "drug",
+                  "characterOffsetBegin": 188,
+                  "characterOffsetEnd": 193,
+                  "pos": "NNS",
+                  "ner": "O",
+                  "speaker": "PER0",
+                  "before": " ",
+                  "after": ""
+                }
+              },
+              "NNS"
+            ]
+          ],
+          "score": 0.0,
+          "text": "performance enhancing drugs",
+          "nlpIndexSentence": 9
         }
       ],
       "label": "how"
@@ -565,12 +1664,3904 @@
           "score": 0.34600000000000003,
           "text": "no athletes",
           "nlpIndexSentence": 3
+        },
+        {
+          "parts": [
+            [
+              {
+                "nlpToken": {
+                  "index": 16,
+                  "word": "we",
+                  "originalText": "we",
+                  "lemma": "we",
+                  "characterOffsetBegin": 307,
+                  "characterOffsetEnd": 309,
+                  "pos": "PRP",
+                  "ner": "O",
+                  "speaker": "PER0",
+                  "before": " ",
+                  "after": " "
+                }
+              },
+              "PRP"
+            ]
+          ],
+          "score": 0.186,
+          "text": "we",
+          "nlpIndexSentence": 5
         }
       ],
       "label": "why"
+    },
+    "where": {
+      "extracted": [
+        {
+          "parts": [
+            [
+              {
+                "nlpToken": {
+                  "index": 12,
+                  "word": "U.S.",
+                  "originalText": "U.S.",
+                  "lemma": "U.S.",
+                  "characterOffsetBegin": 72,
+                  "characterOffsetEnd": 76,
+                  "pos": "NNP",
+                  "ner": "LOCATION",
+                  "speaker": "PER0",
+                  "before": " ",
+                  "after": " "
+                },
+                "aida": [
+                  {
+                    "mention": {
+                      "allEntities": [
+                        {
+                          "kbIdentifier": "YAGO:United_States",
+                          "disambiguationScore": "0.18555"
+                        }
+                      ],
+                      "offset": 72,
+                      "name": "U.S.",
+                      "length": 4,
+                      "bestEntity": {
+                        "kbIdentifier": "YAGO:United_States",
+                        "disambiguationScore": "0.18555"
+                      }
+                    },
+                    "bestEntityMetadata": {
+                      "knowledgebase": "YAGO",
+                      "depictionurl": "http://upload.wikimedia.org/wikipedia/en/a/a4/Flag_of_the_United_States.svg",
+                      "depictionthumbnailurl": "http://upload.wikimedia.org/wikipedia/en/thumbFlag_of_the_United_States.svg/200px-Flag_of_the_United_States.svg",
+                      "importance": 0.0,
+                      "entityId": "United_States",
+                      "type": [
+                        "YAGO_wordnet_system_108435388",
+                        "YAGO_yagoPermanentlyLocatedEntity",
+                        "YAGO_yagoLegalActorGeo",
+                        "YAGO_wordnet_organization_108008335",
+                        "YAGO_wordnet_state_100024720",
+                        "YAGO_wordnet_democracy_108361329",
+                        "YAGO_wordnet_union_114418395",
+                        "YAGO_wordnet_unit_108189659",
+                        "YAGO_wikicategory_Superpowers",
+                        "YAGO_wordnet_cognition_100023271",
+                        "YAGO_wordnet_coalition_114418662",
+                        "YAGO_wordnet_political_system_108367880",
+                        "YAGO_wordnet_attribute_100024264",
+                        "YAGO_wordnet_abstraction_100002137",
+                        "YAGO_wordnet_attitude_106193203",
+                        "YAGO_wordnet_alliance_114418822",
+                        "YAGO_wordnet_group_100031264",
+                        "YAGO_wordnet_psychological_feature_100023100",
+                        "YAGO_wordnet_body_107965085",
+                        "YAGO_wordnet_political_orientation_106212839",
+                        "YAGO_wordnet_democracy_106217103",
+                        "YAGO_wordnet_political_unit_108359949",
+                        "YAGO_wikicategory_Former_British_colonies",
+                        "YAGO_wordnet_economy_108366753",
+                        "YAGO_yagoLegalActor",
+                        "YAGO_wikicategory_G8_nations",
+                        "YAGO_yagoGeoEntity",
+                        "YAGO_wordnet_social_group_107950920",
+                        "YAGO_wordnet_entity_100001740",
+                        "YAGO_wordnet_colony_108374049",
+                        "YAGO_wikicategory_Liberal_democracies",
+                        "YAGO_wikicategory_G20_nations",
+                        "YAGO_wikicategory_Former_confederations",
+                        "YAGO_wordnet_state_108168978",
+                        "YAGO_wikicategory_Federal_constitutional_republics",
+                        "YAGO_wordnet_world_power_108177592",
+                        "YAGO_wikicategory_Republics",
+                        "YAGO_wordnet_orientation_106208021"
+                      ],
+                      "readableRepr": "United States",
+                      "url": "http://en.wikipedia.org/wiki/United%20States"
+                    }
+                  }
+                ]
+              },
+              "NNP"
+            ]
+          ],
+          "score": 0.7,
+          "text": "U.S.",
+          "enhancement": {
+            "openstreetmap_nominatim": {
+              "osm_id": "276671197",
+              "boundingbox": [
+                45.1895505,
+                45.1896185,
+                -88.7322087,
+                -88.7321082
+              ],
+              "licence": "Data \u00a9 OpenStreetMap contributors, ODbL 1.0. http://www.openstreetmap.org/copyright",
+              "importance": 0.201,
+              "icon": "https://nominatim.openstreetmap.org/images/mapicons/transport_fuel.p.20.png",
+              "osm_type": "way",
+              "display_name": "U.S., State Highway 55, Sunny Waters, Lily, Town of Langlade, Langlade County, Wisconsin, 54462, United States of America",
+              "lat": "45.1895845",
+              "type": "fuel",
+              "place_id": "136017889",
+              "lon": "-88.73215845",
+              "class": "amenity"
+            }
+          },
+          "nlpIndexSentence": 2
+        }
+      ],
+      "label": "where"
+    },
+    "when": {
+      "extracted": [
+        {
+          "parts": [
+            [
+              {
+                "nlpToken": {
+                  "index": 4,
+                  "word": "today",
+                  "originalText": "today",
+                  "lemma": "today",
+                  "characterOffsetBegin": 253,
+                  "characterOffsetEnd": 258,
+                  "pos": "NN",
+                  "ner": "DATE",
+                  "normalizedNER": "2017-12-31",
+                  "speaker": "PER0",
+                  "before": " ",
+                  "after": " ",
+                  "timex": {
+                    "tid": "t4",
+                    "type": "DATE",
+                    "value": "2017-12-31"
+                  }
+                },
+                "heideltime": [
+                  {
+                    "@tid": "t3",
+                    "@type": "DATE",
+                    "@value": "2017-12-31",
+                    "#text": "today",
+                    "characterOffset": [
+                      253,
+                      258
+                    ]
+                  }
+                ]
+              },
+              "NN"
+            ]
+          ],
+          "score": 0.34676758107323774,
+          "text": "today",
+          "enhancement": {
+            "timex": {
+              "start_date": "2017-12-31T00:00:00",
+              "end_date": "2017-12-31T23:59:59"
+            }
+          },
+          "nlpIndexSentence": 5
+        }
+      ],
+      "label": "when"
     }
   },
   "fiveWoneH_Metadata": {
     "process_errors": {}
+  },
+  "fiveWoneH_enhancer": {
+    "process_errors": {
+      "coreNLP": {
+        "docDate": "2017-12-31T19:27:27",
+        "sentences": [
+          {
+            "index": 0,
+            "parse": "(ROOT\n  (S\n    (S\n      (NP (NNP NPR))\n      (VP (VB Search)))\n    (: :)\n    (NP (NNP NPR))\n    (. .)))",
+            "basicDependencies": [
+              {
+                "dep": "ROOT",
+                "governor": 0,
+                "governorGloss": "ROOT",
+                "dependent": 2,
+                "dependentGloss": "Search"
+              },
+              {
+                "dep": "nsubj",
+                "governor": 2,
+                "governorGloss": "Search",
+                "dependent": 1,
+                "dependentGloss": "NPR"
+              },
+              {
+                "dep": "punct",
+                "governor": 2,
+                "governorGloss": "Search",
+                "dependent": 3,
+                "dependentGloss": ":"
+              },
+              {
+                "dep": "dep",
+                "governor": 2,
+                "governorGloss": "Search",
+                "dependent": 4,
+                "dependentGloss": "NPR"
+              },
+              {
+                "dep": "punct",
+                "governor": 2,
+                "governorGloss": "Search",
+                "dependent": 5,
+                "dependentGloss": "."
+              }
+            ],
+            "enhancedDependencies": [
+              {
+                "dep": "ROOT",
+                "governor": 0,
+                "governorGloss": "ROOT",
+                "dependent": 2,
+                "dependentGloss": "Search"
+              },
+              {
+                "dep": "nsubj",
+                "governor": 2,
+                "governorGloss": "Search",
+                "dependent": 1,
+                "dependentGloss": "NPR"
+              },
+              {
+                "dep": "punct",
+                "governor": 2,
+                "governorGloss": "Search",
+                "dependent": 3,
+                "dependentGloss": ":"
+              },
+              {
+                "dep": "dep",
+                "governor": 2,
+                "governorGloss": "Search",
+                "dependent": 4,
+                "dependentGloss": "NPR"
+              },
+              {
+                "dep": "punct",
+                "governor": 2,
+                "governorGloss": "Search",
+                "dependent": 5,
+                "dependentGloss": "."
+              }
+            ],
+            "enhancedPlusPlusDependencies": [
+              {
+                "dep": "ROOT",
+                "governor": 0,
+                "governorGloss": "ROOT",
+                "dependent": 2,
+                "dependentGloss": "Search"
+              },
+              {
+                "dep": "nsubj",
+                "governor": 2,
+                "governorGloss": "Search",
+                "dependent": 1,
+                "dependentGloss": "NPR"
+              },
+              {
+                "dep": "punct",
+                "governor": 2,
+                "governorGloss": "Search",
+                "dependent": 3,
+                "dependentGloss": ":"
+              },
+              {
+                "dep": "dep",
+                "governor": 2,
+                "governorGloss": "Search",
+                "dependent": 4,
+                "dependentGloss": "NPR"
+              },
+              {
+                "dep": "punct",
+                "governor": 2,
+                "governorGloss": "Search",
+                "dependent": 5,
+                "dependentGloss": "."
+              }
+            ],
+            "tokens": [
+              {
+                "index": 1,
+                "word": "NPR",
+                "originalText": "NPR",
+                "lemma": "NPR",
+                "characterOffsetBegin": 0,
+                "characterOffsetEnd": 3,
+                "pos": "NNP",
+                "ner": "ORGANIZATION",
+                "speaker": "PER0",
+                "before": "",
+                "after": " "
+              },
+              {
+                "index": 2,
+                "word": "Search",
+                "originalText": "Search",
+                "lemma": "search",
+                "characterOffsetBegin": 4,
+                "characterOffsetEnd": 10,
+                "pos": "VB",
+                "ner": "O",
+                "speaker": "PER0",
+                "before": " ",
+                "after": " "
+              },
+              {
+                "index": 3,
+                "word": ":",
+                "originalText": ":",
+                "lemma": ":",
+                "characterOffsetBegin": 11,
+                "characterOffsetEnd": 12,
+                "pos": ":",
+                "ner": "O",
+                "speaker": "PER0",
+                "before": " ",
+                "after": " "
+              },
+              {
+                "index": 4,
+                "word": "NPR",
+                "originalText": "NPR",
+                "lemma": "NPR",
+                "characterOffsetBegin": 13,
+                "characterOffsetEnd": 16,
+                "pos": "NNP",
+                "ner": "ORGANIZATION",
+                "speaker": "PER0",
+                "before": " ",
+                "after": ""
+              },
+              {
+                "index": 5,
+                "word": ".",
+                "originalText": ".",
+                "lemma": ".",
+                "characterOffsetBegin": 16,
+                "characterOffsetEnd": 17,
+                "pos": ".",
+                "ner": "O",
+                "speaker": "PER0",
+                "before": "",
+                "after": " "
+              }
+            ]
+          },
+          {
+            "index": 1,
+            "parse": "(ROOT (. .))",
+            "basicDependencies": [
+              {
+                "dep": "ROOT",
+                "governor": 0,
+                "governorGloss": "ROOT",
+                "dependent": 1,
+                "dependentGloss": "."
+              }
+            ],
+            "enhancedDependencies": [
+              {
+                "dep": "ROOT",
+                "governor": 0,
+                "governorGloss": "ROOT",
+                "dependent": 1,
+                "dependentGloss": "."
+              }
+            ],
+            "enhancedPlusPlusDependencies": [
+              {
+                "dep": "ROOT",
+                "governor": 0,
+                "governorGloss": "ROOT",
+                "dependent": 1,
+                "dependentGloss": "."
+              }
+            ],
+            "tokens": [
+              {
+                "index": 1,
+                "word": ".",
+                "originalText": ".",
+                "lemma": ".",
+                "characterOffsetBegin": 18,
+                "characterOffsetEnd": 19,
+                "pos": ".",
+                "ner": "O",
+                "speaker": "PER0",
+                "before": " ",
+                "after": " "
+              }
+            ]
+          },
+          {
+            "index": 2,
+            "parse": "(ROOT\n  (S\n    (SBAR (IN As)\n      (S\n        (NP (DT the) (CD 2010) (NNPS Winter) (NNPS Games))\n        (VP (VBZ enters)\n          (NP (PRP$ its) (JJ final) (NNS days)))))\n    (, ,)\n    (NP\n      (NP (DT the) (NNP U.S.) (NNS women) (POS 's))\n      (CC and)\n      (NP\n        (NP (NNS men) (POS 's))\n        (NN hockey) (NNS teams)))\n    (VP (VBP hope)\n      (PP (TO to)\n        (NP (NN medal))))\n    (. .)))",
+            "basicDependencies": [
+              {
+                "dep": "ROOT",
+                "governor": 0,
+                "governorGloss": "ROOT",
+                "dependent": 20,
+                "dependentGloss": "hope"
+              },
+              {
+                "dep": "mark",
+                "governor": 6,
+                "governorGloss": "enters",
+                "dependent": 1,
+                "dependentGloss": "As"
+              },
+              {
+                "dep": "det",
+                "governor": 5,
+                "governorGloss": "Games",
+                "dependent": 2,
+                "dependentGloss": "the"
+              },
+              {
+                "dep": "nummod",
+                "governor": 5,
+                "governorGloss": "Games",
+                "dependent": 3,
+                "dependentGloss": "2010"
+              },
+              {
+                "dep": "compound",
+                "governor": 5,
+                "governorGloss": "Games",
+                "dependent": 4,
+                "dependentGloss": "Winter"
+              },
+              {
+                "dep": "nsubj",
+                "governor": 6,
+                "governorGloss": "enters",
+                "dependent": 5,
+                "dependentGloss": "Games"
+              },
+              {
+                "dep": "advcl",
+                "governor": 20,
+                "governorGloss": "hope",
+                "dependent": 6,
+                "dependentGloss": "enters"
+              },
+              {
+                "dep": "nmod:poss",
+                "governor": 9,
+                "governorGloss": "days",
+                "dependent": 7,
+                "dependentGloss": "its"
+              },
+              {
+                "dep": "amod",
+                "governor": 9,
+                "governorGloss": "days",
+                "dependent": 8,
+                "dependentGloss": "final"
+              },
+              {
+                "dep": "dobj",
+                "governor": 6,
+                "governorGloss": "enters",
+                "dependent": 9,
+                "dependentGloss": "days"
+              },
+              {
+                "dep": "punct",
+                "governor": 20,
+                "governorGloss": "hope",
+                "dependent": 10,
+                "dependentGloss": ","
+              },
+              {
+                "dep": "det",
+                "governor": 13,
+                "governorGloss": "women",
+                "dependent": 11,
+                "dependentGloss": "the"
+              },
+              {
+                "dep": "compound",
+                "governor": 13,
+                "governorGloss": "women",
+                "dependent": 12,
+                "dependentGloss": "U.S."
+              },
+              {
+                "dep": "nmod:poss",
+                "governor": 19,
+                "governorGloss": "teams",
+                "dependent": 13,
+                "dependentGloss": "women"
+              },
+              {
+                "dep": "case",
+                "governor": 13,
+                "governorGloss": "women",
+                "dependent": 14,
+                "dependentGloss": "'s"
+              },
+              {
+                "dep": "cc",
+                "governor": 13,
+                "governorGloss": "women",
+                "dependent": 15,
+                "dependentGloss": "and"
+              },
+              {
+                "dep": "conj",
+                "governor": 13,
+                "governorGloss": "women",
+                "dependent": 16,
+                "dependentGloss": "men"
+              },
+              {
+                "dep": "case",
+                "governor": 16,
+                "governorGloss": "men",
+                "dependent": 17,
+                "dependentGloss": "'s"
+              },
+              {
+                "dep": "compound",
+                "governor": 19,
+                "governorGloss": "teams",
+                "dependent": 18,
+                "dependentGloss": "hockey"
+              },
+              {
+                "dep": "nsubj",
+                "governor": 20,
+                "governorGloss": "hope",
+                "dependent": 19,
+                "dependentGloss": "teams"
+              },
+              {
+                "dep": "case",
+                "governor": 22,
+                "governorGloss": "medal",
+                "dependent": 21,
+                "dependentGloss": "to"
+              },
+              {
+                "dep": "nmod",
+                "governor": 20,
+                "governorGloss": "hope",
+                "dependent": 22,
+                "dependentGloss": "medal"
+              },
+              {
+                "dep": "punct",
+                "governor": 20,
+                "governorGloss": "hope",
+                "dependent": 23,
+                "dependentGloss": "."
+              }
+            ],
+            "enhancedDependencies": [
+              {
+                "dep": "ROOT",
+                "governor": 0,
+                "governorGloss": "ROOT",
+                "dependent": 20,
+                "dependentGloss": "hope"
+              },
+              {
+                "dep": "mark",
+                "governor": 6,
+                "governorGloss": "enters",
+                "dependent": 1,
+                "dependentGloss": "As"
+              },
+              {
+                "dep": "det",
+                "governor": 5,
+                "governorGloss": "Games",
+                "dependent": 2,
+                "dependentGloss": "the"
+              },
+              {
+                "dep": "nummod",
+                "governor": 5,
+                "governorGloss": "Games",
+                "dependent": 3,
+                "dependentGloss": "2010"
+              },
+              {
+                "dep": "compound",
+                "governor": 5,
+                "governorGloss": "Games",
+                "dependent": 4,
+                "dependentGloss": "Winter"
+              },
+              {
+                "dep": "nsubj",
+                "governor": 6,
+                "governorGloss": "enters",
+                "dependent": 5,
+                "dependentGloss": "Games"
+              },
+              {
+                "dep": "advcl:as",
+                "governor": 20,
+                "governorGloss": "hope",
+                "dependent": 6,
+                "dependentGloss": "enters"
+              },
+              {
+                "dep": "nmod:poss",
+                "governor": 9,
+                "governorGloss": "days",
+                "dependent": 7,
+                "dependentGloss": "its"
+              },
+              {
+                "dep": "amod",
+                "governor": 9,
+                "governorGloss": "days",
+                "dependent": 8,
+                "dependentGloss": "final"
+              },
+              {
+                "dep": "dobj",
+                "governor": 6,
+                "governorGloss": "enters",
+                "dependent": 9,
+                "dependentGloss": "days"
+              },
+              {
+                "dep": "punct",
+                "governor": 20,
+                "governorGloss": "hope",
+                "dependent": 10,
+                "dependentGloss": ","
+              },
+              {
+                "dep": "det",
+                "governor": 13,
+                "governorGloss": "women",
+                "dependent": 11,
+                "dependentGloss": "the"
+              },
+              {
+                "dep": "compound",
+                "governor": 13,
+                "governorGloss": "women",
+                "dependent": 12,
+                "dependentGloss": "U.S."
+              },
+              {
+                "dep": "nmod:poss",
+                "governor": 19,
+                "governorGloss": "teams",
+                "dependent": 13,
+                "dependentGloss": "women"
+              },
+              {
+                "dep": "case",
+                "governor": 13,
+                "governorGloss": "women",
+                "dependent": 14,
+                "dependentGloss": "'s"
+              },
+              {
+                "dep": "cc",
+                "governor": 13,
+                "governorGloss": "women",
+                "dependent": 15,
+                "dependentGloss": "and"
+              },
+              {
+                "dep": "conj:and",
+                "governor": 13,
+                "governorGloss": "women",
+                "dependent": 16,
+                "dependentGloss": "men"
+              },
+              {
+                "dep": "nmod:poss",
+                "governor": 19,
+                "governorGloss": "teams",
+                "dependent": 16,
+                "dependentGloss": "men"
+              },
+              {
+                "dep": "case",
+                "governor": 16,
+                "governorGloss": "men",
+                "dependent": 17,
+                "dependentGloss": "'s"
+              },
+              {
+                "dep": "compound",
+                "governor": 19,
+                "governorGloss": "teams",
+                "dependent": 18,
+                "dependentGloss": "hockey"
+              },
+              {
+                "dep": "nsubj",
+                "governor": 20,
+                "governorGloss": "hope",
+                "dependent": 19,
+                "dependentGloss": "teams"
+              },
+              {
+                "dep": "case",
+                "governor": 22,
+                "governorGloss": "medal",
+                "dependent": 21,
+                "dependentGloss": "to"
+              },
+              {
+                "dep": "nmod:to",
+                "governor": 20,
+                "governorGloss": "hope",
+                "dependent": 22,
+                "dependentGloss": "medal"
+              },
+              {
+                "dep": "punct",
+                "governor": 20,
+                "governorGloss": "hope",
+                "dependent": 23,
+                "dependentGloss": "."
+              }
+            ],
+            "enhancedPlusPlusDependencies": [
+              {
+                "dep": "ROOT",
+                "governor": 0,
+                "governorGloss": "ROOT",
+                "dependent": 20,
+                "dependentGloss": "hope"
+              },
+              {
+                "dep": "mark",
+                "governor": 6,
+                "governorGloss": "enters",
+                "dependent": 1,
+                "dependentGloss": "As"
+              },
+              {
+                "dep": "det",
+                "governor": 5,
+                "governorGloss": "Games",
+                "dependent": 2,
+                "dependentGloss": "the"
+              },
+              {
+                "dep": "nummod",
+                "governor": 5,
+                "governorGloss": "Games",
+                "dependent": 3,
+                "dependentGloss": "2010"
+              },
+              {
+                "dep": "compound",
+                "governor": 5,
+                "governorGloss": "Games",
+                "dependent": 4,
+                "dependentGloss": "Winter"
+              },
+              {
+                "dep": "nsubj",
+                "governor": 6,
+                "governorGloss": "enters",
+                "dependent": 5,
+                "dependentGloss": "Games"
+              },
+              {
+                "dep": "advcl:as",
+                "governor": 20,
+                "governorGloss": "hope",
+                "dependent": 6,
+                "dependentGloss": "enters"
+              },
+              {
+                "dep": "nmod:poss",
+                "governor": 9,
+                "governorGloss": "days",
+                "dependent": 7,
+                "dependentGloss": "its"
+              },
+              {
+                "dep": "amod",
+                "governor": 9,
+                "governorGloss": "days",
+                "dependent": 8,
+                "dependentGloss": "final"
+              },
+              {
+                "dep": "dobj",
+                "governor": 6,
+                "governorGloss": "enters",
+                "dependent": 9,
+                "dependentGloss": "days"
+              },
+              {
+                "dep": "punct",
+                "governor": 20,
+                "governorGloss": "hope",
+                "dependent": 10,
+                "dependentGloss": ","
+              },
+              {
+                "dep": "det",
+                "governor": 13,
+                "governorGloss": "women",
+                "dependent": 11,
+                "dependentGloss": "the"
+              },
+              {
+                "dep": "compound",
+                "governor": 13,
+                "governorGloss": "women",
+                "dependent": 12,
+                "dependentGloss": "U.S."
+              },
+              {
+                "dep": "nmod:poss",
+                "governor": 19,
+                "governorGloss": "teams",
+                "dependent": 13,
+                "dependentGloss": "women"
+              },
+              {
+                "dep": "case",
+                "governor": 13,
+                "governorGloss": "women",
+                "dependent": 14,
+                "dependentGloss": "'s"
+              },
+              {
+                "dep": "cc",
+                "governor": 13,
+                "governorGloss": "women",
+                "dependent": 15,
+                "dependentGloss": "and"
+              },
+              {
+                "dep": "conj:and",
+                "governor": 13,
+                "governorGloss": "women",
+                "dependent": 16,
+                "dependentGloss": "men"
+              },
+              {
+                "dep": "nmod:poss",
+                "governor": 19,
+                "governorGloss": "teams",
+                "dependent": 16,
+                "dependentGloss": "men"
+              },
+              {
+                "dep": "case",
+                "governor": 16,
+                "governorGloss": "men",
+                "dependent": 17,
+                "dependentGloss": "'s"
+              },
+              {
+                "dep": "compound",
+                "governor": 19,
+                "governorGloss": "teams",
+                "dependent": 18,
+                "dependentGloss": "hockey"
+              },
+              {
+                "dep": "nsubj",
+                "governor": 20,
+                "governorGloss": "hope",
+                "dependent": 19,
+                "dependentGloss": "teams"
+              },
+              {
+                "dep": "case",
+                "governor": 22,
+                "governorGloss": "medal",
+                "dependent": 21,
+                "dependentGloss": "to"
+              },
+              {
+                "dep": "nmod:to",
+                "governor": 20,
+                "governorGloss": "hope",
+                "dependent": 22,
+                "dependentGloss": "medal"
+              },
+              {
+                "dep": "punct",
+                "governor": 20,
+                "governorGloss": "hope",
+                "dependent": 23,
+                "dependentGloss": "."
+              }
+            ],
+            "tokens": [
+              {
+                "index": 1,
+                "word": "As",
+                "originalText": "As",
+                "lemma": "as",
+                "characterOffsetBegin": 20,
+                "characterOffsetEnd": 22,
+                "pos": "IN",
+                "ner": "O",
+                "speaker": "PER0",
+                "before": " ",
+                "after": " "
+              },
+              {
+                "index": 2,
+                "word": "the",
+                "originalText": "the",
+                "lemma": "the",
+                "characterOffsetBegin": 23,
+                "characterOffsetEnd": 26,
+                "pos": "DT",
+                "ner": "DATE",
+                "normalizedNER": "2010-WI",
+                "speaker": "PER0",
+                "before": " ",
+                "after": " ",
+                "timex": {
+                  "tid": "t1",
+                  "type": "DATE",
+                  "value": "2010-WI"
+                }
+              },
+              {
+                "index": 3,
+                "word": "2010",
+                "originalText": "2010",
+                "lemma": "2010",
+                "characterOffsetBegin": 27,
+                "characterOffsetEnd": 31,
+                "pos": "CD",
+                "ner": "DATE",
+                "normalizedNER": "2010-WI",
+                "speaker": "PER0",
+                "before": " ",
+                "after": " ",
+                "timex": {
+                  "tid": "t1",
+                  "type": "DATE",
+                  "value": "2010-WI"
+                }
+              },
+              {
+                "index": 4,
+                "word": "Winter",
+                "originalText": "Winter",
+                "lemma": "Winter",
+                "characterOffsetBegin": 32,
+                "characterOffsetEnd": 38,
+                "pos": "NNPS",
+                "ner": "DATE",
+                "normalizedNER": "2010-WI",
+                "speaker": "PER0",
+                "before": " ",
+                "after": " ",
+                "timex": {
+                  "tid": "t1",
+                  "type": "DATE",
+                  "value": "2010-WI"
+                }
+              },
+              {
+                "index": 5,
+                "word": "Games",
+                "originalText": "Games",
+                "lemma": "Games",
+                "characterOffsetBegin": 39,
+                "characterOffsetEnd": 44,
+                "pos": "NNPS",
+                "ner": "MISC",
+                "speaker": "PER0",
+                "before": " ",
+                "after": " "
+              },
+              {
+                "index": 6,
+                "word": "enters",
+                "originalText": "enters",
+                "lemma": "enter",
+                "characterOffsetBegin": 45,
+                "characterOffsetEnd": 51,
+                "pos": "VBZ",
+                "ner": "O",
+                "speaker": "PER0",
+                "before": " ",
+                "after": " "
+              },
+              {
+                "index": 7,
+                "word": "its",
+                "originalText": "its",
+                "lemma": "its",
+                "characterOffsetBegin": 52,
+                "characterOffsetEnd": 55,
+                "pos": "PRP$",
+                "ner": "O",
+                "speaker": "PER0",
+                "before": " ",
+                "after": " "
+              },
+              {
+                "index": 8,
+                "word": "final",
+                "originalText": "final",
+                "lemma": "final",
+                "characterOffsetBegin": 56,
+                "characterOffsetEnd": 61,
+                "pos": "JJ",
+                "ner": "O",
+                "speaker": "PER0",
+                "before": " ",
+                "after": " "
+              },
+              {
+                "index": 9,
+                "word": "days",
+                "originalText": "days",
+                "lemma": "day",
+                "characterOffsetBegin": 62,
+                "characterOffsetEnd": 66,
+                "pos": "NNS",
+                "ner": "DURATION",
+                "normalizedNER": "PXD",
+                "speaker": "PER0",
+                "before": " ",
+                "after": "",
+                "timex": {
+                  "tid": "t2",
+                  "type": "DURATION",
+                  "value": "PXD"
+                }
+              },
+              {
+                "index": 10,
+                "word": ",",
+                "originalText": ",",
+                "lemma": ",",
+                "characterOffsetBegin": 66,
+                "characterOffsetEnd": 67,
+                "pos": ",",
+                "ner": "O",
+                "speaker": "PER0",
+                "before": "",
+                "after": " "
+              },
+              {
+                "index": 11,
+                "word": "the",
+                "originalText": "the",
+                "lemma": "the",
+                "characterOffsetBegin": 68,
+                "characterOffsetEnd": 71,
+                "pos": "DT",
+                "ner": "O",
+                "speaker": "PER0",
+                "before": " ",
+                "after": " "
+              },
+              {
+                "index": 12,
+                "word": "U.S.",
+                "originalText": "U.S.",
+                "lemma": "U.S.",
+                "characterOffsetBegin": 72,
+                "characterOffsetEnd": 76,
+                "pos": "NNP",
+                "ner": "LOCATION",
+                "speaker": "PER0",
+                "before": " ",
+                "after": " "
+              },
+              {
+                "index": 13,
+                "word": "women",
+                "originalText": "women",
+                "lemma": "woman",
+                "characterOffsetBegin": 77,
+                "characterOffsetEnd": 82,
+                "pos": "NNS",
+                "ner": "O",
+                "speaker": "PER0",
+                "before": " ",
+                "after": ""
+              },
+              {
+                "index": 14,
+                "word": "'s",
+                "originalText": "'s",
+                "lemma": "'s",
+                "characterOffsetBegin": 82,
+                "characterOffsetEnd": 84,
+                "pos": "POS",
+                "ner": "O",
+                "speaker": "PER0",
+                "before": "",
+                "after": " "
+              },
+              {
+                "index": 15,
+                "word": "and",
+                "originalText": "and",
+                "lemma": "and",
+                "characterOffsetBegin": 85,
+                "characterOffsetEnd": 88,
+                "pos": "CC",
+                "ner": "O",
+                "speaker": "PER0",
+                "before": " ",
+                "after": " "
+              },
+              {
+                "index": 16,
+                "word": "men",
+                "originalText": "men",
+                "lemma": "man",
+                "characterOffsetBegin": 89,
+                "characterOffsetEnd": 92,
+                "pos": "NNS",
+                "ner": "O",
+                "speaker": "PER0",
+                "before": " ",
+                "after": ""
+              },
+              {
+                "index": 17,
+                "word": "'s",
+                "originalText": "'s",
+                "lemma": "'s",
+                "characterOffsetBegin": 92,
+                "characterOffsetEnd": 94,
+                "pos": "POS",
+                "ner": "O",
+                "speaker": "PER0",
+                "before": "",
+                "after": " "
+              },
+              {
+                "index": 18,
+                "word": "hockey",
+                "originalText": "hockey",
+                "lemma": "hockey",
+                "characterOffsetBegin": 95,
+                "characterOffsetEnd": 101,
+                "pos": "NN",
+                "ner": "O",
+                "speaker": "PER0",
+                "before": " ",
+                "after": " "
+              },
+              {
+                "index": 19,
+                "word": "teams",
+                "originalText": "teams",
+                "lemma": "team",
+                "characterOffsetBegin": 102,
+                "characterOffsetEnd": 107,
+                "pos": "NNS",
+                "ner": "O",
+                "speaker": "PER0",
+                "before": " ",
+                "after": " "
+              },
+              {
+                "index": 20,
+                "word": "hope",
+                "originalText": "hope",
+                "lemma": "hope",
+                "characterOffsetBegin": 108,
+                "characterOffsetEnd": 112,
+                "pos": "VBP",
+                "ner": "O",
+                "speaker": "PER0",
+                "before": " ",
+                "after": " "
+              },
+              {
+                "index": 21,
+                "word": "to",
+                "originalText": "to",
+                "lemma": "to",
+                "characterOffsetBegin": 113,
+                "characterOffsetEnd": 115,
+                "pos": "TO",
+                "ner": "O",
+                "speaker": "PER0",
+                "before": " ",
+                "after": " "
+              },
+              {
+                "index": 22,
+                "word": "medal",
+                "originalText": "medal",
+                "lemma": "medal",
+                "characterOffsetBegin": 116,
+                "characterOffsetEnd": 121,
+                "pos": "NN",
+                "ner": "O",
+                "speaker": "PER0",
+                "before": " ",
+                "after": ""
+              },
+              {
+                "index": 23,
+                "word": ".",
+                "originalText": ".",
+                "lemma": ".",
+                "characterOffsetBegin": 121,
+                "characterOffsetEnd": 122,
+                "pos": ".",
+                "ner": "O",
+                "speaker": "PER0",
+                "before": "",
+                "after": " "
+              }
+            ]
+          },
+          {
+            "index": 3,
+            "parse": "(ROOT\n  (S\n    (ADVP (RB Also))\n    (, ,)\n    (NP (DT no) (NNS athletes))\n    (VP (VBP have)\n      (VP (VBN tested)\n        (ADJP (JJ positive)\n          (PP (IN for)\n            (NP\n              (NP (NN performance))\n              (VP (VBG enhancing)\n                (NP (NNS drugs))))))))\n    (. .)))",
+            "basicDependencies": [
+              {
+                "dep": "ROOT",
+                "governor": 0,
+                "governorGloss": "ROOT",
+                "dependent": 6,
+                "dependentGloss": "tested"
+              },
+              {
+                "dep": "advmod",
+                "governor": 6,
+                "governorGloss": "tested",
+                "dependent": 1,
+                "dependentGloss": "Also"
+              },
+              {
+                "dep": "punct",
+                "governor": 6,
+                "governorGloss": "tested",
+                "dependent": 2,
+                "dependentGloss": ","
+              },
+              {
+                "dep": "neg",
+                "governor": 4,
+                "governorGloss": "athletes",
+                "dependent": 3,
+                "dependentGloss": "no"
+              },
+              {
+                "dep": "nsubj",
+                "governor": 6,
+                "governorGloss": "tested",
+                "dependent": 4,
+                "dependentGloss": "athletes"
+              },
+              {
+                "dep": "aux",
+                "governor": 6,
+                "governorGloss": "tested",
+                "dependent": 5,
+                "dependentGloss": "have"
+              },
+              {
+                "dep": "xcomp",
+                "governor": 6,
+                "governorGloss": "tested",
+                "dependent": 7,
+                "dependentGloss": "positive"
+              },
+              {
+                "dep": "case",
+                "governor": 11,
+                "governorGloss": "drugs",
+                "dependent": 8,
+                "dependentGloss": "for"
+              },
+              {
+                "dep": "compound",
+                "governor": 11,
+                "governorGloss": "drugs",
+                "dependent": 9,
+                "dependentGloss": "performance"
+              },
+              {
+                "dep": "amod",
+                "governor": 11,
+                "governorGloss": "drugs",
+                "dependent": 10,
+                "dependentGloss": "enhancing"
+              },
+              {
+                "dep": "nmod",
+                "governor": 7,
+                "governorGloss": "positive",
+                "dependent": 11,
+                "dependentGloss": "drugs"
+              },
+              {
+                "dep": "punct",
+                "governor": 6,
+                "governorGloss": "tested",
+                "dependent": 12,
+                "dependentGloss": "."
+              }
+            ],
+            "enhancedDependencies": [
+              {
+                "dep": "ROOT",
+                "governor": 0,
+                "governorGloss": "ROOT",
+                "dependent": 6,
+                "dependentGloss": "tested"
+              },
+              {
+                "dep": "advmod",
+                "governor": 6,
+                "governorGloss": "tested",
+                "dependent": 1,
+                "dependentGloss": "Also"
+              },
+              {
+                "dep": "punct",
+                "governor": 6,
+                "governorGloss": "tested",
+                "dependent": 2,
+                "dependentGloss": ","
+              },
+              {
+                "dep": "neg",
+                "governor": 4,
+                "governorGloss": "athletes",
+                "dependent": 3,
+                "dependentGloss": "no"
+              },
+              {
+                "dep": "nsubj",
+                "governor": 6,
+                "governorGloss": "tested",
+                "dependent": 4,
+                "dependentGloss": "athletes"
+              },
+              {
+                "dep": "aux",
+                "governor": 6,
+                "governorGloss": "tested",
+                "dependent": 5,
+                "dependentGloss": "have"
+              },
+              {
+                "dep": "xcomp",
+                "governor": 6,
+                "governorGloss": "tested",
+                "dependent": 7,
+                "dependentGloss": "positive"
+              },
+              {
+                "dep": "case",
+                "governor": 11,
+                "governorGloss": "drugs",
+                "dependent": 8,
+                "dependentGloss": "for"
+              },
+              {
+                "dep": "compound",
+                "governor": 11,
+                "governorGloss": "drugs",
+                "dependent": 9,
+                "dependentGloss": "performance"
+              },
+              {
+                "dep": "amod",
+                "governor": 11,
+                "governorGloss": "drugs",
+                "dependent": 10,
+                "dependentGloss": "enhancing"
+              },
+              {
+                "dep": "nmod:for",
+                "governor": 7,
+                "governorGloss": "positive",
+                "dependent": 11,
+                "dependentGloss": "drugs"
+              },
+              {
+                "dep": "punct",
+                "governor": 6,
+                "governorGloss": "tested",
+                "dependent": 12,
+                "dependentGloss": "."
+              }
+            ],
+            "enhancedPlusPlusDependencies": [
+              {
+                "dep": "ROOT",
+                "governor": 0,
+                "governorGloss": "ROOT",
+                "dependent": 6,
+                "dependentGloss": "tested"
+              },
+              {
+                "dep": "advmod",
+                "governor": 6,
+                "governorGloss": "tested",
+                "dependent": 1,
+                "dependentGloss": "Also"
+              },
+              {
+                "dep": "punct",
+                "governor": 6,
+                "governorGloss": "tested",
+                "dependent": 2,
+                "dependentGloss": ","
+              },
+              {
+                "dep": "neg",
+                "governor": 4,
+                "governorGloss": "athletes",
+                "dependent": 3,
+                "dependentGloss": "no"
+              },
+              {
+                "dep": "nsubj",
+                "governor": 6,
+                "governorGloss": "tested",
+                "dependent": 4,
+                "dependentGloss": "athletes"
+              },
+              {
+                "dep": "aux",
+                "governor": 6,
+                "governorGloss": "tested",
+                "dependent": 5,
+                "dependentGloss": "have"
+              },
+              {
+                "dep": "xcomp",
+                "governor": 6,
+                "governorGloss": "tested",
+                "dependent": 7,
+                "dependentGloss": "positive"
+              },
+              {
+                "dep": "case",
+                "governor": 11,
+                "governorGloss": "drugs",
+                "dependent": 8,
+                "dependentGloss": "for"
+              },
+              {
+                "dep": "compound",
+                "governor": 11,
+                "governorGloss": "drugs",
+                "dependent": 9,
+                "dependentGloss": "performance"
+              },
+              {
+                "dep": "amod",
+                "governor": 11,
+                "governorGloss": "drugs",
+                "dependent": 10,
+                "dependentGloss": "enhancing"
+              },
+              {
+                "dep": "nmod:for",
+                "governor": 7,
+                "governorGloss": "positive",
+                "dependent": 11,
+                "dependentGloss": "drugs"
+              },
+              {
+                "dep": "punct",
+                "governor": 6,
+                "governorGloss": "tested",
+                "dependent": 12,
+                "dependentGloss": "."
+              }
+            ],
+            "tokens": [
+              {
+                "index": 1,
+                "word": "Also",
+                "originalText": "Also",
+                "lemma": "also",
+                "characterOffsetBegin": 123,
+                "characterOffsetEnd": 127,
+                "pos": "RB",
+                "ner": "O",
+                "speaker": "PER0",
+                "before": " ",
+                "after": ""
+              },
+              {
+                "index": 2,
+                "word": ",",
+                "originalText": ",",
+                "lemma": ",",
+                "characterOffsetBegin": 127,
+                "characterOffsetEnd": 128,
+                "pos": ",",
+                "ner": "O",
+                "speaker": "PER0",
+                "before": "",
+                "after": " "
+              },
+              {
+                "index": 3,
+                "word": "no",
+                "originalText": "no",
+                "lemma": "no",
+                "characterOffsetBegin": 129,
+                "characterOffsetEnd": 131,
+                "pos": "DT",
+                "ner": "O",
+                "speaker": "PER0",
+                "before": " ",
+                "after": " "
+              },
+              {
+                "index": 4,
+                "word": "athletes",
+                "originalText": "athletes",
+                "lemma": "athlete",
+                "characterOffsetBegin": 132,
+                "characterOffsetEnd": 140,
+                "pos": "NNS",
+                "ner": "O",
+                "speaker": "PER0",
+                "before": " ",
+                "after": " "
+              },
+              {
+                "index": 5,
+                "word": "have",
+                "originalText": "have",
+                "lemma": "have",
+                "characterOffsetBegin": 141,
+                "characterOffsetEnd": 145,
+                "pos": "VBP",
+                "ner": "O",
+                "speaker": "PER0",
+                "before": " ",
+                "after": " "
+              },
+              {
+                "index": 6,
+                "word": "tested",
+                "originalText": "tested",
+                "lemma": "test",
+                "characterOffsetBegin": 146,
+                "characterOffsetEnd": 152,
+                "pos": "VBN",
+                "ner": "O",
+                "speaker": "PER0",
+                "before": " ",
+                "after": " "
+              },
+              {
+                "index": 7,
+                "word": "positive",
+                "originalText": "positive",
+                "lemma": "positive",
+                "characterOffsetBegin": 153,
+                "characterOffsetEnd": 161,
+                "pos": "JJ",
+                "ner": "O",
+                "speaker": "PER0",
+                "before": " ",
+                "after": " "
+              },
+              {
+                "index": 8,
+                "word": "for",
+                "originalText": "for",
+                "lemma": "for",
+                "characterOffsetBegin": 162,
+                "characterOffsetEnd": 165,
+                "pos": "IN",
+                "ner": "O",
+                "speaker": "PER0",
+                "before": " ",
+                "after": " "
+              },
+              {
+                "index": 9,
+                "word": "performance",
+                "originalText": "performance",
+                "lemma": "performance",
+                "characterOffsetBegin": 166,
+                "characterOffsetEnd": 177,
+                "pos": "NN",
+                "ner": "O",
+                "speaker": "PER0",
+                "before": " ",
+                "after": " "
+              },
+              {
+                "index": 10,
+                "word": "enhancing",
+                "originalText": "enhancing",
+                "lemma": "enhance",
+                "characterOffsetBegin": 178,
+                "characterOffsetEnd": 187,
+                "pos": "VBG",
+                "ner": "O",
+                "speaker": "PER0",
+                "before": " ",
+                "after": " "
+              },
+              {
+                "index": 11,
+                "word": "drugs",
+                "originalText": "drugs",
+                "lemma": "drug",
+                "characterOffsetBegin": 188,
+                "characterOffsetEnd": 193,
+                "pos": "NNS",
+                "ner": "O",
+                "speaker": "PER0",
+                "before": " ",
+                "after": ""
+              },
+              {
+                "index": 12,
+                "word": ".",
+                "originalText": ".",
+                "lemma": ".",
+                "characterOffsetBegin": 193,
+                "characterOffsetEnd": 194,
+                "pos": ".",
+                "ner": "O",
+                "speaker": "PER0",
+                "before": "",
+                "after": " "
+              }
+            ]
+          },
+          {
+            "index": 4,
+            "parse": "(ROOT\n  (SQ (VBZ Is)\n    (NP (NN doping))\n    (PP (IN at)\n      (NP\n        (NP (DT the) (NNPS Olympics))\n        (NP\n          (NP (DT a) (NN thing))\n          (PP (IN of)\n            (NP (DT the) (NN past))))))\n    (. ?)))",
+            "basicDependencies": [
+              {
+                "dep": "ROOT",
+                "governor": 0,
+                "governorGloss": "ROOT",
+                "dependent": 7,
+                "dependentGloss": "thing"
+              },
+              {
+                "dep": "cop",
+                "governor": 7,
+                "governorGloss": "thing",
+                "dependent": 1,
+                "dependentGloss": "Is"
+              },
+              {
+                "dep": "nsubj",
+                "governor": 7,
+                "governorGloss": "thing",
+                "dependent": 2,
+                "dependentGloss": "doping"
+              },
+              {
+                "dep": "case",
+                "governor": 5,
+                "governorGloss": "Olympics",
+                "dependent": 3,
+                "dependentGloss": "at"
+              },
+              {
+                "dep": "det",
+                "governor": 5,
+                "governorGloss": "Olympics",
+                "dependent": 4,
+                "dependentGloss": "the"
+              },
+              {
+                "dep": "nmod",
+                "governor": 2,
+                "governorGloss": "doping",
+                "dependent": 5,
+                "dependentGloss": "Olympics"
+              },
+              {
+                "dep": "det",
+                "governor": 7,
+                "governorGloss": "thing",
+                "dependent": 6,
+                "dependentGloss": "a"
+              },
+              {
+                "dep": "case",
+                "governor": 10,
+                "governorGloss": "past",
+                "dependent": 8,
+                "dependentGloss": "of"
+              },
+              {
+                "dep": "det",
+                "governor": 10,
+                "governorGloss": "past",
+                "dependent": 9,
+                "dependentGloss": "the"
+              },
+              {
+                "dep": "nmod",
+                "governor": 7,
+                "governorGloss": "thing",
+                "dependent": 10,
+                "dependentGloss": "past"
+              },
+              {
+                "dep": "punct",
+                "governor": 7,
+                "governorGloss": "thing",
+                "dependent": 11,
+                "dependentGloss": "?"
+              }
+            ],
+            "enhancedDependencies": [
+              {
+                "dep": "ROOT",
+                "governor": 0,
+                "governorGloss": "ROOT",
+                "dependent": 7,
+                "dependentGloss": "thing"
+              },
+              {
+                "dep": "cop",
+                "governor": 7,
+                "governorGloss": "thing",
+                "dependent": 1,
+                "dependentGloss": "Is"
+              },
+              {
+                "dep": "nsubj",
+                "governor": 7,
+                "governorGloss": "thing",
+                "dependent": 2,
+                "dependentGloss": "doping"
+              },
+              {
+                "dep": "case",
+                "governor": 5,
+                "governorGloss": "Olympics",
+                "dependent": 3,
+                "dependentGloss": "at"
+              },
+              {
+                "dep": "det",
+                "governor": 5,
+                "governorGloss": "Olympics",
+                "dependent": 4,
+                "dependentGloss": "the"
+              },
+              {
+                "dep": "nmod:at",
+                "governor": 2,
+                "governorGloss": "doping",
+                "dependent": 5,
+                "dependentGloss": "Olympics"
+              },
+              {
+                "dep": "det",
+                "governor": 7,
+                "governorGloss": "thing",
+                "dependent": 6,
+                "dependentGloss": "a"
+              },
+              {
+                "dep": "case",
+                "governor": 10,
+                "governorGloss": "past",
+                "dependent": 8,
+                "dependentGloss": "of"
+              },
+              {
+                "dep": "det",
+                "governor": 10,
+                "governorGloss": "past",
+                "dependent": 9,
+                "dependentGloss": "the"
+              },
+              {
+                "dep": "nmod:of",
+                "governor": 7,
+                "governorGloss": "thing",
+                "dependent": 10,
+                "dependentGloss": "past"
+              },
+              {
+                "dep": "punct",
+                "governor": 7,
+                "governorGloss": "thing",
+                "dependent": 11,
+                "dependentGloss": "?"
+              }
+            ],
+            "enhancedPlusPlusDependencies": [
+              {
+                "dep": "ROOT",
+                "governor": 0,
+                "governorGloss": "ROOT",
+                "dependent": 7,
+                "dependentGloss": "thing"
+              },
+              {
+                "dep": "cop",
+                "governor": 7,
+                "governorGloss": "thing",
+                "dependent": 1,
+                "dependentGloss": "Is"
+              },
+              {
+                "dep": "nsubj",
+                "governor": 7,
+                "governorGloss": "thing",
+                "dependent": 2,
+                "dependentGloss": "doping"
+              },
+              {
+                "dep": "case",
+                "governor": 5,
+                "governorGloss": "Olympics",
+                "dependent": 3,
+                "dependentGloss": "at"
+              },
+              {
+                "dep": "det",
+                "governor": 5,
+                "governorGloss": "Olympics",
+                "dependent": 4,
+                "dependentGloss": "the"
+              },
+              {
+                "dep": "nmod:at",
+                "governor": 2,
+                "governorGloss": "doping",
+                "dependent": 5,
+                "dependentGloss": "Olympics"
+              },
+              {
+                "dep": "det",
+                "governor": 7,
+                "governorGloss": "thing",
+                "dependent": 6,
+                "dependentGloss": "a"
+              },
+              {
+                "dep": "case",
+                "governor": 10,
+                "governorGloss": "past",
+                "dependent": 8,
+                "dependentGloss": "of"
+              },
+              {
+                "dep": "det",
+                "governor": 10,
+                "governorGloss": "past",
+                "dependent": 9,
+                "dependentGloss": "the"
+              },
+              {
+                "dep": "nmod:of",
+                "governor": 7,
+                "governorGloss": "thing",
+                "dependent": 10,
+                "dependentGloss": "past"
+              },
+              {
+                "dep": "punct",
+                "governor": 7,
+                "governorGloss": "thing",
+                "dependent": 11,
+                "dependentGloss": "?"
+              }
+            ],
+            "tokens": [
+              {
+                "index": 1,
+                "word": "Is",
+                "originalText": "Is",
+                "lemma": "be",
+                "characterOffsetBegin": 195,
+                "characterOffsetEnd": 197,
+                "pos": "VBZ",
+                "ner": "O",
+                "speaker": "PER0",
+                "before": " ",
+                "after": " "
+              },
+              {
+                "index": 2,
+                "word": "doping",
+                "originalText": "doping",
+                "lemma": "doping",
+                "characterOffsetBegin": 198,
+                "characterOffsetEnd": 204,
+                "pos": "NN",
+                "ner": "O",
+                "speaker": "PER0",
+                "before": " ",
+                "after": " "
+              },
+              {
+                "index": 3,
+                "word": "at",
+                "originalText": "at",
+                "lemma": "at",
+                "characterOffsetBegin": 205,
+                "characterOffsetEnd": 207,
+                "pos": "IN",
+                "ner": "O",
+                "speaker": "PER0",
+                "before": " ",
+                "after": " "
+              },
+              {
+                "index": 4,
+                "word": "the",
+                "originalText": "the",
+                "lemma": "the",
+                "characterOffsetBegin": 208,
+                "characterOffsetEnd": 211,
+                "pos": "DT",
+                "ner": "O",
+                "speaker": "PER0",
+                "before": " ",
+                "after": " "
+              },
+              {
+                "index": 5,
+                "word": "Olympics",
+                "originalText": "Olympics",
+                "lemma": "Olympics",
+                "characterOffsetBegin": 212,
+                "characterOffsetEnd": 220,
+                "pos": "NNPS",
+                "ner": "MISC",
+                "speaker": "PER0",
+                "before": " ",
+                "after": " "
+              },
+              {
+                "index": 6,
+                "word": "a",
+                "originalText": "a",
+                "lemma": "a",
+                "characterOffsetBegin": 221,
+                "characterOffsetEnd": 222,
+                "pos": "DT",
+                "ner": "O",
+                "speaker": "PER0",
+                "before": " ",
+                "after": " "
+              },
+              {
+                "index": 7,
+                "word": "thing",
+                "originalText": "thing",
+                "lemma": "thing",
+                "characterOffsetBegin": 223,
+                "characterOffsetEnd": 228,
+                "pos": "NN",
+                "ner": "O",
+                "speaker": "PER0",
+                "before": " ",
+                "after": " "
+              },
+              {
+                "index": 8,
+                "word": "of",
+                "originalText": "of",
+                "lemma": "of",
+                "characterOffsetBegin": 229,
+                "characterOffsetEnd": 231,
+                "pos": "IN",
+                "ner": "O",
+                "speaker": "PER0",
+                "before": " ",
+                "after": " "
+              },
+              {
+                "index": 9,
+                "word": "the",
+                "originalText": "the",
+                "lemma": "the",
+                "characterOffsetBegin": 232,
+                "characterOffsetEnd": 235,
+                "pos": "DT",
+                "ner": "DATE",
+                "normalizedNER": "PAST_REF",
+                "speaker": "PER0",
+                "before": " ",
+                "after": " ",
+                "timex": {
+                  "tid": "t3",
+                  "type": "DATE",
+                  "value": "PAST_REF"
+                }
+              },
+              {
+                "index": 10,
+                "word": "past",
+                "originalText": "past",
+                "lemma": "past",
+                "characterOffsetBegin": 236,
+                "characterOffsetEnd": 240,
+                "pos": "NN",
+                "ner": "DATE",
+                "normalizedNER": "PAST_REF",
+                "speaker": "PER0",
+                "before": " ",
+                "after": "",
+                "timex": {
+                  "tid": "t3",
+                  "type": "DATE",
+                  "value": "PAST_REF"
+                }
+              },
+              {
+                "index": 11,
+                "word": "?",
+                "originalText": "?",
+                "lemma": "?",
+                "characterOffsetBegin": 240,
+                "characterOffsetEnd": 241,
+                "pos": ".",
+                "ner": "O",
+                "speaker": "PER0",
+                "before": "",
+                "after": "\n"
+              }
+            ]
+          },
+          {
+            "index": 5,
+            "parse": "(ROOT\n  (S (: ...)\n    (S\n      (NP\n        (NP (PRP we))\n        (VP (VBD saw)\n          (NP (NN today))))\n      (VP (VBD was)\n        (SBAR (IN that)\n          (S\n            (NP (NNP ESPN))\n            (VP (VBZ plans)\n              (S\n                (VP (TO to)\n                  (VP (VB bid)\n                    (PP (IN for) (: ...)\n                      (CC or)\n                      (ADVP (RB even))))))\n              (SBAR\n                (WHADVP (WRB when))\n                (S\n                  (NP (PRP we))\n                  (VP (MD might)\n                    (VP (VB be)\n                      (VP (VBG risking)\n                        (NP (DT a) (NN crash))))))))))))\n    (. .)))",
+            "basicDependencies": [
+              {
+                "dep": "ROOT",
+                "governor": 0,
+                "governorGloss": "ROOT",
+                "dependent": 5,
+                "dependentGloss": "was"
+              },
+              {
+                "dep": "punct",
+                "governor": 3,
+                "governorGloss": "saw",
+                "dependent": 1,
+                "dependentGloss": "..."
+              },
+              {
+                "dep": "nsubj",
+                "governor": 3,
+                "governorGloss": "saw",
+                "dependent": 2,
+                "dependentGloss": "we"
+              },
+              {
+                "dep": "csubj",
+                "governor": 5,
+                "governorGloss": "was",
+                "dependent": 3,
+                "dependentGloss": "saw"
+              },
+              {
+                "dep": "nmod:tmod",
+                "governor": 3,
+                "governorGloss": "saw",
+                "dependent": 4,
+                "dependentGloss": "today"
+              },
+              {
+                "dep": "mark",
+                "governor": 8,
+                "governorGloss": "plans",
+                "dependent": 6,
+                "dependentGloss": "that"
+              },
+              {
+                "dep": "nsubj",
+                "governor": 8,
+                "governorGloss": "plans",
+                "dependent": 7,
+                "dependentGloss": "ESPN"
+              },
+              {
+                "dep": "ccomp",
+                "governor": 5,
+                "governorGloss": "was",
+                "dependent": 8,
+                "dependentGloss": "plans"
+              },
+              {
+                "dep": "mark",
+                "governor": 10,
+                "governorGloss": "bid",
+                "dependent": 9,
+                "dependentGloss": "to"
+              },
+              {
+                "dep": "xcomp",
+                "governor": 8,
+                "governorGloss": "plans",
+                "dependent": 10,
+                "dependentGloss": "bid"
+              },
+              {
+                "dep": "dep",
+                "governor": 10,
+                "governorGloss": "bid",
+                "dependent": 11,
+                "dependentGloss": "for"
+              },
+              {
+                "dep": "punct",
+                "governor": 11,
+                "governorGloss": "for",
+                "dependent": 12,
+                "dependentGloss": "..."
+              },
+              {
+                "dep": "root",
+                "governor": 12,
+                "governorGloss": "...",
+                "dependent": 13,
+                "dependentGloss": "or"
+              },
+              {
+                "dep": "advmod",
+                "governor": 15,
+                "governorGloss": "when",
+                "dependent": 14,
+                "dependentGloss": "even"
+              },
+              {
+                "dep": "advmod",
+                "governor": 19,
+                "governorGloss": "risking",
+                "dependent": 15,
+                "dependentGloss": "when"
+              },
+              {
+                "dep": "nsubj",
+                "governor": 19,
+                "governorGloss": "risking",
+                "dependent": 16,
+                "dependentGloss": "we"
+              },
+              {
+                "dep": "aux",
+                "governor": 19,
+                "governorGloss": "risking",
+                "dependent": 17,
+                "dependentGloss": "might"
+              },
+              {
+                "dep": "aux",
+                "governor": 19,
+                "governorGloss": "risking",
+                "dependent": 18,
+                "dependentGloss": "be"
+              },
+              {
+                "dep": "advcl",
+                "governor": 13,
+                "governorGloss": "or",
+                "dependent": 19,
+                "dependentGloss": "risking"
+              },
+              {
+                "dep": "det",
+                "governor": 21,
+                "governorGloss": "crash",
+                "dependent": 20,
+                "dependentGloss": "a"
+              },
+              {
+                "dep": "dobj",
+                "governor": 19,
+                "governorGloss": "risking",
+                "dependent": 21,
+                "dependentGloss": "crash"
+              },
+              {
+                "dep": "punct",
+                "governor": 13,
+                "governorGloss": "or",
+                "dependent": 22,
+                "dependentGloss": "."
+              }
+            ],
+            "enhancedDependencies": [
+              {
+                "dep": "ROOT",
+                "governor": 0,
+                "governorGloss": "ROOT",
+                "dependent": 5,
+                "dependentGloss": "was"
+              },
+              {
+                "dep": "punct",
+                "governor": 3,
+                "governorGloss": "saw",
+                "dependent": 1,
+                "dependentGloss": "..."
+              },
+              {
+                "dep": "nsubj",
+                "governor": 3,
+                "governorGloss": "saw",
+                "dependent": 2,
+                "dependentGloss": "we"
+              },
+              {
+                "dep": "csubj",
+                "governor": 5,
+                "governorGloss": "was",
+                "dependent": 3,
+                "dependentGloss": "saw"
+              },
+              {
+                "dep": "nmod:tmod",
+                "governor": 3,
+                "governorGloss": "saw",
+                "dependent": 4,
+                "dependentGloss": "today"
+              },
+              {
+                "dep": "mark",
+                "governor": 8,
+                "governorGloss": "plans",
+                "dependent": 6,
+                "dependentGloss": "that"
+              },
+              {
+                "dep": "nsubj",
+                "governor": 8,
+                "governorGloss": "plans",
+                "dependent": 7,
+                "dependentGloss": "ESPN"
+              },
+              {
+                "dep": "nsubj:xsubj",
+                "governor": 10,
+                "governorGloss": "bid",
+                "dependent": 7,
+                "dependentGloss": "ESPN"
+              },
+              {
+                "dep": "ccomp",
+                "governor": 5,
+                "governorGloss": "was",
+                "dependent": 8,
+                "dependentGloss": "plans"
+              },
+              {
+                "dep": "mark",
+                "governor": 10,
+                "governorGloss": "bid",
+                "dependent": 9,
+                "dependentGloss": "to"
+              },
+              {
+                "dep": "xcomp",
+                "governor": 8,
+                "governorGloss": "plans",
+                "dependent": 10,
+                "dependentGloss": "bid"
+              },
+              {
+                "dep": "dep",
+                "governor": 10,
+                "governorGloss": "bid",
+                "dependent": 11,
+                "dependentGloss": "for"
+              },
+              {
+                "dep": "punct",
+                "governor": 11,
+                "governorGloss": "for",
+                "dependent": 12,
+                "dependentGloss": "..."
+              },
+              {
+                "dep": "root",
+                "governor": 12,
+                "governorGloss": "...",
+                "dependent": 13,
+                "dependentGloss": "or"
+              },
+              {
+                "dep": "advmod",
+                "governor": 15,
+                "governorGloss": "when",
+                "dependent": 14,
+                "dependentGloss": "even"
+              },
+              {
+                "dep": "advmod",
+                "governor": 19,
+                "governorGloss": "risking",
+                "dependent": 15,
+                "dependentGloss": "when"
+              },
+              {
+                "dep": "nsubj",
+                "governor": 19,
+                "governorGloss": "risking",
+                "dependent": 16,
+                "dependentGloss": "we"
+              },
+              {
+                "dep": "aux",
+                "governor": 19,
+                "governorGloss": "risking",
+                "dependent": 17,
+                "dependentGloss": "might"
+              },
+              {
+                "dep": "aux",
+                "governor": 19,
+                "governorGloss": "risking",
+                "dependent": 18,
+                "dependentGloss": "be"
+              },
+              {
+                "dep": "advcl",
+                "governor": 13,
+                "governorGloss": "or",
+                "dependent": 19,
+                "dependentGloss": "risking"
+              },
+              {
+                "dep": "det",
+                "governor": 21,
+                "governorGloss": "crash",
+                "dependent": 20,
+                "dependentGloss": "a"
+              },
+              {
+                "dep": "dobj",
+                "governor": 19,
+                "governorGloss": "risking",
+                "dependent": 21,
+                "dependentGloss": "crash"
+              },
+              {
+                "dep": "punct",
+                "governor": 13,
+                "governorGloss": "or",
+                "dependent": 22,
+                "dependentGloss": "."
+              }
+            ],
+            "enhancedPlusPlusDependencies": [
+              {
+                "dep": "ROOT",
+                "governor": 0,
+                "governorGloss": "ROOT",
+                "dependent": 5,
+                "dependentGloss": "was"
+              },
+              {
+                "dep": "punct",
+                "governor": 3,
+                "governorGloss": "saw",
+                "dependent": 1,
+                "dependentGloss": "..."
+              },
+              {
+                "dep": "nsubj",
+                "governor": 3,
+                "governorGloss": "saw",
+                "dependent": 2,
+                "dependentGloss": "we"
+              },
+              {
+                "dep": "csubj",
+                "governor": 5,
+                "governorGloss": "was",
+                "dependent": 3,
+                "dependentGloss": "saw"
+              },
+              {
+                "dep": "nmod:tmod",
+                "governor": 3,
+                "governorGloss": "saw",
+                "dependent": 4,
+                "dependentGloss": "today"
+              },
+              {
+                "dep": "mark",
+                "governor": 8,
+                "governorGloss": "plans",
+                "dependent": 6,
+                "dependentGloss": "that"
+              },
+              {
+                "dep": "nsubj",
+                "governor": 8,
+                "governorGloss": "plans",
+                "dependent": 7,
+                "dependentGloss": "ESPN"
+              },
+              {
+                "dep": "nsubj:xsubj",
+                "governor": 10,
+                "governorGloss": "bid",
+                "dependent": 7,
+                "dependentGloss": "ESPN"
+              },
+              {
+                "dep": "ccomp",
+                "governor": 5,
+                "governorGloss": "was",
+                "dependent": 8,
+                "dependentGloss": "plans"
+              },
+              {
+                "dep": "mark",
+                "governor": 10,
+                "governorGloss": "bid",
+                "dependent": 9,
+                "dependentGloss": "to"
+              },
+              {
+                "dep": "xcomp",
+                "governor": 8,
+                "governorGloss": "plans",
+                "dependent": 10,
+                "dependentGloss": "bid"
+              },
+              {
+                "dep": "dep",
+                "governor": 10,
+                "governorGloss": "bid",
+                "dependent": 11,
+                "dependentGloss": "for"
+              },
+              {
+                "dep": "punct",
+                "governor": 11,
+                "governorGloss": "for",
+                "dependent": 12,
+                "dependentGloss": "..."
+              },
+              {
+                "dep": "root",
+                "governor": 12,
+                "governorGloss": "...",
+                "dependent": 13,
+                "dependentGloss": "or"
+              },
+              {
+                "dep": "advmod",
+                "governor": 15,
+                "governorGloss": "when",
+                "dependent": 14,
+                "dependentGloss": "even"
+              },
+              {
+                "dep": "advmod",
+                "governor": 19,
+                "governorGloss": "risking",
+                "dependent": 15,
+                "dependentGloss": "when"
+              },
+              {
+                "dep": "nsubj",
+                "governor": 19,
+                "governorGloss": "risking",
+                "dependent": 16,
+                "dependentGloss": "we"
+              },
+              {
+                "dep": "aux",
+                "governor": 19,
+                "governorGloss": "risking",
+                "dependent": 17,
+                "dependentGloss": "might"
+              },
+              {
+                "dep": "aux",
+                "governor": 19,
+                "governorGloss": "risking",
+                "dependent": 18,
+                "dependentGloss": "be"
+              },
+              {
+                "dep": "advcl",
+                "governor": 13,
+                "governorGloss": "or",
+                "dependent": 19,
+                "dependentGloss": "risking"
+              },
+              {
+                "dep": "det",
+                "governor": 21,
+                "governorGloss": "crash",
+                "dependent": 20,
+                "dependentGloss": "a"
+              },
+              {
+                "dep": "dobj",
+                "governor": 19,
+                "governorGloss": "risking",
+                "dependent": 21,
+                "dependentGloss": "crash"
+              },
+              {
+                "dep": "punct",
+                "governor": 13,
+                "governorGloss": "or",
+                "dependent": 22,
+                "dependentGloss": "."
+              }
+            ],
+            "tokens": [
+              {
+                "index": 1,
+                "word": "...",
+                "originalText": "...",
+                "lemma": "...",
+                "characterOffsetBegin": 242,
+                "characterOffsetEnd": 245,
+                "pos": ":",
+                "ner": "O",
+                "speaker": "PER0",
+                "before": "\n",
+                "after": " "
+              },
+              {
+                "index": 2,
+                "word": "we",
+                "originalText": "we",
+                "lemma": "we",
+                "characterOffsetBegin": 246,
+                "characterOffsetEnd": 248,
+                "pos": "PRP",
+                "ner": "O",
+                "speaker": "PER0",
+                "before": " ",
+                "after": " "
+              },
+              {
+                "index": 3,
+                "word": "saw",
+                "originalText": "saw",
+                "lemma": "see",
+                "characterOffsetBegin": 249,
+                "characterOffsetEnd": 252,
+                "pos": "VBD",
+                "ner": "O",
+                "speaker": "PER0",
+                "before": " ",
+                "after": " "
+              },
+              {
+                "index": 4,
+                "word": "today",
+                "originalText": "today",
+                "lemma": "today",
+                "characterOffsetBegin": 253,
+                "characterOffsetEnd": 258,
+                "pos": "NN",
+                "ner": "DATE",
+                "normalizedNER": "2017-12-31",
+                "speaker": "PER0",
+                "before": " ",
+                "after": " ",
+                "timex": {
+                  "tid": "t4",
+                  "type": "DATE",
+                  "value": "2017-12-31"
+                }
+              },
+              {
+                "index": 5,
+                "word": "was",
+                "originalText": "was",
+                "lemma": "be",
+                "characterOffsetBegin": 259,
+                "characterOffsetEnd": 262,
+                "pos": "VBD",
+                "ner": "O",
+                "speaker": "PER0",
+                "before": " ",
+                "after": " "
+              },
+              {
+                "index": 6,
+                "word": "that",
+                "originalText": "that",
+                "lemma": "that",
+                "characterOffsetBegin": 263,
+                "characterOffsetEnd": 267,
+                "pos": "IN",
+                "ner": "O",
+                "speaker": "PER0",
+                "before": " ",
+                "after": " "
+              },
+              {
+                "index": 7,
+                "word": "ESPN",
+                "originalText": "ESPN",
+                "lemma": "ESPN",
+                "characterOffsetBegin": 268,
+                "characterOffsetEnd": 272,
+                "pos": "NNP",
+                "ner": "ORGANIZATION",
+                "speaker": "PER0",
+                "before": " ",
+                "after": " "
+              },
+              {
+                "index": 8,
+                "word": "plans",
+                "originalText": "plans",
+                "lemma": "plan",
+                "characterOffsetBegin": 273,
+                "characterOffsetEnd": 278,
+                "pos": "VBZ",
+                "ner": "O",
+                "speaker": "PER0",
+                "before": " ",
+                "after": " "
+              },
+              {
+                "index": 9,
+                "word": "to",
+                "originalText": "to",
+                "lemma": "to",
+                "characterOffsetBegin": 279,
+                "characterOffsetEnd": 281,
+                "pos": "TO",
+                "ner": "O",
+                "speaker": "PER0",
+                "before": " ",
+                "after": " "
+              },
+              {
+                "index": 10,
+                "word": "bid",
+                "originalText": "bid",
+                "lemma": "bid",
+                "characterOffsetBegin": 282,
+                "characterOffsetEnd": 285,
+                "pos": "VB",
+                "ner": "O",
+                "speaker": "PER0",
+                "before": " ",
+                "after": " "
+              },
+              {
+                "index": 11,
+                "word": "for",
+                "originalText": "for",
+                "lemma": "for",
+                "characterOffsetBegin": 286,
+                "characterOffsetEnd": 289,
+                "pos": "IN",
+                "ner": "O",
+                "speaker": "PER0",
+                "before": " ",
+                "after": " "
+              },
+              {
+                "index": 12,
+                "word": "...",
+                "originalText": "...",
+                "lemma": "...",
+                "characterOffsetBegin": 290,
+                "characterOffsetEnd": 293,
+                "pos": ":",
+                "ner": "O",
+                "speaker": "PER0",
+                "before": " ",
+                "after": " "
+              },
+              {
+                "index": 13,
+                "word": "or",
+                "originalText": "or",
+                "lemma": "or",
+                "characterOffsetBegin": 294,
+                "characterOffsetEnd": 296,
+                "pos": "CC",
+                "ner": "O",
+                "speaker": "PER0",
+                "before": " ",
+                "after": " "
+              },
+              {
+                "index": 14,
+                "word": "even",
+                "originalText": "even",
+                "lemma": "even",
+                "characterOffsetBegin": 297,
+                "characterOffsetEnd": 301,
+                "pos": "RB",
+                "ner": "O",
+                "speaker": "PER0",
+                "before": " ",
+                "after": " "
+              },
+              {
+                "index": 15,
+                "word": "when",
+                "originalText": "when",
+                "lemma": "when",
+                "characterOffsetBegin": 302,
+                "characterOffsetEnd": 306,
+                "pos": "WRB",
+                "ner": "O",
+                "speaker": "PER0",
+                "before": " ",
+                "after": " "
+              },
+              {
+                "index": 16,
+                "word": "we",
+                "originalText": "we",
+                "lemma": "we",
+                "characterOffsetBegin": 307,
+                "characterOffsetEnd": 309,
+                "pos": "PRP",
+                "ner": "O",
+                "speaker": "PER0",
+                "before": " ",
+                "after": " "
+              },
+              {
+                "index": 17,
+                "word": "might",
+                "originalText": "might",
+                "lemma": "might",
+                "characterOffsetBegin": 310,
+                "characterOffsetEnd": 315,
+                "pos": "MD",
+                "ner": "O",
+                "speaker": "PER0",
+                "before": " ",
+                "after": " "
+              },
+              {
+                "index": 18,
+                "word": "be",
+                "originalText": "be",
+                "lemma": "be",
+                "characterOffsetBegin": 316,
+                "characterOffsetEnd": 318,
+                "pos": "VB",
+                "ner": "O",
+                "speaker": "PER0",
+                "before": " ",
+                "after": " "
+              },
+              {
+                "index": 19,
+                "word": "risking",
+                "originalText": "risking",
+                "lemma": "risk",
+                "characterOffsetBegin": 319,
+                "characterOffsetEnd": 326,
+                "pos": "VBG",
+                "ner": "O",
+                "speaker": "PER0",
+                "before": " ",
+                "after": "\n"
+              },
+              {
+                "index": 20,
+                "word": "a",
+                "originalText": "a",
+                "lemma": "a",
+                "characterOffsetBegin": 327,
+                "characterOffsetEnd": 328,
+                "pos": "DT",
+                "ner": "O",
+                "speaker": "PER0",
+                "before": "\n",
+                "after": " "
+              },
+              {
+                "index": 21,
+                "word": "crash",
+                "originalText": "crash",
+                "lemma": "crash",
+                "characterOffsetBegin": 329,
+                "characterOffsetEnd": 334,
+                "pos": "NN",
+                "ner": "O",
+                "speaker": "PER0",
+                "before": " ",
+                "after": ""
+              },
+              {
+                "index": 22,
+                "word": ".",
+                "originalText": ".",
+                "lemma": ".",
+                "characterOffsetBegin": 334,
+                "characterOffsetEnd": 335,
+                "pos": ".",
+                "ner": "O",
+                "speaker": "PER0",
+                "before": "",
+                "after": " "
+              }
+            ]
+          },
+          {
+            "index": 6,
+            "parse": "(ROOT\n  (SQ (: ...)\n    (FRAG\n      (ADVP\n        (ADVP (RB here))\n        (, ,)\n        (CC but)\n        (ADVP (RB maybe)))\n      (UCP\n        (NP (PRP$ their) (NN citizenship))\n        (PP (IN in)\n          (NP (NNP Costa) (NNP Rica)))\n        (CC or))\n      (NP (NNP Jamaica))\n      (: ...))))",
+            "basicDependencies": [
+              {
+                "dep": "ROOT",
+                "governor": 0,
+                "governorGloss": "ROOT",
+                "dependent": 1,
+                "dependentGloss": "..."
+              },
+              {
+                "dep": "advmod",
+                "governor": 1,
+                "governorGloss": "...",
+                "dependent": 2,
+                "dependentGloss": "here"
+              },
+              {
+                "dep": "punct",
+                "governor": 2,
+                "governorGloss": "here",
+                "dependent": 3,
+                "dependentGloss": ","
+              },
+              {
+                "dep": "root",
+                "governor": 3,
+                "governorGloss": ",",
+                "dependent": 4,
+                "dependentGloss": "but"
+              },
+              {
+                "dep": "dep",
+                "governor": 4,
+                "governorGloss": "but",
+                "dependent": 5,
+                "dependentGloss": "maybe"
+              },
+              {
+                "dep": "nmod:poss",
+                "governor": 7,
+                "governorGloss": "citizenship",
+                "dependent": 6,
+                "dependentGloss": "their"
+              },
+              {
+                "dep": "dep",
+                "governor": 5,
+                "governorGloss": "maybe",
+                "dependent": 7,
+                "dependentGloss": "citizenship"
+              },
+              {
+                "dep": "case",
+                "governor": 10,
+                "governorGloss": "Rica",
+                "dependent": 8,
+                "dependentGloss": "in"
+              },
+              {
+                "dep": "compound",
+                "governor": 10,
+                "governorGloss": "Rica",
+                "dependent": 9,
+                "dependentGloss": "Costa"
+              },
+              {
+                "dep": "nmod",
+                "governor": 7,
+                "governorGloss": "citizenship",
+                "dependent": 10,
+                "dependentGloss": "Rica"
+              },
+              {
+                "dep": "cc",
+                "governor": 10,
+                "governorGloss": "Rica",
+                "dependent": 11,
+                "dependentGloss": "or"
+              },
+              {
+                "dep": "conj",
+                "governor": 10,
+                "governorGloss": "Rica",
+                "dependent": 12,
+                "dependentGloss": "Jamaica"
+              },
+              {
+                "dep": "punct",
+                "governor": 7,
+                "governorGloss": "citizenship",
+                "dependent": 13,
+                "dependentGloss": "..."
+              }
+            ],
+            "enhancedDependencies": [
+              {
+                "dep": "ROOT",
+                "governor": 0,
+                "governorGloss": "ROOT",
+                "dependent": 1,
+                "dependentGloss": "..."
+              },
+              {
+                "dep": "advmod",
+                "governor": 1,
+                "governorGloss": "...",
+                "dependent": 2,
+                "dependentGloss": "here"
+              },
+              {
+                "dep": "punct",
+                "governor": 2,
+                "governorGloss": "here",
+                "dependent": 3,
+                "dependentGloss": ","
+              },
+              {
+                "dep": "root",
+                "governor": 3,
+                "governorGloss": ",",
+                "dependent": 4,
+                "dependentGloss": "but"
+              },
+              {
+                "dep": "dep",
+                "governor": 4,
+                "governorGloss": "but",
+                "dependent": 5,
+                "dependentGloss": "maybe"
+              },
+              {
+                "dep": "nmod:poss",
+                "governor": 7,
+                "governorGloss": "citizenship",
+                "dependent": 6,
+                "dependentGloss": "their"
+              },
+              {
+                "dep": "dep",
+                "governor": 5,
+                "governorGloss": "maybe",
+                "dependent": 7,
+                "dependentGloss": "citizenship"
+              },
+              {
+                "dep": "case",
+                "governor": 10,
+                "governorGloss": "Rica",
+                "dependent": 8,
+                "dependentGloss": "in"
+              },
+              {
+                "dep": "compound",
+                "governor": 10,
+                "governorGloss": "Rica",
+                "dependent": 9,
+                "dependentGloss": "Costa"
+              },
+              {
+                "dep": "nmod:in",
+                "governor": 7,
+                "governorGloss": "citizenship",
+                "dependent": 10,
+                "dependentGloss": "Rica"
+              },
+              {
+                "dep": "cc",
+                "governor": 10,
+                "governorGloss": "Rica",
+                "dependent": 11,
+                "dependentGloss": "or"
+              },
+              {
+                "dep": "nmod:in",
+                "governor": 7,
+                "governorGloss": "citizenship",
+                "dependent": 12,
+                "dependentGloss": "Jamaica"
+              },
+              {
+                "dep": "conj:or",
+                "governor": 10,
+                "governorGloss": "Rica",
+                "dependent": 12,
+                "dependentGloss": "Jamaica"
+              },
+              {
+                "dep": "punct",
+                "governor": 7,
+                "governorGloss": "citizenship",
+                "dependent": 13,
+                "dependentGloss": "..."
+              }
+            ],
+            "enhancedPlusPlusDependencies": [
+              {
+                "dep": "ROOT",
+                "governor": 0,
+                "governorGloss": "ROOT",
+                "dependent": 1,
+                "dependentGloss": "..."
+              },
+              {
+                "dep": "advmod",
+                "governor": 1,
+                "governorGloss": "...",
+                "dependent": 2,
+                "dependentGloss": "here"
+              },
+              {
+                "dep": "punct",
+                "governor": 2,
+                "governorGloss": "here",
+                "dependent": 3,
+                "dependentGloss": ","
+              },
+              {
+                "dep": "root",
+                "governor": 3,
+                "governorGloss": ",",
+                "dependent": 4,
+                "dependentGloss": "but"
+              },
+              {
+                "dep": "dep",
+                "governor": 4,
+                "governorGloss": "but",
+                "dependent": 5,
+                "dependentGloss": "maybe"
+              },
+              {
+                "dep": "nmod:poss",
+                "governor": 7,
+                "governorGloss": "citizenship",
+                "dependent": 6,
+                "dependentGloss": "their"
+              },
+              {
+                "dep": "dep",
+                "governor": 5,
+                "governorGloss": "maybe",
+                "dependent": 7,
+                "dependentGloss": "citizenship"
+              },
+              {
+                "dep": "case",
+                "governor": 10,
+                "governorGloss": "Rica",
+                "dependent": 8,
+                "dependentGloss": "in"
+              },
+              {
+                "dep": "compound",
+                "governor": 10,
+                "governorGloss": "Rica",
+                "dependent": 9,
+                "dependentGloss": "Costa"
+              },
+              {
+                "dep": "nmod:in",
+                "governor": 7,
+                "governorGloss": "citizenship",
+                "dependent": 10,
+                "dependentGloss": "Rica"
+              },
+              {
+                "dep": "cc",
+                "governor": 10,
+                "governorGloss": "Rica",
+                "dependent": 11,
+                "dependentGloss": "or"
+              },
+              {
+                "dep": "nmod:in",
+                "governor": 7,
+                "governorGloss": "citizenship",
+                "dependent": 12,
+                "dependentGloss": "Jamaica"
+              },
+              {
+                "dep": "conj:or",
+                "governor": 10,
+                "governorGloss": "Rica",
+                "dependent": 12,
+                "dependentGloss": "Jamaica"
+              },
+              {
+                "dep": "punct",
+                "governor": 7,
+                "governorGloss": "citizenship",
+                "dependent": 13,
+                "dependentGloss": "..."
+              }
+            ],
+            "tokens": [
+              {
+                "index": 1,
+                "word": "...",
+                "originalText": "...",
+                "lemma": "...",
+                "characterOffsetBegin": 336,
+                "characterOffsetEnd": 339,
+                "pos": ":",
+                "ner": "O",
+                "speaker": "PER0",
+                "before": " ",
+                "after": " "
+              },
+              {
+                "index": 2,
+                "word": "here",
+                "originalText": "here",
+                "lemma": "here",
+                "characterOffsetBegin": 340,
+                "characterOffsetEnd": 344,
+                "pos": "RB",
+                "ner": "O",
+                "speaker": "PER0",
+                "before": " ",
+                "after": ""
+              },
+              {
+                "index": 3,
+                "word": ",",
+                "originalText": ",",
+                "lemma": ",",
+                "characterOffsetBegin": 344,
+                "characterOffsetEnd": 345,
+                "pos": ",",
+                "ner": "O",
+                "speaker": "PER0",
+                "before": "",
+                "after": " "
+              },
+              {
+                "index": 4,
+                "word": "but",
+                "originalText": "but",
+                "lemma": "but",
+                "characterOffsetBegin": 346,
+                "characterOffsetEnd": 349,
+                "pos": "CC",
+                "ner": "O",
+                "speaker": "PER0",
+                "before": " ",
+                "after": " "
+              },
+              {
+                "index": 5,
+                "word": "maybe",
+                "originalText": "maybe",
+                "lemma": "maybe",
+                "characterOffsetBegin": 350,
+                "characterOffsetEnd": 355,
+                "pos": "RB",
+                "ner": "O",
+                "speaker": "PER0",
+                "before": " ",
+                "after": " "
+              },
+              {
+                "index": 6,
+                "word": "their",
+                "originalText": "their",
+                "lemma": "they",
+                "characterOffsetBegin": 356,
+                "characterOffsetEnd": 361,
+                "pos": "PRP$",
+                "ner": "O",
+                "speaker": "PER0",
+                "before": " ",
+                "after": " "
+              },
+              {
+                "index": 7,
+                "word": "citizenship",
+                "originalText": "citizenship",
+                "lemma": "citizenship",
+                "characterOffsetBegin": 362,
+                "characterOffsetEnd": 373,
+                "pos": "NN",
+                "ner": "O",
+                "speaker": "PER0",
+                "before": " ",
+                "after": " "
+              },
+              {
+                "index": 8,
+                "word": "in",
+                "originalText": "in",
+                "lemma": "in",
+                "characterOffsetBegin": 374,
+                "characterOffsetEnd": 376,
+                "pos": "IN",
+                "ner": "O",
+                "speaker": "PER0",
+                "before": " ",
+                "after": " "
+              },
+              {
+                "index": 9,
+                "word": "Costa",
+                "originalText": "Costa",
+                "lemma": "Costa",
+                "characterOffsetBegin": 377,
+                "characterOffsetEnd": 382,
+                "pos": "NNP",
+                "ner": "LOCATION",
+                "speaker": "PER0",
+                "before": " ",
+                "after": " "
+              },
+              {
+                "index": 10,
+                "word": "Rica",
+                "originalText": "Rica",
+                "lemma": "Rica",
+                "characterOffsetBegin": 383,
+                "characterOffsetEnd": 387,
+                "pos": "NNP",
+                "ner": "LOCATION",
+                "speaker": "PER0",
+                "before": " ",
+                "after": " "
+              },
+              {
+                "index": 11,
+                "word": "or",
+                "originalText": "or",
+                "lemma": "or",
+                "characterOffsetBegin": 388,
+                "characterOffsetEnd": 390,
+                "pos": "CC",
+                "ner": "O",
+                "speaker": "PER0",
+                "before": " ",
+                "after": " "
+              },
+              {
+                "index": 12,
+                "word": "Jamaica",
+                "originalText": "Jamaica",
+                "lemma": "Jamaica",
+                "characterOffsetBegin": 391,
+                "characterOffsetEnd": 398,
+                "pos": "NNP",
+                "ner": "LOCATION",
+                "speaker": "PER0",
+                "before": " ",
+                "after": " "
+              },
+              {
+                "index": 13,
+                "word": "...",
+                "originalText": "...",
+                "lemma": "...",
+                "characterOffsetBegin": 399,
+                "characterOffsetEnd": 402,
+                "pos": ":",
+                "ner": "O",
+                "speaker": "PER0",
+                "before": " ",
+                "after": ""
+              }
+            ]
+          }
+        ],
+        "corefs": {
+          "3": [
+            {
+              "id": 0,
+              "text": "NPR",
+              "type": "PROPER",
+              "number": "UNKNOWN",
+              "gender": "NEUTRAL",
+              "animacy": "INANIMATE",
+              "startIndex": 1,
+              "endIndex": 2,
+              "headIndex": 1,
+              "sentNum": 1,
+              "position": [
+                1,
+                1
+              ],
+              "isRepresentativeMention": true
+            },
+            {
+              "id": 1,
+              "text": "NPR",
+              "type": "PROPER",
+              "number": "UNKNOWN",
+              "gender": "NEUTRAL",
+              "animacy": "INANIMATE",
+              "startIndex": 4,
+              "endIndex": 5,
+              "headIndex": 4,
+              "sentNum": 1,
+              "position": [
+                1,
+                2
+              ],
+              "isRepresentativeMention": false
+            },
+            {
+              "id": 3,
+              "text": "its",
+              "type": "PRONOMINAL",
+              "number": "SINGULAR",
+              "gender": "UNKNOWN",
+              "animacy": "INANIMATE",
+              "startIndex": 7,
+              "endIndex": 8,
+              "headIndex": 7,
+              "sentNum": 3,
+              "position": [
+                3,
+                2
+              ],
+              "isRepresentativeMention": false
+            }
+          ],
+          "19": [
+            {
+              "id": 21,
+              "text": "we",
+              "type": "PRONOMINAL",
+              "number": "PLURAL",
+              "gender": "UNKNOWN",
+              "animacy": "ANIMATE",
+              "startIndex": 2,
+              "endIndex": 3,
+              "headIndex": 2,
+              "sentNum": 6,
+              "position": [
+                6,
+                5
+              ],
+              "isRepresentativeMention": true
+            },
+            {
+              "id": 19,
+              "text": "we",
+              "type": "PRONOMINAL",
+              "number": "PLURAL",
+              "gender": "UNKNOWN",
+              "animacy": "ANIMATE",
+              "startIndex": 16,
+              "endIndex": 17,
+              "headIndex": 16,
+              "sentNum": 6,
+              "position": [
+                6,
+                3
+              ],
+              "isRepresentativeMention": false
+            }
+          ],
+          "24": [
+            {
+              "id": 18,
+              "text": "ESPN",
+              "type": "PROPER",
+              "number": "UNKNOWN",
+              "gender": "NEUTRAL",
+              "animacy": "INANIMATE",
+              "startIndex": 7,
+              "endIndex": 8,
+              "headIndex": 7,
+              "sentNum": 6,
+              "position": [
+                6,
+                2
+              ],
+              "isRepresentativeMention": true
+            },
+            {
+              "id": 24,
+              "text": "their",
+              "type": "PRONOMINAL",
+              "number": "PLURAL",
+              "gender": "UNKNOWN",
+              "animacy": "ANIMATE",
+              "startIndex": 6,
+              "endIndex": 7,
+              "headIndex": 6,
+              "sentNum": 7,
+              "position": [
+                7,
+                3
+              ],
+              "isRepresentativeMention": false
+            }
+          ]
+        }
+      },
+      "heideltime": [
+        {
+          "@tid": "t1",
+          "@type": "DATE",
+          "@value": "2010",
+          "#text": "2010",
+          "characterOffset": [
+            27,
+            31
+          ]
+        },
+        {
+          "@tid": "t2",
+          "@type": "DATE",
+          "@value": "2017-WI",
+          "#text": "Winter",
+          "characterOffset": [
+            32,
+            38
+          ]
+        },
+        {
+          "@tid": "t3",
+          "@type": "DATE",
+          "@value": "2017-12-31",
+          "#text": "today",
+          "characterOffset": [
+            253,
+            258
+          ]
+        }
+      ],
+      "aida": {
+        "originalFileName": null,
+        "originalText": "NPR Search : NPR. . As the 2010 Winter Games enters its final days, the U.S. women's and men's hockey teams hope to medal. Also, no athletes have tested positive for performance enhancing drugs. Is doping at the Olympics a thing of the past?\n... we saw today was that ESPN plans to bid for ... or even when we might be risking\na crash. ... here, but maybe their citizenship in Costa Rica or Jamaica ...",
+        "overallTime": "8225",
+        "allEntities": [
+          "YAGO:United_States",
+          "YAGO:2010_Winter_Olympics",
+          "YAGO:ESPN",
+          "YAGO:Jamaica",
+          "YAGO:NPR",
+          "YAGO:Costa_Rica"
+        ],
+        "entityMetadata": {
+          "YAGO:United_States": {
+            "knowledgebase": "YAGO",
+            "depictionurl": "http://upload.wikimedia.org/wikipedia/en/a/a4/Flag_of_the_United_States.svg",
+            "depictionthumbnailurl": "http://upload.wikimedia.org/wikipedia/en/thumbFlag_of_the_United_States.svg/200px-Flag_of_the_United_States.svg",
+            "importance": 0.0,
+            "entityId": "United_States",
+            "type": [
+              "YAGO_wordnet_system_108435388",
+              "YAGO_yagoPermanentlyLocatedEntity",
+              "YAGO_yagoLegalActorGeo",
+              "YAGO_wordnet_organization_108008335",
+              "YAGO_wordnet_state_100024720",
+              "YAGO_wordnet_democracy_108361329",
+              "YAGO_wordnet_union_114418395",
+              "YAGO_wordnet_unit_108189659",
+              "YAGO_wikicategory_Superpowers",
+              "YAGO_wordnet_cognition_100023271",
+              "YAGO_wordnet_coalition_114418662",
+              "YAGO_wordnet_political_system_108367880",
+              "YAGO_wordnet_attribute_100024264",
+              "YAGO_wordnet_abstraction_100002137",
+              "YAGO_wordnet_attitude_106193203",
+              "YAGO_wordnet_alliance_114418822",
+              "YAGO_wordnet_group_100031264",
+              "YAGO_wordnet_psychological_feature_100023100",
+              "YAGO_wordnet_body_107965085",
+              "YAGO_wordnet_political_orientation_106212839",
+              "YAGO_wordnet_democracy_106217103",
+              "YAGO_wordnet_political_unit_108359949",
+              "YAGO_wikicategory_Former_British_colonies",
+              "YAGO_wordnet_economy_108366753",
+              "YAGO_yagoLegalActor",
+              "YAGO_wikicategory_G8_nations",
+              "YAGO_yagoGeoEntity",
+              "YAGO_wordnet_social_group_107950920",
+              "YAGO_wordnet_entity_100001740",
+              "YAGO_wordnet_colony_108374049",
+              "YAGO_wikicategory_Liberal_democracies",
+              "YAGO_wikicategory_G20_nations",
+              "YAGO_wikicategory_Former_confederations",
+              "YAGO_wordnet_state_108168978",
+              "YAGO_wikicategory_Federal_constitutional_republics",
+              "YAGO_wordnet_world_power_108177592",
+              "YAGO_wikicategory_Republics",
+              "YAGO_wordnet_orientation_106208021"
+            ],
+            "readableRepr": "United States",
+            "url": "http://en.wikipedia.org/wiki/United%20States"
+          },
+          "YAGO:ESPN": {
+            "knowledgebase": "YAGO",
+            "depictionurl": "http://upload.wikimedia.org/wikipedia/commons/f/f0/ESPN+.png",
+            "depictionthumbnailurl": "http://upload.wikimedia.org/wikipedia/commons/thumbESPN+.png/200px-ESPN+.png",
+            "importance": 9.192157028782872e-05,
+            "entityId": "ESPN",
+            "type": [
+              "YAGO_wordnet_system_108435388",
+              "YAGO_yagoPermanentlyLocatedEntity",
+              "YAGO_yagoLegalActorGeo",
+              "YAGO_wordnet_organization_108008335",
+              "YAGO_wordnet_social_group_107950920",
+              "YAGO_wordnet_institution_108053576",
+              "YAGO_wordnet_entity_100001740",
+              "YAGO_wordnet_subsidiary_company_108003935",
+              "YAGO_wordnet_group_100031264",
+              "YAGO_wikicategory_Walt_Disney_Company_subsidiaries",
+              "YAGO_wordnet_network_108434259",
+              "YAGO_yagoLegalActor",
+              "YAGO_wordnet_abstraction_100002137",
+              "YAGO_wordnet_company_108058098",
+              "YAGO_wikicategory_Sports_television_networks_in_the_United_States"
+            ],
+            "readableRepr": "ESPN",
+            "url": "http://en.wikipedia.org/wiki/ESPN"
+          },
+          "YAGO:2010_Winter_Olympics": {
+            "knowledgebase": "YAGO",
+            "depictionurl": "http://upload.wikimedia.org/wikipedia/en/a/a7/2010_Winter_Olympics_logo.svg",
+            "depictionthumbnailurl": "http://upload.wikimedia.org/wikipedia/en/thumb2010_Winter_Olympics_logo.svg/200px-2010_Winter_Olympics_logo.svg",
+            "importance": 0.0003571013730575649,
+            "entityId": "2010_Winter_Olympics",
+            "type": [
+              "YAGO_wordnet_festival_115162388",
+              "YAGO_yagoPermanentlyLocatedEntity",
+              "YAGO_wordnet_event_100029378",
+              "YAGO_wordnet_fundamental_quantity_113575869",
+              "YAGO_wordnet_measure_100033615",
+              "YAGO_wikicategory_Sports_festivals_in_Canada",
+              "YAGO_wordnet_entity_100001740",
+              "YAGO_wordnet_psychological_feature_100023100",
+              "YAGO_wordnet_contest_107456188",
+              "YAGO_wikicategory_Olympic_Games_in_Canada",
+              "YAGO_wordnet_game_100456199",
+              "YAGO_wordnet_social_event_107288639",
+              "YAGO_wordnet_time_period_115113229",
+              "YAGO_wordnet_abstraction_100002137"
+            ],
+            "readableRepr": "2010 Winter Olympics",
+            "url": "http://en.wikipedia.org/wiki/2010%20Winter%20Olympics"
+          },
+          "YAGO:Jamaica": {
+            "knowledgebase": "YAGO",
+            "depictionurl": "http://upload.wikimedia.org/wikipedia/commons/0/0a/Flag_of_Jamaica.svg",
+            "depictionthumbnailurl": "http://upload.wikimedia.org/wikipedia/commons/thumbFlag_of_Jamaica.svg/200px-Flag_of_Jamaica.svg",
+            "importance": 8.105811198108533e-05,
+            "entityId": "Jamaica",
+            "type": [
+              "YAGO_wordnet_system_108435388",
+              "YAGO_wordnet_district_108552138",
+              "YAGO_yagoPermanentlyLocatedEntity",
+              "YAGO_yagoLegalActorGeo",
+              "YAGO_wordnet_state_108654360",
+              "YAGO_wordnet_country_108544813",
+              "YAGO_wikicategory_Member_states_of_the_United_Nations",
+              "YAGO_wordnet_economy_108366753",
+              "YAGO_wordnet_abstraction_100002137",
+              "YAGO_wordnet_region_108630985",
+              "YAGO_wikicategory_English\\u002dspeaking_countries_and_territories",
+              "YAGO_yagoGeoEntity",
+              "YAGO_wikicategory_World_Trade_Organization_member_economies",
+              "YAGO_wordnet_physical_entity_100001930",
+              "YAGO_wikicategory_Countries_in_the_Caribbean",
+              "YAGO_wordnet_entity_100001740",
+              "YAGO_wikicategory_States_and_territories_established_in_1962",
+              "YAGO_wordnet_object_100002684",
+              "YAGO_wordnet_group_100031264",
+              "YAGO_wikicategory_Island_countries",
+              "YAGO_wikicategory_Member_states_of_the_Caribbean_Community",
+              "YAGO_wordnet_location_100027167",
+              "YAGO_wordnet_administrative_district_108491826",
+              "YAGO_wikicategory_Member_states_of_the_Commonwealth_of_Nations"
+            ],
+            "readableRepr": "Jamaica",
+            "url": "http://en.wikipedia.org/wiki/Jamaica"
+          },
+          "YAGO:NPR": {
+            "knowledgebase": "YAGO",
+            "depictionurl": "http://upload.wikimedia.org/wikipedia/en/e/e7/NPR_1970s_logo.jpg",
+            "depictionthumbnailurl": "http://upload.wikimedia.org/wikipedia/en/thumbNPR_1970s_logo.jpg/200px-NPR_1970s_logo.jpg",
+            "importance": 0.00029609887641200586,
+            "entityId": "NPR",
+            "type": [
+              "YAGO_wordnet_system_108435388",
+              "YAGO_yagoPermanentlyLocatedEntity",
+              "YAGO_yagoLegalActorGeo",
+              "YAGO_wordnet_organization_108008335",
+              "YAGO_wikicategory_American_radio_networks",
+              "YAGO_wordnet_network_108434259",
+              "YAGO_yagoLegalActor",
+              "YAGO_wikicategory_Podcasting_companies",
+              "YAGO_wordnet_abstraction_100002137",
+              "YAGO_wordnet_company_108058098",
+              "YAGO_wikicategory_Companies_established_in_1970",
+              "YAGO_wordnet_social_group_107950920",
+              "YAGO_wordnet_institution_108053576",
+              "YAGO_wordnet_entity_100001740",
+              "YAGO_wordnet_group_100031264",
+              "YAGO_wikicategory_Publicly_funded_broadcasters",
+              "YAGO_wordnet_broadcasting_company_108002015"
+            ],
+            "readableRepr": "NPR",
+            "url": "http://en.wikipedia.org/wiki/NPR"
+          },
+          "YAGO:Costa_Rica": {
+            "knowledgebase": "YAGO",
+            "depictionurl": "http://upload.wikimedia.org/wikipedia/commons/f/f2/Flag_of_Costa_Rica.svg",
+            "depictionthumbnailurl": "http://upload.wikimedia.org/wikipedia/commons/thumbFlag_of_Costa_Rica.svg/200px-Flag_of_Costa_Rica.svg",
+            "importance": 0.00010696328178947341,
+            "entityId": "Costa_Rica",
+            "type": [
+              "YAGO_wordnet_system_108435388",
+              "YAGO_wordnet_district_108552138",
+              "YAGO_yagoPermanentlyLocatedEntity",
+              "YAGO_yagoLegalActorGeo",
+              "YAGO_wordnet_state_108654360",
+              "YAGO_wikicategory_Spanish\\u002dspeaking_countries_and_territories",
+              "YAGO_wordnet_country_108544813",
+              "YAGO_wikicategory_Member_states_of_the_United_Nations",
+              "YAGO_wordnet_economy_108366753",
+              "YAGO_wordnet_abstraction_100002137",
+              "YAGO_wordnet_region_108630985",
+              "YAGO_yagoGeoEntity",
+              "YAGO_wordnet_physical_entity_100001930",
+              "YAGO_wikicategory_Countries_in_the_Caribbean",
+              "YAGO_wordnet_entity_100001740",
+              "YAGO_wordnet_object_100002684",
+              "YAGO_wikicategory_States_and_territories_established_in_1821",
+              "YAGO_wordnet_group_100031264",
+              "YAGO_wordnet_location_100027167",
+              "YAGO_wordnet_administrative_district_108491826",
+              "YAGO_wikicategory_Countries_in_Central_America"
+            ],
+            "readableRepr": "Costa Rica",
+            "url": "http://en.wikipedia.org/wiki/Costa%20Rica"
+          }
+        },
+        "annotatedText": "NPR Search : [[YAGO:NPR|NPR]]. . As the 2010 Winter [[YAGO:2010_Winter_Olympics|Games]] enters its final days, the [[YAGO:United_States|U.S.]] women's and men's hockey teams hope to medal. Also, no athletes have tested positive for performance enhancing drugs. Is doping at the [[YAGO:2010_Winter_Olympics|Olympics]] a thing of the past?\n... we saw today was that [[YAGO:ESPN|ESPN]] plans to bid for ... or even when we might be risking\na crash. ... here, but maybe their citizenship in [[YAGO:Costa_Rica|Costa Rica]] or [[YAGO:Jamaica|Jamaica]] ...",
+        "docID": "1852624844_1516117861025",
+        "mentions": [
+          {
+            "allEntities": [
+              {
+                "kbIdentifier": "YAGO:NPR",
+                "disambiguationScore": "0.98757"
+              }
+            ],
+            "offset": 13,
+            "name": "NPR",
+            "length": 3,
+            "bestEntity": {
+              "kbIdentifier": "YAGO:NPR",
+              "disambiguationScore": "0.98757"
+            }
+          },
+          {
+            "allEntities": [
+              {
+                "kbIdentifier": "YAGO:2010_Winter_Olympics",
+                "disambiguationScore": "0.09945"
+              }
+            ],
+            "offset": 39,
+            "name": "Games",
+            "length": 5,
+            "bestEntity": {
+              "kbIdentifier": "YAGO:2010_Winter_Olympics",
+              "disambiguationScore": "0.09945"
+            }
+          },
+          {
+            "allEntities": [
+              {
+                "kbIdentifier": "YAGO:United_States",
+                "disambiguationScore": "0.18555"
+              }
+            ],
+            "offset": 72,
+            "name": "U.S.",
+            "length": 4,
+            "bestEntity": {
+              "kbIdentifier": "YAGO:United_States",
+              "disambiguationScore": "0.18555"
+            }
+          },
+          {
+            "allEntities": [
+              {
+                "kbIdentifier": "YAGO:2010_Winter_Olympics",
+                "disambiguationScore": "0.0991"
+              }
+            ],
+            "offset": 212,
+            "name": "Olympics",
+            "length": 8,
+            "bestEntity": {
+              "kbIdentifier": "YAGO:2010_Winter_Olympics",
+              "disambiguationScore": "0.0991"
+            }
+          },
+          {
+            "allEntities": [
+              {
+                "kbIdentifier": "YAGO:ESPN",
+                "disambiguationScore": "0.1413"
+              }
+            ],
+            "offset": 268,
+            "name": "ESPN",
+            "length": 4,
+            "bestEntity": {
+              "kbIdentifier": "YAGO:ESPN",
+              "disambiguationScore": "0.1413"
+            }
+          },
+          {
+            "allEntities": [
+              {
+                "kbIdentifier": "YAGO:Costa_Rica",
+                "disambiguationScore": "0.36995"
+              }
+            ],
+            "offset": 377,
+            "name": "Costa Rica",
+            "length": 10,
+            "bestEntity": {
+              "kbIdentifier": "YAGO:Costa_Rica",
+              "disambiguationScore": "0.36995"
+            }
+          },
+          {
+            "allEntities": [
+              {
+                "kbIdentifier": "YAGO:Jamaica",
+                "disambiguationScore": "0.18058"
+              }
+            ],
+            "offset": 391,
+            "name": "Jamaica",
+            "length": 7,
+            "bestEntity": {
+              "kbIdentifier": "YAGO:Jamaica",
+              "disambiguationScore": "0.18058"
+            }
+          }
+        ],
+        "formatVersion": "2.3",
+        "allTypes": [
+          "YAGO_wikicategory_Sports_television_networks_in_the_United_States",
+          "YAGO_wikicategory_Member_states_of_the_Caribbean_Community",
+          "YAGO_wordnet_alliance_114418822",
+          "YAGO_wikicategory_Countries_in_Central_America",
+          "YAGO_wikicategory_Spanish\\u002dspeaking_countries_and_territories",
+          "YAGO_wordnet_region_108630985",
+          "YAGO_wordnet_psychological_feature_100023100",
+          "YAGO_wikicategory_Island_countries",
+          "YAGO_wordnet_institution_108053576",
+          "YAGO_wikicategory_Companies_established_in_1970",
+          "YAGO_wikicategory_Olympic_Games_in_Canada",
+          "YAGO_wordnet_physical_entity_100001930",
+          "YAGO_wordnet_political_system_108367880",
+          "YAGO_wikicategory_Former_British_colonies",
+          "YAGO_wordnet_entity_100001740",
+          "YAGO_wordnet_administrative_district_108491826",
+          "YAGO_wikicategory_States_and_territories_established_in_1821",
+          "YAGO_wikicategory_G20_nations",
+          "YAGO_wordnet_coalition_114418662",
+          "YAGO_wordnet_union_114418395",
+          "YAGO_wordnet_orientation_106208021",
+          "YAGO_wordnet_country_108544813",
+          "YAGO_wordnet_body_107965085",
+          "YAGO_wordnet_system_108435388",
+          "YAGO_wordnet_social_event_107288639",
+          "YAGO_wikicategory_Publicly_funded_broadcasters",
+          "YAGO_wikicategory_Sports_festivals_in_Canada",
+          "YAGO_wikicategory_Podcasting_companies",
+          "YAGO_wikicategory_Superpowers",
+          "YAGO_yagoPermanentlyLocatedEntity",
+          "YAGO_wordnet_social_group_107950920",
+          "YAGO_wikicategory_Former_confederations",
+          "YAGO_wikicategory_Member_states_of_the_Commonwealth_of_Nations",
+          "YAGO_wordnet_event_100029378",
+          "YAGO_wordnet_economy_108366753",
+          "YAGO_wordnet_broadcasting_company_108002015",
+          "YAGO_wordnet_group_100031264",
+          "YAGO_wordnet_company_108058098",
+          "YAGO_wordnet_colony_108374049",
+          "YAGO_wordnet_world_power_108177592",
+          "YAGO_wordnet_organization_108008335",
+          "YAGO_yagoLegalActorGeo",
+          "YAGO_wordnet_subsidiary_company_108003935",
+          "YAGO_wikicategory_Liberal_democracies",
+          "YAGO_wikicategory_American_radio_networks",
+          "YAGO_wordnet_fundamental_quantity_113575869",
+          "YAGO_wordnet_state_108654360",
+          "YAGO_wikicategory_Walt_Disney_Company_subsidiaries",
+          "YAGO_wordnet_abstraction_100002137",
+          "YAGO_wordnet_state_108168978",
+          "YAGO_wordnet_district_108552138",
+          "YAGO_wordnet_cognition_100023271",
+          "YAGO_wordnet_political_unit_108359949",
+          "YAGO_yagoLegalActor",
+          "YAGO_wikicategory_Countries_in_the_Caribbean",
+          "YAGO_wordnet_attribute_100024264",
+          "YAGO_wikicategory_States_and_territories_established_in_1962",
+          "YAGO_wordnet_unit_108189659",
+          "YAGO_wordnet_measure_100033615",
+          "YAGO_wordnet_time_period_115113229",
+          "YAGO_wordnet_state_100024720",
+          "YAGO_wikicategory_Member_states_of_the_United_Nations",
+          "YAGO_yagoGeoEntity",
+          "YAGO_wordnet_democracy_108361329",
+          "YAGO_wordnet_political_orientation_106212839",
+          "YAGO_wikicategory_Republics",
+          "YAGO_wordnet_democracy_106217103",
+          "YAGO_wordnet_game_100456199",
+          "YAGO_wordnet_location_100027167",
+          "YAGO_wikicategory_English\\u002dspeaking_countries_and_territories",
+          "YAGO_wikicategory_World_Trade_Organization_member_economies",
+          "YAGO_wordnet_object_100002684",
+          "YAGO_wikicategory_G8_nations",
+          "YAGO_wordnet_festival_115162388",
+          "YAGO_wikicategory_Federal_constitutional_republics",
+          "YAGO_wordnet_attitude_106193203",
+          "YAGO_wordnet_network_108434259",
+          "YAGO_wordnet_contest_107456188"
+        ]
+      }
+    }
   }
 }

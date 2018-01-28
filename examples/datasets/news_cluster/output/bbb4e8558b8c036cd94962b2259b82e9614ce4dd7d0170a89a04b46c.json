@@ -32,155 +32,6 @@
       "extracted": [],
       "label": "what"
     },
-    "why": {
-      "extracted": [
-        {
-          "parts": [
-            [
-              {
-                "nlpToken": {
-                  "index": 3,
-                  "word": "this",
-                  "originalText": "this",
-                  "lemma": "this",
-                  "characterOffsetBegin": 243,
-                  "characterOffsetEnd": 247,
-                  "pos": "DT",
-                  "ner": "O",
-                  "speaker": "PER0",
-                  "before": " ",
-                  "after": " "
-                }
-              },
-              "DT"
-            ],
-            [
-              {
-                "nlpToken": {
-                  "index": 4,
-                  "word": "zipcode",
-                  "originalText": "zipcode",
-                  "lemma": "zipcode",
-                  "characterOffsetBegin": 248,
-                  "characterOffsetEnd": 255,
-                  "pos": "NN",
-                  "ner": "O",
-                  "speaker": "PER0",
-                  "before": " ",
-                  "after": " "
-                }
-              },
-              "NN"
-            ]
-          ],
-          "score": 0.36200000000000004,
-          "text": "this zipcode",
-          "nlpIndexSentence": 2
-        }
-      ],
-      "label": "why"
-    },
-    "how": {
-      "extracted": [
-        {
-          "parts": [
-            [
-              {
-                "nlpToken": {
-                  "index": 8,
-                  "word": "for",
-                  "originalText": "for",
-                  "lemma": "for",
-                  "characterOffsetBegin": 38,
-                  "characterOffsetEnd": 41,
-                  "pos": "IN",
-                  "ner": "O",
-                  "speaker": "PER0",
-                  "before": " ",
-                  "after": " "
-                }
-              },
-              "IN"
-            ],
-            [
-              {
-                "nlpToken": {
-                  "index": 9,
-                  "word": "129th",
-                  "originalText": "129th",
-                  "lemma": "129th",
-                  "characterOffsetBegin": 42,
-                  "characterOffsetEnd": 47,
-                  "pos": "JJ",
-                  "ner": "O",
-                  "speaker": "PER0",
-                  "before": " ",
-                  "after": " "
-                }
-              },
-              "JJ"
-            ],
-            [
-              {
-                "nlpToken": {
-                  "index": 10,
-                  "word": "Rose",
-                  "originalText": "Rose",
-                  "lemma": "Rose",
-                  "characterOffsetBegin": 48,
-                  "characterOffsetEnd": 52,
-                  "pos": "NNP",
-                  "ner": "O",
-                  "speaker": "PER0",
-                  "before": " ",
-                  "after": " "
-                }
-              },
-              "NNP"
-            ],
-            [
-              {
-                "nlpToken": {
-                  "index": 11,
-                  "word": "Parade",
-                  "originalText": "Parade",
-                  "lemma": "Parade",
-                  "characterOffsetBegin": 53,
-                  "characterOffsetEnd": 59,
-                  "pos": "NNP",
-                  "ner": "O",
-                  "speaker": "PER0",
-                  "before": " ",
-                  "after": ""
-                }
-              },
-              "NNP"
-            ],
-            [
-              {
-                "nlpToken": {
-                  "index": 12,
-                  "word": ".",
-                  "originalText": ".",
-                  "lemma": ".",
-                  "characterOffsetBegin": 59,
-                  "characterOffsetEnd": 60,
-                  "pos": ".",
-                  "ner": "O",
-                  "speaker": "PER0",
-                  "before": "",
-                  "after": " "
-                }
-              },
-              "."
-            ]
-          ],
-          "score": 0.8259083728278042,
-          "text": "for 129th Rose Parade ."
-        }
-      ],
-      "label": "how"
-    },
     "where": {
       "extracted": [
         {
@@ -416,6 +267,96 @@
             }
           },
           "nlpIndexSentence": 1
+        },
+        {
+          "parts": [
+            [
+              {
+                "nlpToken": {
+                  "index": 28,
+                  "word": "California",
+                  "originalText": "California",
+                  "lemma": "California",
+                  "characterOffsetBegin": 193,
+                  "characterOffsetEnd": 203,
+                  "pos": "NNP",
+                  "ner": "LOCATION",
+                  "speaker": "PER0",
+                  "before": " ",
+                  "after": " "
+                },
+                "aida": [
+                  {
+                    "mention": {
+                      "allEntities": [
+                        {
+                          "kbIdentifier": "YAGO:California",
+                          "disambiguationScore": "0.41886"
+                        }
+                      ],
+                      "offset": 193,
+                      "name": "California",
+                      "length": 10,
+                      "bestEntity": {
+                        "kbIdentifier": "YAGO:California",
+                        "disambiguationScore": "0.41886"
+                      }
+                    },
+                    "bestEntityMetadata": {
+                      "knowledgebase": "YAGO",
+                      "depictionurl": "http://upload.wikimedia.org/wikipedia/commons/0/01/Flag_of_California.svg",
+                      "depictionthumbnailurl": "http://upload.wikimedia.org/wikipedia/commons/thumbFlag_of_California.svg/200px-Flag_of_California.svg",
+                      "importance": 4.7353536208881466e-06,
+                      "entityId": "California",
+                      "type": [
+                        "YAGO_yagoGeoEntity",
+                        "YAGO_wordnet_district_108552138",
+                        "YAGO_yagoPermanentlyLocatedEntity",
+                        "YAGO_wordnet_physical_entity_100001930",
+                        "YAGO_yagoLegalActorGeo",
+                        "YAGO_wikicategory_States_and_territories_established_in_1850",
+                        "YAGO_wordnet_entity_100001740",
+                        "YAGO_wordnet_object_100002684",
+                        "YAGO_wordnet_state_108654360",
+                        "YAGO_wordnet_location_100027167",
+                        "YAGO_wikicategory_locations",
+                        "YAGO_wordnet_administrative_district_108491826",
+                        "YAGO_wordnet_region_108630985",
+                        "YAGO_wikicategory_States_of_the_United_States"
+                      ],
+                      "readableRepr": "California",
+                      "url": "http://en.wikipedia.org/wiki/California"
+                    }
+                  }
+                ]
+              },
+              "NNP"
+            ]
+          ],
+          "score": 0.6699999999999999,
+          "text": "California",
+          "enhancement": {
+            "openstreetmap_nominatim": {
+              "osm_id": "165475",
+              "boundingbox": [
+                32.5295236,
+                42.009499,
+                -124.482003,
+                -114.1307816
+              ],
+              "licence": "Data \u00a9 OpenStreetMap contributors, ODbL 1.0. http://www.openstreetmap.org/copyright",
+              "importance": 0.3212045930105,
+              "icon": "https://nominatim.openstreetmap.org/images/mapicons/poi_boundary_administrative.p.20.png",
+              "osm_type": "relation",
+              "display_name": "California, United States of America",
+              "lat": "36.7014631",
+              "type": "administrative",
+              "place_id": "178261560",
+              "lon": "-118.7559974",
+              "class": "boundary"
+            }
+          },
+          "nlpIndexSentence": 1
         }
       ],
       "label": "where"
@@ -423,9 +364,4376 @@
     "when": {
       "extracted": [],
       "label": "when"
+    },
+    "why": {
+      "extracted": [
+        {
+          "parts": [
+            [
+              {
+                "nlpToken": {
+                  "index": 3,
+                  "word": "this",
+                  "originalText": "this",
+                  "lemma": "this",
+                  "characterOffsetBegin": 243,
+                  "characterOffsetEnd": 247,
+                  "pos": "DT",
+                  "ner": "O",
+                  "speaker": "PER0",
+                  "before": " ",
+                  "after": " "
+                }
+              },
+              "DT"
+            ],
+            [
+              {
+                "nlpToken": {
+                  "index": 4,
+                  "word": "zipcode",
+                  "originalText": "zipcode",
+                  "lemma": "zipcode",
+                  "characterOffsetBegin": 248,
+                  "characterOffsetEnd": 255,
+                  "pos": "NN",
+                  "ner": "O",
+                  "speaker": "PER0",
+                  "before": " ",
+                  "after": " "
+                }
+              },
+              "NN"
+            ]
+          ],
+          "score": 0.36200000000000004,
+          "text": "this zipcode",
+          "nlpIndexSentence": 2
+        }
+      ],
+      "label": "why"
+    },
+    "how": {
+      "extracted": [
+        {
+          "parts": [
+            [
+              {
+                "nlpToken": {
+                  "index": 8,
+                  "word": "for",
+                  "originalText": "for",
+                  "lemma": "for",
+                  "characterOffsetBegin": 38,
+                  "characterOffsetEnd": 41,
+                  "pos": "IN",
+                  "ner": "O",
+                  "speaker": "PER0",
+                  "before": " ",
+                  "after": " "
+                }
+              },
+              "IN"
+            ],
+            [
+              {
+                "nlpToken": {
+                  "index": 9,
+                  "word": "129th",
+                  "originalText": "129th",
+                  "lemma": "129th",
+                  "characterOffsetBegin": 42,
+                  "characterOffsetEnd": 47,
+                  "pos": "JJ",
+                  "ner": "O",
+                  "speaker": "PER0",
+                  "before": " ",
+                  "after": " "
+                }
+              },
+              "JJ"
+            ],
+            [
+              {
+                "nlpToken": {
+                  "index": 10,
+                  "word": "Rose",
+                  "originalText": "Rose",
+                  "lemma": "Rose",
+                  "characterOffsetBegin": 48,
+                  "characterOffsetEnd": 52,
+                  "pos": "NNP",
+                  "ner": "O",
+                  "speaker": "PER0",
+                  "before": " ",
+                  "after": " "
+                }
+              },
+              "NNP"
+            ],
+            [
+              {
+                "nlpToken": {
+                  "index": 11,
+                  "word": "Parade",
+                  "originalText": "Parade",
+                  "lemma": "Parade",
+                  "characterOffsetBegin": 53,
+                  "characterOffsetEnd": 59,
+                  "pos": "NNP",
+                  "ner": "O",
+                  "speaker": "PER0",
+                  "before": " ",
+                  "after": ""
+                }
+              },
+              "NNP"
+            ],
+            [
+              {
+                "nlpToken": {
+                  "index": 12,
+                  "word": ".",
+                  "originalText": ".",
+                  "lemma": ".",
+                  "characterOffsetBegin": 59,
+                  "characterOffsetEnd": 60,
+                  "pos": ".",
+                  "ner": "O",
+                  "speaker": "PER0",
+                  "before": "",
+                  "after": " "
+                }
+              },
+              "."
+            ]
+          ],
+          "score": 0.8259083728278042,
+          "text": "for 129th Rose Parade ."
+        },
+        {
+          "parts": [
+            [
+              {
+                "nlpToken": {
+                  "index": 26,
+                  "word": "under",
+                  "originalText": "under",
+                  "lemma": "under",
+                  "characterOffsetBegin": 181,
+                  "characterOffsetEnd": 186,
+                  "pos": "IN",
+                  "ner": "O",
+                  "speaker": "PER0",
+                  "before": " ",
+                  "after": " "
+                }
+              },
+              "IN"
+            ],
+            [
+              {
+                "nlpToken": {
+                  "index": 27,
+                  "word": "sunny",
+                  "originalText": "sunny",
+                  "lemma": "sunny",
+                  "characterOffsetBegin": 187,
+                  "characterOffsetEnd": 192,
+                  "pos": "JJ",
+                  "ner": "O",
+                  "speaker": "PER0",
+                  "before": " ",
+                  "after": " "
+                }
+              },
+              "JJ"
+            ],
+            [
+              {
+                "nlpToken": {
+                  "index": 28,
+                  "word": "California",
+                  "originalText": "California",
+                  "lemma": "California",
+                  "characterOffsetBegin": 193,
+                  "characterOffsetEnd": 203,
+                  "pos": "NNP",
+                  "ner": "LOCATION",
+                  "speaker": "PER0",
+                  "before": " ",
+                  "after": " "
+                },
+                "aida": [
+                  {
+                    "mention": {
+                      "allEntities": [
+                        {
+                          "kbIdentifier": "YAGO:California",
+                          "disambiguationScore": "0.41886"
+                        }
+                      ],
+                      "offset": 193,
+                      "name": "California",
+                      "length": 10,
+                      "bestEntity": {
+                        "kbIdentifier": "YAGO:California",
+                        "disambiguationScore": "0.41886"
+                      }
+                    },
+                    "bestEntityMetadata": {
+                      "knowledgebase": "YAGO",
+                      "depictionurl": "http://upload.wikimedia.org/wikipedia/commons/0/01/Flag_of_California.svg",
+                      "depictionthumbnailurl": "http://upload.wikimedia.org/wikipedia/commons/thumbFlag_of_California.svg/200px-Flag_of_California.svg",
+                      "importance": 4.7353536208881466e-06,
+                      "entityId": "California",
+                      "type": [
+                        "YAGO_yagoGeoEntity",
+                        "YAGO_wordnet_district_108552138",
+                        "YAGO_yagoPermanentlyLocatedEntity",
+                        "YAGO_wordnet_physical_entity_100001930",
+                        "YAGO_yagoLegalActorGeo",
+                        "YAGO_wikicategory_States_and_territories_established_in_1850",
+                        "YAGO_wordnet_entity_100001740",
+                        "YAGO_wordnet_object_100002684",
+                        "YAGO_wordnet_state_108654360",
+                        "YAGO_wordnet_location_100027167",
+                        "YAGO_wikicategory_locations",
+                        "YAGO_wordnet_administrative_district_108491826",
+                        "YAGO_wordnet_region_108630985",
+                        "YAGO_wikicategory_States_of_the_United_States"
+                      ],
+                      "readableRepr": "California",
+                      "url": "http://en.wikipedia.org/wiki/California"
+                    }
+                  }
+                ]
+              },
+              "NNP"
+            ],
+            [
+              {
+                "nlpToken": {
+                  "index": 29,
+                  "word": "skies",
+                  "originalText": "skies",
+                  "lemma": "sky",
+                  "characterOffsetBegin": 204,
+                  "characterOffsetEnd": 209,
+                  "pos": "NNS",
+                  "ner": "O",
+                  "speaker": "PER0",
+                  "before": " ",
+                  "after": " "
+                }
+              },
+              "NNS"
+            ],
+            [
+              {
+                "nlpToken": {
+                  "index": 30,
+                  "word": "as",
+                  "originalText": "as",
+                  "lemma": "as",
+                  "characterOffsetBegin": 210,
+                  "characterOffsetEnd": 212,
+                  "pos": "IN",
+                  "ner": "O",
+                  "speaker": "PER0",
+                  "before": " ",
+                  "after": " "
+                }
+              },
+              "IN"
+            ],
+            [
+              {
+                "nlpToken": {
+                  "index": 31,
+                  "word": "the",
+                  "originalText": "the",
+                  "lemma": "the",
+                  "characterOffsetBegin": 213,
+                  "characterOffsetEnd": 216,
+                  "pos": "DT",
+                  "ner": "O",
+                  "speaker": "PER0",
+                  "before": " ",
+                  "after": " "
+                }
+              },
+              "DT"
+            ],
+            [
+              {
+                "nlpToken": {
+                  "index": 32,
+                  "word": "129th",
+                  "originalText": "129th",
+                  "lemma": "129th",
+                  "characterOffsetBegin": 217,
+                  "characterOffsetEnd": 222,
+                  "pos": "JJ",
+                  "ner": "O",
+                  "speaker": "PER0",
+                  "before": " ",
+                  "after": " "
+                }
+              },
+              "JJ"
+            ],
+            [
+              {
+                "nlpToken": {
+                  "index": 33,
+                  "word": "Rose",
+                  "originalText": "Rose",
+                  "lemma": "Rose",
+                  "characterOffsetBegin": 223,
+                  "characterOffsetEnd": 227,
+                  "pos": "NNP",
+                  "ner": "O",
+                  "speaker": "PER0",
+                  "before": " ",
+                  "after": " "
+                }
+              },
+              "NNP"
+            ],
+            [
+              {
+                "nlpToken": {
+                  "index": 34,
+                  "word": "Parade",
+                  "originalText": "Parade",
+                  "lemma": "Parade",
+                  "characterOffsetBegin": 228,
+                  "characterOffsetEnd": 234,
+                  "pos": "NNP",
+                  "ner": "O",
+                  "speaker": "PER0",
+                  "before": " ",
+                  "after": ""
+                }
+              },
+              "NNP"
+            ],
+            [
+              {
+                "nlpToken": {
+                  "index": 35,
+                  "word": ".",
+                  "originalText": ".",
+                  "lemma": ".",
+                  "characterOffsetBegin": 234,
+                  "characterOffsetEnd": 235,
+                  "pos": ".",
+                  "ner": "O",
+                  "speaker": "PER0",
+                  "before": "",
+                  "after": " "
+                }
+              },
+              "."
+            ]
+          ],
+          "score": 0.7898894154818326,
+          "text": "under sunny California skies as the 129th Rose Parade .",
+          "nlpIndexSentence": 1
+        },
+        {
+          "parts": [
+            [
+              {
+                "nlpToken": {
+                  "index": 31,
+                  "word": "the",
+                  "originalText": "the",
+                  "lemma": "the",
+                  "characterOffsetBegin": 213,
+                  "characterOffsetEnd": 216,
+                  "pos": "DT",
+                  "ner": "O",
+                  "speaker": "PER0",
+                  "before": " ",
+                  "after": " "
+                }
+              },
+              "DT"
+            ],
+            [
+              {
+                "nlpToken": {
+                  "index": 32,
+                  "word": "129th",
+                  "originalText": "129th",
+                  "lemma": "129th",
+                  "characterOffsetBegin": 217,
+                  "characterOffsetEnd": 222,
+                  "pos": "JJ",
+                  "ner": "O",
+                  "speaker": "PER0",
+                  "before": " ",
+                  "after": " "
+                }
+              },
+              "JJ"
+            ],
+            [
+              {
+                "nlpToken": {
+                  "index": 33,
+                  "word": "Rose",
+                  "originalText": "Rose",
+                  "lemma": "Rose",
+                  "characterOffsetBegin": 223,
+                  "characterOffsetEnd": 227,
+                  "pos": "NNP",
+                  "ner": "O",
+                  "speaker": "PER0",
+                  "before": " ",
+                  "after": " "
+                }
+              },
+              "NNP"
+            ],
+            [
+              {
+                "nlpToken": {
+                  "index": 34,
+                  "word": "Parade",
+                  "originalText": "Parade",
+                  "lemma": "Parade",
+                  "characterOffsetBegin": 228,
+                  "characterOffsetEnd": 234,
+                  "pos": "NNP",
+                  "ner": "O",
+                  "speaker": "PER0",
+                  "before": " ",
+                  "after": ""
+                }
+              },
+              "NNP"
+            ],
+            [
+              {
+                "nlpToken": {
+                  "index": 35,
+                  "word": ".",
+                  "originalText": ".",
+                  "lemma": ".",
+                  "characterOffsetBegin": 234,
+                  "characterOffsetEnd": 235,
+                  "pos": ".",
+                  "ner": "O",
+                  "speaker": "PER0",
+                  "before": "",
+                  "after": " "
+                }
+              },
+              "."
+            ]
+          ],
+          "score": 0.7898894154818326,
+          "text": "the 129th Rose Parade .",
+          "nlpIndexSentence": 1
+        },
+        {
+          "parts": [
+            [
+              {
+                "nlpToken": {
+                  "index": 13,
+                  "word": "to",
+                  "originalText": "to",
+                  "lemma": "to",
+                  "characterOffsetBegin": 106,
+                  "characterOffsetEnd": 108,
+                  "pos": "TO",
+                  "ner": "O",
+                  "speaker": "PER0",
+                  "before": " ",
+                  "after": " "
+                }
+              },
+              "TO"
+            ],
+            [
+              {
+                "nlpToken": {
+                  "index": 14,
+                  "word": "military",
+                  "originalText": "military",
+                  "lemma": "military",
+                  "characterOffsetBegin": 109,
+                  "characterOffsetEnd": 117,
+                  "pos": "JJ",
+                  "ner": "O",
+                  "speaker": "PER0",
+                  "before": " ",
+                  "after": " "
+                }
+              },
+              "JJ"
+            ],
+            [
+              {
+                "nlpToken": {
+                  "index": 15,
+                  "word": "veterans",
+                  "originalText": "veterans",
+                  "lemma": "veteran",
+                  "characterOffsetBegin": 118,
+                  "characterOffsetEnd": 126,
+                  "pos": "NNS",
+                  "ner": "O",
+                  "speaker": "PER0",
+                  "before": " ",
+                  "after": ""
+                }
+              },
+              "NNS"
+            ],
+            [
+              {
+                "nlpToken": {
+                  "index": 16,
+                  "word": ",",
+                  "originalText": ",",
+                  "lemma": ",",
+                  "characterOffsetBegin": 126,
+                  "characterOffsetEnd": 127,
+                  "pos": ",",
+                  "ner": "O",
+                  "speaker": "PER0",
+                  "before": "",
+                  "after": " "
+                }
+              },
+              ","
+            ],
+            [
+              {
+                "nlpToken": {
+                  "index": 17,
+                  "word": "marching",
+                  "originalText": "marching",
+                  "lemma": "march",
+                  "characterOffsetBegin": 128,
+                  "characterOffsetEnd": 136,
+                  "pos": "VBG",
+                  "ner": "O",
+                  "speaker": "PER0",
+                  "before": " ",
+                  "after": " "
+                }
+              },
+              "VBG"
+            ],
+            [
+              {
+                "nlpToken": {
+                  "index": 18,
+                  "word": "bands",
+                  "originalText": "bands",
+                  "lemma": "band",
+                  "characterOffsetBegin": 137,
+                  "characterOffsetEnd": 142,
+                  "pos": "NNS",
+                  "ner": "O",
+                  "speaker": "PER0",
+                  "before": " ",
+                  "after": " "
+                }
+              },
+              "NNS"
+            ],
+            [
+              {
+                "nlpToken": {
+                  "index": 19,
+                  "word": "and",
+                  "originalText": "and",
+                  "lemma": "and",
+                  "characterOffsetBegin": 143,
+                  "characterOffsetEnd": 146,
+                  "pos": "CC",
+                  "ner": "O",
+                  "speaker": "PER0",
+                  "before": " ",
+                  "after": " "
+                }
+              },
+              "CC"
+            ],
+            [
+              {
+                "nlpToken": {
+                  "index": 20,
+                  "word": "floral",
+                  "originalText": "floral",
+                  "lemma": "floral",
+                  "characterOffsetBegin": 147,
+                  "characterOffsetEnd": 153,
+                  "pos": "JJ",
+                  "ner": "O",
+                  "speaker": "PER0",
+                  "before": " ",
+                  "after": " "
+                }
+              },
+              "JJ"
+            ],
+            [
+              {
+                "nlpToken": {
+                  "index": 21,
+                  "word": "floats",
+                  "originalText": "floats",
+                  "lemma": "float",
+                  "characterOffsetBegin": 154,
+                  "characterOffsetEnd": 160,
+                  "pos": "VBZ",
+                  "ner": "O",
+                  "speaker": "PER0",
+                  "before": " ",
+                  "after": " "
+                }
+              },
+              "VBZ"
+            ],
+            [
+              {
+                "nlpToken": {
+                  "index": 22,
+                  "word": "took",
+                  "originalText": "took",
+                  "lemma": "take",
+                  "characterOffsetBegin": 161,
+                  "characterOffsetEnd": 165,
+                  "pos": "VBD",
+                  "ner": "O",
+                  "speaker": "PER0",
+                  "before": " ",
+                  "after": " "
+                }
+              },
+              "VBD"
+            ]
+          ],
+          "score": 0.7349921011058451,
+          "text": "to military veterans , marching bands and floral floats took",
+          "nlpIndexSentence": 1
+        },
+        {
+          "parts": [
+            [
+              {
+                "nlpToken": {
+                  "index": 19,
+                  "word": "and",
+                  "originalText": "and",
+                  "lemma": "and",
+                  "characterOffsetBegin": 143,
+                  "characterOffsetEnd": 146,
+                  "pos": "CC",
+                  "ner": "O",
+                  "speaker": "PER0",
+                  "before": " ",
+                  "after": " "
+                }
+              },
+              "CC"
+            ],
+            [
+              {
+                "nlpToken": {
+                  "index": 20,
+                  "word": "floral",
+                  "originalText": "floral",
+                  "lemma": "floral",
+                  "characterOffsetBegin": 147,
+                  "characterOffsetEnd": 153,
+                  "pos": "JJ",
+                  "ner": "O",
+                  "speaker": "PER0",
+                  "before": " ",
+                  "after": " "
+                }
+              },
+              "JJ"
+            ],
+            [
+              {
+                "nlpToken": {
+                  "index": 21,
+                  "word": "floats",
+                  "originalText": "floats",
+                  "lemma": "float",
+                  "characterOffsetBegin": 154,
+                  "characterOffsetEnd": 160,
+                  "pos": "VBZ",
+                  "ner": "O",
+                  "speaker": "PER0",
+                  "before": " ",
+                  "after": " "
+                }
+              },
+              "VBZ"
+            ],
+            [
+              {
+                "nlpToken": {
+                  "index": 22,
+                  "word": "took",
+                  "originalText": "took",
+                  "lemma": "take",
+                  "characterOffsetBegin": 161,
+                  "characterOffsetEnd": 165,
+                  "pos": "VBD",
+                  "ner": "O",
+                  "speaker": "PER0",
+                  "before": " ",
+                  "after": " "
+                }
+              },
+              "VBD"
+            ],
+            [
+              {
+                "nlpToken": {
+                  "index": 23,
+                  "word": "to",
+                  "originalText": "to",
+                  "lemma": "to",
+                  "characterOffsetBegin": 166,
+                  "characterOffsetEnd": 168,
+                  "pos": "TO",
+                  "ner": "O",
+                  "speaker": "PER0",
+                  "before": " ",
+                  "after": " "
+                }
+              },
+              "TO"
+            ],
+            [
+              {
+                "nlpToken": {
+                  "index": 24,
+                  "word": "the",
+                  "originalText": "the",
+                  "lemma": "the",
+                  "characterOffsetBegin": 169,
+                  "characterOffsetEnd": 172,
+                  "pos": "DT",
+                  "ner": "O",
+                  "speaker": "PER0",
+                  "before": " ",
+                  "after": " "
+                }
+              },
+              "DT"
+            ],
+            [
+              {
+                "nlpToken": {
+                  "index": 25,
+                  "word": "streets",
+                  "originalText": "streets",
+                  "lemma": "street",
+                  "characterOffsetBegin": 173,
+                  "characterOffsetEnd": 180,
+                  "pos": "NNS",
+                  "ner": "O",
+                  "speaker": "PER0",
+                  "before": " ",
+                  "after": " "
+                }
+              },
+              "NNS"
+            ],
+            [
+              {
+                "nlpToken": {
+                  "index": 26,
+                  "word": "under",
+                  "originalText": "under",
+                  "lemma": "under",
+                  "characterOffsetBegin": 181,
+                  "characterOffsetEnd": 186,
+                  "pos": "IN",
+                  "ner": "O",
+                  "speaker": "PER0",
+                  "before": " ",
+                  "after": " "
+                }
+              },
+              "IN"
+            ],
+            [
+              {
+                "nlpToken": {
+                  "index": 27,
+                  "word": "sunny",
+                  "originalText": "sunny",
+                  "lemma": "sunny",
+                  "characterOffsetBegin": 187,
+                  "characterOffsetEnd": 192,
+                  "pos": "JJ",
+                  "ner": "O",
+                  "speaker": "PER0",
+                  "before": " ",
+                  "after": " "
+                }
+              },
+              "JJ"
+            ],
+            [
+              {
+                "nlpToken": {
+                  "index": 28,
+                  "word": "California",
+                  "originalText": "California",
+                  "lemma": "California",
+                  "characterOffsetBegin": 193,
+                  "characterOffsetEnd": 203,
+                  "pos": "NNP",
+                  "ner": "LOCATION",
+                  "speaker": "PER0",
+                  "before": " ",
+                  "after": " "
+                },
+                "aida": [
+                  {
+                    "mention": {
+                      "allEntities": [
+                        {
+                          "kbIdentifier": "YAGO:California",
+                          "disambiguationScore": "0.41886"
+                        }
+                      ],
+                      "offset": 193,
+                      "name": "California",
+                      "length": 10,
+                      "bestEntity": {
+                        "kbIdentifier": "YAGO:California",
+                        "disambiguationScore": "0.41886"
+                      }
+                    },
+                    "bestEntityMetadata": {
+                      "knowledgebase": "YAGO",
+                      "depictionurl": "http://upload.wikimedia.org/wikipedia/commons/0/01/Flag_of_California.svg",
+                      "depictionthumbnailurl": "http://upload.wikimedia.org/wikipedia/commons/thumbFlag_of_California.svg/200px-Flag_of_California.svg",
+                      "importance": 4.7353536208881466e-06,
+                      "entityId": "California",
+                      "type": [
+                        "YAGO_yagoGeoEntity",
+                        "YAGO_wordnet_district_108552138",
+                        "YAGO_yagoPermanentlyLocatedEntity",
+                        "YAGO_wordnet_physical_entity_100001930",
+                        "YAGO_yagoLegalActorGeo",
+                        "YAGO_wikicategory_States_and_territories_established_in_1850",
+                        "YAGO_wordnet_entity_100001740",
+                        "YAGO_wordnet_object_100002684",
+                        "YAGO_wordnet_state_108654360",
+                        "YAGO_wordnet_location_100027167",
+                        "YAGO_wikicategory_locations",
+                        "YAGO_wordnet_administrative_district_108491826",
+                        "YAGO_wordnet_region_108630985",
+                        "YAGO_wikicategory_States_of_the_United_States"
+                      ],
+                      "readableRepr": "California",
+                      "url": "http://en.wikipedia.org/wiki/California"
+                    }
+                  }
+                ]
+              },
+              "NNP"
+            ]
+          ],
+          "score": 0.7349921011058451,
+          "text": "and floral floats took to the streets under sunny California",
+          "nlpIndexSentence": 1
+        },
+        {
+          "parts": [
+            [
+              {
+                "nlpToken": {
+                  "index": 7,
+                  "word": "for",
+                  "originalText": "for",
+                  "lemma": "for",
+                  "characterOffsetBegin": 347,
+                  "characterOffsetEnd": 350,
+                  "pos": "IN",
+                  "ner": "O",
+                  "speaker": "PER0",
+                  "before": " ",
+                  "after": " "
+                }
+              },
+              "IN"
+            ],
+            [
+              {
+                "nlpToken": {
+                  "index": 8,
+                  "word": "digital",
+                  "originalText": "digital",
+                  "lemma": "digital",
+                  "characterOffsetBegin": 351,
+                  "characterOffsetEnd": 358,
+                  "pos": "JJ",
+                  "ner": "O",
+                  "speaker": "PER0",
+                  "before": " ",
+                  "after": " "
+                }
+              },
+              "JJ"
+            ],
+            [
+              {
+                "nlpToken": {
+                  "index": 9,
+                  "word": "access",
+                  "originalText": "access",
+                  "lemma": "access",
+                  "characterOffsetBegin": 359,
+                  "characterOffsetEnd": 365,
+                  "pos": "NN",
+                  "ner": "O",
+                  "speaker": "PER0",
+                  "before": " ",
+                  "after": ""
+                }
+              },
+              "NN"
+            ],
+            [
+              {
+                "nlpToken": {
+                  "index": 10,
+                  "word": ".",
+                  "originalText": ".",
+                  "lemma": ".",
+                  "characterOffsetBegin": 365,
+                  "characterOffsetEnd": 366,
+                  "pos": ".",
+                  "ner": "O",
+                  "speaker": "PER0",
+                  "before": "",
+                  "after": "\n"
+                }
+              },
+              "."
+            ]
+          ],
+          "score": 0.7178515007898895,
+          "text": "for digital access .",
+          "nlpIndexSentence": 3
+        },
+        {
+          "parts": [
+            [
+              {
+                "nlpToken": {
+                  "index": 1,
+                  "word": "Sorry",
+                  "originalText": "Sorry",
+                  "lemma": "sorry",
+                  "characterOffsetBegin": 236,
+                  "characterOffsetEnd": 241,
+                  "pos": "JJ",
+                  "ner": "O",
+                  "speaker": "PER0",
+                  "before": " ",
+                  "after": ""
+                }
+              },
+              "JJ"
+            ],
+            [
+              {
+                "nlpToken": {
+                  "index": 2,
+                  "word": ",",
+                  "originalText": ",",
+                  "lemma": ",",
+                  "characterOffsetBegin": 241,
+                  "characterOffsetEnd": 242,
+                  "pos": ",",
+                  "ner": "O",
+                  "speaker": "PER0",
+                  "before": "",
+                  "after": " "
+                }
+              },
+              ","
+            ],
+            [
+              {
+                "nlpToken": {
+                  "index": 3,
+                  "word": "this",
+                  "originalText": "this",
+                  "lemma": "this",
+                  "characterOffsetBegin": 243,
+                  "characterOffsetEnd": 247,
+                  "pos": "DT",
+                  "ner": "O",
+                  "speaker": "PER0",
+                  "before": " ",
+                  "after": " "
+                }
+              },
+              "DT"
+            ],
+            [
+              {
+                "nlpToken": {
+                  "index": 4,
+                  "word": "zipcode",
+                  "originalText": "zipcode",
+                  "lemma": "zipcode",
+                  "characterOffsetBegin": 248,
+                  "characterOffsetEnd": 255,
+                  "pos": "NN",
+                  "ner": "O",
+                  "speaker": "PER0",
+                  "before": " ",
+                  "after": " "
+                }
+              },
+              "NN"
+            ],
+            [
+              {
+                "nlpToken": {
+                  "index": 5,
+                  "word": "is",
+                  "originalText": "is",
+                  "lemma": "be",
+                  "characterOffsetBegin": 256,
+                  "characterOffsetEnd": 258,
+                  "pos": "VBZ",
+                  "ner": "O",
+                  "speaker": "PER0",
+                  "before": " ",
+                  "after": " "
+                }
+              },
+              "VBZ"
+            ],
+            [
+              {
+                "nlpToken": {
+                  "index": 6,
+                  "word": "not",
+                  "originalText": "not",
+                  "lemma": "not",
+                  "characterOffsetBegin": 259,
+                  "characterOffsetEnd": 262,
+                  "pos": "RB",
+                  "ner": "O",
+                  "speaker": "PER0",
+                  "before": " ",
+                  "after": " "
+                }
+              },
+              "RB"
+            ],
+            [
+              {
+                "nlpToken": {
+                  "index": 7,
+                  "word": "in",
+                  "originalText": "in",
+                  "lemma": "in",
+                  "characterOffsetBegin": 263,
+                  "characterOffsetEnd": 265,
+                  "pos": "IN",
+                  "ner": "O",
+                  "speaker": "PER0",
+                  "before": " ",
+                  "after": " "
+                }
+              },
+              "IN"
+            ],
+            [
+              {
+                "nlpToken": {
+                  "index": 8,
+                  "word": "our",
+                  "originalText": "our",
+                  "lemma": "we",
+                  "characterOffsetBegin": 266,
+                  "characterOffsetEnd": 269,
+                  "pos": "PRP$",
+                  "ner": "O",
+                  "speaker": "PER0",
+                  "before": " ",
+                  "after": " "
+                }
+              },
+              "PRP$"
+            ],
+            [
+              {
+                "nlpToken": {
+                  "index": 9,
+                  "word": "deliverable",
+                  "originalText": "deliverable",
+                  "lemma": "deliverable",
+                  "characterOffsetBegin": 270,
+                  "characterOffsetEnd": 281,
+                  "pos": "JJ",
+                  "ner": "O",
+                  "speaker": "PER0",
+                  "before": " ",
+                  "after": " "
+                }
+              },
+              "JJ"
+            ],
+            [
+              {
+                "nlpToken": {
+                  "index": 10,
+                  "word": "area",
+                  "originalText": "area",
+                  "lemma": "area",
+                  "characterOffsetBegin": 282,
+                  "characterOffsetEnd": 286,
+                  "pos": "NN",
+                  "ner": "O",
+                  "speaker": "PER0",
+                  "before": " ",
+                  "after": " "
+                }
+              },
+              "NN"
+            ]
+          ],
+          "score": 0.6989731437598736,
+          "text": "Sorry , this zipcode is not in our deliverable area",
+          "nlpIndexSentence": 2
+        },
+        {
+          "parts": [
+            [
+              {
+                "nlpToken": {
+                  "index": 8,
+                  "word": "our",
+                  "originalText": "our",
+                  "lemma": "we",
+                  "characterOffsetBegin": 266,
+                  "characterOffsetEnd": 269,
+                  "pos": "PRP$",
+                  "ner": "O",
+                  "speaker": "PER0",
+                  "before": " ",
+                  "after": " "
+                }
+              },
+              "PRP$"
+            ],
+            [
+              {
+                "nlpToken": {
+                  "index": 9,
+                  "word": "deliverable",
+                  "originalText": "deliverable",
+                  "lemma": "deliverable",
+                  "characterOffsetBegin": 270,
+                  "characterOffsetEnd": 281,
+                  "pos": "JJ",
+                  "ner": "O",
+                  "speaker": "PER0",
+                  "before": " ",
+                  "after": " "
+                }
+              },
+              "JJ"
+            ],
+            [
+              {
+                "nlpToken": {
+                  "index": 10,
+                  "word": "area",
+                  "originalText": "area",
+                  "lemma": "area",
+                  "characterOffsetBegin": 282,
+                  "characterOffsetEnd": 286,
+                  "pos": "NN",
+                  "ner": "O",
+                  "speaker": "PER0",
+                  "before": " ",
+                  "after": " "
+                }
+              },
+              "NN"
+            ],
+            [
+              {
+                "nlpToken": {
+                  "index": 11,
+                  "word": "for",
+                  "originalText": "for",
+                  "lemma": "for",
+                  "characterOffsetBegin": 287,
+                  "characterOffsetEnd": 290,
+                  "pos": "IN",
+                  "ner": "O",
+                  "speaker": "PER0",
+                  "before": " ",
+                  "after": " "
+                }
+              },
+              "IN"
+            ],
+            [
+              {
+                "nlpToken": {
+                  "index": 12,
+                  "word": "this",
+                  "originalText": "this",
+                  "lemma": "this",
+                  "characterOffsetBegin": 291,
+                  "characterOffsetEnd": 295,
+                  "pos": "DT",
+                  "ner": "O",
+                  "speaker": "PER0",
+                  "before": " ",
+                  "after": " "
+                }
+              },
+              "DT"
+            ],
+            [
+              {
+                "nlpToken": {
+                  "index": 13,
+                  "word": "subscription",
+                  "originalText": "subscription",
+                  "lemma": "subscription",
+                  "characterOffsetBegin": 296,
+                  "characterOffsetEnd": 308,
+                  "pos": "NN",
+                  "ner": "O",
+                  "speaker": "PER0",
+                  "before": " ",
+                  "after": " "
+                }
+              },
+              "NN"
+            ],
+            [
+              {
+                "nlpToken": {
+                  "index": 14,
+                  "word": "service",
+                  "originalText": "service",
+                  "lemma": "service",
+                  "characterOffsetBegin": 309,
+                  "characterOffsetEnd": 316,
+                  "pos": "NN",
+                  "ner": "O",
+                  "speaker": "PER0",
+                  "before": " ",
+                  "after": ""
+                }
+              },
+              "NN"
+            ],
+            [
+              {
+                "nlpToken": {
+                  "index": 15,
+                  "word": ".",
+                  "originalText": ".",
+                  "lemma": ".",
+                  "characterOffsetBegin": 316,
+                  "characterOffsetEnd": 317,
+                  "pos": ".",
+                  "ner": "O",
+                  "speaker": "PER0",
+                  "before": "",
+                  "after": "\n"
+                }
+              },
+              "."
+            ]
+          ],
+          "score": 0.6989731437598736,
+          "text": "our deliverable area for this subscription service .",
+          "nlpIndexSentence": 2
+        },
+        {
+          "parts": [
+            [
+              {
+                "nlpToken": {
+                  "index": 1,
+                  "word": "Get",
+                  "originalText": "Get",
+                  "lemma": "get",
+                  "characterOffsetBegin": 367,
+                  "characterOffsetEnd": 370,
+                  "pos": "VB",
+                  "ner": "O",
+                  "speaker": "PER0",
+                  "before": "\n",
+                  "after": " "
+                }
+              },
+              "VB"
+            ],
+            [
+              {
+                "nlpToken": {
+                  "index": 2,
+                  "word": "digital",
+                  "originalText": "digital",
+                  "lemma": "digital",
+                  "characterOffsetBegin": 371,
+                  "characterOffsetEnd": 378,
+                  "pos": "JJ",
+                  "ner": "O",
+                  "speaker": "PER0",
+                  "before": " ",
+                  "after": " "
+                }
+              },
+              "JJ"
+            ],
+            [
+              {
+                "nlpToken": {
+                  "index": 3,
+                  "word": "access",
+                  "originalText": "access",
+                  "lemma": "access",
+                  "characterOffsetBegin": 379,
+                  "characterOffsetEnd": 385,
+                  "pos": "NN",
+                  "ner": "O",
+                  "speaker": "PER0",
+                  "before": " ",
+                  "after": ""
+                }
+              },
+              "NN"
+            ]
+          ],
+          "score": 0.6818325434439179,
+          "text": "Get digital access",
+          "nlpIndexSentence": 4
+        },
+        {
+          "parts": [
+            [
+              {
+                "nlpToken": {
+                  "index": 8,
+                  "word": "digital",
+                  "originalText": "digital",
+                  "lemma": "digital",
+                  "characterOffsetBegin": 351,
+                  "characterOffsetEnd": 358,
+                  "pos": "JJ",
+                  "ner": "O",
+                  "speaker": "PER0",
+                  "before": " ",
+                  "after": " "
+                }
+              },
+              "JJ"
+            ],
+            [
+              {
+                "nlpToken": {
+                  "index": 9,
+                  "word": "access",
+                  "originalText": "access",
+                  "lemma": "access",
+                  "characterOffsetBegin": 359,
+                  "characterOffsetEnd": 365,
+                  "pos": "NN",
+                  "ner": "O",
+                  "speaker": "PER0",
+                  "before": " ",
+                  "after": ""
+                }
+              },
+              "NN"
+            ]
+          ],
+          "score": 0.24786729857819906,
+          "text": "digital access",
+          "nlpIndexSentence": 8
+        },
+        {
+          "parts": [
+            [
+              {
+                "nlpToken": {
+                  "index": 9,
+                  "word": "129th",
+                  "originalText": "129th",
+                  "lemma": "129th",
+                  "characterOffsetBegin": 42,
+                  "characterOffsetEnd": 47,
+                  "pos": "JJ",
+                  "ner": "O",
+                  "speaker": "PER0",
+                  "before": " ",
+                  "after": " "
+                }
+              },
+              "JJ"
+            ],
+            [
+              {
+                "nlpToken": {
+                  "index": 10,
+                  "word": "Rose",
+                  "originalText": "Rose",
+                  "lemma": "Rose",
+                  "characterOffsetBegin": 48,
+                  "characterOffsetEnd": 52,
+                  "pos": "NNP",
+                  "ner": "O",
+                  "speaker": "PER0",
+                  "before": " ",
+                  "after": " "
+                }
+              },
+              "NNP"
+            ],
+            [
+              {
+                "nlpToken": {
+                  "index": 11,
+                  "word": "Parade",
+                  "originalText": "Parade",
+                  "lemma": "Parade",
+                  "characterOffsetBegin": 53,
+                  "characterOffsetEnd": 59,
+                  "pos": "NNP",
+                  "ner": "O",
+                  "speaker": "PER0",
+                  "before": " ",
+                  "after": ""
+                }
+              },
+              "NNP"
+            ]
+          ],
+          "score": 0.21184834123222748,
+          "text": "129th Rose Parade",
+          "nlpIndexSentence": 9
+        },
+        {
+          "parts": [
+            [
+              {
+                "nlpToken": {
+                  "index": 12,
+                  "word": "this",
+                  "originalText": "this",
+                  "lemma": "this",
+                  "characterOffsetBegin": 291,
+                  "characterOffsetEnd": 295,
+                  "pos": "DT",
+                  "ner": "O",
+                  "speaker": "PER0",
+                  "before": " ",
+                  "after": " "
+                }
+              },
+              "DT"
+            ],
+            [
+              {
+                "nlpToken": {
+                  "index": 13,
+                  "word": "subscription",
+                  "originalText": "subscription",
+                  "lemma": "subscription",
+                  "characterOffsetBegin": 296,
+                  "characterOffsetEnd": 308,
+                  "pos": "NN",
+                  "ner": "O",
+                  "speaker": "PER0",
+                  "before": " ",
+                  "after": " "
+                }
+              },
+              "NN"
+            ],
+            [
+              {
+                "nlpToken": {
+                  "index": 14,
+                  "word": "service",
+                  "originalText": "service",
+                  "lemma": "service",
+                  "characterOffsetBegin": 309,
+                  "characterOffsetEnd": 316,
+                  "pos": "NN",
+                  "ner": "O",
+                  "speaker": "PER0",
+                  "before": " ",
+                  "after": ""
+                }
+              },
+              "NN"
+            ]
+          ],
+          "score": 0.048894154818325444,
+          "text": "this subscription service",
+          "nlpIndexSentence": 12
+        }
+      ],
+      "label": "how"
     }
   },
   "fiveWoneH_Metadata": {
     "process_errors": {}
+  },
+  "fiveWoneH_enhancer": {
+    "process_errors": {
+      "coreNLP": {
+        "docDate": "2018-01-01T15:50:00",
+        "sentences": [
+          {
+            "index": 0,
+            "parse": "(ROOT\n  (S\n    (VP (VBZ Floats) (, ,)\n      (S\n        (VP (VBG marching)\n          (S\n            (NP (NNS bands))\n            (VP (VB hit)\n              (NP (DT the) (NN street))\n              (PP (IN for)\n                (NP (JJ 129th) (NNP Rose) (NNP Parade))))))))\n    (. .)))",
+            "basicDependencies": [
+              {
+                "dep": "ROOT",
+                "governor": 0,
+                "governorGloss": "ROOT",
+                "dependent": 5,
+                "dependentGloss": "hit"
+              },
+              {
+                "dep": "dep",
+                "governor": 5,
+                "governorGloss": "hit",
+                "dependent": 1,
+                "dependentGloss": "Floats"
+              },
+              {
+                "dep": "punct",
+                "governor": 5,
+                "governorGloss": "hit",
+                "dependent": 2,
+                "dependentGloss": ","
+              },
+              {
+                "dep": "amod",
+                "governor": 4,
+                "governorGloss": "bands",
+                "dependent": 3,
+                "dependentGloss": "marching"
+              },
+              {
+                "dep": "nsubj",
+                "governor": 5,
+                "governorGloss": "hit",
+                "dependent": 4,
+                "dependentGloss": "bands"
+              },
+              {
+                "dep": "det",
+                "governor": 7,
+                "governorGloss": "street",
+                "dependent": 6,
+                "dependentGloss": "the"
+              },
+              {
+                "dep": "dobj",
+                "governor": 5,
+                "governorGloss": "hit",
+                "dependent": 7,
+                "dependentGloss": "street"
+              },
+              {
+                "dep": "case",
+                "governor": 11,
+                "governorGloss": "Parade",
+                "dependent": 8,
+                "dependentGloss": "for"
+              },
+              {
+                "dep": "amod",
+                "governor": 11,
+                "governorGloss": "Parade",
+                "dependent": 9,
+                "dependentGloss": "129th"
+              },
+              {
+                "dep": "compound",
+                "governor": 11,
+                "governorGloss": "Parade",
+                "dependent": 10,
+                "dependentGloss": "Rose"
+              },
+              {
+                "dep": "nmod",
+                "governor": 5,
+                "governorGloss": "hit",
+                "dependent": 11,
+                "dependentGloss": "Parade"
+              },
+              {
+                "dep": "punct",
+                "governor": 5,
+                "governorGloss": "hit",
+                "dependent": 12,
+                "dependentGloss": "."
+              }
+            ],
+            "enhancedDependencies": [
+              {
+                "dep": "ROOT",
+                "governor": 0,
+                "governorGloss": "ROOT",
+                "dependent": 5,
+                "dependentGloss": "hit"
+              },
+              {
+                "dep": "dep",
+                "governor": 5,
+                "governorGloss": "hit",
+                "dependent": 1,
+                "dependentGloss": "Floats"
+              },
+              {
+                "dep": "punct",
+                "governor": 5,
+                "governorGloss": "hit",
+                "dependent": 2,
+                "dependentGloss": ","
+              },
+              {
+                "dep": "amod",
+                "governor": 4,
+                "governorGloss": "bands",
+                "dependent": 3,
+                "dependentGloss": "marching"
+              },
+              {
+                "dep": "nsubj",
+                "governor": 5,
+                "governorGloss": "hit",
+                "dependent": 4,
+                "dependentGloss": "bands"
+              },
+              {
+                "dep": "det",
+                "governor": 7,
+                "governorGloss": "street",
+                "dependent": 6,
+                "dependentGloss": "the"
+              },
+              {
+                "dep": "dobj",
+                "governor": 5,
+                "governorGloss": "hit",
+                "dependent": 7,
+                "dependentGloss": "street"
+              },
+              {
+                "dep": "case",
+                "governor": 11,
+                "governorGloss": "Parade",
+                "dependent": 8,
+                "dependentGloss": "for"
+              },
+              {
+                "dep": "amod",
+                "governor": 11,
+                "governorGloss": "Parade",
+                "dependent": 9,
+                "dependentGloss": "129th"
+              },
+              {
+                "dep": "compound",
+                "governor": 11,
+                "governorGloss": "Parade",
+                "dependent": 10,
+                "dependentGloss": "Rose"
+              },
+              {
+                "dep": "nmod:for",
+                "governor": 5,
+                "governorGloss": "hit",
+                "dependent": 11,
+                "dependentGloss": "Parade"
+              },
+              {
+                "dep": "punct",
+                "governor": 5,
+                "governorGloss": "hit",
+                "dependent": 12,
+                "dependentGloss": "."
+              }
+            ],
+            "enhancedPlusPlusDependencies": [
+              {
+                "dep": "ROOT",
+                "governor": 0,
+                "governorGloss": "ROOT",
+                "dependent": 5,
+                "dependentGloss": "hit"
+              },
+              {
+                "dep": "dep",
+                "governor": 5,
+                "governorGloss": "hit",
+                "dependent": 1,
+                "dependentGloss": "Floats"
+              },
+              {
+                "dep": "punct",
+                "governor": 5,
+                "governorGloss": "hit",
+                "dependent": 2,
+                "dependentGloss": ","
+              },
+              {
+                "dep": "amod",
+                "governor": 4,
+                "governorGloss": "bands",
+                "dependent": 3,
+                "dependentGloss": "marching"
+              },
+              {
+                "dep": "nsubj",
+                "governor": 5,
+                "governorGloss": "hit",
+                "dependent": 4,
+                "dependentGloss": "bands"
+              },
+              {
+                "dep": "det",
+                "governor": 7,
+                "governorGloss": "street",
+                "dependent": 6,
+                "dependentGloss": "the"
+              },
+              {
+                "dep": "dobj",
+                "governor": 5,
+                "governorGloss": "hit",
+                "dependent": 7,
+                "dependentGloss": "street"
+              },
+              {
+                "dep": "case",
+                "governor": 11,
+                "governorGloss": "Parade",
+                "dependent": 8,
+                "dependentGloss": "for"
+              },
+              {
+                "dep": "amod",
+                "governor": 11,
+                "governorGloss": "Parade",
+                "dependent": 9,
+                "dependentGloss": "129th"
+              },
+              {
+                "dep": "compound",
+                "governor": 11,
+                "governorGloss": "Parade",
+                "dependent": 10,
+                "dependentGloss": "Rose"
+              },
+              {
+                "dep": "nmod:for",
+                "governor": 5,
+                "governorGloss": "hit",
+                "dependent": 11,
+                "dependentGloss": "Parade"
+              },
+              {
+                "dep": "punct",
+                "governor": 5,
+                "governorGloss": "hit",
+                "dependent": 12,
+                "dependentGloss": "."
+              }
+            ],
+            "tokens": [
+              {
+                "index": 1,
+                "word": "Floats",
+                "originalText": "Floats",
+                "lemma": "float",
+                "characterOffsetBegin": 0,
+                "characterOffsetEnd": 6,
+                "pos": "VBZ",
+                "ner": "O",
+                "speaker": "PER0",
+                "before": "",
+                "after": ""
+              },
+              {
+                "index": 2,
+                "word": ",",
+                "originalText": ",",
+                "lemma": ",",
+                "characterOffsetBegin": 6,
+                "characterOffsetEnd": 7,
+                "pos": ",",
+                "ner": "O",
+                "speaker": "PER0",
+                "before": "",
+                "after": " "
+              },
+              {
+                "index": 3,
+                "word": "marching",
+                "originalText": "marching",
+                "lemma": "march",
+                "characterOffsetBegin": 8,
+                "characterOffsetEnd": 16,
+                "pos": "VBG",
+                "ner": "O",
+                "speaker": "PER0",
+                "before": " ",
+                "after": " "
+              },
+              {
+                "index": 4,
+                "word": "bands",
+                "originalText": "bands",
+                "lemma": "band",
+                "characterOffsetBegin": 17,
+                "characterOffsetEnd": 22,
+                "pos": "NNS",
+                "ner": "O",
+                "speaker": "PER0",
+                "before": " ",
+                "after": " "
+              },
+              {
+                "index": 5,
+                "word": "hit",
+                "originalText": "hit",
+                "lemma": "hit",
+                "characterOffsetBegin": 23,
+                "characterOffsetEnd": 26,
+                "pos": "VB",
+                "ner": "O",
+                "speaker": "PER0",
+                "before": " ",
+                "after": " "
+              },
+              {
+                "index": 6,
+                "word": "the",
+                "originalText": "the",
+                "lemma": "the",
+                "characterOffsetBegin": 27,
+                "characterOffsetEnd": 30,
+                "pos": "DT",
+                "ner": "O",
+                "speaker": "PER0",
+                "before": " ",
+                "after": " "
+              },
+              {
+                "index": 7,
+                "word": "street",
+                "originalText": "street",
+                "lemma": "street",
+                "characterOffsetBegin": 31,
+                "characterOffsetEnd": 37,
+                "pos": "NN",
+                "ner": "O",
+                "speaker": "PER0",
+                "before": " ",
+                "after": " "
+              },
+              {
+                "index": 8,
+                "word": "for",
+                "originalText": "for",
+                "lemma": "for",
+                "characterOffsetBegin": 38,
+                "characterOffsetEnd": 41,
+                "pos": "IN",
+                "ner": "O",
+                "speaker": "PER0",
+                "before": " ",
+                "after": " "
+              },
+              {
+                "index": 9,
+                "word": "129th",
+                "originalText": "129th",
+                "lemma": "129th",
+                "characterOffsetBegin": 42,
+                "characterOffsetEnd": 47,
+                "pos": "JJ",
+                "ner": "O",
+                "speaker": "PER0",
+                "before": " ",
+                "after": " "
+              },
+              {
+                "index": 10,
+                "word": "Rose",
+                "originalText": "Rose",
+                "lemma": "Rose",
+                "characterOffsetBegin": 48,
+                "characterOffsetEnd": 52,
+                "pos": "NNP",
+                "ner": "O",
+                "speaker": "PER0",
+                "before": " ",
+                "after": " "
+              },
+              {
+                "index": 11,
+                "word": "Parade",
+                "originalText": "Parade",
+                "lemma": "Parade",
+                "characterOffsetBegin": 53,
+                "characterOffsetEnd": 59,
+                "pos": "NNP",
+                "ner": "O",
+                "speaker": "PER0",
+                "before": " ",
+                "after": ""
+              },
+              {
+                "index": 12,
+                "word": ".",
+                "originalText": ".",
+                "lemma": ".",
+                "characterOffsetBegin": 59,
+                "characterOffsetEnd": 60,
+                "pos": ".",
+                "ner": "O",
+                "speaker": "PER0",
+                "before": "",
+                "after": " "
+              }
+            ]
+          },
+          {
+            "index": 1,
+            "parse": "(ROOT\n  (NP\n    (NP (NNP PASADENA))\n    (, ,)\n    (NP\n      (NP (NNP Calif.))\n      (PRN (-LRB- -LRB-)\n        (NP (NNP AP))\n        (-RRB- -RRB-))\n      (: --)\n      (S\n        (PP (IN With)\n          (NP\n            (NP\n              (NP (DT a) (NN nod))\n              (PP (IN of)\n                (NP (NNS thanks))))\n            (PP (TO to)\n              (NP (JJ military) (NNS veterans)))))\n        (, ,)\n        (S\n          (VP (VBG marching)\n            (NP\n              (NP (NNS bands))\n              (CC and)\n              (NP (JJ floral) (VBZ floats)))))\n        (VP (VBD took)\n          (PP (TO to)\n            (NP (DT the) (NNS streets)))\n          (PP (IN under)\n            (NP (JJ sunny) (NNP California) (NNS skies)))\n          (PP (IN as)\n            (NP (DT the) (JJ 129th) (NNP Rose) (NNP Parade))))))\n    (. .)))",
+            "basicDependencies": [
+              {
+                "dep": "ROOT",
+                "governor": 0,
+                "governorGloss": "ROOT",
+                "dependent": 1,
+                "dependentGloss": "PASADENA"
+              },
+              {
+                "dep": "punct",
+                "governor": 1,
+                "governorGloss": "PASADENA",
+                "dependent": 2,
+                "dependentGloss": ","
+              },
+              {
+                "dep": "compound",
+                "governor": 5,
+                "governorGloss": "AP",
+                "dependent": 3,
+                "dependentGloss": "Calif."
+              },
+              {
+                "dep": "punct",
+                "governor": 5,
+                "governorGloss": "AP",
+                "dependent": 4,
+                "dependentGloss": "-LRB-"
+              },
+              {
+                "dep": "appos",
+                "governor": 1,
+                "governorGloss": "PASADENA",
+                "dependent": 5,
+                "dependentGloss": "AP"
+              },
+              {
+                "dep": "punct",
+                "governor": 5,
+                "governorGloss": "AP",
+                "dependent": 6,
+                "dependentGloss": "-RRB-"
+              },
+              {
+                "dep": "punct",
+                "governor": 1,
+                "governorGloss": "PASADENA",
+                "dependent": 7,
+                "dependentGloss": "--"
+              },
+              {
+                "dep": "case",
+                "governor": 10,
+                "governorGloss": "nod",
+                "dependent": 8,
+                "dependentGloss": "With"
+              },
+              {
+                "dep": "det",
+                "governor": 10,
+                "governorGloss": "nod",
+                "dependent": 9,
+                "dependentGloss": "a"
+              },
+              {
+                "dep": "nmod",
+                "governor": 1,
+                "governorGloss": "PASADENA",
+                "dependent": 10,
+                "dependentGloss": "nod"
+              },
+              {
+                "dep": "case",
+                "governor": 12,
+                "governorGloss": "thanks",
+                "dependent": 11,
+                "dependentGloss": "of"
+              },
+              {
+                "dep": "nmod",
+                "governor": 10,
+                "governorGloss": "nod",
+                "dependent": 12,
+                "dependentGloss": "thanks"
+              },
+              {
+                "dep": "case",
+                "governor": 15,
+                "governorGloss": "veterans",
+                "dependent": 13,
+                "dependentGloss": "to"
+              },
+              {
+                "dep": "amod",
+                "governor": 15,
+                "governorGloss": "veterans",
+                "dependent": 14,
+                "dependentGloss": "military"
+              },
+              {
+                "dep": "nmod",
+                "governor": 12,
+                "governorGloss": "thanks",
+                "dependent": 15,
+                "dependentGloss": "veterans"
+              },
+              {
+                "dep": "punct",
+                "governor": 10,
+                "governorGloss": "nod",
+                "dependent": 16,
+                "dependentGloss": ","
+              },
+              {
+                "dep": "amod",
+                "governor": 18,
+                "governorGloss": "bands",
+                "dependent": 17,
+                "dependentGloss": "marching"
+              },
+              {
+                "dep": "nsubj",
+                "governor": 21,
+                "governorGloss": "floats",
+                "dependent": 18,
+                "dependentGloss": "bands"
+              },
+              {
+                "dep": "cc",
+                "governor": 18,
+                "governorGloss": "bands",
+                "dependent": 19,
+                "dependentGloss": "and"
+              },
+              {
+                "dep": "conj",
+                "governor": 18,
+                "governorGloss": "bands",
+                "dependent": 20,
+                "dependentGloss": "floral"
+              },
+              {
+                "dep": "acl:relcl",
+                "governor": 10,
+                "governorGloss": "nod",
+                "dependent": 21,
+                "dependentGloss": "floats"
+              },
+              {
+                "dep": "ccomp",
+                "governor": 21,
+                "governorGloss": "floats",
+                "dependent": 22,
+                "dependentGloss": "took"
+              },
+              {
+                "dep": "case",
+                "governor": 25,
+                "governorGloss": "streets",
+                "dependent": 23,
+                "dependentGloss": "to"
+              },
+              {
+                "dep": "det",
+                "governor": 25,
+                "governorGloss": "streets",
+                "dependent": 24,
+                "dependentGloss": "the"
+              },
+              {
+                "dep": "nmod",
+                "governor": 22,
+                "governorGloss": "took",
+                "dependent": 25,
+                "dependentGloss": "streets"
+              },
+              {
+                "dep": "case",
+                "governor": 29,
+                "governorGloss": "skies",
+                "dependent": 26,
+                "dependentGloss": "under"
+              },
+              {
+                "dep": "amod",
+                "governor": 29,
+                "governorGloss": "skies",
+                "dependent": 27,
+                "dependentGloss": "sunny"
+              },
+              {
+                "dep": "compound",
+                "governor": 29,
+                "governorGloss": "skies",
+                "dependent": 28,
+                "dependentGloss": "California"
+              },
+              {
+                "dep": "nmod",
+                "governor": 22,
+                "governorGloss": "took",
+                "dependent": 29,
+                "dependentGloss": "skies"
+              },
+              {
+                "dep": "case",
+                "governor": 34,
+                "governorGloss": "Parade",
+                "dependent": 30,
+                "dependentGloss": "as"
+              },
+              {
+                "dep": "det",
+                "governor": 34,
+                "governorGloss": "Parade",
+                "dependent": 31,
+                "dependentGloss": "the"
+              },
+              {
+                "dep": "amod",
+                "governor": 34,
+                "governorGloss": "Parade",
+                "dependent": 32,
+                "dependentGloss": "129th"
+              },
+              {
+                "dep": "compound",
+                "governor": 34,
+                "governorGloss": "Parade",
+                "dependent": 33,
+                "dependentGloss": "Rose"
+              },
+              {
+                "dep": "nmod",
+                "governor": 22,
+                "governorGloss": "took",
+                "dependent": 34,
+                "dependentGloss": "Parade"
+              },
+              {
+                "dep": "punct",
+                "governor": 1,
+                "governorGloss": "PASADENA",
+                "dependent": 35,
+                "dependentGloss": "."
+              }
+            ],
+            "enhancedDependencies": [
+              {
+                "dep": "ROOT",
+                "governor": 0,
+                "governorGloss": "ROOT",
+                "dependent": 1,
+                "dependentGloss": "PASADENA"
+              },
+              {
+                "dep": "punct",
+                "governor": 1,
+                "governorGloss": "PASADENA",
+                "dependent": 2,
+                "dependentGloss": ","
+              },
+              {
+                "dep": "compound",
+                "governor": 5,
+                "governorGloss": "AP",
+                "dependent": 3,
+                "dependentGloss": "Calif."
+              },
+              {
+                "dep": "punct",
+                "governor": 5,
+                "governorGloss": "AP",
+                "dependent": 4,
+                "dependentGloss": "-LRB-"
+              },
+              {
+                "dep": "appos",
+                "governor": 1,
+                "governorGloss": "PASADENA",
+                "dependent": 5,
+                "dependentGloss": "AP"
+              },
+              {
+                "dep": "punct",
+                "governor": 5,
+                "governorGloss": "AP",
+                "dependent": 6,
+                "dependentGloss": "-RRB-"
+              },
+              {
+                "dep": "punct",
+                "governor": 1,
+                "governorGloss": "PASADENA",
+                "dependent": 7,
+                "dependentGloss": "--"
+              },
+              {
+                "dep": "case",
+                "governor": 10,
+                "governorGloss": "nod",
+                "dependent": 8,
+                "dependentGloss": "With"
+              },
+              {
+                "dep": "det",
+                "governor": 10,
+                "governorGloss": "nod",
+                "dependent": 9,
+                "dependentGloss": "a"
+              },
+              {
+                "dep": "nmod:with",
+                "governor": 1,
+                "governorGloss": "PASADENA",
+                "dependent": 10,
+                "dependentGloss": "nod"
+              },
+              {
+                "dep": "case",
+                "governor": 12,
+                "governorGloss": "thanks",
+                "dependent": 11,
+                "dependentGloss": "of"
+              },
+              {
+                "dep": "nmod:of",
+                "governor": 10,
+                "governorGloss": "nod",
+                "dependent": 12,
+                "dependentGloss": "thanks"
+              },
+              {
+                "dep": "case",
+                "governor": 15,
+                "governorGloss": "veterans",
+                "dependent": 13,
+                "dependentGloss": "to"
+              },
+              {
+                "dep": "amod",
+                "governor": 15,
+                "governorGloss": "veterans",
+                "dependent": 14,
+                "dependentGloss": "military"
+              },
+              {
+                "dep": "nmod:to",
+                "governor": 12,
+                "governorGloss": "thanks",
+                "dependent": 15,
+                "dependentGloss": "veterans"
+              },
+              {
+                "dep": "punct",
+                "governor": 10,
+                "governorGloss": "nod",
+                "dependent": 16,
+                "dependentGloss": ","
+              },
+              {
+                "dep": "amod",
+                "governor": 18,
+                "governorGloss": "bands",
+                "dependent": 17,
+                "dependentGloss": "marching"
+              },
+              {
+                "dep": "nsubj",
+                "governor": 21,
+                "governorGloss": "floats",
+                "dependent": 18,
+                "dependentGloss": "bands"
+              },
+              {
+                "dep": "cc",
+                "governor": 18,
+                "governorGloss": "bands",
+                "dependent": 19,
+                "dependentGloss": "and"
+              },
+              {
+                "dep": "conj:and",
+                "governor": 18,
+                "governorGloss": "bands",
+                "dependent": 20,
+                "dependentGloss": "floral"
+              },
+              {
+                "dep": "nsubj",
+                "governor": 21,
+                "governorGloss": "floats",
+                "dependent": 20,
+                "dependentGloss": "floral"
+              },
+              {
+                "dep": "acl:relcl",
+                "governor": 10,
+                "governorGloss": "nod",
+                "dependent": 21,
+                "dependentGloss": "floats"
+              },
+              {
+                "dep": "ccomp",
+                "governor": 21,
+                "governorGloss": "floats",
+                "dependent": 22,
+                "dependentGloss": "took"
+              },
+              {
+                "dep": "case",
+                "governor": 25,
+                "governorGloss": "streets",
+                "dependent": 23,
+                "dependentGloss": "to"
+              },
+              {
+                "dep": "det",
+                "governor": 25,
+                "governorGloss": "streets",
+                "dependent": 24,
+                "dependentGloss": "the"
+              },
+              {
+                "dep": "nmod:to",
+                "governor": 22,
+                "governorGloss": "took",
+                "dependent": 25,
+                "dependentGloss": "streets"
+              },
+              {
+                "dep": "case",
+                "governor": 29,
+                "governorGloss": "skies",
+                "dependent": 26,
+                "dependentGloss": "under"
+              },
+              {
+                "dep": "amod",
+                "governor": 29,
+                "governorGloss": "skies",
+                "dependent": 27,
+                "dependentGloss": "sunny"
+              },
+              {
+                "dep": "compound",
+                "governor": 29,
+                "governorGloss": "skies",
+                "dependent": 28,
+                "dependentGloss": "California"
+              },
+              {
+                "dep": "nmod:under",
+                "governor": 22,
+                "governorGloss": "took",
+                "dependent": 29,
+                "dependentGloss": "skies"
+              },
+              {
+                "dep": "case",
+                "governor": 34,
+                "governorGloss": "Parade",
+                "dependent": 30,
+                "dependentGloss": "as"
+              },
+              {
+                "dep": "det",
+                "governor": 34,
+                "governorGloss": "Parade",
+                "dependent": 31,
+                "dependentGloss": "the"
+              },
+              {
+                "dep": "amod",
+                "governor": 34,
+                "governorGloss": "Parade",
+                "dependent": 32,
+                "dependentGloss": "129th"
+              },
+              {
+                "dep": "compound",
+                "governor": 34,
+                "governorGloss": "Parade",
+                "dependent": 33,
+                "dependentGloss": "Rose"
+              },
+              {
+                "dep": "nmod:as",
+                "governor": 22,
+                "governorGloss": "took",
+                "dependent": 34,
+                "dependentGloss": "Parade"
+              },
+              {
+                "dep": "punct",
+                "governor": 1,
+                "governorGloss": "PASADENA",
+                "dependent": 35,
+                "dependentGloss": "."
+              }
+            ],
+            "enhancedPlusPlusDependencies": [
+              {
+                "dep": "ROOT",
+                "governor": 0,
+                "governorGloss": "ROOT",
+                "dependent": 1,
+                "dependentGloss": "PASADENA"
+              },
+              {
+                "dep": "punct",
+                "governor": 1,
+                "governorGloss": "PASADENA",
+                "dependent": 2,
+                "dependentGloss": ","
+              },
+              {
+                "dep": "compound",
+                "governor": 5,
+                "governorGloss": "AP",
+                "dependent": 3,
+                "dependentGloss": "Calif."
+              },
+              {
+                "dep": "punct",
+                "governor": 5,
+                "governorGloss": "AP",
+                "dependent": 4,
+                "dependentGloss": "-LRB-"
+              },
+              {
+                "dep": "appos",
+                "governor": 1,
+                "governorGloss": "PASADENA",
+                "dependent": 5,
+                "dependentGloss": "AP"
+              },
+              {
+                "dep": "punct",
+                "governor": 5,
+                "governorGloss": "AP",
+                "dependent": 6,
+                "dependentGloss": "-RRB-"
+              },
+              {
+                "dep": "punct",
+                "governor": 1,
+                "governorGloss": "PASADENA",
+                "dependent": 7,
+                "dependentGloss": "--"
+              },
+              {
+                "dep": "case",
+                "governor": 10,
+                "governorGloss": "nod",
+                "dependent": 8,
+                "dependentGloss": "With"
+              },
+              {
+                "dep": "det",
+                "governor": 10,
+                "governorGloss": "nod",
+                "dependent": 9,
+                "dependentGloss": "a"
+              },
+              {
+                "dep": "nmod:with",
+                "governor": 1,
+                "governorGloss": "PASADENA",
+                "dependent": 10,
+                "dependentGloss": "nod"
+              },
+              {
+                "dep": "case",
+                "governor": 12,
+                "governorGloss": "thanks",
+                "dependent": 11,
+                "dependentGloss": "of"
+              },
+              {
+                "dep": "nmod:of",
+                "governor": 10,
+                "governorGloss": "nod",
+                "dependent": 12,
+                "dependentGloss": "thanks"
+              },
+              {
+                "dep": "case",
+                "governor": 15,
+                "governorGloss": "veterans",
+                "dependent": 13,
+                "dependentGloss": "to"
+              },
+              {
+                "dep": "amod",
+                "governor": 15,
+                "governorGloss": "veterans",
+                "dependent": 14,
+                "dependentGloss": "military"
+              },
+              {
+                "dep": "nmod:to",
+                "governor": 12,
+                "governorGloss": "thanks",
+                "dependent": 15,
+                "dependentGloss": "veterans"
+              },
+              {
+                "dep": "punct",
+                "governor": 10,
+                "governorGloss": "nod",
+                "dependent": 16,
+                "dependentGloss": ","
+              },
+              {
+                "dep": "amod",
+                "governor": 18,
+                "governorGloss": "bands",
+                "dependent": 17,
+                "dependentGloss": "marching"
+              },
+              {
+                "dep": "nsubj",
+                "governor": 21,
+                "governorGloss": "floats",
+                "dependent": 18,
+                "dependentGloss": "bands"
+              },
+              {
+                "dep": "cc",
+                "governor": 18,
+                "governorGloss": "bands",
+                "dependent": 19,
+                "dependentGloss": "and"
+              },
+              {
+                "dep": "conj:and",
+                "governor": 18,
+                "governorGloss": "bands",
+                "dependent": 20,
+                "dependentGloss": "floral"
+              },
+              {
+                "dep": "nsubj",
+                "governor": 21,
+                "governorGloss": "floats",
+                "dependent": 20,
+                "dependentGloss": "floral"
+              },
+              {
+                "dep": "acl:relcl",
+                "governor": 10,
+                "governorGloss": "nod",
+                "dependent": 21,
+                "dependentGloss": "floats"
+              },
+              {
+                "dep": "ccomp",
+                "governor": 21,
+                "governorGloss": "floats",
+                "dependent": 22,
+                "dependentGloss": "took"
+              },
+              {
+                "dep": "case",
+                "governor": 25,
+                "governorGloss": "streets",
+                "dependent": 23,
+                "dependentGloss": "to"
+              },
+              {
+                "dep": "det",
+                "governor": 25,
+                "governorGloss": "streets",
+                "dependent": 24,
+                "dependentGloss": "the"
+              },
+              {
+                "dep": "nmod:to",
+                "governor": 22,
+                "governorGloss": "took",
+                "dependent": 25,
+                "dependentGloss": "streets"
+              },
+              {
+                "dep": "case",
+                "governor": 29,
+                "governorGloss": "skies",
+                "dependent": 26,
+                "dependentGloss": "under"
+              },
+              {
+                "dep": "amod",
+                "governor": 29,
+                "governorGloss": "skies",
+                "dependent": 27,
+                "dependentGloss": "sunny"
+              },
+              {
+                "dep": "compound",
+                "governor": 29,
+                "governorGloss": "skies",
+                "dependent": 28,
+                "dependentGloss": "California"
+              },
+              {
+                "dep": "nmod:under",
+                "governor": 22,
+                "governorGloss": "took",
+                "dependent": 29,
+                "dependentGloss": "skies"
+              },
+              {
+                "dep": "case",
+                "governor": 34,
+                "governorGloss": "Parade",
+                "dependent": 30,
+                "dependentGloss": "as"
+              },
+              {
+                "dep": "det",
+                "governor": 34,
+                "governorGloss": "Parade",
+                "dependent": 31,
+                "dependentGloss": "the"
+              },
+              {
+                "dep": "amod",
+                "governor": 34,
+                "governorGloss": "Parade",
+                "dependent": 32,
+                "dependentGloss": "129th"
+              },
+              {
+                "dep": "compound",
+                "governor": 34,
+                "governorGloss": "Parade",
+                "dependent": 33,
+                "dependentGloss": "Rose"
+              },
+              {
+                "dep": "nmod:as",
+                "governor": 22,
+                "governorGloss": "took",
+                "dependent": 34,
+                "dependentGloss": "Parade"
+              },
+              {
+                "dep": "punct",
+                "governor": 1,
+                "governorGloss": "PASADENA",
+                "dependent": 35,
+                "dependentGloss": "."
+              }
+            ],
+            "tokens": [
+              {
+                "index": 1,
+                "word": "PASADENA",
+                "originalText": "PASADENA",
+                "lemma": "PASADENA",
+                "characterOffsetBegin": 61,
+                "characterOffsetEnd": 69,
+                "pos": "NNP",
+                "ner": "LOCATION",
+                "speaker": "PER0",
+                "before": " ",
+                "after": ""
+              },
+              {
+                "index": 2,
+                "word": ",",
+                "originalText": ",",
+                "lemma": ",",
+                "characterOffsetBegin": 69,
+                "characterOffsetEnd": 70,
+                "pos": ",",
+                "ner": "O",
+                "speaker": "PER0",
+                "before": "",
+                "after": " "
+              },
+              {
+                "index": 3,
+                "word": "Calif.",
+                "originalText": "Calif.",
+                "lemma": "Calif.",
+                "characterOffsetBegin": 71,
+                "characterOffsetEnd": 77,
+                "pos": "NNP",
+                "ner": "LOCATION",
+                "speaker": "PER0",
+                "before": " ",
+                "after": " "
+              },
+              {
+                "index": 4,
+                "word": "-LRB-",
+                "originalText": "(",
+                "lemma": "-lrb-",
+                "characterOffsetBegin": 78,
+                "characterOffsetEnd": 79,
+                "pos": "-LRB-",
+                "ner": "O",
+                "speaker": "PER0",
+                "before": " ",
+                "after": ""
+              },
+              {
+                "index": 5,
+                "word": "AP",
+                "originalText": "AP",
+                "lemma": "AP",
+                "characterOffsetBegin": 79,
+                "characterOffsetEnd": 81,
+                "pos": "NNP",
+                "ner": "ORGANIZATION",
+                "speaker": "PER0",
+                "before": "",
+                "after": ""
+              },
+              {
+                "index": 6,
+                "word": "-RRB-",
+                "originalText": ")",
+                "lemma": "-rrb-",
+                "characterOffsetBegin": 81,
+                "characterOffsetEnd": 82,
+                "pos": "-RRB-",
+                "ner": "O",
+                "speaker": "PER0",
+                "before": "",
+                "after": " "
+              },
+              {
+                "index": 7,
+                "word": "--",
+                "originalText": "\u2014",
+                "lemma": "--",
+                "characterOffsetBegin": 83,
+                "characterOffsetEnd": 84,
+                "pos": ":",
+                "ner": "O",
+                "speaker": "PER0",
+                "before": " ",
+                "after": " "
+              },
+              {
+                "index": 8,
+                "word": "With",
+                "originalText": "With",
+                "lemma": "with",
+                "characterOffsetBegin": 85,
+                "characterOffsetEnd": 89,
+                "pos": "IN",
+                "ner": "O",
+                "speaker": "PER0",
+                "before": " ",
+                "after": " "
+              },
+              {
+                "index": 9,
+                "word": "a",
+                "originalText": "a",
+                "lemma": "a",
+                "characterOffsetBegin": 90,
+                "characterOffsetEnd": 91,
+                "pos": "DT",
+                "ner": "O",
+                "speaker": "PER0",
+                "before": " ",
+                "after": " "
+              },
+              {
+                "index": 10,
+                "word": "nod",
+                "originalText": "nod",
+                "lemma": "nod",
+                "characterOffsetBegin": 92,
+                "characterOffsetEnd": 95,
+                "pos": "NN",
+                "ner": "O",
+                "speaker": "PER0",
+                "before": " ",
+                "after": " "
+              },
+              {
+                "index": 11,
+                "word": "of",
+                "originalText": "of",
+                "lemma": "of",
+                "characterOffsetBegin": 96,
+                "characterOffsetEnd": 98,
+                "pos": "IN",
+                "ner": "O",
+                "speaker": "PER0",
+                "before": " ",
+                "after": " "
+              },
+              {
+                "index": 12,
+                "word": "thanks",
+                "originalText": "thanks",
+                "lemma": "thanks",
+                "characterOffsetBegin": 99,
+                "characterOffsetEnd": 105,
+                "pos": "NNS",
+                "ner": "O",
+                "speaker": "PER0",
+                "before": " ",
+                "after": " "
+              },
+              {
+                "index": 13,
+                "word": "to",
+                "originalText": "to",
+                "lemma": "to",
+                "characterOffsetBegin": 106,
+                "characterOffsetEnd": 108,
+                "pos": "TO",
+                "ner": "O",
+                "speaker": "PER0",
+                "before": " ",
+                "after": " "
+              },
+              {
+                "index": 14,
+                "word": "military",
+                "originalText": "military",
+                "lemma": "military",
+                "characterOffsetBegin": 109,
+                "characterOffsetEnd": 117,
+                "pos": "JJ",
+                "ner": "O",
+                "speaker": "PER0",
+                "before": " ",
+                "after": " "
+              },
+              {
+                "index": 15,
+                "word": "veterans",
+                "originalText": "veterans",
+                "lemma": "veteran",
+                "characterOffsetBegin": 118,
+                "characterOffsetEnd": 126,
+                "pos": "NNS",
+                "ner": "O",
+                "speaker": "PER0",
+                "before": " ",
+                "after": ""
+              },
+              {
+                "index": 16,
+                "word": ",",
+                "originalText": ",",
+                "lemma": ",",
+                "characterOffsetBegin": 126,
+                "characterOffsetEnd": 127,
+                "pos": ",",
+                "ner": "O",
+                "speaker": "PER0",
+                "before": "",
+                "after": " "
+              },
+              {
+                "index": 17,
+                "word": "marching",
+                "originalText": "marching",
+                "lemma": "march",
+                "characterOffsetBegin": 128,
+                "characterOffsetEnd": 136,
+                "pos": "VBG",
+                "ner": "O",
+                "speaker": "PER0",
+                "before": " ",
+                "after": " "
+              },
+              {
+                "index": 18,
+                "word": "bands",
+                "originalText": "bands",
+                "lemma": "band",
+                "characterOffsetBegin": 137,
+                "characterOffsetEnd": 142,
+                "pos": "NNS",
+                "ner": "O",
+                "speaker": "PER0",
+                "before": " ",
+                "after": " "
+              },
+              {
+                "index": 19,
+                "word": "and",
+                "originalText": "and",
+                "lemma": "and",
+                "characterOffsetBegin": 143,
+                "characterOffsetEnd": 146,
+                "pos": "CC",
+                "ner": "O",
+                "speaker": "PER0",
+                "before": " ",
+                "after": " "
+              },
+              {
+                "index": 20,
+                "word": "floral",
+                "originalText": "floral",
+                "lemma": "floral",
+                "characterOffsetBegin": 147,
+                "characterOffsetEnd": 153,
+                "pos": "JJ",
+                "ner": "O",
+                "speaker": "PER0",
+                "before": " ",
+                "after": " "
+              },
+              {
+                "index": 21,
+                "word": "floats",
+                "originalText": "floats",
+                "lemma": "float",
+                "characterOffsetBegin": 154,
+                "characterOffsetEnd": 160,
+                "pos": "VBZ",
+                "ner": "O",
+                "speaker": "PER0",
+                "before": " ",
+                "after": " "
+              },
+              {
+                "index": 22,
+                "word": "took",
+                "originalText": "took",
+                "lemma": "take",
+                "characterOffsetBegin": 161,
+                "characterOffsetEnd": 165,
+                "pos": "VBD",
+                "ner": "O",
+                "speaker": "PER0",
+                "before": " ",
+                "after": " "
+              },
+              {
+                "index": 23,
+                "word": "to",
+                "originalText": "to",
+                "lemma": "to",
+                "characterOffsetBegin": 166,
+                "characterOffsetEnd": 168,
+                "pos": "TO",
+                "ner": "O",
+                "speaker": "PER0",
+                "before": " ",
+                "after": " "
+              },
+              {
+                "index": 24,
+                "word": "the",
+                "originalText": "the",
+                "lemma": "the",
+                "characterOffsetBegin": 169,
+                "characterOffsetEnd": 172,
+                "pos": "DT",
+                "ner": "O",
+                "speaker": "PER0",
+                "before": " ",
+                "after": " "
+              },
+              {
+                "index": 25,
+                "word": "streets",
+                "originalText": "streets",
+                "lemma": "street",
+                "characterOffsetBegin": 173,
+                "characterOffsetEnd": 180,
+                "pos": "NNS",
+                "ner": "O",
+                "speaker": "PER0",
+                "before": " ",
+                "after": " "
+              },
+              {
+                "index": 26,
+                "word": "under",
+                "originalText": "under",
+                "lemma": "under",
+                "characterOffsetBegin": 181,
+                "characterOffsetEnd": 186,
+                "pos": "IN",
+                "ner": "O",
+                "speaker": "PER0",
+                "before": " ",
+                "after": " "
+              },
+              {
+                "index": 27,
+                "word": "sunny",
+                "originalText": "sunny",
+                "lemma": "sunny",
+                "characterOffsetBegin": 187,
+                "characterOffsetEnd": 192,
+                "pos": "JJ",
+                "ner": "O",
+                "speaker": "PER0",
+                "before": " ",
+                "after": " "
+              },
+              {
+                "index": 28,
+                "word": "California",
+                "originalText": "California",
+                "lemma": "California",
+                "characterOffsetBegin": 193,
+                "characterOffsetEnd": 203,
+                "pos": "NNP",
+                "ner": "LOCATION",
+                "speaker": "PER0",
+                "before": " ",
+                "after": " "
+              },
+              {
+                "index": 29,
+                "word": "skies",
+                "originalText": "skies",
+                "lemma": "sky",
+                "characterOffsetBegin": 204,
+                "characterOffsetEnd": 209,
+                "pos": "NNS",
+                "ner": "O",
+                "speaker": "PER0",
+                "before": " ",
+                "after": " "
+              },
+              {
+                "index": 30,
+                "word": "as",
+                "originalText": "as",
+                "lemma": "as",
+                "characterOffsetBegin": 210,
+                "characterOffsetEnd": 212,
+                "pos": "IN",
+                "ner": "O",
+                "speaker": "PER0",
+                "before": " ",
+                "after": " "
+              },
+              {
+                "index": 31,
+                "word": "the",
+                "originalText": "the",
+                "lemma": "the",
+                "characterOffsetBegin": 213,
+                "characterOffsetEnd": 216,
+                "pos": "DT",
+                "ner": "O",
+                "speaker": "PER0",
+                "before": " ",
+                "after": " "
+              },
+              {
+                "index": 32,
+                "word": "129th",
+                "originalText": "129th",
+                "lemma": "129th",
+                "characterOffsetBegin": 217,
+                "characterOffsetEnd": 222,
+                "pos": "JJ",
+                "ner": "O",
+                "speaker": "PER0",
+                "before": " ",
+                "after": " "
+              },
+              {
+                "index": 33,
+                "word": "Rose",
+                "originalText": "Rose",
+                "lemma": "Rose",
+                "characterOffsetBegin": 223,
+                "characterOffsetEnd": 227,
+                "pos": "NNP",
+                "ner": "O",
+                "speaker": "PER0",
+                "before": " ",
+                "after": " "
+              },
+              {
+                "index": 34,
+                "word": "Parade",
+                "originalText": "Parade",
+                "lemma": "Parade",
+                "characterOffsetBegin": 228,
+                "characterOffsetEnd": 234,
+                "pos": "NNP",
+                "ner": "O",
+                "speaker": "PER0",
+                "before": " ",
+                "after": ""
+              },
+              {
+                "index": 35,
+                "word": ".",
+                "originalText": ".",
+                "lemma": ".",
+                "characterOffsetBegin": 234,
+                "characterOffsetEnd": 235,
+                "pos": ".",
+                "ner": "O",
+                "speaker": "PER0",
+                "before": "",
+                "after": " "
+              }
+            ]
+          },
+          {
+            "index": 2,
+            "parse": "(ROOT\n  (S\n    (INTJ (JJ Sorry))\n    (, ,)\n    (NP (DT this) (NN zipcode))\n    (VP (VBZ is) (RB not)\n      (PP (IN in)\n        (NP (PRP$ our) (JJ deliverable) (NN area)))\n      (PP (IN for)\n        (NP (DT this) (NN subscription) (NN service))))\n    (. .)))",
+            "basicDependencies": [
+              {
+                "dep": "ROOT",
+                "governor": 0,
+                "governorGloss": "ROOT",
+                "dependent": 10,
+                "dependentGloss": "area"
+              },
+              {
+                "dep": "dep",
+                "governor": 10,
+                "governorGloss": "area",
+                "dependent": 1,
+                "dependentGloss": "Sorry"
+              },
+              {
+                "dep": "punct",
+                "governor": 10,
+                "governorGloss": "area",
+                "dependent": 2,
+                "dependentGloss": ","
+              },
+              {
+                "dep": "det",
+                "governor": 4,
+                "governorGloss": "zipcode",
+                "dependent": 3,
+                "dependentGloss": "this"
+              },
+              {
+                "dep": "nsubj",
+                "governor": 10,
+                "governorGloss": "area",
+                "dependent": 4,
+                "dependentGloss": "zipcode"
+              },
+              {
+                "dep": "cop",
+                "governor": 10,
+                "governorGloss": "area",
+                "dependent": 5,
+                "dependentGloss": "is"
+              },
+              {
+                "dep": "neg",
+                "governor": 10,
+                "governorGloss": "area",
+                "dependent": 6,
+                "dependentGloss": "not"
+              },
+              {
+                "dep": "case",
+                "governor": 10,
+                "governorGloss": "area",
+                "dependent": 7,
+                "dependentGloss": "in"
+              },
+              {
+                "dep": "nmod:poss",
+                "governor": 10,
+                "governorGloss": "area",
+                "dependent": 8,
+                "dependentGloss": "our"
+              },
+              {
+                "dep": "amod",
+                "governor": 10,
+                "governorGloss": "area",
+                "dependent": 9,
+                "dependentGloss": "deliverable"
+              },
+              {
+                "dep": "case",
+                "governor": 14,
+                "governorGloss": "service",
+                "dependent": 11,
+                "dependentGloss": "for"
+              },
+              {
+                "dep": "det",
+                "governor": 14,
+                "governorGloss": "service",
+                "dependent": 12,
+                "dependentGloss": "this"
+              },
+              {
+                "dep": "compound",
+                "governor": 14,
+                "governorGloss": "service",
+                "dependent": 13,
+                "dependentGloss": "subscription"
+              },
+              {
+                "dep": "nmod",
+                "governor": 10,
+                "governorGloss": "area",
+                "dependent": 14,
+                "dependentGloss": "service"
+              },
+              {
+                "dep": "punct",
+                "governor": 10,
+                "governorGloss": "area",
+                "dependent": 15,
+                "dependentGloss": "."
+              }
+            ],
+            "enhancedDependencies": [
+              {
+                "dep": "ROOT",
+                "governor": 0,
+                "governorGloss": "ROOT",
+                "dependent": 10,
+                "dependentGloss": "area"
+              },
+              {
+                "dep": "dep",
+                "governor": 10,
+                "governorGloss": "area",
+                "dependent": 1,
+                "dependentGloss": "Sorry"
+              },
+              {
+                "dep": "punct",
+                "governor": 10,
+                "governorGloss": "area",
+                "dependent": 2,
+                "dependentGloss": ","
+              },
+              {
+                "dep": "det",
+                "governor": 4,
+                "governorGloss": "zipcode",
+                "dependent": 3,
+                "dependentGloss": "this"
+              },
+              {
+                "dep": "nsubj",
+                "governor": 10,
+                "governorGloss": "area",
+                "dependent": 4,
+                "dependentGloss": "zipcode"
+              },
+              {
+                "dep": "cop",
+                "governor": 10,
+                "governorGloss": "area",
+                "dependent": 5,
+                "dependentGloss": "is"
+              },
+              {
+                "dep": "neg",
+                "governor": 10,
+                "governorGloss": "area",
+                "dependent": 6,
+                "dependentGloss": "not"
+              },
+              {
+                "dep": "case",
+                "governor": 10,
+                "governorGloss": "area",
+                "dependent": 7,
+                "dependentGloss": "in"
+              },
+              {
+                "dep": "nmod:poss",
+                "governor": 10,
+                "governorGloss": "area",
+                "dependent": 8,
+                "dependentGloss": "our"
+              },
+              {
+                "dep": "amod",
+                "governor": 10,
+                "governorGloss": "area",
+                "dependent": 9,
+                "dependentGloss": "deliverable"
+              },
+              {
+                "dep": "case",
+                "governor": 14,
+                "governorGloss": "service",
+                "dependent": 11,
+                "dependentGloss": "for"
+              },
+              {
+                "dep": "det",
+                "governor": 14,
+                "governorGloss": "service",
+                "dependent": 12,
+                "dependentGloss": "this"
+              },
+              {
+                "dep": "compound",
+                "governor": 14,
+                "governorGloss": "service",
+                "dependent": 13,
+                "dependentGloss": "subscription"
+              },
+              {
+                "dep": "nmod:for",
+                "governor": 10,
+                "governorGloss": "area",
+                "dependent": 14,
+                "dependentGloss": "service"
+              },
+              {
+                "dep": "punct",
+                "governor": 10,
+                "governorGloss": "area",
+                "dependent": 15,
+                "dependentGloss": "."
+              }
+            ],
+            "enhancedPlusPlusDependencies": [
+              {
+                "dep": "ROOT",
+                "governor": 0,
+                "governorGloss": "ROOT",
+                "dependent": 10,
+                "dependentGloss": "area"
+              },
+              {
+                "dep": "dep",
+                "governor": 10,
+                "governorGloss": "area",
+                "dependent": 1,
+                "dependentGloss": "Sorry"
+              },
+              {
+                "dep": "punct",
+                "governor": 10,
+                "governorGloss": "area",
+                "dependent": 2,
+                "dependentGloss": ","
+              },
+              {
+                "dep": "det",
+                "governor": 4,
+                "governorGloss": "zipcode",
+                "dependent": 3,
+                "dependentGloss": "this"
+              },
+              {
+                "dep": "nsubj",
+                "governor": 10,
+                "governorGloss": "area",
+                "dependent": 4,
+                "dependentGloss": "zipcode"
+              },
+              {
+                "dep": "cop",
+                "governor": 10,
+                "governorGloss": "area",
+                "dependent": 5,
+                "dependentGloss": "is"
+              },
+              {
+                "dep": "neg",
+                "governor": 10,
+                "governorGloss": "area",
+                "dependent": 6,
+                "dependentGloss": "not"
+              },
+              {
+                "dep": "case",
+                "governor": 10,
+                "governorGloss": "area",
+                "dependent": 7,
+                "dependentGloss": "in"
+              },
+              {
+                "dep": "nmod:poss",
+                "governor": 10,
+                "governorGloss": "area",
+                "dependent": 8,
+                "dependentGloss": "our"
+              },
+              {
+                "dep": "amod",
+                "governor": 10,
+                "governorGloss": "area",
+                "dependent": 9,
+                "dependentGloss": "deliverable"
+              },
+              {
+                "dep": "case",
+                "governor": 14,
+                "governorGloss": "service",
+                "dependent": 11,
+                "dependentGloss": "for"
+              },
+              {
+                "dep": "det",
+                "governor": 14,
+                "governorGloss": "service",
+                "dependent": 12,
+                "dependentGloss": "this"
+              },
+              {
+                "dep": "compound",
+                "governor": 14,
+                "governorGloss": "service",
+                "dependent": 13,
+                "dependentGloss": "subscription"
+              },
+              {
+                "dep": "nmod:for",
+                "governor": 10,
+                "governorGloss": "area",
+                "dependent": 14,
+                "dependentGloss": "service"
+              },
+              {
+                "dep": "punct",
+                "governor": 10,
+                "governorGloss": "area",
+                "dependent": 15,
+                "dependentGloss": "."
+              }
+            ],
+            "tokens": [
+              {
+                "index": 1,
+                "word": "Sorry",
+                "originalText": "Sorry",
+                "lemma": "sorry",
+                "characterOffsetBegin": 236,
+                "characterOffsetEnd": 241,
+                "pos": "JJ",
+                "ner": "O",
+                "speaker": "PER0",
+                "before": " ",
+                "after": ""
+              },
+              {
+                "index": 2,
+                "word": ",",
+                "originalText": ",",
+                "lemma": ",",
+                "characterOffsetBegin": 241,
+                "characterOffsetEnd": 242,
+                "pos": ",",
+                "ner": "O",
+                "speaker": "PER0",
+                "before": "",
+                "after": " "
+              },
+              {
+                "index": 3,
+                "word": "this",
+                "originalText": "this",
+                "lemma": "this",
+                "characterOffsetBegin": 243,
+                "characterOffsetEnd": 247,
+                "pos": "DT",
+                "ner": "O",
+                "speaker": "PER0",
+                "before": " ",
+                "after": " "
+              },
+              {
+                "index": 4,
+                "word": "zipcode",
+                "originalText": "zipcode",
+                "lemma": "zipcode",
+                "characterOffsetBegin": 248,
+                "characterOffsetEnd": 255,
+                "pos": "NN",
+                "ner": "O",
+                "speaker": "PER0",
+                "before": " ",
+                "after": " "
+              },
+              {
+                "index": 5,
+                "word": "is",
+                "originalText": "is",
+                "lemma": "be",
+                "characterOffsetBegin": 256,
+                "characterOffsetEnd": 258,
+                "pos": "VBZ",
+                "ner": "O",
+                "speaker": "PER0",
+                "before": " ",
+                "after": " "
+              },
+              {
+                "index": 6,
+                "word": "not",
+                "originalText": "not",
+                "lemma": "not",
+                "characterOffsetBegin": 259,
+                "characterOffsetEnd": 262,
+                "pos": "RB",
+                "ner": "O",
+                "speaker": "PER0",
+                "before": " ",
+                "after": " "
+              },
+              {
+                "index": 7,
+                "word": "in",
+                "originalText": "in",
+                "lemma": "in",
+                "characterOffsetBegin": 263,
+                "characterOffsetEnd": 265,
+                "pos": "IN",
+                "ner": "O",
+                "speaker": "PER0",
+                "before": " ",
+                "after": " "
+              },
+              {
+                "index": 8,
+                "word": "our",
+                "originalText": "our",
+                "lemma": "we",
+                "characterOffsetBegin": 266,
+                "characterOffsetEnd": 269,
+                "pos": "PRP$",
+                "ner": "O",
+                "speaker": "PER0",
+                "before": " ",
+                "after": " "
+              },
+              {
+                "index": 9,
+                "word": "deliverable",
+                "originalText": "deliverable",
+                "lemma": "deliverable",
+                "characterOffsetBegin": 270,
+                "characterOffsetEnd": 281,
+                "pos": "JJ",
+                "ner": "O",
+                "speaker": "PER0",
+                "before": " ",
+                "after": " "
+              },
+              {
+                "index": 10,
+                "word": "area",
+                "originalText": "area",
+                "lemma": "area",
+                "characterOffsetBegin": 282,
+                "characterOffsetEnd": 286,
+                "pos": "NN",
+                "ner": "O",
+                "speaker": "PER0",
+                "before": " ",
+                "after": " "
+              },
+              {
+                "index": 11,
+                "word": "for",
+                "originalText": "for",
+                "lemma": "for",
+                "characterOffsetBegin": 287,
+                "characterOffsetEnd": 290,
+                "pos": "IN",
+                "ner": "O",
+                "speaker": "PER0",
+                "before": " ",
+                "after": " "
+              },
+              {
+                "index": 12,
+                "word": "this",
+                "originalText": "this",
+                "lemma": "this",
+                "characterOffsetBegin": 291,
+                "characterOffsetEnd": 295,
+                "pos": "DT",
+                "ner": "O",
+                "speaker": "PER0",
+                "before": " ",
+                "after": " "
+              },
+              {
+                "index": 13,
+                "word": "subscription",
+                "originalText": "subscription",
+                "lemma": "subscription",
+                "characterOffsetBegin": 296,
+                "characterOffsetEnd": 308,
+                "pos": "NN",
+                "ner": "O",
+                "speaker": "PER0",
+                "before": " ",
+                "after": " "
+              },
+              {
+                "index": 14,
+                "word": "service",
+                "originalText": "service",
+                "lemma": "service",
+                "characterOffsetBegin": 309,
+                "characterOffsetEnd": 316,
+                "pos": "NN",
+                "ner": "O",
+                "speaker": "PER0",
+                "before": " ",
+                "after": ""
+              },
+              {
+                "index": 15,
+                "word": ".",
+                "originalText": ".",
+                "lemma": ".",
+                "characterOffsetBegin": 316,
+                "characterOffsetEnd": 317,
+                "pos": ".",
+                "ner": "O",
+                "speaker": "PER0",
+                "before": "",
+                "after": "\n"
+              }
+            ]
+          },
+          {
+            "index": 3,
+            "parse": "(ROOT\n  (S\n    (VP (VB Re-enter)\n      (NP\n        (NP (NN zip) (NN code))\n        (CC or)\n        (VP (VB sign)\n          (PRT (RP up))\n          (PP (IN for)\n            (NP (JJ digital) (NN access))))))\n    (. .)))",
+            "basicDependencies": [
+              {
+                "dep": "ROOT",
+                "governor": 0,
+                "governorGloss": "ROOT",
+                "dependent": 1,
+                "dependentGloss": "Re-enter"
+              },
+              {
+                "dep": "compound",
+                "governor": 3,
+                "governorGloss": "code",
+                "dependent": 2,
+                "dependentGloss": "zip"
+              },
+              {
+                "dep": "dobj",
+                "governor": 1,
+                "governorGloss": "Re-enter",
+                "dependent": 3,
+                "dependentGloss": "code"
+              },
+              {
+                "dep": "cc",
+                "governor": 1,
+                "governorGloss": "Re-enter",
+                "dependent": 4,
+                "dependentGloss": "or"
+              },
+              {
+                "dep": "conj",
+                "governor": 1,
+                "governorGloss": "Re-enter",
+                "dependent": 5,
+                "dependentGloss": "sign"
+              },
+              {
+                "dep": "compound:prt",
+                "governor": 5,
+                "governorGloss": "sign",
+                "dependent": 6,
+                "dependentGloss": "up"
+              },
+              {
+                "dep": "case",
+                "governor": 9,
+                "governorGloss": "access",
+                "dependent": 7,
+                "dependentGloss": "for"
+              },
+              {
+                "dep": "amod",
+                "governor": 9,
+                "governorGloss": "access",
+                "dependent": 8,
+                "dependentGloss": "digital"
+              },
+              {
+                "dep": "nmod",
+                "governor": 5,
+                "governorGloss": "sign",
+                "dependent": 9,
+                "dependentGloss": "access"
+              },
+              {
+                "dep": "punct",
+                "governor": 1,
+                "governorGloss": "Re-enter",
+                "dependent": 10,
+                "dependentGloss": "."
+              }
+            ],
+            "enhancedDependencies": [
+              {
+                "dep": "ROOT",
+                "governor": 0,
+                "governorGloss": "ROOT",
+                "dependent": 1,
+                "dependentGloss": "Re-enter"
+              },
+              {
+                "dep": "compound",
+                "governor": 3,
+                "governorGloss": "code",
+                "dependent": 2,
+                "dependentGloss": "zip"
+              },
+              {
+                "dep": "dobj",
+                "governor": 1,
+                "governorGloss": "Re-enter",
+                "dependent": 3,
+                "dependentGloss": "code"
+              },
+              {
+                "dep": "cc",
+                "governor": 1,
+                "governorGloss": "Re-enter",
+                "dependent": 4,
+                "dependentGloss": "or"
+              },
+              {
+                "dep": "conj:or",
+                "governor": 1,
+                "governorGloss": "Re-enter",
+                "dependent": 5,
+                "dependentGloss": "sign"
+              },
+              {
+                "dep": "compound:prt",
+                "governor": 5,
+                "governorGloss": "sign",
+                "dependent": 6,
+                "dependentGloss": "up"
+              },
+              {
+                "dep": "case",
+                "governor": 9,
+                "governorGloss": "access",
+                "dependent": 7,
+                "dependentGloss": "for"
+              },
+              {
+                "dep": "amod",
+                "governor": 9,
+                "governorGloss": "access",
+                "dependent": 8,
+                "dependentGloss": "digital"
+              },
+              {
+                "dep": "nmod:for",
+                "governor": 5,
+                "governorGloss": "sign",
+                "dependent": 9,
+                "dependentGloss": "access"
+              },
+              {
+                "dep": "punct",
+                "governor": 1,
+                "governorGloss": "Re-enter",
+                "dependent": 10,
+                "dependentGloss": "."
+              }
+            ],
+            "enhancedPlusPlusDependencies": [
+              {
+                "dep": "ROOT",
+                "governor": 0,
+                "governorGloss": "ROOT",
+                "dependent": 1,
+                "dependentGloss": "Re-enter"
+              },
+              {
+                "dep": "compound",
+                "governor": 3,
+                "governorGloss": "code",
+                "dependent": 2,
+                "dependentGloss": "zip"
+              },
+              {
+                "dep": "dobj",
+                "governor": 1,
+                "governorGloss": "Re-enter",
+                "dependent": 3,
+                "dependentGloss": "code"
+              },
+              {
+                "dep": "cc",
+                "governor": 1,
+                "governorGloss": "Re-enter",
+                "dependent": 4,
+                "dependentGloss": "or"
+              },
+              {
+                "dep": "conj:or",
+                "governor": 1,
+                "governorGloss": "Re-enter",
+                "dependent": 5,
+                "dependentGloss": "sign"
+              },
+              {
+                "dep": "compound:prt",
+                "governor": 5,
+                "governorGloss": "sign",
+                "dependent": 6,
+                "dependentGloss": "up"
+              },
+              {
+                "dep": "case",
+                "governor": 9,
+                "governorGloss": "access",
+                "dependent": 7,
+                "dependentGloss": "for"
+              },
+              {
+                "dep": "amod",
+                "governor": 9,
+                "governorGloss": "access",
+                "dependent": 8,
+                "dependentGloss": "digital"
+              },
+              {
+                "dep": "nmod:for",
+                "governor": 5,
+                "governorGloss": "sign",
+                "dependent": 9,
+                "dependentGloss": "access"
+              },
+              {
+                "dep": "punct",
+                "governor": 1,
+                "governorGloss": "Re-enter",
+                "dependent": 10,
+                "dependentGloss": "."
+              }
+            ],
+            "tokens": [
+              {
+                "index": 1,
+                "word": "Re-enter",
+                "originalText": "Re-enter",
+                "lemma": "re-enter",
+                "characterOffsetBegin": 318,
+                "characterOffsetEnd": 326,
+                "pos": "VB",
+                "ner": "O",
+                "speaker": "PER0",
+                "before": "\n",
+                "after": " "
+              },
+              {
+                "index": 2,
+                "word": "zip",
+                "originalText": "zip",
+                "lemma": "zip",
+                "characterOffsetBegin": 327,
+                "characterOffsetEnd": 330,
+                "pos": "NN",
+                "ner": "O",
+                "speaker": "PER0",
+                "before": " ",
+                "after": " "
+              },
+              {
+                "index": 3,
+                "word": "code",
+                "originalText": "code",
+                "lemma": "code",
+                "characterOffsetBegin": 331,
+                "characterOffsetEnd": 335,
+                "pos": "NN",
+                "ner": "O",
+                "speaker": "PER0",
+                "before": " ",
+                "after": " "
+              },
+              {
+                "index": 4,
+                "word": "or",
+                "originalText": "or",
+                "lemma": "or",
+                "characterOffsetBegin": 336,
+                "characterOffsetEnd": 338,
+                "pos": "CC",
+                "ner": "O",
+                "speaker": "PER0",
+                "before": " ",
+                "after": " "
+              },
+              {
+                "index": 5,
+                "word": "sign",
+                "originalText": "sign",
+                "lemma": "sign",
+                "characterOffsetBegin": 339,
+                "characterOffsetEnd": 343,
+                "pos": "VB",
+                "ner": "O",
+                "speaker": "PER0",
+                "before": " ",
+                "after": " "
+              },
+              {
+                "index": 6,
+                "word": "up",
+                "originalText": "up",
+                "lemma": "up",
+                "characterOffsetBegin": 344,
+                "characterOffsetEnd": 346,
+                "pos": "RP",
+                "ner": "O",
+                "speaker": "PER0",
+                "before": " ",
+                "after": " "
+              },
+              {
+                "index": 7,
+                "word": "for",
+                "originalText": "for",
+                "lemma": "for",
+                "characterOffsetBegin": 347,
+                "characterOffsetEnd": 350,
+                "pos": "IN",
+                "ner": "O",
+                "speaker": "PER0",
+                "before": " ",
+                "after": " "
+              },
+              {
+                "index": 8,
+                "word": "digital",
+                "originalText": "digital",
+                "lemma": "digital",
+                "characterOffsetBegin": 351,
+                "characterOffsetEnd": 358,
+                "pos": "JJ",
+                "ner": "O",
+                "speaker": "PER0",
+                "before": " ",
+                "after": " "
+              },
+              {
+                "index": 9,
+                "word": "access",
+                "originalText": "access",
+                "lemma": "access",
+                "characterOffsetBegin": 359,
+                "characterOffsetEnd": 365,
+                "pos": "NN",
+                "ner": "O",
+                "speaker": "PER0",
+                "before": " ",
+                "after": ""
+              },
+              {
+                "index": 10,
+                "word": ".",
+                "originalText": ".",
+                "lemma": ".",
+                "characterOffsetBegin": 365,
+                "characterOffsetEnd": 366,
+                "pos": ".",
+                "ner": "O",
+                "speaker": "PER0",
+                "before": "",
+                "after": "\n"
+              }
+            ]
+          },
+          {
+            "index": 4,
+            "parse": "(ROOT\n  (S\n    (VP (VB Get)\n      (NP (JJ digital) (NN access)))))",
+            "basicDependencies": [
+              {
+                "dep": "ROOT",
+                "governor": 0,
+                "governorGloss": "ROOT",
+                "dependent": 1,
+                "dependentGloss": "Get"
+              },
+              {
+                "dep": "amod",
+                "governor": 3,
+                "governorGloss": "access",
+                "dependent": 2,
+                "dependentGloss": "digital"
+              },
+              {
+                "dep": "dobj",
+                "governor": 1,
+                "governorGloss": "Get",
+                "dependent": 3,
+                "dependentGloss": "access"
+              }
+            ],
+            "enhancedDependencies": [
+              {
+                "dep": "ROOT",
+                "governor": 0,
+                "governorGloss": "ROOT",
+                "dependent": 1,
+                "dependentGloss": "Get"
+              },
+              {
+                "dep": "amod",
+                "governor": 3,
+                "governorGloss": "access",
+                "dependent": 2,
+                "dependentGloss": "digital"
+              },
+              {
+                "dep": "dobj",
+                "governor": 1,
+                "governorGloss": "Get",
+                "dependent": 3,
+                "dependentGloss": "access"
+              }
+            ],
+            "enhancedPlusPlusDependencies": [
+              {
+                "dep": "ROOT",
+                "governor": 0,
+                "governorGloss": "ROOT",
+                "dependent": 1,
+                "dependentGloss": "Get"
+              },
+              {
+                "dep": "amod",
+                "governor": 3,
+                "governorGloss": "access",
+                "dependent": 2,
+                "dependentGloss": "digital"
+              },
+              {
+                "dep": "dobj",
+                "governor": 1,
+                "governorGloss": "Get",
+                "dependent": 3,
+                "dependentGloss": "access"
+              }
+            ],
+            "tokens": [
+              {
+                "index": 1,
+                "word": "Get",
+                "originalText": "Get",
+                "lemma": "get",
+                "characterOffsetBegin": 367,
+                "characterOffsetEnd": 370,
+                "pos": "VB",
+                "ner": "O",
+                "speaker": "PER0",
+                "before": "\n",
+                "after": " "
+              },
+              {
+                "index": 2,
+                "word": "digital",
+                "originalText": "digital",
+                "lemma": "digital",
+                "characterOffsetBegin": 371,
+                "characterOffsetEnd": 378,
+                "pos": "JJ",
+                "ner": "O",
+                "speaker": "PER0",
+                "before": " ",
+                "after": " "
+              },
+              {
+                "index": 3,
+                "word": "access",
+                "originalText": "access",
+                "lemma": "access",
+                "characterOffsetBegin": 379,
+                "characterOffsetEnd": 385,
+                "pos": "NN",
+                "ner": "O",
+                "speaker": "PER0",
+                "before": " ",
+                "after": ""
+              }
+            ]
+          }
+        ],
+        "corefs": {
+          "13": [
+            {
+              "id": 2,
+              "text": "129th Rose Parade",
+              "type": "PROPER",
+              "number": "SINGULAR",
+              "gender": "NEUTRAL",
+              "animacy": "INANIMATE",
+              "startIndex": 9,
+              "endIndex": 12,
+              "headIndex": 11,
+              "sentNum": 1,
+              "position": [
+                1,
+                3
+              ],
+              "isRepresentativeMention": false
+            },
+            {
+              "id": 13,
+              "text": "the 129th Rose Parade",
+              "type": "PROPER",
+              "number": "SINGULAR",
+              "gender": "NEUTRAL",
+              "animacy": "INANIMATE",
+              "startIndex": 31,
+              "endIndex": 35,
+              "headIndex": 34,
+              "sentNum": 2,
+              "position": [
+                2,
+                11
+              ],
+              "isRepresentativeMention": true
+            }
+          ]
+        }
+      },
+      "aida": {
+        "originalFileName": null,
+        "originalText": "Floats, marching bands hit the street for 129th Rose Parade. PASADENA, Calif. (AP) \u2014 With a nod of thanks to military veterans, marching bands and floral floats took to the streets under sunny California skies as the 129th Rose Parade. Sorry, this zipcode is not in our deliverable area for this subscription service.\nRe-enter zip code or sign up for digital access.\nGet digital access",
+        "overallTime": "5304",
+        "allEntities": [
+          "YAGO:California",
+          "YAGO:Pasadena\\u002c_California"
+        ],
+        "entityMetadata": {
+          "AIDA:--OOKBE--": {},
+          "YAGO:California": {
+            "knowledgebase": "YAGO",
+            "depictionurl": "http://upload.wikimedia.org/wikipedia/commons/0/01/Flag_of_California.svg",
+            "depictionthumbnailurl": "http://upload.wikimedia.org/wikipedia/commons/thumbFlag_of_California.svg/200px-Flag_of_California.svg",
+            "importance": 4.7353536208881466e-06,
+            "entityId": "California",
+            "type": [
+              "YAGO_yagoGeoEntity",
+              "YAGO_wordnet_district_108552138",
+              "YAGO_yagoPermanentlyLocatedEntity",
+              "YAGO_wordnet_physical_entity_100001930",
+              "YAGO_yagoLegalActorGeo",
+              "YAGO_wikicategory_States_and_territories_established_in_1850",
+              "YAGO_wordnet_entity_100001740",
+              "YAGO_wordnet_object_100002684",
+              "YAGO_wordnet_state_108654360",
+              "YAGO_wordnet_location_100027167",
+              "YAGO_wikicategory_locations",
+              "YAGO_wordnet_administrative_district_108491826",
+              "YAGO_wordnet_region_108630985",
+              "YAGO_wikicategory_States_of_the_United_States"
+            ],
+            "readableRepr": "California",
+            "url": "http://en.wikipedia.org/wiki/California"
+          },
+          "YAGO:Pasadena\\u002c_California": {
+            "knowledgebase": "YAGO",
+            "depictionurl": "http://upload.wikimedia.org/wikipedia/commons/1/19/Pasadena_City_Hall_2.jpg",
+            "depictionthumbnailurl": "http://upload.wikimedia.org/wikipedia/commons/thumbPasadena_City_Hall_2.jpg/200px-Pasadena_City_Hall_2.jpg",
+            "importance": 0.0002721435580945717,
+            "entityId": "Pasadena\\u002c_California",
+            "type": [
+              "YAGO_wordnet_district_108552138",
+              "YAGO_yagoPermanentlyLocatedEntity",
+              "YAGO_wikicategory_Neighborhoods_in_Pasadena\\u002c_California",
+              "YAGO_yagoLegalActorGeo",
+              "YAGO_wordnet_urban_area_108675967",
+              "YAGO_wikicategory_Populated_places_established_in_1874",
+              "YAGO_wordnet_municipality_108626283",
+              "YAGO_wikicategory_Cities_in_Los_Angeles_County\\u002c_California",
+              "YAGO_wikicategory_Cities_in_Southern_California",
+              "YAGO_wordnet_region_108630985",
+              "YAGO_yagoGeoEntity",
+              "YAGO_wordnet_physical_entity_100001930",
+              "YAGO_wordnet_section_108648322",
+              "YAGO_wordnet_site_108651247",
+              "YAGO_wordnet_entity_100001740",
+              "YAGO_wordnet_object_100002684",
+              "YAGO_wordnet_area_108497294",
+              "YAGO_wordnet_city_108524735",
+              "YAGO_wordnet_tract_108673395",
+              "YAGO_wordnet_geographical_area_108574314",
+              "YAGO_wikicategory_Incorporated_cities_and_towns_in_California",
+              "YAGO_wordnet_location_100027167",
+              "YAGO_wordnet_administrative_district_108491826",
+              "YAGO_wordnet_vicinity_108641113"
+            ],
+            "readableRepr": "Pasadena, California",
+            "url": "http://en.wikipedia.org/wiki/Pasadena%2C%20California"
+          }
+        },
+        "annotatedText": "Floats, marching bands hit the street for 129th Rose Parade. [[YAGO:Pasadena\\u002c_California|PASADENA]], [[YAGO:California|Calif.]] ([[AIDA:--OOKBE--|AP]]) \u2014 With a nod of thanks to military veterans, marching bands and floral floats took to the streets under sunny [[YAGO:California|California]] skies as the 129th Rose Parade. Sorry, this zipcode is not in our deliverable area for this subscription service.\nRe-enter zip code or sign up for digital access.\nGet digital access",
+        "docID": "1680662495_1516120482054",
+        "mentions": [
+          {
+            "allEntities": [
+              {
+                "kbIdentifier": "YAGO:Pasadena\\u002c_California",
+                "disambiguationScore": "0.49927"
+              }
+            ],
+            "offset": 61,
+            "name": "PASADENA",
+            "length": 8,
+            "bestEntity": {
+              "kbIdentifier": "YAGO:Pasadena\\u002c_California",
+              "disambiguationScore": "0.49927"
+            }
+          },
+          {
+            "allEntities": [
+              {
+                "kbIdentifier": "YAGO:California",
+                "disambiguationScore": "0.97011"
+              }
+            ],
+            "offset": 71,
+            "name": "Calif.",
+            "length": 6,
+            "bestEntity": {
+              "kbIdentifier": "YAGO:California",
+              "disambiguationScore": "0.97011"
+            }
+          },
+          {
+            "allEntities": [],
+            "offset": 79,
+            "name": "AP",
+            "length": 2
+          },
+          {
+            "allEntities": [
+              {
+                "kbIdentifier": "YAGO:California",
+                "disambiguationScore": "0.41886"
+              }
+            ],
+            "offset": 193,
+            "name": "California",
+            "length": 10,
+            "bestEntity": {
+              "kbIdentifier": "YAGO:California",
+              "disambiguationScore": "0.41886"
+            }
+          }
+        ],
+        "formatVersion": "2.3",
+        "allTypes": [
+          "YAGO_wordnet_section_108648322",
+          "YAGO_wordnet_vicinity_108641113",
+          "YAGO_wordnet_region_108630985",
+          "YAGO_wordnet_geographical_area_108574314",
+          "YAGO_wikicategory_States_of_the_United_States",
+          "YAGO_yagoLegalActorGeo",
+          "YAGO_wordnet_tract_108673395",
+          "YAGO_wordnet_city_108524735",
+          "YAGO_wordnet_state_108654360",
+          "YAGO_wikicategory_locations",
+          "YAGO_wordnet_physical_entity_100001930",
+          "YAGO_wordnet_site_108651247",
+          "YAGO_wordnet_district_108552138",
+          "YAGO_wordnet_entity_100001740",
+          "YAGO_wordnet_administrative_district_108491826",
+          "YAGO_wordnet_urban_area_108675967",
+          "YAGO_wordnet_area_108497294",
+          "YAGO_wordnet_municipality_108626283",
+          "YAGO_wikicategory_Cities_in_Los_Angeles_County\\u002c_California",
+          "YAGO_yagoGeoEntity",
+          "YAGO_wikicategory_Neighborhoods_in_Pasadena\\u002c_California",
+          "YAGO_wordnet_location_100027167",
+          "YAGO_wikicategory_Cities_in_Southern_California",
+          "YAGO_wikicategory_Incorporated_cities_and_towns_in_California",
+          "YAGO_wikicategory_Populated_places_established_in_1874",
+          "YAGO_yagoPermanentlyLocatedEntity",
+          "YAGO_wordnet_object_100002684",
+          "YAGO_wikicategory_States_and_territories_established_in_1850"
+        ]
+      }
+    }
   }
 }

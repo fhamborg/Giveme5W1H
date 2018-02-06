@@ -153,6 +153,43 @@ class Event(Enum):
     astronauts_identify_unknown_microbes_in_space_for_first_time = auto()
 
     #
+    # Second Crawl
+    #
+
+    # Science
+    First_Falcon_Heavy_launch = auto()
+    fossil_sheds_light_on_origins_of_spiders = auto()
+    first_planets_outside_the_Milky_Way = auto()
+
+
+    # entertainment
+    Top_Female__Recording_Academy = auto()
+    The_New_Infinity_War_Trailer = auto()
+    Quentin_Tarantino_Uma_Thurman_car_crash = auto()
+    Justin_Timberlake_halftime_show = auto()
+    Sarah_Silverman_and_Michael_Sheen_Break_Up = auto()
+
+    # technology
+    Apple_removed_Telegram = auto()
+    Google_enables_Pixel_Visual_Core = auto()
+    former_Facebook_and_Apple_employees = auto()
+    Intel_smart_glass = auto()
+    PS4_System_Update_5_50 = auto()
+    Broadcom_Raises_Its_Qualcomm_Offer_to_121 = auto()
+    Bitcoin_drops = auto()
+
+
+
+
+
+
+
+
+
+
+
+
+    #
     # Old
     #
     ## misc
@@ -755,6 +792,149 @@ add_article(Category.world, Topic.legancy, Event.north_Korea_hokkaido_missile, [
     'http://africa.chinadaily.com.cn/world/2017-09/15/content_32041310.htm',
     'http://www.chinadaily.com.cn/world/2017-09/15/content_32021877.htm'
 ])
+
+
+
+#
+# new
+#
+
+add_article(Category.entertainment, Topic.unspecific, Event.Top_Female__Recording_Academy, [
+   'https://www.rollingstone.com/music/news/top-female-music-execs-academy-woefully-out-of-touch-w516375',
+    'http://variety.com/2018/biz/news/female-execs-from-universal-warner-sony-issue-letter-slamming-recording-academy-1202687485/',
+    'http://ew.com/music/2018/02/05/grammys-woefully-out-of-touch-female-music-execs-letter/',
+    'https://www.nytimes.com/2018/02/05/arts/music/neil-portnow-recording-academy-women-letter.html',
+    'http://www.latimes.com/entertainment/la-et-entertainment-news-updates-2018-female-music-execs-protest-gender-bias-1517873932-htmlstory.html'
+])
+
+add_article(Category.entertainment, Topic.unspecific, Event.The_New_Infinity_War_Trailer, [
+    'http://variety.com/2018/film/news/avengers-infinity-war-super-bowl-52-1202682183/',
+    'http://www.businessinsider.com/avengers-infinity-war-super-bowl-trailer-2018-2?IR=T',
+    'https://www.nytimes.com/2017/11/29/movies/avengers-infinity-war-trailer-robert-downey-jr-chadwick-boseman.html',
+    'http://www.dailymail.co.uk/tvshowbiz/article-5351817/Avengers-Infinity-War-Super-Bowl-trailer.html'
+
+])
+add_article(Category.entertainment, Topic.unspecific, Event.Quentin_Tarantino_Uma_Thurman_car_crash, [
+    'http://www.indiewire.com/2018/02/quentin-tarantino-responds-uma-thurman-car-crash-abuse-kill-bill-1201925124/',
+    'http://abcnews.go.com/GMA/Culture/quentin-tarantino-sounds-off-uma-thurmans-kill-bill/story?id=52871322',
+    'http://www.bbc.com/news/entertainment-arts-42958525',
+    'https://www.nytimes.com/2018/02/03/opinion/sunday/this-is-why-uma-thurman-is-angry.html',
+    'http://deadline.com/2018/02/quentin-tarantino-uma-thurman-harvey-weinstein-kill-bill-car-crash-new-york-times-1202278988/',
+    'http://edition.cnn.com/2018/02/03/entertainment/uma-thurman-harvey-weinstein/index.html',
+    'https://www.washingtonpost.com/national/uma-thurman-levels-accusations-against-weinstein-tarantino/2018/02/03/eb678d32-090e-11e8-aa61-f3391373867e_story.html?utm_term=.3cf88126a82d'
+])
+add_article(Category.entertainment, Topic.unspecific, Event.Justin_Timberlake_halftime_show, [
+    'https://www.usatoday.com/story/life/entertainthis/2018/02/05/compared-prince-justin-timberlakes-halftime-show-hilariously-bad/307243002/',
+    'https://www.washingtonpost.com/news/arts-and-entertainment/wp/2018/02/04/this-is-how-justin-timberlake-lost-the-super-bowl/?utm_term=.a60d786e8c79',
+    'https://www.newyorker.com/culture/culture-desk/justin-timberlakes-super-bowl-halftime-show-reviewed',
+    'https://edition.cnn.com/2018/02/04/entertainment/gallery/super-bowl-2018-halftime-show/index.html',
+    'https://www.theguardian.com/culture/2018/feb/04/justin-timberlake-super-bowl-halftime-show-review'
+])
+add_article(Category.entertainment, Topic.unspecific, Event.Sarah_Silverman_and_Michael_Sheen_Break_Up, [
+    'http://www.eonline.com/news/911725/sarah-silverman-and-michael-sheen-break-up',
+    'https://www.usatoday.com/story/life/people/2018/02/06/sarah-silverman-michael-sheen-split-after-four-years/310195002/',
+    'https://edition.cnn.com/2018/02/06/entertainment/sarah-silverman-michael-sheen-split/index.html',
+    'https://www.cbsnews.com/news/sarah-silverman-michael-sheen-call-it-quits/',
+    'https://www.huffingtonpost.com/entry/sarah-silverman-michael-sheen-split_us_5a78cf80e4b0164659c72da3',
+    'http://www.dailymail.co.uk/tvshowbiz/article-5355017/Sarah-Silverman-Michael-Sheen-split-four-years.html',
+    'https://www.thesun.co.uk/tvandshowbiz/5508158/michael-sheen-and-sarah-silverman-split-four-years/',
+    'http://www.nydailynews.com/entertainment/gossip/sarah-silverman-michael-sheen-split-years-article-1.3800922'
+])
+
+
+add_article(Category.science, Topic.unspecific, Event.First_Falcon_Heavy_launch, [
+    'https://spaceflightnow.com/2018/02/05/first-falcon-heavy-launch-blends-spacex-style-raw-power-and-the-unknown/',
+    'https://www.nytimes.com/2018/02/06/science/falcon-heavy-spacex-launch.html',
+    'https://www.npr.org/sections/thetwo-way/2018/02/05/582464054/spacex-set-to-launch-worlds-most-powerful-rocket',
+    'http://www.dailymail.co.uk/sciencetech/article-5238433/Elon-Musk-SpaceX-launch-Falcon-Heavy-rocket-month.html',
+    'https://www.rt.com/usa/417934-spacex-falcon-heavy-rocket/',
+    'https://www.washingtonpost.com/national/energy-environment/spacex-bucks-launch-tradition-in-1st-flight-of-new-rocket/2018/02/05/30a52ade-0ab4-11e8-998c-96deb18cca19_story.html?utm_term=.0feab7a60538',
+    'https://www.washingtonpost.com/national/health-science/spacexs-hot-new-monster-rocket-ready-for-first-test-flight/2018/02/04/0e7f682c-09cc-11e8-998c-96deb18cca19_story.html?utm_term=.94124d7a5e6b'
+])
+
+add_article(Category.science, Topic.unspecific, Event.fossil_sheds_light_on_origins_of_spiders, [
+
+])
+
+add_article(Category.science, Topic.unspecific, Event.first_planets_outside_the_Milky_Way, [
+    'https://www.washingtonpost.com/news/speaking-of-science/wp/2018/02/05/scientists-discover-the-first-planets-outside-the-milky-way/?utm_term=.2d11f789bb28',
+    'http://www.dailymail.co.uk/sciencetech/article-5346873/Scientists-spot-planets-galaxies-Milky-Way.html',
+    'https://www.rt.com/usa/417984-exoplanets-chandra-x-ray/',
+    'http://www.independent.co.uk/news/science/planets-far-beyond-galaxy-discovered-first-time-astrophysicists-nasa-university-oklahoma-a8193531.html',
+    'https://www.nbcnews.com/mach/science/first-planets-beyond-milky-way-may-have-been-discovered-ncna844861'
+])
+
+
+add_article(Category.technology, Topic.unspecific, Event.Apple_removed_Telegram, [
+   # 'https://www.theverge.com/2018/2/5/16974710/apple-telegram-ios-app-store-removal-explanation-child-pornography-distribution',
+    'https://www.theinquirer.net/inquirer/news/3025811/apple-removed-telegram-from-app-store-due-to-child-pornographyc',
+    'http://www.telegraph.co.uk/technology/2018/02/01/apple-removes-encrypted-messaging-app-telegram-app-store/',
+    'https://www.usatoday.com/story/tech/news/2018/02/01/apple-removes-secretive-telegram-messaging-app-app-store/1086302001/',
+    'https://www.thetimes.co.uk/article/apple-removes-telegram-app-accused-of-being-haven-for-terrorists-shv735jvt',
+    'http://www.bbc.com/news/technology-42904198'
+])
+add_article(Category.technology, Topic.unspecific, Event.Google_enables_Pixel_Visual_Core, [
+    'https://gadgetstouse.com/news/google-pixel-visual-core-pixel-2/96002',
+    'https://www.theverge.com/circuitbreaker/2018/2/5/16973286/google-pixel-visual-core-pixel-2-app',
+    'https://www.cnet.com/news/google-pixel-2-photos-get-ai-better-digital-zoom/',
+    'https://www.xda-developers.com/google-pixel-visual-core-instagram-snapchat-whatsapp/',
+    'https://www.wired.com/story/google-pixel-visual-core/',
+    'https://www.blog.google/products/pixel/use-pixel-2-better-photos-instagram-whatsapp-and-snapchat/'
+
+])
+add_article(Category.technology, Topic.unspecific, Event.former_Facebook_and_Apple_employees, [
+    'http://uk.pcmag.com/asana/93196/news/facebook-google-vets-form-coalition-to-fight-tech-addiction',
+    'https://www.usatoday.com/story/tech/2018/02/05/just-say-no-addicting-kids-technology-former-facebook-google-employees-investors-urge/307529002/',
+    'http://www.businessinsider.de/ex-facebook-and-google-employees-launch-anti-tech-addiction-campaign-2018-2?r=US&IR=T',
+    'https://www.nytimes.com/2018/02/04/technology/early-facebook-google-employees-fight-tech.html',
+    'https://www.cnbc.com/2018/02/04/early-facebook-and-google-employees-form-coalition-to-fight-what-they-built.html',
+    'https://www.theguardian.com/technology/2018/feb/05/tech-addiction-former-facebook-google-employees-campaign',
+    'http://www.bbc.com/news/technology-42959848',
+    'http://www.telegraph.co.uk/news/2018/02/05/ex-google-facebook-staff-warn-social-media-dangers/',
+    'https://www.thetimes.co.uk/article/social-media-pioneers-reject-their-creation-x7mp2mjsw'
+])
+add_article(Category.technology, Topic.unspecific, Event.Intel_smart_glass, [
+    'https://techcrunch.com/2018/02/05/intel-wants-smart-glasses-to-be-a-thing/',
+    'https://www.thetimes.co.uk/article/intels-subtle-smart-glasses-avoid-google-glass-blind-spot-w368svbph',
+    'http://bgr.com/2018/02/05/intel-vaunt-smart-glasses-release-date-features/',
+    'https://www.theinquirer.net/inquirer/news/3026063/intels-vaunt-smart-glasses-are-a-long-way-from-google-glass',
+    #'https://www.theverge.com/2018/2/5/16966530/intel-vaunt-smart-glasses-announced-ar-video',
+    'https://www.engadget.com/2018/02/06/the-morning-after-intel-attempts-smartglasses/',
+    'https://www.cnet.com/news/intel-vaunt-smart-glasses-prototype/'
+])
+
+
+add_article(Category.technology, Topic.unspecific, Event.PS4_System_Update_5_50, [
+    'https://www.thesun.co.uk/tech/5350839/ps4-update-beta-sign-up/',
+    'http://www.playstationlifestyle.net/2018/02/06/ps4-system-update-5-50-features-fully-detailed/',
+    'https://www.gamespot.com/articles/ps4-550-updates-features-detailed-heres-what-it-do/1100-6456595/',
+    'https://blog.eu.playstation.com/2018/02/06/ps4-system-software-5-50-out-today-key-features-revealed/',
+    'https://www.psu.com/news/ps4-5-50-update-new-features/',
+    'https://www.dailystar.co.uk/tech/gaming/679642/PS4-Update-5-50-Sony-release-new-system-upgrade-here-s-what-it-does'
+])
+
+add_article(Category.technology, Topic.unspecific, Event.Broadcom_Raises_Its_Qualcomm_Offer_to_121, [
+    'https://www.nytimes.com/2018/02/05/business/dealbook/broadcom-qualcomm-deal.html?partner=rss&emc=rss',
+    'http://www.warringtonguardian.co.uk/news/national/15920573.Broadcom_raises_Qualcomm_bid_to_more_than_121_billion_US_dollars/',
+    'https://www.usatoday.com/story/tech/news/2018/02/05/broadcom-increases-qualcomm-offer-more-than-121-billion/306382002/',
+    'https://www.bloomberg.com/news/articles/2018-02-05/broadcom-is-said-planning-to-boost-qualcomm-bid-to-120-billion',
+    'https://www.wsj.com/articles/broadcom-raises-offer-for-qualcomm-to-over-121-billion-1517833668',
+    'http://www.post-gazette.com/business/tech-news/2018/02/05/Broadcom-raises-its-bid-for-Qualcomm-offering-121-billion/stories/201802050205',
+    'https://uk.reuters.com/article/us-qualcomm-m-a-broadcom/broadcom-unveils-121-billion-best-and-final-offer-for-qualcomm-idUKKBN1FP1KX',
+    'https://www.japantimes.co.jp/?post_type=news&p=1352777',
+])
+add_article(Category.technology, Topic.unspecific, Event.Bitcoin_drops, [
+    'https://www.nytimes.com/2018/02/05/technology/virtual-currency-regulation.html',
+    'https://www.express.co.uk/finance/city/911809/Bitcoin-price-value-worth-latest-today-buy-USD-XRP-Ripple-cryptocurrency-Seoul-trade-video',
+    'https://www.theguardian.com/technology/2018/feb/06/bitcoin-price-crackdown-bis-cryptocurrency',
+    'https://www.coindesk.com/bitcoin-slumps-to-12-week-low-below-6k/',
+    'https://www.express.co.uk/finance/city/915014/Bitcoin-price-live-latest-fall-news-ripple-ethereum-cash-dow-buttcoin',
+    'http://www.businessinsider.de/bitcoin-is-getting-smashed-2018-2?r=US&IR=T',
+    'http://www.forexlive.com/cryptocurrency/!/bitcoin-touches-usd-6000-as-the-tumble-continues-20180206',
+    'http://bgr.com/2018/02/06/bitcoin-price-today-6000-dow/',
+    'https://themerkle.com/bitcoin-price-records-small-bounce-after-dropping-to-6000/'
+])
+
 
 if __name__ == '__main__':
     # crawling itself

@@ -73,9 +73,7 @@ class Writer:
         })
 
         if Config.get()['fiveWoneH_enhancer_full']:
-            output.setdefault('fiveWoneH_enhancer', {
-                'process_errors': document.get_enhancements()
-            })
+            output.setdefault('fiveWoneH_enhancer', document.get_enhancements() )
 
         # Extract answers
         answers = document.get_answers()

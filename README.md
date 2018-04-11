@@ -1,5 +1,7 @@
 # Giveme5W
 
+<img align="right" height="128px" src="https://github.com/fhamborg/Giveme5W/raw/master/misc/logo-256.png" /> 
+
 Giveme5W(1H) is a state of the art open-source 5W Question Answering system for news articles. It can either be used through a simple RESTapi or directly included in existing Python projects. Depending on the configuration Giveme5W parses each document for the answers to the following  questions:
 
 * **Who** is involved?

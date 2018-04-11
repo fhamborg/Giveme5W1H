@@ -284,4 +284,6 @@ Config.get()['Giveme5W-runtime-resources'] = './runtime-resources'
 > Unfortunately there is a bug in PyCharm at the time of writing: if you are viewing multiple project at once, you have to add an additional /../ to the path
 
 # License
-The project is licensed under the Apache License 2.0. Make sure that you use Giveme5W in compliance with applicable law. Copyright 2016 The Giveme5W team
+The project is licensed under the Apache License 2.0. Make sure that you use Giveme5W in compliance with applicable law. The Giveme5W logo is courtesy of [Mario Hamborg](https://mario.hamborg.eu/). 
+
+Copyright 2016 The Giveme5W team

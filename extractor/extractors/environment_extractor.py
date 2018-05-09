@@ -8,7 +8,7 @@ from parsedatetime import parsedatetime as pdt
 from extractor.candidate import Candidate
 from extractor.extractors.abs_extractor import AbsExtractor
 from extractor.tools.timex import Timex
-from tools.cache_manager import CacheManager
+from extractor.tools.cache_manager import CacheManager
 
 
 class EnvironmentExtractor(AbsExtractor):

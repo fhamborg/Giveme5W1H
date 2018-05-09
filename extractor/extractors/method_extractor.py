@@ -1,7 +1,7 @@
 import enum
 from enum import Enum
 
-from document import Document
+from extractor.document import Document
 from extractor.candidate import Candidate
 from extractor.extractors.abs_extractor import AbsExtractor
 

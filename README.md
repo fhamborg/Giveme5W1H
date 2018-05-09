@@ -56,6 +56,16 @@ python3 -m examples.extracting.server
 
 > Its recommended to use a proper IDE(e.g. PyCharm) if you want to use Enhancer,
   otherwise you have to add the projects to your environment
+### PIP
+There is a pip package just run
+```batch
+pip install giveme5w1h
+```
+
+you can start afterwards the server with giveme5w1h.
+> expects a CoreNLP server running under: http://localhost:9090/
+
+> webserver is also bound to your external IP http://localhost:9099/!
 
 ## Configuration
 Configurations are optional.
@@ -237,10 +247,10 @@ Delete all files in "/cache", if you want to precess them again, see examples in
 > if you add or remove enhancer, you must delete all files in the cache directory (if cache is enabled (set_preprocessed_path))
 
 ## REST-Service
-Its also possible to use giveme5W as rest service.
+Its also possible to use giveme5W as rest service, there is also a very simple html ui.
 
 ```
-$ python extractor/examples/extracting/simple_api.py
+$ python extractor/examples/extracting/server.py
 ```
 > Check the code for more details, it is well documented
 

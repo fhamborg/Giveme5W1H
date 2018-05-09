@@ -1,5 +1,6 @@
 import logging
 import socket
+import os
 
 from flask import Flask, request, jsonify
 from jinja2 import Environment, PackageLoader, select_autoescape
@@ -46,8 +47,9 @@ env = Environment(
     autoescape=select_autoescape(['html', 'xml'])
 )
 
+template_index = env.from_string(open(os.path.join(os.path.dirname(__file__), 'index.html')).read())
 # Render landing page
-template_index = env.get_template('index.html')
+#template_index = env.get_template('index.html')
 
 # Giveme5W setup
 extractor = FiveWExtractor()
@@ -106,6 +108,12 @@ def extract():
 #        return jsonify(answer)
 
 
+def main():
+    log.info("starting server on port %i", port)
+    app.run(host, port, debug)
+
+    log.info("server has stopped")
+
 if __name__ == "__main__":
     # setup config
     # Config.get()["candidate"]["nlpIndexSentence"] = False
@@ -115,7 +123,4 @@ if __name__ == "__main__":
     # Config.get()["onlyTopCandidate"] = True
 
     # startup
-    log.info("starting server on port %i", port)
-    app.run(host, port, debug)
-
-    log.info("server has stopped")
+    main()

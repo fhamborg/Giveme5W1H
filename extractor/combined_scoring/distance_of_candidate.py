@@ -1,7 +1,7 @@
 from typing import List
 
-from combined_scoring.abs_combined_scoring import AbsCombinedScoring
-from document import Document
+from extractor.combined_scoring.abs_combined_scoring import AbsCombinedScoring
+from extractor.document import Document
 
 
 class DistanceOfCandidate(AbsCombinedScoring):

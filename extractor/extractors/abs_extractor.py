@@ -6,7 +6,7 @@ from itertools import product
 import nltk
 from nltk.corpus import wordnet
 
-from document import Document
+from extractor.document import Document
 from extractor.candidate import Candidate
 
 

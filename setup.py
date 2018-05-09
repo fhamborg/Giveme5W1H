@@ -1,9 +1,9 @@
 from setuptools import setup, find_packages
 
-setup(name='giveme5w',
+setup(name='giveme5w1h',
       version='1.0.0',
       description="Extraction of the journalistic five W and one H questions (5W1H) from news articles.",
-      long_description="""Giveme5W is an open source, easy-to-use system to that extracts phrases answering the journalist 5W1H questions to describe an article's main event: who did what, when, where, why, and how?""",
+      long_description="""Giveme5W1H is an open source, easy-to-use system to that extracts phrases answering the journalist 5W1H questions to describe an article's main event: who did what, when, where, why, and how?""",
       classifiers=[
           'Development Status :: 4 - Beta',
           'Environment :: Console',
@@ -32,12 +32,23 @@ setup(name='giveme5w',
           'requests',
           'xmltodict',
           'nltk>=3.1.2',
-          'flask>=0.12',
+          'flask>=1.0.1',
           'editdistance>=0.3.1',
           'geopy>=1.11.0',
           'parsedatetime>=2.2',
           'pycorenlp>=0.3.0',
-          'python-dateutil>=2.6'
+          'python-dateutil>=2.6',
+          'python_dateutil',
+          'lxml',
+          'numpy',
+          'pandas',
+          'parsedatetime',
+          'plotly',
+          'pycorenlp',
+          'spacy',
+          'Twisted',
+          'typing',
+          'Unidecode'
       ],
       extras_require={
       }

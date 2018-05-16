@@ -295,6 +295,36 @@ Config.get()['Giveme5W-runtime-resources'] = './runtime-resources'
 
 > Unfortunately there is a bug in PyCharm at the time of writing: if you are viewing multiple project at once, you have to add an additional /../ to the path
 
+## How to cite
+If you are using Giveme5W1H, please cite our [paper](http://www.gipp.com/wp-content/papercite-data/pdf/hamborg2018a.pdf) ([ResearchGate](https://www.researchgate.net/publication/325176943_Extraction_of_Main_Event_Descriptors_from_News_Articles_by_Answering_the_Journalistic_Five_W_and_One_H_Questions)):
+```
+@InProceedings{Hamborg2018a,
+author    = {Hamborg, Felix and Breitinger, Corinna and Schubotz, Moritz and Lachnit, Soeren and Gipp, Bela},
+title     = {Extraction of Main Event Descriptors from News Articles by Answering the Journalistic Five W and One H Questions},
+booktitle = {Proceedings of the ACM/IEEE-CS Joint Conference on Digital Libraries (JCDL)},
+year      = {2018},
+month     = {Jun.},
+location  = {Fort Worth, USA},
+url       = {https://doi.org/10.1145/3197026.3203899},
+doi       = {10.1145/3197026.3203899}
+}
+```
+
+Giveme5W1H is based on the 5W extraction system [Giveme5W](https://www.gipp.com/wp-content/papercite-data/pdf/hamborg2018.pdf) ([ResearchGate](https://www.researchgate.net/publication/323582278_Giveme5W_Main_Event_Retrieval_from_News_Articles_by_Extraction_of_the_Five_Journalistic_W_Questions), [Mendeley](https://www.mendeley.com/research-papers/giveme5w-main-event-retrieval-news-articles-extraction-five-journalistic-w-questions/?utm_source=desktop&utm_medium=1.17.13&utm_campaign=open_catalog&userDocumentId=%7B6945b48b-a775-4b85-b09b-f321b316f6da%7D)), which can be cited as follows:
+```
+@InProceedings{Hamborg2018,
+  author    = {Hamborg, Felix and Lachnit, Soeren and Schubotz, Moritz and Hepp, Thomas and Gipp, Bela},
+  title     = {Giveme5W: Main Event Retrieval from News Articles by Extraction of the Five Journalistic W Questions},
+  booktitle = {Proceedings of the iConference 2018},
+  year      = {2018},
+  month     = {March},
+  location  = {Sheffield, UK},
+  url       = {https://doi.org/10.1007/978-3-319-78105-1_39},
+  doi       = {10.1007/978-3-319-78105-1_39}
+}
+```
+You can find more information on this and other news projects on our [website](https://felix.hamborg.eu/).
+
 ## Contribution and support
 Do you want to contribute? Great, we are always happy for any support on this project! Just send a pull request. By contributing to this project, you agree that your contributions will be licensed under the project's license (see below). If you have questions or issues while working on the code, e.g., when implementing a new feature that you would like to have added to Giveme5W, open an issue on GitHub and we'll be happy to help you. Please note that we usually do not have enough resources to implement features requested by users - instead we recommend to implement them yourself, and send a pull request. 
 

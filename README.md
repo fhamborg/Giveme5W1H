@@ -1,10 +1,10 @@
-# Giveme5W
+# Giveme5W1H
 
 <img align="right" height="128px" src="https://github.com/fhamborg/Giveme5W1H/raw/master/misc/logo-256.png" /> 
 
 [![PyPI version](https://badge.fury.io/py/giveme5w1h.svg)](https://badge.fury.io/py/giveme5w1h)
 
-Giveme5W(1H) is a state of the art open-source 5W Question Answering system for news articles. It can either be used through a simple RESTapi or directly included in existing Python projects. Depending on the configuration Giveme5W parses each document for the answers to the following  questions:
+Giveme5W1H is a state of the art open-source 5W1H extraction system for news articles. It can either be used through a simple RESTapi or directly included in existing Python projects. Depending on the configuration Giveme5W1H parses each document for the answers to the following  questions:
 
 * **Who** is involved?
 * **What** happened?
@@ -14,10 +14,10 @@ Giveme5W(1H) is a state of the art open-source 5W Question Answering system for 
 * **How** did it happen?
 
 ## Getting started
-Giveme5W requires Python 3.6 or later. 
+Giveme5W1H requires Python 3.6 or later. 
 
 ### Stanford CoreNLP Server
-Before you can use Giveme5W, you need to make sure that you have the Stanford CoreNLP Server runtimes.
+Before you can use Giveme5W1H, you need to make sure that you have the Stanford CoreNLP Server runtimes.
 
 If not, you will need to install CoreNLP. Below are the steps you need to perform.
 

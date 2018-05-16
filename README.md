@@ -1,8 +1,8 @@
 # Giveme5W
 
-<img align="right" height="128px" src="https://github.com/fhamborg/Giveme5W/raw/master/misc/logo-256.png" /> 
+<img align="right" height="128px" src="https://github.com/fhamborg/Giveme5W1H/raw/master/misc/logo-256.png" /> 
 
-[![PyPI version](https://badge.fury.io/py/giveme5w.svg)](https://badge.fury.io/py/giveme5w)
+[![PyPI version](https://badge.fury.io/py/giveme5w1h.svg)](https://badge.fury.io/py/giveme5w1h)
 
 Giveme5W(1H) is a state of the art open-source 5W Question Answering system for news articles. It can either be used through a simple RESTapi or directly included in existing Python projects. Depending on the configuration Giveme5W parses each document for the answers to the following  questions:
 

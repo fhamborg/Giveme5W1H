@@ -1,6 +1,6 @@
 # Giveme5W1H
- Giveme5W1H/misc/logo/logo-256.png 
-<img align="right" height="128px" src="https://raw.githubusercontent.com/fhamborg/Giveme5W1H/master/misc/logo-256.png" /> 
+
+<img align="right" height="128px" src="https://raw.githubusercontent.com/fhamborg/Giveme5W1H/master/misc/logo/logo-256.png" /> 
 
 [![PyPI version](https://badge.fury.io/py/giveme5w1h.svg)](https://badge.fury.io/py/giveme5w1h)
 

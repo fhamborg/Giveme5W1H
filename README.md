@@ -326,7 +326,7 @@ Giveme5W1H is based on the 5W extraction system [Giveme5W](https://www.gipp.com/
 You can find more information on this and other news projects on our [website](https://felix.hamborg.eu/).
 
 ## Contribution and support
-Do you want to contribute? Great, we are always happy for any support on this project! Just send a pull request. By contributing to this project, you agree that your contributions will be licensed under the project's license (see below). If you have questions or issues while working on the code, e.g., when implementing a new feature that you would like to have added to Giveme5W, open an issue on GitHub and we'll be happy to help you. Please note that we usually do not have enough resources to implement features requested by users - instead we recommend to implement them yourself, and send a pull request. 
+Do you want to contribute? Great, we are always happy for any support on this project! Just send a pull request. By contributing to this project, you agree that your contributions will be licensed under the project's license (see below). If you have questions or issues while working on the code, e.g., when implementing a new feature that you would like to have added to Giveme5W1H, open an issue on GitHub and we'll be happy to help you. Please note that we usually do not have enough resources to implement features requested by users - instead we recommend to implement them yourself, and send a pull request. 
 
 ## License
 Licensed under the Apache License, Version 2.0 (the "License"); you may not use Giveme5W1H except in compliance with the License. A copy of the License is included in the project, see the file [LICENSE.txt](LICENSE.txt).

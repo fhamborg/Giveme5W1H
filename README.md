@@ -6,6 +6,7 @@
 
 Giveme5W1H is an open source, state of the art system that extracts phrases answering the journalistic 5W1H questions to describe an article's main event, i.e., who did what, when, where, why, and how? You can access it either through a simple RESTful API from any programming language or use it as a Python 3 library.
 
+The figure below shows an excerpt of a news article with highlighted 5W1H phrases.
 <img src="https://raw.githubusercontent.com/fhamborg/Giveme5W1H/master/misc/example5w1h.png" /> 
 
 ## Getting started

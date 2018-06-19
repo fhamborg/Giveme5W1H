@@ -4,14 +4,9 @@
 
 [![PyPI version](https://badge.fury.io/py/giveme5w1h.svg)](https://badge.fury.io/py/giveme5w1h)
 
-Giveme5W1H is a state of the art open-source 5W1H extraction system for news articles. It can either be used through a simple RESTapi or directly included in existing Python projects. Depending on the configuration Giveme5W1H parses each document for the answers to the following  questions:
+Giveme5W1H is an open source, state of the art system that extracts phrases answering the journalistic 5W1H questions to describe an article's main event, i.e., who did what, when, where, why, and how? You can access it either through a simple RESTful API from any programming language or use it as a Python 3 library.
 
-* **Who** is involved?
-* **What** happened?
-* **Where** did it take place?
-* **When** did it happen?
-* **Why** did it happen?
-* **How** did it happen?
+<img src="https://raw.githubusercontent.com/fhamborg/Giveme5W1H/master/misc/example5w1h.png" /> 
 
 ## Getting started
 Giveme5W1H requires Python 3.6 or later. 

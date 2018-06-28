@@ -12,13 +12,19 @@ The figure below shows an excerpt of a news article with highlighted 5W1H phrase
 ## Getting started
 Giveme5W1H requires Python 3.6 or later. 
 
-### Stanford CoreNLP Server
-Before you can use Giveme5W1H, you need to make sure that you have the Stanford CoreNLP Server runtimes.
+### Installation
 
-If not, you will need to install CoreNLP. Below are the steps you need to perform.
+#### Stanford CoreNLP Server
+Giveme5W1H requires the Stanford Core Server to preprocess news articles. Giveme5W1H has been tested with the 2017-06-09 build. Other builds may work as well, but no support will be given,.
+
+Download the [server](http://nlp.stanford.edu/software/stanford-corenlp-full-2017-06-09.zip) and [models](http://nlp.stanford.edu/software/stanford-english-corenlp-2017-06-09-models.jar). Then, extract the server zip file, and move the models.jar into the server folder, like so:
+```
+unzip stanford-corenlp-full-2017-06-09.zip
+mv stanford-english-corenlp-2017-06-09-models.jar stanford-corenlp-full-2017-06-09/
+```
 
  * download the server itself from [here](https://stanfordnlp.github.io/CoreNLP/index.html#download)
-    * at the time of writing [this](http://nlp.stanford.edu/software/stanford-corenlp-full-2017-06-09.zip) was the newest version
+    * at the time of writing [this](http://nlp.stanford.edu/software/stanford-corenlp-full-2017-06-09.zip) was the latest version
  * download also the english language package on the same page
     * at the time of writing [this](http://nlp.stanford.edu/software/stanford-english-corenlp-2017-06-09-models.jar) was the newest version
  * extract the server zip,

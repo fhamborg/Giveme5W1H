@@ -13,17 +13,20 @@ The figure below shows an excerpt of a news article with highlighted 5W1H phrase
 Giveme5W1H requires Python 3.6 or later. 
 
 ### Installation
+tl;dr: In a hurry or don't care about the details? We've got your back! Just copy the code instructions into your terminal.
 
-Clone the repository
+#### Get Giveme5W1H
 ```
 git clone https://github.com/fhamborg/Giveme5W1H.git # or if you've setup SSH: git clone git@github.com:fhamborg/Giveme5W1H.git
 cd Giveme5W1H
 ```
-
-Install the dependencies
+And install its dependencies:
 ```
 pip3 install -r requirements.txt
 ```
+
+#### Stanford CoreNLP Server
+Giveme5W1H requires the Stanford Core Server to perform text preprocessing. Giveme5W1H has been tested with the 2017-06-09 build. Other builds may work as well, but no support will be given.
 
 Get the Stanford Core Server
 ```
@@ -39,41 +42,17 @@ Test if the Stanford Core Server setup was successful
 ```
 python3 -m examples.startup.environment
 ```
-This should print after a couple of seconds `[main] INFO CoreNLP - StanfordCoreNLPServer listening at /0:0:0:0:0:0:0:0:9000`. If it does not, press `Ctrl+C` to abort execution of the script, and have a look at the stacktrace shown.
+This should print after a couple of seconds `[main] INFO CoreNLP - StanfordCoreNLPServer listening at /0:0:0:0:0:0:0:0:9000`. If it does not, press `Ctrl+C` to abort the execution of the script, and have a look at the stacktrace shown.
 
-#### Stanford CoreNLP Server
-Giveme5W1H requires the Stanford Core Server to preprocess news articles. Giveme5W1H has been tested with the 2017-06-09 build. Other builds may work as well, but no support will be given.
+### Extract 5W1H Phrases
+You can access Giveme5W1H's functionality via a RESTful API, or as a module from within your own Python 3.6+ code. 
 
-Download the [server](http://nlp.stanford.edu/software/stanford-corenlp-full-2017-06-09.zip) and [models](http://nlp.stanford.edu/software/stanford-english-corenlp-2017-06-09-models.jar). Then, extract the server zip file, and move the models.jar into the server folder, like so:
-```
-unzip stanford-corenlp-full-2017-06-09.zip
-mv stanford-english-corenlp-2017-06-09-models.jar stanford-corenlp-full-2017-06-09/
+#### RESTful API
+
 ```
 
- * download the server itself from [here](https://stanfordnlp.github.io/CoreNLP/index.html#download)
-    * at the time of writing [this](http://nlp.stanford.edu/software/stanford-corenlp-full-2017-06-09.zip) was the latest version
- * download also the english language package on the same page
-    * at the time of writing [this](http://nlp.stanford.edu/software/stanford-english-corenlp-2017-06-09-models.jar) was the newest version
- * extract the server zip,
- * extract the language zip, copy it inside the server directory
- * copy it into [Giveme5W-runtime-resources](#startup---scripts---giveme5w-runtime-resources) next to your repository folder
-
-Start coreNLP by yourself (Windows, Linux, OSX)
-``` bash
- java -mx4g -cp "*" edu.stanford.nlp.pipeline.StanfordCoreNLPServer -port 9000 -timeout 15000
 ```
-or
-(this is optional, there is no need to use the startup scripts;
- this is only for a simple startup while developing etc.; Linux, OSX)
 
-```python
-python3 -m examples.startup.environment
-```
-> see also Startup - Scripts -> Giveme5W-runtime-resources
-
-For more information on the Stanford CoreNLP Server, please refer to their extensive [documentation](https://stanfordnlp.github.io/CoreNLP/corenlp-server.html).
-
-### Giveme5W
 Environment is now running. Start parsing news_please files
 ```python
 python3 -m examples.extracting.parse_documents

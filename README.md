@@ -14,15 +14,32 @@ Giveme5W1H requires Python 3.6 or later.
 
 ### Installation
 
+Clone the repository
 ```
 git clone https://github.com/fhamborg/Giveme5W1H.git # or if you've setup SSH: git clone git@github.com:fhamborg/Giveme5W1H.git
 cd Giveme5W1H
+```
+
+Install the dependencies
+```
+pip3 install -r requirements.txt
+```
+
+Get the Stanford Core Server
+```
 mkdir runtime-resources
 cd runtime-resources
 wget http://nlp.stanford.edu/software/stanford-corenlp-full-2017-06-09.zip && unzip stanford-corenlp-full-2017-06-09.zip && rm stanford-corenlp-full-2017-06-09.zip
 wget http://nlp.stanford.edu/software/stanford-english-corenlp-2017-06-09-models.jar
 mv stanford-english-corenlp-2017-06-09-models.jar stanford-corenlp-full-2017-06-09/
+cd ..
 ```
+
+Test if the Stanford Core Server setup was successful
+```
+python3 -m examples.startup.environment
+```
+This should print after a couple of seconds `[main] INFO CoreNLP - StanfordCoreNLPServer listening at /0:0:0:0:0:0:0:0:9000`. If it does not, press `Ctrl+C` to abort execution of the script, and have a look at the stacktrace shown.
 
 #### Stanford CoreNLP Server
 Giveme5W1H requires the Stanford Core Server to preprocess news articles. Giveme5W1H has been tested with the 2017-06-09 build. Other builds may work as well, but no support will be given.

@@ -4,7 +4,7 @@
 
 [![PyPI version](https://badge.fury.io/py/giveme5w1h.svg)](https://badge.fury.io/py/giveme5w1h)
 
-Giveme5W1H is an open source, state of the art system that extracts phrases answering the journalistic 5W1H questions to describe an article's main event, i.e., who did what, when, where, why, and how? You can access it either through a simple RESTful API from any programming language or use it as a Python 3 library.
+Giveme5W1H is an open source, state of the art system that extracts phrases answering the journalistic 5W1H questions describing a news article's main event, i.e., who did what, when, where, why, and how? You can access the system through a simple RESTful API from any programming language or use it as a Python 3 library.
 
 The figure below shows an excerpt of a news article with highlighted 5W1H phrases.
 <img src="https://raw.githubusercontent.com/fhamborg/Giveme5W1H/master/misc/example5w1h.png" /> 
@@ -15,7 +15,7 @@ Giveme5W1H requires Python 3.6 or later.
 ### Installation
 
 #### Stanford CoreNLP Server
-Giveme5W1H requires the Stanford Core Server to preprocess news articles. Giveme5W1H has been tested with the 2017-06-09 build. Other builds may work as well, but no support will be given,.
+Giveme5W1H requires the Stanford Core Server to preprocess news articles. Giveme5W1H has been tested with the 2017-06-09 build. Other builds may work as well, but no support will be given.
 
 Download the [server](http://nlp.stanford.edu/software/stanford-corenlp-full-2017-06-09.zip) and [models](http://nlp.stanford.edu/software/stanford-english-corenlp-2017-06-09-models.jar). Then, extract the server zip file, and move the models.jar into the server folder, like so:
 ```
@@ -296,6 +296,7 @@ Config.get()['Giveme5W-runtime-resources'] = './runtime-resources'
 ```
 
 > Unfortunately there is a bug in PyCharm at the time of writing: if you are viewing multiple project at once, you have to add an additional /../ to the path
+
 
 ## How to cite
 If you are using Giveme5W1H, please cite our [paper](http://www.gipp.com/wp-content/papercite-data/pdf/hamborg2018a.pdf) ([ResearchGate](https://www.researchgate.net/publication/325176943_Extraction_of_Main_Event_Descriptors_from_News_Articles_by_Answering_the_Journalistic_Five_W_and_One_H_Questions)):

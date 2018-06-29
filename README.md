@@ -13,7 +13,7 @@ The figure below shows an excerpt of a news article with highlighted 5W1H phrase
 Giveme5W1H requires Python 3.6 or later. 
 
 ### Installation
-tl;dr: In a hurry or don't care about the details? We've got your back! Just copy the code instructions into your terminal.
+We are currently working to create a PyPI package so that you can install Giveme5W1H easily using PIP. Until then, simply follow the installation instructions below (tested on Linux and MacOS).
 
 #### Get Giveme5W1H
 ```

@@ -1,56 +1,36 @@
-# Giveme5W1H
 
-<img align="right" height="128px" src="https://raw.githubusercontent.com/fhamborg/Giveme5W1H/master/misc/logo/logo-256.png" /> 
 
-[![PyPI version](https://badge.fury.io/py/giveme5w1h.svg)](https://badge.fury.io/py/giveme5w1h)
 
-Giveme5W1H is an open source, state of the art system that extracts phrases answering the journalistic 5W1H questions describing a news article's main event, i.e., who did what, when, where, why, and how? You can access the system through a simple RESTful API from any programming language or use it as a Python 3 library.
-
-The figure below shows an excerpt of a news article with highlighted 5W1H phrases.
-<img src="https://raw.githubusercontent.com/fhamborg/Giveme5W1H/master/misc/example5w1h.png" /> 
-
-## Getting started
-Giveme5W1H requires Python 3.6 or later. 
-
-### Installation
-We are currently working to create a PyPI package so that you can install Giveme5W1H easily using PIP. Until then, simply follow the installation instructions below (tested on Linux and MacOS).
-
-#### Get Giveme5W1H
+Download the [server](http://nlp.stanford.edu/software/stanford-corenlp-full-2017-06-09.zip) and [models](http://nlp.stanford.edu/software/stanford-english-corenlp-2017-06-09-models.jar). Then, extract the server zip file, and move the models.jar into the server folder, like so:
 ```
-git clone https://github.com/fhamborg/Giveme5W1H.git # or if you've setup SSH: git clone git@github.com:fhamborg/Giveme5W1H.git
-cd Giveme5W1H
-```
-And install its dependencies:
-```
-pip3 install -r requirements.txt
+unzip stanford-corenlp-full-2017-06-09.zip
+mv stanford-english-corenlp-2017-06-09-models.jar stanford-corenlp-full-2017-06-09/
 ```
 
-#### Stanford CoreNLP Server
-Giveme5W1H requires the Stanford Core Server to perform text preprocessing. Giveme5W1H has been tested with the 2017-06-09 build. Other builds may work as well, but no support will be given.
+ * download the server itself from [here](https://stanfordnlp.github.io/CoreNLP/index.html#download)
+    * at the time of writing [this](http://nlp.stanford.edu/software/stanford-corenlp-full-2017-06-09.zip) was the latest version
+ * download also the english language package on the same page
+    * at the time of writing [this](http://nlp.stanford.edu/software/stanford-english-corenlp-2017-06-09-models.jar) was the newest version
+ * extract the server zip,
+ * extract the language zip, copy it inside the server directory
+ * copy it into [Giveme5W-runtime-resources](#startup---scripts---giveme5w-runtime-resources) next to your repository folder
 
-Get the Stanford Core Server
+Start coreNLP by yourself (Windows, Linux, OSX)
+``` bash
+ java -mx4g -cp "*" edu.stanford.nlp.pipeline.StanfordCoreNLPServer -port 9000 -timeout 15000
 ```
-mkdir runtime-resources && cd runtime-resources
-wget http://nlp.stanford.edu/software/stanford-corenlp-full-2017-06-09.zip && unzip stanford-corenlp-full-2017-06-09.zip && rm stanford-corenlp-full-2017-06-09.zip
-wget http://nlp.stanford.edu/software/stanford-english-corenlp-2017-06-09-models.jar && mv stanford-english-corenlp-2017-06-09-models.jar stanford-corenlp-full-2017-06-09/
-cd ..
-```
+or
+(this is optional, there is no need to use the startup scripts;
+ this is only for a simple startup while developing etc.; Linux, OSX)
 
-Test if the Stanford Core Server setup was successful
-```
+```python
 python3 -m examples.startup.environment
 ```
-This should print after a couple of seconds `[main] INFO CoreNLP - StanfordCoreNLPServer listening at /0:0:0:0:0:0:0:0:9000`. If it does not, press `Ctrl+C` to abort the execution of the script, and have a look at the stacktrace shown.
+> see also Startup - Scripts -> Giveme5W-runtime-resources
 
-### Extract 5W1H Phrases
-You can access Giveme5W1H's functionality via a RESTful API, or as a module from within your own Python 3.6+ code. 
+For more information on the Stanford CoreNLP Server, please refer to their extensive [documentation](https://stanfordnlp.github.io/CoreNLP/corenlp-server.html).
 
-#### RESTful API
-
-```
-
-```
-
+### Giveme5W
 Environment is now running. Start parsing news_please files
 ```python
 python3 -m examples.extracting.parse_documents

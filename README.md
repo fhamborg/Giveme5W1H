@@ -30,11 +30,9 @@ Giveme5W1H requires the Stanford Core Server to perform text preprocessing. Give
 
 Get the Stanford Core Server
 ```
-mkdir runtime-resources
-cd runtime-resources
+mkdir runtime-resources && cd runtime-resources
 wget http://nlp.stanford.edu/software/stanford-corenlp-full-2017-06-09.zip && unzip stanford-corenlp-full-2017-06-09.zip && rm stanford-corenlp-full-2017-06-09.zip
-wget http://nlp.stanford.edu/software/stanford-english-corenlp-2017-06-09-models.jar
-mv stanford-english-corenlp-2017-06-09-models.jar stanford-corenlp-full-2017-06-09/
+wget http://nlp.stanford.edu/software/stanford-english-corenlp-2017-06-09-models.jar && mv stanford-english-corenlp-2017-06-09-models.jar stanford-corenlp-full-2017-06-09/
 cd ..
 ```
 

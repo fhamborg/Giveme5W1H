@@ -1,14 +1,14 @@
 import asyncio
 import os
 
-from extractor.configuration import Configuration as Config
+from Giveme5W1H.extractor.configuration import Configuration as Config
 
 path_to_libs = Config.get()['Giveme5W-runtime-resources']
 
 
 async def do_subprocess(task, command, path):
     dir = os.path.dirname(__file__)
-    abs_path = os.path.join(dir, './../.' + path_to_libs + path)
+    abs_path = os.path.join(dir, './../../.' + path_to_libs + path)
 
     print(task + ':' + abs_path)
 

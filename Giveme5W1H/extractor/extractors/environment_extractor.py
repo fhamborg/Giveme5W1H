@@ -5,10 +5,10 @@ from geopy.distance import great_circle
 from geopy.geocoders import Nominatim
 from parsedatetime import parsedatetime as pdt
 
-from extractor.candidate import Candidate
-from extractor.extractors.abs_extractor import AbsExtractor
-from extractor.tools.timex import Timex
-from extractor.tools.cache_manager import CacheManager
+from Giveme5W1H.extractor.candidate import Candidate
+from Giveme5W1H.extractor.extractors.abs_extractor import AbsExtractor
+from Giveme5W1H.extractor.tools.timex import Timex
+from Giveme5W1H.extractor.tools.cache_manager import CacheManager
 
 
 class EnvironmentExtractor(AbsExtractor):

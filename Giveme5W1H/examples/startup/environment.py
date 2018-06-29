@@ -1,4 +1,4 @@
-from examples.startup.util import StartupHelper
+from Giveme5W1H.examples.startup.util import StartupHelper
 
 
 def start():

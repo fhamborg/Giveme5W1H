@@ -6,8 +6,8 @@ import threading
 import time
 from typing import List
 
-from extractor.root import path
-from extractor.tools.util import bytes_2_human_readable
+from Giveme5W1H.extractor.root import path
+from Giveme5W1H.extractor.tools.util import bytes_2_human_readable
 
 
 class KeyValueCache(object):

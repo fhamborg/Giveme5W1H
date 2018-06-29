@@ -4,7 +4,7 @@ import logging
 import os.path
 import pickle
 
-from extractor.document import Document
+from Giveme5W1H.extractor.document import Document
 
 
 class Reader(object):

@@ -2,9 +2,9 @@ import logging
 import queue
 from threading import Thread
 
-from extractor.combined_scoring import distance_of_candidate
-from extractor.extractors import action_extractor, environment_extractor, cause_extractor, method_extractor
-from extractor.preprocessors.preprocessor_core_nlp import Preprocessor
+from Giveme5W1H.extractor.combined_scoring import distance_of_candidate
+from Giveme5W1H.extractor.extractors import action_extractor, environment_extractor, cause_extractor, method_extractor
+from Giveme5W1H.extractor.preprocessors.preprocessor_core_nlp import Preprocessor
 
 
 class Worker(Thread):

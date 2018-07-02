@@ -1,9 +1,9 @@
 import enum
 from enum import Enum
 
-from extractor.document import Document
-from extractor.candidate import Candidate
-from extractor.extractors.abs_extractor import AbsExtractor
+from Giveme5W1H.extractor.document import Document
+from Giveme5W1H.extractor.candidate import Candidate
+from Giveme5W1H.extractor.extractors.abs_extractor import AbsExtractor
 
 
 @enum.unique
@@ -142,7 +142,7 @@ class MethodExtractor(AbsExtractor):
         :return: A List of Tuples containing all agents, actions and their position in the document.
         """
 
-        # retrieve results from pre-processing
+        # retrieve results from Giveme5W1H.pre-processing
         candidates = []
 
         sentences = document.get_sentences()

@@ -5,10 +5,10 @@ import os
 from flask import Flask, request, jsonify
 from jinja2 import Environment, PackageLoader, select_autoescape
 
-from extractor.document import Document
-from extractor.extractor import FiveWExtractor
-from extractor.tools.file.reader import Reader
-from extractor.tools.file.writer import Writer
+from Giveme5W1H.extractor.document import Document
+from Giveme5W1H.extractor.extractor import FiveWExtractor
+from Giveme5W1H.extractor.tools.file.reader import Reader
+from Giveme5W1H.extractor.tools.file.writer import Writer
 
 # - - from Giveme5W_enhancer.heideltime import Heideltime
 # - - from Giveme5W_enhancer.aida import Aida
@@ -43,7 +43,7 @@ debug = False
 
 # Template engine
 env = Environment(
-    loader=PackageLoader('examples', 'extracting'),
+    loader=PackageLoader('Giveme5W1H.examples', 'Giveme5W1H.extracting'),
     autoescape=select_autoescape(['html', 'xml'])
 )
 

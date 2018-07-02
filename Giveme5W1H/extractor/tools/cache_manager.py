@@ -1,6 +1,6 @@
 import threading
 
-from extractor.tools.key_value_cache import KeyValueCache
+from Giveme5W1H.extractor.tools.key_value_cache import KeyValueCache
 
 
 class CacheManager:

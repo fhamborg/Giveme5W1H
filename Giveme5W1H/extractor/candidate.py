@@ -1,4 +1,4 @@
-from extractor.configuration import Configuration as Config
+from Giveme5W1H.extractor.configuration import Configuration as Config
 
 
 class Candidate:

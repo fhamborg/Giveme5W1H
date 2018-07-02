@@ -3,8 +3,8 @@ import pickle
 
 import os
 
-from extractor.candidate import Candidate
-from extractor.configuration import Configuration as Config
+from Giveme5W1H.extractor.candidate import Candidate
+from Giveme5W1H.extractor.configuration import Configuration as Config
 
 
 class Writer:

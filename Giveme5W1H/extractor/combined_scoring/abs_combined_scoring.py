@@ -1,6 +1,6 @@
 from abc import abstractmethod
 
-from extractor.document import Document
+from Giveme5W1H.extractor.document import Document
 
 
 class AbsCombinedScoring(object):

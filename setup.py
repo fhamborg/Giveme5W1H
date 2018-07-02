@@ -1,7 +1,7 @@
 from setuptools import setup, find_packages
 
 setup(name='giveme5w1h',
-      version='1.0.2',
+      version='1.0.5',
       description="Extraction of the journalistic five W and one H questions (5W1H) from news articles.",
       long_description="""Giveme5W1H is an open source, easy-to-use system to that extracts phrases answering the journalist 5W1H questions to describe an article's main event: who did what, when, where, why, and how?""",
       classifiers=[
@@ -19,7 +19,7 @@ setup(name='giveme5w1h',
       ],
       entry_points={
           'console_scripts': [
-              'giveme5w1h = examples.extracting.server:main',
+              'giveme5w1h = Giveme5W1H.examples.extracting.server:main',
           ],
       },
       keywords='question answering news event detection event extraction 5w fivew 5w1h fivewoneh question-answering qa reporters questions',

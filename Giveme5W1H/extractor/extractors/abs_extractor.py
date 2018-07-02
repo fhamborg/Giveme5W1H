@@ -6,8 +6,8 @@ from itertools import product
 import nltk
 from nltk.corpus import wordnet
 
-from extractor.document import Document
-from extractor.candidate import Candidate
+from Giveme5W1H.extractor.document import Document
+from Giveme5W1H.extractor.candidate import Candidate
 
 
 class AbsExtractor:

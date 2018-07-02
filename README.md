@@ -58,7 +58,22 @@ For POST requests, the required data format is the [news-please article format](
 * `url`
 
 #### Use within your own code (as a library)
+Make sure that the Stanford CoreNLP Server is up and running.
+```
+$ giveme5w1h-corenlp
+```
 
+Then, use the following code to extract 5W1H phrases from a single news article.
+```python
+from extractor.document import Document
+from extractor.extractor import FiveWExtractor
+
+extractor = FiveWExtractor()
+doc = Document(title, lead, text, date_publish)
+doc = extractor.parse(doc)
+```
+
+Have a look at our sample Python scripts, for more information on extraction from a [single news article](https://github.com/fhamborg/Giveme5W1H/blob/master/Giveme5W1H/examples/extracting/parse_single_from_code.py), or a [folder consisting of multiple JSON files in news-please format](https://github.com/fhamborg/Giveme5W1H/blob/master/Giveme5W1H/examples/extracting/parse_documents.py).
 ```python
 python3 -m examples.extracting.parse_documents
 ```

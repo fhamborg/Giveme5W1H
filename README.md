@@ -73,28 +73,12 @@ doc = Document(title, lead, text, date_publish)
 doc = extractor.parse(doc)
 ```
 
-Have a look at our sample Python scripts, for more information on extraction from a [single news article](https://github.com/fhamborg/Giveme5W1H/blob/master/Giveme5W1H/examples/extracting/parse_single_from_code.py), or a [folder consisting of multiple JSON files in news-please format](https://github.com/fhamborg/Giveme5W1H/blob/master/Giveme5W1H/examples/extracting/parse_documents.py).
+Have a look at our sample Python scripts, for more information on extraction from a [single news article](https://github.com/fhamborg/Giveme5W1H/blob/master/Giveme5W1H/examples/extracting/parse_single_from_code.py), or a [folder consisting of multiple JSON files in news-please format](https://github.com/fhamborg/Giveme5W1H/blob/master/Giveme5W1H/examples/extracting/parse_documents.py). Of course, you can also run the sample scripts, e.g.:
 ```python
 python3 -m examples.extracting.parse_documents
 ```
-or start the rest api.
-```python
-python3 -m examples.extracting.server
-```
 
-> Its recommended to use a proper IDE(e.g. PyCharm) if you want to use Enhancer,
-  otherwise you have to add the projects to your environment
-### PIP
-There is a pip package just run
-```batch
-pip install giveme5w1h
-```
-
-you can start afterwards the server with giveme5w1h.
-> expects a CoreNLP server running under: http://localhost:9090/
-
-> webserver is also bound to your external IP http://localhost:9099/!
-
+# Additional Information
 ## Configuration
 Configurations are optional.
 
@@ -107,8 +91,6 @@ from extractor.preprocessors.preprocessor_core_nlp import Preprocessor
 preprocessor = Preprocessor('192.168.178.10:9000')
 FiveWExtractor(preprocessor=preprocessor)
 ```
-
-
 
 ### Output
 

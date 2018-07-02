@@ -1,6 +1,6 @@
 import logging
-import socket
 import os
+import socket
 
 from flask import Flask, request, jsonify
 from jinja2 import Environment, PackageLoader, select_autoescape
@@ -113,6 +113,7 @@ def main():
     app.run(host, port, debug)
 
     log.info("server has stopped")
+
 
 if __name__ == "__main__":
     # setup config

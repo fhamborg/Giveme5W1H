@@ -93,7 +93,6 @@ FiveWExtractor(preprocessor=preprocessor)
 ```
 
 ### Output
-
 - For file based data - every input is transferred to the output
     -  For instance, annotated is already a part of the provided example files
 - Each Question has their extracted candidates under extracted,
@@ -102,103 +101,8 @@ FiveWExtractor(preprocessor=preprocessor)
 - Each payload has at least nlpToken which is the "basic" information.
 - Each enhancer is saving his information under their own name in the payload
 
-See the example below for details:
-```json
- "who": {
-      "annotated": [
-        {
-          "text": "Several people"
-        },
-        {
-          "text": "dozens injured"
-        }
-      ],
-      "label": "who",
-      "extracted": [
-        {
-          "parts": [
-            [
-              {
-                "nlpToken": {
-                  "index": 8,
-                  "word": "Croydon",
-                  "originalText": "Croydon",
-                  "lemma": "Croydon",
-                  "characterOffsetBegin": 3148,
-                  "characterOffsetEnd": 3155,
-                  "pos": "NNP",
-                  "ner": "LOCATION",
-                  "speaker": "PER0",
-                  "before": " ",
-                  "after": " "
-                },
-                "aida": [
-                  {
-                    "mention": {
-                      "allEntities": [
-                        {
-                          "kbIdentifier": "YAGO:Croydon",
-                          "disambiguationScore": "0.23577"
-                        }
-                      ],
-                      "offset": 3148,
-                      "name": "Croydon",
-                      "length": 7,
-                      "bestEntity": {
-                        "kbIdentifier": "YAGO:Croydon",
-                        "disambiguationScore": "0.23577"
-                      }
-                    },
-                    "bestEntityMetadata": {
-                      "knowledgebase": "YAGO",
-                      "depictionurl": "http://upload.wikimedia.org/wikipedia/commons/0/08/Croydon_Town_Hall_-_geograph.org.uk_-_432983.jpg",
-                      "depictionthumbnailurl": "http://upload.wikimedia.org/wikipedia/commons/thumbCroydon_Town_Hall_-_geograph.org.uk_-_432983.jpg/200px-Croydon_Town_Hall_-_geograph.org.uk_-_432983.jpg",
-                      "importance": 0.0007512499244432548,
-                      "entityId": "Croydon",
-                      "type": [
-                        "YAGO_wordnet_district_108552138",
-                        "YAGO_yagoPermanentlyLocatedEntity",
-                        "YAGO_yagoLegalActorGeo",
-                        "YAGO_wordnet_medium_106254669",
-                        "YAGO_wordnet_urban_area_108675967",
-                        "YAGO_wikicategory_Market_towns_in_Surrey",
-                        "YAGO_wordnet_municipality_108626283",
-                        "YAGO_wordnet_instrumentality_103575240",
-                        "YAGO_wordnet_market_town_108672073",
-                        "YAGO_wikicategory_locations",
-                        "YAGO_wikicategory_Districts_of_London_listed_in_the_Domesday_Book",
-                        "YAGO_wordnet_region_108630985",
-                        "YAGO_yagoGeoEntity",
-                        "YAGO_wordnet_physical_entity_100001930",
-                        "YAGO_wikicategory_Districts_of_Croydon",
-                        "YAGO_wikicategory_Post_towns_in_the_CR_postcode_area",
-                        "YAGO_wordnet_entity_100001740",
-                        "YAGO_wordnet_object_100002684",
-                        "YAGO_wordnet_area_108497294",
-                        "YAGO_wordnet_geographical_area_108574314",
-                        "YAGO_wikicategory_Areas_of_London",
-                        "YAGO_wikicategory_Market_towns_in_London",
-                        "YAGO_wordnet_location_100027167",
-                        "YAGO_wordnet_whole_100003553",
-                        "YAGO_wikicategory_Media_and_communications_in_Croydon",
-                        "YAGO_wordnet_artifact_100021939",
-                        "YAGO_wordnet_administrative_district_108491826",
-                        "YAGO_wordnet_town_108665504"
-                      ],
-                      "readableRepr": "Croydon",
-                      "url": "http://en.wikipedia.org/wiki/Croydon"
-                    }
-                  }
-                ]
-              },
-              "NNP"
-            ]..
-          "score": 1.0,
-          "text": "Croydon MPS ( @MPSCroydon ) November 9 , 201 \" There",
-          "nlpIndexSentence": 21:
+See the [sample.json](https://github.com/fhamborg/Giveme5W1H/blob/master/misc/sample.json) for details.
 
-```
->
 
 
 > see configuration.py for all settings and description
@@ -250,29 +154,11 @@ There is a easy to use handler to work with files, these are all options::
 Check the examples under parse_documents_simple.py and parse_documents.py for more details
 
 
-### CACHE
+### Caching
 CoreNLP and Enhancer have a long execution time, therefore it is possible to cache the result at the filesystem to speed up multiple executions.
 Delete all files in "/cache", if you want to precess them again, see examples in 'examples/extracting' for more details.
 
 > if you add or remove enhancer, you must delete all files in the cache directory (if cache is enabled (set_preprocessed_path))
-
-## REST-Service
-Its also possible to use giveme5W as rest service, there is also a very simple html ui.
-
-```
-$ python extractor/examples/extracting/server.py
-```
-> Check the code for more details, it is well documented
-
-* GET AND POST requests are supported
-    * Keep in mind that GET has a limited request length and special character encoding can be tricky
-* Input Field
-    * title (mandatory)
-    * description
-    * text
-    * date (must be readable by [parsedatetime](https://pypi.python.org/pypi/parsedatetime/))
-* Output
-    * [news-please format](https://github.com/fhamborg/news-please/blob/master/newsplease/examples/sample.json)
 
 
 ## Learn_Weights
@@ -281,29 +167,6 @@ The best candidate is compared with the best annotation to get a score.
 The calculated score, document id and the used weights are saved per question under ./results.
 
 > Because of the combined_scorer, each document is evaluated in each step. This can lead to entries with the same weights, but with different scores.
-
-
-# Startup - Scripts -> Giveme5W-runtime-resources
-Giveme5W can start up everything for you. Check examples/startup scripts.
-This is optional, especially without enhancer
-All libraries must be located in the same directory 'runtime-resources' located inside Giveme5W .
-
-- Folder Structure
-    - Giveme5W                      (Master)
-        - runtime-resources
-            - aida-3.0.4
-            - heideltime-standalone
-            - stanford-corenlp-full-2016-10-31
-            - treeTagger
-    - Giveme5W_NewsCluster_enhancer (Master)
-
-
-You can change this directory with:
-```shell
-Config.get()['Giveme5W-runtime-resources'] = './runtime-resources'
-```
-
-> Unfortunately there is a bug in PyCharm at the time of writing: if you are viewing multiple project at once, you have to add an additional /../ to the path
 
 
 ## How to cite

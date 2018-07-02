@@ -13,14 +13,15 @@ The figure below shows an excerpt of a news article with highlighted 5W1H phrase
 It's super easy, we promise!
 
 ### Installation
-Giveme5W1H requires Python 3.6 (or later) to run.
+Giveme5W1H requires Python 3.6 (or later) to run. First, install the PyPI package, then use Giveme5W1H's CoreNLP installer.
 ```
 $ pip3 install giveme5w1h
+$ giveme5w1-corenlp install
 ```
 
 Afterward, install the Stanford CoreNLP Server (build `2017-06-09`):
 ```
-$ giveme5w1-corenlp install
+
 ```
 This command will download all required files and automatically set them up. Note, that downloading the CoreNLP files may take a while depending on your internet connection.
 

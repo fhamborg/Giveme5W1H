@@ -27,17 +27,17 @@ $ giveme5w1h-corenlp
 This should print after a couple of seconds `[main] INFO CoreNLP - StanfordCoreNLPServer listening at /0:0:0:0:0:0:0:0:9000`. To exit the program, press `Ctrl+C` to abort the execution of the script, and have a look at the stacktrace shown.
 
 ### Extract 5W1H Phrases
-Alright, now that we setup Giveme5W1H successfully, we can start using Giveme5W1H, i.e., analyze news articles and extract 5W1H phrases. You can access Giveme5W1H's functionality via a RESTful API, or as a module from within your own Python 3.6+ code. 
+Now that we setup Giveme5W1H successfully, we can start using Giveme5W1H, i.e., analyze news articles and extract 5W1H phrases. You can access Giveme5W1H's functionality via a RESTful API, or as a module from within your own Python 3.6+ code. 
 
 #### RESTful API / webpage access
 Make sure that the Stanford CoreNLP Server is up and running.
 ```
-giveme5w1h-corenlp
+$ giveme5w1h-corenlp
 ```
 
 Start the RESTful API server that comes with Giveme5:
 ```
-giveme5w1h
+$ giveme5w1h
 ```
 After a couple of seconds, you will see the following line:
 ```

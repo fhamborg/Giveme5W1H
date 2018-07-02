@@ -103,18 +103,6 @@ FiveWExtractor(preprocessor=preprocessor)
 
 See the [sample.json](https://github.com/fhamborg/Giveme5W1H/blob/master/misc/sample.json) for details.
 
-
-
-> see configuration.py for all settings and description
-
-
-Use the configuration Singleton to make adjustments
-```python
-from extractor.configuration import Configuration as Config
-Config.get()['candidate']['nlpIndexSentence'] = False
-```
-
-
 ## Processing-Files
 Giveme5W can read and write only in a json format [example](https://github.com/fhamborg/news-please/blob/master/newsplease/examples/sample.json).
 [You find ready to used examples here](/examples/extracting)

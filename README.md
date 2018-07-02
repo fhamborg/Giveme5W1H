@@ -33,7 +33,7 @@ This should print after a couple of seconds `[main] INFO CoreNLP - StanfordCoreN
 ### Extract 5W1H Phrases
 Alright, now that we setup Giveme5W1H successfully, we can start using Giveme5W1H, i.e., analyze news articles and extract 5W1H phrases. You can access Giveme5W1H's functionality via a RESTful API, or as a module from within your own Python 3.6+ code. 
 
-#### RESTful API
+#### RESTful API / webpage access
 Make sure that the Stanford CoreNLP Server is up and running.
 ```
 giveme5w1h-corenlp
@@ -43,8 +43,27 @@ Start the RESTful API server that comes with Giveme5:
 ```
 giveme5w1h
 ```
+After a couple of seconds, you will see the following line:
+```
+ * Running on http://xxx.xxx.xxx.xxx:9099/ (Press CTRL+C to quit)
+```
 
-Environment is now running. Start parsing news_please files
+If you open the URL in your browser, you will see a page with a sample news article. Just click on `GET example`, or `run example` to analyze the shown article. You can also use this page to analyze your own articles.
+
+Of course, you can also access the RESTful API endpoints directly. You can access the endpoint at `http://localhost:9099/extract` via GET or POST requests. For GET requests, the input fields are:
+* title (mandatory)
+* lead paragraph
+* text
+* date (must be readable by [parsedatetime](https://pypi.python.org/pypi/parsedatetime/))
+
+Note, that GET requests have a limited request length, which may result in time-outs before the extraction of Giveme5W1H phrases was finished, and special character encoding can be tricky. If you have only the full text of an article, but separated by title, lead paragraph, and text, simply pass all text in the title field.
+
+For POST requests, the required data format is the [news-please article format](https://github.com/fhamborg/news-please/blob/master/newsplease/examples/sample.json), with the following fields being required in the JSON object:
+* fadf
+* fad
+
+#### Use within your own code (as a library)
+
 ```python
 python3 -m examples.extracting.parse_documents
 ```
@@ -52,17 +71,6 @@ or start the rest api.
 ```python
 python3 -m examples.extracting.server
 ```
-
-Afterward, you can access the API endpoint 'extract' via `get` and `post` requests. The input fieds are:
-* title (mandatory)
-* description
-* text
-* date (must be readable by [parsedatetime](https://pypi.python.org/pypi/parsedatetime/))
-
-Note, that GET requests habe a limited request length, which may result in time-outs before the extraction of Giveme5W1H phrases was finished, and special character encoding can be tricky.
-
-#### Use within your own code (as a library)
-
 
 > Its recommended to use a proper IDE(e.g. PyCharm) if you want to use Enhancer,
   otherwise you have to add the projects to your environment

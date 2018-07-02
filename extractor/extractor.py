@@ -39,6 +39,7 @@ class FiveWExtractor:
         :param combined_scorers: None will load defaults, [] will run without
         :param enhancement:
         """
+        # RuntimeResourcesInstaller.check_and_install()
 
         # first initialize logger
         self.log = logging.getLogger('GiveMe5W')

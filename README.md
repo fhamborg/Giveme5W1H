@@ -13,23 +13,18 @@ The figure below shows an excerpt of a news article with highlighted 5W1H phrase
 It's super easy, we promise!
 
 ### Installation
-Giveme5W1H requires Python 3.6 (or later) to run. First, install the PyPI package, then use Giveme5W1H's CoreNLP installer.
+Giveme5W1H requires Python 3.6 (or later) to run. First, install the PyPI package, then install Stanford Core Server, using the following two commands. You may also use another Stanford Core Server instance (the REST URL that is used by Giveme5W1H to communicate with the Stanford server). Giveme5W1H has been tested with the `2017-06-09` build. Other builds may work as well, but no support will be given.
 ```
 $ pip3 install giveme5w1h
 $ giveme5w1-corenlp install
 ```
-
-Afterward, install the Stanford CoreNLP Server (build `2017-06-09`):
-```
-
-```
-This command will download all required files and automatically set them up. Note, that downloading the CoreNLP files may take a while depending on your internet connection.
+The second command will download all required files and automatically set them up. Note, that downloading the CoreNLP files may take a while depending on your internet connection.
 
 Test if the Stanford CoreNLP Server setup was successful
 ```
 giveme5w1h-corenlp
 ```
-This should print after a couple of seconds `[main] INFO CoreNLP - StanfordCoreNLPServer listening at /0:0:0:0:0:0:0:0:9000`. If it does not, press `Ctrl+C` to abort the execution of the script, and have a look at the stacktrace shown.
+This should print after a couple of seconds `[main] INFO CoreNLP - StanfordCoreNLPServer listening at /0:0:0:0:0:0:0:0:9000`. To exit the program, press `Ctrl+C` to abort the execution of the script, and have a look at the stacktrace shown.
 
 ### Extract 5W1H Phrases
 Alright, now that we setup Giveme5W1H successfully, we can start using Giveme5W1H, i.e., analyze news articles and extract 5W1H phrases. You can access Giveme5W1H's functionality via a RESTful API, or as a module from within your own Python 3.6+ code. 

@@ -46,17 +46,16 @@ After a couple of seconds, you will see the following line:
 
 If you open the URL in your browser, you will see a page with a sample news article. Just click on `GET example`, or `run example` to analyze the shown article. You can also use this page to analyze your own articles.
 
-Of course, you can also access the RESTful API endpoints directly. You can access the endpoint at `http://localhost:9099/extract` via GET or POST requests. For GET requests, the input fields are:
-* title (mandatory)
-* lead paragraph
-* text
-* date (must be readable by [parsedatetime](https://pypi.python.org/pypi/parsedatetime/))
+Of course, you can also access the RESTful API endpoints directly. You can access the endpoint at `http://localhost:9099/extract` via GET or POST requests. For GET and POST requests, the input fields are:
+* `title` (mandatory)
+* `description` (typically the lead paragraph)
+* `text`
+* `date` (must be readable by [parsedatetime](https://pypi.python.org/pypi/parsedatetime/))
 
 Note, that GET requests have a limited request length, which may result in time-outs before the extraction of Giveme5W1H phrases was finished, and special character encoding can be tricky. If you have only the full text of an article, but separated by title, lead paragraph, and text, simply pass all text in the title field.
 
-For POST requests, the required data format is the [news-please article format](https://github.com/fhamborg/news-please/blob/master/newsplease/examples/sample.json), with the following fields being required in the JSON object:
-* fadf
-* fad
+For POST requests, the required data format is the [news-please article format](https://github.com/fhamborg/news-please/blob/master/newsplease/examples/sample.json). Besides the fields mentioned above, the following field is mandatory for POST request, too:
+* `url`
 
 #### Use within your own code (as a library)
 

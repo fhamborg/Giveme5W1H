@@ -10,48 +10,55 @@ The figure below shows an excerpt of a news article with highlighted 5W1H phrase
 <img src="https://raw.githubusercontent.com/fhamborg/Giveme5W1H/master/misc/example5w1h.png" /> 
 
 ## Getting started
-Giveme5W1H requires Python 3.6 or later. 
+It's super easy, we promise!
 
 ### Installation
-We are currently working to create a PyPI package so that you can install Giveme5W1H easily using PIP. Until then, simply follow the installation instructions below (tested on Linux and MacOS).
+Giveme5W1H requires Python 3.6 (or later) to run. First, install the PyPI package, then install Stanford Core Server, using the following two commands. You may also use another Stanford Core Server instance (the REST URL that is used by Giveme5W1H to communicate with the Stanford server). Giveme5W1H has been tested with the `2017-06-09` build. Other builds may work as well, but no support will be given.
+```
+$ pip3 install giveme5w1h
+$ giveme5w1-corenlp install
+```
+The second command will download all required files and automatically set them up. Note, that downloading the CoreNLP files may take a while depending on your internet connection.
 
-#### Get Giveme5W1H
+Test if the Stanford CoreNLP Server setup was successful
 ```
-git clone https://github.com/fhamborg/Giveme5W1H.git # or if you've setup SSH: git clone git@github.com:fhamborg/Giveme5W1H.git
-cd Giveme5W1H
+$ giveme5w1h-corenlp
 ```
-And install its dependencies:
-```
-pip3 install -r requirements.txt
-```
-
-#### Stanford CoreNLP Server
-Giveme5W1H requires the Stanford Core Server to perform text preprocessing. Giveme5W1H has been tested with the 2017-06-09 build. Other builds may work as well, but no support will be given.
-
-Get the Stanford Core Server
-```
-mkdir runtime-resources && cd runtime-resources
-wget http://nlp.stanford.edu/software/stanford-corenlp-full-2017-06-09.zip && unzip stanford-corenlp-full-2017-06-09.zip && rm stanford-corenlp-full-2017-06-09.zip
-wget http://nlp.stanford.edu/software/stanford-english-corenlp-2017-06-09-models.jar && mv stanford-english-corenlp-2017-06-09-models.jar stanford-corenlp-full-2017-06-09/
-cd ..
-```
-
-Test if the Stanford Core Server setup was successful
-```
-python3 -m examples.startup.environment
-```
-This should print after a couple of seconds `[main] INFO CoreNLP - StanfordCoreNLPServer listening at /0:0:0:0:0:0:0:0:9000`. If it does not, press `Ctrl+C` to abort the execution of the script, and have a look at the stacktrace shown.
+This should print after a couple of seconds `[main] INFO CoreNLP - StanfordCoreNLPServer listening at /0:0:0:0:0:0:0:0:9000`. To exit the program, press `Ctrl+C` to abort the execution of the script, and have a look at the stacktrace shown.
 
 ### Extract 5W1H Phrases
-You can access Giveme5W1H's functionality via a RESTful API, or as a module from within your own Python 3.6+ code. 
+Giveme5W1H enables the extractioon of 5W1H phrases from news articles. You can access Giveme5W1H's functionality via a RESTful API, or as a module from within your own Python 3.6+ code. 
 
-#### RESTful API
-
+#### RESTful API / webpage access
+Make sure that the Stanford CoreNLP Server is up and running.
+```
+$ giveme5w1h-corenlp
 ```
 
+Start the RESTful API server that comes with Giveme5:
+```
+$ giveme5w1h
+```
+After a couple of seconds, you will see the following line:
+```
+ * Running on http://xxx.xxx.xxx.xxx:9099/ (Press CTRL+C to quit)
 ```
 
-Environment is now running. Start parsing news_please files
+If you open the URL in your browser, you will see a page with a sample news article. Just click on `GET example`, or `run example` to analyze the shown article. You can also use this page to analyze your own articles.
+
+Of course, you can also access the RESTful API endpoints directly. You can access the endpoint at `http://localhost:9099/extract` via GET or POST requests. For GET and POST requests, the input fields are:
+* `title` (mandatory)
+* `description` (typically the lead paragraph)
+* `text`
+* `date` (must be readable by [parsedatetime](https://pypi.python.org/pypi/parsedatetime/))
+
+Note, that GET requests have a limited request length, which may result in time-outs before the extraction of Giveme5W1H phrases was finished, and special character encoding can be tricky. If you have only the full text of an article, but separated by title, lead paragraph, and text, simply pass all text in the title field.
+
+For POST requests, the required data format is the [news-please article format](https://github.com/fhamborg/news-please/blob/master/newsplease/examples/sample.json). Besides the fields mentioned above, the following field is mandatory for POST request, too:
+* `url`
+
+#### Use within your own code (as a library)
+
 ```python
 python3 -m examples.extracting.parse_documents
 ```

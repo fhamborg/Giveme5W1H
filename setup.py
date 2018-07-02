@@ -58,3 +58,4 @@ setup(name='giveme5w1h',
       extras_require={
       }
 )
+

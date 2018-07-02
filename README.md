@@ -22,7 +22,7 @@ The second command will download all required files and automatically set them u
 
 Test if the Stanford CoreNLP Server setup was successful
 ```
-giveme5w1h-corenlp
+$ giveme5w1h-corenlp
 ```
 This should print after a couple of seconds `[main] INFO CoreNLP - StanfordCoreNLPServer listening at /0:0:0:0:0:0:0:0:9000`. To exit the program, press `Ctrl+C` to abort the execution of the script, and have a look at the stacktrace shown.
 

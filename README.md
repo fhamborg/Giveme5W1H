@@ -10,45 +10,38 @@ The figure below shows an excerpt of a news article with highlighted 5W1H phrase
 <img src="https://raw.githubusercontent.com/fhamborg/Giveme5W1H/master/misc/example5w1h.png" /> 
 
 ## Getting started
-Giveme5W1H requires Python 3.6 or later. 
+It's super easy, we promise!
 
 ### Installation
-We are currently working to create a PyPI package so that you can install Giveme5W1H easily using PIP. Until then, simply follow the installation instructions below (tested on Linux and MacOS).
-
-#### Get Giveme5W1H
+Giveme5W1H requires Python 3.6 (or later) to run.
 ```
-git clone https://github.com/fhamborg/Giveme5W1H.git # or if you've setup SSH: git clone git@github.com:fhamborg/Giveme5W1H.git
-cd Giveme5W1H
-```
-And install its dependencies:
-```
-pip3 install -r requirements.txt
+$ pip3 install giveme5w1h
 ```
 
-#### Stanford CoreNLP Server
-Giveme5W1H requires the Stanford Core Server to perform text preprocessing. Giveme5W1H has been tested with the 2017-06-09 build. Other builds may work as well, but no support will be given.
+Afterward, install the Stanford CoreNLP Server (build `2017-06-09`):
+```
+$ giveme5w1-corenlp install
+```
+This command will download all required files and automatically set them up. Note, that downloading the CoreNLP files may take a while depending on your internet connection.
 
-Get the Stanford Core Server
+Test if the Stanford CoreNLP Server setup was successful
 ```
-mkdir runtime-resources && cd runtime-resources
-wget http://nlp.stanford.edu/software/stanford-corenlp-full-2017-06-09.zip && unzip stanford-corenlp-full-2017-06-09.zip && rm stanford-corenlp-full-2017-06-09.zip
-wget http://nlp.stanford.edu/software/stanford-english-corenlp-2017-06-09-models.jar && mv stanford-english-corenlp-2017-06-09-models.jar stanford-corenlp-full-2017-06-09/
-cd ..
-```
-
-Test if the Stanford Core Server setup was successful
-```
-python3 -m examples.startup.environment
+giveme5w1h-corenlp
 ```
 This should print after a couple of seconds `[main] INFO CoreNLP - StanfordCoreNLPServer listening at /0:0:0:0:0:0:0:0:9000`. If it does not, press `Ctrl+C` to abort the execution of the script, and have a look at the stacktrace shown.
 
 ### Extract 5W1H Phrases
-You can access Giveme5W1H's functionality via a RESTful API, or as a module from within your own Python 3.6+ code. 
+Alright, now that we setup Giveme5W1H successfully, we can start using Giveme5W1H, i.e., analyze news articles and extract 5W1H phrases. You can access Giveme5W1H's functionality via a RESTful API, or as a module from within your own Python 3.6+ code. 
 
 #### RESTful API
-
+Make sure that the Stanford CoreNLP Server is up and running.
+```
+giveme5w1h-corenlp
 ```
 
+Start the RESTful API server that comes with Giveme5:
+```
+giveme5w1h
 ```
 
 Environment is now running. Start parsing news_please files
@@ -59,6 +52,17 @@ or start the rest api.
 ```python
 python3 -m examples.extracting.server
 ```
+
+Afterward, you can access the API endpoint 'extract' via `get` and `post` requests. The input fieds are:
+* title (mandatory)
+* description
+* text
+* date (must be readable by [parsedatetime](https://pypi.python.org/pypi/parsedatetime/))
+
+Note, that GET requests habe a limited request length, which may result in time-outs before the extraction of Giveme5W1H phrases was finished, and special character encoding can be tricky.
+
+#### Use within your own code (as a library)
+
 
 > Its recommended to use a proper IDE(e.g. PyCharm) if you want to use Enhancer,
   otherwise you have to add the projects to your environment

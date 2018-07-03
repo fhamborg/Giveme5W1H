@@ -13,12 +13,11 @@ The figure below shows an excerpt of a news article with highlighted 5W1H phrase
 It's super easy, we promise!
 
 ### Installation
-Giveme5W1H requires Python 3.6 (or later) to run. First, install the PyPI package, then install Stanford Core Server, using the following two commands. You may also use another Stanford Core Server instance (the REST URL that is used by Giveme5W1H to communicate with the Stanford server). Giveme5W1H has been tested with the `2017-06-09` build. Other builds may work as well, but no support will be given.
+Giveme5W1H requires Python 3.6 (or later) to run. The following two commands will install Giveme5W1H and Stanford Core Server.
 ```
 $ pip3 install giveme5w1h
 $ giveme5w1-corenlp install
 ```
-The second command will download all required files and automatically set them up. Note, that downloading the CoreNLP files may take a while depending on your internet connection.
 
 Test if the Stanford CoreNLP Server setup was successful
 ```

@@ -13,7 +13,7 @@ The figure below shows an excerpt of a news article with highlighted 5W1H phrase
 It's super easy, we promise!
 
 ### Installation
-Giveme5W1H requires Python 3.6 (or later) to run. The following two commands will install Giveme5W1H and Stanford Core Server.
+Giveme5W1H requires Python 3.6 (or later) to run. The following two commands will install Giveme5W1H and Stanford CoreNLP Server.
 ```
 $ pip3 install giveme5w1h
 $ giveme5w1h-corenlp install
@@ -28,13 +28,12 @@ After a couple of second this should print `[main] INFO CoreNLP - StanfordCoreNL
 ### Extract 5W1H Phrases
 Giveme5W1H enables the extractioon of 5W1H phrases from news articles. You can access Giveme5W1H's functionality via a RESTful API, or as a module from within your own Python 3.6+ code. 
 
-#### RESTful API / webpage access
-Make sure that the Stanford CoreNLP Server is up and running.
-```
-$ giveme5w1h-corenlp
-```
+#### Starting the CoreNLP Server (mandatory) and some information on performance
+Either way, *you must start* the Stanford CoreNLP Server before using Giveme5W1H. To do so, run `giveme5w1h-corenlp` in a terminal, and do not close the terminal. Why the extra hazzle? We decided to not integrate the CoreNLP Server transparently into Giveme5W1H mainly because the CoreNLP Server takes a lot of time until the initialization of all components is finished. Hence, the first run of Giveme5W1H after you started the CoreNLP Server, will likely take a couple of minutes (because components in CoreNLP Server are initialized on the fly). So, be sure to startup the server and use it to extract 5W1Hs from multiple news articles. See [below]() if you want to use a CoreNLP Server that is running on a remote machine or different port.
+Ideally, you could run the CoreNLP Server on another machine, e.g., a server, where the CoreNLP Server application is running constantly. To do so, install [Giveme5W1H and the CoreNLP Server](https://github.com/fhamborg/Giveme5W1H#installation) on a remote machine, and change the communication API on your local machine (where you plan to use Giveme5W1H) via the 
 
-Start the RESTful API server that comes with Giveme5:
+#### RESTful API / webpage access
+Start the RESTful API server that comes with Giveme5W1H (execute the following command in a separate shell, so that the CoreNLP Server started by the previous command runs in parallel):
 ```
 $ giveme5w1h
 ```
@@ -57,12 +56,7 @@ For POST requests, the required data format is the [news-please article format](
 * `url`
 
 #### Use within your own code (as a library)
-Make sure that the Stanford CoreNLP Server is up and running.
-```
-$ giveme5w1h-corenlp
-```
-
-Then, use the following code to extract 5W1H phrases from a single news article.
+Use the following code to extract 5W1H phrases from a single news article.
 ```python
 from extractor.document import Document
 from extractor.extractor import FiveWExtractor
@@ -78,12 +72,13 @@ python3 -m examples.extracting.parse_documents
 ```
 
 # Additional Information
+This section is currently subject to a major update. Some information may be outdated or redundant to the above information.
+
 ## Configuration
 Configurations are optional.
 
 ### CoreNLP Host
-
-You can use not local installed  CoreNLP-Server. Simply parse the the preprocessor another url in case you run it on another machine:
+You can also use a remotely installed  CoreNLP-Server. Simply parse the the preprocessor another url in case you run it on another machine:
 
 ```python
 from extractor.preprocessors.preprocessor_core_nlp import Preprocessor

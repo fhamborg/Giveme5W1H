@@ -23,7 +23,7 @@ Test if the Stanford CoreNLP Server setup was successful
 ```
 $ giveme5w1h-corenlp
 ```
-After a couple of second this should print `[main] INFO CoreNLP - StanfordCoreNLPServer listening at /0:0:0:0:0:0:0:0:9000`. To exit the program, press `Ctrl+C` to abort the execution of the script, and have a look at the stacktrace shown.
+After a couple of second this should print `[main] INFO CoreNLP - StanfordCoreNLPServer listening at /0:0:0:0:0:0:0:0:9000`. To exit the program, press <kbd>CTRL</kbd>+<kbd>C</kbd>.
 
 ### Extract 5W1H Phrases
 Giveme5W1H enables the extractioon of 5W1H phrases from news articles. You can access Giveme5W1H's functionality via a RESTful API, or as a module from within your own Python 3.6+ code. 

@@ -101,7 +101,7 @@ See the [sample.json](https://github.com/fhamborg/Giveme5W1H/blob/master/misc/sa
 
 ## Processing-Files
 Giveme5W can read and write only in a json format [example](https://github.com/fhamborg/news-please/blob/master/newsplease/examples/sample.json).
-[You find ready to used examples here](/examples/extracting)
+[You find ready to use examples here](/examples/extracting)
 
 > dID is used for matching input and output, not the filename!
 

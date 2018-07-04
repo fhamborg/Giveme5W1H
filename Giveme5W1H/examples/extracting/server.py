@@ -10,9 +10,6 @@ from Giveme5W1H.extractor.extractor import FiveWExtractor
 from Giveme5W1H.extractor.tools.file.reader import Reader
 from Giveme5W1H.extractor.tools.file.writer import Writer
 
-# - - from Giveme5W_enhancer.heideltime import Heideltime
-# - - from Giveme5W_enhancer.aida import Aida
-
 """
 This is a simple example on how to use flask to create a rest api for our extractor.
 
@@ -48,8 +45,6 @@ env = Environment(
 )
 
 template_index = env.from_string(open(os.path.join(os.path.dirname(__file__), 'index.html')).read())
-# Render landing page
-#template_index = env.get_template('index.html')
 
 # Giveme5W setup
 extractor = FiveWExtractor()

@@ -37,7 +37,7 @@ We decided to not integrate the CoreNLP Server transparently into Giveme5W1H mai
 #### RESTful API / webpage access
 Start the RESTful API server that comes with Giveme5W1H (execute the following command in a separate shell, so that the CoreNLP Server started by the previous command runs in parallel):
 ```
-$ giveme5w1h
+$ giveme5w1h-rest
 ```
 After a couple of seconds, you will see the following line:
 ```

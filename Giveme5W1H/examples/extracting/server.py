@@ -6,7 +6,7 @@ from flask import Flask, request, jsonify
 from jinja2 import Environment, PackageLoader, select_autoescape
 
 from Giveme5W1H.extractor.document import Document
-from Giveme5W1H.extractor.extractor import FiveWExtractor
+from Giveme5W1H.extractor.extractor import MasterExtractor
 from Giveme5W1H.extractor.tools.file.reader import Reader
 from Giveme5W1H.extractor.tools.file.writer import Writer
 
@@ -47,9 +47,9 @@ env = Environment(
 template_index = env.from_string(open(os.path.join(os.path.dirname(__file__), 'index.html')).read())
 
 # Giveme5W setup
-extractor = FiveWExtractor()
+extractor = MasterExtractor()
 
-# extractor_enhancer = FiveWExtractor( enhancement=[
+# extractor_enhancer = MasterExtractor( enhancement=[
 #    Heideltime(['when']),
 #    Aida(['how','when','why','where','what','who'])
 # ])

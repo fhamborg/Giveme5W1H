@@ -1,7 +1,7 @@
 import logging
 
 from extractor.document import Document
-from extractor.extractor import FiveWExtractor
+from extractor.extractor import MasterExtractor
 
 """
 This is a simple example how to use the extractor in combination with a dict in news-please format.
@@ -73,7 +73,7 @@ if __name__ == '__main__':
     log.addHandler(sh)
 
     # giveme5w setup - with defaults
-    extractor = FiveWExtractor()
+    extractor = MasterExtractor()
 
     doc = Document(title, lead, text, date_publish)
     doc = extractor.parse(doc)

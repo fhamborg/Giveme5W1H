@@ -1,7 +1,7 @@
 import logging
 import os
 
-from extractor.extractor import FiveWExtractor
+from extractor.extractor import MasterExtractor
 from extractor.tools.file.handler import Handler
 
 """
@@ -42,7 +42,7 @@ if __name__ == '__main__':
     log.addHandler(sh)
 
     # giveme5w setup - with defaults
-    extractor = FiveWExtractor()
+    extractor = MasterExtractor()
 
     inputPath = basePath + '/data'
     outputPath = basePath + '/output'

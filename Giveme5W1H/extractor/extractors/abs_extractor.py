@@ -6,8 +6,8 @@ from itertools import product
 import nltk
 from nltk.corpus import wordnet
 
-from Giveme5W1H.extractor.document import Document
 from Giveme5W1H.extractor.candidate import Candidate
+from Giveme5W1H.extractor.document import Document
 
 
 class AbsExtractor:
@@ -29,7 +29,7 @@ class AbsExtractor:
 
     def process(self, document: Document):
         """
-        Must be implemented by each Extractor, this method will be executed on every document passed to the FiveWExtractor.
+        Must be implemented by each Extractor, this method will be executed on every document passed to the MasterExtractor.
 
         :param document: The Document object to parse
         :type document: Document

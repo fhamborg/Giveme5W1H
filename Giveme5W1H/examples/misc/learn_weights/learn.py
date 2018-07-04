@@ -1,25 +1,22 @@
 import datetime
 import logging
 import math
-import time
 from itertools import product
 from threading import Thread
 
 import dateutil.parser
-
 from dateutil.relativedelta import relativedelta as rd
 from geopy.distance import great_circle
-from nltk import word_tokenize, metrics
-from nltk.corpus import wordnet
-
-from extractor.extractor import FiveWExtractor
-from extractor.root import path
-from extractor.tools.file.handler import Handler
 from misc.learn_weights.metrics.normalized_google_distance import NormalizedGoogleDistance
 from misc.learn_weights.metrics.wmd import Wmd
+from nltk import word_tokenize
+from nltk.corpus import wordnet
+from nltk.metrics.distance import edit_distance
 from tools.cache_manager import CacheManager
-import nltk
-from nltk.metrics.distance        import edit_distance
+
+from extractor.extractor import MasterExtractor
+from extractor.root import path
+from extractor.tools.file.handler import Handler
 
 
 class Worker(Thread):
@@ -255,7 +252,7 @@ class Learn(object):
             _combined_scorers = [combined_scorer]
         else:
             _combined_scorers = []
-        extractor_object = FiveWExtractor(extractors=list(extractors.values()), combined_scorers=_combined_scorers)
+        extractor_object = MasterExtractor(extractors=list(extractors.values()), combined_scorers=_combined_scorers)
 
         # Put all together, run it once, get the cached document objects
         documents = (

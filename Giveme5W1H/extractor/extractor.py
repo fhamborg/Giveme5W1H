@@ -21,9 +21,9 @@ class Worker(Thread):
                 self._queue.task_done()
 
 
-class FiveWExtractor:
+class MasterExtractor:
     """
-    The FiveWExtractor bundles all parsing modules.
+    The MasterExtractor bundles all parsing modules.
     """
 
     log = None

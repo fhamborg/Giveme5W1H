@@ -63,7 +63,7 @@ Use the following code to extract 5W1H phrases from a single news article.
 from extractor.document import Document
 from extractor.extractor import FiveWExtractor
 
-extractor = FiveWExtractor()
+extractor = MasterExtractor()
 doc = Document(title, lead, text, date_publish)
 doc = extractor.parse(doc)
 ```
@@ -85,7 +85,7 @@ You can also use a remotely installed  CoreNLP-Server. Simply parse the preproce
 ```python
 from extractor.preprocessors.preprocessor_core_nlp import Preprocessor
 preprocessor = Preprocessor('192.168.178.10:9000')
-FiveWExtractor(preprocessor=preprocessor)
+MasterExtractor(preprocessor=preprocessor)
 ```
 
 ### Output

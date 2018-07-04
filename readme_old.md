@@ -83,7 +83,7 @@ You can use not local installed  CoreNLP-Server. Simply parse the the preprocess
 ```python
 from extractor.preprocessors.preprocessor_core_nlp import Preprocessor
 preprocessor = Preprocessor('192.168.178.10:9000')
-FiveWExtractor(preprocessor=preprocessor)
+MasterExtractor(preprocessor=preprocessor)
 ```
 
 
@@ -409,7 +409,7 @@ You can use not local installed  CoreNLP-Server. Simply parse the the preprocess
 ```python
 from extractor.preprocessors.preprocessor_core_nlp import Preprocessor
 preprocessor = Preprocessor('192.168.178.10:9000')
-FiveWExtractor(preprocessor=preprocessor)
+MasterExtractor(preprocessor=preprocessor)
 ```
 
 

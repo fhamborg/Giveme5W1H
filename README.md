@@ -106,7 +106,7 @@ Giveme5W can read and write only in a JSON format [example](https://github.com/f
 > dID is used for matching input and output, not the filename!
 
 There is an easy-to-use handler to work with files; these are all options::
-``` python
+```python
  documents = (
         # initiate the file handler with the input directory
         Handler(inputPath)

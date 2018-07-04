@@ -13,38 +13,38 @@ The figure below shows an excerpt of a news article with highlighted 5W1H phrase
 It's super easy, we promise!
 
 ### Installation
-Giveme5W1H requires Python 3.6 (or later) to run. First, install the PyPI package, then install Stanford Core Server, using the following two commands. You may also use another Stanford Core Server instance (the REST URL that is used by Giveme5W1H to communicate with the Stanford server). Giveme5W1H has been tested with the `2017-06-09` build. Other builds may work as well, but no support will be given.
+Giveme5W1H requires Python 3.6 (or later) to run. The following two commands will install Giveme5W1H and Stanford CoreNLP Server.
 ```
 $ pip3 install giveme5w1h
-$ giveme5w1-corenlp install
+$ giveme5w1h-corenlp install
 ```
-The second command will download all required files and automatically set them up. Note, that downloading the CoreNLP files may take a while depending on your internet connection.
 
 Test if the Stanford CoreNLP Server setup was successful
 ```
 $ giveme5w1h-corenlp
 ```
-This should print after a couple of seconds `[main] INFO CoreNLP - StanfordCoreNLPServer listening at /0:0:0:0:0:0:0:0:9000`. To exit the program, press `Ctrl+C` to abort the execution of the script, and have a look at the stacktrace shown.
+After a couple of second this should print `[main] INFO CoreNLP - StanfordCoreNLPServer listening at /0:0:0:0:0:0:0:0:9000`. To exit the program, press <kbd>CTRL</kbd>+<kbd>C</kbd>.
 
 ### Extract 5W1H Phrases
-Giveme5W1H enables the extractioon of 5W1H phrases from news articles. You can access Giveme5W1H's functionality via a RESTful API, or as a module from within your own Python 3.6+ code. 
+Giveme5W1H enables the extraction of 5W1H phrases from news articles. You can access Giveme5W1H's functionality via a RESTful API, or as a module from within your Python 3.6+ code. 
+
+#### Starting the CoreNLP Server (mandatory) 
+Either way, *you must start* the Stanford CoreNLP Server before using Giveme5W1H. To do so, run `giveme5w1h-corenlp` in a terminal, and do not close the terminal. 
+
+##### Some information on performance
+We decided to not integrate the CoreNLP Server transparently into Giveme5W1H mainly because the CoreNLP Server takes a lot of time until the initialization of all components is finished. Hence, the first run of Giveme5W1H after you started the CoreNLP Server, will likely take a couple of minutes (because components in CoreNLP Server are initialized on the fly). So, be sure to start up the server and use it to extract 5W1Hs from multiple news articles. See [below](#corenlp-host) if you want to use a CoreNLP Server that is running on a remote machine or different port.
 
 #### RESTful API / webpage access
-Make sure that the Stanford CoreNLP Server is up and running.
+Start the RESTful API server that comes with Giveme5W1H (execute the following command in a separate shell, so that the CoreNLP Server started by the previous command runs in parallel):
 ```
-$ giveme5w1h-corenlp
-```
-
-Start the RESTful API server that comes with Giveme5:
-```
-$ giveme5w1h
+$ giveme5w1h-rest
 ```
 After a couple of seconds, you will see the following line:
 ```
  * Running on http://xxx.xxx.xxx.xxx:9099/ (Press CTRL+C to quit)
 ```
 
-If you open the URL in your browser, you will see a page with a sample news article. Just click on `GET example`, or `run example` to analyze the shown article. You can also use this page to analyze your own articles.
+If you open the URL in your browser, you will see a page with a sample news article. Just click on `GET example`, or `run example` to analyze the shown article. You can also use this page to analyze your articles.
 
 Of course, you can also access the RESTful API endpoints directly. You can access the endpoint at `http://localhost:9099/extract` via GET or POST requests. For GET and POST requests, the input fields are:
 * `title` (mandatory)
@@ -52,18 +52,13 @@ Of course, you can also access the RESTful API endpoints directly. You can acces
 * `text`
 * `date` (must be readable by [parsedatetime](https://pypi.python.org/pypi/parsedatetime/))
 
-Note, that GET requests have a limited request length, which may result in time-outs before the extraction of Giveme5W1H phrases was finished, and special character encoding can be tricky. If you have only the full text of an article, but separated by title, lead paragraph, and text, simply pass all text in the title field.
+Note, that GET requests have a limited request length, which may result in time-outs before the extraction of Giveme5W1H phrases was finished, and special character encoding can be tricky. If you have only the full text of an article, but separated by title, lead paragraph, and text, pass all text in the title field.
 
 For POST requests, the required data format is the [news-please article format](https://github.com/fhamborg/news-please/blob/master/newsplease/examples/sample.json). Besides the fields mentioned above, the following field is mandatory for POST request, too:
 * `url`
 
 #### Use within your own code (as a library)
-Make sure that the Stanford CoreNLP Server is up and running.
-```
-$ giveme5w1h-corenlp
-```
-
-Then, use the following code to extract 5W1H phrases from a single news article.
+Use the following code to extract 5W1H phrases from a single news article.
 ```python
 from extractor.document import Document
 from extractor.extractor import FiveWExtractor
@@ -79,12 +74,13 @@ python3 -m examples.extracting.parse_documents
 ```
 
 # Additional Information
+This section is currently subject to a major update. Some information may be outdated or redundant to the above information.
+
 ## Configuration
 Configurations are optional.
 
 ### CoreNLP Host
-
-You can use not local installed  CoreNLP-Server. Simply parse the the preprocessor another url in case you run it on another machine:
+You can also use a remotely installed  CoreNLP-Server. Simply parse the preprocessor another URL in case you run it on another machine:
 
 ```python
 from extractor.preprocessors.preprocessor_core_nlp import Preprocessor
@@ -93,23 +89,23 @@ FiveWExtractor(preprocessor=preprocessor)
 ```
 
 ### Output
-- For file based data - every input is transferred to the output
+- For file-based data - every input is transferred to the output
     -  For instance, annotated is already a part of the provided example files
 - Each Question has their extracted candidates under extracted,
 - Each Candidate, has parts, score and text property and their sentence index.
-- Each parts is structured as (payload, Postoken)
+- Each part is structured as (payload, Postoken)
 - Each payload has at least nlpToken which is the "basic" information.
-- Each enhancer is saving his information under their own name in the payload
+- Each enhancer is saving his information under their name in the payload
 
 See the [sample.json](https://github.com/fhamborg/Giveme5W1H/blob/master/misc/sample.json) for details.
 
 ## Processing-Files
-Giveme5W can read and write only in a json format [example](https://github.com/fhamborg/news-please/blob/master/newsplease/examples/sample.json).
-[You find ready to used examples here](/examples/extracting)
+Giveme5W can read and write only in a JSON format [example](https://github.com/fhamborg/news-please/blob/master/newsplease/examples/sample.json).
+[You find ready to use examples here](/examples/extracting)
 
 > dID is used for matching input and output, not the filename!
 
-There is a easy to use handler to work with files, these are all options::
+There is an easy-to-use handler to work with files; these are all options::
 ``` python
  documents = (
         # initiate the file handler with the input directory
@@ -143,16 +139,16 @@ Check the examples under parse_documents_simple.py and parse_documents.py for mo
 
 
 ### Caching
-CoreNLP and Enhancer have a long execution time, therefore it is possible to cache the result at the filesystem to speed up multiple executions.
-Delete all files in "/cache", if you want to precess them again, see examples in 'examples/extracting' for more details.
+CoreNLP and Enhancer have a long execution time; therefore it is possible to cache the result at the filesystem to speed up multiple executions.
+Delete all files in "/cache", if you want to process them again, see examples in 'examples/extracting' for more details.
 
-> if you add or remove enhancer, you must delete all files in the cache directory (if cache is enabled (set_preprocessed_path))
+> if you add or remove enhancer, you must delete all files in the cache directory (if caching is enabled (set_preprocessed_path))
 
 
 ## Learn_Weights
 /examples/misc/Learn_Weights.py is running the extractor with different weights from 0-10.
 The best candidate is compared with the best annotation to get a score.
-The calculated score, document id and the used weights are saved per question under ./results.
+The calculated score, document id, and the used weights are saved per question under ./results.
 
 > Because of the combined_scorer, each document is evaluated in each step. This can lead to entries with the same weights, but with different scores.
 

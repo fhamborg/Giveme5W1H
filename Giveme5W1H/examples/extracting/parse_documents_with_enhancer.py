@@ -3,11 +3,11 @@ import os
 
 from enhancer.aida import Aida
 from enhancer.heideltime import Heideltime
-from extractors import action_extractor, cause_extractor, environment_extractor
-from extractors import method_extractor
+from Giveme5W1H.extractors import action_extractor, cause_extractor, environment_extractor
+from Giveme5W1H.extractors import method_extractor
 
-from extractor.extractor import MasterExtractor
-from extractor.tools.file.handler import Handler
+from Giveme5W1H.extractor.extractor import MasterExtractor
+from Giveme5W1H.extractor.tools.file.handler import Handler
 
 # Add path to allow execution though console
 # sys.path.insert(0, '/'.join(os.path.realpath(__file__).split('/')[:-3]))

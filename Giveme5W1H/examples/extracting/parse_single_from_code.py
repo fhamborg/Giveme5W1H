@@ -1,7 +1,7 @@
 import logging
 
-from extractor.document import Document
-from extractor.extractor import MasterExtractor
+from Giveme5W1H.extractor.document import Document
+from Giveme5W1H.extractor.extractor import MasterExtractor
 
 """
 This is a simple example how to use the extractor in combination with a dict in news-please format.

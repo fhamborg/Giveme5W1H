@@ -50,7 +50,7 @@ Of course, you can also access the RESTful API endpoints directly. You can acces
 * `title` (mandatory; can also be used to pass the full text of the article, e.g., if you do not have title, description, and text separately)
 * `description` (typically the lead paragraph)
 * `text` (the main text)
-* `date` (must be readable by [parsedatetime](https://pypi.python.org/pypi/parsedatetime/))
+* `date` (must be readable by [parsedatetime](https://pypi.python.org/pypi/parsedatetime/), e.g. ,`2017-07-17 17:03:00`)
 * `url` (mandatory for POST requests)
 
 #### Use within your own code (as a library)

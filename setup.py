@@ -1,7 +1,7 @@
 from setuptools import setup, find_packages
 
 setup(name='giveme5w1h',
-      version='1.0.10',
+      version='1.0.11',
       description="Extraction of the journalistic five W and one H questions (5W1H) from news articles.",
       long_description="""Giveme5W1H is an open source, easy-to-use system to that extracts phrases answering the journalist 5W1H questions to describe an article's main event: who did what, when, where, why, and how?""",
       classifiers=[
@@ -43,8 +43,7 @@ setup(name='giveme5w1h',
           'geopy>=1.11.0',
           'parsedatetime>=2.2',
           'pycorenlp>=0.3.0',
-          'python-dateutil>=2.6',
-          'python_dateutil',
+          'python_dateutil>=2.6',
           'lxml',
           'numpy',
           'pandas',
@@ -59,4 +58,3 @@ setup(name='giveme5w1h',
       extras_require={
       }
       )
-

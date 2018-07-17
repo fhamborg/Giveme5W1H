@@ -57,7 +57,7 @@ Of course, you can also access the RESTful API endpoints directly. You can acces
 Use the following code to extract 5W1H phrases from a single news article.
 ```python
 from Giveme5W1H.extractor.document import Document
-from Giveme5W1H.extractor.extractor import FiveWExtractor
+from Giveme5W1H.extractor.extractor import MasterExtractor
 
 extractor = MasterExtractor()
 doc = Document(title, lead, text, date_publish)

@@ -29,10 +29,7 @@ You should see `[main] INFO CoreNLP - StanfordCoreNLPServer listening at /0:0:0:
 Giveme5W1H enables the extraction of 5W1H phrases from news articles. You can access Giveme5W1H's functionality via a RESTful API, or as a module from within your Python 3.6+ code. 
 
 #### Starting the CoreNLP Server (mandatory) 
-Either way, *you must start* the Stanford CoreNLP Server before using Giveme5W1H. To do so, run `giveme5w1h-corenlp` in a terminal, and do not close the terminal. 
-
-##### Some information on performance
-We decided to not integrate the CoreNLP Server transparently into Giveme5W1H mainly because the CoreNLP Server takes a lot of time until the initialization of all components is finished. Hence, the first run of Giveme5W1H after you started the CoreNLP Server, will likely take a couple of minutes (because components in CoreNLP Server are initialized on the fly). So, be sure to start up the server and use it to extract 5W1Hs from multiple news articles. See [below](#corenlp-host) if you want to use a CoreNLP Server that is running on a remote machine or different port.
+Either way, *you must start* the Stanford CoreNLP Server before using Giveme5W1H (see [below](#Stanford CoreNLP Server: Some information on performance) for an explanation why we decided to not integrate an automatic server startup to Giveme5W1H). To do so, run `giveme5w1h-corenlp` in a terminal, and do not close the terminal. 
 
 #### RESTful API / webpage access
 Start the RESTful API server that comes with Giveme5W1H (execute the following command in a separate shell, so that the CoreNLP Server started by the previous command runs in parallel):
@@ -73,6 +70,9 @@ python3 -m Giveme5W1H.examples.extracting.parse_documents
 
 # Additional Information
 This section is currently subject to a major update. Some information may be outdated or redundant to the above information.
+
+## Stanford CoreNLP Server: Some information on performance
+We decided to not integrate the CoreNLP Server transparently into Giveme5W1H mainly because the CoreNLP Server takes a lot of time until the initialization of all components is finished. Hence, the first run of Giveme5W1H after you started the CoreNLP Server, will likely take a couple of minutes (because components in CoreNLP Server are initialized on the fly). So, be sure to start up the server and use it to extract 5W1Hs from multiple news articles. See [below](#corenlp-host) if you want to use a CoreNLP Server that is running on a remote machine or different port.
 
 ## Configuration
 Configurations are optional.
@@ -150,7 +150,6 @@ The best candidate is compared with the best annotation to get a score.
 The calculated score, document id, and the used weights are saved per question under ./results.
 
 > Because of the combined_scorer, each document is evaluated in each step. This can lead to entries with the same weights, but with different scores.
-
 
 ## How to cite
 If you are using Giveme5W1H, please cite our vision [paper](http://www.gipp.com/wp-content/papercite-data/pdf/hamborg2018a.pdf) ([ResearchGate](https://www.researchgate.net/publication/325176943_Extraction_of_Main_Event_Descriptors_from_News_Articles_by_Answering_the_Journalistic_Five_W_and_One_H_Questions)), which describes an early version of Giveme5W1H (a publication on the most recent version of Giveme5W1H is currently planned):

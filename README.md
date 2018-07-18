@@ -29,7 +29,7 @@ You should see `[main] INFO CoreNLP - StanfordCoreNLPServer listening at /0:0:0:
 Giveme5W1H enables the extraction of 5W1H phrases from news articles. You can access Giveme5W1H's functionality via a RESTful API, or as a module from within your Python 3.6+ code. 
 
 #### Starting the CoreNLP Server (mandatory) 
-Either way, *you must start* the Stanford CoreNLP Server before using Giveme5W1H (see [below](#Stanford CoreNLP Server: Some information on performance) for an explanation why we decided to not integrate an automatic server startup to Giveme5W1H). To do so, run `giveme5w1h-corenlp` in a terminal, and do not close the terminal. 
+Either way, *you must start* the Stanford CoreNLP Server before using Giveme5W1H (see [below](#why-do-i-need-to-manually-start-the-stanford-corenlp-server) for an explanation why we decided to not integrate an automatic server startup to Giveme5W1H). To do so, run `giveme5w1h-corenlp` in a terminal, and do not close the terminal. 
 
 #### RESTful API / webpage access
 Start the RESTful API server that comes with Giveme5W1H (execute the following command in a separate shell, so that the CoreNLP Server started by the previous command runs in parallel):

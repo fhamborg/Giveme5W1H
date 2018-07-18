@@ -62,6 +62,8 @@ from Giveme5W1H.extractor.extractor import MasterExtractor
 extractor = MasterExtractor()
 doc = Document(title, lead, text, date_publish)
 doc = extractor.parse(doc)
+top_who_answer = doc.get_answers()['who'][0].get_parts_as_text()
+print(top_who_answer)
 ```
 
 Have a look at our sample Python scripts, for more information on extraction from a [single news article](https://github.com/fhamborg/Giveme5W1H/blob/master/Giveme5W1H/examples/extracting/parse_single_from_code.py), or a [folder consisting of multiple JSON files in news-please format](https://github.com/fhamborg/Giveme5W1H/blob/master/Giveme5W1H/examples/extracting/parse_documents.py). Of course, you can also run the sample scripts, e.g.:

@@ -77,4 +77,6 @@ if __name__ == '__main__':
 
     doc = Document(title, lead, text, date_publish)
     doc = extractor.parse(doc)
-    print("done")
+
+    top_who_answer = doc.get_answers()['who'][0].get_parts_as_text()
+    print(top_who_answer)

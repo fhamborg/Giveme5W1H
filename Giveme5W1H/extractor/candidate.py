@@ -135,6 +135,5 @@ class Candidate:
             else:
                 # just one parts
                 end_index = parts[0][0]['nlpToken']['characterOffsetEnd']
-
             return (start_index, end_index)
         return (-1, -1)

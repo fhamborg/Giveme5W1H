@@ -31,6 +31,24 @@ Giveme5W1H enables the extraction of 5W1H phrases from news articles. You can ac
 #### Starting the CoreNLP Server (mandatory) 
 Either way, *you must start* the Stanford CoreNLP Server before using Giveme5W1H (see [below](#why-do-i-need-to-manually-start-the-stanford-corenlp-server) for an explanation why we decided to not integrate an automatic server startup to Giveme5W1H). To do so, run `giveme5w1h-corenlp` in a terminal, and do not close the terminal. 
 
+#### Use within your own code (as a library)
+Use the following code to extract 5W1H phrases from a single news article.
+```python
+from Giveme5W1H.extractor.document import Document
+from Giveme5W1H.extractor.extractor import MasterExtractor
+
+extractor = MasterExtractor()
+doc = Document(title, lead, text, date_publish)
+doc = extractor.parse(doc)
+top_who_answer = doc.get_answers()['who'][0].get_parts_as_text()
+print(top_who_answer)
+```
+
+Have a look at our sample Python scripts, for more information on extraction from a [single news article](https://github.com/fhamborg/Giveme5W1H/blob/master/Giveme5W1H/examples/extracting/parse_single_from_code.py), or a [folder consisting of multiple JSON files in news-please format](https://github.com/fhamborg/Giveme5W1H/blob/master/Giveme5W1H/examples/extracting/parse_documents.py). To start one of them, use the following command (here shown for the `parse_documents` script, which extracts 5W1Hs from multiple JSON files):
+```python
+python3 -m Giveme5W1H.examples.extracting.parse_documents
+```
+
 #### RESTful API / webpage access
 Start the RESTful API server that comes with Giveme5W1H (execute the following command in a separate shell, so that the CoreNLP Server started by the previous command runs in parallel):
 ```
@@ -49,24 +67,6 @@ Of course, you can also access the RESTful API endpoints directly. You can acces
 * `text` (the main text)
 * `date` (must be readable by [parsedatetime](https://pypi.python.org/pypi/parsedatetime/), e.g., `2017-07-17 17:03:00`)
 * `url` (mandatory for POST requests)
-
-#### Use within your own code (as a library)
-Use the following code to extract 5W1H phrases from a single news article.
-```python
-from Giveme5W1H.extractor.document import Document
-from Giveme5W1H.extractor.extractor import MasterExtractor
-
-extractor = MasterExtractor()
-doc = Document(title, lead, text, date_publish)
-doc = extractor.parse(doc)
-top_who_answer = doc.get_answers()['who'][0].get_parts_as_text()
-print(top_who_answer)
-```
-
-Have a look at our sample Python scripts, for more information on extraction from a [single news article](https://github.com/fhamborg/Giveme5W1H/blob/master/Giveme5W1H/examples/extracting/parse_single_from_code.py), or a [folder consisting of multiple JSON files in news-please format](https://github.com/fhamborg/Giveme5W1H/blob/master/Giveme5W1H/examples/extracting/parse_documents.py). To start one of them, use the following command (here shown for the `parse_documents` script, which extracts 5W1Hs from multiple JSON files):
-```python
-python3 -m Giveme5W1H.examples.extracting.parse_documents
-```
 
 # Additional Information
 This section is currently subject to a major update. Some information may be outdated or redundant to the above information.

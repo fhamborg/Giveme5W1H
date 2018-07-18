@@ -29,28 +29,7 @@ You should see `[main] INFO CoreNLP - StanfordCoreNLPServer listening at /0:0:0:
 Giveme5W1H enables the extraction of 5W1H phrases from news articles. You can access Giveme5W1H's functionality via a RESTful API, or as a module from within your Python 3.6+ code. 
 
 #### Starting the CoreNLP Server (mandatory) 
-Either way, *you must start* the Stanford CoreNLP Server before using Giveme5W1H. To do so, run `giveme5w1h-corenlp` in a terminal, and do not close the terminal. 
-
-##### Some information on performance
-We decided to not integrate the CoreNLP Server transparently into Giveme5W1H mainly because the CoreNLP Server takes a lot of time until the initialization of all components is finished. Hence, the first run of Giveme5W1H after you started the CoreNLP Server, will likely take a couple of minutes (because components in CoreNLP Server are initialized on the fly). So, be sure to start up the server and use it to extract 5W1Hs from multiple news articles. See [below](#corenlp-host) if you want to use a CoreNLP Server that is running on a remote machine or different port.
-
-#### RESTful API / webpage access
-Start the RESTful API server that comes with Giveme5W1H (execute the following command in a separate shell, so that the CoreNLP Server started by the previous command runs in parallel):
-```
-$ giveme5w1h-rest
-```
-After a couple of seconds, you will see the following line:
-```
- * Running on http://xxx.xxx.xxx.xxx:9099/ (Press CTRL+C to quit)
-```
-
-If you open the URL in your browser, you will see a page with a sample news article. Just click on `GET example`, or `run example` to analyze the shown article. You can also use this page to analyze your articles.
-
-Of course, you can also access the RESTful API endpoints directly. You can access the endpoint at `http://localhost:9099/extract` via GET or POST requests. For GET and POST requests, the input format is the [news-please article format](https://github.com/fhamborg/news-please/blob/master/newsplease/examples/sample.json), with the following fields: 
-* `title` (mandatory; can also be used to pass the full text of the article, e.g., if you do not have title, description, and text separately)
-* `description` (typically the lead paragraph)
-* `text` (the main text)
-* `date` (must be readable by [parsedatetime](https://pypi.python.org/pypi/parsedatetime/), e.g., `2017-07-17 17:03:00`)
+Either way, *you must start* the Stanford CoreNLP Server before using Giveme5W1H (see [below](#why-do-i-need-to-manually-start-the-stanford-corenlp-server) for an explanation why we decided to not integrate an automatic server startup to Giveme5W1H). To do so, run `giveme5w1h-corenlp` in a terminal, and do not close the terminal. 
 
 #### Use within your own code (as a library)
 Use the following code to extract 5W1H phrases from a single news article.
@@ -66,13 +45,35 @@ top_who_answer = doc.get_answers()['who'][0].get_parts_as_text()
 print(top_who_answer)
 ```
 
-Have a look at our sample Python scripts, for more information on extraction from a [single news article](https://github.com/fhamborg/Giveme5W1H/blob/master/Giveme5W1H/examples/extracting/parse_single_from_code.py), or a [folder consisting of multiple JSON files in news-please format](https://github.com/fhamborg/Giveme5W1H/blob/master/Giveme5W1H/examples/extracting/parse_documents.py). Of course, you can also run the sample scripts, e.g.:
+Have a look at our sample Python scripts, for more information on extraction from a [single news article](https://github.com/fhamborg/Giveme5W1H/blob/master/Giveme5W1H/examples/extracting/parse_single_from_code.py), or a [folder consisting of multiple JSON files in news-please format](https://github.com/fhamborg/Giveme5W1H/blob/master/Giveme5W1H/examples/extracting/parse_documents.py). To start one of them, use the following command (here shown for the `parse_documents` script, which extracts 5W1Hs from multiple JSON files):
 ```python
 python3 -m Giveme5W1H.examples.extracting.parse_documents
 ```
 
+#### RESTful API / webpage access
+Start the RESTful API server that comes with Giveme5W1H (execute the following command in a separate shell, so that the CoreNLP Server started by the previous command runs in parallel):
+```
+$ giveme5w1h-rest
+```
+After a couple of seconds, you will see the following line:
+```
+ * Running on http://xxx.xxx.xxx.xxx:9099/ (Press CTRL+C to quit)
+```
+
+If you open the URL in your browser, you will see a page with a sample news article. Just click on `GET example`, or `run example` to analyze the shown article. You can also use this page to analyze your articles.
+
+Of course, you can also access the RESTful API endpoints directly. You can access the endpoint at `http://localhost:9099/extract` via GET or POST requests. For GET and POST requests, the input format is the [news-please article format](https://github.com/fhamborg/news-please/blob/master/newsplease/examples/sample.json), with the following fields:
+* `title` (mandatory; can also be used to pass the full text of the article, e.g., if you do not have title, description, and text separately)
+* `description` (typically the lead paragraph)
+* `text` (the main text)
+* `date` (must be readable by [parsedatetime](https://pypi.python.org/pypi/parsedatetime/), e.g., `2017-07-17 17:03:00`)
+* `url` (mandatory for POST requests)
+
 # Additional Information
 This section is currently subject to a major update. Some information may be outdated or redundant to the above information.
+
+## Why do I need to manually start the Stanford CoreNLP Server?
+We decided to not integrate the CoreNLP Server transparently into Giveme5W1H mainly because the CoreNLP Server takes a lot of time until the initialization of all components is finished. Hence, the first run of Giveme5W1H after you started the CoreNLP Server, will likely take a couple of minutes (because components in CoreNLP Server are initialized on the fly). So, be sure to start up the server and use it to extract 5W1Hs from multiple news articles. See [below](#corenlp-host) if you want to use a CoreNLP Server that is running on a remote machine or different port.
 
 ## Configuration
 Configurations are optional.

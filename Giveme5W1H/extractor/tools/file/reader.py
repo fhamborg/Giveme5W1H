@@ -3,6 +3,7 @@ import json
 import logging
 import os.path
 import pickle
+import uuid
 
 from Giveme5W1H.extractor.document import Document
 
@@ -31,7 +32,8 @@ class Reader(object):
         if not data.get('dId'):
             url = data.get('url')
             if not url:
-                print(path + ' has no URL or dID. At least a URL is mandatory to generate a unique dId')
+                print(path + ' has no dId and also no URL to create a dID. Creating a dID using a random number.')
+                data['dId'] = hashlib.sha224(uuid.uuid4().hex).hexdigest()
             else:
                 data['dId'] = hashlib.sha224(url.encode('utf-8')).hexdigest()
 

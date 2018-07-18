@@ -46,12 +46,11 @@ After a couple of seconds, you will see the following line:
 
 If you open the URL in your browser, you will see a page with a sample news article. Just click on `GET example`, or `run example` to analyze the shown article. You can also use this page to analyze your articles.
 
-Of course, you can also access the RESTful API endpoints directly. You can access the endpoint at `http://localhost:9099/extract` via GET or POST requests. For GET and POST requests, the input format is the [news-please article format](https://github.com/fhamborg/news-please/blob/master/newsplease/examples/sample.json), with the following fields:
+Of course, you can also access the RESTful API endpoints directly. You can access the endpoint at `http://localhost:9099/extract` via GET or POST requests. For GET and POST requests, the input format is the [news-please article format](https://github.com/fhamborg/news-please/blob/master/newsplease/examples/sample.json), with the following fields: 
 * `title` (mandatory; can also be used to pass the full text of the article, e.g., if you do not have title, description, and text separately)
 * `description` (typically the lead paragraph)
 * `text` (the main text)
 * `date` (must be readable by [parsedatetime](https://pypi.python.org/pypi/parsedatetime/), e.g., `2017-07-17 17:03:00`)
-* `url` (mandatory for POST requests)
 
 #### Use within your own code (as a library)
 Use the following code to extract 5W1H phrases from a single news article.
@@ -60,7 +59,8 @@ from Giveme5W1H.extractor.document import Document
 from Giveme5W1H.extractor.extractor import MasterExtractor
 
 extractor = MasterExtractor()
-doc = Document(title, lead, text, date_publish)
+doc = Document.from_text(text, date_publish)
+# or: doc = Document(title, lead, text, date_publish) 
 doc = extractor.parse(doc)
 top_who_answer = doc.get_answers()['who'][0].get_parts_as_text()
 print(top_who_answer)

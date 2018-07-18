@@ -74,7 +74,7 @@ if __name__ == '__main__':
 
     # giveme5w setup - with defaults
     extractor = MasterExtractor()
-
+    Document()
     doc = Document(title, lead, text, date_publish)
     doc = extractor.parse(doc)
 

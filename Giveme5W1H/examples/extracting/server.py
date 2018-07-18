@@ -72,14 +72,24 @@ def request_to_document():
         data = request.get_json(force=True)
         document = reader.parse_newsplease(data, 'Server')
     elif request.method == 'GET':
-        title = request.args.get('title', None)
-        description = request.args.get('description', None)
-        text = request.args.get('text', None)
+        # either
+        full_text = request.args.get('fulltext', '')
+        # or
+        title = request.args.get('title', '')
+        description = request.args.get('description', '')
+        text = request.args.get('text', '')
+        # and always
         date = request.args.get('date', None)
 
-        if title and (description or text):
+        if full_text:
+            document = Document.from_text(full_text, date=date)
+        elif title:
             log.debug("retrieved raw article for extraction: %s", title)
-            document = Document(title, description if description else '', text if text else '', date=date)
+            document = Document(title, description, text, date=date)
+        else:
+            log.error("Retrieved data does not contain title or full_text. One of them is required.")
+            return None
+
     return document
 
 

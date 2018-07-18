@@ -49,6 +49,10 @@ class Document(object):
 
         self._error_flags = {}
 
+    @classmethod
+    def from_text(cls, text, date=None, raw_data=None):
+        return cls(title=text, date=date, raw_data=raw_data)
+
     def is_preprocessed(self, preprocessed=None):
         if preprocessed is True or preprocessed is False:
             self._preprocessed = preprocessed

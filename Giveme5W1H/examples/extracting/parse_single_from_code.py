@@ -78,5 +78,16 @@ if __name__ == '__main__':
     doc = Document(title, lead, text, date_publish)
     doc = extractor.parse(doc)
 
-    top_who_answer = doc.get_answers()['who'][0].get_parts_as_text()
+    top_who_answer = doc.get_top_answer('who').get_parts_as_text()
+    top_what_answer = doc.get_top_answer('what').get_parts_as_text()
+    top_when_answer = doc.get_top_answer('when').get_parts_as_text()
+    top_where_answer = doc.get_top_answer('where').get_parts_as_text()
+    top_why_answer = doc.get_top_answer('why').get_parts_as_text()
+    top_how_answer = doc.get_top_answer('how').get_parts_as_text()
+
     print(top_who_answer)
+    print(top_what_answer)
+    print(top_when_answer)
+    print(top_where_answer)
+    print(top_why_answer)
+    print(top_how_answer)

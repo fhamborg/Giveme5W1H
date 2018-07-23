@@ -133,8 +133,14 @@ class Document(object):
     def get_ner(self):
         return self._nerTags
 
-    def get_answers(self):
-        return self._answers
+    def get_answers(self, question=None):
+        if question:
+            return self._answers[question]
+        else:
+            return self._answers
+
+    def get_top_answer(self, question):
+        return self.get_answers(question=question)[0]
 
     def get_annotations(self):
         return self._annotations

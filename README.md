@@ -44,7 +44,8 @@ extractor = MasterExtractor()
 doc = Document.from_text(text, date_publish)
 # or: doc = Document(title, lead, text, date_publish) 
 doc = extractor.parse(doc)
-top_who_answer = doc.get_answers()['who'][0].get_parts_as_text()
+
+top_who_answer = doc.get_top_answer('who').get_parts_as_text()
 print(top_who_answer)
 ```
 

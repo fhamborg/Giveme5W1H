@@ -15,7 +15,7 @@ It's super easy, we promise!
 ### Installation
 Giveme5W1H requires Python 3.6 (or later) to run. The following two commands will install Giveme5W1H and Stanford CoreNLP Server.
 ```
-$ pip3 install giveme5w1h
+$ pip3 install giveme5w1h # Linux users may need to use: sudo -H pip3 install giveme5w1h
 $ giveme5w1h-corenlp install
 ```
 

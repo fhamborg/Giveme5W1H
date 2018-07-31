@@ -161,14 +161,14 @@ The calculated score, document id, and the used weights are saved per question u
 If you are using Giveme5W1H, please cite our vision [paper](http://www.gipp.com/wp-content/papercite-data/pdf/hamborg2018a.pdf) ([ResearchGate](https://www.researchgate.net/publication/325176943_Extraction_of_Main_Event_Descriptors_from_News_Articles_by_Answering_the_Journalistic_Five_W_and_One_H_Questions)), which describes an early version of Giveme5W1H (a publication about the most recent version of Giveme5W1H is currently planned):
 ```
 @InProceedings{Hamborg2018a,
-author    = {Hamborg, Felix and Breitinger, Corinna and Schubotz, Moritz and Lachnit, Soeren and Gipp, Bela},
-title     = {Extraction of Main Event Descriptors from News Articles by Answering the Journalistic Five W and One H Questions},
-booktitle = {Proceedings of the ACM/IEEE-CS Joint Conference on Digital Libraries (JCDL)},
-year      = {2018},
-month     = {Jun.},
-location  = {Fort Worth, USA},
-url       = {https://doi.org/10.1145/3197026.3203899},
-doi       = {10.1145/3197026.3203899}
+  author    = {Hamborg, Felix and Breitinger, Corinna and Schubotz, Moritz and Lachnit, Soeren and Gipp, Bela},
+  title     = {Extraction of Main Event Descriptors from News Articles by Answering the Journalistic Five W and One H Questions},
+  booktitle = {Proceedings of the ACM/IEEE-CS Joint Conference on Digital Libraries (JCDL)},
+  year      = {2018},
+  month     = {Jun.},
+  location  = {Fort Worth, USA},
+  url       = {https://doi.org/10.1145/3197026.3203899},
+  doi       = {10.1145/3197026.3203899}
 }
 ```
 

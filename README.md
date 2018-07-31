@@ -172,19 +172,6 @@ doi       = {10.1145/3197026.3203899}
 }
 ```
 
-Giveme5W1H is based on the 5W extraction system [Giveme5W](https://www.gipp.com/wp-content/papercite-data/pdf/hamborg2018.pdf) ([ResearchGate](https://www.researchgate.net/publication/323582278_Giveme5W_Main_Event_Retrieval_from_News_Articles_by_Extraction_of_the_Five_Journalistic_W_Questions), [Mendeley](https://www.mendeley.com/research-papers/giveme5w-main-event-retrieval-news-articles-extraction-five-journalistic-w-questions/?utm_source=desktop&utm_medium=1.17.13&utm_campaign=open_catalog&userDocumentId=%7B6945b48b-a775-4b85-b09b-f321b316f6da%7D)), which can be cited as follows:
-```
-@InProceedings{Hamborg2018,
-  author    = {Hamborg, Felix and Lachnit, Soeren and Schubotz, Moritz and Hepp, Thomas and Gipp, Bela},
-  title     = {Giveme5W: Main Event Retrieval from News Articles by Extraction of the Five Journalistic W Questions},
-  booktitle = {Proceedings of the iConference 2018},
-  year      = {2018},
-  month     = {March},
-  location  = {Sheffield, UK},
-  url       = {https://doi.org/10.1007/978-3-319-78105-1_39},
-  doi       = {10.1007/978-3-319-78105-1_39}
-}
-```
 You can find more information on this and other news projects on our [website](https://felix.hamborg.eu/).
 
 ## Contribution and support

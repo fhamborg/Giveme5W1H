@@ -29,7 +29,7 @@ You should see `[main] INFO CoreNLP - StanfordCoreNLPServer listening at /0:0:0:
 Giveme5W1H enables the extraction of 5W1H phrases from news articles. You can access Giveme5W1H's functionality via a RESTful API, or as a module from within your Python 3.6+ code. 
 
 #### Starting the CoreNLP Server (mandatory) 
-Either way, *you must start* the Stanford CoreNLP Server before using Giveme5W1H (see [below](#why-do-i-need-to-manually-start-the-stanford-corenlp-server) for an explanation why we decided to not integrate an automatic server startup to Giveme5W1H). To do so, run the following command in a terminal, and do not close the terminal:
+You must start the Stanford CoreNLP Server before using Giveme5W1H (see [below](#why-do-i-need-to-manually-start-the-stanford-corenlp-server) for an explanation why we decided to not integrate an automatic server startup to Giveme5W1H). To do so, run the following command in a terminal, and do not close the terminal:
 ```
 $ giveme5w1h-corenlp
 ``` 
@@ -77,10 +77,10 @@ Of course, you can also access the RESTful API endpoints directly. You can acces
 This section is currently subject to a major update. Some information may be outdated or redundant to the above information.
 
 ## Why do I need to manually start the Stanford CoreNLP Server?
-We decided to not integrate the CoreNLP Server transparently into Giveme5W1H mainly because the CoreNLP Server takes a lot of time until the initialization of all components is finished. Hence, the first run of Giveme5W1H after you started the CoreNLP Server, will likely take a couple of minutes (because components in CoreNLP Server are initialized on the fly). So, be sure to start up the server and use it to extract 5W1Hs from multiple news articles. See [below](#corenlp-host) if you want to use a CoreNLP Server that is running on a remote machine or different port.
+We decided to not integrate the CoreNLP Server transparently into Giveme5W1H mainly because the CoreNLP Server takes a lot of time until the initialization of all components is finished. Hence, the first run of Giveme5W1H after you started the CoreNLP Server, will likely take a couple of minutes (because components in CoreNLP Server are initialized on the fly). So, be sure to start the server and use it to extract 5W1Hs from multiple news articles, or - even better - have the CoreNLP Server run permanently. See [below](#corenlp-host) if you want to use a CoreNLP Server that is running on a remote machine or different port.
 
 ## Configuration
-Configurations are optional.
+The following configurations are optional.
 
 ### CoreNLP Host
 You can also use a remotely installed  CoreNLP-Server. Simply parse the preprocessor another URL in case you run it on another machine:

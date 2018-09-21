@@ -76,7 +76,7 @@ Of course, you can also access the RESTful API endpoints directly. You can acces
 # Additional Information
 This section is currently subject to a major update. Some information may be outdated or redundant to the above information.
 
-## Why do I need to manually start the Stanford CoreNLP Server?
+## Why do I need to start the Stanford CoreNLP Server manually?
 We decided to not integrate the CoreNLP Server transparently into Giveme5W1H mainly because the CoreNLP Server takes a lot of time until the initialization of all components is finished. Hence, the first run of Giveme5W1H after you started the CoreNLP Server, will likely take a couple of minutes (because components in CoreNLP Server are initialized on the fly). So, be sure to start the server and use it to extract 5W1Hs from multiple news articles, or - even better - have the CoreNLP Server run permanently. See [below](#corenlp-host) if you want to use a CoreNLP Server that is running on a remote machine or different port.
 
 ## Configuration

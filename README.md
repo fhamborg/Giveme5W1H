@@ -15,7 +15,7 @@ It's super easy, we promise!
 ### Installation
 Giveme5W1H requires Python 3.6 (or later) to run. The following two commands will install Giveme5W1H and Stanford CoreNLP Server.
 ```
-$ pip3 install giveme5w1h
+$ pip3 install giveme5w1h # Linux users may need to use: sudo -H pip3 install giveme5w1h
 $ giveme5w1h-corenlp install
 ```
 
@@ -29,9 +29,9 @@ You should see `[main] INFO CoreNLP - StanfordCoreNLPServer listening at /0:0:0:
 Giveme5W1H enables the extraction of 5W1H phrases from news articles. You can access Giveme5W1H's functionality via a RESTful API, or as a module from within your Python 3.6+ code. 
 
 #### Starting the CoreNLP Server (mandatory) 
-Either way, *you must start* the Stanford CoreNLP Server before using Giveme5W1H (see [below](#why-do-i-need-to-manually-start-the-stanford-corenlp-server) for an explanation why we decided to not integrate an automatic server startup to Giveme5W1H). To do so, run the following command in a terminal, and do not close the terminal:
+You must start the Stanford CoreNLP Server before using Giveme5W1H (see [below](#why-do-i-need-to-manually-start-the-stanford-corenlp-server) for an explanation why we decided to not integrate an automatic server startup to Giveme5W1H). To do so, run the following command in a terminal, and do not close the terminal:
 ```
-giveme5w1h-corenlp
+$ giveme5w1h-corenlp
 ``` 
 
 #### Use within your own code (as a library)
@@ -44,7 +44,8 @@ extractor = MasterExtractor()
 doc = Document.from_text(text, date_publish)
 # or: doc = Document(title, lead, text, date_publish) 
 doc = extractor.parse(doc)
-top_who_answer = doc.get_answers()['who'][0].get_parts_as_text()
+
+top_who_answer = doc.get_top_answer('who').get_parts_as_text()
 print(top_who_answer)
 ```
 
@@ -75,11 +76,11 @@ Of course, you can also access the RESTful API endpoints directly. You can acces
 # Additional Information
 This section is currently subject to a major update. Some information may be outdated or redundant to the above information.
 
-## Why do I need to manually start the Stanford CoreNLP Server?
-We decided to not integrate the CoreNLP Server transparently into Giveme5W1H mainly because the CoreNLP Server takes a lot of time until the initialization of all components is finished. Hence, the first run of Giveme5W1H after you started the CoreNLP Server, will likely take a couple of minutes (because components in CoreNLP Server are initialized on the fly). So, be sure to start up the server and use it to extract 5W1Hs from multiple news articles. See [below](#corenlp-host) if you want to use a CoreNLP Server that is running on a remote machine or different port.
+## Why do I need to start the Stanford CoreNLP Server manually?
+We decided to not integrate the CoreNLP Server transparently into Giveme5W1H mainly because the CoreNLP Server takes a lot of time until the initialization of all components is finished. Hence, the first run of Giveme5W1H after you started the CoreNLP Server, will likely take a couple of minutes (because components in CoreNLP Server are initialized on the fly). So, be sure to start the server and use it to extract 5W1Hs from multiple news articles, or - even better - have the CoreNLP Server run permanently. See [below](#corenlp-host) if you want to use a CoreNLP Server that is running on a remote machine or different port.
 
 ## Configuration
-Configurations are optional.
+The following configurations are optional.
 
 ### CoreNLP Host
 You can also use a remotely installed  CoreNLP-Server. Simply parse the preprocessor another URL in case you run it on another machine:
@@ -157,33 +158,20 @@ The calculated score, document id, and the used weights are saved per question u
 
 
 ## How to cite
-If you are using Giveme5W1H, please cite our vision [paper](http://www.gipp.com/wp-content/papercite-data/pdf/hamborg2018a.pdf) ([ResearchGate](https://www.researchgate.net/publication/325176943_Extraction_of_Main_Event_Descriptors_from_News_Articles_by_Answering_the_Journalistic_Five_W_and_One_H_Questions)), which describes an early version of Giveme5W1H (a publication on the most recent version of Giveme5W1H is currently planned):
+If you are using Giveme5W1H, please cite our vision [paper](http://www.gipp.com/wp-content/papercite-data/pdf/hamborg2018a.pdf) ([ResearchGate](https://www.researchgate.net/publication/325176943_Extraction_of_Main_Event_Descriptors_from_News_Articles_by_Answering_the_Journalistic_Five_W_and_One_H_Questions)), which describes an early version of Giveme5W1H (a publication about the most recent version of Giveme5W1H is currently planned):
 ```
 @InProceedings{Hamborg2018a,
-author    = {Hamborg, Felix and Breitinger, Corinna and Schubotz, Moritz and Lachnit, Soeren and Gipp, Bela},
-title     = {Extraction of Main Event Descriptors from News Articles by Answering the Journalistic Five W and One H Questions},
-booktitle = {Proceedings of the ACM/IEEE-CS Joint Conference on Digital Libraries (JCDL)},
-year      = {2018},
-month     = {Jun.},
-location  = {Fort Worth, USA},
-url       = {https://doi.org/10.1145/3197026.3203899},
-doi       = {10.1145/3197026.3203899}
+  author    = {Hamborg, Felix and Breitinger, Corinna and Schubotz, Moritz and Lachnit, Soeren and Gipp, Bela},
+  title     = {Extraction of Main Event Descriptors from News Articles by Answering the Journalistic Five W and One H Questions},
+  booktitle = {Proceedings of the ACM/IEEE-CS Joint Conference on Digital Libraries (JCDL)},
+  year      = {2018},
+  month     = {Jun.},
+  location  = {Fort Worth, USA},
+  url       = {https://doi.org/10.1145/3197026.3203899},
+  doi       = {10.1145/3197026.3203899}
 }
 ```
 
-Giveme5W1H is based on the 5W extraction system [Giveme5W](https://www.gipp.com/wp-content/papercite-data/pdf/hamborg2018.pdf) ([ResearchGate](https://www.researchgate.net/publication/323582278_Giveme5W_Main_Event_Retrieval_from_News_Articles_by_Extraction_of_the_Five_Journalistic_W_Questions), [Mendeley](https://www.mendeley.com/research-papers/giveme5w-main-event-retrieval-news-articles-extraction-five-journalistic-w-questions/?utm_source=desktop&utm_medium=1.17.13&utm_campaign=open_catalog&userDocumentId=%7B6945b48b-a775-4b85-b09b-f321b316f6da%7D)), which can be cited as follows:
-```
-@InProceedings{Hamborg2018,
-  author    = {Hamborg, Felix and Lachnit, Soeren and Schubotz, Moritz and Hepp, Thomas and Gipp, Bela},
-  title     = {Giveme5W: Main Event Retrieval from News Articles by Extraction of the Five Journalistic W Questions},
-  booktitle = {Proceedings of the iConference 2018},
-  year      = {2018},
-  month     = {March},
-  location  = {Sheffield, UK},
-  url       = {https://doi.org/10.1007/978-3-319-78105-1_39},
-  doi       = {10.1007/978-3-319-78105-1_39}
-}
-```
 You can find more information on this and other news projects on our [website](https://felix.hamborg.eu/).
 
 ## Contribution and support

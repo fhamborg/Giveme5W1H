@@ -1,7 +1,7 @@
 from setuptools import setup, find_packages
 
 setup(name='giveme5w1h',
-      version='1.0.13',
+      version='1.0.15',
       description="Extraction of the journalistic five W and one H questions (5W1H) from news articles.",
       long_description="""Giveme5W1H is an open source, easy-to-use system to that extracts phrases answering the journalist 5W1H questions to describe an article's main event: who did what, when, where, why, and how?""",
       classifiers=[
@@ -34,7 +34,7 @@ setup(name='giveme5w1h',
       zip_safe=False,
       install_requires=[
           'unidecode',
-          'jinja2',
+          'jinja2>=2.10.1',
           'requests>=2.20.0',
           'xmltodict',
           'nltk>=3.1.2',

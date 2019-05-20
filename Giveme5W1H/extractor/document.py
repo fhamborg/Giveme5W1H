@@ -53,6 +53,14 @@ class Document(object):
     def from_text(cls, text, date=None, raw_data=None):
         return cls(title=text, date=date, raw_data=raw_data)
 
+    @classmethod
+    def from_newsplease(cls, article):
+        if article.date_publish:
+            tmp_date = str(article.date_publish)
+        else:
+            tmp_date = None
+        return cls(title=article.title, text=article.text, desc=article.description, date=tmp_date, raw_data=None)
+
     def is_preprocessed(self, preprocessed=None):
         if preprocessed is True or preprocessed is False:
             self._preprocessed = preprocessed

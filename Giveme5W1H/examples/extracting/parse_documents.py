@@ -14,7 +14,7 @@ File will be process one by one.
 """
 
 # don`t forget to start up core_nlp_host
-# java -mx4g -cp "*" edu.stanford.nlp.pipeline.StanfordCoreNLPServer -port 9000 -timeout 15000
+# giveme5w1h-corenlp
 
 if __name__ == '__main__':
     # helper to setup a correct path

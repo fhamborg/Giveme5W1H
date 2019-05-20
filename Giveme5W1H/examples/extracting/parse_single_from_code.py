@@ -11,8 +11,9 @@ This is a simple example how to use the extractor in combination with a dict in 
 """
 
 # don`t forget to start up core_nlp_host
-# java -mx4g -cp "*" edu.stanford.nlp.pipeline.StanfordCoreNLPServer -port 9000 -timeout 15000
+# giveme5w1h-corenlp
 
+titleshort = "Barack Obama was born in Hawaii.  He is the president. Obama was elected in 2008."
 
 title = "Taliban attacks German consulate in northern Afghan city of Mazar-i-Sharif with truck bomb"
 lead = "The death toll from a powerful Taliban truck bombing at the German consulate in Afghanistan's Mazar-i-Sharif city rose to at least six Friday, with more than 100 others wounded in a major militant assault."
@@ -74,8 +75,8 @@ if __name__ == '__main__':
 
     # giveme5w setup - with defaults
     extractor = MasterExtractor()
-    Document()
-    doc = Document(title, lead, text, date_publish)
+    doc = Document.from_text(titleshort, date_publish)
+
     doc = extractor.parse(doc)
 
     top_who_answer = doc.get_top_answer('who').get_parts_as_text()

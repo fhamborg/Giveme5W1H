@@ -1,6 +1,6 @@
 ---
 name: Bug report
-about: Create a report to help us improve
+about: Create a report to help us improve Giveme5W1H. Please use this issue template when reporting a bug or other issue, always. It helps us to better understand the issue at hand.
 
 ---
 
@@ -13,8 +13,8 @@ Steps to reproduce the behavior, i.e., provide a minimalist example how to repro
 **Expected behavior**
 A clear and concise description of what you expected to happen.
 
-**Screenshots**
-If applicable, add screenshots to help explain your problem.
+**Log**
+Add a log to help explain your problem.
 
 **Versions (please complete the following information):**
  - OS: [e.g. MacOS 10.2]

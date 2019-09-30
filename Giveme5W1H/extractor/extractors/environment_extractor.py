@@ -221,7 +221,7 @@ class EnvironmentExtractor(AbsExtractor):
             max_area = max(max_area, area)
 
         # sort locations based id
-        raw_locations.sort(key=lambda x: x[1], reverse=True)
+        raw_locations.sort(key=lambda x: int(x[1]), reverse=True)
 
         # count multiple mentions
         for i, location in enumerate(raw_locations):

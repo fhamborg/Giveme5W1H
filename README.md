@@ -166,8 +166,7 @@ If you are using Giveme5W1H, please cite our [paper](http://www.gipp.com/wp-cont
   booktitle = {Proceedings of the 13th ACM Conference on Recommender Systems, 7th International Workshop on News Recommendation and Analytics (INRA 2019)},
   year      = {2019},
   month     = {Sept.},
-  location  = {Copenhagen, Denmark},
-  topic     = {newsanalysis}
+  location  = {Copenhagen, Denmark}
 }
 ```
 

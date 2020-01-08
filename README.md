@@ -182,5 +182,5 @@ Unless required by applicable law or agreed to in writing, software distributed 
 
 The Giveme5W1H logo is courtesy of [Mario Hamborg](https://mario.hamborg.eu/). 
 
-Copyright 2018 The Giveme5W1H team
+Copyright 2018-2020 The Giveme5W1H team
 

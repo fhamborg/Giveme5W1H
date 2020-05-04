@@ -5,7 +5,6 @@ import nltk
 from nltk.corpus import wordnet
 from nltk.stem.wordnet import WordNetLemmatizer
 
-
 from Giveme5W1H.extractor.candidate import Candidate
 from Giveme5W1H.extractor.extractors.abs_extractor import AbsExtractor
 

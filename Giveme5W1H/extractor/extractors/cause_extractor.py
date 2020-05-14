@@ -128,7 +128,7 @@ class CauseExtractor(AbsExtractor):
                 sibling = sibling.right_sibling()
 
             # NP-VP-NP pattern found .__repr__()
-	        if sibling.label() == 'VP' and "('NP'" in sibling.__repr__():
+            if sibling.label() == 'VP' and "('NP'" in sibling.__repr__():
                 verbs = [t[0] for t in sibling.pos() if t[1][0] == 'V'][:3]
                 verb_synset = set()
 
@@ -214,8 +214,9 @@ class CauseExtractor(AbsExtractor):
                 # If we come along an adverb (RB) check the adverbials that indicate causation
                 candidates.append(deepcopy([pos[:i], pos[i - 1:], 'RB']))
 
-            elif token in self.causal_conjunctions and ' '.join([x['nlpToken']['originalText'] for x in tokens[i:]]).lower().startswith(
-                self.causal_conjunctions[token]):
+            elif token in self.causal_conjunctions and ' '.join(
+                    [x['nlpToken']['originalText'] for x in tokens[i:]]).lower().startswith(
+                    self.causal_conjunctions[token]):
                 # Check if token is a clausal conjunction indicating causation
                 start = i
                 if token not in self.causal_conjunctions_inclusive:
@@ -276,7 +277,7 @@ class CauseExtractor(AbsExtractor):
                 elif candidateObject.get_type() == 'RB':
                     # while not as significant as biclausal indicators, adverbials are mor significant as the verbs
                     score += self.weights[2]
-                else: # NP-VP-NP
+                else:  # NP-VP-NP
                     score += self.weights[3]
 
                 if score > 0:

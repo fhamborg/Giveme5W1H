@@ -1,7 +1,7 @@
 import logging
 
 import nltk
-from pycorenlp import StanfordCoreNLP
+from stanza.server import CoreNLPClient, StartServer
 
 
 class Preprocessor:
@@ -18,10 +18,9 @@ class Preprocessor:
         self.log = logging.getLogger('GiveMe5W')
 
         # connect to CoreNLP server
-        if host is None:
-            self.cnlp = StanfordCoreNLP("http://localhost:9000")
-        else:
-            self.cnlp = StanfordCoreNLP(host)
+        host = "http://localhost:9000" if host is None else host
+        self.cnlp = CoreNLPClient(endpoint=host,
+                                  start_server = StartServer.DONT_START)
 
         # define basic base_config and desired processing pipeline
         self.base_config = {
@@ -109,7 +108,8 @@ class Preprocessor:
         :return Document: The processed Document object.
         """
         actual_config = self._build_actual_config(document)
-        annotation = self.cnlp.annotate(document.get_full_text(), actual_config)
+        annotation = self.cnlp.annotate(text=document.get_full_text(),
+                                        properties = actual_config)
 
         if type(annotation) is str:
             print(annotation)

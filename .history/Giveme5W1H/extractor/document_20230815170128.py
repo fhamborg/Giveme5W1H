@@ -1,4 +1,3 @@
-from .candidate import Candidate
 class Document(object):
     """
     Document is a pickable container for the raw document and all related data
@@ -149,11 +148,7 @@ class Document(object):
             return self._answers
 
     def get_top_answer(self, question):
-        answers = self.get_answers(question=question)
-        if len(answers) == 0:
-            return Candidate()
-        else:
-            return answers[0]
+        return self.get_answers(question=question)[0]
 
     def get_annotations(self):
         return self._annotations

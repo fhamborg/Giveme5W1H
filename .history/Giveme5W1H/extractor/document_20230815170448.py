@@ -152,7 +152,7 @@ class Document(object):
         answers = self.get_answers(question=question)
         if len(answers) == 0:
             return Candidate()
-        else:
+        else 
             return answers[0]
 
     def get_annotations(self):

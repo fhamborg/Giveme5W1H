@@ -23,9 +23,6 @@ class Candidate:
         self._parts = parts
 
     def get_parts_as_text(self):
-        if not self._parts:
-            return "No result can be found in the document."
-
         answer_text = []
         for part in self._parts:
             answer_text.append(part[0]['nlpToken']['originalText'])
